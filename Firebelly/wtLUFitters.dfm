@@ -57,8 +57,6 @@ object frmWTLUFitters: TfrmWTLUFitters
       item
         Width = 50
       end>
-    ExplicitTop = 290
-    ExplicitWidth = 445
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmWTLUFitters: TfrmWTLUFitters
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 223
-    ExplicitWidth = 445
     DesignSize = (
       451
       67)

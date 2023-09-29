@@ -48,8 +48,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 306
-    ExplicitHeight = 326
     DesignSize = (
       98
       335)
@@ -92,7 +90,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
-      ExplicitTop = 288
     end
   end
   object pnlBottom: TPanel
@@ -104,8 +101,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 326
-    ExplicitWidth = 404
     DesignSize = (
       410
       89)
@@ -146,7 +141,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 323
     end
     object BitBtn2: TBitBtn
       Left = 329
@@ -157,7 +151,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
-      ExplicitLeft = 323
     end
   end
   object stbrDetails: TStatusBar
@@ -172,8 +165,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 415
-    ExplicitWidth = 404
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

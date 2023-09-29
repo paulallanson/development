@@ -27,7 +27,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 290
   end
   object Button4: TButton
     Left = 376
@@ -280,7 +279,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 290
   end
   object btnPreview: TButton
     Left = 96
@@ -291,7 +289,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
-    ExplicitTop = 290
   end
   object rdgrpCategory: TRadioGroup
     Left = 232

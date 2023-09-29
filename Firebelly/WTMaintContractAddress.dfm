@@ -11,11 +11,9 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 16
@@ -181,9 +179,9 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 9
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object btnCancel: TBitBtn
     Left = 217
@@ -192,8 +190,8 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Height = 25
     Cancel = True
     Caption = 'Cancel'
+    NumGlyphs = 2
     TabOrder = 10
     OnClick = btnCancelClick
-    NumGlyphs = 2
   end
 end

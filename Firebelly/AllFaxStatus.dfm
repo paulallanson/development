@@ -33,8 +33,6 @@ object frmAllFaxStatus: TfrmAllFaxStatus
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 300
-    ExplicitWidth = 635
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -121,7 +119,6 @@ object frmAllFaxStatus: TfrmAllFaxStatus
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 545
       object BitBtn1: TBitBtn
         Left = 6
         Top = 8
@@ -142,8 +139,6 @@ object frmAllFaxStatus: TfrmAllFaxStatus
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 1
-    ExplicitWidth = 635
-    ExplicitHeight = 300
     object ShowFaxesDBGrid: TDBGrid
       Left = 1
       Top = 1

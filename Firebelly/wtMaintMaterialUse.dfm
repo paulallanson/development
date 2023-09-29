@@ -11,14 +11,12 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     380
     221)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -37,9 +35,9 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,8 +48,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -97,24 +95,16 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Use_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Use'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -131,8 +121,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -146,8 +136,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -168,39 +158,25 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -124,7 +124,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
-      ExplicitLeft = 347
     end
     object btnEdit: TBitBtn
       Left = 427
@@ -136,7 +135,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 1
       OnClick = btnEditClick
-      ExplicitLeft = 433
     end
     object btnDelete: TBitBtn
       Left = 514
@@ -148,7 +146,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
-      ExplicitLeft = 520
     end
     object BitBtn4: TBitBtn
       Left = 687
@@ -160,7 +157,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 693
     end
     object btnThickness: TBitBtn
       Left = 255
@@ -172,7 +168,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 4
       OnClick = btnThicknessClick
-      ExplicitLeft = 261
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -201,7 +196,6 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 7
       OnClick = btnExcelClick
-      ExplicitLeft = 606
     end
   end
   object Panel2: TPanel

@@ -111,7 +111,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 967
+        Width = 963
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -308,7 +308,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 967
+        Width = 963
       end>
     object Panel3: TPanel
       Left = 11

@@ -11,10 +11,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -71,9 +69,9 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 6
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 390
@@ -83,8 +81,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 7
     NumGlyphs = 2
+    TabOrder = 7
   end
   object edtImagePath: TEdit
     Left = 368
@@ -113,13 +111,13 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     OnChange = EnableOK
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 368
     Top = 55
     Width = 289
     Height = 100
     BorderStyle = bsSingle
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 8
     object imgWorktop: TImage
       Left = 1
@@ -1196,34 +1194,22 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Include_In_Sink_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CutOut'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1239,8 +1225,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1254,8 +1240,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1276,39 +1262,25 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

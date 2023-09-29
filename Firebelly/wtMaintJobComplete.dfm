@@ -11,10 +11,8 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -141,8 +139,8 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     Top = 192
     Width = 121
     Height = 21
-    Date = 38361.793762291670000000
-    Time = 38361.793762291670000000
+    Date = 38361.000000000000000000
+    Time = 0.793762291672464900
     TabOrder = 6
   end
   object edtReference: TEdit

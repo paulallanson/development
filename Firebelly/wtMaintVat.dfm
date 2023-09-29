@@ -69,7 +69,6 @@ object frmwtMaintVat: TfrmwtMaintVat
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    ExplicitTop = 286
   end
   object BitBtn2: TBitBtn
     Left = 208
@@ -82,7 +81,6 @@ object frmwtMaintVat: TfrmwtMaintVat
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
-    ExplicitTop = 286
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -191,44 +189,28 @@ object frmwtMaintVat: TfrmwtMaintVat
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reverse_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reverse_Charge_Vat_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -244,8 +226,8 @@ object frmwtMaintVat: TfrmwtMaintVat
     Top = 224
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -259,9 +241,7 @@ object frmwtMaintVat: TfrmwtMaintVat
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -274,8 +254,8 @@ object frmwtMaintVat: TfrmwtMaintVat
     Top = 224
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -296,39 +276,25 @@ object frmwtMaintVat: TfrmwtMaintVat
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -37,7 +37,6 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    ExplicitTop = 78
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,7 +49,6 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitTop = 78
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -82,19 +80,13 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Designer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Designer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -111,8 +103,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -126,8 +118,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

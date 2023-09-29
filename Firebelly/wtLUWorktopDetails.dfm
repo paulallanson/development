@@ -1,25 +1,23 @@
 object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   Left = 279
   Top = 111
-  Width = 991
-  Height = 529
   Caption = 'Maintain Worktop Prices'
+  ClientHeight = 490
+  ClientWidth = 975
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 476
-    Width = 983
+    Top = 471
+    Width = 975
     Height = 19
     Panels = <
       item
@@ -31,14 +29,14 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 406
-    Width = 983
+    Top = 401
+    Width = 975
     Height = 70
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      983
+      975
       70)
     object Label4: TLabel
       Left = 16
@@ -85,8 +83,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Anchors = [akRight, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object btnThickness: TBitBtn
       Left = 479
@@ -130,7 +128,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 983
+    Width = 975
     Height = 65
     Align = alTop
     BevelOuter = bvNone
@@ -185,8 +183,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 983
-    Height = 341
+    Width = 975
+    Height = 336
     Align = alClient
     DataSource = srcLUWorktops
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -322,24 +320,16 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object srcLUWorktops: TDataSource

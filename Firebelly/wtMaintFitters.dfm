@@ -11,14 +11,12 @@ object frmWTMaintFitters: TfrmWTMaintFitters
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     360
     217)
-  PixelsPerInch = 96
   TextHeight = 13
   object lblName: TLabel
     Left = 8
@@ -58,9 +56,9 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 6
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -71,8 +69,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 7
     NumGlyphs = 2
+    TabOrder = 7
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -140,39 +138,25 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Fitter_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Include_in_Schedule'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitter'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -189,8 +173,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -204,8 +188,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -226,39 +210,25 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

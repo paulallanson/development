@@ -43,8 +43,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 616
-    ExplicitWidth = 908
     object lblDelete: TLabel
       Left = 245
       Top = 22
@@ -136,7 +134,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 908
     DesignSize = (
       898
       81)
@@ -317,8 +314,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 511
-    ExplicitWidth = 908
     DesignSize = (
       898
       105)
@@ -540,13 +535,11 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Caption = 'Panel2'
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 908
-    ExplicitHeight = 430
     object pnlLeft: TPanel
       Left = 1
       Top = 1
       Width = 448
-      Height = 428
+      Height = 412
       Align = alLeft
       ParentBackground = False
       TabOrder = 0
@@ -624,8 +617,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object pnlRight: TPanel
       Left = 449
       Top = 1
-      Width = 458
-      Height = 428
+      Width = 448
+      Height = 412
       Align = alClient
       ParentBackground = False
       TabOrder = 1
@@ -707,8 +700,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Width = 898
     Height = 19
     Panels = <>
-    ExplicitTop = 673
-    ExplicitWidth = 908
   end
   object qryFitter: TFDQuery
     ConnectionName = 'wt'

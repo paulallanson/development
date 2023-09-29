@@ -11,14 +11,12 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     360
     120)
-  PixelsPerInch = 96
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -37,9 +35,9 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,8 +48,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -83,19 +81,13 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Data_Source_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Data_Source'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -112,8 +104,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -127,8 +119,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

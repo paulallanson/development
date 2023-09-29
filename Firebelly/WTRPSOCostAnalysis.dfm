@@ -17,8 +17,8 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
-    Width = 1403
-    Height = 992
+    Width = 1123
+    Height = 794
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qrySalesOrders
@@ -78,17 +78,17 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
     PreviewLeft = 0
     PreviewTop = 0
     object qrbGroupHeader: TQRGroup
-      Left = 47
-      Top = 160
-      Width = 1309
-      Height = 32
+      Left = 38
+      Top = 128
+      Width = 1047
+      Height = 26
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        67.733333333333330000
-        2770.716666666667000000)
+        68.791666666666670000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = qrbGroupFooter
@@ -96,14 +96,14 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       ReprintOnNewPage = False
       object qrlblSortBy: TQRLabel
         Left = 0
-        Top = 10
-        Width = 57
-        Height = 21
+        Top = 8
+        Width = 47
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           0.000000000000000000
           21.166666666666670000
-          120.650000000000000000)
+          124.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -113,7 +113,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -124,15 +124,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
-        Left = 100
-        Top = 10
-        Width = 98
-        Height = 21
+        Left = 80
+        Top = 8
+        Width = 80
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           211.666666666666700000
           21.166666666666670000
-          207.433333333333300000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -143,7 +143,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -157,10 +157,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       end
     end
     object qrsbDetails: TQRSubDetail
-      Left = 47
-      Top = 192
-      Width = 1309
-      Height = 29
+      Left = 38
+      Top = 154
+      Width = 1047
+      Height = 23
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
@@ -174,8 +174,8 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        61.383333333333330000
-        2770.716666666667000000)
+        60.854166666666670000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -184,13 +184,13 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       object QRDBText2: TQRDBText
         Left = 0
         Top = 1
-        Width = 73
-        Height = 19
+        Width = 62
+        Height = 15
         Size.Values = (
-          40.216666666666670000
+          39.687500000000000000
           0.000000000000000000
-          2.116666666666667000
-          154.516666666666700000)
+          2.645833333333333000
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -201,7 +201,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Sales_Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -214,16 +214,16 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrdbDate: TQRDBText
-        Left = 86
+        Left = 68
         Top = 1
-        Width = 75
-        Height = 19
+        Width = 62
+        Height = 15
         Enabled = False
         Size.Values = (
-          40.216666666666670000
-          182.033333333333300000
-          2.116666666666667000
-          158.750000000000000000)
+          39.687500000000000000
+          179.916666666666700000
+          2.645833333333333000
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -234,7 +234,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Date_Raised'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -247,10 +247,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 400
+        Left = 320
         Top = 1
-        Width = 191
-        Height = 19
+        Width = 153
+        Height = 15
         Size.Values = (
           39.687500000000000000
           846.666666666666600000
@@ -267,7 +267,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -280,10 +280,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 170
+        Left = 136
         Top = 1
-        Width = 231
-        Height = 19
+        Width = 185
+        Height = 15
         Size.Values = (
           39.687500000000000000
           359.833333333333400000
@@ -300,7 +300,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -313,15 +313,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 973
+        Left = 774
         Top = 1
-        Width = 79
-        Height = 19
+        Width = 67
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          2059.516666666667000000
-          2.116666666666667000
-          167.216666666666700000)
+          39.687500000000000000
+          2047.875000000000000000
+          2.645833333333333000
+          177.270833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -332,7 +332,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Goods_Value'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -345,10 +345,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRDBText10: TQRDBText
-        Left = 730
+        Left = 584
         Top = 1
-        Width = 111
-        Height = 19
+        Width = 89
+        Height = 15
         Size.Values = (
           39.687500000000000000
           1545.166666666667000000
@@ -365,7 +365,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Rep_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -378,10 +378,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object gtQRDBText2: TQRDBText
-        Left = 844
+        Left = 675
         Top = 1
-        Width = 111
-        Height = 19
+        Width = 89
+        Height = 15
         Size.Values = (
           39.687500000000000000
           1785.937500000000000000
@@ -398,7 +398,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Sales_Order_Status_Desc'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -411,15 +411,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblCost: TQRLabel
-        Left = 1091
+        Left = 872
         Top = 0
-        Width = 52
-        Height = 19
+        Width = 43
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          2309.283333333333000000
+          39.687500000000000000
+          2307.166666666667000000
           0.000000000000000000
-          110.066666666666700000)
+          113.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -429,7 +429,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -440,15 +440,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblCostPerc: TQRLabel
-        Left = 1222
+        Left = 976
         Top = 0
-        Width = 79
-        Height = 19
+        Width = 65
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          2586.566666666667000000
+          39.687500000000000000
+          2582.333333333333000000
           0.000000000000000000
-          167.216666666666700000)
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -458,7 +458,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -469,10 +469,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object gtQRDBText1: TQRDBText
-        Left = 590
+        Left = 472
         Top = 1
-        Width = 121
-        Height = 19
+        Width = 97
+        Height = 15
         Size.Values = (
           39.687500000000000000
           1248.833333333333000000
@@ -489,7 +489,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataField = 'Order_Ref_No'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -502,15 +502,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblMargin: TQRLabel
-        Left = 1172
+        Left = 936
         Top = 0
-        Width = 64
-        Height = 19
+        Width = 53
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          2480.733333333333000000
+          39.687500000000000000
+          2476.500000000000000000
           0.000000000000000000
-          135.466666666666700000)
+          140.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -520,7 +520,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -531,15 +531,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblReportDate: TQRLabel
-        Left = 80
+        Left = 63
         Top = 1
-        Width = 90
-        Height = 19
+        Width = 75
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          169.333333333333300000
-          2.116666666666667000
-          190.500000000000000000)
+          39.687500000000000000
+          166.687500000000000000
+          2.645833333333333000
+          198.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -549,7 +549,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -561,10 +561,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       end
     end
     object qrbGroupFooter: TQRBand
-      Left = 47
-      Top = 221
-      Width = 1309
-      Height = 32
+      Left = 38
+      Top = 177
+      Width = 1047
+      Height = 26
       AfterPrint = qrbGroupFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGroupFooterBeforePrint
@@ -572,21 +572,21 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        67.733333333333330000
-        2770.716666666667000000)
+        68.791666666666670000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblCustPerc: TQRLabel
-        Left = 1215
-        Top = 9
-        Width = 86
-        Height = 21
+        Left = 964
+        Top = 7
+        Width = 77
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2571.750000000000000000
-          19.050000000000000000
-          182.033333333333300000)
+          44.979166666666670000
+          2550.583333333333000000
+          18.520833333333330000
+          203.729166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -596,7 +596,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -607,15 +607,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblCustMargin: TQRLabel
-        Left = 1134
-        Top = 9
-        Width = 101
-        Height = 21
+        Left = 898
+        Top = 7
+        Width = 90
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2400.300000000000000000
-          19.050000000000000000
-          213.783333333333300000)
+          44.979166666666670000
+          2375.958333333333000000
+          18.520833333333330000
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -625,7 +625,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -636,15 +636,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblCustCost: TQRLabel
-        Left = 1060
-        Top = 9
-        Width = 84
-        Height = 21
+        Left = 837
+        Top = 7
+        Width = 78
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2243.666666666667000000
-          19.050000000000000000
-          177.800000000000000000)
+          44.979166666666670000
+          2214.562500000000000000
+          18.520833333333330000
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -654,7 +654,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -665,15 +665,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblCustGoods: TQRLabel
-        Left = 954
-        Top = 9
-        Width = 97
-        Height = 21
+        Left = 753
+        Top = 7
+        Width = 88
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2019.300000000000000000
-          19.050000000000000000
-          205.316666666666700000)
+          44.979166666666670000
+          1992.312500000000000000
+          18.520833333333330000
+          232.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -683,7 +683,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -694,10 +694,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 990
+        Left = 792
         Top = -1
-        Width = 311
-        Height = 10
+        Width = 249
+        Height = 8
         Size.Values = (
           21.166666666666670000
           2095.500000000000000000
@@ -710,15 +710,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         VertAdjust = 0
       end
       object qrGroupbyFootText: TQRDBText
-        Left = 790
-        Top = 9
-        Width = 124
-        Height = 21
+        Left = 623
+        Top = 7
+        Width = 108
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1672.166666666667000000
-          19.050000000000000000
-          262.466666666666700000)
+          44.979166666666670000
+          1648.354166666667000000
+          18.520833333333330000
+          285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -728,7 +728,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         DataSet = qrySalesOrders
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -741,15 +741,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 923
-        Top = 9
-        Width = 33
-        Height = 21
+        Left = 738
+        Top = 7
+        Width = 28
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1953.683333333333000000
-          19.050000000000000000
-          69.850000000000000000)
+          44.979166666666670000
+          1952.625000000000000000
+          18.520833333333330000
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -759,7 +759,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -771,10 +771,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       end
     end
     object QRBand2: TQRBand
-      Left = 47
-      Top = 253
-      Width = 1309
-      Height = 32
+      Left = 38
+      Top = 203
+      Width = 1047
+      Height = 26
       AfterPrint = QRBand2AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
@@ -782,21 +782,21 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        67.733333333333330000
-        2770.716666666667000000)
+        68.791666666666670000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object qrlblReportPerc: TQRLabel
-        Left = 1200
-        Top = 9
-        Width = 101
-        Height = 21
+        Left = 953
+        Top = 7
+        Width = 88
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2540.000000000000000000
-          19.050000000000000000
-          213.783333333333300000)
+          44.979166666666670000
+          2521.479166666667000000
+          18.520833333333330000
+          232.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -806,7 +806,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -817,15 +817,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblReportMargin: TQRLabel
-        Left = 1119
-        Top = 9
-        Width = 116
-        Height = 21
+        Left = 887
+        Top = 7
+        Width = 101
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2368.550000000000000000
-          19.050000000000000000
-          245.533333333333300000)
+          44.979166666666670000
+          2346.854166666667000000
+          18.520833333333330000
+          267.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -835,7 +835,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -846,15 +846,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblReportCost: TQRLabel
-        Left = 1046
-        Top = 9
-        Width = 99
-        Height = 21
+        Left = 827
+        Top = 7
+        Width = 89
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2214.033333333333000000
-          19.050000000000000000
-          209.550000000000000000)
+          44.979166666666670000
+          2188.104166666667000000
+          18.520833333333330000
+          235.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -864,7 +864,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -875,15 +875,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblReportGoods: TQRLabel
-        Left = 941
-        Top = 9
-        Width = 112
-        Height = 21
+        Left = 744
+        Top = 7
+        Width = 99
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1991.783333333333000000
-          19.050000000000000000
-          237.066666666666700000)
+          44.979166666666670000
+          1968.500000000000000000
+          18.520833333333330000
+          261.937500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -893,7 +893,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -904,15 +904,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 873
-        Top = 9
-        Width = 79
-        Height = 21
+        Left = 698
+        Top = 7
+        Width = 68
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1847.850000000000000000
-          19.050000000000000000
-          167.216666666666700000)
+          44.979166666666670000
+          1846.791666666667000000
+          18.520833333333330000
+          179.916666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -922,7 +922,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -933,10 +933,10 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRShape2: TQRShape
-        Left = 990
+        Left = 792
         Top = -1
-        Width = 311
-        Height = 10
+        Width = 249
+        Height = 8
         Size.Values = (
           21.166666666666670000
           2095.500000000000000000
@@ -950,31 +950,31 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       end
     end
     object QRBand1: TQRBand
-      Left = 47
-      Top = 47
-      Width = 1309
-      Height = 113
+      Left = 38
+      Top = 38
+      Width = 1047
+      Height = 90
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        239.183333333333300000
-        2770.716666666667000000)
+        238.125000000000000000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
-        Left = 493
-        Top = 3
-        Width = 309
-        Height = 24
+        Left = 396
+        Top = 2
+        Width = 243
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          1043.516666666667000000
-          6.350000000000000000
-          654.050000000000000000)
+          50.270833333333330000
+          1047.750000000000000000
+          5.291666666666667000
+          642.937500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -984,7 +984,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -995,15 +995,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 12
       end
       object QRSysData1: TQRSysData
-        Left = 1222
-        Top = 29
-        Width = 84
-        Height = 21
+        Left = 976
+        Top = 23
+        Width = 69
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2586.566666666667000000
-          61.383333333333330000
-          177.800000000000000000)
+          44.979166666666670000
+          2582.333333333333000000
+          60.854166666666670000
+          182.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1013,7 +1013,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1025,14 +1025,14 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       end
       object QRLabel3: TQRLabel
         Left = 0
-        Top = 89
-        Width = 70
-        Height = 21
+        Top = 71
+        Width = 59
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           0.000000000000000000
-          188.383333333333300000
-          148.166666666666700000)
+          187.854166666666700000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1042,7 +1042,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1053,15 +1053,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblDate: TQRLabel
-        Left = 87
-        Top = 89
-        Width = 64
-        Height = 21
+        Left = 70
+        Top = 71
+        Width = 54
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          184.150000000000000000
-          188.383333333333300000
-          135.466666666666700000)
+          44.979166666666670000
+          185.208333333333300000
+          187.854166666666700000
+          142.875000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1071,7 +1071,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1082,15 +1082,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 170
-        Top = 89
-        Width = 57
-        Height = 21
+        Left = 136
+        Top = 71
+        Width = 47
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           359.833333333333300000
-          188.383333333333300000
-          120.650000000000000000)
+          187.854166666666700000
+          124.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1100,7 +1100,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1111,15 +1111,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 400
-        Top = 89
-        Width = 59
-        Height = 21
+        Left = 320
+        Top = 71
+        Width = 52
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           846.666666666666700000
-          188.383333333333300000
-          124.883333333333300000)
+          187.854166666666700000
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1129,7 +1129,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1140,15 +1140,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel12: TQRLabel
-        Left = 1255
-        Top = 89
-        Width = 44
-        Height = 21
+        Left = 1004
+        Top = 71
+        Width = 36
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           2656.416666666667000000
-          188.383333333333300000
-          93.133333333333330000)
+          187.854166666666700000
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1158,7 +1158,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1169,15 +1169,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 596
-        Top = 31
-        Width = 89
-        Height = 19
+        Left = 476
+        Top = 25
+        Width = 74
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          1261.533333333333000000
-          65.616666666666670000
-          188.383333333333300000)
+          39.687500000000000000
+          1259.416666666667000000
+          66.145833333333330000
+          195.791666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1187,7 +1187,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1198,15 +1198,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 1240
-        Top = 10
-        Width = 68
-        Height = 21
+        Left = 990
+        Top = 8
+        Width = 56
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2624.666666666667000000
+          44.979166666666670000
+          2619.375000000000000000
           21.166666666666670000
-          143.933333333333300000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1216,7 +1216,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1227,15 +1227,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 1008
-        Top = 89
-        Width = 39
-        Height = 21
+        Left = 806
+        Top = 71
+        Width = 33
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2133.600000000000000000
-          188.383333333333300000
-          82.550000000000000000)
+          44.979166666666670000
+          2132.541666666667000000
+          187.854166666666700000
+          87.312500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1245,7 +1245,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1256,15 +1256,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 1064
-        Top = 89
-        Width = 78
-        Height = 21
+        Left = 851
+        Top = 71
+        Width = 63
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2252.133333333333000000
-          188.383333333333300000
-          165.100000000000000000)
+          44.979166666666670000
+          2251.604166666667000000
+          187.854166666666700000
+          166.687500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1274,7 +1274,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1285,15 +1285,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object QRLabel1: TQRLabel
-        Left = 730
-        Top = 89
-        Width = 24
-        Height = 21
+        Left = 584
+        Top = 71
+        Width = 20
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1545.166666666667000000
-          188.383333333333300000
-          50.800000000000000000)
+          187.854166666666700000
+          52.916666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1303,7 +1303,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1314,15 +1314,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object qrlblSelection: TQRLabel
-        Left = 600
-        Top = 56
-        Width = 79
-        Height = 19
+        Left = 479
+        Top = 45
+        Width = 65
+        Height = 15
         Size.Values = (
-          40.216666666666670000
-          1270.000000000000000000
-          118.533333333333300000
-          167.216666666666700000)
+          39.687500000000000000
+          1267.354166666667000000
+          119.062500000000000000
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1332,7 +1332,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1343,15 +1343,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
-        Left = 844
-        Top = 89
-        Width = 39
-        Height = 21
+        Left = 675
+        Top = 71
+        Width = 32
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1786.466666666667000000
-          188.383333333333300000
-          82.550000000000000000)
+          44.979166666666670000
+          1785.937500000000000000
+          187.854166666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1361,7 +1361,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1372,15 +1372,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
-        Left = 590
-        Top = 89
-        Width = 116
-        Height = 21
+        Left = 472
+        Top = 71
+        Width = 98
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1248.833333333333000000
-          188.383333333333300000
-          245.533333333333300000)
+          187.854166666666700000
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1390,7 +1390,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1401,15 +1401,15 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
-        Left = 1195
-        Top = 89
-        Width = 40
-        Height = 21
+        Left = 955
+        Top = 71
+        Width = 33
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          2529.416666666667000000
-          188.383333333333300000
-          84.666666666666670000)
+          44.979166666666670000
+          2526.770833333333000000
+          187.854166666666700000
+          87.312500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1419,7 +1419,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

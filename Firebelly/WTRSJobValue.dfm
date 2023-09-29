@@ -26,7 +26,6 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 186
   end
   object Button4: TButton
     Left = 264
@@ -38,7 +37,6 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 186
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -238,8 +236,6 @@ object frmWTRSJobValue: TfrmWTRSJobValue
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
-    ExplicitLeft = 178
-    ExplicitTop = 186
   end
   object OleContainer1: TOleContainer
     Left = 140
@@ -283,6 +279,5 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
-    ExplicitTop = 186
   end
 end

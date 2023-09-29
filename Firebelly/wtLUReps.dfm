@@ -57,8 +57,6 @@ object frmWTLUReps: TfrmWTLUReps
       item
         Width = 50
       end>
-    ExplicitTop = 322
-    ExplicitWidth = 408
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmWTLUReps: TfrmWTLUReps
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 246
-    ExplicitWidth = 408
     DesignSize = (
       414
       76)

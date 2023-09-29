@@ -1,21 +1,19 @@
 object frmWTContractSearch: TfrmWTContractSearch
   Left = 440
   Top = 109
-  Width = 266
-  Height = 325
   Caption = 'Contract Quote Search'
+  ClientHeight = 286
+  ClientWidth = 250
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
-    258
-    298)
-  PixelsPerInch = 96
+    250
+    286)
   TextHeight = 13
   object Label1: TLabel
     Left = 10

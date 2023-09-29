@@ -18,8 +18,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   object InvoiceReport: TQuickRep
     Left = 248
     Top = 16
-    Width = 992
-    Height = 1403
+    Width = 794
+    Height = 1123
     ShowingPreview = False
     BeforePrint = InvoiceReportBeforePrint
     Font.Charset = ANSI_CHARSET
@@ -81,10 +81,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     PreviewLeft = 0
     PreviewTop = 0
     object InvoiceFooter: TQRBand
-      Left = 47
-      Top = 783
-      Width = 945
-      Height = 4
+      Left = 38
+      Top = 626
+      Width = 756
+      Height = 3
       AfterPrint = InvoiceFooterAfterPrint
       AlignToBottom = True
       BeforePrint = InvoiceFooterBeforePrint
@@ -92,24 +92,24 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        8.466666666666667000
+        7.937500000000000000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
     end
     object InvoiceGroupHeader: TQRGroup
-      Left = 47
-      Top = 544
-      Width = 945
-      Height = 4
+      Left = 38
+      Top = 435
+      Width = 756
+      Height = 3
       AlignToBottom = False
       BeforePrint = InvoiceGroupHeaderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        8.466666666666667000
+        7.937500000000000000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -118,10 +118,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ReprintOnNewPage = False
     end
     object AddChargesFooter: TQRBand
-      Left = 47
-      Top = 711
-      Width = 945
-      Height = 36
+      Left = 38
+      Top = 568
+      Width = 756
+      Height = 29
       AfterPrint = AddChargesFooterAfterPrint
       AlignToBottom = False
       BeforePrint = AddChargesFooterBeforePrint
@@ -129,16 +129,16 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.200000000000000000
+        76.729166666666670000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object memoNotes: TQRMemo
-        Left = 23
-        Top = 4
-        Width = 589
-        Height = 24
+        Left = 18
+        Top = 3
+        Width = 471
+        Height = 19
         Size.Values = (
           50.270833333333330000
           47.625000000000000000
@@ -154,7 +154,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -165,10 +165,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object InvoiceLine: TQRSubDetail
-      Left = 47
-      Top = 548
-      Width = 945
-      Height = 36
+      Left = 38
+      Top = 438
+      Width = 756
+      Height = 29
       AfterPrint = InvoiceLineAfterPrint
       AlignToBottom = False
       BeforePrint = InvoiceLineBeforePrint
@@ -176,7 +176,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.200000000000000000
+        76.729166666666670000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -186,15 +186,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object Dummy06: TQRLabel
-        Left = 706
-        Top = 9
-        Width = 72
-        Height = 21
+        Left = 565
+        Top = 7
+        Width = 59
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1494.366666666667000000
-          19.050000000000000000
-          152.400000000000000000)
+          44.979166666666670000
+          1494.895833333333000000
+          18.520833333333330000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -204,7 +204,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -215,10 +215,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object VatTotalLbl: TQRLabel
-        Left = 780
-        Top = 6
-        Width = 110
-        Height = 21
+        Left = 624
+        Top = 5
+        Width = 88
+        Height = 17
         Size.Values = (
           44.979166666666670000
           1651.000000000000000000
@@ -234,7 +234,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = VatTotalLblPrint
@@ -246,15 +246,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QtyInvoicedLbl: TQRLabel
-        Left = 495
-        Top = 4
-        Width = 106
-        Height = 26
+        Left = 396
+        Top = 3
+        Width = 83
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           1047.750000000000000000
-          8.466666666666667000
-          224.366666666666700000)
+          7.937500000000000000
+          219.604166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -264,7 +264,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         OnPrint = QtyInvoicedLblPrint
@@ -276,10 +276,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object lblDescription: TQRLabel
-        Left = 21
-        Top = 6
-        Width = 620
-        Height = 21
+        Left = 17
+        Top = 5
+        Width = 496
+        Height = 17
         Size.Values = (
           44.979166666666670000
           44.979166666666670000
@@ -296,7 +296,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = lblDescriptionPrint
@@ -308,15 +308,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object GoodsLbl: TQRLabel
-        Left = 709
-        Top = 6
-        Width = 69
-        Height = 21
+        Left = 566
+        Top = 5
+        Width = 56
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1500.716666666667000000
-          12.700000000000000000
-          146.050000000000000000)
+          44.979166666666670000
+          1497.541666666667000000
+          13.229166666666670000
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -326,7 +326,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = GoodsLblPrint
@@ -339,26 +339,26 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object QRBand1: TQRBand
-      Left = 47
-      Top = 71
-      Width = 945
-      Height = 473
+      Left = 38
+      Top = 57
+      Width = 756
+      Height = 378
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        1001.183333333333000000
+        1000.125000000000000000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRShape7: TQRShape
-        Left = 10
-        Top = 432
-        Width = 891
-        Height = 39
+        Left = 8
+        Top = 346
+        Width = 713
+        Height = 31
         Size.Values = (
           82.020833333333320000
           21.166666666666670000
@@ -371,10 +371,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape8: TQRShape
-        Left = 660
-        Top = 432
-        Width = 124
-        Height = 39
+        Left = 528
+        Top = 346
+        Width = 99
+        Height = 31
         Size.Values = (
           82.020833333333340000
           1397.000000000000000000
@@ -387,10 +387,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape2: TQRShape
-        Left = 530
-        Top = 224
-        Width = 371
-        Height = 141
+        Left = 424
+        Top = 179
+        Width = 297
+        Height = 113
         Size.Values = (
           298.979166666666700000
           1121.833333333333000000
@@ -403,10 +403,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape1: TQRShape
-        Left = 11
-        Top = 224
-        Width = 391
-        Height = 171
+        Left = 9
+        Top = 179
+        Width = 313
+        Height = 137
         Size.Values = (
           362.479166666666700000
           23.812500000000000000
@@ -419,10 +419,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object CustomerAddMemo: TQRMemo
-        Left = 21
-        Top = 236
-        Width = 341
-        Height = 119
+        Left = 17
+        Top = 189
+        Width = 273
+        Height = 95
         Size.Values = (
           251.354166666666700000
           44.979166666666670000
@@ -437,7 +437,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -455,10 +455,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object InvoiceNumberLbl: TQRLabel
-        Left = 755
-        Top = 228
-        Width = 138
-        Height = 25
+        Left = 604
+        Top = 182
+        Width = 110
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1598.083333333333000000
@@ -474,7 +474,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnPrint = InvoiceNumberLblPrint
@@ -486,15 +486,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object InvoiceDateLbl: TQRLabel
-        Left = 777
-        Top = 264
-        Width = 116
-        Height = 25
+        Left = 619
+        Top = 211
+        Width = 96
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1644.650000000000000000
-          558.800000000000000000
-          245.533333333333300000)
+          1637.770833333333000000
+          558.270833333333300000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -504,7 +504,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnPrint = InvoiceDateLblPrint
@@ -516,10 +516,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object lblCustOrderNo: TQRLabel
-        Left = 700
-        Top = 301
-        Width = 192
-        Height = 25
+        Left = 560
+        Top = 241
+        Width = 154
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1481.666666666667000000
@@ -535,7 +535,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -546,15 +546,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblInvoice: TQRLabel
-        Left = 9
-        Top = 160
-        Width = 178
-        Height = 51
+        Left = 7
+        Top = 128
+        Width = 142
+        Height = 41
         Size.Values = (
-          107.950000000000000000
-          19.050000000000000000
+          108.479166666666700000
+          18.520833333333330000
           338.666666666666700000
-          376.766666666666700000)
+          375.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -564,7 +564,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -43
+        Font.Height = -35
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -575,10 +575,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 26
       end
       object qrlblCompanyName: TQRLabel
-        Left = 684
-        Top = 180
-        Width = 216
-        Height = 36
+        Left = 547
+        Top = 144
+        Width = 173
+        Height = 29
         Size.Values = (
           76.729166666666670000
           1447.270833333333000000
@@ -595,7 +595,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -606,15 +606,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object qrlblInvoiceLabel: TQRLabel
-        Left = 550
-        Top = 228
-        Width = 88
-        Height = 25
+        Left = 440
+        Top = 182
+        Width = 72
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1164.166666666667000000
-          482.600000000000000000
-          186.266666666666700000)
+          481.541666666666700000
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -624,7 +624,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -635,15 +635,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 550
-        Top = 264
-        Width = 115
-        Height = 25
+        Left = 440
+        Top = 211
+        Width = 94
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1164.166666666667000000
-          558.800000000000000000
-          243.416666666666700000)
+          558.270833333333300000
+          248.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -653,7 +653,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -664,15 +664,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel7: TQRLabel
-        Left = 550
-        Top = 338
-        Width = 98
-        Height = 24
+        Left = 440
+        Top = 270
+        Width = 77
+        Height = 19
         Size.Values = (
-          50.800000000000000000
+          50.270833333333330000
           1164.166666666667000000
-          715.433333333333300000
-          207.433333333333300000)
+          714.375000000000000000
+          203.729166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -682,7 +682,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -693,15 +693,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 550
-        Top = 301
-        Width = 121
-        Height = 25
+        Left = 440
+        Top = 241
+        Width = 95
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1164.166666666667000000
-          637.116666666666700000
-          256.116666666666700000)
+          637.645833333333300000
+          251.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -711,7 +711,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -722,10 +722,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRShape3: TQRShape
-        Left = 530
-        Top = 256
-        Width = 371
-        Height = 6
+        Left = 424
+        Top = 205
+        Width = 297
+        Height = 5
         Size.Values = (
           13.229166666666670000
           1121.833333333333000000
@@ -738,10 +738,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape4: TQRShape
-        Left = 530
-        Top = 295
-        Width = 371
-        Height = 6
+        Left = 424
+        Top = 236
+        Width = 297
+        Height = 5
         Size.Values = (
           13.229166666666670000
           1121.833333333333000000
@@ -754,10 +754,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape5: TQRShape
-        Left = 530
-        Top = 329
-        Width = 371
-        Height = 6
+        Left = 424
+        Top = 263
+        Width = 297
+        Height = 5
         Size.Values = (
           13.229166666666670000
           1121.833333333333000000
@@ -770,10 +770,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape6: TQRShape
-        Left = 686
-        Top = 224
-        Width = 11
-        Height = 141
+        Left = 549
+        Top = 179
+        Width = 9
+        Height = 113
         Size.Values = (
           298.979166666666700000
           1452.562500000000000000
@@ -786,15 +786,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRLabel8: TQRLabel
-        Left = 23
-        Top = 440
-        Width = 158
-        Height = 23
+        Left = 18
+        Top = 352
+        Width = 130
+        Height = 18
         Size.Values = (
-          48.683333333333330000
-          48.683333333333330000
+          47.625000000000000000
+          47.625000000000000000
           931.333333333333300000
-          334.433333333333300000)
+          343.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -804,7 +804,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -18
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -815,15 +815,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 11
       end
       object QRLabel10: TQRLabel
-        Left = 792
-        Top = 440
-        Width = 100
-        Height = 23
+        Left = 632
+        Top = 352
+        Width = 82
+        Height = 18
         Size.Values = (
-          48.683333333333330000
-          1676.400000000000000000
+          47.625000000000000000
+          1672.166666666667000000
           931.333333333333300000
-          211.666666666666700000)
+          216.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -833,7 +833,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -18
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -844,15 +844,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 11
       end
       object qrlblAccountCode: TQRLabel
-        Left = 750
-        Top = 338
-        Width = 142
-        Height = 24
+        Left = 600
+        Top = 270
+        Width = 114
+        Height = 19
         Size.Values = (
-          50.800000000000000000
+          50.270833333333330000
           1587.500000000000000000
-          715.433333333333300000
-          300.566666666666700000)
+          714.375000000000000000
+          301.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -862,7 +862,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -873,15 +873,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 677
-        Top = 440
-        Width = 94
-        Height = 23
+        Left = 540
+        Top = 352
+        Width = 77
+        Height = 18
         Size.Values = (
-          48.683333333333330000
-          1432.983333333333000000
+          47.625000000000000000
+          1428.750000000000000000
           931.333333333333300000
-          198.966666666666700000)
+          203.729166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -891,7 +891,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -18
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -902,10 +902,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 11
       end
       object qriHeadLogo: TQRImage
-        Left = 305
+        Left = 244
         Top = 0
-        Width = 286
-        Height = 144
+        Width = 229
+        Height = 115
         Size.Values = (
           304.270833333333300000
           645.583333333333300000
@@ -918,10 +918,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object QRBand2: TQRBand
-      Left = 47
-      Top = 787
-      Width = 945
-      Height = 395
+      Left = 38
+      Top = 629
+      Width = 756
+      Height = 316
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
@@ -933,10 +933,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       KeepOnOnePage = False
       BandType = rbPageFooter
       object QRShape10: TQRShape
-        Left = 660
-        Top = 10
-        Width = 243
-        Height = 186
+        Left = 528
+        Top = 8
+        Width = 194
+        Height = 149
         Size.Values = (
           394.229166666666700000
           1397.000000000000000000
@@ -949,10 +949,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape15: TQRShape
-        Left = 661
-        Top = 117
-        Width = 240
-        Height = 8
+        Left = 529
+        Top = 94
+        Width = 192
+        Height = 6
         Size.Values = (
           15.875000000000000000
           1399.645833333333000000
@@ -965,10 +965,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape14: TQRShape
-        Left = 661
-        Top = 80
-        Width = 240
-        Height = 5
+        Left = 529
+        Top = 64
+        Width = 192
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1399.645833333333000000
@@ -981,10 +981,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object QRShape13: TQRShape
-        Left = 661
-        Top = 41
-        Width = 240
-        Height = 8
+        Left = 529
+        Top = 33
+        Width = 192
+        Height = 6
         Size.Values = (
           15.875000000000000000
           1399.645833333333000000
@@ -997,15 +997,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object lblReference: TQRLabel
-        Left = 20
-        Top = 198
-        Width = 94
-        Height = 23
+        Left = 16
+        Top = 158
+        Width = 73
+        Height = 18
         Size.Values = (
-          48.683333333333330000
+          47.625000000000000000
           42.333333333333330000
-          419.100000000000000000
-          198.966666666666700000)
+          418.041666666666700000
+          193.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1015,7 +1015,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1026,15 +1026,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object QRLabel11: TQRLabel
-        Left = 545
-        Top = 19
-        Width = 68
-        Height = 21
+        Left = 436
+        Top = 15
+        Width = 57
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1153.583333333333000000
-          40.216666666666670000
-          143.933333333333300000)
+          39.687500000000000000
+          150.812500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1044,7 +1044,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = GoodsValueLblPrint
@@ -1056,15 +1056,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object GoodsValueLbl: TQRLabel
-        Left = 669
-        Top = 20
-        Width = 110
-        Height = 21
+        Left = 534
+        Top = 16
+        Width = 89
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1416.050000000000000000
+          44.979166666666670000
+          1412.875000000000000000
           42.333333333333330000
-          232.833333333333300000)
+          235.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1074,7 +1074,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = GoodsValueLblPrint
@@ -1086,15 +1086,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object VATValueLbl: TQRLabel
-        Left = 685
-        Top = 55
-        Width = 94
-        Height = 21
+        Left = 547
+        Top = 44
+        Width = 76
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1449.916666666667000000
+          44.979166666666670000
+          1447.270833333333000000
           116.416666666666700000
-          198.966666666666700000)
+          201.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1104,7 +1104,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = VATValueLblPrint
@@ -1116,15 +1116,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel12: TQRLabel
-        Left = 545
-        Top = 55
-        Width = 71
-        Height = 21
+        Left = 436
+        Top = 44
+        Width = 58
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1153.583333333333000000
           116.416666666666700000
-          150.283333333333300000)
+          153.458333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1134,7 +1134,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = VATValueLblPrint
@@ -1146,10 +1146,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRShape9: TQRShape
-        Left = 10
-        Top = 6
-        Width = 651
-        Height = 9
+        Left = 8
+        Top = 5
+        Width = 521
+        Height = 7
         Size.Values = (
           18.520833333333330000
           21.166666666666670000
@@ -1162,15 +1162,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object qrlblDepositPaid: TQRLabel
-        Left = 545
-        Top = 130
-        Width = 94
-        Height = 21
+        Left = 436
+        Top = 104
+        Width = 75
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1153.583333333333000000
           275.166666666666700000
-          198.966666666666700000)
+          198.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1180,7 +1180,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = TotalValueLblPrint
@@ -1192,15 +1192,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object DepositLbl: TQRLabel
-        Left = 702
-        Top = 130
-        Width = 77
-        Height = 21
+        Left = 562
+        Top = 104
+        Width = 62
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1485.900000000000000000
+          44.979166666666670000
+          1486.958333333333000000
           275.166666666666700000
-          162.983333333333300000)
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1210,7 +1210,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = TotalValueLblPrint
@@ -1222,15 +1222,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object TotalValueLbl: TQRLabel
-        Left = 672
-        Top = 95
-        Width = 107
-        Height = 21
+        Left = 534
+        Top = 76
+        Width = 90
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1422.400000000000000000
+          44.979166666666670000
+          1412.875000000000000000
           201.083333333333300000
-          226.483333333333300000)
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1240,7 +1240,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnPrint = TotalValueLblPrint
@@ -1252,15 +1252,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblInvoiceTotal: TQRLabel
-        Left = 545
-        Top = 95
-        Width = 100
-        Height = 21
+        Left = 436
+        Top = 76
+        Width = 83
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1153.583333333333000000
           201.083333333333300000
-          211.666666666666700000)
+          219.604166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1270,7 +1270,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnPrint = TotalValueLblPrint
@@ -1282,10 +1282,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrshpPayment: TQRShape
-        Left = 10
-        Top = 59
-        Width = 461
-        Height = 133
+        Left = 8
+        Top = 47
+        Width = 369
+        Height = 106
         Size.Values = (
           280.458333333333400000
           21.166666666666670000
@@ -1298,10 +1298,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object memPayment: TQRMemo
-        Left = 20
-        Top = 71
-        Width = 441
-        Height = 110
+        Left = 16
+        Top = 57
+        Width = 353
+        Height = 88
         Size.Values = (
           232.833333333333400000
           42.333333333333340000
@@ -1316,7 +1316,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -1328,10 +1328,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object gtQRShape5: TQRShape
-        Left = 661
-        Top = 155
-        Width = 240
-        Height = 11
+        Left = 529
+        Top = 124
+        Width = 192
+        Height = 9
         Size.Values = (
           23.812500000000000000
           1399.645833333333000000
@@ -1344,15 +1344,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         VertAdjust = 0
       end
       object qrlblToPay: TQRLabel
-        Left = 545
-        Top = 169
-        Width = 53
-        Height = 21
+        Left = 436
+        Top = 135
+        Width = 42
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1153.583333333333000000
-          357.716666666666700000
-          112.183333333333300000)
+          357.187500000000000000
+          111.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1362,7 +1362,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = TotalValueLblPrint
@@ -1374,15 +1374,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object ToPayLbl: TQRLabel
-        Left = 710
-        Top = 169
-        Width = 69
-        Height = 21
+        Left = 568
+        Top = 135
+        Width = 55
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1502.833333333333000000
-          357.716666666666700000
-          146.050000000000000000)
+          357.187500000000000000
+          145.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1392,7 +1392,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         OnPrint = TotalValueLblPrint
@@ -1404,15 +1404,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblPaymentTerms: TQRLabel
-        Left = 15
-        Top = 23
-        Width = 118
-        Height = 20
+        Left = 12
+        Top = 18
+        Width = 97
+        Height = 16
         Size.Values = (
           42.333333333333330000
           31.750000000000000000
-          48.683333333333330000
-          249.766666666666700000)
+          47.625000000000000000
+          256.645833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1422,7 +1422,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnPrint = GoodsValueLblPrint
@@ -1434,10 +1434,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object memAddress: TQRRichText
-        Left = 228
-        Top = 278
-        Width = 455
-        Height = 41
+        Left = 182
+        Top = 222
+        Width = 364
+        Height = 33
         Size.Values = (
           87.312500000000000000
           481.541666666666700000
@@ -1461,15 +1461,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
           'memAddress')
       end
       object qrlblVatReg: TQRLabel
-        Left = 343
-        Top = 340
-        Width = 227
-        Height = 20
+        Left = 271
+        Top = 272
+        Width = 189
+        Height = 16
         Size.Values = (
           42.333333333333330000
-          726.016666666666700000
+          717.020833333333300000
           719.666666666666700000
-          480.483333333333300000)
+          500.062500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1479,7 +1479,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1490,15 +1490,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
-        Left = 274
-        Top = 318
-        Width = 366
-        Height = 24
+        Left = 215
+        Top = 254
+        Width = 301
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          579.966666666666700000
-          673.100000000000000000
-          774.700000000000000000)
+          50.270833333333330000
+          568.854166666666700000
+          672.041666666666700000
+          796.395833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1508,7 +1508,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1520,17 +1520,17 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object qrLoopB: TQRLoopBand
-      Left = 47
-      Top = 747
-      Width = 945
-      Height = 36
+      Left = 38
+      Top = 597
+      Width = 756
+      Height = 29
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = InvoiceFooter
       Size.Values = (
-        76.200000000000000000
+        76.729166666666670000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1539,10 +1539,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
     end
     object gtQRShape1: TQRShape
-      Left = 945
-      Top = 504
-      Width = 8
-      Height = 700
+      Left = 756
+      Top = 403
+      Width = 6
+      Height = 560
       Size.Values = (
         1481.666666666667000000
         2000.250000000000000000
@@ -1555,10 +1555,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       VertAdjust = 0
     end
     object gtQRShape2: TQRShape
-      Left = 830
-      Top = 504
-      Width = 3
-      Height = 700
+      Left = 664
+      Top = 403
+      Width = 2
+      Height = 560
       Size.Values = (
         1481.666666666667000000
         1756.833333333333000000
@@ -1571,10 +1571,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       VertAdjust = 0
     end
     object gtQRShape3: TQRShape
-      Left = 704
-      Top = 504
-      Width = 8
-      Height = 700
+      Left = 563
+      Top = 403
+      Width = 6
+      Height = 560
       Size.Values = (
         1481.666666666667000000
         1489.604166666667000000
@@ -1587,10 +1587,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       VertAdjust = 0
     end
     object gtQRShape4: TQRShape
-      Left = 54
-      Top = 504
-      Width = 8
-      Height = 515
+      Left = 43
+      Top = 403
+      Width = 6
+      Height = 412
       Size.Values = (
         1090.083333333333000000
         113.770833333333300000
@@ -1603,10 +1603,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       VertAdjust = 0
     end
     object qrsdQElements: TQRSubDetail
-      Left = 47
-      Top = 584
-      Width = 945
-      Height = 30
+      Left = 38
+      Top = 467
+      Width = 756
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrsdQElementsBeforePrint
       Enabled = False
@@ -1623,15 +1623,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object lblWorktopSize: TQRLabel
-        Left = 401
-        Top = 3
-        Width = 110
-        Height = 24
+        Left = 320
+        Top = 2
+        Width = 89
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          848.783333333333300000
-          6.350000000000000000
-          232.833333333333300000)
+          50.270833333333330000
+          846.666666666666700000
+          5.291666666666667000
+          235.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1641,7 +1641,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1652,15 +1652,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object lblWorktopArea: TQRLabel
-        Left = 530
-        Top = 3
-        Width = 113
-        Height = 24
+        Left = 424
+        Top = 2
+        Width = 90
+        Height = 19
         Size.Values = (
-          50.800000000000000000
+          50.270833333333330000
           1121.833333333333000000
-          6.350000000000000000
-          239.183333333333300000)
+          5.291666666666667000
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1670,7 +1670,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1682,10 +1682,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object qrsdQCutOuts: TQRSubDetail
-      Left = 47
-      Top = 614
-      Width = 945
-      Height = 33
+      Left = 38
+      Top = 491
+      Width = 756
+      Height = 26
       AlignToBottom = False
       BeforePrint = qrsdQCutOutsBeforePrint
       Enabled = False
@@ -1693,7 +1693,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        69.850000000000000000
+        68.791666666666670000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1702,15 +1702,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblQuantity: TQRLabel
-        Left = 552
-        Top = 4
-        Width = 91
-        Height = 24
+        Left = 441
+        Top = 3
+        Width = 74
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          1168.400000000000000000
-          8.466666666666667000
-          192.616666666666700000)
+          50.270833333333330000
+          1166.812500000000000000
+          7.937500000000000000
+          195.791666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1720,7 +1720,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1731,15 +1731,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblCutOut: TQRLabel
-        Left = 431
-        Top = 4
-        Width = 81
-        Height = 24
+        Left = 344
+        Top = 3
+        Width = 66
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          912.283333333333300000
-          8.466666666666667000
-          171.450000000000000000)
+          50.270833333333330000
+          910.166666666666700000
+          7.937500000000000000
+          174.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1749,7 +1749,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1761,10 +1761,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object qrsdQEdges: TQRSubDetail
-      Left = 47
-      Top = 647
-      Width = 945
-      Height = 31
+      Left = 38
+      Top = 517
+      Width = 756
+      Height = 25
       AlignToBottom = False
       BeforePrint = qrsdQEdgesBeforePrint
       Enabled = False
@@ -1772,7 +1772,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        65.616666666666670000
+        66.145833333333330000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1781,14 +1781,14 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblLength: TQRLabel
-        Left = 562
-        Top = 3
-        Width = 80
-        Height = 24
+        Left = 450
+        Top = 2
+        Width = 64
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          1189.566666666667000000
-          6.350000000000000000
+          50.270833333333330000
+          1190.625000000000000000
+          5.291666666666667000
           169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1799,7 +1799,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1810,15 +1810,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblEdgeDescription: TQRLabel
-        Left = 359
-        Top = 4
-        Width = 152
-        Height = 24
+        Left = 289
+        Top = 3
+        Width = 120
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          759.883333333333300000
-          8.466666666666667000
-          321.733333333333300000)
+          50.270833333333330000
+          764.645833333333300000
+          7.937500000000000000
+          317.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1828,7 +1828,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1840,10 +1840,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
     object qrsdQExtras: TQRSubDetail
-      Left = 47
-      Top = 678
-      Width = 945
-      Height = 33
+      Left = 38
+      Top = 542
+      Width = 756
+      Height = 26
       AlignToBottom = False
       BeforePrint = qrsdQExtrasBeforePrint
       Enabled = False
@@ -1851,7 +1851,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        69.850000000000000000
+        68.791666666666670000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1860,15 +1860,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblExtraQuantity: TQRDBText
-        Left = 581
-        Top = 5
-        Width = 61
-        Height = 24
+        Left = 464
+        Top = 4
+        Width = 50
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          1229.783333333333000000
+          50.270833333333330000
+          1227.666666666667000000
           10.583333333333330000
-          129.116666666666700000)
+          132.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1879,7 +1879,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1892,15 +1892,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblExtraDescription: TQRLabel
-        Left = 360
-        Top = 4
-        Width = 151
-        Height = 24
+        Left = 288
+        Top = 3
+        Width = 121
+        Height = 19
         Size.Values = (
-          50.800000000000000000
+          50.270833333333330000
           762.000000000000000000
-          8.466666666666667000
-          319.616666666666700000)
+          7.937500000000000000
+          320.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1910,7 +1910,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

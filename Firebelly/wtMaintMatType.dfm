@@ -38,7 +38,6 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 344
   end
   object BitBtn2: TBitBtn
     Left = 354
@@ -52,7 +51,6 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
-    ExplicitTop = 344
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -62,7 +60,6 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
-    ExplicitTop = 341
   end
   object PageControl1: TPageControl
     Left = 8
@@ -1438,7 +1435,6 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Anchors = [akLeft, akBottom]
     Caption = 'Show Material Type Online'
     TabOrder = 2
-    ExplicitTop = 312
   end
   object edtDescription: TEdit
     Left = 85

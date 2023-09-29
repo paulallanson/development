@@ -56,8 +56,6 @@ object frmWTLUMatType: TfrmWTLUMatType
       item
         Width = 50
       end>
-    ExplicitTop = 386
-    ExplicitWidth = 680
   end
   object Panel1: TPanel
     Left = 0
@@ -67,8 +65,6 @@ object frmWTLUMatType: TfrmWTLUMatType
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 299
-    ExplicitWidth = 680
     DesignSize = (
       686
       87)

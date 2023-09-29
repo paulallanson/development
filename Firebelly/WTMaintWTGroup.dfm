@@ -11,10 +11,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -39,9 +37,9 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -51,8 +49,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -108,24 +106,16 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -143,8 +133,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     Top = 56
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -158,8 +148,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     Top = 56
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

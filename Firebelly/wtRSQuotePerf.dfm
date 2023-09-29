@@ -11,13 +11,11 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     369
     310)
-  PixelsPerInch = 96
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
@@ -41,7 +39,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -51,16 +48,17 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 217
     Height = 73
     Caption = 'Quote Date selection'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
@@ -99,8 +97,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -115,14 +111,14 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -137,15 +133,17 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
@@ -200,11 +198,11 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 28
     Top = 87
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
@@ -230,8 +228,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 8
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -275,6 +271,8 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 8
+    OnClick = btnExcelClick
   end
   object btnPreview: TButton
     Left = 93
@@ -287,7 +285,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = btnPreviewClick
   end
   object rdgrpContacts: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -297,15 +294,16 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     Items.Strings = (
       'All'
       'One Contact')
+    ParentBackground = False
     TabOrder = 10
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
+    ParentBackground = False
     TabOrder = 11
     object Label3: TLabel
       Left = 8
@@ -322,7 +320,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Contacts'
@@ -332,7 +329,6 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     end
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -344,6 +340,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 12
   end
   object qryContacts: TFDQuery

@@ -1,7 +1,4 @@
 object dtmdlCustJobs: TdtmdlCustJobs
-  OldCreateOrder = False
-  Left = 51
-  Top = 106
   Height = 467
   Width = 742
   object dtsJobs: TDataSource

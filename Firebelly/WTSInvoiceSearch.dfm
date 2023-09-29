@@ -11,13 +11,11 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     315
     344)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 18

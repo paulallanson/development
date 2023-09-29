@@ -11,13 +11,11 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     364
     315)
-  PixelsPerInch = 96
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
@@ -41,7 +39,6 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     OnClick = Button4Click
   end
   object rdgrpLeadSource: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -51,11 +48,11 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     Items.Strings = (
       'All'
       'One Source')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpLeadSourceClick
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -65,16 +62,17 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 3
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
     Height = 73
     Caption = 'Date selection'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 16
@@ -113,8 +111,6 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -129,14 +125,14 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -151,15 +147,17 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxLeadSource: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
@@ -175,7 +173,6 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       Height = 21
       Style = csDropDownList
       Color = clBtnFace
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Sources'
@@ -185,12 +182,12 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
@@ -255,11 +252,11 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 36
     Top = 87
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
@@ -289,7 +286,6 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -301,6 +297,7 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 12
   end
   object qryLeadSource: TFDQuery

@@ -1,30 +1,24 @@
 object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
   Left = 41
   Top = 104
-  Width = 932
-  Height = 578
   Caption = 'frmwtRPJobFittingTrade'
+  ClientHeight = 539
+  ClientWidth = 916
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpJobSheet: TQuickRep
     Left = 16
     Top = 0
     Width = 816
     Height = 1056
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -46,6 +40,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = Letter
+    Page.Continuous = False
     Page.Values = (
       50.000000000000000000
       2794.000000000000000000
@@ -59,13 +54,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Job Fitting Sheet'
     SnapToGrid = True
@@ -73,25 +71,28 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrgQuote: TQRGroup
       Left = 19
       Top = 1033
       Width = 759
       Height = 2
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrgQuoteAfterPrint
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         5.291666666666667000
         2008.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpJobSheet
       ReprintOnNewPage = False
@@ -101,13 +102,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       Top = 38
       Width = 759
       Height = 995
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -15
@@ -119,22 +115,22 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       Size.Values = (
         2632.604166666667000000
         2008.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRShape26: TQRShape
         Left = 568
         Top = 409
         Width = 185
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1502.833333333333000000
           1082.145833333333000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -144,16 +140,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 409
         Width = 131
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1579.562500000000000000
           1082.145833333333000000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -163,16 +157,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 409
         Width = 68
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1664.229166666667000000
           1082.145833333333000000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -182,16 +174,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 409
         Width = 10
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1735.666666666667000000
           1082.145833333333000000
           26.458333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsVertLine
         VertAdjust = 0
@@ -201,20 +191,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 4
         Width = 131
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1497.541666666667000000
           10.583333333333330000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'INSTALLATION'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -224,7 +211,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRDBText5: TQRDBText
@@ -232,20 +221,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 76
         Width = 417
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           317.500000000000000000
           201.083333333333300000
           1103.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Description'
@@ -256,7 +242,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel2: TQRLabel
@@ -264,20 +254,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 255
         Width = 33
         Height = 34
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           89.958333333333330000
           1502.833333333333000000
           674.687500000000000000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DATE:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -287,7 +273,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBText2: TQRDBText
@@ -295,20 +283,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 96
         Width = 24
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           1672.166666666667000000
           254.000000000000000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job'
@@ -319,7 +303,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel3: TQRLabel
@@ -327,20 +315,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 96
         Width = 45
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           1505.479166666667000000
           254.000000000000000000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'JOB No.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -350,7 +334,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBText4: TQRDBText
@@ -358,20 +344,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 104
         Width = 54
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           317.500000000000000000
           275.166666666666700000
           142.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
@@ -382,7 +364,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel5: TQRLabel
@@ -390,20 +376,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 104
         Width = 72
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           2.645833333333333000
           275.166666666666700000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CLIENT REF:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -413,7 +395,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape1: TQRShape
@@ -421,16 +405,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 228
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           603.250000000000000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -440,20 +422,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 136
         Width = 88
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           0.000000000000000000
           359.833333333333300000
           232.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'SITE ADDRESS:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -463,7 +441,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape2: TQRShape
@@ -471,16 +451,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 312
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           825.500000000000100000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -490,20 +468,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 385
         Width = 154
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           1502.833333333333000000
           1018.645833333333000000
           407.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'INSTALLATION / DELIVERY DATE:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -513,7 +487,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrrchTextInstallAddress: TQRRichText
@@ -521,16 +497,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 136
         Width = 209
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666666700000
           317.500000000000000000
           359.833333333333400000
           552.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
@@ -539,26 +513,25 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Height = -13
         Font.Name = 'Gill Sans MT'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
       object QRLabel12: TQRLabel
         Left = 568
         Top = 127
         Width = 42
         Height = 34
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           89.958333333333330000
           1502.833333333333000000
           336.020833333333300000
           111.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CLIENT:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -568,7 +541,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBText8: TQRDBText
@@ -576,20 +551,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 151
         Width = 145
         Height = 35
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           92.604166666666680000
           1502.833333333333000000
           399.520833333333400000
           383.645833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -600,7 +572,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel15: TQRLabel
@@ -608,20 +584,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 191
         Width = 95
         Height = 34
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           89.958333333333330000
           1502.833333333333000000
           505.354166666666700000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CLIENT CONTACT:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -631,7 +603,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel16: TQRLabel
@@ -639,20 +613,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 244
         Width = 233
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           645.583333333333300000
           616.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'ALL TEMPLATES TO BE TAKEN TO SITE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -662,7 +632,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel19: TQRLabel
@@ -670,20 +642,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 284
         Width = 76
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           751.416666666666700000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LOADED BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -693,7 +661,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel20: TQRLabel
@@ -701,20 +671,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 244
         Width = 193
         Height = 37
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           97.895833333333340000
           910.166666666666600000
           645.583333333333400000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'MATERIAL CHECKED PRIOR TO LOADING'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -724,7 +691,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel21: TQRLabel
@@ -732,20 +701,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 284
         Width = 19
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666700000
           751.416666666666700000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -755,7 +720,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape3: TQRShape
@@ -763,16 +730,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 300
         Width = 305
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           0.000000000000000000
           793.750000000000000000
           806.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -782,16 +747,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 300
         Width = 193
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           910.166666666666600000
           793.750000000000000000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -801,20 +764,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 76
         Width = 86
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           2.645833333333333000
           201.083333333333300000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DESCRIPTION:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -824,7 +783,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblContact: TQRLabel
@@ -832,20 +793,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 215
         Width = 91
         Height = 35
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           92.604166666666670000
           1502.833333333333000000
           568.854166666666700000
           240.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblContact'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -855,7 +812,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel7: TQRLabel
@@ -863,20 +822,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 328
         Width = 225
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           867.833333333333300000
           595.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'ALL MATERIAL TO BE TAKEN TO SITE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -886,7 +841,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel8: TQRLabel
@@ -894,20 +851,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 328
         Width = 193
         Height = 41
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           108.479166666666700000
           910.166666666666600000
           867.833333333333500000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'AMOUNT OF COMPONENTS TO TAKE TO SITE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -917,7 +871,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape7: TQRShape
@@ -925,16 +881,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 376
         Width = 305
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           0.000000000000000000
           994.833333333333400000
           806.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -944,20 +898,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 360
         Width = 76
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           952.500000000000000000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LOADED BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -967,7 +917,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape8: TQRShape
@@ -975,16 +927,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 392
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           1037.166666666667000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -993,16 +943,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Left = 472
         Top = 360
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333340000
           1248.833333333333000000
           952.500000000000000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1012,20 +960,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 408
         Width = 233
         Height = 41
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           108.479166666666700000
           0.000000000000000000
           1079.500000000000000000
           616.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'TEMPLATES CHECKED PRIOR TO INSTALLING / DELIVERING MATERIAL'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1035,7 +980,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel17: TQRLabel
@@ -1043,20 +990,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 408
         Width = 201
         Height = 41
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           108.479166666666700000
           910.166666666666600000
           1079.500000000000000000
           531.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'MATERIAL CHECKED PRIOR TO INSTALLATION / LEAVING SITE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1066,7 +1010,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel18: TQRLabel
@@ -1074,20 +1020,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 448
         Width = 19
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           1185.333333333333000000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1097,7 +1039,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape6: TQRShape
@@ -1105,16 +1049,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 464
         Width = 305
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           0.000000000000000000
           1227.666666666667000000
           806.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1124,16 +1066,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 480
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           1270.000000000000000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1143,20 +1083,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 448
         Width = 19
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666700000
           1185.333333333333000000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1166,7 +1102,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape10: TQRShape
@@ -1174,16 +1112,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 464
         Width = 193
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           910.166666666666600000
           1227.666666666667000000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1193,20 +1129,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 808
         Width = 116
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           2137.833333333333000000
           306.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FITTER COMMENTS'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1216,7 +1148,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape12: TQRShape
@@ -1224,16 +1158,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 704
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           1862.666666666667000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1243,20 +1175,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 496
         Width = 233
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           1312.333333333333000000
           616.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'IS THE JOB / DELIVERY COMPLETE?'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1266,7 +1195,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel27: TQRLabel
@@ -1274,20 +1205,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 496
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666600000
           1312.333333333333000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'YES / NO / NOT APPLICABLE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1297,7 +1225,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel28: TQRLabel
@@ -1305,20 +1235,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 632
         Width = 268
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           1672.166666666667000000
           709.083333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'IF NO, WHAT IS REQUIRED TO MAKE IT SO ?'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1328,7 +1254,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape13: TQRShape
@@ -1336,16 +1264,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 792
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           2095.500000000000000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1355,16 +1281,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = -1
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           -2.645833333333333000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1374,16 +1298,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 88
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           232.833333333333400000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1393,16 +1315,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 117
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           309.562500000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1412,16 +1332,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 175
         Width = 185
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           1502.833333333333000000
           463.020833333333400000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1431,16 +1349,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 239
         Width = 185
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           1502.833333333333000000
           632.354166666666800000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1450,19 +1366,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 279
         Width = 40
         Height = 35
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           92.604166666666670000
           1502.833333333333000000
           738.187500000000000000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDate
         Font.Charset = ANSI_CHARSET
@@ -1471,7 +1384,10 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRShape19: TQRShape
@@ -1479,16 +1395,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 705
         Width = 185
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333340000
           1502.833333333333000000
           1865.312500000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Brush.Color = clSilver
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1499,20 +1413,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 709
         Width = 116
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           1587.500000000000000000
           1875.895833333333000000
           306.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FOR OFFICE USE ONLY'
         Color = clSilver
         Font.Charset = ANSI_CHARSET
@@ -1522,7 +1432,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel29: TQRLabel
@@ -1530,20 +1442,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 321
         Width = 142
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           1502.833333333333000000
           849.312500000000000000
           375.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'INSTALLATION / DELIVERY BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1553,7 +1461,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape20: TQRShape
@@ -1561,16 +1471,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 369
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           976.312500000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1580,20 +1488,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 590
         Width = 184
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1502.833333333333000000
           1561.041666666667000000
           486.833333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'AMOUNT TAKEN'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1603,7 +1508,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel30: TQRLabel
@@ -1611,20 +1518,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 608
         Width = 9
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1502.833333333333000000
           1608.666666666667000000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1634,7 +1537,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRShape21: TQRShape
@@ -1642,16 +1547,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 630
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           1666.875000000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1661,20 +1564,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 741
         Width = 146
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1502.833333333333000000
           1960.562500000000000000
           386.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DATE COMPLETED JOB PASSED:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1684,7 +1583,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel32: TQRLabel
@@ -1692,20 +1593,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 808
         Width = 49
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1502.833333333333000000
           2137.833333333333000000
           129.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BY WHOM:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1715,7 +1612,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape22: TQRShape
@@ -1723,16 +1622,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 842
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           2227.791666666667000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1742,20 +1639,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 865
         Width = 129
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1502.833333333333000000
           2288.645833333333000000
           341.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PASSED FOR INVOICING BY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1765,7 +1658,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape23: TQRShape
@@ -1773,16 +1668,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 901
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           2383.895833333333000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1792,20 +1685,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 913
         Width = 185
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           1502.833333333333000000
           2415.645833333333000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'NETT COST OF PROBLEMS:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1815,7 +1705,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRShape24: TQRShape
@@ -1823,16 +1715,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 932
         Width = 185
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1502.833333333333000000
           2465.916666666667000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clRed
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1843,16 +1733,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 303
         Width = 185
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           1502.833333333333000000
           801.687500000000100000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1862,16 +1750,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 765
         Width = 185
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1502.833333333333000000
           2024.062500000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1881,16 +1767,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 765
         Width = 131
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1579.562500000000000000
           2024.062500000000000000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1900,16 +1784,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 765
         Width = 68
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1664.229166666667000000
           2024.062500000000000000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1919,16 +1801,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 765
         Width = 10
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1735.666666666667000000
           2024.062500000000000000
           26.458333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 3
         Shape = qrsVertLine
         VertAdjust = 0
@@ -1938,16 +1818,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 904
         Width = 321
         Height = 73
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           193.145833333333300000
           127.000000000000000000
           2391.833333333333000000
           849.312499999999900000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AutoStretch = False
         Color = clWindow
@@ -1956,22 +1834,23 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Height = -15
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
       object QRShape34: TQRShape
         Left = 0
         Top = 92
         Width = 537
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           0.000000000000000000
           243.416666666666700000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1981,16 +1860,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 121
         Width = 537
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           0.000000000000000000
           320.145833333333400000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2000,20 +1877,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 25
         Width = 131
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1497.541666666667000000
           66.145833333333340000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'DELIVERY'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2023,7 +1897,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel35: TQRLabel
@@ -2031,20 +1907,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 46
         Width = 131
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1497.541666666667000000
           121.708333333333300000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'ACCEPTANCE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2054,7 +1927,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel36: TQRLabel
@@ -2062,20 +1937,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 68
         Width = 131
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1497.541666666667000000
           179.916666666666700000
           346.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'REMEDIAL'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2085,7 +1957,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRShape36: TQRShape
@@ -2093,16 +1967,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 8
         Width = 15
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1947.333333333334000000
           21.166666666666670000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -2111,16 +1983,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 29
         Width = 15
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1947.333333333334000000
           76.729166666666680000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -2129,16 +1999,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 50
         Width = 15
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1947.333333333334000000
           132.291666666666700000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -2147,16 +2015,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 72
         Width = 15
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1947.333333333334000000
           190.500000000000000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -2165,20 +2031,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 508
         Width = 168
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1497.541666666667000000
           1344.083333333333000000
           444.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'BALANCE PAYMENT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2188,7 +2051,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRShape40: TQRShape
@@ -2196,16 +2061,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 512
         Width = 15
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1947.333333333334000000
           1354.666666666667000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -2214,16 +2077,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 668
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           1767.416666666667000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2233,20 +2094,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 675
         Width = 88
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           1608.666666666667000000
           1785.937500000000000000
           232.833333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'STAFF SIGNATURE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2256,7 +2113,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel39: TQRLabel
@@ -2264,20 +2123,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 453
         Width = 193
         Height = 36
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           95.250000000000000000
           1502.833333333333000000
           1198.562500000000000000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'INVOICE TO BE FORWARDED ON RECEIPT OF FINAL PAYMENT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2287,7 +2143,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRShape42: TQRShape
@@ -2295,16 +2153,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 494
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           1307.041666666667000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2314,16 +2170,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 574
         Width = 185
         Height = 9
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           23.812500000000000000
           1502.833333333333000000
           1518.708333333333000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 4
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2333,20 +2187,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 534
         Width = 184
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           1502.833333333333000000
           1412.875000000000000000
           486.833333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'AMOUNT REQ.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2356,7 +2207,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel41: TQRLabel
@@ -2364,20 +2217,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 553
         Width = 9
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1502.833333333333000000
           1463.145833333333000000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2387,7 +2236,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel42: TQRLabel
@@ -2395,20 +2246,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 539
         Width = 118
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           0.000000000000000000
           1426.104166666667000000
           312.208333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUSTOMER'#39'S SIGNATURE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2418,7 +2265,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRShape44: TQRShape
@@ -2426,16 +2275,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 552
         Width = 417
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           317.500000000000000000
           1460.500000000000000000
           1103.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2445,16 +2292,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 571
         Width = 465
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           190.500000000000000000
           1510.770833333333000000
           1230.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AutoStretch = False
         Color = clWindow
@@ -2463,6 +2308,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Height = -9
         Font.Name = 'Microsoft Sans Serif'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'and are subject to '
           'variation in colour with '
@@ -2479,20 +2327,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 560
         Width = 337
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           203.729166666666700000
           1481.666666666667000000
           891.645833333333200000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'I accept all items supplied are in good order and that granite /' +
           ' limestone / marble are'
@@ -2504,7 +2348,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 7
       end
       object QRLabel44: TQRLabel
@@ -2512,20 +2358,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 559
         Width = 105
         Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           37.041666666666670000
           1127.125000000000000000
           1479.020833333333000000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'products of nature'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2535,7 +2377,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel45: TQRLabel
@@ -2543,20 +2387,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 720
         Width = 115
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           1905.000000000000000000
           304.270833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'OFFICE CALL BACK'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2566,7 +2406,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel46: TQRLabel
@@ -2574,20 +2416,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 720
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666600000
           1905.000000000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'YES / NO / NOT APPLICABLE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2597,7 +2436,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel47: TQRLabel
@@ -2605,20 +2446,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 757
         Width = 65
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           2002.895833333333000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CONTACT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2628,7 +2465,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape45: TQRShape
@@ -2636,16 +2475,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 773
         Width = 473
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           169.333333333333300000
           2045.229166666667000000
           1251.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2655,16 +2492,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 880
         Width = 537
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           2328.333333333333000000
           1420.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 6
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2674,20 +2509,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 136
         Width = 105
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666700000
           359.833333333333300000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CONTACT NAME'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2697,7 +2528,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText3: TQRDBText
@@ -2705,20 +2538,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 156
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666600000
           412.750000000000100000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Name'
@@ -2729,7 +2559,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel76: TQRLabel
@@ -2737,20 +2571,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 184
         Width = 100
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666700000
           486.833333333333300000
           264.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PHONE NUMBER'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2760,7 +2590,9 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText6: TQRDBText
@@ -2768,20 +2600,17 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Top = 204
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           910.166666666666600000
           539.750000000000000000
           489.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Phone'
@@ -2792,7 +2621,11 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -2801,16 +2634,14 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       Top = 35
       Width = 313
       Height = 73
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Size.Values = (
         193.145833333333300000
         359.833333333333400000
         92.604166666666680000
         828.145833333333200000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Picture.Data = {
         07544269746D6170D2620100424DD26201000000000036000000280000006301
         00005500000001001800000000009C620100903D0000903D0000000000000000
@@ -5669,9 +5500,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 46
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
@@ -5689,9 +5519,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -5710,9 +5539,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
@@ -5727,9 +5555,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 126
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
@@ -5743,9 +5570,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 169
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -5758,9 +5584,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 99
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -5780,9 +5604,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 190
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -5807,9 +5629,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJStatus: TFDQuery
@@ -5824,19 +5644,13 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Date_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery

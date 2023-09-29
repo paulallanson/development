@@ -11,13 +11,11 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     784
     234)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -43,9 +41,9 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 390
@@ -56,8 +54,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -94,13 +92,13 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     OnClick = Button3Click
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 368
     Top = 50
     Width = 289
     Height = 100
     BorderStyle = bsSingle
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 7
     object imgWorktop: TImage
       Left = 1
@@ -1185,29 +1183,19 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1223,8 +1211,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Top = 56
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1238,8 +1226,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Top = 56
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1260,39 +1248,25 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

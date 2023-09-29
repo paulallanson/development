@@ -59,7 +59,6 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 499
     object Label1: TLabel
       Left = 16
       Top = 16

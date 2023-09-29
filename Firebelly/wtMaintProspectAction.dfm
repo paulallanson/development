@@ -72,14 +72,10 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Prospect_Action_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Prospect_Action'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -95,8 +91,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -110,8 +106,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

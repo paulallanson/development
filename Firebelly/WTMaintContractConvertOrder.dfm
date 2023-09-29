@@ -24,8 +24,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 4
-    ExplicitTop = 585
-    ExplicitWidth = 600
     DesignSize = (
       594
       45)
@@ -58,7 +56,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 387
     end
     object BitBtn2: TBitBtn
       Left = 463
@@ -70,7 +67,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      ExplicitLeft = 475
     end
   end
   object pnlReference: TPanel
@@ -81,8 +77,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 523
-    ExplicitWidth = 600
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -136,7 +130,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 600
     object Label2: TLabel
       Left = 16
       Top = 16
@@ -324,7 +317,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 600
     object Label4: TLabel
       Left = 16
       Top = 8

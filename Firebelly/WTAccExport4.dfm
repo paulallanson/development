@@ -23,11 +23,11 @@ object frmWTAccExport4: TfrmWTAccExport4
     OnClick = BitBtn1Click
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 321
     Height = 105
+    ParentBackground = False
     TabOrder = 1
     object RecordMemo: TMemo
       Left = 8

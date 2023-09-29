@@ -1,9 +1,9 @@
 object frmWTRSCustContDet: TfrmWTRSCustContDet
   Left = 49
   Top = 122
-  Width = 767
-  Height = 532
   Caption = 'Customer Contact Details'
+  ClientHeight = 493
+  ClientWidth = 751
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,21 +12,19 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 759
+    Width = 751
     Height = 117
     Align = alTop
     TabOrder = 0
     DesignSize = (
-      759
+      751
       117)
     object Label3: TLabel
       Left = 8
@@ -91,7 +89,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
@@ -103,7 +100,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = cbSortChange
       Items.Strings = (
@@ -117,7 +113,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -131,7 +126,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -163,7 +157,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
@@ -193,7 +186,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
@@ -236,16 +228,16 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 441
-    Width = 759
+    Top = 433
+    Width = 751
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      759
+      751
       41)
     object Panel1: TPanel
-      Left = 456
+      Left = 448
       Top = 1
       Width = 302
       Height = 39
@@ -262,8 +254,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = btnPreviewClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -278,6 +268,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnPreviewClick
       end
       object btnPrint: TBitBtn
         Left = 214
@@ -286,8 +278,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = btnPrintClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -302,6 +292,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnPrintClick
       end
       object btnExcel: TBitBtn
         Left = 37
@@ -310,8 +302,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         Height = 25
         Anchors = [akTop, akRight]
         Caption = 'Excel'
-        TabOrder = 2
-        OnClick = btnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -355,6 +345,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 2
+        OnClick = btnExcelClick
       end
     end
     object btnCancel: TBitBtn
@@ -363,14 +355,15 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Width = 75
       Height = 25
       Anchors = [akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 482
-    Width = 759
+    Top = 474
+    Width = 751
     Height = 19
     Panels = <
       item
@@ -386,8 +379,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
   object dbgrdContStatus: TDBGrid
     Left = 0
     Top = 117
-    Width = 759
-    Height = 324
+    Width = 751
+    Height = 316
     Align = alClient
     DataSource = dtsrcCurrentContStatus
     TabOrder = 3
@@ -491,7 +484,6 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Top = 160
   end
   object qryCustType: TFDQuery
-    AutoRefresh = True
     ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Type, Customer_Type.description'

@@ -27,7 +27,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 381
   end
   object Button4: TButton
     Left = 534
@@ -39,7 +38,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 381
   end
   object rdgrpReps: TRadioGroup
     Left = 16
@@ -213,7 +211,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
-    ExplicitTop = 381
   end
   object btnPreview: TButton
     Left = 104
@@ -224,7 +221,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Caption = 'P&review'
     TabOrder = 8
     OnClick = btnPreviewClick
-    ExplicitTop = 381
   end
   object grpbxReps: TGroupBox
     Left = 128

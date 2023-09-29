@@ -22,8 +22,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 169
-    ExplicitWidth = 512
     DesignSize = (
       518
       41)
@@ -51,7 +49,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 332
     end
     object BitBtn2: TBitBtn
       Left = 426
@@ -62,7 +59,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 420
     end
   end
   object Panel2: TPanel
@@ -73,7 +69,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 512
     object lblOrderType: TLabel
       Left = 8
       Top = 8
@@ -126,8 +121,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 512
-    ExplicitHeight = 112
     object Label2: TLabel
       Left = 5
       Top = 16

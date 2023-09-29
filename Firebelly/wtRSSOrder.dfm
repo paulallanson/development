@@ -46,7 +46,6 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
-    ExplicitTop = 176
   end
   object Button4: TButton
     Left = 283
@@ -57,7 +56,6 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
-    ExplicitTop = 176
   end
   object SelectLst: TListBox
     Left = 200
@@ -79,7 +77,6 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
-    ExplicitTop = 176
   end
   object btnEmail: TButton
     Left = 191
@@ -91,7 +88,6 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
-    ExplicitTop = 176
   end
   object chkbxprintLogo: TCheckBox
     Left = 8

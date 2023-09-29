@@ -1,22 +1,20 @@
 object frmWTMaintQExtra: TfrmWTMaintQExtra
   Left = 192
   Top = 107
-  Width = 569
-  Height = 246
   Caption = 'Maintain Extras'
+  ClientHeight = 207
+  ClientWidth = 553
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    561
-    215)
-  PixelsPerInch = 96
+    553
+    207)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 72
@@ -42,9 +40,9 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 291
@@ -55,17 +53,17 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 561
+    Width = 553
     Height = 169
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 16
@@ -204,9 +202,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Extra_Charge'
-        ParamType = ptUnknown
       end>
   end
   object dtsExtra: TDataSource
@@ -239,9 +235,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Extra_Charge'
-        ParamType = ptUnknown
       end>
   end
 end

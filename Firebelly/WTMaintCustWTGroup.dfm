@@ -11,14 +11,12 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     391
     280)
-  PixelsPerInch = 96
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -111,9 +109,9 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 10
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 280
@@ -124,8 +122,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 11
     NumGlyphs = 2
+    TabOrder = 11
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -201,8 +199,6 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 5
-    OnClick = btnDateEffectiveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -217,6 +213,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = btnDateEffectiveClick
   end
   object edtDateInEffective: TEdit
     Left = 96
@@ -233,8 +231,6 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 7
-    OnClick = btnDateInEffectiveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -249,6 +245,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = btnDateInEffectiveClick
   end
   object edtGroupDescription: TEdit
     Left = 96
@@ -278,9 +276,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Left = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object srcMaterialtype: TDataSource
@@ -299,9 +295,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object srcSupplier: TDataSource
@@ -328,49 +322,32 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Effective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ineffective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_For_General_Quoting'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -388,19 +365,15 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -413,13 +386,11 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -446,19 +417,13 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
 end

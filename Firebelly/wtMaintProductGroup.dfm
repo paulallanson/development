@@ -11,13 +11,11 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     356
     111)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -36,9 +34,9 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -49,8 +47,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -82,19 +80,13 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -111,8 +103,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -126,8 +118,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

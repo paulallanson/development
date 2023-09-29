@@ -11,9 +11,7 @@ object frmWTLoginError: TfrmWTLoginError
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo
     Left = 8
@@ -52,7 +50,8 @@ object frmWTLoginError: TfrmWTLoginError
     Top = 264
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 1
   end
 end

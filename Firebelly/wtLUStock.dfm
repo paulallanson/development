@@ -28,13 +28,12 @@ object frmWTLUStock: TfrmWTLUStock
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 728
+        Width = 720
       end>
-    ExplicitWidth = 730
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 715
+      Width = 711
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 44
@@ -98,13 +97,12 @@ object frmWTLUStock: TfrmWTLUStock
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 728
+        Width = 720
       end>
-    ExplicitWidth = 730
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 715
+      Width = 711
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -172,8 +170,6 @@ object frmWTLUStock: TfrmWTLUStock
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 355
-    ExplicitWidth = 730
     DesignSize = (
       726
       41)
@@ -193,7 +189,6 @@ object frmWTLUStock: TfrmWTLUStock
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = 655
     end
     object edtSearch: TEdit
       Left = 104
@@ -219,8 +214,6 @@ object frmWTLUStock: TfrmWTLUStock
       item
         Width = 50
       end>
-    ExplicitTop = 396
-    ExplicitWidth = 730
   end
   object imgLstHot: TImageList
     Left = 176
