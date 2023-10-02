@@ -1,7 +1,6 @@
 object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
   Left = 57
   Top = 101
-  AutoScroll = False
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Buy Print Orders'
   ClientHeight = 373
@@ -12,12 +11,10 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0

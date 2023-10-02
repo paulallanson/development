@@ -11,11 +11,9 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 336
@@ -40,8 +38,9 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 0
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 0
     end
   end
   object pnlHeader: TPanel
@@ -211,9 +210,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Top = 81
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryProdCatsTrue: TFDQuery
@@ -232,9 +230,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Top = 81
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryProdCatsTrueproduct_type: TIntegerField
       FieldName = 'product_type'
@@ -287,14 +284,10 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Top = 194
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'product_type'
-        ParamType = ptUnknown
       end>
   end
 end

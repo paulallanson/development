@@ -1,4 +1,4 @@
-﻿object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
+object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   Left = 415
   Top = 128
   BorderStyle = bsDialog
@@ -11,13 +11,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     423
     157)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 120
@@ -80,9 +78,6 @@
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -147,7 +142,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -157,9 +155,6 @@
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -224,7 +219,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object chkbxActive: TCheckBox
     Left = 33
@@ -244,8 +242,8 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -264,8 +262,8 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -284,24 +282,16 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity_Type_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Face_to_Face_Activity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Type'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -314,9 +304,7 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity_Type'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -335,8 +323,8 @@
     Top = 76
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

@@ -2,8 +2,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   Left = 286
   Top = 104
   Caption = 'Activity Reminder'
-  ClientHeight = 413
-  ClientWidth = 752
+  ClientHeight = 421
+  ClientWidth = 754
   Color = clBtnFace
   Constraints.MinHeight = 460
   Constraints.MinWidth = 770
@@ -20,11 +20,10 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 752
+    Width = 754
     Height = 65
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 762
     object dbtxtSubject: TDBText
       Left = 72
       Top = 8
@@ -155,8 +154,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 752
-    Height = 275
+    Width = 754
+    Height = 283
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -220,15 +219,13 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 340
-    Width = 752
+    Top = 348
+    Width = 754
     Height = 54
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 360
-    ExplicitWidth = 762
     DesignSize = (
-      752
+      754
       54)
     object btnComplete: TButton
       Left = 110
@@ -280,8 +277,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 394
-    Width = 752
+    Top = 402
+    Width = 754
     Height = 19
     Panels = <
       item
@@ -290,7 +287,5 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       item
         Width = 50
       end>
-    ExplicitTop = 414
-    ExplicitWidth = 762
   end
 end

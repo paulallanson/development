@@ -11,13 +11,11 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     489
     446)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -76,8 +74,9 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object OKBitBtn: TBitBtn
     Left = 392
@@ -87,8 +86,6 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Anchors = [akRight, akBottom]
     Caption = 'Add'
     Default = True
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -107,6 +104,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object AddMemo: TMemo
     Left = 321
@@ -163,9 +162,7 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object GetLastNoSQL: TFDQuery
@@ -178,9 +175,7 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -198,34 +193,24 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Prompt_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Question_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddQListSQL: TFDQuery
@@ -242,19 +227,13 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PT_Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryProdType: TFDQuery
@@ -282,9 +261,7 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
 end

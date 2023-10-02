@@ -11,13 +11,11 @@ object PBCapCatsFrm: TPBCapCatsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     454
     422)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -64,8 +62,9 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 1
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object OKBitBtn: TBitBtn
     Left = 363
@@ -75,8 +74,6 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Anchors = [akRight, akBottom]
     Caption = 'Add'
     Default = True
-    TabOrder = 2
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -95,6 +92,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = OKBitBtnClick
   end
   object AddMemo: TMemo
     Left = 302
@@ -163,9 +162,7 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object GetLastNoSQL: TFDQuery
@@ -178,9 +175,7 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -195,19 +190,13 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryProdType: TFDQuery
@@ -235,9 +224,7 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
 end
