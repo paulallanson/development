@@ -5,7 +5,6 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
   Height = 612
   HorzScrollBar.Range = 1200
   VertScrollBar.Range = 2000
-  AutoScroll = False
   Caption = 'STRPBxLabelsFrm'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,20 +12,14 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 14
   object STLabelsQuickReport: TQuickRep
     Left = 0
     Top = 0
     Width = 480
     Height = 378
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = STLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -44,7 +37,8 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Options = []
     Page.Columns = 1
     Page.Orientation = poPortrait
-    Page.PaperSize = NexusLabel
+    Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       0.000000000000000000
       1000.000000000000000000
@@ -58,37 +52,43 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRSubDetail
       Left = 0
       Top = 38
       Width = 480
       Height = 307
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        812.270833333333400000
+        812.270833333333300000
         1270.000000000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = STLabelsQuickReport
       DataSet = RepSQL
       PrintBefore = False
@@ -98,20 +98,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 94
         Width = 39
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           248.708333333333300000
           103.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = RepSQL
         DataField = 'Name'
@@ -122,7 +118,11 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblCust: TQRLabel
@@ -130,20 +130,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 94
         Width = 85
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           248.708333333333300000
           224.895833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUSTOMER: '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -153,7 +149,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblDesc: TQRLabel
@@ -161,20 +159,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 116
         Width = 95
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           306.916666666666700000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DESCRIPTION:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -184,7 +178,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object FromLbl: TQRLabel
@@ -193,20 +189,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Width = 52
         Height = 20
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           978.958333333333200000
           653.520833333333400000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FromLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -216,7 +208,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblBoxNo: TQRLabel
@@ -225,20 +219,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Width = 60
         Height = 20
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           677.333333333333400000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BOX NO:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -248,7 +238,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object NumberedLbl: TQRLabel
@@ -257,20 +249,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Width = 80
         Height = 20
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           732.895833333333400000
           656.166666666666800000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'NUMBERED'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -280,7 +268,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object BoxQtyCaptionlbl: TQRLabel
@@ -288,20 +278,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 224
         Width = 65
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           592.666666666666800000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'BOX QTY:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -311,7 +297,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblDate: TQRLabel
@@ -319,20 +307,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 280
         Width = 41
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           732.895833333333400000
           740.833333333333400000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DATE:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -342,7 +326,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object DeliveryDateLbl: TQRLabel
@@ -350,20 +336,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 280
         Width = 104
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           889.000000000000000000
           740.833333333333400000
           275.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DeliveryDateLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -373,7 +355,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel1: TQRLabel
@@ -381,20 +365,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 145
         Width = 74
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           383.645833333333400000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FORM REF:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -404,7 +384,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel2: TQRLabel
@@ -412,20 +394,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 169
         Width = 77
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           447.145833333333400000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'STOCK REF:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -435,7 +413,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel3: TQRLabel
@@ -443,20 +423,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 198
         Width = 140
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           13.229166666666670000
           523.875000000000000000
           370.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FORM DESCRIPTION:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -466,7 +442,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBTxtdesc: TQRDBText
@@ -474,20 +452,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 116
         Width = 109
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           306.916666666666700000
           288.395833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = RepSQL
         DataField = 'Part_Description'
@@ -498,7 +472,11 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBTxtPrt: TQRDBText
@@ -506,20 +484,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 169
         Width = 27
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           447.145833333333400000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = RepSQL
         DataField = 'Part'
@@ -530,7 +504,11 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLblBxqty: TQRLabel
@@ -538,20 +516,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 224
         Width = 76
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           592.666666666666800000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'QRLblBxqty'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -561,7 +535,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblFormRefid: TQRLabel
@@ -569,20 +545,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 145
         Width = 83
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           383.645833333333400000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblFormRefid'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -592,7 +564,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblFormRefDesc: TQRLabel
@@ -600,20 +574,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 198
         Width = 103
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           407.458333333333400000
           523.875000000000000000
           272.520833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblFormRefDesc'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -623,7 +593,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object gtlblFSCClaim: TQRLabel
@@ -631,20 +603,17 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Top = 282
         Width = 267
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           15.875000000000000000
           746.125000000000000000
           706.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'FSC Claim:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -654,7 +623,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -664,20 +635,16 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Top = 291
     Width = 59
     Height = 24
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
     Size.Values = (
       63.500000000000000000
       407.458333333333400000
       769.937500000000000000
       156.104166666666700000)
+    XLColumn = 0
+    XLNumFormat = nfGeneral
+    ActiveInPreview = False
     Alignment = taLeftJustify
     AlignToBand = False
-    AutoSize = True
-    AutoStretch = False
     Caption = 'FromLbl'
     Color = clWhite
     Font.Charset = ANSI_CHARSET
@@ -687,7 +654,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Font.Style = []
     ParentFont = False
     Transparent = False
-    WordWrap = True
+    ExportAs = exptText
+    WrapStyle = BreakOnSpaces
+    VerticalAlignment = tlTop
     FontSize = 12
   end
   object RepSQL: TFDQuery
@@ -715,9 +684,8 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SRCRep: TDataSource
@@ -735,9 +703,7 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFSCClaim: TFDQuery
@@ -750,9 +716,7 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Top = 142
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -1,40 +1,36 @@
 object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
   Left = 192
   Top = 114
-  Width = 1342
-  Height = 563
   Caption = 'Sales Invoice Details'
+  ClientHeight = 524
+  ClientWidth = 1326
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 488
-    Width = 1334
+    Top = 483
+    Width = 1326
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      1334
+      1326
       41)
     object btnExcel: TBitBtn
-      Left = 1064
+      Left = 1056
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 0
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -78,32 +74,35 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 0
+      OnClick = btnExcelClick
     end
     object pnlButton: TPanel
-      ParentBackground = False
-      Left = 1229
+      Left = 1221
       Top = 1
       Width = 104
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
         Width = 75
         Height = 25
+        Kind = bkClose
+        NumGlyphs = 2
         TabOrder = 0
         OnClick = btbtnCloseClick
-        Kind = bkClose
       end
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
     Top = 0
-    Width = 1334
-    Height = 488
+    Width = 1326
+    Height = 483
     Align = alClient
     DataSource = dtsSIAllDetails
     TabOrder = 1
@@ -287,9 +286,8 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     Top = 80
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qrySIAllDetailsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -420,9 +418,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     Top = 89
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ad_hoc_address'
-        ParamType = ptUnknown
       end>
   end
 end

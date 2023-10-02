@@ -717,6 +717,7 @@ begin
   {$ENDIF}
   Application.Initialize;
   Application.Title := 'Broker Print Management Information System';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdmBroker, dmBroker);
   Application.CreateForm(TfrmpbMainMenu, frmpbMainMenu);
   Application.CreateForm(TPBSendFaxFrm, PBSendFaxFrm);

@@ -2,7 +2,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   Left = 315
   Top = 122
   Caption = 'Maintain Non Conformance'
-  ClientHeight = 553
+  ClientHeight = 561
   ClientWidth = 787
   Color = clBtnFace
   Constraints.MinHeight = 600
@@ -20,16 +20,14 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 491
+    Top = 499
     Width = 787
     Height = 43
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 504
-    ExplicitWidth = 797
     object Panel4: TPanel
-      Left = 305
+      Left = 295
       Top = 1
       Width = 491
       Height = 41
@@ -97,27 +95,23 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 534
+    Top = 542
     Width = 787
     Height = 19
     Panels = <>
-    ExplicitTop = 547
-    ExplicitWidth = 797
   end
   object pnlNotes: TPanel
     Left = 0
     Top = 72
     Width = 787
-    Height = 338
+    Height = 346
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 797
-    ExplicitHeight = 351
     object pnlNCAdetails: TPanel
       Left = 1
       Top = 1
-      Width = 795
+      Width = 785
       Height = 100
       Align = alTop
       Caption = 'pnlNCAdetails'
@@ -126,7 +120,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object Panel5: TPanel
         Left = 1
         Top = 1
-        Width = 793
+        Width = 783
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -137,7 +131,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object memDetails: TMemo
         Left = 1
         Top = 21
-        Width = 793
+        Width = 783
         Height = 78
         Align = alClient
         ScrollBars = ssVertical
@@ -148,8 +142,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     object pnlResponse: TPanel
       Left = 1
       Top = 101
-      Width = 795
-      Height = 49
+      Width = 785
+      Height = 44
       Align = alClient
       Caption = 'pnlResponse'
       ParentBackground = False
@@ -157,7 +151,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object Panel7: TPanel
         Left = 1
         Top = 1
-        Width = 793
+        Width = 783
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -168,8 +162,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object memResponse: TMemo
         Left = 1
         Top = 21
-        Width = 793
-        Height = 27
+        Width = 783
+        Height = 22
         Align = alClient
         ScrollBars = ssVertical
         TabOrder = 1
@@ -178,8 +172,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     end
     object pnlAction: TPanel
       Left = 1
-      Top = 150
-      Width = 795
+      Top = 145
+      Width = 785
       Height = 100
       Align = alBottom
       Caption = 'pnlAction'
@@ -188,7 +182,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object Panel6: TPanel
         Left = 1
         Top = 1
-        Width = 793
+        Width = 783
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -199,7 +193,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object memAction: TMemo
         Left = 1
         Top = 21
-        Width = 793
+        Width = 783
         Height = 78
         Align = alClient
         ScrollBars = ssVertical
@@ -209,8 +203,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     end
     object pnlPrevent: TPanel
       Left = 1
-      Top = 250
-      Width = 795
+      Top = 245
+      Width = 785
       Height = 100
       Align = alBottom
       Caption = 'pnlPrevent'
@@ -219,7 +213,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object Panel9: TPanel
         Left = 1
         Top = 1
-        Width = 793
+        Width = 783
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -230,7 +224,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       object memPrevent: TMemo
         Left = 1
         Top = 21
-        Width = 793
+        Width = 783
         Height = 78
         Align = alClient
         ScrollBars = ssVertical
@@ -241,14 +235,12 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 410
+    Top = 418
     Width = 787
     Height = 81
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 423
-    ExplicitWidth = 797
     DesignSize = (
       787
       81)
@@ -421,7 +413,6 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 797
     DesignSize = (
       787
       72)
