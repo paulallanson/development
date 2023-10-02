@@ -1,29 +1,23 @@
 object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
   Left = 0
   Top = 154
-  Width = 1292
-  Height = 614
   Caption = 'Invoice Job Profitability Report'
+  ClientHeight = 575
+  ClientWidth = 1276
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 8
     Top = 8
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -56,13 +51,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Reps Product Category report'
     SnapToGrid = True
@@ -70,45 +68,45 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
       Left = 19
       Top = 38
       Width = 1085
       Height = 91
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         240.770833333333300000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
         Left = 394
         Top = 8
         Width = 297
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
+          60.854166666666670000
           1042.458333333333000000
           21.166666666666670000
           785.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoiced Job Profitability Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -118,7 +116,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
@@ -126,24 +126,22 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 32
         Width = 80
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1328.208333333333000000
-          84.666666666666680000
+          84.666666666666670000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period From: '
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblDept1: TQRLabel
@@ -151,20 +149,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          552.979166666666800000
+          552.979166666666700000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -174,7 +168,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept2: TQRLabel
@@ -182,20 +178,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          772.583333333333400000
+          772.583333333333300000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -205,7 +197,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept3: TQRLabel
@@ -213,20 +207,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           992.187500000000000000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -236,7 +226,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRSysData1: TQRSysData
@@ -244,19 +236,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 8
         Width = 42
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2725.208333333333000000
           21.166666666666670000
           111.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
@@ -265,7 +254,10 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRSysData2: TQRSysData
@@ -273,19 +265,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 20
         Width = 51
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2701.395833333333000000
-          52.916666666666660000
+          52.916666666666670000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -296,6 +285,8 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel15: TQRLabel
@@ -303,20 +294,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 29
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          58.208333333333340000
+          58.208333333333330000
           169.333333333333300000
-          76.729166666666680000)
+          76.729166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -326,7 +313,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel16: TQRLabel
@@ -334,20 +323,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 40
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          58.208333333333340000
+          58.208333333333330000
           201.083333333333300000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -357,7 +342,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel17: TQRLabel
@@ -365,20 +352,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 28
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           378.354166666666700000
           169.333333333333300000
-          74.083333333333340000)
+          74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Quantity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -388,7 +371,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel18: TQRLabel
@@ -396,20 +381,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 14
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           460.375000000000000000
           201.083333333333300000
           37.041666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -419,7 +400,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel19: TQRLabel
@@ -427,20 +410,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 22
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           346.604166666666700000
           201.083333333333300000
-          58.208333333333340000)
+          58.208333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Actual'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -450,7 +429,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel21: TQRLabel
@@ -458,20 +439,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          552.979166666666800000
+          552.979166666666700000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -481,7 +458,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel22: TQRLabel
@@ -489,20 +468,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 30
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          624.416666666666800000
+          624.416666666666700000
           201.083333333333300000
           79.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -512,7 +487,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel24: TQRLabel
@@ -520,20 +497,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          844.020833333333500000
+          844.020833333333300000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -543,7 +516,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel25: TQRLabel
@@ -551,20 +526,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          772.583333333333400000
+          772.583333333333300000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -574,7 +545,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel27: TQRLabel
@@ -582,20 +555,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1060.979166666667000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -605,7 +574,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel28: TQRLabel
@@ -613,20 +584,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          994.833333333333400000
+          994.833333333333300000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -636,7 +603,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept4: TQRLabel
@@ -644,20 +613,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1209.145833333333000000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -667,7 +632,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept5: TQRLabel
@@ -675,20 +642,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1428.750000000000000000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -698,7 +661,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept6: TQRLabel
@@ -706,20 +671,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1648.354166666667000000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -729,7 +690,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel34: TQRLabel
@@ -737,20 +700,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1209.145833333333000000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -760,7 +719,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel35: TQRLabel
@@ -768,20 +729,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1275.291666666667000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -791,7 +748,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel37: TQRLabel
@@ -799,20 +758,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1497.541666666667000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -822,7 +777,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel38: TQRLabel
@@ -830,20 +787,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1431.395833333333000000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -853,7 +806,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel40: TQRLabel
@@ -861,20 +816,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1717.145833333333000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -884,7 +835,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel41: TQRLabel
@@ -892,20 +845,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1651.000000000000000000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -915,7 +864,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblDept7: TQRLabel
@@ -923,20 +874,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1867.958333333333000000
           169.333333333333300000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Data Processing'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -946,7 +893,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel43: TQRLabel
@@ -954,20 +903,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1870.604166666667000000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -977,7 +922,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel44: TQRLabel
@@ -985,20 +932,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1936.750000000000000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1008,7 +951,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel45: TQRLabel
@@ -1016,20 +961,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 18
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2121.958333333333000000
           169.333333333333300000
           47.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1039,7 +980,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel47: TQRLabel
@@ -1047,20 +990,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 17
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2066.395833333333000000
           201.083333333333300000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1070,7 +1009,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel48: TQRLabel
@@ -1078,20 +1019,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 32
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2153.708333333333000000
           201.083333333333300000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Est. Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1101,7 +1038,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel29: TQRLabel
@@ -1109,20 +1048,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 41
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2389.187500000000000000
           169.333333333333300000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoiced GP'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1132,7 +1067,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblAnalysis1: TQRLabel
@@ -1140,20 +1077,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 30
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2304.520833333333000000
           201.083333333333300000
           79.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Print GP'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1163,7 +1096,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblAnalysis2: TQRLabel
@@ -1171,20 +1106,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 29
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2410.354166666667000000
           201.083333333333300000
-          76.729166666666680000)
+          76.729166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Mail GP'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1194,7 +1125,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblAnalysis3: TQRLabel
@@ -1202,20 +1135,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2513.541666666667000000
           201.083333333333300000
-          82.020833333333340000)
+          82.020833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Work GP'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1225,7 +1154,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel49: TQRLabel
@@ -1233,20 +1164,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 64
         Width = 61
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2677.583333333333000000
           169.333333333333300000
           161.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Work Contribution'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1256,7 +1183,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel50: TQRLabel
@@ -1264,20 +1193,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 22
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2653.770833333333000000
           201.083333333333300000
-          58.208333333333340000)
+          58.208333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Actual'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1287,7 +1212,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel52: TQRLabel
@@ -1295,20 +1222,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 76
         Width = 34
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2764.895833333333000000
           201.083333333333300000
-          89.958333333333340000)
+          89.958333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Estimated'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1318,7 +1241,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -1327,18 +1252,15 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 129
       Width = 1085
       Height = 16
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        42.333333333333340000
+        42.333333333333330000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'Customer_Name'
       FooterBand = qrgFootCustomer
       Master = QRSubDetail1
@@ -1348,20 +1270,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 2
         Width = 63
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           169.333333333333300000
           5.291666666666667000
           166.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1372,7 +1290,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel1: TQRLabel
@@ -1380,20 +1302,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 2
         Width = 41
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
           5.291666666666667000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1403,7 +1321,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -1412,19 +1332,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 145
       Width = 1085
       Height = 16
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        42.333333333333340000
+        42.333333333333330000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       PrintBefore = False
@@ -1434,20 +1351,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 0
         Width = 43
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
-          84.666666666666680000
+          84.666666666666670000
           0.000000000000000000
           113.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag'
@@ -1458,7 +1371,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1467,40 +1384,35 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 257
       Width = 1085
       Height = 40
-      Frame.Color = clBlack
       Frame.DrawTop = True
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = False
       BeforePrint = QRBand3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel7: TQRLabel
         Left = 8
         Top = 14
         Width = 41
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
           37.041666666666670000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Grand Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1510,7 +1422,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost1: TQRLabel
@@ -1518,20 +1432,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          529.166666666666800000
+          529.166666666666700000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1541,7 +1451,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost1: TQRLabel
@@ -1549,20 +1461,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          632.354166666666800000
+          632.354166666666700000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1572,7 +1480,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost2: TQRLabel
@@ -1580,20 +1490,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           746.125000000000000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1603,7 +1509,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost2: TQRLabel
@@ -1611,20 +1519,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          844.020833333333500000
+          844.020833333333300000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1634,7 +1538,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost3: TQRLabel
@@ -1642,20 +1548,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          973.666666666666900000
+          973.666666666666700000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1665,7 +1567,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost3: TQRLabel
@@ -1673,20 +1577,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1076.854166666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1696,7 +1596,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost4: TQRLabel
@@ -1704,20 +1606,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1185.333333333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1727,7 +1625,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost4: TQRLabel
@@ -1735,20 +1635,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1288.520833333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1758,7 +1654,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost5: TQRLabel
@@ -1766,20 +1664,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1418.166666666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1789,7 +1683,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost5: TQRLabel
@@ -1797,20 +1693,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1510.770833333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1820,7 +1712,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost6: TQRLabel
@@ -1828,20 +1722,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1629.833333333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1851,7 +1741,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost6: TQRLabel
@@ -1859,20 +1751,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1733.020833333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1882,7 +1770,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptCost7: TQRLabel
@@ -1890,20 +1780,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1846.791666666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1913,7 +1799,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstCost7: TQRLabel
@@ -1921,20 +1809,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1949.979166666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1944,7 +1828,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalReptCost: TQRLabel
@@ -1952,20 +1838,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2053.166666666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1975,7 +1857,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalReptEstCost: TQRLabel
@@ -1983,20 +1867,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2172.229166666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2006,7 +1886,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptAnalysis1: TQRLabel
@@ -2014,20 +1896,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2315.104166666667000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2037,7 +1915,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptAnalysis2: TQRLabel
@@ -2045,20 +1925,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2420.937500000000000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2068,7 +1944,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptAnalysis3: TQRLabel
@@ -2076,20 +1954,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2524.125000000000000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2099,7 +1973,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptActContrib: TQRLabel
@@ -2107,20 +1983,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2645.833333333333000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2130,7 +2002,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblReptEstContrib: TQRLabel
@@ -2138,20 +2012,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 11
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2770.187500000000000000
           29.104166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2161,7 +2031,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -2170,15 +2042,10 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 225
       Width = 1085
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrgFootCustomerAfterPrint
       AlignToBottom = False
       BeforePrint = qrgFootCustomerBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -2188,28 +2055,26 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        84.666666666666680000
+        84.666666666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText6: TQRDBText
         Left = 126
         Top = 11
         Width = 58
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           333.375000000000000000
           29.104166666666670000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -2220,7 +2085,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost1: TQRLabel
@@ -2228,20 +2097,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          529.166666666666800000
+          529.166666666666700000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2251,7 +2116,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost1: TQRLabel
@@ -2259,20 +2126,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          632.354166666666800000
+          632.354166666666700000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2282,7 +2145,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost2: TQRLabel
@@ -2290,20 +2155,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           746.125000000000000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2313,7 +2174,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost2: TQRLabel
@@ -2321,20 +2184,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          844.020833333333500000
+          844.020833333333300000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2344,7 +2203,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost3: TQRLabel
@@ -2352,20 +2213,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          973.666666666666900000
+          973.666666666666700000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2375,7 +2232,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost3: TQRLabel
@@ -2383,20 +2242,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1076.854166666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2406,7 +2261,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost4: TQRLabel
@@ -2414,20 +2271,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1185.333333333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2437,7 +2290,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost4: TQRLabel
@@ -2445,20 +2300,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1288.520833333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2468,7 +2319,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost5: TQRLabel
@@ -2476,20 +2329,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1418.166666666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2499,7 +2348,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost5: TQRLabel
@@ -2507,20 +2358,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1510.770833333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2530,7 +2377,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost6: TQRLabel
@@ -2538,20 +2387,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1629.833333333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2561,7 +2406,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost6: TQRLabel
@@ -2569,20 +2416,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1733.020833333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2592,7 +2435,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustCost7: TQRLabel
@@ -2600,20 +2445,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1846.791666666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2623,7 +2464,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstCost7: TQRLabel
@@ -2631,20 +2474,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1949.979166666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2654,7 +2493,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalCustCost: TQRLabel
@@ -2662,20 +2503,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2053.166666666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2685,7 +2522,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalCustEstCost: TQRLabel
@@ -2693,20 +2532,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2172.229166666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2716,7 +2551,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustAnalysis1: TQRLabel
@@ -2724,20 +2561,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2315.104166666667000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2747,7 +2580,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustAnalysis2: TQRLabel
@@ -2755,20 +2590,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2420.937500000000000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2778,7 +2609,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustAnalysis3: TQRLabel
@@ -2786,20 +2619,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2524.125000000000000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2809,7 +2638,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustActContrib: TQRLabel
@@ -2817,20 +2648,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2645.833333333333000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2840,7 +2667,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCustEstContrib: TQRLabel
@@ -2848,20 +2677,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2770.187500000000000000
           31.750000000000000000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2871,7 +2696,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRShape1: TQRShape
@@ -2879,16 +2706,14 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 0
         Width = 889
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           529.166666666666800000
           0.000000000000000000
           2352.145833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -2899,19 +2724,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 161
       Width = 1085
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666680000
+        84.666666666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QRSubDetail1
       DataSet = qryDataCollect
       PrintBefore = False
@@ -2921,20 +2743,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 5
         Width = 216
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           105.833333333333300000
           13.229166666666670000
           571.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryDataCollect
         DataField = 'Process_Group.Process_Group_Description'
@@ -2945,7 +2763,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText8: TQRDBText
@@ -2953,20 +2775,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 5
         Width = 109
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           762.000000000000000000
           13.229166666666670000
-          288.395833333333400000)
+          288.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryDataCollect
         DataField = 'Total_Production_Cost'
@@ -2977,7 +2795,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -2985,24 +2807,22 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 8
         Width = 190
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1100.666666666667000000
           21.166666666666670000
-          502.708333333333400000)
+          502.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'THIS IS A DATA COLLECT LINE'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -3011,20 +2831,17 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       Top = 193
       Width = 1085
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRSubDetail3AfterPrint
       AlignToBottom = False
       BeforePrint = QRSubDetail3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666680000
+        84.666666666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QRSubDetail1
       PrintBefore = False
       PrintIfEmpty = True
@@ -3033,20 +2850,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          529.166666666666800000
+          529.166666666666700000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3056,7 +2869,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRDBText2: TQRDBText
@@ -3064,20 +2879,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 0
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           63.500000000000000000
           0.000000000000000000
-          82.020833333333340000)
+          82.020833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag'
@@ -3088,7 +2899,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRDBText3: TQRDBText
@@ -3096,20 +2911,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 12
         Width = 74
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           63.500000000000000000
           31.750000000000000000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag_Description'
@@ -3120,7 +2931,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRDBText7: TQRDBText
@@ -3128,20 +2943,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 0
         Width = 28
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           330.729166666666700000
           0.000000000000000000
-          74.083333333333340000)
+          74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Quantity'
@@ -3152,7 +2963,11 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost1: TQRLabel
@@ -3160,20 +2975,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          632.354166666666800000
+          632.354166666666700000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3183,7 +2994,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost2: TQRLabel
@@ -3191,20 +3004,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           746.125000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3214,7 +3023,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost2: TQRLabel
@@ -3222,20 +3033,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          844.020833333333500000
+          844.020833333333300000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3245,7 +3052,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost3: TQRLabel
@@ -3253,20 +3062,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
-          973.666666666666900000
+          973.666666666666700000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3276,7 +3081,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost3: TQRLabel
@@ -3284,20 +3091,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1076.854166666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3307,7 +3110,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost4: TQRLabel
@@ -3315,20 +3120,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1185.333333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3338,7 +3139,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost4: TQRLabel
@@ -3346,20 +3149,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1288.520833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3369,7 +3168,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost5: TQRLabel
@@ -3377,20 +3178,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1418.166666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3400,7 +3197,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost5: TQRLabel
@@ -3408,20 +3207,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1510.770833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3431,7 +3226,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost6: TQRLabel
@@ -3439,20 +3236,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1629.833333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3462,7 +3255,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost6: TQRLabel
@@ -3470,20 +3265,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1733.020833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3493,7 +3284,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCost7: TQRLabel
@@ -3501,20 +3294,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1846.791666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3524,7 +3313,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblestCost7: TQRLabel
@@ -3532,20 +3323,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1949.979166666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3555,7 +3342,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalCost: TQRLabel
@@ -3563,20 +3352,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2053.166666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3586,7 +3371,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalEstCost: TQRLabel
@@ -3594,20 +3381,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2172.229166666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3617,7 +3400,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalAnalysis1: TQRLabel
@@ -3625,20 +3410,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2315.104166666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3648,7 +3429,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalAnalysis2: TQRLabel
@@ -3656,20 +3439,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2420.937500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3679,7 +3458,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblTotalAnalysis3: TQRLabel
@@ -3687,20 +3468,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2524.125000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3710,7 +3487,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActContrib: TQRLabel
@@ -3718,20 +3497,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2645.833333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3741,7 +3516,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblEstContrib: TQRLabel
@@ -3749,20 +3526,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2770.187500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3772,7 +3545,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblEstQuantity: TQRLabel
@@ -3780,20 +3555,16 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           423.333333333333300000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3803,7 +3574,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -3860,24 +3633,18 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryDataCollect: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsReport
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT job_bag_time_log.Job_Bag,'
       #9'Process_Group.Sequence_no,'
@@ -3952,14 +3719,10 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Top = 38
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -3987,9 +3750,7 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryCatAnalysis: TFDQuery

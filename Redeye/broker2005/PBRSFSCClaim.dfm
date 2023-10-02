@@ -1,40 +1,38 @@
 object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
   Left = 277
   Top = 155
-  Width = 731
-  Height = 241
   Caption = 'FSC and PEFC Material Claim Report'
+  ClientHeight = 202
+  ClientWidth = 715
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 166
-    Width = 723
+    Top = 161
+    Width = 715
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      723
+      715
       41)
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 491
+      Left = 483
       Top = 0
       Width = 232
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewReportBitBtn: TBitBtn
         Left = 30
@@ -42,8 +40,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -58,6 +54,8 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -65,8 +63,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -81,6 +77,8 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -89,18 +87,17 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 413
+      Left = 405
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Excel'
-      TabOrder = 2
-      OnClick = btbtnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -144,16 +141,18 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 2
+      OnClick = btbtnExcelClick
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 723
-    Height = 166
+    Width = 715
+    Height = 161
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 456
@@ -212,7 +211,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Caption = 'To Delivery Date:'
     end
     object rgFSC: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 121
@@ -222,15 +220,16 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Items.Strings = (
         'All Claims'
         'One Claim')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgFSCClick
     end
     object FSCPanel: TPanel
-      ParentBackground = False
       Left = 137
       Top = 14
       Width = 304
       Height = 50
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblRep: TLabel
@@ -266,7 +265,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       end
     end
     object rgProductType: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 88
       Width = 121
@@ -276,15 +274,16 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Items.Strings = (
         'All Product Types'
         'One Product Type')
+      ParentBackground = False
       TabOrder = 2
       OnClick = rgProductTypeClick
     end
     object pnlPTSearch: TPanel
-      ParentBackground = False
       Left = 136
       Top = 91
       Width = 305
       Height = 57
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object lblCustBran: TLabel
@@ -337,7 +336,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       OnExit = DateToEditExit
     end
     object RdGrpRepType: TRadioGroup
-      ParentBackground = False
       Left = 612
       Top = 11
       Width = 93
@@ -347,6 +345,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Items.Strings = (
         'Summary'
         'Detail')
+      ParentBackground = False
       TabOrder = 6
     end
     object chkbxPageBreak: TCheckBox
@@ -369,11 +368,11 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Visible = False
     end
     object pnlExportPrgrss: TPanel
-      ParentBackground = False
       Left = 212
       Top = 55
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 9
       Visible = False
       object lblExporting: TLabel
@@ -393,7 +392,6 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       end
     end
     object rdgrpClaimType: TRadioGroup
-      ParentBackground = False
       Left = 612
       Top = 83
       Width = 93
@@ -404,6 +402,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
         'FSC'
         'PEFC'
         'Both')
+      ParentBackground = False
       TabOrder = 10
     end
   end

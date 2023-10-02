@@ -68,7 +68,6 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     Anchors = [akLeft, akBottom]
     Caption = 'Type here to narrow the search'
     TabOrder = 1
-    ExplicitTop = 275
     object NameEdit: TEdit
       Left = 8
       Top = 16
@@ -164,7 +163,6 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    ExplicitTop = 279
   end
   object CloseBitBtn: TBitBtn
     Left = 344
@@ -175,7 +173,6 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitTop = 307
   end
   object FuncGrpBox: TGroupBox
     Left = 336

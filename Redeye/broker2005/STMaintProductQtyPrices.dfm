@@ -26,8 +26,6 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 487
-    ExplicitWidth = 816
     object OKBitBtn: TBitBtn
       Left = 320
       Top = 7
@@ -196,8 +194,6 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     OnKeyPress = sgDetailsKeyPress
     OnKeyUp = sgDetailsKeyUp
     OnSelectCell = sgDetailsSelectCell
-    ExplicitWidth = 816
-    ExplicitHeight = 430
     ColWidths = (
       20
       96
@@ -214,7 +210,6 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Height = 57
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 816
     object Label1: TLabel
       Left = 8
       Top = 8

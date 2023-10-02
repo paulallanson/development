@@ -20,8 +20,6 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     Height = 40
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 285
-    ExplicitWidth = 701
     DesignSize = (
       691
       40)
@@ -163,8 +161,6 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     Height = 272
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 701
-    ExplicitHeight = 285
     object pnlExportPrgrss: TPanel
       Left = 208
       Top = 115

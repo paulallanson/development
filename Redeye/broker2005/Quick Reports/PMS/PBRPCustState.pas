@@ -363,16 +363,15 @@ end;
 procedure TPBRPCustStateFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
-  TotVatQRLbl.caption := formatfloat('0.00',rVat);
-  InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloatDef(TotGoodsQRLbl.Caption, 0, FormatSettings)+StrToFloatDef(TotVatQRlbl.caption)), 0, FormatSettings);
+  TotGoodsQRLbl.caption := formatfloat('0.00', rGoods);
+  TotVatQRLbl.caption := formatfloat('0.00', rVat);
+  InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloatDef(TotGoodsQRLbl.Caption, 0, FormatSettings)+StrToFloatDef(TotVatQRlbl.caption, 0, FormatSettings)));
 end;
 
-procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;
-  BandPrinted: Boolean);
+procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand; BandPrinted: Boolean);
 begin
-rvat := 0.00;
-rgoods := 0.00;
+  rvat := 0.00;
+  rgoods := 0.00;
 end;
 
 end.

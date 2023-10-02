@@ -5,7 +5,6 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
   Height = 544
   HorzScrollBar.Range = 1200
   VertScrollBar.Range = 2000
-  AutoScroll = False
   Caption = 'Job Bag Reel Labels'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,20 +12,14 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = 8
     Top = 0
     Width = 578
     Height = 578
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -45,6 +38,7 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = Custom
+    Page.Continuous = False
     Page.Values = (
       450.000000000000000000
       1530.000000000000000000
@@ -58,37 +52,43 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRSubDetail
       Left = 19
       Top = 19
       Width = 540
       Height = 334
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        883.708333333333400000
+        883.708333333333300000
         1428.750000000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = PBLabelsQuickReport
       DataSet = JBDelivSQL
       PrintBefore = False
@@ -98,20 +98,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 272
         Width = 97
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666660000
           42.333333333333340000
           719.666666666666800000
           256.645833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Numbering:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -121,7 +118,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object FromLbl: TQRLabel
@@ -129,20 +128,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 272
         Width = 212
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           330.729166666666700000
           719.666666666666800000
           560.916666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'FromLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -152,7 +148,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object JBNumberLbl: TQRLabel
@@ -160,20 +158,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 194
         Width = 146
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1034.520833333333000000
           513.291666666666800000
           386.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'XXXXXXX'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -183,7 +178,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object BoxQuantityLbl: TQRLabel
@@ -191,20 +188,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 194
         Width = 58
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           330.729166666666700000
           513.291666666666800000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'BoxQuantityLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -214,7 +208,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRDBCustOrderRef: TQRDBText
@@ -222,20 +218,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 231
         Width = 148
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           330.729166666666700000
           611.187500000000000000
           391.583333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = JBDelivSQL
         DataField = 'Cust_Order_no'
@@ -246,7 +239,11 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object lblCustomer: TQRLabel
@@ -254,20 +251,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 110
         Width = 84
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           330.729166666666700000
           291.041666666666700000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblCustomer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -277,7 +270,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel2: TQRLabel
@@ -285,20 +280,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 110
         Width = 82
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          42.333333333333340000
+          52.916666666666670000
+          42.333333333333330000
           291.041666666666700000
-          216.958333333333400000)
+          216.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -308,7 +299,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel3: TQRLabel
@@ -316,20 +309,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 194
         Width = 68
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          42.333333333333340000
+          52.916666666666670000
+          42.333333333333330000
           513.291666666666700000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Qty:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -339,7 +328,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel4: TQRLabel
@@ -347,20 +338,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 231
         Width = 75
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          42.333333333333340000
+          52.916666666666670000
+          42.333333333333330000
           611.187500000000000000
           198.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cust O/N:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -370,7 +357,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel5: TQRLabel
@@ -378,20 +367,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 194
         Width = 95
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          740.833333333333400000
+          52.916666666666670000
+          740.833333333333300000
           513.291666666666700000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Number'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -401,7 +386,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel6: TQRLabel
@@ -409,20 +396,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 231
         Width = 83
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          740.833333333333400000
+          52.916666666666670000
+          740.833333333333300000
           611.187500000000000000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Prod Date:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -432,7 +415,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object qrmCompany: TQRMemo
@@ -440,20 +425,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 8
         Width = 193
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666667000000
           910.166666666667000000
           21.166666666666700000
           510.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -462,7 +444,8 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object ReportImage: TQRImage
@@ -470,16 +453,14 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 7
         Width = 305
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666666700000
           47.625000000000000000
           18.520833333333330000
           806.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Center = True
         Stretch = True
       end
@@ -488,20 +469,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 138
         Width = 321
         Height = 37
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           97.895833333333340000
           330.729166666666700000
           365.125000000000000000
           849.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -513,7 +491,8 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
           'Line2')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 12
       end
       object QRLabel7: TQRLabel
@@ -521,20 +500,16 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Top = 138
         Width = 95
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          52.916666666666660000
-          42.333333333333340000
+          52.916666666666670000
+          42.333333333333330000
           365.125000000000000000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -544,7 +519,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
     end
@@ -553,20 +530,17 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
       Top = 250
       Width = 144
       Height = 19
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Size.Values = (
         50.270833333333330000
         1082.145833333333000000
         661.458333333333400000
         381.000000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Alignment = taLeftJustify
       AlignToBand = False
       AutoSize = False
-      AutoStretch = False
       Caption = 'DeliveryDateLbl'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
@@ -576,7 +550,9 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
       Font.Style = []
       ParentFont = False
       Transparent = False
-      WordWrap = True
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
       FontSize = 12
     end
   end
@@ -606,9 +582,8 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object JBDelivSRC: TDataSource
@@ -636,14 +611,10 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -661,9 +632,7 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -681,9 +650,7 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -704,14 +671,10 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource
@@ -743,9 +706,7 @@ object PBRPJobBagLabelsReelsFrm: TPBRPJobBagLabelsReelsFrm
     Top = 310
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

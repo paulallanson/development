@@ -20,8 +20,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Width = 1461
     Height = 19
     Panels = <>
-    ExplicitTop = -19
-    ExplicitWidth = 148
   end
   object Panel1: TPanel
     Left = 1291
@@ -32,8 +30,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = -22
-    ExplicitHeight = 265
     DesignSize = (
       170
       396)
@@ -85,7 +81,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
-      ExplicitTop = 238
     end
   end
   object Panel3: TPanel
@@ -98,8 +93,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = -278
-    ExplicitWidth = 148
     object Panel5: TPanel
       Left = 0
       Top = 0
@@ -119,7 +112,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = -22
       DesignSize = (
         170
         259)
@@ -150,7 +142,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       View3D = False
       Align = alClient
       TabOrder = 2
-      ExplicitWidth = 967
       DefaultCanvas = 'TGDIPlusCanvas'
       ColorPaletteIndex = 13
       object BarSeries1: TBarSeries
@@ -210,7 +201,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 148
   end
   object Panel2: TPanel
     Left = 0
@@ -221,7 +211,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
-    ExplicitHeight = 265
   end
   object dbChart1: TDBChart
     Left = 89
@@ -239,8 +228,6 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     View3D = False
     Align = alClient
     TabOrder = 5
-    ExplicitWidth = 967
-    ExplicitHeight = 265
     DefaultCanvas = 'TGDIPlusCanvas'
     ColorPaletteIndex = 13
     object Series1: TBarSeries
@@ -312,24 +299,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 305
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryYear2Chart1: TFDQuery
@@ -352,24 +335,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 361
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryYear3Chart1: TFDQuery
@@ -392,24 +371,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 425
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryYear1Chart2: TFDQuery
@@ -432,24 +407,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 305
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryYears: TFDQuery
@@ -485,24 +456,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 361
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryYear3Chart2: TFDQuery
@@ -525,24 +492,20 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 425
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'First_Period'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Last_Period'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'First_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Last_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryGetYearPeriods: TFDQuery
@@ -555,9 +518,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Top = 265
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period_Year'
-        ParamType = ptUnknown
       end>
   end
 end

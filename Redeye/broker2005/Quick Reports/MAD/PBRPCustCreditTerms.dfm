@@ -1,29 +1,23 @@
 object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
   Left = 50
   Top = 99
-  Width = 1213
-  Height = 785
   Caption = 'Credit Terms Letter'
+  ClientHeight = 746
+  ClientWidth = 1197
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 152
     Top = -552
     Width = 794
-    Height = 1289
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Height = 1123
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryDetails
     Font.Charset = ANSI_CHARSET
@@ -43,6 +37,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -56,56 +51,58 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
       Left = 38
       Top = 38
       Width = 718
       Height = 875
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         2315.104166666667000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbTitle
       object QRLabel3: TQRLabel
         Left = 40
         Top = 41
         Width = 269
         Height = 41
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           108.479166666666700000
           105.833333333333300000
           108.479166666666700000
           711.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Credit Terms Letter'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -115,7 +112,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 22
       end
       object imgReport: TQRImage
@@ -123,16 +122,14 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 8
         Width = 201
         Height = 65
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           171.979166666666700000
           1352.020833333333000000
           21.166666666666670000
           531.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object CustomerAddMemo: TQRMemo
@@ -140,20 +137,17 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 162
         Width = 337
         Height = 116
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           306.916666666666700000
           105.833333333333300000
           428.625000000000000000
           891.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -170,7 +164,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
           ' ')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRSysData1: TQRSysData
@@ -178,19 +173,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 312
         Width = 36
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           825.500000000000000000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDate
         Font.Charset = ANSI_CHARSET
@@ -199,7 +191,10 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel1: TQRLabel
@@ -207,20 +202,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 344
         Width = 110
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           910.166666666666700000
           291.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Dear Sir or Madam'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -230,7 +221,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel2: TQRLabel
@@ -238,20 +231,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 384
         Width = 84
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           1016.000000000000000000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Your Account:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -261,7 +250,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblAccountCode: TQRLabel
@@ -269,20 +260,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 384
         Width = 80
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           381.000000000000000000
           1016.000000000000000000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Your Account'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -292,7 +279,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
@@ -300,20 +289,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 424
         Width = 487
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           1121.833333333333000000
           1288.520833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'I would like to take this opportunity to confirm the authorised ' +
           'credit terms as follows:'
@@ -325,7 +310,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel4: TQRLabel
@@ -333,20 +320,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 456
         Width = 86
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           1206.500000000000000000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CREDIT LIMIT:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -356,7 +339,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel5: TQRLabel
@@ -364,20 +349,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 488
         Width = 104
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           1291.166666666667000000
           275.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CREDIT TERMS: '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -387,7 +368,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblCreditTerms: TQRLabel
@@ -395,20 +378,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 488
         Width = 95
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           444.500000000000000000
           1291.166666666667000000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCreditTerms'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -418,7 +397,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblCreditLimit: TQRLabel
@@ -426,20 +407,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 456
         Width = 87
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           444.500000000000000000
           1206.500000000000000000
           230.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCreditLimit'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -449,7 +426,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrmCompanyDetails: TQRMemo
@@ -457,16 +436,14 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 116
         Width = 179
         Height = 157
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           415.395833333333300000
           1394.354166666667000000
           306.916666666666700000
           473.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -479,7 +456,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 8
       end
       object memCreditTerms: TQRMemo
@@ -487,20 +465,17 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 534
         Width = 675
         Height = 339
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           896.937500000000000000
           111.125000000000000000
           1412.875000000000000000
           1785.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -514,6 +489,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         ParentFont = False
         Transparent = False
         WordWrap = False
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
     end
@@ -522,38 +499,31 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
       Top = 913
       Width = 718
       Height = 340
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = True
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         899.583333333333300000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageFooter
       object gtQRLabel6: TQRLabel
         Left = 40
         Top = 18
         Width = 83
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           47.625000000000000000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Kind Regards,'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -563,7 +533,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblOperatorName: TQRLabel
@@ -571,20 +543,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 114
         Width = 87
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           301.625000000000000000
           230.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Amanda Horler'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -594,7 +562,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblOperatorPosition: TQRLabel
@@ -602,20 +572,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 154
         Width = 192
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           105.833333333333300000
           407.458333333333300000
           508.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Head of Compliance and Finance'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -625,7 +591,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblOperatorSignature: TQRLabel
@@ -633,20 +601,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 66
         Width = 175
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333330000
           105.833333333333300000
           174.625000000000000000
           463.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Am anda Horler'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -656,7 +620,9 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object gtQRImage2: TQRImage
@@ -664,16 +630,14 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 315
         Width = 166
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           7.937500000000000000
           833.437500000000000000
           439.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         AutoSize = True
         Picture.Data = {
           07544269746D617052890000424D528900000000000036000000280000002C01
@@ -1782,20 +1746,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 308
         Width = 372
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333330000
           907.520833333333300000
           814.916666666666700000
           984.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -1808,7 +1768,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
             'Vat No 939 3605 95')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 7
       end
       object qrmRegOffice: TQRMemo
@@ -1816,20 +1777,16 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 321
         Width = 282
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333330000
           1145.645833333333000000
           849.312500000000000000
           746.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -1840,7 +1797,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
           'Registered Office: ITEC House, Hawkfield Way, Bristol. BS14 0BL')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 7
       end
       object imgISO: TQRImage
@@ -1848,16 +1806,14 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Top = 217
         Width = 124
         Height = 120
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           317.500000000000000000
           529.166666666666700000
           574.145833333333300000
           328.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Picture.Data = {
           07544269746D617006D00500424D06D005000000000036000000280000006F01
           0000590100000100180000000000D0CF05000000000000000000000000000000
@@ -13811,9 +13767,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object CompSQL: TFDQuery
@@ -13846,9 +13800,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
     Top = 157
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
 end

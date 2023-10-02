@@ -22,8 +22,6 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 467
-    ExplicitWidth = 701
     DesignSize = (
       691
       41)
@@ -120,8 +118,6 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 508
-    ExplicitWidth = 701
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'

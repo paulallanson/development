@@ -11,10 +11,8 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 10
@@ -29,17 +27,19 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 246
     Top = 152
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object dblkpCategories: TDBLookupComboBox
     Left = 64
@@ -69,7 +69,6 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     OnClick = btnOperatorsClick
   end
   object radType: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 56
     Width = 161
@@ -79,14 +78,15 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     Items.Strings = (
       'days after approval date'
       'days before required date')
+    ParentBackground = False
     TabOrder = 4
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 176
     Top = 56
     Width = 145
     Height = 81
+    ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 10
@@ -135,14 +135,10 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     Left = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object dtsCategories: TDataSource
@@ -169,29 +165,19 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_KPI'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'KPI_Min_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'KPI_Max_Value'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -203,14 +189,10 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

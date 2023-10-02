@@ -23,7 +23,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 1134
     object Label1: TLabel
       Left = 8
       Top = 17
@@ -47,8 +46,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Width = 1126
     Height = 19
     Panels = <>
-    ExplicitTop = 573
-    ExplicitWidth = 1134
   end
   object sgDetails: TStringGrid
     Left = 0
@@ -64,8 +61,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     TabOrder = 2
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
-    ExplicitWidth = 1134
-    ExplicitHeight = 483
     ColWidths = (
       250
       110
@@ -88,8 +83,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 532
-    ExplicitWidth = 1134
     object OKBitBtn: TBitBtn
       Left = 454
       Top = 7

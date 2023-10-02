@@ -56,7 +56,6 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBitBtnClick
-    ExplicitTop = 190
   end
   object PreviewBitBtn: TBitBtn
     Left = 300
@@ -81,7 +80,6 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 190
   end
   object CancelBitBtn: TBitBtn
     Left = 16
@@ -92,7 +90,6 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 190
   end
   object pnlCustomer: TPanel
     Left = 147
@@ -230,7 +227,6 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
-    ExplicitTop = 190
   end
   object dblkpFY: TDBLookupComboBox
     Left = 68

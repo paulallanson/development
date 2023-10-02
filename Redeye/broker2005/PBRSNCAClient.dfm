@@ -120,8 +120,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    ExplicitLeft = 335
-    ExplicitTop = 175
   end
   object PreviewBitBtn: TBitBtn
     Left = 12
@@ -147,7 +145,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 174
   end
   object PrintBitBtn: TBitBtn
     Left = 97
@@ -173,7 +170,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PrintBitBtnClick
-    ExplicitTop = 174
   end
   object dblkpPeriod: TDBLookupComboBox
     Left = 112
@@ -248,7 +244,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 175
   end
   object pnlExportPrgrss: TPanel
     Left = 75

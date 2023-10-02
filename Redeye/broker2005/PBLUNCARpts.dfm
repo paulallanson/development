@@ -22,8 +22,6 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 405
-    ExplicitHeight = 230
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -78,8 +76,6 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 230
-    ExplicitWidth = 405
     DesignSize = (
       409
       41)
@@ -101,7 +97,6 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 328
     end
   end
 end

@@ -1,9 +1,9 @@
 object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   Left = 150
   Top = 49
-  Width = 821
-  Height = 580
   Caption = 'Maintain Job bag Non Conformance Details'
+  ClientHeight = 541
+  ClientWidth = 805
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 797
@@ -12,23 +12,21 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 813
+    Width = 805
     Height = 97
     Align = alTop
     Enabled = False
     TabOrder = 0
     DesignSize = (
-      813
+      805
       97)
     object labJobBagInfo: TLabel
       Left = 9
@@ -166,8 +164,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 527
-    Width = 813
+    Top = 522
+    Width = 805
     Height = 19
     Panels = <
       item
@@ -182,13 +180,13 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 488
-    Width = 813
+    Top = 483
+    Width = 805
     Height = 39
     Align = alBottom
     TabOrder = 2
     object Panel4: TPanel
-      Left = 421
+      Left = 413
       Top = 1
       Width = 391
       Height = 37
@@ -206,8 +204,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
         Anchors = [akRight, akBottom]
         Caption = 'OK'
         Default = True
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -226,6 +222,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 300
@@ -233,16 +231,17 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object sgDetails: TStringGrid
     Left = 0
     Top = 97
-    Width = 728
-    Height = 391
+    Width = 720
+    Height = 386
     Align = alClient
     ColCount = 10
     DefaultColWidth = 40
@@ -263,10 +262,10 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       86)
   end
   object pnlFunctions: TPanel
-    Left = 728
+    Left = 720
     Top = 97
     Width = 85
-    Height = 391
+    Height = 386
     Align = alRight
     TabOrder = 4
     object btnAdd: TBitBtn
