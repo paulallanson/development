@@ -11,14 +11,12 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     601
     285)
-  PixelsPerInch = 96
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 509
@@ -26,8 +24,6 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Width = 75
     Height = 25
     Caption = 'Print'
-    TabOrder = 0
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -42,6 +38,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 420
@@ -49,8 +47,6 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Width = 75
     Height = 25
     Caption = 'Preview'
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -65,6 +61,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object pnlRepSearch: TPanel
     Left = 139
@@ -109,8 +107,9 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Top = 246
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GroupBox1: TGroupBox
     Left = 5
@@ -146,8 +145,6 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       Top = 23
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btbtnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -162,6 +159,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnDateFromClick
     end
     object edtDateTo: TEdit
       Left = 48
@@ -176,8 +175,6 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       Top = 55
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btbtnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -192,6 +189,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btbtnDateToClick
     end
   end
   object rdgrpRep: TRadioGroup
@@ -322,8 +321,6 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
-    TabOrder = 12
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -367,5 +364,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 12
+    OnClick = btnExcelClick
   end
 end

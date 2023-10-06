@@ -11,11 +11,9 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object rgAddressType: TRadioGroup
     Left = 8
@@ -98,16 +96,18 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
     Width = 75
     Height = 25
     Enabled = False
-    TabOrder = 3
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object btnCancel: TBitBtn
     Left = 265
     Top = 160
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object qrySContacts: TFDQuery
     ConnectionName = 'PB'
@@ -121,9 +121,8 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryCContacts: TFDQuery
@@ -137,9 +136,8 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsContacts: TDataSource

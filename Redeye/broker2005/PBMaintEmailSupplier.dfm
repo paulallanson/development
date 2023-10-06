@@ -11,14 +11,12 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     516
     223)
-  PixelsPerInch = 96
   TextHeight = 13
   object grpbxContact: TGroupBox
     Left = 8
@@ -107,8 +105,9 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Enabled = False
-    TabOrder = 2
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object btnCancel: TBitBtn
     Left = 265
@@ -116,12 +115,13 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object qrySContacts: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsSuppliers
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Contact_no, Name, Email'
       'from Supplier_BranchContacts'
@@ -132,9 +132,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsContacts: TDataSource
@@ -170,9 +169,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

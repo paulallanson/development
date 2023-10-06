@@ -1,7 +1,6 @@
-﻿object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
+object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
   Left = 247
   Top = 160
-  AutoScroll = False
   Caption = 'Maintain Proof History'
   ClientHeight = 159
   ClientWidth = 381
@@ -11,10 +10,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 16
@@ -43,7 +40,6 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 24
     Width = 353
@@ -54,6 +50,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -125,9 +122,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -192,7 +186,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 288
@@ -201,9 +198,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -268,7 +262,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -283,24 +280,22 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Line'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Line'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -318,23 +313,21 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -353,34 +346,23 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Proof_History'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -393,9 +375,7 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_History'
-        ParamType = ptUnknown
       end>
   end
   object StatSRC: TDataSource
@@ -423,18 +403,18 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'Order'
+        DataType = ftFloat
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end

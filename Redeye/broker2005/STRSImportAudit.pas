@@ -34,7 +34,7 @@ var
 
 implementation
 
-uses STRPImportAudit;
+uses UITypes, STRPImportAudit;
 
 {$R *.DFM}
 
@@ -65,8 +65,7 @@ begin
     STRPImportAuditFrm.AuditNumber := dblkpAudit.keyvalue;
     if not STRPImportAuditFrm.getDetails then
       begin
-        MessageDlg('No records to print', mtInformation,
-            [mbOk], 0);
+        MessageDlg('No records to print', mtInformation, [mbOk], 0);
         exit;
       end;
     if bPreview then

@@ -57,7 +57,7 @@ var
 
 implementation
 
-uses WTMaintSupplierContact;
+uses UITypes, WTMaintSupplierContact;
 
 {$R *.dfm}
 

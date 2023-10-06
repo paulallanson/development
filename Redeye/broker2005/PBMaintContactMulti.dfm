@@ -1,7 +1,6 @@
 object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   Left = 568
   Top = 140
-  AutoScroll = False
   Caption = 'Move Customer Contacts'
   ClientHeight = 133
   ClientWidth = 399
@@ -11,9 +10,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 17
@@ -52,9 +49,9 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
     Height = 25
     Caption = 'OK'
     Default = True
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    NumGlyphs = 2
   end
   object CancelBitBtn: TBitBtn
     Left = 220
@@ -64,9 +61,9 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    NumGlyphs = 2
   end
   object ContTypeMaintBitBtn: TBitBtn
     Left = 360
@@ -109,9 +106,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsBranches: TDataSource

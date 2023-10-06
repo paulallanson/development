@@ -57,8 +57,6 @@ object frmWTLUFinish: TfrmWTLUFinish
       item
         Width = 50
       end>
-    ExplicitTop = 232
-    ExplicitWidth = 402
   end
   object Panel1: TPanel
     Left = 0
@@ -67,8 +65,6 @@ object frmWTLUFinish: TfrmWTLUFinish
     Height = 65
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 167
-    ExplicitWidth = 402
     DesignSize = (
       396
       65)

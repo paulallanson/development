@@ -120,7 +120,7 @@ var
 
 implementation
 
-uses PBLUVATCode, PBMaintGroups, PBLURevenueLoc, PBLUPaymentTerms, PBLURep,
+uses UITypes, PBLUVATCode, PBMaintGroups, PBLURevenueLoc, PBLUPaymentTerms, PBLURep,
   PBLULevelOfImportance, pbDatabase, PBLUAccountManager, PBLUOps;
 
 {$R *.dfm}

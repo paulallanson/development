@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses PBRPWorksOrder, pbDatabase, PBFaxList, PBSendFax, CCSemailHandler, CCSCommon;
+uses UITypes, PBRPWorksOrder, pbDatabase, PBFaxList, PBSendFax, CCSemailHandler, CCSCommon;
 
 {$R *.dfm}
 
@@ -270,8 +270,7 @@ begin
   BuildSelection;
   if SelectLst.Items.Count > 100 then
     begin
-      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror,
-      [mbOk], 0);
+      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror, [mbOk], 0);
       SelectLst.Clear;
       memSelection.Clear;
       memSelection.SetFocus;

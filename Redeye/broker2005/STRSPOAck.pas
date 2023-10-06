@@ -43,7 +43,7 @@ var
 
 implementation
 
-uses STRPPOAck, STStockDM, Printers, pbMainMenu;
+uses UITypes, STRPPOAck, STStockDM, Printers, pbMainMenu;
 
 {$R *.DFM}
 

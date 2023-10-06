@@ -212,8 +212,6 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 12
     OnClick = OKBitBtnClick
-    ExplicitLeft = 357
-    ExplicitTop = 532
   end
   object CancelBitBtn: TBitBtn
     Left = 433
@@ -224,8 +222,6 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 13
-    ExplicitLeft = 445
-    ExplicitTop = 532
   end
   object RepComboBox: TDBLookupComboBox
     Left = 94
@@ -697,8 +693,6 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = ChgPassBitBtnClick
-    ExplicitLeft = 8
-    ExplicitTop = 531
   end
   object PhoneEdit: TEdit
     Left = 94

@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses PBAutoPO;
+uses UITypes, PBAutoPO;
 
 {$R *.DFM}
 
@@ -147,8 +147,7 @@ begin
 
   if iStatus < 45 then
     begin
-      messagedlg('This enquiry has not had any prices set, cannot convert to an order', mtInformation,
-      [mbOk], 0);
+      messagedlg('This enquiry has not had any prices set, cannot convert to an order', mtInformation, [mbOk], 0);
       exit;
     end
   else

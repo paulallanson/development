@@ -108,7 +108,7 @@ var
 
 implementation
 
-uses PBLUReasCode, PBDatabase, pbMainMenu;
+uses UITypes, PBLUReasCode, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 
@@ -236,8 +236,7 @@ begin
     Result := (RecordCount > 0);
   end;
   if Result then
-    MessageDlg('The Reason you have entered already exist',
-      mtError, [mbOK], 0);
+    MessageDlg('The Reason you have entered already exist', mtError, [mbOK], 0);
 end;
 
 procedure TPBMaintReasCodeFrm.edtDescriptionChange(Sender: TObject);

@@ -179,7 +179,7 @@ var
 
 implementation
 
-uses StMntPrtSupp, CCSCommon, PBLUPriceUnit, STLUPrtGrp, PBLUCust,
+uses UITypes, StMntPrtSupp, CCSCommon, PBLUPriceUnit, STLUPrtGrp, PBLUCust,
   pbluVatCode, STLUFormRef, CCSMaintProdImages, pbDatabase, pbMainMenu,
   PBMaintPartComponent, PBLUPrdTyp;
 

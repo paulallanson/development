@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, StdCtrls, DBCtrls, ComCtrls, ExtCtrls, pbStockDM,
-  Buttons, ImgList, ToolWin, DB;
+  Buttons, ImgList, ToolWin, DB, System.ImageList;
 
 type
   TfrmSTLUStockLocations = class(TForm)
@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses CCSCommon, PBDatabase, PBPartTransfer, STRPStockLocations, pbMainMenu,
+uses UITypes, CCSCommon, PBDatabase, PBPartTransfer, STRPStockLocations, pbMainMenu,
   STLUStkLoc;
 
 {$R *.dfm}

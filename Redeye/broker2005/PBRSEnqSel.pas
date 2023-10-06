@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses PBLURep, pbDatabase, CCSPrint, PBRPEnqLst, pbMainMenu, DateSelV5, PBLUOps;
+uses UITypes, PBLURep, pbDatabase, CCSPrint, PBRPEnqLst, pbMainMenu, DateSelV5, PBLUOps;
 
 {$R *.DFM}
 

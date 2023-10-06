@@ -38,7 +38,7 @@ var
 
 implementation
 
-uses STStkTkbyPart, STStkTakeDM, STStkValSl;
+uses UITypes, STStkTkbyPart, STStkTakeDM, STStkValSl;
 
 {$R *.DFM}
 

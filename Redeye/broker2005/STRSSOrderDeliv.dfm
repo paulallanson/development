@@ -1,30 +1,28 @@
 object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   Left = 36
   Top = 63
-  Width = 749
-  Height = 494
   Caption = 'Sales Order Delivery Report'
+  ClientHeight = 455
+  ClientWidth = 733
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 400
-    Width = 741
+    Top = 395
+    Width = 733
     Height = 41
     Align = alBottom
     TabOrder = 0
     DesignSize = (
-      741
+      733
       41)
     object PreviewBitBtn: TBitBtn
       Left = 486
@@ -38,9 +36,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      Visible = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -55,6 +50,9 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
     end
     object PrintBitBtn: TBitBtn
       Left = 577
@@ -68,9 +66,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      Visible = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -85,6 +80,9 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
     end
     object CancelBitBtn: TBitBtn
       Left = 661
@@ -98,9 +96,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 2
-      Kind = bkCancel
     end
     object btnEmail: TBitBtn
       Left = 15
@@ -114,9 +113,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btnEmailClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -131,6 +127,9 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnEmailClick
     end
     object btnDetails: TBitBtn
       Left = 111
@@ -144,9 +143,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-      OnClick = btnDetailsClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -161,13 +157,16 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnDetailsClick
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 81
-    Width = 741
-    Height = 319
+    Width = 733
+    Height = 314
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -217,12 +216,12 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 741
+    Width = 733
     Height = 81
     Align = alTop
     TabOrder = 2
     DesignSize = (
-      741
+      733
       81)
     object Label2: TLabel
       Left = 538
@@ -309,8 +308,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 3
-      OnClick = btnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -325,6 +322,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateFromClick
     end
     object btnDateTo: TBitBtn
       Left = 700
@@ -332,8 +331,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 4
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -348,6 +345,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = btnDateToClick
     end
     object rgCustomer: TRadioGroup
       Left = 8
@@ -364,8 +363,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   end
   object stbDetails: TStatusBar
     Left = 0
-    Top = 441
-    Width = 741
+    Top = 436
+    Width = 733
     Height = 19
     Panels = <
       item
@@ -400,35 +399,28 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Top = 160
     object qryReportSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-
     end
     object qryReportSales_order_delivery_no: TIntegerField
       FieldName = 'Sales_order_delivery_no'
-
     end
     object qryReportDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
-
     end
     object qryReportConsignment_number: TStringField
       FieldName = 'Consignment_number'
-
       FixedChar = True
       Size = 40
     end
     object qryReportCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-
       FixedChar = True
       Size = 80
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
-
     end
     object qryReportName: TStringField
       FieldName = 'Name'
-
       FixedChar = True
       Size = 80
     end
@@ -463,9 +455,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

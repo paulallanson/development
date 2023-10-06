@@ -11,10 +11,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -56,9 +54,6 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    ModalResult = 1
-    TabOrder = 2
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -76,18 +71,21 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
       3338F38F000033333333333333A223333333333333338F830000333333333333
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 136
     Top = 128
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object PickRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 89
@@ -96,6 +94,7 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     Items.Strings = (
       'Yes'
       'No')
+    ParentBackground = False
     TabOrder = 4
     OnClick = PickRadioGroupClick
   end
@@ -118,14 +117,10 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object AddBinSQL: TFDQuery
@@ -139,24 +134,16 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_Can_Pick'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Bin'
-        ParamType = ptUnknown
       end>
   end
 end

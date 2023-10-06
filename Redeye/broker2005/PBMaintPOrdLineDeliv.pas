@@ -147,7 +147,7 @@ var
 
 implementation
 
-uses
+uses FireDAC.Stan.Param, 
   System.UITypes,
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod,
   DateSelV5, PBLUCConta, PBMaintPOrd, PBLUSConta, pbLUCompBranch;
@@ -305,7 +305,7 @@ begin
         end;
     end;
 
-  pnlDetails.Enabled := not (FFuncMode in [poDelete, poView]);
+  pnlDetails.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   DelLabel.Visible := (FFuncMode = poDelete);
   AddressRadioActive := false;
   AddrTypeRadGrpClick(Self);

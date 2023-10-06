@@ -199,7 +199,7 @@ var
 
 implementation
 
-uses PBLUCust;
+uses UITypes, PBLUCust;
 
 {$R *.DFM}
 
@@ -255,8 +255,7 @@ begin
         Result := 'X';
       end;
     end;
-  except
-    MessageDlg('Invalid ' + TempError + ' - ' + TempQty, mtError, [mbOK], 0);
+  except MessageDlg('Invalid ' + TempError + ' - ' + TempQty, mtError, [mbOK], 0);
     Result := 'X';
   end;
 end;

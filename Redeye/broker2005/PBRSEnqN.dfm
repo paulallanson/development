@@ -30,8 +30,6 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 122
-    ExplicitWidth = 429
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 55
@@ -191,7 +189,6 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 429
     object gbLayouts: TGroupBox
       Left = 8
       Top = 4
@@ -242,8 +239,6 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 429
-    ExplicitHeight = 41
     object GroupBox2: TGroupBox
       Left = 8
       Top = -5
@@ -281,8 +276,6 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       item
         Width = 50
       end>
-    ExplicitTop = 219
-    ExplicitWidth = 429
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'

@@ -1,9 +1,9 @@
 object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   Left = 47
   Top = 102
-  Width = 879
-  Height = 411
   Caption = 'Purchase Credit Notes'
+  ClientHeight = 372
+  ClientWidth = 863
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,31 +11,29 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 871
+    Width = 863
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 867
+        Width = 857
       end>
     object PageScroller1: TPageScroller
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 854
+      Width = 848
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -43,12 +41,11 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 854
+        Width = 836
         Height = 41
         ButtonHeight = 36
-        ButtonWidth = 62
+        ButtonWidth = 56
         Caption = 'ToolBar1'
-        Flat = True
         Images = imglstFunctions
         ParentShowHint = False
         ShowCaptions = True
@@ -64,7 +61,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 56
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -73,7 +70,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 124
+          Left = 112
           Top = 0
           Hint = 'Copy Order'
           Caption = '&Delete'
@@ -82,7 +79,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnDeleteClick
         end
         object btnPass: TToolButton
-          Left = 186
+          Left = 168
           Top = 0
           Hint = 'Repeat Order'
           Caption = '&Pass'
@@ -91,7 +88,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnPassClick
         end
         object btnQuery: TToolButton
-          Left = 248
+          Left = 224
           Top = 0
           Hint = 'Flag the credit note as a query'
           Caption = '&Query'
@@ -100,7 +97,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnQueryClick
         end
         object btnReset: TToolButton
-          Left = 310
+          Left = 280
           Top = 0
           Caption = 'Re&set'
           Enabled = False
@@ -108,7 +105,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnResetClick
         end
         object btnReports: TToolButton
-          Left = 372
+          Left = 336
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4
@@ -119,8 +116,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 324
-    Width = 871
+    Top = 312
+    Width = 863
     Height = 41
     Align = alBottom
     TabOrder = 1
@@ -140,7 +137,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 685
+      Left = 677
       Top = 1
       Width = 185
       Height = 39
@@ -173,8 +170,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 365
-    Width = 871
+    Top = 353
+    Width = 863
     Height = 19
     Panels = <
       item
@@ -187,8 +184,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 871
-    Height = 250
+    Width = 863
+    Height = 238
     Align = alClient
     DataSource = dmSupplierInvoice.dsPCHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -322,7 +319,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 871
+    Width = 863
     Height = 30
     Align = alTop
     BevelInner = bvLowered

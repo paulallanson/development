@@ -11,18 +11,16 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 233
     Height = 6
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
   end
   object PageControl1: TPageControl
@@ -125,12 +123,12 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 391
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object lblPartLabel: TLabel
       Left = 7
@@ -162,12 +160,12 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 192
     Width = 391
     Height = 49
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object OKBitBtn: TBitBtn
       Left = 119
@@ -176,8 +174,6 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -196,6 +192,8 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 207
@@ -204,8 +202,6 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -224,6 +220,8 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
         3333333333333333333888330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
   end
 end

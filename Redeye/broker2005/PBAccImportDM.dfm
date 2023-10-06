@@ -1,6 +1,4 @@
 object dmAccImport: TdmAccImport
-  OldCreateOrder = False
-  Top = 86
   Height = 634
   Width = 1280
   object AddBranchSQL: TFDQuery
@@ -48,84 +46,55 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Inv_To_Branch'
+        DataType = ftInteger
+      end
+      item
         Name = 'Short_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddCustSQL: TFDQuery
@@ -167,129 +136,80 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Settlement_Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Settlement_Days'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Credit_Limit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Credit_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Intrastat_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Country_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Available_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Currency_Code_Def'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code_Def'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Created_by'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Company_Reg_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Analysis_Code_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Analysis_Code_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Analysis_Code_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Analysis_Code_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GDPR_Letter_Sent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GDPR_Letter_Signed'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Terms'
-        ParamType = ptUnknown
       end>
   end
   object GetBranchSQL: TFDQuery
@@ -303,9 +223,8 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'Account_Code'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object UpCustSQL: TFDQuery
@@ -322,24 +241,17 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Credit_Limit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'VAT_Reference'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object UpBranchSQL: TFDQuery
@@ -356,19 +268,13 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code_on_Ledger'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetNextBranchSQL: TFDQuery
@@ -381,9 +287,7 @@ object dmAccImport: TdmAccImport
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetNextCustSQL: TFDQuery
@@ -406,14 +310,10 @@ object dmAccImport: TdmAccImport
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AddRepSQL: TFDQuery
@@ -436,29 +336,19 @@ object dmAccImport: TdmAccImport
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Main_Rep'
-        ParamType = ptUnknown
       end>
   end
   object AddContactSQL: TFDQuery
@@ -491,54 +381,34 @@ object dmAccImport: TdmAccImport
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ExportFilter'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Salutation'
-        ParamType = ptUnknown
       end>
   end
   object AddSuppSQL: TFDQuery
@@ -570,49 +440,33 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Intrastat_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Reference'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Country_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'VAT_Reference'
+      end
+      item
+        Name = 'Country_id'
+        DataType = ftInteger
+      end
+      item
         Name = 'Vat_Code_Def'
-        ParamType = ptUnknown
       end>
   end
   object GetNextSuppSQL: TFDQuery
@@ -661,64 +515,41 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end>
   end
   object UpSuppSQL: TFDQuery
@@ -733,14 +564,10 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object UpSuppBranchSQL: TFDQuery
@@ -757,19 +584,13 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code_on_Ledger'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object GetLastNarrSQL: TFDQuery
@@ -791,9 +612,7 @@ object dmAccImport: TdmAccImport
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object AddSuppContSQL: TFDQuery
@@ -825,54 +644,34 @@ object dmAccImport: TdmAccImport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ExportFilter'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Salutation'
-        ParamType = ptUnknown
       end>
   end
   object GetNextSuppContactSQL: TFDQuery
@@ -887,14 +686,10 @@ object dmAccImport: TdmAccImport
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object GetSuppBranchSQL: TFDQuery
@@ -907,9 +702,8 @@ object dmAccImport: TdmAccImport
     Top = 240
     ParamData = <
       item
-        DataType = ftString
         Name = 'Account_Code'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddNarrSQL: TFDQuery
@@ -926,19 +720,14 @@ object dmAccImport: TdmAccImport
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Narrative_Text'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object UpBranchNarrSQL: TFDQuery
@@ -952,19 +741,13 @@ object dmAccImport: TdmAccImport
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object GetSageCustomer: TFDQuery
@@ -977,7 +760,6 @@ object dmAccImport: TdmAccImport
   end
   object Sage50Database: TFDConnection
     ConnectionName = 'dbSage50'
-
     Left = 408
     Top = 32
   end
@@ -998,19 +780,13 @@ object dmAccImport: TdmAccImport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end>
   end
   object GetNextRepSQL: TFDQuery
@@ -1032,19 +808,13 @@ object dmAccImport: TdmAccImport
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Is_Sub_Rep'
-        ParamType = ptUnknown
       end>
   end
   object CheckRepSQL: TFDQuery
@@ -1056,9 +826,7 @@ object dmAccImport: TdmAccImport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end>
   end
   object AddCurrencySQL: TFDQuery
@@ -1070,14 +838,10 @@ object dmAccImport: TdmAccImport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Currency_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Currency_Code_Descr'
-        ParamType = ptUnknown
       end>
   end
   object GetSageSupplier: TFDQuery
@@ -1105,19 +869,13 @@ object dmAccImport: TdmAccImport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Name'
-        ParamType = ptUnknown
       end>
   end
   object UpCreditLimitSQL: TFDQuery
@@ -1132,19 +890,13 @@ object dmAccImport: TdmAccImport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Credit_Limit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Available_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object UpCompanyImpSQL: TFDQuery
@@ -1157,9 +909,7 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Data_Import_Directory'
-        ParamType = ptUnknown
       end>
   end
   object GetSagePayments: TFDQuery
@@ -1184,9 +934,7 @@ object dmAccImport: TdmAccImport
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Entered'
-        ParamType = ptUnknown
       end>
   end
   object UpPaymentSQL: TFDQuery
@@ -1202,24 +950,16 @@ object dmAccImport: TdmAccImport
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object GetCompanySQL: TFDQuery
@@ -1240,9 +980,7 @@ object dmAccImport: TdmAccImport
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Payment_Update'
-        ParamType = ptUnknown
       end>
   end
   object UpAuditHSQL: TFDQuery
@@ -1256,34 +994,22 @@ object dmAccImport: TdmAccImport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Tran_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Flag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end>
   end
   object GetSageAuditH: TFDQuery
@@ -1314,54 +1040,34 @@ object dmAccImport: TdmAccImport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'usage_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'split_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'split_crossref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'user_name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'deleted_flag'
-        ParamType = ptUnknown
       end>
   end
   object DelSageAuditH: TFDQuery
@@ -1373,7 +1079,6 @@ object dmAccImport: TdmAccImport
   end
   object MaximiserDB: TFDConnection
     ConnectionName = 'dbMaximiser'
-
     Left = 496
     Top = 8
   end
@@ -1416,14 +1121,10 @@ object dmAccImport: TdmAccImport
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Client_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Number'
-        ParamType = ptUnknown
       end>
   end
   object GetMaxWebsite: TFDQuery
@@ -1437,14 +1138,10 @@ object dmAccImport: TdmAccImport
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Client_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Number'
-        ParamType = ptUnknown
       end>
   end
   object CustNameExistSQL: TFDQuery
@@ -1457,9 +1154,7 @@ object dmAccImport: TdmAccImport
     Top = 251
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end>
   end
   object CheckContactSQL: TFDQuery
@@ -1473,24 +1168,16 @@ object dmAccImport: TdmAccImport
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCType: TFDQuery
@@ -1503,9 +1190,7 @@ object dmAccImport: TdmAccImport
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryNextCType: TFDQuery
@@ -1525,19 +1210,14 @@ object dmAccImport: TdmAccImport
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object QuickbooksDB: TFDConnection
     ConnectionName = 'dbQuickbooks'
-
     Left = 600
     Top = 8
   end
@@ -1550,9 +1230,7 @@ object dmAccImport: TdmAccImport
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetRepSQL: TFDQuery
@@ -1565,14 +1243,10 @@ object dmAccImport: TdmAccImport
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end>
   end
   object GetCustBrSQL: TFDQuery
@@ -1586,9 +1260,7 @@ object dmAccImport: TdmAccImport
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object AddContactinfoSQL: TFDQuery
@@ -1610,29 +1282,19 @@ object dmAccImport: TdmAccImport
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Month'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pays_Online'
-        ParamType = ptUnknown
       end>
   end
   object CheckBranchSQL: TFDQuery
@@ -1645,14 +1307,10 @@ object dmAccImport: TdmAccImport
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Code'
-        ParamType = ptUnknown
       end>
   end
   object UpdBranchSQL: TFDQuery
@@ -1675,69 +1333,43 @@ object dmAccImport: TdmAccImport
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdContactSQL: TFDQuery
@@ -1757,44 +1389,28 @@ object dmAccImport: TdmAccImport
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Salutation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdContactInfoSQL: TFDQuery
@@ -1812,19 +1428,13 @@ object dmAccImport: TdmAccImport
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerContact: TFDQuery
@@ -1837,14 +1447,10 @@ object dmAccImport: TdmAccImport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierContact: TFDQuery
@@ -1857,14 +1463,10 @@ object dmAccImport: TdmAccImport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProductTYpe: TFDQuery
@@ -1877,9 +1479,7 @@ object dmAccImport: TdmAccImport
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPO: TFDQuery
@@ -1909,44 +1509,28 @@ object dmAccImport: TdmAccImport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Head_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPOLine: TFDQuery
@@ -2012,129 +1596,79 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Suppliers_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customers_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Selling_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'List_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Printed_PO'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Inv_Recd'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Supp_Inv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Reqd_by_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnit: TFDQuery
@@ -2156,14 +1690,10 @@ object dmAccImport: TdmAccImport
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryAddDelivLine: TFDQuery
@@ -2212,84 +1742,53 @@ object dmAccImport: TdmAccImport
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_To_Deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No0'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Updated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'No_of_Boxes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_To_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Reqd_by_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSI: TFDQuery
@@ -2355,129 +1854,79 @@ object dmAccImport: TdmAccImport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_to_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Currency_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cash_Sales'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSILine: TFDQuery
@@ -2523,74 +1972,50 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetNextSI: TFDQuery
@@ -2651,74 +2076,46 @@ object dmAccImport: TdmAccImport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Inv_Alt_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value_Diff'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value_Diff'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Currency_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPILine: TFDQuery
@@ -2758,59 +2155,37 @@ object dmAccImport: TdmAccImport
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end>
   end
   object qryGetTopRep: TFDQuery
@@ -2832,9 +2207,7 @@ object dmAccImport: TdmAccImport
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_No'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSI: TFDQuery
@@ -2849,19 +2222,13 @@ object dmAccImport: TdmAccImport
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextSILine: TFDQuery
@@ -2874,9 +2241,7 @@ object dmAccImport: TdmAccImport
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object UpCreditNoteSQL: TFDQuery
@@ -2893,14 +2258,10 @@ object dmAccImport: TdmAccImport
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paid_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end>
   end
   object UpdCustSQL: TFDQuery
@@ -2915,19 +2276,13 @@ object dmAccImport: TdmAccImport
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object CheckSuppContactSQL: TFDQuery
@@ -2941,24 +2296,16 @@ object dmAccImport: TdmAccImport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object UpdSuppContactSQL: TFDQuery
@@ -2978,44 +2325,28 @@ object dmAccImport: TdmAccImport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Salutation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object DelSageAuditU: TFDQuery
@@ -3036,9 +2367,7 @@ object dmAccImport: TdmAccImport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerType: TFDQuery
@@ -3052,9 +2381,7 @@ object dmAccImport: TdmAccImport
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCountry: TFDQuery
@@ -3068,9 +2395,7 @@ object dmAccImport: TdmAccImport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCountry: TFDQuery
@@ -3084,9 +2409,7 @@ object dmAccImport: TdmAccImport
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryGetVatCode: TFDQuery
@@ -3100,9 +2423,7 @@ object dmAccImport: TdmAccImport
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Vat_Ref'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPaymentTerms: TFDQuery
@@ -3116,9 +2437,7 @@ object dmAccImport: TdmAccImport
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Number_of_Days'
-        ParamType = ptUnknown
       end>
   end
   object qryGetOperator: TFDQuery
@@ -3131,9 +2450,7 @@ object dmAccImport: TdmAccImport
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Short_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnitByDesc: TFDQuery
@@ -3148,14 +2465,10 @@ object dmAccImport: TdmAccImport
     Top = 496
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit_Factor'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextJobBag: TFDQuery
@@ -3177,9 +2490,7 @@ object dmAccImport: TdmAccImport
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Job_Bag_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAddJobBag: TFDQuery
@@ -3227,84 +2538,52 @@ object dmAccImport: TdmAccImport
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end>
   end
   object qryAddJobBagLine: TFDQuery
@@ -3362,109 +2641,69 @@ object dmAccImport: TdmAccImport
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_bag_line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_bag_line_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_line_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Selling_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ready_to_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnitFactor: TFDQuery
@@ -3477,9 +2716,7 @@ object dmAccImport: TdmAccImport
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOImport: TFDQuery
@@ -3492,9 +2729,7 @@ object dmAccImport: TdmAccImport
     Top = 536
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierByAccount: TFDQuery
@@ -3507,9 +2742,7 @@ object dmAccImport: TdmAccImport
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchaseOrder: TFDQuery
@@ -3522,9 +2755,7 @@ object dmAccImport: TdmAccImport
     Top = 552
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPOLine: TFDQuery
@@ -3538,19 +2769,13 @@ object dmAccImport: TdmAccImport
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdDeliveryDetail: TFDQuery
@@ -3564,19 +2789,13 @@ object dmAccImport: TdmAccImport
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdJBLine: TFDQuery
@@ -3591,24 +2810,16 @@ object dmAccImport: TdmAccImport
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBagRef: TFDQuery
@@ -3621,9 +2832,7 @@ object dmAccImport: TdmAccImport
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description_Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBLine: TFDQuery
@@ -3636,14 +2845,10 @@ object dmAccImport: TdmAccImport
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextSICharge: TFDQuery
@@ -3658,9 +2863,7 @@ object dmAccImport: TdmAccImport
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSICharge: TFDQuery
@@ -3690,34 +2893,22 @@ object dmAccImport: TdmAccImport
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetVat: TFDQuery
@@ -3731,9 +2922,7 @@ object dmAccImport: TdmAccImport
     Top = 496
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end>
   end
 end

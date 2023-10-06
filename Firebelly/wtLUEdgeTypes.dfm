@@ -57,8 +57,6 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       item
         Width = 50
       end>
-    ExplicitTop = 216
-    ExplicitWidth = 415
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 160
-    ExplicitWidth = 415
     DesignSize = (
       409
       56)

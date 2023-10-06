@@ -65,7 +65,6 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     NumGlyphs = 2
     TabOrder = 11
     OnClick = btnOKClick
-    ExplicitTop = 241
   end
   object BitBtn2: TBitBtn
     Left = 404
@@ -78,7 +77,6 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 12
-    ExplicitTop = 241
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -1259,7 +1257,6 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     TabOrder = 2
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
-    ExplicitLeft = 104
   end
   object edtInEffectiveDate: TEdit
     Left = 92
@@ -1270,7 +1267,6 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     TabOrder = 5
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
-    ExplicitLeft = 104
   end
   object edtDescription: TEdit
     Left = 104

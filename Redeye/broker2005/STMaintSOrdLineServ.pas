@@ -87,7 +87,7 @@ var
 
 implementation
 
-uses STPrtMnt, STSODataMod, STPacks;
+uses UITypes, FireDAC.Stan.Param, STPrtMnt, STSODataMod, STPacks;
 
 {$R *.DFM}
 

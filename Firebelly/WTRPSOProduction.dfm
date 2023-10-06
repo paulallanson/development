@@ -912,29 +912,19 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryCutOuts: TFDQuery
@@ -978,24 +968,16 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'TradeRetail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'TradeRetail'
-        ParamType = ptUnknown
       end>
   end
   object qryEdges: TFDQuery
@@ -1039,24 +1021,16 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'TradeRetail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'TradeRetail'
-        ParamType = ptUnknown
       end>
   end
   object qryBaseCutOuts: TFDQuery
@@ -1097,29 +1071,19 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryBaseEdges: TFDQuery
@@ -1160,29 +1124,19 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
 end

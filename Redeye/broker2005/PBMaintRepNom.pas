@@ -94,7 +94,7 @@ var
 
 implementation
 
-uses PBLURepNom, PBImages, PBDatabase, pbMainMenu;
+uses UITypes, PBLURepNom, PBImages, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

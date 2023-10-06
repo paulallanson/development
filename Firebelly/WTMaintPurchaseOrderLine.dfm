@@ -1,30 +1,28 @@
 object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   Left = 549
   Top = 128
-  Width = 766
-  Height = 492
   Caption = 'Purchase Order Line'
+  ClientHeight = 453
+  ClientWidth = 750
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
     Left = 0
-    Top = 421
-    Width = 758
+    Top = 413
+    Width = 750
     Height = 40
     Align = alBottom
     TabOrder = 4
     TabStop = True
     DesignSize = (
-      758
+      750
       40)
     object lblDelete: TLabel
       Left = 434
@@ -54,9 +52,6 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -75,6 +70,9 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 674
@@ -87,16 +85,17 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      Kind = bkCancel
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 41
-    Width = 758
-    Height = 232
+    Width = 750
+    Height = 224
     Align = alClient
     TabOrder = 1
     object Label6: TLabel
@@ -183,7 +182,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       Caption = 'Slab Cost'
     end
     object btnContactClear: TSpeedButton
-      Left = 377
+      Left = 378
       Top = 99
       Width = 23
       Height = 23
@@ -307,7 +306,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 758
+    Width = 750
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -343,8 +342,8 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   end
   object Panel1: TPanel
     Left = 0
-    Top = 273
-    Width = 758
+    Top = 265
+    Width = 750
     Height = 65
     Align = alBottom
     TabOrder = 2
@@ -471,13 +470,13 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   end
   object pnlNotes: TPanel
     Left = 0
-    Top = 338
-    Width = 758
+    Top = 330
+    Width = 750
     Height = 83
     Align = alBottom
     TabOrder = 3
     DesignSize = (
-      758
+      750
       83)
     object Label7: TLabel
       Left = 26

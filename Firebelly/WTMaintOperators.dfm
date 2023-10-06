@@ -11,14 +11,12 @@ object frmWTMaintOperators: TfrmWTMaintOperators
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     364
     496)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -115,9 +113,9 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 11
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -128,8 +126,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 12
     NumGlyphs = 2
+    TabOrder = 12
   end
   object chkbxEnabled: TCheckBox
     Left = 8
@@ -141,12 +139,12 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     TabOrder = 10
   end
   object grpbxReminders: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 280
     Width = 337
     Height = 81
     Caption = 'Follow Up Reminders '
+    ParentBackground = False
     TabOrder = 7
     object Label4: TLabel
       Left = 16
@@ -161,7 +159,6 @@ object frmWTMaintOperators: TfrmWTMaintOperators
       Width = 161
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'None'
@@ -182,12 +179,12 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     TabOrder = 9
   end
   object grpbxScheduling: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 368
     Width = 337
     Height = 57
     Caption = 'Scheduling'
+    ParentBackground = False
     TabOrder = 8
     object chkbxCanUpdateSchedule: TCheckBox
       Left = 16
@@ -290,69 +287,44 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Login_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Login_Password'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Update_Schedule'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator_Can_Login'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Follow_Up_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -370,8 +342,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -385,8 +357,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -407,39 +379,25 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryRevCentre: TFDQuery

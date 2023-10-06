@@ -1,9 +1,9 @@
 object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   Left = 236
   Top = 99
-  Width = 1038
-  Height = 532
   Caption = 'Retail Address List'
+  ClientHeight = 493
+  ClientWidth = 1022
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,15 +12,13 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 1030
+    Width = 1022
     Height = 65
     Align = alTop
     TabOrder = 0
@@ -67,8 +65,6 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -83,14 +79,14 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDatefromClick
     end
     object btnClearDate: TBitBtn
       Left = 493
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 4
-      OnClick = btnClearDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -105,17 +101,19 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = btnClearDateClick
     end
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 445
-    Width = 1030
+    Top = 433
+    Width = 1022
     Height = 41
     Align = alBottom
     TabOrder = 1
     object Panel1: TPanel
-      Left = 727
+      Left = 719
       Top = 1
       Width = 302
       Height = 39
@@ -131,8 +129,9 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 0
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 0
       end
     end
     object btnExcel: TBitBtn
@@ -141,8 +140,6 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       Width = 75
       Height = 25
       Caption = 'Excel'
-      TabOrder = 1
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -186,12 +183,14 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 1
+      OnClick = btnExcelClick
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 486
-    Width = 1030
+    Top = 474
+    Width = 1022
     Height = 19
     Panels = <
       item
@@ -207,8 +206,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   object dbgrdContStatus: TDBGrid
     Left = 0
     Top = 65
-    Width = 1030
-    Height = 335
+    Width = 1022
+    Height = 323
     Align = alClient
     DataSource = dtsrcCurrentContStatus
     TabOrder = 3
@@ -319,13 +318,13 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   end
   object pnlSearch: TPanel
     Left = 0
-    Top = 400
-    Width = 1030
+    Top = 388
+    Width = 1022
     Height = 45
     Align = alBottom
     TabOrder = 6
     DesignSize = (
-      1030
+      1022
       45)
     object Label1: TLabel
       Left = 16

@@ -30,13 +30,12 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
         Control = Toolbar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 802
+        Width = 788
       end>
-    ExplicitWidth = 804
     object Toolbar1: TToolBar
       Left = 11
       Top = 0
-      Width = 789
+      Width = 779
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -167,8 +166,6 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       item
         Width = 50
       end>
-    ExplicitTop = 396
-    ExplicitWidth = 804
   end
   object Panel1: TPanel
     Left = 0
@@ -178,8 +175,6 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 354
-    ExplicitWidth = 800
     DesignSize = (
       794
       41)
@@ -216,7 +211,6 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       Caption = 'Clos&e'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 724
     end
     object edtNumber: TEdit
       Left = 607
@@ -226,7 +220,6 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 621
     end
     object btnSearch: TBitBtn
       Left = 296
@@ -341,7 +334,6 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 800
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -370,7 +362,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 391
+      Width = 385
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -378,19 +370,18 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 391
+        Width = 373
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 385
+            Width = 367
           end>
-        ExplicitWidth = 397
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 376
+          Width = 358
           Height = 25
           Align = alClient
           ButtonWidth = 62

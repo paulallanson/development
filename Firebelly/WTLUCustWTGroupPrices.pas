@@ -61,7 +61,7 @@ var
 
 implementation
 
-uses wtDataModule, wtMain, WTMaintCustWTGroupPrices;
+uses UITypes, wtDataModule, wtMain, WTMaintCustWTGroupPrices;
 
 {$R *.dfm}
 

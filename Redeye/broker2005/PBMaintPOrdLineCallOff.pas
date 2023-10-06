@@ -169,7 +169,7 @@ var
 
 implementation
 
-uses
+uses FireDAC.Stan.Param, 
   System.UITypes,
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod, DateSelV5,
   PBLUFormRef, PBMaintPOrd, PBLUCConta, PBLUSConta;
@@ -301,7 +301,7 @@ begin
       ShowAddress(Self);
     end;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [poDelete, poView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   OKBitBtn.Visible := (FFuncMode <> poView);
   CheckOK(Self);
 

@@ -61,7 +61,7 @@ var
 
 implementation
 
-uses pbEnqsdm, CCSCommon, pbDatabase, PBLUReasCode;
+uses UITypes, pbEnqsdm, CCSCommon, pbDatabase, PBLUReasCode;
 
 {$R *.dfm}
 

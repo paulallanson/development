@@ -43,7 +43,7 @@ var
 
 implementation
 
-uses wtLUCustomer, AllCommon, DateSelV5;
+uses UITypes, wtLUCustomer, AllCommon, DateSelV5;
 
 {$R *.dfm}
 

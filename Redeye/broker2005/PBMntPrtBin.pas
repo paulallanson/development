@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses PBMntPrtBinUpd;
+uses UITypes, PBMntPrtBinUpd;
 
 
 {$R *.DFM}
@@ -178,8 +178,7 @@ Var
 TempWord: Word ;
 iTempCount: Integer ;
 begin
-TempWord := MessageDlg('Do you want the selected bins to allow picking?', mtConfirmation,
-               [mbCancel,mbNo,mbYes],0) ;
+TempWord := MessageDlg('Do you want the selected bins to allow picking?', mtConfirmation, [mbCancel,mbNo,mbYes],0) ;
 If (TempWord = mrNo) or (TempWord = mrYes) then
    begin
    For iTempCount := 0 to BinsListView.Items.Count - 1 do

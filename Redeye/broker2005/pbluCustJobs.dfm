@@ -36,8 +36,6 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       item
         Width = 50
       end>
-    ExplicitTop = 533
-    ExplicitWidth = 810
   end
   object Panel1: TPanel
     Left = 0
@@ -47,8 +45,6 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 482
-    ExplicitWidth = 800
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -65,7 +61,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 526
+      Left = 520
       Top = 1
       Width = 273
       Height = 39
@@ -73,7 +69,6 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 536
       DesignSize = (
         273
         39)
@@ -124,13 +119,12 @@ object frmpbluCustJobs: TfrmpbluCustJobs
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 808
+        Width = 788
       end>
-    ExplicitWidth = 810
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 795
+      Width = 779
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -318,7 +312,6 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 800
     object Panel4: TPanel
       Left = 0
       Top = 0
@@ -347,7 +340,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 391
+      Width = 385
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -355,19 +348,18 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 391
+        Width = 373
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 385
+            Width = 367
           end>
-        ExplicitWidth = 397
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 376
+          Width = 358
           Height = 25
           Align = alClient
           ButtonWidth = 62

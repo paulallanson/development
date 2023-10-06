@@ -27,8 +27,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     ActivePage = tbsProduction
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 634
-    ExplicitHeight = 499
     object tbsAddress: TTabSheet
       Caption = 'Address'
       object Label5: TLabel
@@ -1847,13 +1845,11 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 622
-        Height = 470
+        Width = 618
+        Height = 469
         ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 626
-        ExplicitHeight = 471
         object TabSheet1: TTabSheet
           Caption = 'Enquiries'
           object Label29: TLabel
@@ -2490,8 +2486,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 538
-    ExplicitWidth = 634
     DesignSize = (
       626
       41)
@@ -2527,7 +2521,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 634
     DesignSize = (
       626
       39)
@@ -2559,7 +2552,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ParentFont = False
       TabOrder = 0
       Text = 'NameEdit'
-      ExplicitWidth = 408
     end
   end
   object StatusBar1: TStatusBar
@@ -2574,8 +2566,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       item
         Width = 50
       end>
-    ExplicitTop = 579
-    ExplicitWidth = 634
   end
   object GetCompanySQL: TFDQuery
     ConnectionName = 'PB'

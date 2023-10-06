@@ -78,7 +78,7 @@ var
 
 implementation
 
-uses pbDatabase, CCSCommon, DateSelV5, pbMainMenu;
+uses UITypes, pbDatabase, CCSCommon, DateSelV5, pbMainMenu;
 
 {$R *.dfm}
 

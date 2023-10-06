@@ -1,7 +1,6 @@
-﻿object STMntPrtStorFrm: TSTMntPrtStorFrm
+object STMntPrtStorFrm: TSTMntPrtStorFrm
   Left = 144
   Top = 111
-  AutoScroll = False
   Caption = 'Maintain Product Store'
   ClientHeight = 377
   ClientWidth = 511
@@ -11,10 +10,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 14
@@ -36,9 +33,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -103,7 +97,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 278
@@ -112,9 +109,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -179,10 +173,12 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 12
     Width = 481
@@ -193,6 +189,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label5: TLabel
@@ -267,12 +264,12 @@
     OnClick = StorTypDBLookupComboBoxClick
   end
   object AddressGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 473
     Height = 185
     Caption = 'Address Details'
+    ParentBackground = False
     TabOrder = 4
     object StreetLabel: TLabel
       Left = 8
@@ -421,74 +418,46 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Bins_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Lots_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Number_and_Stret'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_District'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Fax'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Allow_Neg_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -524,64 +493,40 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Bins_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Lots_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Number_and_Stret'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_District'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Fax'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Allow_Neg_Stock'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -597,9 +542,7 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery

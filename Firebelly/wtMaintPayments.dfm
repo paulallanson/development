@@ -59,7 +59,6 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    ExplicitTop = 166
   end
   object BitBtn2: TBitBtn
     Left = 236
@@ -72,7 +71,6 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 6
-    ExplicitTop = 166
   end
   object dblkpPaymentMethod: TDBLookupComboBox
     Left = 96

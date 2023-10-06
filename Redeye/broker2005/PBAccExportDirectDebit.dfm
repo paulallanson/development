@@ -21,8 +21,6 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 363
-    ExplicitWidth = 533
     object btnExport: TButton
       Left = 352
       Top = 8
@@ -50,13 +48,11 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 533
-    ExplicitHeight = 319
     object pnlNumberRange: TPanel
       Left = 153
       Top = 0
-      Width = 380
-      Height = 319
+      Width = 376
+      Height = 318
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
@@ -200,7 +196,6 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitHeight = 319
       object rdgrpExportBy: TRadioGroup
         Left = 8
         Top = 8
@@ -223,8 +218,6 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Height = 44
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 319
-    ExplicitWidth = 533
     object lblExpTo: TLabel
       Left = 8
       Top = 16

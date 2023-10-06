@@ -28,10 +28,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 637
-    ExplicitWidth = 822
     object Panel4: TPanel
-      Left = 488
+      Left = 478
       Top = 1
       Width = 333
       Height = 37
@@ -105,7 +103,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 822
     DesignSize = (
       812
       97)
@@ -249,12 +246,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 822
-    ExplicitHeight = 290
     object pnlNCADetails: TPanel
       Left = 1
       Top = 1
-      Width = 820
+      Width = 810
       Height = 85
       Align = alTop
       Caption = 'pnlNCADetails'
@@ -263,7 +258,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object Panel5: TPanel
         Left = 1
         Top = 1
-        Width = 818
+        Width = 808
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -274,7 +269,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object memDetails: TMemo
         Left = 1
         Top = 21
-        Width = 818
+        Width = 808
         Height = 63
         Align = alClient
         ScrollBars = ssVertical
@@ -285,8 +280,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     object pnlResponse: TPanel
       Left = 1
       Top = 86
-      Width = 820
-      Height = 33
+      Width = 810
+      Height = 20
       Align = alClient
       Caption = 'pnlResponse'
       ParentBackground = False
@@ -294,7 +289,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object Panel6: TPanel
         Left = 1
         Top = 1
-        Width = 818
+        Width = 808
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -305,7 +300,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object memResponse: TMemo
         Left = 1
         Top = 21
-        Width = 818
+        Width = 808
         Height = 11
         Align = alClient
         ScrollBars = ssVertical
@@ -314,8 +309,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
     object pnlAction: TPanel
       Left = 1
-      Top = 119
-      Width = 820
+      Top = 106
+      Width = 810
       Height = 85
       Align = alBottom
       Caption = 'pnlAction'
@@ -324,7 +319,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object pnlActionLabel: TPanel
         Left = 1
         Top = 1
-        Width = 818
+        Width = 808
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -335,9 +330,14 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object memAction: TRichEdit
         Left = 1
         Top = 21
-        Width = 818
+        Width = 808
         Height = 63
         Align = alClient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentFont = False
         TabOrder = 1
       end
@@ -351,12 +351,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Caption = 'pnlPrevent'
       ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 204
-      ExplicitWidth = 820
       object Panel3: TPanel
         Left = 1
         Top = 1
-        Width = 818
+        Width = 808
         Height = 20
         Align = alTop
         Alignment = taLeftJustify
@@ -367,9 +365,14 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       object memPrevent: TRichEdit
         Left = 1
         Top = 21
-        Width = 818
+        Width = 808
         Height = 63
         Align = alClient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentFont = False
         TabOrder = 1
       end
@@ -383,8 +386,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
-    ExplicitTop = 556
-    ExplicitWidth = 822
     DesignSize = (
       812
       81)
@@ -557,7 +558,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 822
     DesignSize = (
       812
       72)
@@ -774,8 +774,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       item
         Width = 50
       end>
-    ExplicitTop = 676
-    ExplicitWidth = 822
   end
   object pnlPO: TPanel
     Left = 0
@@ -785,7 +783,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 822
     DesignSize = (
       812
       97)

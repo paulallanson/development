@@ -1,7 +1,4 @@
 object STPickDM: TSTPickDM
-  OldCreateOrder = False
-  Left = 132
-  Top = 179
   Height = 479
   Width = 814
   object PickListSQL: TFDQuery
@@ -92,9 +89,8 @@ object STPickDM: TSTPickDM
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object PartSQL: TFDQuery
@@ -107,9 +103,7 @@ object STPickDM: TSTPickDM
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object PickDtlsSRC: TDataSource
@@ -173,24 +167,17 @@ object STPickDM: TSTPickDM
     Top = 176
     ParamData = <
       item
-        DataType = ftString
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end>
   end
   object StoreStockSQL: TFDQuery
@@ -203,9 +190,7 @@ object STPickDM: TSTPickDM
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object PickHeadSQL: TFDQuery
@@ -227,9 +212,7 @@ object STPickDM: TSTPickDM
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end>
   end
   object ClearPickSQL: TFDQuery
@@ -242,9 +225,7 @@ object STPickDM: TSTPickDM
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end>
   end
   object UpdPurchOrdSQL: TFDQuery
@@ -259,19 +240,13 @@ object STPickDM: TSTPickDM
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Sent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckPickBinSQL: TFDQuery
@@ -285,14 +260,10 @@ object STPickDM: TSTPickDM
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object CheckPickLotSQL: TFDQuery
@@ -306,14 +277,10 @@ object STPickDM: TSTPickDM
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_lot'
-        ParamType = ptUnknown
       end>
   end
   object UpdPFJSQL: TFDQuery
@@ -326,14 +293,10 @@ object STPickDM: TSTPickDM
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object PartStoreSQL: TFDQuery
@@ -346,9 +309,7 @@ object STPickDM: TSTPickDM
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object UpdSalesOrdSQL: TFDQuery
@@ -365,19 +326,13 @@ object STPickDM: TSTPickDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdSalesOrdHeadSQL: TFDQuery
@@ -390,14 +345,10 @@ object STPickDM: TSTPickDM
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object UpdDirectSalesOrdSQL: TFDQuery
@@ -415,24 +366,16 @@ object STPickDM: TSTPickDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckPickBinLotSQL: TFDQuery
@@ -449,24 +392,19 @@ object STPickDM: TSTPickDM
     Top = 192
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store_lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetStoreStockSQL: TFDQuery
@@ -487,34 +425,22 @@ object STPickDM: TSTPickDM
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end>
   end
   object UpdSalesOrderInvQty: TFDQuery
@@ -530,19 +456,13 @@ object STPickDM: TSTPickDM
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckSOStatusSQL: TFDQuery
@@ -589,29 +509,19 @@ object STPickDM: TSTPickDM
     Top = 116
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object UpdOrderStatusSQL: TFDQuery
@@ -624,14 +534,10 @@ object STPickDM: TSTPickDM
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'OrderNo'
-        ParamType = ptUnknown
       end>
   end
   object UpdSalesOrdDelivSQL: TFDQuery
@@ -653,24 +559,16 @@ object STPickDM: TSTPickDM
     Top = 268
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Deliv_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deliv_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAddCharge: TFDQuery
@@ -684,9 +582,7 @@ object STPickDM: TSTPickDM
     Top = 332
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -699,9 +595,7 @@ object STPickDM: TSTPickDM
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderLines: TFDQuery
@@ -715,9 +609,7 @@ object STPickDM: TSTPickDM
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdJobBagLine: TFDQuery
@@ -735,34 +627,22 @@ object STPickDM: TSTPickDM
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesOrderJB: TFDQuery
@@ -776,9 +656,7 @@ object STPickDM: TSTPickDM
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryJBChkStatus: TFDQuery
@@ -825,9 +703,7 @@ object STPickDM: TSTPickDM
     Top = 268
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryJBUpHead: TFDQuery
@@ -840,14 +716,10 @@ object STPickDM: TSTPickDM
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProductionLoc: TFDQuery
@@ -865,9 +737,7 @@ object STPickDM: TSTPickDM
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object PartTransferSQL: TFDQuery
@@ -882,19 +752,13 @@ object STPickDM: TSTPickDM
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderLine: TFDQuery
@@ -909,14 +773,10 @@ object STPickDM: TSTPickDM
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPickHead: TFDQuery
@@ -937,9 +797,7 @@ object STPickDM: TSTPickDM
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPickLines: TFDQuery
@@ -993,9 +851,7 @@ object STPickDM: TSTPickDM
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSOPicking: TFDQuery
@@ -1008,9 +864,7 @@ object STPickDM: TSTPickDM
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPicking: TFDQuery
@@ -1030,9 +884,7 @@ object STPickDM: TSTPickDM
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOProductionLines: TFDQuery
@@ -1074,9 +926,7 @@ object STPickDM: TSTPickDM
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesOrderJBReq: TFDQuery
@@ -1090,9 +940,7 @@ object STPickDM: TSTPickDM
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryJBChkStockReq: TFDQuery
@@ -1145,9 +993,7 @@ object STPickDM: TSTPickDM
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object GetSalesOrderHeadSQL: TFDQuery
@@ -1173,9 +1019,7 @@ object STPickDM: TSTPickDM
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteSODelivLine: TFDQuery
@@ -1187,9 +1031,7 @@ object STPickDM: TSTPickDM
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteSODeliv: TFDQuery
@@ -1201,9 +1043,7 @@ object STPickDM: TSTPickDM
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteSOPicking: TFDQuery
@@ -1217,9 +1057,7 @@ object STPickDM: TSTPickDM
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -11,9 +11,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 160
@@ -23,7 +21,6 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Caption = 'Forecast from:'
   end
   object RadioGroup1: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 8
     Width = 129
@@ -33,11 +30,11 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 0
     OnClick = RadioGroup1Click
   end
   object RadioGroup2: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 80
     Width = 129
@@ -47,6 +44,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Items.Strings = (
       'Weekly'
       'Monthly')
+    ParentBackground = False
     TabOrder = 1
     OnClick = RadioGroup2Click
   end
@@ -69,11 +67,11 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     OnClick = PreviewBitBtnClick
   end
   object pnlRepSearch: TPanel
-    ParentBackground = False
     Left = 155
     Top = 16
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblCustBran: TLabel
@@ -121,8 +119,6 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Top = 112
     Width = 25
     Height = 25
-    TabOrder = 6
-    OnClick = DateFromBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -137,14 +133,17 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = DateFromBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 16
     Top = 168
     Width = 75
     Height = 25
-    TabOrder = 7
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 7
   end
   object qrySalesComm: TFDQuery
     ConnectionName = 'pb'

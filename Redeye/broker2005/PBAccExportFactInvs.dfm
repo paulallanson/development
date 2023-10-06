@@ -21,8 +21,6 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 164
-    ExplicitWidth = 515
     object btnExport: TButton
       Left = 320
       Top = 8
@@ -50,8 +48,6 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 515
-    ExplicitHeight = 119
     object pnlNumberRange: TPanel
       Left = 274
       Top = 0
@@ -188,7 +184,6 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Height = 110
       Align = alLeft
       TabOrder = 2
-      ExplicitHeight = 119
       object rdgrpInvOrCred: TRadioGroup
         Left = 8
         Top = 8
@@ -210,7 +205,6 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Height = 110
       Align = alLeft
       TabOrder = 3
-      ExplicitHeight = 119
       object rdgrpExportBy: TRadioGroup
         Left = 8
         Top = 8
@@ -233,8 +227,6 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Height = 45
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 119
-    ExplicitWidth = 515
     object lblExpTo: TLabel
       Left = 72
       Top = 16

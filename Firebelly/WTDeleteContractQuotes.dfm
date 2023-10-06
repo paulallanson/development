@@ -89,7 +89,6 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 2
     OnChange = CheckOK
     OnExit = edtDateToExit
-    ExplicitLeft = 134
   end
   object btnDateRequired: TBitBtn
     Left = 218
@@ -113,7 +112,6 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnDateRequiredClick
-    ExplicitLeft = 230
   end
   object edtDateFrom: TEdit
     Left = 122
@@ -124,7 +122,6 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 0
     OnChange = CheckOK
     OnExit = edtDateToExit
-    ExplicitLeft = 134
   end
   object BitBtn1: TBitBtn
     Left = 218
@@ -148,7 +145,6 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn1Click
-    ExplicitLeft = 230
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'

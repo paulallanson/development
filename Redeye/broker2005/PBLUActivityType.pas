@@ -57,7 +57,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBDatabase, PBMaintCountry, PBMaintActivityType;
+uses UITypes, pbMainMenu, PBDatabase, PBMaintCountry, PBMaintActivityType;
 
 {$R *.DFM}
 

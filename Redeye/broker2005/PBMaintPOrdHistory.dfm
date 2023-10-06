@@ -1,31 +1,29 @@
 object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
   Left = 290
   Top = 114
-  Width = 750
-  Height = 472
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Purchase Order Price Change History'
+  ClientHeight = 433
+  ClientWidth = 734
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 378
-    Width = 742
+    Top = 373
+    Width = 734
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
     DesignSize = (
-      742
+      734
       41)
     object btnClose: TButton
       Left = 655
@@ -41,8 +39,8 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
   object DBGrid1: TDBGrid
     Left = 0
     Top = 0
-    Width = 742
-    Height = 378
+    Width = 734
+    Height = 373
     Align = alClient
     DataSource = PBPODM.dtsGetPOPriceHist
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -130,8 +128,8 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 419
-    Width = 742
+    Top = 414
+    Width = 734
     Height = 19
     Panels = <>
   end

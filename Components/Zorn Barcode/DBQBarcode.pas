@@ -26,7 +26,7 @@ type
     procedure Paint; override;
     procedure Print (X, Y: integer); override;
     procedure Prepare; override;
-    procedure Unprepare; override;
+    procedure UnPrepare; override;
   public
     constructor Create (AOwner: TComponent); override;
     destructor Destroy; override;
@@ -51,10 +51,10 @@ begin
   inherited Print (X, Y);
 end;
 
-procedure TDBBarcode.Unprepare;
+procedure TDBBarcode.UnPrepare;
 begin
   FField := nil;
-  inherited Unprepare;
+  inherited UnPrepare;
 end;
 
 procedure TDBBarcode.Prepare;

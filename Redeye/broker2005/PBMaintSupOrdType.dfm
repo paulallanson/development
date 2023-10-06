@@ -1,4 +1,4 @@
-﻿object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
+object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
   Left = 182
   Top = 117
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 128
@@ -36,8 +34,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -103,6 +99,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 368
@@ -111,9 +109,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -178,7 +173,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -271,19 +269,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_Desc'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -298,19 +290,13 @@
     Left = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_type'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -324,14 +310,10 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_Type'
-        ParamType = ptUnknown
       end>
   end
   object GetBranchNameSQL: TFDQuery
@@ -344,14 +326,10 @@
     Top = 372
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetOrderTypesSQL: TFDQuery
@@ -374,14 +352,10 @@
     Top = 44
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Order_Type'
-        ParamType = ptUnknown
       end>
   end
 end

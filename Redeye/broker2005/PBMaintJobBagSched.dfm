@@ -1,24 +1,22 @@
 object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
   Left = 229
   Top = 113
-  Width = 784
-  Height = 451
   Caption = 'Job Bag Schedule History'
+  ClientHeight = 412
+  ClientWidth = 768
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 776
+    Width = 768
     Height = 49
     Align = alTop
     TabOrder = 0
@@ -35,20 +33,19 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnClick = cmbRevisionClick
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 376
-    Width = 776
+    Top = 371
+    Width = 768
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      776
+      768
       41)
     object BitBtn1: TBitBtn
       Left = 684
@@ -56,16 +53,17 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = BitBtn1Click
-      Kind = bkClose
     end
   end
   object pnlArtwork: TPanel
     Left = 0
     Top = 49
     Width = 265
-    Height = 327
+    Height = 322
     Align = alLeft
     TabOrder = 2
     object Panel15: TPanel
@@ -158,7 +156,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Left = 1
       Top = 133
       Width = 263
-      Height = 193
+      Height = 188
       Align = alClient
       Enabled = False
       TabOrder = 3
@@ -167,14 +165,14 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
   object pnlDataServices: TPanel
     Left = 265
     Top = 49
-    Width = 248
-    Height = 327
+    Width = 240
+    Height = 322
     Align = alClient
     TabOrder = 3
     object Panel16: TPanel
       Left = 1
       Top = 1
-      Width = 246
+      Width = 238
       Height = 20
       Align = alTop
       Enabled = False
@@ -191,8 +189,8 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     object scrlDataServices: TScrollBox
       Left = 1
       Top = 21
-      Width = 246
-      Height = 305
+      Width = 238
+      Height = 300
       Align = alClient
       BevelInner = bvNone
       BevelOuter = bvNone
@@ -394,10 +392,10 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     end
   end
   object pnlSamples: TPanel
-    Left = 513
+    Left = 505
     Top = 49
     Width = 263
-    Height = 327
+    Height = 322
     Align = alRight
     TabOrder = 4
     object Panel17: TPanel
@@ -421,7 +419,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Left = 1
       Top = 21
       Width = 261
-      Height = 190
+      Height = 185
       Align = alClient
       BevelInner = bvNone
       BevelOuter = bvNone
@@ -463,7 +461,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     end
     object Panel14: TPanel
       Left = 1
-      Top = 211
+      Top = 206
       Width = 261
       Height = 115
       Align = alBottom
@@ -505,7 +503,6 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
         Height = 21
         Style = csDropDownList
         Color = clBtnFace
-        ItemHeight = 13
         TabOrder = 0
         Items.Strings = (
           'Client'

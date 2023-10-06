@@ -252,8 +252,6 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 588
-    ExplicitWidth = 1083
     object Panel1: TPanel
       Left = 831
       Top = 1
@@ -263,7 +261,6 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 825
       DesignSize = (
         257
         38)
@@ -388,14 +385,12 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Top = 48
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryGraph2: TFDQuery
@@ -414,14 +409,12 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryGraph3: TFDQuery
@@ -440,14 +433,12 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryGraph4: TFDQuery
@@ -466,14 +457,12 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Top = 224
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
 end

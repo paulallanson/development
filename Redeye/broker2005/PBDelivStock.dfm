@@ -163,8 +163,6 @@ object PBDelivStockFrm: TPBDelivStockFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 302
-    ExplicitWidth = 327
     object OKBtn: TBitBtn
       Left = 71
       Top = 3

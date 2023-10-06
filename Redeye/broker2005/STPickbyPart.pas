@@ -33,8 +33,7 @@ type
     procedure PickingGridDblClick(Sender: TObject);
     procedure ConfirmBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure PickingGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+    procedure PickingGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormDestroy(Sender: TObject);
     procedure UpdateTransfers;
     procedure TransferToProduction;
@@ -48,8 +47,7 @@ type
     procedure EnableButtons(iRow: integer);
     procedure SplitAllocation(aLine: TPickLine; iQtyPicked: integer);
     procedure BitBtn2Click(Sender: TObject);
-    procedure PickingGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure PickingGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
   private
     FPickListNumber: string;
     FSelectedLineIndex: Integer;
@@ -86,7 +84,7 @@ var
 
 implementation
 
-uses stPickItem, ststockdm, STPickingDM;
+uses Types, UITypes, stPickItem, ststockdm, STPickingDM;
 
 {$R *.DFM}
 
@@ -300,13 +298,11 @@ begin
     Result := PickingList.PickLines[FSelectedLineIndex];
 end;
 
-procedure TSTPickbyPartFrm.PickingGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+procedure TSTPickbyPartFrm.PickingGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-  EnableButtons(Row);
-  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
-
+  EnableButtons(ARow);
+  if FSelectedLineIndex = ARow - 1 then Exit;
+  FSelectedLineIndex := ARow - 1;
 end;
 
 procedure TSTPickbyPartFrm.FormDestroy(Sender: TObject);
@@ -839,8 +835,7 @@ begin
 getnextdespNote;
 end;
 
-procedure TSTPickbyPartFrm.PickingGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TSTPickbyPartFrm.PickingGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
 begin
@@ -852,8 +847,7 @@ begin
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end
   else
   	begin

@@ -35,6 +35,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.dfm}
 
 procedure TPBLUSalesInvoiceCustJBfrm.FormCreate(Sender: TObject);

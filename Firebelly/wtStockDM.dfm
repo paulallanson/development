@@ -47,9 +47,7 @@ object dtmdlStock: TdtmdlStock
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Code'
-        ParamType = ptUnknown
       end>
   end
 end

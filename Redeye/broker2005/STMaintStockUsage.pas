@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses PBDatabase, CCSCommon, STMaintStockUsageLine, STLUStkMvmnts,
+uses UITypes, Types, PBDatabase, CCSCommon, STMaintStockUsageLine, STLUStkMvmnts,
   pbMainMenu;
 
 {$R *.dfm}

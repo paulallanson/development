@@ -1,29 +1,23 @@
 object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
   Left = 248
   Top = 114
-  Width = 1301
-  Height = 563
   Caption = 'Sales History Report'
+  ClientHeight = 524
+  ClientWidth = 1285
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 104
     Top = 24
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -41,6 +35,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -54,56 +49,59 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
       Left = 38
       Top = 38
       Width = 718
       Height = 99
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         261.937500000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object gtQRLabel1: TQRLabel
         Left = 236
         Top = 8
         Width = 246
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
+          60.854166666666670000
           624.416666666666700000
           21.166666666666670000
           650.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales History Report by Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -113,7 +111,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRSysData2: TQRSysData
@@ -121,19 +121,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 11
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1698.625000000000000000
           29.104166666666670000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -144,6 +141,8 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateSelection: TQRLabel
@@ -151,20 +150,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 48
         Width = 105
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           809.625000000000000000
           127.000000000000000000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Range From: '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -174,7 +169,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblDelivery: TQRLabel
@@ -182,20 +179,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 81
         Width = 70
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1031.875000000000000000
           214.312500000000000000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivered To'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -205,7 +198,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData1: TQRSysData
@@ -213,19 +208,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 28
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1733.020833333333000000
           74.083333333333340000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
@@ -234,7 +226,10 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
@@ -242,20 +237,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 80
         Width = 35
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1640.416666666667000000
           211.666666666666700000
           92.604166666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Usage'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -265,7 +256,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSelection: TQRLabel
@@ -273,20 +266,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 31
         Width = 110
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           804.333333333333300000
-          82.020833333333340000
+          82.020833333333330000
           291.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Selection'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -296,7 +285,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel2: TQRLabel
@@ -304,20 +295,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 81
         Width = 44
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           15.875000000000000000
           214.312500000000000000
           116.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -327,7 +314,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
@@ -335,20 +324,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 81
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           396.875000000000000000
           214.312500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -358,7 +343,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel5: TQRLabel
@@ -366,20 +353,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 80
         Width = 43
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1770.062500000000000000
           211.666666666666700000
           113.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Inactive'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -389,7 +372,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -398,18 +383,15 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       Top = 137
       Width = 718
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         63.500000000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = QRSubDetail1
       ReprintOnNewPage = False
@@ -418,20 +400,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 0
         Width = 105
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           0.000000000000000000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -442,7 +420,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -451,19 +433,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       Top = 161
       Width = 718
       Height = 2
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbPartHeaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         5.291666666666667000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Part'
       FooterBand = qrpPartFooter
       Master = QRSubDetail1
@@ -474,19 +453,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       Top = 163
       Width = 718
       Height = 18
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         47.625000000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       PrintBefore = False
@@ -497,19 +473,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       Top = 181
       Width = 718
       Height = 20
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         52.916666666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QRSubDetail1
       DataSet = qryUsage
       PrintBefore = False
@@ -519,20 +492,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 58
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1727.729166666667000000
           2.645833333333333000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblInactive'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -542,7 +511,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
@@ -550,20 +521,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 32
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1651.000000000000000000
           2.645833333333333000
           84.666666666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryUsage
         DataField = 'Usage'
@@ -574,7 +541,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbPart: TQRDBText
@@ -582,20 +553,17 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 141
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           10.583333333333330000
           2.645833333333333000
           373.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part'
@@ -606,7 +574,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbPartDescription: TQRDBText
@@ -614,16 +586,14 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 233
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           402.166666666666600000
           2.645833333333333000
           616.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -638,7 +608,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDeliveryLocation: TQRLabel
@@ -646,20 +620,17 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 220
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1029.229166666667000000
           2.645833333333333000
           582.083333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblDeliveryLocation'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -669,7 +640,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -678,39 +651,32 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       Top = 201
       Width = 718
       Height = 29
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrpPartFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         76.729166666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblTotalUsage: TQRLabel
         Left = 583
         Top = 6
         Width = 75
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1542.520833333333000000
           15.875000000000000000
           198.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalUsage'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -720,7 +686,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText5: TQRDBText
@@ -728,20 +696,17 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 6
         Width = 141
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           10.583333333333330000
           15.875000000000000000
           373.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part'
@@ -752,7 +717,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -760,20 +729,17 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 6
         Width = 264
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           402.166666666666600000
           15.875000000000000000
           698.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part_Description'
@@ -784,7 +750,11 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrshpBottom: TQRShape
@@ -792,16 +762,14 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 20
         Width = 90
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333340000
           1505.479166666667000000
           52.916666666666660000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -810,16 +778,14 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 1
         Width = 90
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333340000
           1505.479166666667000000
           2.645833333333333000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -828,20 +794,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 6
         Width = 58
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1312.333333333333000000
           15.875000000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Usage'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -851,7 +813,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalInactive: TQRLabel
@@ -859,20 +823,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Top = 6
         Width = 58
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1727.729166666667000000
           15.875000000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblInactive'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -882,7 +842,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -919,39 +881,25 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -960,8 +908,8 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Top = 40
   end
   object qryUsage: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsReport
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP :Record_List'
       '  '#9'Sales_Order_Line.Part,'
@@ -1009,24 +957,16 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Top = 94
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Record_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object qryBranches: TFDQuery
@@ -1043,9 +983,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -23,8 +23,6 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 679
-    ExplicitHeight = 280
     object dbgrdMvmnts: TDBGrid
       Left = 1
       Top = 49
@@ -124,7 +122,6 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 677
       DesignSize = (
         683
         48)
@@ -213,8 +210,6 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 280
-    ExplicitWidth = 679
     DesignSize = (
       685
       41)
@@ -227,7 +222,6 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 574
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -291,7 +285,6 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 444
     end
   end
 end

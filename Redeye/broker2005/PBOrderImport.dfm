@@ -11,10 +11,8 @@ object PBOrderImportFrm: TPBOrderImportFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlCustomer: TPanel
     Left = 0
@@ -49,7 +47,6 @@ object PBOrderImportFrm: TPBOrderImportFrm
       Width = 193
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnClick = cmbImportTypeClick
       Items.Strings = (
@@ -182,8 +179,9 @@ object PBOrderImportFrm: TPBOrderImportFrm
       Width = 75
       Height = 25
       Caption = 'Close'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
   end
   object opndlgImportFile: TOpenDialog

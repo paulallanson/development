@@ -1,20 +1,18 @@
-﻿object PBLUProductRefFrm: TPBLUProductRefFrm
+object PBLUProductRefFrm: TPBLUProductRefFrm
   Left = 288
   Top = 130
-  Width = 505
-  Height = 488
   Caption = 'Lookup Product Reference'
+  ClientHeight = 449
+  ClientWidth = 489
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CustLabel: TLabel
     Left = 80
@@ -105,17 +103,19 @@
     Width = 75
     Height = 25
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 412
     Top = 424
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
     Left = 408
@@ -130,8 +130,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -146,6 +144,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 4
@@ -153,8 +153,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -169,6 +167,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 4
@@ -176,8 +176,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -192,6 +190,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object DispPanel: TPanel
@@ -231,8 +231,6 @@
     Width = 75
     Height = 25
     Caption = 'Images'
-    TabOrder = 6
-    OnClick = btbtnImagesClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -247,6 +245,8 @@
       EE33337F333377F3337F33EEEEEE00EEEE33337F33337733337F33EEEEEEEEEE
       EE33337FFFFFFFFFFF7F33EEEEEEEEEEEE333377777777777773}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btbtnImagesClick
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -265,19 +265,16 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SearchTimer: TTimer

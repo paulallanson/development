@@ -3,7 +3,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   Top = 58
   Caption = 'Purchases By Invoice Number'
   ClientHeight = 415
-  ClientWidth = 727
+  ClientWidth = 729
   Color = clBtnFace
   Constraints.MinHeight = 400
   Constraints.MinWidth = 745
@@ -18,17 +18,16 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 145
-    Width = 727
+    Width = 729
     Height = 229
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 238
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 731
-      Height = 245
+      Width = 727
+      Height = 227
       Align = alClient
       DataSource = dtsrcPurchByInv
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -103,7 +102,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 727
+    Width = 729
     Height = 145
     Align = alTop
     ParentBackground = False
@@ -342,14 +341,13 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 374
-    Width = 727
+    Width = 729
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 383
     DesignSize = (
-      727
+      729
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -365,7 +363,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 494
+      Left = 496
       Top = 1
       Width = 232
       Height = 39
@@ -429,7 +427,6 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 331
     end
     object btbtnExcel: TBitBtn
       Left = 415
@@ -483,7 +480,6 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
-      ExplicitLeft = 427
     end
   end
   object pnlExportPrgrss: TPanel

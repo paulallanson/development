@@ -41,7 +41,7 @@ var
 
 implementation
 
-uses CCSCommon, PBLUProductionLoc, STRPStockReturns;
+uses UITypes, CCSCommon, PBLUProductionLoc, STRPStockReturns;
 
 {$R *.dfm}
 

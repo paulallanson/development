@@ -11,10 +11,8 @@ object STStoreStockFrm: TSTStoreStockFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
     Left = 0
@@ -142,17 +140,19 @@ object STStoreStockFrm: TSTStoreStockFrm
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btbtnOKClick
-      Kind = bkOK
     end
     object btbtnCancel: TBitBtn
       Left = 408
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
 end

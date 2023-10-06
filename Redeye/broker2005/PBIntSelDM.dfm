@@ -1,7 +1,4 @@
 object dmIntSel: TdmIntSel
-  OldCreateOrder = False
-  Left = 252
-  Top = 105
   Height = 540
   Width = 783
   object GetLastTempIDSQL: TFDQuery
@@ -14,8 +11,8 @@ object dmIntSel: TdmIntSel
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -31,8 +28,8 @@ object dmIntSel: TdmIntSel
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -47,8 +44,8 @@ object dmIntSel: TdmIntSel
     Top = 200
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -65,38 +62,38 @@ object dmIntSel: TdmIntSel
     Top = 136
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sel1'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel4'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftString
-        Name = 'Tag'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftString
-        Name = 'Text100'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Tag'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Text100'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'Int_Sel_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -112,8 +109,8 @@ object dmIntSel: TdmIntSel
     Top = 264
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -131,38 +128,38 @@ object dmIntSel: TdmIntSel
     Top = 328
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Key'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Sel4'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Tag'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Text100'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -180,43 +177,41 @@ object dmIntSel: TdmIntSel
     Top = 384
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Key'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Sel4'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Sel5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Tag'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Text100'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

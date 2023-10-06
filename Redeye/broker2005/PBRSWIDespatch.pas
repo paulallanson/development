@@ -79,7 +79,7 @@ var
 
 implementation
 
-uses STLUCourier, PBLUCust, PBLURep, ccsCommon, DateSelV5, CCSPrint, PBRPWIDespatch;
+uses UITypes, STLUCourier, PBLUCust, PBLURep, ccsCommon, DateSelV5, CCSPrint, PBRPWIDespatch;
 
 {$R *.dfm}
 

@@ -90,7 +90,7 @@ var
 
 implementation
 
-uses CCSCommon;
+uses UITypes, FireDAC.Stan.Param, CCSCommon;
 
 {$R *.DFM}
 

@@ -11,13 +11,11 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     436
     145)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -43,9 +41,9 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 221
@@ -56,8 +54,8 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object edtColor: TEdit
     Left = 94
@@ -112,14 +110,10 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -135,8 +129,8 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -150,8 +144,8 @@ object frmWTMaintAppointmentDateType: TfrmWTMaintAppointmentDateType
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

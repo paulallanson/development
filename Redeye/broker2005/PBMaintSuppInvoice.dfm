@@ -26,7 +26,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 787
     object Label6: TLabel
       Left = 8
       Top = 8
@@ -191,8 +190,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       item
         Width = 50
       end>
-    ExplicitTop = 524
-    ExplicitWidth = 787
   end
   object pnlBottom: TPanel
     Left = 0
@@ -202,8 +199,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 472
-    ExplicitWidth = 787
     DesignSize = (
       781
       52)
@@ -250,7 +245,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 608
     end
     object BitBtn2: TBitBtn
       Left = 684
@@ -261,7 +255,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 696
     end
     object pnlValues: TPanel
       Left = 1
@@ -320,8 +313,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 349
-    ExplicitWidth = 787
     object Label10: TLabel
       Left = 4
       Top = 8
@@ -350,7 +341,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         101)
     end
     object pnlTotals: TPanel
-      Left = 601
+      Left = 595
       Top = 1
       Width = 185
       Height = 121
@@ -445,8 +436,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     OnDblClick = sgLinesDblClick
     OnDrawCell = sgLinesDrawCell
     OnSelectCell = sgLinesSelectCell
-    ExplicitWidth = 787
-    ExplicitHeight = 188
     ColWidths = (
       40
       83

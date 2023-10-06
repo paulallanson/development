@@ -64,7 +64,7 @@ var
 
 implementation
 
-uses STMaintCourier, STLUCourierServ, pbDatabase, pbMainMenu, STLUCourierSort, STLUCourierSpeed;
+uses UITypes, STMaintCourier, STLUCourierServ, pbDatabase, pbMainMenu, STLUCourierSort, STLUCourierSpeed;
 
 {$R *.DFM}
 

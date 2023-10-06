@@ -11,11 +11,9 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 304
@@ -23,8 +21,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Width = 75
     Height = 25
     Caption = 'Print'
-    TabOrder = 0
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -39,6 +35,8 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 216
@@ -46,8 +44,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Width = 75
     Height = 25
     Caption = 'Preview'
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -62,13 +58,15 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object pnlRepSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 16
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblCustBran: TLabel
@@ -107,16 +105,17 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Top = 240
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 5
     Top = 141
     Width = 180
     Height = 89
     Caption = 'Date Range'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
@@ -145,8 +144,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
       Top = 23
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btbtnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -161,6 +158,8 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnDateFromClick
     end
     object edtDateTo: TEdit
       Left = 48
@@ -175,8 +174,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
       Top = 55
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btbtnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -191,10 +188,11 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btbtnDateToClick
     end
   end
   object rdgrpRep: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -204,15 +202,16 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 5
     OnClick = rdgrpRepClick
   end
   object pnlCustSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 82
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object Label3: TLabel
@@ -247,7 +246,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     end
   end
   object rdgrpCust: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 74
     Width = 129
@@ -257,6 +255,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 7
     OnClick = rdgrpCustClick
   end
@@ -285,7 +284,6 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     TabOrder = 10
   end
   object TotByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 480
     Top = 8
     Width = 105
@@ -295,6 +293,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Items.Strings = (
       'by Rep'
       'by Customer')
+    ParentBackground = False
     TabOrder = 11
   end
   object chkbxRepPageBreak: TCheckBox
@@ -316,9 +315,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Top = 9
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -11,10 +11,8 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
     Left = 0
@@ -139,8 +137,6 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Top = 10
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -155,6 +151,8 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateRequiredClick
     end
     object memQuantity: TMemo
       Left = 104
@@ -221,8 +219,6 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Top = 66
       Width = 25
       Height = 25
-      TabOrder = 7
-      OnClick = btnHandoverDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -237,6 +233,8 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 7
+      OnClick = btnHandoverDateClick
     end
     object dblkpSort: TDBLookupComboBox
       Left = 104
@@ -292,9 +290,9 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Caption = 'OK'
       Default = True
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 335
@@ -305,8 +303,8 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel1: TPanel

@@ -56,7 +56,7 @@ var
 
 implementation
 
-uses STLUCustPart, ComObj, ActiveX, CCSCommon, PBLUCust;
+uses UITypes, STLUCustPart, ComObj, ActiveX, CCSCommon, PBLUCust;
 
 {$R *.DFM}
 

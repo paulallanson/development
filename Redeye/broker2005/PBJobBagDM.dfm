@@ -1,12 +1,11 @@
 object dmJobBag: TdmJobBag
-  Height = 905
-  Width = 1399
-  PixelsPerInch = 120
+  Height = 724
+  Width = 1119
   object dsJBHeaderGrid: TDataSource
     AutoEdit = False
     DataSet = qryJBHeaderGrid
-    Left = 50
-    Top = 10
+    Left = 40
+    Top = 8
   end
   object qryJBHeaderGrid: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -36,8 +35,8 @@ object dmJobBag: TdmJobBag
       'order by Job_Bag.Job_Bag desc'
       ' '
       ' ')
-    Left = 160
-    Top = 10
+    Left = 128
+    Top = 8
     ParamData = <
       item
         Name = 'custname'
@@ -65,8 +64,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 420
-    Top = 20
+    Left = 336
+    Top = 16
     ParamData = <
       item
         Name = 'GUID'
@@ -83,8 +82,8 @@ object dmJobBag: TdmJobBag
       'SELECT * FROM Job_Bag'
       'WHERE Job_Bag_Descr = :GUID'
       ' ')
-    Left = 420
-    Top = 80
+    Left = 336
+    Top = 64
     ParamData = <
       item
         Name = 'GUID'
@@ -92,8 +91,8 @@ object dmJobBag: TdmJobBag
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
-    Left = 500
-    Top = 20
+    Left = 400
+    Top = 16
   end
   object qryJBHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -203,8 +202,8 @@ object dmJobBag: TdmJobBag
       ''
       ''
       '')
-    Left = 50
-    Top = 80
+    Left = 40
+    Top = 64
     ParamData = <
       item
         Name = 'jobbag'
@@ -280,8 +279,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 80
+    Left = 224
+    Top = 64
     ParamData = <
       item
         Name = 'Description'
@@ -502,8 +501,8 @@ object dmJobBag: TdmJobBag
       ''
       ' '
       ' ')
-    Left = 220
-    Top = 210
+    Left = 176
+    Top = 168
     ParamData = <
       item
         Name = 'JobBag'
@@ -539,8 +538,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 150
-    Top = 140
+    Left = 120
+    Top = 112
     ParamData = <
       item
         Name = 'JobBag'
@@ -802,8 +801,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 50
-    Top = 210
+    Left = 40
+    Top = 168
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -953,23 +952,23 @@ object dmJobBag: TdmJobBag
   object dsJBAllLines: TDataSource
     AutoEdit = False
     DataSet = qryJBAllLines
-    Left = 50
-    Top = 140
+    Left = 40
+    Top = 112
   end
   object qryJBType: TFDQuery
     FilterOptions = [foCaseInsensitive]
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Job_Bag_Line_Type')
-    Left = 320
-    Top = 150
+    Left = 256
+    Top = 120
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Price_unit WHERE Price_unit = :Unit')
-    Left = 390
-    Top = 190
+    Left = 312
+    Top = 152
     ParamData = <
       item
         Name = 'Unit'
@@ -982,14 +981,14 @@ object dmJobBag: TdmJobBag
     SQL.Strings = (
       'select * from operator'
       'order by Name')
-    Left = 50
-    Top = 610
+    Left = 40
+    Top = 488
   end
   object OperatorSRC: TDataSource
     AutoEdit = False
     DataSet = OperatorSQL
-    Left = 140
-    Top = 610
+    Left = 112
+    Top = 488
   end
   object qryCustContact: TFDQuery
     ConnectionName = 'PB'
@@ -998,8 +997,8 @@ object dmJobBag: TdmJobBag
       'where Customer = :Customer and '
       'Branch_no = :Branch_no'
       'order by name')
-    Left = 390
-    Top = 340
+    Left = 312
+    Top = 272
     ParamData = <
       item
         Name = 'Customer'
@@ -1012,8 +1011,8 @@ object dmJobBag: TdmJobBag
   end
   object srcCustContact: TDataSource
     DataSet = qryCustContact
-    Left = 390
-    Top = 270
+    Left = 312
+    Top = 216
   end
   object qryCustReps: TFDQuery
     ConnectionName = 'PB'
@@ -1023,8 +1022,8 @@ object dmJobBag: TdmJobBag
       'where Customer = :Customer and '
       'Branch_no =:Branch_no and'
       'Reps_Branches.Rep = Rep.Rep')
-    Left = 250
-    Top = 610
+    Left = 200
+    Top = 488
     ParamData = <
       item
         Name = 'Customer'
@@ -1037,8 +1036,8 @@ object dmJobBag: TdmJobBag
   end
   object srcCustReps: TDataSource
     DataSet = qryCustReps
-    Left = 420
-    Top = 410
+    Left = 336
+    Top = 328
   end
   object qryJBUpLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -1082,8 +1081,8 @@ object dmJobBag: TdmJobBag
       'Where'
       'Job_Bag = :Job_Bag and'
       'Job_Bag_Line = :Job_Bag_Line')
-    Left = 150
-    Top = 210
+    Left = 120
+    Top = 168
     ParamData = <
       item
         Name = 'Job_Bag_Line_Type'
@@ -1237,8 +1236,8 @@ object dmJobBag: TdmJobBag
       'from Purchase_OrderLine'
       'where Purchase_Order = :Purchase_Order and '
       'Line = :Line')
-    Left = 570
-    Top = 270
+    Left = 456
+    Top = 216
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1253,8 +1252,8 @@ object dmJobBag: TdmJobBag
       'Delete from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag and'
       'Job_Bag_Line = :Job_Bag_Line')
-    Left = 490
-    Top = 200
+    Left = 392
+    Top = 160
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1264,8 +1263,8 @@ object dmJobBag: TdmJobBag
       end>
   end
   object dsDummy: TDataSource
-    Left = 420
-    Top = 140
+    Left = 336
+    Top = 112
   end
   object qryPO: TFDQuery
     ConnectionName = 'PB'
@@ -1282,8 +1281,8 @@ object dmJobBag: TdmJobBag
         '.Purch_ord_line_Status'
       ' '
       ' ')
-    Left = 500
-    Top = 120
+    Left = 400
+    Top = 96
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1302,8 +1301,8 @@ object dmJobBag: TdmJobBag
       'where Product_Type = :Product_Type and'
       'Product_Type.Category = Category.Category'
       ' ')
-    Left = 50
-    Top = 680
+    Left = 40
+    Top = 544
     ParamData = <
       item
         Name = 'Product_Type'
@@ -1330,8 +1329,8 @@ object dmJobBag: TdmJobBag
       'ORDER BY Sales_Invoice.Sales_Invoice DESC'
       ' '
       ' ')
-    Left = 140
-    Top = 680
+    Left = 112
+    Top = 544
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1351,8 +1350,8 @@ object dmJobBag: TdmJobBag
     SQL.Strings = (
       'select * from customer'
       'where customer = :customer')
-    Left = 580
-    Top = 20
+    Left = 464
+    Top = 16
     ParamData = <
       item
         Name = 'customer'
@@ -1369,8 +1368,8 @@ object dmJobBag: TdmJobBag
       
         'sales_order.sales_order_head_status = sales_Order_head_Status.sa' +
         'les_Order_head_Status')
-    Left = 570
-    Top = 120
+    Left = 456
+    Top = 96
     ParamData = <
       item
         Name = 'sales_order'
@@ -1382,8 +1381,8 @@ object dmJobBag: TdmJobBag
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag')
-    Left = 490
-    Top = 340
+    Left = 392
+    Top = 272
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1404,8 +1403,8 @@ object dmJobBag: TdmJobBag
       
         'sales_order.sales_order_head_status = sales_Order_head_Status.sa' +
         'les_Order_head_Status')
-    Left = 570
-    Top = 200
+    Left = 456
+    Top = 160
     ParamData = <
       item
         Name = 'sales_order'
@@ -1428,8 +1427,8 @@ object dmJobBag: TdmJobBag
       
         'works_order.works_order_status = works_Order_Status.works_Order_' +
         'Status')
-    Left = 640
-    Top = 120
+    Left = 512
+    Top = 96
     ParamData = <
       item
         Name = 'works_order'
@@ -1440,8 +1439,8 @@ object dmJobBag: TdmJobBag
     SQL.Strings = (
       'select * from Job_Bag_line_dets'
       'where Job_Bag = :Job_Bag')
-    Left = 490
-    Top = 410
+    Left = 392
+    Top = 328
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1454,8 +1453,8 @@ object dmJobBag: TdmJobBag
       'from Account_Team_Member, Account_Team'
       'where Operator = :Operator and'
       '(Account_Team_Member.Account_Team = Account_Team.Account_Team)')
-    Left = 490
-    Top = 600
+    Left = 392
+    Top = 480
     ParamData = <
       item
         Name = 'Operator'
@@ -1467,8 +1466,8 @@ object dmJobBag: TdmJobBag
       'Select Last_Job_Bag_Number'
       'From Company'
       'Where Company = 1')
-    Left = 140
-    Top = 735
+    Left = 112
+    Top = 588
   end
   object UpdLastJBSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1476,8 +1475,8 @@ object dmJobBag: TdmJobBag
       'Update Company'
       'Set Last_Job_Bag_Number = :Last_Job_Bag_Number'
       'Where Company = 1')
-    Left = 50
-    Top = 740
+    Left = 40
+    Top = 592
     ParamData = <
       item
         Name = 'Last_Job_Bag_Number'
@@ -1485,8 +1484,8 @@ object dmJobBag: TdmJobBag
   end
   object qrySpare: TFDQuery
     ConnectionName = 'PB'
-    Left = 240
-    Top = 740
+    Left = 192
+    Top = 592
   end
   object qryJBAddHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -1616,8 +1615,8 @@ object dmJobBag: TdmJobBag
       ''
       ''
       '')
-    Left = 160
-    Top = 80
+    Left = 128
+    Top = 64
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1827,8 +1826,8 @@ object dmJobBag: TdmJobBag
       'from account_team_member, Account_Team'
       'where operator = :operator and'
       'account_team_member.account_team = account_team.account_team')
-    Left = 360
-    Top = 590
+    Left = 288
+    Top = 472
     ParamData = <
       item
         Name = 'operator'
@@ -1840,8 +1839,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Account_Team'
       'where Account_Team = :Account_Team')
-    Left = 360
-    Top = 660
+    Left = 288
+    Top = 528
     ParamData = <
       item
         Name = 'Account_Team'
@@ -1865,8 +1864,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 320
-    Top = 210
+    Left = 256
+    Top = 168
     ParamData = <
       item
         Name = 'JobBag'
@@ -2082,8 +2081,8 @@ object dmJobBag: TdmJobBag
       'Job_Bag_Works_Order'
       'where Job_Bag = :Job_Bag'
       'order by Works_Order')
-    Left = 580
-    Top = 410
+    Left = 464
+    Top = 328
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2091,8 +2090,8 @@ object dmJobBag: TdmJobBag
   end
   object srcJBWO: TDataSource
     DataSet = qryJBWO
-    Left = 650
-    Top = 410
+    Left = 520
+    Top = 328
   end
   object qryJBUpdHeaderStatus: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -2107,8 +2106,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 300
-    Top = 10
+    Left = 240
+    Top = 8
     ParamData = <
       item
         Name = 'Job_Bag_Status'
@@ -2131,8 +2130,8 @@ object dmJobBag: TdmJobBag
       'Where Part = :Part'
       ' '
       ' ')
-    Left = 680
-    Top = 20
+    Left = 544
+    Top = 16
     ParamData = <
       item
         Name = 'Part'
@@ -2161,8 +2160,8 @@ object dmJobBag: TdmJobBag
         'Works_Order.Works_Order_Status = Works_Order_Status.Works_Order_' +
         'Status'
       'ORDER BY Job_Bag_Works_Order.Works_Order_no')
-    Left = 50
-    Top = 270
+    Left = 40
+    Top = 216
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2178,8 +2177,8 @@ object dmJobBag: TdmJobBag
       'Values (:Job_Bag,'
       ':Works_Order_no,'
       ':Works_Order)')
-    Left = 150
-    Top = 270
+    Left = 120
+    Top = 216
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2215,8 +2214,8 @@ object dmJobBag: TdmJobBag
         'Works_Order.Works_Order_Status = Works_Order_Status.Works_Order_' +
         'Status'
       'ORDER BY Job_Bag_Works_Order.Works_Order_no')
-    Left = 250
-    Top = 270
+    Left = 200
+    Top = 216
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2231,8 +2230,8 @@ object dmJobBag: TdmJobBag
       'select Supplier.Name as Supplier_Name'
       'from Supplier'
       'where Supplier.Supplier = :Supplier')
-    Left = 640
-    Top = 200
+    Left = 512
+    Top = 160
     ParamData = <
       item
         Name = 'Supplier'
@@ -2244,8 +2243,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Works_Order'
       'where Works_Order = :Works_Order')
-    Left = 580
-    Top = 600
+    Left = 464
+    Top = 480
     ParamData = <
       item
         Name = 'Works_Order'
@@ -2257,8 +2256,8 @@ object dmJobBag: TdmJobBag
       'select * '
       'from sales_invoice_line'
       'where job_bag = :Job_Bag')
-    Left = 680
-    Top = 270
+    Left = 544
+    Top = 216
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2274,8 +2273,8 @@ object dmJobBag: TdmJobBag
         'active IS NULL)) OR'
       '      ((Invoice_Location.Invoice_Location = :Invoice_location))'
       'order by Invoice_Location_Descr')
-    Left = 610
-    Top = 340
+    Left = 488
+    Top = 272
     ParamData = <
       item
         Name = 'Invoice_location'
@@ -2283,8 +2282,8 @@ object dmJobBag: TdmJobBag
   end
   object srcInvoiceLoc: TDataSource
     DataSet = qryInvoiceLoc
-    Left = 700
-    Top = 340
+    Left = 560
+    Top = 272
   end
   object qrySalesInvoice: TFDQuery
     ConnectionName = 'PB'
@@ -2297,8 +2296,8 @@ object dmJobBag: TdmJobBag
       'where Sales_Invoice_Line.Purchase_Order = :Purchase_Order and'
       'Sales_Invoice_Line.Line = :Line and'
       'Sales_invoice_Line.Sales_Invoice = Sales_Invoice.Sales_Invoice')
-    Left = 490
-    Top = 660
+    Left = 392
+    Top = 528
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2313,8 +2312,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Purchase_Order'
       'where Purchase_order = :Purchase_Order')
-    Left = 710
-    Top = 120
+    Left = 568
+    Top = 96
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2331,8 +2330,8 @@ object dmJobBag: TdmJobBag
         'r_Name'
       'from Job_Bag_Document'
       'where Job_Bag = :Job_Bag and Document_No = :Document_No')
-    Left = 260
-    Top = 340
+    Left = 208
+    Top = 272
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2360,8 +2359,8 @@ object dmJobBag: TdmJobBag
       ':Document,'
       ':Operator,'
       ':Created_By)')
-    Left = 150
-    Top = 340
+    Left = 120
+    Top = 272
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2399,8 +2398,8 @@ object dmJobBag: TdmJobBag
       'from Job_Bag_Document'
       'where Job_Bag = :Job_Bag'
       'order by Date_Created')
-    Left = 50
-    Top = 340
+    Left = 40
+    Top = 272
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2459,8 +2458,8 @@ object dmJobBag: TdmJobBag
       #9'Sales_Invoice.Invoice_Description,'
       '  Sales_Invoice.Invoice_or_Credit'
       '')
-    Left = 360
-    Top = 730
+    Left = 288
+    Top = 584
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2510,8 +2509,8 @@ object dmJobBag: TdmJobBag
   end
   object srcAllSalesInvoices: TDataSource
     DataSet = qryAllSalesInvoices
-    Left = 490
-    Top = 730
+    Left = 392
+    Top = 584
   end
   object qrySITotal: TFDQuery
     ConnectionName = 'PB'
@@ -2549,8 +2548,8 @@ object dmJobBag: TdmJobBag
       'GROUP BY Job_bag_Line_Dets.Job_Bag'
       ''
       '')
-    Left = 590
-    Top = 730
+    Left = 472
+    Top = 584
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2562,8 +2561,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Rep'
       'where Rep = :Rep')
-    Left = 680
-    Top = 730
+    Left = 544
+    Top = 584
     ParamData = <
       item
         Name = 'Rep'
@@ -2581,8 +2580,8 @@ object dmJobBag: TdmJobBag
       #9#9'((Rep.Inactive = '#39'N'#39') OR (Rep.Inactive IS NULL)) AND'
       '     (Reps_Branches.Is_Main_Rep = '#39'Y'#39')'
       'ORDER BY Reps_Branches.Is_Main_Rep DESC')
-    Left = 680
-    Top = 670
+    Left = 544
+    Top = 536
     ParamData = <
       item
         Name = 'Customer'
@@ -2618,8 +2617,8 @@ object dmJobBag: TdmJobBag
         '      Job_bag_Process.Work_Centre_Group = Work_centre_Group.Work' +
         '_centre_Group'
       'order by Job_Bag_Process.Process_No')
-    Left = 350
-    Top = 400
+    Left = 280
+    Top = 320
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2654,8 +2653,8 @@ object dmJobBag: TdmJobBag
       ':Work_Centre_Group,'
       ':Simplex_Or_Duplex'
       ')')
-    Left = 110
-    Top = 400
+    Left = 88
+    Top = 320
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2720,8 +2719,8 @@ object dmJobBag: TdmJobBag
       
         '      Job_bag_Process.Work_Centre_Group = Work_centre_Group.Work' +
         '_centre_Group')
-    Left = 200
-    Top = 390
+    Left = 160
+    Top = 312
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2739,8 +2738,8 @@ object dmJobBag: TdmJobBag
       'where Job_Bag = :Job_Bag and'
       'Job_bag_Schedule.Operator = Operator.Operator'
       'order by Job_Bag_Schedule.Schedule_No asc')
-    Left = 50
-    Top = 470
+    Left = 40
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2839,8 +2838,8 @@ object dmJobBag: TdmJobBag
       ':Schedule_Approval_Type,'
       ':Narrative'
       ')')
-    Left = 140
-    Top = 470
+    Left = 112
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3020,8 +3019,8 @@ object dmJobBag: TdmJobBag
       'where Job_Bag = :Job_Bag and'
       '      Schedule_no = :Schedule_no and'
       'Job_bag_Schedule.Operator = Operator.Operator')
-    Left = 250
-    Top = 470
+    Left = 200
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3075,8 +3074,8 @@ object dmJobBag: TdmJobBag
         'ORDER BY Job_Bag_Stock_Request.Job_Bag, Job_Bag_Stock_Request.re' +
         'quest_no'
       '')
-    Left = 50
-    Top = 540
+    Left = 40
+    Top = 432
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3123,8 +3122,8 @@ object dmJobBag: TdmJobBag
       
         '(Sales_order.Sales_Order_Head_Status = Sales_Order_Head_Status.S' +
         'ales_Order_Head_Status)')
-    Left = 250
-    Top = 540
+    Left = 200
+    Top = 432
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3151,8 +3150,8 @@ object dmJobBag: TdmJobBag
       ':Sales_Order_Line_No,'
       ':Included_in_Charges'
       ')')
-    Left = 150
-    Top = 540
+    Left = 120
+    Top = 432
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3208,8 +3207,8 @@ object dmJobBag: TdmJobBag
       '    :Product_Type,'
       '    :Sequence_no)'
       '')
-    Left = 359
-    Top = 470
+    Left = 287
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3349,8 +3348,8 @@ object dmJobBag: TdmJobBag
       ''
       ''
       '')
-    Left = 360
-    Top = 530
+    Left = 288
+    Top = 424
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3415,8 +3414,8 @@ object dmJobBag: TdmJobBag
   end
   object srcAllPurchInvoices: TDataSource
     DataSet = qryAllPurchInvoices
-    Left = 480
-    Top = 530
+    Left = 384
+    Top = 424
   end
   object qryQHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
@@ -3480,8 +3479,8 @@ object dmJobBag: TdmJobBag
       '        LEFT JOIN Customer ON Quote.Customer = Customer.Customer'
       'WHERE'
       '  (Quote.Quote = :Quote)')
-    Left = 830
-    Top = 420
+    Left = 664
+    Top = 336
     ParamData = <
       item
         Name = 'Quote'
@@ -3525,8 +3524,8 @@ object dmJobBag: TdmJobBag
       ' '
       ' '
       ' ')
-    Left = 830
-    Top = 490
+    Left = 664
+    Top = 392
     ParamData = <
       item
         Name = 'Quote'
@@ -3552,8 +3551,8 @@ object dmJobBag: TdmJobBag
       '    :Line_Converted,'
       '    :Quantity'
       ')')
-    Left = 580
-    Top = 470
+    Left = 464
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3592,8 +3591,8 @@ object dmJobBag: TdmJobBag
       '      (Job_Bag_Supply.Enquiry = EnquiryLine.Enquiry) and'
       '      (Job_Bag_Supply.Line = EnquiryLine.Line)'
       '      )')
-    Left = 680
-    Top = 470
+    Left = 544
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3640,8 +3639,8 @@ object dmJobBag: TdmJobBag
         'and'
       '      (EnquiryLine.Product_Type = Product_Type.Product_Type)'
       'order by Job_Bag_Supply.Job_Bag_Supply_No')
-    Left = 490
-    Top = 470
+    Left = 392
+    Top = 376
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3683,8 +3682,8 @@ object dmJobBag: TdmJobBag
         'and'
       '      (EnquiryLine.Product_Type = Product_Type.Product_Type)'
       'order by Quote_Supply.Quote_Supply_No')
-    Left = 770
-    Top = 470
+    Left = 616
+    Top = 376
     ParamData = <
       item
         Name = 'Quote'
@@ -3739,8 +3738,8 @@ object dmJobBag: TdmJobBag
       '      (Job_Bag.Rep = Rep.Rep) AND'
       '      (Job_Bag.Operator = Operator.Operator) and'
       '      (Job_Bag.Office_Contact = AM.Operator)')
-    Left = 820
-    Top = 560
+    Left = 656
+    Top = 448
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3814,8 +3813,8 @@ object dmJobBag: TdmJobBag
         '      Job_Bag_Works_Order.Works_Order = Works_Order_Process.Work' +
         's_Order and'
       '      Works_Order_Process.Process = Process.Process')
-    Left = 820
-    Top = 680
+    Left = 656
+    Top = 544
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3837,8 +3836,8 @@ object dmJobBag: TdmJobBag
       '       0 as "tg:version_special_qty"'
       'FROM Job_Bag'
       'WHERE (Job_Bag.Job_Bag = :Job_Bag)')
-    Left = 820
-    Top = 620
+    Left = 656
+    Top = 496
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3851,8 +3850,8 @@ object dmJobBag: TdmJobBag
       'select * '
       'from Job_Bag_Production_Status'
       'where Job_Bag_Production_Status = :Job_Bag_Production_Status')
-    Left = 690
-    Top = 600
+    Left = 552
+    Top = 480
     ParamData = <
       item
         Name = 'Job_Bag_Production_Status'
@@ -3866,8 +3865,8 @@ object dmJobBag: TdmJobBag
       'where Process.Process_Group = Process_Group.Process_Group and'
       '((Process.Inactive is NULL) or (Process.Inactive = '#39'N'#39'))'
       'order by Process_Group.Sequence_No')
-    Left = 40
-    Top = 400
+    Left = 32
+    Top = 320
   end
   object qryJBProcess: TFDQuery
     ConnectionName = 'PB'
@@ -3890,8 +3889,8 @@ object dmJobBag: TdmJobBag
       'where Job_Bag = :Job_Bag and'
       '      Job_bag_Process.Process = :Process and'
       '      Job_Bag_Process.Process = Process.Process')
-    Left = 260
-    Top = 400
+    Left = 208
+    Top = 320
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3954,8 +3953,8 @@ object dmJobBag: TdmJobBag
         '      Job_Bag_Works_Order.Works_Order = Works_Order_Process.Work' +
         's_Order and'
       '      Works_Order_Process.Process = Process.Process')
-    Left = 820
-    Top = 750
+    Left = 656
+    Top = 600
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3971,8 +3970,8 @@ object dmJobBag: TdmJobBag
       'from sales_invoice_line'
       'where Job_Bag = :Job_Bag and'
       'Job_Bag_line = :Job_Bag_line')
-    Left = 790
-    Top = 120
+    Left = 632
+    Top = 96
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3988,8 +3987,8 @@ object dmJobBag: TdmJobBag
       'from Customer_CostCentre'
       'where Customer = :Customer and '
       'Cost_centre = :Cost_Centre')
-    Left = 710
-    Top = 200
+    Left = 568
+    Top = 160
     ParamData = <
       item
         Name = 'Customer'
@@ -4006,8 +4005,8 @@ object dmJobBag: TdmJobBag
       'where Customer = :Customer and'
       'Branch_no = :Branch_no and '
       'Cost_centre = :Cost_Centre')
-    Left = 800
-    Top = 200
+    Left = 640
+    Top = 160
     ParamData = <
       item
         Name = 'Customer'
@@ -4073,8 +4072,8 @@ object dmJobBag: TdmJobBag
         '      ((Job_bag_time_log.Process_Group = :Process_Group) or (0 =' +
         ' :Process_Group))'
       'ORDER BY Job_Bag_Time_Log.Date_Point')
-    Left = 360
-    Top = 800
+    Left = 288
+    Top = 640
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4200,8 +4199,8 @@ object dmJobBag: TdmJobBag
   end
   object srcDataCollect: TDataSource
     DataSet = qryDataCollect
-    Left = 490
-    Top = 800
+    Left = 392
+    Top = 640
   end
   object qryDepartments: TFDQuery
     ConnectionName = 'PB'
@@ -4209,8 +4208,8 @@ object dmJobBag: TdmJobBag
       'select * '
       'from Process_Group'
       'Order By Sequence_no')
-    Left = 590
-    Top = 800
+    Left = 472
+    Top = 640
   end
   object qryGetDataCollectTotals: TFDQuery
     ConnectionName = 'PB'
@@ -4223,8 +4222,8 @@ object dmJobBag: TdmJobBag
       'where Job_Bag_Time_Log.Job_Bag = :Job_Bag and'
       '      ((Process_Group = :Process_Group) or (:Process_Group = 0))'
       'GROUP BY Job_Bag_Time_Log.Job_Bag')
-    Left = 240
-    Top = 810
+    Left = 192
+    Top = 648
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4246,8 +4245,8 @@ object dmJobBag: TdmJobBag
       'Customer_Contact.Branch_no = :Branch_no and'
       'Contact_No = :Contact_No and'
       '(Customer_Contact.Contact_Info = Contact_Info.Contact_info)')
-    Left = 820
-    Top = 270
+    Left = 656
+    Top = 216
     ParamData = <
       item
         Name = 'Customer'
@@ -4265,8 +4264,8 @@ object dmJobBag: TdmJobBag
       'Update Quote'
       'set Quote_Status = :Quote_Status'
       'where Quote = :Quote')
-    Left = 830
-    Top = 350
+    Left = 664
+    Top = 280
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -4283,8 +4282,8 @@ object dmJobBag: TdmJobBag
       'from Job_bag_line_dets'
       'where Job_bag_line_dets.Job_bag = :Job_Bag and'
       'job_bag_line_dets.quote = quote.quote')
-    Left = 690
-    Top = 540
+    Left = 552
+    Top = 432
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -4299,8 +4298,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Process_Cost'
       'where Customer = :Customer')
-    Left = 580
-    Top = 540
+    Left = 464
+    Top = 432
     ParamData = <
       item
         Name = 'Customer'
@@ -4372,8 +4371,8 @@ object dmJobBag: TdmJobBag
         'rm.Non_Conform_Status'
       'WHERE Job_Bag = :Job_Bag'
       'ORDER BY Job_bag_Non_Conform')
-    Left = 50
-    Top = 880
+    Left = 40
+    Top = 704
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4385,8 +4384,8 @@ object dmJobBag: TdmJobBag
       'Select Last_Non_Conform_Number'
       'From Company'
       'Where Company = 1')
-    Left = 160
-    Top = 880
+    Left = 128
+    Top = 704
   end
   object qryUpdateLastNC: TFDQuery
     ConnectionName = 'PB'
@@ -4394,8 +4393,8 @@ object dmJobBag: TdmJobBag
       'Update Company'
       'Set Last_Non_Conform_Number = :Last_Non_Conform_Number'
       'Where Company = 1')
-    Left = 260
-    Top = 880
+    Left = 208
+    Top = 704
     ParamData = <
       item
         Name = 'Last_Non_Conform_Number'
@@ -4453,8 +4452,8 @@ object dmJobBag: TdmJobBag
       ':Samples_Available,'
       ':Non_Conform_Category'
       ')')
-    Left = 380
-    Top = 880
+    Left = 304
+    Top = 704
     ParamData = <
       item
         Name = 'Job_Bag_Non_Conform'
@@ -4538,8 +4537,8 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Non_Conform_Status'
       'where Non_Conform_Status = :Non_Conform_Status')
-    Left = 50
-    Top = 950
+    Left = 40
+    Top = 760
     ParamData = <
       item
         Name = 'Non_Conform_Status'
@@ -4598,8 +4597,8 @@ object dmJobBag: TdmJobBag
       'GROUP BY'
       #9'Job_Bag_Line_Dets.Job_Bag '
       '')
-    Left = 590
-    Top = 870
+    Left = 472
+    Top = 696
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4702,8 +4701,8 @@ object dmJobBag: TdmJobBag
       ''
       ''
       '')
-    Left = 760
-    Top = 840
+    Left = 608
+    Top = 672
     ParamData = <
       item
         Name = 'job_bag'
@@ -4716,8 +4715,8 @@ object dmJobBag: TdmJobBag
   end
   object srcDataCollectCosts: TDataSource
     DataSet = qryDataCollectCosts
-    Left = 870
-    Top = 830
+    Left = 696
+    Top = 664
   end
   object qryJBDelivery: TFDQuery
     ConnectionName = 'pb'
@@ -4749,8 +4748,8 @@ object dmJobBag: TdmJobBag
       '  Company_Branch'#9
       'from Job_bag_delivery_detail'
       'where Job_Bag = :Job_Bag and Delivery_No = :Delivery_No')
-    Left = 260
-    Top = 950
+    Left = 208
+    Top = 760
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4818,8 +4817,8 @@ object dmJobBag: TdmJobBag
       '  :Supplier_Branch,'
       '  :Company_Branch'
       ')')
-    Left = 380
-    Top = 950
+    Left = 304
+    Top = 760
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4975,8 +4974,8 @@ object dmJobBag: TdmJobBag
         'ORDER BY Job_Bag_Delivery_Detail.Job_Bag, Job_Bag_Delivery_Detai' +
         'l.Delivery_No'
       '')
-    Left = 490
-    Top = 950
+    Left = 392
+    Top = 760
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -4992,16 +4991,16 @@ object dmJobBag: TdmJobBag
       'From Ad_Hoc_Address'
       'Where (Ad_Hoc_Address = :Ad_Hoc_Address)'
       '')
-    Left = 970
-    Top = 23
+    Left = 776
+    Top = 18
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'
       end>
   end
   object AddrSRC: TDataSource
-    Left = 1110
-    Top = 20
+    Left = 888
+    Top = 16
   end
   object GetRepAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -5012,8 +5011,8 @@ object dmJobBag: TdmJobBag
       'From Rep'
       'Where (Rep = :Rep)'
       '')
-    Left = 970
-    Top = 98
+    Left = 776
+    Top = 78
     ParamData = <
       item
         Name = 'Rep'
@@ -5040,8 +5039,8 @@ object dmJobBag: TdmJobBag
       '      (Customer_Branch.Branch_No = :Branch_No) and'
       '      (Customer.Customer = Customer_Branch.Customer)'
       ' ')
-    Left = 970
-    Top = 178
+    Left = 776
+    Top = 142
     ParamData = <
       item
         Name = 'Customer'
@@ -5067,8 +5066,8 @@ object dmJobBag: TdmJobBag
       'Where (Supplier_Branch.Supplier = :Supplier) and'
       '      (Supplier_Branch.Branch_No = :Branch_No) and'
       '      (Supplier.Supplier = Supplier_Branch.Supplier)')
-    Left = 970
-    Top = 249
+    Left = 776
+    Top = 199
     ParamData = <
       item
         Name = 'Supplier'
@@ -5092,8 +5091,8 @@ object dmJobBag: TdmJobBag
       'From Company'
       'Where (Company = 1)'
       '')
-    Left = 970
-    Top = 328
+    Left = 776
+    Top = 262
   end
   object GetCompBrAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -5110,8 +5109,8 @@ object dmJobBag: TdmJobBag
       
         'Where (Company_Branch.Company = 1) and (Company_Branch.Company =' +
         ' 1 and Company_Branch.Branch_no = :Branch_no)')
-    Left = 970
-    Top = 400
+    Left = 776
+    Top = 320
     ParamData = <
       item
         Name = 'Branch_no'
@@ -5127,8 +5126,8 @@ object dmJobBag: TdmJobBag
       'where Courier_Service.Courier = :Courier and '
       'Courier_service.Courier = Courier.courier'
       'Order By Service_Description')
-    Left = 1240
-    Top = 791
+    Left = 992
+    Top = 633
     ParamData = <
       item
         Name = 'Courier'
@@ -5136,8 +5135,8 @@ object dmJobBag: TdmJobBag
   end
   object dtsCourierService: TDataSource
     DataSet = qryCourierService
-    Left = 1130
-    Top = 791
+    Left = 904
+    Top = 633
   end
   object qryPackageType: TFDQuery
     ConnectionName = 'PB'
@@ -5145,13 +5144,13 @@ object dmJobBag: TdmJobBag
       'select *'
       'from Package_Type'
       'ORDER BY Package_Type_Descr')
-    Left = 1240
-    Top = 711
+    Left = 992
+    Top = 569
   end
   object dtsPackageType: TDataSource
     DataSet = qryPackageType
-    Left = 1130
-    Top = 711
+    Left = 904
+    Top = 569
   end
   object qryAllPriceUnits: TFDQuery
     ConnectionName = 'PB'
@@ -5159,13 +5158,13 @@ object dmJobBag: TdmJobBag
       'SELECT * '
       'FROM Price_unit '
       'Order by Description')
-    Left = 980
-    Top = 470
+    Left = 784
+    Top = 376
   end
   object dtsAllPriceUnits: TDataSource
     DataSet = qryAllPriceUnits
-    Left = 1080
-    Top = 470
+    Left = 864
+    Top = 376
   end
   object qryGetCustomerAccount: TFDQuery
     ConnectionName = 'PB'
@@ -5182,8 +5181,8 @@ object dmJobBag: TdmJobBag
       '(Customer_Branch.Inv_To_Branch = Invoice_CB.Branch_no)'
       ')'
       '')
-    Left = 980
-    Top = 540
+    Left = 784
+    Top = 432
     ParamData = <
       item
         Name = 'Customer'
@@ -5200,8 +5199,8 @@ object dmJobBag: TdmJobBag
       '        Process_Group.Sequence_no'
       'FROM Process_Group'
       'ORDER BY Process_Group.Sequence_no')
-    Left = 1190
-    Top = 20
+    Left = 952
+    Top = 16
   end
   object qryJProcessGroup: TFDQuery
     ConnectionName = 'PB'
@@ -5214,8 +5213,8 @@ object dmJobBag: TdmJobBag
       'FROM Job_Bag_Process_Group'
       'WHERE Job_Bag = :Job_Bag and'
       'Job_Bag_Process_Group.Process_Group = :Process_Group')
-    Left = 1190
-    Top = 90
+    Left = 952
+    Top = 72
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -5241,8 +5240,8 @@ object dmJobBag: TdmJobBag
       ':Job_Bag_Specification,'
       ':Job_Bag_Specification_ID'
       ')')
-    Left = 1190
-    Top = 170
+    Left = 952
+    Top = 136
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -5268,8 +5267,8 @@ object dmJobBag: TdmJobBag
       'FROM Quote_Process_Group'
       'WHERE Quote = :Quote and'
       'Quote_Process_Group.Process_Group = :Process_Group')
-    Left = 1200
-    Top = 240
+    Left = 960
+    Top = 192
     ParamData = <
       item
         Name = 'Quote'
@@ -5295,8 +5294,8 @@ object dmJobBag: TdmJobBag
       '        ON Vat_Code.Vat_Code = Sales_Invoice_Add_charge.Vat_Code'
       'WHERE Sales_Invoice.Sales_Invoice = :Sales_Invoice'
       'GROUP BY Sales_Invoice.Sales_Invoice')
-    Left = 980
-    Top = 610
+    Left = 784
+    Top = 488
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -5319,8 +5318,8 @@ object dmJobBag: TdmJobBag
       '        ON Vat_Code.Vat_Code = Supplier_Invoice_charge.Vat_Code'
       'WHERE Supplier_Invoice.Supplier_Invoice = :Supplier_Invoice'
       'GROUP BY Supplier_Invoice.Supplier_Invoice')
-    Left = 980
-    Top = 680
+    Left = 784
+    Top = 544
     ParamData = <
       item
         Name = 'Supplier_Invoice'
@@ -5334,8 +5333,8 @@ object dmJobBag: TdmJobBag
       'WHERE Customer = :Customer AND'
       '      Branch_No = :Branch_no AND'
       '      Contact_No = :Contact_No')
-    Left = 1200
-    Top = 320
+    Left = 960
+    Top = 256
     ParamData = <
       item
         Name = 'Customer'
@@ -5376,8 +5375,8 @@ object dmJobBag: TdmJobBag
         's)'
       '          ON Price_Unit.Price_Unit = Process.Price_unit'
       'WHERE Company.Company = 1')
-    Left = 1200
-    Top = 400
+    Left = 960
+    Top = 320
   end
   object qryGetCustomerSubRep: TFDQuery
     ConnectionName = 'PB'
@@ -5388,8 +5387,8 @@ object dmJobBag: TdmJobBag
       'WHERE ((Customer = :Customer) and (Branch_no = :Branch_no)) AND'
       '      (Rep.Rep_Is_Sub_Rep = '#39'Y'#39') AND'
       #9#9'((Rep.Inactive = '#39'N'#39') OR (Rep.Inactive IS NULL))')
-    Left = 590
-    Top = 660
+    Left = 472
+    Top = 528
     ParamData = <
       item
         Name = 'Customer'
@@ -5405,8 +5404,8 @@ object dmJobBag: TdmJobBag
       '        Override_Cost_Markup_Perc'
       'FROM Customer'
       'WHERE Customer.Customer = :Customer')
-    Left = 1210
-    Top = 470
+    Left = 968
+    Top = 376
     ParamData = <
       item
         Name = 'Customer'
@@ -5419,8 +5418,8 @@ object dmJobBag: TdmJobBag
       'WHERE'
       '      ((Inactive = '#39'N'#39')) or (ID = :ID)'
       'ORDER BY Pack_Format_Description')
-    Left = 1220
-    Top = 560
+    Left = 976
+    Top = 448
     ParamData = <
       item
         Name = 'ID'
@@ -5428,7 +5427,7 @@ object dmJobBag: TdmJobBag
   end
   object dtsPackFormat: TDataSource
     DataSet = qryPackFormat
-    Left = 1140
-    Top = 560
+    Left = 912
+    Top = 448
   end
 end

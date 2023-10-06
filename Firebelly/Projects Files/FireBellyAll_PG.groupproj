@@ -1,0 +1,264 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AF482FF9-2E87-4241-94E8-21E00182541F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AllFax.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Aire.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_aktiv.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_bat.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Bellagio.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Elite.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_EndUser.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Free.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_gms.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_grantech.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Lanzet.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Mega.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Meridian.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_qbs.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_roann.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Romany.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_Ruby.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firebelly_York.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WorktopsLoad.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AllFax">
+        <MSBuild Projects="AllFax.dproj"/>
+    </Target>
+    <Target Name="AllFax:Clean">
+        <MSBuild Projects="AllFax.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AllFax:Make">
+        <MSBuild Projects="AllFax.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Aire">
+        <MSBuild Projects="Firebelly_Aire.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Aire:Clean">
+        <MSBuild Projects="Firebelly_Aire.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Aire:Make">
+        <MSBuild Projects="Firebelly_Aire.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_aktiv">
+        <MSBuild Projects="Firebelly_aktiv.dproj"/>
+    </Target>
+    <Target Name="Firebelly_aktiv:Clean">
+        <MSBuild Projects="Firebelly_aktiv.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_aktiv:Make">
+        <MSBuild Projects="Firebelly_aktiv.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_bat">
+        <MSBuild Projects="Firebelly_bat.dproj"/>
+    </Target>
+    <Target Name="Firebelly_bat:Clean">
+        <MSBuild Projects="Firebelly_bat.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_bat:Make">
+        <MSBuild Projects="Firebelly_bat.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Bellagio">
+        <MSBuild Projects="Firebelly_Bellagio.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Bellagio:Clean">
+        <MSBuild Projects="Firebelly_Bellagio.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Bellagio:Make">
+        <MSBuild Projects="Firebelly_Bellagio.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_demo">
+        <MSBuild Projects="Firebelly_demo.dproj"/>
+    </Target>
+    <Target Name="Firebelly_demo:Clean">
+        <MSBuild Projects="Firebelly_demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_demo:Make">
+        <MSBuild Projects="Firebelly_demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Elite">
+        <MSBuild Projects="Firebelly_Elite.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Elite:Clean">
+        <MSBuild Projects="Firebelly_Elite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Elite:Make">
+        <MSBuild Projects="Firebelly_Elite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_EndUser">
+        <MSBuild Projects="Firebelly_EndUser.dproj"/>
+    </Target>
+    <Target Name="Firebelly_EndUser:Clean">
+        <MSBuild Projects="Firebelly_EndUser.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_EndUser:Make">
+        <MSBuild Projects="Firebelly_EndUser.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Free">
+        <MSBuild Projects="Firebelly_Free.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Free:Clean">
+        <MSBuild Projects="Firebelly_Free.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Free:Make">
+        <MSBuild Projects="Firebelly_Free.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_gms">
+        <MSBuild Projects="Firebelly_gms.dproj"/>
+    </Target>
+    <Target Name="Firebelly_gms:Clean">
+        <MSBuild Projects="Firebelly_gms.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_gms:Make">
+        <MSBuild Projects="Firebelly_gms.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_grantech">
+        <MSBuild Projects="Firebelly_grantech.dproj"/>
+    </Target>
+    <Target Name="Firebelly_grantech:Clean">
+        <MSBuild Projects="Firebelly_grantech.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_grantech:Make">
+        <MSBuild Projects="Firebelly_grantech.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Lanzet">
+        <MSBuild Projects="Firebelly_Lanzet.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Lanzet:Clean">
+        <MSBuild Projects="Firebelly_Lanzet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Lanzet:Make">
+        <MSBuild Projects="Firebelly_Lanzet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Mega">
+        <MSBuild Projects="Firebelly_Mega.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Mega:Clean">
+        <MSBuild Projects="Firebelly_Mega.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Mega:Make">
+        <MSBuild Projects="Firebelly_Mega.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Meridian">
+        <MSBuild Projects="Firebelly_Meridian.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Meridian:Clean">
+        <MSBuild Projects="Firebelly_Meridian.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Meridian:Make">
+        <MSBuild Projects="Firebelly_Meridian.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_qbs">
+        <MSBuild Projects="Firebelly_qbs.dproj"/>
+    </Target>
+    <Target Name="Firebelly_qbs:Clean">
+        <MSBuild Projects="Firebelly_qbs.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_qbs:Make">
+        <MSBuild Projects="Firebelly_qbs.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_roann">
+        <MSBuild Projects="Firebelly_roann.dproj"/>
+    </Target>
+    <Target Name="Firebelly_roann:Clean">
+        <MSBuild Projects="Firebelly_roann.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_roann:Make">
+        <MSBuild Projects="Firebelly_roann.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Romany">
+        <MSBuild Projects="Firebelly_Romany.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Romany:Clean">
+        <MSBuild Projects="Firebelly_Romany.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Romany:Make">
+        <MSBuild Projects="Firebelly_Romany.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_Ruby">
+        <MSBuild Projects="Firebelly_Ruby.dproj"/>
+    </Target>
+    <Target Name="Firebelly_Ruby:Clean">
+        <MSBuild Projects="Firebelly_Ruby.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_Ruby:Make">
+        <MSBuild Projects="Firebelly_Ruby.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Firebelly_York">
+        <MSBuild Projects="Firebelly_York.dproj"/>
+    </Target>
+    <Target Name="Firebelly_York:Clean">
+        <MSBuild Projects="Firebelly_York.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Firebelly_York:Make">
+        <MSBuild Projects="Firebelly_York.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WorktopsLoad">
+        <MSBuild Projects="WorktopsLoad.dproj"/>
+    </Target>
+    <Target Name="WorktopsLoad:Clean">
+        <MSBuild Projects="WorktopsLoad.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WorktopsLoad:Make">
+        <MSBuild Projects="WorktopsLoad.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AllFax;Firebelly_Aire;Firebelly_aktiv;Firebelly_bat;Firebelly_Bellagio;Firebelly_demo;Firebelly_Elite;Firebelly_EndUser;Firebelly_Free;Firebelly_gms;Firebelly_grantech;Firebelly_Lanzet;Firebelly_Mega;Firebelly_Meridian;Firebelly_qbs;Firebelly_roann;Firebelly_Romany;Firebelly_Ruby;Firebelly_York;WorktopsLoad"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AllFax:Clean;Firebelly_Aire:Clean;Firebelly_aktiv:Clean;Firebelly_bat:Clean;Firebelly_Bellagio:Clean;Firebelly_demo:Clean;Firebelly_Elite:Clean;Firebelly_EndUser:Clean;Firebelly_Free:Clean;Firebelly_gms:Clean;Firebelly_grantech:Clean;Firebelly_Lanzet:Clean;Firebelly_Mega:Clean;Firebelly_Meridian:Clean;Firebelly_qbs:Clean;Firebelly_roann:Clean;Firebelly_Romany:Clean;Firebelly_Ruby:Clean;Firebelly_York:Clean;WorktopsLoad:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AllFax:Make;Firebelly_Aire:Make;Firebelly_aktiv:Make;Firebelly_bat:Make;Firebelly_Bellagio:Make;Firebelly_demo:Make;Firebelly_Elite:Make;Firebelly_EndUser:Make;Firebelly_Free:Make;Firebelly_gms:Make;Firebelly_grantech:Make;Firebelly_Lanzet:Make;Firebelly_Mega:Make;Firebelly_Meridian:Make;Firebelly_qbs:Make;Firebelly_roann:Make;Firebelly_Romany:Make;Firebelly_Ruby:Make;Firebelly_York:Make;WorktopsLoad:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

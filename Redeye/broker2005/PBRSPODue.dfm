@@ -326,7 +326,6 @@ object PBRSPODueFrm: TPBRSPODueFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 11
     OnClick = btnExcelClick
-    ExplicitLeft = 100
   end
   object pnlExportPrgrss: TPanel
     Left = 82

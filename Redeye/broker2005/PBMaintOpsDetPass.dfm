@@ -11,10 +11,8 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -62,8 +60,6 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -82,6 +78,8 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 232
@@ -90,8 +88,6 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 4
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -109,7 +105,9 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
       38F338F300003333333333333919333333388333338FFF830000333333333333
       3333333333333333333888330000333333333333333333333333333333333333
       0000}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 4
   end
   object ConfPassEdit: TEdit
     Left = 104

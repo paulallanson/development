@@ -1,4 +1,4 @@
-﻿object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
+object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
   Left = 152
   Top = 121
   BorderStyle = bsDialog
@@ -11,13 +11,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     424
     260)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 120
@@ -113,7 +111,6 @@
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = CheckOK
       Items.Strings = (
@@ -146,7 +143,6 @@
       Width = 201
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 5
       OnChange = CheckOK
       Items.Strings = (
@@ -159,7 +155,6 @@
       Width = 201
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = CheckOK
       Items.Strings = (
@@ -176,9 +171,6 @@
     Caption = 'OK'
     Default = True
     Enabled = False
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -243,7 +235,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -253,9 +248,6 @@
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -320,7 +312,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -332,8 +327,8 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -358,8 +353,8 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -380,39 +375,25 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Start_Period_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Start_Period_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'No_of_Periods'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Performance_Target_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Basis'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -425,9 +406,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -459,14 +438,10 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_no'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPeriod: TFDQuery
@@ -493,39 +468,25 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_End_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Period_End_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object DelPeriodsSQL: TFDQuery
@@ -537,9 +498,7 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPeriod: TFDQuery
@@ -553,19 +512,13 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period_no'
-        ParamType = ptUnknown
       end>
   end
   object DelBudgetsSQL: TFDQuery
@@ -580,9 +533,7 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object DelRepCatsSQL: TFDQuery
@@ -594,9 +545,7 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object DelRepFinanceSQL: TFDQuery
@@ -608,9 +557,7 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object UpdBasicSQL: TFDQuery
@@ -627,24 +574,16 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Performance_Target_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Basis'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
 end

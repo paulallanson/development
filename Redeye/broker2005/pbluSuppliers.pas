@@ -77,7 +77,7 @@ var
 
 implementation
 
-uses pbSupplierDm, pbLuBranches, pbluContacts, PBMaintSupp, PBMaintSConta, CCSCommon,
+uses UITypes, pbSupplierDm, pbLuBranches, pbluContacts, PBMaintSupp, PBMaintSConta, CCSCommon,
   pbDatabase, pbMainMenu, PBLUSupplierRpts, PBLUSupOrdType, PBRSCusSupLabs,
   pbluSupplierSearch;
 

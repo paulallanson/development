@@ -80,7 +80,7 @@ var
 
 implementation
 
-uses pbMainMenu;
+uses UITypes, pbMainMenu;
 
 {$R *.dfm}
 

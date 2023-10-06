@@ -11,12 +11,10 @@ object frmWTJobSearch: TfrmWTJobSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
     276
     320)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 96

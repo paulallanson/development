@@ -47,7 +47,7 @@ var
 
 implementation
 
-uses wtMain, wtMaintLevelofImportance;
+uses UITypes, wtMain, wtMaintLevelofImportance;
 
 {$R *.dfm}
 
@@ -98,10 +98,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Importance_Description').asstring
-                    + ' level of importance has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Importance_Description').asstring + ' level of importance has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

@@ -122,7 +122,6 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive NCAs'
     TabOrder = 11
-    ExplicitTop = 270
   end
   object SearchButton: TButton
     Left = 12
@@ -134,7 +133,6 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Default = True
     TabOrder = 12
     OnClick = SearchButtonClick
-    ExplicitTop = 302
   end
   object edtDescription: TEdit
     Left = 120
@@ -203,7 +201,6 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Caption = 'Clear Search'
     TabOrder = 13
     OnClick = ClearButtonClick
-    ExplicitTop = 303
   end
   object chkbxShowLiveNCA: TCheckBox
     Tag = 12
@@ -214,7 +211,6 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Live NCAs'
     TabOrder = 10
-    ExplicitTop = 247
   end
   object edtRaisingDept: TEdit
     Left = 120

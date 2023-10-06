@@ -1,15 +1,14 @@
 object dtmdlSuppliers: TdtmdlSuppliers
-  Height = 790
-  Width = 883
-  PixelsPerInch = 120
+  Height = 632
+  Width = 706
   object qryMaterialType: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Material_Type.*'
       'FROM Material_Type'
       'ORDER BY Description')
-    Left = 40
-    Top = 50
+    Left = 32
+    Top = 40
   end
   object qryGetMaterialGroups: TFDQuery
     MasterSource = dtsMaterialType
@@ -29,8 +28,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '      ((Worktop_Group.inactive = '#39'N'#39') OR (Worktop_Group.inactive' +
         ' = '#39#39') OR (Worktop_Group.inactive is NULL))'
       'ORDER BY Worktop_Group.Worktop_Group_Description')
-    Left = 40
-    Top = 120
+    Left = 32
+    Top = 96
     ParamData = <
       item
         Name = 'Material_Type'
@@ -38,13 +37,13 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object dtsMaterialType: TDataSource
     DataSet = qryMaterialType
-    Left = 170
-    Top = 50
+    Left = 136
+    Top = 40
   end
   object dtsGetMaterialGroup: TDataSource
     DataSet = qryGetMaterialGroups
-    Left = 170
-    Top = 120
+    Left = 136
+    Top = 96
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -90,8 +89,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Worktop_Group.Worktop_Group_Description, Worktop.Descri' +
         'ption')
-    Left = 480
-    Top = 50
+    Left = 384
+    Top = 40
     ParamData = <
       item
         Name = 'Material_Type'
@@ -114,8 +113,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 580
-    Top = 50
+    Left = 464
+    Top = 40
   end
   object qryGetWTThickness: TFDQuery
     ConnectionName = 'WT'
@@ -123,8 +122,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'SELECT *'
       'FROM Worktop_Thickness'
       'WHERE Worktop_Thickness.Worktop = :Worktop')
-    Left = 40
-    Top = 200
+    Left = 32
+    Top = 160
     ParamData = <
       item
         Name = 'Worktop'
@@ -135,8 +134,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop (Supplier, Worktop, inactive)'
       'VALUES (:Supplier, :Worktop, '#39'N'#39')')
-    Left = 40
-    Top = 270
+    Left = 32
+    Top = 216
     ParamData = <
       item
         Name = 'Supplier'
@@ -150,8 +149,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop_Thickness'
       'VALUES (:Supplier, :Worktop, :Thickness, :Price_Pointer)')
-    Left = 60
-    Top = 350
+    Left = 48
+    Top = 280
     ParamData = <
       item
         Name = 'Supplier'
@@ -241,8 +240,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Material_Type.Description, Worktop_Group.Worktop_Group_' +
         'Description, Worktop.Description, Thickness.Thickness_mm')
-    Left = 50
-    Top = 420
+    Left = 40
+    Top = 336
     ParamData = <
       item
         Name = 'Supplier'
@@ -250,8 +249,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object dtsWorktopPrices: TDataSource
     DataSet = qryWorktopPrices
-    Left = 130
-    Top = 420
+    Left = 104
+    Top = 336
   end
   object qryDummyPrices: TFDQuery
     ConnectionName = 'WT'
@@ -340,8 +339,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         'ickness.Supplier)'
       'WHERE Supplier_Worktop_Thickness.Supplier = :Supplier'
       '')
-    Left = 250
-    Top = 420
+    Left = 200
+    Top = 336
     ParamData = <
       item
         Name = 'Supplier'
@@ -353,8 +352,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'SELECT Supplier'
       'FROM Supplier_Worktop'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 160
-    Top = 270
+    Left = 128
+    Top = 216
     ParamData = <
       item
         Name = 'Supplier'
@@ -382,8 +381,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'WHERE Supplier = :Supplier AND Worktop = :Worktop AND Thickness ' +
         '= :Thickness')
-    Left = 160
-    Top = 350
+    Left = 128
+    Top = 280
     ParamData = <
       item
         Name = 'Supplier'
@@ -401,8 +400,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'UPDATE Supplier_Worktop'
       'SET Inactive = :Inactive'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 480
-    Top = 120
+    Left = 384
+    Top = 96
     ParamData = <
       item
         Name = 'Inactive'
@@ -419,8 +418,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 640
-    Top = 190
+    Left = 512
+    Top = 152
     ParamData = <
       item
         Name = 'Supplier'
@@ -434,8 +433,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop_Thickness'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 640
-    Top = 120
+    Left = 512
+    Top = 96
     ParamData = <
       item
         Name = 'Supplier'
@@ -463,8 +462,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'WHERE Supplier = :Supplier AND Supplier_Product_Code = :Supplier' +
         '_Product_Code')
-    Left = 400
-    Top = 270
+    Left = 320
+    Top = 216
     ParamData = <
       item
         Name = 'Supplier'
@@ -496,8 +495,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       ':Inactive,'
       ':Price_Pointer'
       ')')
-    Left = 400
-    Top = 340
+    Left = 320
+    Top = 272
     ParamData = <
       item
         Name = 'Supplier'
@@ -531,8 +530,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       '    Sell_Pack_Quantity = :Sell_Pack_Quantity,'
       '    inactive = :inactive'
       'WHERE Supplier_Product = :Supplier_Product')
-    Left = 400
-    Top = 410
+    Left = 320
+    Top = 328
     ParamData = <
       item
         Name = 'Supplier_Product_Code'
@@ -612,8 +611,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'FROM Supplier_Product'
       'WHERE 1=1 AND Supplier_Product.Supplier = :Supplier'
       'ORDER BY Supplier_Product.Supplier_Product_Code')
-    Left = 50
-    Top = 510
+    Left = 40
+    Top = 408
     ParamData = <
       item
         Name = 'Supplier'
@@ -624,8 +623,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object dtsProductPrices: TDataSource
     DataSet = qryProductPrices
-    Left = 130
-    Top = 510
+    Left = 104
+    Top = 408
   end
   object qryDummyProductPrices: TFDQuery
     ConnectionName = 'WT'
@@ -685,8 +684,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       '      order by Prices.effective_date desc) AS Operator_Name'
       'FROM Supplier_Product'
       'WHERE Supplier_Product.Supplier = :Supplier')
-    Left = 250
-    Top = 510
+    Left = 200
+    Top = 408
     ParamData = <
       item
         Name = 'Supplier'
@@ -744,8 +743,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         'tion'
       'FROM Supplier_Product'
       'WHERE Supplier_Product = :Supplier_Product')
-    Left = 400
-    Top = 490
+    Left = 320
+    Top = 392
     ParamData = <
       item
         Name = 'Supplier_Product'
@@ -753,16 +752,16 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object qryDelete: TFDQuery
     ConnectionName = 'WT'
-    Left = 400
-    Top = 580
+    Left = 320
+    Top = 464
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Prices'
       'WHERE Price_Pointer = :Price_Pointer')
-    Left = 400
-    Top = 650
+    Left = 320
+    Top = 520
     ParamData = <
       item
         Name = 'Price_Pointer'
@@ -798,8 +797,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Material_Type.Description, Worktop_Group.Worktop_Group_' +
         'Description, Worktop.Description')
-    Left = 50
-    Top = 600
+    Left = 40
+    Top = 480
     ParamData = <
       item
         Name = 'Supplier'
@@ -807,8 +806,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object dtsSupplierWorktops: TDataSource
     DataSet = qrySupplierWorktops
-    Left = 130
-    Top = 600
+    Left = 104
+    Top = 480
   end
   object qryDummySupplierWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -837,8 +836,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '        INNER JOIN Supplier_Worktop ON Worktop.Worktop = Supplie' +
         'r_Worktop.Worktop'
       'WHERE Supplier_Worktop.Supplier = :Supplier')
-    Left = 250
-    Top = 600
+    Left = 200
+    Top = 480
     ParamData = <
       item
         Name = 'Supplier'

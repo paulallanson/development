@@ -180,6 +180,7 @@ begin
   frmWTSplash.Show;
   frmWTSplash.Refresh;
   Application.Title := 'Firebelly Worktop Manufacturing System';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmWTSendFax, frmWTSendFax);

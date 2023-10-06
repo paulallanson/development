@@ -40,7 +40,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   PBMaintSuppInvoice;
 
 {$R *.DFM}

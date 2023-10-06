@@ -15,8 +15,8 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
   object qrReport: TQuickRep
     Left = 40
     Top = 40
-    Width = 1403
-    Height = 992
+    Width = 1123
+    Height = 794
     ShowingPreview = False
     DataSet = qryNCASource
     Font.Charset = DEFAULT_CHARSET
@@ -74,30 +74,30 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRBand
-      Left = 47
-      Top = 47
-      Width = 1309
-      Height = 544
+      Left = 38
+      Top = 38
+      Width = 1047
+      Height = 435
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        1151.466666666667000000
-        2770.716666666667000000)
+        1150.937500000000000000
+        2770.187500000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbTitle
       object QRLabel1: TQRLabel
-        Left = 690
-        Top = 100
-        Width = 133
-        Height = 21
+        Left = 552
+        Top = 80
+        Width = 106
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1460.500000000000000000
           211.666666666666700000
-          281.516666666666700000)
+          280.458333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -107,7 +107,7 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -118,15 +118,15 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
         FontSize = 10
       end
       object qrlblCount: TQRLabel
-        Left = 690
-        Top = 140
-        Width = 74
-        Height = 21
+        Left = 552
+        Top = 112
+        Width = 59
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1460.500000000000000000
           296.333333333333300000
-          156.633333333333300000)
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -136,7 +136,7 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

@@ -154,7 +154,7 @@ type
   end;
 
 implementation
-uses
+uses UITypes, 
 {$IFDEF DEBUG}
   CCSDebug,
 {$ENDIF}

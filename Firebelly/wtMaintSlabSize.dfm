@@ -11,13 +11,11 @@ object frmwtMaintSlabSize: TfrmwtMaintSlabSize
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     301
     150)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -77,9 +75,9 @@ object frmwtMaintSlabSize: TfrmwtMaintSlabSize
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 208
@@ -90,9 +88,9 @@ object frmwtMaintSlabSize: TfrmwtMaintSlabSize
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object chkbxInactive: TCheckBox
     Left = 16

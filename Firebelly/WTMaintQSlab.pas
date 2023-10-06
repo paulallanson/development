@@ -194,7 +194,7 @@ var
 
 implementation
 
-uses wtLUworktops, wtMain, wtDataModule, wtLUSlabSizes, wtLUMatType,
+uses UITypes, wtLUworktops, wtMain, wtDataModule, wtLUSlabSizes, wtLUMatType,
   WTLUSupplierProduct;
 
 {$R *.dfm}

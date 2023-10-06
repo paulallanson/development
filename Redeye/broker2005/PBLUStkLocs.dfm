@@ -1,34 +1,32 @@
 object PBLUStkLocsFrm: TPBLUStkLocsFrm
   Left = 66
   Top = 96
-  Width = 670
-  Height = 260
   Caption = 'Stock Locations'
+  ClientHeight = 221
+  ClientWidth = 654
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 662
-    Height = 192
+    Width = 654
+    Height = 180
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
-      Width = 660
-      Height = 190
+      Width = 652
+      Height = 178
       Align = alClient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
@@ -81,22 +79,23 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 192
-    Width = 662
+    Top = 180
+    Width = 654
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      662
+      654
       41)
     object BitBtn1: TBitBtn
-      Left = 566
+      Left = 558
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 0
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 0
     end
   end
 end

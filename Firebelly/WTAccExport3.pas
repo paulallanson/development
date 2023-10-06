@@ -224,7 +224,8 @@ type
     procedure ImportSage50Customers;
     procedure ImportSage50Suppliers;
     procedure ImportSage50Payments;
-    function Sage50Format(sFieldText: string; bNeedQuotes: boolean; bNeedComma: boolean): string;
+    function Sage50Format(sFieldText: string; bNeedQuotes: boolean; bNeedComma: boolean): string; overload;
+    function Sage50Format(sFieldText: ShortString; bNeedQuotes: boolean; bNeedComma: boolean): string; overload;
     procedure LinkerSalesInvoices;
     procedure LinkerPurchaseInvoices;
     procedure QBooksCustomers(CustomerDataSQL: TFDQuery);
@@ -268,8 +269,7 @@ var
 implementation
 
 uses
-  System.UITypes,
-  WTAccExport1, WTAccExport4, WTAccExport2, WTAccExportDM, AllCommon,
+  UITypes, WTAccExport1, WTAccExport4, WTAccExport2, WTAccExportDM, AllCommon,
   WtAccImportDM, WTMain;
 
 var
@@ -304,6 +304,12 @@ const
   sfiller = '                                                  ';
 
 {$R *.DFM}
+
+function SStrCopy(const Text: string; const Index, Count: Integer): ShortString;
+begin
+  var StrResult := Copy(Text, Index, Count);
+  Result := ShortString(StrResult);
+end;
 
 procedure TfrmWTAccExport3.FinishBtnClick(Sender: TObject);
 begin
@@ -515,56 +521,56 @@ begin
 
       inc(iSupplierInv);
       irow := irow + 1;
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
-      sRef := Copy(FieldByName('Supplier_Invoice').AsString + '/' +
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
+      sRef := SStrCopy(FieldByName('Supplier_Invoice').AsString + '/' +
         FieldByName('Invoice_Line_no').AsString + sfiller, 1, 10);
-      sLongRef := Copy(FieldByName('Supplier_Invoice_no').AsString + sfiller, 1,
+      sLongRef := SStrCopy(FieldByName('Supplier_Invoice_no').AsString + sfiller, 1,
         20);
       {if generated for Enterprise then Version is I2}
       sVersion := 'I2';
-      sDesc := Copy(FieldByName('Description').AsString + sfiller, 1, 50);
-      sStockCode := Copy(sfiller, 1, 14);
+      sDesc := SStrCopy(FieldByName('Description').AsString + sfiller, 1, 50);
+      sStockCode := SStrCopy(sfiller, 1, 14);
       if FieldByName('Price_Unit_Factor').AsFloat = 0 then
         rValue := FieldByName('Goods_Value').AsFloat /
           FieldByName('Qty_Invoiced').AsFloat
       else
         rValue := FieldByName('Goods_Value').AsFloat /
           FieldByName('Price_Unit_Factor').AsFloat;
-      sValue := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
       {if generated for Enterprise then Paytype is null}
 
-      sVat_Code := Copy(FieldByName('VAT_Ref').AsString + sfiller, 1, 1);
-      sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 6);
+      sVat_Code := SStrCopy(FieldByName('VAT_Ref').AsString + sfiller, 1, 1);
+      sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 6);
       sInvType := 'PIN';
-      sQty := Copy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
-      sQtyStk := Copy(sfiller, 1, 8);
-      sUnitCost := Copy(sfiller, 1, 20);
-      sUnitSell := Copy(sfiller, 1, 20);
+      sQty := SStrCopy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
+      sQtyStk := SStrCopy(sfiller, 1, 8);
+      sUnitCost := SStrCopy(sfiller, 1, 20);
+      sUnitSell := SStrCopy(sfiller, 1, 20);
 
       if FieldByName('Currency_Code').isNull then
         sCurr := '1 '
       else
-        sCurr := Copy(FieldByName('Currency_Code').AsString + sfiller, 1, 2);
+        sCurr := SStrCopy(FieldByName('Currency_Code').AsString + sfiller, 1, 2);
 
-      sDoc := Copy(sfiller, 1, 1);
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDoc := SStrCopy(sfiller, 1, 1);
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
-      sCoRate := Copy('1.0' + sfiller, 1, 6);
-      sVATRate := Copy('1.0' + sfiller, 1, 6);
-      sQtyMul := Copy('1.0' + sfiller, 1, 6);
-      sDiscount := Copy('0.0' + sfiller, 1, 6);
-      sAdd1 := Copy(' ' + sfiller, 1, 30);
-      sAdd2 := Copy(' ' + sfiller, 1, 30);
-      sAdd3 := Copy(' ' + sfiller, 1, 30);
-      sAdd4 := Copy(' ' + sfiller, 1, 30);
-      sAdd5 := Copy(' ' + sfiller, 1, 30);
+      sCoRate := SStrCopy('1.0' + sfiller, 1, 6);
+      sVATRate := SStrCopy('1.0' + sfiller, 1, 6);
+      sQtyMul := SStrCopy('1.0' + sfiller, 1, 6);
+      sDiscount := SStrCopy('0.0' + sfiller, 1, 6);
+      sAdd1 := SStrCopy(' ' + sfiller, 1, 30);
+      sAdd2 := SStrCopy(' ' + sfiller, 1, 30);
+      sAdd3 := SStrCopy(' ' + sfiller, 1, 30);
+      sAdd4 := SStrCopy(' ' + sfiller, 1, 30);
+      sAdd5 := SStrCopy(' ' + sfiller, 1, 30);
 
-      sLoc := Copy(sfiller, 1, 3);
-      sLocDesc := Copy(sfiller, 1, 45);
-      sStockDesc := Copy(sfiller, 1, 35);
-      sPIN := Copy(FieldByName('Supp_Inv_Alt_Ref').AsString + sfiller, 1, 6);
-      sUser := Copy(sfiller, 1, 10);
-      sFolio := Copy(IntToStr(irow) + sfiller, 1, 8);
+      sLoc := SStrCopy(sfiller, 1, 3);
+      sLocDesc := SStrCopy(sfiller, 1, 45);
+      sStockDesc := SStrCopy(sfiller, 1, 35);
+      sPIN := SStrCopy(FieldByName('Supp_Inv_Alt_Ref').AsString + sfiller, 1, 6);
+      sUser := SStrCopy(sfiller, 1, 10);
+      sFolio := SStrCopy(IntToStr(irow) + sfiller, 1, 8);
 
       Writeln(InvFile, sAcc_Code, sRef, sLongRef, sVersion, sDesc, ' ',
         sStockCode, '     ',
@@ -633,29 +639,29 @@ begin
         sAcc_Type := 'PI';
 
       {Account Code}
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
       else
-        sNomCode := copy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
           sfiller, 1, 8);
 
       {Department Number}
       sDepartment := '1';
 
 (*      {Transaction Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDate,true,true));
 *)
 
       {Description}
       if trim(FieldByName('Supp_Inv_alt_ref').AsString) = '' then
-        sDescription := Copy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
+        sDescription := SStrCopy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
       else
-        sDescription := Copy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
+        sDescription := SStrCopy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
 
       {Set the Goods and Vat Value differences}
       if iInvoiceLine = 1 then
@@ -688,17 +694,17 @@ begin
       if rValue < 0 then
         rValue := rValue * -1;
 
-//      sValue := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+//      sValue := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
         rVatValue := fieldbyName('Vat_Value').asfloat * -1
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
-//      sVatValue := Copy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
+//      sVatValue := SStrCopy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
 
       {Apply any differences to goods and VAT values}
       rValue := rValue + rGoodsDiff;
@@ -771,17 +777,17 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
             else
-              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
+              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
                 sfiller, 1, 8);
 
             {Nett Amount}
             {See further up for rValue}
-//            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+//            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
@@ -793,7 +799,7 @@ begin
                 rVatRemainder := 0.00;
               end;
 
-//            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+//            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(iSupplierInv);
             if rValue <> 0 then
@@ -880,7 +886,7 @@ begin
     sAcc_Type := 'SU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -888,13 +894,13 @@ begin
       end;
 
       inc(iSuppliers);
-      sCompany := Copy(FieldByName('Supplier_Name').AsString + sfiller, 1, 30);
-      sAdd1 := Copy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
-      sAdd2 := Copy(FieldByName('Street').AsString + sfiller, 1, 30);
-      sAdd3 := Copy(FieldByName('Locale').AsString + sfiller, 1, 30);
-      sAdd4 := Copy(FieldByName('Town').AsString + sfiller, 1, 30);
-      sAdd5 := Copy(FieldByName('Postcode').AsString + sfiller, 1, 30);
-      sContact := Copy(FieldByName('Contact_Name').AsString + sfiller, 1, 25);
+      sCompany := SStrCopy(FieldByName('Supplier_Name').AsString + sfiller, 1, 30);
+      sAdd1 := SStrCopy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
+      sAdd2 := SStrCopy(FieldByName('Street').AsString + sfiller, 1, 30);
+      sAdd3 := SStrCopy(FieldByName('Locale').AsString + sfiller, 1, 30);
+      sAdd4 := SStrCopy(FieldByName('Town').AsString + sfiller, 1, 30);
+      sAdd5 := SStrCopy(FieldByName('Postcode').AsString + sfiller, 1, 30);
+      sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 25);
 
       {if generated for Enterprise then Version is A2}
       sVersion := 'A2';
@@ -906,12 +912,12 @@ begin
       if FieldByName('Currency_code_def').isnull then
         scurrency := '1'
       else
-        sCurrency := Copy(FieldByName('Currency_code_def').AsString + sfiller,
+        sCurrency := SStrCopy(FieldByName('Currency_code_def').AsString + sfiller,
           1, 1);
 
-      sPhone := Copy(FieldByName('Phone').AsString + sfiller, 1, 20);
-      sFax := Copy(FieldByName('Fax_Number').AsString + sfiller, 1, 20);
-      sEMail := Copy(FieldByName('Email').AsString + sfiller, 1, 20);
+      sPhone := SStrCopy(FieldByName('Phone').AsString + sfiller, 1, 20);
+      sFax := SStrCopy(FieldByName('Fax_Number').AsString + sfiller, 1, 20);
+      sEMail := SStrCopy(FieldByName('Email').AsString + sfiller, 1, 20);
 
       {Check for Intrastat code}
       sEC_Status := 'Y';
@@ -980,7 +986,7 @@ begin
     sAcc_Type := 'CU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -988,13 +994,13 @@ begin
       end;
 
       inc(iCustomers);
-      sCompany := Copy(FieldByName('Customer_Name').AsString + sfiller, 1, 30);
-      sAdd1 := Copy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
-      sAdd2 := Copy(FieldByName('Street').AsString + sfiller, 1, 30);
-      sAdd3 := Copy(FieldByName('Locale').AsString + sfiller, 1, 30);
-      sAdd4 := Copy(FieldByName('Town').AsString + sfiller, 1, 30);
-      sAdd5 := Copy(FieldByName('Postcode').AsString + sfiller, 1, 30);
-      sContact := Copy(FieldByName('Contact_Name').AsString + sfiller, 1, 25);
+      sCompany := SStrCopy(FieldByName('Customer_Name').AsString + sfiller, 1, 30);
+      sAdd1 := SStrCopy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
+      sAdd2 := SStrCopy(FieldByName('Street').AsString + sfiller, 1, 30);
+      sAdd3 := SStrCopy(FieldByName('Locale').AsString + sfiller, 1, 30);
+      sAdd4 := SStrCopy(FieldByName('Town').AsString + sfiller, 1, 30);
+      sAdd5 := SStrCopy(FieldByName('Postcode').AsString + sfiller, 1, 30);
+      sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 25);
 
       {if generated for Enterprise then Version is A2}
       sVersion := 'A2';
@@ -1006,12 +1012,12 @@ begin
       if FieldByName('Currency_code_def').isnull then
         scurrency := '1'
       else
-        sCurrency := Copy(FieldByName('Currency_code_def').AsString + sfiller,
+        sCurrency := SStrCopy(FieldByName('Currency_code_def').AsString + sfiller,
           1, 1);
 
-      sPhone := Copy(FieldByName('Phone').AsString + sfiller, 1, 20);
-      sFax := Copy(FieldByName('Fax_Number').AsString + sfiller, 1, 20);
-      sEMail := Copy(FieldByName('Email').AsString + sfiller, 1, 20);
+      sPhone := SStrCopy(FieldByName('Phone').AsString + sfiller, 1, 20);
+      sFax := SStrCopy(FieldByName('Fax_Number').AsString + sfiller, 1, 20);
+      sEMail := SStrCopy(FieldByName('Email').AsString + sfiller, 1, 20);
 
       {Check for Intrastat code}
       sEC_Status := 'Y';
@@ -1040,7 +1046,7 @@ begin
     sAcc_Type := 'CU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -1050,33 +1056,33 @@ begin
       inc(iCustomers);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAcc_Code,true,true));
 
-      sCompany := Copy(FieldByName('Customer_Name').AsString + sfiller, 1, 30);
+      sCompany := SStrCopy(FieldByName('Customer_Name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sCompany,true,true));
 
-      sAdd1 := Copy(FieldByName('Street').AsString + sfiller, 1, 30);
+      sAdd1 := SStrCopy(FieldByName('Street').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd1,true,true));
-      sAdd2 := Copy(FieldByName('Locale').AsString + sfiller, 1, 30);
+      sAdd2 := SStrCopy(FieldByName('Locale').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd2,true,true));
-      sAdd3 := Copy(FieldByName('Town_City').AsString + sfiller, 1, 30);
+      sAdd3 := SStrCopy(FieldByName('Town_City').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd3,true,true));
-      sAdd4 := Copy(FieldByName('County_State').AsString + sfiller, 1, 30);
+      sAdd4 := SStrCopy(FieldByName('County_State').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd4,true,true));
-      sAdd5 := Copy(FieldByName('Postcode').AsString + sfiller, 1, 10);
+      sAdd5 := SStrCopy(FieldByName('Postcode').AsString + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd5,true,true));
 
-      sContact := Copy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
+      sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sContact,true,true));
 
-      sPhone := Copy(FieldByName('Telephone_Number').AsString + sfiller, 1, 30);
+      sPhone := SStrCopy(FieldByName('Telephone_Number').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sPhone,true,true));
 
-      sFax := Copy(FieldByName('Fax_Number').AsString + sfiller, 1, 30);
+      sFax := SStrCopy(FieldByName('Fax_Number').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sFax,true,true));
 
-      sStatus := Copy('New' + sfiller, 1, 30);
+      sStatus := SStrCopy('New' + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sStatus,true,true));
 
-      sRep := Copy(FieldByName('Rep_Name').AsString + sfiller, 1, 30);
+      sRep := SStrCopy(FieldByName('Rep_Name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sRep,true,true));
       {Region}
       sSage50Text := trim(sSage50Text) + trim(Sage50Format('',false,true));
@@ -1085,12 +1091,12 @@ begin
 
       if sAcc_Code = 'DA3' then
         begin
-          sVATRef := Copy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
+          sVATRef := SStrCopy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
           sSage50Text := trim(sSage50Text) + trim(Sage50Format(sVATRef,true,true));
         end
       else
         begin
-          sVATRef := Copy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
+          sVATRef := SStrCopy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
           sSage50Text := trim(sSage50Text) + trim(Sage50Format(sVATRef,true,true));
         end;
       {Turnover}
@@ -1100,16 +1106,16 @@ begin
       {Previous YTD}
       sSage50Text := trim(sSage50Text) + trim(Sage50Format('',false,true));
 
-      sCredit := Copy(FieldByName('Credit_Limit').AsString + sfiller, 1, 10);
+      sCredit := SStrCopy(FieldByName('Credit_Limit').AsString + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sCredit,true,true));
 
       {Terms}
       sSage50Text := trim(sSage50Text) + trim(Sage50Format('',false,true));
 
-      sSett_Days := Copy(FieldByName('Settlement_Days').AsString + sfiller, 1, 10);
+      sSett_Days := SStrCopy(FieldByName('Settlement_Days').AsString + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sSett_Days,false,true));
 
-      sSett_Rate := Copy(FieldByName('Settlement_Discount').AsString + sfiller, 1, 10);
+      sSett_Rate := SStrCopy(FieldByName('Settlement_Discount').AsString + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sSett_Rate,false,true));
 
       {Def Nominal Code}
@@ -1121,6 +1127,14 @@ begin
     end;
     frmWTAccExport4.iRecordCounter := iCustomers;
   end;
+end;
+
+function TfrmWTAccExport3.Sage50Format(sFieldText: ShortString; bNeedQuotes, bNeedComma: boolean): string;
+var
+  FieldText: string;
+begin
+  FieldText := string(sFieldText);
+  Result := Sage50Format(FieldText, bNeedQuotes, bNeedComma);
 end;
 
 procedure TfrmWTAccExport3.Sage50Suppliers(SupplierDataSQL: TFDQuery);
@@ -1137,7 +1151,7 @@ begin
     sAcc_Type := 'SU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -1148,27 +1162,27 @@ begin
       inc(iSuppliers);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAcc_Code,true,true));
 
-      sCompany := Copy(FieldByName('Supplier_Name').AsString + sfiller, 1, 30);
+      sCompany := SStrCopy(FieldByName('Supplier_Name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sCompany,true,true));
 
-      sAdd1 := Copy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
+      sAdd1 := SStrCopy(FieldByName('Building_no_name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd1,true,true));
-      sAdd2 := Copy(FieldByName('Street').AsString + sfiller, 1, 30);
+      sAdd2 := SStrCopy(FieldByName('Street').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd2,true,true));
-      sAdd3 := Copy(FieldByName('Locale').AsString + sfiller, 1, 30);
+      sAdd3 := SStrCopy(FieldByName('Locale').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd3,true,true));
-      sAdd4 := Copy(FieldByName('Town').AsString + sfiller, 1, 30);
+      sAdd4 := SStrCopy(FieldByName('Town').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd4,true,true));
-      sAdd5 := Copy(FieldByName('Postcode').AsString + sfiller, 1, 10);
+      sAdd5 := SStrCopy(FieldByName('Postcode').AsString + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAdd5,true,true));
 
-      sContact := Copy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
+      sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sContact,true,true));
 
-      sPhone := Copy(FieldByName('Phone').AsString + sfiller, 1, 30);
+      sPhone := SStrCopy(FieldByName('Phone').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sPhone,true,true));
 
-      sFax := Copy(FieldByName('Fax_Number').AsString + sfiller, 1, 30);
+      sFax := SStrCopy(FieldByName('Fax_Number').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sFax,true,true));
 
       {Region - analysis 1}
@@ -1180,7 +1194,7 @@ begin
       {Dept Number}
       sSage50Text := trim(sSage50Text) + trim(Sage50Format('',false,true));
 
-      sVATRef := Copy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
+      sVATRef := SStrCopy(FieldByName('VAT_Reference').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sVATRef,true,true));
 
       {Turnover}
@@ -1226,7 +1240,7 @@ begin
     sAcc_Type := 'CU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 (*      if (Trim(sAcc_Code) = '') or (Trim(sAcc_Code) = 'RETAIL') or (fieldbyname('Is_Retail_Customer').asstring = 'Y') then
       begin
         Next;
@@ -1256,7 +1270,7 @@ begin
       sXeroText := trim(sXeroText) + trim(Sage50Format('',true,true));
 
       {Postal Address Details}
-      sContact := Copy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
+      sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sContact,true,true));
 
       sAdd1 := stringreplace(FieldByName('Street').AsString,',',' ',[rfReplaceAll]);
@@ -1350,7 +1364,7 @@ begin
     sAcc_Type := 'CU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -1433,7 +1447,7 @@ begin
     sAcc_Type := 'SU';
     while (not EOF) do
     begin
-      sAcc_Code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_Code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
       if Trim(sAcc_Code) = '' then
       begin
         Next;
@@ -1590,14 +1604,14 @@ begin
       dmAccExport.GetFormRefSQL.parambyname('Form_Reference').asinteger := fieldbyname('Form_Reference').asinteger;
       dmAccExport.GetFormRefSQL.open;
 
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
-      sRef := Copy(FieldByName('Purchase_Order').AsString +
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
+      sRef := SStrCopy(FieldByName('Purchase_Order').AsString +
         FieldByName('Line').AsString + sfiller, 1, 10);
-      sLongRef := Copy(FieldByName('Cust_Order_no').AsString + sfiller, 1, 20);
+      sLongRef := SStrCopy(FieldByName('Cust_Order_no').AsString + sfiller, 1, 20);
       {if generated for Enterprise then Version is I2}
       sVersion := 'I2';
-      sDesc := Copy(FieldByName('Description').AsString + sfiller, 1, 50);
-      sStockCode := Copy(dmAccExport.GetFormRefSQL.FieldByName('Form_Reference_ID').AsString + sfiller, 1,
+      sDesc := SStrCopy(FieldByName('Description').AsString + sfiller, 1, 50);
+      sStockCode := SStrCopy(dmAccExport.GetFormRefSQL.FieldByName('Form_Reference_ID').AsString + sfiller, 1,
         14);
 
       if FieldByName('Price_Unit_Factor').AsFloat = 0 then
@@ -1606,20 +1620,20 @@ begin
       else
         rValue := FieldByName('Goods_Value').AsFloat /
           FieldByName('Price_Unit_Factor').AsFloat;
-      sValue := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
       {if generated for Enterprise then Paytype is null}
 
-      sVat_Code := Copy(FieldByName('VAT_Ref').AsString + sfiller, 1, 1);
+      sVat_Code := SStrCopy(FieldByName('VAT_Ref').AsString + sfiller, 1, 1);
 
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 6)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 6)
       else
-        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 6);
 
       sInvType := 'SIN';
-      sQty := Copy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
-      sQtyStk := Copy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
+      sQty := SStrCopy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
+      sQtyStk := SStrCopy(FieldByName('Qty_Invoiced').AsString + sfiller, 1, 8);
 
       if FieldByName('Order_Unit_Factor').AsFloat = 0 then
         rValue := FieldByName('Order_Price').AsFloat /
@@ -1627,7 +1641,7 @@ begin
       else
         rValue := FieldByName('Order_Price').AsFloat /
           FieldByName('Order_Unit_Factor').AsFloat;
-      sUnitCost := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+      sUnitCost := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
       if FieldByName('Price_Unit_Factor').AsFloat = 0 then
         rValue := FieldByName('Goods_Value').AsFloat /
@@ -1635,41 +1649,41 @@ begin
       else
         rValue := FieldByName('Goods_Value').AsFloat /
           FieldByName('Price_Unit_Factor').AsFloat;
-      sUnitSell := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+      sUnitSell := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
       if FieldByName('Currency_Code').isNull then
         sCurr := '1 '
       else
-        sCurr := Copy(FieldByName('Currency_Code').AsString + sfiller, 1, 2);
+        sCurr := SStrCopy(FieldByName('Currency_Code').AsString + sfiller, 1, 2);
 
-      sDoc := Copy(sfiller, 1, 1);
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDoc := SStrCopy(sfiller, 1, 1);
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
-      sCoRate := Copy('1.0' + sfiller, 1, 6);
-      sVATRate := Copy('1.0' + sfiller, 1, 6);
-      sQtyMul := Copy('1.0' + sfiller, 1, 6);
-      sDiscount := Copy('0.0' + sfiller, 1, 6);
-      sAdd1 := Copy(FieldByName('Building_no_Name').AsString + sfiller, 1, 30);
-      sAdd2 := Copy(FieldByName('Street').AsString + sfiller, 1, 30);
-      sAdd3 := Copy(FieldByName('Locale').AsString + sfiller, 1, 30);
-      sAdd4 := Copy(FieldByName('Town').AsString + sfiller, 1, 30);
-      sAdd5 := Copy(FieldByName('Postcode').AsString + sfiller, 1, 30);
+      sCoRate := SStrCopy('1.0' + sfiller, 1, 6);
+      sVATRate := SStrCopy('1.0' + sfiller, 1, 6);
+      sQtyMul := SStrCopy('1.0' + sfiller, 1, 6);
+      sDiscount := SStrCopy('0.0' + sfiller, 1, 6);
+      sAdd1 := SStrCopy(FieldByName('Building_no_Name').AsString + sfiller, 1, 30);
+      sAdd2 := SStrCopy(FieldByName('Street').AsString + sfiller, 1, 30);
+      sAdd3 := SStrCopy(FieldByName('Locale').AsString + sfiller, 1, 30);
+      sAdd4 := SStrCopy(FieldByName('Town').AsString + sfiller, 1, 30);
+      sAdd5 := SStrCopy(FieldByName('Postcode').AsString + sfiller, 1, 30);
       sLoc := 'GI ';
-      sLocDesc := Copy('Goods In' + sfiller, 1, 45);
-      sStockDesc := Copy(dmAccExport.GetFormRefSQL.FieldByName('Form_Reference_Descr').AsString + sfiller,
+      sLocDesc := SStrCopy('Goods In' + sfiller, 1, 45);
+      sStockDesc := SStrCopy(dmAccExport.GetFormRefSQL.FieldByName('Form_Reference_Descr').AsString + sfiller,
         1, 35);
 
-      sPIN := Copy(sfiller, 1, 6);
-      sUser := Copy(sfiller, 1, 10);
-      sFolio := Copy(IntToStr(irow) + sfiller, 1, 8);
+      sPIN := SStrCopy(sfiller, 1, 6);
+      sUser := SStrCopy(sfiller, 1, 10);
+      sFolio := SStrCopy(IntToStr(irow) + sfiller, 1, 8);
 
       {Don't set stock code and description if not stocked}
       if dmAccExport.GetFormRefSQL.FieldByName('Stocked_Item').AsString <> 'Y' then
       begin
-        sStockCode := Copy(sfiller, 1, 14);
-        sStockDesc := Copy(sfiller, 1, 35);
+        sStockCode := SStrCopy(sfiller, 1, 14);
+        sStockDesc := SStrCopy(sfiller, 1, 35);
         sLoc := '   ';
-        sLocDesc := Copy(sfiller, 1, 45);
+        sLocDesc := SStrCopy(sfiller, 1, 45);
       end;
 
       Writeln(InvFile, sAcc_Code, sRef, sLongRef, sVersion, sDesc, ' ',
@@ -1694,36 +1708,36 @@ begin
         First;
         while (not dmAccExport.SalesInvAddSQL.EOF) do
         begin
-{          sRef := Copy(Trim(sTempRef) + 'A' +
+{          sRef := SStrCopy(Trim(sTempRef) + 'A' +
             Trim(FieldByName('Additional_Charge').AsString) + sfiller, 1, 10);
 }
-          sDesc := Copy(FieldByName('Details').AsString + sfiller, 1, 50);
-          sStockCode := Copy(sfiller, 1, 14);
+          sDesc := SStrCopy(FieldByName('Details').AsString + sfiller, 1, 50);
+          sStockCode := SStrCopy(sfiller, 1, 14);
 
           rValue := FieldByName('Quotation_Price').AsFloat;
-          sValue := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+          sValue := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
           {if generated for Enterprise then Paytype is null}
 
           if Trim(FieldByName('Nominal').AsString) <> '' then
-            sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 6)
+            sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 6)
           else
-            sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+            sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
               sfiller, 1, 6);
 
           sInvType := 'SIN';
-          sQty := Copy('1' + sfiller, 1, 8);
-          sQtyStk := Copy(sfiller, 1, 8);
+          sQty := SStrCopy('1' + sfiller, 1, 8);
+          sQtyStk := SStrCopy(sfiller, 1, 8);
 
           rValue := FieldByName('Amount').AsFloat;
-          sUnitCost := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+          sUnitCost := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
           rValue := FieldByName('Quotation_Price').AsFloat;
-          sUnitSell := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+          sUnitSell := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
-          sStockCode := Copy(sfiller, 1, 14);
-          sStockDesc := Copy(sfiller, 1, 35);
+          sStockCode := SStrCopy(sfiller, 1, 14);
+          sStockDesc := SStrCopy(sfiller, 1, 35);
           sLoc := '   ';
-          sLocDesc := Copy(sfiller, 1, 45);
+          sLocDesc := SStrCopy(sfiller, 1, 45);
           
           Writeln(InvFile, sAcc_Code, sRef, sLongRef, sVersion, sDesc, ' ',
             sStockCode, '     ',
@@ -1769,41 +1783,41 @@ begin
       iEnd := 50;
       while istart < iFieldLength do
        begin
-         sDesc := Copy(copy(trim(stext),istart,50) + sfiller, 1, 50);
+         sDesc := SStrCopy(copy(trim(stext),istart,50) + sfiller, 1, 50);
          if trim(sDesc) = '' then break;
-{         sRef := Copy(Trim(sTempRef) + 'N' +
+{         sRef := SStrCopy(Trim(sTempRef) + 'N' +
                    Trim(inttostr(icount)) + sfiller, 1, 10);
 }
-         sStockCode := Copy(sfiller, 1, 14);
+         sStockCode := SStrCopy(sfiller, 1, 14);
 
-         sValue := Copy(sfiller, 1, 20);
+         sValue := SStrCopy(sfiller, 1, 20);
 
          {if generated for Enterprise then Paytype is null}
-         sNomCode := Copy(sfiller, 1, 6) ;
+         sNomCode := SStrCopy(sfiller, 1, 6) ;
          sInvType := 'SIN';
-         sQty := Copy(sfiller, 1, 8);
-         sQtyStk := Copy(sfiller, 1, 8);
+         sQty := SStrCopy(sfiller, 1, 8);
+         sQtyStk := SStrCopy(sfiller, 1, 8);
 
-         sUnitCost := Copy(sfiller, 1, 20);
-         sUnitSell := Copy(sfiller, 1, 20);
+         sUnitCost := SStrCopy(sfiller, 1, 20);
+         sUnitSell := SStrCopy(sfiller, 1, 20);
 
-         sCurr := Copy(sfiller, 1, 2);
-         sDoc := Copy(sfiller, 1, 1);
-         sDate := Copy(sfiller, 1, 10);
-         sCoRate := Copy(sfiller, 1, 6);
-         sVatRate:= Copy(sfiller, 1, 6);
-         sQtyMul := Copy(sfiller, 1, 6);
-         sDiscount := Copy(sfiller, 1, 6);
-         sAdd1 := Copy(sfiller, 1, 30);
-         sAdd2 := Copy(sfiller, 1, 30);
-         sAdd3 := Copy(sfiller, 1, 30);
-         sAdd4 := Copy(sfiller, 1, 30);
-         sAdd5 := Copy(sfiller, 1, 30);
-         sLoc := Copy(sfiller, 1, 3);
-         sLocDesc := Copy(sfiller, 1, 45);
-         sStockDesc := Copy(sfiller, 1, 35);
-         sPin := Copy(sfiller, 1, 6);
-         sUser := Copy(sfiller, 1, 10);
+         sCurr := SStrCopy(sfiller, 1, 2);
+         sDoc := SStrCopy(sfiller, 1, 1);
+         sDate := SStrCopy(sfiller, 1, 10);
+         sCoRate := SStrCopy(sfiller, 1, 6);
+         sVatRate:= SStrCopy(sfiller, 1, 6);
+         sQtyMul := SStrCopy(sfiller, 1, 6);
+         sDiscount := SStrCopy(sfiller, 1, 6);
+         sAdd1 := SStrCopy(sfiller, 1, 30);
+         sAdd2 := SStrCopy(sfiller, 1, 30);
+         sAdd3 := SStrCopy(sfiller, 1, 30);
+         sAdd4 := SStrCopy(sfiller, 1, 30);
+         sAdd5 := SStrCopy(sfiller, 1, 30);
+         sLoc := SStrCopy(sfiller, 1, 3);
+         sLocDesc := SStrCopy(sfiller, 1, 45);
+         sStockDesc := SStrCopy(sfiller, 1, 35);
+         sPin := SStrCopy(sfiller, 1, 6);
+         sUser := SStrCopy(sfiller, 1, 10);
 
          Writeln(InvFile, sAcc_Code, sRef, sLongRef, sVersion, sDesc, ' ',
                sStockCode, '     ',
@@ -1873,30 +1887,30 @@ begin
 
       {Account Code}
 //      if (FieldByName('Cash_Sales').AsString = 'Y') then
-//        sAcc_code := Copy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
+//        sAcc_code := SStrCopy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
 //      else
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
       else
-        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 8);
 
       {Department Number}
       sDepartment := '1';
 
       {Reference}
-      sReference := Copy(FieldByName('invoice_No').AsString + sfiller, 1, 15);
+      sReference := SStrCopy(FieldByName('invoice_No').AsString + sfiller, 1, 15);
 
       {Description}
-//      sDescription := Copy((FieldByName('Reference').AsString) + sfiller, 1, 30);
+//      sDescription := SStrCopy((FieldByName('Reference').AsString) + sfiller, 1, 30);
       {Use the Sales order number to retrieve the customer reference from the sales order}
       if sAcc_Type = 'SC' then
-        sDescription := copy((dmAccExport.GetSOCustomerOrderNo(FieldByName('Sales_Order').AsString)) + sfiller, 1, 30)
+        sDescription := SStrCopy((dmAccExport.GetSOCustomerOrderNo(FieldByName('Sales_Order').AsString)) + sfiller, 1, 30)
       else
-        sDescription := copy((dmAccExport.GetSOCustomerOrderNo(FieldByName('Reference').AsString)) + sfiller, 1, 30);
+        sDescription := SStrCopy((dmAccExport.GetSOCustomerOrderNo(FieldByName('Reference').AsString)) + sfiller, 1, 30);
 
       if trim(sDescription) = '' then
         sDescription := sOldDescription;
@@ -1907,7 +1921,7 @@ begin
       if FieldByName('Cash_Sales').AsString = 'Y' then
         begin
           sDescription := trim(sDescription) + ' (' + trim(FieldByName('Account_Code').AsString) + ')';
-          sDescription := Copy(sDescription + sfiller, 1, 30);
+          sDescription := SStrCopy(sDescription + sfiller, 1, 30);
         end;
 *)
 
@@ -1920,7 +1934,7 @@ begin
           rValue := rValue * -1;
         end;
 *)
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
       sVat_Code := trim(Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2));
@@ -1935,7 +1949,7 @@ begin
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
-      sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+      sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
       {Write the details to the file}
       if (rValue <> 0) or (rVatValue <> 0) then
@@ -2014,22 +2028,22 @@ begin
 
       {Account Code}
 //      if (FieldByName('Cash_Sales').AsString = 'Y') then
-//        sAcc_code := Copy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
+//        sAcc_code := SStrCopy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
 //      else
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
       else
-        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 8);
 
       {Department Number}
       sDepartment := '1';
 
       {Reference}
-      sOrderReference := Copy(FieldByName('Reference').AsString + sfiller, 1, 15);
+      sOrderReference := SStrCopy(FieldByName('Reference').AsString + sfiller, 1, 15);
 
       {Description}
       sLineDescription := fieldbyname('Description').asstring;
@@ -2037,7 +2051,7 @@ begin
       {Nett Amount}
       rValue := FieldByName('unit_price').AsFloat;
 
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {Quantity}
       rQuantity := (FieldByName('Quantity_Invoiced').Asinteger / FieldByName('sell_unit').AsFloat);
@@ -2045,7 +2059,7 @@ begin
         rQuantity := rQuantity * -1;
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
@@ -2057,7 +2071,7 @@ begin
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
-      sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+      sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
       
       sVat_Description := fieldbyname('Vat_Description').asstring;
 
@@ -2140,29 +2154,29 @@ begin
       iInvoiceCode := fieldbyname('Supplier_invoice').asinteger;
 
       {Account Code}
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 50)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 50)
       else
-        sNomCode := copy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
           sfiller, 1, 50);
 
       {Department Number}
       sDepartment := '1';
 
 (*      {Transaction Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDate,true,true));
 *)
 
       {Description}
       if trim(FieldByName('Supp_Inv_alt_ref').AsString) = '' then
-        sDescription := Copy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
+        sDescription := SStrCopy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
       else
-        sDescription := Copy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
+        sDescription := SStrCopy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
 
       {Set the Goods and Vat Value differences}
       if iInvoiceLine = 1 then
@@ -2191,17 +2205,17 @@ begin
       if rValue < 0 then
         rValue := rValue * -1;
 
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
         rVatValue := fieldbyName('Vat_Value').asfloat * -1
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
-//      sVatValue := Copy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
+//      sVatValue := SStrCopy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
 
       {Apply any differences to goods and VAT values}
       rValue := rValue + rGoodsDiff;
@@ -2268,17 +2282,17 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 50)
+              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 50)
             else
-              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
+              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
                 sfiller, 1, 50);
 
             {Nett Amount}
             {See further up for rValue}
-//            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+//            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
@@ -2290,7 +2304,7 @@ begin
                 rVatRemainder := 0.00;
               end;
 
-//            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+//            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(iSupplierInv);
             if rValue <> 0 then
@@ -2362,31 +2376,31 @@ begin
 
       {Account Code}
 //      if FieldByName('Cash_Sales').AsString = 'Y' then
-//        sAcc_code := Copy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 50)
+//        sAcc_code := SStrCopy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 50)
 //      else
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 50);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 30)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 30)
       else
-        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 30);
 
       {Department Number}
       sDepartment := '1';
 
       {Reference}
-      sReference := Copy(FieldByName('invoice_No').AsString + sfiller, 1, 20);
+      sReference := SStrCopy(FieldByName('invoice_No').AsString + sfiller, 1, 20);
 
       {Description}
-      sDescription := Copy((FieldByName('Reference').AsString) + sfiller, 1, 30);
+      sDescription := SStrCopy((FieldByName('Reference').AsString) + sfiller, 1, 30);
 
       {if Cash Sales then add to description the customer account code}
 (*      if FieldByName('Cash_Sales').AsString = 'Y' then
         begin
           sDescription := trim(sDescription) + ' (' + trim(FieldByName('Account_Code').AsString) + ')';
-          sDescription := Copy(sDescription + sfiller, 1, 30);
+          sDescription := SStrCopy(sDescription + sfiller, 1, 30);
         end;
 *)
 
@@ -2396,10 +2410,10 @@ begin
       if rValue < 0 then
         rValue := rValue * -1;
 
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
@@ -2411,7 +2425,7 @@ begin
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
-      sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+      sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
       {Write the details to the file}
       if (rValue <> 0) or (rVatValue <> 0) then
@@ -2468,23 +2482,23 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 30)
+              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 30)
             else
-              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
                 sfiller, 1, 30);
 
             {Nett Amount}
             {See further up for rValue}
-            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
             rVatValue := rValue * (rVatRate/100);
 
-            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(isalesInv);
             if rValue <> 0 then
@@ -2536,44 +2550,44 @@ begin
       sSage50Text := '';
 
       {Account Type - set to Sales Invoice}
-      sAcc_Type := copy(fieldbyname('Transaction_type').asstring + sfiller,1,2);
+      sAcc_Type := SStrCopy(fieldbyname('Transaction_type').asstring + sfiller,1,2);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAcc_Type,true,true));
 
       {Account Code}
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sAcc_code,true,true));
 
       {Nominal Code}
-      sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8);
+      sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sNomCode,true,true));
 
       {Department Number}
-      sDepartment := Copy(FieldByName('Department').AsString + sfiller, 1, 1);
+      sDepartment := SStrCopy(FieldByName('Department').AsString + sfiller, 1, 1);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDepartment,false,true));
 
       {Transaction Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDate,true,true));
 
       {Reference}
-      sReference := Copy(FieldByName('Reference').AsString + sfiller, 1, 15);
+      sReference := SStrCopy(FieldByName('Reference').AsString + sfiller, 1, 15);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sReference,true,true));
 
       {Description}
-      sDescription := Copy(FieldByName('Description').AsString + sfiller, 1, 30);
+      sDescription := SStrCopy(FieldByName('Description').AsString + sfiller, 1, 30);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDescription,true,true));
 
       {Nett Amount}
-      sValue := Copy(formatfloat('0.00000', (FieldByName('Total_Goods_Value').AsFloat)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (FieldByName('Total_Goods_Value').AsFloat)) + sfiller, 1, 20);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sValue,false,true));
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sVat_Code,true,true));
 
       {VAT Amount}
-      sVatValue := Copy(formatfloat('0.00000', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 20);
+      sVatValue := SStrCopy(formatfloat('0.00000', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 20);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sVatValue,false,false));
 
       Writeln(InvFile, sSage50Text);
@@ -2725,12 +2739,12 @@ begin
       sXeroText := trim(sXeroText) + trim(Sage50Format(sOrderReference,true,true));
 
       {Invoice Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sDate,true,true));
 
       {Due Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Due_Date').AsDateTime) + sfiller, 1, 10);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sDate,true,true));
 
@@ -2754,7 +2768,7 @@ begin
       sXeroText := trim(sXeroText) + trim(Sage50Format('',true,true));
 
       {Nominal Code}
-      sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8);
+      sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sNomCode,true,true));
 
       {Tax Type}
@@ -2790,7 +2804,7 @@ end;
 procedure TfrmWTAccExport3.CreateAccExportFile;
 begin
   {Check for any \ on the end of the path}
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -2825,7 +2839,7 @@ end;
 procedure TfrmWTAccExport3.CreateInvExportFile;
 begin
   {Check for any \ on the end of the path}
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -2863,7 +2877,7 @@ var
 begin
   sAccFileName := FileNameEdit.Text;
   if Pos('INV', sAccFileName) = 1 then
-    sAccFileName := Copy(sAccFileName, 4, 256);
+    sAccFileName := SStrCopy(sAccFileName, 4, 256);
 
   {Set the file extension}
   if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50') or
@@ -2915,7 +2929,7 @@ var
 begin
   sNextInvFile := FileNameEdit.Text;
   if Pos('INV', sNextInvFile) = 1 then
-    sNextInvFile := Copy(sNextInvFile, 4, 256);
+    sNextInvFile := SStrCopy(sNextInvFile, 4, 256);
 
   {Set the file extension}
   if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50') or
@@ -3106,7 +3120,7 @@ var
   icurrency: Integer;
 begin
   {Check for any \ on the end of the path}
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -3131,10 +3145,10 @@ begin
 
       inc(icurrency);
 
-      sCode := Copy(Filebuffer, 1, 2);
-      sDescription := Copy(Filebuffer, 3, 11);
-      sSymbol := Copy(Filebuffer, 14, 3);
-      sRate := Copy(Filebuffer, 17, 20);
+      sCode := SStrCopy(Filebuffer, 1, 2);
+      sDescription := SStrCopy(Filebuffer, 3, 11);
+      sSymbol := SStrCopy(Filebuffer, 14, 3);
+      sRate := SStrCopy(Filebuffer, 17, 20);
 
       {Check whether the record exists}
       with dmAccExport.CurrencySQL do
@@ -3165,7 +3179,7 @@ var
   istock: Integer;
 begin
   {Check for any \ on the end of the path}
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -3188,9 +3202,9 @@ begin
   begin
     Readln(Stockfile, FileBuffer);
     inc(istock);
-    sParent := Copy(Filebuffer, 15, 14);
-    sCode := Copy(Filebuffer, 1, 14);
-    sDescription := Copy(Filebuffer, 29, 35);
+    sParent := SStrCopy(Filebuffer, 15, 14);
+    sCode := SStrCopy(Filebuffer, 1, 14);
+    sDescription := SStrCopy(Filebuffer, 29, 35);
 
     {get the Customer and Branch associated with the Parent code}
     with dmAccExport.BranchSQl do
@@ -3240,7 +3254,7 @@ var
   iaccounts, icustomer: Integer;
 begin
   {Check for any \ on the end of the path}
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -3265,12 +3279,12 @@ begin
 
     inc(iaccounts);
 
-    sAcc_Type := Copy(Filebuffer, 1, 2);
-    sAcc_Code := Copy(Filebuffer, 3, 6);
-    sCredit := Copy(Filebuffer, 9, 20);
-    sAvCredit := Copy(Filebuffer, 29, 20);
-    sStatus := Copy(Filebuffer, 50, 1);
-    sEC_Status := Copy(Filebuffer, 51, 1);
+    sAcc_Type := SStrCopy(Filebuffer, 1, 2);
+    sAcc_Code := SStrCopy(Filebuffer, 3, 6);
+    sCredit := SStrCopy(Filebuffer, 9, 20);
+    sAvCredit := SStrCopy(Filebuffer, 29, 20);
+    sStatus := SStrCopy(Filebuffer, 50, 1);
+    sEC_Status := SStrCopy(Filebuffer, 51, 1);
 
     {Check whether the record exists}
     if sAcc_Type = 'CU' then
@@ -3439,7 +3453,7 @@ end;
 
 function TfrmWTAccExport3.INVfileExists: boolean;
 begin
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
@@ -3471,7 +3485,7 @@ begin
     if MessageDlg('File ' + sFilename + ' already exists. Do you want to overwrite it?', mtWarning, [mbYes, mbNo], 0) = mrYes then
     begin
       DeleteFile(sFilename);
-      sFileName := Copy(sFileName, (Pos('INV', sFileName)+3), 256);
+      sFileName := SStrCopy(sFileName, (Pos('INV', sFileName)+3), 256);
       sFileName := sPathEdit + 'ACC' + sFileName;
       DeleteFile(sFilename);
       Result := false;
@@ -3481,14 +3495,14 @@ end;
 
 procedure TfrmWTAccExport3.DeleteACCfile;
 begin
-  if Copy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
+  if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
   else
     sPathEdit := ExportPathEdit.Text + '\';
 
   {build the full Accounts file name}
   if Pos('INV', FileNameEdit.Text) = 1 then
-    sFilename := sPathEdit + 'ACC' + Copy(FileNameEdit.Text, 4, 256)
+    sFilename := sPathEdit + 'ACC' + SStrCopy(FileNameEdit.Text, 4, 256)
   else
     sFilename := sPathEdit + 'ACC' + FileNameEdit.Text;
 
@@ -3567,29 +3581,29 @@ begin
         sAcc_Type := 'PI';
 
       {Account Code}
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 14)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 14)
       else
-        sNomCode := copy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
           sfiller, 1, 14);
 
       {Department Number}
       sDepartment := '1';
 
 (*      {Transaction Date}
-      sDate := Copy(FormatDateTime('dd"/"mm"/"yyyy',
+      sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yyyy',
         FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 10);
       sSage50Text := trim(sSage50Text) + trim(Sage50Format(sDate,true,true));
 *)
 
       {Description}
       if trim(FieldByName('Supp_Inv_alt_ref').AsString) = '' then
-        sDescription := Copy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
+        sDescription := SStrCopy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
       else
-        sDescription := Copy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
+        sDescription := SStrCopy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
 
       {Set the Goods and Vat Value differences}
       if iInvoiceLine = 1 then
@@ -3618,17 +3632,17 @@ begin
       if rValue < 0 then
         rValue := rValue * -1;
 
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
         rVatValue := fieldbyName('Vat_Value').asfloat * -1
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
-//      sVatValue := Copy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
+//      sVatValue := SStrCopy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
 
       {Apply any differences to goods and VAT values}
       rValue := rValue + rGoodsDiff;
@@ -3696,17 +3710,17 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 14)
+              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 14)
             else
-              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
+              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
                 sfiller, 1, 14);
 
             {Nett Amount}
             {See further up for rValue}
-//            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+//            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
@@ -3718,7 +3732,7 @@ begin
                 rVatRemainder := 0.00;
               end;
 
-//            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+//            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(iSupplierInv);
             if rValue <> 0 then
@@ -3791,34 +3805,34 @@ begin
 
       {Account Code}
 //      if (FieldByName('Cash_Sales').AsString = 'Y') then
-//        sAcc_code := Copy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
+//        sAcc_code := SStrCopy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
 //      else
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 14)
+        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 14)
       else
-        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 14);
 
       {Department Number}
       sDepartment := '1';
 
       {Reference}
-      sReference := Copy(FieldByName('invoice_No').AsString + sfiller, 1, 20);
+      sReference := SStrCopy(FieldByName('invoice_No').AsString + sfiller, 1, 20);
 
       {Description}
-      sDescription := Copy((FieldByName('Reference').AsString) + sfiller, 1, 30);
+      sDescription := SStrCopy((FieldByName('Reference').AsString) + sfiller, 1, 30);
 
       if FieldByName('Invoice_or_Credit').AsString = 'C' then
-        sDescription := Copy(('INV/'+FieldByName('Reference').AsString) + sfiller, 1, 30);
+        sDescription := SStrCopy(('INV/'+FieldByName('Reference').AsString) + sfiller, 1, 30);
 
       {if Cash Sales then add to description the customer account code}
 (*      if FieldByName('Cash_Sales').AsString = 'Y' then
         begin
           sDescription := trim(sDescription) + ' (' + trim(FieldByName('Account_Code').AsString) + ')';
-          sDescription := Copy(sDescription + sfiller, 1, 30);
+          sDescription := SStrCopy(sDescription + sfiller, 1, 30);
         end;
 *)
 
@@ -3828,10 +3842,10 @@ begin
       if rValue < 0 then
         rValue := rValue * -1;
 
-      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
@@ -3843,7 +3857,7 @@ begin
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
-      sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+      sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
       {Write the details to the file}
       if (rValue <> 0) or (rVatValue <> 0) then
@@ -3900,23 +3914,23 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 14)
+              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 14)
             else
-              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
                 sfiller, 1, 14);
 
             {Nett Amount}
             {See further up for rValue}
-            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
             rVatValue := rValue * (rVatRate/100);
 
-            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(isalesInv);
             if rValue <> 0 then
@@ -4096,32 +4110,32 @@ begin
           iInvoiceCode := fieldbyname('Invoice_Code').asinteger;
 
           {Account Code}
-          sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+          sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sAcc_code,true,true));
 
           {Cash Book Account Number}
-          sCBAcc_code := Copy('' + sfiller, 1, 8);
+          sCBAcc_code := SStrCopy('' + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sCBAcc_code,true,true));
 
           {Days Discount Valid}
-          sDays_Discount := Copy('' + sfiller, 1, 2);
+          sDays_Discount := SStrCopy('' + sfiller, 1, 2);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDays_Discount,false,true));
 
           {Discount Value}
-          sDiscount_Value := Copy('' + sfiller, 1, 18);
+          sDiscount_Value := SStrCopy('' + sfiller, 1, 18);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDiscount_Value,false,true));
 
           {Discount Percentage}
-          sDiscount_Perc := Copy('' + sfiller, 1, 26);
+          sDiscount_Perc := SStrCopy('' + sfiller, 1, 26);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDiscount_Perc,false,true));
 
           {Txn Due Date}  {}
-          sDue_Date := Copy(FormatDateTime('dd"/"mm"/"yy', (FieldByName('Invoice_Date').AsDateTime + 30)) + sfiller, 1, 8);
+          sDue_Date := SStrCopy(FormatDateTime('dd"/"mm"/"yy', (FieldByName('Invoice_Date').AsDateTime + 30)) + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDue_Date,true,true));
 
           {Goods Gross Value in Accounts Currency}
-//          sValue := Copy(formatfloat('0.00', (FieldByName('Total_Goods_Value').AsFloat+FieldByName('Total_Vat_Value').AsFloat)) + sfiller, 1, 20);
-          sValue := Copy(formatfloat('0.00',
+//          sValue := SStrCopy(formatfloat('0.00', (FieldByName('Total_Goods_Value').AsFloat+FieldByName('Total_Vat_Value').AsFloat)) + sfiller, 1, 20);
+          sValue := SStrCopy(formatfloat('0.00',
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
           sGrossValue := sValue;
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
@@ -4129,64 +4143,64 @@ begin
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Goods Gross Value in Base Currency}
-//          sValue := Copy(formatfloat('0.00', (FieldByName('Total_Goods_Value').AsFloat+FieldByName('Total_Vat_Value').AsFloat)) + sfiller, 1, 20);
-          sValue := Copy(formatfloat('0.00',
+//          sValue := SStrCopy(formatfloat('0.00', (FieldByName('Total_Goods_Value').AsFloat+FieldByName('Total_Vat_Value').AsFloat)) + sfiller, 1, 20);
+          sValue := SStrCopy(formatfloat('0.00',
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
             sValue := floattostr(StrToFloatDef(sValue, 0, FormatSettings) * -1);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Accounts Currency Rate}
-          sCurrency_Rate := Copy('1.00' + sfiller, 1, 18);
+          sCurrency_Rate := SStrCopy('1.00' + sfiller, 1, 18);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sCurrency_Rate,false,true));
 
           {Base Currency Rate}
-          sBase_Currency_Rate := Copy('1.00' + sfiller, 1, 18);
+          sBase_Currency_Rate := SStrCopy('1.00' + sfiller, 1, 18);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sBase_Currency_Rate,false,true));
 
           {Posting Date}
-          sPost_Date := Copy(FormatDateTime('dd"/"mm"/"yy', date) + sfiller, 1, 8);
+          sPost_Date := SStrCopy(FormatDateTime('dd"/"mm"/"yy', date) + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sPost_Date,true,true));
 
           {Query Code}
-          sQuery_Code := copy('' + sfiller,1,1);
+          sQuery_Code := SStrCopy('' + sfiller,1,1);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sQuery_Code,true,true));
 
           {Txn ref 1}
-          sTxn_Ref1 := copy(fieldbyname('Reference').asstring + sfiller,1,20);
+          sTxn_Ref1 := SStrCopy(fieldbyname('Reference').asstring + sfiller,1,20);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTxn_Ref1,true,true));
 
           {Txn Ref 2}
-          sTxn_Ref2 := copy(FieldByName('Description').AsString + sfiller,1,20);
+          sTxn_Ref2 := SStrCopy(FieldByName('Description').AsString + sfiller,1,20);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTxn_Ref2,true,true));
 
           {Txn Source}
-          sSource := Copy('' + sfiller, 1, 2);
+          sSource := SStrCopy('' + sfiller, 1, 2);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sSource,false,true));
 
           {Account Type - set to Invoice or Credit}
           if (fieldbyname('Transaction_type').asstring = 'SI') or (fieldbyname('Transaction_type').asstring = 'PI') then
-            sAcc_Type := copy('4' + sfiller,1,2)
+            sAcc_Type := SStrCopy('4' + sfiller,1,2)
           else
-            sAcc_Type := copy('5' + sfiller,1,2);
+            sAcc_Type := SStrCopy('5' + sfiller,1,2);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sAcc_Type,false,true));
 
           {Transaction Date}
-          sDate := Copy(FormatDateTime('dd"/"mm"/"yy',
+          sDate := SStrCopy(FormatDateTime('dd"/"mm"/"yy',
             FieldByName('Invoice_Date').AsDateTime) + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDate,true,true));
 
           {Reference}
-          sReference := Copy(FieldByName('Reference').Asstring + sfiller, 1, 8);
+          sReference := SStrCopy(FieldByName('Reference').Asstring + sfiller, 1, 8);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format('',false,true));
 
           {User Number}
-          sUserNo := Copy('' + sfiller, 1, 4);
+          sUserNo := SStrCopy('' + sfiller, 1, 4);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sUserNo,false,true));
 
           {Tax Value - VAT Amount}
-//          sVatValue := Copy(formatfloat('0.00', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 18);
-          sVatValue := Copy(formatfloat('0.00',
+//          sVatValue := SStrCopy(formatfloat('0.00', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 18);
+          sVatValue := SStrCopy(formatfloat('0.00',
             (dmAccExport.GetInvoiceVatTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
 //          sGoodsValue := floattostr(StrToFloatDef(sGrossValue) - StrToFloatDef(sVatValue), 0, FormatSettings);
           sGoodsValue := formatfloat('0.00',(StrToFloatDef(sGrossValue, 0, FormatSettings) - StrToFloatDef(sVatValue, 0, FormatSettings)));
@@ -4198,61 +4212,61 @@ begin
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format('',false,true));
 
           {Reason Code}
-          sReason := Copy('' + sfiller, 1, 2);
+          sReason := SStrCopy('' + sfiller, 1, 2);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sReason,false,true));
         end;
 
       {Nominal Nett Amount}
-      sValue := Copy(formatfloat('0.00', roundfloat(FieldByName('Total_Goods_Value').AsFloat,2)) + sfiller, 1, 18);
+      sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Goods_Value').AsFloat,2)) + sfiller, 1, 18);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
       sNomGoodsValue := sValue;
 
       {Nominal Code}
-      sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8);
+      sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sNomCode,true,true));
 
       {Cost centre}
-      sCost_Centre := Copy(FieldByName('Nominal').AsString + sfiller, 9, 3);
+      sCost_Centre := SStrCopy(FieldByName('Nominal').AsString + sfiller, 9, 3);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sCost_Centre,true,true));
 
       {Department Number}
-      sDepartment := Copy(FieldByName('Nominal').AsString + sfiller, 12, 3);
+      sDepartment := SStrCopy(FieldByName('Nominal').AsString + sfiller, 12, 3);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sDepartment,true,true));
 
       {Nominal Analysis Code Name}
-      sNomAnalysisCodeName := Copy('' + sfiller, 1, 60);
+      sNomAnalysisCodeName := SStrCopy('' + sfiller, 1, 60);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sNomAnalysisCodeName,true,true));
 
       {Nominal Analysis Code}
       if frmWTAccExport1.ActionListBox.ItemIndex = 2 then
         begin
-          sNomAnalysisCode := Copy('' + sfiller, 1, 20);
+          sNomAnalysisCode := SStrCopy('' + sfiller, 1, 20);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sNomAnalysisCode,true,true));
         end;
 
       {Tax Analysis 1 ----------------------------------------------------------------}
 
       {VAT Code}
-      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sVat_Code,false,true));
 
       {Nett Goods Amount - before discount}
-      sValue := Copy(formatfloat('0.00', roundfloat(FieldByName('Total_Goods_Value').AsFloat,2)) + sfiller, 1, 18);
+      sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Goods_Value').AsFloat,2)) + sfiller, 1, 18);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
       {Tax Discount Value}
-      sTax_Discount_Value := Copy(formatfloat('0.00', (0.00)) + sfiller, 1, 18);
+      sTax_Discount_Value := SStrCopy(formatfloat('0.00', (0.00)) + sfiller, 1, 18);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTax_Discount_Value,false,true));
 
       {Tax Discount Perc}
-      sTax_Discount_Perc := Copy(formatfloat('0.00', (0.00)) + sfiller, 1, 20);
+      sTax_Discount_Perc := SStrCopy(formatfloat('0.00', (0.00)) + sfiller, 1, 20);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTax_Discount_Perc,false,true));
 
       {Nett Goods Amount - after discount}
       if trim(sNomGoodsValue) = trim(sGoodsValue) then
         sValue := trim(sVatValue)
       else
-        sValue := Copy(formatfloat('0.00', roundfloat(FieldByName('Total_Vat_Value').AsFloat,2)) + sfiller, 1, 18);
+        sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Vat_Value').AsFloat,2)) + sfiller, 1, 18);
 
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 

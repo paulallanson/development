@@ -25,7 +25,6 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
-    ExplicitTop = 156
   end
   object Button4: TButton
     Left = 376
@@ -37,7 +36,6 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 156
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -207,6 +205,5 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
-    ExplicitTop = 156
   end
 end

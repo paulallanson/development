@@ -11,10 +11,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 24
@@ -80,11 +78,11 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Caption = 'Customer'
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 96
     Top = 84
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel
@@ -114,7 +112,6 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Visible = False
   end
   object rgPrdCat: TRadioGroup
-    ParentBackground = False
     Left = 24
     Top = 64
     Width = 105
@@ -124,16 +121,17 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Items.Strings = (
       'All Categories'
       'One Category')
+    ParentBackground = False
     TabOrder = 2
     TabStop = True
     OnClick = rgPrdCatClick
   end
   object RepPanel: TPanel
-    ParentBackground = False
     Left = 136
     Top = 70
     Width = 321
     Height = 59
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblPrdCat: TLabel
@@ -191,8 +189,9 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Width = 75
     Height = 25
     Caption = '&Cancel'
-    TabOrder = 7
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 7
   end
   object ExcelBitBtn: TBitBtn
     Left = 203
@@ -201,8 +200,6 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Height = 25
     Caption = 'Excel'
     Enabled = False
-    TabOrder = 8
-    OnClick = ExcelBitBtnClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -246,9 +243,10 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 8
+    OnClick = ExcelBitBtnClick
   end
   object RdGrpRepType: TRadioGroup
-    ParentBackground = False
     Left = 356
     Top = 152
     Width = 101
@@ -258,6 +256,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Items.Strings = (
       'Summary'
       'Detail')
+    ParentBackground = False
     TabOrder = 6
   end
   object btnCustomer: TButton
@@ -292,8 +291,6 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Height = 25
     Caption = 'Pre&view'
     Enabled = False
-    TabOrder = 9
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -308,6 +305,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 382
@@ -316,8 +315,6 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Height = 25
     Caption = '&Print'
     Enabled = False
-    TabOrder = 10
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -332,5 +329,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = PrintBitBtnClick
   end
 end

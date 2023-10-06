@@ -27,8 +27,6 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       item
         Width = 100
       end>
-    ExplicitTop = 448
-    ExplicitWidth = 1007
   end
   object Panel2: TPanel
     Left = 0
@@ -38,8 +36,6 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 372
-    ExplicitWidth = 1007
     DesignSize = (
       999
       76)

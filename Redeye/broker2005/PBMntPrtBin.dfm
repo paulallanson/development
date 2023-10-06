@@ -174,14 +174,10 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object BinImageList: TImageList
@@ -470,14 +466,10 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object UpdBinSQL: TFDQuery
@@ -494,19 +486,13 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Bin_Can_Pick'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
 end

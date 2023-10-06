@@ -1,21 +1,19 @@
 object PBAuditViewFrm: TPBAuditViewFrm
   Left = 19
   Top = 20
-  Width = 703
-  Height = 561
   Caption = 'View Audit Trail - Test'
+  ClientHeight = 522
+  ClientWidth = 687
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   DesignSize = (
-    695
-    534)
-  PixelsPerInch = 96
+    687
+    522)
   TextHeight = 13
   object CountLabel: TLabel
     Left = 608
@@ -174,8 +172,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       Top = 16
       Width = 89
       Height = 21
-      Date = 37456.480307974500000000
-      Time = 37456.480307974500000000
+      Date = 37456.000000000000000000
+      Time = 0.480307974503375600
       TabOrder = 0
       OnChange = DateFromDateTimePickerChange
     end
@@ -202,8 +200,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       Top = 16
       Width = 89
       Height = 21
-      Date = 37456.480307974500000000
-      Time = 37456.480307974500000000
+      Date = 37456.000000000000000000
+      Time = 0.480307974503375600
       TabOrder = 0
       OnChange = DateToDateTimePickerChange
     end
@@ -223,8 +221,9 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 5
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -319,14 +318,10 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
     object StringField4: TStringField
       FieldName = 'Audit_Text'

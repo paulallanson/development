@@ -11,20 +11,18 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     361
     299)
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 36
     Top = 95
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
@@ -65,7 +63,6 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     OnClick = Button4Click
   end
   object rdgrpContacts: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -75,11 +72,11 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     Items.Strings = (
       'All'
       'One Contact')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpContactsClick
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -89,16 +86,17 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 3
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
     Height = 73
     Caption = 'Follow Up date selection'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 16
@@ -137,8 +135,6 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -153,14 +149,14 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -175,14 +171,16 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxContacts: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
@@ -199,7 +197,6 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Contacts'
@@ -209,12 +206,12 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
@@ -281,7 +278,6 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -293,6 +289,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 11
   end
   object qryContacts: TFDQuery

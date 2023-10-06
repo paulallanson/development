@@ -1,24 +1,22 @@
 object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
   Left = 428
   Top = 115
-  Width = 591
-  Height = 513
   Caption = 'Maintain Delivery Details'
+  ClientHeight = 474
+  ClientWidth = 575
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object BottomPanel: TPanel
     Left = 0
-    Top = 438
-    Width = 583
+    Top = 433
+    Width = 575
     Height = 41
     Align = alBottom
     TabOrder = 0
@@ -42,8 +40,6 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -109,6 +105,8 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 472
@@ -117,8 +115,6 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -183,20 +179,22 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 583
-    Height = 438
+    Width = 575
+    Height = 433
     Align = alClient
     TabOrder = 1
     object Panel1: TPanel
       Left = 1
       Top = 1
-      Width = 581
+      Width = 573
       Height = 296
       Align = alTop
       Caption = 'pnlDetails'
@@ -363,8 +361,6 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
           Font.Height = -12
           Font.Name = 'Arial'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 7
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -379,6 +375,8 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
             8033373F773337733733330F8700078803333373FF77733F733333300FFF8800
             3333333773FFFF77333333333000003333333333377777333333}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 7
         end
         object edtFAO: TEdit
           Left = 85
@@ -537,8 +535,6 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         Top = 260
         Width = 25
         Height = 25
-        TabOrder = 5
-        OnClick = DatePointBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -553,14 +549,14 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 5
+        OnClick = DatePointBtnClick
       end
       object btnClear: TBitBtn
         Left = 544
         Top = 29
         Width = 27
         Height = 25
-        TabOrder = 6
-        OnClick = btnClearClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -575,12 +571,14 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
           BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
           50BB555555555555575F555555555555550B5555555555555575}
         NumGlyphs = 2
+        TabOrder = 6
+        OnClick = btnClearClick
       end
     end
     object pnlCourierService: TPanel
       Left = 1
       Top = 297
-      Width = 581
+      Width = 573
       Height = 64
       Align = alTop
       TabOrder = 1
@@ -652,8 +650,6 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         Top = 5
         Width = 27
         Height = 25
-        TabOrder = 4
-        OnClick = BitBtn1Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -668,13 +664,15 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
           BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
           50BB555555555555575F555555555555550B5555555555555575}
         NumGlyphs = 2
+        TabOrder = 4
+        OnClick = BitBtn1Click
       end
     end
     object DelInstructPanel: TPanel
       Left = 1
       Top = 361
-      Width = 581
-      Height = 76
+      Width = 573
+      Height = 71
       Align = alClient
       TabOrder = 2
       object Label10: TLabel

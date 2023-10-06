@@ -35,8 +35,6 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       item
         Width = 50
       end>
-    ExplicitTop = 341
-    ExplicitWidth = 887
   end
   object Panel1: TPanel
     Left = 0
@@ -46,8 +44,6 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 300
-    ExplicitWidth = 887
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -64,7 +60,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 613
+      Left = 603
       Top = 1
       Width = 273
       Height = 39
@@ -228,20 +224,19 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 881
+        Width = 871
       end>
-    ExplicitWidth = 883
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 868
+      Width = 862
       Height = 41
       Control = Toolbar1
       TabOrder = 0
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 868
+        Width = 850
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59
@@ -384,7 +379,6 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 887
     object Label3: TLabel
       Left = 8
       Top = 3

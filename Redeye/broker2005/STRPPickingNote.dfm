@@ -1,29 +1,23 @@
 object STRPPickingNoteFrm: TSTRPPickingNoteFrm
   Left = 87
   Top = 105
-  Width = 1185
-  Height = 602
   Caption = 'Picking Note'
+  ClientHeight = 563
+  ClientWidth = 1169
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrDetails: TQuickRep
     Left = 8
     Top = 8
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -56,33 +51,38 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageHeadQRBand: TQRBand
       Left = 19
       Top = 38
       Width = 1085
       Height = 336
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = False
       BeforePrint = PageHeadQRBandBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -94,26 +94,25 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Size.Values = (
         889.000000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
         Left = 23
         Top = 294
         Width = 58
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           60.854166666666680000
           777.875000000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Quantity Ordered'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -123,7 +122,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object PreviewQRLabel: TQRLabel
@@ -131,24 +132,23 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 32
         Width = 80
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           2603.500000000000000000
           84.666666666666680000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'PREVIEW'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object NotesQRMemo: TQRMemo
@@ -156,20 +156,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 129
         Width = 272
         Height = 100
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           264.583333333333300000
           910.166666666666800000
           341.312500000000000000
           719.666666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -184,7 +181,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
           'XXXXXXXXXXXXXXXXXXXXXXXX')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object DelInstructMemo: TQRMemo
@@ -192,20 +190,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 127
         Width = 272
         Height = 100
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           264.583333333333300000
           2098.145833333333000000
           336.020833333333300000
           719.666666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -214,7 +209,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object QRLblAccnt: TQRLabel
@@ -222,20 +218,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 90
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           42.333333333333340000
           677.333333333333400000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Account number'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -245,7 +237,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object CustRefQRDBText: TQRDBText
@@ -253,20 +247,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 88
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           550.333333333333400000
           677.333333333333400000
           232.833333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Cust_Order_No'
@@ -277,7 +267,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object SoNumQRDBText: TQRDBText
@@ -285,20 +279,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 69
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           1164.166666666667000000
           677.333333333333400000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
@@ -309,7 +299,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel6: TQRLabel
@@ -317,20 +311,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 295
         Width = 53
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           1907.645833333333000000
           780.520833333333400000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Units to Pick'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -340,7 +331,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel7: TQRLabel
@@ -348,20 +341,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 310
         Width = 50
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1508.125000000000000000
           820.208333333333500000
           132.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Unit Size'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -371,7 +360,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel5: TQRLabel
@@ -379,20 +370,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 310
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           804.333333333333200000
           820.208333333333500000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -402,7 +389,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel10: TQRLabel
@@ -410,20 +399,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 310
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           227.541666666666700000
           820.208333333333500000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -433,7 +418,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel4: TQRLabel
@@ -441,20 +428,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 310
         Width = 21
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2074.333333333333000000
           820.208333333333500000
           55.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Bin'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -464,7 +447,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblAccountLabel: TQRLabel
@@ -472,20 +457,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 94
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           44.979166666666670000
           627.062500000000000000
           248.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Account Number'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -495,7 +476,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
@@ -503,20 +486,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 79
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           552.979166666666700000
           627.062500000000000000
           209.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Ref.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -526,7 +505,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel8: TQRLabel
@@ -534,20 +515,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 55
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1166.812500000000000000
           627.062500000000000000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order No.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -557,7 +534,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel9: TQRLabel
@@ -565,20 +544,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 73
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1547.812500000000000000
           627.062500000000000000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Picking Date'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -588,7 +563,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel11: TQRLabel
@@ -596,20 +573,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 77
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2034.645833333333000000
           627.062500000000000000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Pick Note No.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -619,7 +592,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel12: TQRLabel
@@ -627,20 +602,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 108
         Width = 116
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2098.145833333333000000
           285.750000000000000000
           306.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Instructions'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -650,7 +621,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel13: TQRLabel
@@ -658,20 +631,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 108
         Width = 63
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           912.812500000000000000
           285.750000000000000000
           166.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Deliver To:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -681,7 +650,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel14: TQRLabel
@@ -689,20 +660,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 32
         Width = 112
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1285.875000000000000000
-          84.666666666666680000
-          296.333333333333400000)
+          84.666666666666670000
+          296.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Picking Note'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -712,7 +679,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 16
       end
       object qrLblShortCode: TQRLabel
@@ -720,20 +689,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 128
         Width = 90
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1656.291666666667000000
           338.666666666666700000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrLblShortCode'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -743,7 +708,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblWarehouse: TQRLabel
@@ -751,20 +718,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 64
         Width = 102
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1301.750000000000000000
           169.333333333333300000
           269.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblWarehouse'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -774,7 +737,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel2: TQRLabel
@@ -782,20 +747,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 294
         Width = 56
         Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           87.312500000000000000
           1695.979166666667000000
           777.875000000000000000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Unit of Measure'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -805,7 +767,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel15: TQRLabel
@@ -813,20 +777,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 296
         Width = 53
         Height = 31
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           82.020833333333340000
           2373.312500000000000000
           783.166666666666800000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Units Picked'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -836,7 +797,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel18: TQRLabel
@@ -844,20 +807,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 108
         Width = 58
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           44.979166666666670000
           285.750000000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -867,7 +826,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object CustomerAddMemo: TQRMemo
@@ -875,20 +836,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 129
         Width = 272
         Height = 100
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           264.583333333333300000
           42.333333333333330000
           341.312500000000000000
           719.666666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -903,7 +861,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
           'XXXXXXXXXXXXXXXXXXXXXXXX')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRDBText1: TQRDBText
@@ -911,20 +870,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 71
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           1545.166666666667000000
           677.333333333333400000
           187.854166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_picked'
@@ -935,7 +890,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText2: TQRDBText
@@ -943,20 +902,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 95
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           1989.666666666667000000
           677.333333333333400000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Picking_List_Ref'
@@ -967,7 +922,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel1: TQRLabel
@@ -975,20 +934,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 237
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2648.479166666667000000
           627.062500000000000000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost Centre'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -998,7 +953,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText3: TQRDBText
@@ -1006,20 +963,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 256
         Width = 70
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           2637.895833333333000000
           677.333333333333400000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Cost_Centre'
@@ -1030,7 +983,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1039,19 +996,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Top = 374
       Width = 1085
       Height = 3
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = GroupHeadQRGroupBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         7.937500000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Sales_Order'
       Master = qrDetails
       ReprintOnNewPage = True
@@ -1061,14 +1015,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Top = 377
       Width = 1085
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -1080,6 +1029,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Size.Values = (
         63.500000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -1088,20 +1039,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 211
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           227.541666666666700000
           7.937500000000000000
           558.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part'
@@ -1112,7 +1060,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DescQRDBText: TQRDBText
@@ -1120,20 +1072,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 249
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           804.333333333333200000
           7.937500000000000000
           658.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part_Description'
@@ -1144,7 +1093,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object BinQRDBText: TQRDBText
@@ -1152,20 +1105,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 73
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2074.333333333333000000
           7.937500000000000000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Part_Bin'
@@ -1177,7 +1127,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Mask = '######'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText4: TQRDBText
@@ -1185,20 +1139,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 64
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1476.375000000000000000
           7.937500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sell_Pack_Quantity'
@@ -1209,7 +1160,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabelDlvrd: TQRLabel
@@ -1217,20 +1172,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 50
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1891.770833333333000000
           7.937500000000000000
           132.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'QRLabelDlvrd'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1240,7 +1192,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabelQty: TQRLabel
@@ -1248,20 +1202,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           7.937500000000000000
           7.937500000000000000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'QRLabelQty'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1271,7 +1222,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText1: TQRDBText
@@ -1279,20 +1232,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 3
         Width = 64
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1661.583333333333000000
           7.937500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'UOM'
@@ -1303,7 +1253,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape1: TQRShape
@@ -1311,16 +1265,14 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 2
         Width = 81
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2307.166666666667000000
           5.291666666666667000
           214.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1330,20 +1282,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 4
         Width = 121
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           2534.708333333333000000
           10.583333333333330000
           320.145833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DO NOT OVER PICK'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1353,7 +1301,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1362,21 +1312,18 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Top = 419
       Width = 1085
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrdetailSerialNosAfterPrint
       AlignToBottom = False
       BeforePrint = qrdetailSerialNosBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         55.562500000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QRSubDetail1
       DataSet = qryGetSerialNos
       PrintBefore = False
@@ -1386,20 +1333,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 0
         Width = 89
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           804.333333333333200000
           0.000000000000000000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Serial Numbers:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1409,7 +1352,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblSerialRange: TQRLabel
@@ -1417,20 +1362,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 0
         Width = 84
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1079.500000000000000000
           0.000000000000000000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblSerialRange'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1440,7 +1381,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1449,39 +1392,33 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Top = 440
       Width = 1085
       Height = 56
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = True
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         148.166666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageFooter
       object QRLabel17: TQRLabel
         Left = 9
         Top = 29
         Width = 78
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           23.812500000000000000
           76.729166666666680000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Requested by:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1491,7 +1428,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText2: TQRDBText
@@ -1499,20 +1438,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 29
         Width = 103
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333340000
           254.000000000000000000
           76.729166666666680000
           272.520833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Account_Manager'
@@ -1523,7 +1458,11 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel19: TQRLabel
@@ -1531,20 +1470,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 29
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2034.645833333333000000
           76.729166666666680000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Picked by:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1554,7 +1489,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape3: TQRShape
@@ -1562,16 +1499,14 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Top = 16
         Width = 238
         Height = 29
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           76.729166666666680000
           2222.500000000000000000
           42.333333333333340000
           629.708333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1582,38 +1517,32 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Top = 401
       Width = 1085
       Height = 18
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         47.625000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = QRSubDetail1
+      PrintOrder = cboAfterParent
       object gtlblFSCClaim: TQRLabel
         Left = 86
         Top = 1
         Width = 56
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           227.541666666666700000
           2.645833333333333000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FSC Claim:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1623,7 +1552,9 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1700,9 +1631,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object GetCustSQL: TFDQuery
@@ -1732,14 +1661,12 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 35
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AdhocSQL: TFDQuery
@@ -1761,8 +1688,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_Address'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1785,9 +1712,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 35
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Production_Location'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBag: TFDQuery
@@ -1800,9 +1725,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 35
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetAccountSQL: TFDQuery
@@ -1822,14 +1745,12 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 35
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddressSRC: TDataSource
@@ -1866,19 +1787,13 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 243
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivNarrSQL: TFDQuery
@@ -1892,9 +1807,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 222
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object AddDelivDetSQL: TFDQuery
@@ -1924,44 +1837,30 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 36
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desp_Note_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Del_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddDelivLineDetSQL: TFDQuery
@@ -1983,19 +1882,13 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 36
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdSOHeadSQL: TFDQuery
@@ -2011,14 +1904,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object CustSQL: TFDQuery
@@ -2042,14 +1931,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 97
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivCountSQL: TFDQuery
@@ -2064,9 +1949,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 92
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSerialNos: TFDQuery
@@ -2083,14 +1966,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 123
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_allocation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
   object CheckDelivSQL: TFDQuery
@@ -2112,19 +1991,13 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 212
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBagReq: TFDQuery
@@ -2137,9 +2010,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 43
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFSCClaim: TFDQuery
@@ -2152,9 +2023,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 198
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
   object qryGetDelivery: TFDQuery
@@ -2167,9 +2036,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Top = 174
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

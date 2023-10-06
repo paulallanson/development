@@ -22,8 +22,6 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 345
-    ExplicitWidth = 870
     DesignSize = (
       862
       41)
@@ -54,7 +52,6 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 782
     end
   end
   object dbgDetails: TDBGrid

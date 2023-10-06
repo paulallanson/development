@@ -22,8 +22,6 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 634
-    ExplicitHeight = 260
     object dbgrdSales: TDBGrid
       Left = 1
       Top = 33
@@ -147,7 +145,6 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 632
       object lblPartDesc: TLabel
         Left = 152
         Top = 8
@@ -179,8 +176,6 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 260
-    ExplicitWidth = 634
     DesignSize = (
       640
       41)
@@ -193,7 +188,6 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 529
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -257,7 +251,6 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 420
     end
   end
   object pmnFunctions: TPopupMenu

@@ -229,7 +229,6 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 8
-    ExplicitTop = 198
   end
   object btnExcel: TBitBtn
     Left = 446
@@ -283,7 +282,6 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 198
   end
   object btnPreview: TBitBtn
     Left = 544
@@ -308,7 +306,6 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     NumGlyphs = 2
     TabOrder = 10
     OnClick = btnPreviewClick
-    ExplicitTop = 198
   end
   object btnPrint: TBitBtn
     Left = 632
@@ -333,7 +330,6 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = btnPrintClick
-    ExplicitTop = 198
   end
   object pnlExportPrgrss: TPanel
     Left = 196

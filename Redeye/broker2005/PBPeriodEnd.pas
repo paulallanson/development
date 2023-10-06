@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses PBDatabase, PBPeriodEndDM, pbMainMenu;
+uses UITypes, PBDatabase, PBPeriodEndDM, pbMainMenu;
 
 {$R *.DFM}
 

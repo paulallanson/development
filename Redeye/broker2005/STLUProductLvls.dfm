@@ -11,14 +11,12 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     528
     179)
-  PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
     Left = 172
@@ -115,9 +113,8 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qryStoreLevelsPart: TStringField
       FieldName = 'Part'

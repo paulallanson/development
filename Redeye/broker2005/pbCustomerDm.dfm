@@ -1,7 +1,6 @@
 object dtmdlCustomers: TdtmdlCustomers
-  Height = 993
-  Width = 1369
-  PixelsPerInch = 120
+  Height = 794
+  Width = 1095
   object qryCustomers: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -39,8 +38,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '      (Customer_Branch.Customer = Customer.Customer) AND'
       '      Customer_Branch.Branch_no = 0'
       'Order By Customer.Name ')
-    Left = 30
-    Top = 10
+    Left = 24
+    Top = 8
     ParamData = <
       item
         Name = 'Code_From'
@@ -57,8 +56,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsCustomers: TDataSource
     DataSet = qryCustomers
-    Left = 120
-    Top = 10
+    Left = 96
+    Top = 8
   end
   object CheckCustAccExistsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -68,8 +67,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Where (Customer.Customer <> :Customer) and'
       '      (Customer_Branch.Customer = Customer.Customer) and'
       '      (Customer_Branch.Account_Code = :Acc_Code)')
-    Left = 60
-    Top = 265
+    Left = 48
+    Top = 212
     ParamData = <
       item
         Name = 'Customer'
@@ -80,8 +79,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object CurrSRC: TDataSource
     DataSet = GetCurrSQL
-    Left = 130
-    Top = 235
+    Left = 104
+    Top = 188
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -91,8 +90,8 @@ object dtmdlCustomers: TdtmdlCustomers
       ''
       ''
       ' ')
-    Left = 270
-    Top = 10
+    Left = 216
+    Top = 8
     ParamData = <
       item
         Name = 'GUID'
@@ -106,8 +105,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Customer'
       'From Customer'
       'Where Name = :GUID')
-    Left = 330
-    Top = 10
+    Left = 264
+    Top = 8
     ParamData = <
       item
         Name = 'GUID'
@@ -123,8 +122,8 @@ object dtmdlCustomers: TdtmdlCustomers
       ''
       ''
       ' ')
-    Left = 420
-    Top = 10
+    Left = 336
+    Top = 8
     ParamData = <
       item
         Name = 'GUID'
@@ -134,8 +133,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object StatusDataSource: TDataSource
     DataSet = GetStatusSQL
-    Left = 434
-    Top = 196
+    Left = 347
+    Top = 157
   end
   object GetStatusSQL: TFDQuery
     ConnectionName = 'PB'
@@ -145,8 +144,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Order By Customer_Status'
       ' '
       ' ')
-    Left = 360
-    Top = 196
+    Left = 288
+    Top = 157
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -234,8 +233,8 @@ object dtmdlCustomers: TdtmdlCustomers
       ' '
       ' '
       ' ')
-    Left = 360
-    Top = 270
+    Left = 288
+    Top = 216
     ParamData = <
       item
         Name = 'NAME'
@@ -506,32 +505,32 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Currency_Code, Currency_Code_Descr'
       'from Currency_Code'
       'Order By Currency_Code_Descr')
-    Left = 528
-    Top = 197
+    Left = 422
+    Top = 158
   end
   object GetTypesSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Type, Description From Customer_Type'
       'Order By Description')
-    Left = 550
-    Top = 290
+    Left = 440
+    Top = 232
   end
   object GetVATSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Vat_Code'
       'Order By Vat_Code')
-    Left = 400
-    Top = 475
+    Left = 320
+    Top = 380
   end
   object GetCustNameSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Name from Customer'
       'Where Customer = :Customer')
-    Left = 500
-    Top = 525
+    Left = 400
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -543,8 +542,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Country_Id, Country_Id_Descr'
       'from Country_Id'
       'Order By Country_Id_Descr')
-    Left = 230
-    Top = 385
+    Left = 184
+    Top = 308
   end
   object DelSQL: TFDQuery
     ConnectionName = 'PB'
@@ -552,8 +551,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Delete From Customer'
       'Where'
       '(Customer = :Customer)')
-    Left = 60
-    Top = 380
+    Left = 48
+    Top = 304
     ParamData = <
       item
         Name = 'Customer'
@@ -564,13 +563,13 @@ object dtmdlCustomers: TdtmdlCustomers
     SQL.Strings = (
       'Select *'
       'From Company')
-    Left = 320
-    Top = 385
+    Left = 256
+    Top = 308
   end
   object IntrastatSRC: TDataSource
     DataSet = GetIntrastatSQL
-    Left = 390
-    Top = 565
+    Left = 312
+    Top = 452
   end
   object GetBranchNameSQL: TFDQuery
     ConnectionName = 'PB'
@@ -578,8 +577,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Name from Customer_Branch'
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)')
-    Left = 530
-    Top = 455
+    Left = 424
+    Top = 364
     ParamData = <
       item
         Name = 'Customer'
@@ -590,8 +589,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object TypesSRC: TDataSource
     DataSet = GetTypesSQL
-    Left = 440
-    Top = 410
+    Left = 352
+    Top = 328
   end
   object GetCrdStatSQL: TFDQuery
     ConnectionName = 'PB'
@@ -599,13 +598,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Credit_Status, Credit_Status_Descr'
       'From Credit_Status'
       'Order By Credit_Status_Descr')
-    Left = 150
-    Top = 400
+    Left = 120
+    Top = 320
   end
   object CountrySRC: TDataSource
     DataSet = GetCountrySQL
-    Left = 50
-    Top = 455
+    Left = 40
+    Top = 364
   end
   object DelBranchSQL: TFDQuery
     ConnectionName = 'PB'
@@ -614,8 +613,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Where'
       '(Customer = :Customer) and'
       '(Branch_No = 0)')
-    Left = 280
-    Top = 510
+    Left = 224
+    Top = 408
     ParamData = <
       item
         Name = 'Customer'
@@ -628,8 +627,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'From Supplier, Supplier_Branch'
       'Where (Supplier_Branch.Supplier = Supplier.Supplier) and'
       '      (Supplier_Branch.Account_Code = :Acc_Code)')
-    Left = 150
-    Top = 455
+    Left = 120
+    Top = 364
     ParamData = <
       item
         Name = 'Acc_Code'
@@ -660,8 +659,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Where'
       '(Customer = :Customer) and'
       '(Branch_No = 0)')
-    Left = 390
-    Top = 640
+    Left = 312
+    Top = 512
     ParamData = <
       item
         Name = 'Building_No_Name'
@@ -722,8 +721,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object VATSRC: TDataSource
     DataSet = GetVATSQL
-    Left = 370
-    Top = 325
+    Left = 296
+    Top = 260
   end
   object AddBranchSQL: TFDQuery
     ConnectionName = 'PB'
@@ -770,8 +769,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '        :Inv_To_Contact)'
       ''
       '')
-    Left = 210
-    Top = 260
+    Left = 168
+    Top = 208
     ParamData = <
       item
         Name = 'Customer'
@@ -842,8 +841,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '(Customer = :Customer) and'
       '(Branch_No = 0)'
       ' ')
-    Left = 230
-    Top = 310
+    Left = 184
+    Top = 248
     ParamData = <
       item
         Name = 'Narrative'
@@ -863,8 +862,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '(Branch_No = 0)'
       ' '
       ' ')
-    Left = 60
-    Top = 320
+    Left = 48
+    Top = 256
     ParamData = <
       item
         Name = 'Delivery_Narrative'
@@ -879,13 +878,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Intrastat_Id, Intrastat_Id_Descr'
       'from Intrastat_Id'
       'Order By Intrastat_Id')
-    Left = 431
-    Top = 345
+    Left = 345
+    Top = 276
   end
   object CrdStatSRC: TDataSource
     DataSet = GetCrdStatSQL
-    Left = 530
-    Top = 295
+    Left = 424
+    Top = 236
   end
   object qryGetCustomer: TFDQuery
     ConnectionName = 'PB'
@@ -991,8 +990,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '      (Customer_Branch.Customer = Customer.Customer) and'
       '      (Customer_Branch.Branch_No = 0)'
       'Order By Customer.Name')
-    Left = 40
-    Top = 230
+    Left = 32
+    Top = 184
     ParamData = <
       item
         Name = 'Customer'
@@ -1007,8 +1006,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'where Product_Code_Prefix  like :Product_Code_Prefix'
       'order by Product_Code_Prefix'
       ' ')
-    Left = 493
-    Top = 15
+    Left = 394
+    Top = 12
     ParamData = <
       item
         Name = 'Product_Code_Prefix'
@@ -1016,8 +1015,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsrcCustProdPrefix: TDataSource
     DataSet = qryCustProdPrefix
-    Left = 553
-    Top = 15
+    Left = 442
+    Top = 12
   end
   object qryCustomersBase: TFDQuery
     ConnectionName = 'PB'
@@ -1169,8 +1168,8 @@ object dtmdlCustomers: TdtmdlCustomers
         's) AND'
       '      ((Customer.Customer_Status = 100)'
       '')
-    Left = 200
-    Top = 10
+    Left = 160
+    Top = 8
     ParamData = <
       item
         Name = 'Code_From'
@@ -1187,13 +1186,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'select customer.name'
       'from customer'
       'order by name')
-    Left = 620
-    Top = 380
+    Left = 496
+    Top = 304
   end
   object dtsCustomerLU: TDataSource
     DataSet = qryCustomerLU
-    Left = 720
-    Top = 380
+    Left = 576
+    Top = 304
   end
   object UpdprefixSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1201,8 +1200,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'update customer'
       'set product_Code_prefix = :product_Code_prefix'
       'where customer = :customer')
-    Left = 680
-    Top = 150
+    Left = 544
+    Top = 120
     ParamData = <
       item
         Name = 'product_Code_prefix'
@@ -1233,8 +1232,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '      (Customer_Branch.Customer = Customer.Customer) and'
       '      (Customer_Branch.Branch_No = 0)'
       'Order By Customer.Name')
-    Left = 690
-    Top = 20
+    Left = 552
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -1259,8 +1258,8 @@ object dtmdlCustomers: TdtmdlCustomers
       
         '      (Customer_Contact.Contact_Type = Contact_Type.Contact_type' +
         ')')
-    Left = 690
-    Top = 80
+    Left = 552
+    Top = 64
     ParamData = <
       item
         Name = 'Customer'
@@ -1272,13 +1271,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from e_invoicing_System'
       'order by e_Invoicing_System_Name')
-    Left = 40
-    Top = 520
+    Left = 32
+    Top = 416
   end
   object dtsEInvoicing: TDataSource
     DataSet = qryEInvoicing
-    Left = 140
-    Top = 520
+    Left = 112
+    Top = 416
   end
   object qryUpdProductStatus: TFDQuery
     ConnectionName = 'PB'
@@ -1286,8 +1285,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Update Part'
       'Set Not_In_Use = :Not_In_Use'
       'where Customer = :Customer')
-    Left = 680
-    Top = 230
+    Left = 544
+    Top = 184
     ParamData = <
       item
         Name = 'Not_In_Use'
@@ -1302,8 +1301,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from e_Invoicing_System'
       'where e_invoicing_system = :e_invoicing_system')
-    Left = 260
-    Top = 620
+    Left = 208
+    Top = 496
     ParamData = <
       item
         Name = 'e_invoicing_system'
@@ -1316,8 +1315,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Customer_Document'
       'where customer = :Customer'
       'order by Date_Created')
-    Left = 620
-    Top = 460
+    Left = 496
+    Top = 368
     ParamData = <
       item
         Name = 'Customer'
@@ -1325,8 +1324,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsDocuments: TDataSource
     DataSet = qryDocuments
-    Left = 730
-    Top = 460
+    Left = 584
+    Top = 368
   end
   object qryAddDocument: TFDQuery
     ConnectionName = 'PB'
@@ -1345,8 +1344,8 @@ object dtmdlCustomers: TdtmdlCustomers
       ':Document_Title,'
       ':Date_Created'
       ')')
-    Left = 620
-    Top = 530
+    Left = 496
+    Top = 424
     ParamData = <
       item
         Name = 'Customer'
@@ -1370,8 +1369,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'select max(document_no) as Last_Document'
       'from Customer_Document'
       'where Customer = :Customer')
-    Left = 730
-    Top = 530
+    Left = 584
+    Top = 424
     ParamData = <
       item
         Name = 'Customer'
@@ -1382,8 +1381,8 @@ object dtmdlCustomers: TdtmdlCustomers
     SQL.Strings = (
       'Delete from Customer_Document'
       'where customer = :customer and Document_no = :Document_no')
-    Left = 620
-    Top = 590
+    Left = 496
+    Top = 472
     ParamData = <
       item
         Name = 'customer'
@@ -1398,8 +1397,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Update Customer_Document'
       'set Document = :Document, Document_Title = :Document_Title'
       'where Customer = :Customer and Document_no = :Document_no')
-    Left = 730
-    Top = 590
+    Left = 584
+    Top = 472
     ParamData = <
       item
         Name = 'Document'
@@ -1420,26 +1419,26 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from Payment_terms'
       'order by Payment_Terms_Description')
-    Left = 390
-    Top = 710
+    Left = 312
+    Top = 568
   end
   object dtsTerms: TDataSource
     DataSet = qryTerms
-    Left = 460
-    Top = 710
+    Left = 368
+    Top = 568
   end
   object qryRevenueCentre: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Invoice_location')
-    Left = 40
-    Top = 570
+    Left = 32
+    Top = 456
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 140
-    Top = 570
+    Left = 112
+    Top = 456
   end
   object qryGetTerms: TFDQuery
     ConnectionName = 'PB'
@@ -1447,8 +1446,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from Payment_terms'
       'where Payment_Terms = :Payment_Terms')
-    Left = 390
-    Top = 780
+    Left = 312
+    Top = 624
     ParamData = <
       item
         Name = 'Payment_Terms'
@@ -1461,8 +1460,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No) and'
       '(Contact_no = :Contact_no)')
-    Left = 680
-    Top = 300
+    Left = 544
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -1476,8 +1475,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsProspects: TDataSource
     DataSet = qryProspects
-    Left = 120
-    Top = 84
+    Left = 96
+    Top = 67
   end
   object qryProspectBase: TFDQuery
     ConnectionName = 'PB'
@@ -1626,8 +1625,8 @@ object dtmdlCustomers: TdtmdlCustomers
         '      ((Customer.Customer_Status > 1) and (Customer.Customer_Sta' +
         'tus < 100))'
       '')
-    Left = 200
-    Top = 84
+    Left = 160
+    Top = 67
     ParamData = <
       item
         Name = 'Code_From'
@@ -1640,18 +1639,18 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object qryProspects: TFDQuery
     ConnectionName = 'PB'
-    Left = 30
-    Top = 84
+    Left = 24
+    Top = 67
   end
   object qryUpdMulti: TFDQuery
     ConnectionName = 'PB'
-    Left = 620
-    Top = 660
+    Left = 496
+    Top = 528
   end
   object qryUpdMultiBranch: TFDQuery
     ConnectionName = 'PB'
-    Left = 730
-    Top = 660
+    Left = 584
+    Top = 528
   end
   object qryGetOneCustomer: TFDQuery
     ConnectionName = 'PB'
@@ -1752,8 +1751,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'WHERE (Customer.Customer = :Customer) and'
       '      (Customer_Branch.Branch_No = 0)'
       'Order By Customer.Name')
-    Left = 810
-    Top = 150
+    Left = 648
+    Top = 120
     ParamData = <
       item
         Name = 'Customer'
@@ -1766,13 +1765,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Rep'
       'Where ((Inactive = '#39'N'#39') or (inactive is NULL))'
       'Order BY Name')
-    Left = 40
-    Top = 630
+    Left = 32
+    Top = 504
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 140
-    Top = 630
+    Left = 112
+    Top = 504
   end
   object qryDelRepBranch: TFDQuery
     ConnectionName = 'PB'
@@ -1780,8 +1779,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'DELETE FROM Reps_Branches'
       'WHERE Customer = :Customer AND'
       'Branch_No = :Branch_no')
-    Left = 40
-    Top = 690
+    Left = 32
+    Top = 552
     ParamData = <
       item
         Name = 'Customer'
@@ -1797,8 +1796,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'INSERT INTO Reps_Branches(Customer, Branch_no, Rep, Percentage, ' +
         'Is_Main_Rep)'
       'VALUES (:Customer, :Branch_no, :Rep, 100, :Is_Main_Rep)')
-    Left = 140
-    Top = 690
+    Left = 112
+    Top = 552
     ParamData = <
       item
         Name = 'Customer'
@@ -1820,13 +1819,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'select Company_Type, Company_Type_Description'
       'from Company_Type'
       'Order by Company_Type_Description')
-    Left = 620
-    Top = 740
+    Left = 496
+    Top = 592
   end
   object dtsCompanyTypes: TDataSource
     DataSet = qryCompanyTypes
-    Left = 730
-    Top = 740
+    Left = 584
+    Top = 592
   end
   object qryGetAccCodes: TFDQuery
     ConnectionName = 'PB'
@@ -1839,8 +1838,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'e <> '#39'%'#39' and'
       'Customer_Branch.Customer <> :Customer'
       '')
-    Left = 390
-    Top = 850
+    Left = 312
+    Top = 680
     ParamData = <
       item
         Name = 'Account_Code'
@@ -1854,8 +1853,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsGetAccCodes: TDataSource
     DataSet = qryGetAccCodes
-    Left = 470
-    Top = 850
+    Left = 376
+    Top = 680
   end
   object qryGetImportance: TFDQuery
     ConnectionName = 'PB'
@@ -1864,13 +1863,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Level_of_Importance'
       'Order By Importance_Description'
       '')
-    Left = 820
-    Top = 15
+    Left = 656
+    Top = 12
   end
   object dtsGetImportance: TDataSource
     DataSet = qryGetImportance
-    Left = 930
-    Top = 15
+    Left = 744
+    Top = 12
   end
   object qryCustomerBranches: TFDQuery
     ConnectionName = 'PB'
@@ -1887,8 +1886,8 @@ object dtmdlCustomers: TdtmdlCustomers
         '((Inactive = '#39'N'#39') or (Inactive is NULL) or (Inactive = :Inactive' +
         '))'
       'order by Customer_Branch.Name')
-    Left = 820
-    Top = 230
+    Left = 656
+    Top = 184
     ParamData = <
       item
         Name = 'Customer'
@@ -1910,8 +1909,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsCustomerBranches: TDataSource
     DataSet = qryCustomerBranches
-    Left = 970
-    Top = 230
+    Left = 776
+    Top = 184
   end
   object qryContacts: TFDQuery
     MasterSource = dtsCustomerBranches
@@ -1954,8 +1953,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'active is NULL)'
       '      or (Customer_Contact.Inactive = :Inactive))'
       'ORDER BY Name')
-    Left = 825
-    Top = 310
+    Left = 660
+    Top = 248
     ParamData = <
       item
         Name = 'Customer'
@@ -1972,8 +1971,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 975
-    Top = 310
+    Left = 780
+    Top = 248
   end
   object qryAddContact: TFDQuery
     ConnectionName = 'PB'
@@ -2048,8 +2047,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '        CC.First_Name,'
       '        CC.Surname'
       '')
-    Left = 970
-    Top = 600
+    Left = 776
+    Top = 480
     ParamData = <
       item
         Name = 'Customer'
@@ -2081,8 +2080,8 @@ object dtmdlCustomers: TdtmdlCustomers
       
         'WHERE Customer = :Customer AND Branch_no = :Branch_no AND Name =' +
         ' :Name')
-    Left = 970
-    Top = 530
+    Left = 776
+    Top = 424
     ParamData = <
       item
         Name = 'Customer'
@@ -2103,8 +2102,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Customer = :Customer and '
       'Branch_no = :Branch_no and '
       'Contact_no = :Contact_no')
-    Left = 970
-    Top = 390
+    Left = 776
+    Top = 312
     ParamData = <
       item
         Name = 'Customer'
@@ -2125,8 +2124,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Customer = :Customer and '
       'Branch_no = :Branch_no and '
       'Contact_no = :Contact_no')
-    Left = 970
-    Top = 460
+    Left = 776
+    Top = 368
     ParamData = <
       item
         Name = 'Customer'
@@ -2153,8 +2152,8 @@ object dtmdlCustomers: TdtmdlCustomers
       ' :Category_Used,'
       ' :Narrative'
       ')')
-    Left = 1090
-    Top = 30
+    Left = 872
+    Top = 24
     ParamData = <
       item
         Name = 'Customer'
@@ -2199,8 +2198,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'e'
       'FROM Category'
       'ORDER BY Category.Description')
-    Left = 1090
-    Top = 100
+    Left = 872
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -2217,16 +2216,16 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsCustomerCategories: TDataSource
     DataSet = qryCustomerCategories
-    Left = 1090
-    Top = 180
+    Left = 872
+    Top = 144
   end
   object qryDelCustomerCat: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Customer_Category'
       'WHERE Customer = :Customer AND Category = :Category')
-    Left = 1220
-    Top = 20
+    Left = 976
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -2241,8 +2240,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'UPDATE Customer_Category'
       'Set We_Supply_This_Category = :We_Supply_This_Category'
       'WHERE Customer = :Customer AND Category = :Category')
-    Left = 1220
-    Top = 100
+    Left = 976
+    Top = 80
     ParamData = <
       item
         Name = 'We_Supply_This_Category'
@@ -2260,8 +2259,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'UPDATE Customer_Category'
       'Set Narrative = :Narrative'
       'WHERE Customer = :Customer AND Category = :Category')
-    Left = 1220
-    Top = 170
+    Left = 976
+    Top = 136
     ParamData = <
       item
         Name = 'Narrative'
@@ -2307,8 +2306,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Branch_no = :Branch_no and'
       'Contact_no = :Contact_no'
       '')
-    Left = 1220
-    Top = 260
+    Left = 976
+    Top = 208
     ParamData = <
       item
         Name = 'Customer'
@@ -2380,8 +2379,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'where'
       'Customer = :Customer'
       '')
-    Left = 1220
-    Top = 340
+    Left = 976
+    Top = 272
     ParamData = <
       item
         Name = 'Customer'
@@ -2409,8 +2408,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'set acc_active = '#39'N'#39
       'where'
       'Customer = :Customer')
-    Left = 1220
-    Top = 430
+    Left = 976
+    Top = 344
     ParamData = <
       item
         Name = 'Customer'
@@ -2456,8 +2455,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'active is NULL)'
       '      or (Customer_Contact.Inactive = :Inactive))'
       'ORDER BY Name')
-    Left = 865
-    Top = 670
+    Left = 692
+    Top = 536
     ParamData = <
       item
         Name = 'Customer'
@@ -2471,8 +2470,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsHOContacts: TDataSource
     DataSet = qryHOContacts
-    Left = 965
-    Top = 670
+    Left = 772
+    Top = 536
   end
   object qryGetContactCats: TFDQuery
     ConnectionName = 'PB'
@@ -2489,8 +2488,8 @@ object dtmdlCustomers: TdtmdlCustomers
       '(Customer_Contact_Category.Contact_no = :Contact_no)'
       ')'
       'ORDER BY Category.Description')
-    Left = 870
-    Top = 740
+    Left = 696
+    Top = 592
     ParamData = <
       item
         Name = 'Customer'
@@ -2504,8 +2503,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsContactCats: TDataSource
     DataSet = qryGetContactCats
-    Left = 965
-    Top = 740
+    Left = 772
+    Top = 592
   end
   object qryUpCustomerCatUsed: TFDQuery
     ConnectionName = 'PB'
@@ -2513,8 +2512,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'UPDATE Customer_Category'
       'SET Category_Used = :Category_Used'
       'WHERE Customer = :Customer AND Category = :Category')
-    Left = 1090
-    Top = 260
+    Left = 872
+    Top = 208
     ParamData = <
       item
         Name = 'Category_Used'
@@ -2533,21 +2532,21 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Operator'
       'Where ((Operator_Can_Login = '#39'Y'#39'))'
       'Order BY Name')
-    Left = 40
-    Top = 810
+    Left = 32
+    Top = 648
   end
   object dtsOperators: TDataSource
     DataSet = qryOperators
-    Left = 140
-    Top = 810
+    Left = 112
+    Top = 648
   end
   object qryDelAccManager: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Customer_Operator'
       'WHERE Customer = :Customer')
-    Left = 30
-    Top = 870
+    Left = 24
+    Top = 696
     ParamData = <
       item
         Name = 'Customer'
@@ -2560,8 +2559,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'INSERT INTO Customer_Operator(Customer, Operator, Is_Main_Operat' +
         'or)'
       'VALUES (:Customer, :Operator, '#39'Y'#39')')
-    Left = 140
-    Top = 870
+    Left = 112
+    Top = 696
     ParamData = <
       item
         Name = 'Customer'
@@ -2588,8 +2587,8 @@ object dtmdlCustomers: TdtmdlCustomers
         #9'                            WHERE ((Reps_Branches.Customer = :C' +
         'ustomer) AND (Reps_Branches.Branch_no = :Branch_no))))'
       '')
-    Left = 40
-    Top = 750
+    Left = 32
+    Top = 600
     ParamData = <
       item
         Name = 'Customer'
@@ -2606,13 +2605,13 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object qryEndUsers: TFDQuery
     ConnectionName = 'PB'
-    Left = 30
-    Top = 164
+    Left = 24
+    Top = 131
   end
   object dtsEndUsers: TDataSource
     DataSet = qryEndUsers
-    Left = 120
-    Top = 164
+    Left = 96
+    Top = 131
   end
   object qryEndUserBase: TFDQuery
     ConnectionName = 'PB'
@@ -2759,8 +2758,8 @@ object dtmdlCustomers: TdtmdlCustomers
         's) AND'
       '      ((Customer.Customer_Status = 200))'
       '')
-    Left = 200
-    Top = 164
+    Left = 160
+    Top = 131
     ParamData = <
       item
         Name = 'Code_From'

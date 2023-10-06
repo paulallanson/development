@@ -1,7 +1,6 @@
-﻿object STMntStorTypFrm: TSTMntStorTypFrm
+object STMntStorTypFrm: TSTMntStorTypFrm
   Left = 91
   Top = 141
-  AutoScroll = False
   Caption = 'Maintain Store Types'
   ClientHeight = 213
   ClientWidth = 425
@@ -11,10 +10,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 70
@@ -36,9 +33,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -103,7 +97,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 326
@@ -112,9 +109,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -179,7 +173,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -224,7 +221,6 @@
       OnChange = NameEditChange
     end
     object ReplenRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 64
       Width = 113
@@ -233,6 +229,7 @@
       Items.Strings = (
         'Purchase'
         'Store')
+      ParentBackground = False
       TabOrder = 1
       OnClick = ReplenRadioGroupClick
     end
@@ -275,29 +272,21 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Is_Van'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Or_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddSQL: TFDQuery
@@ -317,29 +306,21 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Is_Van'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Purchase_Or_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object DelSQL: TFDQuery
@@ -355,9 +336,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery

@@ -11,13 +11,11 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
     288
     502)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -223,8 +221,6 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 14
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -239,6 +235,8 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 14
+    OnClick = btnDateClick
   end
   object edtDescriptiveRef: TEdit
     Left = 120
@@ -310,8 +308,6 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 16
-    OnClick = btnDateReqClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -326,6 +322,8 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 16
+    OnClick = btnDateReqClick
   end
   object edtQuote: TEdit
     Left = 120

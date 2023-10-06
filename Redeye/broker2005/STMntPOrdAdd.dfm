@@ -1,7 +1,6 @@
-﻿object STMntPOrdAddFrm: TSTMntPOrdAddFrm
+object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   Left = 11
   Top = 63
-  AutoScroll = False
   Caption = 'Select Products To Order'
   ClientHeight = 464
   ClientWidth = 677
@@ -11,11 +10,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object NoOfItemsLabel: TLabel
     Left = 609
@@ -73,12 +70,12 @@
       end>
   end
   object SearchGroupBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 312
     Width = 345
     Height = 81
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
@@ -117,8 +114,9 @@
     Top = 416
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object SelectBitBtn: TBitBtn
     Left = 496
@@ -127,8 +125,6 @@
     Height = 25
     Caption = 'Select'
     Default = True
-    TabOrder = 3
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -147,9 +143,10 @@
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = SelectBitBtnClick
   end
   object SuppRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 312
     Width = 281
@@ -159,6 +156,7 @@
     Items.Strings = (
       'Is the preferred source'
       'Is a possible source')
+    ParentBackground = False
     TabOrder = 4
     OnClick = SuppRadioGroupClick
   end
@@ -236,19 +234,13 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pref_Source'
-        ParamType = ptUnknown
       end>
   end
   object GetSOPartsSQL: TFDQuery
@@ -318,14 +310,10 @@
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pref_Source'
-        ParamType = ptUnknown
       end>
   end
   object GetDiscRateSQL: TFDQuery
@@ -343,14 +331,10 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
 end

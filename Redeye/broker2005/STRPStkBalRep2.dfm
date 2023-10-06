@@ -1,29 +1,23 @@
 object STRPStkBalRep2frm: TSTRPStkBalRep2frm
   Left = 39
   Top = 87
-  Width = 761
-  Height = 445
   Caption = 'Stock Balance Report'
+  ClientHeight = 406
+  ClientWidth = 745
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrStkBal: TQuickRep
     Left = -3
     Top = -5
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrStkBalBeforePrint
     DataSet = qryStkBalRep
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -56,56 +51,58 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand: TQRBand
       Left = 38
       Top = 38
       Width = 1047
       Height = 90
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         238.125000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object TitleQRLabel: TQRLabel
         Left = 421
         Top = 16
         Width = 205
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          66.145833333333340000
+          66.145833333333330000
           1113.895833333333000000
-          42.333333333333340000
-          542.395833333333400000)
+          42.333333333333330000
+          542.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Stock Balance Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -115,7 +112,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 16
       end
       object DateQRLabel: TQRLabel
@@ -123,20 +122,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 16
         Width = 32
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333300000
           2222.500000000000000000
           42.333333333333300000
           84.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -146,7 +141,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object qrlblRange: TQRLabel
@@ -154,20 +151,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 40
         Width = 104
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          66.145833333333340000
+          66.145833333333330000
           1246.187500000000000000
           105.833333333333300000
           275.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'From Product - '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -177,7 +170,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRSysData1: TQRSysData
@@ -185,19 +180,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 40
         Width = 121
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           2222.500000000000000000
           105.833333333333000000
           320.145833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -208,6 +200,8 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         ParentFont = False
         Text = 'Page No. :'
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLblCust: TQRLabel
@@ -215,20 +209,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 64
         Width = 109
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          66.145833333333340000
+          66.145833333333330000
           1240.895833333333000000
           169.333333333333300000
-          288.395833333333400000)
+          288.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'From Customer '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -238,7 +228,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
     end
@@ -247,20 +239,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       Top = 153
       Width = 1047
       Height = 54
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGroup1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = QRbndDtl
       Size.Values = (
         142.875000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryStkBalRep.Part'
       FooterBand = QRbndFooter
       Master = qrStkBal
@@ -270,20 +259,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 8
         Width = 50
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           21.166666666666670000
           132.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -293,7 +278,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrdbtxtPart: TQRDBText
@@ -301,20 +288,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 8
         Width = 161
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           169.333333333333000000
           21.166666666666700000
           425.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Part'
@@ -325,7 +309,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblPartStoreName: TQRLabel
@@ -333,20 +321,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 64
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
-          84.666666666666680000
+          84.666666666666670000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Warehouse'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -356,7 +340,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDesc: TQRLabel
@@ -364,20 +350,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 8
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          613.833333333333400000
+          613.833333333333300000
           21.166666666666670000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -387,7 +369,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblPack: TQRLabel
@@ -395,20 +379,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          719.666666666666800000
-          84.666666666666680000
+          719.666666666666700000
+          84.666666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Size'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -418,7 +398,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblBoxCount: TQRLabel
@@ -426,20 +408,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 57
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          931.333333333333500000
-          84.666666666666680000
+          931.333333333333300000
+          84.666666666666670000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -449,7 +427,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblStock: TQRLabel
@@ -457,20 +437,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1227.666666666667000000
-          84.666666666666680000
+          84.666666666666670000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'In Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -480,7 +456,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOnOrder: TQRLabel
@@ -488,20 +466,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 16
         Width = 51
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1989.666666666670000000
           42.333333333333300000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'On Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -511,7 +485,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel1: TQRLabel
@@ -519,20 +495,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 55
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2264.833333333330000000
           84.666666666666700000
           145.520833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Min Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -542,7 +514,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -550,20 +524,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 57
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2455.333333333330000000
           84.666666666666700000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Max Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -573,7 +543,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtPartDesc: TQRDBText
@@ -581,20 +553,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 8
         Width = 97
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           825.500000000000000000
           21.166666666666670000
-          256.645833333333400000)
+          256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Part_Description'
@@ -605,7 +573,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
@@ -613,20 +585,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 62
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1439.333333333333000000
-          84.666666666666680000
+          84.666666666666670000
           164.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Alloc.Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -636,7 +604,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -644,20 +614,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 60
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1709.208333333333000000
-          84.666666666666680000
+          84.666666666666670000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Free Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -667,7 +633,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -675,20 +643,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 30
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1947.333333333330000000
           84.666666666666700000
           79.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Prod.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -698,7 +662,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel6: TQRLabel
@@ -706,20 +672,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 36
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2106.083333333330000000
           84.666666666666700000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Purch.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -729,7 +691,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel7: TQRLabel
@@ -737,20 +701,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 32
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2619.375000000000000000
           84.666666666666700000
           148.166666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Not in Use'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -760,7 +720,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape2: TQRShape
@@ -768,16 +730,14 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 2
         Width = 1046
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333300000
           0.000000000000000000
           5.291666666666670000
           2767.541666666670000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -787,40 +747,34 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       Top = 207
       Width = 1047
       Height = 16
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRbndDtlBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = QRbndFooter
       Size.Values = (
-        42.333333333333340000
+        42.333333333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbDetail
       object qrdbtxtPartStoreName: TQRDBText
         Left = 8
         Top = 0
         Width = 169
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           21.166666666666700000
           0.000000000000000000
           447.145833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Part_Store_Name'
@@ -831,7 +785,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtPack: TQRDBText
@@ -839,20 +797,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 49
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           698.500000000000000000
           0.000000000000000000
           129.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Sell_Pack_Quantity'
@@ -863,7 +818,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblBoxCountVal: TQRLabel
@@ -871,20 +830,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 51
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          926.041666666666800000
+          926.041666666666700000
           0.000000000000000000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -894,7 +849,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtStock: TQRDBText
@@ -902,20 +859,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1164.166666666670000000
           0.000000000000000000
           171.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Qty_in_Stock'
@@ -927,7 +881,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText1: TQRDBText
@@ -935,20 +893,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1418.166666666670000000
           0.000000000000000000
           171.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Qty_Allocated'
@@ -960,7 +915,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -968,20 +927,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1693.333333333330000000
           0.000000000000000000
           171.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Free_Stock'
@@ -993,7 +949,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtOnOrder: TQRDBText
@@ -1001,20 +961,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 49
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1883.833333333330000000
           0.000000000000000000
           129.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Production Order Qty'
@@ -1026,7 +983,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtMin: TQRDBText
@@ -1034,20 +995,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2246.312500000000000000
           0.000000000000000000
           148.166666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Minimum_Stock'
@@ -1059,7 +1017,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbtxtMax: TQRDBText
@@ -1067,20 +1029,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 49
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2455.333333333330000000
           0.000000000000000000
           129.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Maximum_Stock'
@@ -1092,7 +1051,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
@@ -1100,20 +1063,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 49
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           2074.333333333330000000
           0.000000000000000000
           129.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Purchase Order Qty'
@@ -1125,7 +1085,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Mask = '0'
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblInUse: TQRLabel
@@ -1133,20 +1097,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 15
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333300000
           2661.708333333330000000
           0.000000000000000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = ' *'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1156,7 +1117,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblWarehouse: TQRLabel
@@ -1164,20 +1127,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 0
         Width = 77
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           105.833333333333300000
           0.000000000000000000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblWarehouse'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1187,7 +1146,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1196,18 +1157,15 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       Top = 243
       Width = 1047
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
     end
     object qrsdtlNumbers: TQRSubDetail
@@ -1215,19 +1173,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       Top = 223
       Width = 1047
       Height = 20
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrsdtlNumbersBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666660000
+        52.916666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrStkBal
       DataSet = GetSerNosSQL
       PrintBefore = False
@@ -1237,20 +1192,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 2
         Width = 89
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           18.520833333333330000
           5.291666666666667000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Serial Numbers:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1260,7 +1211,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblSerialNoRange: TQRLabel
@@ -1268,20 +1221,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 2
         Width = 82
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           275.166666666666700000
           5.291666666666667000
-          216.958333333333400000)
+          216.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblSerialNoRange'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1291,7 +1240,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1300,39 +1251,33 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       Top = 128
       Width = 1047
       Height = 25
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333340000
+        66.145833333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = QRBand
+      PrintOrder = cboAfterParent
       object QRLabel8: TQRLabel
         Left = 8
         Top = 5
         Width = 50
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           13.229166666666670000
           132.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1342,7 +1287,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText4: TQRDBText
@@ -1350,20 +1297,17 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 5
         Width = 161
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           169.333333333333000000
           13.229166666666700000
           425.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Part'
@@ -1374,7 +1318,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel9: TQRLabel
@@ -1382,20 +1330,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 5
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          613.833333333333400000
+          613.833333333333300000
           13.229166666666670000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1405,7 +1349,9 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText5: TQRDBText
@@ -1413,20 +1359,16 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Top = 5
         Width = 97
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           825.500000000000000000
           13.229166666666670000
-          256.645833333333400000)
+          256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryStkBalRep
         DataField = 'Part_Description'
@@ -1437,7 +1379,11 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1564,54 +1510,54 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
     Top = 48
     ParamData = <
       item
-        DataType = ftString
         Name = 'part_from'
+        DataType = ftString
         ParamType = ptInput
         Value = ''
       end
       item
-        DataType = ftString
         Name = 'part_to'
+        DataType = ftString
         ParamType = ptInput
         Value = ''
       end
       item
-        DataType = ftString
         Name = 'Not_in_Use'
+        DataType = ftString
         ParamType = ptInput
         Value = ''
       end
       item
-        DataType = ftString
         Name = 'Not_in_Use'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
         Value = 0
       end
       item
-        DataType = ftInteger
         Name = 'CustBranch'
+        DataType = ftInteger
         ParamType = ptInput
         Value = 0
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
+        DataType = ftInteger
         ParamType = ptInput
         Value = 0
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1630,9 +1576,8 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
     Top = 70
     ParamData = <
       item
-        DataType = ftString
         Name = 'part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object GetSerNosSQLSerial_item_from: TStringField
       FieldName = 'Serial_item_from'

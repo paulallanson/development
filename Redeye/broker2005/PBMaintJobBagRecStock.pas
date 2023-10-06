@@ -32,8 +32,7 @@ type
     qryUpdJBReturn: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
-      Rect: TRect; State: TGridDrawState);
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure sgLinesSelectCell(Sender: TObject; ACol, ARow: Integer;
       var CanSelect: Boolean);
     procedure sgLinesKeyPress(Sender: TObject; var Key: Char);
@@ -161,8 +160,8 @@ begin
   FCustomer := Value;
 end;
 
-procedure TfrmPBMaintJobBagRecStock.sgLinesDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TfrmPBMaintJobBagRecStock.sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -182,7 +181,7 @@ begin
       var WidthOfCell := ColWidths[ACol];
       var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-      if (vCol <= 2) then
+      if (ACol <= 2) then
       begin
         if gdFixed in State then
           Canvas.Brush.Color := sgLines.FixedColor else

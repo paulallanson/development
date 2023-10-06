@@ -11,10 +11,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 24
@@ -38,9 +36,9 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 243
@@ -50,17 +48,17 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 491
     Height = 137
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 16
@@ -212,14 +210,11 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryOneCOThickness: TFDQuery
@@ -250,19 +245,13 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cutout'
-        ParamType = ptUnknown
       end>
   end
   object dtsCOThickness: TDataSource

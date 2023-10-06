@@ -132,7 +132,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   DateSelV5, PBRPWorkIP, PBLUCust, PBLUSupp, CCSPrint, Printers, PBDatabase,
   pbMainMenu;
 

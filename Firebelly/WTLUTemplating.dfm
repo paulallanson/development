@@ -30,13 +30,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1276
+        Width = 1266
       end>
-    ExplicitWidth = 1278
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1263
+      Width = 1257
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -59,7 +58,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1004
+        Left = 998
         Top = 7
         Width = 69
         Height = 13
@@ -89,7 +88,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1084
+        Left = 1078
         Top = 3
         Width = 145
         Height = 21
@@ -97,7 +96,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
-        ExplicitLeft = 1090
       end
     end
   end
@@ -116,8 +114,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Width = 50
       end>
-    ExplicitTop = 377
-    ExplicitWidth = 1278
   end
   object Panel1: TPanel
     Left = 0
@@ -126,8 +122,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 336
-    ExplicitWidth = 1278
     DesignSize = (
       1272
       41)
@@ -164,7 +158,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 1195
     end
     object edtSearch: TEdit
       Left = 56
@@ -182,7 +175,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 1096
     end
     object cmbActionDate: TComboBox
       Left = 608
@@ -282,13 +274,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1276
+        Width = 1266
       end>
-    ExplicitWidth = 1278
     object btnDocuments: TToolBar
       Left = 11
       Top = 0
-      Width = 1263
+      Width = 1257
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56

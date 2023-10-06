@@ -1,4 +1,4 @@
-﻿object STLUSuppPrtFrm: TSTLUSuppPrtFrm
+object STLUSuppPrtFrm: TSTLUSuppPrtFrm
   Left = 147
   Top = 100
   BorderStyle = bsDialog
@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 8
@@ -49,12 +47,12 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 224
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -72,8 +70,6 @@
     Height = 25
     Caption = 'Select'
     Default = True
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -139,22 +135,25 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 466
     Top = 252
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 459
     Top = 105
     Width = 87
     Height = 108
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
@@ -162,8 +161,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -178,6 +175,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -185,8 +184,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -201,6 +198,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -208,8 +207,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -224,6 +221,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object stsDetails: TStatusBar
@@ -268,14 +267,12 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object SearchTimer: TTimer

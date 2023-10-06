@@ -5,8 +5,8 @@ object PBLaserImportFrm: TPBLaserImportFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Import Laser Production Data'
-  ClientHeight = 508
-  ClientWidth = 622
+  ClientHeight = 499
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,23 +21,21 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object mmErrorRecords: TMemo
     Left = 0
     Top = 358
-    Width = 622
+    Width = 624
     Height = 100
     Align = alTop
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 0
-    ExplicitWidth = 388
   end
   object pnlImportFile: TPanel
     Left = 0
     Top = 185
-    Width = 622
+    Width = 624
     Height = 56
     Align = alTop
     Enabled = False
     TabOrder = 1
-    ExplicitWidth = 388
     object lblStep2: TLabel
       Left = 8
       Top = 8
@@ -65,11 +63,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object pnlProgress: TPanel
     Left = 0
     Top = 282
-    Width = 622
+    Width = 624
     Height = 76
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 388
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -111,12 +108,11 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object pnlImport: TPanel
     Left = 0
     Top = 241
-    Width = 622
+    Width = 624
     Height = 41
     Align = alTop
     Enabled = False
     TabOrder = 3
-    ExplicitWidth = 388
     object lblStep4: TLabel
       Left = 8
       Top = 8
@@ -138,11 +134,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object pnlCancel: TPanel
     Left = 0
     Top = 458
-    Width = 622
+    Width = 624
     Height = 41
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 388
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
@@ -157,11 +152,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object pnlDepartment: TPanel
     Left = 0
     Top = 0
-    Width = 622
+    Width = 624
     Height = 185
     Align = alTop
     TabOrder = 5
-    ExplicitWidth = 388
     object lblStep1: TLabel
       Left = 8
       Top = 8

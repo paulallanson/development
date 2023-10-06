@@ -43,7 +43,7 @@ var
 
 implementation
 
-uses PBDatabase, PBMainMenu;
+uses UITypes, PBDatabase, PBMainMenu;
 
 {$R *.DFM}
 

@@ -24,7 +24,6 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Height = 97
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 660
     object lblEnquiryNo: TLabel
       Left = 24
       Top = 16
@@ -54,8 +53,6 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Height = 58
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 345
-    ExplicitWidth = 660
     object btnOK: TBitBtn
       Left = 248
       Top = 17
@@ -84,8 +81,6 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Height = 239
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 660
-    ExplicitHeight = 248
     object Label1: TLabel
       Left = 24
       Top = 21

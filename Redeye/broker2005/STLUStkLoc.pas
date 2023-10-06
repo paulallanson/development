@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses STLUStkBinLots, pbMainMenu, STMaintStoreStock;
+uses UITypes, FireDAC.Stan.Param, STLUStkBinLots, pbMainMenu, STMaintStoreStock;
 
 {$R *.DFM}
 

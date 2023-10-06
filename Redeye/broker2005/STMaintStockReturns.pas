@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses PBDatabase, CCSCommon, STRSStockReturns, pbMainMenu;
+uses UITypes, Types, FireDAC.Stan.Param, PBDatabase, CCSCommon, STRSStockReturns, pbMainMenu;
 
 {$R *.dfm}
 

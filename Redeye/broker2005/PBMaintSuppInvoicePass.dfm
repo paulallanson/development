@@ -11,13 +11,10 @@ object PBMaintSuppInvoicePassFrm: TPBMaintSuppInvoicePassFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object rdgrpSelection: TRadioGroup
-    ParentBackground = False
     Left = 40
     Top = 8
     Width = 193
@@ -27,6 +24,7 @@ object PBMaintSuppInvoicePassFrm: TPBMaintSuppInvoicePassFrm
     Items.Strings = (
       'Selected Invoice'
       'All Invoices')
+    ParentBackground = False
     TabOrder = 0
   end
   object CloseBitBtn: TBitBtn
@@ -34,16 +32,18 @@ object PBMaintSuppInvoicePassFrm: TPBMaintSuppInvoicePassFrm
     Top = 88
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object OKBitBtn: TBitBtn
     Left = 52
     Top = 88
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
 end

@@ -490,7 +490,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Alignment = taCenter
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
@@ -1049,7 +1049,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
@@ -1121,7 +1121,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
@@ -1193,7 +1193,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'

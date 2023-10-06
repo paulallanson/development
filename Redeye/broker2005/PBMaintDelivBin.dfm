@@ -11,15 +11,13 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object grpBxBins: TGroupBox
-    ParentBackground = False
     Left = 2
     Top = 0
     Width = 361
     Height = 80
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
@@ -82,13 +80,13 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 130
     Width = 366
     Height = 29
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object btnOK: TBitBtn
       Left = 102
@@ -98,8 +96,6 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -118,18 +114,20 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 190
       Top = 3
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlAdjustment: TPanel
-    ParentBackground = False
     Left = 0
     Top = 80
     Width = 366
@@ -137,13 +135,14 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     Align = alBottom
     BevelOuter = bvNone
     Caption = 'pnlAdjustment'
+    ParentBackground = False
     TabOrder = 2
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 2
       Top = 1
       Width = 362
       Height = 44
+      ParentBackground = False
       TabOrder = 0
       object Label4: TLabel
         Left = 16

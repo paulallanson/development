@@ -116,7 +116,6 @@ object frmWTMaintClient: TfrmWTMaintClient
     ParentFont = False
     TabOrder = 2
     OnClick = BitBtn2Click
-    ExplicitTop = 201
   end
   object CancelBitBtn: TBitBtn
     Left = 256
@@ -135,7 +134,6 @@ object frmWTMaintClient: TfrmWTMaintClient
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    ExplicitTop = 201
   end
   object ApplicDBLCB: TDBLookupComboBox
     Left = 16

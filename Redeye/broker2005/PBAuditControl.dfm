@@ -1,18 +1,16 @@
 object PBAuditControlFrm: TPBAuditControlFrm
   Left = 147
   Top = 135
-  Width = 292
-  Height = 170
   Caption = 'Audit Control'
+  ClientHeight = 131
+  ClientWidth = 276
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object ProgMoveCheckBox: TCheckBox
     Left = 8
@@ -51,17 +49,19 @@ object PBAuditControlFrm: TPBAuditControlFrm
     Top = 96
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object CancelBitBtn: TBitBtn
     Left = 192
     Top = 96
     Width = 75
     Height = 25
-    TabOrder = 5
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object GetAuditFlagsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -88,24 +88,16 @@ object PBAuditControlFrm: TPBAuditControlFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Audit_Log_Prog'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Log_Upd'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Log_Fields'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Log_Errors'
-        ParamType = ptUnknown
       end>
   end
 end

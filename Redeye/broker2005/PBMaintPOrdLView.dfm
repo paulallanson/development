@@ -21,8 +21,6 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
     Caption = 'pnlLines'
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 588
-    ExplicitHeight = 341
     object LineDetsStringGrid: TStringGrid
       Left = 1
       Top = 1
@@ -36,8 +34,6 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
       TabOrder = 0
       OnDblClick = LineDetsStringGridDblClick
       OnDrawCell = LineDetsStringGridDrawCell
-      ExplicitWidth = 586
-      ExplicitHeight = 339
       ColWidths = (
         41
         203
@@ -55,8 +51,6 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 341
-    ExplicitWidth = 588
     object BitBtn1: TBitBtn
       Left = 217
       Top = 5

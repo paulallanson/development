@@ -114,7 +114,7 @@ var
 
 implementation
 
-uses PBRPSalesComm, PBDatabase, PBLURep, PBRPSalesCommbyCat, pbMainMenu, CCSCommon;
+uses UITypes, PBRPSalesComm, PBDatabase, PBLURep, PBRPSalesCommbyCat, pbMainMenu, CCSCommon;
 
 {$R *.DFM}
 

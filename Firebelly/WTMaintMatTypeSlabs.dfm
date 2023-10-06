@@ -11,13 +11,11 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     332
     204)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -64,9 +62,9 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 200
@@ -77,8 +75,8 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object edtLength: TCREditInt
     Left = 88
@@ -120,24 +118,16 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Slab_Size'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -159,24 +149,16 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
 end

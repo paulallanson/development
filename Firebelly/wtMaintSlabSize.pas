@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, QrCtrls;
+  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, QrCtrls, Vcl.ExtCtrls;
 
 type
   TfrmwtMaintSlabSize = class(TForm)

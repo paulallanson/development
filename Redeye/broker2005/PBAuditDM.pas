@@ -3,8 +3,7 @@ unit PBAuditDM;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBIERRS,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Db,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -181,7 +180,8 @@ begin
 end;
 
 procedure TPBAuditDataMod.HandleException(Sender: TObject; E: Exception);
-var err : DBIResult;
+var
+DBErr: Integer;
 TempStr: String;
 iCount: Integer;
 begin
@@ -195,7 +195,10 @@ If not bDontWriteError then
                 If Pos(TempStr[iCount], Chr(10)+Chr(13)) > 0 then
                         TempStr[iCount] := ' ' ;
         {Write the the error to the audit trail} ;
-        PBAuditDataMod.WriteAudit(99999, err, 0, 0, 0, TempStr) ;
+        DBErr := -1;
+        if E is EFDDBEngineException then
+          DBErr := Ord(EFDDBEngineException(E).Kind);
+        PBAuditDataMod.WriteAudit(99999, DBErr, 0, 0, 0, TempStr) ;
         bDontWriteError := False ;
         end;
 {Tell the user about the error} ;

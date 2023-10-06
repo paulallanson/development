@@ -1,7 +1,6 @@
-﻿object PBMaintProcessFrm: TPBMaintProcessFrm
+object PBMaintProcessFrm: TPBMaintProcessFrm
   Left = 225
   Top = 152
-  AutoScroll = False
   Caption = 'Maintain Processes'
   ClientHeight = 377
   ClientWidth = 442
@@ -11,13 +10,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     442
     377)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 117
@@ -48,9 +45,6 @@
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -115,7 +109,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 333
@@ -125,9 +122,6 @@
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 1
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -192,7 +186,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = CancelBitBtnClick
   end
   object PageControl1: TPageControl
     Left = 8
@@ -204,7 +201,6 @@
     object TabSheet1: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 401
@@ -214,6 +210,7 @@
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = []
+        ParentBackground = False
         ParentFont = False
         TabOrder = 0
         object Label2: TLabel
@@ -448,8 +445,6 @@
         Height = 25
         Caption = '&Add'
         Enabled = False
-        TabOrder = 2
-        OnClick = btnAddClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -464,6 +459,8 @@
           3333333333333333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnAddClick
       end
       object btnRemove: TBitBtn
         Left = 159
@@ -472,8 +469,6 @@
         Height = 25
         Caption = '&Remove'
         Enabled = False
-        TabOrder = 3
-        OnClick = btnRemoveClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -488,6 +483,8 @@
           3333333333773333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = btnRemoveClick
       end
       object lstbxNonMembers: TListBox
         Left = 256
@@ -559,8 +556,8 @@
     Top = 264
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -577,8 +574,8 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -608,84 +605,54 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_as_default'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Prompt_For_Laser_Format'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Prompt_For_Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'SFDC_Prompt_For_Laser_Format'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'SFDC_Prompt_For_Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'SFDC_Prompt_For_Number_Up'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Number_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Prompt_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -698,9 +665,7 @@
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -720,34 +685,23 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryPriceUnit: TFDQuery
@@ -804,9 +758,7 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -834,9 +786,7 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -857,19 +807,13 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryNumberType: TFDQuery

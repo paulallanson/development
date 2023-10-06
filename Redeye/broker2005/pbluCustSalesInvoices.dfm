@@ -29,7 +29,6 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 804
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -57,7 +56,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 395
+      Width = 389
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -65,22 +64,21 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 395
+        Width = 377
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 393
+            Width = 371
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 380
+          Width = 362
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 47
+          ButtonWidth = 62
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -154,13 +152,12 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 802
+        Width = 792
       end>
-    ExplicitWidth = 804
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 789
+      Width = 783
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -168,7 +165,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 789
+        Width = 771
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 51
@@ -189,7 +186,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnChangeClick
         end
         object ToolButton3: TToolButton
-          Left = 57
+          Left = 51
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -197,7 +194,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           Style = tbsSeparator
         end
         object btnPreview: TToolButton
-          Left = 65
+          Left = 59
           Top = 0
           Caption = 'Pre&view'
           Enabled = False
@@ -205,7 +202,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnPreviewClick
         end
         object btnPrint: TToolButton
-          Left = 122
+          Left = 110
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -213,7 +210,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 179
+          Left = 161
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -221,7 +218,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnReprintClick
         end
         object ToolButton2: TToolButton
-          Left = 236
+          Left = 212
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -229,7 +226,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           Style = tbsSeparator
         end
         object btnOrder: TToolButton
-          Left = 244
+          Left = 220
           Top = 0
           Caption = 'Order'
           Enabled = False
@@ -392,8 +389,6 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       item
         Width = 50
       end>
-    ExplicitTop = 527
-    ExplicitWidth = 812
   end
   object imglstFunctions: TImageList
     Left = 240

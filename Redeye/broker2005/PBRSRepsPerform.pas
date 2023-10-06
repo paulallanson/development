@@ -90,7 +90,7 @@ var
 
 implementation
 
-uses PBLURep, PBDatabase, CCSPrint, CCSCommon, PBRPRepsPerform,
+uses UITypes, PBLURep, PBDatabase, CCSPrint, CCSCommon, PBRPRepsPerform,
   PBRPRepsCatPerform;
 
 {$R *.DFM}

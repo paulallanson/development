@@ -38,7 +38,7 @@ var
 
 implementation
 
-uses WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
+uses UITypes, WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
   WTAccImportDM, WTFileImport;
 
 var

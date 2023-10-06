@@ -126,7 +126,7 @@ var
 
 implementation
 
-uses PBMaintSuppInvoice;
+uses UITypes, PBMaintSuppInvoice;
 
 {$R *.DFM}
 

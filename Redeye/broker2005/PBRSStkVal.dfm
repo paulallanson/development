@@ -11,10 +11,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object rgCustomer: TRadioGroup
     Left = 8
@@ -85,8 +83,9 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Width = 75
     Height = 25
     Caption = '&Cancel'
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object PreviewBitBtn: TBitBtn
     Left = 264
@@ -94,8 +93,6 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 3
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -110,6 +107,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 344
@@ -117,8 +116,6 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -133,6 +130,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
   end
   object RepRadioGroup: TRadioGroup
     Left = 8
@@ -320,14 +319,10 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object oldDummySQL: TFDQuery

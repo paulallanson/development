@@ -96,7 +96,7 @@ var
 
 implementation
 
-uses CCSCommon, DateSelV5, PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust,
+uses FireDAC.Stan.Param, UITypes, CCSCommon, DateSelV5, PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust,
   pbLUCompBranch, pbDatabase, PBLUCConta, STLUCourier;
 
 {$R *.dfm}
@@ -233,8 +233,7 @@ var
 begin
   if strtoint(QtyToDeliverMemo.Text) <= 0 then
     begin
-      MessageDlg('Quantity to deliver must be greater than zero!', mtError,
-        [mbAbort], 0);
+      MessageDlg('Quantity to deliver must be greater than zero!', mtError, [mbAbort], 0);
       QtyToDeliverMemo.SetFocus;
       exit;
     end;

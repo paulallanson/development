@@ -344,7 +344,6 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
-    ExplicitLeft = 215
   end
   object GroupBox1: TGroupBox
     Left = 8

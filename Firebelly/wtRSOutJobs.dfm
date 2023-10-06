@@ -26,7 +26,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnRunClick
-    ExplicitTop = 159
   end
   object Button4: TButton
     Left = 400
@@ -38,7 +37,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 159
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -226,7 +224,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = 'P&review'
     TabOrder = 8
     OnClick = Button1Click
-    ExplicitTop = 159
   end
   object Button2: TButton
     Left = 184
@@ -237,7 +234,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = '&Excel'
     TabOrder = 9
     OnClick = Button2Click
-    ExplicitTop = 159
   end
   object OleContainer1: TOleContainer
     Left = 212

@@ -86,7 +86,7 @@ var
 
 implementation
 
-uses PBLUCust, PBLUSInvDM, DateSelV5, PBRSCustState, pbMainMenu, CCSCommon;
+uses UITypes, PBLUCust, PBLUSInvDM, DateSelV5, PBRSCustState, pbMainMenu, CCSCommon;
 
 {$R *.DFM}
 

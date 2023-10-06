@@ -1,4 +1,4 @@
-﻿object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
+object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
   Left = 436
   Top = 219
   Anchors = [akLeft, akTop, akBottom]
@@ -13,13 +13,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
     Left = 0
@@ -114,9 +112,6 @@
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btnDateSelClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -131,6 +126,9 @@
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnDateSelClick
     end
     object edtDateFrom: TEdit
       Left = 160
@@ -244,9 +242,9 @@
       Anchors = [akLeft, akBottom]
       Caption = '&Print'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = PrintBitBtnClick
-      NumGlyphs = 2
     end
     object btnPreview: TBitBtn
       Left = 97
@@ -256,9 +254,9 @@
       Anchors = [akLeft, akBottom]
       Caption = 'P&review'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = PreviewBitBtnClick
-      NumGlyphs = 2
     end
     object btnEmail: TBitBtn
       Left = 185
@@ -268,9 +266,9 @@
       Anchors = [akLeft, akBottom]
       Caption = '&Email'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = EmailBitBtnClick
-      NumGlyphs = 2
     end
     object btnClose: TBitBtn
       Left = 369
@@ -279,9 +277,9 @@
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = CancelBitBtnClick
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 273
@@ -291,10 +289,10 @@
       Anchors = [akLeft, akBottom]
       Caption = 'E&xcel'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 4
       Visible = False
       OnClick = ExcelBitBtnClick
-      NumGlyphs = 2
     end
   end
   object qryGetStatement: TFDQuery
@@ -307,9 +305,7 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qrySetStatement: TFDQuery
@@ -323,9 +319,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -536,7 +536,7 @@ const
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBMaintEnquiry, PBMaintQEnq;
+uses UITypes, pbDatabase, pbMainMenu, PBMaintEnquiry, PBMaintQEnq;
 
 {$R *.DFM}
 

@@ -1,7 +1,6 @@
 object PBEnqQuantitiesFrm: TPBEnqQuantitiesFrm
   Left = 371
   Top = 148
-  AutoScroll = False
   Caption = 'Enquiry Quantities'
   ClientHeight = 301
   ClientWidth = 323
@@ -11,10 +10,8 @@ object PBEnqQuantitiesFrm: TPBEnqQuantitiesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 8
@@ -180,16 +177,18 @@ object PBEnqQuantitiesFrm: TPBEnqQuantitiesFrm
     Top = 256
     Width = 75
     Height = 25
-    TabOrder = 10
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 10
   end
   object btbtnCancel: TBitBtn
     Left = 232
     Top = 256
     Width = 75
     Height = 25
-    TabOrder = 11
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 11
   end
   object btnReinstate1: TButton
     Left = 232

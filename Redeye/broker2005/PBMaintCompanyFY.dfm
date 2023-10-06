@@ -11,10 +11,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object OKBitBtn: TBitBtn
     Left = 72
@@ -22,17 +20,19 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 160
     Top = 144
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -114,9 +114,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Financial_Year'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsPeriod: TDataSource
@@ -144,14 +143,10 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckSalesProfit: TFDQuery
@@ -165,9 +160,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_year'
-        ParamType = ptUnknown
       end>
   end
 end

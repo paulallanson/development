@@ -1,29 +1,27 @@
 object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
   Left = 192
   Top = 114
-  Width = 850
-  Height = 449
   Caption = 'Lookup Enquiry Details'
+  ClientHeight = 410
+  ClientWidth = 834
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 352
-    Width = 842
+    Top = 347
+    Width = 834
     Height = 41
     Align = alBottom
     TabOrder = 0
     DesignSize = (
-      842
+      834
       41)
     object Label1: TLabel
       Left = 8
@@ -63,8 +61,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 393
-    Width = 842
+    Top = 388
+    Width = 834
     Height = 22
     Panels = <
       item
@@ -77,8 +75,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 842
-    Height = 352
+    Width = 834
+    Height = 347
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqsJB
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -201,14 +199,10 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object tmrSearch: TTimer

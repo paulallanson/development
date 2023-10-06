@@ -45,7 +45,7 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon;
+uses Types, pbMainMenu, CCSCommon;
 
 {$R *.dfm}
 

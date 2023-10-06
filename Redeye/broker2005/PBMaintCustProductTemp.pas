@@ -57,7 +57,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUCustProductTemp;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUCustProductTemp;
 
 {$R *.DFM}
 

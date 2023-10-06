@@ -11,13 +11,11 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     780
     201)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -43,9 +41,9 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -56,8 +54,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 6
     NumGlyphs = 2
+    TabOrder = 6
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -1184,29 +1182,19 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Texture_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1222,8 +1210,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1237,8 +1225,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

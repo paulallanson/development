@@ -549,7 +549,7 @@ begin
   if s2 = '' then
     Result := s1
   else { Don't add space if force linebreak found }
-  if (s1[Length(s1)] in [#10, #13]) or (s2[1] in [#10, #13]) then
+  if CharInSet(s1[Length(s1)], [#10, #13]) or CharInSet(s2[1], [#10, #13]) then
     Result := s1 + s2
   else
     Result := s1 + ' ' + s2;

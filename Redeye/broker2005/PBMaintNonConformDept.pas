@@ -45,7 +45,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBLUNonConformDept, ActiveX;
+uses UITypes, pbDatabase, pbMainMenu, PBLUNonConformDept, ActiveX;
 
 {$R *.DFM}
 

@@ -21,8 +21,6 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
     Height = 290
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 603
-    ExplicitHeight = 299
     DesignSize = (
       597
       290)
@@ -252,7 +250,6 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 8
-      ExplicitTop = 260
     end
     object btbtnExcel: TBitBtn
       Left = 323
@@ -306,7 +303,6 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 9
       OnClick = btbtnExcelClick
-      ExplicitTop = 266
     end
     object PreviewReportBitBtn: TBitBtn
       Left = 419
@@ -331,7 +327,6 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       NumGlyphs = 2
       TabOrder = 10
       OnClick = PreviewReportBitBtnClick
-      ExplicitTop = 266
     end
     object PrintReportBitBtn: TBitBtn
       Left = 507
@@ -356,7 +351,6 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       NumGlyphs = 2
       TabOrder = 11
       OnClick = PrintReportBitBtnClick
-      ExplicitTop = 266
     end
   end
   object pnlExportPrgrss: TPanel

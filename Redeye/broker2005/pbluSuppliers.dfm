@@ -31,8 +31,6 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       item
         Width = 50
       end>
-    ExplicitTop = 318
-    ExplicitWidth = 829
   end
   object Panel1: TPanel
     Left = 0
@@ -42,8 +40,6 @@ object frmpbluSuppliers: TfrmpbluSuppliers
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 277
-    ExplicitWidth = 829
     DesignSize = (
       823
       41)
@@ -71,7 +67,6 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       Caption = '&Close'
       TabOrder = 1
       OnClick = btnCloseClick
-      ExplicitLeft = 750
     end
     object btnSearch: TBitBtn
       Left = 288
@@ -93,13 +88,12 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 827
+        Width = 817
       end>
-    ExplicitWidth = 829
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 814
+      Width = 808
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 56
@@ -286,7 +280,6 @@ object frmpbluSuppliers: TfrmpbluSuppliers
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 829
     object Label3: TLabel
       Left = 8
       Top = 3

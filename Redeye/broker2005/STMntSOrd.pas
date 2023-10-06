@@ -123,10 +123,9 @@ type
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure LineDetsStringGridDrawCell(Sender: TObject; aCol,
-  aRow: Integer; Rect: TRect; State: TGridDrawState);
+      aRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure btnCostCentreClick(Sender: TObject);
@@ -152,8 +151,7 @@ type
     procedure ChrgAddBitBtnClick(Sender: TObject);
     procedure ChrgChgBitBtnClick(Sender: TObject);
     procedure ChrgDelBitBtnClick(Sender: TObject);
-    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
+    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure ExtChgMenuPopup(Sender: TObject);
     procedure RdBtnToCustClick(Sender: TObject);
     procedure RDBtnToAdHocClick(Sender: TObject);
@@ -258,7 +256,7 @@ var
 
 implementation
 
-uses
+uses Types, 
   System.UITypes,
   STSODataMod, DateSelV5, STMaintSOrdLineServ, STMaintSOrdLine, PBDBMemo, PBLUCust,
   pbMainMenu, PBLUCustCstCntr, STMaintSinvExtChg, STMaintSOrdSerialNos, PBLUCConta,
@@ -1515,8 +1513,7 @@ begin
   CheckOK(Self);
 end;
 
-procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 var
   tempInx: integer;
   tempPartCode: string;
@@ -1541,8 +1538,7 @@ begin
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end
   else
   	begin
@@ -2712,7 +2708,7 @@ begin
     if sTempFuncMode = soAdd then
       SalesOrder.ExtraCharges.Add(ExtraCharge);
     inx := SalesOrder.ExtraCharges.IndexFromChargeNo(iCharge);
-    if sTempFuncMode in [soChange, soDelete] then
+    if CharInSet(sTempFuncMode, [soChange, soDelete]) then
     begin
       SalesOrder.ExtraCharges[inx].Free;
      SalesOrder.ExtraCharges.Delete(inx);
@@ -2851,10 +2847,9 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.ExtChgDetsStringGridSelectCell(Sender: TObject;
-  ACol, ARow: Integer; var CanSelect: Boolean);
+procedure TSTMntSOrdFrm.ExtChgDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-if FSelectedChargeIndex = ARow - 1 then Exit;
+  if FSelectedChargeIndex = ARow - 1 then Exit;
   FSelectedChargeIndex := ARow - 1;
 end;
 

@@ -62,7 +62,7 @@ var
 
 implementation
 
-uses STMntPrtBinUpd, pbDatabase, pbMainMenu;
+uses UITypes, STMntPrtBinUpd, pbDatabase, pbMainMenu;
 
 
 {$R *.DFM}

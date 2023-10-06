@@ -1,9 +1,9 @@
 object PBRSStkMoveFrm: TPBRSStkMoveFrm
   Left = 12
   Top = 21
-  Width = 780
-  Height = 511
   Caption = 'Customer Stock Movement'
+  ClientHeight = 472
+  ClientWidth = 764
   Color = clBtnFace
   Constraints.MinHeight = 511
   Constraints.MinWidth = 780
@@ -12,20 +12,18 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    772
-    483)
-  PixelsPerInch = 96
+    764
+    472)
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 772
+    Width = 764
     Height = 169
     Align = alTop
     Font.Charset = ANSI_CHARSET
@@ -36,7 +34,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     ParentFont = False
     TabOrder = 0
     DesignSize = (
-      772
+      764
       169)
     object Label1: TLabel
       Left = 607
@@ -278,7 +276,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       OnChange = cbSort1Change
       Items.Strings = (
@@ -295,7 +292,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 7
       OnChange = cbSort2Change
       Items.Strings = (
@@ -312,7 +308,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 8
       OnChange = cbSort2Change
       Items.Strings = (
@@ -345,16 +340,16 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
   object Panel2: TPanel
     Left = 0
     Top = 169
-    Width = 772
-    Height = 273
+    Width = 764
+    Height = 262
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 1
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 770
-      Height = 271
+      Width = 762
+      Height = 260
       Align = alClient
       DataSource = dsReport
       Font.Charset = ANSI_CHARSET
@@ -502,8 +497,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 442
-    Width = 772
+    Top = 431
+    Width = 764
     Height = 41
     Align = alBottom
     Font.Charset = ANSI_CHARSET
@@ -519,8 +514,9 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 75
       Height = 25
       Caption = '&Cancel'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object PreviewBitBtn: TBitBtn
       Left = 592
@@ -528,8 +524,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 75
       Height = 25
       Caption = 'Pre&view'
-      TabOrder = 1
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -544,6 +538,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 672
@@ -551,8 +547,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Width = 75
       Height = 25
       Caption = '&Print'
-      TabOrder = 2
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -567,6 +561,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = PrintBitBtnClick
     end
   end
   object chkbxExcCsts: TCheckBox
@@ -909,9 +905,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -929,9 +923,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -952,14 +944,10 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object CompSQL: TFDQuery
@@ -993,14 +981,10 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
 end

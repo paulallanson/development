@@ -11,13 +11,11 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
     470
     240)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 128
@@ -43,8 +41,6 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -110,6 +106,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 368
@@ -119,8 +117,6 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -185,7 +181,9 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -318,39 +316,25 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deferred_Service'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -370,39 +354,25 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'service_description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deferred_Service'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_no'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -415,14 +385,10 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'service_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextServiceNo: TFDQuery
@@ -435,9 +401,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Top = 28
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -38,8 +38,7 @@ type
     procedure btnOKClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure grdDetailsSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
+    procedure grdDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormDestroy(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckKeyIsNumber(Sender: TObject; var Key: Char);
@@ -200,10 +199,9 @@ begin
     end;
 end;
 
-procedure TSTPODirectConfFrm.grdDetailsSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TSTPODirectConfFrm.grdDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-	if (aCol = 5) then
+	if (ACol = 5) then
     grdDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
   else
     grdDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing];

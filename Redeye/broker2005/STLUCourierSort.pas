@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses STMaintCourierSort;
+uses UITypes, STMaintCourierSort;
 
 {$R *.DFM}
 

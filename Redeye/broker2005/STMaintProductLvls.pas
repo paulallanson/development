@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu;
+uses UITypes, pbDatabase, pbMainMenu;
 
 {$R *.DFM}
 

@@ -10,6 +10,7 @@ Function InpToSing(sInpStr: String; iPackSize: Integer): Integer;
 
 implementation
 
+uses UITypes;
 Function ShowInPacks(iSinglesQty, iPackSize: Integer): String;
 Var
 iNoOfPacks: Integer;

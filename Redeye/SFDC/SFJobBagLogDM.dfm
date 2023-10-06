@@ -1,7 +1,4 @@
 object dtmdlJobBagLog: TdtmdlJobBagLog
-  OldCreateOrder = False
-  Left = 539
-  Top = 122
   Height = 527
   Width = 738
   object qryProcessGrp: TFDQuery
@@ -19,8 +16,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 24
   end
   object qryProcess: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsProcessGroup
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Process.Process,'
@@ -37,9 +34,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcess: TDataSource
@@ -62,8 +57,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 144
   end
   object qryProcessPaper: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsProcess
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Paper_Size.Process,'
       'Process_Paper_Size.Paper_Size,'
@@ -76,9 +71,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessPaper: TDataSource
@@ -100,9 +93,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -115,9 +106,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -133,8 +122,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -181,149 +170,110 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Work_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Paper_Size'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Custom_Paper_Size'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Number_Up'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Laser_Format'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftFloat
         Name = 'Quantity'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Audit_Workstation'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Labour_Time_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Labour_Time_To'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Labour_Hours'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Labour_Overtime_Hours'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Machine_Hours'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Team_Count'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Operation'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Work_Centre_Assistant'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Master_Job_Time_Log'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Activity'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Labour_Time_From'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Labour_Time_To'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Labour_Hours'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Labour_Overtime_Hours'
+      end
+      item
+        Name = 'Machine_Hours'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Team_Count'
         DataType = ftInteger
+      end
+      item
+        Name = 'Work_Centre_Operator'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Operation'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Work_Centre_Assistant'
+      end
+      item
+        Name = 'Master_Job_Time_Log'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Activity'
+        DataType = ftString
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Hourly_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Machine_Hourly_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Click_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -336,8 +286,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -355,8 +305,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -640,19 +590,13 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsWCOperators: TDataSource
@@ -670,14 +614,12 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryProcessOps: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsProcess
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Operation.Process,'
       'Process_Operation.Operation,'
@@ -691,9 +633,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessOps: TDataSource
@@ -711,9 +651,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Employee_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobLog: TFDQuery
@@ -786,9 +724,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_bag_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object qryProcessGrpWC: TFDQuery
@@ -814,9 +750,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessGrpWC: TDataSource
@@ -838,29 +772,19 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryDelMulti: TFDQuery
@@ -873,9 +797,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Master_Job_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object qryWCOperatorsBase: TFDQuery
@@ -889,19 +811,13 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryOldJobLogBase: TFDQuery
@@ -1049,9 +965,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_bag_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNonJobTimeLog: TFDQuery
@@ -1072,34 +986,28 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 328
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_Point'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Process_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Activity'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Activity'
+      end
+      item
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryActivities: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsProcessGroup
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Group_Activity'
@@ -1109,9 +1017,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryGetEmployeeTime: TFDQuery
@@ -1133,14 +1039,10 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end>
   end
   object qryDelJobBagLog: TFDQuery
@@ -1152,9 +1054,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Time_Log'
-        ParamType = ptUnknown
       end>
   end
   object qryGetActivity: TFDQuery
@@ -1168,14 +1068,10 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end>
   end
   object qryJobLogBase: TFDQuery
@@ -1258,9 +1154,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryGetWorkCentrebyName: TFDQuery
@@ -1273,9 +1167,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProcess: TFDQuery
@@ -1296,9 +1188,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object qryGetWorkCentrebyShortName: TFDQuery
@@ -1311,9 +1201,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 440
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Short_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryWCOperator: TFDQuery
@@ -1326,9 +1214,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
       end>
   end
 end

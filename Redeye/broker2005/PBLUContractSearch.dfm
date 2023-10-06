@@ -129,7 +129,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive contracts'
     TabOrder = 13
-    ExplicitTop = 310
   end
   object SearchButton: TButton
     Left = 12
@@ -141,7 +140,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Default = True
     TabOrder = 14
     OnClick = SearchButtonClick
-    ExplicitTop = 342
   end
   object edtDescription: TEdit
     Left = 120
@@ -217,7 +215,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Caption = 'Clear Search'
     TabOrder = 15
     OnClick = ClearButtonClick
-    ExplicitTop = 343
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
@@ -228,7 +225,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY live contracts'
     TabOrder = 12
-    ExplicitTop = 287
   end
   object edtDateReq: TEdit
     Left = 120

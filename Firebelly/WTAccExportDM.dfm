@@ -1,7 +1,4 @@
 object dmAccExport: TdmAccExport
-  OldCreateOrder = False
-  Left = 121
-  Top = 83
   Height = 559
   Width = 814
   object SalesInvNarrSQL: TFDQuery
@@ -15,9 +12,7 @@ object dmAccExport: TdmAccExport
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object SalesInvAddSQL: TFDQuery
@@ -43,14 +38,10 @@ object dmAccExport: TdmAccExport
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpCompanyAccSQL: TFDQuery
@@ -62,9 +53,7 @@ object dmAccExport: TdmAccExport
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Acc'
-        ParamType = ptUnknown
       end>
   end
   object oldPurchaseInvSQL: TFDQuery
@@ -123,14 +112,10 @@ object dmAccExport: TdmAccExport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end>
   end
   object UpCustomerSQL: TFDQuery
@@ -146,14 +131,10 @@ object dmAccExport: TdmAccExport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end>
   end
   object POCustomerSQL: TFDQuery
@@ -260,14 +241,10 @@ object dmAccExport: TdmAccExport
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end>
   end
   object UpSalesInvHeadSQL: TFDQuery
@@ -281,14 +258,10 @@ object dmAccExport: TdmAccExport
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end>
   end
   object UpSupplierInvHeadSQL: TFDQuery
@@ -302,14 +275,10 @@ object dmAccExport: TdmAccExport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end>
   end
   object UpInvSupplierSQL: TFDQuery
@@ -388,9 +357,7 @@ object dmAccExport: TdmAccExport
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end>
   end
   object UpStockSQL: TFDQuery
@@ -412,29 +379,19 @@ object dmAccExport: TdmAccExport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_ID'
-        ParamType = ptUnknown
       end>
   end
   object UpCurrSQL: TFDQuery
@@ -452,24 +409,16 @@ object dmAccExport: TdmAccExport
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'symbol'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'rate'
-        ParamType = ptUnknown
       end>
   end
   object CurrencySQL: TFDQuery
@@ -482,9 +431,7 @@ object dmAccExport: TdmAccExport
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end>
   end
   object UpCustSQL: TFDQuery
@@ -500,29 +447,19 @@ object dmAccExport: TdmAccExport
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Credit_Limit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Available_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Credit_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Intrastat_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object StockSQL: TFDQuery
@@ -537,19 +474,13 @@ object dmAccExport: TdmAccExport
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object MaxStockSQL: TFDQuery
@@ -569,9 +500,7 @@ object dmAccExport: TdmAccExport
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Inv'
-        ParamType = ptUnknown
       end>
   end
   object UpCompanySQL: TFDQuery
@@ -584,14 +513,10 @@ object dmAccExport: TdmAccExport
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Acc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Inv'
-        ParamType = ptUnknown
       end>
   end
   object PurchaseInvAddSQL: TFDQuery
@@ -605,14 +530,10 @@ object dmAccExport: TdmAccExport
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object GetFormRefSQL: TFDQuery
@@ -627,19 +548,13 @@ object dmAccExport: TdmAccExport
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object UpCompanyExpSQL: TFDQuery
@@ -652,9 +567,7 @@ object dmAccExport: TdmAccExport
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'data_export_directory'
-        ParamType = ptUnknown
       end>
   end
   object InvSupplierSQL: TFDQuery
@@ -698,9 +611,7 @@ object dmAccExport: TdmAccExport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSageInvs: TFDQuery
@@ -738,69 +649,43 @@ object dmAccExport: TdmAccExport
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Transaction_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Department'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Code'
-        ParamType = ptUnknown
       end>
   end
   object SalesInvChgsSQL: TFDQuery
@@ -814,9 +699,7 @@ object dmAccExport: TdmAccExport
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSageImport: TFDQuery
@@ -852,9 +735,7 @@ object dmAccExport: TdmAccExport
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object PurchaseInvSQL: TFDQuery
@@ -920,9 +801,7 @@ object dmAccExport: TdmAccExport
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesInvoice: TFDQuery
@@ -939,9 +818,7 @@ object dmAccExport: TdmAccExport
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierInvoice: TFDQuery
@@ -960,9 +837,7 @@ object dmAccExport: TdmAccExport
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'supplier_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryVATCode: TFDQuery
@@ -975,9 +850,7 @@ object dmAccExport: TdmAccExport
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPendingSI: TFDQuery
@@ -990,9 +863,7 @@ object dmAccExport: TdmAccExport
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'export_filename'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPendingPI: TFDQuery
@@ -1005,9 +876,7 @@ object dmAccExport: TdmAccExport
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'export_filename'
-        ParamType = ptUnknown
       end>
   end
   object CompanySQL: TFDQuery
@@ -1230,9 +1099,7 @@ object dmAccExport: TdmAccExport
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryDelXeroInvs: TFDQuery
@@ -1244,9 +1111,7 @@ object dmAccExport: TdmAccExport
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryUpXeroInvs: TFDQuery
@@ -1280,59 +1145,37 @@ object dmAccExport: TdmAccExport
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Due_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Tax_Rate'
-        ParamType = ptUnknown
       end>
   end
   object qryGetXeroImport: TFDQuery
@@ -1356,9 +1199,7 @@ object dmAccExport: TdmAccExport
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -94,7 +94,6 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 224
   end
   object BitBtn2: TBitBtn
     Left = 128
@@ -107,7 +106,6 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 224
   end
   object prgbrRecords: TProgressBar
     Left = 8

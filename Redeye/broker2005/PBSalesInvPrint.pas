@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   DateSelV5, CCSPrint, CCSemailHandler, PBEmailList, pbDatabase, pbMainMenu,
   ccsCommon, Printer.Tools;
 
@@ -927,4 +927,3 @@ begin
 end;
 
 end.
-

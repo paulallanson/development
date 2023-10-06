@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses WTAccImportDM;
+uses UITypes, WTAccImportDM;
 
 {$R *.dfm}
 

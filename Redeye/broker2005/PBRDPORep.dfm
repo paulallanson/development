@@ -1,7 +1,4 @@
-﻿object PBRDPORepDataMod: TPBRDPORepDataMod
-  OldCreateOrder = True
-  Left = 221
-  Top = 95
+object PBRDPORepDataMod: TPBRDPORepDataMod
   Height = 563
   Width = 741
   object GetPOsSeq00SQL: TFDQuery
@@ -101,49 +98,41 @@
     Top = 19
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq30SQL: TFDQuery
@@ -246,49 +235,41 @@
     Top = 211
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq20SQL: TFDQuery
@@ -395,49 +376,41 @@
     Top = 147
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq50SQL: TFDQuery
@@ -545,49 +518,41 @@
     Top = 339
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq40SQL: TFDQuery
@@ -696,49 +661,41 @@
     Top = 283
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq41SQL: TFDQuery
@@ -843,49 +800,41 @@
     Top = 283
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq11SQL: TFDQuery
@@ -985,49 +934,41 @@
     Top = 75
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq10SQL: TFDQuery
@@ -1132,49 +1073,41 @@
     Top = 75
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq02SQL: TFDQuery
@@ -1283,49 +1216,41 @@
     Top = 19
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq01SQL: TFDQuery
@@ -1431,49 +1356,41 @@
     Top = 19
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq21SQL: TFDQuery
@@ -1579,49 +1496,41 @@
     Top = 147
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq12SQL: TFDQuery
@@ -1727,49 +1636,41 @@
     Top = 75
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPosSeq22SQL: TFDQuery
@@ -1880,49 +1781,41 @@
     Top = 147
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq31SQL: TFDQuery
@@ -2027,49 +1920,41 @@
     Top = 211
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq32SQL: TFDQuery
@@ -2175,49 +2060,41 @@
     Top = 211
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq42SQL: TFDQuery
@@ -2323,49 +2200,41 @@
     Top = 283
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq51SQL: TFDQuery
@@ -2474,49 +2343,41 @@
     Top = 339
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq52SQL: TFDQuery
@@ -2622,49 +2483,41 @@
     Top = 339
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptInput
-      end
-      item
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
         Name = 'Date_To'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object FormRefSQL: TFDQuery
@@ -2677,9 +2530,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq60SQL: TFDQuery
@@ -2781,49 +2632,31 @@
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq61SQL: TFDQuery
@@ -2923,49 +2756,31 @@
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq62SQL: TFDQuery
@@ -3068,49 +2883,31 @@
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq70SQL: TFDQuery
@@ -3212,49 +3009,31 @@
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq71SQL: TFDQuery
@@ -3354,49 +3133,31 @@
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetPOsSeq72SQL: TFDQuery
@@ -3499,49 +3260,31 @@
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

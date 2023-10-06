@@ -1,7 +1,6 @@
 object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   Left = 131
   Top = 104
-  AutoScroll = False
   Caption = 'Product Suppliers'
   ClientHeight = 453
   ClientWidth = 539
@@ -11,12 +10,10 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
-  PixelsPerInch = 96
   TextHeight = 13
   object PartLabel: TLabel
     Left = 8
@@ -85,25 +82,27 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Top = 408
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object CancelBitBtn: TBitBtn
     Left = 440
     Top = 408
     Width = 75
     Height = 25
-    TabOrder = 5
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 384
     Width = 249
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 6
     object NameEdit: TEdit
       Left = 8
@@ -132,9 +131,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetSuppsQuery: TFDQuery
@@ -161,14 +158,10 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddSuppQuery: TFDQuery
@@ -185,24 +178,16 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Preference_Order'
-        ParamType = ptUnknown
       end>
   end
   object DelSuppsQuery: TFDQuery
@@ -215,9 +200,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object tmrSearch: TTimer

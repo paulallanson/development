@@ -114,7 +114,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, CCSCommon, pbluWorksOrdersSearch, PBMaintWorksOrders, PBRSWorksOrder,
+uses UITypes, pbDatabase, pbMainMenu, CCSCommon, pbluWorksOrdersSearch, PBMaintWorksOrders, PBRSWorksOrder,
   pbLUWorksOrdersRpts, PBMaintWOrderConfDelivs, PBLUWorksOrderDelivs, PBLaserImport,
   PBRSWorksOrderISO, PBMaintWOrderStatus;
 

@@ -3,7 +3,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   Top = 19
   Caption = 'Maintain Contract Quotes'
   ClientHeight = 704
-  ClientWidth = 982
+  ClientWidth = 984
   Color = clBtnFace
   Constraints.MinHeight = 550
   Constraints.MinWidth = 1000
@@ -24,12 +24,12 @@ object frmWTMaintContract: TfrmWTMaintContract
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 982
+    Width = 984
     Height = 36
     Align = alTop
     TabOrder = 0
     DesignSize = (
-      982
+      984
       36)
     object Label1: TLabel
       Left = 16
@@ -175,7 +175,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 685
-    Width = 982
+    Width = 984
     Height = 19
     Panels = <
       item
@@ -188,12 +188,12 @@ object frmWTMaintContract: TfrmWTMaintContract
   object pnlBottom: TPanel
     Left = 0
     Top = 644
-    Width = 982
+    Width = 984
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      982
+      984
       41)
     object lblDeleteprompt: TLabel
       Left = 638
@@ -330,13 +330,13 @@ object frmWTMaintContract: TfrmWTMaintContract
   object pnlHeader: TPanel
     Left = 0
     Top = 36
-    Width = 982
+    Width = 984
     Height = 199
     Align = alTop
     Anchors = [akRight, akBottom]
     TabOrder = 3
     DesignSize = (
-      982
+      984
       199)
     object Label16: TLabel
       Left = 16
@@ -624,7 +624,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   object pcDetails: TPageControl
     Left = 0
     Top = 235
-    Width = 982
+    Width = 984
     Height = 409
     ActivePage = tsQuotes
     Align = alClient
@@ -634,7 +634,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       object sgDetails: TStringGrid
         Left = 0
         Top = 0
-        Width = 974
+        Width = 976
         Height = 213
         Align = alClient
         ColCount = 2
@@ -654,14 +654,14 @@ object frmWTMaintContract: TfrmWTMaintContract
       object pnlDrawings: TPanel
         Left = 0
         Top = 267
-        Width = 974
+        Width = 976
         Height = 114
         Align = alBottom
         TabOrder = 1
         object lstvwLineDocuments: TListView
           Left = 1
           Top = 1
-          Width = 876
+          Width = 878
           Height = 79
           Align = alClient
           Columns = <
@@ -688,7 +688,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         object Panel3: TPanel
           Left = 1
           Top = 80
-          Width = 972
+          Width = 974
           Height = 33
           Align = alBottom
           BevelOuter = bvNone
@@ -730,7 +730,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           end
         end
         object Panel5: TPanel
-          Left = 877
+          Left = 879
           Top = 1
           Width = 96
           Height = 79
@@ -786,7 +786,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Panel4: TPanel
         Left = 0
         Top = 248
-        Width = 974
+        Width = 976
         Height = 19
         Align = alBottom
         Alignment = taLeftJustify
@@ -802,7 +802,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       object pnlPriceChange: TPanel
         Left = 0
         Top = 213
-        Width = 974
+        Width = 976
         Height = 35
         Align = alBottom
         TabOrder = 3
@@ -836,13 +836,13 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 974
+        Width = 976
         Height = 17
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          974
+          976
           17)
         object Label44: TLabel
           Left = 2
@@ -852,7 +852,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Caption = 'Documents'
         end
         object lblNotes: TLabel
-          Left = 531
+          Left = 533
           Top = 0
           Width = 28
           Height = 13
@@ -864,7 +864,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       object lstvwDocuments: TListView
         Left = 0
         Top = 17
-        Width = 542
+        Width = 544
         Height = 364
         Align = alClient
         Columns = <
@@ -888,18 +888,20 @@ object frmWTMaintContract: TfrmWTMaintContract
         OnColumnClick = lstvwDocumentsColumnClick
         OnCompare = lstvwDocumentsCompare
         OnDblClick = lstvwDocumentsDblClick
+        ExplicitWidth = 542
       end
       object Panel1: TPanel
-        Left = 573
+        Left = 575
         Top = 17
         Width = 16
         Height = 364
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 2
+        ExplicitLeft = 573
       end
       object ToolBar1: TToolBar
-        Left = 542
+        Left = 544
         Top = 17
         Width = 31
         Height = 364
@@ -912,6 +914,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         ParentShowHint = False
         ShowHint = True
         TabOrder = 3
+        ExplicitLeft = 542
         object btnExcel: TToolButton
           Left = 0
           Top = 0
@@ -957,13 +960,14 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
       end
       object pnlNotes: TPanel
-        Left = 589
+        Left = 591
         Top = 17
         Width = 385
         Height = 364
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 4
+        ExplicitLeft = 589
         object memNotes: TMemo
           Left = 0
           Top = 0

@@ -133,7 +133,7 @@ var
 
 implementation
 
-uses PBLUCust, PBDatabase, DateSelV5, PBLUFormRef, PBPODataMod, PBRPStkMove, CCSPrint, Printers;
+uses UITypes, PBLUCust, PBDatabase, DateSelV5, PBLUFormRef, PBPODataMod, PBRPStkMove, CCSPrint, Printers;
 
 {$R *.DFM}
 

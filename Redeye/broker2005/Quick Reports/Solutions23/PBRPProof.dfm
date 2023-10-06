@@ -1610,44 +1610,36 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 1
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'ByCustomer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
+        Name = 'ByCustomer'
         DataType = ftString
+      end
+      item
+        Name = 'Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'ByBranch'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object CompSRC: TDataSource
@@ -1692,14 +1684,10 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 85
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object FormRefSQL: TFDQuery
@@ -1712,9 +1700,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 102
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -1732,34 +1718,23 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Proof_History'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -1777,18 +1752,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1803,18 +1778,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'Order'
+        DataType = ftFloat
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1829,18 +1804,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1855,19 +1830,13 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 214
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_revision'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetComp: TFDQuery

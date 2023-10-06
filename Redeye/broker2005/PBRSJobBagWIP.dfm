@@ -1,9 +1,9 @@
 object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   Left = 16
   Top = 41
-  Width = 768
-  Height = 516
   Caption = 'Work In Progress Report - Purchase Orders in Job Bags'
+  ClientHeight = 477
+  ClientWidth = 752
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 768
@@ -12,24 +12,22 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 441
-    Width = 760
+    Top = 436
+    Width = 752
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
     DesignSize = (
-      760
+      752
       41)
     object pnlRightControl: TPanel
-      Left = 429
+      Left = 421
       Top = 0
       Width = 331
       Height = 41
@@ -42,8 +40,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         Width = 75
         Height = 25
         Caption = 'Pre&view'
-        TabOrder = 0
-        OnClick = PreviewBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -58,6 +54,8 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewBitBtnClick
       end
       object PrintBitBtn: TBitBtn
         Left = 232
@@ -65,8 +63,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         Width = 75
         Height = 25
         Caption = '&Print'
-        TabOrder = 1
-        OnClick = PrintBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -81,6 +77,8 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
           33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -90,8 +88,9 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Cancel'
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btnExcel: TBitBtn
       Left = 485
@@ -100,8 +99,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Excel'
-      TabOrder = 2
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -145,21 +142,23 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 2
+      OnClick = btnExcelClick
     end
   end
   object pnlDetail: TPanel
     Left = 0
     Top = 177
-    Width = 760
-    Height = 264
+    Width = 752
+    Height = 259
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
-      Width = 760
-      Height = 264
+      Width = 752
+      Height = 259
       Align = alClient
       DataSource = dsReport
       ReadOnly = True
@@ -265,7 +264,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 760
+    Width = 752
     Height = 177
     Align = alTop
     BevelOuter = bvNone
@@ -463,7 +462,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = cbSortChange
       Items.Strings = (
@@ -481,7 +479,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 5
       OnChange = cbSortChange
       Items.Strings = (
@@ -499,7 +496,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       OnChange = cbSortChange
       Items.Strings = (
@@ -512,7 +508,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         'Job Bag')
     end
     object pnlDates: TPanel
-      Left = 582
+      Left = 574
       Top = 0
       Width = 178
       Height = 177

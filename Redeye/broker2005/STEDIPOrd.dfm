@@ -21,13 +21,11 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Height = 222
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 405
-    ExplicitHeight = 227
     object strgrdPOsCreated: TStringGrid
       Left = 1
       Top = 1
-      Width = 403
-      Height = 225
+      Width = 395
+      Height = 220
       Align = alClient
       ColCount = 6
       DefaultRowHeight = 20
@@ -44,7 +42,6 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Height = 129
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 405
     object rdgrpSupplier: TRadioGroup
       Left = 16
       Top = 8
@@ -116,11 +113,10 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Height = 0
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 405
     object mmResponseDtls: TMemo
       Left = 1
       Top = 1
-      Width = 403
+      Width = 395
       Height = 98
       Align = alClient
       ScrollBars = ssVertical
@@ -134,8 +130,6 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 356
-    ExplicitWidth = 405
     DesignSize = (
       397
       41)
@@ -148,7 +142,6 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 0
-      ExplicitLeft = 319
     end
     object btbtnPrint: TBitBtn
       Left = 220
@@ -174,7 +167,6 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       TabOrder = 1
       Visible = False
       OnClick = btbtnPrintClick
-      ExplicitLeft = 228
     end
   end
   object PrintDialog1: TPrintDialog

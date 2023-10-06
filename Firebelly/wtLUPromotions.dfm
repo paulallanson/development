@@ -58,8 +58,6 @@ object frmwtLUPromotions: TfrmwtLUPromotions
       item
         Width = 50
       end>
-    ExplicitTop = 258
-    ExplicitWidth = 484
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmwtLUPromotions: TfrmwtLUPromotions
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 184
-    ExplicitWidth = 484
     DesignSize = (
       478
       74)

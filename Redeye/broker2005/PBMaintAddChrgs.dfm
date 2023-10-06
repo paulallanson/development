@@ -11,10 +11,8 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 72
@@ -30,12 +28,12 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     ParentFont = False
   end
   object grpbxDetails: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 0
     Width = 377
     Height = 97
     Caption = 'Details'
+    ParentBackground = False
     TabOrder = 0
     object lblDescription: TLabel
       Left = 16
@@ -119,9 +117,6 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -186,7 +181,10 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 310
@@ -195,8 +193,6 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -261,7 +257,9 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object qryInsAddChrg: TFDQuery
     ConnectionName = 'PB'
@@ -281,24 +279,16 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Additional_charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_price'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdAddChrg: TFDQuery
@@ -314,24 +304,16 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'additional_charge'
-        ParamType = ptUnknown
       end>
   end
   object qryDelAddChrge: TFDQuery
@@ -343,9 +325,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'additional_charge'
-        ParamType = ptUnknown
       end>
   end
   object qrySelNextAddChrg: TFDQuery

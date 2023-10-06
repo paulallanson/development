@@ -109,10 +109,8 @@ type
     procedure edtSearchChange(Sender: TObject);
     procedure tmrSearchTimer(Sender: TObject);
     procedure dblkpWCOperatorsDblClick(Sender: TObject);
-    procedure sgManDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgManDetailsSelectCell(Sender: TObject; Col, Row: Integer;
-      var CanSelect: Boolean);
+    procedure sgManDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure sgManDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure sgWCDetailsKeyPress(Sender: TObject; var Key: Char);
     procedure edtEmployeeNoExit(Sender: TObject);
     procedure btnLUEmployeeClick(Sender: TObject);
@@ -1609,8 +1607,7 @@ begin
   end;
 end;
 
-procedure TSFMaintJobLogFrm.sgManDetailsSelectCell(Sender: TObject; Col,
-  Row: Integer; var CanSelect: Boolean);
+procedure TSFMaintJobLogFrm.sgManDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 //	if (Col = 2) or (Col = 3) then
 //    sgManDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]

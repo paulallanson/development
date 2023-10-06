@@ -1501,34 +1501,24 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryActivity: TFDQuery
@@ -1542,9 +1532,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 257
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryQuotes: TFDQuery
@@ -1560,19 +1548,13 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 329
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object qrySOrders: TFDQuery
@@ -1590,19 +1572,13 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 393
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object qrySInvoices: TFDQuery
@@ -1620,19 +1596,13 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 449
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object qryActivityDetails: TFDQuery
@@ -1658,19 +1628,13 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_to'
-        ParamType = ptUnknown
       end>
   end
 end

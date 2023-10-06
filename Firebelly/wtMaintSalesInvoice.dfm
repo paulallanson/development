@@ -29,8 +29,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       item
         Width = 50
       end>
-    ExplicitTop = 593
-    ExplicitWidth = 909
   end
   object pnlBottom: TPanel
     Left = 0
@@ -40,8 +38,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 552
-    ExplicitWidth = 909
     object btnNotes: TBitBtn
       Left = 8
       Top = 8
@@ -109,7 +105,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 473
       DesignSize = (
         435
         39)
@@ -176,7 +171,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 909
     DesignSize = (
       915
       36)
@@ -270,7 +264,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       ListSource = dtmdlSalesInvoice.dsOperator
       TabOrder = 3
       OnClick = dblkpOperatorClick
-      ExplicitLeft = 743
     end
   end
   object pnlFooter: TPanel
@@ -281,8 +274,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 426
-    ExplicitWidth = 909
     DesignSize = (
       915
       126)
@@ -320,7 +311,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 723
       DesignSize = (
         185
         124)
@@ -420,7 +410,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       OnChange = memDepositChange
       OnEnter = SaveValue
       OnExit = ValidateMoney
-      ExplicitLeft = 615
     end
     object dblkpPaymentTerms: TDBLookupComboBox
       Left = 88
@@ -464,7 +453,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       TabOrder = 4
       OnEnter = SaveValue
       OnExit = ValidateMoney
-      ExplicitLeft = 615
     end
   end
   object pnlHeader: TPanel
@@ -475,7 +463,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     Align = alTop
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 909
     DesignSize = (
       915
       221)
@@ -556,7 +543,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 583
     end
     object edtAccountCode: TEdit
       Left = 589
@@ -566,7 +552,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 1
-      ExplicitLeft = 583
     end
     object btnInvToCustomer: TBitBtn
       Left = 869
@@ -586,7 +571,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       ShowHint = True
       TabOrder = 2
       OnClick = btnInvToCustomerClick
-      ExplicitLeft = 863
     end
     object memCustomer: TMemo
       Left = 96
@@ -633,7 +617,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Anchors = [akTop, akRight]
       Caption = 'lblReference'
       TabOrder = 6
-      ExplicitLeft = 751
     end
     object edtDescription: TEdit
       Left = 96
@@ -643,7 +626,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 7
       OnChange = edtDescriptionChange
-      ExplicitWidth = 816
     end
     object pnlRevenueCentre: TPanel
       Left = -2
@@ -803,8 +785,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     Caption = 'Panel6'
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 909
-    ExplicitHeight = 169
     object sgLines: TStringGrid
       Left = 1
       Top = 1
@@ -819,8 +799,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       TabOrder = 0
       OnDblClick = sgLinesDblClick
       OnDrawCell = sgLinesDrawCell
-      ExplicitWidth = 907
-      ExplicitHeight = 167
       ColWidths = (
         40
         89

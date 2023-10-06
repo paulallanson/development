@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses PBMaintCConta, PBMaintSConta, pbDatabase, pbMainMenu,
+uses UITypes, PBMaintCConta, PBMaintSConta, pbDatabase, pbMainMenu,
   PBMaintContactOnline, PBMaintContactMulti;
 
 {$R *.DFM}

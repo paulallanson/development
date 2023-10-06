@@ -131,7 +131,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 607
     end
     object PreviewBitBtn: TBitBtn
       Left = 427
@@ -162,7 +161,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
-      ExplicitLeft = 433
     end
     object PrintBitBtn: TBitBtn
       Left = 518
@@ -193,7 +191,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 524
     end
     object btbtnFax: TBitBtn
       Left = 9
@@ -305,7 +302,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 5
       OnClick = btnExcelClick
-      ExplicitLeft = 341
     end
   end
   object Panel1: TPanel
@@ -346,7 +342,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       MaxLength = 30
       TabOrder = 0
       OnExit = DateFromEditExit
-      ExplicitLeft = 567
     end
     object DateFromBitBtn: TBitBtn
       Left = 649
@@ -370,7 +365,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = DateFromBitBtnClick
-      ExplicitLeft = 655
     end
     object grpbxCust: TGroupBox
       Left = 8
@@ -489,7 +483,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       MaxLength = 30
       TabOrder = 4
       OnExit = DateToEditExit
-      ExplicitLeft = 567
     end
     object DateTobtbtn: TBitBtn
       Left = 649
@@ -513,7 +506,6 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = DateTobtbtnClick
-      ExplicitLeft = 655
     end
     object chkbxShowGoodsValue: TCheckBox
       Left = 504

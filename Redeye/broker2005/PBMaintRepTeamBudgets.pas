@@ -80,7 +80,7 @@ implementation
 
 {$R *.DFM}
 
-uses PBLURepTeam;
+uses UITypes, PBLURepTeam;
 
 procedure TPBMaintRepTeamBudgetsFrm.FormActivate(Sender: TObject);
 var

@@ -83,7 +83,7 @@ StockSQL =
 
 implementation
 
-uses
+uses UITypes, 
   PBMaintSalesInvoice, pbMainMenu;
 
 {$R *.DFM}

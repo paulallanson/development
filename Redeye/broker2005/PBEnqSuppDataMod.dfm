@@ -1,9 +1,6 @@
-﻿object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
-  OldCreateOrder = True
+object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   OnCreate = PBEnqSuppDataModFrmCreate
   OnDestroy = PBEnqSuppDataModFrmDestroy
-  Left = 60
-  Top = 120
   Height = 479
   Width = 741
   object EnqHeadSQL: TFDQuery
@@ -34,9 +31,8 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqHeadSRC: TDataSource
@@ -45,8 +41,8 @@
     Top = 16
   end
   object EnqLineSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqHeadSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select EnquiryLine.*, NCR_OTC_Mix.NCR_OTC_Descr, Product_Type.De' +
@@ -61,9 +57,8 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineSRC: TDataSource
@@ -72,8 +67,8 @@
     Top = 64
   end
   object EnqSuppSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Supplier_Enquiry.*, '
       '          Supplier.Name, '
@@ -109,14 +104,12 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqSuppSRC: TDataSource
@@ -125,8 +118,8 @@
     Top = 120
   end
   object EnqSuppQtySQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqSuppSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct '#9'Supplier,'
       #9#9#9#9#9#9'Branch_no,'
@@ -158,24 +151,20 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqSuppQtySRC: TDataSource
@@ -184,8 +173,8 @@
     Top = 176
   end
   object EnqSuppChgsSQL: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = EnqSuppSRC
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct '#9'Supplier,'
       #9#9#9#9#9#9'      Branch_no,'
@@ -210,24 +199,16 @@
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object DelChargeSQL: TFDQuery
@@ -242,24 +223,16 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object AddEnqSuppChgsSQL: TFDQuery
@@ -290,49 +263,32 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Charge_type'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
 end

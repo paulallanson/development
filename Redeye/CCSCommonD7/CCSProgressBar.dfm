@@ -11,9 +11,7 @@ object frmCCSProgressBar: TfrmCCSProgressBar
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -23,11 +21,11 @@ object frmCCSProgressBar: TfrmCCSProgressBar
     Caption = 'Please wait ............................................'
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 0
     Visible = False
     object lblExporting: TLabel

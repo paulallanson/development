@@ -11,10 +11,8 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 94
@@ -41,10 +39,6 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 1
-    ParentFont = False
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -109,7 +103,11 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 303
@@ -123,9 +121,6 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 2
-    ParentFont = False
-    TabOrder = 1
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -190,7 +185,10 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -274,9 +272,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -288,14 +284,10 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Composite_Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -317,24 +309,16 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Composite_Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object qryUpd: TFDQuery
@@ -348,24 +332,16 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Composite_Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_no'
-        ParamType = ptUnknown
       end>
   end
 end

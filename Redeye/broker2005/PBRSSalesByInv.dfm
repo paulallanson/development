@@ -24,8 +24,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 883
-    ExplicitHeight = 196
     object OleContainer1: TOleContainer
       Left = 416
       Top = 200
@@ -39,8 +37,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 887
-      Height = 203
+      Width = 875
+      Height = 185
       Align = alClient
       DataSource = dtsrcSalesByInv
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -148,7 +146,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 883
     object Label3: TLabel
       Left = 8
       Top = 183
@@ -489,8 +486,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 421
-    ExplicitWidth = 883
     DesignSize = (
       877
       41)
@@ -503,7 +498,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 650
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -613,7 +607,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
-      ExplicitLeft = 583
     end
   end
   object pnlExportPrgrss: TPanel
@@ -655,8 +648,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       item
         Width = 50
       end>
-    ExplicitTop = 462
-    ExplicitWidth = 883
   end
   object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields

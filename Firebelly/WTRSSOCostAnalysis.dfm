@@ -50,7 +50,6 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 331
   end
   object Button4: TButton
     Left = 416
@@ -62,7 +61,6 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 331
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -236,7 +234,6 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
-    ExplicitTop = 331
   end
   object btnExcel: TButton
     Left = 184
@@ -247,7 +244,6 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 331
   end
   object OleContainer1: TOleContainer
     Left = 180

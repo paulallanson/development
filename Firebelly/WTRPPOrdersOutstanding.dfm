@@ -1228,24 +1228,18 @@ object frmWTRPPOrdersOutstanding: TfrmWTRPPOrdersOutstanding
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
 end

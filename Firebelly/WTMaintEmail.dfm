@@ -11,10 +11,8 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object grpbxContact: TGroupBox
     Left = 8
@@ -85,16 +83,18 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Width = 75
     Height = 25
     Enabled = False
-    TabOrder = 2
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object btnCancel: TBitBtn
     Left = 265
     Top = 160
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object qryCContacts: TFDQuery
     ConnectionName = 'wt'
@@ -107,9 +107,8 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsContacts: TDataSource
@@ -128,9 +127,7 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
 end

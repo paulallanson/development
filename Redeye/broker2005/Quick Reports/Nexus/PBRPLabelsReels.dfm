@@ -641,9 +641,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PODelivSRC: TDataSource
@@ -671,14 +670,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -696,9 +691,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -716,9 +709,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -739,14 +730,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource

@@ -297,7 +297,7 @@ const
 
 implementation
 
-uses PBIntSelDM, pbMainMenu;
+uses UITypes, PBIntSelDM, pbMainMenu;
 
 {$R *.DFM}
 
@@ -903,8 +903,7 @@ begin
       open;
       if FieldByName('Postcode').AsString = '' then
       begin
-        MessageDlg('There is no Post Code on the Company file'+#13#10+
-                    'Please enter a Post Code for the main company record', mtWarning, [mbOK], 0);
+        MessageDlg('There is no Post Code on the Company file'+#13#10+ 'Please enter a Post Code for the main company record', mtWarning, [mbOK], 0);
         Result := false;
         exit;
       end;

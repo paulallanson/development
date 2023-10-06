@@ -41,8 +41,7 @@ type
     procedure CountGridDblClick(Sender: TObject);
     procedure ConfirmBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure CountGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+    procedure CountGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormDestroy(Sender: TObject);
     procedure UpdateTransfers;
     procedure FormatGrid;
@@ -301,12 +300,11 @@ begin
     Result := countinglist.CountLines[FSelectedLineIndex];
 end;
 
-procedure TSTStkTkbyPartFrm.CountGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+procedure TSTStkTkbyPartFrm.CountGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-  EnableButtons(aRow);
-  if FSelectedLineIndex = aRow - 1 then Exit;
-  FSelectedLineIndex := aRow - 1;
+  EnableButtons(ARow);
+  if FSelectedLineIndex = ARow - 1 then Exit;
+  FSelectedLineIndex := ARow - 1;
 end;
 
 procedure TSTStkTkbyPartFrm.FormDestroy(Sender: TObject);

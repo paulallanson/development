@@ -46,7 +46,7 @@ var
 
 implementation
 
-uses STPartSuppDM, STPartSuppRep, STPrtMnt;
+uses UITypes, STPartSuppDM, STPartSuppRep, STPrtMnt;
 
 {$R *.DFM}
 

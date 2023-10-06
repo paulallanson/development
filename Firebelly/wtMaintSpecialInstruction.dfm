@@ -1,4 +1,4 @@
-﻿object frmWTMaintSpecialInstruction: TfrmWTMaintSpecialInstruction
+object frmWTMaintSpecialInstruction: TfrmWTMaintSpecialInstruction
   Left = 514
   Top = 116
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -53,8 +51,8 @@
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object OkBitBtn: TBitBtn
     Left = 149
@@ -65,9 +63,9 @@
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = OkBitBtnClick
-    NumGlyphs = 2
   end
   object ClearBitBtn: TBitBtn
     Left = 8
@@ -76,9 +74,9 @@
     Height = 25
     Caption = 'Clear'
     Default = True
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = ClearBitBtnClick
-    NumGlyphs = 2
   end
   object edtDescription: TEdit
     Left = 8
@@ -99,8 +97,8 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -120,13 +118,13 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -143,19 +141,16 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Description'
+        DataType = ftString
+      end
+      item
         Name = 'Special_Instruction'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryZero: TFDQuery
@@ -168,8 +163,8 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -183,9 +178,8 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Special_Instruction'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

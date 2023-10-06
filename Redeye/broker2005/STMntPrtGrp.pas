@@ -43,7 +43,7 @@ var
 
 implementation
 
-uses STLUPrtGrp, pbDatabase, pbMainMenu;
+uses UITypes, STLUPrtGrp, pbDatabase, pbMainMenu;
 
 
 {$R *.DFM}

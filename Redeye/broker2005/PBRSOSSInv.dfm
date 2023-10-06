@@ -1,20 +1,18 @@
 object PBRSOSSInvFrm: TPBRSOSSInvFrm
   Left = 177
   Top = 122
-  Width = 669
-  Height = 256
   Caption = 'Oustanding Invoicing Report Selection'
+  ClientHeight = 217
+  ClientWidth = 653
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -92,8 +90,9 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Top = 184
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object rdgrpRep: TRadioGroup
     Left = 8
@@ -165,7 +164,6 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Width = 145
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 7
     OnChange = cmboSortChange
     Items.Strings = (

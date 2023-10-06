@@ -709,9 +709,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -729,9 +727,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
     Top = 21
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
 end

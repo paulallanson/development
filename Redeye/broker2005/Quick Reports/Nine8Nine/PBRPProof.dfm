@@ -18,8 +18,8 @@ object PBRPProofFrm: TPBRPProofFrm
   object PrintPOsQuickReport: TQuickRep
     Left = 112
     Top = 8
-    Width = 992
-    Height = 1403
+    Width = 794
+    Height = 1123
     ShowingPreview = False
     BeforePrint = PrintPOsQuickReportBeforePrint
     DataSet = GetProofSQL
@@ -78,10 +78,10 @@ object PBRPProofFrm: TPBRPProofFrm
     PreviewLeft = 0
     PreviewTop = 0
     object PageHeaderQRBand: TQRBand
-      Left = 47
-      Top = 47
-      Width = 898
-      Height = 454
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 363
       Frame.DrawBottom = True
       AfterPrint = PageHeaderQRBandAfterPrint
       AlignToBottom = False
@@ -90,22 +90,22 @@ object PBRPProofFrm: TPBRPProofFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        960.966666666666700000
-        1900.766666666667000000)
+        960.437500000000000000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object OrderLbl: TQRLabel
-        Left = 39
-        Top = 175
-        Width = 268
-        Height = 30
+        Left = 31
+        Top = 140
+        Width = 222
+        Height = 24
         Enabled = False
         Size.Values = (
           63.500000000000000000
-          82.550000000000000000
+          82.020833333333330000
           370.416666666666700000
-          567.266666666666700000)
+          587.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -115,7 +115,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -23
+        Font.Height = -19
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -126,15 +126,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 14
       end
       object PONumberLbl: TQRLabel
-        Left = 40
-        Top = 175
-        Width = 163
-        Height = 30
+        Left = 32
+        Top = 140
+        Width = 133
+        Height = 24
         Size.Values = (
           63.500000000000000000
           84.666666666666670000
           370.416666666666700000
-          345.016666666666700000)
+          351.895833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -144,7 +144,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -23
+        Font.Height = -19
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -155,15 +155,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 14
       end
       object QRLabel4: TQRLabel
-        Left = 40
-        Top = 255
-        Width = 72
-        Height = 18
+        Left = 32
+        Top = 204
+        Width = 62
+        Height = 14
         Size.Values = (
-          38.100000000000000000
+          37.041666666666670000
           84.666666666666670000
           539.750000000000000000
-          152.400000000000000000)
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -173,7 +173,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -184,15 +184,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 8
       end
       object YourRefLbl: TQRLabel
-        Left = 130
-        Top = 254
-        Width = 81
-        Height = 22
+        Left = 104
+        Top = 203
+        Width = 62
+        Height = 18
         Size.Values = (
-          46.566666666666670000
+          47.625000000000000000
           275.166666666666700000
-          537.633333333333300000
-          171.450000000000000000)
+          537.104166666666700000
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -202,7 +202,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -213,10 +213,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object AddressMemo: TQRMemo
-        Left = 40
-        Top = 285
-        Width = 341
-        Height = 156
+        Left = 32
+        Top = 228
+        Width = 273
+        Height = 125
         Size.Values = (
           330.729166666666700000
           84.666666666666680000
@@ -231,7 +231,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         Lines.Strings = (
@@ -243,15 +243,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 120
-        Top = 218
-        Width = 50
-        Height = 22
+        Left = 96
+        Top = 174
+        Width = 36
+        Height = 18
         Size.Values = (
-          46.566666666666670000
+          47.625000000000000000
           254.000000000000000000
-          461.433333333333300000
-          105.833333333333300000)
+          460.375000000000000000
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -262,7 +262,7 @@ object PBRPProofFrm: TPBRPProofFrm
         DataField = 'Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -275,15 +275,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel20: TQRLabel
-        Left = 40
-        Top = 220
-        Width = 72
-        Height = 18
+        Left = 32
+        Top = 176
+        Width = 60
+        Height = 14
         Size.Values = (
-          38.100000000000000000
+          37.041666666666670000
           84.666666666666670000
           465.666666666666700000
-          152.400000000000000000)
+          158.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -293,7 +293,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -304,15 +304,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 8
       end
       object DateLbl: TQRLabel
-        Left = 788
-        Top = 185
-        Width = 58
-        Height = 22
+        Left = 633
+        Top = 148
+        Width = 43
+        Height = 18
         Size.Values = (
-          46.566666666666670000
-          1667.933333333333000000
+          47.625000000000000000
+          1674.812500000000000000
           391.583333333333300000
-          122.766666666666700000)
+          113.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -322,7 +322,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -333,15 +333,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object lblProofRevision: TQRLabel
-        Left = 704
-        Top = 280
-        Width = 142
-        Height = 26
+        Left = 573
+        Top = 224
+        Width = 104
+        Height = 21
         Size.Values = (
-          55.033333333333330000
-          1490.133333333333000000
+          55.562500000000000000
+          1516.062500000000000000
           592.666666666666700000
-          300.566666666666700000)
+          275.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -351,7 +351,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -362,15 +362,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object lblOfficeContact: TQRLabel
-        Left = 735
-        Top = 220
-        Width = 112
-        Height = 26
+        Left = 592
+        Top = 176
+        Width = 86
+        Height = 21
         Size.Values = (
-          55.033333333333330000
-          1555.750000000000000000
+          55.562500000000000000
+          1566.333333333333000000
           465.666666666666700000
-          237.066666666666700000)
+          227.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -380,7 +380,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -391,16 +391,16 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRDBText1: TQRDBText
-        Left = 765
-        Top = 380
-        Width = 88
-        Height = 22
+        Left = 612
+        Top = 304
+        Width = 65
+        Height = 18
         Enabled = False
         Size.Values = (
-          46.566666666666670000
+          47.625000000000000000
           1619.250000000000000000
           804.333333333333300000
-          186.266666666666700000)
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -409,7 +409,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -423,10 +423,10 @@ object PBRPProofFrm: TPBRPProofFrm
       end
     end
     object DetailQRBand: TQRBand
-      Left = 47
-      Top = 501
-      Width = 898
-      Height = 780
+      Left = 38
+      Top = 401
+      Width = 718
+      Height = 624
       AlignToBottom = False
       BeforePrint = DetailQRBandBeforePrint
       TransparentBand = False
@@ -434,15 +434,15 @@ object PBRPProofFrm: TPBRPProofFrm
       ForceNewPage = True
       Size.Values = (
         1651.000000000000000000
-        1900.766666666667000000)
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbDetail
       object QRShape1: TQRShape
         Left = 0
-        Top = 100
-        Width = 897
-        Height = 5
+        Top = 80
+        Width = 718
+        Height = 4
         Size.Values = (
           10.583333333333330000
           0.000000000000000000
@@ -455,14 +455,14 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRLabel12: TQRLabel
-        Left = 255
-        Top = 179
-        Width = 50
-        Height = 25
+        Left = 204
+        Top = 143
+        Width = 40
+        Height = 20
         Size.Values = (
           52.916666666666670000
           539.750000000000000000
-          378.883333333333300000
+          378.354166666666700000
           105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -473,7 +473,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -484,15 +484,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel15: TQRLabel
-        Left = 755
-        Top = 179
-        Width = 37
-        Height = 25
+        Left = 604
+        Top = 143
+        Width = 27
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1598.083333333333000000
-          378.883333333333300000
-          78.316666666666670000)
+          378.354166666666700000
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -502,7 +502,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -513,10 +513,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape5: TQRShape
-        Left = 315
-        Top = 195
-        Width = 188
-        Height = 5
+        Left = 252
+        Top = 156
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           666.750000000000000000
@@ -529,10 +529,10 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRShape8: TQRShape
-        Left = 795
-        Top = 195
-        Width = 100
-        Height = 5
+        Left = 636
+        Top = 156
+        Width = 80
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1682.750000000000000000
@@ -546,14 +546,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel18: TQRLabel
         Left = 0
-        Top = 119
-        Width = 644
-        Height = 25
+        Top = 95
+        Width = 491
+        Height = 20
         Size.Values = (
           52.916666666666670000
           0.000000000000000000
-          251.883333333333300000
-          1363.133333333333000000)
+          251.354166666666700000
+          1299.104166666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -565,7 +565,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -577,14 +577,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel3: TQRLabel
         Left = 0
-        Top = 179
-        Width = 218
-        Height = 26
+        Top = 143
+        Width = 165
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          378.883333333333300000
-          461.433333333333300000)
+          378.354166666666700000
+          436.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -594,7 +594,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -606,14 +606,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel5: TQRLabel
         Left = 0
-        Top = 253
-        Width = 237
-        Height = 26
+        Top = 202
+        Width = 182
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          535.516666666666700000
-          501.650000000000000000)
+          534.458333333333300000
+          481.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -623,7 +623,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -634,14 +634,14 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 255
-        Top = 253
-        Width = 50
-        Height = 25
+        Left = 204
+        Top = 202
+        Width = 40
+        Height = 20
         Size.Values = (
           52.916666666666670000
           539.750000000000000000
-          535.516666666666700000
+          534.458333333333300000
           105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -652,7 +652,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -663,10 +663,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape2: TQRShape
-        Left = 315
-        Top = 269
-        Width = 188
-        Height = 5
+        Left = 252
+        Top = 215
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           666.750000000000000000
@@ -679,15 +679,15 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRLabel7: TQRLabel
-        Left = 755
-        Top = 253
-        Width = 37
-        Height = 25
+        Left = 604
+        Top = 202
+        Width = 27
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1598.083333333333000000
-          535.516666666666700000
-          78.316666666666670000)
+          534.458333333333300000
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -697,7 +697,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -708,10 +708,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape3: TQRShape
-        Left = 795
-        Top = 269
-        Width = 100
-        Height = 5
+        Left = 636
+        Top = 215
+        Width = 80
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1682.750000000000000000
@@ -725,14 +725,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel8: TQRLabel
         Left = 0
-        Top = 324
-        Width = 148
-        Height = 26
+        Top = 259
+        Width = 114
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          685.800000000000000000
-          313.266666666666700000)
+          685.270833333333300000
+          301.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -742,7 +742,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -753,14 +753,14 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 255
-        Top = 324
-        Width = 50
-        Height = 25
+        Left = 204
+        Top = 259
+        Width = 40
+        Height = 20
         Size.Values = (
           52.916666666666670000
           539.750000000000000000
-          685.800000000000000000
+          685.270833333333300000
           105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -771,7 +771,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -782,10 +782,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape4: TQRShape
-        Left = 315
-        Top = 340
-        Width = 188
-        Height = 5
+        Left = 252
+        Top = 272
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           666.750000000000000000
@@ -798,15 +798,15 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRLabel10: TQRLabel
-        Left = 755
-        Top = 324
-        Width = 37
-        Height = 25
+        Left = 604
+        Top = 259
+        Width = 27
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1598.083333333333000000
-          685.800000000000000000
-          78.316666666666670000)
+          685.270833333333300000
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -816,7 +816,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -827,10 +827,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape6: TQRShape
-        Left = 795
-        Top = 340
-        Width = 100
-        Height = 5
+        Left = 636
+        Top = 272
+        Width = 80
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1682.750000000000000000
@@ -844,9 +844,9 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRShape7: TQRShape
         Left = 0
-        Top = 380
-        Width = 897
-        Height = 5
+        Top = 304
+        Width = 718
+        Height = 4
         Size.Values = (
           10.583333333333330000
           0.000000000000000000
@@ -860,9 +860,9 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRShape9: TQRShape
         Left = 0
-        Top = 578
-        Width = 897
-        Height = 5
+        Top = 462
+        Width = 718
+        Height = 4
         Size.Values = (
           10.583333333333330000
           0.000000000000000000
@@ -876,14 +876,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel11: TQRLabel
         Left = 0
-        Top = 585
-        Width = 315
-        Height = 25
+        Top = 468
+        Width = 241
+        Height = 20
         Size.Values = (
           52.916666666666670000
           0.000000000000000000
           1238.250000000000000000
-          666.750000000000000000)
+          637.645833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -893,7 +893,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -904,15 +904,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 20
-        Top = 8
-        Width = 82
-        Height = 25
+        Left = 16
+        Top = 6
+        Width = 61
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          16.933333333333330000
-          173.566666666666700000)
+          15.875000000000000000
+          161.395833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -922,7 +922,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -933,15 +933,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel14: TQRLabel
-        Left = 120
-        Top = 8
-        Width = 79
-        Height = 25
+        Left = 96
+        Top = 6
+        Width = 59
+        Height = 20
         Size.Values = (
           52.916666666666670000
           254.000000000000000000
-          16.933333333333330000
-          167.216666666666700000)
+          15.875000000000000000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -951,7 +951,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -962,15 +962,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel16: TQRLabel
-        Left = 680
-        Top = 8
-        Width = 53
-        Height = 25
+        Left = 544
+        Top = 6
+        Width = 39
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1439.333333333333000000
-          16.933333333333330000
-          112.183333333333300000)
+          15.875000000000000000
+          103.187500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -980,7 +980,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -991,15 +991,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel17: TQRLabel
-        Left = 790
-        Top = 8
-        Width = 55
-        Height = 25
+        Left = 632
+        Top = 6
+        Width = 41
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1672.166666666667000000
-          16.933333333333330000
-          116.416666666666700000)
+          15.875000000000000000
+          108.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1009,7 +1009,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -1020,15 +1020,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel25: TQRLabel
-        Left = 764
-        Top = 34
-        Width = 13
-        Height = 26
+        Left = 611
+        Top = 27
+        Width = 10
+        Height = 21
         Size.Values = (
-          55.033333333333330000
-          1617.133333333333000000
-          71.966666666666670000
-          27.516666666666670000)
+          55.562500000000000000
+          1616.604166666667000000
+          71.437500000000000000
+          26.458333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1038,7 +1038,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1050,14 +1050,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel26: TQRLabel
         Left = 0
-        Top = 390
-        Width = 628
-        Height = 26
+        Top = 312
+        Width = 487
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
           825.500000000000000000
-          1329.266666666667000000)
+          1288.520833333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1069,7 +1069,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1081,14 +1081,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel27: TQRLabel
         Left = 0
-        Top = 464
-        Width = 413
-        Height = 26
+        Top = 371
+        Width = 319
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          982.133333333333300000
-          874.183333333333300000)
+          981.604166666666700000
+          844.020833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1098,7 +1098,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1109,15 +1109,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel28: TQRLabel
-        Left = 409
-        Top = 464
-        Width = 442
-        Height = 26
+        Left = 327
+        Top = 371
+        Width = 337
+        Height = 21
         Size.Values = (
-          55.033333333333330000
-          865.716666666666700000
-          982.133333333333300000
-          935.566666666666700000)
+          55.562500000000000000
+          865.187500000000000000
+          981.604166666666700000
+          891.645833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1127,7 +1127,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -1139,14 +1139,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel29: TQRLabel
         Left = 0
-        Top = 488
-        Width = 117
-        Height = 26
+        Top = 390
+        Width = 90
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          1032.933333333333000000
-          247.650000000000000000)
+          1031.875000000000000000
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1156,7 +1156,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -1167,15 +1167,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel30: TQRLabel
-        Left = 120
-        Top = 488
-        Width = 670
-        Height = 26
+        Left = 96
+        Top = 390
+        Width = 520
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           254.000000000000000000
-          1032.933333333333000000
-          1418.166666666667000000)
+          1031.875000000000000000
+          1375.833333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1187,7 +1187,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1199,14 +1199,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel31: TQRLabel
         Left = 0
-        Top = 536
-        Width = 567
-        Height = 26
+        Top = 429
+        Width = 439
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          1134.533333333333000000
-          1200.150000000000000000)
+          1135.062500000000000000
+          1161.520833333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1218,7 +1218,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1229,15 +1229,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object LabQuantity: TQRLabel
-        Left = 20
-        Top = 34
-        Width = 106
-        Height = 26
+        Left = 16
+        Top = 27
+        Width = 80
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           42.333333333333330000
-          71.966666666666670000
-          224.366666666666700000)
+          71.437500000000000000
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1247,7 +1247,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1258,10 +1258,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object LabJobTitle: TQRLabel
-        Left = 120
-        Top = 34
-        Width = 511
-        Height = 26
+        Left = 96
+        Top = 27
+        Width = 409
+        Height = 21
         Size.Values = (
           55.562500000000000000
           254.000000000000000000
@@ -1277,7 +1277,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1288,15 +1288,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object LabDepth: TQRLabel
-        Left = 645
-        Top = 34
-        Width = 84
-        Height = 26
+        Left = 520
+        Top = 27
+        Width = 63
+        Height = 21
         Size.Values = (
-          55.033333333333330000
-          1365.250000000000000000
-          71.966666666666670000
-          177.800000000000000000)
+          55.562500000000000000
+          1375.833333333333000000
+          71.437500000000000000
+          166.687500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1306,7 +1306,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1317,15 +1317,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object LabWidth: TQRLabel
-        Left = 790
-        Top = 34
-        Width = 83
-        Height = 26
+        Left = 632
+        Top = 27
+        Width = 62
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           1672.166666666667000000
-          71.966666666666670000
-          175.683333333333300000)
+          71.437500000000000000
+          164.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1335,7 +1335,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1346,10 +1346,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRShape10: TQRShape
-        Left = 565
-        Top = 195
-        Width = 188
-        Height = 5
+        Left = 452
+        Top = 156
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1195.916666666667000000
@@ -1362,10 +1362,10 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRShape11: TQRShape
-        Left = 565
-        Top = 269
-        Width = 188
-        Height = 5
+        Left = 452
+        Top = 215
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1195.916666666667000000
@@ -1378,10 +1378,10 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRShape12: TQRShape
-        Left = 565
-        Top = 340
-        Width = 188
-        Height = 5
+        Left = 452
+        Top = 272
+        Width = 150
+        Height = 4
         Size.Values = (
           10.583333333333330000
           1195.916666666667000000
@@ -1394,15 +1394,15 @@ object PBRPProofFrm: TPBRPProofFrm
         VertAdjust = 0
       end
       object QRLabel1: TQRLabel
-        Left = 515
-        Top = 179
-        Width = 44
-        Height = 25
+        Left = 412
+        Top = 143
+        Width = 34
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1090.083333333333000000
-          378.883333333333300000
-          93.133333333333330000)
+          378.354166666666700000
+          89.958333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1412,7 +1412,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1423,15 +1423,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel2: TQRLabel
-        Left = 515
-        Top = 253
-        Width = 44
-        Height = 25
+        Left = 412
+        Top = 202
+        Width = 34
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1090.083333333333000000
-          535.516666666666700000
-          93.133333333333330000)
+          534.458333333333300000
+          89.958333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1441,7 +1441,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1452,15 +1452,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object QRLabel19: TQRLabel
-        Left = 515
-        Top = 324
-        Width = 44
-        Height = 25
+        Left = 412
+        Top = 259
+        Width = 34
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1090.083333333333000000
-          685.800000000000000000
-          93.133333333333330000)
+          685.270833333333300000
+          89.958333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1470,7 +1470,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1482,14 +1482,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel21: TQRLabel
         Left = 0
-        Top = 513
-        Width = 355
-        Height = 26
+        Top = 410
+        Width = 274
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          1085.850000000000000000
-          751.416666666666700000)
+          1084.791666666667000000
+          724.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1499,7 +1499,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1511,14 +1511,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel22: TQRLabel
         Left = 0
-        Top = 415
-        Width = 882
-        Height = 26
+        Top = 332
+        Width = 684
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
           878.416666666666700000
-          1866.900000000000000000)
+          1809.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1530,7 +1530,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1542,14 +1542,14 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       object QRLabel23: TQRLabel
         Left = 0
-        Top = 439
-        Width = 54
-        Height = 26
+        Top = 351
+        Width = 42
+        Height = 21
         Size.Values = (
-          55.033333333333330000
+          55.562500000000000000
           0.000000000000000000
-          929.216666666666700000
-          114.300000000000000000)
+          928.687500000000000000
+          111.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1559,7 +1559,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1570,15 +1570,15 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
       object gtlblFSCClaim: TQRLabel
-        Left = 20
-        Top = 72
-        Width = 65
-        Height = 20
+        Left = 16
+        Top = 58
+        Width = 58
+        Height = 16
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
-          152.400000000000000000
-          137.583333333333300000)
+          153.458333333333300000
+          153.458333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1588,7 +1588,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -1600,26 +1600,26 @@ object PBRPProofFrm: TPBRPProofFrm
       end
     end
     object QRBand1: TQRBand
-      Left = 47
-      Top = 1281
-      Width = 898
-      Height = 108
+      Left = 38
+      Top = 1025
+      Width = 718
+      Height = 86
       AfterPrint = QRBand1AfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        228.600000000000000000
-        1900.766666666667000000)
+        227.541666666666700000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object QRMemoCmpnyNm: TQRMemo
-        Left = 60
-        Top = 10
-        Width = 761
-        Height = 61
+        Left = 48
+        Top = 8
+        Width = 609
+        Height = 49
         Enabled = False
         Size.Values = (
           129.645833333333300000
@@ -1636,7 +1636,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -1646,10 +1646,10 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 8
       end
       object qrlblVatNo: TQRMemo
-        Left = 91
-        Top = 75
-        Width = 700
-        Height = 21
+        Left = 73
+        Top = 60
+        Width = 560
+        Height = 17
         Size.Values = (
           44.979166666666670000
           193.145833333333300000
@@ -1664,7 +1664,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         Lines.Strings = (
@@ -1677,10 +1677,10 @@ object PBRPProofFrm: TPBRPProofFrm
       end
     end
     object ReportImage: TQRImage
-      Left = 436
-      Top = 31
-      Width = 121
-      Height = 190
+      Left = 349
+      Top = 25
+      Width = 97
+      Height = 152
       Enabled = False
       Size.Values = (
         402.166666666666600000
@@ -1791,44 +1791,36 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 65
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'ByCustomer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
+        Name = 'ByCustomer'
         DataType = ftString
+      end
+      item
+        Name = 'Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'ByBranch'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetCompSQL: TFDQuery
@@ -1882,14 +1874,10 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 85
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object FormRefSQL: TFDQuery
@@ -1902,9 +1890,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 62
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -1922,34 +1908,23 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Proof_History'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -1967,18 +1942,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1993,18 +1968,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'Order'
+        DataType = ftFloat
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -2019,18 +1994,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -2045,19 +2020,13 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 166
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_revision'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFSCClaim: TFDQuery
@@ -2070,9 +2039,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 286
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -6,7 +6,6 @@ object PBRPProofFrm: TPBRPProofFrm
   HorzScrollBar.Range = 1200
   VertScrollBar.Position = 815
   VertScrollBar.Range = 2000
-  AutoScroll = False
   Caption = 'Print Proof Approval Letter'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,21 +13,15 @@ object PBRPProofFrm: TPBRPProofFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 14
   object PrintPOsQuickReport: TQuickRep
     Left = 16
     Top = -807
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = PrintPOsQuickReportBeforePrint
     DataSet = GetProofSQL
     Font.Charset = DEFAULT_CHARSET
@@ -48,6 +41,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -61,38 +55,45 @@ object PBRPProofFrm: TPBRPProofFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageHeaderQRBand: TQRBand
       Left = 64
       Top = 38
       Width = 692
       Height = 411
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = PageHeaderQRBandAfterPrint
       AlignToBottom = False
       BeforePrint = PageHeaderQRBandBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         1087.437500000000000000
         1830.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object ReportImage: TQRImage
         Left = 194
@@ -100,16 +101,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Width = 295
         Height = 136
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           359.833333333333000000
           513.291666666667000000
           2.645833333333330000
           780.520833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object OrderLbl: TQRLabel
@@ -118,20 +117,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Width = 178
         Height = 24
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1352.020833333330000000
           52.916666666666700000
           470.958333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PROOF APPROVAL No. '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -141,7 +136,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object PONumberLbl: TQRLabel
@@ -149,20 +146,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 20
         Width = 107
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1524.000000000000000000
           52.916666666666700000
           283.104166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PONumberLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -172,7 +165,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object QRLabel4: TQRLabel
@@ -180,20 +175,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 220
         Width = 60
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           0.000000000000000000
           582.083333333333000000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'ORDER REF:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -203,7 +194,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object YourRefLbl: TQRLabel
@@ -211,20 +204,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 236
         Width = 67
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           624.416666666667000000
           177.270833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'YourRefLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -234,7 +223,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object AddressMemo: TQRMemo
@@ -242,20 +233,17 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 268
         Width = 273
         Height = 125
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           330.729166666667000000
           0.000000000000000000
           709.083333333333000000
           722.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -266,7 +254,8 @@ object PBRPProofFrm: TPBRPProofFrm
           'For Delivery To:')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object QRDBText2: TQRDBText
@@ -274,20 +263,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 192
         Width = 45
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           0.000000000000000000
           508.000000000000000000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = GetProofSQL
         DataField = 'Name'
@@ -298,7 +283,11 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel20: TQRLabel
@@ -306,20 +295,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 176
         Width = 57
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           0.000000000000000000
           465.666666666667000000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUSTOMER:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -329,7 +314,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object DateLbl: TQRLabel
@@ -337,24 +324,22 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 128
         Width = 37
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666700000
           1608.666666666670000000
           338.666666666667000000
           97.895833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DateLbl'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblProofRevision: TQRLabel
@@ -362,20 +347,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 152
         Width = 105
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           1428.750000000000000000
           402.166666666667000000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblProofRevision'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -385,7 +366,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
     end
@@ -394,35 +377,30 @@ object PBRPProofFrm: TPBRPProofFrm
       Top = 449
       Width = 692
       Height = 609
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = DetailQRBandBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         1611.312500000000000000
         1830.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbDetail
       object QRShape1: TQRShape
         Left = 0
         Top = 112
         Width = 690
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           0.000000000000000000
           296.333333333333000000
           1825.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -431,20 +409,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 175
         Width = 34
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           603.250000000000000000
           463.020833333333000000
           89.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Signed'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -454,7 +428,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel15: TQRLabel
@@ -462,20 +438,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 175
         Width = 24
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           1301.750000000000000000
           463.020833333333000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -485,7 +457,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape5: TQRShape
@@ -493,16 +467,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 188
         Width = 209
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           709.083333333333000000
           497.416666666667000000
           552.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -511,16 +483,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 188
         Width = 100
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           1365.250000000000000000
           497.416666666667000000
           264.583333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -529,20 +499,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 127
         Width = 466
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           336.020833333333000000
           1232.958333333330000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'All proof details have been carefully checked and are approved a' +
           's follows:-'
@@ -554,7 +520,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel3: TQRLabel
@@ -562,20 +530,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 175
         Width = 180
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           463.020833333333000000
           476.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PROCEED, NO AMENDMENTS'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -585,7 +549,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel5: TQRLabel
@@ -593,20 +559,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 234
         Width = 203
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           619.125000000000000000
           537.104166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PROCEED, AFTER AMENDMENTS'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -616,7 +578,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel6: TQRLabel
@@ -624,20 +588,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 234
         Width = 34
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           603.250000000000000000
           619.125000000000000000
           89.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Signed'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -647,7 +607,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape2: TQRShape
@@ -655,16 +617,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 247
         Width = 209
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           709.083333333333000000
           653.520833333333000000
           552.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -673,20 +633,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 234
         Width = 24
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           1301.750000000000000000
           619.125000000000000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -696,7 +652,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape3: TQRShape
@@ -704,16 +662,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 247
         Width = 100
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           1365.250000000000000000
           653.520833333333000000
           264.583333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -722,20 +678,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 291
         Width = 124
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           769.937500000000000000
           328.083333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'AMEND & REPROOF'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -745,7 +697,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel9: TQRLabel
@@ -753,20 +707,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 291
         Width = 34
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           603.250000000000000000
           769.937500000000000000
           89.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Signed'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -776,7 +726,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape4: TQRShape
@@ -784,16 +736,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 304
         Width = 209
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           709.083333333333000000
           804.333333333333000000
           552.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -802,20 +752,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 291
         Width = 24
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           1301.750000000000000000
           769.937500000000000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -825,7 +771,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape6: TQRShape
@@ -833,16 +781,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 304
         Width = 100
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           1365.250000000000000000
           804.333333333333000000
           264.583333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -851,16 +797,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 336
         Width = 690
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           0.000000000000000000
           889.000000000000000000
           1825.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -869,16 +813,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 457
         Width = 690
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           0.000000000000000000
           1209.145833333330000000
           1825.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -887,20 +829,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 471
         Width = 219
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           0.000000000000000000
           1246.187500000000000000
           579.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUSTOMER REMARKS / SPECIAL NOTES :'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -910,7 +848,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape10: TQRShape
@@ -918,16 +858,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 609
         Width = 690
         Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           10.583333333333300000
           0.000000000000000000
           1611.312500000000000000
           1825.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -936,20 +874,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 6
         Width = 47
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           42.333333333333300000
           15.875000000000000000
           124.354166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'QUANTITY'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -959,7 +893,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel14: TQRLabel
@@ -967,20 +903,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 6
         Width = 46
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           338.666666666667000000
           15.875000000000000000
           121.708333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'JOB TITLE'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -990,7 +922,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel16: TQRLabel
@@ -998,20 +932,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 6
         Width = 32
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           1375.833333333330000000
           15.875000000000000000
           84.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DEPTH'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1021,7 +951,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel17: TQRLabel
@@ -1029,20 +961,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 6
         Width = 32
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666700000
           1545.166666666670000000
           15.875000000000000000
           84.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'WIDTH'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1052,7 +980,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel25: TQRLabel
@@ -1060,20 +990,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 27
         Width = 10
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           1489.604166666670000000
           71.437500000000000000
           26.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'X'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1083,7 +1009,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel27: TQRLabel
@@ -1091,20 +1019,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 350
         Width = 623
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           926.041666666666700000
           1648.354166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'Please check layout, spacing and spelling very carefully paying ' +
           'particular attention to names and telephone'
@@ -1116,7 +1040,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel30: TQRLabel
@@ -1124,20 +1050,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 370
         Width = 606
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           978.958333333333300000
           1603.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'numbers etc. as no liability can be accepted for errors and omis' +
           'sions once the proof has been approved.'
@@ -1149,7 +1071,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel31: TQRLabel
@@ -1157,20 +1081,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 405
         Width = 515
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           1071.562500000000000000
           1362.604166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'Work cannot proceed until we have this proof slip signed and ret' +
           'urned to us together with'
@@ -1182,7 +1102,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel32: TQRLabel
@@ -1190,20 +1112,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 425
         Width = 242
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           1124.479166666667000000
           640.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'your original copy and all previous proofs.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1213,7 +1131,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object LabQuantity: TQRLabel
@@ -1221,20 +1141,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 27
         Width = 76
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           42.333333333333300000
           71.437500000000000000
           201.083333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LabQuantity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1244,7 +1160,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object LabJobTitle: TQRLabel
@@ -1252,20 +1170,17 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 27
         Width = 337
         Height = 41
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           108.479166666667000000
           338.666666666667000000
           71.437500000000000000
           891.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'LabJobTitle'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1275,7 +1190,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object LabDepth: TQRLabel
@@ -1283,20 +1200,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 27
         Width = 60
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           1299.104166666670000000
           71.437500000000000000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LabDepth'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1306,7 +1219,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object LabWidth: TQRLabel
@@ -1314,20 +1229,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 27
         Width = 59
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           1545.166666666670000000
           71.437500000000000000
           156.104166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LabWidth'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1337,7 +1248,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object FormRefLbl: TQRLabel
@@ -1345,20 +1258,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 70
         Width = 63
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           338.666666666667000000
           185.208333333333000000
           166.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FormRefLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1368,7 +1277,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object FormRefDescLbl: TQRLabel
@@ -1376,20 +1287,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 89
         Width = 89
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           338.666666666667000000
           235.479166666667000000
           235.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FormRefDescLbl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1399,7 +1306,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1408,39 +1317,32 @@ object PBRPProofFrm: TPBRPProofFrm
       Top = 1058
       Width = 692
       Height = 112
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRBand1AfterPrint
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         296.333333333333300000
         1830.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageFooter
       object QRLabel19: TQRLabel
         Left = 8
         Top = 7
         Width = 97
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           21.166666666666670000
           18.520833333333330000
           256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Processed By :  '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1450,7 +1352,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText8: TQRDBText
@@ -1458,20 +1362,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 6
         Width = 64
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           317.500000000000000000
           15.875000000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = GetProofSQL
         DataField = 'Contact_Name'
@@ -1482,7 +1382,11 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblCompanyAddress: TQRLabel
@@ -1490,20 +1394,16 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 69
         Width = 96
         Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           21.166666666666700000
           182.562500000000000000
           254.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblCompanyAddress'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1513,7 +1413,9 @@ object PBRPProofFrm: TPBRPProofFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape11: TQRShape
@@ -1521,16 +1423,14 @@ object PBRPProofFrm: TPBRPProofFrm
         Top = 50
         Width = 690
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666700000
           0.000000000000000000
           132.291666666667000000
           1825.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1632,44 +1532,36 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 161
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'ByCustomer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
+        Name = 'ByCustomer'
         DataType = ftString
+      end
+      item
+        Name = 'Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'ByBranch'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetCompSQL: TFDQuery
@@ -1723,14 +1615,10 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 133
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object FormRefSQL: TFDQuery
@@ -1743,9 +1631,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 126
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -1763,34 +1649,23 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Proof_History'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -1808,18 +1683,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1834,18 +1709,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'Order'
+        DataType = ftFloat
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1860,18 +1735,18 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1886,19 +1761,13 @@ object PBRPProofFrm: TPBRPProofFrm
     Top = 206
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_revision'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

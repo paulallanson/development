@@ -254,29 +254,24 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel4'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DelIntSelsSQL: TFDQuery
@@ -290,19 +285,14 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end>
   end
   object LoadIntSelSQL: TFDQuery
@@ -330,19 +320,14 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 320
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetIntSelSQL: TFDQuery
@@ -371,9 +356,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 288
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetUnSelProdTypsSQL: TFDQuery
@@ -406,9 +390,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UnSelProdTypsDS: TDataSource
@@ -451,14 +434,12 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 304
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UnSelCapsDS: TDataSource
@@ -478,19 +459,14 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end>
   end
   object GetDefCapSQL: TFDQuery
@@ -512,9 +488,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 304
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object TreeViewImageList: TImageList
@@ -810,24 +785,18 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 288
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -851,24 +820,17 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'DeleteRun'
-        ParamType = ptUnknown
       end>
   end
   object GetNewCapSQL: TFDQuery
@@ -890,19 +852,13 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Top = 231
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
 end

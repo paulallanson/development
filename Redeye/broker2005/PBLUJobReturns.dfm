@@ -1,26 +1,24 @@
 object frmPBLUJobReturns: TfrmPBLUJobReturns
   Left = 118
   Top = 111
-  Width = 959
-  Height = 467
   Caption = 'Job Returns'
+  ClientHeight = 428
+  ClientWidth = 943
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 414
-    Width = 951
+    Top = 409
+    Width = 943
     Height = 19
     Panels = <
       item
@@ -32,13 +30,13 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
   end
   object Panel1: TPanel
     Left = 0
-    Top = 373
-    Width = 951
+    Top = 368
+    Width = 943
     Height = 41
     Align = alBottom
     TabOrder = 1
     object Panel2: TPanel
-      Left = 677
+      Left = 669
       Top = 1
       Width = 273
       Height = 39
@@ -76,10 +74,10 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
     end
   end
   object Panel3: TPanel
-    Left = 856
+    Left = 848
     Top = 105
     Width = 95
-    Height = 268
+    Height = 263
     Align = alRight
     TabOrder = 2
     object btnReturns: TButton
@@ -95,13 +93,13 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 951
+    Width = 943
     Height = 105
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
     DesignSize = (
-      951
+      943
       105)
     object Label1: TLabel
       Left = 24
@@ -203,8 +201,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
   object dbgDetails: TDBGrid
     Left = 0
     Top = 105
-    Width = 856
-    Height = 268
+    Width = 848
+    Height = 263
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 4
@@ -284,9 +282,7 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

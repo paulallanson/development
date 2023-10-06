@@ -31,22 +31,21 @@ object frmpbluCustOrders: TfrmpbluCustOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 797
+        Width = 787
       end>
-    ExplicitWidth = 799
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 784
+      Width = 778
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 784
+        Width = 766
         Height = 41
-        ButtonHeight = 29
+        ButtonHeight = 44
         ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstOrders
@@ -195,8 +194,6 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 490
-    ExplicitWidth = 799
     DesignSize = (
       793
       41)
@@ -225,7 +222,6 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 725
     end
     object edtSearch: TEdit
       Left = 104
@@ -243,7 +239,6 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 627
     end
     object chkbxShowUnauthorised: TCheckBox
       Left = 368
@@ -276,8 +271,6 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       item
         Width = 50
       end>
-    ExplicitTop = 533
-    ExplicitWidth = 807
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -416,14 +409,12 @@ object frmpbluCustOrders: TfrmpbluCustOrders
         Expanded = False
         FieldName = 'Rep_Name'
         Title.Caption = 'Rep'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Width = 64
         Visible = True
       end>
   end
@@ -437,7 +428,6 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 799
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -466,7 +456,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 390
+      Width = 384
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -474,22 +464,21 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 390
+        Width = 372
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 388
+            Width = 366
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 375
+          Width = 357
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 47
+          ButtonWidth = 62
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

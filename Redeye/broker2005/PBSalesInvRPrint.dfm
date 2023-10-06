@@ -72,7 +72,6 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBtnClick
-    ExplicitTop = 247
   end
   object PreviewBtn: TBitBtn
     Left = 210
@@ -97,7 +96,6 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBtnClick
-    ExplicitTop = 247
   end
   object CloseBitBtn: TBitBtn
     Left = 16
@@ -108,7 +106,6 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 247
   end
   object SelectLst: TListBox
     Left = 336
@@ -143,7 +140,6 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = EmailBitBtnClick
-    ExplicitTop = 247
   end
   object chkbxPrintLogo: TCheckBox
     Left = 16
@@ -231,7 +227,6 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
-    ExplicitLeft = 381
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'

@@ -94,8 +94,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 261
-    ExplicitWidth = 348
     DesignSize = (
       336
       65)
@@ -107,7 +105,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
       Anchors = [akLeft, akRight, akBottom]
       TabOrder = 0
       OnChange = NameEditChange
-      ExplicitWidth = 332
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
@@ -132,8 +129,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    ExplicitLeft = 370
-    ExplicitTop = 332
   end
   object CloseBitBtn: TBitBtn
     Left = 358
@@ -144,8 +139,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitLeft = 370
-    ExplicitTop = 365
   end
   object FuncGrpBox: TGroupBox
     Left = 352
@@ -156,7 +149,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 364
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 16
@@ -238,8 +230,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     BorderStyle = bsSingle
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 331
-    ExplicitWidth = 349
     object DBContactText: TDBText
       Left = 67
       Top = 3
@@ -313,7 +303,6 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 6
-    ExplicitLeft = 359
     object EventsBitBtn: TBitBtn
       Left = 7
       Top = 16

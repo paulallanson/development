@@ -207,8 +207,6 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 191
-    ExplicitWidth = 468
     object DelLabel: TLabel
       Left = 128
       Top = 6

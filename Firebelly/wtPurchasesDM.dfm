@@ -1,7 +1,6 @@
 object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
-  Height = 706
-  Width = 1280
-  PixelsPerInch = 120
+  Height = 565
+  Width = 1024
   object qryAllPurchases: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
@@ -44,8 +43,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE (1=1)')
-    Left = 40
-    Top = 30
+    Left = 32
+    Top = 24
     object qryAllPurchasesPurchase_Order: TIntegerField
       FieldName = 'Purchase_Order'
       Origin = 'Purchase_Order'
@@ -151,8 +150,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsAllPurchases: TDataSource
     DataSet = qryAllPurchases
-    Left = 160
-    Top = 30
+    Left = 128
+    Top = 24
   end
   object qryPOHeader: TFDQuery
     ConnectionName = 'WT'
@@ -198,8 +197,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE Purchase_Order.Purchase_Order = :Purchase_Order')
-    Left = 40
-    Top = 230
+    Left = 32
+    Top = 184
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -210,18 +209,18 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
     SQL.Strings = (
       'select *'
       'from Operator')
-    Left = 660
-    Top = 30
+    Left = 528
+    Top = 24
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 730
-    Top = 30
+    Left = 584
+    Top = 24
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 310
-    Top = 30
+    Left = 248
+    Top = 24
   end
   object qryGetSupplier: TFDQuery
     ConnectionName = 'wt'
@@ -235,8 +234,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        Fax_number,'
       '        web_address'
       'from Supplier where Supplier = :Supplier')
-    Left = 660
-    Top = 110
+    Left = 528
+    Top = 88
     ParamData = <
       item
         Name = 'Supplier'
@@ -285,8 +284,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        :On_Hold,'
       '        :Descriptive_Reference'
       ')')
-    Left = 40
-    Top = 90
+    Left = 32
+    Top = 72
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -374,8 +373,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        On_Hold = :On_Hold,'
       '        Descriptive_Reference = :Descriptive_Reference'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 40
-    Top = 160
+    Left = 32
+    Top = 128
     ParamData = <
       item
         Name = 'Supplier'
@@ -441,8 +440,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'select Last_Purchase_Order_number'
       'from Company'
       'where company = 1')
-    Left = 390
-    Top = 30
+    Left = 312
+    Top = 24
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'WT'
@@ -450,8 +449,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'update company'
       'set last_purchase_order_number = :last_purchase_order_number'
       'where company = 1')
-    Left = 490
-    Top = 30
+    Left = 392
+    Top = 24
     ParamData = <
       item
         Name = 'last_purchase_order_number'
@@ -463,8 +462,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'update Purchase_order'
       'set Purchase_order_status = :Purchase_order_Status'
       'where Purchase_order = :Purchase_order')
-    Left = 40
-    Top = 300
+    Left = 32
+    Top = 240
     ParamData = <
       item
         Name = 'Purchase_order_Status'
@@ -479,8 +478,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'select *'
       'from VAt'
       'order by Vat_Rate')
-    Left = 660
-    Top = 190
+    Left = 528
+    Top = 152
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
       Origin = 'Vat'
@@ -506,8 +505,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsVAT: TDataSource
     DataSet = qryVAT
-    Left = 720
-    Top = 190
+    Left = 576
+    Top = 152
   end
   object qryGetContacts: TFDQuery
     ConnectionName = 'WT'
@@ -517,8 +516,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Contact'
       'WHERE Supplier = :Supplier AND '
       '((inactive = '#39'N'#39') OR (inactive IS NULL))')
-    Left = 660
-    Top = 260
+    Left = 528
+    Top = 208
     ParamData = <
       item
         Name = 'Supplier'
@@ -526,8 +525,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 950
-    Top = 30
+    Left = 760
+    Top = 24
   end
   object qryMaterial: TFDQuery
     ConnectionName = 'wt'
@@ -536,8 +535,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'from Material_Type'
       'where (inactive = '#39'N'#39' or inactive is null) '
       'order by Description')
-    Left = 880
-    Top = 30
+    Left = 704
+    Top = 24
   end
   object qryWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -549,8 +548,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where (worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness)'
       'order by thickness_mm')
-    Left = 880
-    Top = 180
+    Left = 704
+    Top = 144
     ParamData = <
       item
         Name = 'worktop'
@@ -558,13 +557,13 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 950
-    Top = 100
+    Left = 760
+    Top = 80
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 950
-    Top = 180
+    Left = 760
+    Top = 144
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
@@ -576,8 +575,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 880
-    Top = 100
+    Left = 704
+    Top = 80
     ParamData = <
       item
         Name = 'material_type'
@@ -645,8 +644,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Stock_item.Stock_item = Purchase_orderline.Stock_it' +
         'em'
       'WHERE Purchase_OrderLine.Purchase_Order = :Purchase_Order')
-    Left = 150
-    Top = 230
+    Left = 120
+    Top = 184
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -667,8 +666,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Material_Type_Slab_Size'
       'WHERE Material_Type = :Material_Type'
       'ORDER BY Length')
-    Left = 880
-    Top = 260
+    Left = 704
+    Top = 208
     ParamData = <
       item
         Name = 'Material_Type'
@@ -676,8 +675,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsMaterialSlab: TDataSource
     DataSet = qryMaterialSlab
-    Left = 960
-    Top = 260
+    Left = 768
+    Top = 208
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -703,8 +702,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where Supplier = :Supplier AND'
       '      Worktop = :Worktop and'
       '      Thickness = :Thickness')
-    Left = 1100
-    Top = 180
+    Left = 880
+    Top = 144
     ParamData = <
       item
         Name = 'Supplier'
@@ -777,8 +776,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ':GRN_Number,'
       ':DEL_Number'
       ')')
-    Left = 40
-    Top = 370
+    Left = 32
+    Top = 296
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -897,8 +896,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'WHERE Purchase_Order = :Purchase_Order AND'
       '      Line_no = :Line_no'
       '')
-    Left = 40
-    Top = 440
+    Left = 32
+    Top = 352
     ParamData = <
       item
         Name = 'Stock_Item'
@@ -1005,8 +1004,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '      ON Operator.Operator = Quote.Operator)'
       '      ON Supplier.Supplier = Material_Type.Preferred_Supplier'
       'WHERE Quote.Quote = :Quote')
-    Left = 40
-    Top = 510
+    Left = 32
+    Top = 408
     ParamData = <
       item
         Name = 'Quote'
@@ -1020,8 +1019,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Contact'
       'WHERE Supplier = :Supplier AND '
       '((inactive = '#39'N'#39') OR (inactive IS NULL))')
-    Left = 660
-    Top = 340
+    Left = 528
+    Top = 272
     ParamData = <
       item
         Name = 'Supplier'
@@ -1044,8 +1043,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE Quote_Slab.Quote = :Quote AND Quote_Slab.Supplier = :Suppl' +
         'ier')
-    Left = 40
-    Top = 580
+    Left = 32
+    Top = 464
     ParamData = <
       item
         Name = 'Quote'
@@ -1089,8 +1088,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '  Worktop.Description,'
       '  Quote_Element.Thickness,'
       '  Thickness.Thickness_mm')
-    Left = 140
-    Top = 510
+    Left = 112
+    Top = 408
     ParamData = <
       item
         Name = 'Quote'
@@ -1120,8 +1119,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where supplier = :supplier and'
       'worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 660
-    Top = 510
+    Left = 528
+    Top = 408
     ParamData = <
       item
         Name = 'supplier'
@@ -1142,8 +1141,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'From Material_Type_Slab_Size'
       'Where Material_Type = :Material_Type'
       'Order By Length')
-    Left = 660
-    Top = 580
+    Left = 528
+    Top = 464
     ParamData = <
       item
         Name = 'Material_Type'
@@ -1179,8 +1178,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE Quote_Slab.Quote = :Quote AND Quote_Slab.Supplier = :Suppl' +
         'ier')
-    Left = 140
-    Top = 580
+    Left = 112
+    Top = 464
     ParamData = <
       item
         Name = 'Quote'
@@ -1195,8 +1194,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'UPDATE Purchase_Order'
       'SET Purchase_Order_Status = :Purchase_Order_Status'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 250
-    Top = 510
+    Left = 200
+    Top = 408
     ParamData = <
       item
         Name = 'Purchase_Order_Status'
@@ -1211,8 +1210,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'UPDATE Purchase_OrderLine'
       'SET Quantity_Delivered = (Quantity * :Multiplier)'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 360
-    Top = 510
+    Left = 288
+    Top = 408
     ParamData = <
       item
         Name = 'Multiplier'
@@ -1228,8 +1227,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Product'
       'WHERE Supplier = :Supplier AND (Inactive = '#39'N'#39')'
       'ORDER BY Supplier_Product_Code')
-    Left = 900
-    Top = 510
+    Left = 720
+    Top = 408
     ParamData = <
       item
         Name = 'Supplier'
@@ -1237,8 +1236,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsGetProducts: TDataSource
     DataSet = qryGetProducts
-    Left = 990
-    Top = 510
+    Left = 792
+    Top = 408
   end
   object qryGetProduct: TFDQuery
     ConnectionName = 'WT'
@@ -1261,8 +1260,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'WHERE (Supplier = :Supplier) AND'
       '      (Supplier_Product_Code = :Supplier_Product_Code) AND'
       '      (Inactive = '#39'N'#39')')
-    Left = 900
-    Top = 580
+    Left = 720
+    Top = 464
     ParamData = <
       item
         Name = 'Supplier'
@@ -1311,8 +1310,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE (1=1)')
-    Left = 250
-    Top = 30
+    Left = 200
+    Top = 24
   end
   object qryGetSOLines: TFDQuery
     ConnectionName = 'WT'
@@ -1387,8 +1386,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '      (Sales_Order.Sales_order = :Sales_Order)'
       '      )'
       'ORDER BY Sales_Order_Line.Sales_Order DESC')
-    Left = 250
-    Top = 100
+    Left = 200
+    Top = 80
     ParamData = <
       item
         Name = 'Supplier'
@@ -1405,8 +1404,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   end
   object dtsGetSOLines: TDataSource
     DataSet = qryGetSOLines
-    Left = 160
-    Top = 100
+    Left = 128
+    Top = 80
   end
   object qryQuoteSlab: TFDQuery
     ConnectionName = 'WT'
@@ -1438,8 +1437,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE quote_Slab.Quote = :Quote and Quote_Slab.Slab_Number = :Sl' +
         'ab_Number')
-    Left = 250
-    Top = 580
+    Left = 200
+    Top = 464
     ParamData = <
       item
         Name = 'Quote'
@@ -1501,8 +1500,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         ' = 0)) and'
       '      (Sales_Order.Customer_Name LIKE :Customer_Name)'
       'ORDER BY Sales_Order_Line.Sales_Order DESC')
-    Left = 340
-    Top = 100
+    Left = 272
+    Top = 80
     ParamData = <
       item
         Name = 'Supplier'
@@ -1539,8 +1538,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ' where POL.Purchase_Order = :Purchase_Order) as total_Delivered'
       'from Purchase_OrderLine'
       'where Purchase_OrderLine.Purchase_Order = :Purchase_Order')
-    Left = 150
-    Top = 300
+    Left = 120
+    Top = 240
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1574,8 +1573,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         'ctive = '#39'N'#39'))) as total_Purchased'
       'From Sales_Order'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 660
-    Top = 420
+    Left = 528
+    Top = 336
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1593,8 +1592,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'Update Sales_Order'
       'Set Sales_Order_Status = :Sales_Order_Status'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 760
-    Top = 420
+    Left = 608
+    Top = 336
     ParamData = <
       item
         Name = 'Sales_Order_Status'
@@ -1644,8 +1643,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE quote_Slab.Quote = :Quote AND quote_Slab.Supplier = :Suppl' +
         'ier AND quote_Slab.Adhesive_Product_Code <> '#39#39)
-    Left = 360
-    Top = 580
+    Left = 288
+    Top = 464
     ParamData = <
       item
         Name = 'Quote'
@@ -1661,8 +1660,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'from Purchase_Order_internal_Note, Operator'
       'where Purchase_Order = :Purchase_Order and'
       'Purchase_Order_internal_Note.Operator = Operator.Operator')
-    Left = 260
-    Top = 230
+    Left = 208
+    Top = 184
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1677,8 +1676,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         'where Purchase_Order = :Purchase_Order and Internal_Note = :Inte' +
         'rnal_Note and'
       'Purchase_Order_internal_Note.Operator = Operator.Operator')
-    Left = 340
-    Top = 230
+    Left = 272
+    Top = 184
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1702,8 +1701,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 340
-    Top = 290
+    Left = 272
+    Top = 232
     ParamData = <
       item
         Name = 'Purchase_Order'

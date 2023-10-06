@@ -90,7 +90,7 @@ var
 
 implementation
 
-uses STStkValRep, STStkVarRep, STPrtMnt, STLUPrtStor, STMntPrtBin, PBLURep,
+uses UITypes, STStkValRep, STStkVarRep, STPrtMnt, STLUPrtStor, STMntPrtBin, PBLURep,
   PBLUCust, CCSCommon, printers, ccsprint;
 
 {$R *.DFM}

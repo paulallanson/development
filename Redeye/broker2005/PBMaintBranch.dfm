@@ -131,7 +131,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = OKBitBtnClick
-    ExplicitTop = 582
   end
   object CancelBitBtn: TBitBtn
     Left = 372
@@ -209,7 +208,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = CancelBitBtnClick
-    ExplicitTop = 582
   end
   object PrintBitBtn: TBitBtn
     Left = 8
@@ -220,7 +218,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     Caption = 'Print'
     TabOrder = 5
     OnClick = PrintBitBtnClick
-    ExplicitTop = 582
   end
   object pgBranches: TPageControl
     Left = 8
@@ -232,13 +229,13 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     object tbGeneral: TTabSheet
       Caption = 'General Details'
       object pnlDets: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 425
         Height = 477
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           425
@@ -489,13 +486,13 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           OnExit = AccCodeEditExit
         end
         object InvToGrpBox: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 363
           Width = 409
           Height = 110
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Invoice To'
+          ParentBackground = False
           TabOrder = 18
           DesignSize = (
             409
@@ -884,7 +881,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     ReadOnly = True
     TabOrder = 0
     Text = 'CustNameEdit'
-    ExplicitWidth = 299
   end
   object NameEdit: TEdit
     Left = 87
@@ -896,7 +892,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     TabOrder = 1
     Text = 'NameEdit'
     OnChange = NameEditChange
-    ExplicitWidth = 299
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'

@@ -11,22 +11,20 @@ object STRSLabelsfrm: TSTRSLabelsfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object POGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
     Height = 65
     Caption = 'Delivery details for order '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
@@ -58,12 +56,12 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 126
     Width = 209
     Height = 130
     Caption = 'Box Quantities'
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 50
@@ -131,12 +129,12 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     end
   end
   object GroupBox3: TGroupBox
-    ParentBackground = False
     Left = 224
     Top = 126
     Width = 177
     Height = 91
     Caption = 'Numbering'
+    ParentBackground = False
     TabOrder = 2
     object Label6: TLabel
       Left = 24
@@ -178,9 +176,10 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 144
@@ -194,9 +193,6 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -211,13 +207,16 @@ object STRSLabelsfrm: TSTRSLabelsfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 393
     Height = 55
+    ParentBackground = False
     TabOrder = 5
     object Label9: TLabel
       Left = 8
@@ -241,8 +240,6 @@ object STRSLabelsfrm: TSTRSLabelsfrm
       Top = 18
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -257,6 +254,8 @@ object STRSLabelsfrm: TSTRSLabelsfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
   end
   object PrintBitBtn: TBitBtn
@@ -272,9 +271,6 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 6
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -289,6 +285,9 @@ object STRSLabelsfrm: TSTRSLabelsfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 6
+    OnClick = PrintBitBtnClick
   end
   object CountSQL: TFDQuery
     ConnectionName = 'PB'
@@ -308,9 +307,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end>
   end
 end

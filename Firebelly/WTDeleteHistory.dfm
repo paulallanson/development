@@ -102,7 +102,6 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     TabOrder = 5
     OnChange = CheckOK
     OnExit = edtDateRequiredExit
-    ExplicitLeft = 134
   end
   object btnDateRequired: TBitBtn
     Left = 218
@@ -126,7 +125,6 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     NumGlyphs = 2
     TabOrder = 6
     OnClick = btnDateRequiredClick
-    ExplicitLeft = 230
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'

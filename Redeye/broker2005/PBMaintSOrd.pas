@@ -103,9 +103,9 @@ type
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
     procedure LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+      ACol, ARow: Integer; var CanSelect: Boolean);
     procedure LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+      vRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure CstCntrBitBtnClick(Sender: TObject);
@@ -903,7 +903,7 @@ begin
 end;
 
 procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 (*	if (Col = 1) or
      (Col = 4) then
@@ -912,12 +912,12 @@ begin
     LineDetsStringGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing];
 
 *)
-  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
+  if FSelectedLineIndex = ARow - 1 then Exit;
+  FSelectedLineIndex := ARow - 1;
 end;
 
 procedure TSTMntSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+  vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
 begin

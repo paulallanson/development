@@ -69,7 +69,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBMaintJobBagNonConfDoc;
+uses UITypes, pbMainMenu, PBMaintJobBagNonConfDoc;
 
 {$R *.dfm}
 

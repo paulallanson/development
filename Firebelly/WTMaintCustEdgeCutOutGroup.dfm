@@ -11,13 +11,11 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     379
     244)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -76,9 +74,9 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -88,9 +86,9 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 8
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object edtDescription: TEdit
     Left = 96
@@ -129,8 +127,6 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 3
-    OnClick = btnDateEffectiveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -145,6 +141,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnDateEffectiveClick
   end
   object edtDateInEffective: TEdit
     Left = 95
@@ -161,8 +159,6 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 5
-    OnClick = btnDateInEffectiveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -177,6 +173,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = btnDateInEffectiveClick
   end
   object chkbxUseForGeneralQuoting: TCheckBox
     Left = 8
@@ -212,34 +210,22 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_For_General_Quoting'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Effective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InEffective_Date'
-        ParamType = ptUnknown
       end>
   end
   object qryUpd: TFDQuery
@@ -257,39 +243,25 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_For_General_Quoting'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Effective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InEffective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryMaterialType: TFDQuery
@@ -303,9 +275,7 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Left = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object srcMaterialtype: TDataSource

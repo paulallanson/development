@@ -57,8 +57,6 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
       item
         Width = 50
       end>
-    ExplicitTop = 299
-    ExplicitWidth = 440
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 226
-    ExplicitWidth = 440
     DesignSize = (
       434
       73)

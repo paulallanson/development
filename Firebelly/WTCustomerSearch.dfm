@@ -11,12 +11,10 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
     261
     335)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 10
@@ -170,8 +168,6 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Top = 221
     Width = 25
     Height = 25
-    TabOrder = 10
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -186,6 +182,8 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = btnDateClick
   end
   object chkbxIncludeProspects: TCheckBox
     Left = 16

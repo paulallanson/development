@@ -90,7 +90,7 @@ var
 
 implementation
 
-uses pbMainMenu, ccscommon;
+uses Types, pbMainMenu, ccscommon;
 
 {$R *.dfm}
 

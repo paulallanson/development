@@ -1,30 +1,24 @@
 object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
   Left = 264
   Top = 113
-  Width = 1220
-  Height = 631
   Caption = 'FSC Claim Report'
+  ClientHeight = 592
+  ClientWidth = 1204
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 56
     Top = 32
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +38,7 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -57,32 +52,36 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrpPageheader: TQRBand
       Left = 38
       Top = 38
       Width = 718
       Height = 75
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Style = psDashDot
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -94,26 +93,24 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Size.Values = (
         198.437500000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
         Left = 278
         Top = 2
         Width = 161
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
-          735.541666666666800000
+          735.541666666666700000
           5.291666666666667000
           425.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Material Claim Report'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -123,7 +120,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object QRLblSelection: TQRLabel
@@ -131,20 +130,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 31
         Width = 74
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          851.958333333333400000
-          82.020833333333340000
+          851.958333333333300000
+          82.020833333333330000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'QRLblSelection'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -154,7 +149,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateSelection: TQRLabel
@@ -162,20 +159,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 50
         Width = 87
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           833.437500000000000000
           132.291666666666700000
           230.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateSelection'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -185,7 +178,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -193,19 +188,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1733.020833333333000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
@@ -214,7 +206,10 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData1: TQRSysData
@@ -222,19 +217,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 25
         Width = 66
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1706.562500000000000000
-          66.145833333333340000
+          66.145833333333330000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
@@ -245,6 +237,8 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         ParentFont = False
         Text = 'Page '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -253,18 +247,15 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 130
       Width = 718
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Claim_Description'
       FooterBand = qrFootFSC
       Master = qrsubdetails
@@ -274,20 +265,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 101
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           21.166666666666670000
           13.229166666666670000
           267.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Material Category:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -297,7 +284,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object GrpByQRDBText: TQRDBText
@@ -305,20 +294,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 86
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          304.270833333333400000
+          42.333333333333330000
+          304.270833333333300000
           13.229166666666670000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Claim_Description'
@@ -329,7 +314,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -338,40 +327,33 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 202
       Width = 718
       Height = 26
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrFootProductTypeAfterPrint
       AlignToBottom = False
       BeforePrint = qrFootProductTypeBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        68.791666666666680000
+        68.791666666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText6: TQRDBText
         Left = 136
         Top = 6
         Width = 128
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
-          359.833333333333400000
+          359.833333333333300000
           15.875000000000000000
           338.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Product_Type_Description'
@@ -382,7 +364,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText7: TQRDBText
@@ -390,20 +376,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 6
         Width = 125
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           698.500000000000000000
           15.875000000000000000
           330.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'FSC_Product_Type_Code'
@@ -414,7 +396,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReceived: TQRLabel
@@ -422,20 +408,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1095.375000000000000000
           13.229166666666670000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReceived'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -445,7 +427,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblInStock: TQRLabel
@@ -453,20 +437,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1367.895833333333000000
           13.229166666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblInStock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -476,7 +456,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDespatched: TQRLabel
@@ -484,20 +466,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 79
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1608.666666666667000000
           13.229166666666670000
           209.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDespatched'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -507,7 +485,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrshpproductTypeLine: TQRShape
@@ -515,16 +495,14 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = -3
         Width = 281
         Height = 10
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           26.458333333333330000
           1076.854166666667000000
           -7.937500000000000000
           743.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -535,20 +513,17 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 178
       Width = 718
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrsubdetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsubdetailsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       PrintBefore = False
@@ -558,20 +533,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 4
         Width = 81
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           -13.229166666666670000
           10.583333333333330000
           214.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Purchase_Order'
@@ -582,7 +553,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -590,20 +565,17 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 4
         Width = 255
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           216.958333333333400000
           10.583333333333330000
           674.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customers_Desc'
@@ -614,7 +586,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
@@ -622,20 +598,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 4
         Width = 89
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
-          814.916666666666800000
+          814.916666666666700000
           10.583333333333330000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Deliv_Actual'
@@ -646,7 +618,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
@@ -654,20 +630,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 4
         Width = 69
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1084.791666666667000000
           10.583333333333330000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Qty_Received'
@@ -678,7 +650,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblPOInStock: TQRLabel
@@ -686,20 +662,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 3
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1328.208333333333000000
           7.937500000000000000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblPOInStock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -709,7 +681,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblPODespatched: TQRLabel
@@ -717,20 +691,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 3
         Width = 93
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1574.270833333333000000
           7.937500000000000000
           246.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblPODespatched'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -740,7 +710,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -749,14 +721,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 154
       Width = 718
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -768,6 +735,8 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Size.Values = (
         63.500000000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Product_Type_Description'
       FooterBand = qrFootProductType
       Master = qrsubdetails
@@ -777,20 +746,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 5
         Width = 128
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           275.166666666666700000
           13.229166666666670000
           338.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Product_Type_Description'
@@ -801,7 +766,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -809,20 +778,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 4
         Width = 77
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           63.500000000000000000
           10.583333333333330000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product Type:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -832,7 +797,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -841,40 +808,33 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 228
       Width = 718
       Height = 40
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrFootFSCAfterPrint
       AlignToBottom = False
       BeforePrint = qrFootFSCBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText9: TQRDBText
         Left = 211
         Top = 10
         Width = 101
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          558.270833333333400000
+          42.333333333333330000
+          558.270833333333300000
           26.458333333333330000
           267.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Claim_Description'
@@ -885,7 +845,11 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblFSCReceived: TQRLabel
@@ -893,20 +857,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 11
         Width = 97
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1010.708333333333000000
           29.104166666666670000
-          256.645833333333400000)
+          256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblFSCReceived'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -916,7 +876,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblFSCInStock: TQRLabel
@@ -924,20 +886,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 11
         Width = 88
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1283.229166666667000000
           29.104166666666670000
-          232.833333333333400000)
+          232.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblFSCInStock'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -947,7 +905,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblFSCDespatched: TQRLabel
@@ -955,20 +915,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 11
         Width = 112
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1521.354166666667000000
           29.104166666666670000
-          296.333333333333400000)
+          296.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblFSCDespatched'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -978,7 +934,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel10: TQRLabel
@@ -986,20 +944,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 10
         Width = 38
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          867.833333333333500000
+          42.333333333333330000
+          867.833333333333300000
           26.458333333333330000
           100.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Totals:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1009,7 +963,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape1: TQRShape
@@ -1017,16 +973,14 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 281
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1079.500000000000000000
           0.000000000000000000
           743.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1036,16 +990,14 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 25
         Width = 281
         Height = 13
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           34.395833333333340000
           1079.500000000000000000
           66.145833333333340000
           743.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1056,37 +1008,32 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 268
       Width = 718
       Height = 17
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         44.979166666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      PrintOrder = cboAfterParent
       object QRLabel3: TQRLabel
         Left = 27
         Top = 0
         Width = 48
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           71.437500000000000000
           0.000000000000000000
           127.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order No.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1096,7 +1043,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -1104,20 +1053,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 46
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           1143.000000000000000000
           0.000000000000000000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Received'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1127,7 +1072,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel11: TQRLabel
@@ -1135,20 +1082,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 39
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1412.875000000000000000
           0.000000000000000000
           103.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'In Stock'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1158,7 +1101,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel14: TQRLabel
@@ -1166,20 +1111,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1664.229166666667000000
           0.000000000000000000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Despatched'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1189,7 +1130,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel15: TQRLabel
@@ -1197,20 +1140,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 55
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           219.604166666666700000
           0.000000000000000000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1220,7 +1159,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel16: TQRLabel
@@ -1228,20 +1169,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 53
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          915.458333333333200000
+          42.333333333333330000
+          915.458333333333300000
           0.000000000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Rec'#39'd'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1251,7 +1188,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1260,38 +1199,33 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       Top = 113
       Width = 718
       Height = 17
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         44.979166666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrpPageheader
+      PrintOrder = cboAfterParent
       object QRLabel6: TQRLabel
         Left = 136
         Top = 0
         Width = 65
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          359.833333333333400000
+          42.333333333333330000
+          359.833333333333300000
           0.000000000000000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product Type'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1301,7 +1235,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel7: TQRLabel
@@ -1309,20 +1245,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 89
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
-          783.166666666666800000
+          42.333333333333330000
+          783.166666666666700000
           0.000000000000000000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FSC Product Code'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1332,7 +1264,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel8: TQRLabel
@@ -1340,20 +1274,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 46
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333340000
+          42.333333333333330000
           1143.000000000000000000
           0.000000000000000000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Received'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1363,7 +1293,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel12: TQRLabel
@@ -1371,20 +1303,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 39
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1412.875000000000000000
           0.000000000000000000
           103.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'In Stock'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1394,7 +1322,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel13: TQRLabel
@@ -1402,20 +1332,16 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Top = 0
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1664.229166666667000000
           0.000000000000000000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Despatched'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1425,7 +1351,9 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1506,44 +1434,34 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Claim_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Claim_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Claim_Type'
+      end
+      item
+        Name = 'Claim_Type'
+      end
+      item
+        Name = 'Product_Type'
         DataType = ftInteger
-        Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
+        Name = 'Product_Type'
+        DataType = ftInteger
+      end
+      item
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
     object qryReportPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
@@ -1615,14 +1533,10 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
 end

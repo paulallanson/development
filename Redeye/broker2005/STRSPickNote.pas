@@ -63,7 +63,7 @@ var
 
 implementation
 
-uses STRPPick, printers, pbDatabase, dateselv5, pbMainMenu;
+uses UITypes, FireDAC.Stan.Param, STRPPick, printers, pbDatabase, dateselv5, pbMainMenu;
 
 {$R *.DFM}
 

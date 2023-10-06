@@ -110,7 +110,7 @@ var
 
 implementation
 
-uses wtLUworktops, wtMain, wtDataModule, wtLUMaterialUse;
+uses UITypes, wtLUworktops, wtMain, wtDataModule, wtLUMaterialUse;
 
 {$R *.dfm}
 

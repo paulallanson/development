@@ -1,9 +1,9 @@
 object SFMaintJobLogFrm: TSFMaintJobLogFrm
   Left = 234
   Top = 72
-  Width = 760
-  Height = 595
   Caption = 'Job Time Record'
+  ClientHeight = 556
+  ClientWidth = 744
   Color = clBtnFace
   Constraints.MaxHeight = 800
   Constraints.MaxWidth = 780
@@ -15,18 +15,16 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 506
-    Width = 752
+    Top = 501
+    Width = 744
     Height = 36
     Align = alBottom
     BevelOuter = bvNone
@@ -51,8 +49,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       Height = 24
       Caption = 'Save'
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -71,20 +67,23 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 384
       Top = 7
       Width = 75
       Height = 24
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 752
+    Width = 744
     Height = 142
     Align = alTop
     TabOrder = 0
@@ -139,9 +138,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       Width = 25
       Height = 25
       Hint = 'select activity date'
-      TabOrder = 1
-      TabStop = False
-      OnClick = btnActivityDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -156,6 +152,9 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      TabStop = False
+      OnClick = btnActivityDateClick
     end
     object dblkpDepartment: TDBLookupComboBox
       Left = 120
@@ -221,7 +220,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   object pnlJobBag: TPanel
     Left = 0
     Top = 142
-    Width = 752
+    Width = 744
     Height = 65
     Align = alTop
     TabOrder = 1
@@ -274,7 +273,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       Width = 113
       Height = 21
       CharCase = ecUpperCase
-      ItemHeight = 13
       TabOrder = 0
       OnChange = cmbJobBagChange
       OnExit = cmbJobBagExit
@@ -308,8 +306,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   object pgTimeDetails: TPageControl
     Left = 0
     Top = 207
-    Width = 752
-    Height = 299
+    Width = 744
+    Height = 294
     ActivePage = tbsWorkCentre
     Align = alClient
     TabOrder = 2
@@ -369,7 +367,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object pnlWCDets: TPanel
         Left = 0
         Top = 0
-        Width = 744
+        Width = 736
         Height = 193
         Align = alTop
         BevelOuter = bvNone
@@ -464,7 +462,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           TabOrder = 5
           OnClick = EnableOK
           OnKeyPress = cmbFormatKeyPress
@@ -577,16 +574,16 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object pnlWorkCentre: TPanel
         Left = 0
         Top = 193
-        Width = 744
-        Height = 96
+        Width = 736
+        Height = 91
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
         object pnlUnassWCOperatorsList: TPanel
-          Left = 394
+          Left = 386
           Top = 0
           Width = 350
-          Height = 96
+          Height = 91
           Align = alRight
           TabOrder = 0
           object pnlWCOperatorsTop: TPanel
@@ -600,7 +597,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           end
           object pnlWCOperatorsBottom: TPanel
             Left = 1
-            Top = 66
+            Top = 61
             Width = 348
             Height = 29
             Align = alBottom
@@ -649,8 +646,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         object pnlWCOperatorsCenter: TPanel
           Left = 350
           Top = 0
-          Width = 44
-          Height = 96
+          Width = 36
+          Height = 91
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -659,7 +656,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           Left = 0
           Top = 0
           Width = 350
-          Height = 96
+          Height = 91
           Align = alLeft
           TabOrder = 2
           object Panel2: TPanel
@@ -675,7 +672,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             Left = 1
             Top = 25
             Width = 348
-            Height = 70
+            Height = 65
             Align = alClient
             ItemHeight = 13
             TabOrder = 1
@@ -700,8 +697,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object sgManDetails: TStringGrid
         Left = 0
         Top = 25
-        Width = 744
-        Height = 264
+        Width = 736
+        Height = 259
         Align = alClient
         ColCount = 4
         DefaultColWidth = 30
@@ -711,6 +708,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         OnDrawCell = sgManDetailsDrawCell
         OnKeyPress = sgWCDetailsKeyPress
         OnSelectCell = sgManDetailsSelectCell
+        ExplicitWidth = 744
+        ExplicitHeight = 264
         ColWidths = (
           30
           241
@@ -720,11 +719,12 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object pnlManDetsTop: TPanel
         Left = 0
         Top = 0
-        Width = 744
+        Width = 736
         Height = 25
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitWidth = 744
         object Label12: TLabel
           Left = 8
           Top = 5
@@ -744,7 +744,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Top = 76
         Width = 145
         Height = 21
-        ItemHeight = 13
         TabOrder = 2
         Visible = False
         OnChange = cmbManOvertimeChange
@@ -856,7 +855,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Top = 80
         Width = 145
         Height = 21
-        ItemHeight = 13
         TabOrder = 3
         Visible = False
         OnChange = cmbManTimeChange
@@ -1005,7 +1003,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Top = 40
         Width = 84
         Height = 21
-        ItemHeight = 13
         TabOrder = 1
         OnExit = cmbLabourHoursExit
         OnKeyPress = cmbLabourHoursKeyPress
@@ -1117,7 +1114,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Top = 72
         Width = 84
         Height = 21
-        ItemHeight = 13
         TabOrder = 2
         OnExit = cmbLabourHoursExit
         OnKeyPress = cmbLabourHoursKeyPress
@@ -1228,8 +1224,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 542
-    Width = 752
+    Top = 537
+    Width = 744
     Height = 19
     Panels = <
       item

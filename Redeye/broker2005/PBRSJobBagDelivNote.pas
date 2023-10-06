@@ -85,7 +85,7 @@ var
 
 implementation
 
-uses PBLUDeliveriesDM, printers, dateselv5, pbMainMenu, PBRPJobBagDelivNote;
+uses UITypes, PBLUDeliveriesDM, printers, dateselv5, pbMainMenu, PBRPJobBagDelivNote;
 
 {$R *.DFM}
 

@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses PBLURep, PBLUCust, PBPOObjects, PBRPOSSInvJobBags;
+uses UITypes, PBLURep, PBLUCust, PBPOObjects, PBRPOSSInvJobBags;
 
 {$R *.DFM}
 

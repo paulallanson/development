@@ -11,14 +11,12 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
     755
     592)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -148,8 +146,6 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 2
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -168,6 +164,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 366
@@ -175,8 +173,9 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GroupBox1: TGroupBox
     Left = 112
@@ -547,8 +546,6 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Top = 118
       Width = 25
       Height = 23
-      TabOrder = 4
-      OnClick = btbtnClearAccInfoClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -563,14 +560,14 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = btbtnClearAccInfoClick
     end
     object BitBtn1: TBitBtn
       Left = 288
       Top = 183
       Width = 25
       Height = 23
-      TabOrder = 7
-      OnClick = BitBtn1Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -585,14 +582,14 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 7
+      OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
       Left = 288
       Top = 212
       Width = 25
       Height = 23
-      TabOrder = 10
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -607,14 +604,14 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 10
+      OnClick = BitBtn2Click
     end
     object BitBtn3: TBitBtn
       Left = 288
       Top = 274
       Width = 25
       Height = 23
-      TabOrder = 16
-      OnClick = BitBtn3Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -629,14 +626,14 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 16
+      OnClick = BitBtn3Click
     end
     object BitBtn4: TBitBtn
       Left = 288
       Top = 454
       Width = 25
       Height = 23
-      TabOrder = 23
-      OnClick = BitBtn4Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -651,14 +648,14 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 23
+      OnClick = BitBtn4Click
     end
     object BitBtn5: TBitBtn
       Left = 288
       Top = 424
       Width = 25
       Height = 23
-      TabOrder = 20
-      OnClick = BitBtn5Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -673,6 +670,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 20
+      OnClick = BitBtn5Click
     end
     object dblkpImportance: TDBLookupComboBox
       Tag = 1
@@ -708,8 +707,6 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Top = 244
       Width = 25
       Height = 23
-      TabOrder = 13
-      OnClick = BitBtn7Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -724,6 +721,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 13
+      OnClick = BitBtn7Click
     end
     object edtAnalysisTo1: TEdit
       Tag = 1
@@ -779,8 +778,6 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Top = 86
       Width = 25
       Height = 23
-      TabOrder = 28
-      OnClick = BitBtn9Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -795,6 +792,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 28
+      OnClick = BitBtn9Click
     end
     object dblkpSecondaryRep: TDBLookupComboBox
       Tag = 1
@@ -830,8 +829,6 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Top = 150
       Width = 25
       Height = 23
-      TabOrder = 31
-      OnClick = BitBtn11Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -846,6 +843,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      TabOrder = 31
+      OnClick = BitBtn11Click
     end
     object edtAnalysisTo3: TEdit
       Tag = 1

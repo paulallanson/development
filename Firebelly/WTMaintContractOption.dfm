@@ -11,13 +11,11 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     527
     233)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -65,8 +63,6 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 5
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -85,6 +81,8 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
     Left = 279
@@ -92,9 +90,10 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 6
     OnClick = BitBtn2Click
-    Kind = bkCancel
   end
   object dblkpOptions: TDBLookupComboBox
     Left = 120
@@ -130,10 +129,10 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 1
     OnClick = btnOptionsClick
-    NumGlyphs = 2
   end
   object dblkpThickness: TDBLookupComboBox
     Left = 120
@@ -162,9 +161,7 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryOptionThickness: TFDQuery
@@ -186,14 +183,10 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsOptionThickness: TDataSource

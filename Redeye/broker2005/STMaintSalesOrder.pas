@@ -86,7 +86,7 @@ var
 
 implementation
 
-uses STSODataMod, STMaintSalesOrderLine, STMaintSalesOrderLineValues, CCSCommon;
+uses FireDAC.Stan.Param, UITypes, STSODataMod, STMaintSalesOrderLine, STMaintSalesOrderLineValues, CCSCommon;
 
 {$R *.dfm}
 
@@ -364,8 +364,7 @@ begin
           parambyname('Quantity_Wastage').asinteger := WasteQty;
           if InvQty > 0 then
             parambyname('Quantity_Invoiced').asinteger := DelQty
-          else
-            parambyname('Quantity_Invoiced').asinteger := 0;
+          else parambyname('Quantity_Invoiced').asinteger := 0;
           parambyname('Part_Sales_Price').asfloat := Sell_Price;
           parambyname('Sell_Pack_Quantity').asinteger := SellPackQuantity;
           execsql;

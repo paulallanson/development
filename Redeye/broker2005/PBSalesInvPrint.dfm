@@ -1,4 +1,4 @@
-﻿object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
+object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   Left = 273
   Top = 145
   Caption = 'Print Sales Invoices'
@@ -108,7 +108,6 @@
     OnClick = PreviewBitBtnClick
   end
   object SelectionGroup: TRadioGroup
-    ParentBackground = False
     Left = 24
     Top = 16
     Width = 345
@@ -118,6 +117,7 @@
     Items.Strings = (
       'Print selected'
       'Print ALL')
+    ParentBackground = False
     TabOrder = 0
   end
   object CloseBitBtn: TBitBtn
@@ -261,9 +261,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object GetInvCustSQL: TFDQuery
@@ -348,9 +346,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object GetCreditCustSQL: TFDQuery
@@ -434,9 +430,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object InvHeadSQL: TFDQuery
@@ -556,24 +550,17 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditEmail: TFDQuery
@@ -637,24 +624,17 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object InvPrintSQL: TFDQuery
@@ -672,9 +652,7 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object InvLineSQL: TFDQuery
@@ -732,14 +710,10 @@
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Zero_Values'
-        ParamType = ptUnknown
       end>
   end
 end

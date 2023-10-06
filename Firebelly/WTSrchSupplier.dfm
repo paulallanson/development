@@ -47,8 +47,6 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 310
-    ExplicitHeight = 257
     DesignSize = (
       98
       248)
@@ -90,7 +88,6 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
-      ExplicitTop = 251
     end
   end
   object pnlBottom: TPanel
@@ -101,8 +98,6 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 257
-    ExplicitWidth = 408
     DesignSize = (
       402
       89)
@@ -167,8 +162,6 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       item
         Width = 50
       end>
-    ExplicitTop = 346
-    ExplicitWidth = 408
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

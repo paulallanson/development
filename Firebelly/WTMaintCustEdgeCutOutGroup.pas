@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses WTLUCustEdgeCutOutGroup, DateSelV5, AllCommon;
+uses UITypes, WTLUCustEdgeCutOutGroup, DateSelV5, AllCommon;
 
 {$R *.dfm}
 
@@ -145,7 +145,7 @@ begin
         end;
     end;
 
-  if Mode[1] in ['A'] then
+  if CharInSet(Mode[1], ['A']) then
     begin
       with qryAdd do
         begin

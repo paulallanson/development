@@ -1,7 +1,6 @@
 object PBAboutOpsFrm: TPBAboutOpsFrm
   Left = 340
   Top = 109
-  AutoScroll = False
   Caption = 'Purchase Ordering Authorisation Levels'
   ClientHeight = 418
   ClientWidth = 679
@@ -11,10 +10,8 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0

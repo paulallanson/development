@@ -1,4 +1,4 @@
-﻿object PBMaintInterfFrm: TPBMaintInterfFrm
+object PBMaintInterfFrm: TPBMaintInterfFrm
   Left = 145
   Top = 155
   BorderStyle = bsSingle
@@ -11,19 +11,18 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CancelBitBtn: TBitBtn
     Left = 291
     Top = 256
     Width = 75
     Height = 25
-    TabOrder = 0
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 0
   end
   object OKBitBtn: TBitBtn
     Left = 203
@@ -33,8 +32,6 @@
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -100,6 +97,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object PageControl1: TPageControl
     Left = 8
@@ -111,11 +110,11 @@
     object TabSheet1: TTabSheet
       Caption = 'Accounts'
       object GroupBox1: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521
         Height = 185
+        ParentBackground = False
         TabOrder = 0
         object Label5: TLabel
           Left = 8
@@ -256,11 +255,11 @@
       Caption = 'Scheduling'
       ImageIndex = 1
       object GroupBox3: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521
         Height = 57
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           521
@@ -295,11 +294,6 @@
           Font.Height = -12
           Font.Name = 'Arial'
           Font.Style = [fsBold]
-          ParentFont = False
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
-          OnClick = BitBtn3Click
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -314,6 +308,11 @@
             B0557777FF577777F7F500000E055550805577777F7555575755500000555555
             05555777775555557F5555000555555505555577755555557555}
           NumGlyphs = 2
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          OnClick = BitBtn3Click
         end
       end
     end
@@ -321,11 +320,11 @@
       Caption = 'Data Transfer'
       ImageIndex = 2
       object GroupBox2: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521
         Height = 57
+        ParentBackground = False
         TabOrder = 0
         object Label6: TLabel
           Left = 7
@@ -392,44 +391,29 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Data_Import_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Data_Export_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Inv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Acc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Accounts_Package'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Data_Transfer_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Schedule_Package'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Direct_Debit'
-        ParamType = ptUnknown
       end>
   end
   object AccPkgSQL: TFDQuery

@@ -1,7 +1,6 @@
 object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
   Left = 6
   Top = 2
-  AutoScroll = False
   Caption = 'Supplier Invoice details'
   ClientHeight = 535
   ClientWidth = 781
@@ -11,15 +10,12 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 432
     Width = 781
@@ -31,18 +27,19 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     DesignSize = (
       781
       84)
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 26
       Width = 297
       Height = 53
       Caption = 'Type here to narrow the search for supplier'
+      ParentBackground = False
       TabOrder = 0
       object edtSupplierName: TEdit
         Left = 10
@@ -54,13 +51,13 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       end
     end
     object GroupBox2: TGroupBox
-      ParentBackground = False
       Left = 668
       Top = 3
       Width = 105
       Height = 76
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 1
       object btnSelect: TBitBtn
         Left = 14
@@ -69,8 +66,6 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
         Height = 25
         Caption = 'Select '
         Enabled = False
-        TabOrder = 0
-        OnClick = btnSelectClick
         Glyph.Data = {
           BE060000424DBE06000000000000360400002800000024000000120000000100
           0800000000008802000000000000000000000001000000000000000000000000
@@ -128,6 +123,8 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
           0303030303030303030303030303030303030303030303030303030303030303
           0303}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnSelectClick
       end
       object BitBtn2: TBitBtn
         Left = 14
@@ -135,8 +132,9 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
         Width = 75
         Height = 25
         Caption = 'Close'
-        TabOrder = 1
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
@@ -221,7 +219,6 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
         Expanded = False
         FieldName = 'Status_Desc'
         Title.Caption = 'Status'
-        Width = 64
         Visible = True
       end>
   end

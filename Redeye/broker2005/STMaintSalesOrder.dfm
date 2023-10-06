@@ -28,8 +28,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = 392
-    ExplicitWidth = 778
     DesignSize = (
       768
       36)
@@ -201,8 +199,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Width = 768
     Height = 19
     Panels = <>
-    ExplicitTop = 428
-    ExplicitWidth = 778
   end
   object Panel1: TPanel
     Left = 0
@@ -212,7 +208,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Align = alTop
     Enabled = False
     TabOrder = 2
-    ExplicitWidth = 778
     DesignSize = (
       768
       65)
@@ -324,7 +319,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 778
     DesignSize = (
       768
       120)
@@ -451,8 +445,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     ParentFont = False
     TabOrder = 4
     OnDblClick = sgLinesDblClick
-    ExplicitWidth = 778
-    ExplicitHeight = 207
     ColWidths = (
       38
       159

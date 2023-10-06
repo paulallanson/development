@@ -1,6 +1,4 @@
 inherited dbQuoLtr: TdbQuoLtr
-  Left = 93
-  Top = 62
   Height = 498
   Width = 639
   object GetNotesSQL: TFDQuery
@@ -13,9 +11,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 21
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdEnqStatusSQL: TFDQuery
@@ -30,14 +27,10 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 186
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'NewDate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object GetPricesSQL: TFDQuery
@@ -61,14 +54,12 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 137
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object QuestionsSRC: TDataSource
@@ -93,14 +84,10 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object GetQtysSQL: TFDQuery
@@ -116,24 +103,16 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object GetAddDetailsSQL: TFDQuery
@@ -148,14 +127,12 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 81
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetRngEnqsSQL: TFDQuery
@@ -244,46 +221,38 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 193
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'iintselcode'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
         Value = 0
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftBoolean
         Name = 'ByCustomer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftBoolean
-        Name = 'ByBranch'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Branch_No'
         DataType = ftInteger
+      end
+      item
+        Name = 'ByBranch'
+        DataType = ftBoolean
+      end
+      item
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
         Value = 1
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PartsSRC: TDataSource
@@ -311,19 +280,13 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 129
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object PricesSRC: TDataSource
@@ -341,14 +304,10 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 249
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object AddDetailsSRC: TDataSource
@@ -438,46 +397,38 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 297
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
         Value = 0
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftBoolean
         Name = 'ByCustomer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftBoolean
-        Name = 'ByBranch'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Branch_No'
         DataType = ftInteger
+      end
+      item
+        Name = 'ByBranch'
+        DataType = ftBoolean
+      end
+      item
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
         Value = 1
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetExtrasSQL: TFDQuery
@@ -513,14 +464,12 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 305
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object ExtrasSRC: TDataSource
@@ -545,24 +494,16 @@ inherited dbQuoLtr: TdbQuoLtr
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

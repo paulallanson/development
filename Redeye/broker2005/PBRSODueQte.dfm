@@ -1,4 +1,4 @@
-﻿object PBRSODueQteFrm: TPBRSODueQteFrm
+object PBRSODueQteFrm: TPBRSODueQteFrm
   Left = 128
   Top = 148
   BorderIcons = [biSystemMenu]
@@ -12,11 +12,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object DateLabel: TLabel
     Left = 8
@@ -62,7 +60,6 @@
     OnClick = DateSpeedButtonClick
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -76,6 +73,7 @@
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = AllOrOneRadioGroupClick
@@ -91,9 +89,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -108,6 +103,9 @@
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 173
@@ -120,9 +118,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -137,6 +132,9 @@
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 80
@@ -149,9 +147,10 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
   end
   object DateEdit: TEdit
     Left = 176
@@ -170,7 +169,6 @@
     OnKeyUp = DateEditKeyUp
   end
   object RepGrpBox: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 265
@@ -180,6 +178,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     Visible = False
@@ -226,9 +225,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

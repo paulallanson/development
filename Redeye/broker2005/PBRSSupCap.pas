@@ -156,7 +156,7 @@ var
 
 implementation
 
-uses DateSelV5, PBRPSupCap, PBRDPORep, PBLUSupp, PBLUCust, PBLUPrdTyp;
+uses UITypes, DateSelV5, PBRPSupCap, PBRDPORep, PBLUSupp, PBLUCust, PBLUPrdTyp;
 
 {$R *.DFM}
 

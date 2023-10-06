@@ -1,28 +1,26 @@
 object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
   Left = 57
   Top = 101
-  Width = 713
-  Height = 400
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Quotes'
+  ClientHeight = 361
+  ClientWidth = 697
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 705
-    Height = 306
+    Width = 697
+    Height = 301
     Align = alClient
     DataSource = dtmdlQuotes.dtsQuotesJB
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -76,13 +74,13 @@ object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
   end
   object Panel1: TPanel
     Left = 0
-    Top = 306
-    Width = 705
+    Top = 301
+    Width = 697
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      705
+      697
       41)
     object Label1: TLabel
       Left = 8
@@ -139,8 +137,8 @@ object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 347
-    Width = 705
+    Top = 342
+    Width = 697
     Height = 19
     Panels = <
       item

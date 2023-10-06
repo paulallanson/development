@@ -1,7 +1,6 @@
 object STPickbyPartFrm: TSTPickbyPartFrm
   Left = 30
   Top = 34
-  AutoScroll = False
   Caption = 'Picking Confirmation by Part'
   ClientHeight = 460
   ClientWidth = 774
@@ -14,21 +13,19 @@ object STPickbyPartFrm: TSTPickbyPartFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 774
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 600
@@ -67,12 +64,12 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 677
     Top = 41
     Width = 97
     Height = 419
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       97
@@ -84,8 +81,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'C&onfirm'
-      TabOrder = 0
-      OnClick = ConfirmBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -104,6 +99,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = ConfirmBtnClick
     end
     object BitBtn2: TBitBtn
       Left = 14
@@ -113,8 +110,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       Anchors = [akRight, akBottom]
       Cancel = True
       Caption = 'Ca&ncel'
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -133,6 +128,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
         3333333333333333333888330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -168,13 +165,13 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 41
     Width = 677
     Height = 419
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
     object PickingGrid: TStringGrid
       Left = 1
@@ -218,9 +215,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'int_sel_code'
-        ParamType = ptUnknown
       end>
   end
 end

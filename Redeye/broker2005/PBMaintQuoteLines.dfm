@@ -11,10 +11,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 125
@@ -37,8 +35,6 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -104,14 +100,17 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 413
     Top = 488
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -526,9 +525,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProductType: TFDQuery
@@ -540,9 +537,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryWCGroup: TFDQuery
@@ -560,8 +555,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 272
   end
   object qryWC: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsWCGroup
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select work_centre.work_Centre_Name'
       'from work_centre_WC_Group, work_Centre'
@@ -574,9 +569,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'work_Centre_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsWC: TDataSource
@@ -585,8 +578,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 392
   end
   object qryProcess: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = dtsProcessGroup
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process'
@@ -596,9 +589,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'process_group'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcess: TDataSource

@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses PBLUAccountManager, PBLUCust, CCSCommon, DateSelV5, PBRPJobBagWIPStkReq, printers, CCSPrint;
+uses UITypes, PBLUAccountManager, PBLUCust, CCSCommon, DateSelV5, PBRPJobBagWIPStkReq, printers, CCSPrint;
 
 {$R *.dfm}
 

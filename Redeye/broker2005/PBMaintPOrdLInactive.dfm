@@ -11,10 +11,8 @@ object PBMaintPOrdLInactiveFrm: TPBMaintPOrdLInactiveFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -55,16 +53,18 @@ object PBMaintPOrdLInactiveFrm: TPBMaintPOrdLInactiveFrm
     Width = 75
     Height = 25
     Enabled = False
-    TabOrder = 2
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object btnCancel: TBitBtn
     Left = 288
     Top = 56
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object chkReActivate: TCheckBox
     Left = 16

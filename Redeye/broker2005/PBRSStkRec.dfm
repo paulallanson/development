@@ -11,8 +11,6 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object rgReportType: TRadioGroup
     Left = 16
@@ -35,8 +33,6 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
     Height = 25
     Caption = 'Pre&view'
     Enabled = False
-    TabOrder = 1
-    OnClick = btnPreviewClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -51,14 +47,17 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
       5555557FFFFF7755555555500000005555555577777775555555555555555555
       5555555555555555555555555555555555555555555555555555}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnPreviewClick
   end
   object btnClose: TBitBtn
     Left = 278
     Top = 128
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object btnPrint: TBitBtn
     Left = 112
@@ -67,8 +66,6 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
     Height = 25
     Caption = '&Print'
     Enabled = False
-    TabOrder = 3
-    OnClick = btnPrintClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -83,5 +80,7 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnPrintClick
   end
 end

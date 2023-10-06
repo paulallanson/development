@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses PBMaintSalesInvoice, pbDatabase, pbMainMenu, PBAuditDM;
+uses UITypes, PBMaintSalesInvoice, pbDatabase, pbMainMenu, PBAuditDM;
 
 {$R *.DFM}
 

@@ -1,18 +1,16 @@
 object STPrtTransSNFrm: TSTPrtTransSNFrm
   Left = 233
   Top = 107
-  Width = 352
-  Height = 304
   Caption = 'Specify Serial Numbers'
+  ClientHeight = 265
+  ClientWidth = 336
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object ItemNoLabel: TLabel
     Left = 8
@@ -28,8 +26,6 @@ object STPrtTransSNFrm: TSTPrtTransSNFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -48,14 +44,17 @@ object STPrtTransSNFrm: TSTPrtTransSNFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 256
     Top = 240
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object SNStringGrid: TStringGrid
     Left = 8

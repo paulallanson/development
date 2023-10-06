@@ -1,30 +1,24 @@
 object frmWTRPContract: TfrmWTRPContract
   Left = 34
   Top = 97
-  Width = 1314
-  Height = 620
   Caption = 'Contract Quote Report'
+  ClientHeight = 581
+  ClientWidth = 1298
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 64
     Top = -24
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +38,7 @@ object frmWTRPContract: TfrmWTRPContract
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -57,52 +52,57 @@ object frmWTRPContract: TfrmWTRPContract
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrbPageHeader: TQRBand
       Left = 30
       Top = 38
       Width = 734
       Height = 419
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         1108.604166666667000000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object gtQRShape3: TQRShape
         Left = 8
         Top = 320
         Width = 701
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666666700000
           21.166666666666670000
           846.666666666666700000
           1854.729166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -111,20 +111,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 8
         Width = 161
         Height = 43
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           1439.333333333333000000
           21.166666666666670000
           425.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Quotation'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -134,7 +130,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 28
       end
       object QRDBText4: TQRDBText
@@ -142,20 +140,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 328
         Width = 57
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           264.583333333333300000
           867.833333333333300000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Developer'
@@ -166,7 +160,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel5: TQRLabel
@@ -174,20 +172,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 328
         Width = 57
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           34.395833333333330000
           867.833333333333300000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Developer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -197,7 +191,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText5: TQRDBText
@@ -205,20 +201,17 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 387
         Width = 600
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           264.583333333333300000
           1023.937500000000000000
           1587.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Contract_Description'
@@ -229,7 +222,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel7: TQRLabel
@@ -237,20 +234,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 387
         Width = 64
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           34.395833333333330000
           1023.937500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -260,7 +253,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShape5: TQRShape
@@ -268,16 +263,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 346
         Width = 701
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           21.166666666666670000
           915.458333333333300000
           1854.729166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -286,16 +279,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 71
         Width = 217
         Height = 122
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           322.791666666666700000
           1312.333333333333000000
           187.854166666666700000
           574.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -304,20 +295,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 108
         Width = 30
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1330.854166666667000000
           285.750000000000000000
           79.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -327,7 +314,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText1: TQRDBText
@@ -335,20 +324,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 108
         Width = 80
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1658.937500000000000000
           285.750000000000000000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Contract_Date'
@@ -359,7 +344,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText2: TQRDBText
@@ -367,20 +356,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 77
         Width = 87
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1640.416666666667000000
           203.729166666666700000
           230.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Contract_Quote'
@@ -391,7 +376,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText3: TQRDBText
@@ -399,20 +388,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 139
         Width = 140
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1500.187500000000000000
           367.770833333333300000
           370.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Account_Manager_Name'
@@ -423,7 +408,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText6: TQRDBText
@@ -431,20 +420,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 168
         Width = 133
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1518.708333333333000000
           444.500000000000000000
           351.895833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'AM_Telephone_number'
@@ -455,7 +440,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel16: TQRLabel
@@ -463,20 +452,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 168
         Width = 40
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1330.854166666667000000
           444.500000000000000000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Phone:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -486,7 +471,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel4: TQRLabel
@@ -494,20 +481,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 139
         Width = 46
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1330.854166666667000000
           367.770833333333300000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -517,7 +500,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel3: TQRLabel
@@ -525,20 +510,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 77
         Width = 69
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1330.854166666667000000
           203.729166666666700000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contract No:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -548,7 +529,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShape7: TQRShape
@@ -556,16 +539,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 320
         Width = 9
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666666700000
           219.604166666666700000
           846.666666666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -574,16 +555,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 128
         Width = 217
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333330000
           1312.333333333333000000
           338.666666666666700000
           574.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -592,16 +571,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 101
         Width = 217
         Height = 3
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           7.937500000000000000
           1312.333333333333000000
           267.229166666666700000
           574.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -610,16 +587,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 373
         Width = 701
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           21.166666666666670000
           986.895833333333300000
           1854.729166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -628,20 +603,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 356
         Width = 48
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           34.395833333333330000
           941.916666666666700000
           127.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Location'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -651,7 +622,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText1: TQRDBText
@@ -659,20 +632,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 356
         Width = 76
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           264.583333333333300000
           941.916666666666700000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Site_Location'
@@ -683,7 +652,11 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object memAddress: TQRMemo
@@ -691,20 +664,17 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 14
         Width = 166
         Height = 131
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           346.604166666666700000
           600.604166666666700000
           37.041666666666670000
           439.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -713,7 +683,8 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 7
       end
       object gtQRShape12: TQRShape
@@ -721,16 +692,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 159
         Width = 217
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333330000
           1312.333333333333000000
           420.687500000000000000
           574.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -739,16 +708,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 71
         Width = 9
         Height = 122
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           322.791666666666700000
           1521.354166666667000000
           187.854166666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -757,16 +724,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 166
         Width = 353
         Height = 147
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           388.937500000000000000
           21.166666666666670000
           439.208333333333300000
           933.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -775,20 +740,17 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 180
         Width = 225
         Height = 121
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           320.145833333333300000
           105.833333333333300000
           476.250000000000000000
           595.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -797,7 +759,8 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 9
       end
       object qriHeadLogo: TQRImage
@@ -805,16 +768,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 200
         Height = 150
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           396.875000000000000000
           31.750000000000000000
           15.875000000000000000
           529.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
     end
@@ -823,19 +784,16 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 457
       Width = 734
       Height = 2
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         5.291666666666667000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpDetails
       ReprintOnNewPage = False
@@ -845,19 +803,16 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 533
       Width = 734
       Height = 26
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrsdContractLineBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         68.791666666666670000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryContractLine
       FooterBand = qrbTemplateFitting
@@ -869,16 +824,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 150
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
           0.000000000000000000
           396.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -887,20 +840,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 116
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           15.875000000000000000
           15.875000000000000000
           306.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDrawingNumber'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -910,7 +859,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShapeOption5: TQRShape
@@ -918,16 +869,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1923.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -936,16 +885,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -954,16 +901,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           780.520833333333300000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -972,16 +917,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1161.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -990,16 +933,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1542.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1008,20 +949,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           597.958333333333300000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1031,7 +968,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblOption2: TQRLabel
@@ -1039,20 +978,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           978.958333333333300000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1062,7 +997,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblOption3: TQRLabel
@@ -1070,20 +1007,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1352.020833333333000000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1093,7 +1026,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblOption4: TQRLabel
@@ -1101,20 +1036,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1719.791666666667000000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1124,7 +1055,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShapeOption6: TQRShape
@@ -1132,16 +1065,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           2304.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1150,20 +1081,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           2100.791666666667000000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1173,7 +1100,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblOption6: TQRLabel
@@ -1181,20 +1110,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 32
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           2476.500000000000000000
           15.875000000000000000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1204,7 +1129,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
@@ -1213,19 +1140,16 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 509
       Width = 734
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbContractLineHeaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
       object qrlblOptionHead0: TQRRichText
         Left = 156
@@ -1233,24 +1157,25 @@ object frmWTRPContract: TfrmWTRPContract
         Width = 137
         Height = 16
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           412.750000000000000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AutoStretch = True
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'Option '
           'Description')
@@ -1260,16 +1185,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 150
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
           0.000000000000000000
           396.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1278,16 +1201,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1296,16 +1217,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           780.520833333333300000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1314,16 +1233,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1161.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1332,16 +1249,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1542.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1350,16 +1265,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           1923.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1368,16 +1281,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 0
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           2304.520833333333000000
           0.000000000000000000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1386,20 +1297,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 67
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           15.875000000000000000
           15.875000000000000000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Drawing Ref'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1409,7 +1316,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead1: TQRLabel
@@ -1417,16 +1326,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           412.750000000000000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1440,7 +1347,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead2: TQRLabel
@@ -1448,16 +1357,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           791.104166666666700000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1471,7 +1378,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead3: TQRLabel
@@ -1479,16 +1388,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1169.458333333333000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1502,7 +1409,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead4: TQRLabel
@@ -1510,16 +1419,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1550.458333333333000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1533,7 +1440,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead5: TQRLabel
@@ -1541,16 +1450,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1934.104166666667000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1564,7 +1471,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOptionHead6: TQRLabel
@@ -1572,16 +1481,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 6
         Width = 137
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           2315.104166666667000000
           15.875000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
@@ -1595,7 +1502,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1604,39 +1513,33 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 459
       Width = 734
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrcbNotesBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         132.291666666666700000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrgQuote
+      PrintOrder = cboAfterParent
       object qrlNotes: TQRLabel
         Left = 12
         Top = 8
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           31.750000000000000000
           21.166666666666670000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'NOTES'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1646,7 +1549,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrrchTextNotes: TQRRichText
@@ -1654,24 +1559,25 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 26
         Width = 701
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           31.750000000000000000
           68.791666666666670000
           1854.729166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
     end
     object qrbTemplateFitting: TQRBand
@@ -1679,35 +1585,30 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 559
       Width = 734
       Height = 34
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbTemplateFittingBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         89.958333333333330000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRShape10: TQRShape
         Left = 2
         Top = -1
         Width = 150
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
           -2.645833333333333000
           396.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1716,16 +1617,14 @@ object frmWTRPContract: TfrmWTRPContract
         Top = -1
         Width = 145
         Height = 26
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
           -2.645833333333333000
           383.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -1734,20 +1633,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 5
         Width = 141
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           13.229166666666670000
           373.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Template, Fitting, Delivery'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1757,7 +1652,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblTemplatePrice: TQRLabel
@@ -1765,20 +1662,16 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 5
         Width = 32
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           597.958333333333300000
           13.229166666666670000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = #163'0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1788,7 +1681,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
@@ -1797,38 +1692,32 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 593
       Width = 734
       Height = 58
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         153.458333333333300000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrbTemplateFitting
+      PrintOrder = cboAfterParent
       object gtQRLabel2: TQRLabel
         Left = 9
         Top = 24
         Width = 160
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           23.812500000000000000
           63.500000000000000000
           423.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '(All prices are Excluding VAT)'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1838,7 +1727,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
@@ -1847,39 +1738,33 @@ object frmWTRPContract: TfrmWTRPContract
       Top = 651
       Width = 734
       Height = 52
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrcbAvailabilityBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         137.583333333333300000
         1942.041666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrbContractLineFooter
+      PrintOrder = cboAfterParent
       object QRLabel9: TQRLabel
         Left = 12
         Top = 7
         Width = 83
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           31.750000000000000000
           18.520833333333330000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CONDITIONS:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1889,7 +1774,9 @@ object frmWTRPContract: TfrmWTRPContract
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrrchTextAvailability: TQRRichText
@@ -1897,24 +1784,25 @@ object frmWTRPContract: TfrmWTRPContract
         Top = 26
         Width = 689
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           31.750000000000000000
           68.791666666666670000
           1822.979166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
     end
   end
@@ -1948,9 +1836,7 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 14
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -1987,9 +1873,8 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 22
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsAddress: TDataSource
@@ -2006,9 +1891,7 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 27
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qrygetNotes: TFDQuery
@@ -2022,14 +1905,12 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 29
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryContractLine: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select * '
       'from Contract_Quote_Line'
@@ -2039,14 +1920,12 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 146
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryContractOption: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsContractLine
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select *'
       'FROM Contract_Quote_Line_Option'
@@ -2057,14 +1936,10 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 258
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsContractLine: TDataSource
@@ -2073,8 +1948,8 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 208
   end
   object qryOptionHeaders: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Option_Description'
       'FROM Contract_Quote_Line_Option'
@@ -2085,9 +1960,7 @@ object frmWTRPContract: TfrmWTRPContract
     Top = 90
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery

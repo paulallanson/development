@@ -1880,8 +1880,6 @@ object frmWTMaintParams: TfrmWTMaintParams
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 660
-    ExplicitWidth = 746
     object btnOK: TBitBtn
       Left = 283
       Top = 4

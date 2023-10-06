@@ -11,10 +11,8 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
     Left = 0
@@ -101,17 +99,19 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 406
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object DocOpenDialog: TOpenDialog

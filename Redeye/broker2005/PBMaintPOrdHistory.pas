@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, PBPOObjects;
+  Dialogs, Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, PBPOObjects, Data.DB;
 
 type
   TPBMaintPOrdHistoryFrm = class(TForm)
@@ -26,7 +26,7 @@ var
 
 implementation
 
-uses PBPODataMod;
+uses FireDAC.Stan.Param, PBPODataMod;
 
 {$R *.dfm}
 

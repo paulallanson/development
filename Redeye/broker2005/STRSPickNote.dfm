@@ -11,19 +11,17 @@ object STRSPickNotefrm: TSTRSPickNotefrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object OrderGroupBox: TGroupBox
-    ParentBackground = False
     Left = 7
     Top = 8
     Width = 346
     Height = 73
     Caption = 'Delivery Details for order: '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 24
@@ -55,11 +53,11 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     end
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 7
     Top = 81
     Width = 346
     Height = 56
+    ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
       Left = 9
@@ -82,8 +80,6 @@ object STRSPickNotefrm: TSTRSPickNotefrm
       Top = 16
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -98,6 +94,8 @@ object STRSPickNotefrm: TSTRSPickNotefrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
   end
   object CancelBitBtn: TBitBtn
@@ -111,9 +109,10 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object Previewbitbtn: TBitBtn
     Left = 94
@@ -126,9 +125,6 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = PreviewbitbtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -143,6 +139,9 @@ object STRSPickNotefrm: TSTRSPickNotefrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PreviewbitbtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 183
@@ -156,9 +155,6 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -173,6 +169,9 @@ object STRSPickNotefrm: TSTRSPickNotefrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
   end
   object SetupBitBtn: TBitBtn
     Left = 271
@@ -186,9 +185,6 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-    OnClick = SetupBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -203,5 +199,8 @@ object STRSPickNotefrm: TSTRSPickNotefrm
       07557777777F55557F5555000005555707555577777FF5557F55553000075557
       0755557F7777FFF5755555335000005555555577577777555555}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 5
+    OnClick = SetupBitBtnClick
   end
 end

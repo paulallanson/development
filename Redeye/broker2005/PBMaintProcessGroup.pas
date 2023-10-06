@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, ComObj, ActiveX, PBLUProcessGroup, CCSCommon;
+uses UITypes, pbDatabase, pbMainMenu, ComObj, ActiveX, PBLUProcessGroup, CCSCommon;
 
 {$R *.DFM}
 

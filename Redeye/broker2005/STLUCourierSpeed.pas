@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses STMaintCourierSpeed;
+uses UITypes, STMaintCourierSpeed;
 
 {$R *.DFM}
 

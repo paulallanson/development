@@ -435,7 +435,6 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 13
     OnClick = btbtnExcelClick
-    ExplicitLeft = 7
   end
   object OleContainer1: TOleContainer
     Left = 316

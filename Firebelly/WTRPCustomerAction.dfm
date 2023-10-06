@@ -814,34 +814,24 @@ object frmwtRPCustomerAction: TfrmwtRPCustomerAction
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
 end
