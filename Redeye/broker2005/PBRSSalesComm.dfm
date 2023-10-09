@@ -27,8 +27,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object dbgrdSalesInvoice: TDBGrid
       Left = 1
       Top = 1
-      Width = 778
-      Height = 292
+      Width = 772
+      Height = 283
       Align = alClient
       DataSource = dtsrcSalesComm
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -467,7 +467,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
-      ExplicitLeft = 485
     end
   end
   object DateToEdit: TEdit

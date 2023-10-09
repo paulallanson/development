@@ -25,7 +25,6 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Height = 70
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 677
     object Label3: TLabel
       Left = 16
       Top = 7
@@ -124,8 +123,6 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Height = 40
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 467
-    ExplicitWidth = 677
     object OKBitBtn: TBitBtn
       Left = 254
       Top = 7
@@ -155,7 +152,6 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Height = 85
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 677
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
@@ -251,15 +247,13 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     ActivePage = tbshtCommission
     Align = alClient
     TabOrder = 3
-    ExplicitWidth = 677
-    ExplicitHeight = 312
     object tbshtCommission: TTabSheet
       Caption = 'Commission'
       object grdCategory: TStringGrid
         Left = 0
         Top = 0
-        Width = 669
-        Height = 284
+        Width = 663
+        Height = 275
         Align = alClient
         DefaultColWidth = 200
         DefaultRowHeight = 19

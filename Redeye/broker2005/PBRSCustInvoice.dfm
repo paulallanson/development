@@ -224,7 +224,6 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 157
   end
   object btnCancel: TBitBtn
     Left = 232
@@ -301,7 +300,6 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitTop = 157
   end
   object qryGetSalesOrders: TFDQuery
     ConnectionName = 'PB'

@@ -568,14 +568,14 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Left = 0
         Top = 0
         Width = 305
-        Height = 164
+        Height = 152
         Align = alLeft
         TabOrder = 0
         object sgEvents: TStringGrid
           Left = 1
           Top = 1
           Width = 303
-          Height = 162
+          Height = 150
           Align = alClient
           ColCount = 3
           DefaultColWidth = 40
@@ -593,8 +593,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Panel18: TPanel
         Left = 305
         Top = 0
-        Width = 140
-        Height = 164
+        Width = 132
+        Height = 152
         Align = alClient
         TabOrder = 1
         object btnAddEvents: TBitBtn
@@ -628,17 +628,17 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         end
       end
       object Panel8: TPanel
-        Left = 445
+        Left = 437
         Top = 0
         Width = 441
-        Height = 164
+        Height = 152
         Align = alRight
         TabOrder = 2
         object memEventNotes: TMemo
           Left = 1
           Top = 1
           Width = 439
-          Height = 162
+          Height = 150
           Align = alClient
           Color = clBtnFace
           ReadOnly = True

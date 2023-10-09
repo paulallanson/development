@@ -52,7 +52,7 @@ var
 
 implementation
 
-uses PBLURep, PBDatabase, PBRP4CastSumm;
+uses UITypes, PBLURep, PBDatabase, PBRP4CastSumm;
 
 {$R *.DFM}
 

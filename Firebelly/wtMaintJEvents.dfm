@@ -1,27 +1,25 @@
 object frmWTMaintJEvents: TfrmWTMaintJEvents
   Left = 213
   Top = 86
-  Width = 353
-  Height = 377
   Caption = 'Event details'
+  ClientHeight = 338
+  ClientWidth = 337
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 297
-    Width = 345
+    Top = 292
+    Width = 337
     Height = 46
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object lblDelete: TLabel
       Left = 32
@@ -45,9 +43,9 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
       Default = True
       Enabled = False
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 248
@@ -57,17 +55,17 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 345
+    Width = 337
     Height = 73
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
@@ -105,8 +103,8 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
       Top = 40
       Width = 90
       Height = 21
-      Date = 38114.892242361110000000
-      Time = 38114.892242361110000000
+      Date = 38114.000000000000000000
+      Time = 0.892242361107491900
       TabOrder = 1
     end
     object dtpckTime: TDateTimePicker
@@ -114,27 +112,27 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
       Top = 40
       Width = 82
       Height = 21
-      Date = 38114.892714699080000000
-      Time = 38114.892714699080000000
+      Date = 38114.000000000000000000
+      Time = 0.892714699082716800
       Kind = dtkTime
       TabOrder = 2
       Visible = False
     end
   end
   object pnldetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 73
-    Width = 345
-    Height = 224
+    Width = 337
+    Height = 219
     Align = alClient
     Caption = 'pnldetails'
+    ParentBackground = False
     TabOrder = 2
     object memDetails: TMemo
       Left = 1
       Top = 1
-      Width = 343
-      Height = 222
+      Width = 335
+      Height = 217
       Align = alClient
       TabOrder = 0
       OnChange = EnableOK

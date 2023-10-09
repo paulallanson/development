@@ -116,7 +116,7 @@ var
 
 implementation
 
-uses PBLUOps, PBLUNonConformType, PBLUNonConformDept, CCSCommon, DateSelV5,
+uses UITypes, PBLUOps, PBLUNonConformType, PBLUNonConformDept, CCSCommon, DateSelV5,
   pbMainMenu, PBLUNonConformCat;
 
 {$R *.dfm}

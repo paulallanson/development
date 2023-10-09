@@ -11,10 +11,8 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label15: TLabel
     Left = 16
@@ -43,9 +41,9 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
       Caption = 'OK'
       Default = True
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 188
@@ -56,8 +54,8 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object rdgrpMarkupType: TRadioGroup

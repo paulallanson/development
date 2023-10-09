@@ -1,7 +1,6 @@
 object frmwtRPSOrder: TfrmwtRPSOrder
   Left = 214
   Top = 11
-  VertScrollBar.Position = 259
   Caption = 'Sales Order Print'
   ClientHeight = 750
   ClientWidth = 1096
@@ -16,7 +15,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 32
-    Top = 31
+    Top = 290
     Width = 794
     Height = 1123
     ShowingPreview = False

@@ -50,8 +50,7 @@ type
     procedure cmbPickingNoteClick(Sender: TObject);
     procedure edtPickingDateExit(Sender: TObject);
     procedure btnDateClick(Sender: TObject);
-    procedure sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
+    procedure sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -119,7 +118,7 @@ var
 
 implementation
 
-uses STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
+uses Types, UITypes, STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
   pbMainMenu, stPickingDM, STStockDM;
 
 {$R *.dfm}
@@ -284,8 +283,7 @@ begin
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 
     end
   else
@@ -403,8 +401,7 @@ begin
             if (strtoint(sgDetails.cells[5,icount]) > (strtoint(sgDetails.cells[3,icount]) - strtoint(sgDetails.cells[4,icount]))) then
               begin
                 iQtytoPick := strtoint(sgDetails.cells[3,icount]) - strtoint(sgDetails.cells[4,icount]);
-                MessageDlg('You cannot request to pick more than is available to pick, which is ' + inttostr(iQtytoPick)
-                        + ' for item ' + inttostr(icount) + ', product code ' + sgDetails.cells[0,icount], mtError, [mbOk], 0);
+                MessageDlg('You cannot request to pick more than is available to pick, which is ' + inttostr(iQtytoPick) + ' for item ' + inttostr(icount) + ', product code ' + sgDetails.cells[0,icount], mtError, [mbOk], 0);
                 bOK := false;
                 exit;
               end;
@@ -750,8 +747,7 @@ begin
   printBitBtn.enabled := previewBitBtn.enabled;
 end;
 
-procedure TSTRSPickingNoteFrm.sgDetailsSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TSTRSPickingNoteFrm.sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   if Confirmed then
     begin

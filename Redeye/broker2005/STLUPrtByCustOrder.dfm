@@ -21,7 +21,6 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 676
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -34,7 +33,6 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
           MinHeight = 43
           Width = 676
         end>
-      ExplicitWidth = 676
       object ToolBar2: TToolBar
         Left = 11
         Top = 0
@@ -81,8 +79,6 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 358
-    ExplicitWidth = 676
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -119,7 +115,6 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
         item
           Width = 50
         end>
-      ExplicitWidth = 674
     end
     object EdtDesc: TEdit
       Left = 88
@@ -141,8 +136,6 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 676
-    ExplicitHeight = 312
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -512,14 +505,14 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Top = 85
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'cust'
+        DataType = ftInteger
         ParamType = ptInput
         Value = 0
       end
       item
-        DataType = ftDate
         Name = 'dateFrom'
+        DataType = ftDate
         ParamType = ptInput
         Value = 0d
       end>
@@ -548,24 +541,16 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Top = 141
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'partDesc'
-        ParamType = ptUnknown
       end>
   end
 end

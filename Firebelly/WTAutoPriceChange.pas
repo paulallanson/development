@@ -70,7 +70,7 @@ var
 
 implementation
 
-uses wtDataModule, wtMain;
+uses UITypes, wtDataModule, wtMain;
 
 {$R *.DFM}
 
@@ -266,8 +266,7 @@ begin
   	  end;
     MessageDlg('Global price change has completed successfully', mtInformation,[mbOk], 0);
     close;
-  except
-    MessageDlg('Global price change has encountered an error', mterror,[mbOk], 0);
+  except MessageDlg('Global price change has encountered an error', mterror,[mbOk], 0);
   end;
 end;
 

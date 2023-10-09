@@ -66,8 +66,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure ConditionGridSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
+    procedure ConditionGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure btnEditClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure FormResize(Sender: TObject);
@@ -234,8 +233,7 @@ begin
     AvailableStates := FStateMachine.StateNames;
 end;
 
-procedure TfrmStateEdit.ConditionGridSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TfrmStateEdit.ConditionGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   btnEdit.Enabled := ARow in [1..ConditionGrid.RowCount - 2];
   btnDelete.Enabled := btnEdit.Enabled;

@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses STStkValRep, STStkVarRep, STPrtMnt;
+uses UITypes, STStkValRep, STStkVarRep, STPrtMnt;
 
 {$R *.DFM}
 

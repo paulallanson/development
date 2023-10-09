@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses CCSCommon, DateSelV5, pbDatabase;
+uses UITypes, CCSCommon, DateSelV5, pbDatabase;
 
 {$R *.DFM}
 

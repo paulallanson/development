@@ -1,25 +1,23 @@
 object PBLUProdFrm: TPBLUProdFrm
   Left = 228
   Top = 121
-  Width = 681
-  Height = 471
   Caption = 'Look Up Product'
+  ClientHeight = 432
+  ClientWidth = 665
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stBrDetails: TStatusBar
     Left = 0
-    Top = 420
-    Width = 673
+    Top = 415
+    Width = 665
     Height = 17
     Panels = <
       item
@@ -32,8 +30,8 @@ object PBLUProdFrm: TPBLUProdFrm
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 0
-    Width = 673
-    Height = 368
+    Width = 665
+    Height = 363
     Align = alClient
     DataSource = dtsrcParts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -62,8 +60,8 @@ object PBLUProdFrm: TPBLUProdFrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 368
-    Width = 673
+    Top = 363
+    Width = 665
     Height = 52
     Align = alBottom
     BevelOuter = bvNone
@@ -85,7 +83,7 @@ object PBLUProdFrm: TPBLUProdFrm
       OnChange = edtProductChange
     end
     object pnlCloseBtn: TPanel
-      Left = 473
+      Left = 465
       Top = 0
       Width = 200
       Height = 52
@@ -99,8 +97,6 @@ object PBLUProdFrm: TPBLUProdFrm
         Height = 25
         Caption = 'Select'
         Default = True
-        TabOrder = 0
-        OnClick = btnSelectClick
         Glyph.Data = {
           CE070000424DCE07000000000000360000002800000024000000120000000100
           1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -166,15 +162,18 @@ object PBLUProdFrm: TPBLUProdFrm
           7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
           007F7F007F7F007F7F007F7F007F7F007F7F}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnSelectClick
       end
       object CloseBitBtn: TBitBtn
         Left = 116
         Top = 11
         Width = 75
         Height = 25
+        Kind = bkClose
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = CloseBitBtnClick
-        Kind = bkClose
       end
     end
     object ChkBxExcProd: TCheckBox
@@ -203,23 +202,23 @@ object PBLUProdFrm: TPBLUProdFrm
     Top = 100
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'cust'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'part'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'part'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'all_parts'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

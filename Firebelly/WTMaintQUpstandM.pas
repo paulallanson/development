@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses wtLUworktops, wtMain;
+uses UITypes, wtLUworktops, wtMain;
 
 {$R *.dfm}
 

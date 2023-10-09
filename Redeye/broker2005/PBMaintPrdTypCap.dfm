@@ -1,7 +1,6 @@
-﻿object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
+object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
   Left = 353
   Top = 156
-  AutoScroll = False
   Caption = 'Maintain Product Type Capabilities'
   ClientHeight = 174
   ClientWidth = 418
@@ -11,13 +10,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     418
     174)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 104
@@ -34,7 +31,6 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 393
@@ -45,6 +41,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -98,8 +95,6 @@
     Anchors = [akRight, akBottom]
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -165,6 +160,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 325
@@ -174,9 +171,6 @@
     Anchors = [akRight, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -241,7 +235,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -253,8 +250,8 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -272,18 +269,18 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -301,24 +298,16 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -332,14 +321,10 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -356,18 +341,18 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -381,14 +366,10 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckPTCapExists: TFDQuery
@@ -403,24 +384,16 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckCapExists: TFDQuery
@@ -434,14 +407,10 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSuppliers: TFDQuery
@@ -465,14 +434,10 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSupplier: TFDQuery
@@ -496,24 +461,16 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
 end

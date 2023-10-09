@@ -1,30 +1,23 @@
 object STRPBarCodeFrm: TSTRPBarCodeFrm
   Left = 192
   Top = 114
-  Width = 1003
-  Height = 480
-  VertScrollBar.Position = 685
   Caption = 'STRPBarCodeFrm'
+  ClientHeight = 441
+  ClientWidth = 987
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 64
-    Top = -677
+    Top = 8
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -46,6 +39,7 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -59,37 +53,43 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRSubDetail1: TQRSubDetail
       Left = 38
       Top = 38
       Width = 718
       Height = 1035
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         2738.437500000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -98,20 +98,16 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Top = 576
         Width = 134
         Height = 43
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           783.166666666666700000
           1524.000000000000000000
           354.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Text100'
@@ -122,7 +118,11 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 28
       end
       object barcodeNo: TBarCode
@@ -130,16 +130,14 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Top = 192
         Width = 713
         Height = 369
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           976.312500000000000000
           21.166666666666670000
           508.000000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         BarType = btCode39
         Text = '41212'
         Font.Charset = DEFAULT_CHARSET
@@ -154,20 +152,16 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Top = 40
         Width = 120
         Height = 56
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           148.166666666666700000
           788.458333333333400000
           105.833333333333300000
           317.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Pallet'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -177,7 +171,9 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 36
       end
       object qrlblFoot: TQRDBText
@@ -185,20 +181,16 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Top = 952
         Width = 134
         Height = 43
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           762.000000000000000000
           2518.833333333333000000
           354.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Text100'
@@ -209,7 +201,11 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 28
       end
     end
@@ -218,19 +214,16 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
       Top = 1073
       Width = 718
       Height = 8
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRBand1AfterPrint
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         21.166666666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
     end
   end
@@ -245,9 +238,7 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
     Top = 118
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdCompany: TFDQuery
@@ -260,9 +251,7 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Pallet'
-        ParamType = ptUnknown
       end>
   end
 end

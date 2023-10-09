@@ -111,7 +111,7 @@ var
 
 implementation
 
-uses PBIntSelDM, CCSPrint, STRPStockLabels, DateSelV5;
+uses UITypes, PBIntSelDM, CCSPrint, STRPStockLabels, DateSelV5;
 
 {$R *.DFM}
 

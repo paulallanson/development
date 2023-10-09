@@ -151,7 +151,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     ParentFont = False
     TabOrder = 10
     OnClick = btnOKClick
-    ExplicitTop = 391
   end
   object btnCancel: TBitBtn
     Left = 368
@@ -168,7 +167,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 11
-    ExplicitTop = 391
   end
   object ApplicDBLCB: TDBLookupComboBox
     Left = 16
@@ -327,7 +325,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Left = 201
     Top = 267
     Width = 26
-    Height = 22
+    Height = 21
     Hint = 'Font Size|Select font size'
     TabOrder = 13
     Text = '8'
@@ -336,7 +334,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Left = 227
     Top = 267
     Width = 15
-    Height = 22
+    Height = 21
     Associate = edtFontSize
     Position = 8
     TabOrder = 14

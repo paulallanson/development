@@ -25,8 +25,6 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     ParentBackground = False
     TabOrder = 1
     TabStop = True
-    ExplicitTop = 192
-    ExplicitWidth = 626
     DesignSize = (
       622
       40)
@@ -80,7 +78,6 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 462
     end
     object btnCancel: TBitBtn
       Left = 534
@@ -97,7 +94,6 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 542
     end
   end
   object pnlDetails: TPanel
@@ -108,8 +104,6 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 626
-    ExplicitHeight = 192
     object Label1: TLabel
       Left = 10
       Top = 24

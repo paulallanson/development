@@ -68,7 +68,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   System.Types,
   pbMainMenu, ccscommon;
 

@@ -11,13 +11,11 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     443
     185)
-  PixelsPerInch = 96
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -55,9 +53,9 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 232
@@ -68,8 +66,8 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -112,19 +110,13 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Retail_Multiplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -154,24 +146,16 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Retail_Multiplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -207,9 +191,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
 end

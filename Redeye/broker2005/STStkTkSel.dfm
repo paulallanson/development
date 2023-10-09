@@ -11,12 +11,10 @@ object STStkTkSelFrm: TSTStkTkSelFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -74,9 +72,10 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkClose
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkClose
   end
   object BitBtnCncl: TBitBtn
     Left = 240
@@ -105,9 +104,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Ref'
-        ParamType = ptUnknown
       end>
   end
 end

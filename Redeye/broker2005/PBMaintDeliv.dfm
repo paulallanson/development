@@ -25,8 +25,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 563
-    ExplicitWidth = 636
     DesignSize = (
       624
       41)
@@ -120,7 +118,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 437
     end
     object CancelBitBtn: TBitBtn
       Left = 517
@@ -198,7 +195,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 525
     end
   end
   object pnlFormRef: TPanel
@@ -209,7 +205,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 636
     object POrderLbl: TLabel
       Left = 8
       Top = 4
@@ -306,20 +301,16 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 636
-    ExplicitHeight = 482
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
         Left = 0
         Top = 352
-        Width = 620
-        Height = 90
+        Width = 616
+        Height = 89
         Align = alClient
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 628
-        ExplicitHeight = 102
         object Label10: TLabel
           Left = 16
           Top = 10
@@ -338,13 +329,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 620
+        Width = 616
         Height = 316
         Align = alTop
         Caption = 'Panel1'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 628
         object Label9: TLabel
           Left = 160
           Top = 258
@@ -907,12 +897,11 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object pnlCourierService: TPanel
         Left = 0
         Top = 316
-        Width = 620
+        Width = 616
         Height = 36
         Align = alTop
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 628
         object lblCourier: TLabel
           Left = 16
           Top = 12
@@ -1173,8 +1162,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
-    ExplicitTop = 604
-    ExplicitWidth = 636
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup

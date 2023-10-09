@@ -11,11 +11,9 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -35,17 +33,19 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Height = 25
       Caption = 'Select'
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 379
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btnClose: TBitBtn
       Left = 651
@@ -53,8 +53,9 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
     end
   end
   object StatusBar1: TStatusBar
@@ -402,14 +403,10 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 169
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessCosts: TDataSource
@@ -439,19 +436,13 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 201
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryProcessCostSub: TFDQuery
@@ -478,24 +469,16 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 129
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessCostCat: TDataSource
@@ -530,44 +513,28 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAddProcessCostCat: TFDQuery
@@ -594,54 +561,34 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryLastCostNumber: TFDQuery
@@ -654,14 +601,10 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryLastCatNumber: TFDQuery
@@ -676,19 +619,13 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAddProcessCostSub: TFDQuery
@@ -717,64 +654,40 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -802,9 +715,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProcess: TFDQuery

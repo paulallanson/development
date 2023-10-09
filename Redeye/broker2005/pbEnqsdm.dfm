@@ -1,7 +1,6 @@
 object dtmdlEnqs: TdtmdlEnqs
-  Height = 610
-  Width = 680
-  PixelsPerInch = 120
+  Height = 488
+  Width = 544
   object qryEnqs: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -55,8 +54,8 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Office_Contact.Operator = Enquiry.Office_Contact'
       'Where ((Enquiry.Customer = :Customer) or (0 = :Customer)) and'
       '      EnquiryLine.Form_Description LIKE :Description')
-    Left = 20
-    Top = 20
+    Left = 16
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -193,8 +192,8 @@ object dtmdlEnqs: TdtmdlEnqs
   end
   object dtsEnqs: TDataSource
     DataSet = qryEnqs
-    Left = 100
-    Top = 20
+    Left = 80
+    Top = 16
   end
   object qryDummy: TFDQuery
     ConnectionName = 'PB'
@@ -249,8 +248,8 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Office_Contact.Operator = Enquiry.Office_Contact'
       'Where ((Enquiry.Customer = :Customer) or (0 = :Customer)) and'
       '      EnquiryLine.Form_Description LIKE :Description')
-    Left = 170
-    Top = 20
+    Left = 136
+    Top = 16
     ParamData = <
       item
         Name = 'RECORDS'
@@ -273,13 +272,13 @@ object dtmdlEnqs: TdtmdlEnqs
   end
   object qryEnqsJB: TFDQuery
     ConnectionName = 'pb'
-    Left = 20
-    Top = 130
+    Left = 16
+    Top = 104
   end
   object dtsEnqsJB: TDataSource
     DataSet = qryEnqsJB
-    Left = 100
-    Top = 130
+    Left = 80
+    Top = 104
   end
   object qryEnqsNotConverted: TFDQuery
     SQL.Strings = (
@@ -331,8 +330,8 @@ object dtmdlEnqs: TdtmdlEnqs
       
         '((EnquiryLine.Enquiry_Status >= 45) AND (EnquiryLine.Enquiry_Sta' +
         'tus <= 80))')
-    Left = 170
-    Top = 130
+    Left = 136
+    Top = 104
     ParamData = <
       item
         Name = 'Customer'
@@ -351,8 +350,8 @@ object dtmdlEnqs: TdtmdlEnqs
       'FROM Purchase_OrderLine'
       'WHERE Purchase_OrderLine.Enquiry = :Enquiry AND'
       'Purchase_OrderLine.Line0 = :Line0')
-    Left = 20
-    Top = 220
+    Left = 16
+    Top = 176
     ParamData = <
       item
         Name = 'Enquiry'
@@ -368,13 +367,13 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Enq_InActive_Reason.Description'
       'FROM Enq_InActive_Reason'
       'ORDER BY Enq_InActive_Reason.Description')
-    Left = 40
-    Top = 310
+    Left = 32
+    Top = 248
   end
   object dtsReasons: TDataSource
     DataSet = qryReasons
-    Left = 110
-    Top = 310
+    Left = 88
+    Top = 248
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'PB'
@@ -382,13 +381,13 @@ object dtmdlEnqs: TdtmdlEnqs
       'SELECT Price_unit, Description '
       'FROM Price_unit'
       'ORDER BY Description')
-    Left = 40
-    Top = 380
+    Left = 32
+    Top = 304
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 110
-    Top = 380
+    Left = 88
+    Top = 304
   end
   object qryGetEnquiryLine: TFDQuery
     ConnectionName = 'PB'
@@ -414,8 +413,8 @@ object dtmdlEnqs: TdtmdlEnqs
       'WHERE'
       '        EnquiryLine.Enquiry = :Enquiry AND'
       '        EnquiryLine.Line = :Line')
-    Left = 40
-    Top = 450
+    Left = 32
+    Top = 360
     ParamData = <
       item
         Name = 'Enquiry'
@@ -440,8 +439,8 @@ object dtmdlEnqs: TdtmdlEnqs
       '     Enq_inactive_Notes = :Enq_inactive_Notes'
       'WHERE Enquiry = :Enquiry AND'
       '      Line = :Line')
-    Left = 40
-    Top = 510
+    Left = 32
+    Top = 408
     ParamData = <
       item
         Name = 'Enq_inactive_Winning_price'

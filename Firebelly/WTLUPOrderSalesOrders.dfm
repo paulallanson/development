@@ -1,22 +1,20 @@
 object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
   Left = 204
   Top = 74
-  Width = 928
-  Height = 480
   Caption = 'Recommended Purchase Orders'
+  ClientHeight = 441
+  ClientWidth = 912
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 920
+    Width = 912
     Height = 65
     Align = alTop
     TabOrder = 0
@@ -39,8 +37,8 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Top = 16
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 0
     end
     object DateTimePicker1: TDateTimePicker
@@ -48,16 +46,16 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Top = 16
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 1
     end
   end
   object sgdetails: TStringGrid
     Left = 0
     Top = 65
-    Width = 920
-    Height = 319
+    Width = 912
+    Height = 307
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
@@ -75,13 +73,13 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
   end
   object Panel2: TPanel
     Left = 0
-    Top = 384
-    Width = 920
+    Top = 372
+    Width = 912
     Height = 50
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      920
+      912
       50)
     object Label2: TLabel
       Left = 16
@@ -104,8 +102,9 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btnOK: TBitBtn
       Left = 746
@@ -116,7 +115,6 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 2
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -135,12 +133,13 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 434
-    Width = 920
+    Top = 422
+    Width = 912
     Height = 19
     Panels = <
       item

@@ -21,15 +21,13 @@ type
     ExFilterSRC: TDataSource;
     lblCount: TLabel;
     procedure FormCreate(Sender: TObject);
-//    procedure EmailListGridSelectCell(Sender: TObject; Col, Row: Longint;
-//      var CanSelect: Boolean);
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbExportFilterClick(Sender: TObject);
     procedure EmailListGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
-    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
   private
     { Private declarations }
     function cellleft(grid: TStringGrid; Col: Integer): Integer;

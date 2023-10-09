@@ -58,7 +58,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBMaintSICCode, PBDatabase;
+uses UITypes, pbMainMenu, PBMaintSICCode, PBDatabase;
 
 {$R *.DFM}
 

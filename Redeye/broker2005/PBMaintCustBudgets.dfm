@@ -1,9 +1,9 @@
 object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   Left = 192
   Top = 114
-  Width = 1142
-  Height = 626
   Caption = 'Maintain Customer Yearly Budgets'
+  ClientHeight = 587
+  ClientWidth = 1126
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,17 +11,15 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1134
+    Width = 1126
     Height = 49
     Align = alTop
     TabOrder = 0
@@ -44,16 +42,16 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 573
-    Width = 1134
+    Top = 568
+    Width = 1126
     Height = 19
     Panels = <>
   end
   object sgDetails: TStringGrid
     Left = 0
     Top = 49
-    Width = 1134
-    Height = 483
+    Width = 1126
+    Height = 478
     Align = alClient
     ColCount = 13
     DefaultColWidth = 250
@@ -80,8 +78,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 532
-    Width = 1134
+    Top = 527
+    Width = 1126
     Height = 41
     Align = alBottom
     TabOrder = 3
@@ -91,8 +89,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
       Width = 75
       Height = 25
       Caption = 'OK'
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -158,6 +154,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 550
@@ -166,8 +164,6 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -232,7 +228,9 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object qryCustomer: TFDQuery
@@ -254,14 +252,10 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'End_Period'
-        ParamType = ptUnknown
       end>
   end
   object qryPeriods: TFDQuery
@@ -275,9 +269,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -289,14 +281,10 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'End_Period'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -317,24 +305,16 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end>
   end
 end

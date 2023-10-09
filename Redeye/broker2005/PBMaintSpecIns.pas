@@ -105,7 +105,7 @@ var
 
 implementation
 
-uses PBLUSpecIns, PBNarrativeDM, ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses UITypes, PBLUSpecIns, PBNarrativeDM, ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

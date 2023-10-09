@@ -11,12 +11,10 @@ object frmWTMaintAddress: TfrmWTMaintAddress
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
     429
     304)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 16
@@ -177,8 +175,8 @@ object frmWTMaintAddress: TfrmWTMaintAddress
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 9
     NumGlyphs = 2
+    TabOrder = 9
   end
   object btnCancel: TBitBtn
     Left = 217
@@ -188,7 +186,7 @@ object frmWTMaintAddress: TfrmWTMaintAddress
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    TabOrder = 10
     NumGlyphs = 2
+    TabOrder = 10
   end
 end

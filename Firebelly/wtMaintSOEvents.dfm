@@ -20,8 +20,6 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     Height = 46
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 304
-    ExplicitWidth = 345
     object lblDelete: TLabel
       Left = 32
       Top = 17
@@ -67,7 +65,6 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     Height = 73
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 345
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -128,13 +125,11 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     Align = alClient
     Caption = 'pnldetails'
     TabOrder = 2
-    ExplicitWidth = 345
-    ExplicitHeight = 231
     object memDetails: TMemo
       Left = 1
       Top = 1
-      Width = 343
-      Height = 229
+      Width = 335
+      Height = 217
       Align = alClient
       TabOrder = 0
       OnChange = EnableOK

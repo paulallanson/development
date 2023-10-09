@@ -1,4 +1,4 @@
-﻿object PBMaintLastNosFrm: TPBMaintLastNosFrm
+object PBMaintLastNosFrm: TPBMaintLastNosFrm
   Left = 456
   Top = 156
   BorderStyle = bsDialog
@@ -11,19 +11,18 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CancelBitBtn: TBitBtn
     Left = 392
     Top = 288
     Width = 75
     Height = 25
-    TabOrder = 0
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 0
   end
   object OKBitBtn: TBitBtn
     Left = 304
@@ -32,8 +31,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -99,6 +96,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object PageControl1: TPageControl
     Left = 8
@@ -278,7 +277,6 @@
         Top = 184
         Width = 145
         Height = 21
-        ItemHeight = 13
         ItemIndex = 0
         TabOrder = 1
         Text = 'Suffix'
@@ -346,49 +344,31 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Enq_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_PO_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Inv_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Credit_Note_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Job_Bag_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_works_order_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Quote_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Non_Conform_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Contract_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -421,29 +401,19 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Invoice_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Suffix_or_Prefix'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Suffix_or_Prefix_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Company'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

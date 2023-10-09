@@ -32,8 +32,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       item
         Width = 50
       end>
-    ExplicitTop = 351
-    ExplicitWidth = 1151
   end
   object Panel1: TPanel
     Left = 0
@@ -42,8 +40,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 310
-    ExplicitWidth = 1151
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -69,7 +65,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 965
+      Left = 945
       Top = 1
       Width = 185
       Height = 39
@@ -106,7 +102,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 2
-    ExplicitWidth = 1151
     object Label1: TLabel
       Left = 8
       Top = 3
@@ -153,7 +148,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       BevelInner = bvLowered
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 900
       DesignSize = (
         250
         28)
@@ -200,23 +194,22 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 479
+        Width = 467
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 477
+            Width = 461
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 464
+          Width = 452
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 49
+          ButtonWidth = 64
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -229,7 +222,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
           Wrapable = False
           object btnEvents: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Caption = '  Calls   '
             ImageIndex = 0
           end
@@ -247,13 +240,12 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1147
+        Width = 1125
       end>
-    ExplicitWidth = 1151
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1134
+      Width = 1116
       Height = 40
       Align = alLeft
       ButtonHeight = 36

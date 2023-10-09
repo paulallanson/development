@@ -1513,7 +1513,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Alignment = taLeftJustify
         AutoStretch = True
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'

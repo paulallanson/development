@@ -252,7 +252,7 @@ begin
 // check that the failed directory exists
 
 // check that directory exist
-  if not DirectoryExists(tempDir+sDirectory) then
+  if not SysUtils.DirectoryExists(tempDir+sDirectory) then
     begin
       try
         CreateDir(tempDir+sDirectory);
@@ -537,7 +537,7 @@ begin
 // check that the failed directory exists
 
 // check that directory exist
-  if not DirectoryExists(tempDir+sDirectory) then
+  if not SysUtils.DirectoryExists(tempDir+sDirectory) then
     begin
       try
         CreateDir(tempDir+sDirectory);

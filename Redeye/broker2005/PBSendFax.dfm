@@ -1,19 +1,17 @@
-﻿object PBSendFaxFrm: TPBSendFaxFrm
+object PBSendFaxFrm: TPBSendFaxFrm
   Left = 200
   Top = 108
-  Width = 380
-  Height = 313
   Caption = 'Fax Send Form'
+  ClientHeight = 274
+  ClientWidth = 364
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 64
@@ -49,44 +47,29 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'CreatedOn'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PhoneNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'NoOfRetries'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'LastTried'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'UserName'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object GetOldFaxesQuery: TFDQuery
@@ -98,9 +81,7 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Before'
-        ParamType = ptUnknown
       end>
   end
   object DelFaxQuery: TFDQuery
@@ -112,15 +93,13 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end>
   end
   object FaxDatabase: TFDConnection
-    ConnectionDefName = 'faxes'
     ConnectionName = 'faxesSQL'
-
+    Params.Strings = (
+      'ConnectionDef=faxes')
     OnLogin = FaxDatabaseLogin
     Left = 144
     Top = 24

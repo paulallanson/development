@@ -129,7 +129,7 @@ var
 
 implementation
 
-uses PBIntSelDM, CCSPrint, STRPBxLabels, DateSelV5, pbMainMenu;
+uses UITypes, PBIntSelDM, CCSPrint, STRPBxLabels, DateSelV5, pbMainMenu;
 
 {$R *.DFM}
 

@@ -78,7 +78,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBDatabase, PBMaintPackFormat;
+uses UITypes, pbMainMenu, PBDatabase, PBMaintPackFormat;
 
 {$R *.DFM}
 
@@ -178,7 +178,7 @@ begin
   try
     PBMaintPackFormatFrm.sFuncMode := sTempFuncMode;
 
-    if sTempFuncMode[1] in ['C', 'D'] then
+    if CharInSet(sTempFuncMode[1], ['C', 'D']) then
     begin
       PBMaintPackFormatFrm.SelCode := DetsSRC.DataSet.FieldByName('ID').AsInteger;
       PBMaintPackFormatFrm.edtdescription.Text :=

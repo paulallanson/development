@@ -11,11 +11,9 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   DesignSize = (
     285
     343)
-  PixelsPerInch = 96
   TextHeight = 13
   object lblFormReference: TLabel
     Left = 11
@@ -195,8 +193,8 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
     Top = 30
     Width = 90
     Height = 21
-    Date = 39825.487247696760000000
-    Time = 39825.487247696760000000
+    Date = 39825.000000000000000000
+    Time = 0.487247696757549400
     TabOrder = 10
   end
   object dtmDateTo: TDateTimePicker
@@ -204,8 +202,8 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
     Top = 64
     Width = 90
     Height = 21
-    Date = 39825.487276446760000000
-    Time = 39825.487276446760000000
+    Date = 39825.000000000000000000
+    Time = 0.487276446758187400
     TabOrder = 11
   end
 end

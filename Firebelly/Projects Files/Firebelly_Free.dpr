@@ -146,17 +146,17 @@ uses
   WTLUEdgeDetails in '..\WTLUEdgeDetails.pas' {frmWTLUEdgeDetails},
   wtLUCutOutDetails in '..\wtLUCutOutDetails.pas' {frmWTLUCutOutDetails},
   wtMaintCutOutDetails in '..\wtMaintCutOutDetails.pas' {frmWTMaintCutOutDetails},
-  wtRPContract in '..\Demo CD\Reports\wtRPContract.pas' {frmWTRPContract},
-  WTRPJobCutSched in '..\Demo CD\Reports\WTRPJobCutSched.pas' {frmWTRPJobCutSched},
-  WtRPJobRemedialSheet in '..\Demo CD\Reports\WtRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet},
-  WtRPJobSheetClient in '..\Demo CD\Reports\WtRPJobSheetClient.pas' {frmWTRPJobSheetClient},
-  WTRPSOrderAllocation in '..\Demo CD\Reports\WTRPSOrderAllocation.pas' {frmWTRPSOrderAllocation},
-  WtRPJobFitting in '..\Demo CD\Reports\WtRPJobFitting.pas' {frmwtRPJobFitting},
-  wtRPQuote in '..\Demo CD\Reports\wtRPQuote.pas' {frmwtRPQuote},
-  WtRPJobSheet in '..\Demo CD\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
-  wtRPSalesInvoice in '..\Demo CD\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
-  wtRPSOrder in '..\Demo CD\Reports\wtRPSOrder.pas' {frmwtRPSOrder},
-  wtRPTemplate in '..\Demo CD\Reports\wtRPTemplate.pas' {frmwtRPTemplate},
+  wtRPContract in '..\Demo\Reports\wtRPContract.pas' {frmWTRPContract},
+  WTRPJobCutSched in '..\Demo\Reports\WTRPJobCutSched.pas' {frmWTRPJobCutSched},
+  WtRPJobRemedialSheet in '..\Demo\Reports\WtRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet},
+  WtRPJobSheetClient in '..\Demo\Reports\WtRPJobSheetClient.pas' {frmWTRPJobSheetClient},
+  WTRPSOrderAllocation in '..\Demo\Reports\WTRPSOrderAllocation.pas' {frmWTRPSOrderAllocation},
+  WtRPJobFitting in '..\Demo\Reports\WtRPJobFitting.pas' {frmwtRPJobFitting},
+  wtRPQuote in '..\Demo\Reports\wtRPQuote.pas' {frmwtRPQuote},
+  WtRPJobSheet in '..\Demo\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
+  wtRPSalesInvoice in '..\Demo\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
+  wtRPSOrder in '..\Demo\Reports\wtRPSOrder.pas' {frmwtRPSOrder},
+  wtRPTemplate in '..\Demo\Reports\wtRPTemplate.pas' {frmwtRPTemplate},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
@@ -174,6 +174,7 @@ begin
   frmWTSplash.Show;
   frmWTSplash.Refresh;
   Application.Title := 'Worktop Manufacturing';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);

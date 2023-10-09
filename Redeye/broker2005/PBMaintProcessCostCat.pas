@@ -63,7 +63,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, CCSCommon, ComObj, ActiveX;
+uses UITypes, pbDatabase, pbMainMenu, CCSCommon, ComObj, ActiveX;
 
 {$R *.dfm}
 

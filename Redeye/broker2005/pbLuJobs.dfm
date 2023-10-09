@@ -30,13 +30,12 @@ object frmPBLUJobs: TfrmPBLUJobs
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1206
+        Width = 1192
       end>
-    ExplicitWidth = 1208
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1193
+      Width = 1183
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -425,8 +424,6 @@ object frmPBLUJobs: TfrmPBLUJobs
       item
         Width = 50
       end>
-    ExplicitTop = 375
-    ExplicitWidth = 1208
   end
   object Panel3: TPanel
     Left = 0
@@ -439,7 +436,6 @@ object frmPBLUJobs: TfrmPBLUJobs
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1208
     object Label3: TLabel
       Left = 8
       Top = 3

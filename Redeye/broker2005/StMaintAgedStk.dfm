@@ -1,9 +1,9 @@
 object StMaintAgedStkFrm: TStMaintAgedStkFrm
   Left = 26
   Top = 60
-  Width = 765
-  Height = 482
   Caption = 'Manage Aged Stock'
+  ClientHeight = 443
+  ClientWidth = 749
   Color = clBtnFace
   Constraints.MinHeight = 425
   Constraints.MinWidth = 503
@@ -12,15 +12,13 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 757
+    Width = 749
     Height = 169
     Align = alTop
     BevelOuter = bvNone
@@ -232,8 +230,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 169
-    Width = 757
-    Height = 238
+    Width = 749
+    Height = 233
     Align = alClient
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -326,16 +324,16 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 407
-    Width = 757
+    Top = 402
+    Width = 749
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      757
+      749
       41)
     object CloseBitBtn: TBitBtn
-      Left = 670
+      Left = 662
       Top = 8
       Width = 75
       Height = 25
@@ -345,9 +343,10 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkCancel
     end
     object btbtnOKInvoice: TBitBtn
       Left = 12
@@ -355,8 +354,6 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Width = 75
       Height = 25
       Caption = 'Invoice'
-      TabOrder = 1
-      OnClick = SetReadyforInvoicng1Click
       Glyph.Data = {
         F6000000424DF600000000000000760000002800000010000000100000000100
         04000000000080000000120B0000120B00001000000000000000000000000000
@@ -366,6 +363,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
         330550B3B3BB3BB3B33050B3B33BBBBB333050B3B33BBBBB3B3050B3B333BB0B
         33B050B33333BBB3B3B050BB33333333BB05550B33B3333BB305550BB33330BB
         B0555550BB33B3BB0555555500B3333055555555550000055555}
+      TabOrder = 1
+      OnClick = SetReadyforInvoicng1Click
     end
   end
   object DataSource1: TDataSource
@@ -427,43 +426,43 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Top = 212
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'theDate'
+        DataType = ftDateTime
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'noOfDays'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'PartFrom'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'PartTo'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'CustBranch'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'CustBranch'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end>
     object qrySelUnPaidAgedStkPart: TStringField
@@ -555,14 +554,10 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Top = 276
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'PO'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object tmrGridRefresh: TTimer
@@ -579,9 +574,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Top = 244
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'PO'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdStoreStock: TFDQuery
@@ -594,9 +587,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Top = 276
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'store_stock'
-        ParamType = ptUnknown
       end>
   end
 end

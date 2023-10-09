@@ -88,7 +88,7 @@ end;
 
 procedure TPBMaintQAOperatorFrm.btnOKClick(Sender: TObject);
 begin
-  if sFuncMode[1] in ['A', 'C'] then
+  if CharInSet(sFuncMode[1], ['A', 'C']) then
   begin
     if sFuncMode = 'A' then
       iCode := GetNextDbKey;

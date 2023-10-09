@@ -1,7 +1,6 @@
-﻿object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
+object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   Left = 225
   Top = 152
-  AutoScroll = False
   Caption = 'Maintain Product Types'
   ClientHeight = 368
   ClientWidth = 436
@@ -11,12 +10,10 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 133
@@ -45,9 +42,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -112,7 +106,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 349
@@ -121,9 +118,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 1
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -188,7 +182,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = CancelBitBtnClick
   end
   object PageControl1: TPageControl
     Left = 8
@@ -200,7 +197,6 @@
     object TabSheet1: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
-        ParentBackground = False
         Left = 5
         Top = 1
         Width = 397
@@ -210,6 +206,7 @@
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = []
+        ParentBackground = False
         ParentFont = False
         TabOrder = 0
         object Label2: TLabel
@@ -311,9 +308,6 @@
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 8
-          OnClick = NotesBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -328,6 +322,9 @@
             3333333373FF7333333333333000333333333333377733333333333333333333
             3333333333333333333333333333333333333333333333333333}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 8
+          OnClick = NotesBitBtnClick
         end
         object ShortDescrEdit: TEdit
           Left = 118
@@ -375,6 +372,7 @@
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
           TabOrder = 3
+          Text = ''
         end
         object PurchNomAccEdt: TMaskEdit
           Left = 118
@@ -385,6 +383,7 @@
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
           TabOrder = 4
+          Text = ''
         end
         object spnSuppliers: TSpinEdit
           Left = 184
@@ -452,8 +451,6 @@
         Height = 25
         Caption = '&Add'
         Enabled = False
-        TabOrder = 1
-        OnClick = btnAddClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -468,6 +465,8 @@
           3333333333333333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnAddClick
       end
       object btnRemove: TBitBtn
         Left = 159
@@ -476,8 +475,6 @@
         Height = 25
         Caption = '&Remove'
         Enabled = False
-        TabOrder = 2
-        OnClick = btnRemoveClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -492,6 +489,8 @@
           3333333333773333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnRemoveClick
       end
       object lstbxNonMembers: TListBox
         Left = 256
@@ -528,7 +527,6 @@
         Width = 105
         Height = 21
         Style = csDropDownList
-        ItemHeight = 0
         TabOrder = 6
       end
     end
@@ -566,8 +564,8 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -588,18 +586,18 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Category'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -625,59 +623,38 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry_Min_Suppliers'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Product_Type_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -690,9 +667,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object FlashTimer: TTimer
@@ -718,34 +693,23 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object UpdNotesOnlySQL: TFDQuery
@@ -762,14 +726,11 @@
     Top = 192
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryInsDefCap: TFDQuery
@@ -789,14 +750,10 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'product_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end>
   end
   object qryMembers: TFDQuery
@@ -813,9 +770,7 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryPriceUnit: TFDQuery
@@ -853,9 +808,7 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -876,19 +829,13 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
 end

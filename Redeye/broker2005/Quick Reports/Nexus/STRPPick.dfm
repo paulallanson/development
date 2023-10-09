@@ -16,8 +16,8 @@ object STRPPickfrm: TSTRPPickfrm
   object PickSOListQuickReport: TQuickRep
     Left = 0
     Top = 8
-    Width = 1020
-    Height = 1320
+    Width = 816
+    Height = 1056
     ShowingPreview = False
     BeforePrint = PickSOListQuickReportBeforePrint
     DataSet = GetAllocMasterQuery
@@ -77,9 +77,9 @@ object STRPPickfrm: TSTRPPickfrm
     PreviewTop = 0
     object PageHeadQRBand: TQRBand
       Left = 0
-      Top = 47
-      Width = 1020
-      Height = 204
+      Top = 38
+      Width = 816
+      Height = 163
       AfterPrint = PageHeadQRBandAfterPrint
       AlignToBottom = False
       BeforePrint = PageHeadQRBandBeforePrint
@@ -93,16 +93,16 @@ object STRPPickfrm: TSTRPPickfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        431.800000000000000000
+        431.270833333333300000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object PreviewQRLabel: TQRLabel
-        Left = 850
-        Top = 10
-        Width = 100
-        Height = 30
+        Left = 680
+        Top = 8
+        Width = 80
+        Height = 24
         Size.Values = (
           63.500000000000000000
           1799.166666666670000000
@@ -118,7 +118,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -129,10 +129,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object NotesQRMemo: TQRMemo
-        Left = 30
-        Top = 39
-        Width = 340
-        Height = 153
+        Left = 24
+        Top = 31
+        Width = 272
+        Height = 122
         Size.Values = (
           322.791666666667000000
           63.500000000000000000
@@ -147,7 +147,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         Lines.Strings = (
@@ -163,10 +163,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object DelInstructMemo: TQRMemo
-        Left = 490
-        Top = 39
-        Width = 340
-        Height = 153
+        Left = 392
+        Top = 31
+        Width = 272
+        Height = 122
         Size.Values = (
           322.791666666667000000
           1037.166666666670000000
@@ -181,7 +181,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -191,15 +191,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel9: TQRLabel
-        Left = 30
-        Top = 10
-        Width = 146
-        Height = 30
+        Left = 24
+        Top = 8
+        Width = 118
+        Height = 24
         Size.Values = (
           63.500000000000000000
           63.500000000000000000
           21.166666666666670000
-          309.033333333333300000)
+          312.208333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -209,7 +209,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -222,9 +222,9 @@ object STRPPickfrm: TSTRPPickfrm
     end
     object GroupHeadQRGroup: TQRGroup
       Left = 0
-      Top = 251
-      Width = 1020
-      Height = 150
+      Top = 201
+      Width = 816
+      Height = 120
       AlignToBottom = False
       BeforePrint = GroupHeadQRGroupBeforePrint
       TransparentBand = False
@@ -245,15 +245,15 @@ object STRPPickfrm: TSTRPPickfrm
       Master = PickSOListQuickReport
       ReprintOnNewPage = True
       object AccNoQRLabel: TQRLabel
-        Left = 20
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 16
+        Top = 9
+        Width = 94
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          248.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -263,7 +263,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -274,15 +274,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object CustRefQRLabel: TQRLabel
-        Left = 210
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 168
+        Top = 9
+        Width = 95
+        Height = 20
         Size.Values = (
           52.916666666666670000
           444.500000000000000000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          251.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -292,7 +292,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -303,15 +303,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object SONOQRLabel: TQRLabel
-        Left = 820
-        Top = 11
-        Width = 136
-        Height = 25
+        Left = 656
+        Top = 9
+        Width = 109
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1735.666666666667000000
-          23.283333333333330000
-          287.866666666666700000)
+          23.812500000000000000
+          288.395833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -321,7 +321,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -332,15 +332,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object CustRefQRDBText: TQRDBText
-        Left = 210
-        Top = 36
-        Width = 127
-        Height = 25
+        Left = 168
+        Top = 29
+        Width = 102
+        Height = 20
         Size.Values = (
           52.916666666666670000
           444.500000000000000000
-          76.200000000000000000
-          268.816666666666700000)
+          76.729166666666670000
+          269.875000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -351,7 +351,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Cust_Order_No'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -364,15 +364,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object SoNumQRDBText: TQRDBText
-        Left = 820
-        Top = 36
-        Width = 101
-        Height = 25
+        Left = 656
+        Top = 29
+        Width = 78
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1735.666666666667000000
-          76.200000000000000000
-          213.783333333333300000)
+          76.729166666666670000
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -383,7 +383,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -396,15 +396,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel1: TQRLabel
-        Left = 642
-        Top = 123
-        Width = 76
-        Height = 25
+        Left = 514
+        Top = 98
+        Width = 59
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1358.900000000000000000
-          260.350000000000000000
-          160.866666666666700000)
+          1359.958333333333000000
+          259.291666666666700000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -414,7 +414,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -425,15 +425,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel4: TQRLabel
-        Left = 860
-        Top = 123
-        Width = 29
-        Height = 25
+        Left = 688
+        Top = 98
+        Width = 24
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1820.333333333333000000
-          260.350000000000000000
-          61.383333333333330000)
+          259.291666666666700000
+          63.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -443,7 +443,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -454,15 +454,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel5: TQRLabel
-        Left = 170
-        Top = 123
-        Width = 97
-        Height = 25
+        Left = 136
+        Top = 98
+        Width = 78
+        Height = 20
         Size.Values = (
           52.916666666666670000
           359.833333333333300000
-          260.350000000000000000
-          205.316666666666700000)
+          259.291666666666700000
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -472,7 +472,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -483,15 +483,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel7: TQRLabel
-        Left = 548
-        Top = 123
-        Width = 84
-        Height = 25
+        Left = 438
+        Top = 98
+        Width = 65
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1159.933333333333000000
-          260.350000000000000000
-          177.800000000000000000)
+          1158.875000000000000000
+          259.291666666666700000
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -501,7 +501,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -512,15 +512,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel8: TQRLabel
-        Left = 670
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 536
+        Top = 9
+        Width = 96
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1418.166666666667000000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -530,7 +530,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -541,10 +541,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object TciketQRLabel: TQRLabel
-        Left = 540
-        Top = 11
-        Width = 121
-        Height = 25
+        Left = 432
+        Top = 9
+        Width = 97
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1143.000000000000000000
@@ -560,7 +560,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -571,15 +571,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object DelNoQRLabel: TQRLabel
-        Left = 540
-        Top = 36
-        Width = 126
-        Height = 25
+        Left = 432
+        Top = 29
+        Width = 98
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1143.000000000000000000
-          76.200000000000000000
-          266.700000000000000000)
+          76.729166666666670000
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -589,7 +589,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -600,10 +600,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object DespDtQRLbl: TQRLabel
-        Left = 670
-        Top = 36
-        Width = 100
-        Height = 25
+        Left = 536
+        Top = 29
+        Width = 80
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1418.166666666670000000
@@ -619,7 +619,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -631,15 +631,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel6: TQRLabel
-        Left = 784
-        Top = 123
-        Width = 52
-        Height = 25
+        Left = 627
+        Top = 98
+        Width = 43
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1659.466666666667000000
-          260.350000000000000000
-          110.066666666666700000)
+          1658.937500000000000000
+          259.291666666666700000
+          113.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -649,7 +649,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -660,15 +660,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLblAccnt: TQRLabel
-        Left = 20
-        Top = 36
-        Width = 129
-        Height = 25
+        Left = 16
+        Top = 29
+        Width = 101
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          76.200000000000000000
-          273.050000000000000000)
+          76.729166666666670000
+          267.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -678,7 +678,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -689,15 +689,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabel10: TQRLabel
-        Left = 20
-        Top = 123
-        Width = 116
-        Height = 25
+        Left = 16
+        Top = 98
+        Width = 91
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          260.350000000000000000
-          245.533333333333300000)
+          259.291666666666700000
+          240.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -707,7 +707,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -720,9 +720,9 @@ object STRPPickfrm: TSTRPPickfrm
     end
     object QRSubDetail1: TQRSubDetail
       Left = 0
-      Top = 401
-      Width = 1020
-      Height = 31
+      Top = 321
+      Width = 816
+      Height = 25
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
@@ -735,7 +735,7 @@ object STRPPickfrm: TSTRPPickfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        65.616666666666670000
+        66.145833333333330000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -744,10 +744,10 @@ object STRPPickfrm: TSTRPPickfrm
       PrintBefore = False
       PrintIfEmpty = True
       object PartQRDBText: TQRDBText
-        Left = 20
-        Top = 3
-        Width = 141
-        Height = 25
+        Left = 16
+        Top = 2
+        Width = 113
+        Height = 20
         Size.Values = (
           52.916666666666700000
           42.333333333333300000
@@ -764,7 +764,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Part'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -777,10 +777,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object DescQRDBText: TQRDBText
-        Left = 170
-        Top = 3
-        Width = 371
-        Height = 25
+        Left = 136
+        Top = 2
+        Width = 297
+        Height = 20
         Size.Values = (
           52.916666666666700000
           359.833333333333000000
@@ -797,7 +797,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Part_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -810,10 +810,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object BinQRDBText: TQRDBText
-        Left = 860
-        Top = 3
-        Width = 91
-        Height = 25
+        Left = 688
+        Top = 2
+        Width = 73
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1820.333333333330000000
@@ -830,7 +830,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Part_Bin'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         Mask = '######'
@@ -844,10 +844,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRDBText4: TQRDBText
-        Left = 548
-        Top = 3
-        Width = 80
-        Height = 25
+        Left = 438
+        Top = 2
+        Width = 64
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1158.875000000000000000
@@ -864,7 +864,7 @@ object STRPPickfrm: TSTRPPickfrm
         DataField = 'Sell_Pack_Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -877,15 +877,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabelDlvrd: TQRLabel
-        Left = 720
-        Top = 3
-        Width = 120
-        Height = 25
+        Left = 581
+        Top = 2
+        Width = 91
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1524.000000000000000000
-          6.350000000000000000
-          254.000000000000000000)
+          1537.229166666667000000
+          5.291666666666667000
+          240.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -895,7 +895,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -906,10 +906,10 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object QRLabelQty: TQRLabel
-        Left = 634
-        Top = 3
-        Width = 83
-        Height = 25
+        Left = 507
+        Top = 2
+        Width = 66
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1341.437500000000000000
@@ -925,7 +925,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -938,9 +938,9 @@ object STRPPickfrm: TSTRPPickfrm
     end
     object qrdetailSerialNos: TQRSubDetail
       Left = 0
-      Top = 432
-      Width = 1020
-      Height = 31
+      Top = 346
+      Width = 816
+      Height = 25
       AfterPrint = qrdetailSerialNosAfterPrint
       AlignToBottom = False
       BeforePrint = qrdetailSerialNosBeforePrint
@@ -949,7 +949,7 @@ object STRPPickfrm: TSTRPPickfrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        65.616666666666670000
+        66.145833333333330000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -958,15 +958,15 @@ object STRPPickfrm: TSTRPPickfrm
       PrintBefore = False
       PrintIfEmpty = True
       object lblSerialCaption: TQRLabel
-        Left = 170
-        Top = 3
-        Width = 131
-        Height = 25
+        Left = 136
+        Top = 2
+        Width = 98
+        Height = 20
         Size.Values = (
           52.916666666666670000
           359.833333333333300000
-          6.350000000000000000
-          277.283333333333300000)
+          5.291666666666667000
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -976,7 +976,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -987,15 +987,15 @@ object STRPPickfrm: TSTRPPickfrm
         FontSize = 12
       end
       object lblSerialRange: TQRLabel
-        Left = 310
-        Top = 3
-        Width = 120
-        Height = 25
+        Left = 248
+        Top = 2
+        Width = 87
+        Height = 20
         Size.Values = (
           52.916666666666670000
           656.166666666666700000
-          6.350000000000000000
-          254.000000000000000000)
+          5.291666666666667000
+          230.187500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1005,7 +1005,7 @@ object STRPPickfrm: TSTRPPickfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -1108,9 +1108,8 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object oldGetAllocMasterQuery: TFDQuery
@@ -1139,9 +1138,8 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdAllocDetQuery: TFDQuery
@@ -1160,14 +1158,10 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Record'
-        ParamType = ptUnknown
       end>
   end
   object GetAllAllocDetQuery: TFDQuery
@@ -1195,9 +1189,7 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 188
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end>
   end
   object UpdRefQuery: TFDQuery
@@ -1210,9 +1202,8 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 118
     ParamData = <
       item
-        DataType = ftString
         Name = 'Picking_Ref_No'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetCustSQL: TFDQuery
@@ -1239,14 +1230,12 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 107
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdSOHeadSQL: TFDQuery
@@ -1262,14 +1251,10 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 134
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivNarrSQL: TFDQuery
@@ -1283,9 +1268,7 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 222
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivCountSQL: TFDQuery
@@ -1300,9 +1283,7 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetNextSODelivSQL: TFDQuery
@@ -1364,24 +1345,20 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Status_from'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Status_to'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DummySQL: TFDQuery
@@ -1410,24 +1387,18 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 34
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Status_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_to'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -1447,8 +1418,8 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_Address'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1472,14 +1443,12 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 67
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddDelivDetSQL: TFDQuery
@@ -1509,39 +1478,27 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desp_Note_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Del_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddDelivLineDetSQL: TFDQuery
@@ -1563,19 +1520,13 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 156
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckDelivSQL: TFDQuery
@@ -1597,19 +1548,13 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 212
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end>
   end
   object GetAllocSerialNoSQL: TFDQuery
@@ -1623,14 +1568,10 @@ object STRPPickfrm: TSTRPPickfrm
     Top = 123
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
 end

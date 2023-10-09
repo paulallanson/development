@@ -11,10 +11,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 10
@@ -36,17 +34,19 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 278
     Top = 80
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object dblkpOperators: TDBLookupComboBox
     Left = 112
@@ -113,9 +113,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Left = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsOperators: TDataSource
@@ -138,19 +136,13 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Left = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'User_Group_Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'User_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -170,9 +162,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Top = 65528
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'User_Group_operator'
-        ParamType = ptUnknown
       end>
   end
   object qryTeam: TFDQuery
@@ -198,9 +188,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryDelTeam: TFDQuery
@@ -212,9 +200,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryAddTeam: TFDQuery
@@ -226,19 +212,13 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'account_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Member_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryGetMemberNo: TFDQuery
@@ -251,9 +231,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end>
   end
 end

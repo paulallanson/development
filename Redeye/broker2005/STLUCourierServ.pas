@@ -54,7 +54,7 @@ var
 
 implementation
 
-uses STMaintCourierServ;
+uses UITypes, STMaintCourierServ;
 
 {$R *.DFM}
 

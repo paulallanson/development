@@ -46,7 +46,6 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
-    ExplicitTop = 182
   end
   object Button4: TButton
     Left = 360
@@ -57,7 +56,6 @@ object frmWTRSContract: TfrmWTRSContract
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
-    ExplicitTop = 182
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -87,7 +85,6 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 5
     OnClick = btnPreviewClick
-    ExplicitTop = 182
   end
   object btnEmail: TButton
     Left = 184
@@ -99,7 +96,6 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 6
     OnClick = btnEmailClick
-    ExplicitTop = 182
   end
   object chkbxIncludeTemplating: TCheckBox
     Left = 8
@@ -163,8 +159,6 @@ object frmWTRSContract: TfrmWTRSContract
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitLeft = 252
-    ExplicitTop = 182
   end
   object pnlExportPrgrss: TPanel
     Left = 84

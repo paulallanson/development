@@ -1,4 +1,4 @@
-﻿object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
+object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
   Left = 152
   Top = 121
   BorderStyle = bsDialog
@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 120
@@ -32,7 +30,6 @@
     Visible = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 8
     Width = 393
@@ -43,6 +40,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -68,9 +66,10 @@
     Top = 72
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -79,9 +78,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -146,7 +142,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -169,14 +168,10 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive_Reason'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -191,14 +186,10 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive_Reason'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -212,9 +203,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive_Reason'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -234,14 +223,11 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enq_InActive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -11,13 +11,11 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
     282
     309)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -173,8 +171,6 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 9
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -189,6 +185,8 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = btnDateClick
   end
   object edtProductType: TEdit
     Left = 120

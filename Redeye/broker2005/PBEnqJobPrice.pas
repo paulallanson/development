@@ -1085,7 +1085,7 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedPricesGridDrawCell(Sender: TObject;
-  ACol, ARow: Longint; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do

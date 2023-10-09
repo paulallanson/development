@@ -68,7 +68,7 @@ var
 
 implementation
 
-uses STStockDM, pbDatabase, CCSCommon, pbMainMenu, PBLUPriceUnit;
+uses UITypes, STStockDM, pbDatabase, CCSCommon, pbMainMenu, PBLUPriceUnit;
 
 {$R *.DFM}
 

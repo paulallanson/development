@@ -11,10 +11,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblProdCode: TLabel
     Left = 29
@@ -116,17 +114,19 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     Top = 184
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 7
     OnClick = btbtnOKClick
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 336
     Top = 184
     Width = 75
     Height = 25
-    TabOrder = 8
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 8
   end
   object OpenPictureDialog1: TOpenPictureDialog
     Left = 248
@@ -149,33 +149,31 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ecommerce_info'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftString
-        Name = 'Stock_Reference'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftString
-        Name = 'Other_info_prompt'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Thumbnail_image'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
-        Name = 'Generate_popup'
-        ParamType = ptUnknown
+        Name = 'Stock_Reference'
+        DataType = ftString
+        ParamType = ptInput
       end
       item
+        Name = 'Other_info_prompt'
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Thumbnail_image'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Generate_popup'
+      end
+      item
         Name = 'Popup_image'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -196,33 +194,33 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'Stock_Reference'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Other_info_prompt'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Thumbnail_image'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Generate_popup'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
-        Name = 'Popup_image'
         ParamType = ptInput
       end
       item
+        Name = 'Generate_popup'
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Popup_image'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'Ecommerce_info'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -235,9 +233,7 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryTopECommNo: TFDQuery

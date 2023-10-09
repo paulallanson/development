@@ -18,6 +18,7 @@ begin
   {$ENDIF}
   Application.Initialize;
   Application.Title := 'Broker Loader';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TfrmWorktopsVers, frmWorktopsVers);
   Application.Run;
 end.

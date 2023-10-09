@@ -49,6 +49,8 @@ var
 
 implementation
 
+uses UITypes;
+
 {$R *.DFM}
 
 { TSTStoreStockFrm }

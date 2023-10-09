@@ -89,7 +89,7 @@ var
 
 implementation
 
-uses pbLUCust, STPrtMnt, pbMainMenu;
+uses UITypes, pbLUCust, STPrtMnt, pbMainMenu;
 
 {$R *.DFM}
 

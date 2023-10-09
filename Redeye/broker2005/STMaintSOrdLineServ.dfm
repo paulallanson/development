@@ -11,18 +11,16 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlproduct: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 722
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -87,12 +85,12 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     end
   end
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
     Top = 162
     Width = 722
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     TabStop = True
     DesignSize = (
@@ -126,9 +124,6 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = OKBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -147,6 +142,9 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = OKBtnClick
     end
     object CancelBtn: TBitBtn
       Left = 638
@@ -159,18 +157,19 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      Kind = bkCancel
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 49
     Width = 722
     Height = 113
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 8

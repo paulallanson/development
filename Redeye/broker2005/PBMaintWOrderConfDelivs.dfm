@@ -22,7 +22,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Align = alTop
     Enabled = False
     TabOrder = 0
-    ExplicitWidth = 621
     object Label1: TLabel
       Left = 8
       Top = 45
@@ -261,8 +260,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Height = 40
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 489
-    ExplicitWidth = 621
     object lblDelete: TLabel
       Left = 112
       Top = 12
@@ -308,7 +305,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Align = alTop
     Enabled = False
     TabOrder = 1
-    ExplicitWidth = 621
     object rdgrpAccountType: TRadioGroup
       Left = 8
       Top = 10
@@ -370,8 +366,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Align = alClient
     Enabled = False
     TabOrder = 2
-    ExplicitWidth = 621
-    ExplicitHeight = 174
     object Label6: TLabel
       Left = 8
       Top = 36
@@ -460,8 +454,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Height = 35
     Align = alBottom
     TabOrder = 4
-    ExplicitTop = 454
-    ExplicitWidth = 621
     object Label13: TLabel
       Left = 384
       Top = 10

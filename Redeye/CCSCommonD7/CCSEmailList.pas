@@ -64,8 +64,7 @@ type
     ExFilterSQL: TFDQuery;
     ExFilterSRC: TDataSource;
     procedure FormCreate(Sender: TObject);
-    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbExportFilterClick(Sender: TObject);
@@ -93,8 +92,7 @@ begin
   EmailListgrid.cells[3,0] := 'Attachment File type';
 end;
 
-procedure TCCSEmailListFrm.EmailListGridSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TCCSEmailListFrm.EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 	if (ACol = 1) or (ACol = 3) then
     EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]

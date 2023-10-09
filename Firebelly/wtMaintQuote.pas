@@ -549,7 +549,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   wtCommon, WTSrchCustomer, wtMain, wtMaintQElement, wtMaintQCutOut, wtMaintQEdge,
   wtMaintQExtra, wtNotesDM, wtDataModule, wtMaintQUpstand, WTMaintQEvents,
   WTSrchCustContacts, wtLUMatType, WTMaintQElementM, WTMaintQUpstandM,
@@ -1544,8 +1544,7 @@ begin
     begin
       if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qRequote)) and (dblkpLeadSource.Text = '') then
         begin
-          messagedlg('Cannot save this quote, you must enter a Sales Lead Source', mterror,
-            [mbOk], 0);
+          messagedlg('Cannot save this quote, you must enter a Sales Lead Source', mterror, [mbOk], 0);
           dblkpLeadSource.SetFocus;
           exit;
         end;
@@ -4725,7 +4724,6 @@ begin
 end;
 
 end.
-
 
 
 

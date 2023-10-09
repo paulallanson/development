@@ -1,4 +1,4 @@
-﻿object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
+object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
   Left = 381
   Top = 36
   BorderStyle = bsDialog
@@ -11,13 +11,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     611
     633)
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsGrpBox: TGroupBox
     Left = 16
@@ -237,9 +235,9 @@
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    NumGlyphs = 2
   end
   object chkbxInActive: TCheckBox
     Left = 16
@@ -278,59 +276,43 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Color'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Font_Color'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Logo_Path'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Invoice_Payment_Notes'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Registered_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
-        Name = 'Company_Reg_Number'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Registration_No'
-        ParamType = ptUnknown
-      end
-      item
+        Name = 'Invoice_Payment_Notes'
         DataType = ftInteger
-        Name = 'Accounts_Package'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Registered_Address'
+        DataType = ftString
+      end
+      item
+        Name = 'Company_Reg_Number'
+      end
+      item
+        Name = 'VAT_Registration_No'
+      end
+      item
+        Name = 'Accounts_Package'
+        DataType = ftInteger
+      end
+      item
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -343,9 +325,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -406,54 +386,40 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Color'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Font_Color'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Logo_Path'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Invoice_Payment_Notes'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Registered_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
-        Name = 'Company_Reg_Number'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Registration_No'
-        ParamType = ptUnknown
-      end
-      item
+        Name = 'Invoice_Payment_Notes'
         DataType = ftInteger
+      end
+      item
+        Name = 'Registered_Address'
+        DataType = ftString
+      end
+      item
+        Name = 'Company_Reg_Number'
+      end
+      item
+        Name = 'VAT_Registration_No'
+      end
+      item
         Name = 'Accounts_Package'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAccounts: TFDQuery

@@ -61,8 +61,6 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Height = 213
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 152
-    ExplicitWidth = 434
     object cbPrintLogo: TCheckBox
       Left = 14
       Top = 8

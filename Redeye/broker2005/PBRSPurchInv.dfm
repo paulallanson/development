@@ -1,9 +1,9 @@
 object PBRSPurchInvFrm: TPBRSPurchInvFrm
   Left = 35
   Top = 29
-  Width = 781
-  Height = 502
   Caption = 'Invoice Daybook'
+  ClientHeight = 463
+  ClientWidth = 765
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,24 +12,22 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
     Left = 0
     Top = 137
-    Width = 773
-    Height = 290
+    Width = 765
+    Height = 285
     Align = alClient
     TabOrder = 0
     object dbgrdProofStatus: TDBGrid
       Left = 1
       Top = 1
-      Width = 771
-      Height = 288
+      Width = 763
+      Height = 283
       Align = alClient
       DataSource = dtsrcPurchInv
       TabOrder = 0
@@ -151,7 +149,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 773
+    Width = 765
     Height = 137
     Align = alTop
     TabOrder = 1
@@ -226,7 +224,6 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -242,7 +239,6 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -381,8 +377,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 427
-    Width = 773
+    Top = 422
+    Width = 765
     Height = 41
     Align = alBottom
     TabOrder = 2
@@ -400,7 +396,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 452
+      Left = 444
       Top = 1
       Width = 320
       Height = 39
@@ -416,8 +412,6 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -432,6 +426,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 230
@@ -439,8 +435,6 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -455,6 +449,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
       object btbtnExcel: TBitBtn
         Left = 37
@@ -463,8 +459,6 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
         Height = 25
         Anchors = [akTop, akRight]
         Caption = 'Excel'
-        TabOrder = 2
-        OnClick = btbtnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -508,6 +502,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 2
+        OnClick = btbtnExcelClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -515,8 +511,9 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object OleContainer1: TOleContainer
       Left = 112

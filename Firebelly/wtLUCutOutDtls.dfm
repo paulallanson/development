@@ -63,11 +63,9 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     end
   end
   inherited lkpEdgeThickness: TFDQuery
-    Left = 40
     Top = 142
   end
   inherited srclkpEdgeThickness: TDataSource
-    Left = 148
     Top = 142
   end
   object tblCOutThickness: TFDTable

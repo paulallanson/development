@@ -1,7 +1,4 @@
 object dmLookUpSInv: TdmLookUpSInv
-  OldCreateOrder = False
-  Left = 543
-  Top = 239
   Height = 375
   Width = 544
   object DetsSRC: TDataSource
@@ -121,14 +118,10 @@ object dmLookUpSInv: TdmLookUpSInv
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
   object Query1: TFDQuery
@@ -187,24 +180,16 @@ object dmLookUpSInv: TdmLookUpSInv
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object DummySQL: TFDQuery
@@ -253,14 +238,10 @@ object dmLookUpSInv: TdmLookUpSInv
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object GetCustStatSQL: TFDQuery
@@ -279,14 +260,10 @@ object dmLookUpSInv: TdmLookUpSInv
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object SetStatementSQL: TFDQuery
@@ -300,9 +277,7 @@ object dmLookUpSInv: TdmLookUpSInv
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object oldDummySQL: TFDQuery

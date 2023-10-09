@@ -60,6 +60,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 procedure TfrmpbluCustWorksJB.FormCreate(Sender: TObject);
@@ -155,8 +156,7 @@ begin
       Selected := true;
       close;
     end
-  else
-    messagedlg('Sorry, this Works Instruction contains inactive processes, therefore it cannot be repeated. Please create a new Works Instruction by selecting the relevant processes within the job bag.', mtInformation, [mbOk], 0);
+  else messagedlg('Sorry, this Works Instruction contains inactive processes, therefore it cannot be repeated. Please create a new Works Instruction by selecting the relevant processes within the job bag.', mtInformation, [mbOk], 0);
 end;
 
 function TfrmpbluCustWorksJB.OKtoRepeat: boolean;

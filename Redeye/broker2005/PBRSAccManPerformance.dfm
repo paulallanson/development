@@ -21,8 +21,6 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 393
-    ExplicitWidth = 920
     DesignSize = (
       914
       41)
@@ -35,7 +33,6 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       Caption = 'Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 832
     end
     object btnExcel: TBitBtn
       Left = 716
@@ -90,7 +87,6 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 728
     end
   end
   object pnlHeader: TPanel
@@ -100,7 +96,6 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 81
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 920
     object rgAccMan: TRadioGroup
       Left = 8
       Top = 8
@@ -280,8 +275,6 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Width = 914
     Height = 19
     Panels = <>
-    ExplicitTop = 434
-    ExplicitWidth = 920
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

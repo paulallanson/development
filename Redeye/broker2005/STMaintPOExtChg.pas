@@ -106,7 +106,7 @@ begin
     end;
   POrdLabel.Caption := sDescName;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [poDelete, poView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   DelLabel.Visible := (FFuncMode = poDelete);
   OKBitBtn.Visible := (FFuncMode <> poView);
   CheckOK(Self);
@@ -126,7 +126,7 @@ end;
 
 procedure TSTMaintPOExtChgFrm.OKBitBtnClick(Sender: TObject);
 begin
-  if FFuncMode in [poAdd, poChange] then
+  if CharInSet(FFuncMode, [poAdd, poChange]) then
   begin
     with ExtraCharge do
     begin

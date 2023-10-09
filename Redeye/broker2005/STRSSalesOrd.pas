@@ -56,7 +56,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   pbDatabase, PBEmailList, printers, CCSCommon, pbMainMenu,
   Printer.Tools;
 

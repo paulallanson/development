@@ -1,7 +1,4 @@
 object dtmdlUpdateDB: TdtmdlUpdateDB
-  OldCreateOrder = False
-  Left = 65532
-  Top = 65532
   Height = 872
   Width = 1544
   object qryGetDBVersion: TFDQuery

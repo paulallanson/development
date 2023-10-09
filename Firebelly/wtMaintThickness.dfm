@@ -11,14 +11,12 @@ object frmWtMaintThickness: TfrmWtMaintThickness
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     286
     153)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -37,9 +35,9 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 152
@@ -50,8 +48,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -93,24 +91,16 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Thickness_mm'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -127,8 +117,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -142,8 +132,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

@@ -25,8 +25,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 212
-    ExplicitWidth = 688
     DesignSize = (
       682
       41)
@@ -39,7 +37,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Notes'
       TabOrder = 1
       OnClick = btnDeliveryNotesClick
-      ExplicitLeft = 358
     end
     object btnLabels: TButton
       Left = 426
@@ -50,7 +47,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Prod Labels'
       TabOrder = 2
       OnClick = btnLabelsClick
-      ExplicitLeft = 438
     end
     object btnChange: TButton
       Left = 266
@@ -61,7 +57,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = 'C&onfirm'
       TabOrder = 0
       OnClick = btnChangeClick
-      ExplicitLeft = 278
     end
     object btnClose: TButton
       Left = 594
@@ -72,7 +67,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Close'
       TabOrder = 4
       OnClick = btnCloseClick
-      ExplicitLeft = 606
     end
     object btnBoxLabels: TButton
       Left = 506
@@ -83,7 +77,6 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Box Labels'
       TabOrder = 3
       OnClick = btnBoxLabelsClick
-      ExplicitLeft = 518
     end
   end
   object dbgDetails: TDBGrid

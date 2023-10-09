@@ -73,7 +73,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBDatabase, PBMaintRevenueLoc, PBMaintRevenueLocBudgets;
+uses UITypes, pbMainMenu, PBDatabase, PBMaintRevenueLoc, PBMaintRevenueLocBudgets;
 
 {$R *.DFM}
 

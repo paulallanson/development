@@ -11,20 +11,18 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 339
     Width = 594
     Height = 44
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       594
@@ -37,9 +35,10 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
       Anchors = [akRight, akBottom]
       Caption = 'Select'
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnSelectClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 504
@@ -47,17 +46,18 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 594
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object lblCustomer: TLabel
       Left = 8

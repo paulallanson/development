@@ -1,29 +1,27 @@
 object PBRSCapabilityfrm: TPBRSCapabilityfrm
   Left = 58
   Top = 99
-  Width = 718
-  Height = 453
   Caption = 'Supplier/Capability report'
+  ClientHeight = 414
+  ClientWidth = 702
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 344
-    Width = 710
+    Top = 332
+    Width = 702
     Height = 63
     Align = alBottom
     TabOrder = 0
     DesignSize = (
-      710
+      702
       63)
     object Label1: TLabel
       Left = 8
@@ -47,8 +45,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Preview'
-      TabOrder = 1
-      OnClick = btnPreviewClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -63,6 +59,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
         5555557FFFFF7755555555500000005555555577777775555555555555555555
         5555555555555555555555555555555555555555555555555555}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnPreviewClick
     end
     object btnPrint: TBitBtn
       Left = 536
@@ -71,8 +69,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Print'
-      TabOrder = 2
-      OnClick = btnPrintClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -87,6 +83,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnPrintClick
     end
     object btnCancel: TBitBtn
       Left = 614
@@ -94,8 +92,9 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 3
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 3
     end
     object chkCapability: TCheckBox
       Left = 72
@@ -108,8 +107,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
   end
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 407
-    Width = 710
+    Top = 395
+    Width = 702
     Height = 19
     Panels = <
       item
@@ -122,8 +121,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
   object DBGrid1: TDBGrid
     Left = 0
     Top = 0
-    Width = 710
-    Height = 344
+    Width = 702
+    Height = 332
     Align = alClient
     DataSource = dsCapability
     TabOrder = 2

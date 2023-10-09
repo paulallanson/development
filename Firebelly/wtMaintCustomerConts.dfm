@@ -275,59 +275,37 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Forename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Surname'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -343,19 +321,15 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -368,14 +342,10 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -388,13 +358,11 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -411,43 +379,29 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
       'Where'
       '(Category = :Category) '
       '')
-    Left = 368
+    Left = 367
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

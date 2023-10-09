@@ -66,7 +66,6 @@ object frmWTMaintReps: TfrmWTMaintReps
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 200
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -79,7 +78,6 @@ object frmWTMaintReps: TfrmWTMaintReps
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitTop = 200
   end
   object chkbxIsCustomer: TCheckBox
     Left = 8
@@ -164,9 +162,7 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -186,39 +182,25 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Is_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -235,8 +217,8 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -250,8 +232,8 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -272,39 +254,25 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

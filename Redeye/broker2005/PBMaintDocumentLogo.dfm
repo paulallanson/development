@@ -11,13 +11,11 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     608
     198)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -50,9 +48,9 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 314
@@ -63,8 +61,8 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object edtLogoName: TEdit
     Left = 102
@@ -130,29 +128,19 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Logo_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Logo_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -177,24 +165,16 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Logo_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Logo_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

@@ -11,10 +11,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -49,17 +47,19 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = OKbitbtnClick
-    Kind = bkOK
   end
   object Cancelbtn: TBitBtn
     Left = 264
     Top = 88
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object edtDetails: TEdit
     Left = 64
@@ -97,34 +97,22 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -150,39 +138,25 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Profit'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -196,14 +170,10 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -217,19 +187,13 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end>
   end
   object getLastProfitSQL: TFDQuery
@@ -289,104 +253,73 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Profit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Sales_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no0'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Office_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Account_Team'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep_Team'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object updSalesProfitSQL: TFDQuery
@@ -399,14 +332,10 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Profit'
-        ParamType = ptUnknown
       end>
   end
   object qryDelSalesProfit: TFDQuery
@@ -418,9 +347,7 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Profit'
-        ParamType = ptUnknown
       end>
   end
 end

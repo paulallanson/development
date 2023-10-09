@@ -11,12 +11,9 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object RadioGroup1: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 161
@@ -26,6 +23,7 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
       'Customer'
       'Supplier'
       'Both')
+    ParentBackground = False
     TabOrder = 0
   end
   object BitBtn1: TBitBtn
@@ -33,15 +31,17 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
     Top = 144
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object BitBtn2: TBitBtn
     Left = 96
     Top = 144
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
 end

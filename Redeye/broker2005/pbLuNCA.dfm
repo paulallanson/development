@@ -30,13 +30,12 @@ object frmPBluNCA: TfrmPBluNCA
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 681
+        Width = 667
       end>
-    ExplicitWidth = 683
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 668
+      Width = 658
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -221,8 +220,6 @@ object frmPBluNCA: TfrmPBluNCA
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 311
-    ExplicitWidth = 683
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -239,7 +236,7 @@ object frmPBluNCA: TfrmPBluNCA
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 409
+      Left = 399
       Top = 1
       Width = 273
       Height = 39
@@ -302,8 +299,6 @@ object frmPBluNCA: TfrmPBluNCA
       item
         Width = 50
       end>
-    ExplicitTop = 352
-    ExplicitWidth = 683
   end
   object Panel3: TPanel
     Left = 0
@@ -316,7 +311,6 @@ object frmPBluNCA: TfrmPBluNCA
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 683
     object Label3: TLabel
       Left = 8
       Top = 3

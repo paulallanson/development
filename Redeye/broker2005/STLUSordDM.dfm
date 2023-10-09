@@ -1,8 +1,5 @@
 object DmLookupSOrd: TDmLookupSOrd
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 391
-  Top = 124
   Height = 445
   Width = 610
   object DetsSRC: TDataSource
@@ -64,14 +61,10 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'del_to'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'del_to'
-        ParamType = ptUnknown
       end>
     object GetDetsSQLDescription: TStringField
       FieldKind = fkCalculated
@@ -193,9 +186,7 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object oldDummySQL: TFDQuery
@@ -253,14 +244,10 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'del_to'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'del_to'
-        ParamType = ptUnknown
       end>
   end
   object GetContactSQL: TFDQuery
@@ -278,19 +265,13 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 34
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetDespDetsSQL: TFDQuery
@@ -347,14 +328,12 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 152
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Status_From'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Status_To'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryNewSOs: TFDQuery
@@ -371,9 +350,7 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryperiodEnd: TFDQuery
@@ -386,9 +363,7 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesHistory: TFDQuery
@@ -432,20 +407,20 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 208
     ParamData = <
       item
-        DataType = ftString
         Name = 'part'
+        DataType = ftString
         ParamType = ptInput
         Value = ''
       end
       item
-        DataType = ftInteger
         Name = 'cust'
+        DataType = ftInteger
         ParamType = ptInput
         Value = 0
       end
       item
-        DataType = ftDateTime
         Name = 'date'
+        DataType = ftDateTime
         ParamType = ptInput
         Value = 0d
       end>
@@ -627,34 +602,28 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 256
     ParamData = <
       item
-        DataType = ftString
         Name = 'part'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'cust'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDate
+        Name = 'cust'
+        DataType = ftInteger
+      end
+      item
         Name = 'dateFrom'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftDate
         Name = 'dateTo'
-        ParamType = ptUnknown
+        DataType = ftDate
       end>
     object qryProductSalesbyCustsales_order: TIntegerField
       FieldName = 'sales_order'
@@ -757,9 +726,7 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object OldqryProductSalesbyCust: TFDQuery
@@ -832,34 +799,22 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateTo'
-        ParamType = ptUnknown
       end>
   end
   object qryAdhoc: TFDQuery
@@ -872,9 +827,7 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ad_hoc_address'
-        ParamType = ptUnknown
       end>
   end
   object qryCust: TFDQuery
@@ -890,19 +843,15 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesSerialNos: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsDetails
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from sales_order_line_serial_no'
@@ -913,14 +862,12 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 320
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'sales_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsDetails: TDataSource
@@ -1065,44 +1012,28 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateTo'
-        ParamType = ptUnknown
       end>
   end
   object qryProdSalesbyCust: TFDQuery
@@ -1202,44 +1133,38 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'part'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'cust'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'cust'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'rep'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'rep'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftDate
         Name = 'dateFrom'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftDate
         Name = 'dateTo'
-        ParamType = ptUnknown
+        DataType = ftDate
       end>
     object qryProdSalesbyCustsales_order: TIntegerField
       FieldName = 'sales_order'
@@ -1375,14 +1300,10 @@ object DmLookupSOrd: TDmLookupSOrd
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

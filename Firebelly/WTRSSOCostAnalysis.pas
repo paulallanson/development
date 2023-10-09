@@ -75,7 +75,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   allCommon, WTSrchCustomer, DateSelV5, WTRPSOCostAnalysis, wtMain;
 
 {$R *.dfm}

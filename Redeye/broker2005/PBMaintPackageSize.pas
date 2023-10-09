@@ -58,7 +58,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUPackageSize;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUPackageSize;
 
 {$R *.DFM}
 

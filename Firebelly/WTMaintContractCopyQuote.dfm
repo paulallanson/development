@@ -1,20 +1,18 @@
 object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
   Left = 192
   Top = 107
-  Width = 928
-  Height = 480
   Caption = 'Copy Contract Quote'
+  ClientHeight = 441
+  ClientWidth = 912
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   DesignSize = (
-    920
-    453)
-  PixelsPerInch = 96
+    912
+    441)
   TextHeight = 13
   object btnOK: TBitBtn
     Left = 79
@@ -25,7 +23,6 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 0
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -44,6 +41,7 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 0
   end
   object BitBtn2: TBitBtn
     Left = 167
@@ -51,8 +49,9 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object dblkpWorktops: TDBLookupComboBox
     Left = 56

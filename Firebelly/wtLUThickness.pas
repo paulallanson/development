@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   wtMaintThickness, wtMain;
 
 {$R *.DFM}
@@ -100,10 +100,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Thickness_mm').asstring
-                    + ' thickness has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Thickness_mm').asstring + ' thickness has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

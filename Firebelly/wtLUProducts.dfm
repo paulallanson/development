@@ -84,8 +84,6 @@ object frmWTLUProducts: TfrmWTLUProducts
       item
         Width = 50
       end>
-    ExplicitTop = 485
-    ExplicitWidth = 841
   end
   object Panel1: TPanel
     Left = 0
@@ -95,8 +93,6 @@ object frmWTLUProducts: TfrmWTLUProducts
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 417
-    ExplicitWidth = 841
     DesignSize = (
       839
       68)
@@ -134,7 +130,6 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 762
     end
     object BitBtn2: TBitBtn
       Left = 264
@@ -154,8 +149,6 @@ object frmWTLUProducts: TfrmWTLUProducts
     Align = alRight
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 751
-    ExplicitHeight = 417
     DesignSize = (
       90
       409)
@@ -188,7 +181,6 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitTop = 387
     end
     object btnDelete: TBitBtn
       Left = 7

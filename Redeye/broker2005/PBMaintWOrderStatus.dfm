@@ -11,10 +11,8 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -40,17 +38,19 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 257
     Top = 72
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object qryWOStatus: TFDQuery
     ConnectionName = 'PB'

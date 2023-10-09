@@ -72,7 +72,7 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrder;
+uses UITypes, allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrder;
 
 {$R *.dfm}
 

@@ -82,7 +82,7 @@ var
 
 implementation
 
-uses WTSrchCustomer, allCommon, DateSelV5, wtDataModule, WTRSCustomerRFP,
+uses UITypes, WTSrchCustomer, allCommon, DateSelV5, wtDataModule, WTRSCustomerRFP,
   wtMain, WTLUCustomerSite;
 
 {$R *.dfm}

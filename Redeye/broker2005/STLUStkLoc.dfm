@@ -26,8 +26,8 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     object dbgrdLocations: TDBGrid
       Left = 1
       Top = 33
-      Width = 650
-      Height = 189
+      Width = 644
+      Height = 180
       Align = alClient
       DefaultDrawing = False
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -130,13 +130,12 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     object pnlPart: TPanel
       Left = 1
       Top = 1
-      Width = 650
+      Width = 644
       Height = 32
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 644
       object lblPartDesc: TLabel
         Left = 184
         Top = 8
@@ -258,7 +257,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 444
     end
   end
   object StatusBar1: TStatusBar

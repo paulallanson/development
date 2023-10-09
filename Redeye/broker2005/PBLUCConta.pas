@@ -169,7 +169,7 @@ var
 
 implementation
 
-uses PBMaintCConta, pbMainMenu, PBDatabase, PBLUCContaEvents, PBDBMemo;
+uses UITypes, PBMaintCConta, pbMainMenu, PBDatabase, PBLUCContaEvents, PBDBMemo;
 
 {$R *.DFM}
 

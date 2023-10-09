@@ -1,0 +1,180 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A5E371E9-72DE-4BBD-A35A-D01EC0847FD2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="redeye.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_989.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_avanti.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_besleyCopp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_bs.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_cald.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_mad.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_MandM.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_pms.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_prem.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_PrintGuy.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_s23.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="redeye_SM.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="redeye">
+        <MSBuild Projects="redeye.dproj"/>
+    </Target>
+    <Target Name="redeye:Clean">
+        <MSBuild Projects="redeye.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye:Make">
+        <MSBuild Projects="redeye.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_989">
+        <MSBuild Projects="redeye_989.dproj"/>
+    </Target>
+    <Target Name="redeye_989:Clean">
+        <MSBuild Projects="redeye_989.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_989:Make">
+        <MSBuild Projects="redeye_989.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_avanti">
+        <MSBuild Projects="redeye_avanti.dproj"/>
+    </Target>
+    <Target Name="redeye_avanti:Clean">
+        <MSBuild Projects="redeye_avanti.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_avanti:Make">
+        <MSBuild Projects="redeye_avanti.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_besleyCopp">
+        <MSBuild Projects="redeye_besleyCopp.dproj"/>
+    </Target>
+    <Target Name="redeye_besleyCopp:Clean">
+        <MSBuild Projects="redeye_besleyCopp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_besleyCopp:Make">
+        <MSBuild Projects="redeye_besleyCopp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_bs">
+        <MSBuild Projects="redeye_bs.dproj"/>
+    </Target>
+    <Target Name="redeye_bs:Clean">
+        <MSBuild Projects="redeye_bs.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_bs:Make">
+        <MSBuild Projects="redeye_bs.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_cald">
+        <MSBuild Projects="redeye_cald.dproj"/>
+    </Target>
+    <Target Name="redeye_cald:Clean">
+        <MSBuild Projects="redeye_cald.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_cald:Make">
+        <MSBuild Projects="redeye_cald.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_mad">
+        <MSBuild Projects="redeye_mad.dproj"/>
+    </Target>
+    <Target Name="redeye_mad:Clean">
+        <MSBuild Projects="redeye_mad.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_mad:Make">
+        <MSBuild Projects="redeye_mad.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_MandM">
+        <MSBuild Projects="redeye_MandM.dproj"/>
+    </Target>
+    <Target Name="redeye_MandM:Clean">
+        <MSBuild Projects="redeye_MandM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_MandM:Make">
+        <MSBuild Projects="redeye_MandM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_pms">
+        <MSBuild Projects="redeye_pms.dproj"/>
+    </Target>
+    <Target Name="redeye_pms:Clean">
+        <MSBuild Projects="redeye_pms.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_pms:Make">
+        <MSBuild Projects="redeye_pms.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_prem">
+        <MSBuild Projects="redeye_prem.dproj"/>
+    </Target>
+    <Target Name="redeye_prem:Clean">
+        <MSBuild Projects="redeye_prem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_prem:Make">
+        <MSBuild Projects="redeye_prem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_PrintGuy">
+        <MSBuild Projects="redeye_PrintGuy.dproj"/>
+    </Target>
+    <Target Name="redeye_PrintGuy:Clean">
+        <MSBuild Projects="redeye_PrintGuy.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_PrintGuy:Make">
+        <MSBuild Projects="redeye_PrintGuy.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_s23">
+        <MSBuild Projects="redeye_s23.dproj"/>
+    </Target>
+    <Target Name="redeye_s23:Clean">
+        <MSBuild Projects="redeye_s23.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_s23:Make">
+        <MSBuild Projects="redeye_s23.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="redeye_SM">
+        <MSBuild Projects="redeye_SM.dproj"/>
+    </Target>
+    <Target Name="redeye_SM:Clean">
+        <MSBuild Projects="redeye_SM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="redeye_SM:Make">
+        <MSBuild Projects="redeye_SM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="redeye;redeye_989;redeye_avanti;redeye_besleyCopp;redeye_bs;redeye_cald;redeye_mad;redeye_MandM;redeye_pms;redeye_prem;redeye_PrintGuy;redeye_s23;redeye_SM"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="redeye:Clean;redeye_989:Clean;redeye_avanti:Clean;redeye_besleyCopp:Clean;redeye_bs:Clean;redeye_cald:Clean;redeye_mad:Clean;redeye_MandM:Clean;redeye_pms:Clean;redeye_prem:Clean;redeye_PrintGuy:Clean;redeye_s23:Clean;redeye_SM:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="redeye:Make;redeye_989:Make;redeye_avanti:Make;redeye_besleyCopp:Make;redeye_bs:Make;redeye_cald:Make;redeye_mad:Make;redeye_MandM:Make;redeye_pms:Make;redeye_prem:Make;redeye_PrintGuy:Make;redeye_s23:Make;redeye_SM:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

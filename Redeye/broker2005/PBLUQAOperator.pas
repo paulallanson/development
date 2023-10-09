@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   System.Types,
   pbDatabase, pbMainMenu, PBMaintQAOperator;
 

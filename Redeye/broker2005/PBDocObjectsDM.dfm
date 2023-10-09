@@ -1,7 +1,4 @@
 object dmPBDocObjects: TdmPBDocObjects
-  OldCreateOrder = False
-  Left = 64
-  Top = 176
   Height = 480
   Width = 696
   object qryDelPOLineDocs: TFDQuery
@@ -13,14 +10,10 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryInsPOLineDocs: TFDQuery
@@ -37,29 +30,19 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end>
   end
   object qryDelEnqLineDocs: TFDQuery
@@ -72,14 +55,12 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryInsEnqLineDoc: TFDQuery
@@ -93,29 +74,19 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end>
   end
   object qrySelEnqLineDocs: TFDQuery
@@ -128,14 +99,10 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 100
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qrySelPOLineDocs: TFDQuery
@@ -150,14 +117,10 @@ object dmPBDocObjects: TdmPBDocObjects
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery

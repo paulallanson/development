@@ -11,10 +11,8 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlproduct: TPanel
     Left = 0
@@ -234,9 +232,6 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = OKBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -255,6 +250,9 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = OKBtnClick
     end
     object CancelBtn: TBitBtn
       Left = 655
@@ -267,10 +265,11 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
       OnClick = CancelBtnClick
-      Kind = bkCancel
     end
   end
   object qryStoreStock: TFDQuery
@@ -299,9 +298,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryUpStoreStock: TFDQuery
@@ -316,24 +313,16 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryDelStoreStock: TFDQuery
@@ -347,9 +336,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPartStoreAlloc: TFDQuery
@@ -362,9 +349,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     Top = 113
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
 end

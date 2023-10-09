@@ -293,7 +293,7 @@ begin
     sValue := stringreplace(sValue,',','',[rfReplaceAll]);
     iGoods := iGoods + StrToFloatDef(sValue, 0, FormatSettings);
 
-    rVatValue := StrToFloatDef(sValue) * (FieldByName('Vat_Rate', 0, FormatSettings).AsFloat / 100);
+    rVatValue := StrToFloatDef(sValue, 0, FormatSettings) * (FieldByName('Vat_Rate').AsFloat / 100);
     lblVat.Caption := CurrencyDisp('£###,##0.00',floattostr(rVatValue));
     ivat := ivat + rVatValue;
   end;

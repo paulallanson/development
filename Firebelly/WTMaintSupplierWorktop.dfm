@@ -1,19 +1,17 @@
 object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   Left = 371
   Top = 143
-  Width = 522
-  Height = 250
   Caption = 'Maintain Supplier Worktop Details'
+  ClientHeight = 211
+  ClientWidth = 506
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 24
@@ -110,9 +108,9 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     Caption = 'OK'
     Default = True
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 234
@@ -122,9 +120,9 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object spnAdhesiveQuantity: TSpinEdit
     Left = 121
@@ -157,8 +155,6 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     Top = 71
     Width = 25
     Height = 25
-    TabOrder = 5
-    OnClick = btnClearClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -173,6 +169,8 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = btnClearClick
   end
   object qryUpdSupplierWorktop: TFDQuery
     ConnectionName = 'WT'
@@ -186,24 +184,16 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Adhesive_Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Adhesive_Quantity_Per_Slab'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierWorktop: TFDQuery
@@ -229,14 +219,10 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
 end

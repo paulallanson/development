@@ -2,8 +2,8 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   Left = 3
   Top = 40
   Caption = 'Sales By Product Category'
-  ClientHeight = 513
-  ClientWidth = 772
+  ClientHeight = 521
+  ClientWidth = 774
   Color = clBtnFace
   Constraints.MinHeight = 560
   Constraints.MinWidth = 790
@@ -19,16 +19,16 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 185
-    Width = 772
-    Height = 287
+    Width = 774
+    Height = 295
     Align = alClient
     ParentBackground = False
     TabOrder = 0
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 776
-      Height = 294
+      Width = 772
+      Height = 293
       Align = alClient
       DataSource = dtsrcSalesByInv
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -122,7 +122,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 772
+    Width = 774
     Height = 185
     Align = alTop
     ParentBackground = False
@@ -415,14 +415,14 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 472
-    Width = 772
+    Top = 480
+    Width = 774
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      772
+      774
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -438,7 +438,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 539
+      Left = 541
       Top = 1
       Width = 232
       Height = 39
@@ -502,7 +502,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 376
     end
     object btbtnExcel: TBitBtn
       Left = 466
@@ -556,7 +555,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
-      ExplicitLeft = 472
     end
   end
   object pnlExportPrgrss: TPanel

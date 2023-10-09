@@ -41,7 +41,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     NumGlyphs = 2
     TabOrder = 13
     OnClick = PrintBitBtnClick
-    ExplicitTop = 311
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
@@ -66,7 +65,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     NumGlyphs = 2
     TabOrder = 12
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 311
   end
   object pnlAssignedToSearch: TPanel
     Left = 139
@@ -115,7 +113,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 10
-    ExplicitTop = 311
   end
   object GroupBox1: TGroupBox
     Left = 5
@@ -125,7 +122,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Anchors = [akLeft, akBottom]
     Caption = 'Date Range'
     TabOrder = 6
-    ExplicitTop = 212
     object Label1: TLabel
       Left = 8
       Top = 28
@@ -375,7 +371,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 11
     OnClick = btnExcelClick
-    ExplicitTop = 311
   end
   object chkbxShowOnlyLive: TCheckBox
     Left = 488

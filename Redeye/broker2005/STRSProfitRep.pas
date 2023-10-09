@@ -37,7 +37,7 @@ var
 
 implementation
 
-uses PBLUCust, STRPProfitRep;
+uses UITypes, FireDAC.Stan.Param, PBLUCust, STRPProfitRep;
 
 {$R *.DFM}
 

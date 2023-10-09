@@ -11,13 +11,11 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     387
     131)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -32,9 +30,10 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 204
@@ -42,9 +41,10 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn2Click
-    Kind = bkCancel
   end
   object spnLines: TSpinEdit
     Left = 152

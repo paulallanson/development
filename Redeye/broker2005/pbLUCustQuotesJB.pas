@@ -52,7 +52,7 @@ var
 
 implementation
 
-uses PBAutoPO;
+uses UITypes, PBAutoPO;
 
 {$R *.DFM}
 

@@ -2,8 +2,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   Left = 192
   Top = 114
   Caption = 'Maintain Customer Edge Details'
-  ClientHeight = 373
-  ClientWidth = 733
+  ClientHeight = 381
+  ClientWidth = 735
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -19,8 +19,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 733
-    Height = 212
+    Width = 735
+    Height = 220
     Align = alClient
     DataSource = dtsCustEdge
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -72,14 +72,14 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 285
-    Width = 733
+    Top = 293
+    Width = 735
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      733
+      735
       69)
     object Label4: TLabel
       Left = 16
@@ -162,8 +162,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 354
-    Width = 733
+    Top = 362
+    Width = 735
     Height = 19
     Panels = <
       item
@@ -176,13 +176,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 733
+    Width = 735
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
     DesignSize = (
-      733
+      735
       73)
     object Label1: TLabel
       Left = 16

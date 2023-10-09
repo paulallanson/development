@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses PBMaintActivity, pbMainMenu, CCSCommon;
+uses UITypes, PBMaintActivity, pbMainMenu, CCSCommon;
 
 {$R *.dfm}
 

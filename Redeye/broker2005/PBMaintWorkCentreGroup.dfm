@@ -1,4 +1,4 @@
-﻿object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
+object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
   Left = 225
   Top = 152
   BorderStyle = bsDialog
@@ -11,13 +11,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     347
     122)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 29
@@ -55,9 +53,6 @@
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -122,7 +117,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 245
@@ -132,9 +130,6 @@
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 1
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -199,7 +194,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = CancelBitBtnClick
   end
   object edtName: TEdit
     Left = 78
@@ -231,8 +229,8 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -248,8 +246,8 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -266,19 +264,13 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group_Short_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -291,9 +283,7 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -308,14 +298,10 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
       end>
   end
 end

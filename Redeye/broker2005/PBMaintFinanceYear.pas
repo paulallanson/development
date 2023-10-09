@@ -70,7 +70,7 @@ var
 
 implementation
 
-uses PBLUFinanceYear, ComObj, ActiveX, PBDatabase, pbMainMenu, CCSCommon;
+uses UITypes, PBLUFinanceYear, ComObj, ActiveX, PBDatabase, pbMainMenu, CCSCommon;
 
 {$R *.DFM}
 

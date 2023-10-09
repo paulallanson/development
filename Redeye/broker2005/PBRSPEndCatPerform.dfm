@@ -117,8 +117,6 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    ExplicitLeft = 335
-    ExplicitTop = 198
   end
   object PreviewBitBtn: TBitBtn
     Left = 12
@@ -144,7 +142,6 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 197
   end
   object PrintBitBtn: TBitBtn
     Left = 97
@@ -170,7 +167,6 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PrintBitBtnClick
-    ExplicitTop = 197
   end
   object dblkpPeriod: TDBLookupComboBox
     Left = 112
@@ -245,7 +241,6 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 198
   end
   object pnlExportPrgrss: TPanel
     Left = 67

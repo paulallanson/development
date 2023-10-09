@@ -129,7 +129,7 @@ var
 
 implementation
 
-uses
+uses FireDAC.Stan.Param, 
   System.UITypes,
   stPickingDM, STLUPartBinLot;
 

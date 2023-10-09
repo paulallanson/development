@@ -11,10 +11,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -80,8 +78,6 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Height = 25
     Caption = '&Add'
     Enabled = False
-    TabOrder = 1
-    OnClick = btnAddClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -96,6 +92,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnAddClick
   end
   object btnRemove: TBitBtn
     Left = 191
@@ -104,8 +102,6 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Height = 25
     Caption = '&Remove'
     Enabled = False
-    TabOrder = 2
-    OnClick = btnRemoveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -120,6 +116,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
       3333333333773333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = btnRemoveClick
   end
   object lstbxProcesses: TListBox
     Left = 288
@@ -143,17 +141,19 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 241
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object lstbxPProcessesCodes: TListBox
@@ -205,19 +205,13 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Production_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -240,9 +234,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Production_type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -254,9 +246,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Production_Type'
-        ParamType = ptUnknown
       end>
   end
 end

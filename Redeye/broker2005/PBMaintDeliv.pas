@@ -598,8 +598,8 @@ begin
     end;
 
   {Enable or disable the buttons}
-  self.tbshtDetails.Enabled := not (FFuncMode in [poDelete, poView]);
-  self.QtysGrpBox.Enabled := not (FFuncMode in [poDelete, poRestrict]);
+  self.tbshtDetails.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
+  self.QtysGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poRestrict]);
 
   {Disable changing if using Stock system and Delivery has been made}
   DelLabel.Visible := (FFuncMode = poDelete);

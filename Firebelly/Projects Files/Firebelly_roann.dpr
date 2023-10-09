@@ -313,6 +313,7 @@ uses
   WTRSCustomerRFP in '..\WTRSCustomerRFP.pas' {frmWTRSCustomerRFP},
   WTRPCustomerRFP in '..\WTRPCustomerRFP.pas' {frmWTRPCustomerRFP},
   WTUSSetDocuments in '..\WTUSSetDocuments.pas' {frmWTUSSetDocuments},
+  wtSrchCustContacts in '..\wtSrchCustContacts.pas' {frmWTSrchCustContacts},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
@@ -330,6 +331,7 @@ begin
 //  frmWTSplash.Show;
 //  frmWTSplash.Refresh;
   Application.Title := 'Worktop Manufacturing';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);

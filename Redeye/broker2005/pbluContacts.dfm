@@ -85,8 +85,6 @@ object frmpbluContacts: TfrmpbluContacts
       item
         Width = 50
       end>
-    ExplicitTop = 343
-    ExplicitWidth = 717
   end
   object Panel1: TPanel
     Left = 0
@@ -97,8 +95,6 @@ object frmpbluContacts: TfrmpbluContacts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 287
-    ExplicitWidth = 717
     DesignSize = (
       705
       56)
@@ -118,7 +114,6 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 635
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -155,8 +150,6 @@ object frmpbluContacts: TfrmpbluContacts
     Align = alRight
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 617
-    ExplicitHeight = 287
     DesignSize = (
       100
       269)

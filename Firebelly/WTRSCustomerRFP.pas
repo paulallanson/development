@@ -90,7 +90,7 @@ var
 
 implementation
 
-uses DateSelV5, wtDataModule, WTRPCustomerRFP, allEmailHandler;
+uses UITypes, DateSelV5, wtDataModule, WTRPCustomerRFP, allEmailHandler;
 
 {$R *.DFM}
 
@@ -189,8 +189,7 @@ begin
 	dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
   if SelectLst.Count > 1000 then
     begin
-      MessageDlg(' This selection will result in more than 1000 documents being produced. Please redefine the range', mterror,
-      [mbOk], 0);
+      MessageDlg(' This selection will result in more than 1000 documents being produced. Please redefine the range', mterror, [mbOk], 0);
       SelectLst.Clear;
     end;
 
@@ -471,4 +470,3 @@ begin
 end;
 
 end.
-

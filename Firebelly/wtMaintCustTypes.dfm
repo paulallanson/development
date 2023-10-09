@@ -1,19 +1,17 @@
 object frmWTMaintCustTypes: TfrmWTMaintCustTypes
   Left = 576
   Top = 133
-  Width = 372
-  Height = 192
   Caption = 'Customer Types'
+  ClientHeight = 153
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -52,9 +50,9 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 264
@@ -64,8 +62,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object edtDescription: TEdit
     Left = 80
@@ -98,24 +96,16 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -132,8 +122,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -147,8 +137,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

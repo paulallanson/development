@@ -112,7 +112,7 @@ var
 
 implementation
 
-uses PBLUSupp, PBLUCust, PBDatabase, DateSelV5, PBRPJBMargin, CCSPrint, Printers;
+uses UITypes, PBLUSupp, PBLUCust, PBDatabase, DateSelV5, PBRPJBMargin, CCSPrint, Printers;
 
 {$R *.DFM}
 

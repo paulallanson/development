@@ -41,7 +41,7 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, ccscommon;
+uses UITypes, pbMainMenu, pbDatabase, ccscommon;
 
 {$R *.DFM}
 

@@ -16,8 +16,8 @@ object STRPDelivfrm: TSTRPDelivfrm
   object PickSOListQuickReport: TQuickRep
     Left = 32
     Top = 16
-    Width = 1020
-    Height = 1320
+    Width = 816
+    Height = 1056
     ShowingPreview = False
     BeforePrint = PickSOListQuickReportBeforePrint
     DataSet = GetAllocMasterQuery
@@ -77,9 +77,9 @@ object STRPDelivfrm: TSTRPDelivfrm
     PreviewTop = 0
     object PageHeadQRBand: TQRBand
       Left = 0
-      Top = 47
-      Width = 1020
-      Height = 204
+      Top = 38
+      Width = 816
+      Height = 163
       AfterPrint = PageHeadQRBandAfterPrint
       AlignToBottom = False
       BeforePrint = PageHeadQRBandBeforePrint
@@ -93,16 +93,16 @@ object STRPDelivfrm: TSTRPDelivfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        431.800000000000000000
+        431.270833333333300000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object PreviewQRLabel: TQRLabel
-        Left = 850
-        Top = 10
-        Width = 100
-        Height = 30
+        Left = 680
+        Top = 8
+        Width = 80
+        Height = 24
         Size.Values = (
           63.500000000000000000
           1799.166666666670000000
@@ -118,7 +118,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -129,10 +129,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object NotesQRMemo: TQRMemo
-        Left = 30
-        Top = 39
-        Width = 340
-        Height = 153
+        Left = 24
+        Top = 31
+        Width = 272
+        Height = 122
         Size.Values = (
           322.791666666667000000
           63.500000000000000000
@@ -147,7 +147,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         Lines.Strings = (
@@ -163,10 +163,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object DelInstructMemo: TQRMemo
-        Left = 490
-        Top = 39
-        Width = 340
-        Height = 153
+        Left = 392
+        Top = 31
+        Width = 272
+        Height = 122
         Size.Values = (
           322.791666666667000000
           1037.166666666670000000
@@ -181,7 +181,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -191,15 +191,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel9: TQRLabel
-        Left = 30
-        Top = 10
-        Width = 146
-        Height = 30
+        Left = 24
+        Top = 8
+        Width = 118
+        Height = 24
         Size.Values = (
           63.500000000000000000
           63.500000000000000000
           21.166666666666670000
-          309.033333333333300000)
+          312.208333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -209,7 +209,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -222,9 +222,9 @@ object STRPDelivfrm: TSTRPDelivfrm
     end
     object GroupHeadQRGroup: TQRGroup
       Left = 0
-      Top = 251
-      Width = 1020
-      Height = 150
+      Top = 201
+      Width = 816
+      Height = 120
       AlignToBottom = False
       BeforePrint = GroupHeadQRGroupBeforePrint
       TransparentBand = False
@@ -245,15 +245,15 @@ object STRPDelivfrm: TSTRPDelivfrm
       Master = PickSOListQuickReport
       ReprintOnNewPage = True
       object AccNoQRLabel: TQRLabel
-        Left = 20
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 16
+        Top = 9
+        Width = 94
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          248.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -263,7 +263,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -274,15 +274,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object CustRefQRLabel: TQRLabel
-        Left = 210
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 168
+        Top = 9
+        Width = 95
+        Height = 20
         Size.Values = (
           52.916666666666670000
           444.500000000000000000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          251.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -292,7 +292,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -303,15 +303,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object SONOQRLabel: TQRLabel
-        Left = 820
-        Top = 11
-        Width = 136
-        Height = 25
+        Left = 656
+        Top = 9
+        Width = 109
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1735.666666666667000000
-          23.283333333333330000
-          287.866666666666700000)
+          23.812500000000000000
+          288.395833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -321,7 +321,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -332,15 +332,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object CustRefQRDBText: TQRDBText
-        Left = 210
-        Top = 36
-        Width = 127
-        Height = 25
+        Left = 168
+        Top = 29
+        Width = 102
+        Height = 20
         Size.Values = (
           52.916666666666670000
           444.500000000000000000
-          76.200000000000000000
-          268.816666666666700000)
+          76.729166666666670000
+          269.875000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -351,7 +351,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         DataField = 'Cust_Order_No'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -364,15 +364,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object SoNumQRDBText: TQRDBText
-        Left = 820
-        Top = 36
-        Width = 101
-        Height = 25
+        Left = 656
+        Top = 29
+        Width = 78
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1735.666666666667000000
-          76.200000000000000000
-          213.783333333333300000)
+          76.729166666666670000
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -383,7 +383,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -396,15 +396,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel1: TQRLabel
-        Left = 792
-        Top = 123
-        Width = 76
-        Height = 25
+        Left = 634
+        Top = 98
+        Width = 59
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1676.400000000000000000
-          260.350000000000000000
-          160.866666666666700000)
+          1677.458333333333000000
+          259.291666666666700000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -414,7 +414,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -425,15 +425,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel5: TQRLabel
-        Left = 220
-        Top = 123
-        Width = 97
-        Height = 25
+        Left = 176
+        Top = 98
+        Width = 78
+        Height = 20
         Size.Values = (
           52.916666666666670000
           465.666666666666700000
-          260.350000000000000000
-          205.316666666666700000)
+          259.291666666666700000
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -443,7 +443,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -454,15 +454,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel7: TQRLabel
-        Left = 698
-        Top = 123
-        Width = 84
-        Height = 25
+        Left = 558
+        Top = 98
+        Width = 65
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1477.433333333333000000
-          260.350000000000000000
-          177.800000000000000000)
+          1476.375000000000000000
+          259.291666666666700000
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -472,7 +472,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -483,15 +483,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel8: TQRLabel
-        Left = 670
-        Top = 11
-        Width = 119
-        Height = 25
+        Left = 536
+        Top = 9
+        Width = 96
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1418.166666666667000000
-          23.283333333333330000
-          251.883333333333300000)
+          23.812500000000000000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -501,7 +501,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -512,10 +512,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object TciketQRLabel: TQRLabel
-        Left = 540
-        Top = 11
-        Width = 121
-        Height = 25
+        Left = 432
+        Top = 9
+        Width = 97
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1143.000000000000000000
@@ -531,7 +531,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -542,15 +542,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object DelNoQRLabel: TQRLabel
-        Left = 540
-        Top = 36
-        Width = 126
-        Height = 25
+        Left = 432
+        Top = 29
+        Width = 98
+        Height = 20
         Size.Values = (
           52.916666666666670000
           1143.000000000000000000
-          76.200000000000000000
-          266.700000000000000000)
+          76.729166666666670000
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -560,7 +560,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -571,10 +571,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object DespDtQRLbl: TQRLabel
-        Left = 670
-        Top = 36
-        Width = 100
-        Height = 25
+        Left = 536
+        Top = 29
+        Width = 80
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1418.166666666670000000
@@ -590,7 +590,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -602,15 +602,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel6: TQRLabel
-        Left = 934
-        Top = 123
-        Width = 52
-        Height = 25
+        Left = 747
+        Top = 98
+        Width = 43
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1976.966666666667000000
-          260.350000000000000000
-          110.066666666666700000)
+          1976.437500000000000000
+          259.291666666666700000
+          113.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -620,7 +620,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -631,15 +631,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLblAccnt: TQRLabel
-        Left = 20
-        Top = 36
-        Width = 129
-        Height = 25
+        Left = 16
+        Top = 29
+        Width = 101
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          76.200000000000000000
-          273.050000000000000000)
+          76.729166666666670000
+          267.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -649,7 +649,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -660,15 +660,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabel10: TQRLabel
-        Left = 20
-        Top = 123
-        Width = 116
-        Height = 25
+        Left = 16
+        Top = 98
+        Width = 91
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          260.350000000000000000
-          245.533333333333300000)
+          259.291666666666700000
+          240.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -678,7 +678,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -691,9 +691,9 @@ object STRPDelivfrm: TSTRPDelivfrm
     end
     object QRSubDetail1: TQRSubDetail
       Left = 0
-      Top = 401
-      Width = 1020
-      Height = 31
+      Top = 321
+      Width = 816
+      Height = 25
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
@@ -706,7 +706,7 @@ object STRPDelivfrm: TSTRPDelivfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        65.616666666666670000
+        66.145833333333330000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -715,10 +715,10 @@ object STRPDelivfrm: TSTRPDelivfrm
       PrintBefore = False
       PrintIfEmpty = True
       object PartQRDBText: TQRDBText
-        Left = 20
-        Top = 3
-        Width = 191
-        Height = 25
+        Left = 16
+        Top = 2
+        Width = 153
+        Height = 20
         Size.Values = (
           52.916666666666660000
           42.333333333333340000
@@ -735,7 +735,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         DataField = 'Part'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -748,10 +748,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object DescQRDBText: TQRDBText
-        Left = 220
-        Top = 3
-        Width = 471
-        Height = 25
+        Left = 176
+        Top = 2
+        Width = 377
+        Height = 20
         Size.Values = (
           52.916666666666660000
           465.666666666666800000
@@ -768,7 +768,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         DataField = 'Part_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -781,10 +781,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRDBText4: TQRDBText
-        Left = 698
-        Top = 3
-        Width = 80
-        Height = 25
+        Left = 558
+        Top = 2
+        Width = 64
+        Height = 20
         Size.Values = (
           52.916666666666660000
           1476.375000000000000000
@@ -801,7 +801,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         DataField = 'Sell_Pack_Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -814,15 +814,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabelDlvrd: TQRLabel
-        Left = 870
-        Top = 3
-        Width = 120
-        Height = 25
+        Left = 701
+        Top = 2
+        Width = 91
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          1841.500000000000000000
-          6.350000000000000000
-          254.000000000000000000)
+          1854.729166666667000000
+          5.291666666666667000
+          240.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -832,7 +832,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -843,10 +843,10 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object QRLabelQty: TQRLabel
-        Left = 784
-        Top = 3
-        Width = 83
-        Height = 25
+        Left = 627
+        Top = 2
+        Width = 66
+        Height = 20
         Size.Values = (
           52.916666666666660000
           1658.937500000000000000
@@ -862,7 +862,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -875,9 +875,9 @@ object STRPDelivfrm: TSTRPDelivfrm
     end
     object qrdetailSerialNos: TQRSubDetail
       Left = 0
-      Top = 461
-      Width = 1020
-      Height = 26
+      Top = 369
+      Width = 816
+      Height = 21
       AlignToBottom = False
       BeforePrint = qrdetailSerialNosBeforePrint
       Enabled = False
@@ -885,7 +885,7 @@ object STRPDelivfrm: TSTRPDelivfrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        55.033333333333330000
+        55.562500000000000000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -894,15 +894,15 @@ object STRPDelivfrm: TSTRPDelivfrm
       PrintBefore = False
       PrintIfEmpty = True
       object lblSerialCaption: TQRLabel
-        Left = 150
+        Left = 120
         Top = 0
-        Width = 131
-        Height = 25
+        Width = 98
+        Height = 20
         Size.Values = (
           52.916666666666670000
           317.500000000000000000
           0.000000000000000000
-          277.283333333333300000)
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -912,7 +912,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -923,15 +923,15 @@ object STRPDelivfrm: TSTRPDelivfrm
         FontSize = 12
       end
       object lblSerialRange: TQRLabel
-        Left = 280
+        Left = 224
         Top = 0
-        Width = 120
-        Height = 25
+        Width = 87
+        Height = 20
         Size.Values = (
           52.916666666666670000
           592.666666666666700000
           0.000000000000000000
-          254.000000000000000000)
+          230.187500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -941,7 +941,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -954,31 +954,31 @@ object STRPDelivfrm: TSTRPDelivfrm
     end
     object chldbndFSCClaim: TQRChildBand
       Left = 0
-      Top = 432
-      Width = 1020
-      Height = 29
+      Top = 346
+      Width = 816
+      Height = 23
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = QRSubDetail1
       Size.Values = (
-        61.383333333333330000
+        60.854166666666670000
         2159.000000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = QRSubDetail1
       PrintOrder = cboAfterParent
       object gtlblFSCClaim: TQRLabel
-        Left = 20
-        Top = 4
-        Width = 83
-        Height = 20
+        Left = 16
+        Top = 3
+        Width = 65
+        Height = 16
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
-          8.466666666666667000
-          175.683333333333300000)
+          7.937500000000000000
+          171.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -988,7 +988,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Times New Roman'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1050,9 +1050,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object oldGetAllocMasterQuery: TFDQuery
@@ -1081,9 +1080,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdAllocDetQuery: TFDQuery
@@ -1102,14 +1100,10 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Record'
-        ParamType = ptUnknown
       end>
   end
   object GetAllAllocDetQuery: TFDQuery
@@ -1137,9 +1131,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 212
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end>
   end
   object UpdRefQuery: TFDQuery
@@ -1152,9 +1144,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 118
     ParamData = <
       item
-        DataType = ftString
         Name = 'Picking_Ref_No'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetCustSQL: TFDQuery
@@ -1184,14 +1175,12 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 107
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdSOHeadSQL: TFDQuery
@@ -1207,14 +1196,10 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 134
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivNarrSQL: TFDQuery
@@ -1228,9 +1213,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 222
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object AddDelivDetSQL: TFDQuery
@@ -1251,34 +1234,22 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desp_Note_No'
-        ParamType = ptUnknown
       end>
   end
   object GetDelivCountSQL: TFDQuery
@@ -1293,9 +1264,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetNextSODelivSQL: TFDQuery
@@ -1357,24 +1326,20 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Status_from'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Status_to'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DummySQL: TFDQuery
@@ -1403,19 +1368,15 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 34
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Sales_Order'
+        DataType = ftInteger
+      end
+      item
         Name = 'Status_from'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -1435,8 +1396,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_Address'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1460,14 +1421,12 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 67
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetAllocSerialNoSQL: TFDQuery
@@ -1481,14 +1440,10 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 139
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFSCClaim: TFDQuery
@@ -1501,9 +1456,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 198
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

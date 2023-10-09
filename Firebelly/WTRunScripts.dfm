@@ -11,12 +11,10 @@ object frmWTRunScripts: TfrmWTRunScripts
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   DesignSize = (
     483
     273)
-  PixelsPerInch = 96
   TextHeight = 13
   object memQuery: TMemo
     Left = 24

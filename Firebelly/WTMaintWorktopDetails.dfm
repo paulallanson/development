@@ -1,19 +1,17 @@
 object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
   Left = 477
   Top = 112
-  Width = 380
-  Height = 415
   Caption = 'Worktops'
+  ClientHeight = 376
+  ClientWidth = 364
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -108,9 +106,9 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 280
@@ -120,8 +118,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object Button1: TButton
     Left = 248
@@ -143,8 +141,6 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Top = 78
     Width = 25
     Height = 25
-    TabOrder = 6
-    OnClick = btnClearClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -159,6 +155,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btnClearClick
   end
   object dblkpThickness: TDBLookupComboBox
     Left = 80
@@ -186,9 +184,9 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Text = '0.00'
   end
   object tblWorktops: TFDTable
-    ConnectionName = 'WT'
     Filtered = True
     IndexFieldNames = 'Description'
+    ConnectionName = 'WT'
     TableName = 'Worktop'
     Left = 16
     Top = 224
@@ -244,14 +242,10 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end>
   end
   object lkpMatType: TFDQuery
@@ -266,9 +260,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object srclkpMatType: TDataSource

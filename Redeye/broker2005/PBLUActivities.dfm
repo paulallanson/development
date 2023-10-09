@@ -30,7 +30,6 @@ object frmPBLUActivities: TfrmPBLUActivities
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 920
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -75,8 +74,6 @@ object frmPBLUActivities: TfrmPBLUActivities
       item
         Width = 50
       end>
-    ExplicitTop = 434
-    ExplicitWidth = 920
   end
   object Panel1: TPanel
     Left = 0
@@ -85,8 +82,6 @@ object frmPBLUActivities: TfrmPBLUActivities
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 393
-    ExplicitWidth = 920
     object Label60: TLabel
       Left = 8
       Top = 13
@@ -95,7 +90,7 @@ object frmPBLUActivities: TfrmPBLUActivities
       Caption = 'Customer Search'
     end
     object Panel2: TPanel
-      Left = 646
+      Left = 642
       Top = 1
       Width = 273
       Height = 39
@@ -149,16 +144,15 @@ object frmPBLUActivities: TfrmPBLUActivities
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 916
+        Width = 910
       end>
-    ExplicitWidth = 920
     object ToolBar8: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 903
+      Width = 901
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -171,7 +165,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -179,7 +173,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnChangeClick
       end
       object btnFollowUp: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Caption = 'Follow Up'
         Enabled = False
@@ -187,7 +181,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnFollowUpClick
       end
       object btnDelete: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -195,7 +189,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnDeleteClick
       end
       object btnReports: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4

@@ -32,13 +32,12 @@ object frmpbLUOrders: TfrmpbLUOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 933
+        Width = 923
       end>
-    ExplicitWidth = 935
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 920
+      Width = 914
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -46,7 +45,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 920
+        Width = 902
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56
@@ -392,8 +391,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Alignment = taRightJustify
         Width = 50
       end>
-    ExplicitTop = 407
-    ExplicitWidth = 935
   end
   object Panel1: TPanel
     Left = 0
@@ -403,8 +400,6 @@ object frmpbLUOrders: TfrmpbLUOrders
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 366
-    ExplicitWidth = 935
     DesignSize = (
       929
       41)
@@ -433,7 +428,6 @@ object frmpbLUOrders: TfrmpbLUOrders
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 848
     end
     object edtSearch: TEdit
       Left = 104
@@ -452,7 +446,6 @@ object frmpbLUOrders: TfrmpbLUOrders
       CharCase = ecUpperCase
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 742
     end
     object chkbxShowUnauthorised: TCheckBox
       Left = 376
@@ -484,7 +477,6 @@ object frmpbLUOrders: TfrmpbLUOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 935
     object Label3: TLabel
       Left = 8
       Top = 3

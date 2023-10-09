@@ -1,23 +1,21 @@
 object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   Left = 5
   Top = 33
-  Width = 790
-  Height = 491
   Caption = 'Purchase Orders not in Job Bags'
+  ClientHeight = 452
+  ClientWidth = 774
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsDetails: TStatusBar
     Left = 0
-    Top = 445
-    Width = 782
+    Top = 433
+    Width = 774
     Height = 19
     Panels = <
       item
@@ -26,16 +24,18 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       item
         Width = 50
       end>
-    SimplePanel = False
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 404
-    Width = 782
+    Top = 392
+    Width = 774
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    DesignSize = (
+      774
+      41)
     object PreviewReportBitBtn: TBitBtn
       Left = 517
       Top = 8
@@ -43,8 +43,6 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Preview'
-      TabOrder = 0
-      OnClick = PreviewReportBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -59,6 +57,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = PreviewReportBitBtnClick
     end
     object PrintReportBitBtn: TBitBtn
       Left = 605
@@ -67,8 +67,6 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Print'
-      TabOrder = 1
-      OnClick = PrintReportBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -83,6 +81,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = PrintReportBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 695
@@ -90,8 +90,9 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
     end
     object chkbxIncCallOffs: TCheckBox
       Left = 16
@@ -106,8 +107,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   object DBGrid1: TDBGrid
     Left = 0
     Top = 81
-    Width = 782
-    Height = 323
+    Width = 774
+    Height = 311
     Align = alClient
     DataSource = dtsReport
     TabOrder = 2
@@ -161,15 +162,14 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 782
+    Width = 774
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 113
@@ -179,15 +179,16 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      ParentBackground = False
       Left = 128
       Top = 8
       Width = 329
       Height = 65
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel

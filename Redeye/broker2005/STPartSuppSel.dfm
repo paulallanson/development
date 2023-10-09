@@ -11,12 +11,10 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object PreviewBitBTn: TBitBtn
     Left = 265
@@ -24,8 +22,6 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     Width = 80
     Height = 27
     Caption = 'Pre&view'
-    TabOrder = 3
-    OnClick = PreviewBitBTnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -40,9 +36,10 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = PreviewBitBTnClick
   end
   object SelectionType: TRadioGroup
-    ParentBackground = False
     Left = 280
     Top = 16
     Width = 161
@@ -54,6 +51,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
       'Preferred Suppliers'
       'Alternative Suppliers'
       'All Possible Suppliers')
+    ParentBackground = False
     TabOrder = 1
   end
   object PrintBitBtn: TBitBtn
@@ -62,8 +60,6 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     Width = 80
     Height = 27
     Caption = '&Print'
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -78,6 +74,8 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
   end
   object BitBtn3: TBitBtn
     Left = 9
@@ -85,16 +83,17 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     Width = 80
     Height = 27
     Caption = '&Cancel'
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 265
     Height = 105
     Caption = 'Product Selection'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16

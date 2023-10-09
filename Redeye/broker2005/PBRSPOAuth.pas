@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses PBLUOps, PBDatabase, PBLUCust, PBPOObjects, CCSCommon, PBRPPOAuth;
+uses UITypes, PBLUOps, PBDatabase, PBLUCust, PBPOObjects, CCSCommon, PBRPPOAuth;
 
 {$R *.DFM}
 

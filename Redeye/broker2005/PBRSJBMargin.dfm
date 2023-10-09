@@ -1,9 +1,9 @@
 object PBRSJBMarginfrm: TPBRSJBMarginfrm
   Left = 77
   Top = 88
-  Width = 823
-  Height = 537
   Caption = 'Job Bag Margin Report'
+  ClientHeight = 498
+  ClientWidth = 807
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 750
@@ -12,16 +12,14 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 491
-    Width = 815
+    Top = 479
+    Width = 807
     Height = 19
     Panels = <
       item
@@ -32,15 +30,15 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 450
-    Width = 815
+    Top = 438
+    Width = 807
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      815
+      807
       41)
     object btnCancel: TBitBtn
       Left = 8
@@ -48,8 +46,9 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Width = 75
       Height = 25
       Caption = '&Cancel'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object btnPreview: TBitBtn
       Left = 638
@@ -58,8 +57,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Pre&view'
-      TabOrder = 1
-      OnClick = btnPreviewClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -74,6 +71,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnPreviewClick
     end
     object btnPrint: TBitBtn
       Left = 725
@@ -82,8 +81,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Print'
-      TabOrder = 2
-      OnClick = btnPrintClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -98,6 +95,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnPrintClick
     end
     object btnExcel: TBitBtn
       Left = 554
@@ -106,8 +105,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
-      TabOrder = 3
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -151,13 +148,14 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 3
+      OnClick = btnExcelClick
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 815
+    Width = 807
     Height = 137
     Align = alTop
     Font.Charset = ANSI_CHARSET
@@ -165,6 +163,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object lblDateFrom: TLabel
@@ -248,7 +247,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       OnClick = btnDateToClick
     end
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 1
       Width = 113
@@ -263,12 +261,12 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
     object CustomerPanel: TPanel
-      ParentBackground = False
       Left = 129
       Top = 12
       Width = 281
@@ -278,6 +276,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
       object lblCustomer: TLabel
@@ -318,7 +317,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object rgSupplier: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 67
       Width = 113
@@ -333,12 +331,12 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Items.Strings = (
         'All Suppliers'
         'One Supplier')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
       OnClick = rgSupplierClick
     end
     object SupplierPanel: TPanel
-      ParentBackground = False
       Left = 129
       Top = 72
       Width = 281
@@ -348,6 +346,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 3
       object lblSupplier: TLabel
@@ -382,13 +381,13 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object Panel3: TPanel
-      ParentBackground = False
-      Left = 546
+      Left = 538
       Top = 1
       Width = 268
       Height = 135
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 4
       object chkbxPageBreak: TCheckBox
         Left = 140
@@ -401,7 +400,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         WordWrap = True
       end
       object RdGrpRepType: TRadioGroup
-        ParentBackground = False
         Left = 140
         Top = 8
         Width = 101
@@ -411,10 +409,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Items.Strings = (
           'Summary'
           'Detail')
+        ParentBackground = False
         TabOrder = 1
       end
       object TotByRadioGroup: TRadioGroup
-        ParentBackground = False
         Left = 1
         Top = 8
         Width = 132
@@ -432,6 +430,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
           'By Rep'
           'By Account Manager'
           'Do not total')
+        ParentBackground = False
         ParentFont = False
         TabOrder = 2
         OnClick = TotByRadioGroupClick
@@ -480,8 +479,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   object dbgJobBag: TDBGrid
     Left = 0
     Top = 137
-    Width = 815
-    Height = 313
+    Width = 807
+    Height = 301
     Align = alClient
     DataSource = dsReport
     Font.Charset = ANSI_CHARSET
@@ -614,11 +613,11 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 276
     Top = 228
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
@@ -697,101 +696,80 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Top = 248
     object qryReportJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
-
     end
     object qryReportJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
-
     end
     object qryReportJob_Bag_Line_Descr: TStringField
       FieldName = 'Job_Bag_Line_Descr'
-
       FixedChar = True
       Size = 80
     end
     object qryReportCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-
       FixedChar = True
       Size = 80
     end
     object qryReportSupplier_Name: TStringField
       FieldName = 'Supplier_Name'
-
       FixedChar = True
       Size = 80
     end
     object qryReportJob_Bag_Line_Cost: TCurrencyField
       FieldName = 'Job_Bag_Line_Cost'
-
     end
     object qryReportJob_Bag_Line_Sell: TCurrencyField
       FieldName = 'Job_Bag_Line_Sell'
-
     end
     object qryReportJob_Bag_Quantity: TIntegerField
       FieldName = 'Job_Bag_Quantity'
-
     end
     object qryReportVAT_Code: TIntegerField
       FieldName = 'VAT_Code'
-
     end
     object qryReportJob_Bag_Line_Type: TStringField
       FieldName = 'Job_Bag_Line_Type'
-
       FixedChar = True
       Size = 2
     end
     object qryReportCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-
       FixedChar = True
       Size = 80
     end
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
-
     end
     object qryReportRep_Name: TStringField
       FieldName = 'Rep_Name'
-
       FixedChar = True
       Size = 80
     end
     object qryReportVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
     end
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
-
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
-
     end
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
-
     end
     object qryReportCustomer_Branch_Name: TStringField
       FieldName = 'Customer_Branch_Name'
-
       FixedChar = True
       Size = 80
     end
     object qryReportSupplier: TIntegerField
       FieldName = 'Supplier'
-
     end
     object qryReportSupplier_Branch_no: TIntegerField
       FieldName = 'Supplier_Branch_no'
-
     end
     object qryReportSupplier_Branch_Name: TStringField
       FieldName = 'Supplier_Branch_Name'
-
       FixedChar = True
       Size = 80
     end

@@ -75,7 +75,7 @@ var
 
 implementation
 
-uses wtLUworktops, wtDataModule;
+uses UITypes, wtLUworktops, wtDataModule;
 
 {$R *.dfm}
 

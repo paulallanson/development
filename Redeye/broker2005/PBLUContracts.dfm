@@ -35,8 +35,6 @@ object frmPBLUContracts: TfrmPBLUContracts
       item
         Width = 50
       end>
-    ExplicitTop = 434
-    ExplicitWidth = 862
   end
   object Panel3: TPanel
     Left = 0
@@ -48,7 +46,6 @@ object frmPBLUContracts: TfrmPBLUContracts
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 1
-    ExplicitWidth = 862
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -88,16 +85,15 @@ object frmPBLUContracts: TfrmPBLUContracts
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 858
+        Width = 848
       end>
-    ExplicitWidth = 862
     object ToolBar8: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 845
+      Width = 839
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -110,7 +106,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -118,7 +114,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -126,14 +122,14 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = 'Print'
         Enabled = False
         ImageIndex = 4
       end
       object btnReports: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -148,8 +144,6 @@ object frmPBLUContracts: TfrmPBLUContracts
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 393
-    ExplicitWidth = 862
     object Label60: TLabel
       Left = 8
       Top = 13
@@ -175,7 +169,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 588
+      Left = 580
       Top = 1
       Width = 273
       Height = 39

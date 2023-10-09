@@ -80,7 +80,7 @@ var
 
 implementation
 
-uses StMovSl, pbMainMenu, ccsCommon;
+uses UITypes, StMovSl, pbMainMenu, ccsCommon;
 
 {$R *.DFM}
 

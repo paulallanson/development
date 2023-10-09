@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses PBDBMemo, PBImages, PBDelivNotes, ComObj, ActiveX,
+uses UITypes, PBDBMemo, PBImages, PBDelivNotes, ComObj, ActiveX,
   PBDatabase, pbMainMenu, CCSPrint, PBLUProductionLoc, PBMntPrtBin;
 
 {$R *.DFM}

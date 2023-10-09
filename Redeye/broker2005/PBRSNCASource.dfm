@@ -11,13 +11,11 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     467
     203)
-  PixelsPerInch = 96
   TextHeight = 13
   object PreviewBitBtn: TBitBtn
     Left = 378
@@ -26,8 +24,6 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
-    TabOrder = 0
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -42,6 +38,8 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 24
@@ -49,16 +47,17 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 16
     Width = 217
     Height = 65
     Caption = 'Graph 1'
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 16
@@ -79,12 +78,12 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 240
     Top = 16
     Width = 217
     Height = 65
     Caption = 'Graph 2'
+    ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 16
@@ -105,12 +104,12 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox3: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 88
     Width = 217
     Height = 65
     Caption = 'Graph 3'
+    ParentBackground = False
     TabOrder = 4
     object Label2: TLabel
       Left = 16
@@ -131,12 +130,12 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox4: TGroupBox
-    ParentBackground = False
     Left = 240
     Top = 88
     Width = 217
     Height = 65
     Caption = 'Graph 4'
+    ParentBackground = False
     TabOrder = 5
     object Label4: TLabel
       Left = 16
@@ -172,9 +171,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object dtsPeriods: TDataSource
@@ -192,9 +189,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
 end

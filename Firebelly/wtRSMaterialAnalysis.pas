@@ -96,7 +96,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   allCommon, WTSrchCustomer, DateSelV5, wtDataModule, WTRPMaterialAnalysis,
   wtMain;
 

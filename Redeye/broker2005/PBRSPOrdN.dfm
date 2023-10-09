@@ -28,8 +28,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 281
-    ExplicitWidth = 488
     object CancelBitBtn: TBitBtn
       Left = 8
       Top = 8
@@ -143,7 +141,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 488
     object gbLayouts: TGroupBox
       Left = 1
       Top = 6
@@ -199,8 +196,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 488
-    ExplicitHeight = 106
     DesignSize = (
       476
       97)
@@ -278,7 +273,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       ParentFont = False
       TabOrder = 2
       OnClick = TypeRadioGroupClick
-      ExplicitWidth = 225
     end
     object chkbxAttachDelNote: TCheckBox
       Left = 10
@@ -319,8 +313,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 187
-    ExplicitWidth = 488
     object Label12: TLabel
       Left = 192
       Top = 12
@@ -411,8 +403,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       item
         Width = 50
       end>
-    ExplicitTop = 322
-    ExplicitWidth = 488
   end
   object GetPOsSQL: TFDQuery
     ConnectionName = 'PB'

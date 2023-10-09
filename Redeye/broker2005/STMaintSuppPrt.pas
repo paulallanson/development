@@ -102,7 +102,7 @@ var
 
 implementation
 
-uses STLUSuppPrt, ComObj, ActiveX, PBLUSupp, CCSCommon;
+uses UITypes, STLUSuppPrt, ComObj, ActiveX, PBLUSupp, CCSCommon;
 
 {$R *.DFM}
 

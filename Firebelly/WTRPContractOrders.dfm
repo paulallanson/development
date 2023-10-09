@@ -1642,29 +1642,21 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
-        Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Date_To'
+        DataType = ftDateTime
+      end
+      item
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end>
   end
 end

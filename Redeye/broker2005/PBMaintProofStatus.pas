@@ -118,7 +118,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBLUProofStatus, PBDatabase, pbMainMenu;
+uses UITypes, ComObj, ActiveX, PBLUProofStatus, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

@@ -20,7 +20,6 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Height = 113
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 636
     object Label1: TLabel
       Left = 24
       Top = 16
@@ -210,8 +209,6 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Width = 628
     Height = 19
     Panels = <>
-    ExplicitTop = 355
-    ExplicitWidth = 636
   end
   object dbgDetails: TDBGrid
     Left = 0

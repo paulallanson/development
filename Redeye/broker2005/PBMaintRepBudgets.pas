@@ -111,7 +111,7 @@ implementation
 
 {$R *.DFM}
 
-uses PBLURep;
+uses UITypes, PBLURep;
 
 procedure TPBMaintRepBudgetsFrm.FormActivate(Sender: TObject);
 var

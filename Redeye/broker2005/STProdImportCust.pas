@@ -80,7 +80,7 @@ var
 
 implementation
 
-uses STPartSuppDM, STStockDM, STMntPrtBin, PBLUCust, pbDatabase;
+uses UITypes, STPartSuppDM, STStockDM, STMntPrtBin, PBLUCust, pbDatabase;
 
 var
   STPartSDM: TSTPartSDM;

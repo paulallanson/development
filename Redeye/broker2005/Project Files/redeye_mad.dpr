@@ -708,6 +708,7 @@ begin
   {$ENDIF}
   Application.Initialize;
   Application.Title := 'Mailadoc - Redeye Management Information';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdmBroker, dmBroker);
   Application.CreateForm(TfrmpbMainMenu, frmpbMainMenu);
   Application.CreateForm(TPBSendFaxFrm, PBSendFaxFrm);

@@ -11,21 +11,19 @@ object STRSStkValfrm: TSTRSStkValfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     488
     445)
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 64
     Top = 136
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 17
     Visible = False
     object lblExporting: TLabel
@@ -55,9 +53,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -72,6 +67,9 @@ object STRSStkValfrm: TSTRSStkValfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
   end
   object BitBtn2: TBitBtn
     Left = 192
@@ -84,9 +82,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = BitBtn2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -101,6 +96,9 @@ object STRSStkValfrm: TSTRSStkValfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
     Left = 8
@@ -113,12 +111,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 355
     Width = 115
@@ -134,11 +132,11 @@ object STRSStkValfrm: TSTRSStkValfrm
       'Store'
       'Product'
       'Bin within Store')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end
   object CostRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 195
     Width = 115
@@ -153,11 +151,11 @@ object STRSStkValfrm: TSTRSStkValfrm
     Items.Strings = (
       'Actual Cost'
       'Current Cost')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
   end
   object grpbxRange: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 270
     Width = 289
@@ -168,6 +166,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     object Label1: TLabel
@@ -247,7 +246,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 6
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 1
     Width = 121
@@ -261,12 +259,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 7
     OnClick = AllOrOneRadioGroupClick
   end
   object CustRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 68
     Width = 121
@@ -280,12 +278,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 8
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
-    ParentBackground = False
     Left = 137
     Top = 68
     Width = 288
@@ -295,6 +293,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 9
     Visible = False
@@ -332,7 +331,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RepGrpBox: TGroupBox
-    ParentBackground = False
     Left = 136
     Top = 1
     Width = 289
@@ -342,6 +340,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 10
     Visible = False
@@ -385,7 +384,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RadioGroup1: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 129
     Width = 121
@@ -399,12 +397,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     Items.Strings = (
       'All Stores'
       'One Store')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 11
     OnClick = RadioGroup1Click
   end
   object StoresGrpBox: TGroupBox
-    ParentBackground = False
     Left = 137
     Top = 129
     Width = 288
@@ -414,6 +412,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 12
     Visible = False
@@ -452,7 +451,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RadioGroup2: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 195
     Width = 121
@@ -466,12 +464,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     Items.Strings = (
       'All Bins'
       'Bin Range')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 13
     OnClick = RadioGroup2Click
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 137
     Top = 195
     Width = 224
@@ -481,6 +479,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 14
     Visible = False
@@ -550,7 +549,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RDGrpPdFor: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 270
     Width = 115
@@ -566,6 +564,7 @@ object STRSStkValfrm: TSTRSStkValfrm
       'All'
       'Paid for'
       'Unpaid')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 15
   end
@@ -576,8 +575,6 @@ object STRSStkValfrm: TSTRSStkValfrm
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
-    TabOrder = 16
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -621,6 +618,8 @@ object STRSStkValfrm: TSTRSStkValfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 16
+    OnClick = btbtnExcelClick
   end
   object OleContainer1: TOleContainer
     Left = 276

@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses PBLURep, PBLUCust, PBPOObjects, PBRPOSSInvPInvRecd;
+uses UITypes, PBLURep, PBLUCust, PBPOObjects, PBRPOSSInvPInvRecd;
 
 {$R *.DFM}
 

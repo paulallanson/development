@@ -104,7 +104,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   CCSPrint, pbDatabase, PBEmailList, CCSCommon, pbMainMenu, Printer.Tools;
 
 {$R *.DFM}

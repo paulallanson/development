@@ -23,8 +23,6 @@ object frmPBRSQuote: TfrmPBRSQuote
     Height = 243
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 418
-    ExplicitHeight = 244
     DesignSize = (
       414
       243)
@@ -44,7 +42,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = 210
     end
     object PreviewBitBtn: TBitBtn
       Left = 97
@@ -75,7 +72,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
-      ExplicitTop = 210
     end
     object PrintBitBtn: TBitBtn
       Left = 177
@@ -107,7 +103,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
-      ExplicitTop = 210
     end
     object FaxBitBtn: TBitBtn
       Left = 257
@@ -138,7 +133,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 3
       Visible = False
-      ExplicitTop = 210
     end
     object EmailBitBtn: TBitBtn
       Left = 336
@@ -163,7 +157,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       NumGlyphs = 2
       TabOrder = 4
       OnClick = EmailBitBtnClick
-      ExplicitTop = 210
     end
     object GroupBox1: TGroupBox
       Left = 8

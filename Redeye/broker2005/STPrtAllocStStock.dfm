@@ -1,9 +1,9 @@
 object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
   Left = 60
   Top = 94
-  Width = 668
-  Height = 376
   Caption = 'Allocate specific stock'
+  ClientHeight = 337
+  ClientWidth = 652
   Color = clBtnFace
   Constraints.MinHeight = 376
   Constraints.MinWidth = 668
@@ -12,18 +12,16 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 660
+    Width = 652
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblProduct: TLabel
       Left = 16
@@ -55,36 +53,35 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 301
-    Width = 660
+    Top = 296
+    Width = 652
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      660
+      652
       41)
     object BitBtn2: TBitBtn
-      Left = 568
+      Left = 560
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Cancel'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object BitBtn1: TBitBtn
-      Left = 480
+      Left = 472
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Select'
       Default = True
-      TabOrder = 1
-      OnClick = BitBtn1Click
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -103,13 +100,15 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn1Click
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 660
-    Height = 244
+    Width = 652
+    Height = 239
     Align = alClient
     DataSource = srcStoreStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -189,69 +188,55 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryStoreStockStore_Stock: TIntegerField
       FieldName = 'Store_Stock'
-
     end
     object qryStoreStockQuantity_Allocated: TIntegerField
       FieldName = 'Quantity_Allocated'
-
     end
     object qryStoreStockStore_Quantity: TIntegerField
       FieldName = 'Store_Quantity'
-
     end
     object qryStoreStockStore_Cost: TCurrencyField
       FieldName = 'Store_Cost'
-
     end
     object qryStoreStockDate_Received: TDateTimeField
       FieldName = 'Date_Received'
-
     end
     object qryStoreStockPart: TStringField
       FieldName = 'Part'
-
       FixedChar = True
       Size = 30
     end
     object qryStoreStockPart_Store_Lot: TStringField
       FieldName = 'Part_Store_Lot'
-
       FixedChar = True
       Size = 40
     end
     object qryStoreStockPart_Store: TIntegerField
       FieldName = 'Part_Store'
-
     end
     object qryStoreStockPart_Bin: TStringField
       FieldName = 'Part_Bin'
-
       FixedChar = True
     end
     object qryStoreStockStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
-
     end
     object qryStoreStockStore_Stock_Description: TStringField
       FieldName = 'Store_Stock_Description'
-
       FixedChar = True
       Size = 60
     end
     object qryStoreStockinvoice_upfront: TStringField
       FieldName = 'invoice_upfront'
-
       FixedChar = True
       Size = 2
     end
@@ -278,14 +263,10 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     Top = 110
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -38,7 +38,6 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 53
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -51,7 +50,6 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 53
   end
   object edtContactTypeDescription: TEdit
     Left = 80
@@ -74,14 +72,10 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_Type_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -97,8 +91,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -112,8 +106,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

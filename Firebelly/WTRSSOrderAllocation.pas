@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, wtLUFitters, WTRPSOrderAllocation;
+uses UITypes, allCommon, WTSrchCustomer, DateSelV5, wtLUFitters, WTRPSOrderAllocation;
 
 {$R *.dfm}
 

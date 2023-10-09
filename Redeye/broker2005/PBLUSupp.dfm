@@ -1,4 +1,4 @@
-﻿object PBLUSuppFrm: TPBLUSuppFrm
+object PBLUSuppFrm: TPBLUSuppFrm
   Left = 208
   Top = 197
   BorderStyle = bsDialog
@@ -11,13 +11,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CountLabel: TLabel
     Left = 291
@@ -58,12 +56,12 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 300
     Width = 337
     Height = 69
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object edtName: TEdit
       Left = 8
@@ -92,8 +90,6 @@
     Height = 26
     Caption = 'Select'
     Default = True
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -159,22 +155,25 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 373
     Top = 403
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GoToGrpBox: TGroupBox
-    ParentBackground = False
     Left = 360
     Top = 8
     Width = 97
     Height = 49
     Caption = 'Go To'
+    ParentBackground = False
     TabOrder = 4
     object BranchesBitBtn: TBitBtn
       Left = 6
@@ -182,8 +181,6 @@
       Width = 83
       Height = 25
       Caption = 'Branches'
-      TabOrder = 0
-      OnClick = BranchesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -198,15 +195,17 @@
         3333333337FFFF7F333333333000000333333333377777733333333333077033
         33333333337FF7F3333333333300003333333333337777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BranchesBitBtnClick
     end
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 366
     Top = 104
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 5
     object AddBitBtn: TBitBtn
       Left = 6
@@ -214,8 +213,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -230,6 +227,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -237,8 +236,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -253,6 +250,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -260,8 +259,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -276,16 +273,18 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object DispPanel: TPanel
-    ParentBackground = False
     Left = 8
     Top = 372
     Width = 337
     Height = 57
     BevelOuter = bvLowered
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 6
     object LabelName: TLabel
       Left = 24
@@ -355,8 +354,6 @@
     Height = 25
     Caption = 'Branch'
     Default = True
-    TabOrder = 7
-    OnClick = SelBranchBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -422,6 +419,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = SelBranchBitBtnClick
   end
   object LabelsBitBtn: TBitBtn
     Left = 373
@@ -430,8 +429,6 @@
     Height = 26
     Caption = 'Labels'
     Default = True
-    TabOrder = 8
-    OnClick = LabelsBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -446,6 +443,8 @@
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 8
+    OnClick = LabelsBitBtnClick
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -477,19 +476,13 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Active_Only'
-        ParamType = ptUnknown
       end>
   end
   object tmrSearch: TTimer
@@ -532,9 +525,7 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object NullSRC: TDataSource
@@ -567,14 +558,11 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
 end

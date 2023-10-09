@@ -1,7 +1,4 @@
 object STStkTkDM: TSTStkTkDM
-  OldCreateOrder = False
-  Left = 192
-  Top = 107
   Height = 436
   Width = 544
   object PartSQL: TFDQuery
@@ -14,9 +11,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object CountListSQL: TFDQuery
@@ -50,14 +45,12 @@ object STStkTkDM: TSTStkTkDM
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Status_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Status_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object CountListSRC: TDataSource
@@ -76,14 +69,10 @@ object STStkTkDM: TSTStkTkDM
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object CheckValidLotSQL: TFDQuery
@@ -97,14 +86,10 @@ object STStkTkDM: TSTStkTkDM
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_lot'
-        ParamType = ptUnknown
       end>
   end
   object PartStoreSQL: TFDQuery
@@ -117,9 +102,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object CountHeadSQL: TFDQuery
@@ -137,9 +120,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Ref'
-        ParamType = ptUnknown
       end>
   end
   object CountDtlsSQL: TFDQuery
@@ -169,9 +150,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_take_ref'
-        ParamType = ptUnknown
       end>
   end
   object CountDtlsSRC: TDataSource
@@ -196,24 +175,16 @@ object STStkTkDM: TSTStkTkDM
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_take_ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Lot'
-        ParamType = ptUnknown
       end>
   end
   object GetCountStkSQL: TFDQuery
@@ -229,9 +200,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_take_ref'
-        ParamType = ptUnknown
       end>
   end
   object FreezeCountSQL: TFDQuery
@@ -248,24 +217,18 @@ object STStkTkDM: TSTStkTkDM
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Store_Cost'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
   object UpdCountSql: TFDQuery
@@ -286,39 +249,27 @@ object STStkTkDM: TSTStkTkDM
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Pack_Qty'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
   object NextStockTakeSQL: TFDQuery
@@ -364,89 +315,60 @@ object STStkTkDM: TSTStkTkDM
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'Stock_Take'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'PriorQty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CountQty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'OrigBin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'OrigLot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Pack_qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Pack_Qty_Orig'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock_Description'
-        ParamType = ptUnknown
       end>
   end
   object DelCountSQL: TFDQuery
@@ -461,14 +383,10 @@ object STStkTkDM: TSTStkTkDM
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
   object UpdStatusSQL: TFDQuery
@@ -482,14 +400,12 @@ object STStkTkDM: TSTStkTkDM
     Top = 232
     ParamData = <
       item
-        DataType = ftString
         Name = 'status'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'stock_take'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object StoreStockSQL: TFDQuery
@@ -502,9 +418,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreStockNoSQL: TFDQuery
@@ -523,24 +437,19 @@ object STStkTkDM: TSTStkTkDM
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Part_Store_Lot'
+        DataType = ftString
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object DelCountRecSQl: TFDQuery
@@ -552,9 +461,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
   object GetCountQtySQL: TFDQuery
@@ -578,9 +485,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Ref'
-        ParamType = ptUnknown
       end>
   end
   object GetPartSQL: TFDQuery
@@ -601,9 +506,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetStockDescSQL: TFDQuery
@@ -624,24 +527,19 @@ object STStkTkDM: TSTStkTkDM
     Top = 288
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Part_Store_Lot'
+        DataType = ftString
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLastLot: TFDQuery
@@ -656,14 +554,10 @@ object STStkTkDM: TSTStkTkDM
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomer: TFDQuery
@@ -677,9 +571,7 @@ object STStkTkDM: TSTStkTkDM
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

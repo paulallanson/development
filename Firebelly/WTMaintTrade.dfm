@@ -11,13 +11,11 @@ object frmWTMaintTrade: TfrmWTMaintTrade
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label8: TLabel
     Left = 16
@@ -97,9 +95,9 @@ object frmWTMaintTrade: TfrmWTMaintTrade
     Caption = 'OK'
     Default = True
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 233
@@ -109,8 +107,8 @@ object frmWTMaintTrade: TfrmWTMaintTrade
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object edtName: TDBEdit
     Left = 104

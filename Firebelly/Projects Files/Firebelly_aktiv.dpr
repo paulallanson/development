@@ -47,13 +47,11 @@ uses
   wtMaintCustomerConts in '..\wtMaintCustomerConts.pas' {frmwtMaintCustomerConts},
   WTSrchCustContacts in '..\WTSrchCustContacts.pas' {frmWTSrchCustContacts},
   wtMaintQElement in '..\wtMaintQElement.pas' {frmWTMaintQElement},
-  wtLUPurchases in '..\wtLUPurchases.pas' {frmwtLUPurchases},
   wtLUSales in '..\wtLUSales.pas' {frmwtLUSales},
   WTJobsDM in '..\WTJobsDM.pas' {dtmdlJob: TDataModule},
   wtLUJobs in '..\wtLUJobs.pas' {frmwtLUJobs},
   WTSalesOrderDM in '..\WTSalesOrderDM.pas' {dtmdlSalesOrder: TDataModule},
   wtMaintSalesOrder in '..\wtMaintSalesOrder.pas' {frmWTMaintSalesOrder},
-  wtPurchasesDM in '..\wtPurchasesDM.pas' {dtmdlPurchase: TDataModule},
   wtMaintPurchOrders in '..\wtMaintPurchOrders.pas' {frmWTMaintPurchOrders},
   wtSalesInvoiceDM in '..\wtSalesInvoiceDM.pas' {dtmdlSalesInvoice: TDataModule},
   wtMaintSalesInvoice in '..\wtMaintSalesInvoice.pas' {frmWTMaintSalesInvoice},
@@ -222,6 +220,8 @@ uses
   WTRPSalesbyInvoice in '..\WTRPSalesbyInvoice.pas' {frmwtRPSalesbyInvoice},
   WTRPSIPayments in '..\WTRPSIPayments.pas' {frmwtRPSIPayments},
   WTRPSalesInvoicePayments in '..\WTRPSalesInvoicePayments.pas' {frmWTRPSalesInvoicePayments},
+  wtPurchasesDM in '..\wtPurchasesDM.pas' {dtmdlPurchaseOrder: TDataModule},
+  WTPricesDM in '..\WTPricesDM.pas' {dtmdlPrices: TDataModule},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
@@ -239,6 +239,7 @@ begin
   frmWTSplash.Show;
   frmWTSplash.Refresh;
   Application.Title := 'Worktop Manufacturing';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmWTSendFax, frmWTSendFax);

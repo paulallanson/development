@@ -34,8 +34,6 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 346
-    ExplicitWidth = 548
     DesignSize = (
       536
       80)
@@ -99,8 +97,6 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 196
-    ExplicitWidth = 548
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
@@ -129,8 +125,6 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitWidth = 548
-    ExplicitHeight = 58
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -159,7 +153,6 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Height = 138
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 552
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7

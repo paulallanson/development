@@ -31,13 +31,12 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 924
+        Width = 914
       end>
-    ExplicitWidth = 926
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 911
+      Width = 905
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -45,9 +44,9 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 911
+        Width = 893
         Height = 40
-        ButtonHeight = 29
+        ButtonHeight = 44
         ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstOrders
@@ -134,7 +133,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnAllocatefncClick
         end
         object btnPrintPickNote: TToolButton
-          Left = 523
+          Left = 519
           Top = 0
           Hint = 'Print Picking Note'
           Caption = 'Pic&king'
@@ -143,7 +142,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPrintPickNoteClick
         end
         object btnPickConfirm: TToolButton
-          Left = 585
+          Left = 581
           Top = 0
           Caption = 'Con&firm'
           Enabled = False
@@ -151,7 +150,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPickConfirmClick
         end
         object ToolButton3: TToolButton
-          Left = 647
+          Left = 643
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -159,7 +158,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 655
+          Left = 651
           Top = 0
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
@@ -168,7 +167,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnDeliveriesClick
         end
         object ToolButton2: TToolButton
-          Left = 717
+          Left = 713
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -176,7 +175,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object ToolButton1: TToolButton
-          Left = 725
+          Left = 721
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4
@@ -193,8 +192,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 322
-    ExplicitWidth = 934
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -211,7 +208,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 667
+      Left = 653
       Top = 1
       Width = 266
       Height = 39
@@ -291,8 +288,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       item
         Width = 50
       end>
-    ExplicitTop = 363
-    ExplicitWidth = 934
   end
   object Panel3: TPanel
     Left = 0
@@ -305,7 +300,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 934
     object Label3: TLabel
       Left = 8
       Top = 3

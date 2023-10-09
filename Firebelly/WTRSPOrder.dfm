@@ -57,7 +57,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 3
     OnClick = btnPrintClick
-    ExplicitTop = 137
   end
   object btnPreview: TButton
     Left = 99
@@ -69,7 +68,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
-    ExplicitTop = 137
   end
   object btnEmail: TButton
     Left = 191
@@ -81,7 +79,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
-    ExplicitTop = 137
   end
   object Button4: TButton
     Left = 283
@@ -92,7 +89,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Caption = 'Close'
     TabOrder = 6
     OnClick = Button4Click
-    ExplicitTop = 137
   end
   object qryGetRange: TFDQuery
     ConnectionName = 'WT'

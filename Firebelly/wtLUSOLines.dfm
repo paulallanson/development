@@ -23,8 +23,6 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 208
-    ExplicitWidth = 632
     DesignSize = (
       638
       41)
@@ -38,7 +36,6 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Enabled = False
       TabOrder = 0
       OnClick = btnSelectClick
-      ExplicitLeft = 447
     end
     object btnCancel: TButton
       Left = 549
@@ -49,7 +46,6 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Caption = 'Cancel'
       TabOrder = 1
       OnClick = btnCancelClick
-      ExplicitLeft = 543
     end
   end
   object dbgDetails: TDBGrid
@@ -115,7 +111,6 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 632
     object Label1: TLabel
       Left = 8
       Top = 12

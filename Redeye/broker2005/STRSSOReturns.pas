@@ -42,7 +42,7 @@ var
 
 implementation
 
-uses STRPSOReturns, PBLUAccountManager, PBLUCust;
+uses UITypes, STRPSOReturns, PBLUAccountManager, PBLUCust;
 
 {$R *.dfm}
 

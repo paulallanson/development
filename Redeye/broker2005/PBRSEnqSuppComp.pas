@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses DateSelV5, PBLUSupp, CCSCommon, Printers, CCSPrint, PBRPEnqSupplierComp;
+uses UITypes, DateSelV5, PBLUSupp, CCSCommon, Printers, CCSPrint, PBRPEnqSupplierComp;
 
 {$R *.dfm}
 

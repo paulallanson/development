@@ -65,7 +65,6 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 522
     object Label1: TLabel
       Left = 16
       Top = 16

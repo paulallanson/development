@@ -11,13 +11,11 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     436
     166)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -43,9 +41,9 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 221
@@ -56,8 +54,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 6
     NumGlyphs = 2
+    TabOrder = 6
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -123,29 +121,19 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Importance_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Color'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Font_Color'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Level_of_Importance'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -170,24 +158,16 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Importance_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Color'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Font_Color'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

@@ -62,7 +62,7 @@ type
 
 implementation
 
-uses PBLUSupp, PBLUPrdTyp, CCSCommon;
+uses UITypes, PBLUSupp, PBLUPrdTyp, CCSCommon;
 
 {$R *.DFM}
 
@@ -166,8 +166,7 @@ begin
       JobBagLine.DeletefromDB;
       JobBagLine.Parent.Lines.Delete(inx);
       MakeInactive := false;
-    except
-      messagedlg('This line has been invoiced previously, therefore the line will be flagged as deleted!', mtInformation, [mbOk], 0);
+    except messagedlg('This line has been invoiced previously, therefore the line will be flagged as deleted!', mtInformation, [mbOk], 0);
       JobBagLine.JBLineInactive := true;
       JobBagLine.JBLineStatusText := '*Deleted*';
       MakeInactive := true;

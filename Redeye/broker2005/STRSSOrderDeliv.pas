@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses DateSelV5, pbDatabase, PBLUCust, STMaintSOrdDel;
+uses UITypes, DateSelV5, pbDatabase, PBLUCust, STMaintSOrdDel;
 
 {$R *.DFM}
 
@@ -317,7 +317,7 @@ begin
 
   tempDir := GetTransferDir;
 
-  if not DirectoryExists(tempDir) then
+  if not SysUtils.DirectoryExists(tempDir) then
     begin
       try
         CreateDir(tempDir);

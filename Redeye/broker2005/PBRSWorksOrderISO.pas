@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses PBRPWorksOrderISO, pbDatabase, CCSemailHandler, CCSCommon;
+uses UITypes, PBRPWorksOrderISO, pbDatabase, CCSemailHandler, CCSCommon;
 
 {$R *.dfm}
 

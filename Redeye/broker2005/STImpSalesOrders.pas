@@ -47,7 +47,7 @@ var
 
 implementation
 
-uses STImpSalesOrdersDM, pbMainMenu, STRSImportAudit;
+uses UITypes, STImpSalesOrdersDM, pbMainMenu, STRSImportAudit;
 
 var
   ImportPath: string;

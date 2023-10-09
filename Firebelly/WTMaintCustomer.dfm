@@ -3,7 +3,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Top = 35
   Caption = 'Customer details'
   ClientHeight = 551
-  ClientWidth = 832
+  ClientWidth = 834
   Color = clBtnFace
   Constraints.MinHeight = 459
   Constraints.MinWidth = 850
@@ -22,13 +22,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object Panel1: TPanel
     Left = 0
     Top = 490
-    Width = 832
+    Width = 834
     Height = 42
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      832
+      834
       42)
     object lblDelete: TLabel
       Left = 411
@@ -111,7 +111,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 832
+    Width = 834
     Height = 490
     ActivePage = TabSheet1
     Align = alClient
@@ -121,13 +121,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object pnlDetails: TPanel
         Left = 0
         Top = 0
-        Width = 830
-        Height = 471
+        Width = 826
+        Height = 462
         Align = alClient
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          824
+          826
           462)
         object Label1: TLabel
           Left = 8
@@ -766,11 +766,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 272
-        Height = 471
+        Height = 462
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 462
         object Label31: TLabel
           Left = 24
           Top = 67
@@ -948,35 +947,30 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object Panel13: TPanel
         Left = 272
         Top = 0
-        Width = 558
-        Height = 471
+        Width = 554
+        Height = 462
         Align = alClient
         Caption = 'Panel13'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 552
-        ExplicitHeight = 462
         object Panel15: TPanel
           Left = 1
           Top = 1
-          Width = 556
+          Width = 552
           Height = 41
           Align = alTop
           Caption = 'Material Types'
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 550
         end
         object pnlMaterialTypeFunctions: TPanel
-          Left = 465
+          Left = 461
           Top = 42
           Width = 92
-          Height = 387
+          Height = 378
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 459
-          ExplicitHeight = 378
           object btnMTAdd: TBitBtn
             Left = 10
             Top = 8
@@ -1008,8 +1002,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object dbgMaterialTypes: TDBGrid
           Left = 1
           Top = 42
-          Width = 464
-          Height = 387
+          Width = 460
+          Height = 378
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 2
@@ -1038,14 +1032,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
         object pnlMaterialTypeFooter: TPanel
           Left = 1
-          Top = 429
-          Width = 556
+          Top = 420
+          Width = 552
           Height = 41
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
-          ExplicitTop = 420
-          ExplicitWidth = 550
           object chkbxShowInactiveMaterialTypes: TCheckBox
             Left = 8
             Top = 8
@@ -1720,13 +1712,15 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Activity'
       ImageIndex = 6
       object Panel3: TPanel
-        Left = 737
+        Left = 733
         Top = 0
         Width = 93
-        Height = 338
+        Height = 329
         Align = alRight
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 737
+        ExplicitHeight = 338
         object btnChangeEv: TBitBtn
           Left = 9
           Top = 40
@@ -1758,8 +1752,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object dbgEvents: TDBGrid
         Left = 0
         Top = 0
-        Width = 737
-        Height = 338
+        Width = 733
+        Height = 329
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
@@ -1808,11 +1802,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object TPanel
         Left = 0
-        Top = 338
-        Width = 830
+        Top = 329
+        Width = 826
         Height = 133
         Align = alBottom
         TabOrder = 2
+        ExplicitTop = 338
+        ExplicitWidth = 830
         object Label28: TLabel
           Left = 291
           Top = 29
@@ -2119,7 +2115,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 532
-    Width = 832
+    Width = 834
     Height = 19
     Panels = <
       item

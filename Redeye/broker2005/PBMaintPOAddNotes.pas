@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   PBPODatamod, PBPOObjects;
 
 {$R *.DFM}

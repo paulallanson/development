@@ -34,8 +34,6 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 137
-    ExplicitWidth = 365
     DesignSize = (
       355
       80)
@@ -91,7 +89,6 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitWidth = 365
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7

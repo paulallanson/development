@@ -56,8 +56,6 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       item
         Width = 50
       end>
-    ExplicitTop = 286
-    ExplicitWidth = 422
   end
   object Panel1: TPanel
     Left = 0
@@ -68,8 +66,6 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 231
-    ExplicitWidth = 422
     object BitBtn1: TBitBtn
       Left = 8
       Top = 25
@@ -138,7 +134,6 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 422
     object Label1: TLabel
       Left = 8
       Top = 8

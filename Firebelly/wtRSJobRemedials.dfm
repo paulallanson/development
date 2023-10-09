@@ -27,7 +27,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 159
   end
   object Button4: TButton
     Left = 264
@@ -39,7 +38,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 159
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -210,7 +208,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 5
     OnClick = btnExcelClick
-    ExplicitTop = 160
   end
   object btnPreview: TButton
     Left = 93
@@ -221,7 +218,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Caption = 'P&review'
     TabOrder = 6
     OnClick = btnPreviewClick
-    ExplicitTop = 159
   end
   object rdgrpContacts: TRadioGroup
     Left = 8

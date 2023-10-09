@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin,
-  Db, PBSupplierInvoiceDM;
+  Db, PBSupplierInvoiceDM, System.ImageList;
 
 type
   TfrmPBLUPurchaseCredits = class(TForm)
@@ -79,7 +79,7 @@ var
 
 implementation
 
-uses CCSCommon, PBMaintSuppInvoice, PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB,
+uses UITypes, CCSCommon, PBMaintSuppInvoice, PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB,
       PBLUSupplierInvoicePurch, PBMaintSuppInvoicePass, pbMainMenu,
   PBLUSupplierInvoiceCN, pbDatabase, pbLUPurchaseInvoiceRpts;
 

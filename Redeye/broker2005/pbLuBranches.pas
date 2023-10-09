@@ -63,7 +63,7 @@ var
 
 implementation
 
-uses PBMaintBranch, PBMaintSupBrch, pbDatabase, pbMainMenu;
+uses UITypes, PBMaintBranch, PBMaintSupBrch, pbDatabase, pbMainMenu;
 
 {$R *.DFM}
 

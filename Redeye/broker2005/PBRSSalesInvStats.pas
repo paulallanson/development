@@ -37,7 +37,7 @@ var
 
 implementation
 
-uses pbDatabase, PBRPSalesInvStats, CCSPrint;
+uses UITypes, pbDatabase, PBRPSalesInvStats, CCSPrint;
 
 {$R *.dfm}
 

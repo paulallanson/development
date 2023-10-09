@@ -69,7 +69,7 @@ var
 
 implementation
 
-uses PBLURep, PBDatabase, PBLUCust, PBPOObjects, PBRP4CastInvs, pbMainMenu;
+uses UITypes, PBLURep, PBDatabase, PBLUCust, PBPOObjects, PBRP4CastInvs, pbMainMenu;
 
 {$R *.DFM}
 

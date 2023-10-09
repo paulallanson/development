@@ -77,7 +77,7 @@ var
 
 implementation
 
-uses wtMain, DateSelV5, wtDataModule;
+uses UITypes, wtMain, DateSelV5, wtDataModule;
 
 {$R *.DFM}
 

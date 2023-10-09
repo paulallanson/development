@@ -1,7 +1,6 @@
-﻿object PBMaintRepNomFrm: TPBMaintRepNomFrm
+object PBMaintRepNomFrm: TPBMaintRepNomFrm
   Left = 189
   Top = 169
-  AutoScroll = False
   Caption = 'Maintain Nominal'
   ClientHeight = 170
   ClientWidth = 436
@@ -11,10 +10,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 86
@@ -41,10 +38,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 1
-    ParentFont = False
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -109,7 +102,11 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 342
@@ -123,10 +120,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 2
-    ParentFont = False
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -191,10 +184,13 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 4
     Width = 409
@@ -205,6 +201,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object NomLbl: TLabel
@@ -257,6 +254,7 @@
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
       TabOrder = 2
+      Text = ''
       OnChange = NomEditChange
     end
   end
@@ -270,9 +268,8 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddSQL: TFDQuery
@@ -295,24 +292,20 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Nominal_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Nominal'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Nominal_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object UpdSQL: TFDQuery
@@ -329,24 +322,20 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftString
         Name = 'Nominal'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Nominal_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Nominal_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DelSQL: TFDQuery
@@ -360,14 +349,11 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal_Reference'
-        ParamType = ptUnknown
       end>
   end
   object FlashTimer: TTimer

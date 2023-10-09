@@ -11,10 +11,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object btnOK: TBitBtn
     Left = 206
@@ -24,8 +22,6 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 2
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -44,14 +40,17 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
     Left = 302
     Top = 208
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -173,39 +172,25 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Web_User_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Web_User_Role'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'User_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Password'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Active_User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Consumer_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enter_Retail_Price'
-        ParamType = ptUnknown
       end>
   end
   object qryGetContact: TFDQuery
@@ -220,19 +205,13 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -247,24 +226,16 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Web_User_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySelWebUserID: TFDQuery
@@ -277,9 +248,7 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Web_User_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdWebUser: TFDQuery
@@ -297,39 +266,25 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'User_name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Password'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Consumer_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Active_User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Web_User_Role'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enter_Retail_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Web_User_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckUserName: TFDQuery
@@ -348,14 +303,10 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'user_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryWebRole: TFDQuery

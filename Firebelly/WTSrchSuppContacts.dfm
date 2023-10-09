@@ -11,11 +11,9 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -71,9 +69,9 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     Width = 75
     Height = 25
     Caption = '&Close'
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object btnAdd: TBitBtn
     Left = 272
@@ -115,14 +113,11 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     Top = 48
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource
@@ -139,9 +134,9 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
   end
   object tblContacts: TFDTable
     OnNewRecord = tblContactsNewRecord
-    ConnectionName = 'WT'
     Filtered = True
     FilterOptions = [foNoPartialCompare]
+    ConnectionName = 'WT'
     TableName = 'Supplier_contact'
     Left = 80
     Top = 112
@@ -161,9 +156,7 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryContactType: TFDQuery

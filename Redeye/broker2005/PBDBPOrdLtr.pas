@@ -635,7 +635,7 @@ begin
       stext := '';
       for i := 0 to Pred(AdditionalDetails.Count) do
         with AdditionalDetails[i] do
-          if FAOFlag in sAllow then
+          if CharInSet(FAOFlag, sAllow) then
             sText := sText + Detail + cLFCR;
 
       {Get out if stext is empty}

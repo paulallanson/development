@@ -1,9 +1,6 @@
-﻿object PBEnqDataModFrm: TPBEnqDataModFrm
-  OldCreateOrder = True
+object PBEnqDataModFrm: TPBEnqDataModFrm
   OnCreate = PBEnqDataModFrmCreate
   OnDestroy = PBEnqDataModFrmDestroy
-  Left = 20
-  Top = 172
   Height = 479
   Width = 741
   object EnqHeadSQL: TFDQuery
@@ -29,14 +26,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqHeadSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  EnquiryLine.*,'
       '        NCR_OTC_Mix.NCR_OTC_Descr,'
@@ -60,9 +56,8 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqHeadSRC: TDataSource
@@ -71,8 +66,8 @@
     Top = 8
   end
   object EnqLineQtySQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Enquiry_LineQuantity'
@@ -82,19 +77,17 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineQSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Enquiry_Questions.*, Question_Text, Product_TypeQuestion.' +
@@ -113,19 +106,17 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineAddSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from EnquiryLineAdditionl_Dtls'
@@ -136,19 +127,16 @@
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLinePartSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from EnquiryLinePart_Detail'
@@ -158,19 +146,17 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineCapSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select EnquiryLinPrdct_TypCpblty.*, Description '
       'from EnquiryLinPrdct_TypCpblty, Product_TypeCapability'
@@ -189,14 +175,12 @@
     Top = 296
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineSRC: TDataSource
@@ -230,8 +214,8 @@
     Top = 296
   end
   object EnqLineSuppSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Supplier_Enquiry.Supplier, '
       #9'Supplier_Enquiry.Branch_no, '
@@ -275,14 +259,12 @@
     Top = 344
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineSuppSRC: TDataSource
@@ -291,8 +273,8 @@
     Top = 344
   end
   object OldEnqLineSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqHeadSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  EnquiryLine.*,'
       '        NCR_OTC_Mix.NCR_OTC_Descr,'
@@ -314,14 +296,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqLineOptSQL: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = EnqLineSRC
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select EnquiryLineProduct_TypeOChg.*, Description '
       'from EnquiryLineProduct_TypeOChg, Product_TypeOChg'
@@ -340,14 +321,12 @@
     Top = 296
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DataSource1: TDataSource
@@ -364,8 +343,8 @@
     Top = 12
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -380,29 +359,19 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end>
   end
   object qrySelEnqLineDocs: TFDQuery
@@ -415,14 +384,10 @@
     Top = 100
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
 end

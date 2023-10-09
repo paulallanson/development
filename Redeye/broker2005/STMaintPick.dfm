@@ -1,9 +1,9 @@
 object STMaintPickFrm: TSTMaintPickFrm
   Left = 32
   Top = 34
-  Width = 782
-  Height = 487
   Caption = 'Picking Confirmation by Part'
+  ClientHeight = 448
+  ClientWidth = 766
   Color = clBtnFace
   Constraints.MinHeight = 487
   Constraints.MinWidth = 782
@@ -13,19 +13,17 @@ object STMaintPickFrm: TSTMaintPickFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 774
+    Width = 766
     Height = 73
     Align = alTop
     TabOrder = 0
@@ -70,30 +68,27 @@ object STMaintPickFrm: TSTMaintPickFrm
       Width = 169
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnClick = cmbPickingNoteClick
     end
   end
   object Panel2: TPanel
-    Left = 677
+    Left = 669
     Top = 73
     Width = 97
-    Height = 380
+    Height = 375
     Align = alRight
     TabOrder = 1
     DesignSize = (
       97
-      380)
+      375)
     object ConfirmBtn: TBitBtn
       Left = 14
-      Top = 313
+      Top = 308
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'C&onfirm'
-      TabOrder = 0
-      OnClick = ConfirmBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -112,17 +107,20 @@ object STMaintPickFrm: TSTMaintPickFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = ConfirmBtnClick
     end
     object BitBtn2: TBitBtn
       Left = 14
-      Top = 353
+      Top = 348
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Clos&e'
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      Kind = bkClose
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -171,16 +169,16 @@ object STMaintPickFrm: TSTMaintPickFrm
   object Panel3: TPanel
     Left = 0
     Top = 73
-    Width = 677
-    Height = 380
+    Width = 669
+    Height = 375
     Align = alClient
     Caption = 'Panel3'
     TabOrder = 2
     object sgDetails: TStringGrid
       Left = 1
       Top = 1
-      Width = 675
-      Height = 378
+      Width = 667
+      Height = 373
       Align = alClient
       ColCount = 9
       DefaultColWidth = 60
@@ -218,9 +216,7 @@ object STMaintPickFrm: TSTMaintPickFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'int_sel_code'
-        ParamType = ptUnknown
       end>
   end
   object qryPickNotes: TFDQuery
@@ -238,9 +234,7 @@ object STMaintPickFrm: TSTMaintPickFrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryProdLocation: TFDQuery
@@ -258,9 +252,7 @@ object STMaintPickFrm: TSTMaintPickFrm
     Top = 209
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

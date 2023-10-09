@@ -26,8 +26,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       item
         Width = 100
       end>
-    ExplicitTop = 440
-    ExplicitWidth = 1000
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -101,8 +99,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 302
-    ExplicitWidth = 1000
     DesignSize = (
       990
       138)

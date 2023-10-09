@@ -11,14 +11,12 @@ object frmWTMaintReason: TfrmWTMaintReason
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     361
     91)
-  PixelsPerInch = 96
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -37,9 +35,9 @@ object frmWTMaintReason: TfrmWTMaintReason
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,8 +48,8 @@ object frmWTMaintReason: TfrmWTMaintReason
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object edtInactiveReasonDescr: TEdit
     Left = 64
@@ -75,19 +73,13 @@ object frmWTMaintReason: TfrmWTMaintReason
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Inactive_Reason_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -104,8 +96,8 @@ object frmWTMaintReason: TfrmWTMaintReason
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -119,8 +111,8 @@ object frmWTMaintReason: TfrmWTMaintReason
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

@@ -1,23 +1,21 @@
 object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
   Left = 465
   Top = 122
-  Width = 712
-  Height = 338
   Caption = 'frmWTLUWorktopPrices'
+  ClientHeight = 299
+  ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 704
-    Height = 307
+    Width = 696
+    Height = 299
     Align = alClient
     DataSource = srcLUWorktops
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -174,24 +172,16 @@ object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object srcLUWorktops: TDataSource

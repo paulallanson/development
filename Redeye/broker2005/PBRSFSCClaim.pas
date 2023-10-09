@@ -65,7 +65,7 @@ var
 
 implementation
 
-uses  CCSCommon, DateSelV5, PBLUFSCClaim, PBRPFSCClaim, CCSPrint,
+uses UITypes,  CCSCommon, DateSelV5, PBLUFSCClaim, PBRPFSCClaim, CCSPrint,
   PBLUPrdTyp;
 
 {$R *.dfm}

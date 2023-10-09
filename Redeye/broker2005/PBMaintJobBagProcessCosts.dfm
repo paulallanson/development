@@ -24,8 +24,6 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 403
-    ExplicitWidth = 1242
     object OKBitBtn: TBitBtn
       Left = 536
       Top = 7
@@ -194,8 +192,6 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     OnKeyPress = sgDetailsKeyPress
     OnKeyUp = sgDetailsKeyUp
     OnSelectCell = sgDetailsSelectCell
-    ExplicitWidth = 1242
-    ExplicitHeight = 362
     ColWidths = (
       20
       139
@@ -244,7 +240,6 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Height = 41
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 1242
   end
   object dblkpVAT: TDBLookupComboBox
     Left = 488

@@ -1,7 +1,6 @@
 object STNegStkSlfrm: TSTNegStkSlfrm
   Left = 220
   Top = 217
-  AutoScroll = False
   Caption = 'Negative Stock selection screen'
   ClientHeight = 165
   ClientWidth = 287
@@ -11,9 +10,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 184
@@ -26,9 +23,6 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -43,6 +37,9 @@ object STNegStkSlfrm: TSTNegStkSlfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PrintBitBtnClick
   end
   object BitBtn2: TBitBtn
     Left = 96
@@ -55,9 +52,6 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = BitBtn2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -72,6 +66,9 @@ object STNegStkSlfrm: TSTNegStkSlfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
     Left = 8
@@ -84,12 +81,12 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 1
-    Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 113
@@ -104,6 +101,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Items.Strings = (
       'By Store'
       'By Product')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end

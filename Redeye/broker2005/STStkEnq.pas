@@ -7,7 +7,7 @@ uses
   StdCtrls, Buttons, Db, ComCtrls, ImgList, ExtCtrls, Menus,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TStockDet = class
@@ -91,7 +91,7 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, STPrtEnqMov, STStoreStockObj;
+uses UITypes, pbMainMenu, CCSCommon, STPrtEnqMov, STStoreStockObj;
 
 {$R *.DFM}
 

@@ -360,8 +360,8 @@ var
 	MI			 : MailItem;
   bOutlookRunning: boolean;
   i: integer;
-  iPos: integer;
-  sHTML: string;
+//  iPos: integer;
+//  sHTML: string;
 //	Insp		 : Inspector;
 //  NmSpace: NameSpace;
 //  Folder: MAPIFolder;
@@ -689,7 +689,7 @@ var
   i: integer;
   Disp: IDispatch;
   NmSpace: NameSpace;
-  userCancelled, saveIT: boolean;
+  {userCancelled,} saveIT: boolean;
   createTime, tempTime: TDateTime;
 const
   olMailItem = 0;
@@ -783,7 +783,7 @@ begin
             tempTime := temp_MI.creationTime;
             if tempTime >= createTime then
             begin
-              createTime := temp_MI.creationTime;
+//              createTime := temp_MI.creationTime;
               SAVE_MI := temp_MI;
               saveIT := true;
               break;
@@ -798,7 +798,7 @@ begin
         if messageDlg('The Message could not be located in either the Sent Items or the Outbox folders.' +#10#13
                 +'Click OK when you have sent the message or click Cancel if you do not want to save the message.', mtConfirmation, [mbOK, mbCancel], 0) = mrCancel then
         begin
-          userCancelled := true;
+//          userCancelled := true;
           okToSave := false;
         end;
       end
@@ -918,11 +918,11 @@ begin
   StrLength := Length(StartStr);
   for Count := StrLength downto 1 do
   begin
-    CurrChar := Copy(StartStr, Count, 1);
+    CurrChar := ShortString(Copy(StartStr, Count, 1));
     Id := Pos(CurrChar, Numbers);
     if Id > 0 then
     begin
-      StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
+      StartStr := Copy(StartStr, 1, (Count - 1)) + string(Copy(Numbers, (Id + 1), 1)) +
         Copy(StartStr, (Count + 1), (StrLength - Count));
       IncrementNo := StartStr;
       if Id < 10 then Exit;
@@ -932,7 +932,7 @@ begin
       Id := Pos(CurrChar, Alphas);
       if Id > 0 then
       begin
-        StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
+        StartStr := Copy(StartStr, 1, (Count - 1)) + string(Copy(Alphas, (Id + 1), 1)) +
           Copy(StartStr, (Count + 1), (StrLength - Count));
         IncrementNo := StartStr;
         if Id < 27 then Exit;
@@ -1351,10 +1351,12 @@ var
   olePath: array[0..MAX_PATH] of TOLECHAR;
   chEaten: ULONG;
   dwAttributes: ULONG;
+  AnsiPath: AnsiString;
 begin
   if Succeeded(SHGetDesktopFolder(pDesktopFolder)) then
   try
-    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(APAth), -1, olePath, MAX_PATH);
+    AnsiPath := AnsiString(APath);
+    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(AnsiPath), -1, olePath, MAX_PATH);
     if Succeeded(pDesktopFolder.ParseDisplayName(0, nil, olePath, chEaten, pidl, dwAttributes)) then
       Result := pidl
     else
@@ -1745,7 +1747,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows System directory');
+       raise EOSError.Create('Cannot get Windows System directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1762,7 +1764,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows directory');
+       raise EOSError.Create('Cannot get Windows directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1773,6 +1775,7 @@ var
   specialFolder : integer;
   path: array [0..MAX_PATH] of char;
 begin
+  specialFolder := CSIDL_PERSONAL;
   case folder of
     //[Current User]\My Documents
     0: specialFolder := CSIDL_PERSONAL;
@@ -1804,7 +1807,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows temp directory');
+       raise EOSError.Create('Cannot get Windows temp directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1885,7 +1888,7 @@ var
    DevMode: PDevMode;
 
 
-   function Supported(Setting : integer) : boolean;
+   function Supported(Setting: Cardinal): Boolean;
    begin
       Supported := (DevMode^.dmFields and Setting) = Setting;
    end;
@@ -2021,7 +2024,7 @@ end;
 procedure CreateNewXMLfile(filename: string);
 var
   exportfile: textFile;
-  tempstr: string;
+//  tempstr: string;
 begin
   assignFile(exportFile, filename);
   rewrite(exportFile);
@@ -2133,7 +2136,7 @@ procedure WriteTechCustTypeXMLHead(filename: string);
 var
   exportfile: textFile;
   tempstr: string;
-  sDataString: string;
+//  sDataString: string;
 begin
   assignFile(exportFile, filename);
   append(exportfile);

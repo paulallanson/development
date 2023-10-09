@@ -1,25 +1,23 @@
 object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
   Left = 211
   Top = 115
-  Width = 830
-  Height = 325
   Caption = 'Works Instruction Deliveries'
+  ClientHeight = 286
+  ClientWidth = 814
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object sgDelivs: TStringGrid
     Left = 0
     Top = 0
-    Width = 736
-    Height = 291
+    Width = 728
+    Height = 286
     Align = alClient
     ColCount = 7
     DefaultColWidth = 40
@@ -37,10 +35,10 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
       90)
   end
   object Panel7: TPanel
-    Left = 736
+    Left = 728
     Top = 0
     Width = 86
-    Height = 291
+    Height = 286
     Align = alRight
     TabOrder = 1
     object btnConfirm: TBitBtn
@@ -59,9 +57,9 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
       Width = 75
       Height = 25
       Caption = '&Exit'
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btnDeleteDelivsClick
-      NumGlyphs = 2
     end
   end
 end

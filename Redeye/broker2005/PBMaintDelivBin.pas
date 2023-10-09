@@ -102,6 +102,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 { TPBMaintDelivBinfrm }

@@ -1,20 +1,18 @@
-﻿object STLUPartBinLotFrm: TSTLUPartBinLotFrm
+object STLUPartBinLotFrm: TSTLUPartBinLotFrm
   Left = 200
   Top = 118
-  Width = 401
-  Height = 340
   Caption = 'Look-Up A Part Bin Lot'
+  ClientHeight = 301
+  ClientWidth = 385
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 8
@@ -53,8 +51,6 @@
     Height = 25
     Caption = 'Select'
     Default = True
-    TabOrder = 1
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -120,14 +116,17 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 311
     Top = 269
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -150,14 +149,10 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
 end

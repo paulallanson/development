@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses WtRPJobRemedialSheet, wtDataModule, AllEmailHandler;
+uses UITypes, WtRPJobRemedialSheet, wtDataModule, AllEmailHandler;
 
 const
 

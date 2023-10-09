@@ -11,10 +11,8 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDocuments: TLabel
     Left = 11
@@ -34,17 +32,19 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
     Top = 257
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = OkBitBtnClick
-    Kind = bkOK
   end
   object CancelBitBtn: TBitBtn
     Left = 125
     Top = 257
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object lstNames: TListBox
     Left = 11
@@ -97,9 +97,7 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Module_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -111,14 +109,10 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Module_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Folder_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNames: TFDQuery
@@ -131,9 +125,7 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Module_ID'
-        ParamType = ptUnknown
       end>
   end
 end

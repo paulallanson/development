@@ -30,8 +30,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       item
         Width = 50
       end>
-    ExplicitTop = 422
-    ExplicitWidth = 854
   end
   object Panel2: TPanel
     Left = 0
@@ -40,8 +38,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 381
-    ExplicitWidth = 854
     DesignSize = (
       852
       41)
@@ -70,7 +66,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 776
     end
     object btnOK: TBitBtn
       Left = 686
@@ -101,7 +96,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
-      ExplicitLeft = 688
     end
   end
   object Panel3: TPanel
@@ -111,7 +105,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 41
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 854
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -167,8 +160,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
-    ExplicitWidth = 752
-    ExplicitHeight = 340
     ColWidths = (
       178
       201
@@ -183,8 +174,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 332
     Align = alRight
     TabOrder = 4
-    ExplicitLeft = 752
-    ExplicitHeight = 340
     DesignSize = (
       102
       332)
@@ -270,7 +259,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitTop = 304
     end
   end
   object tmrSearch: TTimer

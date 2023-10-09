@@ -66,7 +66,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBLUProcessQstn, pbDatabase, pbMainMenu,
+uses UITypes, ComObj, ActiveX, PBLUProcessQstn, pbDatabase, pbMainMenu,
   PBLUProcessQstnList;
 
 {$R *.DFM}

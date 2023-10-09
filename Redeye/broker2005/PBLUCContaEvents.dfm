@@ -1,7 +1,6 @@
-﻿object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
+object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   Left = 176
   Top = 23
-  AutoScroll = False
   Caption = 'Look-Up Customer/Branch Contacts Events'
   ClientHeight = 538
   ClientWidth = 439
@@ -11,11 +10,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CustLabel: TLabel
     Left = 85
@@ -118,25 +115,27 @@
     Width = 75
     Height = 26
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 345
     Top = 477
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 341
     Top = 168
     Width = 87
     Height = 129
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 3
     object AddBitBtn: TBitBtn
       Left = 6
@@ -144,8 +143,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -160,6 +157,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -167,8 +166,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -183,6 +180,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -190,8 +189,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -206,6 +203,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
     object AppBitBtn: TBitBtn
       Left = 6
@@ -214,10 +213,6 @@
       Height = 25
       Hint = 'Set appointment'
       Caption = 'App'#39'ts'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 3
-      OnClick = AppBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -232,10 +227,13 @@
         79F07FFFFF77F77F77F700000000000000007777777777777777CCCCCC8888CC
         CCCC777777FFFF777777CCCCCCCCCCCCCCCC7777777777777777}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = AppBitBtnClick
     end
   end
   object DispPanel: TPanel
-    ParentBackground = False
     Left = 13
     Top = 334
     Width = 321
@@ -243,6 +241,7 @@
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 4
     object TextMemo: TMemo
       Left = 0
@@ -283,19 +282,16 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Contact_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object GetDetsSQLCustomer_Cont_Event_No: TIntegerField
       FieldName = 'Customer_Cont_Event_No'

@@ -11,10 +11,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 64
@@ -30,7 +28,6 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 4
     Width = 369
@@ -41,6 +38,7 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -149,8 +147,6 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -216,6 +212,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 302
@@ -224,9 +222,6 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -291,7 +286,10 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetRepsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -308,19 +306,13 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 4
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object RepsSRC: TDataSource
@@ -340,19 +332,13 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -370,29 +356,20 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Left = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Is_Main_Rep'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -414,29 +391,20 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Left = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Is_Main_Rep'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryGetRep: TFDQuery
@@ -449,9 +417,7 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 68
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryBranches: TFDQuery
@@ -468,14 +434,10 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 4
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object dtsBranches: TDataSource
@@ -497,14 +459,10 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 52
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetBranches: TFDQuery
@@ -525,14 +483,10 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Top = 148
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
 end

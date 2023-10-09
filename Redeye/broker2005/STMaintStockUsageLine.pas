@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses CCSCommon, STPrtMnt;
+uses UITypes, CCSCommon, STPrtMnt;
 
 {$R *.dfm}
 

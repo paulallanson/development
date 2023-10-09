@@ -49,7 +49,7 @@ var
 
 implementation
 
-uses STLUStorTyp, pbDatabase, pbMainMenu;
+uses UITypes, STLUStorTyp, pbDatabase, pbMainMenu;
 
 
 {$R *.DFM}

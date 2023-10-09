@@ -1,4 +1,4 @@
-﻿object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
+object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
   Left = 384
   Top = 151
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 0
@@ -108,8 +106,8 @@
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
     end
     object btnExcel: TBitBtn
       Left = 517
@@ -165,10 +163,10 @@
       Font.Name = 'MS Sans Serif'
       Font.Style = []
       ModalResult = 1
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
       OnClick = btnSelectClick
-      NumGlyphs = 2
     end
   end
   object DetsSRC: TDataSource
@@ -191,9 +189,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object tmrRefresh: TTimer

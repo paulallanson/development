@@ -1,9 +1,9 @@
 object PBRSSuppDetFrm: TPBRSSuppDetFrm
   Left = 51
   Top = 48
-  Width = 721
-  Height = 417
   Caption = 'Supplier Details'
+  ClientHeight = 378
+  ClientWidth = 705
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,24 +12,22 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
     Left = 0
     Top = 76
-    Width = 713
-    Height = 266
+    Width = 705
+    Height = 261
     Align = alClient
     TabOrder = 0
     object dbgrdCustStatus: TDBGrid
       Left = 1
       Top = 1
-      Width = 711
-      Height = 264
+      Width = 703
+      Height = 259
       Align = alClient
       DataSource = dtsrcCurrentSuppStatus
       TabOrder = 0
@@ -108,7 +106,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 713
+    Width = 705
     Height = 76
     Align = alTop
     TabOrder = 1
@@ -136,8 +134,8 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 342
-    Width = 713
+    Top = 337
+    Width = 705
     Height = 41
     Align = alBottom
     TabOrder = 2
@@ -155,7 +153,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 480
+      Left = 472
       Top = 1
       Width = 232
       Height = 39
@@ -168,8 +166,6 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -184,6 +180,8 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -191,8 +189,6 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -207,6 +203,8 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -214,8 +212,9 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object qryCurrentSuppStatus: TFDQuery
@@ -255,9 +254,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end>
     object qryCurrentSuppStatusSupplier: TIntegerField
       FieldName = 'Supplier'

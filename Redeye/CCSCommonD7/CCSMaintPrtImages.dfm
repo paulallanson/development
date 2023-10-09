@@ -11,11 +11,9 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Shape2: TShape
     Left = 12
@@ -76,25 +74,25 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 248
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btbtnOKClick
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 360
     Top = 248
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object btbtnEraseImage2: TBitBtn
     Left = 288
     Top = 48
     Width = 25
     Height = 25
-    TabOrder = 4
-    OnClick = btbtnEraseImage2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -109,6 +107,8 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = btbtnEraseImage2Click
   end
   object OpenPictureDialog1: TOpenPictureDialog
     Filter = 
@@ -128,13 +128,13 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ecommerce_info'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Stock_Reference'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -151,13 +151,13 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Stock_Reference'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Ecommerce_info'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -170,8 +170,8 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'stock_reference'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -199,19 +199,13 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'full_image'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'format'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ecommerce_info'
-        ParamType = ptUnknown
       end>
   end
   object qryDelEcommInfo: TFDQuery
@@ -223,9 +217,7 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ecomm_info'
-        ParamType = ptUnknown
       end>
   end
 end

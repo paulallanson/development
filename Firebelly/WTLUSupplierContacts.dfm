@@ -113,14 +113,11 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     Top = 48
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource

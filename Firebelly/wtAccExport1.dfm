@@ -66,12 +66,12 @@ object frmWTAccExport1: TfrmWTAccExport1
     OnClick = ActionListBoxClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 256
     Width = 313
     Height = 89
     Caption = 'Description'
+    ParentBackground = False
     TabOrder = 3
     object DescriptionLbl: TLabel
       Left = 8

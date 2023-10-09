@@ -56,7 +56,7 @@ var
 
 implementation
 
-uses PBLUCust, STPrtMnt, STRPCustStkBal, STRPCustStkBalDet;
+uses UITypes, PBLUCust, STPrtMnt, STRPCustStkBal, STRPCustStkBalDet;
 
 {$R *.DFM}
 

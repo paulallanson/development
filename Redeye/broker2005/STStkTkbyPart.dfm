@@ -2,8 +2,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Left = 4
   Top = 76
   Caption = 'Enter Stock Count Details '
-  ClientHeight = 419
-  ClientWidth = 772
+  ClientHeight = 427
+  ClientWidth = 774
   Color = clBtnFace
   Constraints.MinHeight = 466
   Constraints.MinWidth = 790
@@ -22,7 +22,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 772
+    Width = 774
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -68,16 +68,16 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
   end
   object Panel2: TPanel
-    Left = 686
+    Left = 688
     Top = 41
     Width = 86
-    Height = 359
+    Height = 367
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
       86
-      359)
+      367)
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 8
@@ -223,8 +223,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 400
-    Width = 772
+    Top = 408
+    Width = 774
     Height = 19
     Panels = <
       item
@@ -237,16 +237,16 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 686
-    Height = 359
+    Width = 688
+    Height = 367
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
     TabOrder = 3
     object Panel4: TPanel
       Left = 0
-      Top = 318
-      Width = 686
+      Top = 326
+      Width = 688
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
@@ -290,8 +290,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object CountGrid: TStringGrid
       Left = 0
       Top = 0
-      Width = 686
-      Height = 318
+      Width = 688
+      Height = 326
       Align = alClient
       ColCount = 7
       DefaultColWidth = 60

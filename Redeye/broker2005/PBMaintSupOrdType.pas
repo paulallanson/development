@@ -93,7 +93,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBLUSupOrdType;
+uses UITypes, ComObj, ActiveX, PBLUSupOrdType;
 
 {$R *.DFM}
 
@@ -226,4 +226,3 @@ begin
 end;
 
 end.
-

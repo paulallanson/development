@@ -11,10 +11,8 @@ object PBMaintCompanyDocNameFrm: TPBMaintCompanyDocNameFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -29,18 +27,20 @@ object PBMaintCompanyDocNameFrm: TPBMaintCompanyDocNameFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object CancelBitBtn: TBitBtn
     Left = 221
     Top = 55
     Width = 75
     Height = 25
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = CancelBitBtnClick
-    Kind = bkCancel
   end
   object edtName: TEdit
     Left = 72

@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   PBPODataMod, PBLUCustFormRef;
 
 {$R *.DFM}
@@ -95,7 +95,7 @@ begin
     end;
   POrdLabel.Caption := sDescName;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [poDelete, poView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   DelLabel.Visible := (FFuncMode = poDelete);
   OKBitBtn.Visible := (FFuncMode <> poView);
   CheckOK(Self);

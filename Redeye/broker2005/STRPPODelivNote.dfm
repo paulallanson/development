@@ -16,8 +16,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
   object qrpDetails: TQuickRep
     Left = 144
     Top = 16
-    Width = 992
-    Height = 1403
+    Width = 794
+    Height = 1123
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = GetOrdHedQuery
@@ -76,25 +76,25 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     PreviewLeft = 0
     PreviewTop = 0
     object PageHeaderQRBand: TQRBand
-      Left = 47
-      Top = 47
-      Width = 898
-      Height = 454
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 363
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        960.966666666666700000
-        1900.766666666667000000)
+        960.437500000000000000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object ReportImage: TQRImage
-        Left = 630
-        Top = -15
-        Width = 261
-        Height = 261
+        Left = 504
+        Top = -12
+        Width = 209
+        Height = 209
         Enabled = False
         Size.Values = (
           553.000000000000000000
@@ -4998,15 +4998,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Stretch = True
       end
       object ReportTitleQRLabel: TQRLabel
-        Left = 20
-        Top = 8
-        Width = 382
-        Height = 71
+        Left = 16
+        Top = 6
+        Width = 309
+        Height = 57
         Size.Values = (
-          150.283333333333300000
+          150.812500000000000000
           42.333333333333330000
-          16.933333333333330000
-          808.566666666666700000)
+          15.875000000000000000
+          817.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5016,7 +5016,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -60
+        Font.Height = -48
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5028,15 +5028,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 36
       end
       object gtQRLabel2: TQRLabel
-        Left = 18
-        Top = 134
-        Width = 133
-        Height = 29
+        Left = 14
+        Top = 107
+        Width = 108
+        Height = 23
         Size.Values = (
-          61.383333333333330000
-          38.100000000000000000
-          283.633333333333300000
-          281.516666666666700000)
+          60.854166666666670000
+          37.041666666666670000
+          283.104166666666700000
+          285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5046,7 +5046,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5057,15 +5057,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 12
       end
       object DateRequiredLabel: TQRLabel
-        Left = 158
-        Top = 134
-        Width = 112
-        Height = 29
+        Left = 126
+        Top = 107
+        Width = 89
+        Height = 23
         Size.Values = (
-          61.383333333333330000
-          334.433333333333300000
-          283.633333333333300000
-          237.066666666666700000)
+          60.854166666666670000
+          333.375000000000000000
+          283.104166666666700000
+          235.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5075,7 +5075,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5086,15 +5086,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 18
-        Top = 186
-        Width = 104
-        Height = 25
+        Left = 14
+        Top = 149
+        Width = 84
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          38.100000000000000000
-          393.700000000000000000
-          220.133333333333300000)
+          37.041666666666670000
+          394.229166666666700000
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5104,7 +5104,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5115,15 +5115,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 12
       end
       object qrlblContact: TQRLabel
-        Left = 140
-        Top = 186
-        Width = 117
-        Height = 25
+        Left = 112
+        Top = 149
+        Width = 95
+        Height = 20
         Size.Values = (
           52.916666666666670000
           296.333333333333300000
-          393.700000000000000000
-          247.650000000000000000)
+          394.229166666666700000
+          251.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5133,7 +5133,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5144,10 +5144,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 12
       end
       object QRShape2: TQRShape
-        Left = 18
-        Top = 210
-        Width = 494
-        Height = 171
+        Left = 14
+        Top = 168
+        Width = 395
+        Height = 137
         Size.Values = (
           362.479166666666700000
           37.041666666666670000
@@ -5160,10 +5160,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         VertAdjust = 0
       end
       object DellAddmemo: TQRMemo
-        Left = 30
-        Top = 221
-        Width = 405
-        Height = 120
+        Left = 24
+        Top = 177
+        Width = 324
+        Height = 96
         Size.Values = (
           254.000000000000000000
           63.500000000000000000
@@ -5178,7 +5178,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5189,15 +5189,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object qrlblReferencelabel: TQRLabel
-        Left = 29
-        Top = 356
-        Width = 86
-        Height = 21
+        Left = 23
+        Top = 285
+        Width = 70
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          61.383333333333330000
-          753.533333333333300000
-          182.033333333333300000)
+          44.979166666666670000
+          60.854166666666670000
+          754.062500000000000000
+          185.208333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5207,7 +5207,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5218,10 +5218,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object qrlblreference: TQRLabel
-        Left = 123
-        Top = 356
-        Width = 381
-        Height = 21
+        Left = 98
+        Top = 285
+        Width = 305
+        Height = 17
         Size.Values = (
           44.979166666666670000
           259.291666666666700000
@@ -5237,7 +5237,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5248,15 +5248,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 30
-        Top = 391
-        Width = 57
-        Height = 21
+        Left = 24
+        Top = 313
+        Width = 46
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           63.500000000000000000
-          827.616666666666700000
-          120.650000000000000000)
+          828.145833333333300000
+          121.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5266,7 +5266,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5277,15 +5277,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 30
-        Top = 416
-        Width = 35
-        Height = 21
+        Left = 24
+        Top = 333
+        Width = 29
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           63.500000000000000000
-          880.533333333333300000
-          74.083333333333330000)
+          881.062500000000000000
+          76.729166666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5295,7 +5295,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5306,10 +5306,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object DPhoneQRLabel: TQRLabel
-        Left = 100
-        Top = 391
-        Width = 351
-        Height = 21
+        Left = 80
+        Top = 313
+        Width = 281
+        Height = 17
         Size.Values = (
           44.979166666666670000
           211.666666666666700000
@@ -5325,7 +5325,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5336,10 +5336,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object DFaxQRLabel: TQRLabel
-        Left = 100
-        Top = 416
-        Width = 351
-        Height = 21
+        Left = 80
+        Top = 333
+        Width = 281
+        Height = 17
         Size.Values = (
           44.979166666666670000
           211.666666666666700000
@@ -5355,7 +5355,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5366,15 +5366,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object qrlDelNumber: TQRLabel
-        Left = 18
-        Top = 94
-        Width = 164
-        Height = 29
+        Left = 14
+        Top = 75
+        Width = 134
+        Height = 23
         Size.Values = (
-          61.383333333333330000
-          38.100000000000000000
-          198.966666666666700000
-          347.133333333333300000)
+          60.854166666666670000
+          37.041666666666670000
+          198.437500000000000000
+          354.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5384,7 +5384,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5396,25 +5396,25 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       end
     end
     object FooterQRBand: TQRBand
-      Left = 47
-      Top = 585
-      Width = 898
-      Height = 170
+      Left = 38
+      Top = 468
+      Width = 718
+      Height = 136
       AlignToBottom = True
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         359.833333333333300000
-        1900.766666666667000000)
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRShape1: TQRShape
-        Left = 10
-        Top = 30
-        Width = 511
-        Height = 129
+        Left = 8
+        Top = 24
+        Width = 409
+        Height = 103
         Size.Values = (
           272.520833333333400000
           21.166666666666670000
@@ -5427,15 +5427,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         VertAdjust = 0
       end
       object lblSpecialNotes: TQRLabel
-        Left = 11
-        Top = 8
-        Width = 101
-        Height = 21
+        Left = 9
+        Top = 6
+        Width = 82
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          23.283333333333330000
-          16.933333333333330000
-          213.783333333333300000)
+          44.979166666666670000
+          23.812500000000000000
+          15.875000000000000000
+          216.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5445,7 +5445,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5456,10 +5456,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object SpecialNotesMemo: TQRMemo
-        Left = 21
-        Top = 43
-        Width = 490
-        Height = 109
+        Left = 17
+        Top = 34
+        Width = 392
+        Height = 87
         Size.Values = (
           230.187500000000000000
           44.979166666666670000
@@ -5474,7 +5474,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -5492,10 +5492,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       end
     end
     object pogroupheader: TQRGroup
-      Left = 47
-      Top = 501
-      Width = 898
-      Height = 53
+      Left = 38
+      Top = 401
+      Width = 718
+      Height = 42
       Frame.DrawBottom = True
       AlignToBottom = False
       BeforePrint = pogroupheaderBeforePrint
@@ -5503,8 +5503,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        112.183333333333300000
-        1900.766666666667000000)
+        111.125000000000000000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'GetOrdHedQuery.Sel1'
@@ -5512,15 +5512,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       Master = qrpDetails
       ReprintOnNewPage = True
       object LineQrLabel: TQRLabel
-        Left = 10
-        Top = 29
-        Width = 34
-        Height = 21
+        Left = 8
+        Top = 23
+        Width = 29
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           21.166666666666670000
-          61.383333333333330000
-          71.966666666666670000)
+          60.854166666666670000
+          76.729166666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5530,7 +5530,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5541,15 +5541,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object PartQRLabel: TQRLabel
-        Left = 53
-        Top = 29
-        Width = 64
-        Height = 21
+        Left = 42
+        Top = 23
+        Width = 50
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          112.183333333333300000
-          61.383333333333330000
-          135.466666666666700000)
+          44.979166666666670000
+          111.125000000000000000
+          60.854166666666670000
+          132.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5559,7 +5559,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5570,15 +5570,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object DescQRLabel: TQRLabel
-        Left = 200
-        Top = 29
-        Width = 91
-        Height = 21
+        Left = 160
+        Top = 23
+        Width = 72
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           423.333333333333300000
-          61.383333333333330000
-          192.616666666666700000)
+          60.854166666666670000
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5588,7 +5588,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5599,10 +5599,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object OrdQtyQRLabel: TQRLabel
-        Left = 830
-        Top = 10
-        Width = 65
-        Height = 40
+        Left = 664
+        Top = 8
+        Width = 52
+        Height = 32
         Size.Values = (
           84.666666666666680000
           1756.833333333333000000
@@ -5618,7 +5618,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5629,15 +5629,15 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 768
-        Top = 29
-        Width = 48
-        Height = 21
+        Left = 614
+        Top = 23
+        Width = 38
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1625.600000000000000000
-          61.383333333333330000
-          101.600000000000000000)
+          44.979166666666670000
+          1624.541666666667000000
+          60.854166666666670000
+          100.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5647,7 +5647,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -5660,10 +5660,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 47
-      Top = 554
-      Width = 898
-      Height = 31
+      Left = 38
+      Top = 443
+      Width = 718
+      Height = 25
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
@@ -5676,8 +5676,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        65.616666666666670000
-        1900.766666666667000000)
+        66.145833333333330000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -5685,10 +5685,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       PrintBefore = False
       PrintIfEmpty = True
       object PackqtyQRLabel: TQRLabel
-        Left = 743
-        Top = 4
-        Width = 71
-        Height = 21
+        Left = 594
+        Top = 3
+        Width = 57
+        Height = 17
         Size.Values = (
           44.979166666666670000
           1571.625000000000000000
@@ -5704,7 +5704,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5716,9 +5716,9 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       end
       object POrdLineNoQRLabel: TQRLabel
         Left = 0
-        Top = 4
-        Width = 41
-        Height = 21
+        Top = 3
+        Width = 33
+        Height = 17
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
@@ -5734,7 +5734,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5745,10 +5745,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object PartCodeQRLabel: TQRLabel
-        Left = 53
-        Top = 4
-        Width = 139
-        Height = 21
+        Left = 42
+        Top = 3
+        Width = 111
+        Height = 17
         Size.Values = (
           44.979166666666670000
           111.125000000000000000
@@ -5764,7 +5764,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5775,10 +5775,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object PartDescrQRLabel: TQRLabel
-        Left = 200
-        Top = 4
-        Width = 541
-        Height = 21
+        Left = 160
+        Top = 3
+        Width = 433
+        Height = 17
         Size.Values = (
           44.979166666666670000
           423.333333333333300000
@@ -5794,7 +5794,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5805,10 +5805,10 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         FontSize = 10
       end
       object PackSizeQRLabel: TQRLabel
-        Left = 818
-        Top = 4
-        Width = 61
-        Height = 21
+        Left = 654
+        Top = 3
+        Width = 49
+        Height = 17
         Size.Values = (
           44.979166666666670000
           1730.375000000000000000
@@ -5824,7 +5824,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5906,14 +5906,12 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 98
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetDelFromSuppQuery: TFDQuery
@@ -5954,9 +5952,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 201
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object GetDelFromSuppQuerySuppNam: TStringField
       FieldName = 'SuppNam'
@@ -6021,24 +6018,17 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object GetSODelAddQuery: TFDQuery
@@ -6075,9 +6065,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 233
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
   object CompSRC: TDataSource
@@ -6113,9 +6101,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 154
     ParamData = <
       item
-        DataType = ftString
         Name = 'purch_ord_no'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetNarrSQL: TFDQuery
@@ -6130,9 +6117,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Top = 26
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource

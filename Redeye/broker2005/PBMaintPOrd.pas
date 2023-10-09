@@ -3038,7 +3038,7 @@ begin
     inx := SelectedLine.DeliveryLines.IndexFromDelNo(iDelivery);
 
     {If this is the first delivery line then set the required dates to the ones on the delivery page - if not already set}
-    if (iDelivery = 1) and (sTempFuncMode in [poAdd, poChange]) then
+    if (iDelivery = 1) and CharInSet(sTempFuncMode, [poAdd, poChange]) then
       begin
         {Supplier Required date}
         if (ReqbyDateEdit.text = '') then
@@ -3049,7 +3049,7 @@ begin
           CustReqDateEdit.text := PBDateStr(SelectedLine.DeliveryLines[inx].GoodsRequiredbyCust);
       end;
 
-    if sTempFuncMode in [poChange, poDelete] then
+    if CharInSet(sTempFuncMode, [poChange, poDelete]) then
     begin
       SelectedLine.DeliveryLines[inx].Free;
       SelectedLine.DeliveryLines.Delete(inx);
@@ -4417,7 +4417,7 @@ begin
     data to do anything with. }
 //  DetsGrpBox.Enabled := not (FuncMode in [poDelete, poView]);
   bEnabled := (PurchaseOrder.OrderLines.Count > 0) and
-    not (FuncMode in [poDelete, poView]);
+    not CharInSet(FuncMode, [poDelete, poView]);
   DelivAddBitBtn.Visible := bEnabled;
   DelivChgBitBtn.Visible := bEnabled;
   DelivDelBitBtn.Visible := bEnabled;
@@ -4459,30 +4459,30 @@ begin
 
   if bCanChangeInvoicedOrders then
     begin
-      SellPriceMemo.enabled := not (FuncMode in [poRestrict]) and
+      SellPriceMemo.enabled := not CharInSet(FuncMode, [poRestrict]) and
                           ((PurchaseOrder.AuthorisedBy = 0) or (PurchaseOrder.AuthorisedBy = frmPBMainMenu.iOperator));
       SellUnitDBLCB.enabled := SellPriceMemo.enabled;
       ExtChgFuncGrpBox.visible := SellPriceMemo.enabled;
 
-      CustLUbtn.Enabled := not (FuncMode in [poRestrict]);
+      CustLUbtn.Enabled := not CharInSet(FuncMode, [poRestrict]);
       ContactLUbtn.Enabled := CustLUbtn.Enabled;
       RepLUButton.Enabled := CustLUbtn.Enabled;
       ProdTypeBtn.enabled := CustLUbtn.Enabled;
     end
   else
     begin
-      SellPriceMemo.enabled := not (FuncMode in [poRestrict, poInvoiced]) and
+      SellPriceMemo.enabled := not CharInSet(FuncMode, [poRestrict, poInvoiced]) and
                           ((PurchaseOrder.AuthorisedBy = 0) or (PurchaseOrder.AuthorisedBy = frmPBMainMenu.iOperator));
       SellUnitDBLCB.enabled := SellPriceMemo.enabled;
       ExtChgFuncGrpBox.visible := SellPriceMemo.enabled;
 
-      CustLUbtn.Enabled := not (FuncMode in [poRestrict, poInvoiced]);
+      CustLUbtn.Enabled := not CharInSet(FuncMode, [poRestrict, poInvoiced]);
       ContactLUbtn.Enabled := CustLUbtn.Enabled;
       RepLUButton.Enabled := CustLUbtn.Enabled;
       ProdTypeBtn.enabled := CustLUbtn.Enabled;
     end;
 
-  btnAccountManager.enabled := not (FuncMode in [poRestrict]);
+  btnAccountManager.enabled := not CharInSet(FuncMode, [poRestrict]);
   dblkpJobType.enabled := not(RepCanConvert) or not(CreateFromEnq);
 end;
 
@@ -5294,7 +5294,7 @@ begin
     if sTempFuncMode = poAdd then
       SelectedLine.CallOffOrders.Add(CallOffOrder);
     inx := SelectedLine.CallOffOrders.IndexFromCallOffNo(iCallOff);
-    if sTempFuncMode in [poChange, poDelete] then
+    if CharInSet(sTempFuncMode, [poChange, poDelete]) then
     begin
       SelectedLine.CallOffOrders[inx].Free;
       SelectedLine.CallOffOrders.Delete(inx);
@@ -7943,10 +7943,10 @@ begin
     invList.Free;
   end;
 
-  OrdPriceMemo.enabled := (not (FuncMode in [poRestrict])) and
+  OrdPriceMemo.enabled := (not CharInSet(FuncMode, [poRestrict])) and
                           ((PurchaseOrder.AuthorisedBy = 0) or (PurchaseOrder.AuthorisedBy = frmPBMainMenu.iOperator)) and
                           (not selectedLine.Matched);
-  OrderUnitDBLCB.enabled := (not (FuncMode in [poRestrict])) and
+  OrderUnitDBLCB.enabled := (not CharInSet(FuncMode, [poRestrict])) and
                           ((PurchaseOrder.AuthorisedBy = 0) or (PurchaseOrder.AuthorisedBy = frmPBMainMenu.iOperator)) and
                           (not selectedLine.Matched);
 

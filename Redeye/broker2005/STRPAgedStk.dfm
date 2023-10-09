@@ -1,30 +1,24 @@
 object STRPAgedStkFrm: TSTRPAgedStkFrm
   Left = 0
   Top = 109
-  Width = 1227
-  Height = 606
   Caption = 'Aged Stock Report Print'
+  ClientHeight = 567
+  ClientWidth = 1211
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrAgedStk: TQuickRep
     Left = 0
     Top = 0
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrAgedStkBeforePrint
     DataSet = qryAgedStk
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +38,7 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -57,56 +52,58 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand: TQRBand
       Left = 38
       Top = 38
       Width = 1078
       Height = 145
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        383.645833333333400000
+        383.645833333333300000
         2852.208333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object TitleQRLabel: TQRLabel
         Left = 406
         Top = 8
         Width = 266
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          66.145833333333340000
+          66.145833333333330000
           1074.208333333333000000
           21.166666666666670000
-          703.791666666666800000)
+          703.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Slow Moving Stock Report - '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -116,7 +113,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 16
       end
       object qrlblDateSince: TQRLabel
@@ -124,20 +123,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 34
         Width = 417
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          873.124999999999900000
-          89.958333333333320000
+          873.125000000000000000
+          89.958333333333330000
           1103.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'Report showing products that have been stocked for more than x d' +
           'ays:- '
@@ -149,7 +144,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrPart: TQRLabel
@@ -157,20 +154,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 107
         Width = 44
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           283.104166666666700000
           116.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -180,7 +173,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape1: TQRShape
@@ -188,16 +183,14 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 137
         Width = 1062
         Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           18.520833333333300000
           21.166666666666700000
           362.479166666667000000
           2809.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -206,20 +199,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           325.437500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -229,7 +218,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblStock: TQRLabel
@@ -237,20 +228,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 45
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1973.791666666667000000
           325.437500000000000000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'In Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -260,7 +247,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel3: TQRLabel
@@ -268,20 +257,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 115
         Width = 36
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333320000
           2328.333333333333000000
           304.270833333333300000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Box Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -291,7 +277,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -299,20 +287,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 66
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2442.104166666667000000
           325.437500000000000000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Stock Value'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -322,7 +306,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel1: TQRLabel
@@ -330,20 +316,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 51
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1397.000000000000000000
           325.437500000000000000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Store/Bin'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -353,7 +335,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -361,20 +345,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2116.666666666667000000
           325.437500000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Pack Size'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -384,7 +364,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel6: TQRLabel
@@ -392,20 +374,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1775.354166666667000000
           325.437500000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Stock Ref'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -415,7 +393,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel7: TQRLabel
@@ -423,20 +403,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           873.125000000000000000
           325.437500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Recv'#39'd'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -446,7 +422,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel8: TQRLabel
@@ -454,20 +432,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 107
         Width = 40
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1256.770833333333000000
           283.104166666666700000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Days in'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -477,7 +451,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel10: TQRLabel
@@ -485,20 +461,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 32
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1267.354166666667000000
           325.437500000000000000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -508,7 +480,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel11: TQRLabel
@@ -516,20 +490,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 58
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1074.208333333333000000
           325.437500000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -539,7 +509,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel12: TQRLabel
@@ -547,20 +519,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 107
         Width = 25
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1121.833333333333000000
           283.104166666666700000
-          66.145833333333340000)
+          66.145833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Last'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -570,7 +538,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblCust: TQRLabel
@@ -578,20 +548,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 78
         Width = 95
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1299.104166666667000000
           206.375000000000000000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'From Customer '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -601,7 +567,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel13: TQRLabel
@@ -609,20 +577,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 107
         Width = 60
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
-          486.833333333333400000
+          486.833333333333300000
           283.104166666666700000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer/'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -632,7 +596,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel15: TQRLabel
@@ -640,20 +606,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           529.166666666666700000
           325.437500000000000000
-          58.208333333333340000)
+          58.208333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Rep'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -663,7 +625,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel16: TQRLabel
@@ -671,20 +635,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 22
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2767.541666666667000000
           325.437500000000000000
-          58.208333333333340000)
+          58.208333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Use'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -694,7 +654,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel17: TQRLabel
@@ -702,20 +664,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 107
         Width = 32
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2743.729166666667000000
           283.104166666666700000
-          84.666666666666680000)
+          84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Not in'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -725,7 +683,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblRange: TQRLabel
@@ -733,20 +693,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 56
         Width = 92
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1304.395833333333000000
           148.166666666666700000
           243.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'From Product - '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -756,7 +712,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DateQRLabel: TQRLabel
@@ -764,20 +722,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 32
         Width = 23
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2767.541666666667000000
-          84.666666666666680000
-          60.854166666666680000)
+          84.666666666666670000
+          60.854166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -787,7 +741,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData1: TQRSysData
@@ -795,19 +751,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 10
         Width = 85
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2603.500000000000000000
           26.458333333333330000
           224.895833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -818,6 +771,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParentFont = False
         Text = 'Page No.:'
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel14: TQRLabel
@@ -825,20 +780,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 123
         Width = 24
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2656.416666666667000000
           325.437500000000000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Paid'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -848,7 +799,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -857,40 +810,33 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
       Top = 183
       Width = 1078
       Height = 38
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbndDetailAfterPrint
       AlignToBottom = False
       BeforePrint = qrbndDetailBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         100.541666666666700000
         2852.208333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbDetail
       object QRDBText7: TQRDBText
         Left = 951
         Top = 0
         Width = 76
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2516.187500000000000000
           0.000000000000000000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Invoice_upfront'
@@ -901,7 +847,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText1: TQRDBText
@@ -909,20 +859,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 165
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           0.000000000000000000
           436.562499999999900000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Part'
@@ -933,7 +880,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -941,20 +892,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 16
         Width = 165
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           42.333333333333340000
           436.562499999999900000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Description'
@@ -965,7 +913,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
@@ -973,20 +925,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 41
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1984.375000000000000000
           0.000000000000000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Quantity'
@@ -997,7 +945,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -1005,20 +957,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 16
         Width = 16
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1397.000000000000000000
-          42.333333333333340000
-          42.333333333333340000)
+          42.333333333333330000
+          42.333333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Bin'
@@ -1029,7 +977,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblBoxCountVal: TQRLabel
@@ -1037,20 +989,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 51
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2286.000000000000000000
           0.000000000000000000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1060,7 +1008,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText8: TQRDBText
@@ -1068,20 +1018,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 137
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1397.000000000000000000
           0.000000000000000000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Part_Store_Name'
@@ -1092,7 +1039,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
@@ -1100,20 +1051,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 74
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1772.708333333333000000
           0.000000000000000000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'Stock_Ref'
@@ -1124,7 +1072,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText9: TQRDBText
@@ -1132,20 +1084,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 70
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           857.250000000000000000
           0.000000000000000000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'date_received'
@@ -1156,7 +1104,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDays: TQRLabel
@@ -1164,20 +1116,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 46
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1238.250000000000000000
           0.000000000000000000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDays'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1187,7 +1135,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblPckSz: TQRLabel
@@ -1195,20 +1145,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2116.666666666667000000
           0.000000000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'QRLblPckSz'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1218,7 +1165,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblVal: TQRLabel
@@ -1226,20 +1175,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 46
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2497.666666666667000000
           0.000000000000000000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'QRLblVal'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1249,7 +1194,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblLastSalesDate: TQRLabel
@@ -1257,20 +1204,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 45
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1100.666666666667000000
           0.000000000000000000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblLastSalesDate'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1280,7 +1224,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText5: TQRDBText
@@ -1288,20 +1234,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 150
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           465.666666666666700000
           0.000000000000000000
           396.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryAgedStk
         DataField = 'CustName'
@@ -1312,7 +1255,11 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblInUse: TQRLabel
@@ -1320,20 +1267,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 0
         Width = 15
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2778.125000000000000000
           0.000000000000000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = ' *'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1343,7 +1287,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRMemoRepName: TQRMemo
@@ -1351,16 +1297,14 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 16
         Width = 150
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           465.666666666666700000
           42.333333333333340000
           396.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1373,7 +1317,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 8
       end
       object qrlblLastJobUsedDate: TQRLabel
@@ -1382,20 +1327,17 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Width = 45
         Height = 15
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1100.666666666667000000
           42.333333333333330000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblLastJobUsedDate'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1405,7 +1347,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1414,39 +1358,32 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
       Top = 221
       Width = 1078
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666680000
+        84.666666666666670000
         2852.208333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel9: TQRLabel
         Left = 818
         Top = 8
         Width = 96
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2164.291666666667000000
           21.166666666666670000
           254.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Stock Value'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1456,7 +1393,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalStkVal: TQRLabel
@@ -1464,20 +1403,16 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 8
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2442.104166666667000000
           21.166666666666670000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Stock Value'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1487,7 +1422,9 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape2: TQRShape
@@ -1495,16 +1432,14 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         Top = 4
         Width = 185
         Height = 1
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           2.645833333333333000
           2124.604166666667000000
           10.583333333333330000
           489.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1594,79 +1529,60 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'theDate'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'noOfDays'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'PartFrom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'PartTo'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Not_In_use'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'CustBranch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Part_store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetSalesDtQry: TFDQuery
@@ -1689,29 +1605,23 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 38
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Type'
-        ParamType = ptUnknown
       end>
   end
   object Query1: TFDQuery
@@ -1774,69 +1684,43 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 94
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'theDate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'noOfDays'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PartFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PartTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_To'
-        ParamType = ptUnknown
       end>
   end
   object GetTopRepSQL: TFDQuery
@@ -1860,9 +1744,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 94
     ParamData = <
       item
-        DataType = ftString
         Name = 'part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryGetPOs: TFDQuery
@@ -1878,9 +1761,7 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchOrds: TFDQuery
@@ -1893,9 +1774,7 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAccMgr: TFDQuery
@@ -1913,9 +1792,7 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -25,13 +25,12 @@ object frmWTDatabase: TfrmWTDatabase
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 37
-        Width = 579
+        Width = 569
       end>
-    ExplicitWidth = 583
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 566
+      Width = 560
       Height = 37
       ButtonHeight = 36
       ButtonWidth = 60
@@ -91,8 +90,6 @@ object frmWTDatabase: TfrmWTDatabase
     Width = 575
     Height = 19
     Panels = <>
-    ExplicitTop = 329
-    ExplicitWidth = 583
   end
   object imgLstHot: TImageList
     Left = 56

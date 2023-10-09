@@ -113,7 +113,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   System.Types,
   PBMaintPrdTyp, PBMaintOpsDet, PBDBMemo, pbMainMenu, PBDatabase, PBRPOperator;
 

@@ -99,7 +99,7 @@ var
 
 implementation
 
-uses WTMaintCustomer, WTDBMemo;
+uses UITypes, WTMaintCustomer, WTDBMemo;
 
 {$R *.dfm}
 
@@ -426,10 +426,7 @@ begin
             execsql;
           end;
         Refreshdata;
-      except
-        messagedlg('Customer '+ dbgDetails.datasource.DataSet.fieldbyname('Customer_name').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg('Customer '+ dbgDetails.datasource.DataSet.fieldbyname('Customer_name').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 

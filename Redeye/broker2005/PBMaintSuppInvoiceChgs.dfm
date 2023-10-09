@@ -12,10 +12,8 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 144
@@ -38,8 +36,6 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 0
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -58,23 +54,26 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
     Left = 387
     Top = 144
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 475
     Height = 137
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
@@ -152,6 +151,7 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
       TabOrder = 3
+      Text = ''
       OnChange = CheckOK
     end
     object cmbPurchaseOrders: TComboBox
@@ -159,7 +159,6 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       Top = 104
       Width = 145
       Height = 21
-      ItemHeight = 13
       TabOrder = 4
       OnChange = CheckOK
     end

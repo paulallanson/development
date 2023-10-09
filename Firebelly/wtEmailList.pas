@@ -32,8 +32,8 @@ type
     UpSalesOrderTemplaterSQL: TFDQuery;
     UpSalesOrderFitterSQL: TFDQuery;
     procedure FormCreate(Sender: TObject);
-//    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Longint;
-//      var CanSelect: Boolean);
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbExportFilterClick(Sender: TObject);
@@ -43,8 +43,6 @@ type
     procedure cmbContactsClick(Sender: TObject);
     procedure cmbContactsEnter(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
-    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
   private
     FCodeType: string;
     { Private declarations }

@@ -1,19 +1,17 @@
 object frmWTMaintInstallArea: TfrmWTMaintInstallArea
   Left = 442
   Top = 150
-  Width = 376
-  Height = 261
   Caption = 'Installation Areas'
+  ClientHeight = 222
+  ClientWidth = 360
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -84,9 +82,9 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 6
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 264
@@ -96,8 +94,8 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 7
     NumGlyphs = 2
+    TabOrder = 7
   end
   object dblkpCountry: TDBLookupComboBox
     Left = 80
@@ -180,34 +178,23 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Country'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Templating_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Area'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -234,29 +221,20 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Country'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Templating_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

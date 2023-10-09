@@ -462,6 +462,7 @@ begin
   {$ENDIF}
   Application.Initialize;
   Application.Title := 'Redeye Print Management';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdmBroker, dmBroker);
   Application.CreateForm(TfrmpbMainMenu, frmpbMainMenu);
   Application.CreateForm(TPBSendFaxFrm, PBSendFaxFrm);

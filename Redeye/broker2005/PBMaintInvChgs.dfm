@@ -12,10 +12,8 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 152
@@ -38,8 +36,6 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 1
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -58,23 +54,26 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
     Left = 387
     Top = 144
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 489
     Height = 137
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 24
@@ -162,7 +161,6 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Top = 8
       Width = 353
       Height = 21
-      ItemHeight = 13
       TabOrder = 0
       OnClick = cmbbxAddChrgClick
     end
@@ -188,6 +186,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
       TabOrder = 5
+      Text = ''
       OnChange = CheckOK
     end
     object cmbLines: TComboBox
@@ -196,7 +195,6 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Width = 65
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
     end
   end

@@ -1,4 +1,4 @@
-﻿object frmSTLUFormRef: TfrmSTLUFormRef
+object frmSTLUFormRef: TfrmSTLUFormRef
   Left = 146
   Top = 88
   BorderStyle = bsDialog
@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CustLabel: TLabel
     Left = 88
@@ -84,12 +82,12 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 264
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -106,25 +104,27 @@
     Width = 75
     Height = 25
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 356
     Top = 328
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 352
     Top = 144
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 4
@@ -132,8 +132,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -148,6 +146,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 4
@@ -155,8 +155,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -171,6 +169,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 4
@@ -178,8 +178,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -194,10 +192,11 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object DispPanel: TPanel
-    ParentBackground = False
     Left = 8
     Top = 318
     Width = 321
@@ -205,6 +204,7 @@
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 5
     object DBContactText: TDBText
       Left = 83
@@ -234,8 +234,6 @@
     Width = 75
     Height = 25
     Caption = 'Images'
-    TabOrder = 6
-    OnClick = btbtnImagesClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -250,6 +248,8 @@
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btbtnImagesClick
   end
   object stsbrDetails: TStatusBar
     Left = 0
@@ -263,7 +263,6 @@
       item
         Width = 50
       end>
-    SimplePanel = False
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -285,24 +284,19 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

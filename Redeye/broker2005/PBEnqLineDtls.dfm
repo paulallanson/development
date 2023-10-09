@@ -1,7 +1,6 @@
-﻿object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
+object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   Left = 127
   Top = 122
-  AutoScroll = False
   Caption = 'Add Enquiry Line details'
   ClientHeight = 404
   ClientWidth = 651
@@ -12,11 +11,9 @@
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Bevel2: TBevel
     Left = 0
@@ -208,8 +205,6 @@
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 21
-    OnClick = OKBtnClick
     Glyph.Data = {
       BE060000424DBE06000000000000360400002800000024000000120000000100
       0800000000008802000000000000000000000001000000000000000000000000
@@ -267,15 +262,18 @@
       0303030303030303030303030303030303030303030303030303030303030303
       0303}
     NumGlyphs = 2
+    TabOrder = 21
+    OnClick = OKBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 324
     Top = 355
     Width = 75
     Height = 25
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 22
     OnClick = CancelBitBtnClick
-    Kind = bkCancel
   end
   object Unit1: TEdit
     Tag = 5
@@ -324,7 +322,6 @@
     Width = 167
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 14
     OnChange = NCR_OTCComboChange
     OnClick = NCR_OTCComboClick
@@ -426,10 +423,6 @@
     Height = 25
     Hint = 'Clear Form Reference'
     Caption = 'Clear'
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 5
-    OnClick = BitBtn1Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -444,6 +437,10 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    OnClick = BitBtn1Click
   end
   object ArtEdit: TMemo
     Tag = 9
@@ -504,7 +501,6 @@
     Top = 188
     Width = 213
     Height = 21
-    ItemHeight = 13
     TabOrder = 26
     OnChange = cmbbxJobTypeChange
   end
@@ -514,10 +510,6 @@
     Width = 27
     Height = 25
     Hint = 'Clear Form Reference'
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 27
-    OnClick = btbtnDelJobTypeClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -532,6 +524,10 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 27
+    OnClick = btbtnDelJobTypeClick
   end
   object ProductSQL: TFDQuery
     ConnectionName = 'pb'

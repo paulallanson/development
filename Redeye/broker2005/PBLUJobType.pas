@@ -171,7 +171,7 @@ begin
   try
     PBMaintJobTypeFrm.sFuncMode := sTempFuncMode;
 
-    if sTempFuncMode[1] in ['C', 'D'] then
+    if CharInSet(sTempFuncMode[1], ['C', 'D']) then
     begin
       PBMaintJobTypeFrm.SelCode := DetsSRC.DataSet.FieldByName('Job_type').AsInteger;
       PBMaintJobTypeFrm.edtdescription.Text :=

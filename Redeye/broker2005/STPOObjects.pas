@@ -41,13 +41,13 @@ type
   private
     FLineNo: integer;
     FQuantityAllocated: integer;
-    FFullyReceived: ShortString;
+    FFullyReceived: string;
     FQuantityOrdered: integer;
     FQuantityReceived: integer;
     FPurchPackQuantity: integer;
     FQuantitySent: integer;
-    FGRNNo: ShortString;
-    FPart: ShortString;
+    FGRNNo: string;
+    FPart: string;
     FPurchasePrice: Currency;
     FDateDelivActual: TDateTime;
     FDateDelivExpected: TDateTime;
@@ -63,11 +63,11 @@ type
     FLineIsSample: boolean;
     procedure SetLineNo(const Value: integer);
     procedure SetQuantityAllocated(const Value: integer);
-    procedure SetFullyReceived(const Value: ShortString);
+    procedure SetFullyReceived(const Value: string);
     procedure SetDateDelivActual(const Value: TDateTime);
     procedure SetDateDelivExpected(const Value: TDateTime);
-    procedure SetGRNNo(const Value: ShortString);
-    procedure SetPart(const Value: ShortString);
+    procedure SetGRNNo(const Value: string);
+    procedure SetPart(const Value: string);
     procedure SetPurchasePrice(const Value: Currency);
     procedure SetPurchPackQuantity(const Value: integer);
     procedure SetQuantityOrdered(const Value: integer);
@@ -86,16 +86,16 @@ type
   public
     property LineNo: integer read FLineNo write SetLineNo;
     property QuantityAllocated: integer read FQuantityAllocated write SetQuantityAllocated;
-    property FullyReceived: ShortString read FFullyReceived write SetFullyReceived;
+    property FullyReceived: string read FFullyReceived write SetFullyReceived;
     property QuantityOrdered: integer read FQuantityOrdered write SetQuantityOrdered;
-    property Part: ShortString read FPart write SetPart;
+    property Part: string read FPart write SetPart;
     property ProductStatus: string read FProductStatus write SetProductStatus;
     property QuantityReceived: integer read FQuantityReceived write SetQuantityReceived;
     property DateDelivExpected: TDateTime read FDateDelivExpected write SetDateDelivExpected;
     property DateDelivActual: TDateTime read FDateDelivActual write SetDateDelivActual;
     property LineIsSample: boolean read FLineIsSample write SetLineIsSample;
     property PurchasePrice: Currency read FPurchasePrice write SetPurchasePrice;
-    property GRNNo: ShortString read FGRNNo write SetGRNNo;
+    property GRNNo: string read FGRNNo write SetGRNNo;
     property QuantitySent: integer read FQuantitySent write SetQuantitySent;
     property PurchPackQuantity: integer read FPurchPackQuantity write SetPurchPackQuantity;
     property Modified: boolean read FModified write SetModified;
@@ -118,12 +118,12 @@ type
     FSalesOrder: integer;
     FPartStoreFrom: integer;
     FBranchNo: integer;
-    FPurchOrdNo: ShortString;
-    FDescription: ShortString;
-    FRecRef: ShortString;
-    FPurchOrdStatus: ShortString;
+    FPurchOrdNo: string;
+    FDescription: string;
+    FRecRef: string;
+    FPurchOrdStatus: string;
     FPurchOrdDate: TDateTime;
-    FSuppOrderType: ShortString;
+    FSuppOrderType: string;
     FDateRequired: TDateTime;
     FPOLines: TObjectList;
     FModified: boolean;
@@ -135,19 +135,19 @@ type
     FVersionNo: integer;
     FSupplierAckNo: string;
     procedure SetBranchNo(const Value: integer);
-    procedure SetDescription(const Value: ShortString);
+    procedure SetDescription(const Value: string);
     procedure SetPartStore(const Value: integer);
     procedure SetPartStoreFrom(const Value: integer);
     procedure SetPOLines(Index: integer; const value: TPurchaseOrderLine);
     procedure SetPONumber(const Value: integer);
     procedure SetPurchOrdDate(const Value: TDateTime);
-    procedure SetPurchOrdNo(const Value: ShortString);
-    procedure SetPurchOrdStatus(const Value: ShortString);
+    procedure SetPurchOrdNo(const Value: string);
+    procedure SetPurchOrdStatus(const Value: string);
     procedure SetPurchOrdType(const Value: integer);
-    procedure SetRecRef(const Value: ShortString);
+    procedure SetRecRef(const Value: string);
     procedure SetSalesOrder(const Value: integer);
     procedure SetSupplier(const Value: integer);
-    procedure SetSuppOrderType(const Value: ShortString);
+    procedure SetSuppOrderType(const Value: string);
     procedure SetDateRequired(const Value: TDateTime);
     procedure SetModified(const Value: boolean);
     procedure SetNewOrder(const Value: boolean);
@@ -162,13 +162,13 @@ type
     procedure SetSupplierAckNo(const Value: string);
   public
     property PONumber: integer read FPONumber write SetPONumber;
-    property Description: ShortString read FDescription write SetDescription;
+    property Description: string read FDescription write SetDescription;
     property PartStore: integer read FPartStore write SetPartStore;
-    property RecRef: ShortString read FRecRef write SetRecRef;
+    property RecRef: string read FRecRef write SetRecRef;
     property Supplier: integer read FSupplier write SetSupplier;
     property BranchNo: integer read FBranchNo write SetBranchNo;
-    property PurchOrdNo: ShortString read FPurchOrdNo write SetPurchOrdNo;
-    property PurchOrdStatus: ShortString read FPurchOrdStatus write SetPurchOrdStatus;
+    property PurchOrdNo: string read FPurchOrdNo write SetPurchOrdNo;
+    property PurchOrdStatus: string read FPurchOrdStatus write SetPurchOrdStatus;
     property PurchOrdDate: TDateTime read FPurchOrdDate write SetPurchOrdDate;
     property PartStoreFrom: integer read FPartStoreFrom write SetPartStoreFrom;
     property PurchOrdType: integer read FPurchOrdType write SetPurchOrdType;
@@ -186,7 +186,7 @@ type
     function CalcOrderValue: double;
     procedure UpdateDBRecords(STPODM: TSTPODM);
     property Narrative: integer read FNarrative write SetNarrative;
-    property SuppOrderType: ShortString read FSuppOrderType write SetSuppOrderType;
+    property SuppOrderType: string read FSuppOrderType write SetSuppOrderType;
     property DateRequired: TDateTime read FDateRequired write SetDateRequired;
     property POLines[index: integer]: TPurchaseOrderLine read GetPOLines write SetPOLines;
     function AddLine(aProdCode, aReplacedLineNo: string; anOrdQty, aDelQty, aPackSize: integer;
@@ -224,6 +224,8 @@ type
 function FormatMoney(const Money: variant): string;
 
 implementation
+
+uses UITypes;
 
 const
   xmlTab1 = #9;
@@ -295,13 +297,13 @@ begin
   Modified := True;
 end;
 
-procedure TPurchaseOrderLine.SetFullyReceived(const Value: ShortString);
+procedure TPurchaseOrderLine.SetFullyReceived(const Value: string);
 begin
   FFullyReceived := Value;
   Modified := True;
 end;
 
-procedure TPurchaseOrderLine.SetGRNNo(const Value: ShortString);
+procedure TPurchaseOrderLine.SetGRNNo(const Value: string);
 begin
   FGRNNo := Value;
   Modified := True;
@@ -323,7 +325,7 @@ begin
   FNewLine := Value;
 end;
 
-procedure TPurchaseOrderLine.SetPart(const Value: ShortString);
+procedure TPurchaseOrderLine.SetPart(const Value: string);
 begin
   FPart := Value;
   Modified := True;
@@ -1654,7 +1656,7 @@ begin
   Modified := True;
 end;
 
-procedure TPurchaseOrder.SetDescription(const Value: ShortString);
+procedure TPurchaseOrder.SetDescription(const Value: string);
 begin
   FDescription := Value;
   Modified := True;
@@ -1712,13 +1714,13 @@ begin
   Modified := True;
 end;
 
-procedure TPurchaseOrder.SetPurchOrdNo(const Value: ShortString);
+procedure TPurchaseOrder.SetPurchOrdNo(const Value: string);
 begin
   FPurchOrdNo := Value;
   Modified := True;
 end;
 
-procedure TPurchaseOrder.SetPurchOrdStatus(const Value: ShortString);
+procedure TPurchaseOrder.SetPurchOrdStatus(const Value: string);
 begin
   FPurchOrdStatus := Value;
   Modified := True;
@@ -1730,7 +1732,7 @@ begin
   Modified := True;
 end;
 
-procedure TPurchaseOrder.SetRecRef(const Value: ShortString);
+procedure TPurchaseOrder.SetRecRef(const Value: string);
 begin
   FRecRef := Value;
   Modified := True;
@@ -1748,7 +1750,7 @@ begin
   Modified := True;
 end;
 
-procedure TPurchaseOrder.SetSuppOrderType(const Value: ShortString);
+procedure TPurchaseOrder.SetSuppOrderType(const Value: string);
 begin
   FSuppOrderType := Value;
   Modified := True;

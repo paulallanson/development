@@ -205,8 +205,7 @@ type
     procedure ChangePOLineClick(Sender: TObject);
     procedure DeletePOLineClick(Sender: TObject);
     procedure RecommendPOLineClick(Sender: TObject);
-    procedure strgrdExtChgDetsSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
+    procedure strgrdExtChgDetsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure ppmnExChrgsGridPopup(Sender: TObject);
     procedure AddExChrgClick(Sender: TObject);
     procedure ShowExtChgGrid(Sender: TObject);
@@ -240,7 +239,7 @@ type
     procedure UpdateSalesOrderStatus(tmpCode: integer);
   public
     { Public declarations }
-    sFuncMode: String[1] ;
+    sFuncMode: Char ;
     sFuncDescr, headStatus: String ;
     iCode, iSupplCode, iSupplBranch, iTransType: Integer ;
     bStore_Ord: ByteBool ;
@@ -1578,8 +1577,7 @@ begin
   FSelectedChargeIndex := Value;
 end;
 
-procedure TSTMntPOrdFrm.strgrdExtChgDetsSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TSTMntPOrdFrm.strgrdExtChgDetsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   if FSelectedChargeIndex = ARow - 1 then Exit;
   FSelectedChargeIndex := ARow - 1;

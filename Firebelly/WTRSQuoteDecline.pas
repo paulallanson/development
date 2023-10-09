@@ -67,7 +67,7 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPQuoteReason,
+uses UITypes, allCommon, WTSrchCustomer, DateSelV5, WTRPQuoteReason,
   WTRPQuoteDecline;
 
 {$R *.dfm}

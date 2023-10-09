@@ -78,7 +78,7 @@ var
 
 implementation
 
-uses STPrtMnt, STRPPord, CCSCommon, DateSelV5, PBLUSupp, PBLUCust;
+uses UITypes, STPrtMnt, STRPPord, CCSCommon, DateSelV5, PBLUSupp, PBLUCust;
 
 {$R *.DFM}
 

@@ -302,7 +302,7 @@ var
 
 implementation
 
-uses
+uses UITypes, FireDAC.Stan.Param, 
   PBMaintPOrd, PBLUCust, PBLUPrdTyp, PBLURep, PBLUFormRef, PBPODataMod,
   DateSelV5, PBLUCConta;
 
@@ -463,7 +463,7 @@ begin
   DetsGrpBox.Caption := DetsGrpBox.Caption + '   Supplier: ' +
     OrderLine.SuppliersDesc;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [poDelete, poView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   DelLabel.Visible := (FFuncMode = poDelete);
   ProofsReqChkBoxClick(Self);
   OKBitBtn.Visible := (FFuncMode <> poView);

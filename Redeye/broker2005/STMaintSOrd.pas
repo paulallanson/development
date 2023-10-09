@@ -3,12 +3,12 @@ unit STMaintSOrd;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, Grids, STSOObjects,
-  Menus, CCSCommon,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls,
+  Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, Grids, STSOObjects, Menus, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
 type
   TSTMaintSOrdFrm = class(TForm)
     FlashTimer: TTimer;
@@ -102,10 +102,8 @@ type
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure CstCntrBitBtnClick(Sender: TObject);
@@ -202,7 +200,7 @@ var
 
 implementation
 
-uses STSODataMod, DateSelV5, CSDBMemo, CSLUCust;
+uses Variants, STSODataMod, DateSelV5, CSDBMemo, CSLUCust;
 
 var
   CSDBSOMemoFrm: TCSDBMemoFrm;
@@ -898,8 +896,7 @@ begin
   CheckOK(Self);
 end;
 
-procedure TSTMaintSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+procedure TSTMaintSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 (*	if (Col = 1) or
      (Col = 4) then
@@ -908,12 +905,12 @@ begin
     LineDetsStringGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing];
 
 *)
-  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
+  if FSelectedLineIndex = ARow - 1 then Exit;
+  FSelectedLineIndex := ARow - 1;
 end;
 
 procedure TSTMaintSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+  vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
 begin

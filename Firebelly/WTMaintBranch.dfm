@@ -251,16 +251,13 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 8
-    ExplicitTop = 268
-    ExplicitWidth = 522
-    ExplicitHeight = 231
     object TabSheet1: TTabSheet
       Caption = 'Installation Notes'
       object memInstallationNotes: TMemo
         Left = 0
         Top = 0
-        Width = 514
-        Height = 203
+        Width = 506
+        Height = 202
         Align = alClient
         MaxLength = 255
         TabOrder = 0
@@ -345,8 +342,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Height = 41
     Align = alBottom
     TabOrder = 9
-    ExplicitTop = 499
-    ExplicitWidth = 522
     DesignSize = (
       514
       41)
@@ -383,8 +378,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Width = 514
     Height = 19
     Panels = <>
-    ExplicitTop = 540
-    ExplicitWidth = 522
   end
   object qryGetLastNo: TFDQuery
     ConnectionName = 'wt'

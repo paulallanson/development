@@ -124,7 +124,7 @@ var
 
 implementation
 
-uses DateSelV5, PBLUCust, PBLURep, pbDatabase, STRPWorkIP, CCSPrint;
+uses UITypes, DateSelV5, PBLUCust, PBLURep, pbDatabase, STRPWorkIP, CCSPrint;
 
 {$R *.DFM}
 

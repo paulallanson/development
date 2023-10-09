@@ -64,7 +64,7 @@ var
 
 implementation
 
-uses WTRPOutQuote, allCommon, WTSrchCustomer, DateSelV5;
+uses UITypes, WTRPOutQuote, allCommon, WTSrchCustomer, DateSelV5;
 
 {$R *.dfm}
 

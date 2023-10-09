@@ -29,8 +29,6 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 128
-    ExplicitWidth = 459
     object cbPrintLogo: TCheckBox
       Left = 10
       Top = 44
@@ -225,8 +223,6 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 459
-    ExplicitHeight = 57
     object GroupBox2: TGroupBox
       Left = 8
       Top = 0
@@ -261,7 +257,6 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 459
     object gbLayouts: TGroupBox
       Left = 8
       Top = -1
@@ -315,8 +310,6 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       item
         Width = 50
       end>
-    ExplicitTop = 300
-    ExplicitWidth = 459
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'

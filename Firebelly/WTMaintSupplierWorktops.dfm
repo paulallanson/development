@@ -1,9 +1,9 @@
 object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
   Left = 285
   Top = 54
-  Width = 650
-  Height = 600
   Caption = 'Add Worktop Colours'
+  ClientHeight = 561
+  ClientWidth = 634
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 650
@@ -12,16 +12,14 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 550
-    Width = 642
+    Top = 542
+    Width = 634
     Height = 19
     Panels = <
       item
@@ -33,13 +31,13 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
   end
   object Panel1: TPanel
     Left = 0
-    Top = 508
-    Width = 642
+    Top = 500
+    Width = 634
     Height = 42
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      642
+      634
       42)
     object Label1: TLabel
       Left = 16
@@ -65,9 +63,9 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
       Constraints.MinWidth = 75
       Default = True
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 555
@@ -79,9 +77,9 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
       Caption = 'Cancel'
       Constraints.MinHeight = 25
       Constraints.MinWidth = 75
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn2Click
-      NumGlyphs = 2
     end
     object BitBtn1: TBitBtn
       Left = 368
@@ -105,12 +103,12 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 642
+    Width = 634
     Height = 81
     Align = alTop
     TabOrder = 0
     DesignSize = (
-      642
+      634
       81)
     object Label2: TLabel
       Left = 16
@@ -198,8 +196,8 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
   object dbgDetails: TDBGrid
     Left = 0
     Top = 81
-    Width = 642
-    Height = 427
+    Width = 634
+    Height = 419
     Align = alClient
     DataSource = dtmdlSuppliers.dtsWorktops
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

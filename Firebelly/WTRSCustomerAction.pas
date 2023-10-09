@@ -68,7 +68,7 @@ var
 
 implementation
 
-uses allCommon, DateSelV5, WTRPCustomerAction, wtLUOperators;
+uses UITypes, allCommon, DateSelV5, WTRPCustomerAction, wtLUOperators;
 
 {$R *.dfm}
 
