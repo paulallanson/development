@@ -3,7 +3,7 @@
         <ProjectGuid>{25B8D3D2-5005-4A17-9908-37FA11A03299}</ProjectGuid>
         <MainSource>redeye_SM.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
@@ -2251,6 +2251,12 @@
             </Platforms>
             <Deployment Version="4">
                 <DeployFile LocalName="Win32\Debug\redeye_SM.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>redeye_SM.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win32\Release\redeye_SM.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>redeye_SM.exe</RemoteName>
                         <Overwrite>true</Overwrite>
