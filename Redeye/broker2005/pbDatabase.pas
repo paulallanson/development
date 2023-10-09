@@ -233,7 +233,7 @@ type
     procedure LockCompanyRecord;
     function LockRecord(key1, key2, key3, key4, key5, tmpTable, tmpCaption: string; tmpWorkstation: integer;
                         bCanView: boolean): integer;
-    function UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer): integer;
+    procedure UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer);
     procedure SaveNarrative(var iNarrative: Integer; const Data: string);
     procedure ScreenAccessControl(Sender: TObject; sButtonName: String;
                         iOperator, iDataOp, iDataRep: integer);
@@ -1902,7 +1902,7 @@ begin
     end;
 end;
 
-function TdmBroker.UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer): integer;
+procedure TdmBroker.UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer);
 var
   icount: integer;
 begin

@@ -631,8 +631,8 @@ procedure TPDLetterMaintFrm.btnSaveClick(Sender: TObject);
 var
   Valid1, Valid2 : integer;
 begin
-  if (StrToFloatDef(edtTabStop2.Text) > 0, 0, FormatSettings) and
-     (StrToFloatDef(edtTabStop1.Text, 0, FormatSettings) > StrToFloatDef(edtTabStop2.Text), 0, FormatSettings) then
+  if (StrToFloatDef(edtTabStop2.Text, 0, FormatSettings) > 0) and
+     (StrToFloatDef(edtTabStop1.Text, 0, FormatSettings) > StrToFloatDef(edtTabStop2.Text, 0, FormatSettings)) then
   begin
     MessageDlg('Tab Stop 1 cannot be greater than Tab Stop 2', mtError,
       [mbOK], 0);

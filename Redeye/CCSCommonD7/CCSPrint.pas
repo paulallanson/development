@@ -311,7 +311,7 @@ type
 
 function SetUpPrinter(PrinterSettings : TPrinterSettings) : Boolean; overload;
 function SetUpPrinter(PrinterSettings: TQRPrinterSettings): Boolean; overload;
-function GetOutputBin: TQRBin;
+//function GetOutputBin: TQRBin;
 
 implementation
 uses
@@ -384,12 +384,13 @@ begin
   end;
 end;
 
+(*
 function GetOutputBin: TQRBin;
-//var
-//  Printset : TPrintSet;
-//  sBin : string;
+var
+  Printset : TPrintSet;
+  sBin : string;
 begin
-(*  Printset := TPrintset.create(nil);
+  Printset := TPrintset.create(nil);
   try
     try
       Printset.ResetPrinterDialogs;
@@ -481,8 +482,9 @@ begin
     end;
   except
     Result := Auto;
-  end;      *)
+  end;
 end;
+*)
 
 { TPrintRecord }
 

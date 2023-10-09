@@ -3,8 +3,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   Top = 47
   BorderStyle = bsDialog
   Caption = 'Company preferences'
-  ClientHeight = 705
-  ClientWidth = 752
+  ClientHeight = 704
+  ClientWidth = 748
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1873,13 +1873,15 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object Panel1: TPanel
     Left = 0
-    Top = 669
-    Width = 752
+    Top = 668
+    Width = 748
     Height = 36
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 669
+    ExplicitWidth = 752
     object btnOK: TBitBtn
       Left = 283
       Top = 4

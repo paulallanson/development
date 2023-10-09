@@ -23,7 +23,6 @@ type
     qrygetNotes: TFDQuery;
     qrlblTemplate: TQRLabel;
     qryEndUser: TFDQuery;
-    gtQRFilters1: TgtQRFilters;
     gtQRLabel4: TQRLabel;
     qrmSiteAddress: TQRMemo;
     qryQuote: TFDQuery;

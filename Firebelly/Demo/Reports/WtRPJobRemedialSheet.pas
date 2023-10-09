@@ -102,6 +102,9 @@ type
     function BuildNotes(const iNotes: integer): string;
   public
     Job: integer;
+    RemedialNo: integer;
+    RemedialOrder: integer;
+    bRemedialTemplate: boolean;
     bPreview: boolean;
     bPrintLogo: boolean;
     bAccountsCopy: boolean;

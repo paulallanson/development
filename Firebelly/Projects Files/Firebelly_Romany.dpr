@@ -164,7 +164,8 @@ uses
   wtRPSalesInvoice in '..\Romany\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
   wtRPSOrder in '..\Romany\Reports\wtRPSOrder.pas' {frmwtRPSOrder},
   DragAndDrop.Interfaces in '..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas',
-  DragAndDrop.Tools in '..\..\Drag and Drop Tools\DragAndDrop.Tools.pas';
+  DragAndDrop.Tools in '..\..\Drag and Drop Tools\DragAndDrop.Tools.pas',
+  CRControls in '..\..\Components\CRPackage\CRControls.pas';
 
 {$R *.RES}
 

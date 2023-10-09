@@ -344,7 +344,7 @@ object dmPage: TdmPage
   end
   object qryDefaults: TFDQuery
     ConnectionName = 'PB'
-    UpdateOptions.UpdateOptions.RequestLive = True
+    UpdateOptions.RequestLive = True
     SQL.Strings = (
       'SELECT * FROM tb_LetterLayout'
       'WHERE f_LetterName = :Name')

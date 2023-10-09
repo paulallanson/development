@@ -71,8 +71,6 @@ uses
   PDDragDrop in '..\PDDragDrop.pas' {frmPreview},
   PDConfirmWidth in '..\PDConfirmWidth.pas' {dlgConfirmWidth},
   PDIndentWidth in '..\PDIndentWidth.pas' {dlgIndentWidth},
-  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
-  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
   PBNarrativeDM in '..\..\broker2005\PBNarrativeDM.pas' {dmNarrative: TDataModule},
   PBImages in '..\..\broker2005\PBImages.pas' {PBImagesFrm};
 
