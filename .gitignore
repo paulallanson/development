@@ -82,7 +82,8 @@ Components/Quasidata/
 # Other files
 Client_Files_NDA/
 Data/
-DUnits
+DUnits/
+FontSizeFromMigration/
 
 # DCU folders
 Firebelly/Aire/Win32
