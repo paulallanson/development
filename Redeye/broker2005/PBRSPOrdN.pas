@@ -380,6 +380,7 @@ var
   PrinterSettings: TPrinterSettings;
   fileList: TStringList;
 begin
+  fileList := nil;
   {Set up the Query to determine whether there are any Purchase Orders to print}
   with GetPOsSQL do
   begin
@@ -598,7 +599,6 @@ begin
     if assigned(FileList) then
     begin
       fileList.Free;
-      fileList := nil;
     end;
   end;
 end;
@@ -606,7 +606,7 @@ end;
 procedure TPBRSPOrdNFrm.EmailAckReport(Sender: TObject);
 var
   icount, irow: Integer;
-  sTo, sSubject, sBody, sSalutation, sBodyText: string;
+  sTo, sSubject, sSalutation, sBodyText: string;
   sSenderName, sSenderEmail, sRecipientName: string;
 begin
   {Set up the Query to determine whether there are any Enquiries to print}
@@ -1153,7 +1153,6 @@ end;
 procedure TPBRSPOrdNFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
-  sAttach: string;
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
@@ -1309,7 +1308,6 @@ var
   TempArray: array[0..255] of Char;
   IniFile : TIniFile;
   sFormat: string;
-  sAttachDelNote: string;
   iDefaultPageLayout: integer;
 begin
   FEmailAttachment := TStringList.create;
@@ -1403,7 +1401,6 @@ end;
 
 procedure TPBRSPOrdNFrm.AddActivity;
 var
-  key: integer;
   iActivityType: integer;
   iOriginalActivity: integer;
   aActivity : TActivity;
@@ -1417,7 +1414,6 @@ begin
     end;
 
   {Check for the Acknowledgement Activity type already exists}
-  iOriginalActivity := 0;
   if (TypeRadioGroup.itemindex = 1) then
     iActivityType := dmBroker.GetDefaultOrderAckActivityType
   else

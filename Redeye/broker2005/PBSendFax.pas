@@ -35,7 +35,7 @@ $History: PBSendFax.pas $
  * Updated in $/PBL D5
  * New Fax Drivers - Put in a "dummy" WaitForFaxFinish procedure into PB
  * sendFaxFrm.
- * 
+ *
  * *****************  Version 7  *****************
  * User: Paul         Date: 26/07/:1   Time: 11:24
  * Updated in $/PBL D5
@@ -93,7 +93,7 @@ type
     DelFaxQuery: TFDQuery;
     FaxDatabase: TFDConnection;
     ApdFaxDriverInterface1: TApdFaxDriverInterface;
-    function OutToFax(FaxNo, FaxDescr, TempFaxTime: string): ByteBool;
+    function OutToFax(FaxNo, FaxDescr: string; TempFaxTime: AnsiString): ByteBool;
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
@@ -118,15 +118,16 @@ var
 
 implementation
 
-uses UITypes, pbMainMenu, PBLogin;
+uses
+  UITypes, pbMainMenu, PBLogin, AnsiStrings;
 
 {$R *.DFM}
 
-function TPBSendFaxFrm.OutToFax(FaxNo, FaxDescr, TempFaxTime: string): ByteBool;
+function TPBSendFaxFrm.OutToFax(FaxNo, FaxDescr: string; TempFaxTime: AnsiString): ByteBool;
 var
   TempLoop: Byte;
   TempArray, TempArray2, TempArray3: array[0..255] of Char;
-  TempPrintName, TempPrintDevice, TempPrintPort: array[0..255] of char;    
+  TempPrintName, TempPrintDevice, TempPrintPort: array[0..255] of char;
   TempPrintDevMode: THandle ;
 begin
 {Reset the end of fax event} ;
@@ -228,7 +229,7 @@ begin
      AddFaxSQL.ParamByName('NoOfRetries').AsInteger := 0;
      AddFaxSQL.ParamByName('LastTried').Clear;
      if TimedFax then
-        AddFaxSQL.ParamByName('LastTried').AsDateTime := Date + StrToTime(FaxTime);
+        AddFaxSQL.ParamByName('LastTried').AsDateTime := Date + StrToTime(string(FaxTime));
      AddFaxSQL.ParamByName('Description').AsString := FaxRef;
      AddFaxSQL.ParamByName('UserName').AsString := frmpbMainMenu.stsbrMainMenu.panels[0].Text;
      AddFaxSQL.ExecSQL;
@@ -307,8 +308,8 @@ begin
   GetPrivateProfileString('Fax Server Sending', 'Last Fax OK', '', TempArray,
     SizeOf(TempArray), 'FaxSrvV3.ini');
   sConvertLabel := TempArray;
-  TempResult := sConvertLabel;
-  if Trim(TempResult) = '' then
+  TempResult := AnsiString(sConvertLabel);
+  if AnsiStrings.Trim(TempResult) = '' then
   begin
     WaitForFaxFinishTimer.Enabled := True;
     Exit;
@@ -322,7 +323,6 @@ begin
   begin
     WriteLogLine(FaxFileName + ' finished with error');
   end;
-
 end;
 
 procedure TPBSendFaxFrm.WriteLogLine(TempText: string);

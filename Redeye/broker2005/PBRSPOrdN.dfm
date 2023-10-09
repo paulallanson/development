@@ -3,8 +3,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   Top = 120
   BorderIcons = [biSystemMenu]
   Caption = 'Purchase Order Print'
-  ClientHeight = 332
-  ClientWidth = 476
+  ClientHeight = 331
+  ClientWidth = 472
   Color = clBtnFace
   Constraints.MaxHeight = 510
   Constraints.MaxWidth = 620
@@ -22,12 +22,14 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 272
-    Width = 476
+    Top = 271
+    Width = 472
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 272
+    ExplicitWidth = 476
     object CancelBitBtn: TBitBtn
       Left = 8
       Top = 8
@@ -136,11 +138,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 476
+    Width = 472
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 476
     object gbLayouts: TGroupBox
       Left = 1
       Top = 6
@@ -191,14 +194,16 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   object pnlButtons: TPanel
     Left = 0
     Top = 81
-    Width = 476
-    Height = 97
+    Width = 472
+    Height = 96
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 476
+    ExplicitHeight = 97
     DesignSize = (
-      476
-      97)
+      472
+      96)
     object cbPrintLogo: TCheckBox
       Left = 16
       Top = 10
@@ -257,7 +262,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     object TypeRadioGroup: TRadioGroup
       Left = 256
       Top = 2
-      Width = 217
+      Width = 209
       Height = 65
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -273,6 +278,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       ParentFont = False
       TabOrder = 2
       OnClick = TypeRadioGroupClick
+      ExplicitWidth = 217
     end
     object chkbxAttachDelNote: TCheckBox
       Left = 10
@@ -307,12 +313,14 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   end
   object pnlLabels: TPanel
     Left = 0
-    Top = 178
-    Width = 476
+    Top = 177
+    Width = 472
     Height = 94
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 178
+    ExplicitWidth = 476
     object Label12: TLabel
       Left = 192
       Top = 12
@@ -393,8 +401,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 313
-    Width = 476
+    Top = 312
+    Width = 472
     Height = 19
     Panels = <
       item
@@ -403,6 +411,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 313
+    ExplicitWidth = 476
   end
   object GetPOsSQL: TFDQuery
     ConnectionName = 'PB'

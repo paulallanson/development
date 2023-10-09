@@ -402,6 +402,7 @@ end;
 
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
 begin
+  Result := nil;
   TPrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
 end;
 

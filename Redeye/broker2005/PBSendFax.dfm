@@ -2,8 +2,8 @@ object PBSendFaxFrm: TPBSendFaxFrm
   Left = 200
   Top = 108
   Caption = 'Fax Send Form'
-  ClientHeight = 274
-  ClientWidth = 364
+  ClientHeight = 273
+  ClientWidth = 360
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
