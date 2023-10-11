@@ -11,7 +11,7 @@ object AboutBox: TAboutBox
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
@@ -27,7 +27,7 @@ object AboutBox: TAboutBox
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -16
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label1Click
