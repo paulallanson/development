@@ -9,7 +9,7 @@ object ProtocolOptions: TProtocolOptions
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter

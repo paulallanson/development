@@ -6,7 +6,7 @@ object VoipAudioVideoEditor: TVoipAudioVideoEditor
   Caption = 'Voice Over IP Options'
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   PixelsPerInch = 96

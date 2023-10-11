@@ -22,7 +22,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -56,7 +56,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -76,7 +76,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label9Click
@@ -99,7 +99,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = WebLblClick
@@ -122,7 +122,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = WebLblClick
@@ -145,7 +145,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = WebLblClick
@@ -168,7 +168,7 @@ object ApaxAbout: TApaxAbout
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = WebLblClick

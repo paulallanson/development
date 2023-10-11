@@ -7,7 +7,7 @@ object frmConditionEdit: TfrmConditionEdit
   Color = clBtnFace
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -48,7 +48,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Caption:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -60,7 +60,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Color:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -72,7 +72,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Width:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -83,7 +83,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -97,7 +97,7 @@ object frmConditionEdit: TfrmConditionEdit
       Style = csOwnerDrawFixed
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemHeight = 13
       ParentFont = False
@@ -111,7 +111,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
@@ -133,7 +133,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Start string:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -145,7 +145,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'End string'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -157,7 +157,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Packet size:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -169,7 +169,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Timeout:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -181,7 +181,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Next state:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -193,7 +193,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Error code:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -205,7 +205,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Activate Output:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -216,7 +216,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -229,7 +229,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1
@@ -242,7 +242,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 3
@@ -255,7 +255,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 4
@@ -269,7 +269,7 @@ object frmConditionEdit: TfrmConditionEdit
       Style = csDropDownList
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemHeight = 13
       ParentFont = False
@@ -285,7 +285,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Ignore case:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
@@ -297,7 +297,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 5
@@ -312,7 +312,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Default Next:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 7
@@ -326,7 +326,7 @@ object frmConditionEdit: TfrmConditionEdit
       Caption = 'Default Error:'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 8
@@ -338,7 +338,7 @@ object frmConditionEdit: TfrmConditionEdit
       Height = 21
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 9

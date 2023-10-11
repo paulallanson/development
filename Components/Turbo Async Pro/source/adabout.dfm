@@ -9,7 +9,7 @@ object ApdAboutForm: TApdAboutForm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
@@ -32,7 +32,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -45,7 +45,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -79,7 +79,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label9Click
@@ -102,7 +102,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label13Click
@@ -125,7 +125,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label13Click
@@ -148,7 +148,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label6Click
@@ -171,7 +171,7 @@ object ApdAboutForm: TApdAboutForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label7Click

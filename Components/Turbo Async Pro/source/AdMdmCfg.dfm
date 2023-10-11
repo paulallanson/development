@@ -8,7 +8,7 @@ object ApdModemConfigDialog: TApdModemConfigDialog
   Color = clBtnFace
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   PixelsPerInch = 96
   TextHeight = 13
