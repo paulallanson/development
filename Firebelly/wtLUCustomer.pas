@@ -507,8 +507,6 @@ end;
 procedure TfrmWTLUCustomer.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('Not_Active').AsString = 'Y') then
     begin

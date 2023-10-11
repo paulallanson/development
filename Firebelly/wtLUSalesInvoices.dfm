@@ -8,7 +8,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -30,7 +30,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 910
+        Width = 914
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -145,7 +145,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -421,7 +421,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -19
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -435,7 +435,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ExplicitLeft = 730

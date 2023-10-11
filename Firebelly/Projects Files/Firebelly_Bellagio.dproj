@@ -3,7 +3,7 @@
         <ProjectGuid>{BCB52D29-CF9D-4BE5-8250-FFC36A062F22}</ProjectGuid>
         <MainSource>Firebelly_Bellagio.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

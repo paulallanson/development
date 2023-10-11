@@ -8,7 +8,7 @@ object frmAllFaxStatus: TfrmAllFaxStatus
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   TextHeight = 13
@@ -158,7 +158,7 @@ object frmAllFaxStatus: TfrmAllFaxStatus
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnColEnter = ShowFaxesDBGridColEnter
       OnDblClick = ShowFaxesDBGridColEnter

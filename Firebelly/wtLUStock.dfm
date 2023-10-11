@@ -8,7 +8,7 @@ object frmWTLUStock: TfrmWTLUStock
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -118,7 +118,7 @@ object frmWTLUStock: TfrmWTLUStock
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -136,7 +136,7 @@ object frmWTLUStock: TfrmWTLUStock
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
     Columns = <

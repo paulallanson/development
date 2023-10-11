@@ -3,7 +3,7 @@
         <ProjectGuid>{F465E0A2-352E-4387-89A0-5518692783D6}</ProjectGuid>
         <MainSource>Firebelly_York.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

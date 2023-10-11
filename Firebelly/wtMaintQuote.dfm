@@ -11,7 +11,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -62,7 +62,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -128,7 +128,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -141,7 +141,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -155,7 +155,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         ExplicitLeft = 914
@@ -169,7 +169,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -182,7 +182,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -196,7 +196,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         ExplicitLeft = 700
@@ -211,7 +211,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         ExplicitLeft = 593
@@ -369,7 +369,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         ExplicitLeft = 700
@@ -383,7 +383,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -569,7 +569,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -582,7 +582,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -602,7 +602,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -615,7 +615,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -693,7 +693,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -830,7 +830,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -2065,7 +2065,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -2140,7 +2140,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2153,7 +2153,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2166,7 +2166,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2179,7 +2179,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2192,7 +2192,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2233,7 +2233,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2247,7 +2247,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2261,7 +2261,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2275,7 +2275,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2289,7 +2289,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2303,7 +2303,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2317,7 +2317,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2330,7 +2330,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2364,7 +2364,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -2385,7 +2385,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clRed
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2398,7 +2398,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2425,7 +2425,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2894,7 +2894,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           ReadOnly = True
@@ -2913,7 +2913,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           ReadOnly = True
@@ -2932,7 +2932,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           ReadOnly = True
@@ -2951,7 +2951,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           ReadOnly = True
@@ -2970,7 +2970,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clRed
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           ReadOnly = True
@@ -3210,7 +3210,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         Columns = <
           item
@@ -3319,7 +3319,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False

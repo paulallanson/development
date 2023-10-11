@@ -9,7 +9,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -24,7 +24,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentFont = False
@@ -32,7 +32,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -42,7 +42,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clBlack
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 336
         Visible = True
@@ -160,7 +160,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ModalResult = 1
       NumGlyphs = 2

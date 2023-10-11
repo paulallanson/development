@@ -90,7 +90,7 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types,
+  System.UITypes, System.Types, Math,
   WtMaintSalesOrder, wtRSSOrder, WTJobsDM, WtMaintJob, wtLUSOLines,
   WTLUSOrderRpts, WTSOrderSearch, wtRSTemplateSheet, wtDataModule,
   wtLUPayments, wtMain, wtRSFittingConfirm;
@@ -255,9 +255,8 @@ var
   frm : TfrmWtMaintSalesOrder;
   aSOrder : TSOrder;
   bOK: boolean;
-//  sWarning: string;
 begin
-
+  bOk := False;
   if aMode = sopAdd then
     Key := 0
   else
@@ -280,7 +279,6 @@ begin
     end
   else
     key := dtmdlAllSales.CurrentSOrder;
-
 
   try
     aSOrder := TSOrder.Create(dtmdlAllSales);
@@ -412,8 +410,9 @@ end;
 procedure TfrmwtLUSales.btnPrintClick(Sender: TObject);
 var
   OldCursor : TCursor;
-  key: integer;
+  Key: integer;
 begin
+  Key := 0;
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
   try
@@ -449,8 +448,8 @@ var
   sCreditStatus: string;
   bUsePurchasing: boolean;
   icount: integer;
-  aJob: TJob;
 begin
+  SOrderNo := 0;
   if dbgDetails.SelectedRows.Count = 1 then
     begin
       bUsePurchasing := dtmdlWorktops.UsePurchaseOrdering;
@@ -546,7 +545,6 @@ end;
 
 procedure TfrmwtLUSales.ConvertToJob(iSalesOrder, iQuoteNo: integer; sReference: string);
 var
-  tempSO: integer;
   Key : integer;
   aJob : TJob;
 begin
@@ -787,14 +785,17 @@ end;
 procedure TfrmwtLUSales.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
+(*
 var
   idays: integer;
+*)
 begin
+(*
   if dbgDetails.datasource.dataset.fieldbyname('Date_Required').asdatetime <> 0 then
     iDays :=  DaysBetween(now, dbgDetails.datasource.dataset.fieldbyname('Date_Required').asDateTime)
   else
     iDays := 1000;
-
+*)
   if(dbgDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
@@ -844,13 +845,19 @@ begin
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
+  if (gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
+
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Goods_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('VAT_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Total_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Deposit_Terms')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Deposit_Amount')).DisplayFormat := '0.00';
 
   if  (Column.Title.Caption <> 'Order Value') and
       (Column.Title.Caption <> 'VAT') and
@@ -885,8 +892,9 @@ end;
 procedure TfrmwtLUSales.btnProformaClick(Sender: TObject);
 var
   OldCursor : TCursor;
-  key: integer;
+  Key: integer;
 begin
+  Key := 0;
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
   try
@@ -969,8 +977,7 @@ procedure TfrmwtLUSales.btnFittingEmailClick(Sender: TObject);
 var
   OldCursor : TCursor;
   key, iCount: integer;
-  sTo, sTemp, sSubject, sBodyText: string;
-  AttachmentList: TStringList;
+  // sTo, sTemp, sSubject, sBodyText: string;
 begin
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;

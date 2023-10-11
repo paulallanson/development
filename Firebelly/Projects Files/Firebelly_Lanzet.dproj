@@ -3,7 +3,7 @@
         <ProjectGuid>{1C7B49EE-B1D3-4A73-B4D4-97AFD6B85A12}</ProjectGuid>
         <MainSource>Firebelly_Lanzet.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

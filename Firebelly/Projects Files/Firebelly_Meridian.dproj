@@ -3,7 +3,7 @@
         <ProjectGuid>{983BB55E-4F09-4EE0-8964-E3C4F05DEAC8}</ProjectGuid>
         <MainSource>Firebelly_Meridian.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

@@ -3,7 +3,7 @@
         <ProjectGuid>{81AFDE49-D86A-493C-82D4-D2453EC9D6A2}</ProjectGuid>
         <MainSource>Firebelly_Ruby.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

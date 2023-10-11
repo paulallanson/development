@@ -383,6 +383,12 @@ begin
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Goods_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('VAT_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Total_Value')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Deposit_Terms')).DisplayFormat := '0.00';
+  TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Deposit_Amount')).DisplayFormat := '0.00';
+
   if  (Column.Title.Caption <> 'Order Value') and
       (Column.Title.Caption <> 'VAT') and
       (Column.Title.Caption <> 'Total') and

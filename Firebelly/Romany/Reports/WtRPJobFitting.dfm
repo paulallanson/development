@@ -8,7 +8,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Scaled = False
   OnCreate = FormCreate
@@ -2841,7 +2841,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         Transparent = False

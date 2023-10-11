@@ -8,7 +8,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -223,7 +223,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -329,7 +329,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -343,7 +343,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -16
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentColor = False
         ParentFont = False

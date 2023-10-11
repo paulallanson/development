@@ -3,7 +3,7 @@
         <ProjectGuid>{C37F66F7-49C2-40CA-8F10-7955C5F2433E}</ProjectGuid>
         <MainSource>Firebelly_grantech.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

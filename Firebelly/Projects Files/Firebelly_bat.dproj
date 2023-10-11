@@ -3,7 +3,7 @@
         <ProjectGuid>{4FDEF7DB-C85A-42CE-BD0A-42B7FB50AFFA}</ProjectGuid>
         <MainSource>Firebelly_bat.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

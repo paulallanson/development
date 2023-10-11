@@ -2,15 +2,15 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 353
-  ClientWidth = 704
+  ClientHeight = 343
+  ClientWidth = 702
   Color = clBtnFace
   Constraints.MinHeight = 390
   Constraints.MinWidth = 720
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -25,19 +25,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 704
+    Width = 702
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 698
+        Width = 700
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 689
+      Width = 687
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 63
@@ -123,8 +123,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 334
-    Width = 704
+    Top = 324
+    Width = 702
     Height = 19
     Panels = <
       item
@@ -133,12 +133,13 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 325
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 704
-    Height = 220
+    Width = 702
+    Height = 210
     Align = alClient
     DataSource = dtsCustomers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -147,7 +148,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -265,19 +266,20 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object Panel2: TPanel
     Left = 0
-    Top = 293
-    Width = 704
+    Top = 283
+    Width = 702
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 284
     DesignSize = (
-      704
+      702
       41)
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -317,7 +319,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 606
+      Left = 598
       Top = 8
       Width = 75
       Height = 25
@@ -325,12 +327,13 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button1Click
+      ExplicitLeft = 604
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 704
+    Width = 702
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -341,19 +344,20 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 702
+      Width = 706
       Height = 75
       Bands = <
         item
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 696
+          Width = 698
         end>
+      ExplicitWidth = 700
       object Panel3: TPanel
         Left = 11
         Top = 0
-        Width = 687
+        Width = 685
         Height = 28
         Align = alLeft
         BevelOuter = bvNone
@@ -361,38 +365,37 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          687
+          685
           28)
         object Label2: TLabel
           Left = 0
           Top = 1
-          Width = 178
-          Height = 24
+          Width = 177
+          Height = 25
           Caption = 'Customers/Prospects'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
           Font.Height = -19
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 430
+          Left = 428
           Top = 7
-          Width = 69
+          Width = 78
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Customer Filter'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 464
         end
         object cmbCustomerFilter: TComboBox
-          Left = 510
+          Left = 508
           Top = 3
           Width = 145
           Height = 21

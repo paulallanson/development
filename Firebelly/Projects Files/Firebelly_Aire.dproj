@@ -3,7 +3,7 @@
         <ProjectGuid>{8DB276B5-DECB-497A-9780-417A94837B88}</ProjectGuid>
         <MainSource>Firebelly_Aire.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

@@ -8,7 +8,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
@@ -52,7 +52,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -85,7 +85,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1
@@ -154,7 +154,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -167,7 +167,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       Visible = False
@@ -181,7 +181,7 @@ object frmWTMaintPurchaseOrderLineCon: TfrmWTMaintPurchaseOrderLineCon
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       Visible = False

@@ -3,13 +3,13 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Product Price Changes'
-  ClientHeight = 420
-  ClientWidth = 409
+  ClientHeight = 411
+  ClientWidth = 403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate

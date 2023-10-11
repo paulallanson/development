@@ -9,7 +9,7 @@ object frmWTLUFitting: TfrmWTLUFitting
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -48,42 +48,41 @@ object frmWTLUFitting: TfrmWTLUFitting
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 50
-        Height = 24
+        Width = 53
+        Height = 25
         Caption = 'Fitting'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object Label4: TLabel
         Left = 956
         Top = 7
-        Width = 69
+        Width = 78
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1036
       end
       object lblWorkinProgress: TLabel
         Left = 64
         Top = 3
-        Width = 83
-        Height = 20
+        Width = 85
+        Height = 21
         Caption = '-  Tomorrow'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -16
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentColor = False
         ParentFont = False
@@ -134,24 +133,24 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1003
+      Left = 995
       Top = 15
-      Width = 55
+      Width = 59
       Height = 13
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
-      ExplicitLeft = 1047
+      ExplicitLeft = 999
     end
     object Label6: TLabel
       Left = 536
       Top = 15
-      Width = 57
+      Width = 64
       Height = 13
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1163
+      Left = 1159
       Top = 9
       Width = 75
       Height = 25
@@ -169,7 +168,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1064
+      Left = 1060
       Top = 11
       Width = 73
       Height = 21
@@ -224,9 +223,9 @@ object frmWTLUFitting: TfrmWTLUFitting
         225
         39)
       object Label8: TLabel
-        Left = 10
+        Left = 8
         Top = 13
-        Width = 71
+        Width = 73
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -283,7 +282,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Width = 1251
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -300,7 +299,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnChangeClick
       end
       object btnFitting: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Fitting'
@@ -309,7 +308,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnFittingClick
       end
       object btnDeliveryNote: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Hint = 'Print Delivery Notes'
         Caption = 'Delivery'
@@ -320,7 +319,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnDeliveryNoteClick
       end
       object btnReturned: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = 'Returned'
         Enabled = False
@@ -328,7 +327,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnReturnedClick
       end
       object btnComplete: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Complete'
@@ -339,7 +338,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnCompleteClick
       end
       object ToolButton1: TToolButton
-        Left = 280
+        Left = 295
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -347,7 +346,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 288
+        Left = 303
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -370,7 +369,7 @@ object frmWTLUFitting: TfrmWTLUFitting
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick

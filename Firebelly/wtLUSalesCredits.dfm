@@ -8,7 +8,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -133,7 +133,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -145,7 +145,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
         Width = 78
@@ -157,7 +157,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Date'
         Width = 65
@@ -169,7 +169,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Customer'
         Width = 150
@@ -181,7 +181,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Width = 161
         Visible = True
@@ -192,7 +192,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Invoice No.'
         Width = 61
@@ -204,7 +204,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Goods'
         Width = 51
@@ -216,7 +216,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'VAT'
         Width = 50
@@ -228,7 +228,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Total'
         Width = 70
@@ -240,7 +240,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Status'
         Width = 83
@@ -252,7 +252,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Rep'
         Width = 139
@@ -264,7 +264,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Office Contact'
         Width = 158
@@ -276,7 +276,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Created By'
         Width = 137
@@ -288,7 +288,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Order Reference'
         Width = 149
@@ -434,7 +434,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -19
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -448,7 +448,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ExplicitLeft = 728

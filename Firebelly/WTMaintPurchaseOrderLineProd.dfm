@@ -9,7 +9,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -51,7 +51,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
@@ -84,7 +84,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
@@ -136,7 +136,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -149,7 +149,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       Visible = False
@@ -163,7 +163,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       Visible = False

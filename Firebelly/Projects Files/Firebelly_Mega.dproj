@@ -3,7 +3,7 @@
         <ProjectGuid>{0BDF2FB9-120A-4CA2-AB90-79AD47A6533B}</ProjectGuid>
         <MainSource>Firebelly_Mega.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

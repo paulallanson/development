@@ -3,7 +3,7 @@
         <ProjectGuid>{E81C92BB-1D79-4693-A97A-297494668302}</ProjectGuid>
         <MainSource>AllFax.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

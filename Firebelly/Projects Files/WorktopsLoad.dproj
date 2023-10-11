@@ -3,7 +3,7 @@
         <ProjectGuid>{2BB9D156-D305-4A5C-9A85-AA485F69E816}</ProjectGuid>
         <MainSource>WorktopsLoad.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

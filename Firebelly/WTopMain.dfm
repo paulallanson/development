@@ -6,7 +6,7 @@
   Caption = 'Maintain Worktop Details'
   Font.Color = clBlack
   Font.Height = -13
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnShow = FormShow
@@ -28,7 +28,7 @@
       DataSource = WorkTop_ThickSrc
       Font.Color = clBlue
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -41,7 +41,7 @@
       DataSource = WorkTopSrc
       Font.Color = clBlue
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -60,7 +60,7 @@
       TabOrder = 0
       TitleFont.Color = clBlack
       TitleFont.Height = -13
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
     object DBNavigator2: TDBNavigator
@@ -175,7 +175,7 @@
       Caption = 'Worktops'
       Font.Color = clBlack
       Font.Height = -19
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -222,7 +222,7 @@
       TabOrder = 0
       TitleFont.Color = clBlack
       TitleFont.Height = -13
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
   end
