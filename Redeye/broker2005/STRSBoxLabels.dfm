@@ -9,7 +9,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -73,7 +73,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
@@ -90,7 +90,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -121,7 +121,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100

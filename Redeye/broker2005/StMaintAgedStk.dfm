@@ -10,7 +10,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
@@ -40,7 +40,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -144,7 +144,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
       Items.Strings = (
@@ -179,7 +179,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -219,7 +219,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1
@@ -240,7 +240,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
       item
@@ -341,7 +341,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2

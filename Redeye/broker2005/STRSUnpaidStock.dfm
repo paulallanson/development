@@ -8,7 +8,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
@@ -21,7 +21,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -39,7 +39,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
@@ -85,7 +85,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -103,7 +103,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
@@ -227,7 +227,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
     NumGlyphs = 2

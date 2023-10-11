@@ -8,7 +8,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
@@ -30,7 +30,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -43,7 +43,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentFont = False
@@ -51,7 +51,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
@@ -79,7 +79,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkClose
     NumGlyphs = 2
@@ -95,7 +95,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
@@ -180,7 +180,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100

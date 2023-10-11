@@ -9,7 +9,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -23,7 +23,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -41,7 +41,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
@@ -142,7 +142,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -160,7 +160,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 6

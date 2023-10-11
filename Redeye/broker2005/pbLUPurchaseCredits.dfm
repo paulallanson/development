@@ -8,7 +8,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -195,7 +195,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -205,7 +205,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Supplier'
         Width = 167
@@ -217,7 +217,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
         Width = 82
@@ -230,7 +230,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Date'
         Width = 81
@@ -242,7 +242,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Alignment = taRightJustify
         Title.Caption = 'Goods Value'
@@ -255,7 +255,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Alignment = taRightJustify
         Title.Caption = 'Vat Value'
@@ -268,7 +268,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'PIN Number'
         Width = 74
@@ -280,7 +280,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Status'
         Width = 329
@@ -292,7 +292,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Original Invoice No'
         Width = 94
@@ -304,7 +304,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Account Code'
         Visible = True
@@ -335,7 +335,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end

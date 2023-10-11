@@ -9,7 +9,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -37,7 +37,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -119,7 +119,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -205,7 +205,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -225,7 +225,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ReadOnly = True
@@ -255,7 +255,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2

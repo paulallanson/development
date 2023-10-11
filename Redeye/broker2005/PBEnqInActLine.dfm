@@ -9,7 +9,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -31,7 +31,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -46,7 +46,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

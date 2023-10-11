@@ -10,7 +10,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -682,7 +682,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -696,7 +696,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -734,7 +734,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           WordWrap = True
@@ -749,7 +749,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -877,7 +877,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -890,7 +890,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end

@@ -8,7 +8,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   ShowHint = True
   OnActivate = FormActivate
@@ -34,7 +34,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -47,7 +47,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -101,7 +101,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ModalResult = 2
       NumGlyphs = 2
@@ -119,7 +119,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Lines.Strings = (
       'edtBody')
@@ -887,7 +887,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Left = 16
     Top = 144

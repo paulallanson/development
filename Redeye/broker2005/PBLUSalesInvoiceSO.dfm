@@ -10,7 +10,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -25,7 +25,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     ParentFont = False
@@ -33,7 +33,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgSOCellClick
     OnDblClick = dbgSODblClick

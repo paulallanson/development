@@ -9,7 +9,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -13
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -25,7 +25,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -82,7 +82,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
@@ -141,7 +141,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       ParentFont = False
@@ -149,7 +149,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -13
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
         item
@@ -158,7 +158,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 247
           Visible = True
@@ -172,7 +172,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 70
           Visible = True

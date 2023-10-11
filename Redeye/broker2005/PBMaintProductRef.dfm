@@ -9,7 +9,7 @@ object PBMaintProductRefFrm: TPBMaintProductRefFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -23,7 +23,7 @@ object PBMaintProductRefFrm: TPBMaintProductRefFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -43,7 +43,7 @@ object PBMaintProductRefFrm: TPBMaintProductRefFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -56,7 +56,7 @@ object PBMaintProductRefFrm: TPBMaintProductRefFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end

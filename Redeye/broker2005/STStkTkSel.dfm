@@ -9,7 +9,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -25,7 +25,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -37,7 +37,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     KeyField = 'Stock_Take_Ref'
     ListField = 'Stock_Take_Ref'
@@ -56,7 +56,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
@@ -70,7 +70,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkClose
     NumGlyphs = 2
@@ -87,7 +87,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3

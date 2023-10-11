@@ -8,7 +8,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -210,7 +210,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
       ParentFont = False
@@ -218,7 +218,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clBlack
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = dbgPurchCellClick
       OnDblClick = dbgPurchDblClick

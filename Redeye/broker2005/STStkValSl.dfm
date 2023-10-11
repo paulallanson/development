@@ -9,7 +9,7 @@ object STStkValSlfrm: TSTStkValSlfrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -58,7 +58,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -87,7 +87,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -116,7 +116,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
     NumGlyphs = 2
@@ -132,7 +132,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -151,7 +151,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -170,7 +170,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
@@ -246,7 +246,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 6

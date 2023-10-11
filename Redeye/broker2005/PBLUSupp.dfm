@@ -3,13 +3,13 @@ object PBLUSuppFrm: TPBLUSuppFrm
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Look-Up A Supplier'
-  ClientHeight = 442
-  ClientWidth = 468
+  ClientHeight = 441
+  ClientWidth = 464
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -18,9 +18,9 @@ object PBLUSuppFrm: TPBLUSuppFrm
   OnShow = FormShow
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 291
+    Left = 286
     Top = 286
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -35,7 +35,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = dbgDetailsColEnter
     OnDblClick = dbgDetailsDblClick
@@ -289,14 +289,14 @@ object PBLUSuppFrm: TPBLUSuppFrm
     object LabelName: TLabel
       Left = 24
       Top = 3
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 24
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end
@@ -316,7 +316,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -329,7 +329,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -342,7 +342,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end

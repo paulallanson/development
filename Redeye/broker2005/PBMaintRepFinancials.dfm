@@ -10,7 +10,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -318,7 +318,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -331,7 +331,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -344,7 +344,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -357,7 +357,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -392,7 +392,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1

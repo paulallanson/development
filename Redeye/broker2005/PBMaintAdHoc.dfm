@@ -9,7 +9,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -24,7 +24,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -189,7 +189,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
@@ -203,7 +203,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -216,7 +216,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -229,7 +229,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -298,7 +298,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -327,7 +327,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100

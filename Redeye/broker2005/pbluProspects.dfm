@@ -8,7 +8,7 @@ object frmPBLUProspects: TfrmPBLUProspects
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poDefault
@@ -33,7 +33,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     ExplicitLeft = 13
@@ -187,7 +187,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -434,7 +434,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -457,7 +457,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
         Font.Height = -16
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -484,7 +484,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end

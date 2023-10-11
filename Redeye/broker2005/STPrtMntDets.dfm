@@ -3,13 +3,13 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   Top = 38
   BorderStyle = bsDialog
   Caption = 'Maintain Products'
-  ClientHeight = 485
-  ClientWidth = 517
+  ClientHeight = 476
+  ClientWidth = 511
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate

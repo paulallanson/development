@@ -9,7 +9,7 @@
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
@@ -62,7 +62,7 @@
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
@@ -142,7 +142,7 @@
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
@@ -266,7 +266,7 @@
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = dbgDetailsColEnter
     OnDblClick = dbgDetailsDblClick

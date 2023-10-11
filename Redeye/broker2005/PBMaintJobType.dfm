@@ -9,7 +9,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -23,7 +23,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -43,7 +43,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -55,7 +55,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0

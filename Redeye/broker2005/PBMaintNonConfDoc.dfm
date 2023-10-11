@@ -10,7 +10,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -230,7 +230,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ReadOnly = True
@@ -336,7 +336,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1
@@ -371,7 +371,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1
@@ -910,7 +910,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ReadOnly = True

@@ -10,7 +10,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -27,7 +27,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
     Items.Strings = (
@@ -44,7 +44,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 2
     Items.Strings = (
@@ -130,7 +130,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
@@ -146,7 +146,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -176,7 +176,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -205,7 +205,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -257,7 +257,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 5
@@ -294,7 +294,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 0

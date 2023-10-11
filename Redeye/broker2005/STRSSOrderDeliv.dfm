@@ -8,7 +8,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -34,7 +34,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -64,7 +64,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -94,7 +94,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
@@ -111,7 +111,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -141,7 +141,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -174,7 +174,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
     Columns = <

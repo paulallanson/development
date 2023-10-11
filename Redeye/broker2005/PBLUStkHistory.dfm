@@ -10,7 +10,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -35,7 +35,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       ParentFont = False
@@ -44,7 +44,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = detsDBGridDrawColumnCell
       OnDblClick = detsDBGridDblClick
@@ -57,7 +57,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 63
           Visible = True
@@ -69,7 +69,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 70
           Visible = True
@@ -81,7 +81,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 124
           Visible = True
@@ -94,7 +94,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 81
           Visible = True
@@ -107,7 +107,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -119,7 +119,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -130,7 +130,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 79
           Visible = True
@@ -142,7 +142,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 195
           Visible = True
@@ -154,7 +154,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 186
           Visible = True
@@ -166,7 +166,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 189
           Visible = True
@@ -183,7 +183,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
@@ -289,7 +289,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
@@ -305,7 +305,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkClose
       NumGlyphs = 2

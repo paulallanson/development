@@ -2,13 +2,13 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   Left = 58
   Top = 126
   Caption = 'Update Supplier Responses'
-  ClientHeight = 505
-  ClientWidth = 750
+  ClientHeight = 496
+  ClientWidth = 744
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter

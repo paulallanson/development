@@ -9,7 +9,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   TextHeight = 13
@@ -174,7 +174,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1

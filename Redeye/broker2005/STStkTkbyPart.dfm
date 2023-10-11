@@ -10,7 +10,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -36,7 +36,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -49,7 +49,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -62,7 +62,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -88,7 +88,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -118,7 +118,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -148,7 +148,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -179,7 +179,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
@@ -213,7 +213,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
@@ -301,7 +301,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking]
       ParentFont = False

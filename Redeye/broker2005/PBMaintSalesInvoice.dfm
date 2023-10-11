@@ -10,7 +10,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -51,7 +51,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 624
@@ -105,7 +105,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -134,7 +134,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -228,7 +228,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -241,7 +241,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -255,7 +255,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 687
@@ -269,7 +269,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -570,7 +570,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -624,7 +624,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 522
@@ -639,7 +639,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 505
@@ -653,7 +653,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -666,7 +666,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -964,7 +964,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
     ParentFont = False
@@ -1009,7 +1009,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -1024,7 +1024,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 533

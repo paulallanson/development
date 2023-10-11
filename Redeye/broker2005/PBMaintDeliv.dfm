@@ -10,7 +10,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
@@ -396,7 +396,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -409,7 +409,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -422,7 +422,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -435,7 +435,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -448,7 +448,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -603,7 +603,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -616,7 +616,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -629,7 +629,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -642,7 +642,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
@@ -662,7 +662,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end

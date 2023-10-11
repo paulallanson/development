@@ -10,7 +10,7 @@ object STMaintStockFrm: TSTMaintStockFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
@@ -101,7 +101,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = dbgDetailsFromDblClick
       Columns = <
@@ -206,7 +206,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = dbgDetailsToDblClick
       Columns = <

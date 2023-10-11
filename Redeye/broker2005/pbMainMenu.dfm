@@ -2,13 +2,13 @@ object frmpbMainMenu: TfrmpbMainMenu
   Left = 121
   Top = 85
   Caption = 'Print Management Information System'
-  ClientHeight = 712
-  ClientWidth = 1476
+  ClientHeight = 711
+  ClientWidth = 1472
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIForm
   Menu = mnMain
@@ -23,15 +23,16 @@ object frmpbMainMenu: TfrmpbMainMenu
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1476
+    Width = 1472
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1470
+        Width = 1474
       end>
+    ExplicitWidth = 1476
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -234,8 +235,8 @@ object frmpbMainMenu: TfrmpbMainMenu
   end
   object stsbrMainMenu: TStatusBar
     Left = 0
-    Top = 693
-    Width = 1476
+    Top = 692
+    Width = 1472
     Height = 19
     Panels = <
       item
@@ -250,6 +251,8 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
+    ExplicitTop = 693
+    ExplicitWidth = 1476
   end
   object mnMain: TMainMenu
     Left = 256

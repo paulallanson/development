@@ -8,7 +8,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
@@ -22,7 +22,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -36,7 +36,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -118,7 +118,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -199,7 +199,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False

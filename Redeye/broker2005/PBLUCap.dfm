@@ -3,22 +3,22 @@ object PBLUCapFrm: TPBLUCapFrm
   Top = 149
   BorderStyle = bsDialog
   Caption = 'Look-Up A Capability'
-  ClientHeight = 326
-  ClientWidth = 488
+  ClientHeight = 325
+  ClientWidth = 484
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -34,7 +34,7 @@ object PBLUCapFrm: TPBLUCapFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick

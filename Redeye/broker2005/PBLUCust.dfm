@@ -9,7 +9,7 @@ object PBLUCustFrm: TPBLUCustFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -72,7 +72,7 @@ object PBLUCustFrm: TPBLUCustFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -152,7 +152,7 @@ object PBLUCustFrm: TPBLUCustFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
@@ -387,7 +387,7 @@ object PBLUCustFrm: TPBLUCustFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = dbgDetailsColEnter
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -418,7 +418,7 @@ object PBLUCustFrm: TPBLUCustFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100

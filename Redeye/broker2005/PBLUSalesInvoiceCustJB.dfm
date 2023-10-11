@@ -8,7 +8,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnShow = FormShow
@@ -71,7 +71,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentFont = False
@@ -79,7 +79,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgJBCellClick
     OnDblClick = dbgJBDblClick

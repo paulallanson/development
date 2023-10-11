@@ -10,7 +10,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
@@ -493,7 +493,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           Indent = 19
           ParentFont = False
@@ -563,7 +563,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           Indent = 19
           ParentFont = False

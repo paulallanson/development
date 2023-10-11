@@ -3,13 +3,13 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Import Direct Supplied Order'
-  ClientHeight = 359
-  ClientWidth = 364
+  ClientHeight = 358
+  ClientWidth = 360
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -19,20 +19,21 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object pnlSupplier: TPanel
     Left = 0
     Top = 65
-    Width = 364
+    Width = 360
     Height = 64
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 364
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 128
+      Width = 110
       Height = 13
       Caption = '2. Select the Supplier.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -56,21 +57,23 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel1: TPanel
     Left = 0
     Top = 129
-    Width = 364
-    Height = 182
+    Width = 360
+    Height = 181
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 1
+    ExplicitWidth = 364
+    ExplicitHeight = 182
     object Label2: TLabel
       Left = 8
       Top = 8
-      Width = 116
+      Width = 100
       Height = 13
       Caption = '3.  Select Filenames'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -116,20 +119,21 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 364
+    Width = 360
     Height = 65
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 364
     object Label1: TLabel
       Left = 8
       Top = 4
-      Width = 106
+      Width = 97
       Height = 13
       Caption = '1. Import Directory'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -145,11 +149,13 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 311
-    Width = 364
+    Top = 310
+    Width = 360
     Height = 48
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 311
+    ExplicitWidth = 364
     object btnClose: TBitBtn
       Left = 272
       Top = 15

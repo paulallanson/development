@@ -9,7 +9,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -31,7 +31,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentFont = False
@@ -39,7 +39,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
       item
@@ -48,7 +48,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clBlack
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 303
         Visible = True
@@ -63,7 +63,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkClose
     NumGlyphs = 2
@@ -79,7 +79,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
@@ -93,7 +93,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -122,7 +122,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -151,7 +151,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -181,7 +181,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkOK
     NumGlyphs = 2

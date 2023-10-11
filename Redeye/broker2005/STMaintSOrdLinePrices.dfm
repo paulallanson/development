@@ -9,7 +9,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
@@ -32,7 +32,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -45,7 +45,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -58,7 +58,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ReadOnly = True
@@ -74,7 +74,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       ReadOnly = True
@@ -104,7 +104,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -137,7 +137,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1
@@ -238,7 +238,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
@@ -254,7 +254,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -270,7 +270,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 3
@@ -286,7 +286,7 @@ object STMaintSOrdLinePricesFrm: TSTMaintSOrdLinePricesFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1

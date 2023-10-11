@@ -8,7 +8,7 @@ object PBSendFaxFrm: TPBSendFaxFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -22,7 +22,7 @@ object PBSendFaxFrm: TPBSendFaxFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

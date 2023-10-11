@@ -9,7 +9,7 @@ object frmPBRPNonConform: TfrmPBRPNonConform
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
   Scaled = False

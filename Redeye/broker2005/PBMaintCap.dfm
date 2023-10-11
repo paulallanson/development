@@ -3,13 +3,13 @@ object PBMaintCapFrm: TPBMaintCapFrm
   Top = 199
   BorderStyle = bsDialog
   Caption = 'Maintain Capabilities'
-  ClientHeight = 131
-  ClientWidth = 419
+  ClientHeight = 130
+  ClientWidth = 415
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -36,14 +36,14 @@ object PBMaintCapFrm: TPBMaintCapFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

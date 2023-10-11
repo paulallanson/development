@@ -10,7 +10,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -161,7 +161,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
@@ -175,7 +175,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -187,7 +187,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -215,7 +215,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -227,7 +227,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -255,7 +255,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
       Items.Strings = (
@@ -274,7 +274,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
@@ -288,7 +288,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -325,7 +325,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
       Items.Strings = (
@@ -344,7 +344,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
@@ -421,7 +421,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ItemIndex = 4
         Items.Strings = (
@@ -453,7 +453,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 10
       ParentFont = False
@@ -468,7 +468,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 10
       ParentFont = False
@@ -486,7 +486,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
@@ -503,7 +503,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Visible = True
       end
@@ -514,7 +514,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 81
         Visible = True
@@ -526,7 +526,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 188
         Visible = True
@@ -539,7 +539,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 76
         Visible = True
@@ -551,7 +551,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 202
         Visible = True
@@ -563,7 +563,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Visible = True
       end
@@ -574,7 +574,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Visible = True
       end
@@ -585,7 +585,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Visible = True
       end
@@ -596,7 +596,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 246
         Visible = True

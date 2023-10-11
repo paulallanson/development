@@ -9,7 +9,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
@@ -34,7 +34,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -47,7 +47,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -60,7 +60,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -73,7 +73,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -108,7 +108,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1

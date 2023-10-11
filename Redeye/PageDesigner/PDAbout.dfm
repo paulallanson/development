@@ -10,7 +10,7 @@ object PDAboutFrm: TPDAboutFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
@@ -837,7 +837,7 @@ object PDAboutFrm: TPDAboutFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -32
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -852,7 +852,7 @@ object PDAboutFrm: TPDAboutFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -867,7 +867,7 @@ object PDAboutFrm: TPDAboutFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -882,7 +882,7 @@ object PDAboutFrm: TPDAboutFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -16
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -896,7 +896,7 @@ object PDAboutFrm: TPDAboutFrm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

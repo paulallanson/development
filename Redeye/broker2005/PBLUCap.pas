@@ -106,7 +106,7 @@ type
     procedure AddBitBtnClick(Sender: TObject);
     procedure ChgBitBtnClick(Sender: TObject);
     procedure DelBitBtnClick(Sender: TObject);
-    procedure CallMaintScreen(sTempFuncMode: string);
+    procedure CallMaintScreen(sTempFuncMode: AnsiString);
     procedure FindInGrid(iTempSel: Integer);
     procedure FormCreate(Sender: TObject);
   private
@@ -223,7 +223,7 @@ begin
   CallMaintScreen('D');
 end;
 
-procedure TPBLUCapFrm.CallMaintScreen(sTempFuncMode: string);
+procedure TPBLUCapFrm.CallMaintScreen(sTempFuncMode: AnsiString);
 var
   bTempOK: ByteBool;
   iTempSel: Integer;

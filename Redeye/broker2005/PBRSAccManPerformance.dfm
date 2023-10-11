@@ -8,7 +8,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
@@ -140,7 +140,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 1
@@ -160,7 +160,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     Columns = <

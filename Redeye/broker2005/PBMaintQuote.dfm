@@ -10,7 +10,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
@@ -868,7 +868,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -1099,7 +1099,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -1210,7 +1210,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1381,7 +1381,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1420,7 +1420,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
@@ -1448,7 +1448,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         Visible = False

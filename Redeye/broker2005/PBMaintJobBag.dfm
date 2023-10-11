@@ -10,7 +10,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -145,7 +145,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 7
@@ -1786,7 +1786,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -1799,7 +1799,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -1812,7 +1812,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -1919,7 +1919,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentBackground = False
           ParentFont = False
@@ -2076,7 +2076,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -2247,7 +2247,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
-          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
           OnDblClick = dbgSalesInvoicesDblClick
@@ -2393,7 +2393,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
-          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgPurchaseInvoicesDrawColumnCell
           OnDblClick = dbgPurchaseInvoicesDblClick
@@ -2608,7 +2608,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         Columns = <
           item
@@ -2999,7 +2999,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -3013,7 +3013,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -3027,7 +3027,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
@@ -3050,7 +3050,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -3063,7 +3063,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -3076,7 +3076,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -3089,7 +3089,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -3103,7 +3103,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -3223,7 +3223,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -3514,7 +3514,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clRed
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
@@ -3528,7 +3528,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clRed
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
@@ -3605,7 +3605,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clGreen
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -3632,7 +3632,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clGreen
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
@@ -3678,7 +3678,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 3
@@ -3783,7 +3783,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -3911,7 +3911,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -4082,7 +4082,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end

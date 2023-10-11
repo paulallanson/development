@@ -3,13 +3,13 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Discounts'
-  ClientHeight = 335
-  ClientWidth = 318
+  ClientHeight = 326
+  ClientWidth = 312
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -43,7 +43,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -57,7 +57,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -139,7 +139,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
@@ -220,7 +220,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
@@ -253,7 +253,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -266,7 +266,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -285,7 +285,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 3
@@ -327,7 +327,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 5
@@ -363,7 +363,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       KeyField = 'Discount_type'
       ListField = 'Description'
@@ -381,7 +381,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
@@ -397,7 +397,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -414,7 +414,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     ReadOnly = True

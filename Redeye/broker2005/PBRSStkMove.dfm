@@ -10,7 +10,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -29,7 +29,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -126,7 +126,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
       Items.Strings = (
@@ -145,7 +145,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
       Items.Strings = (
@@ -164,7 +164,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
@@ -208,7 +208,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 3
@@ -263,7 +263,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 10
       ParentFont = False
@@ -329,7 +329,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       State = cbChecked
@@ -355,14 +355,14 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
-      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
         item
@@ -372,7 +372,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 161
           Visible = True
@@ -385,7 +385,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 72
           Visible = True
@@ -397,7 +397,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 86
           Visible = True
@@ -409,7 +409,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 206
           Visible = True
@@ -421,7 +421,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 142
           Visible = True
@@ -433,7 +433,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -444,7 +444,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -455,7 +455,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -466,7 +466,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -477,7 +477,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Visible = True
         end
@@ -488,7 +488,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Title.Font.Charset = ANSI_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -11
-          Title.Font.Name = 'MS Sans Serif'
+          Title.Font.Name = 'Segoe UI'
           Title.Font.Style = []
           Width = 82
           Visible = True
@@ -504,7 +504,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
@@ -577,7 +577,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     State = cbChecked

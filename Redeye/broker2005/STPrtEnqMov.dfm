@@ -8,7 +8,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -127,7 +127,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 69
         Visible = True
@@ -139,7 +139,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 120
         Visible = True
@@ -151,7 +151,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 79
         Visible = True
@@ -163,7 +163,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 99
         Visible = True
@@ -175,7 +175,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 98
         Visible = True
@@ -187,7 +187,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 157
         Visible = True
@@ -199,7 +199,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 34
         Visible = True
@@ -212,7 +212,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Width = 69
         Visible = True
@@ -224,7 +224,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Title.Font.Charset = ANSI_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
-        Title.Font.Name = 'MS Sans Serif'
+        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
         Visible = True
       end>

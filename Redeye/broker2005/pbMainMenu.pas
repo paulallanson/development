@@ -585,9 +585,15 @@ begin
 end;
 
 procedure TfrmpbMainMenu.CopyIfNewer(FName, FDesc: String);
+var
+  ServDate,
+  LocalDate: TDateTime;
 begin
-  {Check if server version of file is older or same. If it is don't copy it} ;
-  if FileAge(ServDir + '\' + FName) <= FileAge(LocalDir + FName) then exit ;
+  {Check if server version of file is older or same. If it is don't copy it}
+  FileAge(ServDir + '\' + FName, ServDate);
+  FileAge(LocalDir + FName, LocalDate);
+  if ServDate <= LocalDate then Exit;
+
   FileCopy(ServDir + '\' + FName, LocalDir + FName) ;
 end;
 
@@ -2212,10 +2218,7 @@ end;
 
 procedure TfrmpbMainMenu.miExcelClick(Sender: TObject);
 var
-  icount: integer;
   tmpForm: TForm;
-  tmpQuery: TFDQuery;
-  tmpGrid: TDBGrid;
 begin
   tmpForm := ActiveMDIChild;
   ExportToExcel(tmpForm);
@@ -2224,7 +2227,6 @@ end;
 procedure TfrmpbMainMenu.ExportToExcel(tmpForm: TForm);
 var
   icount: integer;
-  tmpQuery: TFDQuery;
   tmpGrid: TDBGrid;
 begin
   for icount := 0 to pred(tmpForm.ComponentCount) do

@@ -120,7 +120,6 @@ type
     procedure OKBitBtnClick(Sender: TObject);
     procedure TextEditChange(Sender: TObject);
   private
-    sQuestionList: TStringList;
     procedure AddZero;
     procedure DeleteZero;
     function  GetNextKey : integer;

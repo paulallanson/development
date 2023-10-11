@@ -2,13 +2,13 @@ object PBAccExport3Frm: TPBAccExport3Frm
   Left = 145
   Top = 140
   Caption = 'Export & Import Wizard'
-  ClientHeight = 298
-  ClientWidth = 343
+  ClientHeight = 289
+  ClientWidth = 337
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate

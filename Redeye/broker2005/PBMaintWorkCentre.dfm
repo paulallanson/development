@@ -9,7 +9,7 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -27,7 +27,7 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
     ExplicitTop = 250
@@ -48,7 +48,7 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -89,7 +89,7 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     WordWrap = True

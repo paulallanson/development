@@ -8,7 +8,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   TextHeight = 13
@@ -28,7 +28,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

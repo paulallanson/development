@@ -68,7 +68,6 @@ procedure TSTImpDirectOrdersFrm.GetNewFileDetails;
 var
   SearchRec : TSearchRec;
   sFileDetails: string;
-  FileDateTime: TDateTime ;
 begin
   btnImport.enabled := false;
 
@@ -81,13 +80,11 @@ begin
   begin
     exit;
   end;
-  FileDateTime := FileDateToDateTime(SearchRec.Time);
   sFileDetails := SearchRec.Name;
   lstbxFileNames.items.Add(sFileDetails);
 
   while FindNext(SearchRec) = 0 do
   begin
-    FileDateTime := FileDateToDateTime(SearchRec.Time);
     sFileDetails := SearchRec.Name;
     lstbxFileNames.items.Add(sFileDetails);
   end;
@@ -104,6 +101,7 @@ var
   i, Errorcount: integer;
   bSuccess: boolean;
 begin
+  bSuccess := False;
   self.DeleteOldArchiveFiles;
 
   if MessageDlg('The selected orders will be created, continue?',
@@ -211,7 +209,6 @@ end;
 
 procedure TSTImpDirectOrdersFrm.DeleteOldArchiveFiles;
 var
-  i: integer;
   archivePath: string;
   SearchRec : TSearchRec;
 begin
@@ -222,14 +219,14 @@ begin
     exit;
   end;
 
-  if FileDateToDateTime(SearchRec.Time) < (Now - 28) then
+  if FileDateToDateTime(Trunc(SearchRec.TimeStamp)) < (Now - 28) then
   begin
     deleteFile(archivePath+SearchRec.Name);
   end;
 
   while FindNext(SearchRec) = 0 do
   begin
-    if FileDateToDateTime(SearchRec.Time) < (Now - 28) then
+    if FileDateToDateTime(Trunc(SearchRec.TimeStamp)) < (Now - 28) then
     begin
       deleteFile(archivePath+SearchRec.Name);
     end;

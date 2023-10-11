@@ -9,7 +9,7 @@ object frmpbluCustEnqsSearch: TfrmpbluCustEnqsSearch
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
   PixelsPerInch = 96
@@ -23,7 +23,7 @@ object frmpbluCustEnqsSearch: TfrmpbluCustEnqsSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -36,7 +36,7 @@ object frmpbluCustEnqsSearch: TfrmpbluCustEnqsSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

@@ -9,7 +9,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -219,7 +219,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnCellClick = dbgrdDetsCellClick
         OnColEnter = dbgrdDetsColEnter

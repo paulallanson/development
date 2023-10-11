@@ -9,7 +9,7 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
@@ -38,7 +38,7 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False

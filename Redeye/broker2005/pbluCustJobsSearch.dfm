@@ -9,7 +9,7 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   TextHeight = 13
@@ -22,7 +22,7 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -35,7 +35,7 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

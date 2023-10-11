@@ -9,7 +9,7 @@ object PBLUCustProductTempFrm: TPBLUCustProductTempFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -35,7 +35,7 @@ object PBLUCustProductTempFrm: TPBLUCustProductTempFrm
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -50,7 +50,7 @@ object PBLUCustProductTempFrm: TPBLUCustProductTempFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick

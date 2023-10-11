@@ -8,7 +8,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -43,7 +43,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Images = imglstMaint
       ParentFont = False
@@ -244,7 +244,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -354,7 +354,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
         Font.Height = -16
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end

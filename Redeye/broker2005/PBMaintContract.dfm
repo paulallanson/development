@@ -10,7 +10,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
@@ -52,7 +52,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -65,7 +65,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -79,7 +79,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 690
@@ -94,7 +94,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -210,7 +210,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
@@ -237,7 +237,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
         Visible = False
@@ -329,7 +329,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -342,7 +342,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -355,7 +355,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -369,7 +369,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 718
@@ -383,7 +383,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -397,7 +397,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 695
@@ -413,7 +413,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 744
@@ -466,7 +466,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 733
@@ -803,7 +803,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgJobDetailsDblClick
         Columns = <
@@ -1034,7 +1034,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgPODetailsDblClick
         Columns = <
@@ -1115,7 +1115,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         Columns = <
@@ -1248,7 +1248,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
@@ -1360,7 +1360,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100

@@ -9,7 +9,7 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   DesignSize = (
     285
@@ -45,7 +45,7 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -58,7 +58,7 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end

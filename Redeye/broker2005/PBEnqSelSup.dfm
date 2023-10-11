@@ -9,7 +9,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
@@ -71,7 +71,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = SuppsDBGridCellClick
     OnDblClick = SuppsDBGridDblClick
@@ -320,7 +320,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = SupSelDBGridDblClick
     Columns = <

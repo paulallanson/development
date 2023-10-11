@@ -9,7 +9,7 @@ object frmPBLUQuoteRpts: TfrmPBLUQuoteRpts
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 13
   object Panel1: TPanel

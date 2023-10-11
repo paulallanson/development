@@ -8,7 +8,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -162,7 +162,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -173,7 +173,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
         Width = 78
@@ -185,7 +185,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Date'
         Width = 65
@@ -197,7 +197,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Customer'
         Width = 150
@@ -209,7 +209,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Description'
         Width = 161
@@ -221,7 +221,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Invoice No.'
         Width = 61
@@ -233,7 +233,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Goods'
         Width = 51
@@ -245,7 +245,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'VAT'
         Width = 50
@@ -257,7 +257,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Total'
         Width = 70
@@ -269,7 +269,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Status'
         Width = 92
@@ -281,7 +281,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Cash Sale'
         Width = 101
@@ -293,7 +293,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Paid Status'
         Width = 91
@@ -305,7 +305,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Rep'
         Width = 184
@@ -317,7 +317,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Format'
         Visible = True
@@ -328,7 +328,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Account Code'
         Width = 86
@@ -340,7 +340,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Factoring Date'
         Width = 83
@@ -352,7 +352,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Factoring File'
         Width = 171
@@ -364,7 +364,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'SAP Credit Note No.'
         Width = 113
@@ -513,7 +513,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end

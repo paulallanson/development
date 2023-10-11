@@ -9,7 +9,7 @@ object PDLetterMaintFrm: TPDLetterMaintFrm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -352,7 +352,7 @@ object PDLetterMaintFrm: TPDLetterMaintFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           Lines.Strings = (
             'Edit this text to change what appears on the printout.')
@@ -446,7 +446,7 @@ object PDLetterMaintFrm: TPDLetterMaintFrm
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           Lines.Strings = (
             'This is some sample text.')
