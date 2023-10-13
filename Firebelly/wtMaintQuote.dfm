@@ -23,14 +23,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
   object Label21: TLabel
     Left = 432
     Top = 240
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Telephone'
   end
   object Label22: TLabel
     Left = 432
     Top = 268
-    Width = 66
+    Width = 71
     Height = 13
     Caption = 'Email Address'
   end
@@ -42,6 +42,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1107
     object pnlRevenueCentre: TPanel
       Left = 1
       Top = 128
@@ -50,13 +51,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 1105
       DesignSize = (
         1109
         40)
       object Label59: TLabel
         Left = 7
         Top = 12
-        Width = 78
+        Width = 81
         Height = 13
         Caption = 'Revenue Centre'
         Font.Charset = DEFAULT_CHARSET
@@ -116,13 +118,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Align = alClient
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 1105
       DesignSize = (
         1109
         127)
       object Label1: TLabel
         Left = 8
         Top = 12
-        Width = 59
+        Width = 54
         Height = 13
         Caption = 'Quote No.'
         Font.Charset = DEFAULT_CHARSET
@@ -135,7 +138,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label2: TLabel
         Left = 212
         Top = 12
-        Width = 66
+        Width = 59
         Height = 13
         Caption = 'Quote Date'
         Font.Charset = DEFAULT_CHARSET
@@ -146,9 +149,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object Label15: TLabel
-        Left = 867
+        Left = 863
         Top = 12
-        Width = 83
+        Width = 73
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
@@ -158,12 +161,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 914
+        ExplicitLeft = 867
       end
       object Label19: TLabel
         Left = 8
         Top = 40
-        Width = 46
+        Width = 43
         Height = 13
         Caption = 'Material'
         Font.Charset = DEFAULT_CHARSET
@@ -176,7 +179,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label7: TLabel
         Left = 8
         Top = 63
-        Width = 65
+        Width = 59
         Height = 13
         Caption = 'Description'
         Font.Charset = DEFAULT_CHARSET
@@ -187,9 +190,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 653
+        Left = 649
         Top = 90
-        Width = 60
+        Width = 51
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Reference'
@@ -199,12 +202,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 700
+        ExplicitLeft = 653
       end
       object Label3: TLabel
-        Left = 546
+        Left = 542
         Top = 12
-        Width = 88
+        Width = 80
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Follow Up Date'
@@ -214,10 +217,10 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 593
+        ExplicitLeft = 546
       end
       object btnHigh: TSpeedButton
-        Left = 767
+        Left = 763
         Top = 6
         Width = 25
         Height = 25
@@ -244,7 +247,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 814
       end
       object btnLow: TSpeedButton
-        Left = 791
+        Left = 787
         Top = 6
         Width = 25
         Height = 25
@@ -284,7 +287,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 838
       end
       object btnCalendarTask: TSpeedButton
-        Left = 823
+        Left = 819
         Top = 6
         Width = 25
         Height = 25
@@ -360,9 +363,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 870
       end
       object Label63: TLabel
-        Left = 653
+        Left = 649
         Top = 66
-        Width = 33
+        Width = 35
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Project'
@@ -372,12 +375,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 700
+        ExplicitLeft = 653
       end
       object lblExpiryDate: TLabel
         Left = 392
         Top = 12
-        Width = 42
+        Width = 37
         Height = 13
         Caption = 'Expires'
         Font.Charset = DEFAULT_CHARSET
@@ -405,7 +408,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 1
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 955
+        Left = 951
         Top = 8
         Width = 114
         Height = 21
@@ -413,6 +416,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         TabOrder = 2
+        ExplicitLeft = 947
       end
       object dblkpMaterial: TDBLookupComboBox
         Left = 96
@@ -425,13 +429,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         OnClick = dblkpMaterialClick
       end
       object edtReference: TEdit
-        Left = 726
+        Left = 722
         Top = 86
         Width = 345
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 4
         OnChange = edtReferenceChange
+        ExplicitLeft = 718
       end
       object btnLUMatType: TBitBtn
         Left = 352
@@ -451,7 +456,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object edtDescription: TMemo
         Left = 96
         Top = 62
-        Width = 530
+        Width = 526
         Height = 59
         Anchors = [akLeft, akTop, akRight]
         Lines.Strings = (
@@ -459,18 +464,20 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         MaxLength = 255
         TabOrder = 6
         OnChange = edtDescriptionChange
+        ExplicitWidth = 522
       end
       object edtFollowUpDate: TEdit
-        Left = 638
+        Left = 634
         Top = 8
         Width = 89
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 7
         OnExit = edtFollowUpDateExit
+        ExplicitLeft = 630
       end
       object btnFollowUpDate: TBitBtn
-        Left = 734
+        Left = 730
         Top = 6
         Width = 25
         Height = 25
@@ -491,15 +498,17 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         NumGlyphs = 2
         TabOrder = 8
         OnClick = btnFollowUpDateClick
+        ExplicitLeft = 726
       end
       object edtProject: TEdit
-        Left = 726
+        Left = 722
         Top = 62
         Width = 345
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 9
         OnChange = edtProjectChange
+        ExplicitLeft = 718
       end
       object edtExpiryDate: TEdit
         Left = 443
@@ -545,15 +554,19 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       item
         Width = 50
       end>
+    ExplicitTop = 644
+    ExplicitWidth = 1107
   end
   object pcDetails: TPageControl
     Left = 0
     Top = 169
     Width = 1111
     Height = 295
-    ActivePage = tbCustomer
+    ActivePage = tbDocuments
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1107
+    ExplicitHeight = 294
     object tbCustomer: TTabSheet
       Caption = 'Customer'
       ImageIndex = 7
@@ -563,7 +576,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label4: TLabel
         Left = 8
         Top = 16
-        Width = 53
+        Width = 50
         Height = 13
         Caption = 'Customer'
         Font.Charset = DEFAULT_CHARSET
@@ -576,7 +589,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label18: TLabel
         Left = 8
         Top = 40
-        Width = 35
+        Width = 30
         Height = 13
         Caption = 'Street'
         Font.Charset = DEFAULT_CHARSET
@@ -589,14 +602,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label6: TLabel
         Left = 7
         Top = 124
-        Width = 37
+        Width = 40
         Height = 13
         Caption = 'Contact'
       end
       object Label20: TLabel
         Left = 8
         Top = 100
-        Width = 54
+        Width = 48
         Height = 13
         Caption = 'Postcode'
         Font.Charset = DEFAULT_CHARSET
@@ -609,7 +622,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label23: TLabel
         Left = 8
         Top = 81
-        Width = 59
+        Width = 53
         Height = 13
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
@@ -620,36 +633,34 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object lblAccepted: TLabel
-        Left = 679
+        Left = 675
         Top = 205
-        Width = 72
+        Width = 74
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Date Accepted'
         Visible = False
-        ExplicitLeft = 726
-        ExplicitTop = 218
+        ExplicitLeft = 679
       end
       object Label30: TLabel
-        Left = 679
+        Left = 675
         Top = 237
-        Width = 78
+        Width = 84
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Templating Date'
         Visible = False
-        ExplicitLeft = 726
-        ExplicitTop = 250
+        ExplicitLeft = 679
       end
       object Label17: TLabel
         Left = 7
         Top = 159
-        Width = 50
+        Width = 56
         Height = 13
         Caption = 'Showroom'
       end
       object btnContactClear: TSpeedButton
-        Left = 567
+        Left = 563
         Top = 121
         Width = 23
         Height = 22
@@ -680,14 +691,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object lblDesigner: TLabel
         Left = 7
         Top = 189
-        Width = 42
+        Width = 46
         Height = 13
         Caption = 'Designer'
       end
       object lblSalesLead: TLabel
         Left = 7
         Top = 220
-        Width = 64
+        Width = 54
         Height = 13
         Caption = 'Sales Lead'
         Font.Charset = DEFAULT_CHARSET
@@ -698,7 +709,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object btnCustomerSearch: TBitBtn
-        Left = 540
+        Left = 536
         Top = 12
         Width = 22
         Height = 22
@@ -714,59 +725,65 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 0
         OnClick = btnCustomerSearchClick
+        ExplicitLeft = 532
       end
       object pnlAddress: TPanel
         Left = 74
         Top = 0
-        Width = 465
+        Width = 461
         Height = 153
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         Enabled = False
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 457
         DesignSize = (
-          465
+          461
           153)
         object Label24: TLabel
           Left = 104
           Top = 101
-          Width = 33
+          Width = 37
           Height = 13
           Caption = 'County'
         end
         object edtCustomerName: TEdit
           Left = 8
           Top = 12
-          Width = 447
+          Width = 443
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = edtCustomerNameChange
+          ExplicitWidth = 439
         end
         object edtStreet: TEdit
           Left = 8
           Top = 36
-          Width = 447
+          Width = 443
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
+          ExplicitWidth = 439
         end
         object edtlocale: TEdit
           Left = 8
           Top = 56
-          Width = 447
+          Width = 443
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
+          ExplicitWidth = 439
         end
         object edtTown: TEdit
           Left = 8
           Top = 77
-          Width = 447
+          Width = 443
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
+          ExplicitWidth = 439
         end
         object edtPostcode: TEdit
           Left = 8
@@ -779,23 +796,25 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object edtCounty: TEdit
           Left = 152
           Top = 97
-          Width = 303
+          Width = 299
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
+          ExplicitWidth = 295
         end
         object edtContact: TEdit
           Left = 8
           Top = 120
-          Width = 448
+          Width = 444
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 6
           OnChange = edtContactChange
+          ExplicitWidth = 440
         end
       end
       object btnContactSearch: TBitBtn
-        Left = 540
+        Left = 536
         Top = 121
         Width = 22
         Height = 22
@@ -811,9 +830,10 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 2
         OnClick = btnContactSearchClick
+        ExplicitLeft = 532
       end
       object pnlTelephone: TPanel
-        Left = 678
+        Left = 674
         Top = 0
         Width = 391
         Height = 153
@@ -821,10 +841,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
+        ExplicitLeft = 670
         object Telephone: TLabel
           Left = 0
           Top = 16
-          Width = 61
+          Width = 54
           Height = 13
           Caption = 'Telephone'
           Font.Charset = DEFAULT_CHARSET
@@ -837,14 +858,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Email: TLabel
           Left = 0
           Top = 40
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Email'
         end
         object Label50: TLabel
           Left = 0
           Top = 80
-          Width = 48
+          Width = 49
           Height = 13
           Caption = 'Timescale'
         end
@@ -858,7 +879,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label56: TLabel
           Left = 0
           Top = 128
-          Width = 71
+          Width = 72
           Height = 13
           Caption = 'Call Back Time'
         end
@@ -910,7 +931,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object edtAccepted: TEdit
-        Left = 767
+        Left = 763
         Top = 201
         Width = 90
         Height = 21
@@ -918,9 +939,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 4
         Visible = False
         OnExit = edtTemplateExit
+        ExplicitLeft = 759
+        ExplicitTop = 200
       end
       object btnAccepted: TBitBtn
-        Left = 863
+        Left = 859
         Top = 199
         Width = 25
         Height = 25
@@ -942,9 +965,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 5
         Visible = False
         OnClick = btnAcceptedClick
+        ExplicitLeft = 855
+        ExplicitTop = 198
       end
       object edtTemplate: TEdit
-        Left = 767
+        Left = 763
         Top = 233
         Width = 90
         Height = 21
@@ -952,9 +977,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 6
         Visible = False
         OnExit = edtTemplateExit
+        ExplicitLeft = 759
+        ExplicitTop = 232
       end
       object btntemplate: TBitBtn
-        Left = 863
+        Left = 859
         Top = 231
         Width = 25
         Height = 25
@@ -976,29 +1003,33 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 7
         Visible = False
         OnClick = btntemplateClick
+        ExplicitLeft = 855
+        ExplicitTop = 230
       end
       object dblkpShowroom: TDBLookupComboBox
         Left = 82
         Top = 155
-        Width = 383
+        Width = 379
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Branch_no'
         ListField = 'Branch_Name'
         TabOrder = 8
+        ExplicitWidth = 375
       end
       object dblkpDesigner: TDBLookupComboBox
         Left = 82
         Top = 184
-        Width = 383
+        Width = 379
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Designer'
         ListField = 'Designer_Name'
         TabOrder = 9
+        ExplicitWidth = 375
       end
       object btnDesigner: TBitBtn
-        Left = 475
+        Left = 471
         Top = 183
         Width = 22
         Height = 22
@@ -1014,6 +1045,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 12
         OnClick = btnDesignerClick
+        ExplicitLeft = 467
       end
       object dblkpLeadSource: TDBLookupComboBox
         Left = 81
@@ -1086,14 +1118,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblWTTotalArea: TLabel
           Left = 8
           Top = 7
-          Width = 83
+          Width = 87
           Height = 13
           Caption = 'Total Area (sqm): '
         end
         object lblWTTotalSales: TLabel
           Left = 296
           Top = 7
-          Width = 89
+          Width = 91
           Height = 13
           Caption = 'Total Sales Value: '
         end
@@ -1222,14 +1254,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblCOTotalSales: TLabel
           Left = 8
           Top = 7
-          Width = 86
+          Width = 88
           Height = 13
           Caption = 'Total Sales Value:'
         end
         object lblCOTotalCost: TLabel
           Left = 296
           Top = 7
-          Width = 84
+          Width = 88
           Height = 13
           Caption = 'Total Cost Value: '
         end
@@ -1309,14 +1341,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblEdgeTotalSales: TLabel
           Left = 8
           Top = 7
-          Width = 86
+          Width = 88
           Height = 13
           Caption = 'Total Sales Value:'
         end
         object lblEdgeTotalCost: TLabel
           Left = 296
           Top = 7
-          Width = 84
+          Width = 88
           Height = 13
           Caption = 'Total Cost Value: '
         end
@@ -1411,21 +1443,21 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblUpTotalArea: TLabel
           Left = 8
           Top = 7
-          Width = 83
+          Width = 87
           Height = 13
           Caption = 'Total Area (sqm): '
         end
         object lblUpTotalSales: TLabel
           Left = 296
           Top = 7
-          Width = 89
+          Width = 91
           Height = 13
           Caption = 'Total Sales Value: '
         end
         object lblUpTotalPolishCost: TLabel
           Left = 600
           Top = 7
-          Width = 88
+          Width = 94
           Height = 13
           Caption = 'Total Polish Cost:: '
         end
@@ -1505,14 +1537,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblExTotalSales: TLabel
           Left = 8
           Top = 7
-          Width = 86
+          Width = 88
           Height = 13
           Caption = 'Total Sales Value:'
         end
         object lblExTotalCost: TLabel
           Left = 296
           Top = 7
-          Width = 84
+          Width = 88
           Height = 13
           Caption = 'Total Cost Value: '
         end
@@ -1573,21 +1605,21 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblSlabTotalArea: TLabel
           Left = 288
           Top = 7
-          Width = 86
+          Width = 88
           Height = 13
           Caption = 'Total Sales Value:'
         end
         object lblSlabTotalCost: TLabel
           Left = 8
           Top = 7
-          Width = 84
+          Width = 88
           Height = 13
           Caption = 'Total Cost Value: '
         end
         object lblSlabWasteCost: TLabel
-          Left = 632
+          Left = 629
           Top = 7
-          Width = 94
+          Width = 97
           Height = 13
           Alignment = taRightJustify
           Caption = 'Total Waste Value: '
@@ -1670,7 +1702,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label16: TLabel
           Left = 2
           Top = 0
-          Width = 147
+          Width = 159
           Height = 13
           Caption = 'Installation Address (100 chars)'
         end
@@ -1690,20 +1722,18 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label26: TLabel
           Left = 8
           Top = -872
-          Width = 90
+          Width = 101
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Contact'
-          ExplicitTop = -815
         end
         object Label27: TLabel
           Left = 8
           Top = -836
-          Width = 90
+          Width = 102
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Number'
-          ExplicitTop = -779
         end
         object edtInstallName: TEdit
           Left = 120
@@ -1769,7 +1799,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label25: TLabel
           Left = 2
           Top = 0
-          Width = 54
+          Width = 58
           Height = 13
           Caption = 'Documents'
         end
@@ -1880,6 +1910,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           OnMouseMove = slvDocumentsMouseMove
           TabOrder = 0
           ViewStyle = vsReport
+          ExplicitLeft = -6
+          ExplicitTop = -1
         end
       end
     end
@@ -1898,7 +1930,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label65: TLabel
           Left = 2
           Top = 0
-          Width = 54
+          Width = 58
           Height = 13
           Caption = 'Documents'
         end
@@ -2059,7 +2091,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label32: TLabel
           Left = 272
           Top = 6
-          Width = 74
+          Width = 65
           Height = 13
           Caption = 'Grand Totals'
           Font.Charset = ANSI_CHARSET
@@ -2134,7 +2166,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label45: TLabel
           Left = 16
           Top = 76
-          Width = 68
+          Width = 74
           Height = 13
           Caption = 'Cut Out Totals'
           Font.Charset = ANSI_CHARSET
@@ -2147,7 +2179,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label46: TLabel
           Left = 16
           Top = 100
-          Width = 218
+          Width = 228
           Height = 13
           Caption = 'Edge Totals (incl Upstands, Splashbacks, etc)'
           Font.Charset = ANSI_CHARSET
@@ -2160,7 +2192,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label47: TLabel
           Left = 16
           Top = 124
-          Width = 61
+          Width = 63
           Height = 13
           Caption = 'Extras Totals'
           Font.Charset = ANSI_CHARSET
@@ -2173,7 +2205,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label33: TLabel
           Left = 16
           Top = 205
-          Width = 37
+          Width = 41
           Height = 13
           Caption = 'Mileage'
           Font.Charset = ANSI_CHARSET
@@ -2186,7 +2218,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label34: TLabel
           Left = 16
           Top = 229
-          Width = 80
+          Width = 85
           Height = 13
           Caption = 'Template Labour'
           Font.Charset = ANSI_CHARSET
@@ -2199,35 +2231,35 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label35: TLabel
           Left = 176
           Top = 229
-          Width = 40
+          Width = 44
           Height = 13
           Caption = 'hours @'
         end
         object Label36: TLabel
           Left = 288
           Top = 229
-          Width = 29
+          Width = 32
           Height = 13
           Caption = '/ hour'
         end
         object Label37: TLabel
           Left = 176
           Top = 205
-          Width = 37
+          Width = 40
           Height = 13
           Caption = 'miles @'
         end
         object Label38: TLabel
           Left = 288
           Top = 205
-          Width = 35
+          Width = 38
           Height = 13
           Caption = 'p / mile'
         end
         object Label44: TLabel
           Left = 16
           Top = 29
-          Width = 184
+          Width = 194
           Height = 13
           Caption = 'Worktop/Upstands/Splashback Totals'
           Font.Charset = ANSI_CHARSET
@@ -2238,9 +2270,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label39: TLabel
-          Left = 350
+          Left = 348
           Top = 5
-          Width = 46
+          Width = 48
           Height = 13
           Alignment = taRightJustify
           Caption = 'Slab Area'
@@ -2252,9 +2284,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label40: TLabel
-          Left = 425
+          Left = 422
           Top = 5
-          Width = 51
+          Width = 54
           Height = 13
           Alignment = taRightJustify
           Caption = 'Cost Value'
@@ -2266,9 +2298,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label41: TLabel
-          Left = 487
+          Left = 484
           Top = 5
-          Width = 53
+          Width = 56
           Height = 13
           Alignment = taRightJustify
           Caption = 'Area Req'#39'd'
@@ -2280,9 +2312,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label42: TLabel
-          Left = 561
+          Left = 560
           Top = 5
-          Width = 56
+          Width = 57
           Height = 13
           Alignment = taRightJustify
           Caption = 'Sales Value'
@@ -2294,9 +2326,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label48: TLabel
-          Left = 689
+          Left = 685
           Top = 148
-          Width = 24
+          Width = 28
           Height = 13
           Alignment = taRightJustify
           Caption = 'Profit'
@@ -2308,9 +2340,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label49: TLabel
-          Left = 769
+          Left = 764
           Top = 148
-          Width = 35
+          Width = 40
           Height = 13
           Alignment = taRightJustify
           Caption = '% Profit'
@@ -2324,7 +2356,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label51: TLabel
           Left = 16
           Top = 278
-          Width = 64
+          Width = 73
           Height = 13
           Caption = 'Fitting Labour'
           Font.Charset = ANSI_CHARSET
@@ -2337,28 +2369,28 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label52: TLabel
           Left = 176
           Top = 278
-          Width = 40
+          Width = 44
           Height = 13
           Caption = 'hours @'
         end
         object Label53: TLabel
           Left = 288
           Top = 278
-          Width = 29
+          Width = 32
           Height = 13
           Caption = '/ hour'
         end
         object lblDiscountAnalysis: TLabel
           Left = 16
           Top = 148
-          Width = 42
+          Width = 46
           Height = 13
           Caption = 'Discount'
         end
         object Label57: TLabel
           Left = 192
           Top = 180
-          Width = 157
+          Width = 140
           Height = 13
           Caption = 'Total Supply Costs && Prices'
           Font.Charset = ANSI_CHARSET
@@ -2379,7 +2411,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object lblDiscountMarkup: TLabel
           Left = 504
           Top = 148
-          Width = 27
+          Width = 31
           Height = 13
           Caption = 'minus'
           Font.Charset = DEFAULT_CHARSET
@@ -2392,7 +2424,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label43: TLabel
           Left = 16
           Top = 52
-          Width = 80
+          Width = 91
           Height = 13
           Caption = 'Handling/Cutting'
           Font.Charset = ANSI_CHARSET
@@ -2405,21 +2437,21 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label55: TLabel
           Left = 168
           Top = 52
-          Width = 30
+          Width = 31
           Height = 13
           Caption = '/ sq m'
         end
         object Label58: TLabel
           Left = 296
           Top = 52
-          Width = 45
+          Width = 49
           Height = 13
           Caption = 'sq metres'
         end
         object Label60: TLabel
           Left = 16
           Top = 326
-          Width = 74
+          Width = 79
           Height = 13
           Caption = 'Delivery Labour'
           Font.Charset = ANSI_CHARSET
@@ -2432,28 +2464,28 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object Label61: TLabel
           Left = 176
           Top = 326
-          Width = 40
+          Width = 44
           Height = 13
           Caption = 'hours @'
         end
         object Label62: TLabel
           Left = 288
           Top = 326
-          Width = 29
+          Width = 32
           Height = 13
           Caption = '/ hour'
         end
         object Label12: TLabel
           Left = 360
           Top = 278
-          Width = 21
+          Width = 23
           Height = 13
           Caption = 'Men'
         end
         object Label13: TLabel
           Left = 360
           Top = 326
-          Width = 21
+          Width = 23
           Height = 13
           Caption = 'Men'
         end
@@ -3306,14 +3338,16 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 463
+    ExplicitWidth = 1107
     DesignSize = (
       1111
       181)
     object lblDeletePrompt: TLabel
       Left = 13
       Top = 127
-      Width = 151
-      Height = 16
+      Width = 138
+      Height = 17
       Anchors = [akLeft, akBottom]
       Caption = 'Delete this quotation?'
       Font.Charset = DEFAULT_CHARSET
@@ -3327,14 +3361,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     object Label31: TLabel
       Left = 13
       Top = 13
-      Width = 59
+      Width = 62
       Height = 13
       Caption = 'Supply Price'
     end
     object lblReason: TLabel
       Left = 138
       Top = 104
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Reason'
       Visible = False
@@ -3342,21 +3376,21 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     object lblWasteValue: TLabel
       Left = 192
       Top = 13
-      Width = 88
+      Width = 91
       Height = 13
       Caption = 'Total Waste Value'
     end
     object lblFrontWTTotalArea: TLabel
       Left = 13
       Top = 39
-      Width = 83
+      Width = 87
       Height = 13
       Caption = 'Total Area (sqm): '
     end
     object lblFrontSlabTotalArea: TLabel
       Left = 13
       Top = 63
-      Width = 84
+      Width = 88
       Height = 13
       Caption = 'Total Cost Value: '
     end
@@ -3408,75 +3442,76 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 600
       DesignSize = (
         506
         179)
       object lblDiscountRate: TLabel
         Left = 8
         Top = 12
-        Width = 74
+        Width = 81
         Height = 13
         Anchors = [akLeft, akBottom]
         Caption = 'Discount rate %'
       end
       object lblDiscountValue: TLabel
-        Left = 178
+        Left = 173
         Top = 12
-        Width = 72
+        Width = 77
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Discount Value'
       end
       object Label11: TLabel
-        Left = 350
+        Left = 345
         Top = 12
-        Width = 44
+        Width = 49
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Complete'
       end
       object Label8: TLabel
-        Left = 367
+        Left = 363
         Top = 60
-        Width = 27
+        Width = 31
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Fixing'
       end
       object Label9: TLabel
-        Left = 342
+        Left = 337
         Top = 36
-        Width = 52
+        Width = 57
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Templating'
       end
       object Label14: TLabel
-        Left = 356
+        Left = 354
         Top = 84
-        Width = 38
+        Width = 40
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Delivery'
       end
       object lblVat: TLabel
-        Left = 373
+        Left = 376
         Top = 109
-        Width = 21
+        Width = 18
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'VAT'
       end
       object lblTotal: TLabel
-        Left = 343
+        Left = 342
         Top = 133
-        Width = 51
+        Width = 52
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -3485,14 +3520,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Label28: TLabel
         Left = 8
         Top = 110
-        Width = 68
+        Width = 72
         Height = 13
         Caption = 'Deposit Terms'
       end
       object Label29: TLabel
         Left = 8
         Top = 133
-        Width = 60
+        Width = 65
         Height = 13
         Caption = 'Deposit Paid'
       end
