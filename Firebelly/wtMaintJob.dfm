@@ -453,7 +453,7 @@ object frmWTMaintJob: TfrmWTMaintJob
     Top = 169
     Width = 1030
     Height = 276
-    ActivePage = tbDocuments
+    ActivePage = tbCustomer
     Align = alClient
     TabOrder = 3
     ExplicitWidth = 1026
@@ -568,7 +568,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentFont = False
         TabOrder = 0
         OnClick = btnCustomerSearchClick
-        ExplicitLeft = 564
       end
       object pnlAddress: TPanel
         Left = 70
@@ -580,7 +579,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         Enabled = False
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 495
         DesignSize = (
           499
           249)
@@ -599,7 +597,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = edtCustomerNameChange
-          ExplicitWidth = 477
         end
         object edtStreet: TEdit
           Left = 8
@@ -608,7 +605,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
-          ExplicitWidth = 477
         end
         object edtlocale: TEdit
           Left = 8
@@ -617,7 +613,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
-          ExplicitWidth = 477
         end
         object edtTown: TEdit
           Left = 8
@@ -626,7 +621,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
-          ExplicitWidth = 477
         end
         object edtPostcode: TEdit
           Left = 8
@@ -643,7 +637,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
-          ExplicitWidth = 341
         end
         object edtContact: TEdit
           Left = 8
@@ -653,7 +646,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 6
           OnChange = edtContactChange
-          ExplicitWidth = 478
         end
         object edtEmail: TEdit
           Left = 8
@@ -662,7 +654,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 7
-          ExplicitWidth = 477
         end
         object edtTelephone: TEdit
           Left = 8
@@ -671,7 +662,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 8
-          ExplicitWidth = 397
         end
       end
       object btnContactSearch: TBitBtn
@@ -691,7 +681,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentFont = False
         TabOrder = 2
         OnClick = btnContactSearchClick
-        ExplicitLeft = 564
       end
       object pnlPlanning: TPanel
         Left = 657
@@ -702,8 +691,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
-        ExplicitLeft = 653
-        ExplicitHeight = 247
         object GroupBox1: TGroupBox
           Left = 92
           Top = 0
@@ -896,7 +883,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         KeyField = 'Branch_no'
         ListField = 'Branch_Name'
         TabOrder = 4
-        ExplicitWidth = 413
       end
       object dblkpDesigner: TDBLookupComboBox
         Left = 78
@@ -907,7 +893,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         KeyField = 'Designer'
         ListField = 'Designer_Name'
         TabOrder = 5
-        ExplicitWidth = 270
       end
       object btnDesigner: TBitBtn
         Left = 362
@@ -926,7 +911,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentFont = False
         TabOrder = 6
         OnClick = btnDesignerClick
-        ExplicitLeft = 358
       end
     end
     object TabSheet1: TTabSheet
@@ -1479,6 +1463,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1018
         object Label44: TLabel
           Left = 2
           Top = 0
@@ -1501,6 +1486,8 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
+        ExplicitLeft = 989
+        ExplicitHeight = 230
         object btnExcel: TToolButton
           Left = 0
           Top = 0
@@ -1563,6 +1550,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 2
         OnDragDrop = stvDocumentsDragDrop
         OnDragOver = stvDocumentsDragOver
+        ExplicitHeight = 230
       end
       object dfDocuments: TPJDropFiles
         Left = 161
@@ -1573,9 +1561,11 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 3
         Filter = PJExtFileFilter1
         ForegroundOnDrop = False
-        Options = [dfoIncFolders, dfoIncFiles]
+        Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
         PassThrough = False
         OnDropFiles = dfDocumentsDropFiles
+        ExplicitWidth = 828
+        ExplicitHeight = 230
         object slvDocuments: TShellListView
           Left = 0
           Top = 0
@@ -1593,6 +1583,8 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnMouseMove = slvDocumentsMouseMove
           TabOrder = 0
           ViewStyle = vsReport
+          ExplicitLeft = -6
+          ExplicitTop = -2
         end
       end
     end
@@ -2552,7 +2544,7 @@ object frmWTMaintJob: TfrmWTMaintJob
     end
   end
   object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.doc;.docx;.xls;.xlsx;.txt'
+    Style = fsAll
     Left = 757
     Top = 274
   end
