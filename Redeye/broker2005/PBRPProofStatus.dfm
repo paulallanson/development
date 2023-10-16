@@ -10,7 +10,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 15
   object qrpProofStatus: TQuickRep
     Left = -152

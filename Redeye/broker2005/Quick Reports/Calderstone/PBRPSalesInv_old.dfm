@@ -15,7 +15,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
   Font.Name = 'Arial'
   Font.Style = []
   OldCreateOrder = True
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   PixelsPerInch = 96

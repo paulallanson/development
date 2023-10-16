@@ -15,7 +15,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
   Font.Name = 'Courier New'
   Font.Style = []
   OldCreateOrder = True
-  Scaled = False
+  Scaled = True
   PixelsPerInch = 96
   TextHeight = 18
   object PBDelivQuickReport: TQuickRep

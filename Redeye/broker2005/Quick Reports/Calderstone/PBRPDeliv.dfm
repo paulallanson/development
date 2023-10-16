@@ -12,7 +12,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
   Font.Height = -16
   Font.Name = 'Courier New'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 18

@@ -10,7 +10,7 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 13
   object qrReport: TQuickRep
     Left = -3

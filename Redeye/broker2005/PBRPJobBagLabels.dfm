@@ -13,7 +13,7 @@ object PBRPJobBagLabelsFrm: TPBRPJobBagLabelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = 8

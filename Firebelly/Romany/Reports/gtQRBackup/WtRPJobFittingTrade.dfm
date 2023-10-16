@@ -11,7 +11,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

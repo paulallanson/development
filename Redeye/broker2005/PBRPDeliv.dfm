@@ -15,7 +15,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
   Font.Name = 'Courier New'
   Font.Style = []
   OldCreateOrder = True
-  Scaled = False
+  Scaled = True
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96

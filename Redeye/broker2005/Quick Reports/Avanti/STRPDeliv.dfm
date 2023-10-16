@@ -10,7 +10,7 @@ object STRPDelivfrm: TSTRPDelivfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   TextHeight = 13
   object PickSOListQuickReport: TQuickRep

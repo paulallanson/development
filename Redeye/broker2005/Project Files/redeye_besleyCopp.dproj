@@ -3,7 +3,7 @@
         <ProjectGuid>{33516EE2-536E-47A2-B20F-02A84C96AD15}</ProjectGuid>
         <MainSource>redeye_besleyCopp.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

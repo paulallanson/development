@@ -13,7 +13,7 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 14
   object QRLabel6: TQRLabel
     Left = 448

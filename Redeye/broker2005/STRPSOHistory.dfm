@@ -10,7 +10,7 @@ object STRPSOHistoryFrm: TSTRPSOHistoryFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 13
   object qckrpSalesByProd: TQuickRep
     Left = 0

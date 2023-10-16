@@ -13,7 +13,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
   Font.Height = -7
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   TextHeight = 7
   object InvoiceReport: TQuickRep

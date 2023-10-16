@@ -11,7 +11,7 @@ object STPOrdAckFrm: TSTPOrdAckFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

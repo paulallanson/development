@@ -11,7 +11,7 @@ object PBRPOperatorFrm: TPBRPOperatorFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  Scaled = False
+  Scaled = True
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

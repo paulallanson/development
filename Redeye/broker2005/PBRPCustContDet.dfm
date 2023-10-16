@@ -10,7 +10,7 @@ object PBRPCustContDetFrm: TPBRPCustContDetFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 13
   object QRPCustStat: TQuickRep
     Left = -24

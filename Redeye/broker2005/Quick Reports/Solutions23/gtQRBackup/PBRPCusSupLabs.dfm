@@ -15,7 +15,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
   Font.Name = 'Arial'
   Font.Style = []
   OldCreateOrder = True
-  Scaled = False
+  Scaled = True
   PixelsPerInch = 96
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep

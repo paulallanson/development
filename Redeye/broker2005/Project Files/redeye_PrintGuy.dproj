@@ -3,7 +3,7 @@
         <ProjectGuid>{F41B9A85-BE98-4713-B14A-AC57274A7C78}</ProjectGuid>
         <MainSource>redeye_PrintGuy.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

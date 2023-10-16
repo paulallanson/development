@@ -10,7 +10,7 @@ object frmWTRPJobMasonRpt: TfrmWTRPJobMasonRpt
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 13
   object qrpMasonRpt: TQuickRep
     Left = 8

@@ -10,7 +10,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13

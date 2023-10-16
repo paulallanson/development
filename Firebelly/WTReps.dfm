@@ -12,7 +12,7 @@
   Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   PixelsPerInch = 96
   TextHeight = 16
   object PageHeadBand: TQRBand

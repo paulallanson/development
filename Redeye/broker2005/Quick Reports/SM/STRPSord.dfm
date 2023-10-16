@@ -10,7 +10,7 @@ object STRPSordFrm: TSTRPSordFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   TextHeight = 13
   object SalesOrdQuickReport: TQuickRep
     Left = 136

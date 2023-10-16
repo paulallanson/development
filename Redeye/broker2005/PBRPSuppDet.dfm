@@ -12,7 +12,7 @@ object PBRPSuppDetFrm: TPBRPSuppDetFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  Scaled = False
+  Scaled = True
   PixelsPerInch = 96
   TextHeight = 13
   object QRPSuppStat: TQuickRep

@@ -13,7 +13,7 @@ object PBRPProofFrm: TPBRPProofFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  Scaled = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 14
