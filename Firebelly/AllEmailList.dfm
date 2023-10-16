@@ -2,8 +2,8 @@ object AllEmailListFrm: TAllEmailListFrm
   Left = 41
   Top = 205
   Caption = 'AllEmailListFrm'
-  ClientHeight = 259
-  ClientWidth = 741
+  ClientHeight = 258
+  ClientWidth = 737
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,11 +17,13 @@ object AllEmailListFrm: TAllEmailListFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 741
-    Height = 218
+    Width = 737
+    Height = 217
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 741
+    ExplicitHeight = 218
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -58,15 +60,17 @@ object AllEmailListFrm: TAllEmailListFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 218
-    Width = 741
+    Top = 217
+    Width = 737
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 218
+    ExplicitWidth = 741
     object lblCount: TLabel
       Left = 8
       Top = 16
-      Width = 38
+      Width = 45
       Height = 13
       Caption = 'lblCount'
     end

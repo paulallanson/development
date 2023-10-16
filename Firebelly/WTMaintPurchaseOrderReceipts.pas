@@ -104,6 +104,10 @@ begin
   SetGridHeaders;
 
   AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
+
+  dbgLines.ColAlignments[3] := taRightJustify;
+  dbgLines.ColAlignments[4] := taRightJustify;
+  dbgLines.ColAlignments[5] := taRightJustify;
 end;
 
 procedure TfrmWTMaintPurchaseOrderReceipts.FormActivate(Sender: TObject);
@@ -277,27 +281,6 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
-    end;
-  end;
-
-  {If Heading Display Left justified in the cells}
-  with dbgLines do
-  begin
-    if ACol < 3 then
-    begin
-      S := Cells[ACol, ARow]; // cell contents
-      SavedAlign := SetTextAlign(Canvas.Handle, TA_LEFT);
-      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign(Canvas.Handle, SavedAlign);
-    end
-    else
-    begin
-      {Display the Columns Right justified in the cells}
-      S := Cells[ACol, ARow]; // cell contents
-      SavedAlign := SetTextAlign(Canvas.Handle, TA_RIGHT);
-      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign(Canvas.Handle, SavedAlign);
     end;
   end;
 
@@ -306,7 +289,6 @@ begin
 (*    if (gdselected in State) then
     begin
       //draw a box around the selected cell
-//      pen.Color := clHighlight;
       pen.Color := clred;
       pen.Width := 2;
       polyline([point(rect.left+1,rect.top+1),

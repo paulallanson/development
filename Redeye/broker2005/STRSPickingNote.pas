@@ -258,12 +258,16 @@ begin
     end;
 
   GetDefaultPrinter;
+
+  for var i := 0 to sgDetails.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      sgDetails.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TSTRSPickingNoteFrm.sgDetailsDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -272,31 +276,8 @@ begin
       begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
       end;
   end;
-
-  if (vCol < 3) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
-    end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
-
 end;
 
 procedure TSTRSPickingNoteFrm.PrintBitBtnClick(Sender: TObject);

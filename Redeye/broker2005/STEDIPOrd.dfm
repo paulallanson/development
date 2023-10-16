@@ -32,7 +32,6 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       RowCount = 2
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
       TabOrder = 0
-      OnDrawCell = strgrdPOsCreatedDrawCell
     end
   end
   object pnlMain: TPanel
@@ -134,7 +133,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       397
       41)
     object BitBtn1: TBitBtn
-      Left = 311
+      Left = 307
       Top = 8
       Width = 75
       Height = 25
@@ -144,7 +143,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       TabOrder = 0
     end
     object btbtnPrint: TBitBtn
-      Left = 220
+      Left = 216
       Top = 8
       Width = 75
       Height = 25

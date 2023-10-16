@@ -52,7 +52,6 @@ type
     procedure EnableButtons(iRow: integer);
     procedure SplitAllocation(aLine: TPickLine; iQtyPicked: integer);
     procedure BitBtn2Click(Sender: TObject);
-    procedure sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure FormActivate(Sender: TObject);
     procedure cmbPickingNoteClick(Sender: TObject);
     procedure CancelBtnClick(Sender: TObject);
@@ -340,6 +339,12 @@ begin
       cells[7,0] := 'Pick Bin'; {Picking}
       cells[8,0] := 'Pick Lot'; {Picking}
     end;
+
+  for var i := 0 to sgDetails.ColCount-1 do
+  begin
+    if not (i in [2,5,6]) then
+      sgDetails.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 function TSTMaintPickFrm.GetSelectedLine: TPickLine;
@@ -1009,33 +1014,6 @@ procedure TSTMaintPickFrm.BitBtn2Click(Sender: TObject);
 begin
 //  getnextdespNote;
   close;
-end;
-
-procedure TSTMaintPickFrm.sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol <> 2) and (vCol <> 5) and (vCol <>6) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TSTMaintPickFrm.SetJobBagNumber(const Value: integer);

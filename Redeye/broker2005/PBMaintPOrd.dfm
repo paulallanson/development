@@ -23,7 +23,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
   object Label8: TLabel
     Left = 256
     Top = 115
-    Width = 66
+    Width = 70
     Height = 13
     Caption = 'Extra Charges'
   end
@@ -35,13 +35,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Align = alTop
     BevelInner = bvRaised
     TabOrder = 0
+    ExplicitWidth = 974
     DesignSize = (
       978
       65)
     object Label2: TLabel
       Left = 3
       Top = 12
-      Width = 46
+      Width = 51
       Height = 13
       Caption = 'Order No.'
       Font.Charset = ANSI_CHARSET
@@ -54,7 +55,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     object Label5: TLabel
       Left = 3
       Top = 38
-      Width = 61
+      Width = 55
       Height = 13
       Caption = 'Date Point'
       Font.Charset = ANSI_CHARSET
@@ -86,9 +87,9 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       OnClick = SelDateBtnClick
     end
     object lblAccountManager: TLabel
-      Left = 611
+      Left = 607
       Top = 14
-      Width = 73
+      Width = 68
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Mgr'
@@ -98,12 +99,12 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 663
+      ExplicitLeft = 611
     end
     object Label3: TLabel
       Left = 161
       Top = 12
-      Width = 47
+      Width = 43
       Height = 13
       Caption = 'Supplier'
       Font.Charset = ANSI_CHARSET
@@ -116,7 +117,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     object Label7: TLabel
       Left = 163
       Top = 38
-      Width = 45
+      Width = 40
       Height = 13
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
@@ -127,7 +128,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
     end
     object Label9: TLabel
-      Left = 408
+      Left = 404
       Top = 38
       Width = 49
       Height = 15
@@ -143,7 +144,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ExplicitLeft = 460
     end
     object ReqByDateLUBtn: TSpeedButton
-      Left = 892
+      Left = 888
       Top = 32
       Width = 23
       Height = 23
@@ -166,9 +167,9 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ExplicitLeft = 944
     end
     object Label33: TLabel
-      Left = 820
+      Left = 824
       Top = 12
-      Width = 98
+      Width = 90
       Height = 13
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
@@ -179,12 +180,12 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 872
+      ExplicitLeft = 828
     end
     object lblAccountTeam: TLabel
-      Left = 601
+      Left = 597
       Top = 38
-      Width = 83
+      Width = 73
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Team'
@@ -194,7 +195,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 653
+      ExplicitLeft = 601
     end
     object POrdNoMemo: TMemo
       Left = 63
@@ -221,7 +222,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     object SupplierEdit: TEdit
       Left = 214
       Top = 8
-      Width = 360
+      Width = 356
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
@@ -229,20 +230,22 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ReadOnly = True
       TabOrder = 2
       OnChange = SupplierEditChange
+      ExplicitWidth = 352
     end
     object ContactEdit: TEdit
       Left = 214
       Top = 34
-      Width = 330
+      Width = 326
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
       MaxLength = 40
       ReadOnly = True
       TabOrder = 4
+      ExplicitWidth = 322
     end
     object SelContactBtn: TButton
-      Left = 552
+      Left = 548
       Top = 33
       Width = 23
       Height = 23
@@ -256,9 +259,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 5
       OnClick = SelContactBtnClick
+      ExplicitLeft = 544
     end
     object SelSupBtn: TButton
-      Left = 580
+      Left = 576
       Top = 8
       Width = 23
       Height = 23
@@ -272,9 +276,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 3
       OnClick = SelSupBtnClick
+      ExplicitLeft = 572
     end
     object CurrDBLUCB: TDBLookupComboBox
-      Left = 461
+      Left = 457
       Top = 38
       Width = 25
       Height = 21
@@ -284,9 +289,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ListSource = PBPODM.CurrSRC
       TabOrder = 7
       Visible = False
+      ExplicitLeft = 453
     end
     object CurrClearBitBtn: TBitBtn
-      Left = 491
+      Left = 487
       Top = 38
       Width = 23
       Height = 23
@@ -311,9 +317,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 8
       Visible = False
       OnClick = CurrClearBitBtnClick
+      ExplicitLeft = 483
     end
     object ReqByDateEdit: TEdit
-      Left = 822
+      Left = 818
       Top = 34
       Width = 69
       Height = 21
@@ -322,9 +329,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 9
       OnChange = ReqByDateEditChange
       OnExit = ReqByDateEditExit
+      ExplicitLeft = 814
     end
     object edtAccountTeam: TEdit
-      Left = 687
+      Left = 683
       Top = 34
       Width = 115
       Height = 21
@@ -333,9 +341,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 6
+      ExplicitLeft = 679
     end
     object edtAccountManager: TEdit
-      Left = 687
+      Left = 683
       Top = 10
       Width = 95
       Height = 21
@@ -344,9 +353,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 10
+      ExplicitLeft = 679
     end
     object btnAccountManager: TButton
-      Left = 788
+      Left = 784
       Top = 8
       Width = 23
       Height = 23
@@ -360,6 +370,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 11
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 780
     end
   end
   object stsbrDetails: TStatusBar
@@ -377,6 +388,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       item
         Width = 250
       end>
+    ExplicitTop = 545
+    ExplicitWidth = 974
   end
   object Panel4: TPanel
     Left = 0
@@ -385,16 +398,20 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Height = 449
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 974
+    ExplicitHeight = 448
     object OrderLinePage: TPageControl
       Tag = 180
       Left = 1
       Top = 1
       Width = 976
       Height = 447
-      ActivePage = tsGeneral
+      ActivePage = tsNCA
       Align = alClient
       TabOrder = 0
       OnChange = OrderLinePageChange
+      ExplicitWidth = 972
+      ExplicitHeight = 446
       object tsGeneral: TTabSheet
         Caption = 'General'
         DesignSize = (
@@ -403,7 +420,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label32: TLabel
           Left = 391
           Top = 82
-          Width = 56
+          Width = 49
           Height = 13
           Caption = 'Form Ref.'
           Font.Charset = ANSI_CHARSET
@@ -416,14 +433,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label37: TLabel
           Left = 391
           Top = 134
-          Width = 51
+          Width = 53
           Height = 13
           Caption = 'Form Desc'
         end
         object Label25: TLabel
           Left = 391
           Top = 56
-          Width = 56
+          Width = 51
           Height = 13
           Caption = 'Order No.'
           Font.Charset = ANSI_CHARSET
@@ -436,7 +453,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label30: TLabel
           Left = 8
           Top = 4
-          Width = 53
+          Width = 50
           Height = 13
           Caption = 'Customer'
           Font.Charset = ANSI_CHARSET
@@ -449,7 +466,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label36: TLabel
           Left = 8
           Top = 31
-          Width = 45
+          Width = 40
           Height = 13
           Caption = 'Contact'
           Font.Charset = ANSI_CHARSET
@@ -462,7 +479,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label35: TLabel
           Left = 8
           Top = 83
-          Width = 24
+          Width = 20
           Height = 13
           Caption = 'Rep'
           Font.Charset = ANSI_CHARSET
@@ -475,7 +492,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label18: TLabel
           Left = 8
           Top = 108
-          Width = 65
+          Width = 59
           Height = 13
           Caption = 'Description'
           Font.Charset = ANSI_CHARSET
@@ -488,7 +505,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label47: TLabel
           Left = 8
           Top = 180
-          Width = 70
+          Width = 63
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Product/Cat'
@@ -498,12 +515,11 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 198
         end
         object Label48: TLabel
           Left = 8
           Top = 230
-          Width = 35
+          Width = 32
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Depth'
@@ -513,12 +529,11 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 248
         end
         object Label50: TLabel
           Left = 228
           Top = 230
-          Width = 34
+          Width = 32
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Width'
@@ -528,12 +543,11 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 248
         end
         object Label34: TLabel
           Left = 809
           Top = 31
-          Width = 105
+          Width = 108
           Height = 13
           Caption = 'Expected Life (weeks)'
           Visible = False
@@ -541,11 +555,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label51: TLabel
           Left = 8
           Top = 308
-          Width = 55
+          Width = 58
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Qty per Box'
-          ExplicitTop = 326
         end
         object Label53: TLabel
           Left = 8
@@ -560,29 +573,27 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label52: TLabel
           Left = 8
           Top = 256
-          Width = 51
+          Width = 58
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Numbering'
-          ExplicitTop = 274
         end
         object Label41: TLabel
-          Left = 391
+          Left = 386
           Top = 156
-          Width = 36
+          Width = 41
           Height = 13
           Alignment = taRightJustify
           Caption = 'Artwork'
         end
         object PlateChangeLbl: TLabel
-          Left = 242
+          Left = 238
           Top = 282
-          Width = 61
+          Width = 65
           Height = 13
           Alignment = taRightJustify
           Anchors = [akLeft, akBottom]
           Caption = 'No. of Plates'
-          ExplicitTop = 300
         end
         object Label31: TLabel
           Left = 391
@@ -592,9 +603,9 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'Stock Ref.'
         end
         object Label55: TLabel
-          Left = 387
+          Left = 393
           Top = 28
-          Width = 60
+          Width = 54
           Height = 13
           Alignment = taRightJustify
           Caption = 'Date req'#39'd'
@@ -629,8 +640,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label61: TLabel
           Left = 587
           Top = 21
-          Width = 62
-          Height = 26
+          Width = 49
+          Height = 39
           Caption = 'Expected Reorder date'
           WordWrap = True
         end
@@ -658,16 +669,15 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label70: TLabel
           Left = 8
           Top = 156
-          Width = 73
+          Width = 76
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Descriptive Ref'
-          ExplicitTop = 174
         end
         object lblAltPurchaseOrder: TLabel
           Left = 583
           Top = 56
-          Width = 84
+          Width = 75
           Height = 13
           Caption = 'SAP Order No.'
           Font.Charset = ANSI_CHARSET
@@ -835,6 +845,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnChange = CustDescEditChange
           OnEnter = CustDescEditEnter
           OnExit = CustDescEditExit
+          ExplicitHeight = 43
         end
         object OnHoldChkBox: TCheckBox
           Left = 451
@@ -855,6 +866,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           ReadOnly = True
           TabOrder = 9
+          ExplicitTop = 175
         end
         object ProdTypeBtn: TButton
           Left = 339
@@ -871,6 +883,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ParentFont = False
           TabOrder = 10
           OnClick = ProdTypeBtnClick
+          ExplicitTop = 175
         end
         object DepthEdit: TEdit
           Tag = 3
@@ -882,6 +895,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 12
           OnChange = DepthEditChange
           OnExit = DepthEditExit
+          ExplicitTop = 225
         end
         object WidthEdit: TEdit
           Tag = 4
@@ -893,6 +907,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 14
           OnChange = WidthEditChange
           OnExit = WidthEditExit
+          ExplicitTop = 225
         end
         object Unit1: TEdit
           Tag = 5
@@ -905,6 +920,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ReadOnly = True
           TabOrder = 13
           Text = 'mm'
+          ExplicitTop = 225
         end
         object Unit2: TEdit
           Tag = 6
@@ -917,6 +933,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ReadOnly = True
           TabOrder = 15
           Text = 'mm'
+          ExplicitTop = 225
         end
         object UpDown1: TUpDown
           Left = 191
@@ -928,6 +945,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabStop = True
           OnChanging = UpDown1Changing
           OnExit = UpDown1Exit
+          ExplicitTop = 224
         end
         object UpDown2: TUpDown
           Left = 367
@@ -939,6 +957,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabStop = True
           OnChanging = UpDown2Changing
           OnExit = UpDown2Exit
+          ExplicitTop = 224
         end
         object ExpectedLifeSpinEdit: TSpinEdit
           Left = 926
@@ -970,6 +989,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ShowHint = True
           TabOrder = 16
           OnClick = defaultSizeBtnClick
+          ExplicitTop = 224
         end
         object FormsPerBoxEdit: TEdit
           Left = 87
@@ -980,6 +1000,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           TabOrder = 20
           OnExit = FormsPerBoxEditExit
+          ExplicitTop = 303
         end
         object SetsEdit: TEdit
           Left = 87
@@ -989,6 +1010,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Anchors = [akLeft, akBottom]
           TabOrder = 18
           OnExit = SetsEditExit
+          ExplicitTop = 277
         end
         object NumberingEdit: TEdit
           Left = 87
@@ -999,6 +1021,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 80
           TabOrder = 17
           OnExit = NumberingEditExit
+          ExplicitTop = 251
         end
         object ArtEdit: TMemo
           Left = 451
@@ -1010,6 +1033,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ScrollBars = ssVertical
           TabOrder = 30
           OnExit = ArtEditExit
+          ExplicitHeight = 67
         end
         object PlateChangeSpin: TSpinEdit
           Tag = 108
@@ -1023,6 +1047,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 19
           Value = 0
           OnExit = PlateChangeSpinExit
+          ExplicitTop = 276
         end
         object ArtworkBtn: TButton
           Left = 736
@@ -1046,10 +1071,12 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 86
           Align = alBottom
           TabOrder = 36
+          ExplicitTop = 332
+          ExplicitWidth = 964
           object Label42: TLabel
             Left = 5
             Top = 9
-            Width = 48
+            Width = 45
             Height = 13
             Caption = 'Quantity'
             Font.Charset = ANSI_CHARSET
@@ -1062,7 +1089,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label43: TLabel
             Left = 5
             Top = 36
-            Width = 59
+            Width = 51
             Height = 13
             Caption = 'Cost Price'
             Font.Charset = ANSI_CHARSET
@@ -1075,7 +1102,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label44: TLabel
             Left = 5
             Top = 63
-            Width = 55
+            Width = 46
             Height = 13
             Caption = 'Sell Price'
             Font.Charset = ANSI_CHARSET
@@ -1088,14 +1115,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label60: TLabel
             Left = 167
             Top = 9
-            Width = 52
+            Width = 55
             Height = 13
             Caption = 'Deliver Qty'
           end
           object Label45: TLabel
             Left = 167
             Top = 36
-            Width = 53
+            Width = 48
             Height = 13
             Caption = 'Cost Unit'
             Font.Charset = ANSI_CHARSET
@@ -1108,7 +1135,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label46: TLabel
             Left = 167
             Top = 63
-            Width = 49
+            Width = 43
             Height = 13
             Caption = 'Sell Unit'
             Font.Charset = ANSI_CHARSET
@@ -1121,21 +1148,21 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label26: TLabel
             Left = 487
             Top = 36
-            Width = 53
+            Width = 56
             Height = 13
             Caption = 'Total Costs'
           end
           object Label27: TLabel
             Left = 487
             Top = 63
-            Width = 53
+            Width = 54
             Height = 13
             Caption = 'Total Sales'
           end
           object ProfitLabel: TLabel
-            Left = 661
+            Left = 657
             Top = 36
-            Width = 24
+            Width = 28
             Height = 13
             Alignment = taRightJustify
             Caption = 'Profit'
@@ -1143,35 +1170,35 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object ProfPercLabel: TLabel
             Left = 650
             Top = 63
-            Width = 35
+            Width = 40
             Height = 13
             Caption = '% Profit'
           end
           object Label28: TLabel
             Left = 330
             Top = 36
-            Width = 48
+            Width = 52
             Height = 13
             Caption = 'Cost Chgs'
           end
           object Label29: TLabel
             Left = 330
             Top = 63
-            Width = 56
+            Width = 59
             Height = 13
             Caption = 'Sales Chrgs'
           end
           object Label49: TLabel
             Left = 330
             Top = 9
-            Width = 60
+            Width = 63
             Height = 13
             Caption = 'Qty Invoiced'
           end
           object Label62: TLabel
             Left = 488
             Top = 9
-            Width = 51
+            Width = 42
             Height = 13
             Caption = 'Vat Rate'
             Font.Charset = ANSI_CHARSET
@@ -1395,24 +1422,25 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Anchors = [akLeft, akBottom]
           Caption = 'Proofs'
           TabOrder = 32
+          ExplicitTop = 250
           object ProofByLabel: TLabel
             Left = 8
             Top = 22
-            Width = 60
+            Width = 65
             Height = 13
             Caption = 'Required by:'
           end
           object ProofStatLabel: TLabel
             Left = 8
             Top = 53
-            Width = 70
+            Width = 77
             Height = 13
             Caption = 'Current Status:'
           end
           object lblProofStatus: TLabel
             Left = 256
             Top = 53
-            Width = 23
+            Width = 24
             Height = 13
             Caption = 'Date'
             Visible = False
@@ -1532,6 +1560,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           TabOrder = 8
           OnExit = edtDescReferenceExit
+          ExplicitTop = 151
         end
         object pnlFSCClaim: TPanel
           Left = 0
@@ -1541,17 +1570,18 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Anchors = [akLeft, akBottom]
           BevelOuter = bvNone
           TabOrder = 11
+          ExplicitTop = 198
           object lblFSCClaim: TLabel
             Left = 8
             Top = 6
-            Width = 52
+            Width = 48
             Height = 13
             Caption = 'FSC/PEFC'
           end
           object lblFSCMix: TLabel
             Left = 288
             Top = 6
-            Width = 27
+            Width = 30
             Height = 13
             Caption = '% Mix'
           end
@@ -1611,7 +1641,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object lblCostCentre: TLabel
             Left = 8
             Top = 7
-            Width = 55
+            Width = 60
             Height = 13
             Caption = 'Cost Centre'
           end
@@ -1650,6 +1680,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'File Copies Received'
           TabOrder = 37
           OnClick = chkbxFileCopiesClick
+          ExplicitTop = 230
         end
         object edtAltPurchaseOrder: TEdit
           Left = 670
@@ -1666,14 +1697,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 968
+          Width = 964
           Height = 136
           Align = alTop
           TabOrder = 0
           object sgPartDetails: TStringGrid
             Left = 1
             Top = 1
-            Width = 966
+            Width = 962
             Height = 134
             Align = alClient
             ColCount = 12
@@ -1777,7 +1808,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object SameAsLbl: TLabel
             Left = 286
             Top = 52
-            Width = 63
+            Width = 64
             Height = 13
             Caption = 'Same as Part'
             Visible = False
@@ -1925,7 +1956,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object ProductQLbl: TLabel
             Left = 16
             Top = 8
-            Width = 125
+            Width = 138
             Height = 13
             Caption = 'Questions for Product type'
           end
@@ -1940,42 +1971,42 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label56: TLabel
           Left = 8
           Top = 24
-          Width = 45
+          Width = 51
           Height = 13
           Caption = 'Supplier'#39's'
         end
         object Label38: TLabel
           Left = 8
           Top = 38
-          Width = 53
+          Width = 59
           Height = 13
           Caption = 'Description'
         end
         object Label39: TLabel
           Left = 8
           Top = 80
-          Width = 82
+          Width = 86
           Height = 13
           Caption = 'Quote Reference'
         end
         object Label40: TLabel
           Left = 8
           Top = 105
-          Width = 70
+          Width = 72
           Height = 13
           Caption = 'Job Reference'
         end
         object Label57: TLabel
           Left = 400
           Top = 8
-          Width = 66
+          Width = 70
           Height = 13
           Caption = 'Extra Charges'
         end
         object Label12: TLabel
           Left = 8
           Top = 184
-          Width = 77
+          Width = 87
           Height = 13
           Caption = 'Additional Notes'
         end
@@ -2012,7 +2043,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object ExtChgDetsStringGrid: TStringGrid
           Left = 400
           Top = 24
-          Width = 498
+          Width = 494
           Height = 89
           Anchors = [akLeft, akTop, akRight]
           ColCount = 3
@@ -2320,30 +2351,30 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label58: TLabel
           Left = 4
           Top = 8
-          Width = 170
+          Width = 187
           Height = 13
           Caption = 'Deliveries for the selected Order line'
         end
         object Label6: TLabel
-          Left = 276
+          Left = 272
           Top = 257
-          Width = 70
+          Width = 73
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Total Deliv Qty'
-          ExplicitLeft = 328
+          ExplicitLeft = 276
         end
         object OrdQtyLbl: TLabel
-          Left = 277
+          Left = 273
           Top = 282
-          Width = 68
+          Width = 77
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Order Quantity'
-          ExplicitLeft = 329
+          ExplicitLeft = 277
         end
         object Label69: TLabel
-          Left = 149
+          Left = 145
           Top = 332
           Width = 44
           Height = 13
@@ -2354,7 +2385,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object DelivDetsStringGrid: TStringGrid
           Left = 4
           Top = 24
-          Width = 431
+          Width = 427
           Height = 185
           Anchors = [akLeft, akTop, akRight]
           ColCount = 2
@@ -2443,7 +2474,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnClick = DelivDelBitBtnClick
         end
         object QtyMemo: TMemo
-          Left = 363
+          Left = 359
           Top = 252
           Width = 73
           Height = 25
@@ -2457,7 +2488,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 4
         end
         object OrdQtyMemo: TMemo
-          Left = 363
+          Left = 359
           Top = 278
           Width = 73
           Height = 23
@@ -2481,21 +2512,21 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label1: TLabel
             Left = 156
             Top = 293
-            Width = 62
+            Width = 70
             Height = 13
             Caption = 'Cust required'
           end
           object Label11: TLabel
             Left = 323
             Top = 293
-            Width = 69
+            Width = 74
             Height = 13
             Caption = 'Date delivered'
           end
           object Label59: TLabel
             Left = 156
             Top = 261
-            Width = 66
+            Width = 74
             Height = 13
             Caption = 'Supp required'
           end
@@ -2510,7 +2541,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label24: TLabel
               Left = 9
               Top = 10
-              Width = 95
+              Width = 104
               Height = 13
               Caption = 'Delivery Instructions'
             end
@@ -2549,14 +2580,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object AddrTypeLabel: TLabel
               Left = 8
               Top = 28
-              Width = 24
+              Width = 23
               Height = 13
               Caption = 'Type'
             end
             object BranchNameLabel: TLabel
               Left = 8
               Top = 76
-              Width = 34
+              Width = 35
               Height = 13
               Caption = 'Branch'
               Font.Charset = ANSI_CHARSET
@@ -2569,7 +2600,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label16: TLabel
               Left = 8
               Top = 101
-              Width = 38
+              Width = 41
               Height = 13
               Caption = 'Address'
               Font.Charset = ANSI_CHARSET
@@ -2582,7 +2613,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label17: TLabel
               Left = 8
               Top = 202
-              Width = 45
+              Width = 47
               Height = 13
               Caption = 'Postcode'
               Font.Charset = ANSI_CHARSET
@@ -2602,7 +2633,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label54: TLabel
               Left = 144
               Top = 202
-              Width = 33
+              Width = 37
               Height = 13
               Caption = 'County'
               Font.Charset = ANSI_CHARSET
@@ -2716,7 +2747,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label19: TLabel
               Left = 8
               Top = 21
-              Width = 49
+              Width = 50
               Height = 13
               Caption = 'To Deliver'
               Font.Charset = ANSI_CHARSET
@@ -2729,7 +2760,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label20: TLabel
               Left = 8
               Top = 51
-              Width = 45
+              Width = 48
               Height = 13
               Caption = 'Delivered'
               Font.Charset = ANSI_CHARSET
@@ -2742,7 +2773,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label21: TLabel
               Left = 8
               Top = 81
-              Width = 41
+              Width = 43
               Height = 13
               Caption = 'Invoiced'
               Font.Charset = ANSI_CHARSET
@@ -2755,7 +2786,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label22: TLabel
               Left = 8
               Top = 104
-              Width = 28
+              Width = 31
               Height = 13
               Caption = 'No Of'
               Font.Charset = ANSI_CHARSET
@@ -2966,7 +2997,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnClick = chkInvoiceUpfrontClick
         end
         object dblkpJobType: TDBLookupComboBox
-          Left = 213
+          Left = 209
           Top = 328
           Width = 185
           Height = 21
@@ -2979,7 +3010,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ExplicitLeft = 231
         end
         object btnClearJobType: TBitBtn
-          Left = 403
+          Left = 399
           Top = 328
           Width = 23
           Height = 23
@@ -3013,54 +3044,54 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           968
           419)
         object TLabel
-          Left = 724
+          Left = 720
           Top = 16
-          Width = 69
+          Width = 77
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'No. of Call offs'
-          ExplicitLeft = 776
+          ExplicitLeft = 724
         end
         object Label4: TLabel
-          Left = 724
+          Left = 720
           Top = 62
-          Width = 57
+          Width = 61
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Stock Order'
-          ExplicitLeft = 776
+          ExplicitLeft = 724
         end
         object Label13: TLabel
-          Left = 724
+          Left = 720
           Top = 91
-          Width = 51
+          Width = 54
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Scheduled'
-          ExplicitLeft = 776
+          ExplicitLeft = 724
         end
         object Label14: TLabel
-          Left = 724
+          Left = 720
           Top = 120
-          Width = 45
+          Width = 48
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Delivered'
-          ExplicitLeft = 776
+          ExplicitLeft = 724
         end
         object Label15: TLabel
-          Left = 724
+          Left = 720
           Top = 152
-          Width = 40
+          Width = 41
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'In Stock'
-          ExplicitLeft = 776
+          ExplicitLeft = 724
         end
         object sgCallOff: TStringGrid
           Left = 8
           Top = 8
-          Width = 692
+          Width = 688
           Height = 333
           Anchors = [akLeft, akTop, akRight, akBottom]
           ColCount = 4
@@ -3155,7 +3186,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnClick = CallOffDelBtnClick
         end
         object NoCallOffEdit: TEdit
-          Left = 833
+          Left = 829
           Top = 8
           Width = 72
           Height = 21
@@ -3165,7 +3196,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ExplicitLeft = 851
         end
         object StockQtyMemo: TMemo
-          Left = 825
+          Left = 821
           Top = 52
           Width = 80
           Height = 25
@@ -3179,7 +3210,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ExplicitLeft = 843
         end
         object SchedQtyMemo: TMemo
-          Left = 825
+          Left = 821
           Top = 81
           Width = 80
           Height = 25
@@ -3193,7 +3224,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ExplicitLeft = 843
         end
         object DelivQtyMemo: TMemo
-          Left = 825
+          Left = 821
           Top = 111
           Width = 80
           Height = 25
@@ -3207,7 +3238,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ExplicitLeft = 843
         end
         object InStockQtyMemo: TMemo
-          Left = 825
+          Left = 821
           Top = 140
           Width = 80
           Height = 25
@@ -3228,7 +3259,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object pnlStockUsage: TPanel
           Left = 0
           Top = 0
-          Width = 968
+          Width = 964
           Height = 205
           Align = alTop
           Caption = 'pnlStockUsage'
@@ -3239,33 +3270,31 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label72: TLabel
             Left = 8
             Top = 4
-            Width = 31
+            Width = 32
             Height = 13
             Caption = 'Usage'
           end
           object Label74: TLabel
             Left = 797
             Top = 177
-            Width = 58
+            Width = 60
             Height = 13
             Anchors = [akRight, akBottom]
             Caption = 'Total Usage'
-            ExplicitLeft = 805
           end
           object lblTotalUsage: TLabel
-            Left = 874
+            Left = 869
             Top = 177
-            Width = 65
+            Width = 70
             Height = 13
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'lblTotalUsage'
-            ExplicitLeft = 882
           end
           object Label76: TLabel
             Left = 10
             Top = 177
-            Width = 68
+            Width = 77
             Height = 13
             Anchors = [akLeft, akBottom]
             Caption = 'Order Quantity'
@@ -3273,7 +3302,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object lblOrdQtyStockUsage: TLabel
             Left = 120
             Top = 176
-            Width = 102
+            Width = 110
             Height = 13
             Anchors = [akLeft, akBottom]
             Caption = 'lblOrdQtyStockUsage'
@@ -3363,36 +3392,34 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 214
           Align = alClient
           TabOrder = 1
+          ExplicitWidth = 964
+          ExplicitHeight = 213
           DesignSize = (
             968
             214)
           object Label73: TLabel
             Left = 8
             Top = 4
-            Width = 65
+            Width = 70
             Height = 13
             Caption = 'Current Stock'
           end
           object Label75: TLabel
             Left = 791
             Top = 188
-            Width = 74
+            Width = 77
             Height = 13
             Anchors = [akRight, akBottom]
             Caption = 'Available Stock'
-            ExplicitLeft = 795
-            ExplicitTop = 206
           end
           object lblTotalStock: TLabel
-            Left = 868
+            Left = 863
             Top = 188
-            Width = 65
+            Width = 70
             Height = 13
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'lblTotalUsage'
-            ExplicitLeft = 872
-            ExplicitTop = 206
           end
           object dbgStock: TDBGrid
             Left = 9
@@ -3472,8 +3499,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         ImageIndex = 6
         object pnlDocs: TPanel
           Left = 0
-          Top = 209
-          Width = 968
+          Top = 208
+          Width = 964
           Height = 210
           Align = alBottom
           TabOrder = 0
@@ -3484,7 +3511,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object lblDocs: TLabel
             Left = 12
             Top = 8
-            Width = 57
+            Width = 61
             Height = 13
             Caption = 'Documents:'
           end
@@ -3531,7 +3558,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C000000000000046000000000000000000000000907E47A637F5D901
+              00000000C000000000000046000000000000000000000000A0BB3DAB3400DA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3707,7 +3734,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              00000000000000000000000000000000907E47A637F5D901907E47A637F5D901
+              0000000000000000000000000000000090943DAB3400DA0190943DAB3400DA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4183,7 +4210,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C000000000000046000000000000000000000000907E47A637F5D901
+              00000000C000000000000046000000000000000000000000A0BB3DAB3400DA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4532,20 +4559,22 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 209
           Align = alClient
           TabOrder = 1
+          ExplicitWidth = 964
+          ExplicitHeight = 208
           DesignSize = (
             968
             209)
           object Label63: TLabel
             Left = 16
             Top = 6
-            Width = 31
+            Width = 33
             Height = 13
             Caption = 'Notes:'
           end
           object lblNote: TLabel
             Left = 404
             Top = 6
-            Width = 26
+            Width = 28
             Height = 13
             Caption = 'Note:'
           end
@@ -4785,7 +4814,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             object Label10: TLabel
               Left = 9
               Top = 6
-              Width = 124
+              Width = 135
               Height = 13
               Caption = 'Non Conformance Details:'
             end
@@ -4811,7 +4840,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object pnlSalesInvs: TPanel
           Left = 0
           Top = 0
-          Width = 968
+          Width = 964
           Height = 217
           Align = alTop
           TabOrder = 0
@@ -4821,14 +4850,14 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object Label64: TLabel
             Left = 8
             Top = 4
-            Width = 69
+            Width = 70
             Height = 13
             Caption = 'Sales Invoices'
           end
           object Label66: TLabel
             Left = 204
             Top = 164
-            Width = 29
+            Width = 30
             Height = 13
             Anchors = [akLeft, akBottom]
             Caption = 'Totals'
@@ -4934,33 +4963,33 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 202
           Align = alClient
           TabOrder = 1
+          ExplicitWidth = 964
+          ExplicitHeight = 201
           DesignSize = (
             968
             202)
           object Label65: TLabel
             Left = 8
             Top = 4
-            Width = 88
+            Width = 90
             Height = 13
             Caption = 'Purchase Invoices'
           end
           object Label67: TLabel
             Left = 204
             Top = 173
-            Width = 29
+            Width = 30
             Height = 13
             Anchors = [akLeft, akBottom]
             Caption = 'Totals'
-            ExplicitTop = 191
           end
           object Label68: TLabel
             Left = 8
             Top = 173
-            Width = 39
+            Width = 44
             Height = 13
             Anchors = [akLeft, akBottom]
             Caption = 'Quantity'
-            ExplicitTop = 191
           end
           object strgrdPurchInvs: TStringGrid
             Left = 8
@@ -5052,13 +5081,15 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 513
+    ExplicitWidth = 974
     DesignSize = (
       978
       32)
     object lblAuthorisedBy: TLabel
       Left = 316
       Top = 10
-      Width = 72
+      Width = 81
       Height = 13
       Caption = 'lblAuthorisedBy'
       Color = clBtnFace
@@ -5122,7 +5153,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       OnClick = LineDelBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 842
+      Left = 838
       Top = 4
       Width = 75
       Height = 25
@@ -5149,9 +5180,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 834
     end
     object OKBitBtn: TBitBtn
-      Left = 760
+      Left = 756
       Top = 4
       Width = 75
       Height = 25
@@ -5177,6 +5209,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = OKBitBtnClick
+      ExplicitLeft = 752
     end
     object OleContainer1: TOleContainer
       Left = 592

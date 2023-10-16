@@ -2,8 +2,8 @@ object STMaintPickFrm: TSTMaintPickFrm
   Left = 32
   Top = 34
   Caption = 'Picking Confirmation by Part'
-  ClientHeight = 448
-  ClientWidth = 766
+  ClientHeight = 449
+  ClientWidth = 770
   Color = clBtnFace
   Constraints.MinHeight = 487
   Constraints.MinWidth = 782
@@ -23,42 +23,43 @@ object STMaintPickFrm: TSTMaintPickFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 766
+    Width = 770
     Height = 73
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 766
     object Label1: TLabel
       Left = 24
       Top = 41
-      Width = 57
+      Width = 60
       Height = 13
       Caption = 'Picking List:'
     end
     object Label2: TLabel
       Left = 376
       Top = 8
-      Width = 28
+      Width = 30
       Height = 13
       Caption = 'Store:'
     end
     object StoreNameLbl: TLabel
       Left = 416
       Top = 8
-      Width = 67
+      Width = 71
       Height = 13
       Caption = 'StoreNameLbl'
     end
     object Label3: TLabel
       Left = 24
       Top = 8
-      Width = 72
+      Width = 80
       Height = 13
       Caption = 'Order Number: '
     end
     object LblOrderNo: TLabel
       Left = 107
       Top = 8
-      Width = 54
+      Width = 60
       Height = 13
       Caption = 'LblOrderNo'
     end
@@ -73,18 +74,20 @@ object STMaintPickFrm: TSTMaintPickFrm
     end
   end
   object Panel2: TPanel
-    Left = 669
+    Left = 673
     Top = 73
     Width = 97
-    Height = 375
+    Height = 376
     Align = alRight
     TabOrder = 1
+    ExplicitLeft = 669
+    ExplicitHeight = 375
     DesignSize = (
       97
-      375)
+      376)
     object ConfirmBtn: TBitBtn
       Left = 14
-      Top = 308
+      Top = 309
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -109,10 +112,11 @@ object STMaintPickFrm: TSTMaintPickFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = ConfirmBtnClick
+      ExplicitTop = 308
     end
     object BitBtn2: TBitBtn
       Left = 14
-      Top = 348
+      Top = 349
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -121,6 +125,7 @@ object STMaintPickFrm: TSTMaintPickFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
+      ExplicitTop = 348
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -169,16 +174,18 @@ object STMaintPickFrm: TSTMaintPickFrm
   object Panel3: TPanel
     Left = 0
     Top = 73
-    Width = 669
-    Height = 375
+    Width = 673
+    Height = 376
     Align = alClient
     Caption = 'Panel3'
     TabOrder = 2
+    ExplicitWidth = 669
+    ExplicitHeight = 375
     object sgDetails: TStringGrid
       Left = 1
       Top = 1
-      Width = 667
-      Height = 373
+      Width = 671
+      Height = 374
       Align = alClient
       ColCount = 9
       DefaultColWidth = 60
@@ -191,8 +198,9 @@ object STMaintPickFrm: TSTMaintPickFrm
       TabOrder = 0
       OnClick = sgDetailsClick
       OnDblClick = sgDetailsDblClick
-      OnDrawCell = sgDetailsDrawCell
       OnSelectCell = sgDetailsSelectCell
+      ExplicitWidth = 667
+      ExplicitHeight = 373
       ColWidths = (
         123
         183

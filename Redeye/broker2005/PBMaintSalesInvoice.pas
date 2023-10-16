@@ -118,8 +118,6 @@ type
     procedure sgChargesDblClick(Sender: TObject);
     procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
       Rect: TRect; State: TGridDrawState);
-    procedure sgChargesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure btnNotesClick(Sender: TObject);
     procedure CheckNotes(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
@@ -708,6 +706,12 @@ begin
   lblAltInvoiceNumber.visible := edtAltInvoiceNumber.visible;
   SetLineHeaders;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
+
+  for var i := 0 to sgCharges.ColCount-1 do
+  begin
+    if not (i in [0,1]) then
+      sgLines.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TPBMaintSalesInvoicefrm.SetLineHeaders;
@@ -1052,6 +1056,7 @@ var
   frm: TPBMaintSalesInvoiceLineFrm;
   DeleteCharges: boolean;
 begin
+  DeleteCharges := False;
 //  inx := sgLines.row;
   inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   try
@@ -1214,7 +1219,7 @@ end;
 procedure TPBMaintSalesInvoicefrm.sgLinesDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
+  SavedAlign: integer;
 begin
   if SalesInvoice.Lines.Count > 0 then
   begin
@@ -1223,57 +1228,23 @@ begin
           (Sender as TStringGrid).Canvas.font.color := clGray;
           (Sender as TStringGrid).Canvas.font.style := Font.Style + [fsstrikeout];
         end;
+
     if (vCol = 0) or (vCol = 1) or (vCol = 2) or (vCol = 12) then
   	begin
       if (vrow > 0) and (SalesInvoice.Lines[vRow-1].NotPrinted = 'Y') then
         (Sender as TStringGrid).Canvas.font.Color := clRed;
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_LEFT);
+      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
     end
     else
   	begin
 			{Display the Columns Right justified in the cells}
       if (vrow > 0) and (SalesInvoice.Lines[vRow-1].NotPrinted = 'Y') then
         (Sender as TStringGrid).Canvas.font.Color := clRed;
-
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_RIGHT);
+      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
     end;
   end;
-end;
-
-procedure TPBMaintSalesInvoicefrm.sgChargesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TPBMaintSalesInvoicefrm.btnNotesClick(Sender: TObject);
@@ -1801,7 +1772,7 @@ end;
 procedure TPBMaintSalesInvoicefrm.sgLinesTopLeftChanged(Sender: TObject);
 var
   icount: integer;
-  iLine, iRow: integer;
+  iRow: integer;
   myImage: TImage;
 begin
   for icount := 0 to pred(componentcount) do

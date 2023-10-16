@@ -156,7 +156,6 @@ procedure TAllEmailListFrm.EmailListGridDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   cmbExportFilter.width := EmailListGrid.colwidths[Acol];
-
 end;
 
 end.

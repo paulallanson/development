@@ -91,42 +91,42 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
     object Label3: TLabel
       Left = 16
       Top = 52
-      Width = 63
+      Width = 65
       Height = 13
       Caption = 'Receipt Date'
     end
     object Label1: TLabel
       Left = 16
       Top = 116
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'GRN Number'
     end
     object Label5: TLabel
       Left = 16
       Top = 84
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Delivery Note No'
     end
     object Label4: TLabel
       Left = 16
       Top = 20
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label6: TLabel
       Left = 648
       Top = 20
-      Width = 74
+      Width = 79
       Height = 13
       Caption = 'Purchase Order'
     end
     object Label7: TLabel
       Left = 480
       Top = 116
-      Width = 70
+      Width = 74
       Height = 13
       Caption = 'Our Reference'
     end

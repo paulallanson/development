@@ -29,28 +29,28 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     object Label6: TLabel
       Left = 8
       Top = 8
-      Width = 64
+      Width = 68
       Height = 13
       Caption = 'Invoice From:'
     end
     object Label7: TLabel
       Left = 8
       Top = 140
-      Width = 68
+      Width = 72
       Height = 13
       Caption = 'Account Code'
     end
     object Label2: TLabel
       Left = 456
       Top = 78
-      Width = 61
+      Width = 63
       Height = 13
       Caption = 'Invoice Date'
     end
     object Label3: TLabel
       Left = 456
       Top = 47
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Invoice Number'
     end
@@ -64,7 +64,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     object Label9: TLabel
       Left = 456
       Top = 16
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
@@ -172,7 +172,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     object lblOrigInvoice: TStaticText
       Left = 456
       Top = 136
-      Width = 77
+      Width = 85
       Height = 17
       Caption = 'Original Invoice'
       TabOrder = 9
@@ -316,7 +316,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     object Label10: TLabel
       Left = 4
       Top = 8
-      Width = 75
+      Width = 81
       Height = 13
       Caption = 'Sundry Charges'
     end
@@ -332,7 +332,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       PopupMenu = pmnCharges
       TabOrder = 0
       OnDblClick = sgChargesDblClick
-      OnDrawCell = sgChargesDrawCell
       ColWidths = (
         40
         179
@@ -355,15 +354,15 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       object Label4: TLabel
         Left = 14
         Top = 34
-        Width = 31
+        Width = 34
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Goods'
       end
       object Label5: TLabel
-        Left = 14
+        Left = 17
         Top = 61
-        Width = 21
+        Width = 18
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -372,7 +371,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       object Label8: TLabel
         Left = 14
         Top = 90
-        Width = 24
+        Width = 25
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Total'
@@ -434,7 +433,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     PopupMenu = pmnLines
     TabOrder = 4
     OnDblClick = sgLinesDblClick
-    OnDrawCell = sgLinesDrawCell
     OnSelectCell = sgLinesSelectCell
     ColWidths = (
       40

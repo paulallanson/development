@@ -30,9 +30,8 @@ type
     StatusBar1: TStatusBar;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure strgrdOrdHistDrawCell(Sender: TObject; ACol, ARow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure FormResize(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure FillGrid;
@@ -171,30 +170,12 @@ begin
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 
-procedure TPBPOrdHistFrm.strgrdOrdHistDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
+procedure TPBPOrdHistFrm.FormCreate(Sender: TObject);
 begin
-  {The following is code extracted from the Delphi Info Base}
-  {If Heading Display Left justified in the cells}
-  if (ACol = 4) or (ACol = 5) or (ACol = 6) or (ACol = 11) or (ARow = 0)then
+  for var i := 0 to strgrdOrdHist.ColCount-1 do
   begin
-    StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-    SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-      GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-    ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    {Display the Columns Right justified in the cells}
-    StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-    SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-      GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-    ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    if not (i in [0,4,5,6,11]) then
+      strgrdOrdHist.ColAlignments[i] := taRightJustify;
   end;
 end;
 

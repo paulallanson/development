@@ -2,8 +2,8 @@ object frmWTEmailList: TfrmWTEmailList
   Left = 67
   Top = 99
   Caption = 'frmWTEmailList'
-  ClientHeight = 259
-  ClientWidth = 689
+  ClientHeight = 258
+  ClientWidth = 685
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,11 +17,13 @@ object frmWTEmailList: TfrmWTEmailList
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 689
-    Height = 218
+    Width = 685
+    Height = 217
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 689
+    ExplicitHeight = 218
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -73,11 +75,13 @@ object frmWTEmailList: TfrmWTEmailList
   end
   object Panel2: TPanel
     Left = 0
-    Top = 218
-    Width = 689
+    Top = 217
+    Width = 685
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 218
+    ExplicitWidth = 689
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8

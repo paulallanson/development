@@ -3298,6 +3298,8 @@ begin
       EnableCreditDetails;
       EnableInvoicingDetails;
     end;
+
+  pgCustomer.ActivePage := tbDetails;
 end;
 
 

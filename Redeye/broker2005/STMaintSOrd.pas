@@ -103,7 +103,6 @@ type
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
     procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure CstCntrBitBtnClick(Sender: TObject);
@@ -134,8 +133,6 @@ type
     procedure ExtChgMenuPopup(Sender: TObject);
     procedure RdBtnToCustClick(Sender: TObject);
     procedure RDBtnToAdHocClick(Sender: TObject);
-    procedure ExtChgDetsStringGridDrawCell(Sender: TObject; VCol,
-      VRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure ExtChgDetsStringGridDblClick(Sender: TObject);
     procedure pMnuMaintPopup(Sender: TObject);
     procedure LineSerialNosClick(Sender: TObject);
@@ -417,11 +414,23 @@ begin
   pnlSupplier.Top := pnlWarehouse.top;
   pnlSupplier.left := pnlWarehouse.left;
   pnlSupplier.bevelOuter := bvNone;
+
+  for var i := 0 to LineDetsStringGrid.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      LineDetsStringGrid.ColAlignments[i] := taRightJustify;
+  end;
+
+  for var i := 0 to ExtChgDetsStringGrid.ColCount-1 do
+  begin
+    if not (i in [0]) then
+      ExtChgDetsStringGrid.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TSTMaintSOrdFrm.DescrEditChange(Sender: TObject);
 begin
-CheckOK(self) ;
+  CheckOK(self) ;
 end;
 
 procedure TSTMaintSOrdFrm.DtReqBitBtnClick(Sender: TObject);
@@ -907,35 +916,6 @@ begin
 *)
   if FSelectedLineIndex = ARow - 1 then Exit;
   FSelectedLineIndex := ARow - 1;
-end;
-
-procedure TSTMaintSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-
 end;
 
 procedure TSTMaintSOrdFrm.SetupDetails(Sender: TObject);
@@ -2034,35 +2014,6 @@ procedure TSTMaintSOrdFrm.RDBtnToAdHocClick(Sender: TObject);
 begin
 Deliveryedit.Text := '';
 SetDeliverTo;
-end;
-
-procedure TSTMaintSOrdFrm.ExtChgDetsStringGridDrawCell(Sender: TObject; VCol,
-  VRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 0) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-
 end;
 
 procedure TSTMaintSOrdFrm.ExtChgDetsStringGridDblClick(Sender: TObject);

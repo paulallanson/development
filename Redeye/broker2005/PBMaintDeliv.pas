@@ -151,8 +151,6 @@ type
     procedure popChangeClick(Sender: TObject);
     procedure popDeleteClick(Sender: TObject);
     procedure pMnBinsPopup(Sender: TObject);
-    procedure sgBinsDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure sgPickDrawCell(Sender: TObject; vCol, vRow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure FormCreate(Sender: TObject);
@@ -1722,38 +1720,8 @@ begin
     end;
 end;
 
-procedure TPBMaintDelivFrm.sgBinsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 0) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-end;
-
 procedure TPBMaintDelivFrm.sgPickDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
@@ -1763,29 +1731,8 @@ begin
         begin
           Canvas.Brush.Color := Color;
         	Canvas.Font.Color  := Font.Color;
-        	Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          Cells[vCol, vRow]);
         end;
     END;
-  if (vCol <= 1) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TPBMaintDelivFrm.FormCreate(Sender: TObject);
@@ -1796,7 +1743,22 @@ begin
   dtmdlStockMove := TdtmdlStockMove.Create(Self);
   PBPODm := TPBPODm.Create(self);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
-end;
+
+  for var i := 0 to sgBins.ColCount-1 do
+  begin
+    if not (i in [0]) then
+      sgBins.ColAlignments[i] := taRightJustify;
+  end;
+
+  for var i := 0 to sgPick.ColCount-1 do
+    sgPick.ColAlignments[i] := taRightJustify;
+
+  for var i := 0 to SGStock.ColCount-1 do
+  begin
+    if not (i in [0]) then
+      SGStock.ColAlignments[i] := taRightJustify;
+  end;
+ end;
 
 procedure TPBMaintDelivFrm.sgPickSelectCell(Sender: TObject; ACol,
   ARow: Integer; var CanSelect: Boolean);
@@ -2262,8 +2224,6 @@ end;
 
 procedure TPBMaintDelivFrm.SGStockDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
@@ -2273,29 +2233,8 @@ begin
         begin
           Canvas.Brush.Color := Color;
         	Canvas.Font.Color  := Font.Color;
-        	Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          Cells[vCol, vRow]);
         end;
     END;
-  if (vCol = 0) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TPBMaintDelivFrm.TransferStock;

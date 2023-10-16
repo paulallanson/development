@@ -65,8 +65,6 @@ type
     procedure edtInvoiceDateExit(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure sgLinesDblClick(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure mnChangeLineClick(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure edtPINRefChange(Sender: TObject);
@@ -89,8 +87,6 @@ type
       var CanSelect: Boolean);
     procedure mnAddfromPOClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure sgChargesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
   private
     FMode: TpiMode;
     FSupplierInvoice: TSuppInvoice;
@@ -435,6 +431,18 @@ begin
 
   SetLineHeaders;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
+
+  for var i := 0 to sgLines.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      sgLines.ColAlignments[i] := taRightJustify;
+  end;
+
+  for var i := 0 to sgCharges.ColCount-1 do
+  begin
+    if not (i in [0,1]) then
+      sgCharges.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TPBMaintSuppInvoicefrm.SetLineHeaders;
@@ -533,32 +541,6 @@ procedure TPBMaintSuppInvoicefrm.sgLinesDblClick(Sender: TObject);
 begin
   if (Mode <> piView) and (Mode <> piDelete) then
     mnChangeLineClick(self);
-end;
-
-procedure TPBMaintSuppInvoicefrm.sgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TPBMaintSuppInvoicefrm.mnChangeLineClick(Sender: TObject);
@@ -1018,32 +1000,6 @@ end;
 procedure TPBMaintSuppInvoicefrm.FormDestroy(Sender: TObject);
 begin
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
-end;
-
-procedure TPBMaintSuppInvoicefrm.sgChargesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 end.

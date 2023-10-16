@@ -423,6 +423,18 @@ begin
   pnlSupplier.Top := pnlWarehouse.top;
   pnlSupplier.left := pnlWarehouse.left;
   pnlSupplier.bevelOuter := bvNone;
+
+  for var i := 0 to LineDetsStringGrid.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      LineDetsStringGrid.ColAlignments[i] := taRightJustify;
+  end;
+
+  for var i := 0 to ExtChgDetsStringGrid.ColCount-1 do
+  begin
+    if not (i in [0]) then
+      ExtChgDetsStringGrid.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TSTMntSOrdFrm.DescrEditChange(Sender: TObject);
@@ -918,31 +930,7 @@ end;
 
 procedure TSTMntSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-
 end;
 
 procedure TSTMntSOrdFrm.SetupDetails(Sender: TObject);
@@ -2045,31 +2033,7 @@ end;
 
 procedure TSTMntSOrdFrm.ExtChgDetsStringGridDrawCell(Sender: TObject; VCol,
   VRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 0) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-
 end;
 
 procedure TSTMntSOrdFrm.ExtChgDetsStringGridDblClick(Sender: TObject);

@@ -375,7 +375,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       PopupMenu = ExtChgMenu
       TabOrder = 1
       OnDblClick = ExtChgDetsStringGridDblClick
-      OnDrawCell = ExtChgDetsStringGridDrawCell
       OnSelectCell = ExtChgDetsStringGridSelectCell
       ColWidths = (
         202
@@ -412,7 +411,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         PopupMenu = pMnuMaint
         TabOrder = 0
         OnDblClick = LineDetsStringGridDblClick
-        OnDrawCell = LineDetsStringGridDrawCell
         OnKeyUp = LineDetsStringGridKeyUp
         OnSelectCell = LineDetsStringGridSelectCell
         ColWidths = (

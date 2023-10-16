@@ -30,9 +30,10 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     RowCount = 9
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing]
     TabOrder = 0
-    OnDrawCell = LineDetsStringGridDrawCell
     OnKeyPress = BoxQuantityEditKeyPress
     OnSelectCell = LineDetsStringGridSelectCell
+    ExplicitWidth = 753
+    ExplicitHeight = 248
     ColWidths = (
       38
       70
@@ -55,6 +56,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       item
         Width = 50
       end>
+    ExplicitTop = 410
+    ExplicitWidth = 753
   end
   object pnlFooter: TPanel
     Left = 0
@@ -64,6 +67,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 369
+    ExplicitWidth = 753
     object CancelBitBtn: TBitBtn
       Left = 656
       Top = 8
@@ -150,6 +155,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 753
     object POGroupBox: TGroupBox
       Left = 8
       Top = 8
@@ -161,14 +167,14 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       object Label1: TLabel
         Left = 16
         Top = 20
-        Width = 47
+        Width = 52
         Height = 13
         Caption = 'Customer:'
       end
       object CustomerLbl: TLabel
         Left = 80
         Top = 20
-        Width = 58
+        Width = 64
         Height = 13
         Caption = 'CustomerLbl'
       end
@@ -183,7 +189,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       object Label9: TLabel
         Left = 16
         Top = 20
-        Width = 64
+        Width = 67
         Height = 13
         Caption = 'Delivery Date'
       end
@@ -238,7 +244,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       object Label12: TLabel
         Left = 16
         Top = 20
-        Width = 53
+        Width = 56
         Height = 13
         Caption = 'Label Logo'
       end

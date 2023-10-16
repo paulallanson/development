@@ -28,8 +28,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure GenerateBtnClick(Sender: TObject);
     procedure AnalyseBtnClick(Sender: TObject);
-    procedure strgrdPOsCreatedDrawCell(Sender: TObject; ACol,
-      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure btbtnPrintClick(Sender: TObject);
   private
     procedure AnalyseALDLine(RespLine: string; var Prodcode, LineNo, SaleUnit, OrdQty, DelQty, PackCost, ReplProdDesc, ReplProdCode, PriceDiffFlg: string);
@@ -117,6 +115,12 @@ begin
     ColWidths[3] := 128;
     ColWidths[4] := 75;
     ColWidths[5] := 75;
+  end;
+
+  for var i := 0 to strgrdPOsCreated.ColCount-1 do
+  begin
+    if not (i in [0,1,2,3]) then
+      strgrdPOsCreated.ColAlignments[i] := taRightJustify;
   end;
 end;
 
@@ -374,34 +378,6 @@ begin
     Close;
   end;
   STPartSDM.Free;
-end;
-
-procedure TSTEDIPOrdFrm.strgrdPOsCreatedDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 3) then
-  begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-			{Display the Columns Right justified in the cells}
- 		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;  
 end;
 
 procedure TSTEDIPOrdFrm.AnalyseDOResponses;

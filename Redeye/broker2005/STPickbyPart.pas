@@ -47,7 +47,6 @@ type
     procedure EnableButtons(iRow: integer);
     procedure SplitAllocation(aLine: TPickLine; iQtyPicked: integer);
     procedure BitBtn2Click(Sender: TObject);
-    procedure PickingGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
   private
     FPickListNumber: string;
     FSelectedLineIndex: Integer;
@@ -288,6 +287,12 @@ procedure TSTPickbyPartFrm.FormCreate(Sender: TObject);
 begin
   bOK := false;
   PickingList := TPickingList.Create(stPickDM);
+
+  for var i := 0 to PickingGrid.ColCount-1 do
+  begin
+    if not (i in [2,5,6]) then
+      PickingGrid.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 function TSTPickbyPartFrm.GetSelectedLine: TPickLine;
@@ -833,32 +838,6 @@ end;
 procedure TSTPickbyPartFrm.BitBtn2Click(Sender: TObject);
 begin
 getnextdespNote;
-end;
-
-procedure TSTPickbyPartFrm.PickingGridDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol <> 2) and (vCol <> 5) and (vCol <>6) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TSTPickbyPartFrm.SetJobBagNumber(const Value: integer);

@@ -745,27 +745,6 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
-    end;
-  end;
-
-  {If Heading Display Left justified in the cells}
-  with sgDetails do
-  begin
-    if (ACol = 0) or (ACol = 1) then
-    begin
-      S := Cells[ACol, ARow]; // cell contents
-      SavedAlign := SetTextAlign(Canvas.Handle, TA_LEFT);
-      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign(Canvas.Handle, SavedAlign);
-    end
-    else
-    begin
-      {Display the Columns Right justified in the cells}
-      S := Cells[ACol, ARow]; // cell contents
-      SavedAlign := SetTextAlign(Canvas.Handle, TA_RIGHT);
-      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign(Canvas.Handle, SavedAlign);
     end;
   end;
 
@@ -774,7 +753,6 @@ begin
     if (gdselected in State) then
     begin
       //draw a box around the selected cell
-//      pen.Color := clHighlight;
       pen.Color := clred;
       pen.Width := 2;
       polyline([point(rect.left+1,rect.top+1),
@@ -3291,7 +3269,9 @@ end;
 
 procedure TfrmWTMaintContract.cmbOptionsClick(Sender: TObject);
 begin
-  edtQuoteValue.Text := formatfloat('£#,##0.00',Contract.GetOptionTotals(cmbOptions.ItemIndex));
+  if cmbOptions.ItemIndex >= 0 then
+    edtQuoteValue.Text := formatfloat('£#,##0.00',Contract.GetOptionTotals(cmbOptions.ItemIndex)) else
+    edtQuoteValue.Text := '';
 end;
 
 procedure TfrmWTMaintContract.edtExpiryDateExit(Sender: TObject);

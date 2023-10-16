@@ -22,45 +22,46 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Height = 57
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 648
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Sales Order'
     end
     object Label4: TLabel
       Left = 8
       Top = 32
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 32
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
     object SalesOrderlbl: TLabel
       Left = 88
       Top = 8
-      Width = 62
+      Width = 69
       Height = 13
       Caption = 'SalesOrderlbl'
     end
     object Label6: TLabel
       Left = 368
       Top = 8
-      Width = 52
+      Width = 57
       Height = 13
       Caption = 'Order Date'
     end
     object OrderDatelbl: TLabel
       Left = 456
       Top = 8
-      Width = 80
+      Width = 86
       Height = 13
       Caption = 'DateRequiredLbl'
     end
@@ -72,13 +73,15 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Height = 51
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 363
+    ExplicitWidth = 648
     DesignSize = (
       652
       51)
     object lblPickingConfirmed: TLabel
       Left = 8
       Top = 12
-      Width = 352
+      Width = 338
       Height = 26
       Caption = 
         'This Picking Note has been confirmed and the details cannot be  ' +
@@ -100,7 +103,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       TabOrder = 3
     end
     object Previewbitbtn: TBitBtn
-      Left = 394
+      Left = 390
       Top = 14
       Width = 75
       Height = 25
@@ -128,9 +131,10 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 0
       OnClick = PreviewbitbtnClick
+      ExplicitLeft = 386
     end
     object PrintBitBtn: TBitBtn
-      Left = 483
+      Left = 479
       Top = 14
       Width = 75
       Height = 25
@@ -159,9 +163,10 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 475
     end
     object CancelBitBtn: TBitBtn
-      Left = 572
+      Left = 568
       Top = 14
       Width = 75
       Height = 25
@@ -177,6 +182,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 2
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 564
     end
   end
   object Panel3: TPanel
@@ -186,17 +192,18 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Height = 56
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 648
     object Label2: TLabel
       Left = 8
       Top = 4
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Picking Notes'
     end
     object Label1: TLabel
       Left = 256
       Top = 25
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end
@@ -265,6 +272,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
     OnSelectCell = sgDetailsSelectCell
+    ExplicitWidth = 648
+    ExplicitHeight = 250
     ColWidths = (
       119
       203

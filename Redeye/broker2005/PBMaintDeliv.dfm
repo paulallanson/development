@@ -25,6 +25,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 549
+    ExplicitWidth = 620
     DesignSize = (
       624
       41)
@@ -118,6 +120,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 425
     end
     object CancelBitBtn: TBitBtn
       Left = 517
@@ -195,6 +198,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 513
     end
   end
   object pnlFormRef: TPanel
@@ -205,45 +209,46 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 620
     object POrderLbl: TLabel
       Left = 8
       Top = 4
-      Width = 47
+      Width = 51
       Height = 13
       Caption = 'POrderLbl'
     end
     object CustomerLbl: TLabel
       Left = 208
       Top = 4
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label12: TLabel
       Left = 8
       Top = 55
-      Width = 76
+      Width = 80
       Height = 13
       Caption = 'Form Reference'
     end
     object Label17: TLabel
       Left = 8
       Top = 30
-      Width = 81
+      Width = 82
       Height = 13
       Caption = 'Stock Reference'
     end
     object lblOrderPrice: TLabel
       Left = 384
       Top = 22
-      Width = 52
+      Width = 58
       Height = 13
       Caption = 'Order price'
     end
     object lblOrderQty: TLabel
       Left = 384
       Top = 47
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Order Qty'
     end
@@ -301,6 +306,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 620
+    ExplicitHeight = 468
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
@@ -311,10 +318,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 612
+        ExplicitHeight = 88
         object Label10: TLabel
           Left = 16
           Top = 10
-          Width = 95
+          Width = 104
           Height = 13
           Caption = 'Delivery Instructions'
         end
@@ -335,24 +344,25 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Caption = 'Panel1'
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 612
         object Label9: TLabel
           Left = 160
           Top = 258
-          Width = 75
+          Width = 83
           Height = 13
           Caption = 'Supp req'#39'd date'
         end
         object Label11: TLabel
           Left = 376
           Top = 284
-          Width = 71
+          Width = 75
           Height = 13
           Caption = 'Date Delivered'
         end
         object Label18: TLabel
           Left = 160
           Top = 284
-          Width = 71
+          Width = 79
           Height = 13
           Caption = 'Cust req'#39'd date'
         end
@@ -383,14 +393,14 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object AddrTypeLabel: TLabel
             Left = 8
             Top = 19
-            Width = 49
+            Width = 51
             Height = 13
             Caption = 'Addr Type'
           end
           object BranchNameLabel: TLabel
             Left = 8
             Top = 66
-            Width = 34
+            Width = 35
             Height = 13
             Caption = 'Branch'
             Font.Charset = ANSI_CHARSET
@@ -403,7 +413,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label4: TLabel
             Left = 8
             Top = 89
-            Width = 38
+            Width = 41
             Height = 13
             Caption = 'Address'
             Font.Charset = ANSI_CHARSET
@@ -416,7 +426,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label7: TLabel
             Left = 8
             Top = 184
-            Width = 45
+            Width = 47
             Height = 13
             Caption = 'Postcode'
             Font.Charset = ANSI_CHARSET
@@ -442,7 +452,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label19: TLabel
             Left = 184
             Top = 182
-            Width = 33
+            Width = 37
             Height = 13
             Caption = 'County'
             Font.Charset = ANSI_CHARSET
@@ -597,7 +607,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label5: TLabel
             Left = 8
             Top = 20
-            Width = 49
+            Width = 50
             Height = 13
             Caption = 'To Deliver'
             Font.Charset = ANSI_CHARSET
@@ -610,7 +620,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label6: TLabel
             Left = 8
             Top = 46
-            Width = 45
+            Width = 48
             Height = 13
             Caption = 'Delivered'
             Font.Charset = ANSI_CHARSET
@@ -623,7 +633,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label8: TLabel
             Left = 8
             Top = 72
-            Width = 41
+            Width = 43
             Height = 13
             Caption = 'Invoiced'
             Font.Charset = ANSI_CHARSET
@@ -636,7 +646,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label1: TLabel
             Left = 8
             Top = 123
-            Width = 57
+            Width = 62
             Height = 13
             Caption = 'No of boxes'
             Font.Charset = ANSI_CHARSET
@@ -649,14 +659,14 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label14: TLabel
             Left = 8
             Top = 98
-            Width = 37
+            Width = 38
             Height = 13
             Caption = 'Box Qty'
           end
           object Label2: TLabel
             Left = 8
             Top = 148
-            Width = 62
+            Width = 68
             Height = 13
             Caption = 'Weight (gms)'
             Font.Charset = ANSI_CHARSET
@@ -902,6 +912,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 612
         object lblCourier: TLabel
           Left = 16
           Top = 12
@@ -913,14 +924,14 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         object Label20: TLabel
           Left = 160
           Top = 12
-          Width = 36
+          Width = 35
           Height = 13
           Caption = 'Service'
         end
         object Label21: TLabel
           Left = 377
           Top = 12
-          Width = 70
+          Width = 68
           Height = 13
           Caption = 'Package Type'
         end
@@ -975,7 +986,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         PopupMenu = pMnBins
         TabOrder = 0
         OnDblClick = popChangeClick
-        OnDrawCell = sgBinsDrawCell
         ColWidths = (
           173
           74
@@ -1019,7 +1029,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object Label15: TLabel
         Left = 16
         Top = 298
-        Width = 75
+        Width = 81
         Height = 13
         Caption = 'Quantity to Pick'
       end
@@ -1095,7 +1105,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object FromStoreLabel: TLabel
         Left = 32
         Top = 24
-        Width = 25
+        Width = 27
         Height = 13
         Caption = 'Store'
       end
@@ -1162,6 +1172,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
+    ExplicitTop = 590
+    ExplicitWidth = 620
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup

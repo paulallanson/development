@@ -511,6 +511,12 @@ begin
   sgLines.cells[8,0] := 'Nominal';
   sgLines.cells[9,0] := 'Credit Type';
   sgLines.cells[10,0] := 'Cost';
+
+  for var i := 0 to sgLines.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      sgLines.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TfrmWTMaintSalesInvoice.btnOKClick(Sender: TObject);
@@ -743,29 +749,17 @@ end;
 
 procedure TfrmWTMaintSalesInvoice.sgLinesDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  S: string;
-  SavedAlign: Cardinal;
 begin
   if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 11) then
   	begin
       if (ARow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
         (Sender as TStringGrid).Canvas.font.Color := clRed;
-      S := (Sender as TStringGrid).Cells[ACol, ARow];
-      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_LEFT);
-      (Sender as TStringGrid).Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
      end
   else
   	begin
 			{Display the Columns Right justified in the cells}
       if (ARow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
         (Sender as TStringGrid).Canvas.font.Color := clRed;
-
-      S := (Sender as TStringGrid).Cells[ACol, ARow];
-      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_RIGHT);
-      (Sender as TStringGrid).Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
-      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
     end;
 end;
 

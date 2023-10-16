@@ -51,8 +51,6 @@ type
     procedure DeliveryDateEditExit(Sender: TObject);
     procedure DeliveryDateEditChange(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; vcol,
-      vrow: Integer; Rect: TRect; State: TGridDrawState);
     procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormActivate(Sender: TObject);
     procedure FormRefClrBitBtnClick(Sender: TObject);
@@ -334,6 +332,12 @@ begin
   dmIntSel := TdmIntSel.Create(Self);
   FPrinted := false;
   GetDefaultPrinter;
+
+  for var i := 0 to LineDetsStringGrid.ColCount-1 do
+  begin
+    if not (i in [1,2]) then
+      LineDetsStringGrid.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TSTRSBoxLabelsfrm.FormDestroy(Sender: TObject);
@@ -664,35 +668,6 @@ If iSinglesQty = (iPackSize*iNoOfPacks) then
 else
         Result := iNoOfPacks+1 ;
 end;
-procedure TSTRSBoxLabelsfrm.LineDetsStringGridDrawCell(Sender: TObject;
-  vcol, vrow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (vCol = 1) or (vCol = 2) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-
-end;
-
 procedure TSTRSBoxLabelsfrm.LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   if Acol < 5 then
