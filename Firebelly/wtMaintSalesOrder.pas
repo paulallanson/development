@@ -667,6 +667,8 @@ procedure TfrmWTMaintSalesOrder.FormCreate(Sender: TObject);
 begin
   bOK := false;
 
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   {Set job type}
   if not dtmdlWorktops.UseRemedialsAsOrders then
     begin

@@ -2,8 +2,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Left = 322
   Top = 35
   Caption = 'Customer details'
-  ClientHeight = 551
-  ClientWidth = 834
+  ClientHeight = 542
+  ClientWidth = 838
   Color = clBtnFace
   Constraints.MinHeight = 459
   Constraints.MinWidth = 850
@@ -21,21 +21,19 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 490
-    Width = 834
+    Top = 481
+    Width = 838
     Height = 42
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    DesignSize = (
-      834
-      42)
+    ExplicitTop = 472
+    ExplicitWidth = 832
     object lblDelete: TLabel
-      Left = 411
-      Top = 15
-      Width = 163
+      Left = 397
+      Top = 14
+      Width = 142
       Height = 13
-      Anchors = [akRight, akBottom]
       Caption = 'Delete the selected record ?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -43,14 +41,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 488
     end
     object btnOK: TBitBtn
-      Left = 590
+      Left = 576
       Top = 9
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
       ModalResult = 1
@@ -59,11 +55,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
-      Left = 676
+      Left = 662
       Top = 9
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
       Cancel = True
       Caption = 'Cancel'
       NumGlyphs = 2
@@ -111,28 +106,30 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 834
-    Height = 490
+    Width = 838
+    Height = 481
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 832
+    ExplicitHeight = 472
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
         Left = 0
         Top = 0
-        Width = 826
-        Height = 462
+        Width = 830
+        Height = 453
         Align = alClient
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          826
-          462)
+          830
+          453)
         object Label1: TLabel
           Left = 8
           Top = 12
-          Width = 33
+          Width = 31
           Height = 13
           Caption = 'Name'
           Font.Charset = DEFAULT_CHARSET
@@ -145,7 +142,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label2: TLabel
           Left = 8
           Top = 43
-          Width = 35
+          Width = 30
           Height = 13
           Caption = 'Street'
           Font.Charset = DEFAULT_CHARSET
@@ -158,14 +155,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label4: TLabel
           Left = 8
           Top = 91
-          Width = 27
+          Width = 28
           Height = 13
           Caption = 'Town'
         end
         object Label6: TLabel
           Left = 8
           Top = 115
-          Width = 54
+          Width = 48
           Height = 13
           Caption = 'Postcode'
           Font.Charset = DEFAULT_CHARSET
@@ -178,14 +175,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label5: TLabel
           Left = 8
           Top = 139
-          Width = 33
+          Width = 37
           Height = 13
           Caption = 'County'
         end
         object Label7: TLabel
           Left = 8
           Top = 171
-          Width = 37
+          Width = 34
           Height = 13
           Caption = 'Phone'
           Font.Charset = DEFAULT_CHARSET
@@ -205,14 +202,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label9: TLabel
           Left = 8
           Top = 219
-          Width = 64
+          Width = 68
           Height = 13
           Caption = 'Web Address'
         end
         object Label10: TLabel
           Left = 384
           Top = 43
-          Width = 85
+          Width = 78
           Height = 13
           Caption = 'Customer Type'
           Font.Charset = DEFAULT_CHARSET
@@ -225,7 +222,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object lblDiscountRate: TLabel
           Left = 384
           Top = 91
-          Width = 95
+          Width = 85
           Height = 13
           Caption = 'Discount Rate %'
           FocusControl = chkbxFactored
@@ -239,7 +236,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label3: TLabel
           Left = 384
           Top = 115
-          Width = 56
+          Width = 45
           Height = 13
           Caption = 'VAT Rate'
           Font.Charset = DEFAULT_CHARSET
@@ -252,21 +249,21 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label12: TLabel
           Left = 384
           Top = 224
-          Width = 60
+          Width = 66
           Height = 13
           Caption = 'Credit Status'
         end
         object Label13: TLabel
           Left = 384
           Top = 250
-          Width = 51
+          Width = 58
           Height = 13
           Caption = 'Credit Limit'
         end
         object Label14: TLabel
           Left = 384
           Top = 196
-          Width = 68
+          Width = 72
           Height = 13
           Caption = 'Account Code'
         end
@@ -301,14 +298,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label15: TLabel
           Left = 384
           Top = 171
-          Width = 79
+          Width = 84
           Height = 13
           Caption = 'Deposit Terms %'
         end
         object Label16: TLabel
           Left = 8
           Top = 276
-          Width = 24
+          Width = 20
           Height = 13
           Caption = 'Rep'
           Font.Charset = DEFAULT_CHARSET
@@ -335,21 +332,21 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label17: TLabel
           Left = 8
           Top = 245
-          Width = 66
+          Width = 71
           Height = 13
           Caption = 'Email Address'
         end
         object Label23: TLabel
           Left = 384
           Top = 310
-          Width = 83
+          Width = 89
           Height = 13
           Caption = 'No. of Employees'
         end
         object Label18: TLabel
           Left = 384
           Top = 139
-          Width = 73
+          Width = 75
           Height = 13
           Caption = 'Payment Terms'
         end
@@ -370,14 +367,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label30: TLabel
           Left = 384
           Top = 281
-          Width = 64
+          Width = 66
           Height = 13
           Caption = 'Invoice Label'
         end
         object Label11: TLabel
           Left = 384
           Top = 12
-          Width = 51
+          Width = 47
           Height = 13
           Caption = 'Category'
           Font.Charset = DEFAULT_CHARSET
@@ -417,7 +414,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label35: TLabel
           Left = 384
           Top = 67
-          Width = 53
+          Width = 58
           Height = 13
           Caption = 'Importance'
           Font.Charset = DEFAULT_CHARSET
@@ -444,7 +441,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label36: TLabel
           Left = 384
           Top = 340
-          Width = 104
+          Width = 108
           Height = 13
           Caption = 'End User Price Factor'
           FocusControl = chkbxFactored
@@ -458,7 +455,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label37: TLabel
           Left = 680
           Top = 340
-          Width = 27
+          Width = 28
           Height = 13
           Caption = 'Value'
         end
@@ -717,7 +714,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Tag = 200
           Left = 383
           Top = 213
-          Width = 365
+          Width = 357
           Height = 111
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
@@ -766,14 +763,15 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 272
-        Height = 462
+        Height = 453
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 444
         object Label31: TLabel
           Left = 24
           Top = 67
-          Width = 92
+          Width = 102
           Height = 13
           Caption = 'Cut Out Discount %'
           Font.Charset = DEFAULT_CHARSET
@@ -786,7 +784,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label32: TLabel
           Left = 24
           Top = 99
-          Width = 81
+          Width = 87
           Height = 13
           Caption = 'Edge Discount %'
           Font.Charset = DEFAULT_CHARSET
@@ -799,7 +797,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object lblTemplatingDiscount: TLabel
           Left = 24
           Top = 193
-          Width = 79
+          Width = 84
           Height = 13
           Caption = 'Templating Price'
           Font.Charset = DEFAULT_CHARSET
@@ -812,7 +810,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object lblFittingDiscount: TLabel
           Left = 24
           Top = 227
-          Width = 55
+          Width = 61
           Height = 13
           Caption = 'Fitting Price'
           Font.Charset = DEFAULT_CHARSET
@@ -825,7 +823,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label33: TLabel
           Left = 24
           Top = 259
-          Width = 65
+          Width = 67
           Height = 13
           Caption = 'Delivery Price'
           Font.Charset = DEFAULT_CHARSET
@@ -838,7 +836,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label34: TLabel
           Left = 24
           Top = 131
-          Width = 97
+          Width = 107
           Height = 13
           Caption = 'Worktop Discount %'
           Font.Charset = DEFAULT_CHARSET
@@ -851,7 +849,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label38: TLabel
           Left = 24
           Top = 355
-          Width = 43
+          Width = 48
           Height = 13
           Caption = 'Unit Cost'
           Font.Charset = DEFAULT_CHARSET
@@ -947,30 +945,35 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object Panel13: TPanel
         Left = 272
         Top = 0
-        Width = 554
-        Height = 462
+        Width = 558
+        Height = 453
         Align = alClient
         Caption = 'Panel13'
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 552
+        ExplicitHeight = 444
         object Panel15: TPanel
           Left = 1
           Top = 1
-          Width = 552
+          Width = 556
           Height = 41
           Align = alTop
           Caption = 'Material Types'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 550
         end
         object pnlMaterialTypeFunctions: TPanel
-          Left = 461
+          Left = 465
           Top = 42
           Width = 92
-          Height = 378
+          Height = 369
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 459
+          ExplicitHeight = 360
           object btnMTAdd: TBitBtn
             Left = 10
             Top = 8
@@ -1002,8 +1005,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object dbgMaterialTypes: TDBGrid
           Left = 1
           Top = 42
-          Width = 460
-          Height = 378
+          Width = 464
+          Height = 369
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 2
@@ -1032,12 +1035,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
         object pnlMaterialTypeFooter: TPanel
           Left = 1
-          Top = 420
-          Width = 552
+          Top = 411
+          Width = 556
           Height = 41
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
+          ExplicitTop = 402
+          ExplicitWidth = 550
           object chkbxShowInactiveMaterialTypes: TCheckBox
             Left = 8
             Top = 8
@@ -1057,7 +1062,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 313
-        Height = 471
+        Height = 453
         Align = alLeft
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 0
@@ -1113,10 +1118,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 435
+        Height = 417
         Align = alRight
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 739
+        ExplicitHeight = 408
         object btnChangeQ: TBitBtn
           Left = 4
           Top = 40
@@ -1176,7 +1183,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 435
+        Height = 417
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
@@ -1263,12 +1270,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel4: TPanel
         Left = 0
-        Top = 435
+        Top = 417
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 408
+        ExplicitWidth = 824
         object Label19: TLabel
           Left = 8
           Top = 12
@@ -1294,7 +1303,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 435
+        Height = 417
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 0
@@ -1371,10 +1380,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 435
+        Height = 417
         Align = alRight
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 739
+        ExplicitHeight = 408
         object btnChangeSO: TBitBtn
           Left = 4
           Top = 40
@@ -1405,12 +1416,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel6: TPanel
         Left = 0
-        Top = 435
+        Top = 417
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 408
+        ExplicitWidth = 824
         object Label20: TLabel
           Left = 8
           Top = 12
@@ -1436,10 +1449,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 435
+        Height = 417
         Align = alRight
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 739
+        ExplicitHeight = 408
         object btnChangeJob: TBitBtn
           Left = 4
           Top = 40
@@ -1470,12 +1485,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel8: TPanel
         Left = 0
-        Top = 435
+        Top = 417
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 408
+        ExplicitWidth = 824
         object Label21: TLabel
           Left = 8
           Top = 12
@@ -1496,7 +1513,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 435
+        Height = 417
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
@@ -1590,7 +1607,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 435
+        Height = 417
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 0
@@ -1660,10 +1677,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 435
+        Height = 417
         Align = alRight
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 739
+        ExplicitHeight = 408
         object btnPrintInv: TBitBtn
           Left = 4
           Top = 40
@@ -1685,12 +1704,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel10: TPanel
         Left = 0
-        Top = 435
+        Top = 417
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 408
+        ExplicitWidth = 824
         object Label22: TLabel
           Left = 8
           Top = 12
@@ -1712,15 +1733,15 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Activity'
       ImageIndex = 6
       object Panel3: TPanel
-        Left = 733
+        Left = 737
         Top = 0
         Width = 93
-        Height = 329
+        Height = 320
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 737
-        ExplicitHeight = 338
+        ExplicitLeft = 731
+        ExplicitHeight = 311
         object btnChangeEv: TBitBtn
           Left = 9
           Top = 40
@@ -1752,8 +1773,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object dbgEvents: TDBGrid
         Left = 0
         Top = 0
-        Width = 733
-        Height = 329
+        Width = 737
+        Height = 320
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
@@ -1802,24 +1823,24 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object TPanel
         Left = 0
-        Top = 329
-        Width = 826
+        Top = 320
+        Width = 830
         Height = 133
         Align = alBottom
         TabOrder = 2
-        ExplicitTop = 338
-        ExplicitWidth = 830
+        ExplicitTop = 311
+        ExplicitWidth = 824
         object Label28: TLabel
           Left = 291
           Top = 29
-          Width = 30
+          Width = 32
           Height = 13
           Caption = 'Status'
         end
         object Label29: TLabel
           Left = 8
           Top = 8
-          Width = 34
+          Width = 36
           Height = 13
           Caption = 'Phone:'
           Font.Charset = DEFAULT_CHARSET
@@ -1832,7 +1853,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object DBText2: TDBText
           Left = 56
           Top = 8
-          Width = 42
+          Width = 40
           Height = 13
           AutoSize = True
           DataField = 'Telephone_Number'
@@ -1849,28 +1870,28 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           object Label24: TLabel
             Left = 8
             Top = 24
-            Width = 30
+            Width = 33
             Height = 13
             Caption = 'Action'
           end
           object Label25: TLabel
             Left = 288
             Top = 24
-            Width = 23
+            Width = 24
             Height = 13
             Caption = 'Date'
           end
           object Label26: TLabel
             Left = 8
             Top = 53
-            Width = 44
+            Width = 47
             Height = 13
             Caption = 'To whom'
           end
           object Label27: TLabel
             Left = 288
             Top = 53
-            Width = 43
+            Width = 46
             Height = 13
             Caption = 'By whom'
           end
@@ -2001,16 +2022,18 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 17
         Width = 830
-        Height = 454
+        Height = 436
         Align = alClient
         Caption = 'Panel11'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 824
+        ExplicitHeight = 427
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
           Width = 799
-          Height = 452
+          Height = 434
           Align = alClient
           Columns = <
             item
@@ -2038,7 +2061,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Left = 800
           Top = 1
           Width = 29
-          Height = 452
+          Height = 434
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -2102,10 +2125,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 824
         object Label44: TLabel
           Left = 2
           Top = 4
-          Width = 54
+          Width = 58
           Height = 13
           Caption = 'Documents'
         end
@@ -2114,8 +2138,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 532
-    Width = 834
+    Top = 523
+    Width = 838
     Height = 19
     Panels = <
       item
@@ -2124,6 +2148,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 514
+    ExplicitWidth = 832
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer
@@ -2548,8 +2574,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       '      Unit_Cost = :Unit_Cost'
       'WHERE'
       '  Customer = :Customer')
-    Left = 520
-    Top = 432
+    Left = 570
+    Top = 380
     ParamData = <
       item
         Name = 'Customer_Name'
@@ -2727,8 +2753,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       'Select Max(Customer)+1, 1, 2, now(), :GUID'
       'From Customer'
       ' ')
-    Left = 576
-    Top = 432
+    Left = 648
+    Top = 380
     ParamData = <
       item
         Name = 'GUID'
@@ -2742,8 +2768,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       'Delete From Customer'
       'Where'
       '(Category = :Customer)')
-    Left = 632
-    Top = 432
+    Left = 726
+    Top = 380
     ParamData = <
       item
         Name = 'Customer'
@@ -2755,8 +2781,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       'Select Customer'
       'From Customer'
       'Where Customer_Name = :GUID')
-    Left = 688
-    Top = 432
+    Left = 568
+    Top = 288
     ParamData = <
       item
         Name = 'GUID'
@@ -2766,8 +2792,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object qryZero: TFDQuery
     ConnectionName = 'WT'
-    Left = 752
-    Top = 432
+    Left = 648
+    Top = 288
   end
   object qryGetAccountCodes: TFDQuery
     ConnectionName = 'WT'

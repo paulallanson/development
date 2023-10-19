@@ -468,6 +468,8 @@ end;
 
 procedure TfrmWtMaintCustomer.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlEvents := TdtmdlEvents.create(self);
   dbgEvents.DataSource := dtmdlEvents.dtsEvents;
 
