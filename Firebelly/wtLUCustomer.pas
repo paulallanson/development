@@ -355,6 +355,7 @@ procedure TfrmWTLUCustomer.FormShow(Sender: TObject);
 begin
   ShowInactive := false;
   edtSearch.setfocus;
+  FormActivate(Sender);
 end;
 
 procedure TfrmWTLUCustomer.Button1Click(Sender: TObject);

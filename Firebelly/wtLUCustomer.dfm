@@ -2,8 +2,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 343
-  ClientWidth = 702
+  ClientHeight = 351
+  ClientWidth = 704
   Color = clBtnFace
   Constraints.MinHeight = 390
   Constraints.MinWidth = 720
@@ -25,22 +25,22 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 702
+    Width = 704
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 700
+        Width = 698
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 687
+      Width = 689
       Height = 40
       ButtonHeight = 36
-      ButtonWidth = 63
+      ButtonWidth = 65
       Caption = 'ToolBar1'
       Constraints.MinHeight = 40
       Constraints.MinWidth = 50
@@ -57,7 +57,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 63
+        Left = 65
         Top = 0
         Caption = 'Chang&e'
         Enabled = False
@@ -65,7 +65,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 126
+        Left = 130
         Top = 0
         Caption = '   &Delete   '
         Enabled = False
@@ -73,7 +73,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnDeleteClick
       end
       object btnContacts: TToolButton
-        Left = 189
+        Left = 195
         Top = 0
         Caption = ' Con&tacts '
         Enabled = False
@@ -81,7 +81,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnContactsClick
       end
       object btnSites: TToolButton
-        Left = 252
+        Left = 260
         Top = 0
         Caption = 'Sites'
         Enabled = False
@@ -89,7 +89,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnSitesClick
       end
       object btnWTGroups: TToolButton
-        Left = 315
+        Left = 325
         Top = 0
         Caption = 'Worktops'
         Enabled = False
@@ -97,7 +97,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnWTGroupsClick
       end
       object btnEdgeCutoutGroups: TToolButton
-        Left = 378
+        Left = 390
         Top = 0
         Caption = 'Edges/Cuts'
         Enabled = False
@@ -105,7 +105,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         OnClick = btnEdgeCutoutGroupsClick
       end
       object ToolButton6: TToolButton
-        Left = 441
+        Left = 455
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -113,7 +113,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 449
+        Left = 463
         Top = 0
         Caption = 'Reports'
         ImageIndex = 8
@@ -123,8 +123,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 324
-    Width = 702
+    Top = 332
+    Width = 704
     Height = 19
     Panels = <
       item
@@ -133,13 +133,12 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 325
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 702
-    Height = 210
+    Width = 704
+    Height = 218
     Align = alClient
     DataSource = dtsCustomers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -266,15 +265,14 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object Panel2: TPanel
     Left = 0
-    Top = 283
-    Width = 702
+    Top = 291
+    Width = 704
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 284
     DesignSize = (
-      702
+      704
       41)
     object Label1: TLabel
       Left = 8
@@ -319,7 +317,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 598
+      Left = 594
       Top = 8
       Width = 75
       Height = 25
@@ -327,13 +325,12 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button1Click
-      ExplicitLeft = 604
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 702
+    Width = 704
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -344,20 +341,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 706
+      Width = 702
       Height = 75
       Bands = <
         item
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 698
+          Width = 696
         end>
-      ExplicitWidth = 700
       object Panel3: TPanel
         Left = 11
         Top = 0
-        Width = 685
+        Width = 687
         Height = 28
         Align = alLeft
         BevelOuter = bvNone
@@ -365,7 +361,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          685
+          687
           28)
         object Label2: TLabel
           Left = 0
@@ -381,7 +377,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 428
+          Left = 430
           Top = 7
           Width = 78
           Height = 13
@@ -393,9 +389,10 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
+          ExplicitLeft = 428
         end
         object cmbCustomerFilter: TComboBox
-          Left = 508
+          Left = 510
           Top = 3
           Width = 145
           Height = 21
