@@ -1,34 +1,33 @@
 object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   Left = 227
   Top = 138
-  Width = 870
-  Height = 480
   Caption = 'Customer Deliveries Due'
+  ClientHeight = 442
+  ClientWidth = 858
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 858
     Height = 49
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 852
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -44,23 +43,25 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 373
-    Width = 862
+    Top = 369
+    Width = 858
     Height = 54
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 360
+    ExplicitWidth = 852
     DesignSize = (
-      862
+      858
       54)
     object Label2: TLabel
       Left = 8
       Top = 22
-      Width = 74
+      Width = 77
       Height = 13
       Caption = 'Product Search'
     end
     object btnClose: TButton
-      Left = 768
+      Left = 774
       Top = 16
       Width = 75
       Height = 25
@@ -68,9 +69,10 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 768
     end
     object btnNone: TButton
-      Left = 672
+      Left = 678
       Top = 16
       Width = 75
       Height = 25
@@ -79,9 +81,10 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       ModalResult = 1
       TabOrder = 1
       OnClick = btnNoneClick
+      ExplicitLeft = 672
     end
     object btnSelect: TButton
-      Left = 576
+      Left = 582
       Top = 16
       Width = 75
       Height = 25
@@ -90,6 +93,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       Enabled = False
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 576
     end
     object edtSearch: TEdit
       Left = 96
@@ -103,8 +107,8 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 49
-    Width = 862
-    Height = 324
+    Width = 858
+    Height = 320
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
@@ -200,8 +204,8 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 427
-    Width = 862
+    Top = 423
+    Width = 858
     Height = 19
     Panels = <
       item
@@ -210,6 +214,8 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       item
         Width = 50
       end>
+    ExplicitTop = 414
+    ExplicitWidth = 852
   end
   object tmrSearch: TTimer
     Interval = 500

@@ -39,6 +39,7 @@ type
     procedure PartsDBGridDblClick(Sender: TObject);
     procedure EdtDescChange(Sender: TObject);
     procedure tlbtnCloseClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure RefreshGrid;
   public
@@ -95,6 +96,11 @@ begin
   GridTimer.Enabled := False;
 
   GridTimer.Enabled := True;
+end;
+
+procedure TSTLUPrtByCustOrderFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TSTLUPrtByCustOrderFrm.RefreshGrid;

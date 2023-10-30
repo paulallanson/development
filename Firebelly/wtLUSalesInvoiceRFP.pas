@@ -12,7 +12,7 @@ uses
 
 type
   TfrmWTLUSalesInvoiceRFP = class(TForm)
-    SIStatusBar: TStatusBar;
+    stsbrDetails: TStatusBar;
     pnlFooter: TPanel;
     ImgHot: TImageList;
     ImgCool: TImageList;
@@ -114,6 +114,8 @@ end;
 
 procedure TfrmWTLUSalesInvoiceRFP.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   ApplicationList := TStringList.create;
   allCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
   customer := 0;

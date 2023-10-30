@@ -72,6 +72,8 @@ end;
 
 procedure TPBLUSalesInvoiceSOfrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dmSalesInvoice := TdmSalesInvoice.Create(Self);
   dbgSO.DataSource := dmSalesInvoice.dsSOAll;
   dmSalesInvoice.dsSOAll.OnDataChange := SetButtons;

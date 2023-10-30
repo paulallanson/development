@@ -2,8 +2,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   Left = 22
   Top = 128
   Caption = 'Customer Quotes'
-  ClientHeight = 404
-  ClientWidth = 800
+  ClientHeight = 395
+  ClientWidth = 794
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,22 +23,22 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 800
+    Width = 794
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 794
+        Width = 788
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 785
+      Width = 779
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstButtons
       ShowCaptions = True
@@ -51,7 +51,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -59,7 +59,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Copy'
         Enabled = False
@@ -67,7 +67,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnCopyClick
       end
       object btnReQuote: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = 'Re-Quote'
         Enabled = False
@@ -75,7 +75,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnReQuoteClick
       end
       object btnDelete: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -83,7 +83,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 280
+        Left = 295
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -91,7 +91,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnPrintClick
       end
       object ToolButton1: TToolButton
-        Left = 336
+        Left = 354
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -99,7 +99,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 344
+        Left = 362
         Top = 0
         Caption = 'Con&vert'
         Enabled = False
@@ -107,7 +107,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnConvertClick
       end
       object ToolButton3: TToolButton
-        Left = 400
+        Left = 421
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -115,7 +115,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 408
+        Left = 429
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -124,8 +124,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 385
-    Width = 800
+    Top = 376
+    Width = 794
     Height = 19
     Panels = <
       item
@@ -140,28 +140,29 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 344
-    Width = 800
+    Top = 335
+    Width = 794
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      800
+      794
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 545
+      Left = 533
       Top = 16
-      Width = 69
+      Width = 76
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Quote Number'
+      ExplicitLeft = 545
     end
     object edtSearch: TEdit
       Left = 107
@@ -172,7 +173,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 728
+      Left = 716
       Top = 10
       Width = 75
       Height = 25
@@ -182,7 +183,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       OnClick = btnCloseClick
     end
     object edtNumber: TEdit
-      Left = 625
+      Left = 613
       Top = 12
       Width = 90
       Height = 21
@@ -203,7 +204,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 800
+    Width = 794
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -222,8 +223,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 125
-        Height = 20
+        Width = 122
+        Height = 21
         Caption = 'Customer Quotes'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -236,7 +237,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 391
+      Width = 385
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -244,21 +245,21 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 379
+        Width = 373
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 373
+            Width = 367
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 364
+          Width = 358
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonWidth = 66
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -277,42 +278,42 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
             OnClick = btnCustomersClick
           end
           object btnQuote: TToolButton
-            Left = 62
+            Left = 66
             Top = 0
             Caption = 'Quote'
             Enabled = False
             ImageIndex = 6
           end
           object btnEnquiries: TToolButton
-            Left = 124
+            Left = 132
             Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
-            Left = 186
+            Left = 198
             Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = btnProductionClick
           end
           object btnJobs: TToolButton
-            Left = 248
+            Left = 264
             Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
-            Left = 310
+            Left = 330
             Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
-            Left = 372
+            Left = 396
             Top = 0
             Caption = 'Sales'
             ImageIndex = 5
@@ -325,8 +326,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 800
-    Height = 269
+    Width = 794
+    Height = 260
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions

@@ -99,6 +99,7 @@ end;
 
 procedure TfrmSTMaintSalesOrder.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   STSalesOrdDM := TStSalesOrdDM.Create(Self);
   SalesOrder := TSalesOrder.Create(STSalesOrdDM);
   SetLineHeaders;

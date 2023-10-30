@@ -11,6 +11,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -21,6 +22,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 676
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -33,6 +35,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
           MinHeight = 43
           Width = 676
         end>
+      ExplicitWidth = 676
       object ToolBar2: TToolBar
         Left = 11
         Top = 0
@@ -79,17 +82,19 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 358
+    ExplicitWidth = 676
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
@@ -115,6 +120,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
         item
           Width = 50
         end>
+      ExplicitWidth = 674
     end
     object EdtDesc: TEdit
       Left = 88
@@ -136,6 +142,8 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 676
+    ExplicitHeight = 312
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1

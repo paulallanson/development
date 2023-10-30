@@ -76,6 +76,8 @@ end;
 
 procedure TfrmWTLUSalesOrderQuotes.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dtmdlSalesOrder := TdtmdlSalesOrder.Create(Application);
   dbgDetails.DataSource := dtmdlSalesOrder.dsCustQuotes;
   dtmdlSalesOrder.dsCustQuotes.OnDataChange := SetButtons;

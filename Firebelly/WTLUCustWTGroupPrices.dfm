@@ -12,10 +12,9 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -81,6 +80,8 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 519
   end
   object Panel1: TPanel
     Left = 0
@@ -90,6 +91,8 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 271
+    ExplicitWidth = 519
     DesignSize = (
       525
       51)
@@ -123,18 +126,19 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 429
+      Left = 423
       Top = 17
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
+      ExplicitLeft = 417
     end
     object btnExcel: TBitBtn
-      Left = 347
+      Left = 341
       Top = 17
       Width = 75
       Height = 25
@@ -143,6 +147,7 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       Enabled = False
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 335
     end
   end
   object Panel2: TPanel
@@ -152,10 +157,11 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Height = 41
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 519
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 39
+      Width = 36
       Height = 13
       Caption = 'Group:'
       Font.Charset = DEFAULT_CHARSET
@@ -168,7 +174,7 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     object lblGroupName: TLabel
       Left = 52
       Top = 16
-      Width = 80
+      Width = 77
       Height = 13
       Caption = 'lblGroupName'
       Font.Charset = DEFAULT_CHARSET
@@ -181,7 +187,7 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     object Label2: TLabel
       Left = 240
       Top = 16
-      Width = 50
+      Width = 46
       Height = 13
       Caption = 'Material:'
       Font.Charset = DEFAULT_CHARSET
@@ -194,7 +200,7 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     object lblMaterialType: TLabel
       Left = 292
       Top = 16
-      Width = 87
+      Width = 81
       Height = 13
       Caption = 'lblMaterialType'
       Font.Charset = DEFAULT_CHARSET
@@ -214,9 +220,7 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object srclkpCustWTGroupPrices: TDataSource
@@ -279,14 +283,10 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
 end

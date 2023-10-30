@@ -789,6 +789,7 @@ begin
   sSupp := '' ;
   sSuppDescr := '' ;
   sFormRef := '';
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   CCSCommon.SetDBGridCols('', 'ProductLU Col Order', frmPBMainMenu.AppIniFile, PartSDBGrid);
 end;
 

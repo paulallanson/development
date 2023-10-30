@@ -97,6 +97,8 @@ end;
 
 procedure TfrmWTLUSupplier.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtsSuppliers.OnDataChange := SetButtons;
   FChildLeft := -1;
   FChildTop := -1;

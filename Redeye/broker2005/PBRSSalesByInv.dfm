@@ -24,6 +24,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 871
+    ExplicitHeight = 178
     object OleContainer1: TOleContainer
       Left = 416
       Top = 200
@@ -146,17 +148,18 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 871
     object Label3: TLabel
       Left = 8
       Top = 183
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 183
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -184,21 +187,21 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object Label1: TLabel
       Left = 440
       Top = 15
-      Width = 90
+      Width = 95
       Height = 13
       Caption = 'From Invoice Date:'
     end
     object Label2: TLabel
       Left = 440
       Top = 84
-      Width = 80
+      Width = 81
       Height = 13
       Caption = 'To Invoice Date:'
     end
     object Label5: TLabel
       Left = 328
       Top = 183
-      Width = 89
+      Width = 96
       Height = 13
       Caption = 'Invoices to include'
     end
@@ -248,7 +251,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 1
-        Width = 89
+        Width = 94
         Height = 13
         Caption = 'Customer / Branch'
       end
@@ -409,7 +412,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       object lblRep: TLabel
         Left = 8
         Top = 4
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end
@@ -486,6 +489,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 403
+    ExplicitWidth = 871
     DesignSize = (
       877
       41)
@@ -498,6 +503,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 638
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -556,7 +562,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 565
+      Left = 559
       Top = 8
       Width = 75
       Height = 25
@@ -607,6 +613,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
+      ExplicitLeft = 553
     end
   end
   object pnlExportPrgrss: TPanel
@@ -620,7 +627,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -648,6 +655,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       item
         Width = 50
       end>
+    ExplicitTop = 444
+    ExplicitWidth = 871
   end
   object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields

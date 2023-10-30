@@ -102,6 +102,8 @@ end;
 
 procedure TPBLUSupplierInvoiceCNFrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dmSupplierInvoice := TdmSupplierInvoice.Create(Self);
   dmSupplierInvoice.dsSIHeaderGrid.OnDataChange := SetButtons;
 end;

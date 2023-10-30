@@ -93,6 +93,8 @@ var
   TempUser                    : array[0..255] of Char;
   TempUserSize                : DWORD;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := extractfilepath(application.ExeName);
 

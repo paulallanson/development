@@ -2,8 +2,8 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   Left = 0
   Top = 0
   Caption = 'Customer contact events'
-  ClientHeight = 552
-  ClientWidth = 811
+  ClientHeight = 543
+  ClientWidth = 805
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 811
+    Width = 805
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -43,8 +43,8 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 177
-        Height = 20
+        Width = 171
+        Height = 21
         Caption = 'Customer contact events'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -57,7 +57,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 402
+      Width = 396
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -65,21 +65,21 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 390
+        Width = 384
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 384
+            Width = 378
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 375
+          Width = 369
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonWidth = 66
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -98,42 +98,42 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
             ImageIndex = 0
           end
           object btnQuotes: TToolButton
-            Left = 62
+            Left = 66
             Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
-            Left = 124
+            Left = 132
             Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
-            Left = 186
+            Left = 198
             Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = btnProductionClick
           end
           object btnJobs: TToolButton
-            Left = 248
+            Left = 264
             Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
-            Left = 310
+            Left = 330
             Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
-            Left = 372
+            Left = 396
             Top = 0
             Caption = 'Sales'
             ImageIndex = 5
@@ -146,8 +146,8 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 471
-    Height = 417
+    Width = 465
+    Height = 408
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
@@ -197,22 +197,22 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 811
+    Width = 805
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 805
+        Width = 799
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 796
+      Width = 790
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -225,7 +225,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -233,7 +233,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -241,7 +241,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
         OnClick = btnDeleteClick
       end
       object btnAppointment: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = 'Appt'#39's'
         ImageIndex = 4
@@ -251,8 +251,8 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   end
   object Panel1: TPanel
     Left = 0
-    Top = 492
-    Width = 811
+    Top = 483
+    Width = 805
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -260,7 +260,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
@@ -281,7 +281,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       TabOrder = 1
     end
     object Panel2: TPanel
-      Left = 537
+      Left = 531
       Top = 1
       Width = 273
       Height = 39
@@ -302,8 +302,8 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 533
-    Width = 811
+    Top = 524
+    Width = 805
     Height = 19
     Panels = <
       item
@@ -317,10 +317,10 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       end>
   end
   object Panel5: TPanel
-    Left = 471
+    Left = 465
     Top = 75
     Width = 340
-    Height = 417
+    Height = 408
     Align = alRight
     BevelOuter = bvNone
     Caption = 'Panel5'
@@ -341,7 +341,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       Left = 0
       Top = 18
       Width = 340
-      Height = 399
+      Height = 390
       Align = alClient
       Color = clBtnFace
       ReadOnly = True

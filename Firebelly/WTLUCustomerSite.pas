@@ -46,6 +46,7 @@ type
     procedure btnSelectClick(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FisLookup: boolean;
     FSelected: boolean;
@@ -94,6 +95,11 @@ procedure TfrmWTLUCustomerSite.FormClose(Sender: TObject; var Action: TCloseActi
 begin
   Action := caFree;
   qryCustomerBranch.close;
+end;
+
+procedure TfrmWTLUCustomerSite.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUCustomerSite.BitBtn1Click(Sender: TObject);

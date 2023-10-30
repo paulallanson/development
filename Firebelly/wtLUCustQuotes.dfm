@@ -2,8 +2,8 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   Left = 77
   Top = 91
   Caption = 'Customer Quote details'
-  ClientHeight = 390
-  ClientWidth = 651
+  ClientHeight = 381
+  ClientWidth = 645
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,8 +20,8 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 371
-    Width = 651
+    Top = 362
+    Width = 645
     Height = 19
     Panels = <
       item
@@ -36,24 +36,24 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 330
-    Width = 651
+    Top = 321
+    Width = 645
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      651
+      645
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Button1: TButton
-      Left = 576
+      Left = 564
       Top = 8
       Width = 75
       Height = 25
@@ -74,22 +74,22 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 651
+    Width = 645
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 645
+        Width = 639
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 636
+      Width = 630
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 44
+      ButtonWidth = 47
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -102,7 +102,7 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 44
+        Left = 47
         Top = 0
         Caption = '&Change'
         Enabled = False
@@ -110,21 +110,21 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 88
+        Left = 94
         Top = 0
         Caption = 'C&opy'
         Enabled = False
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 132
+        Left = 141
         Top = 0
         Caption = '&Delete'
         Enabled = False
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 176
+        Left = 188
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -132,7 +132,7 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 184
+        Left = 196
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -143,8 +143,8 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 45
-    Width = 651
-    Height = 285
+    Width = 645
+    Height = 276
     Align = alClient
     DataSource = dtmdlQuote.dtsAllQuotes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

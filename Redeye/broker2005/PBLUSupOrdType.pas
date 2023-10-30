@@ -213,6 +213,8 @@ procedure TPBLUSupOrdTypeFrm.FormCreate(Sender: TObject);
 begin
   SelCode := '';
   bDisableNameChangeEvent := False;
+  stsBrDets.Top := Screen.Height - stsBrDets.Height;
+
   dmBroker.ScreenAccessControl(Self,'mnuSuppliers',frmPBMainMenu.iOperator,0,0) ;
 end;
 

@@ -3,8 +3,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   Top = 183
   BorderIcons = [biSystemMenu]
   Caption = 'Quotation Print'
-  ClientHeight = 306
-  ClientWidth = 447
+  ClientHeight = 297
+  ClientWidth = 441
   Color = clBtnFace
   Constraints.MaxHeight = 400
   Constraints.MaxWidth = 625
@@ -22,8 +22,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
-    Top = 115
-    Width = 447
+    Top = 106
+    Width = 441
     Height = 172
     Align = alBottom
     BevelOuter = bvNone
@@ -217,8 +217,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   object pnlReminder: TPanel
     Left = 0
     Top = 71
-    Width = 447
-    Height = 44
+    Width = 441
+    Height = 35
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
@@ -233,7 +233,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       object Label3: TLabel
         Left = 8
         Top = 18
-        Width = 71
+        Width = 76
         Height = 13
         Caption = 'Reminder Date'
       end
@@ -251,7 +251,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 447
+    Width = 441
     Height = 71
     Align = alTop
     BevelOuter = bvNone
@@ -267,14 +267,14 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       object Label1: TLabel
         Left = 8
         Top = 15
-        Width = 63
+        Width = 66
         Height = 13
         Caption = 'Paper Layout'
       end
       object Label2: TLabel
         Left = 8
         Top = 42
-        Width = 62
+        Width = 66
         Height = 13
         Caption = 'Letter Layout'
       end
@@ -300,8 +300,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 287
-    Width = 447
+    Top = 278
+    Width = 441
     Height = 19
     Panels = <
       item

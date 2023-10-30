@@ -2,8 +2,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   Left = 277
   Top = 110
   Caption = 'Quotes'
-  ClientHeight = 441
-  ClientWidth = 854
+  ClientHeight = 432
+  ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 854
+    Width = 848
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -33,8 +33,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 52
-      Height = 20
+      Width = 50
+      Height = 21
       Caption = 'Quotes'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -46,8 +46,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     object lblShowLive: TLabel
       Left = 96
       Top = 3
-      Width = 193
-      Height = 20
+      Width = 198
+      Height = 21
       Caption = '-  displaying only live quotes'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
@@ -62,22 +62,22 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 854
+    Width = 848
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 848
+        Width = 842
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 839
+      Width = 833
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstButtons
       ShowCaptions = True
@@ -90,7 +90,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -98,7 +98,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -106,7 +106,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = 'Re-&Quote'
         Enabled = False
@@ -114,7 +114,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -122,7 +122,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 280
+        Left = 295
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -130,7 +130,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton1: TToolButton
-        Left = 336
+        Left = 354
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -138,7 +138,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 344
+        Left = 362
         Top = 0
         Caption = 'Con&vert'
         Enabled = False
@@ -146,7 +146,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnConvertClick
       end
       object ToolButton3: TToolButton
-        Left = 400
+        Left = 421
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -154,7 +154,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 408
+        Left = 429
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -165,8 +165,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 854
-    Height = 306
+    Width = 848
+    Height = 297
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -291,15 +291,15 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 381
-    Width = 854
+    Top = 372
+    Width = 848
     Height = 41
     Align = alBottom
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -312,7 +312,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 580
+      Left = 574
       Top = 1
       Width = 273
       Height = 39
@@ -325,7 +325,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       object Label2: TLabel
         Left = 14
         Top = 13
-        Width = 69
+        Width = 76
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Quote Number'
@@ -361,8 +361,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 422
-    Width = 854
+    Top = 413
+    Width = 848
     Height = 19
     Panels = <
       item

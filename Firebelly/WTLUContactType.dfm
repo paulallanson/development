@@ -13,6 +13,7 @@ object frmWTLUContactType: TfrmWTLUContactType
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -51,6 +52,8 @@ object frmWTLUContactType: TfrmWTLUContactType
       item
         Width = 50
       end>
+    ExplicitTop = 308
+    ExplicitWidth = 470
   end
   object Panel1: TPanel
     Left = 0
@@ -60,6 +63,8 @@ object frmWTLUContactType: TfrmWTLUContactType
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 258
+    ExplicitWidth = 470
     DesignSize = (
       476
       50)

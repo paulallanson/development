@@ -14,6 +14,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 13
   object pnlControls: TPanel
@@ -24,6 +25,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 970
     DesignSize = (
       976
       117)
@@ -67,12 +69,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 604
+      Left = 598
       Top = 88
-      Width = 99
+      Width = 112
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Default Markup % =>'
+      ExplicitLeft = 604
     end
     object Label9: TLabel
       Left = 447
@@ -220,7 +223,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 869
+      Left = 863
       Top = 12
       Width = 108
       Height = 97
@@ -235,9 +238,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentBackground = False
       TabOrder = 6
       OnClick = RadioGroup1Click
+      ExplicitLeft = 857
     end
     object spnedtMarkup: TSpinEdit
-      Left = 713
+      Left = 707
       Top = 83
       Width = 41
       Height = 22
@@ -247,9 +251,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 7
       Value = 0
       OnExit = spnedtMarkupExit
+      ExplicitLeft = 701
     end
     object chkbxCustomers: TCheckBox
-      Left = 713
+      Left = 707
       Top = 16
       Width = 152
       Height = 17
@@ -257,9 +262,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Caption = 'Include inactive Customers'
       TabOrder = 8
       OnClick = cmbbxContStatusChange
+      ExplicitLeft = 701
     end
     object chkbxContacts: TCheckBox
-      Left = 713
+      Left = 707
       Top = 38
       Width = 144
       Height = 17
@@ -267,15 +273,17 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Caption = 'Include inactive Contacts'
       TabOrder = 9
       OnClick = cmbbxContStatusChange
+      ExplicitLeft = 701
     end
     object chkbxShowStatus: TCheckBox
-      Left = 713
+      Left = 707
       Top = 60
       Width = 97
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Show Status'
       TabOrder = 10
+      ExplicitLeft = 701
     end
     object Panel4: TPanel
       Left = 443
@@ -365,6 +373,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 424
+    ExplicitWidth = 970
     DesignSize = (
       976
       41)
@@ -377,6 +387,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 667
       DesignSize = (
         302
         39)
@@ -483,7 +494,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object btnCancel: TBitBtn
-      Left = 21
+      Left = 20
       Top = 9
       Width = 75
       Height = 25
@@ -508,6 +519,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 465
+    ExplicitWidth = 970
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
@@ -633,7 +646,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

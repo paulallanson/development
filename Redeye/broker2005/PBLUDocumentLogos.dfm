@@ -14,6 +14,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -57,6 +58,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
       item
         Width = 50
       end>
+    ExplicitTop = 223
+    ExplicitWidth = 396
   end
   object Panel1: TPanel
     Left = 0
@@ -65,6 +68,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
     Height = 65
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 158
+    ExplicitWidth = 396
     DesignSize = (
       402
       65)

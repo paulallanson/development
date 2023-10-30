@@ -2,7 +2,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
   Left = 315
   Top = 122
   Caption = 'Maintain Non Conformance'
-  ClientHeight = 561
+  ClientHeight = 562
   ClientWidth = 795
   Color = clBtnFace
   Constraints.MinHeight = 600
@@ -20,11 +20,13 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 499
+    Top = 500
     Width = 795
     Height = 43
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 491
+    ExplicitWidth = 789
     object Panel4: TPanel
       Left = 303
       Top = 1
@@ -33,6 +35,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 297
       DesignSize = (
         491
         41)
@@ -93,18 +96,22 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 542
+    Top = 543
     Width = 795
     Height = 19
     Panels = <>
+    ExplicitTop = 534
+    ExplicitWidth = 789
   end
   object pnlNotes: TPanel
     Left = 0
     Top = 72
     Width = 795
-    Height = 346
+    Height = 347
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 789
+    ExplicitHeight = 338
     object pnlNCAdetails: TPanel
       Left = 1
       Top = 1
@@ -113,6 +120,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Align = alTop
       Caption = 'pnlNCAdetails'
       TabOrder = 0
+      ExplicitWidth = 787
       object Panel5: TPanel
         Left = 1
         Top = 1
@@ -122,6 +130,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Alignment = taLeftJustify
         Caption = 'Non Conformance Details'
         TabOrder = 0
+        ExplicitWidth = 785
       end
       object memDetails: TMemo
         Left = 1
@@ -132,16 +141,19 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memDetailsChange
+        ExplicitWidth = 785
       end
     end
     object pnlResponse: TPanel
       Left = 1
       Top = 101
       Width = 793
-      Height = 44
+      Height = 45
       Align = alClient
       Caption = 'pnlResponse'
       TabOrder = 1
+      ExplicitWidth = 787
+      ExplicitHeight = 36
       object Panel7: TPanel
         Left = 1
         Top = 1
@@ -151,26 +163,31 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Alignment = taLeftJustify
         Caption = 'Response Details'
         TabOrder = 0
+        ExplicitWidth = 785
       end
       object memResponse: TMemo
         Left = 1
         Top = 21
         Width = 791
-        Height = 22
+        Height = 23
         Align = alClient
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memResponseChange
+        ExplicitWidth = 785
+        ExplicitHeight = 14
       end
     end
     object pnlAction: TPanel
       Left = 1
-      Top = 145
+      Top = 146
       Width = 793
       Height = 100
       Align = alBottom
       Caption = 'pnlAction'
       TabOrder = 2
+      ExplicitTop = 137
+      ExplicitWidth = 787
       object Panel6: TPanel
         Left = 1
         Top = 1
@@ -180,6 +197,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Alignment = taLeftJustify
         Caption = 'Corrective Action'
         TabOrder = 0
+        ExplicitWidth = 785
       end
       object memAction: TMemo
         Left = 1
@@ -190,16 +208,19 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memActionChange
+        ExplicitWidth = 785
       end
     end
     object pnlPrevent: TPanel
       Left = 1
-      Top = 245
+      Top = 246
       Width = 793
       Height = 100
       Align = alBottom
       Caption = 'pnlPrevent'
       TabOrder = 3
+      ExplicitTop = 237
+      ExplicitWidth = 787
       object Panel9: TPanel
         Left = 1
         Top = 1
@@ -209,6 +230,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Alignment = taLeftJustify
         Caption = 'Preventative Action'
         TabOrder = 0
+        ExplicitWidth = 785
       end
       object memPrevent: TMemo
         Left = 1
@@ -219,48 +241,53 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memPreventChange
+        ExplicitWidth = 785
       end
     end
   end
   object Panel3: TPanel
     Left = 0
-    Top = 418
+    Top = 419
     Width = 795
     Height = 81
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 410
+    ExplicitWidth = 789
     DesignSize = (
       795
       81)
     object Label12: TLabel
       Left = 328
       Top = 16
-      Width = 83
+      Width = 90
       Height = 13
       Caption = 'QA Signed off by:'
     end
     object Label13: TLabel
       Left = 416
       Top = 48
-      Width = 26
+      Width = 27
       Height = 13
       Caption = 'Date:'
     end
     object Label14: TLabel
-      Left = 631
+      Left = 625
       Top = 48
-      Width = 80
+      Width = 88
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost to Company'
+      ExplicitLeft = 631
     end
     object Label1: TLabel
-      Left = 647
+      Left = 641
       Top = 16
-      Width = 62
+      Width = 70
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost to Client'
+      ExplicitLeft = 647
     end
     object dblkpQAOperator: TDBLookupComboBox
       Left = 416
@@ -274,7 +301,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnClick = dblkpQAOperatorClick
     end
     object memTotalCost: TMemo
-      Left = 719
+      Left = 713
       Top = 44
       Width = 73
       Height = 21
@@ -285,6 +312,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
+      ExplicitLeft = 707
     end
     object BitBtn4: TBitBtn
       Left = 534
@@ -332,7 +360,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnClick = btnDateClick
     end
     object memCosttoClient: TMemo
-      Left = 719
+      Left = 713
       Top = 12
       Width = 73
       Height = 21
@@ -343,6 +371,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
+      ExplicitLeft = 707
     end
     object btnClear: TBitBtn
       Left = 568
@@ -398,64 +427,69 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Height = 72
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 789
     DesignSize = (
       795
       72)
     object Label7: TLabel
       Left = 167
       Top = 16
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label8: TLabel
-      Left = 599
+      Left = 593
       Top = 13
-      Width = 47
+      Width = 49
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Raised by'
+      ExplicitLeft = 599
     end
     object Label9: TLabel
-      Left = 339
+      Left = 333
       Top = 48
-      Width = 61
+      Width = 66
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Raising Dept'
+      ExplicitLeft = 339
     end
     object Label10: TLabel
-      Left = 586
+      Left = 580
       Top = 48
-      Width = 60
+      Width = 63
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Source Dept'
+      ExplicitLeft = 586
     end
     object Label11: TLabel
-      Left = 336
+      Left = 330
       Top = 16
       Width = 64
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Reason Type'
+      ExplicitLeft = 336
     end
     object Label2: TLabel
       Left = 8
       Top = 16
-      Width = 62
+      Width = 66
       Height = 13
       Caption = 'NCA Number'
     end
     object Label22: TLabel
       Left = 8
       Top = 48
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object edtRaisedBy: TEdit
-      Left = 654
+      Left = 648
       Top = 9
       Width = 104
       Height = 21
@@ -464,9 +498,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
+      ExplicitLeft = 642
     end
     object BitBtn2: TBitBtn
-      Left = 765
+      Left = 759
       Top = 7
       Width = 25
       Height = 25
@@ -480,9 +515,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 3
       OnClick = BitBtn2Click
+      ExplicitLeft = 753
     end
     object dblkpRaisedByDept: TDBLookupComboBox
-      Left = 407
+      Left = 401
       Top = 44
       Width = 137
       Height = 21
@@ -492,9 +528,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsRaisingDept
       TabOrder = 6
       OnClick = CheckOK
+      ExplicitLeft = 395
     end
     object dblkpSourceDept: TDBLookupComboBox
-      Left = 655
+      Left = 649
       Top = 44
       Width = 137
       Height = 21
@@ -504,9 +541,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsSourceDept
       TabOrder = 8
       OnClick = CheckOK
+      ExplicitLeft = 643
     end
     object dblkpNCType: TDBLookupComboBox
-      Left = 408
+      Left = 402
       Top = 12
       Width = 137
       Height = 21
@@ -516,9 +554,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsNCType
       TabOrder = 4
       OnClick = CheckOK
+      ExplicitLeft = 396
     end
     object BitBtn1: TBitBtn
-      Left = 550
+      Left = 544
       Top = 10
       Width = 25
       Height = 25
@@ -532,9 +571,10 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 5
       OnClick = BitBtn1Click
+      ExplicitLeft = 538
     end
     object BitBtn3: TBitBtn
-      Left = 549
+      Left = 543
       Top = 42
       Width = 25
       Height = 25
@@ -548,6 +588,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 7
       OnClick = BitBtn3Click
+      ExplicitLeft = 537
     end
     object edtDateRaised: TEdit
       Left = 199

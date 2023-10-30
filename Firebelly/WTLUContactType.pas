@@ -32,6 +32,7 @@ type
     procedure srcContactTypeDataChange(Sender: TObject; Field: TField);
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -112,6 +113,11 @@ end;
 procedure TfrmWTLUContactType.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUContactType.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUContactType.dbgDetailsDblClick(Sender: TObject);

@@ -59,6 +59,8 @@ uses UITypes, PBAutoPO;
 
 procedure TfrmpbluCustEnqsJB.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlCustEnqs := TdtmdlEnqs.create(self);
   dtmdlCustEnqs.dtsEnqsJB.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustEnqs.dtsEnqsJB;

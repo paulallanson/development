@@ -172,6 +172,8 @@ end;
 
 procedure TPBPOrdHistFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   for var i := 0 to strgrdOrdHist.ColCount-1 do
   begin
     if not (i in [0,4,5,6,11]) then

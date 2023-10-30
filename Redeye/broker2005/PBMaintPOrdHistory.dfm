@@ -13,6 +13,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
@@ -22,11 +23,13 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 364
+    ExplicitWidth = 728
     DesignSize = (
       734
       41)
     object btnClose: TButton
-      Left = 655
+      Left = 649
       Top = 8
       Width = 75
       Height = 25
@@ -34,6 +37,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 0
+      ExplicitLeft = 643
     end
   end
   object DBGrid1: TDBGrid
@@ -132,5 +136,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Width = 734
     Height = 19
     Panels = <>
+    ExplicitTop = 405
+    ExplicitWidth = 728
   end
 end

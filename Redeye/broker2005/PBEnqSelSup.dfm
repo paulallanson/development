@@ -19,29 +19,29 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   object Label2: TLabel
     Left = 8
     Top = 8
-    Width = 63
+    Width = 67
     Height = 13
     Caption = 'Not selected:'
   end
   object Label3: TLabel
     Left = 8
     Top = 228
-    Width = 45
+    Width = 46
     Height = 13
     Caption = 'Selected:'
   end
   object NoOfSuppsLabel: TLabel
-    Left = 350
+    Left = 344
     Top = 8
-    Width = 53
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'No of items'
   end
   object NoOfSelSupLabel: TLabel
-    Left = 350
+    Left = 344
     Top = 400
-    Width = 53
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'No of items'
@@ -439,6 +439,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
         Text = 'You may assign upto x suppliers.'
         Width = 50
       end>
+    ExplicitTop = 501
+    ExplicitWidth = 503
   end
   object GetSuppsSQL: TFDQuery
     ConnectionName = 'PB'

@@ -72,6 +72,8 @@ uses
 
 procedure TfrmWtLUWorktops.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dblkpMaterialType.keyvalue :=1;
 end;
 

@@ -71,6 +71,8 @@ uses
 
 procedure TPBLUContractCustomerJobsFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlCustJobs := TdtmdlJobs.create(self);
   dtmdlCustJobs.dtsContractJobs.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustJobs.dtsContractJobs;

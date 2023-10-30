@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 334
-  ClientWidth = 916
+  ClientHeight = 325
+  ClientWidth = 910
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 916
+    Width = 910
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 910
+        Width = 904
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 901
+      Width = 895
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,10 +43,10 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 889
+        Width = 883
         Height = 40
         ButtonHeight = 36
-        ButtonWidth = 56
+        ButtonWidth = 59
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -63,7 +63,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 56
+          Left = 59
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -72,7 +72,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 112
+          Left = 118
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -80,7 +80,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnDeleteClick
         end
         object ToolButton3: TToolButton
-          Left = 168
+          Left = 177
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -88,7 +88,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnPrint: TToolButton
-          Left = 176
+          Left = 185
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -96,7 +96,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 232
+          Left = 244
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -104,7 +104,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnReprintClick
         end
         object ToolButton6: TToolButton
-          Left = 288
+          Left = 303
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -112,7 +112,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 296
+          Left = 311
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
@@ -124,8 +124,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 916
-    Height = 185
+    Width = 910
+    Height = 176
     Align = alClient
     DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -297,8 +297,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 259
-    Width = 916
+    Top = 250
+    Width = 910
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -306,7 +306,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -319,7 +319,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 632
+      Left = 626
       Top = 1
       Width = 283
       Height = 54
@@ -333,14 +333,14 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object Label2: TLabel
         Left = 16
         Top = 11
-        Width = 67
+        Width = 75
         Height = 13
         Caption = 'Credit Number'
       end
       object Label3: TLabel
         Left = 16
         Top = 36
-        Width = 53
+        Width = 58
         Height = 13
         Caption = 'Credit Date'
       end
@@ -400,8 +400,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 315
-    Width = 916
+    Top = 306
+    Width = 910
     Height = 19
     Panels = <
       item
@@ -414,7 +414,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 916
+    Width = 910
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -423,13 +423,13 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     ParentBackground = False
     TabOrder = 4
     DesignSize = (
-      916
+      910
       30)
     object Label4: TLabel
       Left = 2
       Top = 3
-      Width = 109
-      Height = 24
+      Width = 107
+      Height = 25
       Caption = 'Sales Credits'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
@@ -439,9 +439,9 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 656
+      Left = 644
       Top = 7
-      Width = 69
+      Width = 78
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Customer Filter'
@@ -451,10 +451,10 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 728
+      ExplicitLeft = 656
     end
     object cmbCustomerFilter: TComboBox
-      Left = 736
+      Left = 724
       Top = 3
       Width = 145
       Height = 21

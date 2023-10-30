@@ -847,6 +847,8 @@ end;
 
 procedure TPBRSWorkIPfrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   If dmBroker.iAccCtrlMenu = 4 then
     begin
       totbyRadioGroup.ItemIndex := 2;

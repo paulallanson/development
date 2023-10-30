@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 525
-  ClientWidth = 1327
+  ClientHeight = 516
+  ClientWidth = 1321
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 506
-    Width = 1327
+    Top = 497
+    Width = 1321
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 465
-    Width = 1327
+    Top = 456
+    Width = 1321
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -47,7 +47,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -60,7 +60,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1036
+      Left = 1030
       Top = 1
       Width = 290
       Height = 39
@@ -73,9 +73,9 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         290
         39)
       object Label3: TLabel
-        Left = 29
+        Left = 22
         Top = 12
-        Width = 69
+        Width = 76
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -123,22 +123,22 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1327
+    Width = 1321
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1321
+        Width = 1315
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1312
+      Width = 1306
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 58
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -152,7 +152,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 58
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -161,7 +161,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 112
+        Left = 116
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -170,7 +170,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 168
+        Left = 174
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -178,7 +178,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 224
+        Left = 232
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -187,7 +187,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 280
+        Left = 290
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -196,7 +196,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 336
+        Left = 348
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -204,7 +204,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object btnTemplate: TToolButton
-        Left = 344
+        Left = 356
         Top = 0
         Caption = 'Template'
         Enabled = False
@@ -212,7 +212,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnTemplateClick
       end
       object btnConvert: TToolButton
-        Left = 400
+        Left = 414
         Top = 0
         Hint = 'Sales Order Confirmation'
         Caption = 'Con&firm'
@@ -223,7 +223,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnConvertClick
       end
       object btnJob: TToolButton
-        Left = 456
+        Left = 472
         Top = 0
         Hint = 'Create job from quote'
         Caption = 'Job'
@@ -232,7 +232,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnJobClick
       end
       object ToolButton2: TToolButton
-        Left = 512
+        Left = 530
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -240,7 +240,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 520
+        Left = 538
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -251,8 +251,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1327
-    Height = 388
+    Width = 1321
+    Height = 379
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
@@ -391,19 +391,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1327
+    Width = 1321
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1321
+        Width = 1315
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1312
+      Width = 1306
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -411,13 +411,13 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1312
+        1306
         28)
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 61
-        Height = 24
+        Width = 60
+        Height = 25
         Caption = 'Quotes'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -429,8 +429,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       object lblWorkinProgress: TLabel
         Left = 72
         Top = 3
-        Width = 193
-        Height = 20
+        Width = 198
+        Height = 21
         Caption = '-  displaying only live quotes'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET
@@ -442,9 +442,9 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1026
+        Left = 1020
         Top = 7
-        Width = 69
+        Width = 78
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
@@ -454,10 +454,10 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1112
+        ExplicitLeft = 1026
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1106
+        Left = 1100
         Top = 3
         Width = 145
         Height = 21

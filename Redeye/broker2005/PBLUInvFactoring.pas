@@ -32,6 +32,7 @@ type
     procedure cmbFactorFilesChange(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
     procedure btnExportClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure BuildFactorFileList;
@@ -66,6 +67,11 @@ begin
           self.qrySelFactorFileList.FieldByName('factoring_filename').asString);
     self.qrySelFactorFileList.next;
   end;
+end;
+
+procedure TPBLUInvFactoringFrm.FormCreate(Sender: TObject);
+begin
+  SIStatusBar.Top := Screen.Height - SIStatusBar.Height;
 end;
 
 procedure TPBLUInvFactoringFrm.FormShow(Sender: TObject);

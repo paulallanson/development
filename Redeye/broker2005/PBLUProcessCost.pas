@@ -699,6 +699,7 @@ procedure TPBLUProcessCostFrm.FormCreate(Sender: TObject);
 begin
   Customer := 0;
   lblDescription.caption := '';
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TPBLUProcessCostFrm.SetCustomerName(const Value: string);

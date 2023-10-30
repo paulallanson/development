@@ -275,6 +275,7 @@ var
 const
   cOnStop = 'This Customer is ON STOP, please check their current financial status.';
   cOverdue = 'This Customer''s status is OVERDUE, please check their current financial status.';
+  cConnectionDefName = 'Redeye';
 
 implementation
 

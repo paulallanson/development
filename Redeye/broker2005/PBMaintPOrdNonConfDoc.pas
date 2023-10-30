@@ -556,6 +556,7 @@ end;
 
 procedure TPBMaintPOrdNonConfDocFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 

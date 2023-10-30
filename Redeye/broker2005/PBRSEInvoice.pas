@@ -397,6 +397,7 @@ end;
 procedure TPBRSEInvoiceFrm.FormCreate(Sender: TObject);
 begin
   bOK := false;
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   dmEInvoice := TdmSalesInvoice.Create(Self);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;

@@ -20,18 +20,20 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 338
+    ExplicitWidth = 828
     DesignSize = (
       834
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object btnClose: TButton
-      Left = 759
+      Left = 753
       Top = 10
       Width = 75
       Height = 25
@@ -39,6 +41,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Close'
       TabOrder = 1
       OnClick = btnCloseClick
+      ExplicitLeft = 747
     end
     object edtSearch: TEdit
       Left = 104
@@ -49,7 +52,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       OnChange = edtSearchChange
     end
     object btnSelect: TButton
-      Left = 671
+      Left = 665
       Top = 10
       Width = 75
       Height = 25
@@ -57,6 +60,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Select'
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 659
     end
   end
   object stsbrDetails: TStatusBar
@@ -71,6 +75,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       item
         Width = 50
       end>
+    ExplicitTop = 379
+    ExplicitWidth = 828
   end
   object dbgDetails: TDBGrid
     Left = 0

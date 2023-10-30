@@ -2,8 +2,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   Left = 65
   Top = 104
   Caption = 'Prospects'
-  ClientHeight = 360
-  ClientWidth = 1219
+  ClientHeight = 351
+  ClientWidth = 1213
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,13 +20,13 @@ object frmPBLUProspects: TfrmPBLUProspects
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    1219
-    360)
+    1213
+    351)
   TextHeight = 13
   object Label4: TLabel
-    Left = 7
+    Left = -5
     Top = 7
-    Width = 75
+    Width = 83
     Height = 13
     Anchors = [akTop, akRight]
     Caption = 'Colour Code by:'
@@ -36,28 +36,28 @@ object frmPBLUProspects: TfrmPBLUProspects
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    ExplicitLeft = 13
+    ExplicitLeft = 7
   end
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1219
+    Width = 1213
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1213
+        Width = 1207
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1204
+      Width = 1198
       Height = 40
       Align = alLeft
       ButtonHeight = 36
-      ButtonWidth = 68
+      ButtonWidth = 72
       Caption = 'ToolBar1'
       Images = imglstMaint
       ParentShowHint = False
@@ -73,7 +73,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 68
+        Left = 72
         Top = 0
         Hint = 'Change record'
         Caption = '  &Change  '
@@ -82,7 +82,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 136
+        Left = 144
         Top = 0
         Hint = 'Delete record'
         Caption = '&Delete'
@@ -91,7 +91,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnDeleteClick
       end
       object btnLabels: TToolButton
-        Left = 204
+        Left = 216
         Top = 0
         Hint = 'Print address labels'
         Caption = 'Labels'
@@ -100,7 +100,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnLabelsClick
       end
       object ToolButton1: TToolButton
-        Left = 272
+        Left = 288
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -108,7 +108,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         Style = tbsSeparator
       end
       object btnBranches: TToolButton
-        Left = 280
+        Left = 296
         Top = 0
         Hint = 'Branches'
         Caption = '&Branch'
@@ -117,7 +117,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnBranchesClick
       end
       object btnContacts: TToolButton
-        Left = 348
+        Left = 368
         Top = 0
         Hint = 'Contacts'
         Caption = 'Contac&ts'
@@ -126,7 +126,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnContactsClick
       end
       object btnAccMgrs: TToolButton
-        Left = 416
+        Left = 440
         Top = 0
         Caption = 'Acc Mgrs'
         Enabled = False
@@ -134,7 +134,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnAccMgrsClick
       end
       object btnCustReps: TToolButton
-        Left = 484
+        Left = 512
         Top = 0
         Caption = '&Reps'
         Enabled = False
@@ -142,7 +142,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnCustRepsClick
       end
       object ToolButton4: TToolButton
-        Left = 552
+        Left = 584
         Top = 0
         Width = 8
         Caption = 'ToolButton4'
@@ -150,7 +150,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 560
+        Left = 592
         Top = 0
         Caption = 'Credit Check'
         Enabled = False
@@ -158,7 +158,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         OnClick = btnConvertClick
       end
       object ToolButton2: TToolButton
-        Left = 628
+        Left = 664
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -166,7 +166,7 @@ object frmPBLUProspects: TfrmPBLUProspects
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 636
+        Left = 672
         Top = 0
         Hint = 'Report selection'
         Caption = '&Reports'
@@ -178,8 +178,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1219
-    Height = 226
+    Width = 1213
+    Height = 217
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -345,15 +345,15 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object Panel1: TPanel
     Left = 0
-    Top = 300
-    Width = 1219
+    Top = 291
+    Width = 1213
     Height = 41
     Align = alBottom
     TabOrder = 2
     object lblSearch: TLabel
       Left = 16
       Top = 16
-      Width = 79
+      Width = 81
       Height = 13
       Caption = 'Prospect Search'
     end
@@ -375,7 +375,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 1033
+      Left = 1027
       Top = 1
       Width = 185
       Height = 39
@@ -404,8 +404,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 341
-    Width = 1219
+    Top = 332
+    Width = 1213
     Height = 19
     Panels = <
       item
@@ -418,7 +418,7 @@ object frmPBLUProspects: TfrmPBLUProspects
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1219
+    Width = 1213
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -428,8 +428,8 @@ object frmPBLUProspects: TfrmPBLUProspects
     object Label1: TLabel
       Left = 8
       Top = 3
-      Width = 77
-      Height = 20
+      Width = 75
+      Height = 21
       Caption = 'Customers'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -451,8 +451,8 @@ object frmPBLUProspects: TfrmPBLUProspects
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 71
-        Height = 20
+        Width = 67
+        Height = 21
         Caption = 'Prospects'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -463,7 +463,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       end
     end
     object Panel5: TPanel
-      Left = 968
+      Left = 962
       Top = 1
       Width = 250
       Height = 28
@@ -477,7 +477,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       object Label2: TLabel
         Left = 13
         Top = 7
-        Width = 75
+        Width = 83
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Colour Code by:'
@@ -509,7 +509,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     object PageScroller1: TPageScroller
       Left = 401
       Top = 1
-      Width = 567
+      Width = 561
       Height = 28
       Align = alClient
       Control = CoolBar2
@@ -517,22 +517,22 @@ object frmPBLUProspects: TfrmPBLUProspects
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 555
+        Width = 549
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 549
+            Width = 543
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 540
+          Width = 534
           Height = 25
           Align = alClient
-          ButtonWidth = 64
+          ButtonWidth = 66
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

@@ -1247,6 +1247,8 @@ end;
 
 procedure TSTMntPOrdFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   slDelLines := TStringList.Create ;
   STStockDataMod := TSTStockDataMod.Create(Self) ;
   {Get the next int_sel_code to use} ;

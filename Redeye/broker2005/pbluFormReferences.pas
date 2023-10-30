@@ -108,6 +108,7 @@ procedure TfrmPBLUFormReferences.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlAllForms := TdtmdlForms.create(self);
   dtmdlAllForms.dtsForms.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllForms.dtsForms;

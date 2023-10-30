@@ -30,6 +30,7 @@ type
     procedure edtCapabilityChange(Sender: TObject);
     procedure btnPreviewClick(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FDisableNameChangeEvent: boolean;
     procedure SetDisableNameChangeEvent(const Value: boolean);
@@ -87,6 +88,11 @@ begin
   sTemp := sTemp + 'ORDER BY Product_typecapability.description, Product_type.Description, Supplier.Name';
 
   Result := sTemp;
+end;
+
+procedure TPBRSCapabilityfrm.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TPBRSCapabilityfrm.FormShow(Sender: TObject);

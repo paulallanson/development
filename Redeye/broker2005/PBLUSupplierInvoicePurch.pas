@@ -197,6 +197,8 @@ end;
 
 procedure TPBLUSupplierInvoicePurchFrm.FormCreate(Sender: TObject);
 begin
+  stBrDetails.Top := Screen.Height - stBrDetails.Height;
+
   dmSupplierInvoice := TdmSupplierInvoice.Create(Self);
   dmSupplierInvoice.dsPurchOrd.OnDataChange := SetButtons;
   dmSupplierInvoice.qryPurchAll.AfterScroll := SetPurchaseOrderEdit;

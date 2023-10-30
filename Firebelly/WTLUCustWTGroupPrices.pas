@@ -36,6 +36,7 @@ type
     procedure btnDeleteClick(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FCustomer: integer;
     FGroupCode: integer;
@@ -205,6 +206,11 @@ end;
 procedure TfrmWTLUCustWTGroupPrices.FormActivate(Sender: TObject);
 begin
   refresh;
+end;
+
+procedure TfrmWTLUCustWTGroupPrices.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 end.

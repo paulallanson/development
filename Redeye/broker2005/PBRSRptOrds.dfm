@@ -2,8 +2,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Left = 15
   Top = 30
   Caption = 'Expected Reorder Report'
-  ClientHeight = 427
-  ClientWidth = 726
+  ClientHeight = 418
+  ClientWidth = 720
   Color = clBtnFace
   Constraints.MinHeight = 462
   Constraints.MinWidth = 735
@@ -21,7 +21,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 726
+    Width = 720
     Height = 113
     Align = alTop
     ParentBackground = False
@@ -29,7 +29,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Sort By:'
     end
@@ -43,14 +43,14 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object Label2: TLabel
       Left = 480
       Top = 84
-      Width = 120
+      Width = 130
       Height = 13
       Caption = 'Show Orders Due in Next'
     end
     object Label3: TLabel
       Left = 688
       Top = 84
-      Width = 22
+      Width = 23
       Height = 13
       Caption = 'days'
     end
@@ -174,7 +174,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       object Customerlbl: TLabel
         Left = 6
         Top = 16
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
         Visible = False
@@ -207,14 +207,14 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object pnlButton: TPanel
     Left = 0
-    Top = 367
-    Width = 726
+    Top = 358
+    Width = 720
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      726
+      720
       41)
     object CancelBitBtn: TBitBtn
       Left = 14
@@ -276,7 +276,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = btbtnChangeClick
     end
     object PreviewBitBtn: TBitBtn
-      Left = 548
+      Left = 530
       Top = 8
       Width = 75
       Height = 25
@@ -298,9 +298,10 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 536
     end
     object PrintBitBtn: TBitBtn
-      Left = 636
+      Left = 618
       Top = 8
       Width = 75
       Height = 25
@@ -322,13 +323,14 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 624
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 726
-    Height = 254
+    Width = 720
+    Height = 245
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
@@ -449,8 +451,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 408
-    Width = 726
+    Top = 399
+    Width = 720
     Height = 19
     Panels = <
       item

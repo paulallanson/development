@@ -56,6 +56,7 @@ uses
 
 procedure TfrmWTLUEdgeTypes.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   Refresh;
 end;
 

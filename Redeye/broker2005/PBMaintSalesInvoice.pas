@@ -697,6 +697,7 @@ end;
 
 procedure TPBMaintSalesInvoicefrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
   AccountsPackage := dmBroker.GetAccountsPackage;
 
   lblJobRevenue.Visible := dmBroker.UseRevenueCentres;

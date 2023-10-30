@@ -28,6 +28,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       item
         Width = 50
       end>
+    ExplicitTop = 474
+    ExplicitWidth = 768
   end
   object Panel3: TPanel
     Left = 0
@@ -37,6 +39,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 383
+    ExplicitWidth = 768
     object Panel1: TPanel
       Left = 0
       Top = 9
@@ -55,7 +59,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         object Label1: TLabel
           Left = 8
           Top = 32
-          Width = 38
+          Width = 43
           Height = 13
           Caption = 'Supplier'
         end
@@ -77,6 +81,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 447
       object GroupBox2: TGroupBox
         Left = 212
         Top = 6
@@ -172,14 +177,14 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         object Label2: TLabel
           Left = 34
           Top = 27
-          Width = 37
+          Width = 41
           Height = 13
           Caption = 'Number'
         end
         object Label3: TLabel
           Left = 34
           Top = 51
-          Width = 20
+          Width = 21
           Height = 13
           Caption = 'Line'
         end
@@ -211,6 +216,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     BevelOuter = bvNone
     Caption = 'Panel4'
     TabOrder = 2
+    ExplicitWidth = 768
+    ExplicitHeight = 383
     object dbgJB: TDBGrid
       Left = 0
       Top = 0

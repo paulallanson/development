@@ -30,6 +30,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 848
   end
   object Panel2: TPanel
     Left = 0
@@ -38,13 +40,15 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 372
+    ExplicitWidth = 848
     DesignSize = (
       854
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 74
+      Width = 77
       Height = 13
       Caption = 'Product Search'
     end
@@ -58,7 +62,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 776
+      Left = 770
       Top = 8
       Width = 75
       Height = 25
@@ -66,9 +70,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 764
     end
     object btnOK: TBitBtn
-      Left = 688
+      Left = 682
       Top = 8
       Width = 75
       Height = 25
@@ -96,9 +101,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
+      ExplicitLeft = 676
     end
     object PrintBitBtn: TBitBtn
-      Left = 566
+      Left = 560
       Top = 8
       Width = 75
       Height = 25
@@ -129,9 +135,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ShowHint = True
       TabOrder = 3
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 554
     end
     object btnExcel: TBitBtn
-      Left = 472
+      Left = 466
       Top = 8
       Width = 75
       Height = 25
@@ -183,6 +190,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 460
     end
   end
   object Panel3: TPanel
@@ -192,24 +200,25 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Height = 41
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 848
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 90
+      Width = 102
       Height = 13
       Caption = 'Fulfillment Location'
     end
     object Label3: TLabel
       Left = 640
       Top = 12
-      Width = 85
+      Width = 89
       Height = 13
       Caption = 'Transaction  Date'
     end
     object lblBinLocation: TLabel
       Left = 352
       Top = 12
-      Width = 70
+      Width = 74
       Height = 13
       Caption = 'Associated Bin'
     end
@@ -248,6 +257,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
+    ExplicitWidth = 848
+    ExplicitHeight = 331
     ColWidths = (
       178
       201

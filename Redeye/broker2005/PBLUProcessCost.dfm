@@ -23,6 +23,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 360
+    ExplicitWidth = 748
     DesignSize = (
       754
       41)
@@ -48,7 +50,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       TabOrder = 1
     end
     object btnClose: TBitBtn
-      Left = 651
+      Left = 645
       Top = 8
       Width = 75
       Height = 25
@@ -56,6 +58,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 639
     end
   end
   object StatusBar1: TStatusBar
@@ -64,6 +67,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Width = 754
     Height = 19
     Panels = <>
+    ExplicitTop = 401
+    ExplicitWidth = 748
   end
   object Panel2: TPanel
     Left = 0
@@ -72,10 +77,11 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Height = 113
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 748
     object Label2: TLabel
       Left = 8
       Top = 14
-      Width = 50
+      Width = 42
       Height = 13
       Caption = 'Process:'
       Font.Charset = DEFAULT_CHARSET
@@ -88,7 +94,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     object lblProcessDescription: TLabel
       Left = 520
       Top = 14
-      Width = 101
+      Width = 110
       Height = 13
       Caption = 'lblProcessDescription'
       Visible = False
@@ -116,7 +122,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 9
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -204,45 +210,47 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Align = alClient
     Caption = 'Panel3'
     TabOrder = 3
+    ExplicitWidth = 748
+    ExplicitHeight = 247
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 46
+      Width = 53
       Height = 13
       Caption = 'Operation'
     end
     object lblCategory: TLabel
       Left = 464
       Top = 8
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object Label3: TLabel
       Left = 608
       Top = 8
-      Width = 64
+      Width = 69
       Height = 13
       Caption = 'Sub Category'
     end
     object Label4: TLabel
       Left = 8
       Top = 228
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Unit Cost'
     end
     object Label5: TLabel
       Left = 168
       Top = 228
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Unit Sell Price'
     end
     object lblTask: TLabel
       Left = 8
       Top = 200
-      Width = 45
+      Width = 46
       Height = 13
       Caption = 'Selected:'
     end
@@ -266,7 +274,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     object lblDescription: TLabel
       Left = 64
       Top = 200
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end

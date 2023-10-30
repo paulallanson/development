@@ -783,6 +783,8 @@ end;
 
 procedure TPBMaintActivityFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   FEmailAttachment := TStringList.create;
   pgActivities.ActivePage := tbCurrent;
   CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);

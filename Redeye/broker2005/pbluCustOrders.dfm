@@ -3,8 +3,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   Top = 91
   ActiveControl = PageScroller1
   Caption = 'Customer order details'
-  ClientHeight = 541
-  ClientWidth = 793
+  ClientHeight = 532
+  ClientWidth = 787
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,29 +24,29 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 793
+    Width = 787
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 787
+        Width = 781
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 778
+      Width = 772
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 766
+        Width = 760
         Height = 41
         ButtonHeight = 44
-        ButtonWidth = 62
+        ButtonWidth = 65
         Caption = 'ToolBar1'
         Images = imglstOrders
         ParentShowHint = False
@@ -63,7 +63,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnMouseDown = btnAddMouseDown
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 65
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -72,7 +72,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnChangeClick
         end
         object btnRepeat: TToolButton
-          Left = 124
+          Left = 130
           Top = 0
           Hint = 'Repeat Order'
           Caption = '&Repeat'
@@ -81,7 +81,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnRepeatClick
         end
         object btnDelete: TToolButton
-          Left = 186
+          Left = 195
           Top = 0
           Caption = 'Delete'
           Enabled = False
@@ -89,7 +89,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnDeleteClick
         end
         object btnPrint: TToolButton
-          Left = 248
+          Left = 260
           Top = 0
           Hint = 'Print'
           Caption = '&Print'
@@ -98,7 +98,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnPrintClick
         end
         object btnrequote: TToolButton
-          Left = 310
+          Left = 325
           Top = 0
           Caption = 'Re-quote'
           Enabled = False
@@ -106,7 +106,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnrequoteClick
         end
         object btnHistory: TToolButton
-          Left = 372
+          Left = 390
           Top = 0
           Hint = 'Show Order History'
           Caption = '&History'
@@ -115,7 +115,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnHistoryClick
         end
         object btnseparator1: TToolButton
-          Left = 434
+          Left = 455
           Top = 0
           Width = 8
           Caption = 'btnseparator1'
@@ -124,7 +124,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           Visible = False
         end
         object btnAllocatefnc: TToolButton
-          Left = 442
+          Left = 463
           Top = 0
           Caption = 'Al&locate'
           DropdownMenu = pmnAllocate
@@ -134,7 +134,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnAllocatefncClick
         end
         object btnPicking: TToolButton
-          Left = 519
+          Left = 547
           Top = 0
           Caption = 'Pic&king'
           DropdownMenu = pmnPicking
@@ -142,7 +142,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           ImageIndex = 7
         end
         object ToolButton3: TToolButton
-          Left = 581
+          Left = 612
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -150,7 +150,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           Style = tbsSeparator
         end
         object btnProofs: TToolButton
-          Left = 589
+          Left = 620
           Top = 0
           Caption = 'Proo&fs'
           DropdownMenu = pmnProofs
@@ -158,7 +158,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           ImageIndex = 7
         end
         object btnDeliveriesSpacer: TToolButton
-          Left = 651
+          Left = 685
           Top = 0
           Width = 8
           Caption = 'btnDeliveriesSpacer'
@@ -166,7 +166,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 659
+          Left = 693
           Top = 0
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
@@ -175,7 +175,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnDeliveriesClick
         end
         object btnHold: TToolButton
-          Left = 721
+          Left = 758
           Top = 0
           Hint = 'On Hold'
           Caption = '&Hold'
@@ -188,33 +188,33 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 481
-    Width = 793
+    Top = 472
+    Width = 787
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      793
+      787
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 521
+      Left = 509
       Top = 16
-      Width = 64
+      Width = 73
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Order number'
-      ExplicitLeft = 557
+      ExplicitLeft = 521
     end
     object btnClose: TButton
-      Left = 697
+      Left = 685
       Top = 10
       Width = 75
       Height = 25
@@ -232,7 +232,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 599
+      Left = 587
       Top = 12
       Width = 90
       Height = 21
@@ -261,8 +261,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 522
-    Width = 793
+    Top = 513
+    Width = 787
     Height = 19
     Panels = <
       item
@@ -275,8 +275,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 793
-    Height = 407
+    Width = 787
+    Height = 398
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -421,7 +421,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 793
+    Width = 787
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -442,8 +442,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 207
-        Height = 20
+        Width = 202
+        Height = 21
         Caption = 'Customer Sales Order details'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -456,7 +456,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 384
+      Width = 378
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -464,21 +464,21 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 372
+        Width = 366
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 366
+            Width = 360
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 357
+          Width = 351
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonWidth = 66
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -497,42 +497,42 @@ object frmpbluCustOrders: TfrmpbluCustOrders
             OnClick = btnCustomersClick
           end
           object btnQuotes: TToolButton
-            Left = 62
+            Left = 66
             Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
-            Left = 124
+            Left = 132
             Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
-            Left = 186
+            Left = 198
             Top = 0
             Caption = 'Orders'
             Enabled = False
             ImageIndex = 8
           end
           object btnJobs: TToolButton
-            Left = 248
+            Left = 264
             Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
-            Left = 310
+            Left = 330
             Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
-            Left = 372
+            Left = 396
             Top = 0
             Caption = 'Sales'
             ImageIndex = 5

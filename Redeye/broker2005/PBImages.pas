@@ -43,9 +43,8 @@ var
 
 implementation
 
-
 uses
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, PBDataBase;
 
 {$R *.DFM}
 
@@ -63,7 +62,7 @@ begin
   else
     StrPCopy(AppIniFile,myRedeye_INIFILE);
 
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray,
+  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray,
     sizeof(TempArray), AppIniFile);
 
   sgList := TStringList.Create;

@@ -150,6 +150,8 @@ end;
 
 procedure TfrmWtLUWTGroupPrices.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   lkpMatType.active := true;
   dblkpMaterialType.keyvalue :=1;
   dblkpMaterialTypeClick(Self);

@@ -13,6 +13,7 @@ type
     btnClose: TButton;
     StatusBar1: TStatusBar;
     procedure FormActivate(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,6 +40,11 @@ begin
       parambyname('line').asinteger := OrderLine.Line;
       open;
     end;
+end;
+
+procedure TPBMaintPOrdHistoryFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 end.

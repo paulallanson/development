@@ -22,10 +22,11 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Height = 81
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -77,7 +78,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       object Label5: TLabel
         Left = 9
         Top = 17
-        Width = 44
+        Width = 47
         Height = 13
         Caption = 'Location:'
       end
@@ -105,6 +106,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Width = 854
     Height = 19
     Panels = <>
+    ExplicitTop = 411
+    ExplicitWidth = 848
   end
   object Panel3: TPanel
     Left = 760
@@ -113,6 +116,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Height = 339
     Align = alRight
     TabOrder = 2
+    ExplicitLeft = 754
+    ExplicitHeight = 330
     DesignSize = (
       94
       339)
@@ -173,6 +178,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
+      ExplicitTop = 254
     end
     object BitBtn2: TBitBtn
       Left = 11
@@ -183,6 +189,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 294
     end
     object btnExcel: TBitBtn
       Left = 11
@@ -247,6 +254,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 3
+    ExplicitWidth = 754
+    ExplicitHeight = 330
     object Panel5: TPanel
       Left = 1
       Top = 178
@@ -256,6 +265,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       BevelOuter = bvNone
       Caption = 'Panel3'
       TabOrder = 0
+      ExplicitTop = 169
+      ExplicitWidth = 752
       object pnlFTP: TPanel
         Left = 0
         Top = 0
@@ -267,21 +278,21 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         object Label2: TLabel
           Left = 5
           Top = 12
-          Width = 64
+          Width = 65
           Height = 13
           Caption = 'FTP Address:'
         end
         object Label3: TLabel
           Left = 5
           Top = 44
-          Width = 51
+          Width = 54
           Height = 13
           Caption = 'Username:'
         end
         object Label4: TLabel
           Left = 5
           Top = 76
-          Width = 49
+          Width = 52
           Height = 13
           Caption = 'Password:'
         end
@@ -340,6 +351,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         Style = lbOwnerDrawFixed
         Align = alClient
         TabOrder = 1
+        ExplicitWidth = 503
       end
     end
     object dbgDetails: TDBGrid

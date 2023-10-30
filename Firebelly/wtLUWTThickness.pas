@@ -138,7 +138,7 @@ begin
 end;
 procedure TfrmWTLUWTThickness.FormShow(Sender: TObject);
 begin
-  refresh;
+  Refresh;
 end;
 
 procedure TfrmWTLUWTThickness.btnPricesClick(Sender: TObject);

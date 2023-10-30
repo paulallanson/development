@@ -213,6 +213,7 @@ procedure TCSLUSupOrdTypeFrm.FormCreate(Sender: TObject);
 begin
   SelCode := '';
   bDisableNameChangeEvent := False;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 end.

@@ -3,8 +3,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Export an Electronic Invoice'
-  ClientHeight = 304
-  ClientWidth = 862
+  ClientHeight = 295
+  ClientWidth = 856
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,24 +18,24 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 285
-    Width = 862
+    Top = 276
+    Width = 856
     Height = 19
     Panels = <>
   end
   object Panel3: TPanel
-    Left = 768
+    Left = 762
     Top = 0
     Width = 94
-    Height = 285
+    Height = 276
     Align = alRight
     TabOrder = 1
     DesignSize = (
       94
-      285)
+      276)
     object btnOK: TBitBtn
       Left = 11
-      Top = 204
+      Top = 195
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -65,7 +65,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     end
     object BitBtn2: TBitBtn
       Left = 11
-      Top = 244
+      Top = 235
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -77,8 +77,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 768
-    Height = 285
+    Width = 762
+    Height = 276
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 2
@@ -91,6 +91,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       BevelOuter = bvNone
       Caption = 'Panel3'
       TabOrder = 0
+      ExplicitTop = 115
+      ExplicitWidth = 760
       object pnlFTP: TPanel
         Left = 0
         Top = 0
@@ -101,21 +103,21 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
         object Label2: TLabel
           Left = 5
           Top = 12
-          Width = 64
+          Width = 65
           Height = 13
           Caption = 'FTP Address:'
         end
         object Label3: TLabel
           Left = 5
           Top = 44
-          Width = 51
+          Width = 54
           Height = 13
           Caption = 'Username:'
         end
         object Label4: TLabel
           Left = 5
           Top = 76
-          Width = 49
+          Width = 52
           Height = 13
           Caption = 'Password:'
         end
@@ -168,7 +170,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object lstbxStatus: TListBox
         Left = 249
         Top = 0
-        Width = 517
+        Width = 511
         Height = 160
         Hint = 'Transaction Log'
         Style = lbOwnerDrawFixed
@@ -179,14 +181,14 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     object Panel1: TPanel
       Left = 1
       Top = 1
-      Width = 766
-      Height = 123
+      Width = 760
+      Height = 114
       Align = alClient
       TabOrder = 1
       object Label1: TLabel
         Left = 24
         Top = 24
-        Width = 67
+        Width = 59
         Height = 13
         Caption = 'Invoice No:'
         Font.Charset = DEFAULT_CHARSET
@@ -199,7 +201,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label5: TLabel
         Left = 264
         Top = 24
-        Width = 78
+        Width = 67
         Height = 13
         Caption = 'Invoice Date:'
         Font.Charset = DEFAULT_CHARSET
@@ -212,7 +214,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label6: TLabel
         Left = 24
         Top = 56
-        Width = 57
+        Width = 53
         Height = 13
         Caption = 'Customer:'
         Font.Charset = DEFAULT_CHARSET
@@ -225,7 +227,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label7: TLabel
         Left = 24
         Top = 88
-        Width = 69
+        Width = 62
         Height = 13
         Caption = 'Description:'
         Font.Charset = DEFAULT_CHARSET
@@ -238,7 +240,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label8: TLabel
         Left = 504
         Top = 24
-        Width = 77
+        Width = 68
         Height = 13
         Caption = 'Goods Value:'
         Font.Charset = DEFAULT_CHARSET
@@ -251,7 +253,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label9: TLabel
         Left = 504
         Top = 56
-        Width = 65
+        Width = 53
         Height = 13
         Caption = 'VAT Value:'
         Font.Charset = DEFAULT_CHARSET
@@ -264,7 +266,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       object Label10: TLabel
         Left = 504
         Top = 88
-        Width = 70
+        Width = 59
         Height = 13
         Caption = 'Total Value:'
         Font.Charset = DEFAULT_CHARSET

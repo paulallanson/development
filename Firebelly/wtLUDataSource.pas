@@ -33,6 +33,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -98,6 +99,11 @@ end;
 procedure TfrmWTLUDataSource.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUDataSource.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUDataSource.btnDeleteClick(Sender: TObject);

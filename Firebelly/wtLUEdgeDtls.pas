@@ -78,6 +78,8 @@ end;
 
 procedure TfrmWtLUEdgeDtls.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   lkpMatType.active := true;
   lkpEdgeType.active := true;
 

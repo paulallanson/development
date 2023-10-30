@@ -209,6 +209,7 @@ type
       ARow: Integer; const Value: String);
     procedure btbtnAddQuantityClick(Sender: TObject);
     procedure cmbbxPriceUnitCloseUp(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   published
     procedure QuestionChange(Sender: TObject);
     procedure QuestionDropDown(Sender: TObject);
@@ -802,6 +803,11 @@ begin
   Enquiry.Line.Width := StrToFloatDef(edtWidth.Text, 0, FormatSettings);
   Enquiry.DetailsModified := true;
   Enquiry.Line.modified := true;
+end;
+
+procedure TPBMaintEnquiryFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TPBMaintEnquiryFrm.FormRefButtonClick(Sender: TObject);

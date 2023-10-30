@@ -351,6 +351,7 @@ procedure TfrmSTLUFormRef.FormCreate(Sender: TObject);
 begin
   SelCode := 0;
   bDisableNameChangeEvent := False;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmSTLUFormRef.btbtnImagesClick(Sender: TObject);

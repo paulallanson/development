@@ -261,6 +261,8 @@ end;
 
 procedure TfrmpbluCustStock.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlStock := TdtmdlStock.create(self);
   dtmdlStock.dtsStock.OnDataChange := SetButtons;
 

@@ -73,6 +73,7 @@ uses PBMaintJobReturns, PBPartTransfer, pbMainMenu;
 
 procedure TfrmPBLUJobReturns.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlJBReturns := TdtmdlJobs.create(self);
   dtmdlJBReturns.dtsJobReturns.OnDataChange := SetButtons;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

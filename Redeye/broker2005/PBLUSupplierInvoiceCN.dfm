@@ -30,6 +30,8 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 423
+    ExplicitWidth = 775
     DesignSize = (
       781
       84)
@@ -51,7 +53,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       end
     end
     object GroupBox2: TGroupBox
-      Left = 668
+      Left = 662
       Top = 3
       Width = 105
       Height = 76
@@ -59,6 +61,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 656
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -150,6 +153,8 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 507
+    ExplicitWidth = 775
   end
   object dbgSupplierInvoice: TDBGrid
     Left = 0

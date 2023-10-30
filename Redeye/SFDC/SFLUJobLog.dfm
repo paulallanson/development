@@ -1,26 +1,24 @@
 object SFLUJobLogFrm: TSFLUJobLogFrm
   Left = 114
   Top = 112
-  Width = 1006
-  Height = 516
   Caption = 'Shop Floor Data Collection Log View'
+  ClientHeight = 478
+  ClientWidth = 994
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 463
-    Width = 998
+    Top = 459
+    Width = 994
     Height = 19
     Panels = <
       item
@@ -29,12 +27,14 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       item
         Width = 200
       end>
+    ExplicitTop = 450
+    ExplicitWidth = 988
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 998
-    Height = 386
+    Width = 994
+    Height = 382
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -171,15 +171,17 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 422
-    Width = 998
+    Top = 418
+    Width = 994
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 409
+    ExplicitWidth = 988
     object lblSearch: TLabel
       Left = 16
       Top = 16
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Employee'
     end
@@ -201,13 +203,14 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 720
+      Left = 716
       Top = 1
       Width = 277
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
+      ExplicitLeft = 710
       DesignSize = (
         277
         39)
@@ -227,8 +230,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Excel'
-        TabOrder = 1
-        OnClick = btnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -272,52 +273,59 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 1
+        OnClick = btnExcelClick
       end
     end
   end
   object Panel3: TPanel
     Left = 0
-    Top = 386
-    Width = 998
+    Top = 382
+    Width = 994
     Height = 36
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 373
+    ExplicitWidth = 988
     DesignSize = (
-      998
+      994
       36)
     object Label1: TLabel
-      Left = 832
+      Left = 838
       Top = 12
-      Width = 72
+      Width = 78
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Machine Hours'
+      ExplicitLeft = 832
     end
     object Label4: TLabel
-      Left = 672
+      Left = 678
       Top = 12
-      Width = 73
+      Width = 80
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Overtime Hours'
+      ExplicitLeft = 672
     end
     object Label5: TLabel
-      Left = 504
+      Left = 510
       Top = 12
-      Width = 74
+      Width = 81
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Standard Hours'
+      ExplicitLeft = 504
     end
     object lblDateFrom: TLabel
       Left = 16
       Top = 12
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object memMachine: TMemo
-      Left = 912
+      Left = 918
       Top = 8
       Width = 65
       Height = 21
@@ -328,9 +336,10 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 912
     end
     object memOvertime: TMemo
-      Left = 752
+      Left = 758
       Top = 8
       Width = 65
       Height = 21
@@ -341,9 +350,10 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 1
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 752
     end
     object memLabour: TMemo
-      Left = 592
+      Left = 598
       Top = 8
       Width = 65
       Height = 21
@@ -354,14 +364,15 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 2
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 592
     end
     object dtmDateFrom: TDateTimePicker
       Left = 72
       Top = 8
       Width = 89
       Height = 21
-      Date = 39825.441564409720000000
-      Time = 39825.441564409720000000
+      Date = 39825.000000000000000000
+      Time = 0.441564409717102500
       TabOrder = 3
       OnChange = dtmDateFromChange
     end

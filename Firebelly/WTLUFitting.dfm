@@ -3,8 +3,8 @@ object frmWTLUFitting: TfrmWTLUFitting
   Top = 121
   ActiveControl = cmbCustomerFilter
   Caption = 'Fitting Details'
-  ClientHeight = 378
-  ClientWidth = 1266
+  ClientHeight = 369
+  ClientWidth = 1260
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,26 +24,26 @@ object frmWTLUFitting: TfrmWTLUFitting
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1266
+    Width = 1260
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1260
+        Width = 1254
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1251
+      Width = 1245
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
       TabOrder = 0
       DesignSize = (
-        1251
+        1245
         28)
       object Label2: TLabel
         Left = 0
@@ -59,7 +59,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 956
+        Left = 950
         Top = 7
         Width = 78
         Height = 13
@@ -71,6 +71,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 956
       end
       object lblWorkinProgress: TLabel
         Left = 64
@@ -88,7 +89,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1036
+        Left = 1030
         Top = 3
         Width = 145
         Height = 21
@@ -101,8 +102,8 @@ object frmWTLUFitting: TfrmWTLUFitting
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 359
-    Width = 1266
+    Top = 350
+    Width = 1260
     Height = 19
     Panels = <
       item
@@ -117,13 +118,13 @@ object frmWTLUFitting: TfrmWTLUFitting
   end
   object Panel1: TPanel
     Left = 0
-    Top = 318
-    Width = 1266
+    Top = 309
+    Width = 1260
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      1266
+      1260
       41)
     object Label1: TLabel
       Left = 8
@@ -133,7 +134,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 995
+      Left = 983
       Top = 15
       Width = 59
       Height = 13
@@ -150,7 +151,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1159
+      Left = 1147
       Top = 9
       Width = 75
       Height = 25
@@ -168,7 +169,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1060
+      Left = 1048
       Top = 11
       Width = 73
       Height = 21
@@ -267,19 +268,19 @@ object frmWTLUFitting: TfrmWTLUFitting
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1266
+    Width = 1260
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1260
+        Width = 1254
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1251
+      Width = 1245
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -360,8 +361,8 @@ object frmWTLUFitting: TfrmWTLUFitting
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1266
-    Height = 241
+    Width = 1260
+    Height = 232
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

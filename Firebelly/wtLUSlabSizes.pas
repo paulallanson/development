@@ -111,6 +111,8 @@ end;
 
 procedure TfrmwtLUSlabSizes.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   tblSlabSize.active := true;
 end;
 

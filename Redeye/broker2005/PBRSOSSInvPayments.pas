@@ -264,6 +264,8 @@ begin
   DateFrom := Date - 30;
   DateFromEdit.Text := PBDatestr(DateFrom);
 
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtsReport.OnDataChange := SetButtons;
   CCSCommon.SetDBGridCols('', 'PaymentsLU Col Order', frmPBMainMenu.AppIniFile, self.dbgDetails);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

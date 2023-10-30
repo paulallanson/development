@@ -13,6 +13,7 @@ object frmWTLUCountry: TfrmWTLUCountry
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -46,6 +47,8 @@ object frmWTLUCountry: TfrmWTLUCountry
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 232
+    ExplicitWidth = 470
     DesignSize = (
       476
       67)
@@ -113,6 +116,8 @@ object frmWTLUCountry: TfrmWTLUCountry
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 470
   end
   object dtsCountry: TDataSource
     DataSet = qryCountry

@@ -2,8 +2,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Left = 137
   Top = 109
   Caption = 'Purchase details'
-  ClientHeight = 347
-  ClientWidth = 969
+  ClientHeight = 338
+  ClientWidth = 963
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 328
-    Width = 969
+    Top = 319
+    Width = 963
     Height = 19
     Panels = <
       item
@@ -38,34 +38,34 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   end
   object Panel1: TPanel
     Left = 0
-    Top = 287
-    Width = 969
+    Top = 278
+    Width = 963
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      969
+      963
       41)
     object Label1: TLabel
       Left = 8
       Top = 13
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 702
+      Left = 685
       Top = 13
-      Width = 74
+      Width = 79
       Height = 13
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Purchase Order'
-      ExplicitLeft = 740
+      ExplicitLeft = 697
     end
     object Button1: TButton
-      Left = 878
+      Left = 866
       Top = 7
       Width = 75
       Height = 25
@@ -83,7 +83,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 782
+      Left = 770
       Top = 9
       Width = 73
       Height = 21
@@ -104,22 +104,22 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 969
+    Width = 963
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 963
+        Width = 957
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 954
+      Width = 948
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -132,7 +132,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -140,7 +140,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -148,7 +148,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnCopyClick
       end
       object btnDelete: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -156,7 +156,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnDeleteClick
       end
       object ToolButton6: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -164,7 +164,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 232
+        Left = 244
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -172,7 +172,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 288
+        Left = 303
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -180,7 +180,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnReceipts: TToolButton
-        Left = 296
+        Left = 311
         Top = 0
         Caption = 'Receipts'
         Enabled = False
@@ -189,14 +189,14 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnReceiptsClick
       end
       object btnReceipts1: TToolButton
-        Left = 352
+        Left = 370
         Top = 0
         Caption = 'Receipts'
         ImageIndex = 5
         OnClick = btnReceipts1Click
       end
       object ToolButton1: TToolButton
-        Left = 408
+        Left = 429
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -204,7 +204,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 416
+        Left = 437
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -215,8 +215,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 969
-    Height = 210
+    Width = 963
+    Height = 201
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
@@ -301,19 +301,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 969
+    Width = 963
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 963
+        Width = 957
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 954
+      Width = 948
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -323,8 +323,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 95
-        Height = 24
+        Width = 94
+        Height = 25
         Caption = 'Purchasing'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -336,8 +336,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       object lblWorkinProgress: TLabel
         Left = 120
         Top = 3
-        Width = 189
-        Height = 20
+        Width = 196
+        Height = 21
         Caption = '-  displaying only live orders'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET

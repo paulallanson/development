@@ -30,6 +30,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -107,6 +108,11 @@ begin
   refresh;
 end;
 
+procedure TfrmWTLUCountry.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+end;
+
 procedure TfrmWTLUCountry.dbgDetailsDblClick(Sender: TObject);
 begin
   btnEditClick(self);
@@ -115,7 +121,6 @@ end;
 procedure TfrmWTLUCountry.btnExcelClick(Sender: TObject);
 begin
   frmWTMain.ExportTableToExcel(frmWTLUCountry);
-
 end;
 
 procedure TfrmWTLUCountry.btnAddClick(Sender: TObject);

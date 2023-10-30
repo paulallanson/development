@@ -28,6 +28,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       item
         Width = 50
       end>
+    ExplicitTop = 474
+    ExplicitWidth = 768
   end
   object Panel3: TPanel
     Left = 0
@@ -37,6 +39,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 383
+    ExplicitWidth = 768
     object Panel1: TPanel
       Left = 0
       Top = 9
@@ -55,7 +59,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
         object Label1: TLabel
           Left = 8
           Top = 32
-          Width = 38
+          Width = 43
           Height = 13
           Caption = 'Supplier'
         end
@@ -77,6 +81,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 447
       object GroupBox2: TGroupBox
         Left = 212
         Top = 6
@@ -201,6 +206,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
     BevelOuter = bvNone
     Caption = 'Panel4'
     TabOrder = 2
+    ExplicitWidth = 768
+    ExplicitHeight = 383
     object dbgPurch: TDBGrid
       Left = 0
       Top = 0

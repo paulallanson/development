@@ -13,6 +13,7 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -51,6 +52,8 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
       item
         Width = 50
       end>
+    ExplicitTop = 298
+    ExplicitWidth = 418
   end
   object Panel1: TPanel
     Left = 0
@@ -60,6 +63,8 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 254
+    ExplicitWidth = 418
     DesignSize = (
       424
       44)

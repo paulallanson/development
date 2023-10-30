@@ -538,6 +538,8 @@ end;
 
 procedure TPBRSJBMarginfrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   if dmBroker.UseProduction then
     begin
       lblDatefrom.caption := 'Req '+ lblDatefrom.caption;

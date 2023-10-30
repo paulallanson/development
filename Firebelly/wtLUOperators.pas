@@ -35,6 +35,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -155,6 +156,11 @@ end;
 procedure TfrmWTLUOperators.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUOperators.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUOperators.btnExcelClick(Sender: TObject);

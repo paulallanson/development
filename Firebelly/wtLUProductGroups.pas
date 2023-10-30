@@ -34,6 +34,7 @@ type
     procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -126,6 +127,11 @@ end;
 procedure TfrmWTLUProductGroups.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUProductGroups.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUProductGroups.Refresh;

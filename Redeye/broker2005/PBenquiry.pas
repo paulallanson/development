@@ -4317,6 +4317,7 @@ end;
 procedure TPBEnquiryFrm.FormCreate(Sender: TObject);
 begin
 //  AutoSize := true;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
   {Create the form which gets all the enquiry data}
   PBEnqDataModFrm := TPBEnqDataModFrm.Create(Self);

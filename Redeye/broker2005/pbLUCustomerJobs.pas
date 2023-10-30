@@ -64,6 +64,7 @@ uses UITypes;
 
 procedure TPBLUCustomerJobsFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlCustJobs := TdtmdlJobs.create(self);
   dtmdlCustJobs.dtsJobs.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustJobs.dtsJobs;

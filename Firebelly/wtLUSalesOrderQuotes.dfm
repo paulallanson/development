@@ -2,8 +2,8 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
   Left = 38
   Top = 52
   Caption = 'Quotes Lookup'
-  ClientHeight = 459
-  ClientWidth = 999
+  ClientHeight = 450
+  ClientWidth = 993
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 440
-    Width = 999
+    Top = 431
+    Width = 993
     Height = 19
     Panels = <
       item
@@ -30,39 +30,40 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
   end
   object Panel2: TPanel
     Left = 0
-    Top = 364
-    Width = 999
+    Top = 355
+    Width = 993
     Height = 76
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      999
+      993
       76)
     object Label1: TLabel
-      Left = 667
+      Left = 649
       Top = 45
-      Width = 29
+      Width = 32
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Quote'
+      ExplicitLeft = 667
     end
     object Label2: TLabel
       Left = 8
       Top = 20
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label3: TLabel
       Left = 8
       Top = 52
-      Width = 50
+      Width = 51
       Height = 13
       Caption = 'Reference'
     end
     object btnSelect: TBitBtn
-      Left = 822
+      Left = 804
       Top = 39
       Width = 75
       Height = 25
@@ -72,15 +73,17 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 810
     end
     object edtNumber: TEdit
-      Left = 707
+      Left = 689
       Top = 41
       Width = 89
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 695
     end
     object edtCustomerName: TEdit
       Left = 72
@@ -92,7 +95,7 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       TabOrder = 2
     end
     object BitBtn1: TBitBtn
-      Left = 910
+      Left = 892
       Top = 39
       Width = 75
       Height = 25
@@ -101,6 +104,7 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       ModalResult = 2
       TabOrder = 3
       OnClick = BitBtn1Click
+      ExplicitLeft = 898
     end
     object edtReference: TEdit
       Left = 72
@@ -114,8 +118,8 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 999
-    Height = 364
+    Width = 993
+    Height = 355
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2

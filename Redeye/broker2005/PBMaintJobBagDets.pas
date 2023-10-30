@@ -500,6 +500,8 @@ end;
 
 procedure TPBMaintJobBagDetsFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dbgLines.DataSource.OnDataChange := SetButtons;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;

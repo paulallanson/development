@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, Db, Grids, DBGrids, WTJobsDM, QrCtrls;
+  ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, Db, Grids, DBGrids, WTJobsDM, QrCtrls,
+  System.ImageList;
 
 type
   TfrmwtLUTests = class(TForm)
@@ -75,6 +76,8 @@ end;
 
 procedure TfrmwtLUTests.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlAllJobs := TdtmdlJob.create(Application);
   dbgDetails.DataSource := dtmdlAllJobs.dtsAllJobs;
   dtmdlAllJobs.dtsAllJobs.OnDataChange := SetButtons;

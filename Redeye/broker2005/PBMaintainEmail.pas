@@ -219,6 +219,8 @@ procedure TPBMaintainEmailfrm.FormCreate(Sender: TObject);
 var
   TempArray: array[0..255] of Char;
 begin
+  StatusBar.Top := Screen.Height - StatusBar.Height;
+
   GetFontNames;
 
   GetPrivateProfileString('Email', 'Email Font', '', TempArray,

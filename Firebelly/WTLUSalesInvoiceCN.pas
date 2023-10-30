@@ -19,7 +19,7 @@ type
     GroupBox1: TGroupBox;
     Label1: TLabel;
     NameEdit: TEdit;
-    stsBrInvoices: TStatusBar;
+    stsbrDetails: TStatusBar;
     edtSalesInvNo: TEdit;
     lblSalesInvNo: TLabel;
     pmnRaise: TPopupMenu;
@@ -83,6 +83,8 @@ end;
 
 procedure TfrmWTLUSalesInvoiceCN.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dmSalesInvoiceCN := TdtmdlSalesInvoice.create(self);
   dmSalesInvoiceCN.dsSIHeaderGrid.OnDataChange := SetButtons;
   dmSalesInvoiceCN.qrySIHeaderGrid.AfterScroll := SetSalesInvoiceEdit;
@@ -96,7 +98,7 @@ begin
   with dmSalesInvoiceCN do
   begin
     btnSelect.enabled := (qrySIHeaderGrid.recordcount > 0);
-    stsBrInvoices.panels[0].text := inttostr(qrySIHeaderGrid.recordcount) + ' sales invoices listed';
+    stsbrDetails.panels[0].text := inttostr(qrySIHeaderGrid.recordcount) + ' sales invoices listed';
   end;
 end;
 

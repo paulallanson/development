@@ -10,6 +10,7 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
@@ -18,17 +19,18 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 906
     object Label3: TLabel
       Left = 664
       Top = 20
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Date Required'
     end
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 85
+      Width = 94
       Height = 13
       Caption = 'Order Due before:'
     end
@@ -63,6 +65,8 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing]
     TabOrder = 1
+    ExplicitWidth = 906
+    ExplicitHeight = 298
     ColWidths = (
       178
       201
@@ -78,13 +82,15 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     Height = 50
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 363
+    ExplicitWidth = 906
     DesignSize = (
       912
       50)
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
@@ -97,7 +103,7 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       TabOrder = 0
     end
     object btbtnClose: TBitBtn
-      Left = 834
+      Left = 828
       Top = 14
       Width = 75
       Height = 25
@@ -105,9 +111,10 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 822
     end
     object btnOK: TBitBtn
-      Left = 746
+      Left = 740
       Top = 14
       Width = 75
       Height = 25
@@ -134,6 +141,7 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
         0000}
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 734
     end
   end
   object stsbrDetails: TStatusBar
@@ -148,5 +156,7 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       item
         Width = 50
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 906
   end
 end

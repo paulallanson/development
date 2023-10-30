@@ -38,6 +38,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CallMaintScreen(FuncMode: string);
@@ -155,10 +156,14 @@ begin
   Refresh;
 end;
 
+procedure TfrmWtLUThickness.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+end;
+
 procedure TfrmWtLUThickness.btnExcelClick(Sender: TObject);
 begin
  frmWTMain.ExportToExcel(frmWtLUThickness);
-
 end;
 
 procedure TfrmWtLUThickness.tmrRefreshTimer(Sender: TObject);

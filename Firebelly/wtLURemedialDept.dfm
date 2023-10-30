@@ -13,6 +13,7 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -57,6 +58,8 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
       item
         Width = 50
       end>
+    ExplicitTop = 379
+    ExplicitWidth = 694
   end
   object Panel1: TPanel
     Left = 0
@@ -66,6 +69,8 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 292
+    ExplicitWidth = 694
     DesignSize = (
       700
       87)

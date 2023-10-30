@@ -108,6 +108,8 @@ end;
 
 procedure TfrmwtLUCustJobs.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlCustJobs := TdtmdlCustJobs.create(self);
   dtmdlCustJobs.dtsJobs.OnDataChange := SetButtons;
 end;

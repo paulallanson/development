@@ -1,29 +1,29 @@
 object frmPBLUStockLocations: TfrmPBLUStockLocations
   Left = 185
   Top = 109
-  Width = 742
-  Height = 441
   Caption = 'Stock Location Enquiry'
+  ClientHeight = 403
+  ClientWidth = 730
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
+  OnCreate = FormCreate
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 734
+    Width = 730
     Height = 49
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 724
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
     end
@@ -37,15 +37,17 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
   end
   object Panel2: TPanel
     Left = 0
-    Top = 347
-    Width = 734
+    Top = 343
+    Width = 730
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 334
+    ExplicitWidth = 724
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 59
+      Width = 63
       Height = 13
       Caption = 'Bin Location'
     end
@@ -59,16 +61,18 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 388
-    Width = 734
+    Top = 384
+    Width = 730
     Height = 19
     Panels = <>
+    ExplicitTop = 375
+    ExplicitWidth = 724
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 49
-    Width = 734
-    Height = 298
+    Width = 730
+    Height = 294
     Align = alClient
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

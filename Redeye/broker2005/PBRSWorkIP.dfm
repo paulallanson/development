@@ -2,8 +2,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   Left = 283
   Top = 87
   Caption = 'Work In Progress Report'
-  ClientHeight = 461
-  ClientWidth = 834
+  ClientHeight = 453
+  ClientWidth = 832
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 850
@@ -18,18 +18,18 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 401
-    Width = 834
+    Top = 393
+    Width = 832
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      834
+      832
       41)
     object pnlRightControl: TPanel
-      Left = 503
+      Left = 501
       Top = 0
       Width = 331
       Height = 41
@@ -155,14 +155,14 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 834
+    Width = 832
     Height = 201
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     object pnlDates: TPanel
-      Left = 656
+      Left = 660
       Top = 0
       Width = 178
       Height = 201
@@ -170,6 +170,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 654
       object chkbxPageBreak: TCheckBox
         Left = 17
         Top = 136
@@ -215,7 +216,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel1: TPanel
-      Left = 459
+      Left = 463
       Top = 0
       Width = 197
       Height = 201
@@ -223,10 +224,11 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 457
       object Label1: TLabel
         Left = 19
         Top = 3
-        Width = 86
+        Width = 93
         Height = 13
         Caption = 'Delivery due after:'
       end
@@ -254,7 +256,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object Label2: TLabel
         Left = 19
         Top = 48
-        Width = 95
+        Width = 103
         Height = 13
         Caption = 'Delivery due before:'
       end
@@ -349,30 +351,31 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object Panel2: TPanel
       Left = 0
       Top = 0
-      Width = 459
+      Width = 463
       Height = 201
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 457
       object Label3: TLabel
         Left = 8
         Top = 152
-        Width = 52
+        Width = 59
         Height = 13
         Caption = 'Sort first by'
       end
       object Label4: TLabel
         Left = 160
         Top = 152
-        Width = 55
+        Width = 62
         Height = 13
         Caption = 'then sort by'
       end
       object Label5: TLabel
         Left = 312
         Top = 152
-        Width = 81
+        Width = 92
         Height = 13
         Caption = 'and finally sort by'
       end
@@ -414,7 +417,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         object lblSupplier: TLabel
           Left = 8
           Top = 4
-          Width = 77
+          Width = 82
           Height = 13
           Caption = 'Supplier/Branch'
         end
@@ -452,7 +455,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         object lblCustomer: TLabel
           Left = 8
           Top = 1
-          Width = 83
+          Width = 88
           Height = 13
           Caption = 'Customer/Branch'
         end
@@ -542,16 +545,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 442
-    Width = 834
+    Top = 434
+    Width = 832
     Height = 19
     Panels = <>
   end
   object DBGrid: TDBGrid
     Left = 0
     Top = 201
-    Width = 834
-    Height = 200
+    Width = 832
+    Height = 192
     Align = alClient
     DataSource = dsReport
     ReadOnly = True
@@ -631,7 +634,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

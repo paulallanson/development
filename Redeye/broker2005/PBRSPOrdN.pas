@@ -1313,6 +1313,8 @@ begin
   FEmailAttachment := TStringList.create;
   LetterType := ltPurchaseOrder;
 
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   GetPrivateProfileString('Centrereed Broker', 'Label Printer Format', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sFormat := TempArray;

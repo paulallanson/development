@@ -4,7 +4,7 @@ object frmpbluBranches: TfrmpbluBranches
   BorderIcons = [biSystemMenu]
   Caption = 'Branch details'
   ClientHeight = 282
-  ClientWidth = 616
+  ClientWidth = 618
   Color = clBtnFace
   Constraints.MinHeight = 230
   Constraints.MinWidth = 630
@@ -22,7 +22,7 @@ object frmpbluBranches: TfrmpbluBranches
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 616
+    Width = 618
     Height = 214
     Align = alClient
     DataSource = dtsBranch
@@ -79,14 +79,16 @@ object frmpbluBranches: TfrmpbluBranches
   object Panel1: TPanel
     Left = 0
     Top = 214
-    Width = 616
+    Width = 618
     Height = 49
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 205
+    ExplicitWidth = 612
     DesignSize = (
-      616
+      618
       49)
     object Label1: TLabel
       Left = 8
@@ -96,7 +98,7 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = 'Search'
     end
     object btnAdd: TButton
-      Left = 265
+      Left = 261
       Top = 8
       Width = 75
       Height = 25
@@ -104,9 +106,10 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = '&Add'
       TabOrder = 0
       OnClick = btnAddClick
+      ExplicitLeft = 255
     end
     object btnChange: TButton
-      Left = 353
+      Left = 349
       Top = 8
       Width = 75
       Height = 25
@@ -115,9 +118,10 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 1
       OnClick = btnChangeClick
+      ExplicitLeft = 343
     end
     object btnDelete: TButton
-      Left = 441
+      Left = 437
       Top = 8
       Width = 75
       Height = 25
@@ -126,9 +130,10 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
+      ExplicitLeft = 431
     end
     object btnClose: TButton
-      Left = 527
+      Left = 523
       Top = 8
       Width = 75
       Height = 25
@@ -136,6 +141,7 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = 'Clos&e'
       TabOrder = 3
       OnClick = btnCloseClick
+      ExplicitLeft = 517
     end
     object edtName: TEdit
       Left = 56
@@ -160,7 +166,7 @@ object frmpbluBranches: TfrmpbluBranches
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 263
-    Width = 616
+    Width = 618
     Height = 19
     Panels = <
       item
@@ -169,6 +175,8 @@ object frmpbluBranches: TfrmpbluBranches
       item
         Width = 50
       end>
+    ExplicitTop = 254
+    ExplicitWidth = 612
   end
   object dtsBranch: TDataSource
     DataSet = qrySBranch

@@ -2,8 +2,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   Left = 269
   Top = 66
   Caption = 'Activities'
-  ClientHeight = 452
-  ClientWidth = 916
+  ClientHeight = 443
+  ClientWidth = 910
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUActivities: TfrmPBLUActivities
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 916
+    Width = 910
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -34,7 +34,7 @@ object frmPBLUActivities: TfrmPBLUActivities
       Left = 8
       Top = 3
       Width = 62
-      Height = 20
+      Height = 21
       Caption = 'Activities'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -46,8 +46,8 @@ object frmPBLUActivities: TfrmPBLUActivities
     object lblShowLive: TLabel
       Left = 96
       Top = 3
-      Width = 204
-      Height = 20
+      Width = 211
+      Height = 21
       Caption = '-  displaying only live activities'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
@@ -61,8 +61,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 433
-    Width = 916
+    Top = 424
+    Width = 910
     Height = 19
     Panels = <
       item
@@ -77,20 +77,20 @@ object frmPBLUActivities: TfrmPBLUActivities
   end
   object Panel1: TPanel
     Left = 0
-    Top = 392
-    Width = 916
+    Top = 383
+    Width = 910
     Height = 41
     Align = alBottom
     TabOrder = 2
     object Label60: TLabel
       Left = 8
       Top = 13
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
     object Panel2: TPanel
-      Left = 642
+      Left = 636
       Top = 1
       Width = 273
       Height = 39
@@ -137,22 +137,22 @@ object frmPBLUActivities: TfrmPBLUActivities
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 916
+    Width = 910
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 910
+        Width = 904
       end>
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 901
+      Width = 895
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 60
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -165,7 +165,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 60
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -173,7 +173,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnChangeClick
       end
       object btnFollowUp: TToolButton
-        Left = 112
+        Left = 120
         Top = 0
         Caption = 'Follow Up'
         Enabled = False
@@ -181,7 +181,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnFollowUpClick
       end
       object btnDelete: TToolButton
-        Left = 168
+        Left = 180
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -189,7 +189,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnDeleteClick
       end
       object btnReports: TToolButton
-        Left = 224
+        Left = 240
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -200,8 +200,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 916
-    Height = 317
+    Width = 910
+    Height = 308
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 4

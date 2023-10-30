@@ -1737,6 +1737,8 @@ end;
 
 procedure TPBMaintDelivFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   PBPODelivNotesFrm := TPBDelivNotesFrm.Create(Self);
   tbshtCallOffs.TabVisible := false;
   tbshtSTkLocs.TabVisible := False;

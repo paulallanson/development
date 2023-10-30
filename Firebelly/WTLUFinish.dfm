@@ -14,6 +14,7 @@ object frmWTLUFinish: TfrmWTLUFinish
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -57,6 +58,8 @@ object frmWTLUFinish: TfrmWTLUFinish
       item
         Width = 50
       end>
+    ExplicitTop = 214
+    ExplicitWidth = 390
   end
   object Panel1: TPanel
     Left = 0
@@ -65,6 +68,8 @@ object frmWTLUFinish: TfrmWTLUFinish
     Height = 65
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 149
+    ExplicitWidth = 390
     DesignSize = (
       396
       65)

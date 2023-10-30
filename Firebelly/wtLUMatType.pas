@@ -39,6 +39,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CallMaintScreen(FuncMode: string);
@@ -60,6 +61,11 @@ uses
 procedure TfrmWTLUMatType.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfrmWTLUMatType.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUMatType.BitBtn1Click(Sender: TObject);

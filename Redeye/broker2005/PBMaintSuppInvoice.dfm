@@ -4,7 +4,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   Anchors = [akRight, akBottom]
   Caption = 'Supplier Invoice details'
   ClientHeight = 534
-  ClientWidth = 781
+  ClientWidth = 783
   Color = clBtnFace
   Constraints.MinHeight = 570
   Constraints.MinWidth = 795
@@ -21,11 +21,12 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 781
+    Width = 783
     Height = 161
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 777
     object Label6: TLabel
       Left = 8
       Top = 8
@@ -181,7 +182,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   object stbrDetails: TStatusBar
     Left = 0
     Top = 515
-    Width = 781
+    Width = 783
     Height = 19
     Panels = <
       item
@@ -190,20 +191,24 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       item
         Width = 50
       end>
+    ExplicitTop = 506
+    ExplicitWidth = 777
   end
   object pnlBottom: TPanel
     Left = 0
     Top = 463
-    Width = 781
+    Width = 783
     Height = 52
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 454
+    ExplicitWidth = 777
     DesignSize = (
-      781
+      783
       52)
     object lblDeleteprompt: TLabel
-      Left = 444
+      Left = 440
       Top = 20
       Width = 117
       Height = 16
@@ -218,7 +223,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       ExplicitLeft = 456
     end
     object btnOK: TBitBtn
-      Left = 596
+      Left = 592
       Top = 16
       Width = 75
       Height = 25
@@ -245,9 +250,10 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 586
     end
     object BitBtn2: TBitBtn
-      Left = 684
+      Left = 680
       Top = 16
       Width = 75
       Height = 25
@@ -255,6 +261,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 674
     end
     object pnlValues: TPanel
       Left = 1
@@ -308,11 +315,13 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   object pnlFooter: TPanel
     Left = 0
     Top = 340
-    Width = 781
+    Width = 783
     Height = 123
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 331
+    ExplicitWidth = 777
     object Label10: TLabel
       Left = 4
       Top = 8
@@ -340,7 +349,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         101)
     end
     object pnlTotals: TPanel
-      Left = 595
+      Left = 597
       Top = 1
       Width = 185
       Height = 121
@@ -348,6 +357,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 591
       DesignSize = (
         185
         121)
@@ -423,7 +433,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   object sgLines: TStringGrid
     Left = 0
     Top = 161
-    Width = 781
+    Width = 783
     Height = 179
     Align = alClient
     ColCount = 10
@@ -434,6 +444,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     TabOrder = 4
     OnDblClick = sgLinesDblClick
     OnSelectCell = sgLinesSelectCell
+    ExplicitWidth = 777
+    ExplicitHeight = 170
     ColWidths = (
       40
       83

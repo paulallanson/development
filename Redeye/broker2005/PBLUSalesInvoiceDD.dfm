@@ -11,6 +11,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
+  OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   TextHeight = 13
@@ -26,6 +27,8 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       item
         Width = 250
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 906
   end
   object Panel1: TPanel
     Left = 0
@@ -34,6 +37,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Height = 113
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 906
     object GroupBox2: TGroupBox
       Left = 16
       Top = 8
@@ -44,7 +48,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       object lblDateFrom: TLabel
         Left = 9
         Top = 28
-        Width = 52
+        Width = 56
         Height = 13
         Caption = 'Date From:'
       end
@@ -213,10 +217,12 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 372
+    ExplicitWidth = 906
     object lblExpTo: TLabel
       Left = 8
       Top = 16
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'Export To:'
     end

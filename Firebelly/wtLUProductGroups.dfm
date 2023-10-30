@@ -13,6 +13,7 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -56,6 +57,8 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       item
         Width = 50
       end>
+    ExplicitTop = 218
+    ExplicitWidth = 403
   end
   object Panel1: TPanel
     Left = 0
@@ -66,6 +69,8 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 158
+    ExplicitWidth = 403
     DesignSize = (
       409
       60)

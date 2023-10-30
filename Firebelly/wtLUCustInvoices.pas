@@ -32,6 +32,7 @@ type
     tmrSearch: TTimer;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FCustomer: integer;
     FParentForm: TForm;
@@ -76,6 +77,11 @@ procedure TfrmwtLUCustInvoices.FormClose(Sender: TObject;
 begin
   PostMessage(ParentForm.Handle, luCustomers_Invoicesclosed, left, Top);
   Action := caFree;
+end;
+
+procedure TfrmwtLUCustInvoices.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmwtLUCustInvoices.Button1Click(Sender: TObject);

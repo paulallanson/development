@@ -13,6 +13,7 @@ object frmWTLUReason: TfrmWTLUReason
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -47,6 +48,8 @@ object frmWTLUReason: TfrmWTLUReason
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 335
+    ExplicitWidth = 777
     DesignSize = (
       783
       48)
@@ -133,6 +136,8 @@ object frmWTLUReason: TfrmWTLUReason
       item
         Width = 50
       end>
+    ExplicitTop = 383
+    ExplicitWidth = 777
   end
   object srcReason: TDataSource
     DataSet = qryReason

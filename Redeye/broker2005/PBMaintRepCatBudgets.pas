@@ -50,6 +50,7 @@ type
     procedure grdPeriodsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure grdDetailsTopLeftChanged(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     category: array[1..100] of integer;
     periods: array[1..100] of integer;
@@ -467,6 +468,11 @@ begin
       Action := caNone
   else
     OKBitBtnClick(self);
+end;
+
+procedure TPBMaintRepCatBudgetsFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TPBMaintRepCatBudgetsFrm.grdPeriodsDrawCell(Sender: TObject;

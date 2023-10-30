@@ -2856,6 +2856,8 @@ procedure TPBMaintCustFrm.FormCreate(Sender: TObject);
 var
   sAnalysis: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlOneCustomer := TdtmdlCustomers.create(self);
   dtmdlCustEnqs := TdtmdlEnqs.create(self);
   dtmdlCustJobs := TdtmdlJobs.create(self);

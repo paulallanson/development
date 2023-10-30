@@ -2,8 +2,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   Left = 192
   Top = 114
   Caption = 'Maintain Customer Cut Out Details'
-  ClientHeight = 373
-  ClientWidth = 733
+  ClientHeight = 382
+  ClientWidth = 739
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -20,8 +20,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 733
-    Height = 212
+    Width = 739
+    Height = 221
     Align = alClient
     DataSource = srclkpCOutThickness
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -79,16 +79,16 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 285
-    Width = 733
+    Top = 294
+    Width = 739
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 305
-    ExplicitWidth = 743
+    ExplicitTop = 285
+    ExplicitWidth = 733
     DesignSize = (
-      733
+      739
       69)
     object Label4: TLabel
       Left = 16
@@ -123,6 +123,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
+      ExplicitLeft = 303
     end
     object btnEdit: TBitBtn
       Left = 397
@@ -134,6 +135,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
+      ExplicitLeft = 391
     end
     object btnDelete: TBitBtn
       Left = 485
@@ -145,6 +147,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
+      ExplicitLeft = 479
     end
     object BitBtn4: TBitBtn
       Left = 661
@@ -156,6 +159,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
+      ExplicitLeft = 655
     end
     object btnExcel: TBitBtn
       Left = 573
@@ -167,12 +171,13 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
+      ExplicitLeft = 567
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 354
-    Width = 733
+    Top = 363
+    Width = 739
     Height = 19
     Panels = <
       item
@@ -181,39 +186,39 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       item
         Width = 50
       end>
-    ExplicitTop = 374
-    ExplicitWidth = 743
+    ExplicitTop = 354
+    ExplicitWidth = 733
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 733
+    Width = 739
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitWidth = 743
+    ExplicitWidth = 733
     DesignSize = (
-      733
+      739
       73)
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 64
+      Width = 68
       Height = 13
       Caption = 'Material Type'
     end
     object Label2: TLabel
       Left = 216
       Top = 16
-      Width = 48
+      Width = 51
       Height = 13
       Caption = 'Edge type'
     end
     object Label3: TLabel
       Left = 501
       Top = 16
-      Width = 124
+      Width = 138
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
@@ -307,6 +312,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
+      ExplicitLeft = 495
     end
     object btnGo: TButton
       Left = 662
@@ -318,6 +324,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
+      ExplicitLeft = 656
     end
   end
   object tblCOutThickness: TFDTable

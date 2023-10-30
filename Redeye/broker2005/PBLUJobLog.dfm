@@ -159,42 +159,47 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Height = 36
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 336
+    ExplicitWidth = 848
     DesignSize = (
       854
       36)
     object Label1: TLabel
-      Left = 696
+      Left = 690
       Top = 12
-      Width = 72
+      Width = 78
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Machine Hours'
+      ExplicitLeft = 696
     end
     object Label4: TLabel
-      Left = 536
+      Left = 530
       Top = 12
-      Width = 73
+      Width = 80
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Overtime Hours'
+      ExplicitLeft = 536
     end
     object Label5: TLabel
-      Left = 368
+      Left = 362
       Top = 12
-      Width = 74
+      Width = 81
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Standard Hours'
+      ExplicitLeft = 368
     end
     object lblDateFrom: TLabel
       Left = 16
       Top = 12
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object memMachine: TMemo
-      Left = 776
+      Left = 770
       Top = 8
       Width = 65
       Height = 21
@@ -205,9 +210,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 764
     end
     object memOvertime: TMemo
-      Left = 616
+      Left = 610
       Top = 8
       Width = 65
       Height = 21
@@ -218,9 +224,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 1
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 604
     end
     object memLabour: TMemo
-      Left = 456
+      Left = 450
       Top = 8
       Width = 65
       Height = 21
@@ -231,6 +238,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 2
       WantReturns = False
       WordWrap = False
+      ExplicitLeft = 444
     end
     object dtmDateFrom: TDateTimePicker
       Left = 72
@@ -250,10 +258,12 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 372
+    ExplicitWidth = 848
     object lblSearch: TLabel
       Left = 16
       Top = 16
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Employee'
     end
@@ -282,6 +292,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
+      ExplicitLeft = 570
       DesignSize = (
         277
         39)
@@ -361,6 +372,8 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       item
         Width = 200
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 848
   end
   object tmrSearch: TTimer
     OnTimer = tmrSearchTimer

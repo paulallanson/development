@@ -123,6 +123,7 @@ end;
 
 procedure TfrmPBLUPurchaseInvoices.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlAllSuppInvoices := TdmSupplierInvoice.create(self);
 
   dtmdlAllSuppInvoices.dsSIHeaderGrid.OnDataChange := SetButtons;

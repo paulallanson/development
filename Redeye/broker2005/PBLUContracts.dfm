@@ -2,8 +2,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   Left = 205
   Top = 107
   Caption = 'Contracts'
-  ClientHeight = 441
-  ClientWidth = 854
+  ClientHeight = 432
+  ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 422
-    Width = 854
+    Top = 413
+    Width = 848
     Height = 19
     Panels = <
       item
@@ -39,7 +39,7 @@ object frmPBLUContracts: TfrmPBLUContracts
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 854
+    Width = 848
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -49,8 +49,8 @@ object frmPBLUContracts: TfrmPBLUContracts
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 69
-      Height = 20
+      Width = 66
+      Height = 21
       Caption = 'Contracts'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -62,8 +62,8 @@ object frmPBLUContracts: TfrmPBLUContracts
     object lblShowLive: TLabel
       Left = 96
       Top = 3
-      Width = 210
-      Height = 20
+      Width = 214
+      Height = 21
       Caption = '-  displaying only live contracts'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
@@ -78,22 +78,22 @@ object frmPBLUContracts: TfrmPBLUContracts
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 854
+    Width = 848
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 848
+        Width = 842
       end>
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 839
+      Width = 833
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -106,7 +106,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -114,7 +114,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -122,14 +122,14 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = 'Print'
         Enabled = False
         ImageIndex = 4
       end
       object btnReports: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -139,15 +139,15 @@ object frmPBLUContracts: TfrmPBLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 381
-    Width = 854
+    Top = 372
+    Width = 848
     Height = 41
     Align = alBottom
     TabOrder = 3
     object Label60: TLabel
       Left = 8
       Top = 13
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -169,7 +169,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 580
+      Left = 574
       Top = 1
       Width = 273
       Height = 39
@@ -182,7 +182,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       object Label2: TLabel
         Left = 6
         Top = 13
-        Width = 80
+        Width = 88
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Contract Number'
@@ -210,8 +210,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 854
-    Height = 306
+    Width = 848
+    Height = 297
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions

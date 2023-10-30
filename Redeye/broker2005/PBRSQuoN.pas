@@ -617,6 +617,8 @@ var
   IniFile : TIniFile;
   sPageLayout, sLetterLayout: string;
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   if dmBroker.UseCRM and frmPBMainMenu.mnuActivities.Enabled then
     begin
 //      self.height := 263;

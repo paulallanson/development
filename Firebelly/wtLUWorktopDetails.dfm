@@ -26,6 +26,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       item
         Width = 50
       end>
+    ExplicitTop = 462
+    ExplicitWidth = 969
   end
   object Panel1: TPanel
     Left = 0
@@ -35,6 +37,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 392
+    ExplicitWidth = 969
     DesignSize = (
       975
       70)
@@ -46,7 +50,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = 'Search'
     end
     object BitBtn1: TBitBtn
-      Left = 562
+      Left = 556
       Top = 15
       Width = 75
       Height = 25
@@ -54,9 +58,10 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
+      ExplicitLeft = 550
     end
     object btnEdit: TBitBtn
-      Left = 645
+      Left = 639
       Top = 15
       Width = 75
       Height = 25
@@ -64,9 +69,10 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Edit'
       Enabled = False
       TabOrder = 1
+      ExplicitLeft = 633
     end
     object btnDelete: TBitBtn
-      Left = 728
+      Left = 722
       Top = 15
       Width = 75
       Height = 25
@@ -74,9 +80,10 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Delete'
       Enabled = False
       TabOrder = 2
+      ExplicitLeft = 716
     end
     object BitBtn4: TBitBtn
-      Left = 895
+      Left = 889
       Top = 15
       Width = 75
       Height = 25
@@ -85,9 +92,10 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 3
+      ExplicitLeft = 883
     end
     object btnThickness: TBitBtn
-      Left = 479
+      Left = 473
       Top = 15
       Width = 75
       Height = 25
@@ -95,6 +103,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Prices'
       Enabled = False
       TabOrder = 4
+      ExplicitLeft = 467
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -114,7 +123,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 811
+      Left = 805
       Top = 15
       Width = 75
       Height = 25
@@ -123,6 +132,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Enabled = False
       TabOrder = 7
       OnClick = btnExcelClick
+      ExplicitLeft = 799
     end
   end
   object Panel2: TPanel
@@ -133,10 +143,11 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 969
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 64
+      Width = 68
       Height = 13
       Caption = 'Material Type'
     end

@@ -2,8 +2,8 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
   Left = 165
   Top = 116
   Caption = 'Customer Jobs details'
-  ClientHeight = 336
-  ClientWidth = 528
+  ClientHeight = 327
+  ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,22 +21,22 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 528
+    Width = 522
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 522
+        Width = 516
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 513
+      Width = 507
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 44
+      ButtonWidth = 47
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -48,25 +48,25 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
         ImageIndex = 0
       end
       object btnChange: TToolButton
-        Left = 44
+        Left = 47
         Top = 0
         Caption = '&Change'
         ImageIndex = 1
       end
       object btnCopy: TToolButton
-        Left = 88
+        Left = 94
         Top = 0
         Caption = 'C&opy'
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 132
+        Left = 141
         Top = 0
         Caption = '&Delete'
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 176
+        Left = 188
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -74,7 +74,7 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 184
+        Left = 196
         Top = 0
         Caption = '&Print'
         ImageIndex = 7
@@ -84,8 +84,8 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
   object DBGrid1: TDBGrid
     Left = 0
     Top = 45
-    Width = 528
-    Height = 231
+    Width = 522
+    Height = 222
     Align = alClient
     DataSource = dtmdlCustJobs.dtsJobs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -113,24 +113,24 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 276
-    Width = 528
+    Top = 267
+    Width = 522
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      528
+      522
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Button1: TButton
-      Left = 453
+      Left = 441
       Top = 8
       Width = 75
       Height = 25
@@ -150,8 +150,8 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 317
-    Width = 528
+    Top = 308
+    Width = 522
     Height = 19
     Panels = <
       item

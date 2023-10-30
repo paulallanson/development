@@ -18,7 +18,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   object SuppLabel: TLabel
     Left = 8
     Top = 6
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'SuppLabel'
   end
@@ -150,6 +150,8 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
       item
         Width = 50
       end>
+    ExplicitTop = 216
+    ExplicitWidth = 419
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

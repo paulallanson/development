@@ -3565,7 +3565,8 @@ begin
   {Activate the invoice method SQL}
   PBPODM := TPBPODM.Create(Self);
   dmPBDocObjects := TdmPBDocObjects.Create(self);
-  
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   with PBPODM do
   begin
     GetInvMethSQL.Close;

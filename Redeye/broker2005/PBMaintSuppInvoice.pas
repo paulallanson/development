@@ -427,6 +427,7 @@ end;
 
 procedure TPBMaintSuppInvoicefrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
   AccountsPackage := dmBroker.GetAccountsPackage;
 
   SetLineHeaders;

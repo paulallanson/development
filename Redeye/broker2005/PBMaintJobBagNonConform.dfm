@@ -2,7 +2,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   Left = 150
   Top = 49
   Caption = 'Maintain Job bag Non Conformance Details'
-  ClientHeight = 541
+  ClientHeight = 542
   ClientWidth = 805
   Color = clBtnFace
   Constraints.MinHeight = 580
@@ -25,68 +25,73 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Align = alTop
     Enabled = False
     TabOrder = 0
+    ExplicitWidth = 799
     DesignSize = (
       805
       97)
     object labJobBagInfo: TLabel
       Left = 9
       Top = 15
-      Width = 59
+      Width = 61
       Height = 13
       Caption = 'Job Bag No.'
     end
     object Label4: TLabel
       Left = 184
       Top = 15
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
-      Left = 621
+      Left = 615
       Top = 15
-      Width = 69
+      Width = 74
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date Required'
+      ExplicitLeft = 621
     end
     object Label25: TLabel
-      Left = 416
+      Left = 410
       Top = 15
-      Width = 48
+      Width = 51
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Start Date'
+      ExplicitLeft = 416
     end
     object Label2: TLabel
       Left = 8
       Top = 42
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label5: TLabel
-      Left = 574
+      Left = 568
       Top = 42
-      Width = 85
+      Width = 91
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Manager'
+      ExplicitLeft = 574
     end
     object Label1: TLabel
       Left = 8
       Top = 69
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label6: TLabel
-      Left = 638
+      Left = 632
       Top = 69
       Width = 20
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Rep'
+      ExplicitLeft = 638
     end
     object edtJobBag: TEdit
       Left = 80
@@ -104,29 +109,32 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       TabOrder = 1
     end
     object edtDateReq: TEdit
-      Left = 701
+      Left = 695
       Top = 11
       Width = 81
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 3
+      ExplicitLeft = 689
     end
     object edtStartDate: TEdit
-      Left = 472
+      Left = 466
       Top = 11
       Width = 81
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 2
+      ExplicitLeft = 460
     end
     object edtCustomer: TEdit
       Left = 80
       Top = 38
-      Width = 245
+      Width = 239
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 4
+      ExplicitWidth = 233
     end
     object edtDescription: TEdit
       Left = 80
@@ -142,7 +150,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       TabOrder = 5
     end
     object edtAccountManager: TEdit
-      Left = 669
+      Left = 663
       Top = 38
       Width = 115
       Height = 21
@@ -150,9 +158,10 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 6
+      ExplicitLeft = 657
     end
     object edtRep: TEdit
-      Left = 669
+      Left = 663
       Top = 65
       Width = 115
       Height = 21
@@ -160,11 +169,12 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 7
+      ExplicitLeft = 657
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 522
+    Top = 523
     Width = 805
     Height = 19
     Panels = <
@@ -177,14 +187,18 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       item
         Width = 50
       end>
+    ExplicitTop = 514
+    ExplicitWidth = 799
   end
   object Panel2: TPanel
     Left = 0
-    Top = 483
+    Top = 484
     Width = 805
     Height = 39
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 475
+    ExplicitWidth = 799
     object Panel4: TPanel
       Left = 413
       Top = 1
@@ -193,6 +207,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 407
       DesignSize = (
         391
         37)
@@ -241,7 +256,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Left = 0
     Top = 97
     Width = 720
-    Height = 386
+    Height = 387
     Align = alClient
     ColCount = 10
     DefaultColWidth = 40
@@ -249,6 +264,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
     TabOrder = 3
     OnDblClick = sgDetailsDblClick
+    ExplicitWidth = 714
+    ExplicitHeight = 378
     ColWidths = (
       40
       87
@@ -265,9 +282,11 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Left = 720
     Top = 97
     Width = 85
-    Height = 386
+    Height = 387
     Align = alRight
     TabOrder = 4
+    ExplicitLeft = 714
+    ExplicitHeight = 378
     object btnAdd: TBitBtn
       Left = 8
       Top = 8

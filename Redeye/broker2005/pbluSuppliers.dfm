@@ -2,8 +2,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   Left = 51
   Top = 117
   Caption = 'Supplier details'
-  ClientHeight = 328
-  ClientWidth = 823
+  ClientHeight = 319
+  ClientWidth = 817
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   TextHeight = 13
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 309
-    Width = 823
+    Top = 300
+    Width = 817
     Height = 19
     Panels = <
       item
@@ -34,19 +34,19 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 268
-    Width = 823
+    Top = 259
+    Width = 817
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      823
+      817
       41)
     object lblSearch: TLabel
       Left = 16
       Top = 16
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Supplier Search'
     end
@@ -59,7 +59,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 738
+      Left = 726
       Top = 8
       Width = 75
       Height = 25
@@ -81,22 +81,22 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 823
+    Width = 817
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 817
+        Width = 811
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 808
+      Width = 802
       Height = 40
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstMaint
       ParentShowHint = False
@@ -112,7 +112,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Hint = 'Change record'
         Caption = '  &Change  '
@@ -121,7 +121,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Hint = 'Delete record'
         Caption = '&Delete'
@@ -130,7 +130,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnDeleteClick
       end
       object btnLabels: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Hint = 'Print address labels'
         Caption = 'Labels'
@@ -139,7 +139,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnLabelsClick
       end
       object ToolButton1: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -147,7 +147,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         Style = tbsSeparator
       end
       object btnBranches: TToolButton
-        Left = 232
+        Left = 244
         Top = 0
         Hint = 'Branches'
         Caption = '&Branch'
@@ -156,7 +156,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnBranchesClick
       end
       object btnContacts: TToolButton
-        Left = 288
+        Left = 303
         Top = 0
         Hint = 'Contacts'
         Caption = 'Contac&ts'
@@ -165,7 +165,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnContactsClick
       end
       object btnFileTypes: TToolButton
-        Left = 344
+        Left = 362
         Top = 0
         Caption = 'File Types'
         Enabled = False
@@ -173,7 +173,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnFileTypesClick
       end
       object ToolButton2: TToolButton
-        Left = 400
+        Left = 421
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -181,7 +181,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 408
+        Left = 429
         Top = 0
         Hint = 'Report selection'
         Caption = '&Reports'
@@ -193,8 +193,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 823
-    Height = 194
+    Width = 817
+    Height = 185
     Align = alClient
     DataSource = dtmdlSuppliers.dtsSuppliers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -272,7 +272,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 823
+    Width = 817
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -283,8 +283,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 66
-      Height = 20
+      Width = 65
+      Height = 21
       Caption = 'Suppliers'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

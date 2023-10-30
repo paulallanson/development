@@ -1656,6 +1656,7 @@ end;
 procedure TPBMaintQuoteFrm.FormCreate(Sender: TObject);
 begin
   pgDetails.ActivePage := tsCharges;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
   {Show pack pricing option is using Pack Prices}
   pnlPackPrice.Visible := dmBroker.UsePackPricing;

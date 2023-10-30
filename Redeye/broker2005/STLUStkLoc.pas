@@ -62,6 +62,7 @@ end;
 procedure TSTLUStkLocFrm.FormCreate(Sender: TObject);
 begin
   Changed := false;
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   dtmdlStockEnquiry := TdtmdlStock.create(self);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
   CCSCommon.SetDBGridCols('', 'LoctnsLU Col Order', frmPBMainMenu.AppIniFile, self.dbgrdLocations);

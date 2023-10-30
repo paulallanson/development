@@ -12,9 +12,7 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -24,6 +22,8 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 436
+    ExplicitHeight = 192
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -43,20 +43,27 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
           Caption = 'Item No'
           Width = 0
         end>
-      Items.Data = {
-        CF0000000300000000000000FFFFFFFFFFFFFFFF01000000000000001C416E74
-        696369706174656420496E766F6963696E67205265706F72741346524D575452
-        53534F414E54494E564F49434500000000FFFFFFFFFFFFFFFF01000000000000
-        001D53616C6573204F726465722050726F64756374696F6E205265706F727413
-        46524D57545253534F50524F44554354494F4E00000000FFFFFFFFFFFFFFFF01
-        000000000000000F57617272616E7479205265706F72741146524D5754525353
-        4F57415252414E5459FFFFFFFFFFFF}
+      Items.ItemData = {
+        05610100000300000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
+        001C41006E00740069006300690070006100740065006400200049006E007600
+        6F006900630069006E00670020005200650070006F007200740013460052004D
+        00570054005200530053004F0041004E00540049004E0056004F004900430045
+        000000000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000001D5300
+        61006C006500730020004F0072006400650072002000500072006F0064007500
+        6300740069006F006E0020005200650070006F007200740013460052004D0057
+        0054005200530053004F00500052004F00440055004300540049004F004E0000
+        00000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000000F57006100
+        7200720061006E007400790020005200650070006F007200740011460052004D
+        00570054005200530053004F00570041005200520041004E0054005900000000
+        00FFFFFFFFFFFF}
       ReadOnly = True
       RowSelect = True
       TabOrder = 0
       ViewStyle = vsReport
       OnClick = enableSelect
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 436
+      ExplicitHeight = 192
     end
   end
   object Panel2: TPanel
@@ -67,6 +74,8 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 192
+    ExplicitWidth = 436
     DesignSize = (
       442
       41)
@@ -81,7 +90,7 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
       OnClick = btnselectClick
     end
     object Button2: TButton
-      Left = 357
+      Left = 345
       Top = 8
       Width = 75
       Height = 25
@@ -89,6 +98,7 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 339
     end
   end
 end

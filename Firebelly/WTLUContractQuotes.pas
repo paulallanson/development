@@ -72,6 +72,7 @@ end;
 
 procedure TfrmWTLUContractQuotes.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
   dtmdlContract := TdtmdlContract.Create(Application);
   dbgDetails.DataSource := dtmdlContract.dsCustQuotes;
   dtmdlContract.dsCustQuotes.OnDataChange := SetButtons;

@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 361
-  ClientWidth = 673
+  ClientHeight = 352
+  ClientWidth = 667
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,22 +23,22 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 673
+    Width = 667
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 667
+        Width = 661
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 658
+      Width = 652
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -51,7 +51,7 @@ object frmPBluNCA: TfrmPBluNCA
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -59,7 +59,7 @@ object frmPBluNCA: TfrmPBluNCA
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -67,7 +67,7 @@ object frmPBluNCA: TfrmPBluNCA
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -75,7 +75,7 @@ object frmPBluNCA: TfrmPBluNCA
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -83,7 +83,7 @@ object frmPBluNCA: TfrmPBluNCA
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 232
+        Left = 244
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -94,8 +94,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 673
-    Height = 226
+    Width = 667
+    Height = 217
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -214,8 +214,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 301
-    Width = 673
+    Top = 292
+    Width = 667
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -223,7 +223,7 @@ object frmPBluNCA: TfrmPBluNCA
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -236,7 +236,7 @@ object frmPBluNCA: TfrmPBluNCA
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 399
+      Left = 393
       Top = 1
       Width = 273
       Height = 39
@@ -250,7 +250,7 @@ object frmPBluNCA: TfrmPBluNCA
       object Label2: TLabel
         Left = 22
         Top = 13
-        Width = 62
+        Width = 66
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'NCA Number'
@@ -286,8 +286,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 342
-    Width = 673
+    Top = 333
+    Width = 667
     Height = 19
     Panels = <
       item
@@ -303,7 +303,7 @@ object frmPBluNCA: TfrmPBluNCA
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 673
+    Width = 667
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -314,8 +314,8 @@ object frmPBluNCA: TfrmPBluNCA
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 180
-      Height = 20
+      Width = 178
+      Height = 21
       Caption = 'Non Conformance Advice'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -327,8 +327,8 @@ object frmPBluNCA: TfrmPBluNCA
     object lblWorkinProgress: TLabel
       Left = 200
       Top = 3
-      Width = 190
-      Height = 20
+      Width = 196
+      Height = 21
       Caption = '-  displaying only live details'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET

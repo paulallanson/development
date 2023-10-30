@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 311
-  ClientWidth = 876
+  ClientHeight = 277
+  ClientWidth = 870
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 876
+    Width = 870
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -34,8 +34,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 132
-      Height = 20
+      Width = 129
+      Height = 21
       Caption = 'Works Instructions'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -47,8 +47,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     object lblWorkinProgress: TLabel
       Left = 144
       Top = 3
-      Width = 233
-      Height = 20
+      Width = 240
+      Height = 21
       Caption = '-  displaying only work in progress'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
@@ -63,22 +63,22 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 876
+    Width = 870
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 870
+        Width = 864
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 861
+      Width = 855
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstOrders
       ShowCaptions = True
@@ -91,7 +91,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -99,7 +99,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -107,7 +107,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnDeleteClick
       end
       object btnRepeat: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = '&Repeat'
         Enabled = False
@@ -115,7 +115,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnRepeatClick
       end
       object btnPrint: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -123,7 +123,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnPrintClick
       end
       object btnPrintISO: TToolButton
-        Left = 280
+        Left = 295
         Top = 0
         Caption = 'ISO Print'
         Enabled = False
@@ -131,7 +131,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnPrintISOClick
       end
       object btnStatus: TToolButton
-        Left = 336
+        Left = 354
         Top = 0
         Caption = 'Status'
         Enabled = False
@@ -139,7 +139,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnStatusClick
       end
       object btnDespatches: TToolButton
-        Left = 392
+        Left = 413
         Top = 0
         Caption = 'Despatch'
         Enabled = False
@@ -147,7 +147,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnDespatchesClick
       end
       object ToolButton2: TToolButton
-        Left = 448
+        Left = 472
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -155,7 +155,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 456
+        Left = 480
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -166,8 +166,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 876
-    Height = 176
+    Width = 870
+    Height = 142
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -266,15 +266,15 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 251
-    Width = 876
+    Top = 217
+    Width = 870
     Height = 41
     Align = alBottom
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -287,7 +287,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 590
+      Left = 584
       Top = 1
       Width = 285
       Height = 39
@@ -300,7 +300,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       object Label2: TLabel
         Left = 10
         Top = 13
-        Width = 91
+        Width = 99
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Works Inst Number'
@@ -345,8 +345,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 292
-    Width = 876
+    Top = 258
+    Width = 870
     Height = 19
     Panels = <
       item

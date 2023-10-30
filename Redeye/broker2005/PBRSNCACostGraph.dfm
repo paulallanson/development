@@ -13,6 +13,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
   Position = poScreenCenter
   WindowState = wsMaximized
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
@@ -20,6 +21,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Width = 1461
     Height = 19
     Panels = <>
+    ExplicitTop = 679
+    ExplicitWidth = 1455
   end
   object Panel1: TPanel
     Left = 1291
@@ -30,13 +33,15 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 1285
+    ExplicitHeight = 387
     DesignSize = (
       170
       396)
     object Label1: TLabel
       Left = 16
       Top = 32
-      Width = 106
+      Width = 108
       Height = 13
       Caption = 'Select Required Years'
     end
@@ -81,6 +86,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitTop = 360
     end
   end
   object Panel3: TPanel
@@ -93,6 +99,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 420
+    ExplicitWidth = 1455
     object Panel5: TPanel
       Left = 0
       Top = 0
@@ -112,6 +120,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 1285
       DesignSize = (
         170
         259)
@@ -142,6 +151,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       View3D = False
       Align = alClient
       TabOrder = 2
+      ExplicitWidth = 1196
       DefaultCanvas = 'TGDIPlusCanvas'
       ColorPaletteIndex = 13
       object BarSeries1: TBarSeries
@@ -201,6 +211,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 1455
   end
   object Panel2: TPanel
     Left = 0
@@ -211,6 +222,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
+    ExplicitHeight = 387
   end
   object dbChart1: TDBChart
     Left = 89
@@ -228,6 +240,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     View3D = False
     Align = alClient
     TabOrder = 5
+    ExplicitWidth = 1196
+    ExplicitHeight = 387
     DefaultCanvas = 'TGDIPlusCanvas'
     ColorPaletteIndex = 13
     object Series1: TBarSeries

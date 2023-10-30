@@ -2,8 +2,8 @@ object frmWTLUStock: TfrmWTLUStock
   Left = 147
   Top = 140
   Caption = 'Products'
-  ClientHeight = 414
-  ClientWidth = 726
+  ClientHeight = 405
+  ClientWidth = 720
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,22 +21,22 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 726
+    Width = 720
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 720
+        Width = 714
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 711
+      Width = 705
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 44
+      ButtonWidth = 47
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -49,7 +49,7 @@ object frmWTLUStock: TfrmWTLUStock
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 44
+        Left = 47
         Top = 0
         Caption = '&Change'
         Enabled = False
@@ -57,21 +57,21 @@ object frmWTLUStock: TfrmWTLUStock
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 88
+        Left = 94
         Top = 0
         Caption = 'C&opy'
         Enabled = False
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 132
+        Left = 141
         Top = 0
         Caption = '&Delete'
         Enabled = False
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 176
+        Left = 188
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -79,7 +79,7 @@ object frmWTLUStock: TfrmWTLUStock
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 184
+        Left = 196
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -90,19 +90,19 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar2: TCoolBar
     Left = 0
     Top = 45
-    Width = 726
+    Width = 720
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 720
+        Width = 714
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 711
+      Width = 705
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -113,7 +113,7 @@ object frmWTLUStock: TfrmWTLUStock
         Left = 0
         Top = 1
         Width = 74
-        Height = 24
+        Height = 25
         Caption = 'Products'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -127,8 +127,8 @@ object frmWTLUStock: TfrmWTLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 726
-    Height = 277
+    Width = 720
+    Height = 268
     Align = alClient
     DataSource = dtmdlStock.dtsAllStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -164,24 +164,24 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 354
-    Width = 726
+    Top = 345
+    Width = 720
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      726
+      720
       41)
     object Label1: TLabel
       Left = 56
       Top = 12
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
     end
     object Button1: TButton
-      Left = 647
+      Left = 635
       Top = 8
       Width = 75
       Height = 25
@@ -201,8 +201,8 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 395
-    Width = 726
+    Top = 386
+    Width = 720
     Height = 19
     Panels = <
       item

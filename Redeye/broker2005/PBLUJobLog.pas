@@ -77,6 +77,8 @@ var
   IniFile: TIniFile;
   sTmpDateFrom, stmpDateTo, sEmployeeName: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create('datacollect.ini');
   try
     with IniFile do

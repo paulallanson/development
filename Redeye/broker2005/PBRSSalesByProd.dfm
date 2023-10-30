@@ -2,8 +2,8 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   Left = 24
   Top = 192
   Caption = 'Invoiced Sales by Product'
-  ClientHeight = 491
-  ClientWidth = 780
+  ClientHeight = 482
+  ClientWidth = 776
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 794
@@ -18,8 +18,8 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   TextHeight = 13
   object stsDetails: TStatusBar
     Left = 0
-    Top = 472
-    Width = 780
+    Top = 463
+    Width = 776
     Height = 19
     Panels = <
       item
@@ -31,17 +31,17 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 431
-    Width = 780
+    Top = 422
+    Width = 776
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      780
+      776
       41)
     object PrintReportBitBtn: TBitBtn
-      Left = 600
+      Left = 584
       Top = 8
       Width = 75
       Height = 25
@@ -63,9 +63,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = PrintReportBitBtnClick
+      ExplicitLeft = 590
     end
     object PreviewReportBitBtn: TBitBtn
-      Left = 512
+      Left = 496
       Top = 8
       Width = 75
       Height = 25
@@ -87,9 +88,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = PreviewReportBitBtnClick
+      ExplicitLeft = 502
     end
     object CancelBitBtn: TBitBtn
-      Left = 688
+      Left = 672
       Top = 8
       Width = 75
       Height = 25
@@ -97,6 +99,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 678
     end
     object btbtnExcel: TBitBtn
       Left = 424
@@ -154,25 +157,25 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 780
+    Width = 776
     Height = 121
     Align = alTop
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      780
+      776
       121)
     object Label1: TLabel
-      Left = 634
+      Left = 618
       Top = 10
-      Width = 90
+      Width = 95
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'From Invoice Date:'
-      ExplicitLeft = 646
+      ExplicitLeft = 634
     end
     object DateFromButton: TSpeedButton
-      Left = 737
+      Left = 721
       Top = 24
       Width = 25
       Height = 25
@@ -195,16 +198,16 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       ExplicitLeft = 749
     end
     object Label2: TLabel
-      Left = 634
+      Left = 618
       Top = 58
-      Width = 80
+      Width = 81
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'To Invoice Date:'
-      ExplicitLeft = 646
+      ExplicitLeft = 634
     end
     object DateToButton: TSpeedButton
-      Left = 737
+      Left = 721
       Top = 72
       Width = 25
       Height = 25
@@ -252,32 +255,34 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object pnlCustSearch: TPanel
       Left = 128
       Top = 11
-      Width = 316
+      Width = 300
       Height = 78
       Anchors = [akLeft, akTop, akRight]
       ParentBackground = False
       TabOrder = 2
       Visible = False
+      ExplicitWidth = 306
       DesignSize = (
-        316
+        300
         78)
       object lblCustBran: TLabel
         Left = 8
         Top = 2
-        Width = 89
+        Width = 94
         Height = 13
         Caption = 'Customer / Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 18
-        Width = 264
+        Width = 248
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 0
+        ExplicitWidth = 254
       end
       object btnCustomer: TButton
-        Left = 279
+        Left = 263
         Top = 18
         Width = 25
         Height = 25
@@ -291,11 +296,12 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnCustomerClick
+        ExplicitLeft = 269
       end
       object chkbxBranches: TCheckBox
         Left = 8
         Top = 48
-        Width = 294
+        Width = 278
         Height = 17
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Report on all branches'
@@ -303,10 +309,11 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         State = cbChecked
         TabOrder = 2
         OnClick = chkbxBranchesClick
+        ExplicitWidth = 284
       end
     end
     object DateFromEdit: TEdit
-      Left = 633
+      Left = 617
       Top = 26
       Width = 98
       Height = 21
@@ -314,9 +321,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       MaxLength = 10
       TabOrder = 3
       OnExit = DateFromEditExit
+      ExplicitLeft = 623
     end
     object DateToEdit: TEdit
-      Left = 633
+      Left = 617
       Top = 74
       Width = 98
       Height = 21
@@ -324,27 +332,30 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       MaxLength = 10
       TabOrder = 4
       OnExit = DateToEditExit
+      ExplicitLeft = 623
     end
     object chkbxTotalbyBranch: TCheckBox
-      Left = 453
+      Left = 437
       Top = 96
       Width = 161
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Total by Customer Branch'
       TabOrder = 5
+      ExplicitLeft = 443
     end
     object chkbxTotalbyProduct: TCheckBox
-      Left = 453
+      Left = 437
       Top = 72
       Width = 161
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Total by Product'
       TabOrder = 6
+      ExplicitLeft = 443
     end
     object ChkBxShwVl: TCheckBox
-      Left = 453
+      Left = 437
       Top = 8
       Width = 161
       Height = 17
@@ -352,9 +363,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Caption = 'Exclude Goods Value'
       TabOrder = 7
       OnClick = ChkBxShwVlClick
+      ExplicitLeft = 443
     end
     object ChkBxExcCsts: TCheckBox
-      Left = 453
+      Left = 437
       Top = 32
       Width = 170
       Height = 17
@@ -362,6 +374,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Caption = 'Exclude Cost /Profit Values'
       TabOrder = 8
       OnClick = ChkBxShwVlClick
+      ExplicitLeft = 443
     end
     object chkbxShowFormRefs: TCheckBox
       Left = 224
@@ -375,8 +388,8 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 780
-    Height = 310
+    Width = 776
+    Height = 301
     Align = alClient
     DataSource = dtsSalesByProd
     TabOrder = 3
@@ -459,7 +472,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

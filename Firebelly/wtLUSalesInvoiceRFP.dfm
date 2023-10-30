@@ -13,7 +13,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
-  object SIStatusBar: TStatusBar
+  object stsbrDetails: TStatusBar
     Left = 0
     Top = 515
     Width = 1057
@@ -25,6 +25,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       item
         Width = 50
       end>
+    ExplicitTop = 506
+    ExplicitWidth = 1051
   end
   object pnlFooter: TPanel
     Left = 0
@@ -33,6 +35,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Height = 53
     Align = alBottom
     TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 473
     DesignSize = (
       1057
       53)
@@ -48,7 +52,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnPrintClick
     end
     object Button4: TButton
-      Left = 949
+      Left = 937
       Top = 16
       Width = 75
       Height = 25
@@ -56,6 +60,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       Caption = 'Close'
       TabOrder = 1
       OnClick = Button4Click
+      ExplicitLeft = 931
     end
     object btnSweep: TButton
       Left = 8
@@ -155,27 +160,28 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Height = 89
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 1051
     DesignSize = (
       1057
       89)
     object CustomerLbl: TLabel
       Left = 8
       Top = 14
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 360
       Top = 14
-      Width = 83
+      Width = 91
       Height = 13
       Caption = 'Statement History'
     end
     object Label1: TLabel
       Left = 8
       Top = 46
-      Width = 18
+      Width = 19
       Height = 13
       Caption = 'Site'
     end
@@ -239,19 +245,20 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnClearClick
     end
     object grpInvDate: TGroupBox
-      Left = 794
+      Left = 782
       Top = 5
       Width = 233
       Height = 73
       Anchors = [akTop, akRight]
       TabOrder = 4
+      ExplicitLeft = 776
       DesignSize = (
         233
         73)
       object Label4: TLabel
         Left = 20
         Top = 21
-        Width = 52
+        Width = 56
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Date From:'

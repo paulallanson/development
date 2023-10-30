@@ -122,6 +122,8 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   dtmdlAllQuote := TdtmdlQuote.create(Application);

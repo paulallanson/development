@@ -13,6 +13,7 @@ object frmwtLUPromotions: TfrmwtLUPromotions
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -58,6 +59,8 @@ object frmwtLUPromotions: TfrmwtLUPromotions
       item
         Width = 50
       end>
+    ExplicitTop = 240
+    ExplicitWidth = 472
   end
   object Panel1: TPanel
     Left = 0
@@ -67,6 +70,8 @@ object frmwtLUPromotions: TfrmwtLUPromotions
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 166
+    ExplicitWidth = 472
     DesignSize = (
       478
       74)

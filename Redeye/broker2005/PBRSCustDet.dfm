@@ -25,6 +25,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 905
+    ExplicitHeight = 266
     object dbgrdCustStatus: TDBGrid
       Left = 1
       Top = 1
@@ -47,6 +49,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 224
+      ExplicitWidth = 903
       object lblRecordCount: TLabel
         Left = 104
         Top = 16
@@ -62,6 +66,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 638
         DesignSize = (
           264
           39)
@@ -186,6 +191,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 905
     object Label3: TLabel
       Left = 8
       Top = 78
@@ -402,7 +408,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -437,6 +443,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 387
+    ExplicitWidth = 905
   end
   object qryCurrentCustStatus: TFDQuery
     Connection = dmBroker.PBLDatabase

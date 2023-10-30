@@ -195,6 +195,8 @@ procedure TSFMaintJobLogFrm.FormCreate(Sender: TObject);
 var
   TempArray: array[0..255] of Char;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   {Search the INI file to decide whether to prompt for Operator}
   GetPrivateProfileString('Shop Floor Data Collection', 'Prompt for User', '', TempArray,
     sizeof(TempArray), frmFPMainMenu.AppIniFile);

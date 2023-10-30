@@ -11,6 +11,7 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 13
   object Panel1: TPanel
@@ -20,13 +21,15 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
     Height = 63
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 323
+    ExplicitWidth = 696
     DesignSize = (
       702
       63)
     object Label1: TLabel
       Left = 8
       Top = 18
-      Width = 45
+      Width = 51
       Height = 13
       Caption = 'Capability'
     end
@@ -39,7 +42,7 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       OnChange = edtCapabilityChange
     end
     object btnPreview: TBitBtn
-      Left = 456
+      Left = 450
       Top = 24
       Width = 75
       Height = 25
@@ -61,9 +64,10 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPreviewClick
+      ExplicitLeft = 444
     end
     object btnPrint: TBitBtn
-      Left = 536
+      Left = 530
       Top = 24
       Width = 75
       Height = 25
@@ -85,9 +89,10 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitLeft = 524
     end
     object btnCancel: TBitBtn
-      Left = 614
+      Left = 608
       Top = 24
       Width = 75
       Height = 25
@@ -95,6 +100,7 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 3
+      ExplicitLeft = 602
     end
     object chkCapability: TCheckBox
       Left = 72
@@ -117,6 +123,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       item
         Width = 50
       end>
+    ExplicitTop = 386
+    ExplicitWidth = 696
   end
   object DBGrid1: TDBGrid
     Left = 0

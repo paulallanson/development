@@ -45,6 +45,7 @@ type
     procedure tmrRefreshTimer(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
     procedure qryMaterialUseCalcFields(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CallMaintScreen(FuncMode: string);
@@ -67,6 +68,11 @@ uses
 procedure TfrmWTLUMaterialUse.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfrmWTLUMaterialUse.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUMaterialUse.BitBtn1Click(Sender: TObject);

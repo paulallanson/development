@@ -121,6 +121,8 @@ end;
 
 procedure TfrmWTLUPrices.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlAllPrices := TdtmdlPrices.create(Application);
   dtmdlAllPrices.dtsAllPrices.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllPrices.dtsAllPrices;

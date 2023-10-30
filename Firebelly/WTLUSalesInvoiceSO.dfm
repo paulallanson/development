@@ -2,8 +2,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   Left = 215
   Top = 81
   Caption = 'Sales order selection'
-  ClientHeight = 443
-  ClientWidth = 990
+  ClientHeight = 434
+  ClientWidth = 984
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 424
-    Width = 990
+    Top = 415
+    Width = 984
     Height = 19
     Panels = <
       item
@@ -30,8 +30,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 990
-    Height = 286
+    Width = 984
+    Height = 277
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -93,25 +93,26 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   end
   object Panel2: TPanel
     Left = 0
-    Top = 286
-    Width = 990
+    Top = 277
+    Width = 984
     Height = 138
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      990
+      984
       138)
     object Label1: TLabel
-      Left = 660
+      Left = 642
       Top = 100
-      Width = 55
+      Width = 59
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
+      ExplicitLeft = 660
     end
     object btnSelect: TBitBtn
-      Left = 823
+      Left = 805
       Top = 94
       Width = 75
       Height = 25
@@ -120,18 +121,20 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 811
     end
     object edtSONumber: TEdit
-      Left = 724
+      Left = 706
       Top = 96
       Width = 89
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtSONumberKeyPress
+      ExplicitLeft = 712
     end
     object btnClose: TBitBtn
-      Left = 911
+      Left = 893
       Top = 94
       Width = 75
       Height = 25
@@ -140,6 +143,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       ModalResult = 2
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 899
     end
     object chkbxShow: TCheckBox
       Left = 8
@@ -161,7 +165,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       object Label2: TLabel
         Left = 24
         Top = 22
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end

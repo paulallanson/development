@@ -119,6 +119,8 @@ end;
 
 procedure TPBLUSalesInvoicePOfrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dmSalesInvoice := TdmSalesInvoice.Create(Self);
   dmSalesInvoice.dsPOLine.OnDataChange := SetButtons;
   dmSalesInvoice.qryPOAllLines.AfterScroll := SetPurchaseOrderEdit;

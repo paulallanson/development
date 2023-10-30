@@ -177,6 +177,8 @@ procedure TfrmPBLUEndUsers.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     with IniFile do

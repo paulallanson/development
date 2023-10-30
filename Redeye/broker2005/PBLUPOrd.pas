@@ -273,7 +273,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
-  IniFiles, ComCtrls, ToolWin, Menus, ImgList, CCSCommon;
+  IniFiles, ComCtrls, ToolWin, Menus, ImgList, CCSCommon, System.ImageList;
 
 type
   TPBLUPOrdFrm = class(TForm)
@@ -787,6 +787,8 @@ end;
 
 procedure TPBLUPOrdFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   FChildLeft := -1;
   FChildTop := -1;
   dmLookUpPOrd := TdmLookUpPOrd.Create(Self);

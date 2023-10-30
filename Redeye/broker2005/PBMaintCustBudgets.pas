@@ -119,6 +119,8 @@ end;
 
 procedure TPBMaintCustBudgetsfrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   with sgDetails do
     begin
       cells[0,0] := 'Customer';

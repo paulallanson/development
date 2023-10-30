@@ -3,7 +3,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   Top = 90
   Caption = 'Maintain Purchase Orders'
   ClientHeight = 529
-  ClientWidth = 796
+  ClientWidth = 798
   Color = clBtnFace
   Constraints.MinHeight = 565
   Constraints.MinWidth = 810
@@ -41,7 +41,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   object Label7: TLabel
     Left = 8
     Top = 376
-    Width = 72
+    Width = 76
     Height = 13
     Caption = 'Extra Charges: '
   end
@@ -74,35 +74,35 @@ object STMntPOrdFrm: TSTMntPOrdFrm
     object Label2: TLabel
       Left = 32
       Top = 52
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object NoLabel: TLabel
       Left = 8
       Top = 20
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Order No'
     end
     object Label5: TLabel
       Left = 400
       Top = 68
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label8: TLabel
       Left = 400
       Top = 95
-      Width = 67
+      Width = 69
       Height = 13
       Caption = 'Requested By'
     end
     object Label9: TLabel
       Left = 176
       Top = 20
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Date Required'
     end
@@ -279,7 +279,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label4: TLabel
         Left = 8
         Top = 14
-        Width = 51
+        Width = 56
         Height = 13
         Caption = 'Store From'
       end
@@ -313,7 +313,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label3: TLabel
         Left = 12
         Top = 14
-        Width = 75
+        Width = 81
         Height = 13
         Caption = 'Replenish Store'
       end
@@ -340,14 +340,14 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label6: TLabel
         Left = 16
         Top = 8
-        Width = 101
+        Width = 109
         Height = 13
         Caption = 'Direct Delivery Order:'
       end
       object lblSalesOrder: TLabel
         Left = 160
         Top = 8
-        Width = 62
+        Width = 69
         Height = 13
         Caption = 'lblSalesOrder'
       end
@@ -362,7 +362,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label1: TLabel
         Left = 8
         Top = 17
-        Width = 38
+        Width = 43
         Height = 13
         Caption = 'Supplier'
       end
@@ -446,11 +446,13 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   object pnlFooter: TPanel
     Left = 0
     Top = 477
-    Width = 796
+    Width = 798
     Height = 33
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 468
+    ExplicitWidth = 792
     object DelLabel: TLabel
       Left = 486
       Top = 10
@@ -643,7 +645,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 510
-    Width = 796
+    Width = 798
     Height = 19
     Panels = <
       item
@@ -655,6 +657,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 501
+    ExplicitWidth = 792
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'

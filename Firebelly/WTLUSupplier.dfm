@@ -2,8 +2,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 387
-  ClientWidth = 903
+  ClientHeight = 378
+  ClientWidth = 897
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 903
+    Width = 897
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -32,19 +32,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 901
+      Width = 895
       Height = 75
       Bands = <
         item
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 895
+          Width = 889
         end>
       object Panel3: TPanel
         Left = 11
         Top = 0
-        Width = 886
+        Width = 880
         Height = 28
         Align = alLeft
         BevelOuter = bvNone
@@ -53,8 +53,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         object Label2: TLabel
           Left = 0
           Top = 1
-          Width = 79
-          Height = 24
+          Width = 78
+          Height = 25
           Caption = 'Suppliers'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
@@ -69,22 +69,22 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 903
+    Width = 897
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 897
+        Width = 891
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 888
+      Width = 882
       Height = 40
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 58
       Caption = 'ToolBar1'
       Constraints.MinHeight = 40
       Constraints.MinWidth = 50
@@ -101,7 +101,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 58
         Top = 0
         Caption = 'Chang&e'
         Enabled = False
@@ -109,7 +109,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 116
         Top = 0
         Caption = '   &Delete   '
         Enabled = False
@@ -117,7 +117,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnDeleteClick
       end
       object btnContacts: TToolButton
-        Left = 168
+        Left = 174
         Top = 0
         Caption = ' Con&tacts '
         Enabled = False
@@ -125,7 +125,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnContactsClick
       end
       object ToolButton6: TToolButton
-        Left = 224
+        Left = 232
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -133,7 +133,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 232
+        Left = 240
         Top = 0
         Caption = 'Reports'
         ImageIndex = 8
@@ -143,8 +143,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 903
-    Height = 254
+    Width = 897
+    Height = 245
     Align = alClient
     DataSource = dtsSuppliers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -221,8 +221,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 368
-    Width = 903
+    Top = 359
+    Width = 897
     Height = 19
     Panels = <
       item
@@ -234,15 +234,15 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object Panel2: TPanel
     Left = 0
-    Top = 327
-    Width = 903
+    Top = 318
+    Width = 897
     Height = 41
     Align = alBottom
     TabOrder = 4
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Supplier Search'
     end
@@ -273,7 +273,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
-      Left = 717
+      Left = 711
       Top = 1
       Width = 185
       Height = 39

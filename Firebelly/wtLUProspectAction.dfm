@@ -13,6 +13,7 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -51,6 +52,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
       item
         Width = 50
       end>
+    ExplicitTop = 290
+    ExplicitWidth = 417
   end
   object Panel1: TPanel
     Left = 0
@@ -59,6 +62,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     Height = 51
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 239
+    ExplicitWidth = 417
     DesignSize = (
       423
       51)

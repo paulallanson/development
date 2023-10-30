@@ -317,6 +317,7 @@ const
 
 procedure TPBRSSalesByProdFrm.FormCreate(Sender: TObject);
 begin
+  stsDetails.Top := Screen.Height - stsDetails.Height;
   Screen.Cursor := crDefault;
   {setting the default content of the sort option edit boxes}
   DateTo := Date;

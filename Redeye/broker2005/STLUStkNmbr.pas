@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, IniFiles, ComCtrls, Menus, CCSCommon,
-  PBStockDM;
+  PBStockDM, Data.DB;
 
 type
   TSTLUStkNmbrFrm = class(TForm)
@@ -46,6 +46,7 @@ end;
 
 procedure TSTLUStkNmbrFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   dtmdlStockEnquiry := TdtmdlStock.create(self);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
   CCSCommon.SetDBGridCols('', 'NmbrsLU Col Order', frmPBMainMenu.AppIniFile, self.dbgrdLocations);

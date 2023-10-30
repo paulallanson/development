@@ -13,6 +13,7 @@ object frmWTLUCustType: TfrmWTLUCustType
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -48,6 +49,8 @@ object frmWTLUCustType: TfrmWTLUCustType
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 232
+    ExplicitWidth = 470
     DesignSize = (
       476
       67)
@@ -124,6 +127,8 @@ object frmWTLUCustType: TfrmWTLUCustType
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 470
   end
   object dtsCustTypes: TDataSource
     DataSet = qryCustTypes

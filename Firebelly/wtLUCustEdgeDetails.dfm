@@ -2,8 +2,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   Left = 192
   Top = 114
   Caption = 'Maintain Customer Edge Details'
-  ClientHeight = 381
-  ClientWidth = 735
+  ClientHeight = 382
+  ClientWidth = 739
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -15,12 +15,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 735
-    Height = 220
+    Width = 739
+    Height = 221
     Align = alClient
     DataSource = dtsCustEdge
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -72,14 +73,16 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 293
-    Width = 735
+    Top = 294
+    Width = 739
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 285
+    ExplicitWidth = 733
     DesignSize = (
-      735
+      739
       69)
     object Label4: TLabel
       Left = 16
@@ -106,7 +109,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       OnChange = edtNameChange
     end
     object BitBtn1: TBitBtn
-      Left = 309
+      Left = 307
       Top = 14
       Width = 75
       Height = 25
@@ -114,9 +117,10 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
+      ExplicitLeft = 301
     end
     object btnEdit: TBitBtn
-      Left = 397
+      Left = 395
       Top = 14
       Width = 75
       Height = 25
@@ -125,9 +129,10 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
+      ExplicitLeft = 389
     end
     object btnDelete: TBitBtn
-      Left = 485
+      Left = 483
       Top = 14
       Width = 75
       Height = 25
@@ -136,9 +141,10 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
+      ExplicitLeft = 477
     end
     object BitBtn4: TBitBtn
-      Left = 661
+      Left = 659
       Top = 14
       Width = 75
       Height = 25
@@ -147,9 +153,10 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
+      ExplicitLeft = 653
     end
     object btnExcel: TBitBtn
-      Left = 573
+      Left = 571
       Top = 14
       Width = 75
       Height = 25
@@ -158,12 +165,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
+      ExplicitLeft = 565
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 362
-    Width = 735
+    Top = 363
+    Width = 739
     Height = 19
     Panels = <
       item
@@ -172,39 +180,43 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 733
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 735
+    Width = 739
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 733
     DesignSize = (
-      735
+      739
       73)
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 64
+      Width = 68
       Height = 13
       Caption = 'Material Type'
     end
     object Label2: TLabel
       Left = 216
       Top = 16
-      Width = 48
+      Width = 51
       Height = 13
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 501
+      Left = 499
       Top = 16
-      Width = 124
+      Width = 138
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
+      ExplicitLeft = 501
     end
     object dblkpMaterialType: TDBLookupComboBox
       Left = 16
@@ -231,7 +243,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyGroup: TDBLookupComboBox
-      Left = 501
+      Left = 499
       Top = 32
       Width = 145
       Height = 21
@@ -241,9 +253,10 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       ListSource = dtsCustEdgeGroup
       TabOrder = 2
       OnClick = dblkpCopyGroupClick
+      ExplicitLeft = 493
     end
     object btnGo: TButton
-      Left = 662
+      Left = 660
       Top = 30
       Width = 75
       Height = 25
@@ -252,6 +265,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
+      ExplicitLeft = 654
     end
   end
   object dtsCustEdge: TDataSource

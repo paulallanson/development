@@ -17,7 +17,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 53
+    Width = 49
     Height = 13
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET

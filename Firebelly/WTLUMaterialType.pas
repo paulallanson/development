@@ -34,6 +34,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CallMaintScreen(FuncMode: string);
@@ -57,6 +58,11 @@ procedure TfrmWTLUMaterialType.FormClose(Sender: TObject; var Action: TCloseActi
 begin
   Action := caFree;
   qryWorktopType.close;
+end;
+
+procedure TfrmWTLUMaterialType.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUMaterialType.BitBtn1Click(Sender: TObject);

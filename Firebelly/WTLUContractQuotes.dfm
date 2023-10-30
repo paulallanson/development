@@ -27,8 +27,8 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       item
         Width = 100
       end>
-    ExplicitTop = 422
-    ExplicitWidth = 742
+    ExplicitTop = 393
+    ExplicitWidth = 726
   end
   object Panel2: TPanel
     Left = 0
@@ -37,28 +37,29 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
     Height = 51
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 371
-    ExplicitWidth = 742
+    ExplicitTop = 342
+    ExplicitWidth = 726
     DesignSize = (
       732
       51)
     object Label1: TLabel
-      Left = 402
+      Left = 396
       Top = 20
-      Width = 29
+      Width = 32
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Quote'
+      ExplicitLeft = 402
     end
     object Label2: TLabel
       Left = 8
       Top = 20
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object btnSelect: TBitBtn
-      Left = 557
+      Left = 551
       Top = 14
       Width = 75
       Height = 25
@@ -68,15 +69,17 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 545
     end
     object edtNumber: TEdit
-      Left = 442
+      Left = 436
       Top = 16
       Width = 89
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 430
     end
     object edtCustomerName: TEdit
       Left = 64
@@ -88,7 +91,7 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       TabOrder = 2
     end
     object BitBtn1: TBitBtn
-      Left = 645
+      Left = 639
       Top = 14
       Width = 75
       Height = 25
@@ -97,6 +100,7 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 2
       TabOrder = 3
       OnClick = BitBtn1Click
+      ExplicitLeft = 633
     end
   end
   object dbgDetails: TDBGrid

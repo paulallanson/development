@@ -24,10 +24,12 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 586
+    ExplicitWidth = 1283
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -47,13 +49,14 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       Alignment = taRightJustify
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 992
       DesignSize = (
         290
         39)
       object Label3: TLabel
-        Left = 29
+        Left = 22
         Top = 12
-        Width = 69
+        Width = 76
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

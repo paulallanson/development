@@ -376,6 +376,7 @@ end;
 
 procedure TfrmwtLUPayments.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   srcPayments.OnDataChange := SetButtons;
 end;
 

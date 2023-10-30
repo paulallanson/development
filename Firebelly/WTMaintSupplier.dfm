@@ -2,8 +2,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   Left = 436
   Top = 74
   Caption = 'Supplier Details'
-  ClientHeight = 516
-  ClientWidth = 1004
+  ClientHeight = 517
+  ClientWidth = 1008
   Color = clBtnFace
   Constraints.MinHeight = 555
   Constraints.MinWidth = 1020
@@ -21,8 +21,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 497
-    Width = 1004
+    Top = 498
+    Width = 1008
     Height = 19
     Panels = <
       item
@@ -31,21 +31,25 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       item
         Width = 50
       end>
+    ExplicitTop = 489
+    ExplicitWidth = 1002
   end
   object Panel1: TPanel
     Left = 0
-    Top = 455
-    Width = 1004
+    Top = 456
+    Width = 1008
     Height = 42
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 447
+    ExplicitWidth = 1002
     DesignSize = (
-      1004
+      1008
       42)
     object lblDelete: TLabel
-      Left = 641
+      Left = 639
       Top = 15
-      Width = 163
+      Width = 142
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Delete the selected record ?'
@@ -55,10 +59,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 655
+      ExplicitLeft = 641
     end
     object btnOK: TBitBtn
-      Left = 820
+      Left = 818
       Top = 9
       Width = 75
       Height = 25
@@ -69,9 +73,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
+      ExplicitLeft = 812
     end
     object BitBtn2: TBitBtn
-      Left = 906
+      Left = 904
       Top = 9
       Width = 75
       Height = 25
@@ -81,6 +86,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtn2Click
+      ExplicitLeft = 898
     end
     object chkbxInactive: TCheckBox
       Left = 13
@@ -94,15 +100,16 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 1004
+    Width = 1008
     Height = 49
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 1002
     object Label1: TLabel
       Left = 24
       Top = 20
-      Width = 33
+      Width = 31
       Height = 13
       Caption = 'Name'
       Font.Charset = DEFAULT_CHARSET
@@ -125,17 +132,19 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   object pgDetails: TPageControl
     Left = 0
     Top = 49
-    Width = 1004
-    Height = 406
+    Width = 1008
+    Height = 407
     ActivePage = tsDetails
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 1002
+    ExplicitHeight = 398
     object tsDetails: TTabSheet
       Caption = 'Details'
       object Label2: TLabel
         Left = 24
         Top = 19
-        Width = 35
+        Width = 30
         Height = 13
         Caption = 'Street'
         Font.Charset = DEFAULT_CHARSET
@@ -148,14 +157,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Label4: TLabel
         Left = 24
         Top = 67
-        Width = 27
+        Width = 28
         Height = 13
         Caption = 'Town'
       end
       object Label6: TLabel
         Left = 24
         Top = 91
-        Width = 54
+        Width = 48
         Height = 13
         Caption = 'Postcode'
         Font.Charset = DEFAULT_CHARSET
@@ -168,14 +177,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Label5: TLabel
         Left = 24
         Top = 115
-        Width = 33
+        Width = 37
         Height = 13
         Caption = 'County'
       end
       object Label7: TLabel
         Left = 24
         Top = 148
-        Width = 37
+        Width = 34
         Height = 13
         Caption = 'Phone'
         Font.Charset = DEFAULT_CHARSET
@@ -195,42 +204,42 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Label9: TLabel
         Left = 24
         Top = 200
-        Width = 64
+        Width = 68
         Height = 13
         Caption = 'Web Address'
       end
       object Label14: TLabel
         Left = 24
         Top = 324
-        Width = 68
+        Width = 72
         Height = 13
         Caption = 'Account Code'
       end
       object Label15: TLabel
         Left = 23
         Top = 293
-        Width = 43
+        Width = 46
         Height = 13
         Caption = 'Leadtime'
       end
       object Label16: TLabel
         Left = 175
         Top = 293
-        Width = 22
+        Width = 23
         Height = 13
         Caption = 'days'
       end
       object Label17: TLabel
         Left = 24
         Top = 227
-        Width = 66
+        Width = 71
         Height = 13
         Caption = 'Email Address'
       end
       object Label18: TLabel
         Left = 23
         Top = 258
-        Width = 53
+        Width = 58
         Height = 13
         Caption = 'Discount %'
       end
@@ -484,40 +493,40 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alBottom
         TabOrder = 2
         DesignSize = (
-          996
+          1000
           62)
         object Label3: TLabel
           Left = 8
           Top = 12
-          Width = 37
+          Width = 42
           Height = 13
           Caption = 'Material'
         end
         object Label10: TLabel
           Left = 160
           Top = 12
-          Width = 30
+          Width = 35
           Height = 13
           Caption = 'Colour'
         end
         object Label11: TLabel
           Left = 304
           Top = 12
-          Width = 49
+          Width = 50
           Height = 13
           Caption = 'Thickness'
         end
         object Label12: TLabel
           Left = 448
           Top = 12
-          Width = 29
+          Width = 33
           Height = 13
           Caption = 'Group'
         end
         object Label13: TLabel
           Left = 592
           Top = 12
-          Width = 68
+          Width = 70
           Height = 13
           Caption = 'Effective Date'
         end
@@ -530,7 +539,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterialChange
         end
         object Panel4: TPanel
-          Left = 892
+          Left = 896
           Top = 1
           Width = 103
           Height = 60
@@ -538,6 +547,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Alignment = taRightJustify
           BevelOuter = bvNone
           TabOrder = 4
+          ExplicitLeft = 892
         end
         object edtColour: TEdit
           Left = 200
@@ -626,7 +636,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = BitBtn5Click
         end
         object btnSweep: TBitBtn
-          Left = 888
+          Left = 892
           Top = 6
           Width = 75
           Height = 25
@@ -634,6 +644,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Caption = 'S&weep'
           TabOrder = 9
           OnClick = btnSweepClick
+          ExplicitLeft = 888
         end
         object chkbxShowInactive: TCheckBox
           Left = 9
@@ -659,26 +670,26 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alBottom
         TabOrder = 0
         DesignSize = (
-          996
+          1000
           62)
         object Label20: TLabel
           Left = 8
           Top = 12
-          Width = 37
+          Width = 42
           Height = 13
           Caption = 'Material'
         end
         object Label21: TLabel
           Left = 160
           Top = 12
-          Width = 30
+          Width = 35
           Height = 13
           Caption = 'Colour'
         end
         object Label23: TLabel
           Left = 304
           Top = 12
-          Width = 29
+          Width = 33
           Height = 13
           Caption = 'Group'
         end
@@ -691,7 +702,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterial1Change
         end
         object Panel5: TPanel
-          Left = 892
+          Left = 896
           Top = 1
           Width = 103
           Height = 60
@@ -699,6 +710,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Alignment = taRightJustify
           BevelOuter = bvNone
           TabOrder = 3
+          ExplicitLeft = 892
         end
         object edtColour1: TEdit
           Left = 200
@@ -737,12 +749,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
       end
       object Panel7: TPanel
-        Left = 903
+        Left = 907
         Top = 0
         Width = 93
-        Height = 316
+        Height = 317
         Align = alRight
         TabOrder = 1
+        ExplicitLeft = 903
+        ExplicitHeight = 316
         object btnChangeWorktop: TBitBtn
           Left = 10
           Top = 40
@@ -792,8 +806,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object dbgWorktopDetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 903
-        Height = 316
+        Width = 907
+        Height = 317
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 2
@@ -840,7 +854,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alBottom
         TabOrder = 0
         DesignSize = (
-          996
+          1000
           62)
         object Label19: TLabel
           Left = 8
@@ -867,7 +881,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = btnProdClearClick
         end
         object btnProdSweep: TBitBtn
-          Left = 912
+          Left = 916
           Top = 6
           Width = 75
           Height = 25
@@ -875,6 +889,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Caption = 'S&weep'
           TabOrder = 2
           OnClick = btnProdSweepClick
+          ExplicitLeft = 912
         end
         object chkbxShowInactiveProducts: TCheckBox
           Left = 9
@@ -890,8 +905,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object dbgProductDetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 903
-        Height = 316
+        Width = 907
+        Height = 317
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 1
@@ -946,12 +961,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end>
       end
       object Panel6: TPanel
-        Left = 903
+        Left = 907
         Top = 0
         Width = 93
-        Height = 316
+        Height = 317
         Align = alRight
         TabOrder = 2
+        ExplicitLeft = 903
+        ExplicitHeight = 316
         object btnProdChange: TBitBtn
           Left = 10
           Top = 40
@@ -995,7 +1012,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         object Label44: TLabel
           Left = 2
           Top = 4
-          Width = 54
+          Width = 58
           Height = 13
           Caption = 'Documents'
         end

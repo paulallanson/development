@@ -109,6 +109,8 @@ end;
 
 procedure TfrmwtLUCustQuotes.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlQuote := TdtmdlQuote.create(self);
   dbgDetails.Datasource := dtmdlQuote.dtsAllQuotes;
   dtmdlQuote.dtsAllQuotes.OnDataChange := SetButtons;

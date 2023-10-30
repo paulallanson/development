@@ -32,6 +32,7 @@ type
     procedure btnSelectClick(Sender: TObject);
     procedure CloseBitBtnClick(Sender: TObject);
     procedure DetsDBGridDblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure ShowGrid;
@@ -78,6 +79,11 @@ procedure TPBLUProdFrm.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   self.qrySelParts.close;
+end;
+
+procedure TPBLUProdFrm.FormCreate(Sender: TObject);
+begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
 end;
 
 procedure TPBLUProdFrm.GridTimerTimer(Sender: TObject);

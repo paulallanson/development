@@ -740,6 +740,8 @@ var
   IniFile : TIniFile;
   iReplenishType: integer;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do

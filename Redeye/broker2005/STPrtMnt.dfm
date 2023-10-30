@@ -28,6 +28,7 @@ object STPrtMntFrm: TSTPrtMntFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 704
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -46,13 +47,14 @@ object STPrtMntFrm: TSTPrtMntFrm
           MinHeight = 41
           Width = 704
         end>
+      ExplicitWidth = 704
       object ToolBar1: TToolBar
         Left = 11
         Top = 0
         Width = 695
         Height = 41
         ButtonHeight = 36
-        ButtonWidth = 51
+        ButtonWidth = 53
         HotImages = HotImageList1
         Images = CoolImageList1
         ShowCaptions = True
@@ -65,21 +67,21 @@ object STPrtMntFrm: TSTPrtMntFrm
           OnClick = AddBitBtnClick
         end
         object ChangeBitBtn: TToolButton
-          Left = 51
+          Left = 53
           Top = 0
           Caption = 'Change'
           ImageIndex = 1
           OnClick = ChangeBitBtnClick
         end
         object DelBitBtn: TToolButton
-          Left = 102
+          Left = 106
           Top = 0
           Caption = 'Delete'
           ImageIndex = 2
           OnClick = DelBitBtnClick
         end
         object ImportBitBtn: TToolButton
-          Left = 153
+          Left = 159
           Top = 0
           Hint = 'Import Product Text File'
           Caption = 'Import'
@@ -89,7 +91,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           OnClick = ImportBitBtnClick
         end
         object ToolButton5: TToolButton
-          Left = 204
+          Left = 212
           Top = 0
           Width = 8
           Caption = 'ToolButton5'
@@ -97,35 +99,35 @@ object STPrtMntFrm: TSTPrtMntFrm
           Style = tbsSeparator
         end
         object SelAllBitBtn: TToolButton
-          Left = 212
+          Left = 220
           Top = 0
           Caption = 'Select All'
           ImageIndex = 5
           OnClick = SelAllBitBtnClick
         end
         object SuppBitBtn: TToolButton
-          Left = 263
+          Left = 273
           Top = 0
           Caption = 'Supplier'
           ImageIndex = 6
           OnClick = SuppBitBtnClick
         end
         object SuppPartBitBtn: TToolButton
-          Left = 314
+          Left = 326
           Top = 0
           Caption = 'Details'
           ImageIndex = 8
           OnClick = SuppPartBitBtnClick
         end
         object btbtnEComm: TToolButton
-          Left = 365
+          Left = 379
           Top = 0
           Caption = 'E-Comm'
           ImageIndex = 9
           OnClick = btbtnECommClick
         end
         object ToolButton4: TToolButton
-          Left = 416
+          Left = 432
           Top = 0
           Width = 8
           Caption = 'ToolButton4'
@@ -133,7 +135,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           Style = tbsSeparator
         end
         object CloseBitBtn: TToolButton
-          Left = 424
+          Left = 440
           Top = 0
           Caption = 'Close'
           ImageIndex = 4
@@ -185,25 +187,27 @@ object STPrtMntFrm: TSTPrtMntFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 388
+    ExplicitWidth = 704
     DesignSize = (
       710
       88)
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object ShowAllCheckBox: TCheckBox
-      Left = 583
+      Left = 577
       Top = 48
       Width = 121
       Height = 17
@@ -211,6 +215,7 @@ object STPrtMntFrm: TSTPrtMntFrm
       Caption = 'Show All Products'
       TabOrder = 0
       OnClick = ShowAllCheckBoxClick
+      ExplicitLeft = 571
     end
     object CodeEdit: TEdit
       Left = 88
@@ -234,6 +239,7 @@ object STPrtMntFrm: TSTPrtMntFrm
         item
           Width = 50
         end>
+      ExplicitWidth = 702
     end
     object EdtDesc: TEdit
       Left = 88
@@ -255,6 +261,8 @@ object STPrtMntFrm: TSTPrtMntFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 704
+    ExplicitHeight = 343
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1

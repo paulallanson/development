@@ -2,7 +2,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   Left = 315
   Top = 122
   Caption = 'Maintain Non Conformance'
-  ClientHeight = 561
+  ClientHeight = 562
   ClientWidth = 787
   Color = clBtnFace
   Constraints.MinHeight = 600
@@ -20,12 +20,14 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 499
+    Top = 500
     Width = 787
     Height = 43
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 491
+    ExplicitWidth = 781
     object Panel4: TPanel
       Left = 295
       Top = 1
@@ -35,6 +37,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 289
       DesignSize = (
         491
         41)
@@ -95,19 +98,23 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 542
+    Top = 543
     Width = 787
     Height = 19
     Panels = <>
+    ExplicitTop = 534
+    ExplicitWidth = 781
   end
   object pnlNotes: TPanel
     Left = 0
     Top = 72
     Width = 787
-    Height = 346
+    Height = 347
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 781
+    ExplicitHeight = 338
     object pnlNCAdetails: TPanel
       Left = 1
       Top = 1
@@ -117,6 +124,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Caption = 'pnlNCAdetails'
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 779
       object Panel5: TPanel
         Left = 1
         Top = 1
@@ -127,6 +135,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Caption = 'Non Conformance Details'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 777
       end
       object memDetails: TMemo
         Left = 1
@@ -137,17 +146,20 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memDetailsChange
+        ExplicitWidth = 777
       end
     end
     object pnlResponse: TPanel
       Left = 1
       Top = 101
       Width = 785
-      Height = 44
+      Height = 45
       Align = alClient
       Caption = 'pnlResponse'
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 779
+      ExplicitHeight = 36
       object Panel7: TPanel
         Left = 1
         Top = 1
@@ -158,27 +170,32 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Caption = 'Response Details'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 777
       end
       object memResponse: TMemo
         Left = 1
         Top = 21
         Width = 783
-        Height = 22
+        Height = 23
         Align = alClient
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memResponseChange
+        ExplicitWidth = 777
+        ExplicitHeight = 14
       end
     end
     object pnlAction: TPanel
       Left = 1
-      Top = 145
+      Top = 146
       Width = 785
       Height = 100
       Align = alBottom
       Caption = 'pnlAction'
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 137
+      ExplicitWidth = 779
       object Panel6: TPanel
         Left = 1
         Top = 1
@@ -189,6 +206,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Caption = 'Corrective Action'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 777
       end
       object memAction: TMemo
         Left = 1
@@ -199,17 +217,20 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memActionChange
+        ExplicitWidth = 777
       end
     end
     object pnlPrevent: TPanel
       Left = 1
-      Top = 245
+      Top = 246
       Width = 785
       Height = 100
       Align = alBottom
       Caption = 'pnlPrevent'
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 237
+      ExplicitWidth = 779
       object Panel9: TPanel
         Left = 1
         Top = 1
@@ -220,6 +241,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Caption = 'Preventative Action'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 777
       end
       object memPrevent: TMemo
         Left = 1
@@ -230,49 +252,54 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memPreventChange
+        ExplicitWidth = 777
       end
     end
   end
   object Panel3: TPanel
     Left = 0
-    Top = 418
+    Top = 419
     Width = 787
     Height = 81
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 410
+    ExplicitWidth = 781
     DesignSize = (
       787
       81)
     object Label12: TLabel
       Left = 320
       Top = 16
-      Width = 83
+      Width = 90
       Height = 13
       Caption = 'QA Signed off by:'
     end
     object Label13: TLabel
       Left = 408
       Top = 48
-      Width = 26
+      Width = 27
       Height = 13
       Caption = 'Date:'
     end
     object Label14: TLabel
-      Left = 625
+      Left = 619
       Top = 48
-      Width = 80
+      Width = 88
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost to Company'
+      ExplicitLeft = 625
     end
     object Label1: TLabel
-      Left = 641
+      Left = 635
       Top = 16
-      Width = 62
+      Width = 70
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost to Client'
+      ExplicitLeft = 641
     end
     object dblkpQAOperator: TDBLookupComboBox
       Left = 408
@@ -286,7 +313,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       OnClick = dblkpQAOperatorClick
     end
     object memTotalCost: TMemo
-      Left = 713
+      Left = 707
       Top = 44
       Width = 73
       Height = 21
@@ -297,6 +324,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
+      ExplicitLeft = 701
     end
     object BitBtn4: TBitBtn
       Left = 526
@@ -344,7 +372,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       OnClick = btnDateClick
     end
     object memCosttoClient: TMemo
-      Left = 713
+      Left = 707
       Top = 12
       Width = 73
       Height = 21
@@ -355,6 +383,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
+      ExplicitLeft = 701
     end
     object btnClear: TBitBtn
       Left = 560
@@ -413,64 +442,69 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 781
     DesignSize = (
       787
       72)
     object Label7: TLabel
       Left = 167
       Top = 16
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label8: TLabel
-      Left = 593
+      Left = 587
       Top = 13
-      Width = 47
+      Width = 49
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Raised by'
+      ExplicitLeft = 593
     end
     object Label9: TLabel
-      Left = 331
+      Left = 325
       Top = 48
-      Width = 61
+      Width = 66
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Raising Dept'
+      ExplicitLeft = 331
     end
     object Label10: TLabel
-      Left = 580
+      Left = 574
       Top = 48
-      Width = 60
+      Width = 63
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Source Dept'
+      ExplicitLeft = 580
     end
     object Label11: TLabel
-      Left = 328
+      Left = 322
       Top = 16
       Width = 64
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Reason Type'
+      ExplicitLeft = 328
     end
     object Label2: TLabel
       Left = 8
       Top = 16
-      Width = 65
+      Width = 69
       Height = 13
       Caption = 'NCA Number:'
     end
     object Label22: TLabel
       Left = 8
       Top = 48
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object edtRaisedBy: TEdit
-      Left = 648
+      Left = 642
       Top = 9
       Width = 104
       Height = 21
@@ -479,9 +513,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 5
+      ExplicitLeft = 636
     end
     object BitBtn2: TBitBtn
-      Left = 759
+      Left = 753
       Top = 7
       Width = 25
       Height = 25
@@ -495,9 +530,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ParentFont = False
       TabOrder = 6
       OnClick = BitBtn2Click
+      ExplicitLeft = 747
     end
     object dblkpRaisedByDept: TDBLookupComboBox
-      Left = 401
+      Left = 395
       Top = 44
       Width = 137
       Height = 21
@@ -507,9 +543,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ListSource = dtsRaisingDept
       TabOrder = 9
       OnClick = CheckOK
+      ExplicitLeft = 389
     end
     object dblkpSourceDept: TDBLookupComboBox
-      Left = 649
+      Left = 643
       Top = 44
       Width = 137
       Height = 21
@@ -519,9 +556,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ListSource = dtsSourceDept
       TabOrder = 11
       OnClick = CheckOK
+      ExplicitLeft = 637
     end
     object dblkpNCType: TDBLookupComboBox
-      Left = 400
+      Left = 394
       Top = 12
       Width = 137
       Height = 21
@@ -531,9 +569,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ListSource = dtsNCType
       TabOrder = 3
       OnClick = CheckOK
+      ExplicitLeft = 388
     end
     object BitBtn1: TBitBtn
-      Left = 542
+      Left = 536
       Top = 10
       Width = 25
       Height = 25
@@ -547,9 +586,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ParentFont = False
       TabOrder = 4
       OnClick = BitBtn1Click
+      ExplicitLeft = 530
     end
     object BitBtn3: TBitBtn
-      Left = 543
+      Left = 537
       Top = 42
       Width = 25
       Height = 25
@@ -563,6 +603,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       ParentFont = False
       TabOrder = 10
       OnClick = BitBtn3Click
+      ExplicitLeft = 531
     end
     object edtDateRaised: TEdit
       Left = 193

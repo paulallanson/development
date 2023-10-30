@@ -13,6 +13,7 @@ object frmwtLUVat: TfrmwtLUVat
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -62,6 +63,8 @@ object frmwtLUVat: TfrmwtLUVat
       item
         Width = 50
       end>
+    ExplicitTop = 248
+    ExplicitWidth = 414
   end
   object Panel1: TPanel
     Left = 0
@@ -72,6 +75,8 @@ object frmwtLUVat: TfrmwtLUVat
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 174
+    ExplicitWidth = 414
     DesignSize = (
       420
       74)

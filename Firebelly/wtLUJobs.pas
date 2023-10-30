@@ -126,6 +126,8 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlAllJobs := TdtmdlJob.create(Application);
   dtmdlAllJobs.dtsAllJobs.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllJobs.dtsAllJobs;

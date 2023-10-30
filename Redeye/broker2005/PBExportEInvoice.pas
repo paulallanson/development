@@ -488,6 +488,7 @@ end;
 procedure TPBExportEInvoiceFrm.FormCreate(Sender: TObject);
 begin
   bOK := false;
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   self.edtExpFile.Text := self.GetPath;
   dmEInvoice := TdmSalesInvoice.Create(Self);
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

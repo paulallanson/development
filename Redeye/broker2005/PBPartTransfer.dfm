@@ -2,7 +2,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
   Left = 118
   Top = 44
   Caption = 'Product Transfers'
-  ClientHeight = 497
+  ClientHeight = 498
   ClientWidth = 783
   Color = clBtnFace
   Constraints.MinHeight = 536
@@ -29,7 +29,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 478
+    Top = 479
     Width = 783
     Height = 19
     Panels = <
@@ -39,14 +39,18 @@ object PBPartTransferFrm: TPBPartTransferFrm
       item
         Width = 50
       end>
+    ExplicitTop = 470
+    ExplicitWidth = 777
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 437
+    Top = 438
     Width = 783
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 429
+    ExplicitWidth = 777
     DesignSize = (
       783
       41)
@@ -66,7 +70,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       AutoSize = False
     end
     object OKBitBtn: TBitBtn
-      Left = 539
+      Left = 533
       Top = 8
       Width = 75
       Height = 25
@@ -93,9 +97,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 527
     end
     object CancelBitBtn: TBitBtn
-      Left = 619
+      Left = 613
       Top = 8
       Width = 75
       Height = 25
@@ -122,9 +127,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 607
     end
     object CloseBitBtn: TBitBtn
-      Left = 699
+      Left = 693
       Top = 8
       Width = 75
       Height = 25
@@ -133,6 +139,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
+      ExplicitLeft = 687
     end
   end
   object pnlTop: TPanel
@@ -142,72 +149,74 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Height = 141
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 777
     DesignSize = (
       783
       141)
     object QtyLabel: TLabel
       Left = 11
       Top = 117
-      Width = 114
+      Width = 121
       Height = 13
       Caption = 'Qty To Move (in singles)'
     end
     object MovedLabel: TLabel
       Left = 352
       Top = 117
-      Width = 104
+      Width = 113
       Height = 13
       Caption = 'Qty Moved (in singles)'
     end
     object Label3: TLabel
       Left = 10
       Top = 13
-      Width = 76
+      Width = 81
       Height = 13
       Caption = 'Movement Date'
     end
     object lblMoveType: TLabel
       Left = 303
       Top = 13
-      Width = 77
+      Width = 80
       Height = 13
       Caption = 'Movement Type'
     end
     object lblReference: TLabel
-      Left = 560
+      Left = 553
       Top = 13
-      Width = 50
+      Width = 51
       Height = 13
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'Reference'
-      ExplicitLeft = 572
+      ExplicitLeft = 559
     end
     object GRNGroupBox: TGroupBox
       Left = 7
       Top = 29
-      Width = 765
+      Width = 759
       Height = 75
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 3
+      ExplicitWidth = 753
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Order No'
       end
       object Label4: TLabel
         Left = 296
         Top = 20
-        Width = 38
+        Width = 43
         Height = 13
         Caption = 'Supplier'
       end
       object Label5: TLabel
         Left = 8
         Top = 52
-        Width = 64
+        Width = 67
         Height = 13
         Caption = 'GRN Number'
       end
@@ -239,38 +248,39 @@ object PBPartTransferFrm: TPBPartTransferFrm
     object PartGroupBox: TGroupBox
       Left = 7
       Top = 31
-      Width = 766
+      Width = 760
       Height = 73
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
+      ExplicitWidth = 754
       DesignSize = (
-        766
+        760
         73)
       object Label2: TLabel
         Left = 8
         Top = 20
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
       object Label8: TLabel
         Left = 384
         Top = 47
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object Label6: TLabel
         Left = 8
         Top = 47
-        Width = 76
+        Width = 80
         Height = 13
         Caption = 'Form Reference'
       end
       object Label7: TLabel
         Left = 384
         Top = 20
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -303,12 +313,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
       object PartDescrEdit: TEdit
         Left = 456
         Top = 43
-        Width = 303
+        Width = 297
         Height = 21
         Anchors = [akLeft, akTop, akRight, akBottom]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
+        ExplicitWidth = 291
       end
       object edtFormReference: TEdit
         Left = 128
@@ -324,7 +335,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       object edtCustomerName: TEdit
         Left = 456
         Top = 16
-        Width = 303
+        Width = 297
         Height = 21
         Anchors = [akLeft, akTop, akRight, akBottom]
         CharCase = ecUpperCase
@@ -332,6 +343,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ReadOnly = True
         TabOrder = 4
         OnKeyPress = PartEditKeyPress
+        ExplicitWidth = 291
       end
       object dblkpVersions: TDBLookupComboBox
         Left = 128
@@ -409,12 +421,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
       OnClick = DateBitBtnClick
     end
     object edtReference: TEdit
-      Left = 620
+      Left = 614
       Top = 9
       Width = 153
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 6
+      ExplicitLeft = 608
     end
     object dblkpMoveType: TDBLookupComboBox
       Left = 392
@@ -432,37 +445,43 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Left = 0
     Top = 141
     Width = 783
-    Height = 296
+    Height = 297
     Align = alClient
     Caption = 'pnlcentre'
     TabOrder = 4
+    ExplicitWidth = 777
+    ExplicitHeight = 288
     object pnlCentreRight: TPanel
       Left = 401
       Top = 1
       Width = 381
-      Height = 294
+      Height = 295
       Align = alClient
       BevelOuter = bvNone
       Caption = 'pnlCentreRight'
       TabOrder = 0
+      ExplicitWidth = 375
+      ExplicitHeight = 286
       DesignSize = (
         381
-        294)
+        295)
       object ToGroupBox: TGroupBox
         Left = 9
         Top = 9
-        Width = 367
+        Width = 361
         Height = 273
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
         TabOrder = 0
+        ExplicitWidth = 355
+        ExplicitHeight = 264
         DesignSize = (
-          367
+          361
           273)
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Store'
         end
@@ -487,7 +506,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
         object ToTreeView: TTreeView
           Left = 8
           Top = 74
-          Width = 348
+          Width = 342
           Height = 186
           Anchors = [akLeft, akTop, akRight, akBottom]
           Font.Charset = ANSI_CHARSET
@@ -502,6 +521,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnDragDrop = ToTreeViewDragDrop
           OnDragOver = ToTreeViewDragOver
           OnStartDrag = ToTreeViewStartDrag
+          ExplicitWidth = 336
+          ExplicitHeight = 177
         end
       end
     end
@@ -509,14 +530,15 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Left = 1
       Top = 1
       Width = 400
-      Height = 294
+      Height = 295
       Align = alLeft
       BevelOuter = bvNone
       Caption = 'pnlCentreLeft'
       TabOrder = 1
+      ExplicitHeight = 286
       DesignSize = (
         400
-        294)
+        295)
       object FromGroupBox: TGroupBox
         Left = 9
         Top = 9
@@ -525,20 +547,21 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move From'
         TabOrder = 0
+        ExplicitHeight = 265
         DesignSize = (
           384
           274)
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Store'
         end
         object FromDetsLabel: TLabel
           Left = 8
           Top = 56
-          Width = 48
+          Width = 52
           Height = 13
           Caption = 'From Dets'
         end
@@ -571,6 +594,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnChange = FromTreeViewChange
           OnDblClick = FromTreeViewDblClick
           OnStartDrag = FromTreeViewStartDrag
+          ExplicitHeight = 177
         end
       end
     end

@@ -129,6 +129,7 @@ end;
 
 procedure TPBRSRptOrdsFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   dtmdlOrders := TdtmdlOrders.Create(Self);
   self.RepCode := -1;
   self.SelCustomer := -1;

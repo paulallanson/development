@@ -345,6 +345,8 @@ end;
 
 procedure TfrmpbluContacts.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   somethingChanged := false;
   ContactName := '';
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

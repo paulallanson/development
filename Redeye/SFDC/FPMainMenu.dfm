@@ -1,9 +1,9 @@
 object frmFPMainMenu: TfrmFPMainMenu
   Left = 455
   Top = 111
-  Width = 380
-  Height = 400
   Caption = 'Shop Floor Data Collection'
+  ClientHeight = 362
+  ClientWidth = 368
   Color = clBtnFace
   Constraints.MaxHeight = 400
   Constraints.MaxWidth = 380
@@ -14,18 +14,16 @@ object frmFPMainMenu: TfrmFPMainMenu
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDblClick = FormDblClick
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrMainMenu: TStatusBar
     Left = 0
-    Top = 347
-    Width = 372
+    Top = 343
+    Width = 368
     Height = 19
     Panels = <
       item
@@ -38,6 +36,8 @@ object frmFPMainMenu: TfrmFPMainMenu
       item
         Width = 100
       end>
+    ExplicitTop = 334
+    ExplicitWidth = 362
   end
   object Button1: TButton
     Left = 24

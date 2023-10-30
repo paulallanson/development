@@ -13,6 +13,7 @@ object frmWTLUOperators: TfrmWTLUOperators
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -64,6 +65,8 @@ object frmWTLUOperators: TfrmWTLUOperators
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 412
   end
   object Panel1: TPanel
     Left = 0
@@ -73,6 +76,8 @@ object frmWTLUOperators: TfrmWTLUOperators
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 247
+    ExplicitWidth = 412
     DesignSize = (
       418
       75)

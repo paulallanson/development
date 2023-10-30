@@ -21,11 +21,13 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 375
+    ExplicitWidth = 908
     DesignSize = (
       914
       41)
     object btnClose: TButton
-      Left = 820
+      Left = 814
       Top = 8
       Width = 75
       Height = 25
@@ -33,9 +35,10 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       Caption = 'Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 808
     end
     object btnExcel: TBitBtn
-      Left = 716
+      Left = 710
       Top = 8
       Width = 75
       Height = 25
@@ -87,6 +90,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
+      ExplicitLeft = 704
     end
   end
   object pnlHeader: TPanel
@@ -96,6 +100,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 81
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 908
     object rgAccMan: TRadioGroup
       Left = 8
       Top = 8
@@ -119,7 +124,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 116
+        Width = 123
         Height = 13
         Caption = 'Account Manager Name'
       end
@@ -275,6 +280,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Width = 914
     Height = 19
     Panels = <>
+    ExplicitTop = 416
+    ExplicitWidth = 908
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

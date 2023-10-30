@@ -98,10 +98,11 @@ end;
 
 procedure TfrmWTLUPOrderSalesOrderLine.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlPOrder := TdtmdlPurchaseOrder.Create(Self);
   dtmdlPOrder.dtsGetSOLines.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlPOrder.dtsGetSOLines;
-
 end;
 
 procedure TfrmWTLUPOrderSalesOrderLine.SetButtons(Sender: TObject; Field: TField);

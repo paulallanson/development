@@ -134,6 +134,8 @@ end;
 
 procedure TfrmWTLUEdgeDetails.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   lkpMatType.active := true;
   lkpEdgeType.active := true;
 
@@ -141,7 +143,6 @@ begin
   dblkpEdgetype.keyvalue := lkpEdgeType.fieldbyname('Edge_Type').asinteger;
 
 //  tblEdgeThickness.active := true;
-
 end;
 
 procedure TfrmWTLUEdgeDetails.dblkpMaterialTypeClick(Sender: TObject);

@@ -143,6 +143,8 @@ end;
 
 procedure TfrmWTLUSupplierProduct.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dtsDetails.OnDataChange := SetButtons;
 end;
 

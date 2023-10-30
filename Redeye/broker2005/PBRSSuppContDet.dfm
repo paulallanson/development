@@ -23,6 +23,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Height = 81
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 745
     DesignSize = (
       751
       81)
@@ -56,7 +57,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 628
+      Left = 622
       Top = 7
       Width = 120
       Height = 63
@@ -67,6 +68,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
         'Summary'
         'Detailed')
       TabOrder = 1
+      ExplicitLeft = 616
     end
     object chkbxSuppliers: TCheckBox
       Left = 448
@@ -94,6 +96,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 424
+    ExplicitWidth = 745
     DesignSize = (
       751
       41)
@@ -105,6 +109,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 442
       DesignSize = (
         302
         39)
@@ -211,7 +216,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       end
     end
     object btnCancel: TBitBtn
-      Left = 8
+      Left = 7
       Top = 9
       Width = 75
       Height = 25
@@ -236,6 +241,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 465
+    ExplicitWidth = 745
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
@@ -311,7 +318,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

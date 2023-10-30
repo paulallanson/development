@@ -157,6 +157,8 @@ end;
 
 procedure TPBLUCustDeliveriesFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 

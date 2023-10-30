@@ -65,6 +65,7 @@ uses UITypes;
 
 procedure TfrmpbluCustWorksJB.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlCustWOrders := TdtmdlWOrders.create(self);
   dtmdlCustWOrders.dtsWOHeaderGrid.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustWOrders.dtsWOHeaderGrid;

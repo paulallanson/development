@@ -34,6 +34,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CallMaintScreen(FuncMode: string);
@@ -56,6 +57,11 @@ uses
 procedure TfrmPBLUDocumentLogos.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfrmPBLUDocumentLogos.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmPBLUDocumentLogos.BitBtn1Click(Sender: TObject);

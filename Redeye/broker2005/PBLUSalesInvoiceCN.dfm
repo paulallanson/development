@@ -25,6 +25,8 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 753
+    ExplicitHeight = 363
     object dbgSalesInvoice: TDBGrid
       Left = 0
       Top = 0
@@ -110,13 +112,15 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 363
+    ExplicitWidth = 753
     DesignSize = (
       759
       80)
     object lblSalesInvNo: TLabel
       Left = 460
       Top = 62
-      Width = 64
+      Width = 65
       Height = 13
       Caption = 'Sales Invoice'
     end
@@ -130,7 +134,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       object Label1: TLabel
         Left = 16
         Top = 16
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -152,13 +156,14 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       OnKeyPress = edtSalesInvNoKeyPress
     end
     object GroupBox2: TGroupBox
-      Left = 640
+      Left = 634
       Top = 1
       Width = 105
       Height = 76
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       TabOrder = 2
+      ExplicitLeft = 628
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -251,6 +256,8 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       item
         Width = 50
       end>
+    ExplicitTop = 443
+    ExplicitWidth = 753
   end
   object SearchTimer: TTimer
     Enabled = False

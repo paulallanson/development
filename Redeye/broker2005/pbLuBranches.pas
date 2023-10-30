@@ -230,6 +230,8 @@ end;
 
 procedure TfrmpbluBranches.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   BranchName := '';
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;

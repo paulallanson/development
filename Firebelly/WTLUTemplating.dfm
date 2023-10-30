@@ -2,8 +2,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   Left = 186
   Top = 121
   Caption = 'Templating Details'
-  ClientHeight = 387
-  ClientWidth = 1272
+  ClientHeight = 378
+  ClientWidth = 1266
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,32 +23,32 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1272
+    Width = 1266
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1266
+        Width = 1260
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1257
+      Width = 1251
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
       TabOrder = 0
       DesignSize = (
-        1257
+        1251
         28)
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 94
-        Height = 24
+        Width = 93
+        Height = 25
         Caption = 'Templating'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -58,9 +58,9 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 998
+        Left = 992
         Top = 7
-        Width = 69
+        Width = 78
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
@@ -70,13 +70,13 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1036
+        ExplicitLeft = 998
       end
       object lblWorkinProgress: TLabel
         Left = 120
         Top = 3
-        Width = 83
-        Height = 20
+        Width = 85
+        Height = 21
         Caption = '-  Tomorrow'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET
@@ -88,7 +88,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1078
+        Left = 1072
         Top = 3
         Width = 145
         Height = 21
@@ -101,8 +101,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 368
-    Width = 1272
+    Top = 359
+    Width = 1266
     Height = 19
     Panels = <
       item
@@ -117,13 +117,13 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   end
   object Panel1: TPanel
     Left = 0
-    Top = 327
-    Width = 1272
+    Top = 318
+    Width = 1266
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      1272
+      1266
       41)
     object Label1: TLabel
       Left = 8
@@ -133,24 +133,24 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1023
+      Left = 1007
       Top = 15
-      Width = 55
+      Width = 59
       Height = 13
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
-      ExplicitLeft = 1047
+      ExplicitLeft = 1019
     end
     object Label6: TLabel
       Left = 528
       Top = 15
-      Width = 73
+      Width = 76
       Height = 13
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1183
+      Left = 1171
       Top = 9
       Width = 75
       Height = 25
@@ -168,7 +168,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1084
+      Left = 1072
       Top = 11
       Width = 73
       Height = 21
@@ -223,9 +223,9 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         225
         39)
       object Label8: TLabel
-        Left = 10
+        Left = 8
         Top = 13
-        Width = 71
+        Width = 73
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -267,22 +267,22 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1272
+    Width = 1266
     Height = 45
     Bands = <
       item
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1266
+        Width = 1260
       end>
     object btnDocuments: TToolBar
       Left = 11
       Top = 0
-      Width = 1257
+      Width = 1251
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'btnDocuments'
       Images = imgLstHot
       ShowCaptions = True
@@ -299,7 +299,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnChangeClick
       end
       object btnTemplate: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Template'
@@ -308,7 +308,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnTemplateClick
       end
       object btnReturned: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Hint = 'Confirm Paperwork Returned'
         Caption = 'Returned'
@@ -317,7 +317,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnReturnedClick
       end
       object btnConvert: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Convert'
@@ -328,7 +328,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnConvertClick
       end
       object ToolButton1: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -336,7 +336,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 232
+        Left = 244
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -350,8 +350,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1272
-    Height = 250
+    Width = 1266
+    Height = 241
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

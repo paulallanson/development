@@ -9,8 +9,7 @@ uses
   IniFiles, PBActivityDM, System.Actions, System.ImageList;
 
 type
-  TfrmpbMainMenu = class(TForm)                                                                                
-    CoolBar1: TCoolBar;
+  TfrmpbMainMenu = class(TForm)
     File1: TMenuItem;
     miExit: TMenuItem;
     N2: TMenuItem;
@@ -172,7 +171,7 @@ type
     pmnSalesInvoicing: TPopupMenu;
     btnSalesInvoicing1: TMenuItem;
     btnSalesCredits1: TMenuItem;
-    ToolBar1: TToolBar;
+    MainMenuToolbar: TToolBar;
     btnActivities: TToolButton;
     btnCustomers: TToolButton;
     btnProspects: TToolButton;
@@ -517,6 +516,8 @@ var
   TempArray: array[0..255] of Char;
   iActivityInterval: integer;
 begin
+  stsbrMainMenu.Top := Screen.Height - stsbrMainMenu.Height;
+
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
@@ -1446,7 +1447,6 @@ end;
 procedure TfrmPBMainMenu.CheckContracts;
 begin
   btnContracts.visible := dmBroker.UseContracts;
-  mnuContracts.Visible := btnContracts.Visible;
   mnuContracts.Visible := btnContracts.Visible;
 end;
 

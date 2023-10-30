@@ -442,6 +442,8 @@ procedure TPBEnqSelSupFrm.FormCreate(Sender: TObject);
 var
   icount: Integer;
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   setLength(iSelSupp, supplierLimit);
   setLength(iSelBranch, supplierLimit);
   

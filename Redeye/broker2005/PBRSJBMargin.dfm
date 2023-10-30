@@ -2,8 +2,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   Left = 77
   Top = 88
   Caption = 'Job Bag Margin Report'
-  ClientHeight = 498
-  ClientWidth = 807
+  ClientHeight = 489
+  ClientWidth = 801
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 750
@@ -18,8 +18,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 479
-    Width = 807
+    Top = 470
+    Width = 801
     Height = 19
     Panels = <
       item
@@ -31,14 +31,14 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 438
-    Width = 807
+    Top = 429
+    Width = 801
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      807
+      801
       41)
     object btnCancel: TBitBtn
       Left = 8
@@ -51,7 +51,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       TabOrder = 0
     end
     object btnPreview: TBitBtn
-      Left = 638
+      Left = 620
       Top = 8
       Width = 75
       Height = 25
@@ -73,9 +73,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPreviewClick
+      ExplicitLeft = 626
     end
     object btnPrint: TBitBtn
-      Left = 725
+      Left = 707
       Top = 8
       Width = 75
       Height = 25
@@ -97,9 +98,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitLeft = 713
     end
     object btnExcel: TBitBtn
-      Left = 554
+      Left = 536
       Top = 8
       Width = 75
       Height = 25
@@ -150,12 +152,13 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 542
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 807
+    Width = 801
     Height = 137
     Align = alTop
     Font.Charset = ANSI_CHARSET
@@ -169,7 +172,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object lblDateFrom: TLabel
       Left = 424
       Top = 8
-      Width = 52
+      Width = 56
       Height = 13
       Caption = 'Date From:'
       Font.Charset = ANSI_CHARSET
@@ -282,7 +285,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       object lblCustomer: TLabel
         Left = 8
         Top = 4
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
         Font.Charset = ANSI_CHARSET
@@ -352,7 +355,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 77
+        Width = 82
         Height = 13
         Caption = 'Supplier/Branch'
       end
@@ -389,6 +392,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 4
+      ExplicitLeft = 532
       object chkbxPageBreak: TCheckBox
         Left = 140
         Top = 104
@@ -479,8 +483,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   object dbgJobBag: TDBGrid
     Left = 0
     Top = 137
-    Width = 807
-    Height = 301
+    Width = 801
+    Height = 292
     Align = alClient
     DataSource = dsReport
     Font.Charset = ANSI_CHARSET
@@ -623,7 +627,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

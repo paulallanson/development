@@ -109,6 +109,8 @@ var
   stempDate: string;
   sShowLive, sShowAllOperators: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     with IniFile do

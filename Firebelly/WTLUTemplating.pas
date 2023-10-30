@@ -121,6 +121,8 @@ var
   IniFile : TIniFile;
   sShowLive, sShowOnSchedule: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   dtmdlTemplating := TdtmdlSalesOrder.create(Application);

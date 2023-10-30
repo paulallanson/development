@@ -30,6 +30,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       item
         Width = 50
       end>
+    ExplicitTop = 405
+    ExplicitWidth = 846
   end
   object Panel2: TPanel
     Left = 0
@@ -38,13 +40,15 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 364
+    ExplicitWidth = 846
     DesignSize = (
       852
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 74
+      Width = 77
       Height = 13
       Caption = 'Product Search'
     end
@@ -58,7 +62,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 774
+      Left = 768
       Top = 8
       Width = 75
       Height = 25
@@ -66,9 +70,10 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 762
     end
     object btnOK: TBitBtn
-      Left = 686
+      Left = 680
       Top = 8
       Width = 75
       Height = 25
@@ -96,6 +101,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
+      ExplicitLeft = 674
     end
   end
   object Panel3: TPanel
@@ -105,24 +111,25 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 41
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 846
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 90
+      Width = 102
       Height = 13
       Caption = 'Fulfillment Location'
     end
     object Label3: TLabel
       Left = 640
       Top = 12
-      Width = 85
+      Width = 89
       Height = 13
       Caption = 'Transaction  Date'
     end
     object lblBinLocation: TLabel
       Left = 352
       Top = 12
-      Width = 70
+      Width = 74
       Height = 13
       Caption = 'Associated Bin'
     end
@@ -160,6 +167,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
+    ExplicitWidth = 744
+    ExplicitHeight = 323
     ColWidths = (
       178
       201
@@ -174,6 +183,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 332
     Align = alRight
     TabOrder = 4
+    ExplicitLeft = 744
+    ExplicitHeight = 323
     DesignSize = (
       102
       332)
@@ -259,6 +270,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitTop = 287
     end
   end
   object tmrSearch: TTimer

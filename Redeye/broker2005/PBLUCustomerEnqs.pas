@@ -65,6 +65,7 @@ uses UITypes, PBAutoPO;
 procedure TPBLUCustomerEnqsFrm.FormCreate(Sender: TObject);
 begin
   Selected := false;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlCustEnqs := TdtmdlEnqs.create(self);
   dbgDetails.Datasource := dtmdlCustEnqs.dtsEnqsJB;
   dtmdlCustEnqs.dtsEnqsJB.OnDataChange := SetButtons;

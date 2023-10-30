@@ -86,6 +86,8 @@ object frmwtLUPayments: TfrmwtLUPayments
       item
         Width = 50
       end>
+    ExplicitTop = 496
+    ExplicitWidth = 779
   end
   object Panel1: TPanel
     Left = 0
@@ -95,6 +97,8 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 453
+    ExplicitWidth = 779
     DesignSize = (
       785
       43)
@@ -129,7 +133,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 675
+      Left = 669
       Top = 10
       Width = 75
       Height = 25
@@ -138,6 +142,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
+      ExplicitLeft = 663
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -157,13 +162,15 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 79
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 374
+    ExplicitWidth = 779
     DesignSize = (
       785
       79)
     object Label1: TLabel
-      Left = 566
+      Left = 560
       Top = 13
-      Width = 92
+      Width = 82
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Total Payments:'
@@ -173,21 +180,21 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 584
+      ExplicitLeft = 566
     end
     object lblTotalPayments: TLabel
-      Left = 670
+      Left = 664
       Top = 13
-      Width = 80
+      Width = 86
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblTotalPayments'
-      ExplicitLeft = 688
+      ExplicitLeft = 670
     end
     object lblDeposit: TLabel
       Left = 8
       Top = 62
-      Width = 107
+      Width = 96
       Height = 13
       Caption = 'Deposit Required: '
       Font.Charset = DEFAULT_CHARSET
@@ -200,14 +207,14 @@ object frmwtLUPayments: TfrmwtLUPayments
     object lblDepositRequired: TLabel
       Left = 136
       Top = 62
-      Width = 89
+      Width = 100
       Height = 13
       Caption = 'lblDepositRequired'
     end
     object lblTotalValueLabel: TLabel
       Left = 8
       Top = 13
-      Width = 105
+      Width = 91
       Height = 13
       Caption = 'Total Order Value:'
       Font.Charset = DEFAULT_CHARSET
@@ -220,14 +227,14 @@ object frmwtLUPayments: TfrmwtLUPayments
     object lblOrderValue: TLabel
       Left = 136
       Top = 13
-      Width = 63
+      Width = 71
       Height = 13
       Caption = 'lblOrderValue'
     end
     object Label3: TLabel
-      Left = 566
+      Left = 560
       Top = 61
-      Width = 73
+      Width = 68
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Outstanding:'
@@ -237,21 +244,21 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 584
+      ExplicitLeft = 566
     end
     object lblOutstanding: TLabel
-      Left = 670
+      Left = 664
       Top = 61
-      Width = 67
+      Width = 79
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblOutstanding'
-      ExplicitLeft = 688
+      ExplicitLeft = 670
     end
     object lblCredits: TLabel
-      Left = 566
+      Left = 560
       Top = 38
-      Width = 73
+      Width = 64
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Total Credits'
@@ -261,16 +268,16 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 584
+      ExplicitLeft = 566
     end
     object lblTotalCredits: TLabel
-      Left = 670
+      Left = 664
       Top = 38
-      Width = 66
+      Width = 74
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblTotalCredits'
-      ExplicitLeft = 688
+      ExplicitLeft = 670
     end
   end
   object pnlHeader: TPanel
@@ -281,10 +288,11 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 4
+    ExplicitWidth = 779
     object lblSalesOrder: TLabel
-      Left = 674
+      Left = 682
       Top = 14
-      Width = 76
+      Width = 68
       Height = 13
       Alignment = taRightJustify
       Caption = 'lblSalesOrder'
@@ -313,7 +321,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     object lblCustomer: TLabel
       Left = 8
       Top = 14
-      Width = 66
+      Width = 63
       Height = 13
       Caption = 'lblCustomer'
       Font.Charset = DEFAULT_CHARSET
@@ -324,9 +332,9 @@ object frmwtLUPayments: TfrmwtLUPayments
       ParentFont = False
     end
     object lblSalesInvoice: TLabel
-      Left = 663
+      Left = 674
       Top = 43
-      Width = 87
+      Width = 76
       Height = 13
       Alignment = taRightJustify
       Caption = 'lblSalesInvoice'
@@ -340,7 +348,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     object lblAccountCode: TLabel
       Left = 464
       Top = 14
-      Width = 90
+      Width = 83
       Height = 13
       Caption = 'lblAccountCode'
       Font.Charset = DEFAULT_CHARSET
@@ -377,7 +385,6 @@ object frmwtLUPayments: TfrmwtLUPayments
         Expanded = False
         FieldName = 'Invoice_no'
         Title.Caption = 'Credit Note No.'
-        Width = 84
         Visible = True
       end
       item
@@ -408,10 +415,12 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 33
     Align = alBottom
     TabOrder = 6
+    ExplicitTop = 245
+    ExplicitWidth = 779
     object lblCreditNotes: TLabel
       Left = 8
       Top = 13
-      Width = 71
+      Width = 65
       Height = 13
       Caption = 'Credit Notes'
       Font.Charset = DEFAULT_CHARSET

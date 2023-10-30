@@ -18,42 +18,42 @@ object frmSTLUFormRef: TfrmSTLUFormRef
   object CustLabel: TLabel
     Left = 88
     Top = 54
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label2: TLabel
     Left = 8
     Top = 54
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 68
+    Width = 73
     Height = 13
     Caption = 'Product Code:'
   end
   object lblProductCode: TLabel
     Left = 88
     Top = 8
-    Width = 72
+    Width = 80
     Height = 13
     Caption = 'lblProductCode'
   end
   object Label3: TLabel
     Left = 8
     Top = 32
-    Width = 56
+    Width = 62
     Height = 13
     Caption = 'Description:'
   end
   object lblDescription: TLabel
     Left = 88
     Top = 32
-    Width = 63
+    Width = 72
     Height = 13
     Caption = 'lblDescription'
   end
@@ -223,7 +223,7 @@ object frmSTLUFormRef: TfrmSTLUFormRef
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
@@ -263,6 +263,8 @@ object frmSTLUFormRef: TfrmSTLUFormRef
       item
         Width = 50
       end>
+    ExplicitTop = 355
+    ExplicitWidth = 442
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

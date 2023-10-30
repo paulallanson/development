@@ -35,7 +35,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 790
+    ExplicitWidth = 788
     DesignSize = (
       794
       61)
@@ -47,12 +47,13 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Caption = 'Order No.'
     end
     object Label8: TLabel
-      Left = 356
+      Left = 350
       Top = 12
       Width = 74
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Required Date'
+      ExplicitLeft = 356
     end
     object OrdNoLabel: TLabel
       Left = 80
@@ -92,12 +93,13 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Visible = False
     end
     object Label20: TLabel
-      Left = 564
+      Left = 558
       Top = 12
       Width = 47
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Operator'
+      ExplicitLeft = 564
     end
     object DateEdit: TEdit
       Left = 240
@@ -131,7 +133,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       OnClick = DateBitBtnClick
     end
     object DtReqEdit: TEdit
-      Left = 436
+      Left = 430
       Top = 8
       Width = 81
       Height = 21
@@ -139,10 +141,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       MaxLength = 30
       TabOrder = 2
       OnExit = DtReqEditExit
-      ExplicitLeft = 432
+      ExplicitLeft = 424
     end
     object DtReqBitBtn: TBitBtn
-      Left = 524
+      Left = 518
       Top = 6
       Width = 25
       Height = 25
@@ -163,7 +165,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = DtReqBitBtnClick
-      ExplicitLeft = 520
+      ExplicitLeft = 512
     end
     object cmbbxOrderType: TComboBox
       Left = 80
@@ -180,7 +182,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         'Destroy Notification')
     end
     object OfficeComboBox: TDBLookupComboBox
-      Left = 620
+      Left = 614
       Top = 8
       Width = 153
       Height = 21
@@ -189,17 +191,17 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       ListField = 'Name'
       ListSource = STSalesOrdDM.OperatorSRC
       TabOrder = 4
-      ExplicitLeft = 616
+      ExplicitLeft = 608
     end
     object chkbxCashSale: TCheckBox
-      Left = 620
+      Left = 614
       Top = 36
       Width = 121
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Cash Sale'
       TabOrder = 6
-      ExplicitLeft = 616
+      ExplicitLeft = 608
     end
   end
   object pnlFooter: TPanel
@@ -217,8 +219,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitTop = 481
-    ExplicitWidth = 790
+    ExplicitTop = 473
+    ExplicitWidth = 788
     DesignSize = (
       794
       33)
@@ -230,7 +232,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Caption = 'FAO'
     end
     object OKBitBtn: TBitBtn
-      Left = 609
+      Left = 603
       Top = 5
       Width = 76
       Height = 25
@@ -304,10 +306,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 605
+      ExplicitLeft = 597
     end
     object CancelBitBtn: TBitBtn
-      Left = 697
+      Left = 691
       Top = 5
       Width = 76
       Height = 25
@@ -381,7 +383,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 693
+      ExplicitLeft = 685
     end
     object NotesBitBtn: TBitBtn
       Left = 8
@@ -453,18 +455,19 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 369
-    ExplicitWidth = 790
+    ExplicitTop = 361
+    ExplicitWidth = 788
     DesignSize = (
       794
       112)
     object Label10: TLabel
-      Left = 548
+      Left = 542
       Top = 20
       Width = 89
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Total Order Value'
+      ExplicitLeft = 548
     end
     object Label16: TLabel
       Left = 3
@@ -474,7 +477,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Caption = 'Additional Charges'
     end
     object memoTotal: TMemo
-      Left = 671
+      Left = 665
       Top = 16
       Width = 97
       Height = 23
@@ -487,7 +490,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 667
+      ExplicitLeft = 659
     end
     object ExtChgDetsStringGrid: TStringGrid
       Left = 8
@@ -509,7 +512,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         96)
     end
     object chkbxDoNotInvc: TCheckBox
-      Left = 548
+      Left = 542
       Top = 68
       Width = 97
       Height = 17
@@ -517,10 +520,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Caption = 'Do Not Invoice'
       TabOrder = 2
       OnClick = chkbxDoNotInvcClick
-      ExplicitLeft = 544
+      ExplicitLeft = 536
     end
     object chkbxAuthorise: TCheckBox
-      Left = 548
+      Left = 542
       Top = 47
       Width = 121
       Height = 17
@@ -528,17 +531,17 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Caption = 'Authorise Call Off'
       TabOrder = 3
       Visible = False
-      ExplicitLeft = 544
+      ExplicitLeft = 536
     end
     object chkbxInactive: TCheckBox
-      Left = 548
+      Left = 542
       Top = 89
       Width = 225
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Order is inactive and has been cancelled'
       TabOrder = 4
-      ExplicitLeft = 544
+      ExplicitLeft = 536
     end
   end
   object pnlDetails: TPanel
@@ -550,8 +553,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     Caption = 'pnlDetails'
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 790
-    ExplicitHeight = 308
+    ExplicitWidth = 788
+    ExplicitHeight = 300
     object pnlLines: TPanel
       Left = 1
       Top = 145
@@ -560,8 +563,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       Align = alClient
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 788
-      ExplicitHeight = 162
+      ExplicitWidth = 786
+      ExplicitHeight = 154
       object LineDetsStringGrid: TStringGrid
         Left = 1
         Top = 1
@@ -583,8 +586,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         OnDblClick = LineDetsStringGridDblClick
         OnKeyUp = LineDetsStringGridKeyUp
         OnSelectCell = LineDetsStringGridSelectCell
-        ExplicitWidth = 786
-        ExplicitHeight = 160
+        ExplicitWidth = 784
+        ExplicitHeight = 152
         ColWidths = (
           38
           225
@@ -611,7 +614,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 788
+      ExplicitWidth = 786
       DesignSize = (
         792
         144)
@@ -630,12 +633,13 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         Caption = 'Contact'
       end
       object Label11: TLabel
-        Left = 386
+        Left = 380
         Top = 37
         Width = 83
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Delivery address'
+        ExplicitLeft = 386
       end
       object Label13: TLabel
         Left = 8
@@ -652,30 +656,32 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         Caption = 'Rep'
       end
       object Label1: TLabel
-        Left = 386
+        Left = 380
         Top = 67
         Width = 77
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Replenish Type'
+        ExplicitLeft = 386
       end
       object Label17: TLabel
-        Left = 386
+        Left = 380
         Top = 8
         Width = 49
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Deliver to'
+        ExplicitLeft = 386
       end
       object pnlWarehouse: TPanel
-        Left = 372
+        Left = 366
         Top = 88
         Width = 401
         Height = 49
         Anchors = [akTop, akRight]
         ParentBackground = False
         TabOrder = 12
-        ExplicitLeft = 368
+        ExplicitLeft = 360
         DesignSize = (
           401
           49)
@@ -703,7 +709,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       object CustNameEdit: TEdit
         Left = 78
         Top = 6
-        Width = 245
+        Width = 239
         Height = 21
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
@@ -712,10 +718,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         TabOrder = 0
         OnChange = CustNameEditChange
         OnExit = CustNameEditExit
-        ExplicitWidth = 241
+        ExplicitWidth = 233
       end
       object CustBitBtn: TBitBtn
-        Left = 332
+        Left = 326
         Top = 4
         Width = 25
         Height = 25
@@ -730,12 +736,12 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         TabOrder = 1
         TabStop = False
         OnClick = CustBitBtnClick
-        ExplicitLeft = 328
+        ExplicitLeft = 320
       end
       object ContactEdit: TEdit
         Left = 78
         Top = 34
-        Width = 245
+        Width = 239
         Height = 21
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
@@ -743,10 +749,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         MaxLength = 40
         ReadOnly = True
         TabOrder = 2
-        ExplicitWidth = 241
+        ExplicitWidth = 233
       end
       object SelContactBtn: TButton
-        Left = 332
+        Left = 326
         Top = 32
         Width = 25
         Height = 25
@@ -760,22 +766,22 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         ParentFont = False
         TabOrder = 3
         OnClick = SelContactBtnClick
-        ExplicitLeft = 328
+        ExplicitLeft = 320
       end
       object OrdEdit: TEdit
         Left = 78
         Top = 90
-        Width = 215
+        Width = 209
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
         OnChange = OrdEditChange
-        ExplicitWidth = 211
+        ExplicitWidth = 203
       end
       object dbLkpCmbRep: TDBLookupComboBox
         Left = 78
         Top = 116
-        Width = 215
+        Width = 209
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Rep'
@@ -783,10 +789,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         ListSource = STSalesOrdDM.RepSRC
         TabOrder = 6
         OnClick = dbLkpCmbRepClick
-        ExplicitWidth = 211
+        ExplicitWidth = 203
       end
       object DeliveryBitBtn: TBitBtn
-        Left = 740
+        Left = 734
         Top = 31
         Width = 25
         Height = 25
@@ -800,10 +806,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         ParentFont = False
         TabOrder = 9
         OnClick = DeliveryBitBtnClick
-        ExplicitLeft = 736
+        ExplicitLeft = 728
       end
       object DeliveryEdit: TEdit
-        Left = 474
+        Left = 468
         Top = 33
         Width = 257
         Height = 21
@@ -814,10 +820,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         ReadOnly = True
         TabOrder = 8
         OnChange = CustNameEditChange
-        ExplicitLeft = 470
+        ExplicitLeft = 462
       end
       object dblkpReplType: TDBLookupComboBox
-        Left = 474
+        Left = 468
         Top = 63
         Width = 222
         Height = 21
@@ -827,10 +833,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         ListSource = STSalesOrdDM.RepSourceSRC
         TabOrder = 10
         OnClick = dblkpReplTypeClick
-        ExplicitLeft = 470
+        ExplicitLeft = 462
       end
       object pnlDeliveryType: TPanel
-        Left = 474
+        Left = 468
         Top = 2
         Width = 307
         Height = 25
@@ -838,7 +844,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 7
-        ExplicitLeft = 470
+        ExplicitLeft = 462
         DesignSize = (
           307
           25)
@@ -877,14 +883,14 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         end
       end
       object pnlSupplier: TPanel
-        Left = 380
+        Left = 374
         Top = 88
         Width = 401
         Height = 57
         Anchors = [akTop, akRight]
         ParentBackground = False
         TabOrder = 11
-        ExplicitLeft = 376
+        ExplicitLeft = 368
         object Label4: TLabel
           Left = 14
           Top = 8
@@ -992,8 +998,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       item
         Width = 50
       end>
-    ExplicitTop = 514
-    ExplicitWidth = 790
+    ExplicitTop = 506
+    ExplicitWidth = 788
   end
   object FlashTimer: TTimer
     Enabled = False

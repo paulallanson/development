@@ -2,8 +2,8 @@ object STMaintStockFrm: TSTMaintStockFrm
   Left = 2
   Top = 5
   Caption = 'Maintain Stock Records'
-  ClientHeight = 529
-  ClientWidth = 780
+  ClientHeight = 530
+  ClientWidth = 784
   Color = clBtnFace
   Constraints.MinHeight = 568
   Constraints.MinWidth = 796
@@ -18,16 +18,18 @@ object STMaintStockFrm: TSTMaintStockFrm
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 469
-    Width = 780
+    Top = 470
+    Width = 784
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 461
+    ExplicitWidth = 778
     DesignSize = (
-      780
+      784
       41)
     object btnClose: TBitBtn
-      Left = 693
+      Left = 691
       Top = 8
       Width = 75
       Height = 25
@@ -35,15 +37,17 @@ object STMaintStockFrm: TSTMaintStockFrm
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 685
     end
   end
   object pnlLeft: TPanel
     Left = 0
     Top = 0
     Width = 337
-    Height = 469
+    Height = 470
     Align = alLeft
     TabOrder = 1
+    ExplicitHeight = 461
     object Panel5: TPanel
       Left = 1
       Top = 1
@@ -54,14 +58,14 @@ object STMaintStockFrm: TSTMaintStockFrm
       object Label1: TLabel
         Left = 16
         Top = 16
-        Width = 63
+        Width = 69
         Height = 13
         Caption = 'Product From'
       end
       object lblDescriptionFrom: TLabel
         Left = 16
         Top = 64
-        Width = 86
+        Width = 98
         Height = 13
         Caption = 'lblDescriptionFrom'
       end
@@ -93,7 +97,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       Left = 1
       Top = 89
       Width = 335
-      Height = 379
+      Height = 380
       Align = alClient
       DataSource = dtsStockFrom
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -145,28 +149,31 @@ object STMaintStockFrm: TSTMaintStockFrm
   object pnlRight: TPanel
     Left = 429
     Top = 0
-    Width = 351
-    Height = 469
+    Width = 355
+    Height = 470
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 349
+    ExplicitHeight = 461
     object Panel6: TPanel
       Left = 1
       Top = 1
-      Width = 349
+      Width = 353
       Height = 88
       Align = alTop
       TabOrder = 0
+      ExplicitWidth = 347
       object Label2: TLabel
         Left = 16
         Top = 16
-        Width = 53
+        Width = 55
         Height = 13
         Caption = 'Product To'
       end
       object lblDescriptionTo: TLabel
         Left = 16
         Top = 64
-        Width = 76
+        Width = 84
         Height = 13
         Caption = 'lblDescriptionTo'
       end
@@ -197,8 +204,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     object dbgDetailsTo: TDBGrid
       Left = 1
       Top = 89
-      Width = 349
-      Height = 379
+      Width = 353
+      Height = 380
       Align = alClient
       DataSource = dtsStockTo
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -251,9 +258,10 @@ object STMaintStockFrm: TSTMaintStockFrm
     Left = 337
     Top = 0
     Width = 92
-    Height = 469
+    Height = 470
     Align = alLeft
     TabOrder = 3
+    ExplicitHeight = 461
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
@@ -352,10 +360,12 @@ object STMaintStockFrm: TSTMaintStockFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 510
-    Width = 780
+    Top = 511
+    Width = 784
     Height = 19
     Panels = <>
+    ExplicitTop = 502
+    ExplicitWidth = 778
   end
   object qryStockFrom: TFDQuery
     ConnectionName = 'PB'

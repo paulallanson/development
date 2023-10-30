@@ -22,29 +22,29 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
     Height = 84
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 379
-    ExplicitWidth = 826
+    ExplicitTop = 356
+    ExplicitWidth = 806
     DesignSize = (
       812
       84)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
     object CustomerLbl: TLabel
       Left = 55
       Top = 30
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end
     object Label2: TLabel
       Left = 8
       Top = 62
-      Width = 83
+      Width = 91
       Height = 13
       Caption = 'Statement History'
     end
@@ -73,21 +73,21 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       OnClick = btnCustomerClick
     end
     object grpInvDate: TGroupBox
-      Left = 571
+      Left = 565
       Top = 5
       Width = 233
       Height = 73
       Anchors = [akRight, akBottom]
       Enabled = False
       TabOrder = 2
-      ExplicitLeft = 583
+      ExplicitLeft = 559
       DesignSize = (
         233
         73)
       object Label4: TLabel
         Left = 20
         Top = 21
-        Width = 52
+        Width = 56
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Date From:'
@@ -219,13 +219,13 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
     Height = 320
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 826
-    ExplicitHeight = 334
+    ExplicitWidth = 806
+    ExplicitHeight = 311
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
-      Width = 824
-      Height = 332
+      Width = 810
+      Height = 318
       Align = alClient
       DataSource = dmLookUpSInv.DetsSRC
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -306,8 +306,8 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 463
-    ExplicitWidth = 826
+    ExplicitTop = 440
+    ExplicitWidth = 806
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -319,16 +319,16 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 822
+        Width = 806
       end>
-    ExplicitWidth = 826
+    ExplicitWidth = 806
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 809
+      Width = 797
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 51
+      ButtonWidth = 53
       Caption = 'ToolBar1'
       HotImages = ImgHot
       Images = ImgCool
@@ -343,7 +343,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnPrintClick
       end
       object btnSelect: TToolButton
-        Left = 51
+        Left = 53
         Top = 0
         Caption = 'Select All'
         Enabled = False
@@ -351,7 +351,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnSelectClick
       end
       object btnRemove: TToolButton
-        Left = 102
+        Left = 106
         Top = 0
         Caption = 'Remove'
         Enabled = False
@@ -359,7 +359,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnRemoveClick
       end
       object ToolButton2: TToolButton
-        Left = 153
+        Left = 159
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -367,7 +367,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         Style = tbsSeparator
       end
       object btnClose: TToolButton
-        Left = 161
+        Left = 167
         Top = 0
         Caption = 'Close'
         ImageIndex = 4

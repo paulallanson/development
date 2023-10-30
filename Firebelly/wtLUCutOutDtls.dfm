@@ -38,28 +38,28 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
   end
   inherited Panel1: TPanel
     inherited BitBtn1: TBitBtn
-      Left = 198
-      ExplicitLeft = 198
+      Left = 186
+      ExplicitLeft = 180
     end
     inherited btnEdit: TBitBtn
-      Left = 286
-      ExplicitLeft = 286
+      Left = 274
+      ExplicitLeft = 268
     end
     inherited btnDelete: TBitBtn
-      Left = 374
-      ExplicitLeft = 374
+      Left = 362
+      ExplicitLeft = 356
     end
     inherited BitBtn4: TBitBtn
-      Left = 462
-      ExplicitLeft = 462
+      Left = 450
+      ExplicitLeft = 444
     end
     inherited btnThickness: TBitBtn
-      Left = 243
-      ExplicitLeft = 243
+      Left = 231
+      ExplicitLeft = 225
     end
     inherited btnExcel: TBitBtn
-      Left = 588
-      ExplicitLeft = 588
+      Left = 576
+      ExplicitLeft = 570
     end
   end
   inherited lkpEdgeThickness: TFDQuery

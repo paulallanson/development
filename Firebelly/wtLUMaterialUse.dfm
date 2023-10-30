@@ -14,6 +14,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -64,6 +65,8 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       item
         Width = 50
       end>
+    ExplicitTop = 277
+    ExplicitWidth = 704
   end
   object Panel1: TPanel
     Left = 0
@@ -73,6 +76,8 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 199
+    ExplicitWidth = 704
     DesignSize = (
       710
       78)

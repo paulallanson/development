@@ -112,16 +112,16 @@ end;
 
 procedure TfrmWTLUStock.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlAllStock := TdtmdlStock.create(Application);
   dbgDetails.DataSource := dtmdlAllStock.dtsAllStock;
   dtmdlAllStock.dtsAllStock.OnDataChange := SetButtons;
-
 end;
 
 procedure TfrmWTLUStock.FormDestroy(Sender: TObject);
 begin
   dtmdlAllStock.free;
-
 end;
 
 procedure TfrmWTLUStock.edtSearchChange(Sender: TObject);

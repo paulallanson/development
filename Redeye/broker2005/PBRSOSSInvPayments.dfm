@@ -2,8 +2,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   Left = 46
   Top = 40
   Caption = 'Sales Invoice Outstanding Payments'
-  ClientHeight = 411
-  ClientWidth = 694
+  ClientHeight = 412
+  ClientWidth = 698
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 710
@@ -19,21 +19,22 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 694
+    Width = 698
     Height = 121
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 692
     object Label3: TLabel
       Left = 8
       Top = 72
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 176
       Top = 72
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -60,7 +61,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 1
-        Width = 89
+        Width = 94
         Height = 13
         Caption = 'Customer / Branch'
       end
@@ -108,7 +109,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       object Label1: TLabel
         Left = 12
         Top = 24
-        Width = 52
+        Width = 56
         Height = 13
         Caption = 'Date From:'
       end
@@ -220,11 +221,13 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 355
-    Width = 694
+    Top = 356
+    Width = 698
     Height = 37
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 347
+    ExplicitWidth = 692
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -286,13 +289,14 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       end
     end
     object Panel4: TPanel
-      Left = 408
+      Left = 412
       Top = 1
       Width = 285
       Height = 35
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 406
       DesignSize = (
         285
         35)
@@ -335,8 +339,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 694
-    Height = 234
+    Width = 698
+    Height = 235
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -415,8 +419,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 392
-    Width = 694
+    Top = 393
+    Width = 698
     Height = 19
     Panels = <
       item
@@ -428,6 +432,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 384
+    ExplicitWidth = 692
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

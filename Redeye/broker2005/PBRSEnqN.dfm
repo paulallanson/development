@@ -30,6 +30,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 100
+    ExplicitWidth = 411
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 55
@@ -139,7 +141,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       object EstNumLabel: TLabel
         Left = 8
         Top = 17
-        Width = 75
+        Width = 83
         Height = 13
         Caption = 'Enquiry Number'
         Font.Charset = ANSI_CHARSET
@@ -189,6 +191,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 411
     object gbLayouts: TGroupBox
       Left = 8
       Top = 4
@@ -199,14 +202,14 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       object Label1: TLabel
         Left = 8
         Top = 15
-        Width = 63
+        Width = 66
         Height = 13
         Caption = 'Paper Layout'
       end
       object Label2: TLabel
         Left = 8
         Top = 42
-        Width = 62
+        Width = 66
         Height = 13
         Caption = 'Letter Layout'
       end
@@ -239,6 +242,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 411
+    ExplicitHeight = 19
     object GroupBox2: TGroupBox
       Left = 8
       Top = -5
@@ -249,7 +254,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       object Label3: TLabel
         Left = 8
         Top = 18
-        Width = 71
+        Width = 76
         Height = 13
         Caption = 'Reminder Date'
       end
@@ -276,6 +281,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 197
+    ExplicitWidth = 411
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'

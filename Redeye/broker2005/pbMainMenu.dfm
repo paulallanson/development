@@ -20,219 +20,6 @@ object frmpbMainMenu: TfrmpbMainMenu
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 13
-  object CoolBar1: TCoolBar
-    Left = 0
-    Top = 0
-    Width = 1472
-    Height = 45
-    Bands = <
-      item
-        Control = ToolBar1
-        ImageIndex = -1
-        MinHeight = 41
-        Width = 1474
-      end>
-    ExplicitWidth = 1476
-    object ToolBar1: TToolBar
-      Left = 11
-      Top = 0
-      Width = 1461
-      Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 56
-      Caption = 'ToolBar1'
-      DragMode = dmAutomatic
-      Images = imglstMainMenu
-      ParentShowHint = False
-      ShowCaptions = True
-      ShowHint = True
-      TabOrder = 0
-      Wrapable = False
-      object btnActivities: TToolButton
-        Left = 0
-        Top = 0
-        Hint = 'Activities'
-        Caption = '&Activities'
-        ImageIndex = 14
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnActivitiesClick
-      end
-      object btnCustomers: TToolButton
-        Left = 56
-        Top = 0
-        Hint = 'Customers'
-        Caption = '&Customers'
-        ImageIndex = 0
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnCustomersClick
-      end
-      object btnEndUsers: TToolButton
-        Left = 112
-        Top = 0
-        Caption = 'End Users'
-        ImageIndex = 15
-        OnClick = btnEndUsersClick
-      end
-      object btnProspects: TToolButton
-        Left = 168
-        Top = 0
-        Hint = 'Prospect details'
-        Caption = '&Prospects'
-        ImageIndex = 8
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnProspectsClick
-      end
-      object btnSuppliers: TToolButton
-        Left = 224
-        Top = 0
-        Hint = 'Supplier details'
-        Caption = 'Su&ppliers'
-        ImageIndex = 1
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnSuppliersClick
-      end
-      object btnContracts: TToolButton
-        Left = 280
-        Top = 0
-        Caption = 'Contracts'
-        ImageIndex = 12
-        Visible = False
-        OnClick = btnContractsClick
-      end
-      object btnFormReferences: TToolButton
-        Left = 336
-        Top = 0
-        Hint = 'Form References'
-        Caption = '&Forms'
-        ImageIndex = 9
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnFormReferencesClick
-      end
-      object btnQuotes: TToolButton
-        Left = 392
-        Top = 0
-        Hint = 'Quotes'
-        Caption = '&Quotes'
-        ImageIndex = 11
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnQuotesClick
-      end
-      object btnEnquiries: TToolButton
-        Left = 448
-        Top = 0
-        Hint = 'Enquiries'
-        Caption = '&Enquiries'
-        ImageIndex = 2
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnEnquiriesClick
-      end
-      object btnProduction: TToolButton
-        Left = 504
-        Top = 0
-        Hint = 'Buy Print'
-        Caption = '&Buy Print'
-        ImageIndex = 6
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnProductionClick
-      end
-      object btnJobs: TToolButton
-        Left = 560
-        Top = 0
-        Hint = 'Job Bags'
-        Caption = '&Job Bags'
-        ImageIndex = 3
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnJobsClick
-      end
-      object btnWorksOrders: TToolButton
-        Left = 616
-        Top = 0
-        Hint = 'Works Instructions'
-        Caption = '&Works'
-        ImageIndex = 10
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnWorksOrdersClick
-      end
-      object btnNCA: TToolButton
-        Left = 672
-        Top = 0
-        Hint = 'Non Conformance Advice'
-        Caption = '&NCA'
-        ImageIndex = 13
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnNCAClick
-      end
-      object btnCallOffs: TToolButton
-        Left = 728
-        Top = 0
-        Hint = 'Stock Call Offs'
-        Caption = 'Call &Offs'
-        ImageIndex = 7
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnCallOffsClick
-      end
-      object btnPurchases: TToolButton
-        Left = 784
-        Top = 0
-        Hint = 'Purchase Ordering'
-        Caption = 'P&urchase'
-        ImageIndex = 8
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnPurchasesClick
-      end
-      object btnStock: TToolButton
-        Left = 840
-        Top = 0
-        Hint = 'Stock Control'
-        Caption = 'S&tock'
-        ImageIndex = 4
-        ParentShowHint = False
-        ShowHint = True
-        Visible = False
-        OnClick = btnStockClick
-      end
-      object btnSalesInvoicing: TToolButton
-        Left = 896
-        Top = 0
-        Hint = 'Sales Invoicing'
-        Caption = '&Sales'
-        DropdownMenu = pmnSalesInvoicing
-        ImageIndex = 5
-        ParentShowHint = False
-        ShowHint = True
-      end
-      object btnPurchaseInvoicing: TToolButton
-        Left = 952
-        Top = 0
-        Hint = 'Purchase Invoicing'
-        Caption = 'Purch Inv'
-        DropdownMenu = pmnPurchaseInvoicing
-        ImageIndex = 7
-        ParentShowHint = False
-        ShowHint = True
-      end
-    end
-  end
   object stsbrMainMenu: TStatusBar
     Left = 0
     Top = 692
@@ -251,12 +38,215 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
-    ExplicitTop = 693
-    ExplicitWidth = 1476
+    ExplicitTop = 683
+    ExplicitWidth = 1466
+  end
+  object MainMenuToolbar: TToolBar
+    Left = 0
+    Top = 0
+    Width = 1472
+    Height = 41
+    BorderWidth = 2
+    ButtonHeight = 36
+    ButtonWidth = 61
+    Caption = 'MainMenuToolbar'
+    DragMode = dmAutomatic
+    Images = imglstMainMenu
+    ParentShowHint = False
+    ShowCaptions = True
+    ShowHint = True
+    TabOrder = 1
+    Wrapable = False
+    ExplicitLeft = 11
+    ExplicitWidth = 1457
+    object btnActivities: TToolButton
+      Left = 0
+      Top = 0
+      Hint = 'Activities'
+      Caption = '&Activities'
+      ImageIndex = 14
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnActivitiesClick
+    end
+    object btnCustomers: TToolButton
+      Left = 61
+      Top = 0
+      Hint = 'Customers'
+      Caption = '&Customers'
+      ImageIndex = 0
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnCustomersClick
+    end
+    object btnEndUsers: TToolButton
+      Left = 122
+      Top = 0
+      Caption = 'End Users'
+      ImageIndex = 15
+      OnClick = btnEndUsersClick
+    end
+    object btnProspects: TToolButton
+      Left = 183
+      Top = 0
+      Hint = 'Prospect details'
+      Caption = '&Prospects'
+      ImageIndex = 8
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnProspectsClick
+    end
+    object btnSuppliers: TToolButton
+      Left = 244
+      Top = 0
+      Hint = 'Supplier details'
+      Caption = 'Su&ppliers'
+      ImageIndex = 1
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnSuppliersClick
+    end
+    object btnContracts: TToolButton
+      Left = 305
+      Top = 0
+      Hint = 'Contracts'
+      Caption = 'Contracts'
+      ImageIndex = 12
+      Visible = False
+      OnClick = btnContractsClick
+    end
+    object btnFormReferences: TToolButton
+      Left = 366
+      Top = 0
+      Hint = 'Form References'
+      Caption = '&Forms'
+      ImageIndex = 9
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnFormReferencesClick
+    end
+    object btnQuotes: TToolButton
+      Left = 427
+      Top = 0
+      Hint = 'Quotes'
+      Caption = '&Quotes'
+      ImageIndex = 11
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnQuotesClick
+    end
+    object btnEnquiries: TToolButton
+      Left = 488
+      Top = 0
+      Hint = 'Enquiries'
+      Caption = '&Enquiries'
+      ImageIndex = 2
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnEnquiriesClick
+    end
+    object btnProduction: TToolButton
+      Left = 549
+      Top = 0
+      Hint = 'Buy Print'
+      Caption = '&Buy Print'
+      ImageIndex = 6
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnProductionClick
+    end
+    object btnJobs: TToolButton
+      Left = 610
+      Top = 0
+      Hint = 'Job Bags'
+      Caption = '&Job Bags'
+      ImageIndex = 3
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnJobsClick
+    end
+    object btnWorksOrders: TToolButton
+      Left = 671
+      Top = 0
+      Hint = 'Works Instructions'
+      Caption = '&Works'
+      ImageIndex = 10
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnWorksOrdersClick
+    end
+    object btnNCA: TToolButton
+      Left = 732
+      Top = 0
+      Hint = 'Non Conformance Advice'
+      Caption = '&NCA'
+      ImageIndex = 13
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnNCAClick
+    end
+    object btnCallOffs: TToolButton
+      Left = 793
+      Top = 0
+      Hint = 'Stock Call Offs'
+      Caption = 'Call &Offs'
+      ImageIndex = 7
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnCallOffsClick
+    end
+    object btnPurchases: TToolButton
+      Left = 854
+      Top = 0
+      Hint = 'Purchase Ordering'
+      Caption = 'P&urchase'
+      ImageIndex = 8
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnPurchasesClick
+    end
+    object btnStock: TToolButton
+      Left = 915
+      Top = 0
+      Hint = 'Stock Control'
+      Caption = 'S&tock'
+      ImageIndex = 4
+      ParentShowHint = False
+      ShowHint = True
+      Visible = False
+      OnClick = btnStockClick
+    end
+    object btnSalesInvoicing: TToolButton
+      Left = 976
+      Top = 0
+      Hint = 'Sales Invoicing'
+      Caption = '&Sales'
+      DropdownMenu = pmnSalesInvoicing
+      ImageIndex = 5
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object btnPurchaseInvoicing: TToolButton
+      Left = 1037
+      Top = 0
+      Hint = 'Purchase Invoicing'
+      Caption = 'Purch Inv'
+      DropdownMenu = pmnPurchaseInvoicing
+      ImageIndex = 7
+      ParentShowHint = False
+      ShowHint = True
+    end
   end
   object mnMain: TMainMenu
-    Left = 256
-    Top = 128
+    Left = 184
+    Top = 96
     object File1: TMenuItem
       Caption = '&File'
       object New1: TMenuItem
@@ -906,8 +896,8 @@ object frmpbMainMenu: TfrmpbMainMenu
     end
   end
   object imglstMainMenu: TImageList
-    Left = 152
-    Top = 160
+    Left = 64
+    Top = 96
     Bitmap = {
       494C010110001300040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
@@ -1577,8 +1567,8 @@ object frmpbMainMenu: TfrmpbMainMenu
       000000000000}
   end
   object ActionList1: TActionList
-    Left = 328
-    Top = 120
+    Left = 288
+    Top = 96
     object WindowArrange1: TWindowArrange
       Category = 'Window'
       Caption = '&Arrange'

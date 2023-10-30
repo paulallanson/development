@@ -138,6 +138,8 @@ end;
 
 procedure TfrmPBLUSalesCredits.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlAllSCredits := TdmSalesInvoice.create(self);
 
   dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;

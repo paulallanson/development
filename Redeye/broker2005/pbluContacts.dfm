@@ -2,8 +2,8 @@ object frmpbluContacts: TfrmpbluContacts
   Left = 108
   Top = 150
   Caption = 'Contact Details'
-  ClientHeight = 344
-  ClientWidth = 705
+  ClientHeight = 335
+  ClientWidth = 699
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmpbluContacts: TfrmpbluContacts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 605
-    Height = 269
+    Width = 599
+    Height = 260
     Align = alClient
     DataSource = dtsContacts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -75,8 +75,8 @@ object frmpbluContacts: TfrmpbluContacts
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 325
-    Width = 705
+    Top = 316
+    Width = 699
     Height = 19
     Panels = <
       item
@@ -88,15 +88,15 @@ object frmpbluContacts: TfrmpbluContacts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 269
-    Width = 705
+    Top = 260
+    Width = 699
     Height = 56
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      705
+      699
       56)
     object Label1: TLabel
       Left = 8
@@ -106,7 +106,7 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Search'
     end
     object btnClose: TButton
-      Left = 611
+      Left = 593
       Top = 17
       Width = 75
       Height = 25
@@ -114,6 +114,7 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 599
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -143,16 +144,16 @@ object frmpbluContacts: TfrmpbluContacts
     end
   end
   object Panel2: TPanel
-    Left = 605
+    Left = 599
     Top = 0
     Width = 100
-    Height = 269
+    Height = 260
     Align = alRight
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
       100
-      269)
+      260)
     object btnAdd: TButton
       Left = 17
       Top = 17

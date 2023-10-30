@@ -84,6 +84,8 @@ var
   IniFile: TIniFile;
   sTmpDateFrom, stmpDateTo, sEmployeeName: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(frmFPMainMenu.AppIniFile);
 
   with IniFile do

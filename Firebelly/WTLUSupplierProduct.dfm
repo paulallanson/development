@@ -24,6 +24,8 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitLeft = 522
+    ExplicitHeight = 336
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -91,13 +93,15 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 336
+    ExplicitWidth = 620
     DesignSize = (
       626
       89)
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 74
+      Width = 77
       Height = 13
       Anchors = [akLeft, akBottom]
       Caption = 'Product Search'
@@ -122,7 +126,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 543
+      Left = 531
       Top = 16
       Width = 75
       Height = 25
@@ -131,9 +135,10 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 525
     end
     object BitBtn2: TBitBtn
-      Left = 543
+      Left = 531
       Top = 54
       Width = 75
       Height = 25
@@ -141,6 +146,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
+      ExplicitLeft = 525
     end
   end
   object stbrDetails: TStatusBar
@@ -155,6 +161,8 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       item
         Width = 50
       end>
+    ExplicitTop = 425
+    ExplicitWidth = 620
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

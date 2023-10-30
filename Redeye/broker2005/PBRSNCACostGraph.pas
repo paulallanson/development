@@ -46,6 +46,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure DisplayGraph(iSeries: integer; sYear: string);
     procedure CloseQueries;
@@ -79,6 +80,11 @@ begin
         end;
     end;
 
+end;
+
+procedure TPBRSNCACostGraphFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TPBRSNCACostGraphFrm.Button1Click(Sender: TObject);

@@ -28,8 +28,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 272
-    ExplicitWidth = 476
+    ExplicitTop = 262
+    ExplicitWidth = 466
     object CancelBitBtn: TBitBtn
       Left = 8
       Top = 8
@@ -143,7 +143,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 476
+    ExplicitWidth = 466
     object gbLayouts: TGroupBox
       Left = 1
       Top = 6
@@ -160,14 +160,14 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       object Label3: TLabel
         Left = 8
         Top = 15
-        Width = 63
+        Width = 66
         Height = 13
         Caption = 'Paper Layout'
       end
       object Label4: TLabel
         Left = 8
         Top = 42
-        Width = 62
+        Width = 66
         Height = 13
         Caption = 'Letter Layout'
       end
@@ -199,8 +199,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 476
-    ExplicitHeight = 97
+    ExplicitWidth = 466
+    ExplicitHeight = 87
     DesignSize = (
       472
       96)
@@ -230,7 +230,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 61
+        Width = 65
         Height = 13
         Caption = 'P.O. Number'
         Font.Charset = ANSI_CHARSET
@@ -262,7 +262,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     object TypeRadioGroup: TRadioGroup
       Left = 256
       Top = 2
-      Width = 209
+      Width = 203
       Height = 65
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -278,7 +278,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       ParentFont = False
       TabOrder = 2
       OnClick = TypeRadioGroupClick
-      ExplicitWidth = 217
+      ExplicitWidth = 197
     end
     object chkbxAttachDelNote: TCheckBox
       Left = 10
@@ -319,12 +319,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 178
-    ExplicitWidth = 476
+    ExplicitTop = 168
+    ExplicitWidth = 466
     object Label12: TLabel
       Left = 192
       Top = 12
-      Width = 53
+      Width = 56
       Height = 13
       Caption = 'Label Logo'
     end
@@ -411,8 +411,8 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       item
         Width = 50
       end>
-    ExplicitTop = 313
-    ExplicitWidth = 476
+    ExplicitTop = 303
+    ExplicitWidth = 466
   end
   object GetPOsSQL: TFDQuery
     ConnectionName = 'PB'

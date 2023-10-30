@@ -13,6 +13,7 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -47,6 +48,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 239
+    ExplicitWidth = 505
     DesignSize = (
       511
       50)
@@ -118,6 +121,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
       item
         Width = 50
       end>
+    ExplicitTop = 289
+    ExplicitWidth = 505
   end
   object srcPaymentTerms: TDataSource
     DataSet = qryPaymentTerms

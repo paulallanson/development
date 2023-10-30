@@ -20,6 +20,7 @@ type
     stsbrDetails: TStatusBar;
     Label1: TLabel;
     DateTimePicker1: TDateTimePicker;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,5 +33,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmWTLUPOrderSalesOrders.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+end;
 
 end.

@@ -191,9 +191,13 @@ begin
 end;
 
 procedure TPBLUSupplierInvoicePOFrm.FormCreate(Sender: TObject);
+(*
 var
   IniFile : TIniFile;
+*)
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dmSupplierInvoice := TdmSupplierInvoice.Create(Self);
 
   dbgDetails.Datasource := dmSupplierInvoice.dsPOLine;

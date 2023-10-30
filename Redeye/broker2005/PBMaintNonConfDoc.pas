@@ -1023,6 +1023,7 @@ begin
   pnlJobBag.Visible := dmBroker.UseJobBags;
   pnlPO.Visible := not pnlJobBag.Visible;
 
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 

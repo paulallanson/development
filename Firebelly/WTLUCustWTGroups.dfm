@@ -57,6 +57,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
       item
         Width = 50
       end>
+    ExplicitTop = 337
+    ExplicitWidth = 733
   end
   object Panel1: TPanel
     Left = 0
@@ -66,6 +68,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 263
+    ExplicitWidth = 733
     DesignSize = (
       739
       74)
@@ -167,17 +171,18 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 733
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object lblCustomerName: TLabel
       Left = 64
       Top = 8
-      Width = 82
+      Width = 91
       Height = 13
       Caption = 'lblCustomerName'
     end
@@ -190,6 +195,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 4
+    ExplicitLeft = 645
+    ExplicitHeight = 230
     object btnColours: TBitBtn
       Left = 9
       Top = 3

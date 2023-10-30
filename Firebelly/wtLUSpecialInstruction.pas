@@ -39,6 +39,7 @@ type
     procedure btnDeleteClick(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   public
     iCode, iNarr, SelCode: Integer;
     Selname: string;
@@ -73,6 +74,11 @@ begin
   {Load up the string grid};
   ShowGrid(Self);
   if (SelCode <> 0) then FindInGrid(SelCode);
+end;
+
+procedure TfrmWTLUSpecialInstruction.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUSpecialInstruction.ShowGrid(Sender: TObject);

@@ -42,6 +42,7 @@ type
     procedure dblkpMaterialTypeClick(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
     procedure btnLUMatTypeClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -121,6 +122,11 @@ begin
   dblkpMaterialType.keyvalue :=1;
 
   dblkpMaterialTypeClick(Self);
+end;
+
+procedure TfrmWTLUWTGroup.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUWTGroup.srcWTGroupDataChange(Sender: TObject;

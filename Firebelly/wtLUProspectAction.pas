@@ -31,6 +31,7 @@ type
     procedure btnEditClick(Sender: TObject);
     procedure srcActionDataChange(Sender: TObject; Field: TField);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -78,6 +79,11 @@ end;
 procedure TfrmWTLUProspectAction.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUProspectAction.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUProspectAction.btnDeleteClick(Sender: TObject);

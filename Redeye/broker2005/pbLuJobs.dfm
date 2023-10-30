@@ -2,8 +2,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 384
-  ClientWidth = 1198
+  ClientHeight = 375
+  ClientWidth = 1192
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,22 +23,22 @@ object frmPBLUJobs: TfrmPBLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1198
+    Width = 1192
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1192
+        Width = 1186
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1183
+      Width = 1177
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -51,7 +51,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 59
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -59,7 +59,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnChangeClick
       end
       object btnRepeat: TToolButton
-        Left = 112
+        Left = 118
         Top = 0
         Caption = '&Repeat'
         Enabled = False
@@ -67,7 +67,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnRepeatClick
       end
       object btnDelete: TToolButton
-        Left = 168
+        Left = 177
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -75,7 +75,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 224
+        Left = 236
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -83,7 +83,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 280
+        Left = 295
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -91,7 +91,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnDraft: TToolButton
-        Left = 288
+        Left = 303
         Top = 0
         Hint = 'Print a draft invoice'
         Caption = 'Dra&ft'
@@ -102,7 +102,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDraftClick
       end
       object btnInvoiceThisWeek: TToolButton
-        Left = 344
+        Left = 362
         Top = 0
         Caption = 'Inv Now'
         Enabled = False
@@ -110,7 +110,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnInvoiceThisWeekClick
       end
       object ToolButton1: TToolButton
-        Left = 400
+        Left = 421
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -118,7 +118,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 408
+        Left = 429
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -129,8 +129,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1198
-    Height = 238
+    Width = 1192
+    Height = 229
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -300,8 +300,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 313
-    Width = 1198
+    Top = 304
+    Width = 1192
     Height = 52
     Align = alBottom
     ParentBackground = False
@@ -309,7 +309,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     object Label1: TLabel
       Left = 8
       Top = 26
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -322,7 +322,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 924
+      Left = 918
       Top = 1
       Width = 273
       Height = 50
@@ -336,7 +336,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       object Label2: TLabel
         Left = 22
         Top = 25
-        Width = 57
+        Width = 62
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Job Number'
@@ -411,8 +411,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 365
-    Width = 1198
+    Top = 356
+    Width = 1192
     Height = 19
     Panels = <
       item
@@ -428,7 +428,7 @@ object frmPBLUJobs: TfrmPBLUJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1198
+    Width = 1192
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -439,8 +439,8 @@ object frmPBLUJobs: TfrmPBLUJobs
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 67
-      Height = 20
+      Width = 61
+      Height = 21
       Caption = 'Job Bags'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -452,8 +452,8 @@ object frmPBLUJobs: TfrmPBLUJobs
     object lblWorkinProgress: TLabel
       Left = 96
       Top = 3
-      Width = 233
-      Height = 20
+      Width = 240
+      Height = 21
       Caption = '-  displaying only work in progress'
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET

@@ -100,6 +100,7 @@ uses PBRPPOnotonJB, PBDatabase, PBLUCust;
 
 procedure TPBRSPOnotonJBfrm.FormCreate(Sender: TObject);
 begin
+  stsDetails.Top := Screen.Height - stsDetails.Height;
   Screen.Cursor := crDefault;
   FixQuery(False);
 end;

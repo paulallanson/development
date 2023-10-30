@@ -1879,6 +1879,7 @@ end;
 
 procedure TPBMaintCompanyFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 

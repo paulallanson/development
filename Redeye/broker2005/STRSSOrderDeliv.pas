@@ -105,6 +105,7 @@ const
 
 procedure TSTRSSOrderDelivFrm.FormCreate(Sender: TObject);
 begin
+  stbDetails.Top := Screen.Height - stbDetails.Height;
   Screen.Cursor := crDefault;
   {setting the default content of the sort option edit boxes}
   DateTo := Date;

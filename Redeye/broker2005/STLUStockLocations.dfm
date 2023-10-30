@@ -23,6 +23,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Height = 38
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 815
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -33,7 +34,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       object Label1: TLabel
         Left = 16
         Top = 12
-        Width = 55
+        Width = 59
         Height = 13
         Caption = 'Warehouse'
       end
@@ -62,13 +63,14 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
           MinHeight = 30
           Width = 253
         end>
+      ExplicitWidth = 253
       object ToolBar2: TToolBar
         Left = 11
         Top = 0
         Width = 244
         Height = 30
         Align = alClient
-        ButtonWidth = 76
+        ButtonWidth = 83
         Caption = 'ToolBar2'
         Color = clBtnFace
         EdgeInner = esNone
@@ -87,7 +89,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
           OnClick = btnTransfersClick
         end
         object btnAdjustOut: TToolButton
-          Left = 76
+          Left = 83
           Top = 0
           Caption = 'Adjust Out'
           ImageIndex = 9
@@ -103,13 +105,15 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 363
+    ExplicitWidth = 815
     DesignSize = (
       821
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 59
+      Width = 63
       Height = 13
       Caption = 'Bin Location'
     end
@@ -123,7 +127,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 743
+      Left = 737
       Top = 8
       Width = 75
       Height = 25
@@ -132,9 +136,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
+      ExplicitLeft = 731
     end
     object btnPrint: TBitBtn
-      Left = 655
+      Left = 649
       Top = 8
       Width = 75
       Height = 25
@@ -156,9 +161,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitLeft = 643
     end
     object btnPreview: TBitBtn
-      Left = 569
+      Left = 563
       Top = 8
       Width = 75
       Height = 25
@@ -186,9 +192,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       ParentFont = False
       TabOrder = 3
       OnClick = btnPreviewClick
+      ExplicitLeft = 557
     end
     object btnExcel: TBitBtn
-      Left = 480
+      Left = 474
       Top = 8
       Width = 75
       Height = 25
@@ -240,6 +247,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 468
     end
   end
   object stsbrDetails: TStatusBar
@@ -254,6 +262,8 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       item
         Width = 50
       end>
+    ExplicitTop = 404
+    ExplicitWidth = 815
   end
   object dbgDetails: TDBGrid
     Left = 0

@@ -77,6 +77,8 @@ uses
 
 procedure TPBRSSuppContDetFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   qryContType.Open;
   while not qryContType.Eof do
   begin

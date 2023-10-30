@@ -28,11 +28,13 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 370
+    ExplicitWidth = 762
     DesignSize = (
       768
       36)
     object btnConfirm: TBitBtn
-      Left = 599
+      Left = 593
       Top = 6
       Width = 76
       Height = 25
@@ -106,9 +108,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnConfirmClick
+      ExplicitLeft = 587
     end
     object CancelBitBtn: TBitBtn
-      Left = 687
+      Left = 681
       Top = 6
       Width = 76
       Height = 25
@@ -182,6 +185,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 675
     end
     object chkbxDoNotInvc: TCheckBox
       Left = 8
@@ -199,6 +203,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Width = 768
     Height = 19
     Panels = <>
+    ExplicitTop = 406
+    ExplicitWidth = 762
   end
   object Panel1: TPanel
     Left = 0
@@ -208,62 +214,63 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Align = alTop
     Enabled = False
     TabOrder = 2
+    ExplicitWidth = 762
     DesignSize = (
       768
       65)
     object Label5: TLabel
       Left = 8
       Top = 12
-      Width = 46
+      Width = 51
       Height = 13
       Caption = 'Order No.'
     end
     object OrdNoLabel: TLabel
       Left = 64
       Top = 12
-      Width = 62
+      Width = 71
       Height = 13
       Caption = 'order number'
     end
     object Label2: TLabel
       Left = 152
       Top = 12
-      Width = 52
+      Width = 57
       Height = 13
       Caption = 'Order Date'
     end
     object Label8: TLabel
       Left = 328
       Top = 12
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Required Date'
     end
     object Label9: TLabel
       Left = 568
       Top = 12
-      Width = 61
+      Width = 66
       Height = 13
       Caption = 'Account Mgr'
     end
     object Label19: TLabel
       Left = 568
       Top = 38
-      Width = 70
+      Width = 71
       Height = 13
       Caption = 'Account Team'
     end
     object Label1: TLabel
       Left = 8
       Top = 38
-      Width = 39
+      Width = 40
       Height = 13
       Caption = 'Job Bag'
     end
     object lblJobBagNumber: TLabel
       Left = 64
       Top = 38
-      Width = 62
+      Width = 71
       Height = 13
       Caption = 'order number'
     end
@@ -284,7 +291,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       TabOrder = 1
     end
     object edtAccountManager: TEdit
-      Left = 645
+      Left = 639
       Top = 8
       Width = 115
       Height = 21
@@ -293,9 +300,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Color = clWhite
       ReadOnly = True
       TabOrder = 2
+      ExplicitLeft = 633
     end
     object edtAccountTeam: TEdit
-      Left = 645
+      Left = 639
       Top = 34
       Width = 115
       Height = 21
@@ -303,6 +311,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Color = clWhite
       ReadOnly = True
       TabOrder = 3
+      ExplicitLeft = 633
     end
   end
   object pnlHead: TPanel
@@ -319,27 +328,28 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    ExplicitWidth = 762
     DesignSize = (
       768
       120)
     object Label3: TLabel
       Left = 8
       Top = 14
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label6: TLabel
       Left = 8
       Top = 42
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label11: TLabel
       Left = 400
       Top = 14
-      Width = 50
+      Width = 54
       Height = 13
       Caption = 'Delivery to'
     end
@@ -353,17 +363,18 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     object Label4: TLabel
       Left = 8
       Top = 94
-      Width = 41
+      Width = 43
       Height = 13
       Caption = 'Cust Ref'
     end
     object Label14: TLabel
-      Left = 400
+      Left = 394
       Top = 43
-      Width = 73
+      Width = 80
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Replenish From'
+      ExplicitLeft = 400
     end
     object CustNameEdit: TEdit
       Left = 78
@@ -406,7 +417,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       TabOrder = 3
     end
     object StoreComboBox: TDBLookupComboBox
-      Left = 486
+      Left = 480
       Top = 39
       Width = 222
       Height = 21
@@ -415,6 +426,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       ListField = 'Part_Store_Name'
       ListSource = STSalesOrdDM.StoreSRC
       TabOrder = 4
+      ExplicitLeft = 474
     end
     object dbLkpCmbRep: TDBLookupComboBox
       Left = 78
@@ -445,6 +457,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     ParentFont = False
     TabOrder = 4
     OnDblClick = sgLinesDblClick
+    ExplicitWidth = 762
+    ExplicitHeight = 185
     ColWidths = (
       38
       159

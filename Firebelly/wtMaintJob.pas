@@ -13,7 +13,7 @@ uses
 type
   TfrmWTMaintJob = class(TForm)
     pnlTop: TPanel;
-    StatusBar1: TStatusBar;
+    stsbrDetails: TStatusBar;
     Panel2: TPanel;
     pgDetails: TPageControl;
     TabSheet1: TTabSheet;
@@ -1077,6 +1077,8 @@ end;
 
 procedure TfrmWTMaintJob.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   SetGridHeaders;
   dtmdlNotes := TdtmdlNotes.create(self);
   bOK := false;

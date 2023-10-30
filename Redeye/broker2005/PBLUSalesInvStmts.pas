@@ -209,6 +209,8 @@ end;
 
 procedure TPBLUSalesInvStmtsFrm.FormCreate(Sender: TObject);
 begin
+  SIStatusBar.Top := Screen.Height - SIStatusBar.Height;
+
   dmLookUpSInv := TdmLookUpSInv.Create(Self);
   StatementList := TStringList.create;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

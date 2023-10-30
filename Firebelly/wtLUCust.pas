@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, ComCtrls, ImgList, ToolWin, QrCtrls;
+  Grids, DBGrids, ExtCtrls, ComCtrls, ImgList, ToolWin, QrCtrls, Data.DB,
+  System.ImageList;
 
 type
   TfrmWTLUCust = class(TForm)

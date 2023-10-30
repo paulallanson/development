@@ -30,6 +30,7 @@ type
     procedure dbgDetailsDblClick(Sender: TObject);
     procedure srcPaymentTermsDataChange(Sender: TObject; Field: TField);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -114,6 +115,11 @@ end;
 procedure TfrmWTLUPaymentTerms.FormActivate(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUPaymentTerms.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUPaymentTerms.dbgDetailsDblClick(Sender: TObject);

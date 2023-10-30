@@ -29,6 +29,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       item
         Width = 50
       end>
+    ExplicitTop = 462
+    ExplicitWidth = 1088
   end
   object Panel3: TPanel
     Left = 0
@@ -38,6 +40,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 334
+    ExplicitWidth = 1088
     object Panel1: TPanel
       Left = 0
       Top = 0
@@ -46,6 +50,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitWidth = 726
       object CustomerGroupBox: TGroupBox
         Left = 8
         Top = 66
@@ -56,7 +61,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
         object Label1: TLabel
           Left = 8
           Top = 27
-          Width = 38
+          Width = 43
           Height = 13
           Caption = 'Supplier'
         end
@@ -190,6 +195,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 726
       object GroupBox2: TGroupBox
         Left = 252
         Top = 40
@@ -318,6 +324,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
     BevelOuter = bvNone
     Caption = 'Panel4'
     TabOrder = 2
+    ExplicitWidth = 1088
+    ExplicitHeight = 334
     object dbgdetails: TDBGrid
       Left = 0
       Top = 0

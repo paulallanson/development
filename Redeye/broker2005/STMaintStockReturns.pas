@@ -97,6 +97,8 @@ procedure TSTMaintStockReturnsFrm.FormCreate(Sender: TObject);
 var
   TempArray: array[0..255] of Char;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   GetPrivateProfileString('Centrereed Broker', 'Bench Stock Area', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 

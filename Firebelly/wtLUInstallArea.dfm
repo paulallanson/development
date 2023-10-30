@@ -13,6 +13,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -61,6 +62,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 232
+    ExplicitWidth = 746
     DesignSize = (
       752
       67)
@@ -152,6 +155,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 746
   end
   object dtsInstallationAreas: TDataSource
     DataSet = qryInstallationArea

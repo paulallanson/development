@@ -74,6 +74,7 @@ type
     procedure SpeedButton2Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FActivated: boolean;
     FCustomer: integer;
@@ -239,6 +240,11 @@ end;
 procedure TfrmWTLUCustCutOutDetails.FormClick(Sender: TObject);
 begin
   Refresh;
+end;
+
+procedure TfrmWTLUCustCutOutDetails.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUCustCutOutDetails.dbgDetailsDrawColumnCell(Sender: TObject;

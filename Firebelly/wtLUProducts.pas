@@ -283,6 +283,8 @@ end;
 
 procedure TfrmWTLUProducts.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
   AllCommon.SetDBGridCols('', 'ProductsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;

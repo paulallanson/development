@@ -2,8 +2,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   Left = 30
   Top = 92
   Caption = 'Sales Credits'
-  ClientHeight = 377
-  ClientWidth = 1148
+  ClientHeight = 368
+  ClientWidth = 1142
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1148
+    Width = 1142
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1142
+        Width = 1136
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1133
+      Width = 1127
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,10 +43,10 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1121
+        Width = 1115
         Height = 40
         ButtonHeight = 36
-        ButtonWidth = 56
+        ButtonWidth = 59
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -63,7 +63,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 56
+          Left = 59
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -72,7 +72,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 112
+          Left = 118
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -80,7 +80,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnDeleteClick
         end
         object ToolButton3: TToolButton
-          Left = 168
+          Left = 177
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -88,7 +88,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           Style = tbsSeparator
         end
         object btnPreview: TToolButton
-          Left = 176
+          Left = 185
           Top = 0
           Caption = 'Pre&view'
           Enabled = False
@@ -96,7 +96,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPreviewClick
         end
         object btnPrint: TToolButton
-          Left = 232
+          Left = 244
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -104,7 +104,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 288
+          Left = 303
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -112,14 +112,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnReprintClick
         end
         object btnEInvoice: TToolButton
-          Left = 344
+          Left = 362
           Top = 0
           Caption = 'e-Invoice'
           ImageIndex = 7
           OnClick = btnEInvoiceClick
         end
         object btnPayments: TToolButton
-          Left = 400
+          Left = 421
           Top = 0
           Caption = 'Taken?'
           Enabled = False
@@ -127,7 +127,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPaymentsClick
         end
         object ToolButton6: TToolButton
-          Left = 456
+          Left = 480
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -135,14 +135,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 464
+          Left = 488
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
           OnClick = btnReportsClick
         end
         object ToolButton1: TToolButton
-          Left = 520
+          Left = 547
           Top = 0
           Caption = 'Refresh'
           ImageIndex = 8
@@ -154,8 +154,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1148
-    Height = 228
+    Width = 1142
+    Height = 219
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -373,15 +373,15 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 302
-    Width = 1148
+    Top = 293
+    Width = 1142
     Height = 56
     Align = alBottom
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -394,7 +394,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 852
+      Left = 846
       Top = 1
       Width = 295
       Height = 54
@@ -407,14 +407,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object Label2: TLabel
         Left = 28
         Top = 11
-        Width = 75
+        Width = 80
         Height = 13
         Caption = 'Invoice Number'
       end
       object Label3: TLabel
         Left = 0
         Top = 36
-        Width = 103
+        Width = 109
         Height = 13
         Caption = 'Defaults Invoice Date'
       end
@@ -483,8 +483,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 358
-    Width = 1148
+    Top = 349
+    Width = 1142
     Height = 19
     Panels = <
       item
@@ -497,7 +497,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1148
+    Width = 1142
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -507,8 +507,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     object Label4: TLabel
       Left = 8
       Top = 3
-      Width = 94
-      Height = 20
+      Width = 89
+      Height = 21
       Caption = 'Sales Credits'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

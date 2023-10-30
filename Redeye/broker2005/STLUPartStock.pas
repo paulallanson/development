@@ -181,6 +181,7 @@ end;
 
 procedure TSTLUPartStockFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   dtsStock.OnDataChange := SetButtons;
   DisableNameChangeEvent := False;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

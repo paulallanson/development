@@ -292,6 +292,7 @@ end;
 
 procedure TSTPrtAllocSalesFrm.FormCreate(Sender: TObject);
 begin
+  stsDetails.Top := Screen.Height - stsDetails.Height;
   STStockDataMod := TSTStockDataMod.Create(Self) ;
 end;
 

@@ -13,6 +13,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
@@ -26,6 +27,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 461
   end
   object Panel1: TPanel
     Left = 0
@@ -35,6 +38,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 259
+    ExplicitWidth = 461
     DesignSize = (
       467
       63)
@@ -110,6 +115,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitLeft = 373
+    ExplicitHeight = 226
     DesignSize = (
       88
       235)
@@ -124,6 +131,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnEdgesClick
+      ExplicitTop = 2
     end
     object btnCutOuts: TBitBtn
       Left = 9
@@ -136,6 +144,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCutOutsClick
+      ExplicitTop = 42
     end
   end
   object pnlHeader: TPanel
@@ -146,17 +155,18 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 461
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object lblCustomerName: TLabel
       Left = 64
       Top = 8
-      Width = 82
+      Width = 91
       Height = 13
       Caption = 'lblCustomerName'
     end

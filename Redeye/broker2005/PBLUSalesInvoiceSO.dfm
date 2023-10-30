@@ -3,7 +3,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
   Top = 48
   Caption = 'Sales Order Selection'
   ClientHeight = 426
-  ClientWidth = 709
+  ClientWidth = 711
   Color = clBtnFace
   Constraints.MinHeight = 462
   Constraints.MinWidth = 723
@@ -19,7 +19,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
   object dbgSO: TDBGrid
     Left = 0
     Top = 0
-    Width = 709
+    Width = 711
     Height = 311
     Align = alClient
     Font.Charset = ANSI_CHARSET
@@ -76,7 +76,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
   object stbrDetails: TStatusBar
     Left = 0
     Top = 407
-    Width = 709
+    Width = 711
     Height = 19
     Panels = <
       item
@@ -85,17 +85,21 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       item
         Width = 50
       end>
+    ExplicitTop = 398
+    ExplicitWidth = 705
   end
   object Panel1: TPanel
     Left = 0
     Top = 311
-    Width = 709
+    Width = 711
     Height = 96
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 302
+    ExplicitWidth = 705
     DesignSize = (
-      709
+      711
       96)
     object CustomerGroupBox: TGroupBox
       Left = 8
@@ -107,7 +111,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       object Label1: TLabel
         Left = 24
         Top = 22
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -131,13 +135,14 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       end
     end
     object GroupBox1: TGroupBox
-      Left = 420
+      Left = 416
       Top = 39
       Width = 161
       Height = 49
       Anchors = [akTop, akRight]
       Caption = 'Selected Sales Order'
       TabOrder = 1
+      ExplicitLeft = 410
       object edtSONumber: TEdit
         Left = 8
         Top = 16
@@ -148,13 +153,14 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       end
     end
     object GroupBox2: TGroupBox
-      Left = 588
+      Left = 584
       Top = 7
       Width = 105
       Height = 81
       Anchors = [akTop, akRight]
       Caption = 'Function'
       TabOrder = 2
+      ExplicitLeft = 578
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

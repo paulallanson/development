@@ -23,6 +23,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 334
+    ExplicitWidth = 773
     DesignSize = (
       779
       117)
@@ -60,7 +62,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       object Label1: TLabel
         Left = 8
         Top = 24
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -84,13 +86,14 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       end
     end
     object GroupBox1: TGroupBox
-      Left = 478
+      Left = 472
       Top = 67
       Width = 161
       Height = 49
       Anchors = [akRight, akBottom]
       Caption = 'Selected Purchase Order'
       TabOrder = 2
+      ExplicitLeft = 466
       object edtPONumber: TEdit
         Left = 8
         Top = 16
@@ -101,13 +104,14 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       end
     end
     object GroupBox2: TGroupBox
-      Left = 654
+      Left = 648
       Top = 32
       Width = 105
       Height = 81
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       TabOrder = 3
+      ExplicitLeft = 642
       object btnSelect: TBitBtn
         Left = 16
         Top = 20
@@ -203,6 +207,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 1
+    ExplicitWidth = 773
+    ExplicitHeight = 334
     object dbgPO: TDBGrid
       Left = 1
       Top = 1
@@ -314,6 +320,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       item
         Width = 50
       end>
+    ExplicitTop = 451
+    ExplicitWidth = 773
   end
   object SearchTimer: TTimer
     Enabled = False

@@ -881,6 +881,8 @@ end;
 
 procedure TPBMaintSuppFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   dtmdlOneSupplier := TdtmdlSuppliers.create(self);
   CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;

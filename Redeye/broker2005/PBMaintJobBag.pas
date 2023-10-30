@@ -1468,6 +1468,9 @@ begin
   rTotalSI := 0;
   bInvoiceChange := false;
   bNewPOAdded := false;
+
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   lblJobRevenue.Visible := dmBroker.UseRevenueCentres;
   dblkpJobRevenue.Visible := dmBroker.UseRevenueCentres;
 

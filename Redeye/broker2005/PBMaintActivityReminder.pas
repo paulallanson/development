@@ -84,6 +84,8 @@ end;
 
 procedure TPBMaintActivityReminderFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   frmPBMainMenu.tmrCheckActivity.enabled := false;
   dtmdlActivityReminder := TdtmdlActivity.Create(self);
   dtmdlActivityReminder.dtsActivityReminder.OnDataChange := SetButtons;

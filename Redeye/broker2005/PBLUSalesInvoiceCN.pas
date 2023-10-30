@@ -151,6 +151,8 @@ end;
 
 procedure TPBLUSalesInvoiceCNfrm.FormCreate(Sender: TObject);
 begin
+  stsBrInvoices.Top := Screen.Height - stsBrInvoices.Height;
+
   dmSalesInvoice := TdmSalesInvoice.Create(Self);
   dmSalesInvoice.dsSIHeaderGrid.OnDataChange := SetButtons;
   dmSalesInvoice.qrySIHeaderGrid.AfterScroll := SetSalesInvoiceEdit;

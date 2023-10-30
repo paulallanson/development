@@ -135,6 +135,7 @@ end;
 
 procedure TfrmPBLUReps.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   somethingChanged := false;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;

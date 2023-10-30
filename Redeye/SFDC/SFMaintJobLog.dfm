@@ -2,7 +2,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   Left = 234
   Top = 72
   Caption = 'Job Time Record'
-  ClientHeight = 556
+  ClientHeight = 557
   ClientWidth = 744
   Color = clBtnFace
   Constraints.MaxHeight = 800
@@ -23,16 +23,18 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 501
+    Top = 502
     Width = 744
     Height = 36
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 493
+    ExplicitWidth = 738
     object lblDelete: TLabel
       Left = 134
       Top = 13
-      Width = 125
+      Width = 109
       Height = 13
       Caption = 'Delete these details ?'
       Font.Charset = ANSI_CHARSET
@@ -88,17 +90,18 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Align = alTop
     TabOrder = 0
     OnEnter = pnlHeaderEnter
+    ExplicitWidth = 738
     object Label8: TLabel
       Left = 32
       Top = 20
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Activity Date'
     end
     object Label4: TLabel
       Left = 32
       Top = 84
-      Width = 55
+      Width = 61
       Height = 13
       Caption = 'Department'
     end
@@ -112,14 +115,14 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     object Label33: TLabel
       Left = 32
       Top = 52
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Employee No.'
     end
     object lblEmployeeName: TLabel
-      Left = 296
+      Left = 295
       Top = 52
-      Width = 28
+      Width = 29
       Height = 13
       Alignment = taRightJustify
       Caption = 'Name'
@@ -225,10 +228,11 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Align = alTop
     TabOrder = 1
     OnEnter = pnlHeaderEnter
+    ExplicitWidth = 738
     object Label3: TLabel
-      Left = 280
+      Left = 275
       Top = 12
-      Width = 44
+      Width = 49
       Height = 13
       Alignment = taRightJustify
       Caption = 'Customer'
@@ -236,14 +240,14 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     object lblJobBag: TLabel
       Left = 32
       Top = 12
-      Width = 78
+      Width = 80
       Height = 13
       Caption = 'Job Bag/Activity'
     end
     object Label15: TLabel
       Left = 32
       Top = 43
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Job Title'
     end
@@ -307,24 +311,26 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Left = 0
     Top = 207
     Width = 744
-    Height = 294
+    Height = 295
     ActivePage = tbsWorkCentre
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 738
+    ExplicitHeight = 286
     object tbsWorkCentre: TTabSheet
       Caption = 'Work Centre Details'
       TabVisible = False
       object Label23: TLabel
         Left = 29
         Top = 136
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Paper Size'
       end
       object Label24: TLabel
-        Left = 357
+        Left = 352
         Top = 136
-        Width = 54
+        Width = 59
         Height = 13
         Alignment = taRightJustify
         Caption = 'Number Up'
@@ -332,35 +338,35 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object Label25: TLabel
         Left = 29
         Top = 167
-        Width = 61
+        Width = 65
         Height = 13
         Caption = 'Laser Format'
       end
       object Label26: TLabel
         Left = 29
         Top = 106
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end
       object Label27: TLabel
         Left = 29
         Top = 43
-        Width = 60
+        Width = 65
         Height = 13
         Caption = 'Work Centre'
       end
       object Label28: TLabel
         Left = 29
         Top = 75
-        Width = 46
+        Width = 53
         Height = 13
         Caption = 'Operation'
       end
       object Label30: TLabel
         Left = 29
         Top = 11
-        Width = 41
+        Width = 47
         Height = 13
         Caption = 'Operator'
       end
@@ -372,17 +378,18 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 730
         object lblPaperSize: TLabel
           Left = 29
           Top = 104
-          Width = 51
+          Width = 52
           Height = 13
           Caption = 'Paper Size'
         end
         object lblNumberUp: TLabel
-          Left = 372
+          Left = 367
           Top = 104
-          Width = 54
+          Width = 59
           Height = 13
           Alignment = taRightJustify
           Caption = 'Number Up'
@@ -390,28 +397,28 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         object lblFormat: TLabel
           Left = 29
           Top = 135
-          Width = 61
+          Width = 65
           Height = 13
           Caption = 'Laser Format'
         end
         object Label10: TLabel
           Left = 29
           Top = 74
-          Width = 39
+          Width = 44
           Height = 13
           Caption = 'Quantity'
         end
         object Label11: TLabel
           Left = 29
           Top = 43
-          Width = 46
+          Width = 53
           Height = 13
           Caption = 'Operation'
         end
         object Label9: TLabel
-          Left = 605
+          Left = 599
           Top = 167
-          Width = 72
+          Width = 78
           Height = 13
           Alignment = taRightJustify
           Caption = 'Machine Hours'
@@ -419,28 +426,28 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         object Label6: TLabel
           Left = 29
           Top = 11
-          Width = 41
+          Width = 44
           Height = 13
           Caption = 'Machine'
         end
         object Label34: TLabel
           Left = 29
           Top = 166
-          Width = 76
+          Width = 79
           Height = 13
           Caption = 'Start Date/Time'
         end
         object Label35: TLabel
           Left = 253
           Top = 166
-          Width = 81
+          Width = 86
           Height = 13
           Caption = 'Finish Date/Time'
         end
         object Label2: TLabel
-          Left = 472
+          Left = 466
           Top = 167
-          Width = 64
+          Width = 70
           Height = 13
           Alignment = taRightJustify
           Caption = 'Labour Hours'
@@ -575,17 +582,21 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Left = 0
         Top = 193
         Width = 736
-        Height = 91
+        Height = 92
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitWidth = 730
+        ExplicitHeight = 83
         object pnlUnassWCOperatorsList: TPanel
           Left = 386
           Top = 0
           Width = 350
-          Height = 91
+          Height = 92
           Align = alRight
           TabOrder = 0
+          ExplicitLeft = 380
+          ExplicitHeight = 83
           object pnlWCOperatorsTop: TPanel
             Left = 1
             Top = 1
@@ -597,11 +608,12 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           end
           object pnlWCOperatorsBottom: TPanel
             Left = 1
-            Top = 61
+            Top = 62
             Width = 348
             Height = 29
             Align = alBottom
             TabOrder = 1
+            ExplicitTop = 53
             object Label14: TLabel
               Left = 8
               Top = 8
@@ -641,24 +653,28 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             TabOrder = 2
             TabStop = False
             OnDblClick = dblkpWCOperatorsDblClick
+            ExplicitHeight = 17
           end
         end
         object pnlWCOperatorsCenter: TPanel
           Left = 350
           Top = 0
           Width = 36
-          Height = 91
+          Height = 92
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
+          ExplicitWidth = 30
+          ExplicitHeight = 83
         end
         object pnlAssWCOperatorList: TPanel
           Left = 0
           Top = 0
           Width = 350
-          Height = 91
+          Height = 92
           Align = alLeft
           TabOrder = 2
+          ExplicitHeight = 83
           object Panel2: TPanel
             Left = 1
             Top = 1
@@ -672,11 +688,12 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             Left = 1
             Top = 25
             Width = 348
-            Height = 65
+            Height = 66
             Align = alClient
             ItemHeight = 13
             TabOrder = 1
             OnDblClick = lstbxWCAssistantsDblClick
+            ExplicitHeight = 57
           end
           object lstbxWCAssistantsCode: TListBox
             Left = 216
@@ -698,7 +715,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Left = 0
         Top = 25
         Width = 736
-        Height = 259
+        Height = 260
         Align = alClient
         ColCount = 4
         DefaultColWidth = 30
@@ -728,7 +745,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         object Label12: TLabel
           Left = 8
           Top = 5
-          Width = 92
+          Width = 82
           Height = 13
           Caption = 'Activities/Times'
           Font.Charset = DEFAULT_CHARSET
@@ -969,21 +986,21 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       object Label37: TLabel
         Left = 29
         Top = 11
-        Width = 46
+        Width = 53
         Height = 13
         Caption = 'Operation'
       end
       object Label40: TLabel
         Left = 29
         Top = 47
-        Width = 64
+        Width = 70
         Height = 13
         Caption = 'Labour Hours'
       end
       object Label32: TLabel
         Left = 29
         Top = 76
-        Width = 73
+        Width = 80
         Height = 13
         Caption = 'Overtime Hours'
       end
@@ -1224,7 +1241,7 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 537
+    Top = 538
     Width = 744
     Height = 19
     Panels = <
@@ -1234,6 +1251,8 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       item
         Width = 50
       end>
+    ExplicitTop = 529
+    ExplicitWidth = 738
   end
   object tmrSearch: TTimer
     Interval = 500

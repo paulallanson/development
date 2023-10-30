@@ -81,6 +81,8 @@ begin
   iYear3 := 0;
   iYear4 := 0;
 
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   with qryFY do
     begin
       close;

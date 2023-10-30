@@ -69,6 +69,7 @@ end;
 
 procedure TPBLUQuoteEnqsQtyFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtsCustEnquiryQtys.OnDataChange := SetButtons;
   dbgDetails.datasource := dtsCustEnquiryQtys;
 end;

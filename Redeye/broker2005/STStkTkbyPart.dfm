@@ -2,8 +2,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Left = 4
   Top = 76
   Caption = 'Enter Stock Count Details '
-  ClientHeight = 427
-  ClientWidth = 774
+  ClientHeight = 419
+  ClientWidth = 772
   Color = clBtnFace
   Constraints.MinHeight = 466
   Constraints.MinWidth = 790
@@ -22,7 +22,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 774
+    Width = 772
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -30,7 +30,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 115
+      Width = 120
       Height = 13
       Caption = 'Stock Count Reference '
       Font.Charset = ANSI_CHARSET
@@ -43,7 +43,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object Label2: TLabel
       Left = 288
       Top = 8
-      Width = 28
+      Width = 30
       Height = 13
       Caption = 'Store:'
       Font.Charset = ANSI_CHARSET
@@ -56,7 +56,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object StoreNameLbl: TLabel
       Left = 336
       Top = 8
-      Width = 67
+      Width = 71
       Height = 13
       Caption = 'StoreNameLbl'
       Font.Charset = ANSI_CHARSET
@@ -68,16 +68,16 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
   end
   object Panel2: TPanel
-    Left = 688
+    Left = 686
     Top = 41
     Width = 86
-    Height = 367
+    Height = 359
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
       86
-      367)
+      359)
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 8
@@ -171,7 +171,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
     object ConfirmBtn: TBitBtn
       Left = 6
-      Top = 309
+      Top = 300
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -205,7 +205,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
     object BitBtn2: TBitBtn
       Left = 6
-      Top = 341
+      Top = 332
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -223,8 +223,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 408
-    Width = 774
+    Top = 400
+    Width = 772
     Height = 19
     Panels = <
       item
@@ -237,24 +237,26 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 688
-    Height = 367
+    Width = 686
+    Height = 359
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
     TabOrder = 3
     object Panel4: TPanel
       Left = 0
-      Top = 326
-      Width = 688
+      Top = 327
+      Width = 692
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitTop = 318
+      ExplicitWidth = 686
       object Label3: TLabel
         Left = 5
         Top = 15
-        Width = 48
+        Width = 55
         Height = 13
         Caption = 'Import File'
       end
@@ -290,8 +292,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object CountGrid: TStringGrid
       Left = 0
       Top = 0
-      Width = 688
-      Height = 326
+      Width = 692
+      Height = 327
       Align = alClient
       ColCount = 7
       DefaultColWidth = 60
@@ -312,6 +314,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       OnDblClick = CountGridDblClick
       OnDrawCell = CountGridDrawCell
       OnSelectCell = CountGridSelectCell
+      ExplicitWidth = 686
+      ExplicitHeight = 318
       ColWidths = (
         89
         138

@@ -22,6 +22,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 445
+    ExplicitWidth = 685
     DesignSize = (
       691
       41)
@@ -44,7 +46,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 613
+      Left = 607
       Top = 8
       Width = 75
       Height = 25
@@ -52,6 +54,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 601
     end
   end
   object dbgDetails: TDBGrid
@@ -118,6 +121,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 486
+    ExplicitWidth = 685
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'

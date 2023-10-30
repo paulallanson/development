@@ -3,8 +3,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   Top = 151
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Stock Numbered Lots'
-  ClientHeight = 236
-  ClientWidth = 538
+  ClientHeight = 227
+  ClientWidth = 532
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   object pnlGrid: TPanel
     Left = 0
     Top = 0
-    Width = 538
-    Height = 176
+    Width = 532
+    Height = 167
     Align = alClient
     ParentBackground = False
     TabOrder = 1
@@ -110,53 +110,54 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 530
       DesignSize = (
-        536
+        530
         40)
       object lblPartCode: TLabel
         Left = 72
         Top = 8
-        Width = 54
+        Width = 60
         Height = 13
         Caption = 'lblPartCode'
       end
       object lblPart: TLabel
         Left = 8
         Top = 8
-        Width = 40
+        Width = 43
         Height = 13
         Caption = 'Product:'
       end
       object lblStore: TLabel
         Left = 8
         Top = 24
-        Width = 28
+        Width = 30
         Height = 13
         Caption = 'Store:'
       end
       object lblStoreName: TLabel
         Left = 72
         Top = 24
-        Width = 63
+        Width = 69
         Height = 13
         Caption = 'lblStoreName'
       end
       object lblQuantities: TLabel
-        Left = 464
+        Left = 449
         Top = 8
-        Width = 57
+        Width = 66
         Height = 13
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblQuantities'
-        ExplicitLeft = 476
+        ExplicitLeft = 455
       end
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 217
-    Width = 538
+    Top = 208
+    Width = 532
     Height = 19
     Panels = <
       item
@@ -171,8 +172,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 176
-    Width = 538
+    Top = 167
+    Width = 532
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -186,6 +187,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 428
       object BitBtn1: TBitBtn
         Left = 16
         Top = 8

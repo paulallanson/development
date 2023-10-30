@@ -33,6 +33,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -124,6 +125,11 @@ end;
 procedure TfrmWTLUCustType.FormActivate(Sender: TObject);
 begin
   refresh;
+end;
+
+procedure TfrmWTLUCustType.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TfrmWTLUCustType.dbgDetailsDblClick(Sender: TObject);

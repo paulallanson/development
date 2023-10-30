@@ -3,7 +3,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Top = 93
   Caption = 'Maintain Rep Commissions and Budgets'
   ClientHeight = 507
-  ClientWidth = 642
+  ClientWidth = 646
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 658
@@ -22,17 +22,21 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object StatusBar1: TStatusBar
     Left = 0
     Top = 488
-    Width = 642
+    Width = 646
     Height = 19
     Panels = <>
+    ExplicitTop = 479
+    ExplicitWidth = 640
   end
   object Panel1: TPanel
     Left = 0
     Top = 447
-    Width = 642
+    Width = 646
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 438
+    ExplicitWidth = 640
     object OKBitBtn: TBitBtn
       Left = 243
       Top = 8
@@ -58,10 +62,11 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 642
+    Width = 646
     Height = 83
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 640
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
@@ -72,7 +77,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object lblBonus: TLabel
         Left = 8
         Top = 16
-        Width = 56
+        Width = 58
         Height = 13
         Caption = 'Bonus Rate'
       end
@@ -124,7 +129,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object Label4: TLabel
         Left = 8
         Top = 16
-        Width = 92
+        Width = 100
         Height = 13
         Caption = 'Commission Rate %'
       end
@@ -158,11 +163,13 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pgBudgets: TPageControl
     Left = 0
     Top = 153
-    Width = 642
+    Width = 646
     Height = 294
     ActivePage = tbshtCategory
     Align = alClient
     TabOrder = 3
+    ExplicitWidth = 640
+    ExplicitHeight = 285
     object tbshtCategory: TTabSheet
       Caption = 'Category Commission Rates'
       object grdCategory: TStringGrid
@@ -181,6 +188,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
+        ExplicitHeight = 257
         ColWidths = (
           200
           94
@@ -222,7 +230,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         object Label3: TLabel
           Left = 6
           Top = 3
-          Width = 42
+          Width = 46
           Height = 13
           Caption = 'Category'
         end
@@ -305,14 +313,15 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 642
+    Width = 646
     Height = 70
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 640
     object Label2: TLabel
       Left = 16
       Top = 7
-      Width = 28
+      Width = 23
       Height = 13
       Caption = 'Rep:'
       Font.Charset = ANSI_CHARSET
@@ -325,7 +334,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     object Label1: TLabel
       Left = 16
       Top = 31
-      Width = 86
+      Width = 74
       Height = 13
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
@@ -338,7 +347,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     object lblRepName: TLabel
       Left = 112
       Top = 7
-      Width = 69
+      Width = 64
       Height = 13
       Caption = 'lblRepName'
       Font.Charset = ANSI_CHARSET
@@ -351,7 +360,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     object lblFinancialYear: TLabel
       Left = 112
       Top = 31
-      Width = 91
+      Width = 81
       Height = 13
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
@@ -371,7 +380,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end

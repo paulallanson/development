@@ -11,6 +11,7 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 13
   object Panel2: TPanel
@@ -20,12 +21,12 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
     Height = 32
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 370
-    ExplicitWidth = 964
+    ExplicitTop = 349
+    ExplicitWidth = 950
     object Label2: TLabel
       Left = 8
       Top = 10
-      Width = 66
+      Width = 73
       Height = 13
       Caption = 'Factoring File:'
     end
@@ -46,13 +47,13 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
     Height = 313
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 964
-    ExplicitHeight = 325
+    ExplicitWidth = 950
+    ExplicitHeight = 304
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
-      Width = 962
-      Height = 323
+      Width = 954
+      Height = 311
       Align = alClient
       DataSource = dtsrcGrid
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -125,8 +126,8 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
       item
         Width = 50
       end>
-    ExplicitTop = 402
-    ExplicitWidth = 964
+    ExplicitTop = 381
+    ExplicitWidth = 950
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -138,16 +139,16 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 960
+        Width = 950
       end>
-    ExplicitWidth = 964
+    ExplicitWidth = 950
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 947
+      Width = 941
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 51
+      ButtonWidth = 53
       Caption = 'ToolBar1'
       HotImages = ImgHot
       Images = ImgCool
@@ -162,7 +163,7 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
         OnClick = btnExportClick
       end
       object ToolButton2: TToolButton
-        Left = 51
+        Left = 53
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -170,7 +171,7 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
         Style = tbsSeparator
       end
       object btnClose: TToolButton
-        Left = 59
+        Left = 61
         Top = 0
         Caption = '   Close   '
         ImageIndex = 1

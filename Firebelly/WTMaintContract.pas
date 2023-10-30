@@ -404,6 +404,8 @@ end;
 
 procedure TfrmWTMaintContract.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   iLine := 0;
   dtmdlAllQuote := TdtmdlQuote.create(Application);
   SetGridHeaders;

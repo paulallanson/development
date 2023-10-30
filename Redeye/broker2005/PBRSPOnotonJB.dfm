@@ -2,8 +2,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   Left = 5
   Top = 33
   Caption = 'Purchase Orders not in Job Bags'
-  ClientHeight = 452
-  ClientWidth = 774
+  ClientHeight = 443
+  ClientWidth = 768
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   TextHeight = 13
   object stsDetails: TStatusBar
     Left = 0
-    Top = 433
-    Width = 774
+    Top = 424
+    Width = 768
     Height = 19
     Panels = <
       item
@@ -27,17 +27,17 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 392
-    Width = 774
+    Top = 383
+    Width = 768
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      774
+      768
       41)
     object PreviewReportBitBtn: TBitBtn
-      Left = 517
+      Left = 499
       Top = 8
       Width = 75
       Height = 25
@@ -59,9 +59,10 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = PreviewReportBitBtnClick
+      ExplicitLeft = 505
     end
     object PrintReportBitBtn: TBitBtn
-      Left = 605
+      Left = 587
       Top = 8
       Width = 75
       Height = 25
@@ -83,9 +84,10 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = PrintReportBitBtnClick
+      ExplicitLeft = 593
     end
     object CancelBitBtn: TBitBtn
-      Left = 695
+      Left = 677
       Top = 8
       Width = 75
       Height = 25
@@ -93,6 +95,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 683
     end
     object chkbxIncCallOffs: TCheckBox
       Left = 16
@@ -107,8 +110,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   object DBGrid1: TDBGrid
     Left = 0
     Top = 81
-    Width = 774
-    Height = 311
+    Width = 768
+    Height = 302
     Align = alClient
     DataSource = dtsReport
     TabOrder = 2
@@ -164,7 +167,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 774
+    Width = 768
     Height = 81
     Align = alTop
     ParentBackground = False
@@ -194,7 +197,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 89
+        Width = 94
         Height = 13
         Caption = 'Customer / Branch'
       end

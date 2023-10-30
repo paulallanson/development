@@ -189,6 +189,8 @@ var
   IniFile : TIniFile;
   stempDate: string;
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     stempdate := IniFile.ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');

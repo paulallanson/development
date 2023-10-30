@@ -3,8 +3,8 @@ object STLUCustPartFrm: TSTLUCustPartFrm
   Top = 99
   BorderStyle = bsDialog
   Caption = 'Look-Up Customer Product Details'
-  ClientHeight = 371
-  ClientWidth = 609
+  ClientHeight = 362
+  ClientWidth = 603
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -227,8 +227,8 @@ object STLUCustPartFrm: TSTLUCustPartFrm
   end
   object stsDetails: TStatusBar
     Left = 0
-    Top = 352
-    Width = 609
+    Top = 343
+    Width = 603
     Height = 19
     Panels = <
       item
@@ -241,7 +241,7 @@ object STLUCustPartFrm: TSTLUCustPartFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 609
+    Width = 603
     Height = 57
     Align = alTop
     BevelOuter = bvNone
@@ -250,28 +250,28 @@ object STLUCustPartFrm: TSTLUCustPartFrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Product:'
     end
     object Label2: TLabel
       Left = 8
       Top = 40
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object lblProduct: TLabel
       Left = 88
       Top = 16
-      Width = 47
+      Width = 53
       Height = 13
       Caption = 'lblProduct'
     end
     object lblDescription: TLabel
       Left = 88
       Top = 40
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end

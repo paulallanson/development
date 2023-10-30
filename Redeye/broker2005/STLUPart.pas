@@ -204,7 +204,7 @@ uses
   ComCtrls, ToolWin,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TSTPrtMntFrm = class(TForm)
@@ -961,16 +961,17 @@ end;
 
 procedure TSTPrtMntFrm.FormCreate(Sender: TObject);
 begin
-bService := False;
-bIs_Lookup := False;
-bOK := False;
-bDontShowGrid := False;
-bMulti_Parts := False;
-sCode := '' ;
-sCodeDescr := '' ;
-iStore_Type := 0 ;
-sSupp := '' ;
-sSuppDescr := '' ;
+  bService := False;
+  bIs_Lookup := False;
+  bOK := False;
+  bDontShowGrid := False;
+  bMulti_Parts := False;
+  sCode := '' ;
+  sCodeDescr := '' ;
+  iStore_Type := 0 ;
+  sSupp := '' ;
+  sSuppDescr := '' ;
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
 end;
 
 procedure TSTPrtMntFrm.SelAllBitBtnClick(Sender: TObject);

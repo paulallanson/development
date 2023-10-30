@@ -248,6 +248,8 @@ end;
 
 procedure TfrmWTLUCustWTGroups.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   btnPatch.visible := (frmWTMain.OperatorName = 'firebelly') or (frmWTMain.OperatorName = 'Firebelly');
 end;
 

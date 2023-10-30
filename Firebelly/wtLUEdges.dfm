@@ -13,6 +13,7 @@ object frmwtLUEdges: TfrmwtLUEdges
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -51,6 +52,8 @@ object frmwtLUEdges: TfrmwtLUEdges
       item
         Width = 50
       end>
+    ExplicitTop = 419
+    ExplicitWidth = 739
   end
   object Panel1: TPanel
     Left = 0
@@ -61,6 +64,8 @@ object frmwtLUEdges: TfrmwtLUEdges
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 328
+    ExplicitWidth = 739
     DesignSize = (
       745
       91)

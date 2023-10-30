@@ -2,8 +2,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   Left = 52
   Top = 102
   Caption = 'Purchase Orders'
-  ClientHeight = 371
-  ClientWidth = 761
+  ClientHeight = 337
+  ClientWidth = 755
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 761
+    Width = 755
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 755
+        Width = 749
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 746
+      Width = 740
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,10 +43,10 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 734
+        Width = 728
         Height = 40
         ButtonHeight = 36
-        ButtonWidth = 59
+        ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstOrders
         ParentShowHint = False
@@ -63,7 +63,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 59
+          Left = 62
           Top = 0
           Hint = 'Change order details'
           Caption = '   &Change  '
@@ -72,7 +72,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnChangeClick
         end
         object btnCopy: TToolButton
-          Left = 118
+          Left = 124
           Top = 0
           Hint = 'Copy Order'
           Caption = 'C&opy'
@@ -80,7 +80,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           ImageIndex = 2
         end
         object btnDelete: TToolButton
-          Left = 177
+          Left = 186
           Top = 0
           Caption = 'Delete'
           Enabled = False
@@ -88,7 +88,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDeleteClick
         end
         object btnPrint: TToolButton
-          Left = 236
+          Left = 248
           Top = 0
           Hint = 'Print'
           Caption = '&Print'
@@ -97,7 +97,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnPrintClick
         end
         object btnEDI: TToolButton
-          Left = 295
+          Left = 310
           Top = 0
           Caption = 'Export PO'
           Enabled = False
@@ -105,7 +105,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnEDIClick
         end
         object btnDeliveryNote: TToolButton
-          Left = 354
+          Left = 372
           Top = 0
           Caption = 'Del Notes'
           Enabled = False
@@ -113,7 +113,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDeliveryNoteClick
         end
         object btnAcknowledge: TToolButton
-          Left = 413
+          Left = 434
           Top = 0
           Caption = 'Print Ac&k'
           Enabled = False
@@ -121,7 +121,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnAcknowledgeClick
         end
         object ToolButton1: TToolButton
-          Left = 472
+          Left = 496
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -129,7 +129,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           Style = tbsSeparator
         end
         object btnReceipts: TToolButton
-          Left = 480
+          Left = 504
           Top = 0
           Caption = 'GRN'#39's'
           Enabled = False
@@ -137,7 +137,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnReceiptsClick
         end
         object btnDirect: TToolButton
-          Left = 539
+          Left = 566
           Top = 0
           Caption = 'Delivery'
           Enabled = False
@@ -145,7 +145,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDirectClick
         end
         object btnReports: TToolButton
-          Left = 598
+          Left = 628
           Top = 0
           Caption = '&Reports'
           ImageIndex = 4
@@ -157,8 +157,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 761
-    Height = 237
+    Width = 755
+    Height = 203
     Align = alClient
     DataSource = dtmdlPOrders.dtsPOHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -232,8 +232,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 352
-    Width = 761
+    Top = 318
+    Width = 755
     Height = 19
     Panels = <
       item
@@ -245,8 +245,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 311
-    Width = 761
+    Top = 277
+    Width = 755
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -254,7 +254,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Supplier Search'
     end
@@ -267,7 +267,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 473
+      Left = 467
       Top = 1
       Width = 287
       Height = 39
@@ -282,7 +282,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       object Label2: TLabel
         Left = 15
         Top = 16
-        Width = 64
+        Width = 73
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Order number'
@@ -320,7 +320,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 761
+    Width = 755
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -331,8 +331,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 119
-      Height = 20
+      Width = 115
+      Height = 21
       Caption = 'Purchase Orders'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

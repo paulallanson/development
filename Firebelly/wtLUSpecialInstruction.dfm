@@ -13,6 +13,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 0
@@ -56,6 +57,8 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 231
+    ExplicitWidth = 695
     DesignSize = (
       701
       40)
@@ -141,6 +144,8 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       item
         Width = 50
       end>
+    ExplicitTop = 271
+    ExplicitWidth = 695
   end
   object pnlLookup: TPanel
     Left = 618
@@ -150,6 +155,8 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitLeft = 612
+    ExplicitHeight = 231
     object btnSelect: TBitBtn
       Left = 5
       Top = 13

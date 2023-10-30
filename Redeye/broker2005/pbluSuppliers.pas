@@ -112,6 +112,8 @@ end;
 
 procedure TfrmpbluSuppliers.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlSuppliers := TdtmdlSuppliers.create(self);
   dtmdlSuppliers.dtsSuppliers.OnDataChange := SetButtons;
 

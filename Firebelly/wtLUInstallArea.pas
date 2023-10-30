@@ -38,6 +38,7 @@ type
     procedure btnEditClick(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -140,6 +141,11 @@ begin
   refresh;
 end;
 
+procedure TfrmWTLUInstallArea.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+end;
+
 procedure TfrmWTLUInstallArea.dbgDetailsDblClick(Sender: TObject);
 begin
   btnEditClick(self);
@@ -148,7 +154,6 @@ end;
 procedure TfrmWTLUInstallArea.btnExcelClick(Sender: TObject);
 begin
   frmWTMain.ExportToExcel(frmWTLUInstallArea);
-
 end;
 
 procedure TfrmWTLUInstallArea.btnAddClick(Sender: TObject);

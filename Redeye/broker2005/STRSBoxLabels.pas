@@ -329,6 +329,8 @@ end;
 
 procedure TSTRSBoxLabelsfrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   dmIntSel := TdmIntSel.Create(Self);
   FPrinted := false;
   GetDefaultPrinter;

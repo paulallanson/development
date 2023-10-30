@@ -3,7 +3,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   Top = 7
   Caption = 'Company Details'
   ClientHeight = 596
-  ClientWidth = 626
+  ClientWidth = 630
   Color = clBtnFace
   Constraints.MinHeight = 626
   Constraints.MinWidth = 642
@@ -22,17 +22,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object tbSettings: TPageControl
     Left = 0
     Top = 39
-    Width = 626
+    Width = 630
     Height = 497
     ActivePage = tbsProduction
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 624
+    ExplicitHeight = 488
     object tbsAddress: TTabSheet
       Caption = 'Address'
       object Label5: TLabel
         Left = 8
         Top = 20
-        Width = 28
+        Width = 30
         Height = 13
         Caption = 'Street'
         Font.Charset = ANSI_CHARSET
@@ -45,7 +47,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label7: TLabel
         Left = 8
         Top = 140
-        Width = 45
+        Width = 47
         Height = 13
         Caption = 'Postcode'
         Font.Charset = ANSI_CHARSET
@@ -58,7 +60,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label8: TLabel
         Left = 8
         Top = 198
-        Width = 31
+        Width = 33
         Height = 13
         Caption = 'Phone'
         Font.Charset = ANSI_CHARSET
@@ -84,7 +86,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label10: TLabel
         Left = 8
         Top = 266
-        Width = 25
+        Width = 27
         Height = 13
         Caption = 'Email'
         Font.Charset = ANSI_CHARSET
@@ -97,7 +99,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label26: TLabel
         Left = 8
         Top = 358
-        Width = 64
+        Width = 62
         Height = 13
         Caption = 'VAT Reg No.'
         Font.Charset = ANSI_CHARSET
@@ -110,7 +112,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label38: TLabel
         Left = 8
         Top = 332
-        Width = 87
+        Width = 92
         Height = 13
         Caption = 'Company Reg No.'
         Font.Charset = ANSI_CHARSET
@@ -123,7 +125,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label39: TLabel
         Left = 8
         Top = 291
-        Width = 23
+        Width = 24
         Height = 13
         Caption = 'Web'
         Font.Charset = ANSI_CHARSET
@@ -136,7 +138,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label69: TLabel
         Left = 8
         Top = 388
-        Width = 85
+        Width = 92
         Height = 13
         Caption = 'Registered Office.'
         Font.Charset = ANSI_CHARSET
@@ -230,7 +232,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label13: TLabel
           Left = 13
           Top = 26
-          Width = 31
+          Width = 33
           Height = 13
           Caption = 'Phone'
           WordWrap = True
@@ -331,7 +333,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label2: TLabel
         Left = 8
         Top = 12
-        Width = 79
+        Width = 86
         Height = 13
         Caption = 'Default Currency'
         Font.Charset = ANSI_CHARSET
@@ -344,35 +346,35 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label6: TLabel
         Left = 8
         Top = 42
-        Width = 112
+        Width = 123
         Height = 13
         Caption = 'Nominal Accounting by:'
       end
       object Label3: TLabel
         Left = 8
         Top = 67
-        Width = 123
+        Width = 133
         Height = 13
         Caption = 'Purchase Nominal Default'
       end
       object Label4: TLabel
         Left = 8
         Top = 94
-        Width = 104
+        Width = 113
         Height = 13
         Caption = 'Sales Nominal Default'
       end
       object Label15: TLabel
         Left = 8
         Top = 146
-        Width = 82
+        Width = 88
         Height = 13
         Caption = 'Commission Type'
       end
       object Label16: TLabel
         Left = 8
         Top = 200
-        Width = 81
+        Width = 87
         Height = 13
         Caption = 'Default Vat Code'
         Font.Charset = ANSI_CHARSET
@@ -385,14 +387,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label19: TLabel
         Left = 8
         Top = 171
-        Width = 57
+        Width = 62
         Height = 13
         Caption = 'Budget type'
       end
       object lblCashSaleAccount: TLabel
         Left = 8
         Top = 120
-        Width = 124
+        Width = 129
         Height = 13
         Caption = 'Cash Sales Account Code'
         Font.Charset = ANSI_CHARSET
@@ -405,14 +407,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label48: TLabel
         Left = 248
         Top = 325
-        Width = 113
+        Width = 119
         Height = 13
         Caption = 'Default Payment Terms:'
       end
       object Label67: TLabel
         Left = 368
         Top = 12
-        Width = 113
+        Width = 120
         Height = 13
         Caption = 'Direct Debit Account ID'
         Font.Charset = ANSI_CHARSET
@@ -425,7 +427,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label70: TLabel
         Left = 8
         Top = 444
-        Width = 137
+        Width = 147
         Height = 13
         Caption = 'Global Invoice Email Address'
       end
@@ -533,7 +535,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label20: TLabel
           Left = 8
           Top = 24
-          Width = 140
+          Width = 154
           Height = 13
           Caption = 'Maximum Unauthorised Value'
         end
@@ -1039,21 +1041,21 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label49: TLabel
           Left = 198
           Top = 23
-          Width = 35
+          Width = 40
           Height = 13
           Caption = 'Months'
         end
         object Label50: TLabel
           Left = 30
           Top = 23
-          Width = 47
+          Width = 52
           Height = 13
           Caption = 'Remind in'
         end
         object Label51: TLabel
           Left = 30
           Top = 47
-          Width = 100
+          Width = 108
           Height = 13
           Caption = 'Minimum Sales Value'
         end
@@ -1159,63 +1161,63 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label18: TLabel
         Left = 12
         Top = 107
-        Width = 79
+        Width = 84
         Height = 13
         Caption = 'Purchase Orders'
       end
       object Label21: TLabel
         Left = 12
         Top = 18
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Enquiries'
       end
       object Label22: TLabel
         Left = 12
         Top = 152
-        Width = 44
+        Width = 45
         Height = 13
         Caption = 'Job Bags'
       end
       object Label23: TLabel
         Left = 12
         Top = 62
-        Width = 34
+        Width = 37
         Height = 13
         Caption = 'Quotes'
       end
       object Label27: TLabel
         Left = 12
         Top = 195
-        Width = 49
+        Width = 54
         Height = 13
         Caption = 'Customers'
       end
       object Label28: TLabel
         Left = 12
         Top = 239
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Suppliers'
       end
       object Label60: TLabel
         Left = 12
         Top = 281
-        Width = 42
+        Width = 45
         Height = 13
         Caption = 'Activities'
       end
       object Label61: TLabel
         Left = 12
         Top = 368
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Email Storage'
       end
       object Label68: TLabel
         Left = 12
         Top = 323
-        Width = 45
+        Width = 49
         Height = 13
         Caption = 'Contracts'
       end
@@ -1458,14 +1460,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label11: TLabel
           Left = 16
           Top = 32
-          Width = 28
+          Width = 29
           Height = 13
           Caption = 'Name'
         end
         object Label12: TLabel
           Left = 16
           Top = 59
-          Width = 34
+          Width = 35
           Height = 13
           Caption = 'Branch'
         end
@@ -1571,14 +1573,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label24: TLabel
         Left = 12
         Top = 242
-        Width = 192
+        Width = 210
         Height = 13
         Caption = 'Default Works Instruction Email Address:'
       end
       object Label25: TLabel
         Left = 12
         Top = 284
-        Width = 99
+        Width = 110
         Height = 13
         Caption = 'Corresponding Name'
       end
@@ -1615,7 +1617,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label62: TLabel
           Left = 25
           Top = 30
-          Width = 55
+          Width = 61
           Height = 13
           Caption = 'Department'
         end
@@ -1629,14 +1631,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label64: TLabel
           Left = 24
           Top = 88
-          Width = 53
+          Width = 59
           Height = 13
           Caption = 'Description'
         end
         object Label65: TLabel
           Left = 24
           Top = 176
-          Width = 47
+          Width = 52
           Height = 13
           Caption = 'Markup %'
         end
@@ -1845,7 +1847,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 618
+        Width = 622
         Height = 469
         ActivePage = TabSheet1
         Align = alClient
@@ -1855,14 +1857,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label29: TLabel
             Left = 16
             Top = 16
-            Width = 82
+            Width = 89
             Height = 13
             Caption = 'Enquiry Preamble'
           end
           object Label32: TLabel
             Left = 16
             Top = 152
-            Width = 76
+            Width = 82
             Height = 13
             Caption = 'Quote Preamble'
           end
@@ -1893,21 +1895,21 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label30: TLabel
             Left = 16
             Top = 16
-            Width = 121
+            Width = 129
             Height = 13
             Caption = 'Purchase Order Preamble'
           end
           object Label31: TLabel
             Left = 16
             Top = 152
-            Width = 135
+            Width = 146
             Height = 13
             Caption = 'Acknowledgement Preamble'
           end
           object Label71: TLabel
             Left = 16
             Top = 288
-            Width = 49
+            Width = 54
             Height = 13
             Caption = 'Order Due'
           end
@@ -1948,7 +1950,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label72: TLabel
             Left = 16
             Top = 16
-            Width = 80
+            Width = 86
             Height = 13
             Caption = 'Proforma Invoice'
           end
@@ -1969,7 +1971,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label33: TLabel
             Left = 16
             Top = 16
-            Width = 90
+            Width = 97
             Height = 13
             Caption = 'Invoicing Preamble'
           end
@@ -2000,35 +2002,35 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label34: TLabel
           Left = 16
           Top = 32
-          Width = 53
+          Width = 59
           Height = 13
           Caption = 'Description'
         end
         object Label35: TLabel
           Left = 16
           Top = 112
-          Width = 21
+          Width = 23
           Height = 13
           Caption = 'Cost'
         end
         object Label36: TLabel
           Left = 16
           Top = 88
-          Width = 34
+          Width = 37
           Height = 13
           Caption = 'Charge'
         end
         object Label37: TLabel
           Left = 16
           Top = 136
-          Width = 21
+          Width = 18
           Height = 13
           Caption = 'VAT'
         end
         object Label40: TLabel
           Left = 16
           Top = 64
-          Width = 84
+          Width = 92
           Height = 13
           Caption = 'Charge Threshold'
         end
@@ -2097,7 +2099,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label45: TLabel
           Left = 16
           Top = 28
-          Width = 101
+          Width = 107
           Height = 13
           Caption = 'Unpaid Product Type'
           Font.Charset = ANSI_CHARSET
@@ -2110,7 +2112,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label46: TLabel
           Left = 16
           Top = 60
-          Width = 88
+          Width = 91
           Height = 13
           Caption = 'Paid Product Type'
           Font.Charset = ANSI_CHARSET
@@ -2210,28 +2212,28 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label43: TLabel
         Left = 8
         Top = 16
-        Width = 114
+        Width = 124
         Height = 13
         Caption = 'Analysis Code 1 Caption'
       end
       object Label44: TLabel
         Left = 8
         Top = 48
-        Width = 114
+        Width = 124
         Height = 13
         Caption = 'Analysis Code 2 Caption'
       end
       object Label53: TLabel
         Left = 8
         Top = 80
-        Width = 114
+        Width = 124
         Height = 13
         Caption = 'Analysis Code 3 Caption'
       end
       object Label54: TLabel
         Left = 8
         Top = 112
-        Width = 114
+        Width = 124
         Height = 13
         Caption = 'Analysis Code 4 Caption'
       end
@@ -2274,21 +2276,21 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label41: TLabel
         Left = 8
         Top = 16
-        Width = 76
+        Width = 81
         Height = 13
         Caption = 'Sales document'
       end
       object Label42: TLabel
         Left = 8
         Top = 48
-        Width = 95
+        Width = 101
         Height = 13
         Caption = 'Purchase document'
       end
       object Label66: TLabel
         Left = 8
         Top = 80
-        Width = 76
+        Width = 81
         Height = 13
         Caption = 'Studio Price List'
       end
@@ -2348,47 +2350,47 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'CRM'
       ImageIndex = 10
       DesignSize = (
-        618
+        622
         469)
       object Label52: TLabel
         Left = 16
         Top = 56
-        Width = 168
+        Width = 185
         Height = 13
         Caption = 'Quotation Reminder Default Activity'
       end
       object Label55: TLabel
         Left = 16
         Top = 24
-        Width = 157
+        Width = 171
         Height = 13
         Caption = 'Enquiry Reminder Default Activity'
       end
       object Label56: TLabel
         Left = 16
         Top = 96
-        Width = 95
+        Width = 102
         Height = 13
         Caption = 'Proof Status Activity'
       end
       object Label57: TLabel
         Left = 16
         Top = 128
-        Width = 75
+        Width = 80
         Height = 13
         Caption = 'Reorder Activity'
       end
       object Label58: TLabel
         Left = 16
         Top = 160
-        Width = 154
+        Width = 168
         Height = 13
         Caption = 'Order Acknowlegdement Activity'
       end
       object Label59: TLabel
         Left = 16
         Top = 192
-        Width = 104
+        Width = 112
         Height = 13
         Caption = 'Order Delivery Activity'
       end
@@ -2404,7 +2406,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 405
+        Left = 403
         Top = 19
         Width = 22
         Height = 22
@@ -2480,14 +2482,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlBottom: TPanel
     Left = 0
     Top = 536
-    Width = 626
+    Width = 630
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 527
+    ExplicitWidth = 624
     DesignSize = (
-      626
+      630
       41)
     object BitBtn1: TBitBtn
       Left = 231
@@ -2515,14 +2519,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 626
+    Width = 630
     Height = 39
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 624
     DesignSize = (
-      626
+      630
       39)
     object Label1: TLabel
       Left = 11
@@ -2540,7 +2545,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     object NameEdit: TEdit
       Left = 121
       Top = 8
-      Width = 392
+      Width = 390
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -2552,12 +2557,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ParentFont = False
       TabOrder = 0
       Text = 'NameEdit'
+      ExplicitWidth = 384
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
     Top = 577
-    Width = 626
+    Width = 630
     Height = 19
     Panels = <
       item
@@ -2566,6 +2572,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       item
         Width = 50
       end>
+    ExplicitTop = 568
+    ExplicitWidth = 624
   end
   object GetCompanySQL: TFDQuery
     ConnectionName = 'PB'

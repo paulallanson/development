@@ -25,6 +25,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 521
+    ExplicitHeight = 540
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
@@ -42,7 +44,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label1: TLabel
           Left = 16
           Top = 17
-          Width = 33
+          Width = 31
           Height = 13
           Caption = 'Name'
           Font.Charset = ANSI_CHARSET
@@ -55,7 +57,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label5: TLabel
           Left = 16
           Top = 44
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -68,7 +70,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label7: TLabel
           Left = 16
           Top = 141
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -81,7 +83,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label8: TLabel
           Left = 16
           Top = 165
-          Width = 37
+          Width = 34
           Height = 13
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
@@ -107,7 +109,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label10: TLabel
           Left = 16
           Top = 212
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
@@ -120,7 +122,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label11: TLabel
           Left = 16
           Top = 265
-          Width = 68
+          Width = 72
           Height = 13
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
@@ -133,7 +135,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label15: TLabel
           Left = 16
           Top = 239
-          Width = 51
+          Width = 46
           Height = 13
           Caption = 'Discount'
           Font.Charset = ANSI_CHARSET
@@ -146,7 +148,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label2: TLabel
           Left = 280
           Top = 239
-          Width = 48
+          Width = 43
           Height = 13
           Caption = 'Intrastat'
           Font.Charset = ANSI_CHARSET
@@ -160,14 +162,14 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label3: TLabel
           Left = 16
           Top = 326
-          Width = 41
+          Width = 38
           Height = 13
           Caption = 'VAT Ref'
         end
         object Label4: TLabel
           Left = 280
           Top = 265
-          Width = 42
+          Width = 45
           Height = 13
           Caption = 'Currency'
           Visible = False
@@ -175,7 +177,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label6: TLabel
           Left = 16
           Top = 356
-          Width = 80
+          Width = 66
           Height = 13
           Caption = 'Def VAT Rate'
           Font.Charset = ANSI_CHARSET
@@ -188,7 +190,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label12: TLabel
           Left = 16
           Top = 116
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET
@@ -201,14 +203,14 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label18: TLabel
           Left = 248
           Top = 208
-          Width = 38
+          Width = 39
           Height = 13
           Caption = 'Label18'
         end
         object Label19: TLabel
           Left = 16
           Top = 292
-          Width = 33
+          Width = 38
           Height = 13
           Caption = 'Courier'
         end
@@ -216,7 +218,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Tag = 100
           Left = 15
           Top = 397
-          Width = 73
+          Width = 75
           Height = 13
           Caption = 'Payment Terms'
           Font.Charset = ANSI_CHARSET
@@ -623,7 +625,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label13: TLabel
           Left = 16
           Top = 36
-          Width = 22
+          Width = 21
           Height = 13
           Caption = 'EAN'
           Font.Charset = ANSI_CHARSET
@@ -636,7 +638,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label14: TLabel
           Left = 16
           Top = 68
-          Width = 60
+          Width = 65
           Height = 13
           Caption = 'Our Account'
           Font.Charset = ANSI_CHARSET
@@ -649,7 +651,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label16: TLabel
           Left = 16
           Top = 100
-          Width = 46
+          Width = 49
           Height = 13
           Caption = 'Password'
           Font.Charset = ANSI_CHARSET
@@ -662,7 +664,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label17: TLabel
           Left = 16
           Top = 164
-          Width = 43
+          Width = 42
           Height = 13
           Caption = 'Site URL'
           Font.Charset = ANSI_CHARSET
@@ -843,10 +845,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 540
+    ExplicitWidth = 521
     object DelLabel: TLabel
       Left = 216
       Top = 20
-      Width = 125
+      Width = 109
       Height = 13
       Caption = 'Delete these details ?'
       Font.Charset = ANSI_CHARSET
@@ -1023,6 +1027,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Width = 527
     Height = 19
     Panels = <>
+    ExplicitTop = 595
+    ExplicitWidth = 521
   end
   object FlashTimer: TTimer
     Enabled = False

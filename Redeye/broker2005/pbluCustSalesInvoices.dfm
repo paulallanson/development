@@ -2,8 +2,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   Left = 0
   Top = 0
   Caption = 'Sales Invoices/Credits'
-  ClientHeight = 532
-  ClientWidth = 798
+  ClientHeight = 523
+  ClientWidth = 792
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 798
+    Width = 792
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -42,8 +42,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 131
-        Height = 20
+        Width = 128
+        Height = 21
         Caption = 'Customer Invoices'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -56,7 +56,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 389
+      Width = 383
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -64,21 +64,21 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 377
+        Width = 371
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 371
+            Width = 365
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 362
+          Width = 356
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonWidth = 66
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -97,42 +97,42 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
             OnClick = btnCustomersClick
           end
           object btnQuotes: TToolButton
-            Left = 62
+            Left = 66
             Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
-            Left = 124
+            Left = 132
             Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
-            Left = 186
+            Left = 198
             Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = btnProductionClick
           end
           object btnJobs: TToolButton
-            Left = 248
+            Left = 264
             Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
-            Left = 310
+            Left = 330
             Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
-            Left = 372
+            Left = 396
             Top = 0
             Caption = 'Sales'
             Enabled = False
@@ -145,19 +145,19 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 798
+    Width = 792
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 792
+        Width = 786
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 783
+      Width = 777
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -165,10 +165,10 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 771
+        Width = 765
         Height = 40
         ButtonHeight = 36
-        ButtonWidth = 51
+        ButtonWidth = 53
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -186,7 +186,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnChangeClick
         end
         object ToolButton3: TToolButton
-          Left = 51
+          Left = 53
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -194,7 +194,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           Style = tbsSeparator
         end
         object btnPreview: TToolButton
-          Left = 59
+          Left = 61
           Top = 0
           Caption = 'Pre&view'
           Enabled = False
@@ -202,7 +202,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnPreviewClick
         end
         object btnPrint: TToolButton
-          Left = 110
+          Left = 114
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -210,7 +210,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 161
+          Left = 167
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -218,7 +218,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           OnClick = btnReprintClick
         end
         object ToolButton2: TToolButton
-          Left = 212
+          Left = 220
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -226,7 +226,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           Style = tbsSeparator
         end
         object btnOrder: TToolButton
-          Left = 220
+          Left = 228
           Top = 0
           Caption = 'Order'
           Enabled = False
@@ -238,8 +238,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 798
-    Height = 401
+    Width = 792
+    Height = 392
     Align = alClient
     DataSource = dmSalesInvoice.dsSCHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -311,15 +311,15 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 475
-    Width = 798
+    Top = 466
+    Width = 792
     Height = 38
     Align = alBottom
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 13
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
@@ -332,7 +332,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel4: TPanel
-      Left = 514
+      Left = 508
       Top = 1
       Width = 283
       Height = 36
@@ -345,7 +345,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object Label2: TLabel
         Left = 16
         Top = 13
-        Width = 75
+        Width = 80
         Height = 13
         Caption = 'Invoice Number'
       end
@@ -379,8 +379,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 513
-    Width = 798
+    Top = 504
+    Width = 792
     Height = 19
     Panels = <
       item

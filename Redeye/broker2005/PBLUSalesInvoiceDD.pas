@@ -52,6 +52,7 @@ type
     procedure edtDateFromExit(Sender: TObject);
     procedure edtDateToExit(Sender: TObject);
     procedure chkbxShowExportedClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     intSel: integer;
     procedure BuildRange(sFirst, sLast: string);
@@ -574,6 +575,11 @@ end;
 procedure TPBLUSalesInvoiceDDFrm.FormActivate(Sender: TObject);
 begin
   self.fixquery(false)
+end;
+
+procedure TPBLUSalesInvoiceDDFrm.FormCreate(Sender: TObject);
+begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
 end;
 
 procedure TPBLUSalesInvoiceDDFrm.edtDateFromExit(Sender: TObject);

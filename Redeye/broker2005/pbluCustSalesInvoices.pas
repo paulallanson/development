@@ -162,6 +162,8 @@ end;
 
 procedure TfrmpbLUCustSalesInvoices.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dmSalesInvoice := TdmSalesInvoice.create(self);
   dmSalesInvoice.dsSIHeaderGrid.OnDataChange := SetButtons;
   dbgDetails.datasource := dmSalesInvoice.dsSIHeaderGrid;

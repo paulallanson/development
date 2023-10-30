@@ -115,6 +115,8 @@ end;
 
 procedure TfrmwtLUOffer.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   tblSaleOffer.active := true;
 end;
 

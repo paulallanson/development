@@ -13,6 +13,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
@@ -26,6 +27,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       item
         Width = 50
       end>
+    ExplicitTop = 337
+    ExplicitWidth = 720
   end
   object Panel1: TPanel
     Left = 0
@@ -36,6 +39,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 250
+    ExplicitWidth = 720
     DesignSize = (
       726
       87)

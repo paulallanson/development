@@ -2,8 +2,8 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   Left = 72
   Top = 108
   Caption = 'Customer invoice details'
-  ClientHeight = 424
-  ClientWidth = 684
+  ClientHeight = 415
+  ClientWidth = 678
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,26 +14,27 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   Position = poScreenCenter
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 684
+    Width = 678
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 678
+        Width = 672
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 669
+      Width = 663
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 44
+      ButtonWidth = 47
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -45,25 +46,25 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
         ImageIndex = 0
       end
       object btnChange: TToolButton
-        Left = 44
+        Left = 47
         Top = 0
         Caption = '&Change'
         ImageIndex = 1
       end
       object btnCopy: TToolButton
-        Left = 88
+        Left = 94
         Top = 0
         Caption = 'C&opy'
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 132
+        Left = 141
         Top = 0
         Caption = '&Delete'
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 176
+        Left = 188
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -71,7 +72,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 184
+        Left = 196
         Top = 0
         Caption = '&Print'
         ImageIndex = 7
@@ -81,8 +82,8 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   object DBGrid1: TDBGrid
     Left = 0
     Top = 45
-    Width = 684
-    Height = 319
+    Width = 678
+    Height = 310
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
@@ -135,24 +136,24 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 364
-    Width = 684
+    Top = 355
+    Width = 678
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      684
+      678
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Button1: TButton
-      Left = 609
+      Left = 597
       Top = 8
       Width = 75
       Height = 25
@@ -171,8 +172,8 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 405
-    Width = 684
+    Top = 396
+    Width = 678
     Height = 19
     Panels = <
       item

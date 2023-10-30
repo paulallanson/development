@@ -58,6 +58,7 @@ uses UITypes, PBAutoPO;
 
 procedure TfrmpbluCustQuotesJB.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlCustQuotes := TdtmdlQuotes.create(self);
   dtmdlCustQuotes.dtsQuotesJB.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustQuotes.dtsQuotesJB;

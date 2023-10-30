@@ -153,13 +153,14 @@ end;
 
 procedure TSTMaintStockFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
   CCSCommon.SetDBGridCols('', 'MaintStock Col Order', frmPBMainMenu.AppIniFile, self.dbgDetailsFrom);
   CCSCommon.SetDBGridCols('', 'MaintStock Col Order', frmPBMainMenu.AppIniFile, self.dbgDetailsTo);
 
   lblDescriptionFrom.caption := '';
   lblDescriptionTo.caption := '';
-
 end;
 
 procedure TSTMaintStockFrm.FormResize(Sender: TObject);

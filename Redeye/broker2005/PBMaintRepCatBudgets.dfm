@@ -14,6 +14,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   TextHeight = 13
   object StatusBar1: TStatusBar
@@ -22,6 +23,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Width = 774
     Height = 19
     Panels = <>
+    ExplicitTop = 471
+    ExplicitWidth = 768
   end
   object Panel1: TPanel
     Left = 0
@@ -30,6 +33,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 430
+    ExplicitWidth = 768
     object OKBitBtn: TBitBtn
       Left = 312
       Top = 8
@@ -77,10 +82,11 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Height = 73
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 768
     object Label1: TLabel
       Left = 16
       Top = 14
-      Width = 67
+      Width = 69
       Height = 13
       Caption = 'Financial Year'
     end
@@ -128,6 +134,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     OnKeyPress = grdDetailsKeyPress
     OnSelectCell = grdDetailsSelectCell
     OnTopLeftChanged = grdDetailsTopLeftChanged
+    ExplicitWidth = 768
+    ExplicitHeight = 335
     ColWidths = (
       211
       70
@@ -169,22 +177,24 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Align = alTop
     Caption = 'Panel5'
     TabOrder = 4
+    ExplicitWidth = 768
     object Label3: TLabel
       Left = 6
       Top = 3
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object ScrollBox1: TScrollBox
-      Left = 204
+      Left = 210
       Top = 1
-      Width = 569
+      Width = 563
       Height = 20
       VertScrollBar.Visible = False
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
+      ExplicitWidth = 557
       object StringGrid1: TStringGrid
         Left = -2
         Top = -3

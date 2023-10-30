@@ -130,6 +130,8 @@ end;
 
 procedure TfrmPBLUPurchaseOrders.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlPOrders := TdtmdlPOrders.create(self);
 
   dtmdlPOrders.dtsPOHeaderGrid.OnDataChange := SetButtons;

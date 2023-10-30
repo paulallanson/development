@@ -66,6 +66,7 @@ uses UITypes, CCSCommon, PBDatabase, PBPartTransfer, STRPStockLocations, pbMainM
 
 procedure TfrmSTLUStockLocations.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlStockBins := TdtmdlStock.create(self);
   dtmdlStockBins.dtsStockLocations.OnDataChange := SetButtons;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);

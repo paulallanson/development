@@ -2,8 +2,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   Left = 286
   Top = 104
   Caption = 'Activity Reminder'
-  ClientHeight = 421
-  ClientWidth = 754
+  ClientHeight = 422
+  ClientWidth = 758
   Color = clBtnFace
   Constraints.MinHeight = 460
   Constraints.MinWidth = 770
@@ -20,10 +20,11 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 754
+    Width = 758
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 752
     object dbtxtSubject: TDBText
       Left = 72
       Top = 8
@@ -53,7 +54,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     object Label1: TLabel
       Left = 8
       Top = 41
-      Width = 59
+      Width = 51
       Height = 13
       Caption = 'Due Date:'
       Font.Charset = DEFAULT_CHARSET
@@ -154,8 +155,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 754
-    Height = 283
+    Width = 758
+    Height = 284
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -219,13 +220,15 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 348
-    Width = 754
+    Top = 349
+    Width = 758
     Height = 54
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 340
+    ExplicitWidth = 752
     DesignSize = (
-      754
+      758
       54)
     object btnComplete: TButton
       Left = 110
@@ -255,7 +258,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       OnClick = btnCompleteAllClick
     end
     object Button1: TButton
-      Left = 666
+      Left = 664
       Top = 16
       Width = 75
       Height = 25
@@ -263,9 +266,10 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       Caption = 'Close'
       TabOrder = 3
       OnClick = Button1Click
+      ExplicitLeft = 658
     end
     object Button2: TButton
-      Left = 578
+      Left = 576
       Top = 16
       Width = 75
       Height = 25
@@ -273,12 +277,13 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       Caption = 'Activities'
       TabOrder = 4
       OnClick = Button2Click
+      ExplicitLeft = 570
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 402
-    Width = 754
+    Top = 403
+    Width = 758
     Height = 19
     Panels = <
       item
@@ -287,5 +292,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       item
         Width = 50
       end>
+    ExplicitTop = 394
+    ExplicitWidth = 752
   end
 end

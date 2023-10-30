@@ -2,8 +2,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   Left = 15
   Top = 33
   Caption = 'Allocate Stock To Store Orders'
-  ClientHeight = 485
-  ClientWidth = 739
+  ClientHeight = 477
+  ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 524
   Constraints.MinWidth = 713
@@ -20,8 +20,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 41
-    Width = 739
-    Height = 384
+    Width = 733
+    Height = 376
     Align = alClient
     DataSource = DetsDataSource
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -91,24 +91,24 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 425
-    Width = 739
+    Top = 417
+    Width = 733
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      739
+      733
       41)
     object lblAllocateSeq: TLabel
       Left = 8
       Top = 16
-      Width = 88
+      Width = 93
       Height = 13
       Caption = 'Allocate sequence'
     end
     object OKBitBtn: TBitBtn
-      Left = 572
+      Left = 554
       Top = 8
       Width = 75
       Height = 25
@@ -135,9 +135,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 560
     end
     object CancelBitBtn: TBitBtn
-      Left = 660
+      Left = 642
       Top = 8
       Width = 75
       Height = 25
@@ -145,9 +146,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 648
     end
     object AllBitBtn: TBitBtn
-      Left = 480
+      Left = 462
       Top = 8
       Width = 75
       Height = 25
@@ -172,6 +174,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       ShowHint = True
       TabOrder = 2
       OnClick = AllBitBtnClick
+      ExplicitLeft = 468
     end
     object cmbAllocateSeq: TComboBox
       Left = 112
@@ -188,8 +191,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object stsDetails: TStatusBar
     Left = 0
-    Top = 466
-    Width = 739
+    Top = 458
+    Width = 733
     Height = 19
     Panels = <
       item
@@ -202,7 +205,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 739
+    Width = 733
     Height = 41
     Align = alTop
     ParentBackground = False
@@ -210,7 +213,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     object lblSalesOrderNo: TLabel
       Left = 16
       Top = 16
-      Width = 76
+      Width = 84
       Height = 13
       Caption = 'lblSalesOrderNo'
     end

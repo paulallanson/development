@@ -605,7 +605,10 @@ const
 
 procedure TPBRSSalesByInvFrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
 //  dmBroker.ScreenAccessControl(Self,'PBSalesByInvBitBtn',PBMenuMainfrm.iOperator,0,PBMenuMainfrm.iRep) ;
+
   Screen.Cursor := crDefault;
   {setting the default content of the sort option edit boxes}
   cbSort1.ItemIndex := 0;

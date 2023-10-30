@@ -427,6 +427,8 @@ end;
 
 procedure TfrmWTMaintSupplier.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   dtmdlOneSupplier := TdtmdlSuppliers.create(application);
 
   AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);

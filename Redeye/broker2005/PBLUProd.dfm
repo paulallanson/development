@@ -12,6 +12,7 @@ object PBLUProdFrm: TPBLUProdFrm
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 13
   object stBrDetails: TStatusBar
@@ -26,6 +27,8 @@ object PBLUProdFrm: TPBLUProdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 406
+    ExplicitWidth = 659
   end
   object DetsDBGrid: TDBGrid
     Left = 0
@@ -66,10 +69,12 @@ object PBLUProdFrm: TPBLUProdFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 354
+    ExplicitWidth = 659
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
     end
@@ -90,6 +95,7 @@ object PBLUProdFrm: TPBLUProdFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 459
       object btnSelect: TBitBtn
         Left = 28
         Top = 11

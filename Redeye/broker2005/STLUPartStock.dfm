@@ -22,17 +22,18 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 1144
     object Label2: TLabel
       Left = 8
       Top = 16
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Warehouse:'
     end
     object lblWarehouse: TLabel
       Left = 88
       Top = 16
-      Width = 65
+      Width = 72
       Height = 13
       Caption = 'lblWarehouse'
     end
@@ -44,13 +45,15 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Height = 46
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 418
+    ExplicitWidth = 1144
     DesignSize = (
       1150
       46)
     object Label1: TLabel
       Left = 8
       Top = 18
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
@@ -64,7 +67,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 1066
+      Left = 1060
       Top = 12
       Width = 75
       Height = 25
@@ -73,9 +76,10 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
+      ExplicitLeft = 1054
     end
     object btnSelect: TBitBtn
-      Left = 976
+      Left = 970
       Top = 12
       Width = 75
       Height = 25
@@ -142,6 +146,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 964
     end
   end
   object dbgDetails: TDBGrid
@@ -236,6 +241,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       item
         Width = 50
       end>
+    ExplicitTop = 464
+    ExplicitWidth = 1144
   end
   object dtsStock: TDataSource
     DataSet = qryStock

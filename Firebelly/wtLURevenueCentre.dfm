@@ -13,6 +13,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -57,6 +58,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       item
         Width = 50
       end>
+    ExplicitTop = 370
+    ExplicitWidth = 688
   end
   object Panel1: TPanel
     Left = 0
@@ -66,6 +69,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 283
+    ExplicitWidth = 688
     DesignSize = (
       694
       87)

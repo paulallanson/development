@@ -25,6 +25,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 793
+    ExplicitHeight = 350
     object dbgSalesInvoice: TDBGrid
       Left = 0
       Top = 0
@@ -108,17 +110,19 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 350
+    ExplicitWidth = 793
     DesignSize = (
       799
       80)
     object lblSalesInvNo: TLabel
-      Left = 438
+      Left = 426
       Top = 62
-      Width = 64
+      Width = 65
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Sales Invoice'
-      ExplicitLeft = 460
+      ExplicitLeft = 438
     end
     object GroupBox1: TGroupBox
       Left = 4
@@ -130,7 +134,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       object Label1: TLabel
         Left = 16
         Top = 16
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -144,22 +148,24 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       end
     end
     object edtSalesInvNo: TEdit
-      Left = 522
+      Left = 510
       Top = 54
       Width = 110
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtSalesInvNoKeyPress
+      ExplicitLeft = 504
     end
     object GroupBox2: TGroupBox
-      Left = 684
+      Left = 672
       Top = 1
       Width = 105
       Height = 76
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       TabOrder = 2
+      ExplicitLeft = 666
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -240,7 +246,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       end
     end
   end
-  object stsBrInvoices: TStatusBar
+  object stsbrDetails: TStatusBar
     Left = 0
     Top = 439
     Width = 799
@@ -252,6 +258,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       item
         Width = 50
       end>
+    ExplicitTop = 430
+    ExplicitWidth = 793
   end
   object SearchTimer: TTimer
     Enabled = False

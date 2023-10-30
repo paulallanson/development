@@ -3,7 +3,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   Top = 2
   Caption = 'Maintain Works Instruction'
   ClientHeight = 537
-  ClientWidth = 789
+  ClientWidth = 791
   Color = clBtnFace
   Constraints.MinHeight = 573
   Constraints.MinWidth = 803
@@ -22,45 +22,46 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 789
+    Width = 791
     Height = 38
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 785
     DesignSize = (
-      789
+      791
       38)
     object Label1: TLabel
       Left = 6
       Top = 12
-      Width = 54
+      Width = 58
       Height = 13
       Caption = 'WI Number'
     end
     object Label2: TLabel
       Left = 208
       Top = 12
-      Width = 59
+      Width = 61
       Height = 13
       Caption = 'Date Raised'
     end
     object Label3: TLabel
-      Left = 591
+      Left = 587
       Top = 12
-      Width = 59
+      Width = 66
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Mailing Date'
-      ExplicitLeft = 603
+      ExplicitLeft = 591
     end
     object Label5: TLabel
-      Left = 384
+      Left = 380
       Top = 12
-      Width = 48
+      Width = 51
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Start Date'
-      ExplicitLeft = 396
+      ExplicitLeft = 384
     end
     object edtOrderNumber: TEdit
       Left = 72
@@ -84,7 +85,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       OnExit = edtDateExit
     end
     object edtDateReq: TEdit
-      Left = 657
+      Left = 653
       Top = 8
       Width = 81
       Height = 21
@@ -92,9 +93,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       TabOrder = 2
       OnExit = edtDateReqExit
+      ExplicitLeft = 647
     end
     object btnDateRequired: TBitBtn
-      Left = 745
+      Left = 741
       Top = 6
       Width = 25
       Height = 25
@@ -115,9 +117,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnDateRequiredClick
+      ExplicitLeft = 735
     end
     object edtDateStart: TEdit
-      Left = 449
+      Left = 445
       Top = 8
       Width = 81
       Height = 21
@@ -125,9 +128,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       TabOrder = 4
       OnExit = edtDateStartExit
+      ExplicitLeft = 439
     end
     object btnDateStart: TBitBtn
-      Left = 537
+      Left = 533
       Top = 6
       Width = 25
       Height = 25
@@ -148,17 +152,20 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       NumGlyphs = 2
       TabOrder = 5
       OnClick = btnDateStartClick
+      ExplicitLeft = 527
     end
   end
   object pgProduction: TPageControl
     Left = 0
     Top = 219
-    Width = 789
+    Width = 791
     Height = 262
     ActivePage = tbProcesses
     Align = alClient
     PopupMenu = pmnuProcess
     TabOrder = 3
+    ExplicitWidth = 785
+    ExplicitHeight = 253
     object tbDespatch: TTabSheet
       Caption = 'Despatch Details'
       ImageIndex = 4
@@ -251,14 +258,14 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         object AddrTypeLabel: TLabel
           Left = 8
           Top = 19
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Addr Type'
         end
         object BranchNameLabel: TLabel
           Left = 8
           Top = 42
-          Width = 34
+          Width = 35
           Height = 13
           Caption = 'Branch'
           Font.Charset = ANSI_CHARSET
@@ -271,7 +278,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         object Label9: TLabel
           Left = 8
           Top = 65
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -284,7 +291,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         object Label10: TLabel
           Left = 8
           Top = 160
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -297,7 +304,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         object Label19: TLabel
           Left = 8
           Top = 184
-          Width = 33
+          Width = 37
           Height = 13
           Caption = 'County'
           Font.Charset = ANSI_CHARSET
@@ -507,7 +514,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ImageIndex = 2
       OnEnter = tbProcessesEnter
       object pnlprocess: TPanel
-        Left = 395
+        Left = 397
         Top = 0
         Width = 386
         Height = 234
@@ -515,6 +522,8 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         BevelInner = bvLowered
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 391
+        ExplicitHeight = 225
         object pnlprMachine: TPanel
           Left = 2
           Top = 165
@@ -523,31 +532,32 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 156
           object lblRunHours: TLabel
             Left = 238
             Top = 16
-            Width = 69
+            Width = 73
             Height = 13
             Caption = 'Run Time (hrs)'
           end
           object lblMachineGroup: TLabel
             Left = 8
             Top = 16
-            Width = 73
+            Width = 80
             Height = 13
             Caption = 'Machine Group'
           end
           object lblMachine: TLabel
             Left = 8
             Top = 44
-            Width = 41
+            Width = 44
             Height = 13
             Caption = 'Machine'
           end
           object lblStaffCount: TLabel
             Left = 253
             Top = 44
-            Width = 53
+            Width = 59
             Height = 13
             Caption = 'Staff Count'
           end
@@ -626,21 +636,21 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           object lblReceiptDate: TLabel
             Left = 8
             Top = 14
-            Width = 88
+            Width = 92
             Height = 13
             Caption = 'Commence $ Date'
           end
           object lblQuantity: TLabel
             Left = 8
             Top = 45
-            Width = 39
+            Width = 44
             Height = 13
             Caption = 'Quantity'
           end
           object lblNumberUp: TLabel
-            Left = 205
+            Left = 198
             Top = 45
-            Width = 90
+            Width = 97
             Height = 13
             Alignment = taRightJustify
             Caption = 'Number Up/Inserts'
@@ -723,7 +733,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             object lblCustomSize: TLabel
               Left = 16
               Top = 46
-              Width = 35
+              Width = 39
               Height = 13
               Caption = 'Custom'
             end
@@ -765,7 +775,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           object lblProcessNotes: TLabel
             Left = 8
             Top = 3
-            Width = 28
+            Width = 30
             Height = 13
             Caption = 'Notes'
           end
@@ -780,29 +790,32 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         BevelInner = bvNone
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitHeight = 225
       end
     end
   end
   object pnlFoot: TPanel
     Left = 0
     Top = 481
-    Width = 789
+    Width = 791
     Height = 35
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 472
+    ExplicitWidth = 785
     DesignSize = (
-      789
+      791
       35)
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 59
+      Width = 60
       Height = 13
       Caption = 'Release No:'
     end
     object pnlOK: TPanel
-      Left = 424
+      Left = 426
       Top = 1
       Width = 364
       Height = 33
@@ -810,13 +823,14 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 420
       DesignSize = (
         364
         33)
       object lblDeletePrompt: TLabel
         Left = 12
         Top = 10
-        Width = 173
+        Width = 155
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Delete this Works Instruction?'
@@ -917,7 +931,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 516
-    Width = 789
+    Width = 791
     Height = 21
     Panels = <
       item
@@ -926,40 +940,43 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       item
         Width = 50
       end>
+    ExplicitTop = 507
+    ExplicitWidth = 785
   end
   object pnlCustomer: TPanel
     Left = 0
     Top = 38
-    Width = 789
+    Width = 791
     Height = 115
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 785
     DesignSize = (
-      789
+      791
       115)
     object Label8: TLabel
       Left = 6
       Top = 10
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label11: TLabel
       Left = 6
       Top = 37
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label13: TLabel
-      Left = 493
+      Left = 489
       Top = 66
-      Width = 64
+      Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Customer Ref'
-      ExplicitLeft = 505
+      ExplicitLeft = 493
     end
     object Label12: TLabel
       Left = 6
@@ -969,36 +986,36 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Rep'
     end
     object Label15: TLabel
-      Left = 493
+      Left = 489
       Top = 10
-      Width = 85
+      Width = 91
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Manager'
-      ExplicitLeft = 505
+      ExplicitLeft = 493
     end
     object Label6: TLabel
-      Left = 554
+      Left = 550
       Top = 92
-      Width = 78
+      Width = 81
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Previous WI No.'
-      ExplicitLeft = 566
+      ExplicitLeft = 554
     end
     object lblAccountTeam: TLabel
-      Left = 494
+      Left = 490
       Top = 38
-      Width = 70
+      Width = 71
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Team'
-      ExplicitLeft = 506
+      ExplicitLeft = 494
     end
     object edtCustomer: TEdit
       Left = 72
       Top = 6
-      Width = 229
+      Width = 225
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
@@ -1006,9 +1023,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       ReadOnly = True
       TabOrder = 0
+      ExplicitWidth = 219
     end
     object btnCustomer: TBitBtn
-      Left = 308
+      Left = 304
       Top = 4
       Width = 25
       Height = 25
@@ -1022,9 +1040,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 1
       OnClick = btnCustomerClick
+      ExplicitLeft = 298
     end
     object btnContacts: TButton
-      Left = 308
+      Left = 304
       Top = 31
       Width = 25
       Height = 25
@@ -1038,18 +1057,20 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 3
       OnClick = btnContactsClick
+      ExplicitLeft = 298
     end
     object edtCustomerOrder: TEdit
-      Left = 596
+      Left = 592
       Top = 62
       Width = 142
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 6
       OnChange = edtCustomerOrderChange
+      ExplicitLeft = 586
     end
     object edtPreviousWIN: TEdit
-      Left = 642
+      Left = 638
       Top = 88
       Width = 96
       Height = 21
@@ -1057,11 +1078,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       TabOrder = 7
       OnChange = edtPreviousWINChange
       OnKeyPress = CheckKeyIsNumber
+      ExplicitLeft = 632
     end
     object dblkpContact: TDBLookupComboBox
       Left = 72
       Top = 33
-      Width = 229
+      Width = 225
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       KeyField = 'Contact_no'
@@ -1069,9 +1091,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ListSource = dtmdlWOrders.dtsCustContacts
       TabOrder = 2
       OnClick = dblkpContactClick
+      ExplicitWidth = 219
     end
     object edtAccountTeam: TEdit
-      Left = 596
+      Left = 592
       Top = 34
       Width = 142
       Height = 21
@@ -1079,9 +1102,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 10
+      ExplicitLeft = 586
     end
     object Button1: TButton
-      Left = 308
+      Left = 304
       Top = 63
       Width = 25
       Height = 25
@@ -1095,9 +1119,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 5
       OnClick = Button1Click
+      ExplicitLeft = 298
     end
     object btnAccountManager: TBitBtn
-      Left = 746
+      Left = 742
       Top = 4
       Width = 25
       Height = 25
@@ -1111,9 +1136,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 9
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 736
     end
     object edtAccountManager: TEdit
-      Left = 596
+      Left = 592
       Top = 6
       Width = 142
       Height = 21
@@ -1121,66 +1147,70 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 8
+      ExplicitLeft = 586
     end
     object edtRep: TEdit
       Left = 72
       Top = 65
-      Width = 229
+      Width = 225
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 4
+      ExplicitWidth = 219
     end
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 153
-    Width = 789
+    Width = 791
     Height = 66
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 785
     DesignSize = (
-      789
+      791
       66)
     object Label7: TLabel
       Left = 6
       Top = 9
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Job Title'
     end
     object lblProductionType: TLabel
-      Left = 458
+      Left = 454
       Top = 32
-      Width = 54
+      Width = 57
       Height = 26
       Anchors = [akTop, akRight]
       Caption = 'Production Type'
       Visible = False
       WordWrap = True
-      ExplicitLeft = 470
+      ExplicitLeft = 458
     end
     object Label20: TLabel
-      Left = 459
+      Left = 455
       Top = 9
-      Width = 72
+      Width = 79
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Actual Quantity'
-      ExplicitLeft = 471
+      ExplicitLeft = 459
     end
     object memDescription: TMemo
       Left = 72
       Top = 5
-      Width = 373
+      Width = 369
       Height = 49
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = memDescriptionChange
+      ExplicitWidth = 363
     end
     object edtProductionType: TEdit
-      Left = 524
+      Left = 520
       Top = 36
       Width = 225
       Height = 21
@@ -1191,9 +1221,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ReadOnly = True
       TabOrder = 1
       Visible = False
+      ExplicitLeft = 514
     end
     object btnProductionType: TBitBtn
-      Left = 756
+      Left = 752
       Top = 34
       Width = 25
       Height = 25
@@ -1208,9 +1239,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       TabOrder = 2
       Visible = False
       OnClick = btnProductionTypeClick
+      ExplicitLeft = 746
     end
     object memActualQty: TMemo
-      Left = 550
+      Left = 546
       Top = 5
       Width = 80
       Height = 21
@@ -1222,9 +1254,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       OnEnter = SaveValue
       OnExit = ValidateQty
       OnKeyPress = CheckKeyIsNumber
+      ExplicitLeft = 540
     end
     object chkbxPerso100: TCheckBox
-      Left = 657
+      Left = 653
       Top = 8
       Width = 98
       Height = 17
@@ -1232,6 +1265,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Is Perso 100%'
       TabOrder = 4
       OnClick = chkbxPerso100Click
+      ExplicitLeft = 647
     end
   end
   object FlashTimer: TTimer

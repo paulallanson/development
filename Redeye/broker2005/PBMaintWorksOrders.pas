@@ -2017,6 +2017,8 @@ end;
 
 procedure TfrmPBMaintWorksOrders.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   SetGridHeaders;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;

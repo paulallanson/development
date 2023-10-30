@@ -86,6 +86,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       item
         Width = 50
       end>
+    ExplicitTop = 407
+    ExplicitWidth = 709
   end
   object Panel1: TPanel
     Left = 0
@@ -95,6 +97,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 311
+    ExplicitWidth = 709
     DesignSize = (
       715
       96)
@@ -108,7 +112,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       object Label1: TLabel
         Left = 8
         Top = 24
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -132,13 +136,14 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       end
     end
     object GroupBox1: TGroupBox
-      Left = 432
+      Left = 426
       Top = 39
       Width = 161
       Height = 49
       Anchors = [akTop, akRight]
       Caption = 'Selected Job Bag'
       TabOrder = 1
+      ExplicitLeft = 420
       object edtJBNumber: TEdit
         Left = 8
         Top = 16
@@ -149,13 +154,14 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       end
     end
     object GroupBox2: TGroupBox
-      Left = 600
+      Left = 594
       Top = 7
       Width = 105
       Height = 81
       Anchors = [akTop, akRight]
       Caption = 'Function'
       TabOrder = 2
+      ExplicitLeft = 588
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

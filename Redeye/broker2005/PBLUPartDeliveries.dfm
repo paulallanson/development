@@ -1,40 +1,39 @@
 object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
   Left = 227
   Top = 138
-  Width = 870
-  Height = 480
   Caption = 'Product Deliveries due'
+  ClientHeight = 442
+  ClientWidth = 858
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 858
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 852
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 16
       Top = 40
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
@@ -59,11 +58,13 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 373
-    Width = 862
+    Top = 369
+    Width = 858
     Height = 54
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 360
+    ExplicitWidth = 852
     object btnClose: TButton
       Left = 768
       Top = 16
@@ -97,8 +98,8 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 862
-    Height = 308
+    Width = 858
+    Height = 304
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
@@ -194,8 +195,8 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 427
-    Width = 862
+    Top = 423
+    Width = 858
     Height = 19
     Panels = <
       item
@@ -204,5 +205,7 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
       item
         Width = 50
       end>
+    ExplicitTop = 414
+    ExplicitWidth = 852
   end
 end

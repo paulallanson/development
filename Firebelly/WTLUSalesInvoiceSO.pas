@@ -124,6 +124,8 @@ end;
 
 procedure TfrmWTLUSalesInvoiceSO.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dtmdlSalesInvoice := TdtmdlSalesInvoice.Create(Self);
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;

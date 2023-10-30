@@ -79,26 +79,29 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 292
+    ExplicitWidth = 691
     DesignSize = (
       697
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 358
+      Left = 352
       Top = 16
-      Width = 73
+      Width = 82
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Enquiry number'
+      ExplicitLeft = 358
     end
     object btnClose: TButton
-      Left = 622
+      Left = 616
       Top = 10
       Width = 75
       Height = 25
@@ -106,6 +109,7 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 610
     end
     object edtSearch: TEdit
       Left = 104
@@ -116,16 +120,17 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 436
+      Left = 430
       Top = 12
       Width = 90
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 424
     end
     object btnSelect: TButton
-      Left = 534
+      Left = 528
       Top = 10
       Width = 75
       Height = 25
@@ -133,6 +138,7 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
+      ExplicitLeft = 522
     end
   end
   object stsbrDetails: TStatusBar
@@ -147,6 +153,8 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       item
         Width = 50
       end>
+    ExplicitTop = 333
+    ExplicitWidth = 691
   end
   object tmrSearch: TTimer
     Enabled = False

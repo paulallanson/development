@@ -69,6 +69,8 @@ end;
 
 procedure TPBLUSalesInvoiceJBfrm.FormCreate(Sender: TObject);
 begin
+  stbrDetails.Top := Screen.Height - stbrDetails.Height;
+
   dmSalesInvoice := TdmSalesInvoice.Create(Self);
   dmSalesInvoice.dsJBAll.OnDataChange := SetButtons;
   dmSalesInvoice.qryJBAll.AfterScroll := SetJobBagEdit;

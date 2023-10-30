@@ -1028,6 +1028,8 @@ end;
 
 procedure TPBMaintRepFinancialsFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
   grdCategory.Cells[1,0] := '% Commission';
   grdCategory.Cells[2,0] := 'Bonus';
   grdCategory.Cells[3,0] := 'Commission Basis';

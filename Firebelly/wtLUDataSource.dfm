@@ -13,6 +13,7 @@ object frmWTLUDataSource: TfrmWTLUDataSource
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -52,6 +53,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
       item
         Width = 50
       end>
+    ExplicitTop = 287
+    ExplicitWidth = 369
   end
   object Panel1: TPanel
     Left = 0
@@ -60,6 +63,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     Height = 81
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 206
+    ExplicitWidth = 369
     DesignSize = (
       375
       81)

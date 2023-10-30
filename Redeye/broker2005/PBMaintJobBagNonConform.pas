@@ -75,6 +75,8 @@ uses UITypes, pbMainMenu, PBMaintJobBagNonConfDoc;
 
 procedure TPBMaintJobBagNonConformFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   {Invoice Line header}
   sgDetails.cells[0,0] := 'Doc';
   sgDetails.cells[1,0] := 'Reference';

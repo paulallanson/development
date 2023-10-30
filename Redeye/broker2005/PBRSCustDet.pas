@@ -147,6 +147,8 @@ begin
   end;
   cmbbxCustStatus.Items.Add('Show All');
 *)
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   {Get and list Customer Types}
   qryCustType.Open;
   while not qryCustType.Eof do

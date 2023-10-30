@@ -149,6 +149,8 @@ end;
 
 procedure TfrmPBLUCustEvents.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+
   btnStock.visible := frmPBMainMenu.btnStock.visible;
   btnJobs.visible := frmPBMainMenu.btnJobs.visible;
 

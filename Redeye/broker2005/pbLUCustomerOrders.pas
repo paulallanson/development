@@ -67,6 +67,7 @@ uses UITypes;
 
 procedure TPBLUCustomerOrdersFrm.FormCreate(Sender: TObject);
 begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
   dtmdlCustOrders := TdtmdlOrders.create(self);
   dtmdlCustOrders.dtsOrders.OnDataChange := SetButtons;
   dbgDetails.datasource := dtmdlCustOrders.dtsOrders;

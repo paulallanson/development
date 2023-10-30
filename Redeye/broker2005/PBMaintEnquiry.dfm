@@ -12,6 +12,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 15
   object pnlEnqHeader: TPanel
@@ -21,6 +22,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 739
     DesignSize = (
       745
       41)
@@ -107,12 +109,13 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     object cmbbxOperators: TComboBox
       Left = 632
       Top = 8
-      Width = 114
+      Width = 108
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
       OnChange = cmbbxOperatorsChange
+      ExplicitWidth = 102
     end
   end
   object pnlCustDetails: TPanel
@@ -122,6 +125,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 64
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 739
     object Label6: TLabel
       Left = 8
       Top = 12
@@ -221,6 +225,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Width = 745
     Height = 20
     Panels = <>
+    ExplicitTop = 515
+    ExplicitWidth = 739
   end
   object pnlOkCancelBtns: TPanel
     Left = 0
@@ -229,11 +235,13 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 474
+    ExplicitWidth = 739
     DesignSize = (
       745
       41)
     object btbtnOK: TBitBtn
-      Left = 567
+      Left = 561
       Top = 8
       Width = 75
       Height = 25
@@ -259,9 +267,10 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btbtnOKClick
+      ExplicitLeft = 555
     end
     object BitBtn2: TBitBtn
-      Left = 663
+      Left = 657
       Top = 8
       Width = 75
       Height = 25
@@ -269,6 +278,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 651
     end
   end
   object PageControl1: TPageControl
@@ -279,6 +289,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 4
+    ExplicitWidth = 739
+    ExplicitHeight = 369
     object TabSheet1: TTabSheet
       Caption = 'General'
       object Label9: TLabel
@@ -351,16 +363,16 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       object pnlPartsGrid: TPanel
         Left = 0
         Top = 185
-        Width = 745
-        Height = 175
+        Width = 737
+        Height = 163
         Align = alClient
         Caption = 'pnlPartsGrid'
         TabOrder = 1
         object strgrdParts: TStringGrid
           Left = 1
           Top = 1
-          Width = 743
-          Height = 173
+          Width = 735
+          Height = 161
           Align = alClient
           ColCount = 12
           DefaultRowHeight = 22
@@ -374,6 +386,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           OnExit = strgrdPartsExit
           OnKeyDown = strgrdPartsKeyDown
           OnKeyPress = strgrdPartsKeyPress
+          ExplicitWidth = 743
+          ExplicitHeight = 173
           ColWidths = (
             64
             107
@@ -457,7 +471,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 745
         DesignSize = (
           737
           185)
@@ -882,16 +895,16 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         BevelOuter = bvNone
         Caption = 'pnlPricesUpper'
         TabOrder = 1
-        ExplicitWidth = 745
-        ExplicitHeight = 202
         object pnlSupplierPricesGrid: TPanel
           Left = 0
           Top = 0
-          Width = 591
-          Height = 202
+          Width = 583
+          Height = 190
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
+          ExplicitWidth = 591
+          ExplicitHeight = 202
           object pnlRunOn: TPanel
             Left = 472
             Top = 0
@@ -1008,10 +1021,10 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           end
         end
         object pnlCapabilities: TPanel
-          Left = 591
+          Left = 583
           Top = 0
           Width = 154
-          Height = 202
+          Height = 190
           Align = alRight
           TabOrder = 1
           DesignSize = (
@@ -1051,9 +1064,9 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             Left = 8
             Top = 24
             Width = 137
-            Height = 77
+            Height = 65
             Anchors = [akLeft, akTop, akRight, akBottom]
-            ItemHeight = 15
+            ItemHeight = 17
             TabOrder = 2
             OnClickCheck = chklstbxCapabilitiesClickCheck
           end
@@ -1066,10 +1079,12 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       object pnlAddDtlsMain: TPanel
         Left = 0
         Top = 0
-        Width = 745
-        Height = 319
+        Width = 737
+        Height = 307
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 745
+        ExplicitHeight = 319
         object pnlAddDtlsCustomer: TPanel
           Left = 1
           Top = 1
@@ -1169,8 +1184,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       end
       object pnlAddDtlsFooter: TPanel
         Left = 0
-        Top = 319
-        Width = 745
+        Top = 307
+        Width = 737
         Height = 41
         Align = alBottom
         TabOrder = 1
@@ -1178,7 +1193,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           737
           41)
         object btnAddSuppCustNotes: TBitBtn
-          Left = 622
+          Left = 614
           Top = 7
           Width = 70
           Height = 25

@@ -142,6 +142,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cmbbxCustStatusChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     bUseSubReps: boolean;
     iCurrentYear, iCurrentPeriod, iYear1, iYear2, iYear3: integer;
@@ -726,6 +727,11 @@ begin
   iYear1 := iCurrentYear - 1;
   iYear2 := iCurrentYear - 2;
   iYear3 := iCurrentYear - 3;
+end;
+
+procedure TPBRSCustContDetFrm.FormCreate(Sender: TObject);
+begin
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 end;
 
 procedure TPBRSCustContDetFrm.SetProspects(const Value: boolean);

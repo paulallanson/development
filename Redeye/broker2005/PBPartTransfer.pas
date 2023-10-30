@@ -335,6 +335,7 @@ uses
 
 procedure TPBPartTransferFrm.FormCreate(Sender: TObject);
 begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
   STStockDataMod := TSTStockDataMod.Create(Self) ;
   slSNs := TStringList.Create ;
   FromTreeView.Images := TreeImageList ;
