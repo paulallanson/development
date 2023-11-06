@@ -315,6 +315,7 @@ type
     procedure btnContractsClick(Sender: TObject);
     procedure mnuDocumentLogosClick(Sender: TObject);
     procedure mnuPackFormatsClick(Sender: TObject);
+    procedure mnuContractsClick(Sender: TObject);
   private
     dtmdlCustActivity: TdtmdlActivity;
     MaxUsers: Integer;
@@ -914,6 +915,13 @@ begin
   if frmPBMainMenu.UseCRMSystem then
     CheckActivityReminder;
 //    tmrCheckActivity.Enabled := true;
+
+  for var i := 0 to MainMenuToolbar.ButtonCount-1 do*
+  begin
+    MainMenuToolbar.Buttons[i].Hint := MainMenuToolbar.Buttons[i].Name;
+    MainMenuToolbar.Buttons[i].ShowHint := True;
+  end;
+
 end;
 
 procedure TfrmpbMainMenu.miExitClick(Sender: TObject);
@@ -986,6 +994,11 @@ begin
   CheckProspects;
   CheckCRM;
   mnuFSCClaim.Visible := dmBroker.UseFSCClaim;
+end;
+
+procedure TfrmpbMainMenu.mnuContractsClick(Sender: TObject);
+begin
+  btnContractsClick(Sender);
 end;
 
 procedure TfrmpbMainMenu.mnuAdhocClick(Sender: TObject);

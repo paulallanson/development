@@ -2,7 +2,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   Left = 121
   Top = 85
   Caption = 'Print Management Information System'
-  ClientHeight = 711
+  ClientHeight = 706
   ClientWidth = 1472
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -22,7 +22,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   TextHeight = 13
   object stsbrMainMenu: TStatusBar
     Left = 0
-    Top = 692
+    Top = 687
     Width = 1472
     Height = 19
     Panels = <
@@ -38,8 +38,6 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
-    ExplicitTop = 683
-    ExplicitWidth = 1466
   end
   object MainMenuToolbar: TToolBar
     Left = 0
@@ -57,8 +55,6 @@ object frmpbMainMenu: TfrmpbMainMenu
     ShowHint = True
     TabOrder = 1
     Wrapable = False
-    ExplicitLeft = 11
-    ExplicitWidth = 1457
     object btnActivities: TToolButton
       Left = 0
       Top = 0
@@ -336,6 +332,7 @@ object frmpbMainMenu: TfrmpbMainMenu
       object mnuContracts: TMenuItem
         Caption = 'C&ontracts'
         Hint = 'Contracts'
+        OnClick = mnuContractsClick
       end
       object mnuFormReferences: TMenuItem
         Caption = '&Form References'
