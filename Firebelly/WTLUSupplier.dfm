@@ -28,6 +28,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object CoolBar2: TCoolBar
       Left = 1
@@ -49,6 +50,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Align = alLeft
         BevelOuter = bvNone
         Color = clSilver
+        ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 0
