@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ImgList, ComCtrls, StdCtrls, Buttons, Grids, DBGrids,
-  ToolWin, WTContractsDM, DB, IniFiles, System.ImageList;
+  ToolWin, WTContractsDM, DB, IniFiles, System.ImageList, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUContracts = class(TForm)
@@ -59,6 +62,7 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure cmbCustomerFilterChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure dbgDetailsTitleClick(Column: TColumn);
   private
     ActiveCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -385,7 +389,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Font.Style := Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
@@ -399,6 +403,41 @@ begin
   		if Assigned(Column.Field) then
         Column.Alignment := taRightJustify;
      end;
+end;
+
+procedure TfrmWTLUContracts.dbgDetailsTitleClick(Column: TColumn);
+var
+  icolumn: integer;
+  SortType, SortField: string;
+begin
+  if dbgDetails.Dragging then exit;
+
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+    SortType := ' ASC'
+  else if dtmdlAllContract.SortType = ' DESC' then
+      SortType := ' ASC'
+  else
+    SortType := ' DESC';
+
+  SortField := Column.FieldName;
+
+  for icolumn := 0 to pred(dbgDetails.columns.count) do
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
+
+  dtmdlAllContract.SortOrder := SortField + SortType;
+  dtmdlAllContract.SortType := SortType;
+
+  dtmdlAllContract.RefreshAllData;
+
+  with dbgDetails do
+    begin
+      try
+        if datasource.dataset.recordcount > 0 then
+          SelectedRows.CurrentRowSelected := true ;
+      except
+      end;
+    end;
 end;
 
 procedure TfrmWTLUContracts.cmbCustomerFilterChange(Sender: TObject);

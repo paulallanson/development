@@ -108,6 +108,8 @@ type
     ShowInactive: string;
     ShowLive: boolean;
     TradeRetail: integer;
+    SortType: string;
+    SortOrder: string;
     property CurrentContract: integer read GetCurrentContract;
     property HeaderCount: integer read GetHeaderCount;
     property HeaderCountAll: integer read GetHeaderCountAll;
@@ -1464,7 +1466,12 @@ begin
 
 
 //      sTemp := sTemp + ' ORDER BY Contract_Quote.Contract_Quote desc';
-      sTemp := sTemp + ' ORDER BY Contract_Quote.Quote_Number desc';
+
+       if SortOrder = '' then
+        sTemp := sTemp + ' ORDER BY Contract_Quote.Quote_Number desc'
+      else
+        sTemp := sTemp + ' ORDER BY ' + SortOrder;
+
       sql.text := sTemp;
       open;
     end;

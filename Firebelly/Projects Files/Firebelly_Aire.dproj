@@ -602,6 +602,11 @@
         <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas"/>
         <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Tools.pas"/>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
+        <DCCReference Include="..\WTPricesDM.pas">
+            <Form>dtmdlPrices</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

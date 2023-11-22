@@ -167,7 +167,8 @@ uses
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   DragAndDrop.Interfaces in '..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas',
   DragAndDrop.Tools in '..\..\Drag and Drop Tools\DragAndDrop.Tools.pas',
-  CRControls in '..\..\Components\CRPackage\CRControls.pas';
+  CRControls in '..\..\Components\CRPackage\CRControls.pas',
+  WTPricesDM in '..\WTPricesDM.pas' {dtmdlPrices: TDataModule};
 
 {$R *.RES}
 

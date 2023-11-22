@@ -2,8 +2,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   Left = 182
   Top = 105
   Caption = 'Sales Invoices'
-  ClientHeight = 317
-  ClientWidth = 910
+  ClientHeight = 290
+  ClientWidth = 892
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 910
+    Width = 892
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 904
+        Width = 886
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 895
+      Width = 877
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 66
@@ -137,16 +137,22 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 910
-    Height = 168
+    Width = 892
+    Height = 141
     Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -284,8 +290,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 242
-    Width = 910
+    Top = 215
+    Width = 892
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -306,7 +312,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 638
+      Left = 620
       Top = 1
       Width = 271
       Height = 54
@@ -387,8 +393,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 298
-    Width = 910
+    Top = 271
+    Width = 892
     Height = 19
     Panels = <
       item
@@ -401,7 +407,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 910
+    Width = 892
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -410,7 +416,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     ParentBackground = False
     TabOrder = 4
     DesignSize = (
-      910
+      892
       30)
     object Label4: TLabel
       Left = 0
@@ -426,7 +432,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 642
+      Left = 606
       Top = 7
       Width = 78
       Height = 13
@@ -441,7 +447,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       ExplicitLeft = 654
     end
     object cmbCustomerFilter: TComboBox
-      Left = 722
+      Left = 686
       Top = 3
       Width = 145
       Height = 21

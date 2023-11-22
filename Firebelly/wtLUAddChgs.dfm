@@ -22,15 +22,22 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     Height = 311
     Align = alClient
     DataSource = srclkpExtras
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
+    OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
         Expanded = False
@@ -76,8 +83,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       item
         Width = 50
       end>
-    ExplicitTop = 365
-    ExplicitWidth = 678
+    ExplicitTop = 373
+    ExplicitWidth = 680
   end
   object Panel1: TPanel
     Left = 0
@@ -88,8 +95,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 302
-    ExplicitWidth = 678
+    ExplicitTop = 310
+    ExplicitWidth = 680
     object Label4: TLabel
       Left = 16
       Top = 16
@@ -269,5 +276,48 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     OnTimer = tmrRefreshTimer
     Left = 440
     Top = 120
+  end
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'select Extra_Charge.*,'
+      ' (select top 1 Unit_price'
+      '    from Prices'
+      '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
+      '    Prices.effective_date <= GetDate()'
+      '    order by Prices.effective_date desc) AS Unit_Price,'
+      '    (select top 1 Unit_cost'
+      '    from Prices'
+      '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
+      '    Prices.effective_date <= GetDate()'
+      '    order by Prices.effective_date desc) AS Unit_Cost,'
+      '    (select top 1 Price_Unit_Description'
+      '    from Prices, Price_unit'
+      '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
+      '    Prices.Price_unit = Price_Unit.Price_Unit and'
+      '    Prices.effective_date <= GetDate()'
+      
+        '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
+        'on'
+      'from Extra_Charge'
+      'where'
+      
+        '((inactive = '#39'N'#39') or (inactive is NULL) or (inactive = '#39#39') or (i' +
+        'nactive = :inactive)) AND'
+      '  (Extra_Charge.Description LIKE :Description)'
+      ''
+      ''
+      ' ')
+    Left = 240
+    Top = 160
+    ParamData = <
+      item
+        Name = 'INACTIVE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DESCRIPTION'
+        ParamType = ptInput
+      end>
   end
 end

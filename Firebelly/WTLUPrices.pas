@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ImgList, ComCtrls, StdCtrls, ToolWin, Grids, Db, DBGrids,
-  Buttons, WTPricesDM, AllCommon, IniFiles, System.ImageList, FireDAC.Stan.Param;
+  Buttons, WTPricesDM, AllCommon, IniFiles, System.ImageList, FireDAC.Stan.Param,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUPrices = class(TForm)
@@ -75,6 +78,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
     procedure ToolButton1Click(Sender: TObject);
+    procedure dbgDetailsTitleClick(Column: TColumn);
   private
     ActiveCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -273,7 +277,7 @@ begin
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
@@ -294,6 +298,41 @@ begin
   		if Assigned(Column.Field) then
         Column.Alignment := taRightJustify;
     end;
+end;
+
+procedure TfrmWTLUPrices.dbgDetailsTitleClick(Column: TColumn);
+var
+  icolumn: integer;
+  SortType, SortField: string;
+begin
+  if dbgDetails.Dragging then exit;
+
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+    SortType := ' ASC'
+  else if dtmdlAllPrices.SortType = ' DESC' then
+      SortType := ' ASC'
+  else
+    SortType := ' DESC';
+
+  SortField := Column.FieldName;
+
+  for icolumn := 0 to pred(dbgDetails.columns.count) do
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
+
+  dtmdlAllPrices.SortOrder := SortField + SortType;
+  dtmdlAllPrices.SortType := SortType;
+
+  dtmdlAllPrices.RefreshWorktopData;
+
+  with dbgDetails do
+  begin
+    try
+      if datasource.dataset.recordcount > 0 then
+        SelectedRows.CurrentRowSelected := true;
+      except
+    end;
+  end;
 end;
 
 procedure TfrmWTLUPrices.btnEffectiveDateClick(Sender: TObject);

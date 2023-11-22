@@ -2,8 +2,8 @@ object frmWTLUStock: TfrmWTLUStock
   Left = 147
   Top = 140
   Caption = 'Products'
-  ClientHeight = 405
-  ClientWidth = 720
+  ClientHeight = 387
+  ClientWidth = 708
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,19 +21,19 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 720
+    Width = 708
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 714
+        Width = 702
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 705
+      Width = 693
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 47
@@ -90,19 +90,19 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar2: TCoolBar
     Left = 0
     Top = 45
-    Width = 720
+    Width = 708
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 714
+        Width = 702
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 705
+      Width = 693
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -127,17 +127,23 @@ object frmWTLUStock: TfrmWTLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 720
-    Height = 268
+    Width = 708
+    Height = 250
     Align = alClient
     DataSource = dtmdlStock.dtsAllStock
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -164,14 +170,14 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 720
+    Top = 327
+    Width = 708
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      720
+      708
       41)
     object Label1: TLabel
       Left = 56
@@ -181,7 +187,7 @@ object frmWTLUStock: TfrmWTLUStock
       Caption = 'Product'
     end
     object Button1: TButton
-      Left = 635
+      Left = 611
       Top = 8
       Width = 75
       Height = 25
@@ -201,8 +207,8 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 386
-    Width = 720
+    Top = 368
+    Width = 708
     Height = 19
     Panels = <
       item

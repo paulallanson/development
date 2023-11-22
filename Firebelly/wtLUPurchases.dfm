@@ -2,8 +2,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Left = 137
   Top = 109
   Caption = 'Purchase details'
-  ClientHeight = 338
-  ClientWidth = 963
+  ClientHeight = 311
+  ClientWidth = 945
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 319
-    Width = 963
+    Top = 292
+    Width = 945
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   end
   object Panel1: TPanel
     Left = 0
-    Top = 278
-    Width = 963
+    Top = 251
+    Width = 945
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      963
+      945
       41)
     object Label1: TLabel
       Left = 8
@@ -55,7 +55,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 685
+      Left = 649
       Top = 13
       Width = 79
       Height = 13
@@ -65,7 +65,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       ExplicitLeft = 697
     end
     object Button1: TButton
-      Left = 866
+      Left = 830
       Top = 7
       Width = 75
       Height = 25
@@ -83,7 +83,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 770
+      Left = 734
       Top = 9
       Width = 73
       Height = 21
@@ -104,19 +104,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 963
+    Width = 945
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 957
+        Width = 939
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 948
+      Width = 930
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -215,16 +215,22 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 963
-    Height = 201
+    Width = 945
+    Height = 174
     Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -301,19 +307,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 963
+    Width = 945
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 957
+        Width = 939
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 948
+      Width = 930
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
