@@ -306,6 +306,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
+        Width = 64
         Visible = True
       end>
   end
@@ -329,6 +330,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         1431
