@@ -34,6 +34,10 @@ type
     qryNonMembers: TFDQuery;
     dtsNonMembers: TDataSource;
     qryDummy: TFDQuery;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    GridPanel1: TGridPanel;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
