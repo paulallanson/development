@@ -58,10 +58,12 @@ begin
   frmWTLUCustomer.CustomerType:= Trim(edtType.Text);
   frmWTLUCustomer.IncludeProspects:= chkbxIncludeProspects.checked;
 
-  if (edtDate.text = '') or (padatestr(edtDate.Text) <= '01/01/2000') then
-    frmWTLUCustomer.DateCreated := paDatestr('01/01/1800')
+  var SelectedDate := StrToDate(edtDate.Text);
+
+  if (edtDate.text = '') or (SelectedDate <= StrToDate('01/01/2000')) then
+    frmWTLUCustomer.DateCreated := StrToDate('01/01/1800')
   else
-    frmWTLUCustomer.DateCreated := paDateStr(edtDate.Text);
+    frmWTLUCustomer.DateCreated := SelectedDate;
 
   frmWTLUCustomer.refreshdata;
   close;
