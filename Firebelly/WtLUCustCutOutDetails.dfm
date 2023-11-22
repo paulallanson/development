@@ -79,8 +79,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 285
-    ExplicitWidth = 733
     DesignSize = (
       739
       69)
@@ -117,7 +115,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
-      ExplicitLeft = 301
     end
     object btnEdit: TBitBtn
       Left = 395
@@ -129,7 +126,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
-      ExplicitLeft = 389
     end
     object btnDelete: TBitBtn
       Left = 483
@@ -141,7 +137,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
-      ExplicitLeft = 477
     end
     object BitBtn4: TBitBtn
       Left = 659
@@ -153,7 +148,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
-      ExplicitLeft = 653
     end
     object btnExcel: TBitBtn
       Left = 571
@@ -165,7 +159,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 565
     end
   end
   object stsbrDetails: TStatusBar
@@ -180,8 +173,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       item
         Width = 50
       end>
-    ExplicitTop = 354
-    ExplicitWidth = 733
   end
   object Panel2: TPanel
     Left = 0
@@ -191,7 +182,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitWidth = 733
     DesignSize = (
       739
       73)
@@ -253,7 +243,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       ListSource = dtsCustEdgeGroup
       TabOrder = 2
       OnClick = dblkpCopyGroupClick
-      ExplicitLeft = 493
     end
     object btnGo: TButton
       Left = 660
@@ -265,7 +254,6 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 654
     end
   end
   object dtsCustCutOut: TDataSource
@@ -353,7 +341,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     object qryCustCutOutPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
     end
-    object qryCustCutOutDescription: TStringField
+    object qryCustCutOutDescription: TWideStringField
       FieldName = 'Description'
       Size = 40
     end
@@ -367,14 +355,14 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       DisplayFormat = '0.00'
       currency = True
     end
-    object qryCustCutOutPrice_Unit_Description: TStringField
+    object qryCustCutOutPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
     end
-    object qryCustCutOutinactive: TStringField
+    object qryCustCutOutinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end
-    object qryCustCutOutEdge_Type_Description: TStringField
+    object qryCustCutOutEdge_Type_Description: TWideStringField
       FieldName = 'Edge_Type_Description'
       Size = 50
     end

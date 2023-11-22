@@ -18,11 +18,11 @@ type
     qryCustCutOutCutout: TIntegerField;
     qryCustCutOutEdge_Type: TIntegerField;
     qryCustCutOutPrice_pointer: TIntegerField;
-    qryCustCutOutDescription: TStringField;
+    qryCustCutOutDescription: TWideStringField;
     qryCustCutOutUnit_Price: TFloatField;
     qryCustCutOutUnit_Cost: TFloatField;
-    qryCustCutOutPrice_Unit_Description: TStringField;
-    qryCustCutOutinactive: TStringField;
+    qryCustCutOutPrice_Unit_Description: TWideStringField;
+    qryCustCutOutinactive: TWideStringField;
     lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
     qryGetCustCutOuts: TFDQuery;
@@ -48,7 +48,7 @@ type
     lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
     btnExcel: TBitBtn;
-    qryCustCutOutEdge_Type_Description: TStringField;
+    qryCustCutOutEdge_Type_Description: TWideStringField;
     qryCustCutOutGroup_Id: TIntegerField;
     qryDelCustCutOut: TFDQuery;
     lkpCustEdgeGroup: TFDQuery;
