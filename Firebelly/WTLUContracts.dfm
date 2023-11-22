@@ -47,8 +47,8 @@ object frmWTLUContracts: TfrmWTLUContracts
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 135
-        Height = 24
+        Width = 137
+        Height = 25
         Caption = 'Contract Quotes'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -60,8 +60,8 @@ object frmWTLUContracts: TfrmWTLUContracts
       object lblWorkinProgress: TLabel
         Left = 144
         Top = 3
-        Width = 189
-        Height = 20
+        Width = 196
+        Height = 21
         Caption = '-  displaying only live orders'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET
@@ -75,7 +75,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       object Label4: TLabel
         Left = 659
         Top = 7
-        Width = 69
+        Width = 78
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
@@ -85,7 +85,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 665
       end
       object cmbCustomerFilter: TComboBox
         Left = 739
@@ -117,7 +116,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       Width = 897
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 58
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -131,7 +130,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 58
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -140,7 +139,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 112
+        Left = 116
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -149,7 +148,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 168
+        Left = 174
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -157,7 +156,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 224
+        Left = 232
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -166,7 +165,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 280
+        Left = 290
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -175,7 +174,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 336
+        Left = 348
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -183,7 +182,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 344
+        Left = 356
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -198,15 +197,22 @@ object frmWTLUContracts: TfrmWTLUContracts
     Height = 223
     Align = alClient
     DataSource = dtmdlContract.dtsAllContracts
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
+    OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
         Expanded = False
@@ -274,7 +280,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -299,9 +305,9 @@ object frmWTLUContracts: TfrmWTLUContracts
         290
         39)
       object Label3: TLabel
-        Left = 29
+        Left = 22
         Top = 12
-        Width = 69
+        Width = 76
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

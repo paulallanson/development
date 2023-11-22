@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 325
-  ClientWidth = 910
+  ClientHeight = 297
+  ClientWidth = 888
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 910
+    Width = 888
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 904
+        Width = 882
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 895
+      Width = 873
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 883
+        Width = 861
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -124,17 +124,23 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 910
-    Height = 176
+    Width = 888
+    Height = 148
     Align = alClient
     DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -297,8 +303,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 250
-    Width = 910
+    Top = 222
+    Width = 888
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -319,7 +325,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 626
+      Left = 604
       Top = 1
       Width = 283
       Height = 54
@@ -400,8 +406,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 306
-    Width = 910
+    Top = 278
+    Width = 888
     Height = 19
     Panels = <
       item
@@ -414,7 +420,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 910
+    Width = 888
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -423,7 +429,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     ParentBackground = False
     TabOrder = 4
     DesignSize = (
-      910
+      888
       30)
     object Label4: TLabel
       Left = 2
@@ -439,7 +445,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 644
+      Left = 604
       Top = 7
       Width = 78
       Height = 13
@@ -454,7 +460,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       ExplicitLeft = 656
     end
     object cmbCustomerFilter: TComboBox
-      Left = 724
+      Left = 684
       Top = 3
       Width = 145
       Height = 21

@@ -2,8 +2,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 330
-  ClientWidth = 866
+  ClientHeight = 303
+  ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 311
-    Width = 866
+    Top = 284
+    Width = 848
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 270
-    Width = 866
+    Top = 243
+    Width = 848
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      866
+      848
       41)
     object Label1: TLabel
       Left = 8
@@ -55,7 +55,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 615
+      Left = 579
       Top = 12
       Width = 62
       Height = 13
@@ -65,7 +65,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ExplicitLeft = 627
     end
     object Button1: TButton
-      Left = 771
+      Left = 735
       Top = 6
       Width = 75
       Height = 25
@@ -83,7 +83,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 683
+      Left = 647
       Top = 8
       Width = 73
       Height = 21
@@ -104,19 +104,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 866
+    Width = 848
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 860
+        Width = 842
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 851
+      Width = 833
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58
@@ -223,17 +223,23 @@ object frmwtLUJobs: TfrmwtLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 866
-    Height = 193
+    Width = 848
+    Height = 166
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -369,19 +375,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 866
+    Width = 848
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 860
+        Width = 842
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 851
+      Width = 833
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -389,7 +395,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        851
+        833
         28)
       object Label2: TLabel
         Left = 0
@@ -420,7 +426,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 578
+        Left = 560
         Top = 7
         Width = 78
         Height = 13
@@ -435,7 +441,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ExplicitLeft = 584
       end
       object cmbCustomerFilter: TComboBox
-        Left = 658
+        Left = 640
         Top = 3
         Width = 145
         Height = 21

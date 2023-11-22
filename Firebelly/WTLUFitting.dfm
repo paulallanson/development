@@ -134,7 +134,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 983
+      Left = 971
       Top = 15
       Width = 59
       Height = 13
@@ -151,7 +151,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1147
+      Left = 1135
       Top = 9
       Width = 75
       Height = 25
@@ -169,7 +169,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1048
+      Left = 1036
       Top = 11
       Width = 73
       Height = 21
@@ -365,13 +365,19 @@ object frmWTLUFitting: TfrmWTLUFitting
     Height = 232
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick

@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 516
-  ClientWidth = 1321
+  ClientHeight = 489
+  ClientWidth = 1303
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 497
-    Width = 1321
+    Top = 470
+    Width = 1303
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 456
-    Width = 1321
+    Top = 429
+    Width = 1303
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -60,7 +60,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1030
+      Left = 1012
       Top = 1
       Width = 290
       Height = 39
@@ -123,19 +123,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1321
+    Width = 1303
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1315
+        Width = 1297
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1306
+      Width = 1288
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58
@@ -251,16 +251,22 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1321
-    Height = 379
+    Width = 1303
+    Height = 352
     Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -391,19 +397,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1321
+    Width = 1303
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1315
+        Width = 1297
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1306
+      Width = 1288
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -411,7 +417,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1306
+        1288
         28)
       object Label2: TLabel
         Left = 0
@@ -442,7 +448,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1020
+        Left = 996
         Top = 7
         Width = 78
         Height = 13
@@ -457,7 +463,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1026
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1100
+        Left = 1076
         Top = 3
         Width = 145
         Height = 21

@@ -2,8 +2,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   Left = 13
   Top = 157
   Caption = 'Prices'
-  ClientHeight = 505
-  ClientWidth = 1452
+  ClientHeight = 496
+  ClientWidth = 1446
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 486
-    Width = 1452
+    Top = 477
+    Width = 1446
     Height = 19
     Panels = <
       item
@@ -38,43 +38,43 @@ object frmWTLUPrices: TfrmWTLUPrices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 424
-    Width = 1452
+    Top = 415
+    Width = 1446
     Height = 62
     Align = alBottom
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label3: TLabel
       Left = 160
       Top = 12
-      Width = 30
+      Width = 35
       Height = 13
       Caption = 'Colour'
     end
     object Label5: TLabel
       Left = 304
       Top = 12
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 448
       Top = 12
-      Width = 29
+      Width = 33
       Height = 13
       Caption = 'Group'
     end
     object Label7: TLabel
       Left = 592
       Top = 12
-      Width = 68
+      Width = 70
       Height = 13
       Caption = 'Effective Date'
     end
@@ -87,7 +87,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnChange = edtMaterialChange
     end
     object Panel2: TPanel
-      Left = 1348
+      Left = 1342
       Top = 1
       Width = 103
       Height = 60
@@ -226,19 +226,26 @@ object frmWTLUPrices: TfrmWTLUPrices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1452
-    Height = 347
+    Width = 1446
+    Height = 338
     Align = alClient
     DataSource = dtmdlPrices.dtsAllPrices
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
+    OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
         Expanded = False
@@ -299,39 +306,38 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Width = 64
         Visible = True
       end>
   end
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1452
+    Width = 1446
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1446
+        Width = 1440
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1437
+      Width = 1431
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
       TabOrder = 0
       DesignSize = (
-        1437
+        1431
         28)
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 52
-        Height = 24
+        Width = 50
+        Height = 25
         Caption = 'Prices'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
@@ -343,8 +349,8 @@ object frmWTLUPrices: TfrmWTLUPrices
       object lblCurrentPrices: TLabel
         Left = 72
         Top = 3
-        Width = 178
-        Height = 20
+        Width = 180
+        Height = 21
         Caption = '- displaying current prices'
         Color = clSilver
         Font.Charset = DEFAULT_CHARSET
@@ -356,7 +362,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1230
+        Left = 1218
         Top = 7
         Width = 29
         Height = 13
@@ -371,7 +377,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         ExplicitLeft = 1238
       end
       object cmbPriceTypeFilter: TComboBox
-        Left = 1270
+        Left = 1258
         Top = 3
         Width = 145
         Height = 21
@@ -390,22 +396,22 @@ object frmWTLUPrices: TfrmWTLUPrices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1452
+    Width = 1446
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1446
+        Width = 1440
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1437
+      Width = 1431
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 56
+      ButtonWidth = 58
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -419,7 +425,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 56
+        Left = 58
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -428,7 +434,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 112
+        Left = 116
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -437,14 +443,14 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnDeleteClick
       end
       object ToolButton1: TToolButton
-        Left = 168
+        Left = 174
         Top = 0
         Caption = 'Prices'
         ImageIndex = 13
         OnClick = ToolButton1Click
       end
       object btnRefresh: TToolButton
-        Left = 224
+        Left = 232
         Top = 0
         Caption = '&Refresh'
         ImageIndex = 11

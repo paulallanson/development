@@ -36,6 +36,7 @@ type
     lkpExtrasUnit_Price: TCurrencyField;
     lkpExtrasUnit_Cost: TCurrencyField;
     lkpExtrasPrice_Unit_Description: TWideStringField;
+    qryDummy: TFDQuery;
     procedure btnEditClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
@@ -51,7 +52,10 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure edtNameChange(Sender: TObject);
     procedure tmrRefreshTimer(Sender: TObject);
+    procedure dbgDetailsTitleClick(Column: TColumn);
   private
+    SortType: string;
+    SortOrder: string;
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
   public
@@ -113,24 +117,38 @@ end;
 
 procedure TfrmWTLUAddChgs.Refresh;
 var
-  sText: string;
+  sText, sTemp: string;
 begin
   with lkpExtras do
-    begin
-      close;
-      if dtmdlWorktops.IsSQL then
-        begin
-          sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
-          SQL.Text := sText;
-        end;
-      parambyname('Description').asstring :=  '%' + edtName.Text + '%';
-      if not chkbxShowInactive.Checked then
-        parambyname('inactive').asstring := 'N'
+  begin
+    close;
+    sql.Clear;
+    sTemp := qryDummy.sql.text;
+
+    if SortOrder = '' then
+        sTemp := sTemp + ' ORDER BY Description'
       else
-        parambyname('inactive').asstring := 'Y';
-      open;
-      stsbrDetails.panels[0].text := inttostr(recordcount) + ' records displayed';
+        sTemp := sTemp + ' ORDER BY ' + SortOrder;
+
+    sql.Text := stemp;
+
+    if dtmdlWorktops.IsSQL then
+    begin
+      sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+      SQL.Text := sText;
     end;
+
+    parambyname('Description').asstring :=  '%' + edtName.Text + '%';
+
+    if not chkbxShowInactive.Checked then
+      parambyname('inactive').asstring := 'N'
+    else
+      parambyname('inactive').asstring := 'Y';
+
+    open;
+
+    stsbrDetails.panels[0].text := inttostr(recordcount) + ' records displayed';
+  end;
 end;
 
 procedure TfrmWTLUAddChgs.btnAddClick(Sender: TObject);
@@ -236,7 +254,43 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
+end;
+
+procedure TfrmWTLUAddChgs.dbgDetailsTitleClick(Column: TColumn);
+var
+  icolumn: integer;
+  SortField: string;
+begin
+  if dbgDetails.Dragging then exit;
+
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+    SortType := ' ASC'
+  else if SortType = ' DESC' then
+      SortType := ' ASC'
+  else
+    SortType := ' DESC';
+
+  SortField := Column.FieldName;
+
+  for icolumn := 0 to pred(dbgDetails.columns.count) do
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
+
+  SortOrder := SortField + SortType;
+  SortType := SortType;
+
+  Refresh;
+
+  with dbgDetails do
+    begin
+      try
+        if datasource.dataset.recordcount > 0 then
+          SelectedRows.CurrentRowSelected := true ;
+      except
+      end;
     end;
 end;
 
