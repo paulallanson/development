@@ -17,11 +17,11 @@ type
     qryCustEdge: TFDQuery;
     qryCustEdgeEdge_Type: TIntegerField;
     qryCustEdgePrice_pointer: TIntegerField;
-    qryCustEdgeDescription: TWideStringField;
+    qryCustEdgeDescription: TStringField;
     qryCustEdgeUnit_Price: TFloatField;
     qryCustEdgeUnit_Cost: TFloatField;
-    qryCustEdgePrice_Unit_Description: TWideStringField;
-    qryCustEdgeinactive: TWideStringField;
+    qryCustEdgePrice_Unit_Description: TStringField;
+    qryCustEdgeinactive: TStringField;
     lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
     qryGetCustEdges: TFDQuery;

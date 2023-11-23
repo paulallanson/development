@@ -338,7 +338,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     object qryCustEdgePrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
     end
-    object qryCustEdgeDescription: TWideStringField
+    object qryCustEdgeDescription: TStringField
       FieldName = 'Description'
       Size = 40
     end
@@ -352,14 +352,14 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       DisplayFormat = '0.00'
       currency = True
     end
-    object qryCustEdgePrice_Unit_Description: TWideStringField
+    object qryCustEdgePrice_Unit_Description: TStringField
       FieldName = 'Price_Unit_Description'
     end
-    object qryCustEdgeinactive: TWideStringField
+    object qryCustEdgeinactive: TStringField
       FieldName = 'inactive'
       Size = 1
     end
-    object qryCustEdgeEdge_Type_Description: TWideStringField
+    object qryCustEdgeEdge_Type_Description: TStringField
       FieldName = 'Edge_Type_Description'
       Size = 50
     end
