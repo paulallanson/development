@@ -40,6 +40,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         897
@@ -95,6 +96,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
       end
     end
   end

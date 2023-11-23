@@ -40,6 +40,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         1251
@@ -96,6 +97,11 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
       end
     end
   end
@@ -133,7 +139,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1001
+      Left = 993
       Top = 15
       Width = 59
       Height = 13
@@ -150,7 +156,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1165
+      Left = 1157
       Top = 9
       Width = 75
       Height = 25
@@ -168,7 +174,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1066
+      Left = 1058
       Top = 11
       Width = 73
       Height = 21
