@@ -388,7 +388,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       end
       item
         Expanded = False
-        FieldName = 'Expiry_Date_New'
+        FieldName = 'Expiry_Date'
         Title.Caption = 'Expiry Date'
         Width = 135
         Visible = True
@@ -397,19 +397,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1303
+    Width = 1285
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1297
+        Width = 1279
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1288
+      Width = 1270
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -417,7 +417,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1288
+        1270
         28)
       object Label2: TLabel
         Left = 0

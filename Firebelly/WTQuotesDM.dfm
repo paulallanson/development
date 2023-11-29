@@ -1,40 +1,58 @@
 object dtmdlQuote: TdtmdlQuote
-  Height = 649
-  Width = 1083
+  Height = 811
+  Width = 1354
+  PixelsPerInch = 120
   object qryAllQuotes: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
-      'SELECT  Quote.Quote,'
-      '        Quote.Date_Required,'
-      '        Quote.Date_Raised,'
-      '        Quote.Customer,'
-      '        Quote.Description,'
-      '        Quote.Operator,'
-      '        Quote.Installation_price,'
-      '        Quote.Delivery_Price,'
-      '        Quote.Survey_price,'
-      '        Quote.Project_Reference,'
-      '        Quote.Reference,'
-      '        Quote.Quote_Status,'
-      '        Quote.Nett_Price,'
-      '        Quote.Inactive,'
-      '        Quote.Customer_name,'
-      '        Quote.Contact_Name,'
-      '        Quote.Material_Type,'
-      '        Quote.Importance,'
+      'SELECT TOP 3000'
+      #9'Quote.Quote,        '
+      #9'Quote.Date_Required,        '
+      #9'Quote.Date_Raised,        '
+      #9'Quote.Customer,        '
+      #9'Quote.Description,        '
+      #9'Quote.Operator,        '
+      #9'Quote.Installation_price,       '
+      #9'Quote.Delivery_Price,        '
+      #9'Quote.Survey_price,        '
+      #9'Quote.Project_Reference,        '
+      #9'Quote.Reference,        '
+      #9'Quote.Quote_Status,        '
+      #9'Quote.Nett_Price,        '
+      #9'Quote.Inactive,        '
+      #9'Operator.Operator_Name,        '
+      #9'Quote_Status.Quote_status_description AS Status_Text,        '
+      #9'Quote.Customer_name,        '
+      #9'Quote.Contact_Name,        '
+      #9'Quote.Material_Type,        '
+      #9'Material_Type.Description AS Material_Description,        '
+      #9'Quote.Importance,        '
       
-        '        (Quote.Nett_price-Quote.Discount_Value+Quote.Markup_Valu' +
-        'e+Quote.Waste_Value) AS Gross_Price,'
-      '        Quote.Quote_Number,'
-      '        Quote.Original_Quote,'
-      '        Quote.Expiry_Date'
-      'FROM Quote'
+        #9'(Quote.Nett_price - Quote.Discount_Value + Quote.Markup_Value +' +
+        ' Quote.Waste_Value) as Gross_Price,        '
+      #9'Customer.Is_Retail_Customer,        '
+      #9'Customer.Customer_is_Speculative,        '
+      #9'Quote.Address,        '
+      #9'Quote.Quote_Number,        '
+      #9'Quote.Original_Quote,        '
+      #9'Quote.Expiry_Date '
+      #9'FROM Material_Type      '
+      #9
+      #9'INNER JOIN (Customer      '
+      #9'INNER JOIN (Quote_Status      '
+      #9'INNER JOIN (Operator      '
+      #9'INNER JOIN Quote ON        '
+      #9'Operator.Operator = Quote.Operator) ON        '
+      #9'Quote_Status.Quote_Status = Quote.Quote_Status) ON        '
+      #9'Customer.Customer = Quote.Customer) ON        '
+      #9'Material_Type.Material_Type = Quote.Material_Type'
       
-        'WHERE ((Quote.Contract_Quote) Is Null Or (Quote.Contract_Quote =' +
-        #39'N'#39'))'
-      'ORDER BY Quote.Quote desc')
-    Left = 24
-    Top = 8
+        #9'WHERE ((Quote.Contract_Quote IS NULL) OR (Quote.Contract_Quote ' +
+        '= '#39'N'#39')) AND Quote_Status.Quote_status > 1 AND ((Quote.inactive i' +
+        's NULL) or (Quote.inactive = '#39'N'#39') or (Quote.inactive = '#39#39')) ORDE' +
+        'R BY Quote.Quote desc')
+    Left = 30
+    Top = 10
     object qryAllQuotesQuote: TIntegerField
       FieldName = 'Quote'
       Origin = 'Quote'
@@ -144,11 +162,42 @@ object dtmdlQuote: TdtmdlQuote
       FieldName = 'Expiry_Date'
       Origin = 'Expiry_Date'
     end
+    object qryAllQuotesOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 30
+    end
+    object qryAllQuotesStatus_Text: TWideStringField
+      FieldName = 'Status_Text'
+      Origin = 'Status_Text'
+      Required = True
+      Size = 50
+    end
+    object qryAllQuotesMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object qryAllQuotesIs_Retail_Customer: TWideStringField
+      FieldName = 'Is_Retail_Customer'
+      Origin = 'Is_Retail_Customer'
+      Size = 1
+    end
+    object qryAllQuotesCustomer_is_Speculative: TWideStringField
+      FieldName = 'Customer_is_Speculative'
+      Origin = 'Customer_is_Speculative'
+      Size = 1
+    end
+    object qryAllQuotesAddress: TIntegerField
+      FieldName = 'Address'
+      Origin = 'Address'
+    end
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 352
-    Top = 8
+    Left = 440
+    Top = 10
   end
   object qryQHeader: TFDQuery
     ConnectionName = 'wt'
@@ -235,8 +284,8 @@ object dtmdlQuote: TdtmdlQuote
       '    Quote_Status.Quote_Status = Quote.Quote_Status) ON'
       '    Vat.Vat = Quote.Vat'
       'WHERE Quote.Quote = :Quote')
-    Left = 24
-    Top = 112
+    Left = 30
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -250,8 +299,8 @@ object dtmdlQuote: TdtmdlQuote
     SQL.Strings = (
       'select Last_Quote_Number'
       'from Company')
-    Left = 288
-    Top = 8
+    Left = 360
+    Top = 10
   end
   object qryQAddHeader: TFDQuery
     ConnectionName = 'wt'
@@ -394,8 +443,8 @@ object dtmdlQuote: TdtmdlQuote
       '        :Revenue_Centre,'
       '        :Option_Number'
       ')')
-    Left = 24
-    Top = 160
+    Left = 30
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -679,8 +728,8 @@ object dtmdlQuote: TdtmdlQuote
       '    Expiry_Date = :Expiry_Date,'
       '    Revenue_Centre = :Revenue_Centre'
       'WHERE Quote = :Quote')
-    Left = 24
-    Top = 344
+    Left = 30
+    Top = 430
     ParamData = <
       item
         Name = 'Account_Manager'
@@ -889,8 +938,8 @@ object dtmdlQuote: TdtmdlQuote
       'where Customer = :Customer and'
       'Description LIKE :Description'
       'order by Quote desc')
-    Left = 24
-    Top = 56
+    Left = 30
+    Top = 70
     ParamData = <
       item
         Name = 'Customer'
@@ -918,9 +967,7 @@ object dtmdlQuote: TdtmdlQuote
       '        Quote.Nett_Price,'
       '        Quote.Inactive,'
       '        Operator.Operator_Name,'
-      
-        '        Quote_Status.Quote_status_description AS Status_Descript' +
-        'ion,'
+      '        Quote_Status.Quote_status_description AS Status_Text,'
       '        Quote.Customer_name,'
       '        Quote.Contact_Name,'
       '        Quote.Material_Type,'
@@ -947,18 +994,18 @@ object dtmdlQuote: TdtmdlQuote
       
         'WHERE ((Quote.Contract_Quote IS NULL) OR (Quote.Contract_Quote =' +
         ' '#39'N'#39'))')
-    Left = 224
-    Top = 8
+    Left = 280
+    Top = 10
   end
   object dtsQuotes: TDataSource
     DataSet = qryCustQuotes
-    Left = 96
-    Top = 56
+    Left = 120
+    Top = 70
   end
   object dtsAllQuotes: TDataSource
     DataSet = qryAllQuotes
-    Left = 160
-    Top = 8
+    Left = 200
+    Top = 10
   end
   object qryQElement: TFDQuery
     ConnectionName = 'wt'
@@ -1007,8 +1054,8 @@ object dtmdlQuote: TdtmdlQuote
       'WHERE Quote = :Quote and'
       '      Element_Number = :Element_Number and'
       '      Element_Type ='#39'P'#39)
-    Left = 96
-    Top = 112
+    Left = 120
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -1060,8 +1107,8 @@ object dtmdlQuote: TdtmdlQuote
       ':No_of_Polished_Depths,'
       ':No_of_Polished_Lengths,'
       ':Total_Upstand_Pieces)')
-    Left = 96
-    Top = 160
+    Left = 120
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -1167,8 +1214,8 @@ object dtmdlQuote: TdtmdlQuote
         'e'
       'WHERE Quote = :Quote and Element_Type = '#39'P'#39
       'ORDER BY Element_Number')
-    Left = 96
-    Top = 224
+    Left = 120
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -1194,8 +1241,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Extra.Price_unit'
       'WHERE Quote = :Quote and'
       '               Extra_no = :Extra_no')
-    Left = 160
-    Top = 112
+    Left = 200
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -1234,8 +1281,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Cutout.Price_unit'
       'WHERE Quote = :Quote and'
       '               Cutout_Number = :cutout_Number')
-    Left = 224
-    Top = 112
+    Left = 280
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -1272,8 +1319,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Edge.Price_unit'
       'WHERE Quote = :Quote and'
       '               Edge_Number = :Edge_Number')
-    Left = 288
-    Top = 112
+    Left = 360
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -1303,8 +1350,8 @@ object dtmdlQuote: TdtmdlQuote
       ':Price_unit,'
       ':Quantity,'
       ':Do_Not_Discount)')
-    Left = 160
-    Top = 160
+    Left = 200
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -1356,8 +1403,8 @@ object dtmdlQuote: TdtmdlQuote
       ':Price_unit,'
       ':Quantity,'
       ':CutOut_Discount)')
-    Left = 224
-    Top = 160
+    Left = 280
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -1415,8 +1462,8 @@ object dtmdlQuote: TdtmdlQuote
       ':Price_unit,'
       ':Length,'
       ':Edge_Discount)')
-    Left = 288
-    Top = 160
+    Left = 360
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -1479,8 +1526,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Cutout.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY Cutout_NUmber')
-    Left = 160
-    Top = 224
+    Left = 200
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -1514,8 +1561,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Edge.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY Edge_Number')
-    Left = 224
-    Top = 224
+    Left = 280
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -1541,8 +1588,8 @@ object dtmdlQuote: TdtmdlQuote
       '        Price_unit.Price_unit = Quote_Extra.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY Extra_no')
-    Left = 288
-    Top = 224
+    Left = 360
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -1562,8 +1609,8 @@ object dtmdlQuote: TdtmdlQuote
       'Price_unit = :Price_Unit,'
       'Quantity = :Quantity'
       'WHERE Quote = :Quote')
-    Left = 96
-    Top = 344
+    Left = 120
+    Top = 430
     ParamData = <
       item
         Name = 'Element_Number'
@@ -1610,8 +1657,8 @@ object dtmdlQuote: TdtmdlQuote
       'Price_unit = :Price_Unit,'
       'Quantity = :Quantity'
       'WHERE Quote = :Quote')
-    Left = 156
-    Top = 344
+    Left = 195
+    Top = 430
     ParamData = <
       item
         Name = 'Element_Number'
@@ -1652,8 +1699,8 @@ object dtmdlQuote: TdtmdlQuote
         'State,Telephone_number, Fax_number, email_address, web_address, ' +
         'Mailing'
       'from Address where Address = :Address')
-    Left = 24
-    Top = 400
+    Left = 30
+    Top = 500
     ParamData = <
       item
         Name = 'Address'
@@ -1683,8 +1730,8 @@ object dtmdlQuote: TdtmdlQuote
       '      Discount_Rate,'
       '      Customer_Name'
       'from Customer where Customer = :Customer')
-    Left = 96
-    Top = 400
+    Left = 120
+    Top = 500
     ParamData = <
       item
         Name = 'Customer'
@@ -1699,8 +1746,8 @@ object dtmdlQuote: TdtmdlQuote
         '(inactive = '#39'N'#39' or inactive is null) OR Material_type = :Materia' +
         'l_Type'
       'order by Material_type.description')
-    Left = 24
-    Top = 448
+    Left = 30
+    Top = 560
     ParamData = <
       item
         Name = 'Material_Type'
@@ -1708,8 +1755,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 96
-    Top = 448
+    Left = 120
+    Top = 560
   end
   object qryOperator: TFDQuery
     ConnectionName = 'wt'
@@ -1718,8 +1765,8 @@ object dtmdlQuote: TdtmdlQuote
       'from Operator'
       'where (Operator_Can_Login = '#39'Y'#39') OR Operator = :Operator'
       'order by Operator_Name')
-    Left = 160
-    Top = 448
+    Left = 200
+    Top = 560
     ParamData = <
       item
         Name = 'Operator'
@@ -1727,16 +1774,16 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 216
-    Top = 448
+    Left = 270
+    Top = 560
   end
   object qryGetNextAdd: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 488
-    Top = 8
+    Left = 610
+    Top = 10
   end
   object qryAddAddress: TFDQuery
     ConnectionName = 'wT'
@@ -1761,8 +1808,8 @@ object dtmdlQuote: TdtmdlQuote
       ':County_state,'
       ':Telephone_number,'
       ':email_address)')
-    Left = 488
-    Top = 64
+    Left = 610
+    Top = 80
     ParamData = <
       item
         Name = 'Address'
@@ -1806,8 +1853,8 @@ object dtmdlQuote: TdtmdlQuote
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 488
-    Top = 112
+    Left = 610
+    Top = 140
     ParamData = <
       item
         Name = 'Address_Name'
@@ -1842,8 +1889,8 @@ object dtmdlQuote: TdtmdlQuote
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
-    Left = 488
-    Top = 168
+    Left = 610
+    Top = 210
     ParamData = <
       item
         Name = 'address'
@@ -1889,8 +1936,8 @@ object dtmdlQuote: TdtmdlQuote
       'WHERE Quote = :Quote and'
       '      Element_Number = :Element_Number and'
       '      Element_Type = '#39'U'#39)
-    Left = 352
-    Top = 112
+    Left = 440
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -1952,8 +1999,8 @@ object dtmdlQuote: TdtmdlQuote
         'e'
       'WHERE Quote = :Quote and Element_Type = '#39'U'#39
       'ORDER BY Element_Number')
-    Left = 360
-    Top = 224
+    Left = 450
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -1965,8 +2012,8 @@ object dtmdlQuote: TdtmdlQuote
       'update company'
       'set last_quote_number = :last_quote_number'
       'where company = 1')
-    Left = 280
-    Top = 448
+    Left = 350
+    Top = 560
     ParamData = <
       item
         Name = 'last_quote_number'
@@ -1977,8 +2024,8 @@ object dtmdlQuote: TdtmdlQuote
     SQL.Strings = (
       'select * from Vat'
       'where vat = :vat')
-    Left = 488
-    Top = 232
+    Left = 610
+    Top = 290
     ParamData = <
       item
         Name = 'vat'
@@ -1991,8 +2038,8 @@ object dtmdlQuote: TdtmdlQuote
       'from Quote_internal_Note, Operator'
       'where Quote = :Quote and Internal_Note = :Internal_Note and'
       'Quote_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 112
+    Left = 520
+    Top = 140
     ParamData = <
       item
         Name = 'Quote'
@@ -2008,8 +2055,8 @@ object dtmdlQuote: TdtmdlQuote
       'from Quote_internal_Note, Operator'
       'where Quote = :Quote and'
       'Quote_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 224
+    Left = 520
+    Top = 280
     ParamData = <
       item
         Name = 'Quote'
@@ -2030,8 +2077,8 @@ object dtmdlQuote: TdtmdlQuote
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 416
-    Top = 160
+    Left = 520
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -2055,8 +2102,8 @@ object dtmdlQuote: TdtmdlQuote
       'Update Quote'
       'set Quote_Status = :Quote_Status'
       'where Quote =:quote')
-    Left = 560
-    Top = 8
+    Left = 700
+    Top = 10
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -2071,8 +2118,8 @@ object dtmdlQuote: TdtmdlQuote
       'select Worktop_Group'
       'from Worktop_Group'
       'where Worktop_Group = :Worktop_Group')
-    Left = 488
-    Top = 296
+    Left = 610
+    Top = 370
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -2084,8 +2131,8 @@ object dtmdlQuote: TdtmdlQuote
       'select Sales_order, Sales_order_line_no'
       'from sales_order_line'
       'where Quote = :Quote')
-    Left = 560
-    Top = 56
+    Left = 700
+    Top = 70
     ParamData = <
       item
         Name = 'Quote'
@@ -2097,8 +2144,8 @@ object dtmdlQuote: TdtmdlQuote
       'update Sales_order'
       'set SAles_order_Status = :sales_order_Status'
       'where sales_order = :Sales_order')
-    Left = 560
-    Top = 112
+    Left = 700
+    Top = 140
     ParamData = <
       item
         Name = 'sales_order_Status'
@@ -2114,8 +2161,8 @@ object dtmdlQuote: TdtmdlQuote
       'set Quote_Status = :Quote_Status,'
       'Date_Accepted = :Date_Accepted'
       'where Quote =:quote')
-    Left = 560
-    Top = 168
+    Left = 700
+    Top = 210
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -2134,8 +2181,8 @@ object dtmdlQuote: TdtmdlQuote
       'set Job = :Job'
       'where sales_order = :Sales_order and'
       'sales_order_line_no = :sales_order_line_no')
-    Left = 640
-    Top = 112
+    Left = 800
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -2153,8 +2200,8 @@ object dtmdlQuote: TdtmdlQuote
       'select Job'
       'from Job'
       'Where Job.Quote = :Quote')
-    Left = 488
-    Top = 464
+    Left = 610
+    Top = 580
     ParamData = <
       item
         Name = 'Quote'
@@ -2169,8 +2216,8 @@ object dtmdlQuote: TdtmdlQuote
         'where (inactive = '#39'N'#39' or inactive is null) or designer = :design' +
         'er'
       'order by Designer_Name')
-    Left = 744
-    Top = 16
+    Left = 930
+    Top = 20
     ParamData = <
       item
         Name = 'designer'
@@ -2178,8 +2225,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsDesigner: TDataSource
     DataSet = qryDesigner
-    Left = 816
-    Top = 16
+    Left = 1020
+    Top = 20
   end
   object qryLeadSource: TFDQuery
     ConnectionName = 'WT'
@@ -2190,8 +2237,8 @@ object dtmdlQuote: TdtmdlQuote
         'where (inactive = '#39'N'#39' or inactive is null) or sales_lead_source ' +
         '= :sales_lead_source'
       'order by Sales_lead_Source_Descr')
-    Left = 744
-    Top = 80
+    Left = 930
+    Top = 100
     ParamData = <
       item
         Name = 'sales_lead_source'
@@ -2199,8 +2246,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsLeadSource: TDataSource
     DataSet = qryLeadSource
-    Left = 824
-    Top = 80
+    Left = 1030
+    Top = 100
   end
   object qryBranch: TFDQuery
     ConnectionName = 'WT'
@@ -2210,8 +2257,8 @@ object dtmdlQuote: TdtmdlQuote
       'where Customer = :Customer and'
       '(inactive = '#39'N'#39' or inactive is null) OR Branch_no = :Branch_No'
       'order by Branch_Name')
-    Left = 744
-    Top = 152
+    Left = 930
+    Top = 190
     ParamData = <
       item
         Name = 'Customer'
@@ -2222,8 +2269,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsBranch: TDataSource
     DataSet = qryBranch
-    Left = 816
-    Top = 152
+    Left = 1020
+    Top = 190
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -2247,8 +2294,8 @@ object dtmdlQuote: TdtmdlQuote
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 744
-    Top = 216
+    Left = 930
+    Top = 270
     ParamData = <
       item
         Name = 'Worktop'
@@ -2263,8 +2310,8 @@ object dtmdlQuote: TdtmdlQuote
       'select * from Vat'
       'where (inactive = '#39'N'#39' or inactive is null) or vat = :vat'
       'order by Vat_Rate')
-    Left = 744
-    Top = 272
+    Left = 930
+    Top = 340
     ParamData = <
       item
         Name = 'vat'
@@ -2275,8 +2322,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsVat: TDataSource
     DataSet = qryVat
-    Left = 816
-    Top = 272
+    Left = 1020
+    Top = 340
   end
   object qryUpSOLineValues: TFDQuery
     ConnectionName = 'wt'
@@ -2294,8 +2341,8 @@ object dtmdlQuote: TdtmdlQuote
       '    Waste_Value = :Waste_Value'
       'where sales_order = :Sales_order and'
       'sales_order_line_no = :sales_order_line_no')
-    Left = 640
-    Top = 168
+    Left = 800
+    Top = 210
     ParamData = <
       item
         Name = 'Unit_Price'
@@ -2342,8 +2389,8 @@ object dtmdlQuote: TdtmdlQuote
       '    Goods_Value = :Goods_Value,'
       '    Vat_Value = :Vat_Value'
       'where sales_order = :Sales_order')
-    Left = 640
-    Top = 232
+    Left = 800
+    Top = 290
     ParamData = <
       item
         Name = 'Goods_Value'
@@ -2361,8 +2408,8 @@ object dtmdlQuote: TdtmdlQuote
       'SELECT *'
       'FROM Customer_Contact'
       'WHERE Customer = :Customer')
-    Left = 744
-    Top = 336
+    Left = 930
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -2375,13 +2422,13 @@ object dtmdlQuote: TdtmdlQuote
       'from Inactive_Reason'
       'where Inactive_Type = '#39'Q'#39
       'order by Inactive_Reason_Descr')
-    Left = 24
-    Top = 512
+    Left = 30
+    Top = 640
   end
   object dtsQReason: TDataSource
     DataSet = qryQReason
-    Left = 96
-    Top = 512
+    Left = 120
+    Top = 640
   end
   object qryReQuoteCount: TFDQuery
     ConnectionName = 'wt'
@@ -2389,8 +2436,8 @@ object dtmdlQuote: TdtmdlQuote
       'SELECT max(Quote_Number) as Last_ReQuote'
       'FROM Quote'
       'WHERE Original_Quote = :Original_Quote')
-    Left = 488
-    Top = 408
+    Left = 610
+    Top = 510
     ParamData = <
       item
         Name = 'Original_Quote'
@@ -2429,8 +2476,8 @@ object dtmdlQuote: TdtmdlQuote
       'WHERE (Quote.Original_Quote = :Original_Quote)'
       'ORDER BY Quote.Quote DESC'
       '')
-    Left = 648
-    Top = 416
+    Left = 810
+    Top = 520
     ParamData = <
       item
         Name = 'Original_Quote'
@@ -2513,8 +2560,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsGetLinkedQuotes: TDataSource
     DataSet = qryGetLinkedQuotes
-    Left = 760
-    Top = 416
+    Left = 950
+    Top = 520
   end
   object qryGetSalesOrder: TFDQuery
     ConnectionName = 'wt'
@@ -2522,8 +2569,8 @@ object dtmdlQuote: TdtmdlQuote
       'select Top 1 Sales_Order'
       'from Sales_Order_Line'
       'Where Sales_Order_Line.Quote = :Quote')
-    Left = 488
-    Top = 520
+    Left = 610
+    Top = 650
     ParamData = <
       item
         Name = 'Quote'
@@ -2537,8 +2584,8 @@ object dtmdlQuote: TdtmdlQuote
       '    Address = :Address,'
       '    Customer_Name = :Customer_Name'
       'where Quote = :quote')
-    Left = 936
-    Top = 16
+    Left = 1170
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -2566,8 +2613,8 @@ object dtmdlQuote: TdtmdlQuote
         ') AND'
       '(Customer.Is_Retail_Customer = '#39'N'#39') AND'
       '(Quote.Customer = Customer.Customer)')
-    Left = 936
-    Top = 72
+    Left = 1170
+    Top = 90
     ParamData = <
       item
         Name = 'Customer_Name'
@@ -2580,8 +2627,8 @@ object dtmdlQuote: TdtmdlQuote
       'SET Inactive = '#39'Y'#39', inactive_Reason = :inactive_Reason'
       'WHERE Original_Quote = :Original_Quote AND'
       '      Quote_Status < 24')
-    Left = 936
-    Top = 136
+    Left = 1170
+    Top = 170
     ParamData = <
       item
         Name = 'inactive_Reason'
@@ -2640,8 +2687,8 @@ object dtmdlQuote: TdtmdlQuote
       
         'WHERE ((Quote.Contract_Quote IS NULL) OR (Quote.Contract_Quote =' +
         ' '#39'N'#39'))')
-    Left = 160
-    Top = 56
+    Left = 200
+    Top = 70
   end
   object qryOldDummy: TFDQuery
     SQL.Strings = (
@@ -2693,8 +2740,8 @@ object dtmdlQuote: TdtmdlQuote
       
         'WHERE ((Quote.Contract_Quote IS NULL) OR (Quote.Contract_Quote =' +
         ' '#39'N'#39'))')
-    Left = 416
-    Top = 8
+    Left = 520
+    Top = 10
   end
   object qryQAddSlab: TFDQuery
     ConnectionName = 'wt'
@@ -2746,8 +2793,8 @@ object dtmdlQuote: TdtmdlQuote
       ')'
       ''
       '')
-    Left = 352
-    Top = 160
+    Left = 440
+    Top = 200
     ParamData = <
       item
         Name = 'Quote'
@@ -2856,8 +2903,8 @@ object dtmdlQuote: TdtmdlQuote
       '          AND (Supplier_Product.Supplier = Quote_Slab.Supplier)'
       'WHERE Quote = :Quote'
       'ORDER BY Slab_Number')
-    Left = 96
-    Top = 280
+    Left = 120
+    Top = 350
     ParamData = <
       item
         Name = 'Quote'
@@ -2883,8 +2930,8 @@ object dtmdlQuote: TdtmdlQuote
       'WHERE (Supplier = :Supplier) AND'
       '      (Supplier_Product_Code = :Supplier_Product_Code) AND'
       '      (Inactive = '#39'N'#39')')
-    Left = 760
-    Top = 480
+    Left = 950
+    Top = 600
     ParamData = <
       item
         Name = 'Supplier'
@@ -2899,8 +2946,8 @@ object dtmdlQuote: TdtmdlQuote
       'SELECT Supplier_Product_Code, Description'
       'FROM Supplier_Product'
       'WHERE Supplier = :Supplier AND (Inactive = '#39'N'#39')')
-    Left = 848
-    Top = 480
+    Left = 1060
+    Top = 600
     ParamData = <
       item
         Name = 'Supplier'
@@ -2908,8 +2955,8 @@ object dtmdlQuote: TdtmdlQuote
   end
   object dtsGetProducts: TDataSource
     DataSet = qryGetProducts
-    Left = 896
-    Top = 480
+    Left = 1120
+    Top = 600
   end
   object qryRevenueCentre: TFDQuery
     ConnectionName = 'WT'
@@ -2917,12 +2964,12 @@ object dtmdlQuote: TdtmdlQuote
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 760
-    Top = 536
+    Left = 950
+    Top = 670
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 848
-    Top = 536
+    Left = 1060
+    Top = 670
   end
 end

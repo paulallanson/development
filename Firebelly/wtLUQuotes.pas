@@ -906,8 +906,6 @@ begin
 
   if (column.FieldName = 'Status_Text') then
     SortField := 'Quote_Status.Quote_Status_Description'
-  else if (column.FieldName = 'Expiry_Date_New') then
-    SortField := 'Quote.Expiry_Date'
   else
     SortField := Column.FieldName;
 
