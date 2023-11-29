@@ -133,6 +133,12 @@ type
     qryGetLinkedQuotesComplete_Price: TFloatField;
     qryGetLinkedQuotesTotal_Price: TFloatField;
     qryGetLinkedQuotesQuote_status_description: TWideStringField;
+    qryAllQuotesOperator_Name: TWideStringField;
+    qryAllQuotesStatus_Text: TWideStringField;
+    qryAllQuotesMaterial_Description: TWideStringField;
+    qryAllQuotesIs_Retail_Customer: TWideStringField;
+    qryAllQuotesCustomer_is_Speculative: TWideStringField;
+    qryAllQuotesAddress: TIntegerField;
     procedure qryAllQuotesStatus_TextGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
     procedure qryAllQuotesExpiry_Date_NewGetText(Sender: TField;
