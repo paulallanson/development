@@ -465,7 +465,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -491,7 +491,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       'Order By description')
     Left = 72
     Top = 12
-    object qryCustTypeDescription: TStringField
+    object qryCustTypeDescription: TWideStringField
       FieldName = 'Description'
       Size = 100
     end
@@ -503,7 +503,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       'order by Contact_Type_Description')
     Left = 218
     Top = 12
-    object qryContTypeContact_Type_Description: TStringField
+    object qryContTypeContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       Size = 100
     end
@@ -516,7 +516,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       'Order by Rep_Name')
     Left = 370
     Top = 12
-    object QryRepRep_Name: TStringField
+    object QryRepRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 100
     end
@@ -607,94 +607,94 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       ' ')
     Left = 112
     Top = 160
-    object qryCurrentContStatusContact_Name: TStringField
+    object qryCurrentContStatusContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       Size = 30
     end
-    object qryCurrentContStatusTitle: TStringField
+    object qryCurrentContStatusTitle: TWideStringField
       FieldName = 'Title'
       Size = 10
     end
-    object qryCurrentContStatusForename: TStringField
+    object qryCurrentContStatusForename: TWideStringField
       FieldName = 'Forename'
       Size = 30
     end
-    object qryCurrentContStatusEmail_address: TStringField
+    object qryCurrentContStatusEmail_address: TWideStringField
       FieldName = 'Email_address'
       Size = 100
     end
-    object qryCurrentContStatusContact_Phone: TStringField
+    object qryCurrentContStatusContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
       Size = 30
     end
-    object qryCurrentContStatusMobile_Number: TStringField
+    object qryCurrentContStatusMobile_Number: TWideStringField
       FieldName = 'Mobile_Number'
       Size = 30
     end
-    object qryCurrentContStatusContact_Fax: TStringField
+    object qryCurrentContStatusContact_Fax: TWideStringField
       FieldName = 'Contact_Fax'
       Size = 30
     end
     object qryCurrentContStatusContact_Type: TIntegerField
       FieldName = 'Contact_Type'
     end
-    object qryCurrentContStatusContact_Type_Description: TStringField
+    object qryCurrentContStatusContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       Size = 50
     end
-    object qryCurrentContStatusStreet: TStringField
+    object qryCurrentContStatusStreet: TWideStringField
       FieldName = 'Street'
       Size = 50
     end
-    object qryCurrentContStatusLocale: TStringField
+    object qryCurrentContStatusLocale: TWideStringField
       FieldName = 'Locale'
       Size = 50
     end
-    object qryCurrentContStatusTown_City: TStringField
+    object qryCurrentContStatusTown_City: TWideStringField
       FieldName = 'Town_City'
       Size = 50
     end
-    object qryCurrentContStatusPostcode: TStringField
+    object qryCurrentContStatusPostcode: TWideStringField
       FieldName = 'Postcode'
     end
-    object qryCurrentContStatusCounty_State: TStringField
+    object qryCurrentContStatusCounty_State: TWideStringField
       FieldName = 'County_State'
       Size = 30
     end
-    object qryCurrentContStatusCustomer_Phone: TStringField
+    object qryCurrentContStatusCustomer_Phone: TWideStringField
       FieldName = 'Customer_Phone'
       Size = 30
     end
-    object qryCurrentContStatusCustomer_Fax: TStringField
+    object qryCurrentContStatusCustomer_Fax: TWideStringField
       FieldName = 'Customer_Fax'
       Size = 30
     end
-    object qryCurrentContStatusCustomer_Name: TStringField
+    object qryCurrentContStatusCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
     object qryCurrentContStatusCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryCurrentContStatusinactive: TStringField
+    object qryCurrentContStatusinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end
     object qryCurrentContStatusRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryCurrentContStatusCustomer_Type_Description: TStringField
+    object qryCurrentContStatusCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 40
     end
-    object qryCurrentContStatusPhone: TStringField
+    object qryCurrentContStatusPhone: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Phone'
       OnGetText = qryCurrentContStatusPhoneGetText
       Size = 50
       Calculated = True
     end
-    object qryCurrentContStatusRep_Name: TStringField
+    object qryCurrentContStatusRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
