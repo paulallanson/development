@@ -790,11 +790,21 @@ begin
   end;
 
   if bShowDocuments then
-    begin
-      ShowLineDocuments;
-      edtSupplierreference.Text := ContractLine.SupplierReference;
-      memUnits.Text := formatfloat('0',ContractLine.NumberofUnits);
-    end;
+  begin
+    ShowLineDocuments;
+    edtSupplierreference.Text := ContractLine.SupplierReference;
+    memUnits.Text := formatfloat('0',ContractLine.NumberofUnits);
+  end;
+
+  if (ARow > 0) and (ACol > 1) then
+  begin
+    var Text := sgDetails.Cells[ACol,ARow];
+    var WidthOfText := sgDetails.Canvas.TextWidth(Text);
+    var WidthOfCell := sgDetails.ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText;
+
+    sgDetails.Canvas.TextRect(Rect, Rect.Left+LeftOffset, Rect.Top, Text);
+  end;
 end;
 
 procedure TfrmWTMaintContract.FormKeyPress(Sender: TObject; var Key: Char);
