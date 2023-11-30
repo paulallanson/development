@@ -215,6 +215,14 @@ type
     qryAllSalesOperator_name: TWideStringField;
     qryAllSalesTotal_Value: TFloatField;
     qryAllSalessales_order_status_desc: TWideStringField;
+    qryAllSalesDeposit_Required: TFloatField;
+    qryAllSalesOffice_Contact_Name: TWideStringField;
+    qryAllSalesQuote: TIntegerField;
+    qryAllSalesTemplater_Name: TWideStringField;
+    qryAllSalesFitter_Name: TWideStringField;
+    qryAllSalesJob: TBCDField;
+    qryAllSalesJob_Status: TIntegerField;
+    qryAllSalesWorktop_Weight: TFloatField;
     procedure qryAllSalesStatus_TextGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
     procedure qryAllSalesTemplate_Date_NewGetText(Sender: TField;
