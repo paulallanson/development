@@ -5,20 +5,67 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   object qryAllSales: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
-      'select sales_order.*,'
-      '  Customer.Customer_name as original_customer_name,'
-      '  Customer.is_retail_customer,'
-      '  Customer.Customer_is_Speculative,'
-      '  Customer.Account_code,'
-      '  Operator.Operator_name,'
-      '  (Goods_Value + VAt_Value) as Total_Value,'
-      '  sales_order_status.sales_order_status_desc'
-      'from sales_order, customer, operator, sales_order_status'
-      'where sales_order.customer = customer.customer and'
-      'sales_order.operator = operator.operator and'
+      'SELECT DISTINCT TOP 3000  '
+      #9'sales_order.*'
+      #9',  Customer.Customer_name as Original_Customer_name'
+      #9',  Customer.Account_Code'
+      #9',  Operator.Operator_name'
+      #9',  (Goods_Value + VAt_Value) as Total_Value'
       
-        'sales_order.sales_order_status = sales_order_status.sales_order_' +
-        'status')
+        #9',  ((Sales_Order.Goods_Value + Sales_Order.VAt_Value) * (Sales_' +
+        'Order.Deposit_Terms/100)) as Deposit_Required'
+      #9',  sales_order_status.sales_order_status_desc'
+      #9',  Office_Contact.Operator_Name as Office_Contact_Name'
+      #9',  Customer.Is_Retail_Customer'
+      #9',  Customer.Customer_is_Speculative'
+      #9',  (Select TOP 1 Sales_Order_Line.Quote      '
+      #9#9#9'from Sales_Order_Line      '
+      
+        #9#9#9'where Sales_Order_Line.Sales_Order = Sales_Order.Sales_Order)' +
+        ' as Quote'
+      #9',    Templater.Fitter_Name as Templater_Name'
+      #9',    Fitter.Fitter_Name'
+      #9',    0.0001 as Job'
+      #9',    0 as Job_Status'
+      
+        #9',  (SELECT Sum((((Quote_Element.Length*Quote_Element.Depth)/100' +
+        '0000.00000)*Quote_Element.Quantity)*Worktop_Type_Thickness.Weigh' +
+        't_kg)   '
+      #9#9#9'FROM Sales_Order_Line    '
+      #9#9#9'INNER JOIN ((Worktop_Type_Thickness    '
+      #9#9#9'INNER JOIN Quote_Element    '
+      
+        #9#9#9'ON Worktop_Type_Thickness.Thickness = Quote_Element.Thickness' +
+        ')    '
+      #9#9#9'INNER JOIN Material_Type    '
+      
+        #9#9#9'ON (Material_Type.Material_Type = Quote_Element.Material_type' +
+        ') AND (Worktop_Type_Thickness.Worktop_Type = Material_Type.Workt' +
+        'op_Type))    '
+      #9#9#9'ON Sales_Order_Line.Quote = Quote_Element.Quote  '
+      
+        #9#9#9'WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Order ' +
+        'AND    Quote_Element.Quote = Sales_Order_Line.Quote) AS Worktop_' +
+        'Weight'
+      #9'FROM Fitter    '
+      #9'RIGHT JOIN (Fitter AS Templater    '
+      #9'RIGHT JOIN (Operator AS Office_Contact    '
+      #9'RIGHT JOIN (Sales_Order_Status    '
+      
+        #9'INNER JOIN (Customer INNER JOIN (Operator INNER JOIN sales_orde' +
+        'r ON Operator.Operator = sales_order.Operator)        '
+      #9'ON Customer.Customer = sales_order.Customer)        '
+      
+        #9'ON Sales_Order_Status.Sales_Order_Status = sales_order.Sales_Or' +
+        'der_Status)        '
+      
+        #9'ON Office_Contact.Operator = sales_order.Account_Manager)      ' +
+        '  '
+      #9'ON Templater.Fitter = sales_order.Templater)        '
+      #9'ON Fitter.Fitter = sales_order.Fitter'
+      
+        #9'WHERE (1=1) AND ((Sales_Order.inactive is NULL) OR (Sales_Order' +
+        '.inactive = '#39'N'#39')) ORDER BY Sales_order.Sales_order desc')
     Left = 40
     Top = 30
     object qryAllSalesSales_Order: TIntegerField
@@ -329,6 +376,49 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'sales_order_status_desc'
       Required = True
       Size = 30
+    end
+    object qryAllSalesDeposit_Required: TFloatField
+      FieldName = 'Deposit_Required'
+      Origin = 'Deposit_Required'
+      ReadOnly = True
+    end
+    object qryAllSalesOffice_Contact_Name: TWideStringField
+      FieldName = 'Office_Contact_Name'
+      Origin = 'Office_Contact_Name'
+      Size = 30
+    end
+    object qryAllSalesQuote: TIntegerField
+      FieldName = 'Quote'
+      Origin = 'Quote'
+      ReadOnly = True
+    end
+    object qryAllSalesTemplater_Name: TWideStringField
+      FieldName = 'Templater_Name'
+      Origin = 'Templater_Name'
+      Size = 50
+    end
+    object qryAllSalesFitter_Name: TWideStringField
+      FieldName = 'Fitter_Name'
+      Origin = 'Fitter_Name'
+      Size = 50
+    end
+    object qryAllSalesJob: TBCDField
+      FieldName = 'Job'
+      Origin = 'Job'
+      ReadOnly = True
+      Required = True
+      Precision = 4
+    end
+    object qryAllSalesJob_Status: TIntegerField
+      FieldName = 'Job_Status'
+      Origin = 'Job_Status'
+      ReadOnly = True
+      Required = True
+    end
+    object qryAllSalesWorktop_Weight: TFloatField
+      FieldName = 'Worktop_Weight'
+      Origin = 'Worktop_Weight'
+      ReadOnly = True
     end
   end
   object dtsAllSales: TDataSource
