@@ -1647,7 +1647,7 @@ begin
     end;
 
   Quote.QDate := dtpckQuoteDate.date;
-  Quote.DateRequired := PADateStr(edtFollowUpDate.text);
+  Quote.DateRequired := StrToDateTime(edtFollowUpDate.text);
   
   if edtExpiryDate.Text = '' then
     Quote.ExpiryDate := 0
