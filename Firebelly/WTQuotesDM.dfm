@@ -59,12 +59,12 @@ object dtmdlQuote: TdtmdlQuote
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qryAllQuotesDate_Required: TSQLTimeStampField
+    object qryAllQuotesDate_Required: TDateTimeField
       FieldName = 'Date_Required'
       Origin = 'Date_Required'
       Required = True
     end
-    object qryAllQuotesDate_Raised: TSQLTimeStampField
+    object qryAllQuotesDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
       Origin = 'Date_Raised'
       Required = True
@@ -158,7 +158,7 @@ object dtmdlQuote: TdtmdlQuote
       FieldName = 'Original_Quote'
       Origin = 'Original_Quote'
     end
-    object qryAllQuotesExpiry_Date: TSQLTimeStampField
+    object qryAllQuotesExpiry_Date: TDateTimeField
       FieldName = 'Expiry_Date'
       Origin = 'Expiry_Date'
     end
@@ -2502,7 +2502,7 @@ object dtmdlQuote: TdtmdlQuote
       Origin = 'Quote'
       Required = True
     end
-    object qryGetLinkedQuotesDate_Raised: TSQLTimeStampField
+    object qryGetLinkedQuotesDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
       Origin = 'Date_Raised'
       Required = True

@@ -98,8 +98,8 @@ type
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
     qryAllQuotesQuote: TIntegerField;
-    qryAllQuotesDate_Required: TSQLTimeStampField;
-    qryAllQuotesDate_Raised: TSQLTimeStampField;
+    qryAllQuotesDate_Required: TDateTimeField;
+    qryAllQuotesDate_Raised: TDateTimeField;
     qryAllQuotesCustomer: TIntegerField;
     qryAllQuotesDescription: TWideStringField;
     qryAllQuotesOperator: TIntegerField;
@@ -118,11 +118,11 @@ type
     qryAllQuotesGross_Price: TFloatField;
     qryAllQuotesQuote_Number: TFloatField;
     qryAllQuotesOriginal_Quote: TIntegerField;
-    qryAllQuotesExpiry_Date: TSQLTimeStampField;
+    qryAllQuotesExpiry_Date: TDateTimeField;
     qryGetLinkedQuotesOperator_Name: TWideStringField;
     qryGetLinkedQuotesAccount_Manager_Name: TWideStringField;
     qryGetLinkedQuotesQuote: TIntegerField;
-    qryGetLinkedQuotesDate_Raised: TSQLTimeStampField;
+    qryGetLinkedQuotesDate_Raised: TDateTimeField;
     qryGetLinkedQuotesDescription: TWideStringField;
     qryGetLinkedQuotesMaterial_Type_Description: TWideStringField;
     qryGetLinkedQuotesQuote_Number: TFloatField;

@@ -782,7 +782,7 @@ procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
 begin
   dtbsWorktops.FormatOptions.OwnMapRules := True;
   dtbsWorktops.FormatOptions.MapRules.Clear;
-  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTime, dtDateTimeStamp);
+  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

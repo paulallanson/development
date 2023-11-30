@@ -1,6 +1,7 @@
 object dtmdlPrices: TdtmdlPrices
-  Height = 361
-  Width = 794
+  Height = 451
+  Width = 993
+  PixelsPerInch = 120
   object qryAllPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
@@ -71,8 +72,8 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 43
-    Top = 34
+    Left = 54
+    Top = 43
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
       Origin = 'Worktop'
@@ -118,12 +119,12 @@ object dtmdlPrices: TdtmdlPrices
       Origin = 'Worktop_Group_Description'
       Size = 50
     end
-    object qryAllPricesEffective_Date: TSQLTimeStampField
+    object qryAllPricesEffective_Date: TDateTimeField
       FieldName = 'Effective_Date'
       Origin = 'Effective_Date'
       ReadOnly = True
     end
-    object qryAllPricesDate_Changed: TSQLTimeStampField
+    object qryAllPricesDate_Changed: TDateTimeField
       FieldName = 'Date_Changed'
       Origin = 'Date_Changed'
       ReadOnly = True
@@ -157,8 +158,8 @@ object dtmdlPrices: TdtmdlPrices
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 131
-    Top = 34
+    Left = 164
+    Top = 43
   end
   object qryDummyCurrent: TFDQuery
     SQL.Strings = (
@@ -236,8 +237,8 @@ object dtmdlPrices: TdtmdlPrices
       '        LEFT JOIN Worktop_thickness'
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 229
-    Top = 34
+    Left = 286
+    Top = 43
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -293,8 +294,8 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 336
-    Top = 34
+    Left = 420
+    Top = 43
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -303,8 +304,8 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 43
-    Top = 98
+    Left = 54
+    Top = 123
     ParamData = <
       item
         Name = 'Price_Pointer'

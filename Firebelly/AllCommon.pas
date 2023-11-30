@@ -1631,7 +1631,7 @@ begin
       Result := DateToStr(vIn);
   end
   else
-    if VarType(vIn) = VarString then
+    if (VarType(vIn) = VarUString) or (VarType(vIn) = VarString) then
   begin
     if Trim(vIn) = '' then
       Result := 0

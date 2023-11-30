@@ -1,10 +1,11 @@
 object dtmdlJob: TdtmdlJob
-  Height = 619
-  Width = 946
+  Height = 774
+  Width = 1183
+  PixelsPerInch = 120
   object dtsAllJobs: TDataSource
     DataSet = qryAllJobs
-    Left = 88
-    Top = 24
+    Left = 110
+    Top = 30
   end
   object qryAllJobs: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -26,8 +27,8 @@ object dtmdlJob: TdtmdlJob
       '      Job_Status.Job_Status = Job.Job_Status) ON'
       '      Operator.Operator = Job.Operator'
       'WHERE 1=1')
-    Left = 32
-    Top = 24
+    Left = 40
+    Top = 30
     object qryAllJobsJob: TFloatField
       FieldName = 'Job'
       Origin = 'Job'
@@ -58,29 +59,29 @@ object dtmdlJob: TdtmdlJob
       Required = True
       Size = 30
     end
-    object qryAllJobsDate_Raised: TSQLTimeStampField
+    object qryAllJobsDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
       Origin = 'Date_Raised'
       Required = True
     end
-    object qryAllJobsDate_Required: TSQLTimeStampField
+    object qryAllJobsDate_Required: TDateTimeField
       FieldName = 'Date_Required'
       Origin = 'Date_Required'
       Required = True
     end
-    object qryAllJobsPayment_due: TSQLTimeStampField
+    object qryAllJobsPayment_due: TDateTimeField
       FieldName = 'Payment_due'
       Origin = 'Payment_due'
     end
-    object qryAllJobsProduction_date: TSQLTimeStampField
+    object qryAllJobsProduction_date: TDateTimeField
       FieldName = 'Production_date'
       Origin = 'Production_date'
     end
-    object qryAllJobsTemplate_date: TSQLTimeStampField
+    object qryAllJobsTemplate_date: TDateTimeField
       FieldName = 'Template_date'
       Origin = 'Template_date'
     end
-    object qryAllJobsInstallation_date: TSQLTimeStampField
+    object qryAllJobsInstallation_date: TDateTimeField
       FieldName = 'Installation_date'
       Origin = 'Installation_date'
     end
@@ -106,15 +107,15 @@ object dtmdlJob: TdtmdlJob
       Origin = 'Operator'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object qryAllJobsProduction_date_Actual: TSQLTimeStampField
+    object qryAllJobsProduction_date_Actual: TDateTimeField
       FieldName = 'Production_date_Actual'
       Origin = 'Production_date_Actual'
     end
-    object qryAllJobsTemplate_date_actual: TSQLTimeStampField
+    object qryAllJobsTemplate_date_actual: TDateTimeField
       FieldName = 'Template_date_actual'
       Origin = 'Template_date_actual'
     end
-    object qryAllJobsInstallation_date_actual: TSQLTimeStampField
+    object qryAllJobsInstallation_date_actual: TDateTimeField
       FieldName = 'Installation_date_actual'
       Origin = 'Installation_date_actual'
     end
@@ -329,13 +330,13 @@ object dtmdlJob: TdtmdlJob
       '        LEFT JOIN Vat'
       '          ON Job.VAT = Vat.Vat'
       'WHERE 1=1')
-    Left = 144
-    Top = 24
+    Left = 180
+    Top = 30
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 288
-    Top = 32
+    Left = 360
+    Top = 40
   end
   object qryjHeader: TFDQuery
     ConnectionName = 'wt'
@@ -359,8 +360,8 @@ object dtmdlJob: TdtmdlJob
       '        ON Material_Type.Material_Type = Job.Material_Type)'
       '        ON Operator.Operator = Job.Operator'
       'WHERE Job.Job = :Job')
-    Left = 24
-    Top = 112
+    Left = 30
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -466,8 +467,8 @@ object dtmdlJob: TdtmdlJob
       '        :Risk_Notes'
       ')'
       '')
-    Left = 24
-    Top = 160
+    Left = 30
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -670,8 +671,8 @@ object dtmdlJob: TdtmdlJob
       '    Risk_Notes = :Risk_Notes,'
       '    Waste_Value = :Waste_Value'
       'WHERE Job = :Job')
-    Left = 24
-    Top = 296
+    Left = 30
+    Top = 370
     ParamData = <
       item
         Name = 'Operator'
@@ -847,8 +848,8 @@ object dtmdlJob: TdtmdlJob
       'WHERE Job = :Job and'
       '               Element_Number = :Element_Number and'
       'Element_Type ='#39'P'#39)
-    Left = 96
-    Top = 112
+    Left = 120
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -899,8 +900,8 @@ object dtmdlJob: TdtmdlJob
       ':No_of_Polished_Lengths,'
       ':Total_Upstand_Pieces'
       ')')
-    Left = 96
-    Top = 160
+    Left = 120
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -997,8 +998,8 @@ object dtmdlJob: TdtmdlJob
         'e'
       'WHERE Job = :Job and Element_Type = '#39'P'#39
       'ORDER BY Element_Number')
-    Left = 96
-    Top = 224
+    Left = 120
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -1017,8 +1018,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Extra.Price_unit'
       'WHERE Job = :Job and'
       '               Extra_no = :Extra_no')
-    Left = 160
-    Top = 112
+    Left = 200
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -1046,8 +1047,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Cutout.Price_unit'
       'WHERE Job = :Job and'
       '               Cutout_Number = :cutout_Number')
-    Left = 224
-    Top = 112
+    Left = 280
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -1075,8 +1076,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Edge.Price_unit'
       'WHERE Job = :Job and'
       '               Edge_Number = :Edge_Number')
-    Left = 288
-    Top = 112
+    Left = 360
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -1104,8 +1105,8 @@ object dtmdlJob: TdtmdlJob
       ':Price_unit,'
       ':Quantity,'
       ':Do_not_Discount)')
-    Left = 160
-    Top = 160
+    Left = 200
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -1150,8 +1151,8 @@ object dtmdlJob: TdtmdlJob
       ':Unit_Price,'
       ':Price_unit,'
       ':Quantity)')
-    Left = 224
-    Top = 160
+    Left = 280
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -1199,8 +1200,8 @@ object dtmdlJob: TdtmdlJob
       ':Unit_Price,'
       ':Price_unit,'
       ':Length)')
-    Left = 288
-    Top = 160
+    Left = 360
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -1253,8 +1254,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Cutout.Price_unit'
       'WHERE Job = :Job'
       'ORDER BY Cutout_Number')
-    Left = 160
-    Top = 224
+    Left = 200
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -1286,8 +1287,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Edge.Price_unit'
       'WHERE Job = :Job'
       'ORDER BY Edge_Number')
-    Left = 224
-    Top = 224
+    Left = 280
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -1312,8 +1313,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Job_Extra.Price_unit'
       'WHERE Job = :Job'
       'ORDER BY Extra_no')
-    Left = 288
-    Top = 224
+    Left = 360
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -1333,8 +1334,8 @@ object dtmdlJob: TdtmdlJob
       'Price_unit = :Price_Unit,'
       'Quantity = :Quantity'
       'WHERE Job = :Job')
-    Left = 96
-    Top = 296
+    Left = 120
+    Top = 370
     ParamData = <
       item
         Name = 'Element_Number'
@@ -1381,8 +1382,8 @@ object dtmdlJob: TdtmdlJob
       'Price_unit = :Price_Unit,'
       'Quantity = :Quantity'
       'WHERE Job = :Job')
-    Left = 164
-    Top = 296
+    Left = 205
+    Top = 370
     ParamData = <
       item
         Name = 'Element_Number'
@@ -1422,8 +1423,8 @@ object dtmdlJob: TdtmdlJob
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
         'State,Telephone_number, Fax_number, email_address, web_address'
       'from Address where Address = :Address')
-    Left = 24
-    Top = 344
+    Left = 30
+    Top = 430
     ParamData = <
       item
         Name = 'Address'
@@ -1436,8 +1437,8 @@ object dtmdlJob: TdtmdlJob
         'select Street, Locale,Town_City, Postcode, County_State,Telephon' +
         'e_number, Fax_number, email_address, web_address'
       'from Customer where Customer = :Customer')
-    Left = 96
-    Top = 344
+    Left = 120
+    Top = 430
     ParamData = <
       item
         Name = 'Customer'
@@ -1448,26 +1449,26 @@ object dtmdlJob: TdtmdlJob
     SQL.Strings = (
       'select * from Material_type'
       'order by Material_type.description')
-    Left = 24
-    Top = 392
+    Left = 30
+    Top = 490
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 96
-    Top = 392
+    Left = 120
+    Top = 490
   end
   object qryOperator: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator')
-    Left = 160
-    Top = 392
+    Left = 200
+    Top = 490
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 216
-    Top = 392
+    Left = 270
+    Top = 490
   end
   object qryjUpstand: TFDQuery
     ConnectionName = 'wt'
@@ -1492,8 +1493,8 @@ object dtmdlJob: TdtmdlJob
       'WHERE Job = :Job and'
       '               Element_Number = :Element_Number and'
       'Element_Type = '#39'U'#39)
-    Left = 352
-    Top = 112
+    Left = 440
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -1547,8 +1548,8 @@ object dtmdlJob: TdtmdlJob
         'e'
       'WHERE Job = :Job and Element_Type = '#39'U'#39
       'ORDER BY Element_Number')
-    Left = 360
-    Top = 224
+    Left = 450
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -1560,8 +1561,8 @@ object dtmdlJob: TdtmdlJob
       'update company'
       'set last_job_number = :last_job_number'
       'where company = 1')
-    Left = 280
-    Top = 392
+    Left = 350
+    Top = 490
     ParamData = <
       item
         Name = 'last_job_number'
@@ -1572,16 +1573,16 @@ object dtmdlJob: TdtmdlJob
     SQL.Strings = (
       'select Last_Job_Number'
       'from Company')
-    Left = 224
-    Top = 8
+    Left = 280
+    Top = 10
   end
   object qryDelAddress: TFDQuery
     ConnectionName = 'wT'
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
-    Left = 488
-    Top = 168
+    Left = 610
+    Top = 210
     ParamData = <
       item
         Name = 'address'
@@ -1592,8 +1593,8 @@ object dtmdlJob: TdtmdlJob
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 488
-    Top = 8
+    Left = 610
+    Top = 10
   end
   object qryAddAddress: TFDQuery
     ConnectionName = 'wT'
@@ -1618,8 +1619,8 @@ object dtmdlJob: TdtmdlJob
       ':County_state,'
       ':Telephone_number,'
       ':email_address)')
-    Left = 488
-    Top = 64
+    Left = 610
+    Top = 80
     ParamData = <
       item
         Name = 'Address'
@@ -1663,8 +1664,8 @@ object dtmdlJob: TdtmdlJob
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 488
-    Top = 112
+    Left = 610
+    Top = 140
     ParamData = <
       item
         Name = 'Address_Name'
@@ -1699,8 +1700,8 @@ object dtmdlJob: TdtmdlJob
     SQL.Strings = (
       'select * from Vat'
       'where vat = :vat')
-    Left = 488
-    Top = 216
+    Left = 610
+    Top = 270
     ParamData = <
       item
         Name = 'vat'
@@ -1771,8 +1772,8 @@ object dtmdlJob: TdtmdlJob
       '    Quote_Status.Quote_Status = Quote.Quote_Status) ON'
       '    Vat.Vat = Quote.Vat'
       'WHERE Quote.Quote = :Quote')
-    Left = 24
-    Top = 72
+    Left = 30
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1819,8 +1820,8 @@ object dtmdlJob: TdtmdlJob
         'e'
       'WHERE Quote = :Quote and Element_Type = '#39'P'#39
       'ORDER BY Element_Number')
-    Left = 96
-    Top = 72
+    Left = 120
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1854,8 +1855,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Quote_Cutout.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY CutOut_Number')
-    Left = 160
-    Top = 72
+    Left = 200
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1887,8 +1888,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Quote_Edge.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY Edge_Number')
-    Left = 224
-    Top = 72
+    Left = 280
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1913,8 +1914,8 @@ object dtmdlJob: TdtmdlJob
       '        Price_unit.Price_unit = Quote_Extra.Price_unit'
       'WHERE Quote = :Quote'
       'ORDER BY Extra_No')
-    Left = 288
-    Top = 72
+    Left = 360
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1964,8 +1965,8 @@ object dtmdlJob: TdtmdlJob
         'e'
       'WHERE Quote = :Quote and Element_Type = '#39'U'#39
       'ORDER BY Element_Number')
-    Left = 360
-    Top = 72
+    Left = 450
+    Top = 90
     ParamData = <
       item
         Name = 'Quote'
@@ -1978,8 +1979,8 @@ object dtmdlJob: TdtmdlJob
       'from Job_internal_Note, Operator'
       'where Job = :Job and Internal_Note = :Internal_Note and'
       'Job_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 112
+    Left = 520
+    Top = 140
     ParamData = <
       item
         Name = 'Job'
@@ -2003,8 +2004,8 @@ object dtmdlJob: TdtmdlJob
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 416
-    Top = 160
+    Left = 520
+    Top = 200
     ParamData = <
       item
         Name = 'Job'
@@ -2029,8 +2030,8 @@ object dtmdlJob: TdtmdlJob
       'from Job_internal_Note, Operator'
       'where Job = :Job and'
       'Job_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 224
+    Left = 520
+    Top = 280
     ParamData = <
       item
         Name = 'Job'
@@ -2042,8 +2043,8 @@ object dtmdlJob: TdtmdlJob
       'Update Quote'
       'set Quote_Status = 30'
       'where Quote =:quote')
-    Left = 560
-    Top = 8
+    Left = 700
+    Top = 10
     ParamData = <
       item
         Name = 'quote'
@@ -2055,8 +2056,8 @@ object dtmdlJob: TdtmdlJob
       'Update Sales_Order_line'
       'set Job = :Job'
       'where Quote =:quote')
-    Left = 560
-    Top = 64
+    Left = 700
+    Top = 80
     ParamData = <
       item
         Name = 'Job'
@@ -2071,8 +2072,8 @@ object dtmdlJob: TdtmdlJob
       'Update Sales_Order'
       'set Sales_order_Status = :Sales_Order_Status'
       'where Sales_order =:Sales_Order')
-    Left = 560
-    Top = 120
+    Left = 700
+    Top = 150
     ParamData = <
       item
         Name = 'Sales_Order_Status'
@@ -2089,8 +2090,8 @@ object dtmdlJob: TdtmdlJob
       'where sales_order_line.Quote = :Quote'
       'and'
       'Sales_order_line.sales_order = sales_order.sales_order')
-    Left = 560
-    Top = 168
+    Left = 700
+    Top = 210
     ParamData = <
       item
         Name = 'Quote'
@@ -2103,8 +2104,8 @@ object dtmdlJob: TdtmdlJob
       'set Job_Status = :Job_Status,'
       'Installation_date_Actual = :Installation_Date_Actual'
       'where job = :job')
-    Left = 488
-    Top = 280
+    Left = 610
+    Top = 350
     ParamData = <
       item
         Name = 'Job_Status'
@@ -2127,8 +2128,8 @@ object dtmdlJob: TdtmdlJob
       'from Sales_order_line, Sales_Order'
       'where Job = :Job and'
       'Sales_Order_Line.sales_Order = Sales_order.Sales_order')
-    Left = 560
-    Top = 216
+    Left = 700
+    Top = 270
     ParamData = <
       item
         Name = 'Job'
@@ -2158,8 +2159,8 @@ object dtmdlJob: TdtmdlJob
       ' SOL.job = job.job) as total_complete'
       'from Sales_order_line'
       'where Sales_order_line.sales_order = :sales_order')
-    Left = 560
-    Top = 272
+    Left = 700
+    Top = 340
     ParamData = <
       item
         Name = 'sales_order'
@@ -2209,8 +2210,8 @@ object dtmdlJob: TdtmdlJob
       '          ON Fitter.Fitter = Job_Remedial.Fitter'
       'WHERE Job = :Job and Remedial_Number = :Remedial_Number'
       'ORDER BY Remedial_Number')
-    Left = 24
-    Top = 448
+    Left = 30
+    Top = 560
     ParamData = <
       item
         Name = 'Job'
@@ -2276,8 +2277,8 @@ object dtmdlJob: TdtmdlJob
       ':Customer,'
       ':Office_Notes'
       ')')
-    Left = 96
-    Top = 448
+    Left = 120
+    Top = 560
     ParamData = <
       item
         Name = 'Job'
@@ -2403,8 +2404,8 @@ object dtmdlJob: TdtmdlJob
       '          ON Job_Remedial.Remedial = Sales_Order.Remedial_ID'
       'WHERE Job = :Job'
       'ORDER BY Job_Remedial.Remedial_Number')
-    Left = 160
-    Top = 448
+    Left = 200
+    Top = 560
     ParamData = <
       item
         Name = 'Job'
@@ -2416,13 +2417,13 @@ object dtmdlJob: TdtmdlJob
       'select * '
       'from Fitter'
       'Order By Fitter_Name')
-    Left = 648
-    Top = 16
+    Left = 810
+    Top = 20
   end
   object dtsFitter: TDataSource
     DataSet = qryFitter
-    Left = 688
-    Top = 16
+    Left = 860
+    Top = 20
   end
   object qryDesigner: TFDQuery
     ConnectionName = 'WT'
@@ -2430,18 +2431,18 @@ object dtmdlJob: TdtmdlJob
       'select *'
       'from Designer'
       'order by Designer_Name')
-    Left = 744
-    Top = 16
+    Left = 930
+    Top = 20
   end
   object dtsDesigner: TDataSource
     DataSet = qryDesigner
-    Left = 816
-    Top = 16
+    Left = 1020
+    Top = 20
   end
   object dtsBranch: TDataSource
     DataSet = qryBranch
-    Left = 816
-    Top = 152
+    Left = 1020
+    Top = 190
   end
   object qryBranch: TFDQuery
     ConnectionName = 'WT'
@@ -2450,8 +2451,8 @@ object dtmdlJob: TdtmdlJob
       'from Customer_Branch'
       'where Customer = :Customer'
       'order by Branch_Name')
-    Left = 744
-    Top = 152
+    Left = 930
+    Top = 190
     ParamData = <
       item
         Name = 'Customer'
@@ -2464,13 +2465,13 @@ object dtmdlJob: TdtmdlJob
       'from Inactive_Reason'
       'where Inactive_Type = '#39'Q'#39
       'order by Inactive_Reason_Descr')
-    Left = 24
-    Top = 512
+    Left = 30
+    Top = 640
   end
   object dtsReason: TDataSource
     DataSet = qryReason
-    Left = 96
-    Top = 512
+    Left = 120
+    Top = 640
   end
   object qryAddRemedial: TFDQuery
     ConnectionName = 'WT'
@@ -2497,8 +2498,8 @@ object dtmdlJob: TdtmdlJob
       ':Remedial_Dept,'
       ':Remedial_Category'
       ')')
-    Left = 280
-    Top = 448
+    Left = 350
+    Top = 560
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2534,8 +2535,8 @@ object dtmdlJob: TdtmdlJob
       'SELECT  Remedial.ID'
       'FROM Remedial'
       'WHERE Job = :Job and Remedial_Number = :Remedial_Number')
-    Left = 216
-    Top = 448
+    Left = 270
+    Top = 560
     ParamData = <
       item
         Name = 'Job'

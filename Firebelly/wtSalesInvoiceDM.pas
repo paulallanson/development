@@ -96,7 +96,7 @@ type
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
     qrySIHeaderBaseOld: TFDQuery;
-    qrySCHeaderGridInvoice_Date: TSQLTimeStampField;
+    qrySCHeaderGridInvoice_Date: TDateTimeField;
     qrySCHeaderGridCustomer: TIntegerField;
     qrySCHeaderGridInactive: TWideStringField;
     qrySCHeaderGridInvoice_or_Credit: TWideStringField;
@@ -114,7 +114,7 @@ type
     qrySCHeaderGridDescription: TWideStringField;
     qrySCHeaderGridCustomer_Name: TWideStringField;
     qrySCHeaderGridIs_Retail_Customer: TWideStringField;
-    qrySIHeaderGridInvoice_Date: TSQLTimeStampField;
+    qrySIHeaderGridInvoice_Date: TDateTimeField;
     qrySIHeaderGridCustomer: TIntegerField;
     qrySIHeaderGridInactive: TWideStringField;
     qrySIHeaderGridInvoice_or_Credit: TWideStringField;
