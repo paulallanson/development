@@ -69,8 +69,8 @@ type
     qryAllPurchasesSupplier: TIntegerField;
     qryAllPurchasesDescriptive_Reference: TWideStringField;
     qryAllPurchasesSupplier_Name: TWideStringField;
-    qryAllPurchasesDate_Raised: TSQLTimeStampField;
-    qryAllPurchasesDate_Required: TSQLTimeStampField;
+    qryAllPurchasesDate_Raised: TDateTimeField;
+    qryAllPurchasesDate_Required: TDateTimeField;
     qryAllPurchasesOperator: TIntegerField;
     qryAllPurchasesReference: TWideStringField;
     qryAllPurchasesOn_Hold: TWideStringField;
@@ -80,7 +80,7 @@ type
     qryAllPurchasesGoods_Receipt_Number: TWideStringField;
     qryAllPurchasesPurchase_Order_Status: TIntegerField;
     qryAllPurchasesStatus_Description: TWideStringField;
-    qryAllPurchasesCut_Off_Date: TSQLTimeStampField;
+    qryAllPurchasesCut_Off_Date: TDateTimeField;
     qryAllPurchasesContact_No: TIntegerField;
     qryAllPurchasesContact_name: TWideStringField;
     qryAllPurchasesNotes: TWideStringField;

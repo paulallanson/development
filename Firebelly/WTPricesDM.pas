@@ -24,8 +24,8 @@ type
     qryAllPricesMaterial_Type_Description: TWideStringField;
     qryAllPricesWorktop_Group: TIntegerField;
     qryAllPricesWorktop_Group_Description: TWideStringField;
-    qryAllPricesEffective_Date: TSQLTimeStampField;
-    qryAllPricesDate_Changed: TSQLTimeStampField;
+    qryAllPricesEffective_Date: TDateTimeField;
+    qryAllPricesDate_Changed: TDateTimeField;
     qryAllPricesUnit_Price: TCurrencyField;
     qryAllPricesUnit_Cost: TCurrencyField;
     qryAllPricesPrice_Unit_Description: TWideStringField;

@@ -101,8 +101,8 @@ type
     qryGetLinkedQuotesSales_order_Line_no: TIntegerField;
     qryGetLinkedQuotesQuote_Number: TFloatField;
     qryGetLinkedQuotesQuote: TIntegerField;
-    qryGetLinkedQuotesDate_Raised: TSQLTimeStampField;
-    qryGetLinkedQuotesDate_Required: TSQLTimeStampField;
+    qryGetLinkedQuotesDate_Raised: TDateTimeField;
+    qryGetLinkedQuotesDate_Required: TDateTimeField;
     qryGetLinkedQuotesDescription: TWideStringField;
     qryGetLinkedQuotesOriginal_Quote: TIntegerField;
     qryGetLinkedQuotesOperator_Name: TWideStringField;
@@ -120,8 +120,8 @@ type
     qrySOPurchasesQuantity: TFloatField;
     qrySOPurchasesTotal_Cost: TFloatField;
     qrySOPurchasesSlab_Unit_Cost: TFloatField;
-    qrySOPurchasesDate_Raised: TSQLTimeStampField;
-    qrySOPurchasesDate_Required: TSQLTimeStampField;
+    qrySOPurchasesDate_Raised: TDateTimeField;
+    qrySOPurchasesDate_Required: TDateTimeField;
     qrySOPurchasesOperator: TIntegerField;
     qrySOPurchasesOperator_Name: TWideStringField;
     qrySOPurchasesOffice_Contact: TIntegerField;
@@ -151,8 +151,8 @@ type
     qryVATSSMA_TimeStamp: TBytesField;
     qryVATReverse_Charge_VAT_Rate: TFloatField;
     qryAllSalesSales_Order: TIntegerField;
-    qryAllSalesDate_Raised: TSQLTimeStampField;
-    qryAllSalesDate_Required: TSQLTimeStampField;
+    qryAllSalesDate_Raised: TDateTimeField;
+    qryAllSalesDate_Required: TDateTimeField;
     qryAllSalesCustomer: TIntegerField;
     qryAllSalesReference: TWideStringField;
     qryAllSalesExtra_Notes: TIntegerField;
@@ -170,11 +170,11 @@ type
     qryAllSalesCustomer_Name: TWideStringField;
     qryAllSalesInactive_Reason: TIntegerField;
     qryAllSalesAddress: TIntegerField;
-    qryAllSalesTemplate_Date: TSQLTimeStampField;
+    qryAllSalesTemplate_Date: TDateTimeField;
     qryAllSalesDate_Type: TWideStringField;
     qryAllSalesMaterials_Required: TWideStringField;
-    qryAllSalesMaterials_Reqd_Date: TSQLTimeStampField;
-    qryAllSalesMaterials_Recd_Date: TSQLTimeStampField;
+    qryAllSalesMaterials_Reqd_Date: TDateTimeField;
+    qryAllSalesMaterials_Recd_Date: TDateTimeField;
     qryAllSalesInstall_Name: TWideStringField;
     qryAllSalesInstall_Phone: TWideStringField;
     qryAllSalesOn_Hold: TWideStringField;
