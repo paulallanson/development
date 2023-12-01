@@ -783,6 +783,7 @@ begin
   dtbsWorktops.FormatOptions.OwnMapRules := True;
   dtbsWorktops.FormatOptions.MapRules.Clear;
   dtbsWorktops.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
+  dtbsWorktops.FormatOptions.MapRules.Add(dtBCD, dtDouble);
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

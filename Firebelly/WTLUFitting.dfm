@@ -140,7 +140,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 963
+      Left = 957
       Top = 15
       Width = 59
       Height = 13
@@ -157,7 +157,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1127
+      Left = 1121
       Top = 9
       Width = 75
       Height = 25
@@ -175,7 +175,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1028
+      Left = 1022
       Top = 11
       Width = 73
       Height = 21
@@ -411,7 +411,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end
       item
         Expanded = False
-        FieldName = 'Fitting_Date_New'
+        FieldName = 'Date_Required'
         Title.Caption = 'Date Required'
         Visible = True
       end
@@ -449,7 +449,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end
       item
         Expanded = False
-        FieldName = 'Status_Text'
+        FieldName = 'sales_order_status_desc'
         Title.Caption = 'Status'
         Width = 134
         Visible = True
@@ -470,7 +470,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end
       item
         Expanded = False
-        FieldName = 'Template_Date_New'
+        FieldName = 'Template_Date'
         Title.Caption = 'Template Date'
         Width = 123
         Visible = True

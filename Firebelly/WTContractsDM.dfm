@@ -1,10 +1,11 @@
 object dtmdlContract: TdtmdlContract
-  Height = 522
-  Width = 1084
+  Height = 653
+  Width = 1355
+  PixelsPerInch = 120
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 216
-    Top = 8
+    Left = 270
+    Top = 10
   end
   object qryCQHeader: TFDQuery
     ConnectionName = 'wt'
@@ -54,8 +55,8 @@ object dtmdlContract: TdtmdlContract
       '  Contract_Quote.Contract_Quote = :Contract_Quote'
       ''
       '')
-    Left = 24
-    Top = 120
+    Left = 30
+    Top = 150
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -111,8 +112,8 @@ object dtmdlContract: TdtmdlContract
       '        :Revenue_Centre'
       ')'
       '')
-    Left = 104
-    Top = 120
+    Left = 130
+    Top = 150
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -215,8 +216,8 @@ object dtmdlContract: TdtmdlContract
       '    Quote_Number = :Quote_Number,'
       '    Revenue_Centre = :Revenue_Centre'
       'WHERE Contract_Quote = :Contract_Quote')
-    Left = 200
-    Top = 120
+    Left = 250
+    Top = 150
     ParamData = <
       item
         Name = 'Account_Manager'
@@ -290,8 +291,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'select Last_Contract_Quote_Number'
       'from Company')
-    Left = 272
-    Top = 8
+    Left = 340
+    Top = 10
   end
   object qryAllContracts: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -332,19 +333,19 @@ object dtmdlContract: TdtmdlContract
         '        ON Inactive_reason.Inactive_reason = Contract_Quote.Inac' +
         'tive_Reason'
       'WHERE 1=1')
-    Left = 24
-    Top = 8
+    Left = 30
+    Top = 10
     object qryAllContractsContract_Quote: TIntegerField
       FieldName = 'Contract_Quote'
       Origin = 'Contract_Quote'
       Required = True
     end
-    object qryAllContractsContract_Date: TSQLTimeStampField
+    object qryAllContractsContract_Date: TDateTimeField
       FieldName = 'Contract_Date'
       Origin = 'Contract_Date'
       Required = True
     end
-    object qryAllContractsExpiry_Date: TSQLTimeStampField
+    object qryAllContractsExpiry_Date: TDateTimeField
       FieldName = 'Expiry_Date'
       Origin = 'Expiry_Date'
     end
@@ -444,8 +445,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsAllContracts: TDataSource
     DataSet = qryAllContracts
-    Left = 96
-    Top = 8
+    Left = 120
+    Top = 10
   end
   object qrydummy: TFDQuery
     SQL.Strings = (
@@ -486,8 +487,8 @@ object dtmdlContract: TdtmdlContract
         '        ON Inactive_reason.Inactive_reason = Contract_Quote.Inac' +
         'tive_Reason'
       'WHERE 1=1')
-    Left = 160
-    Top = 8
+    Left = 200
+    Top = 10
   end
   object qryCustContracts: TFDQuery
     ConnectionName = 'WT'
@@ -497,8 +498,8 @@ object dtmdlContract: TdtmdlContract
       'where Customer = :Customer and'
       'Description LIKE :Description'
       'order by Quote desc')
-    Left = 24
-    Top = 64
+    Left = 30
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -511,8 +512,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsContracts: TDataSource
     DataSet = qryCustContracts
-    Left = 96
-    Top = 64
+    Left = 120
+    Top = 80
   end
   object qryOperator: TFDQuery
     ConnectionName = 'wt'
@@ -520,13 +521,13 @@ object dtmdlContract: TdtmdlContract
       'select *'
       'from Operator'
       'ORDER BY Operator.Operator_Name')
-    Left = 688
-    Top = 72
+    Left = 860
+    Top = 90
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 760
-    Top = 72
+    Left = 950
+    Top = 90
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'wt'
@@ -534,8 +535,8 @@ object dtmdlContract: TdtmdlContract
       'update company'
       'set last_Contract_Quote_number = :last_Contract_Quote_number'
       'where company = 1')
-    Left = 272
-    Top = 56
+    Left = 340
+    Top = 70
     ParamData = <
       item
         Name = 'last_Contract_Quote_number'
@@ -560,8 +561,8 @@ object dtmdlContract: TdtmdlContract
       ':Supplier_Reference,'
       ':Number_of_Units'
       ')')
-    Left = 24
-    Top = 208
+    Left = 30
+    Top = 260
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -590,8 +591,8 @@ object dtmdlContract: TdtmdlContract
       'FROM Contract_Quote_Line'
       'WHERE Contract_Quote = :Contract_Quote'
       'ORDER BY Line_Number')
-    Left = 96
-    Top = 208
+    Left = 120
+    Top = 260
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -638,8 +639,8 @@ object dtmdlContract: TdtmdlContract
         'D'
       '  Contract_Quote_Line_Option.Line_Number = :Line_Number'
       'ORDER BY Option_Number')
-    Left = 32
-    Top = 272
+    Left = 40
+    Top = 340
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -689,8 +690,8 @@ object dtmdlContract: TdtmdlContract
       ':Markup_Percentage,'
       ':Original_Quote'
       ')')
-    Left = 128
-    Top = 272
+    Left = 160
+    Top = 340
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -745,8 +746,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dsCustQuotes: TDataSource
     DataSet = qryCustQuotes
-    Left = 760
-    Top = 136
+    Left = 950
+    Top = 170
   end
   object qryCustQuotes: TFDQuery
     ConnectionName = 'wt'
@@ -800,16 +801,16 @@ object dtmdlContract: TdtmdlContract
       'WHERE Quote.Customer = :customer AND'
       'Quote.Contract_Quote <> '#39'Y'#39
       'ORDER BY Quote.Quote desc')
-    Left = 680
-    Top = 136
+    Left = 850
+    Top = 170
     ParamData = <
       item
         Name = 'customer'
       end>
   end
   object dsDummy: TDataSource
-    Left = 832
-    Top = 136
+    Left = 1040
+    Top = 170
   end
   object qryGetCustomerWorktop: TFDQuery
     ConnectionName = 'WT'
@@ -817,8 +818,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT Top 1 Worktop'
       'FROM Customer_Worktop'
       'WHERE Customer = :Customer AND Group_Number = :Group_Number')
-    Left = 48
-    Top = 336
+    Left = 60
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -858,8 +859,8 @@ object dtmdlContract: TdtmdlContract
       'where Customer = :Customer and'
       'Group_Number = :Group_Number and'
       'Thickness = :Thickness')
-    Left = 152
-    Top = 336
+    Left = 190
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -878,8 +879,8 @@ object dtmdlContract: TdtmdlContract
       'from Contract_Quote_internal_Note, Operator'
       'where Contract_Quote = :Contract_Quote and'
       'Contract_Quote_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 224
+    Left = 520
+    Top = 280
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -900,8 +901,8 @@ object dtmdlContract: TdtmdlContract
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 416
-    Top = 160
+    Left = 520
+    Top = 200
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -951,8 +952,8 @@ object dtmdlContract: TdtmdlContract
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'cutout = :cutout')
-    Left = 48
-    Top = 392
+    Left = 60
+    Top = 490
     ParamData = <
       item
         Name = 'Material_type'
@@ -990,8 +991,8 @@ object dtmdlContract: TdtmdlContract
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'Edge_profile = :Edge_profile')
-    Left = 48
-    Top = 440
+    Left = 60
+    Top = 550
     ParamData = <
       item
         Name = 'Material_type'
@@ -1009,8 +1010,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Address'
       'WHERE Address = :Address')
-    Left = 488
-    Top = 160
+    Left = 610
+    Top = 200
     ParamData = <
       item
         Name = 'Address'
@@ -1021,8 +1022,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 488
-    Top = 8
+    Left = 610
+    Top = 10
   end
   object qryAddAddress: TFDQuery
     ConnectionName = 'wT'
@@ -1047,8 +1048,8 @@ object dtmdlContract: TdtmdlContract
       ':County_state,'
       ':Telephone_number,'
       ':email_address)')
-    Left = 488
-    Top = 64
+    Left = 610
+    Top = 80
     ParamData = <
       item
         Name = 'Address'
@@ -1092,8 +1093,8 @@ object dtmdlContract: TdtmdlContract
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 488
-    Top = 112
+    Left = 610
+    Top = 140
     ParamData = <
       item
         Name = 'Address_Name'
@@ -1128,8 +1129,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
-    Left = 488
-    Top = 216
+    Left = 610
+    Top = 270
     ParamData = <
       item
         Name = 'address'
@@ -1143,8 +1144,8 @@ object dtmdlContract: TdtmdlContract
       '    Address = :Address,'
       '    Customer_Name = :Customer_Name'
       'where Address = :Original_Address')
-    Left = 584
-    Top = 8
+    Left = 730
+    Top = 10
     ParamData = <
       item
         Name = 'Customer'
@@ -1168,8 +1169,8 @@ object dtmdlContract: TdtmdlContract
       '    Address = :Address,'
       '    Customer_Name = :Customer_Name'
       'where Address = :Original_Address')
-    Left = 584
-    Top = 64
+    Left = 730
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -1192,8 +1193,8 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop_Group'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 192
+    Left = 860
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -1209,8 +1210,8 @@ object dtmdlContract: TdtmdlContract
       
         'Values (:Customer, :Group_Number, :Group_Description, :Material_' +
         'Type, '#39'N'#39')')
-    Left = 688
-    Top = 240
+    Left = 860
+    Top = 300
     ParamData = <
       item
         Name = 'Customer'
@@ -1232,8 +1233,8 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 288
+    Left = 860
+    Top = 360
     ParamData = <
       item
         Name = 'Customer'
@@ -1247,8 +1248,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'INSERT INTO Customer_Worktop'
       'Values (:Customer, :Group_Number, :Worktop, '#39'N'#39')')
-    Left = 688
-    Top = 336
+    Left = 860
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -1274,8 +1275,8 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop_Group_Thick'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 384
+    Left = 860
+    Top = 480
     ParamData = <
       item
         Name = 'Customer'
@@ -1289,8 +1290,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'INSERT INTO Customer_Worktop_Group_Thick'
       'Values (:Customer, :Group_Number, :Thickness, :Price_Pointer)')
-    Left = 688
-    Top = 440
+    Left = 860
+    Top = 550
     ParamData = <
       item
         Name = 'Customer'
@@ -1313,8 +1314,8 @@ object dtmdlContract: TdtmdlContract
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number AND'
       '               Worktop = :Worktop')
-    Left = 784
-    Top = 296
+    Left = 980
+    Top = 370
     ParamData = <
       item
         Name = 'Customer'
@@ -1334,8 +1335,8 @@ object dtmdlContract: TdtmdlContract
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number AND'
       '               Thickness = :Thickness')
-    Left = 792
-    Top = 392
+    Left = 990
+    Top = 490
     ParamData = <
       item
         Name = 'Customer'
@@ -1353,8 +1354,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT max(Quote_Number) as Last_ReQuote'
       'FROM Contract_Quote'
       'WHERE Original_Quote = :Original_Quote')
-    Left = 352
-    Top = 8
+    Left = 440
+    Top = 10
     ParamData = <
       item
         Name = 'Original_Quote'
@@ -1366,8 +1367,8 @@ object dtmdlContract: TdtmdlContract
       'Select Contract_Quote'
       'From Contract_Quote'
       'Where Contract_Description = :GUID')
-    Left = 328
-    Top = 424
+    Left = 410
+    Top = 530
     ParamData = <
       item
         Name = 'GUID'
@@ -1381,8 +1382,8 @@ object dtmdlContract: TdtmdlContract
       'Delete From Contract_Quote'
       'Where'
       '(Contract_Quote = :Contract_Quote)')
-    Left = 392
-    Top = 424
+    Left = 490
+    Top = 530
     ParamData = <
       item
         Name = 'Contract_Quote'
@@ -1405,8 +1406,8 @@ object dtmdlContract: TdtmdlContract
       ''
       ''
       ' ')
-    Left = 452
-    Top = 424
+    Left = 565
+    Top = 530
     ParamData = <
       item
         Name = 'GUID'
@@ -1442,8 +1443,8 @@ object dtmdlContract: TdtmdlContract
       '    Quote_Number = :Quote_Number,'
       '    Revenue_Centre = :Revenue_Centre'
       'WHERE Contract_Quote = :Contract_Quote')
-    Left = 304
-    Top = 120
+    Left = 380
+    Top = 150
     ParamData = <
       item
         Name = 'Account_Manager'
@@ -1528,8 +1529,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT Supplier'
       'FROM Customer_Worktop_Group'
       'WHERE Customer = :Customer AND Group_Number = :Group_Number')
-    Left = 152
-    Top = 392
+    Left = 190
+    Top = 490
     ParamData = <
       item
         Name = 'Customer'
@@ -1573,8 +1574,8 @@ object dtmdlContract: TdtmdlContract
       '  Customer_Cutout_Edge_Group.Material_Type = :Material_type and'
       '  Customer_Cutout.Edge_Type = :Edge_Type and'
       '  Customer_Cutout.Cutout = :cutout')
-    Left = 336
-    Top = 336
+    Left = 420
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -1624,8 +1625,8 @@ object dtmdlContract: TdtmdlContract
       '  Customer_Cutout_Edge_Group.Material_Type = :Material_type and'
       '  Customer_Edge.Edge_Type = :Edge_Type and'
       '  Customer_Edge.Edge_Profile = :Edge_Profile')
-    Left = 448
-    Top = 336
+    Left = 560
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -1646,8 +1647,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT Length, Depth'
       'FROM Material_Type_Slab_Size'
       'WHERE Material_Type = :Material_Type AND Length >= :Length')
-    Left = 416
-    Top = 280
+    Left = 520
+    Top = 350
     ParamData = <
       item
         Name = 'Material_Type'
@@ -1662,12 +1663,12 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 856
-    Top = 24
+    Left = 1070
+    Top = 30
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 944
-    Top = 24
+    Left = 1180
+    Top = 30
   end
 end
