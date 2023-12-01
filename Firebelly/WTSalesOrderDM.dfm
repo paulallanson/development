@@ -69,6 +69,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 40
     Top = 30
     object qryAllSalesSales_Order: TIntegerField
+      Alignment = taLeftJustify
       FieldName = 'Sales_Order'
       Origin = 'Sales_Order'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
