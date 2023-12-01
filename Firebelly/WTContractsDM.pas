@@ -67,8 +67,8 @@ type
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
     qryAllContractsContract_Quote: TIntegerField;
-    qryAllContractsContract_Date: TSQLTimeStampField;
-    qryAllContractsExpiry_Date: TSQLTimeStampField;
+    qryAllContractsContract_Date: TDateTimeField;
+    qryAllContractsExpiry_Date: TDateTimeField;
     qryAllContractsContract_Quote_Number: TFloatField;
     qryAllContractsCustomer: TIntegerField;
     qryAllContractsContract_Description: TWideStringField;
