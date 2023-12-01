@@ -220,7 +220,7 @@ type
     qryAllSalesQuote: TIntegerField;
     qryAllSalesTemplater_Name: TWideStringField;
     qryAllSalesFitter_Name: TWideStringField;
-    qryAllSalesJob: TBCDField;
+    qryAllSalesJob: TFloatField;
     qryAllSalesJob_Status: TIntegerField;
     qryAllSalesWorktop_Weight: TFloatField;
     procedure qryAllSalesStatus_TextGetText(Sender: TField;
