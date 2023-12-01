@@ -403,7 +403,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'Fitter_Name'
       Size = 50
     end
-    object qryAllSalesJob: TBCDField
+    object qryAllSalesJob: TFloatField
       FieldName = 'Job'
       Origin = 'Job'
       ReadOnly = True
