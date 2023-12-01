@@ -10,14 +10,14 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qrySalesOrders
@@ -77,31 +77,31 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
     PreviewLeft = 0
     PreviewTop = 0
     object qrbGroupHeader: TQRGroup
-      Left = 38
-      Top = 145
-      Width = 1047
-      Height = 26
+      Left = 47
+      Top = 181
+      Width = 1309
+      Height = 33
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        68.791666666666670000
-        2770.187500000000000000)
+        69.850000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
       ReprintOnNewPage = False
       object qrlblSortBy: TQRLabel
         Left = 0
-        Top = 8
-        Width = 47
-        Height = 17
+        Top = 10
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           21.166666666666670000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -111,7 +111,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -122,15 +122,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
-        Left = 96
-        Top = 8
-        Width = 80
-        Height = 17
+        Left = 120
+        Top = 10
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           254.000000000000000000
           21.166666666666670000
-          211.666666666666700000)
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -141,7 +141,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -154,15 +154,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblPhone: TQRLabel
-        Left = 272
-        Top = 8
-        Width = 74
-        Height = 17
+        Left = 340
+        Top = 10
+        Width = 91
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           719.666666666666700000
           21.166666666666670000
-          195.791666666666700000)
+          192.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -172,7 +172,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -183,15 +183,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrPhoneText: TQRDBText
-        Left = 352
-        Top = 8
-        Width = 90
-        Height = 17
+        Left = 440
+        Top = 10
+        Width = 107
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           931.333333333333300000
           21.166666666666670000
-          238.125000000000000000)
+          226.483333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -202,7 +202,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'telephone_number'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -216,10 +216,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 107
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 134
       Frame.DrawBottom = True
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
@@ -227,21 +227,21 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        283.104166666666700000
-        2770.187500000000000000)
+        283.633333333333300000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
-        Left = 410
-        Top = 8
-        Width = 213
-        Height = 19
+        Left = 511
+        Top = 10
+        Width = 270
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1084.791666666667000000
+          50.800000000000000000
+          1081.616666666667000000
           21.166666666666670000
-          563.562500000000000000)
+          571.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -251,7 +251,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -262,15 +262,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 12
       end
       object QRSysData1: TQRSysData
-        Left = 968
-        Top = 23
-        Width = 69
-        Height = 17
+        Left = 1212
+        Top = 29
+        Width = 84
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2561.166666666667000000
-          60.854166666666670000
-          182.562500000000000000)
+          44.450000000000000000
+          2565.400000000000000000
+          61.383333333333330000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -280,7 +280,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -291,15 +291,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 8
-        Top = 89
-        Width = 59
-        Height = 17
+        Left = 10
+        Top = 111
+        Width = 70
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          235.479166666666700000
-          156.104166666666700000)
+          234.950000000000000000
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -309,7 +309,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -320,15 +320,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 80
-        Top = 89
-        Width = 104
-        Height = 17
+        Left = 100
+        Top = 111
+        Width = 126
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           211.666666666666700000
-          235.479166666666700000
-          275.166666666666700000)
+          234.950000000000000000
+          266.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -338,7 +338,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -349,15 +349,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 296
-        Top = 89
-        Width = 52
-        Height = 17
+        Left = 370
+        Top = 111
+        Width = 59
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           783.166666666666700000
-          235.479166666666700000
-          137.583333333333300000)
+          234.950000000000000000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -367,7 +367,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -378,15 +378,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 476
-        Top = 32
-        Width = 74
-        Height = 17
+        Left = 597
+        Top = 40
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1259.416666666667000000
+          44.450000000000000000
+          1263.650000000000000000
           84.666666666666670000
-          195.791666666666700000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -396,7 +396,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -407,15 +407,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 981
-        Top = 8
-        Width = 56
-        Height = 17
+        Left = 1228
+        Top = 10
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2595.562500000000000000
+          44.450000000000000000
+          2599.266666666667000000
           21.166666666666670000
-          148.166666666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -425,7 +425,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -436,15 +436,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek1: TQRLabel
-        Left = 576
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 720
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1524.000000000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -454,7 +454,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -465,15 +465,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek2: TQRLabel
-        Left = 645
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 806
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1706.562500000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          44.450000000000000000
+          1706.033333333333000000
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -483,7 +483,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -494,15 +494,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek3: TQRLabel
-        Left = 714
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 893
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1889.125000000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          44.450000000000000000
+          1890.183333333333000000
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -512,7 +512,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -523,15 +523,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek4: TQRLabel
-        Left = 783
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 979
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2071.687500000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          44.450000000000000000
+          2072.216666666667000000
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -541,7 +541,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -552,15 +552,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek5: TQRLabel
-        Left = 852
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 1065
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2254.250000000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -570,7 +570,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -581,15 +581,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblWeek6: TQRLabel
-        Left = 921
-        Top = 89
-        Width = 54
-        Height = 17
+        Left = 1151
+        Top = 111
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2436.812500000000000000
-          235.479166666666700000
-          142.875000000000000000)
+          44.450000000000000000
+          2436.283333333333000000
+          234.950000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -599,7 +599,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -610,15 +610,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 448
-        Top = 89
-        Width = 44
-        Height = 17
+        Left = 560
+        Top = 111
+        Width = 54
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1185.333333333333000000
-          235.479166666666700000
-          116.416666666666700000)
+          234.950000000000000000
+          114.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -628,7 +628,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -639,15 +639,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblOverdueDate: TQRLabel
-        Left = 505
-        Top = 89
-        Width = 62
-        Height = 17
+        Left = 631
+        Top = 111
+        Width = 76
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1336.145833333333000000
-          235.479166666666700000
-          164.041666666666700000)
+          44.450000000000000000
+          1335.616666666667000000
+          234.950000000000000000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -657,7 +657,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -668,15 +668,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblFutureDate: TQRLabel
-        Left = 987
-        Top = 89
-        Width = 32
-        Height = 17
+        Left = 1234
+        Top = 111
+        Width = 38
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2611.437500000000000000
-          235.479166666666700000
-          84.666666666666670000)
+          44.450000000000000000
+          2611.966666666667000000
+          234.950000000000000000
+          80.433333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -686,7 +686,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -697,10 +697,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 504
-        Top = 72
-        Width = 525
-        Height = 8
+        Left = 630
+        Top = 90
+        Width = 656
+        Height = 10
         Size.Values = (
           21.166666666666670000
           1333.500000000000000000
@@ -713,15 +713,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object QRLabel1: TQRLabel
-        Left = 728
-        Top = 68
-        Width = 104
-        Height = 15
+        Left = 910
+        Top = 85
+        Width = 131
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1926.166666666667000000
           179.916666666666700000
-          275.166666666666700000)
+          277.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -731,7 +731,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -742,15 +742,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 8
-        Top = 8
-        Width = 23
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 28
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           21.166666666666670000
-          60.854166666666670000)
+          59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -760,7 +760,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -771,15 +771,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 56
-        Top = 8
-        Width = 90
-        Height = 17
+        Left = 70
+        Top = 10
+        Width = 109
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           148.166666666666700000
           21.166666666666670000
-          238.125000000000000000)
+          230.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -789,7 +789,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clBlue
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -800,15 +800,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 56
-        Top = 46
-        Width = 69
-        Height = 17
+        Left = 70
+        Top = 57
+        Width = 85
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           148.166666666666700000
-          121.708333333333300000
-          182.562500000000000000)
+          120.650000000000000000
+          179.916666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -818,7 +818,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clRed
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -829,15 +829,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 56
-        Top = 65
-        Width = 54
-        Height = 17
+        Left = 70
+        Top = 81
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           148.166666666666700000
-          171.979166666666700000
-          142.875000000000000000)
+          171.450000000000000000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -847,7 +847,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clGreen
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -858,15 +858,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 56
-        Top = 27
-        Width = 92
-        Height = 17
+        Left = 70
+        Top = 34
+        Width = 110
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           148.166666666666700000
-          71.437500000000000000
-          243.416666666666700000)
+          71.966666666666670000
+          232.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -876,7 +876,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clAqua
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -888,10 +888,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       end
     end
     object qrsbDetails: TQRSubDetail
-      Left = 38
-      Top = 171
-      Width = 1047
-      Height = 50
+      Left = 47
+      Top = 214
+      Width = 1309
+      Height = 63
       Frame.DrawTop = True
       Frame.DrawBottom = True
       Frame.DrawLeft = True
@@ -908,18 +908,18 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2770.187500000000000000)
+        133.350000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
       object QRShape2: TQRShape
-        Left = 437
+        Left = 546
         Top = 0
-        Width = 545
-        Height = 39
+        Width = 681
+        Height = 49
         Size.Values = (
           103.187500000000000000
           1156.229166666667000000
@@ -932,10 +932,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object QRShape3: TQRShape
-        Left = 499
+        Left = 624
         Top = 0
-        Width = 418
-        Height = 39
+        Width = 522
+        Height = 49
         Size.Values = (
           103.187500000000000000
           1320.270833333333000000
@@ -948,10 +948,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object QRShape4: TQRShape
-        Left = 567
+        Left = 709
         Top = 0
-        Width = 281
-        Height = 39
+        Width = 351
+        Height = 49
         Size.Values = (
           103.187500000000000000
           1500.187500000000000000
@@ -964,10 +964,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object QRShape5: TQRShape
-        Left = 636
+        Left = 795
         Top = 0
-        Width = 142
-        Height = 39
+        Width = 177
+        Height = 49
         Size.Values = (
           103.187500000000000000
           1682.750000000000000000
@@ -980,15 +980,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object QRDBText2: TQRDBText
-        Left = 8
-        Top = 4
-        Width = 62
-        Height = 15
+        Left = 10
+        Top = 5
+        Width = 73
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           21.166666666666670000
           10.583333333333330000
-          164.041666666666700000)
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -999,7 +999,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Sales_Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1012,10 +1012,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 288
-        Top = 4
-        Width = 145
-        Height = 15
+        Left = 360
+        Top = 5
+        Width = 181
+        Height = 19
         Size.Values = (
           39.687500000000000000
           762.000000000000000000
@@ -1032,7 +1032,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1045,10 +1045,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 80
-        Top = 4
-        Width = 201
-        Height = 15
+        Left = 100
+        Top = 5
+        Width = 251
+        Height = 19
         Size.Values = (
           39.687500000000000000
           211.666666666666700000
@@ -1065,7 +1065,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1078,15 +1078,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrdbTemplateDate: TQRDBText
-        Left = 508
-        Top = 4
-        Width = 72
-        Height = 15
+        Left = 635
+        Top = 5
+        Width = 88
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1344.083333333333000000
           10.583333333333330000
-          190.500000000000000000)
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1097,7 +1097,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Template_Date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1110,10 +1110,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrdbDescription: TQRDBText
-        Left = 80
-        Top = 20
-        Width = 353
-        Height = 15
+        Left = 100
+        Top = 25
+        Width = 441
+        Height = 19
         Size.Values = (
           39.687500000000000000
           211.666666666666700000
@@ -1130,7 +1130,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1143,15 +1143,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblMatDate: TQRLabel
-        Left = 440
-        Top = 4
-        Width = 60
-        Height = 15
+        Left = 550
+        Top = 5
+        Width = 74
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1164.166666666667000000
           10.583333333333330000
-          158.750000000000000000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1161,7 +1161,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clBlue
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1172,10 +1172,10 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object QRShape6: TQRShape
-        Left = 706
+        Left = 882
         Top = 0
-        Width = 6
-        Height = 39
+        Width = 8
+        Height = 49
         Size.Values = (
           103.187500000000000000
           1867.958333333333000000
@@ -1188,15 +1188,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         VertAdjust = 0
       end
       object qrlblMatReceived: TQRLabel
-        Left = 440
-        Top = 20
-        Width = 60
-        Height = 15
+        Left = 550
+        Top = 25
+        Width = 74
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1164.166666666667000000
           52.916666666666670000
-          158.750000000000000000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1206,7 +1206,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clAqua
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1217,15 +1217,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrdbFittingDate: TQRDBText
-        Left = 636
-        Top = 2
-        Width = 72
-        Height = 15
+        Left = 795
+        Top = 3
+        Width = 86
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1682.750000000000000000
-          5.291666666666667000
-          190.500000000000000000)
+          6.350000000000000000
+          182.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1236,7 +1236,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         DataField = 'Date_Required'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1249,15 +1249,15 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         FontSize = 8
       end
       object qrlblOnHold: TQRLabel
-        Left = 984
-        Top = 4
-        Width = 47
-        Height = 15
+        Left = 1230
+        Top = 5
+        Width = 59
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2603.500000000000000000
           10.583333333333330000
-          124.354166666666700000)
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1267,7 +1267,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Color = clRed
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1409,12 +1409,12 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       FieldName = 'Job'
       Origin = 'Job'
     end
-    object qrySalesOrdersDate_Raised: TSQLTimeStampField
+    object qrySalesOrdersDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
       Origin = 'Date_Raised'
       Required = True
     end
-    object qrySalesOrdersDate_Required: TSQLTimeStampField
+    object qrySalesOrdersDate_Required: TDateTimeField
       FieldName = 'Date_Required'
       Origin = 'Date_Required'
       Required = True
@@ -1431,7 +1431,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       Required = True
       Size = 30
     end
-    object qrySalesOrdersTemplate_Date: TSQLTimeStampField
+    object qrySalesOrdersTemplate_Date: TDateTimeField
       FieldName = 'Template_Date'
       Origin = 'Template_Date'
     end
@@ -1455,11 +1455,11 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       Origin = 'Materials_Required'
       Size = 1
     end
-    object qrySalesOrdersMaterials_Reqd_date: TSQLTimeStampField
+    object qrySalesOrdersMaterials_Reqd_date: TDateTimeField
       FieldName = 'Materials_Reqd_date'
       Origin = 'Materials_Reqd_date'
     end
-    object qrySalesOrdersMaterials_Recd_date: TSQLTimeStampField
+    object qrySalesOrdersMaterials_Recd_date: TDateTimeField
       FieldName = 'Materials_Recd_date'
       Origin = 'Materials_Recd_date'
     end
