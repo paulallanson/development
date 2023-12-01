@@ -30,7 +30,6 @@ type
     procedure CompLogoImageDblClick(Sender: TObject);
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -86,7 +85,7 @@ begin
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if (pos('Worktop',sgList[iAliasList]) > 0) or (pos('worktop',sgList[iAliasList]) > 0) then
-        cmbAliasList.Items.Add(sgList[iAliasList]);
+        cmbAliasList.Items.Add(sgList[iAliasList]) ;
 
     cmbAliasList.Sorted := true;
     cmbAliasList.ItemIndex := cmbAliasList.items.indexof(temparray);
@@ -99,7 +98,7 @@ begin
   end;
 
   Edit1.Text := TempArray;
-  sDBase := AnsiString(Edit1.Text);
+  sDBase := ShortString(Copy(Edit1.Text, 1, 1));
   ShowDataBAse(Self);
   GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray,
     sizeof(TempArray), myWorktops_INIFILE);
@@ -290,14 +289,6 @@ begin
   finally
     IniFile.Free;
   end;
-end;
-
-procedure TfrmWTLogin.FormShow(Sender: TObject);
-begin
-  {$IF DEFINED(GDK) AND DEFINED(DEBUG)}
-  UserEdit.Text := 'bsadmin';
-  PasswordEdit.Text := 'firebelly';
-  {$ENDIF}
 end;
 
 procedure TfrmWTLogin.SetEndUser(const Value: boolean);

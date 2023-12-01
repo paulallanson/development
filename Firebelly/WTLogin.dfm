@@ -14,40 +14,39 @@ object frmWTLogin: TfrmWTLogin
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
-  OnShow = FormShow
   TextHeight = 13
   object Label1: TLabel
     Left = 32
     Top = 84
-    Width = 61
+    Width = 65
     Height = 13
     Caption = 'Logon Name'
   end
   object Label2: TLabel
     Left = 32
     Top = 108
-    Width = 46
+    Width = 49
     Height = 13
     Caption = 'Password'
   end
   object Label3: TLabel
     Left = 32
     Top = 16
-    Width = 204
+    Width = 226
     Height = 13
     Caption = 'Welcome to the worktop production system'
   end
   object Label4: TLabel
     Left = 32
     Top = 56
-    Width = 209
+    Width = 229
     Height = 13
     Caption = 'Please enter your logon name and password'
   end
   object lblLogInto: TLabel
     Left = 32
     Top = 134
-    Width = 46
+    Width = 48
     Height = 13
     Caption = 'Database'
   end
