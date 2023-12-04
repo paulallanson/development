@@ -70,6 +70,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure FaxDatabaseLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
+    procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -83,6 +84,14 @@ var
 implementation
 
 {$R *.DFM}
+
+uses
+  AllCommon;
+
+procedure TfrmAllFaxStatus.FaxDatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(FaxDatabase);
+end;
 
 procedure TfrmAllFaxStatus.FaxDatabaseLogin(
   AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

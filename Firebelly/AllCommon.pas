@@ -3,10 +3,10 @@ unit AllCommon;
 interface
 
 uses
-  Classes, SysUtils, Windows, ShellAPI, ShlObj,
-  Controls, Messages, Registry, Outlook_TLB, COMobj, ActiveX, Math,
-  DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder,
-  wtDataModule;
+  Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry,
+  Outlook_TLB, COMobj, ActiveX, Math, DBGrids, IniFiles, Forms, Variants,
+  qrprntr, Printers, DB, shFolder, wtDataModule,
+  FireDAC.Comp.Client;
 
 type
   TPrinterSettings = class
@@ -110,7 +110,10 @@ procedure UpdateOutlookRemedialProductionAppointment(Team, SalesOrder: integer; 
 function GetRegKey(const TempPath, TempKey: string): string;
 procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
-  type
+{ FireDAC }
+procedure SetConnectionMapRules(const Connection: TFDConnection);
+
+type
   TCCSRegistry =
     class(TRegistry)
   public
@@ -126,7 +129,6 @@ procedure SetRegKey(const TempPath, TempKey, TempValue: string);
     shbDontGoBelowDomain, shbReturnFSAncestors,
     shbReturnOnlyFSDirs, shbStatusText);
   TDirDlgOptions = set of TDirDlgOption;
-
 
   TSelChangeEvent = procedure(Sender: TObject; NewFolder: string; IsDisplayName: boolean) of object;
 
@@ -180,7 +182,8 @@ implementation
 
 uses
   Dialogs, System.UITypes,
-  FireDAC.Comp.Client;
+  FireDAC.Stan.Intf;
+
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
 
@@ -1417,6 +1420,14 @@ begin
   finally
     Reg.free;
   end;
+end;
+
+procedure SetConnectionMapRules(const Connection: TFDConnection);
+begin
+  Connection.FormatOptions.OwnMapRules := True;
+  Connection.FormatOptions.MapRules.Clear;
+  Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
+  Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
 end;
 
 { TDirDlg }

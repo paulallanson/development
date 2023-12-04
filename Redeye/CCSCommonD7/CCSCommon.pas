@@ -3,9 +3,10 @@ unit CCSCommon;
 interface
 
 uses
-  Classes, SysUtils, Windows, ShellAPI, ShlObj,
-  Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
-  DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB;
+  Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry,
+  COMobj, ActiveX, Math, strUtils, DBGrids, Grids, IniFiles, Forms, Variants,
+  qrprntr, Printers, DB, shFolder, Outlook_TLB,
+  FireDAC.Comp.Client;
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar:
@@ -117,7 +118,10 @@ procedure AddAppBlindViaOutlook(sLocation, sSubject, sBody: string; start: Tdate
 function GetRegKey(const TempPath, TempKey: string): string;
 procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
-  type
+{ FireDAC }
+procedure SetConnectionMapRules(const Connection: TFDConnection);
+
+type
   TCCSRegistry =
     class(TRegistry)
   public
@@ -189,7 +193,7 @@ implementation
 
 uses
   Dialogs, System.UITypes,
-  FireDAC.Comp.Client;
+  FireDAC.Stan.Intf;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -1310,6 +1314,14 @@ begin
   finally
     Reg.free;
   end;
+end;
+
+procedure SetConnectionMapRules(const Connection: TFDConnection);
+begin
+  Connection.FormatOptions.OwnMapRules := True;
+  Connection.FormatOptions.MapRules.Clear;
+  Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
+  Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
 end;
 
 { TDirDlg }

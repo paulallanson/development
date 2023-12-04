@@ -916,7 +916,7 @@ begin
     CheckActivityReminder;
 //    tmrCheckActivity.Enabled := true;
 
-  for var i := 0 to MainMenuToolbar.ButtonCount-1 do*
+  for var i := 0 to MainMenuToolbar.ButtonCount-1 do
   begin
     MainMenuToolbar.Buttons[i].Hint := MainMenuToolbar.Buttons[i].Name;
     MainMenuToolbar.Buttons[i].ShowHint := True;

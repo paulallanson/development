@@ -1,7 +1,6 @@
 object dmBroker: TdmBroker
-  Height = 771
-  Width = 1615
-  PixelsPerInch = 120
+  Height = 617
+  Width = 1292
   object PBLDatabase: TFDConnection
     ConnectionName = 'PB'
     Params.Strings = (
@@ -9,8 +8,8 @@ object dmBroker: TdmBroker
     OnLogin = PBLDatabaseLogin
     AfterConnect = PBLDatabaseAfterConnect
     BeforeConnect = PBLDatabaseBeforeConnect
-    Left = 60
-    Top = 20
+    Left = 48
+    Top = 16
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'
@@ -30,8 +29,8 @@ object dmBroker: TdmBroker
       ' '
       ' '
       ' ')
-    Left = 370
-    Top = 140
+    Left = 296
+    Top = 112
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -52,8 +51,8 @@ object dmBroker: TdmBroker
       'From Int_Sel'
       ' '
       ' ')
-    Left = 200
-    Top = 75
+    Left = 160
+    Top = 60
   end
   object DelWorkSQL: TFDQuery
     ConnectionName = 'PB'
@@ -61,8 +60,8 @@ object dmBroker: TdmBroker
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
       ' ')
-    Left = 200
-    Top = 145
+    Left = 160
+    Top = 116
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -78,8 +77,8 @@ object dmBroker: TdmBroker
       ''
       ' '
       ' ')
-    Left = 200
-    Top = 215
+    Left = 160
+    Top = 172
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -97,8 +96,8 @@ object dmBroker: TdmBroker
       '      (Button_Name = :Button_Name)  '
       ' '
       ' ')
-    Left = 400
-    Top = 35
+    Left = 320
+    Top = 28
     ParamData = <
       item
         Name = 'Operator'
@@ -111,8 +110,8 @@ object dmBroker: TdmBroker
     ConnectionName = 'PB'
     SQL.Strings = (
       'select enquiry_type from enquiry where enquiry = :enquiry')
-    Left = 90
-    Top = 220
+    Left = 72
+    Top = 176
     ParamData = <
       item
         Name = 'enquiry'
@@ -125,8 +124,8 @@ object dmBroker: TdmBroker
       'From Operator'
       'Where (Operator = :Operator)'
       ' ')
-    Left = 70
-    Top = 95
+    Left = 56
+    Top = 76
     ParamData = <
       item
         Name = 'Operator'
@@ -138,8 +137,8 @@ object dmBroker: TdmBroker
       'select *'
       'from company'
       'where company = 1')
-    Left = 90
-    Top = 310
+    Left = 72
+    Top = 248
   end
   object qryGetButtons: TFDQuery
     ConnectionName = 'PB'
@@ -148,8 +147,8 @@ object dmBroker: TdmBroker
       'From Operator_Button'
       'Where (Operator = :Operator)'
       ' ')
-    Left = 373
-    Top = 223
+    Left = 298
+    Top = 178
     ParamData = <
       item
         Name = 'Operator'
@@ -161,8 +160,8 @@ object dmBroker: TdmBroker
       'Delete From WorkStation_Redeye'
       'Where'
       'WorkStation = :WorkStation')
-    Left = 530
-    Top = 280
+    Left = 424
+    Top = 224
     ParamData = <
       item
         Name = 'WorkStation'
@@ -176,8 +175,8 @@ object dmBroker: TdmBroker
       'WorkStation_Name = :WorkStation_Name AND'
       'Status_Descr = :Status_Descr'
       '')
-    Left = 530
-    Top = 210
+    Left = 424
+    Top = 168
     ParamData = <
       item
         Name = 'WorkStation_Name'
@@ -191,8 +190,8 @@ object dmBroker: TdmBroker
     SQL.Strings = (
       'Select WorkStation from WorkStation_Redeye'
       'Where WorkStation = :WorkStation')
-    Left = 530
-    Top = 130
+    Left = 424
+    Top = 104
     ParamData = <
       item
         Name = 'WorkStation'
@@ -209,8 +208,8 @@ object dmBroker: TdmBroker
       
         '(:WorkStation,:WorkStation_Name,:Status_Descr, :Software_Version' +
         ', :Logged_in)')
-    Left = 530
-    Top = 40
+    Left = 424
+    Top = 32
     ParamData = <
       item
         Name = 'WorkStation'
@@ -247,8 +246,8 @@ object dmBroker: TdmBroker
         'Workstation_Lock.Workstation = Workstation_Redeye.Workstation AN' +
         'D'
       'Workstation_Redeye.Status_Descr = Operator.Login_Name')
-    Left = 90
-    Top = 390
+    Left = 72
+    Top = 312
     ParamData = <
       item
         Name = 'Key_Value_1'
@@ -280,8 +279,8 @@ object dmBroker: TdmBroker
       'select max(Lock_No) as Last_Lock_No'
       'from Workstation_Lock'
       'where Workstation = :Workstation')
-    Left = 90
-    Top = 460
+    Left = 72
+    Top = 368
     ParamData = <
       item
         Name = 'Workstation'
@@ -312,8 +311,8 @@ object dmBroker: TdmBroker
       ':Table_Name,'
       ':Form_Title'
       ')')
-    Left = 220
-    Top = 390
+    Left = 176
+    Top = 312
     ParamData = <
       item
         Name = 'Workstation'
@@ -354,8 +353,8 @@ object dmBroker: TdmBroker
       'Key_Value_4 = :Key_Value_4 AND'
       'Key_Value_5 = :Key_Value_5 AND'
       'Table_Name = :Table_Name')
-    Left = 220
-    Top = 460
+    Left = 176
+    Top = 368
     ParamData = <
       item
         Name = 'Workstation'
@@ -385,8 +384,8 @@ object dmBroker: TdmBroker
       'Delete From WorkStation_Lock '
       'Where'
       'WorkStation = :WorkStation')
-    Left = 530
-    Top = 360
+    Left = 424
+    Top = 288
     ParamData = <
       item
         Name = 'WorkStation'
@@ -403,8 +402,8 @@ object dmBroker: TdmBroker
       
         ' Workstation_Redeye.Workstation = Workstation_Lock.Workstation) ' +
         '= :WorkStation_Name')
-    Left = 690
-    Top = 40
+    Left = 552
+    Top = 32
     ParamData = <
       item
         Name = 'WorkStation_Name'
@@ -416,8 +415,8 @@ object dmBroker: TdmBroker
       'select *'
       'from Financial_Year'
       'where Financial_Year = :Financial_Year')
-    Left = 690
-    Top = 120
+    Left = 552
+    Top = 96
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -425,16 +424,16 @@ object dmBroker: TdmBroker
   end
   object qrySpare: TFDQuery
     ConnectionName = 'PB'
-    Left = 200
-    Top = 9
+    Left = 160
+    Top = 7
   end
   object qryGetCust: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Customer'
       'Where Customer = :Customer')
-    Left = 530
-    Top = 425
+    Left = 424
+    Top = 340
     ParamData = <
       item
         Name = 'Customer'
@@ -445,8 +444,8 @@ object dmBroker: TdmBroker
     SQL.Strings = (
       'select max(product_id) as Last_Product_ID'
       'from Part')
-    Left = 690
-    Top = 210
+    Left = 552
+    Top = 168
   end
   object qryDelTempID: TFDQuery
     ConnectionName = 'PB'
@@ -455,8 +454,8 @@ object dmBroker: TdmBroker
       'From Int_Sel'
       'Where Int_Sel_Code = :Int_Sel_Code'
       '')
-    Left = 690
-    Top = 290
+    Left = 552
+    Top = 232
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -474,8 +473,8 @@ object dmBroker: TdmBroker
       ''
       ' '
       ' ')
-    Left = 690
-    Top = 360
+    Left = 552
+    Top = 288
     ParamData = <
       item
         Name = 'Key'
@@ -519,8 +518,8 @@ object dmBroker: TdmBroker
       'select *'
       'from Company_Branch'
       'where company = 1')
-    Left = 200
-    Top = 300
+    Left = 160
+    Top = 240
   end
   object qryGetOpCustomer: TFDQuery
     ConnectionName = 'PB'
@@ -532,8 +531,8 @@ object dmBroker: TdmBroker
       
         'Operator_invoice_location.Invoice_location = Customer.Invoice_lo' +
         'cation')
-    Left = 860
-    Top = 40
+    Left = 688
+    Top = 32
     ParamData = <
       item
         Name = 'Customer'
@@ -548,8 +547,8 @@ object dmBroker: TdmBroker
       'Update Company'
       'Set Last_File_No_Direct_Debit = Last_File_No_Direct_Debit + 1'
       'where Company = 1')
-    Left = 860
-    Top = 120
+    Left = 688
+    Top = 96
   end
   object qryAddReplEntity: TFDQuery
     ConnectionName = 'PB'
@@ -562,8 +561,8 @@ object dmBroker: TdmBroker
         '2, :Code3, :Replicate_Action, '#39'N'#39', getdate() FROM Replicate_Enti' +
         'ty'
       '')
-    Left = 860
-    Top = 210
+    Left = 688
+    Top = 168
     ParamData = <
       item
         Name = 'Entity'
@@ -587,8 +586,8 @@ object dmBroker: TdmBroker
       'select Supplier_ID, acc_active'
       'from Supplier'
       'Where Supplier = :Supplier')
-    Left = 860
-    Top = 280
+    Left = 688
+    Top = 224
     ParamData = <
       item
         Name = 'Supplier'
@@ -600,8 +599,8 @@ object dmBroker: TdmBroker
       'select *'
       'from Category'
       'where Category = :Category')
-    Left = 860
-    Top = 360
+    Left = 688
+    Top = 288
     ParamData = <
       item
         Name = 'Category'
@@ -613,8 +612,8 @@ object dmBroker: TdmBroker
       'SELECT SUM(Store_Quantity) as Total_Stock'
       'FROM Store_Stock'
       'WHERE Part = :Part')
-    Left = 990
-    Top = 40
+    Left = 792
+    Top = 32
     ParamData = <
       item
         Name = 'Part'
@@ -631,8 +630,8 @@ object dmBroker: TdmBroker
         #9'INNER JOIN Period ON Financial_Year.Financial_Year = Period.Fin' +
         'ancial_Year'
       'WHERE Period.Financial_Year = :Financial_Year')
-    Left = 690
-    Top = 430
+    Left = 552
+    Top = 344
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -648,8 +647,8 @@ object dmBroker: TdmBroker
       '              Operator = :Operator AND'
       '              Activity_Module = :Activity_Module'
       'ORDER BY Activity DESC')
-    Left = 370
-    Top = 300
+    Left = 296
+    Top = 240
     ParamData = <
       item
         Name = 'Activity_Type'
@@ -671,8 +670,8 @@ object dmBroker: TdmBroker
       'FROM reps_branches'
       'WHERE customer = :Customer AND'
       'Rep <> :Rep')
-    Left = 990
-    Top = 120
+    Left = 792
+    Top = 96
     ParamData = <
       item
         Name = 'Customer'
@@ -687,8 +686,8 @@ object dmBroker: TdmBroker
       'SELECT * '
       'FROM Document_Structure'
       'WHERE Module_ID = :Module_ID')
-    Left = 990
-    Top = 360
+    Left = 792
+    Top = 288
     ParamData = <
       item
         Name = 'Module_ID'
@@ -702,8 +701,8 @@ object dmBroker: TdmBroker
       ''
       ''
       ' ')
-    Left = 1370
-    Top = 220
+    Left = 1096
+    Top = 176
     ParamData = <
       item
         Name = 'GUID'
@@ -726,8 +725,8 @@ object dmBroker: TdmBroker
       '  Workstation_Name = :Workstation_Name'
       'Where'
       '  Email_Id = :Email_Id')
-    Left = 1370
-    Top = 100
+    Left = 1096
+    Top = 80
     ParamData = <
       item
         Name = 'Email_Subject'
@@ -768,8 +767,8 @@ object dmBroker: TdmBroker
       ''
       ''
       ' ')
-    Left = 1370
-    Top = 40
+    Left = 1096
+    Top = 32
     ParamData = <
       item
         Name = 'Date_Created'
@@ -786,8 +785,8 @@ object dmBroker: TdmBroker
       'Select Email_Id'
       'From Email_Log Where Email_Subject = :GUID'
       '')
-    Left = 1370
-    Top = 160
+    Left = 1096
+    Top = 128
     ParamData = <
       item
         Name = 'GUID'
@@ -806,8 +805,8 @@ object dmBroker: TdmBroker
       '(:Email_ID,'
       ':Attachment_Filename'
       ')')
-    Left = 1370
-    Top = 290
+    Left = 1096
+    Top = 232
     ParamData = <
       item
         Name = 'Email_ID'
@@ -822,8 +821,9 @@ object dmBroker: TdmBroker
       '='
       'ConnectionDef=Redeye')
     OnLogin = EmailDatabaseLogin
-    Left = 1290
-    Top = 40
+    BeforeConnect = EmailDatabaseBeforeConnect
+    Left = 1032
+    Top = 32
   end
   object qryGetCustomerRep: TFDQuery
     ConnectionName = 'PB'
@@ -832,8 +832,8 @@ object dmBroker: TdmBroker
       'from Reps_Branches'
       'where Customer = :Customer and Branch_no = :Branch_no'
       'order by Is_Main_Rep desc')
-    Left = 990
-    Top = 210
+    Left = 792
+    Top = 168
     ParamData = <
       item
         Name = 'Customer'
@@ -848,8 +848,8 @@ object dmBroker: TdmBroker
       'select *'
       'from Rep'
       'where Rep = :Rep')
-    Left = 1090
-    Top = 210
+    Left = 872
+    Top = 168
     ParamData = <
       item
         Name = 'Rep'
@@ -863,8 +863,8 @@ object dmBroker: TdmBroker
       #9'INNER JOIN reps_branches ON Rep.Rep = reps_branches.Rep'
       'WHERE ((Customer = :Customer) and (Branch_no = :Branch_no)) AND'
       '      (Rep.Rep_Is_Sub_Rep = '#39'Y'#39')')
-    Left = 990
-    Top = 280
+    Left = 792
+    Top = 224
     ParamData = <
       item
         Name = 'Customer'
@@ -884,7 +884,7 @@ object dmBroker: TdmBroker
         '        ON (Supplier_Branch.Branch_no = Company.Branch_no) AND (' +
         'Supplier_Branch.Supplier = Company.Supplier)'
       'WHERE Company = 1')
-    Left = 90
-    Top = 530
+    Left = 72
+    Top = 424
   end
 end

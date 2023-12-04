@@ -31,6 +31,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FaxDatabaseLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
+    procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     { Private declarations }
    FaxFinishedEvent: TEvent;
@@ -357,6 +358,11 @@ begin
 FaxFinishedEvent.SetEvent;
 {Move the fax onto the server and trigger the finished event} ;
 SendFax(Self) ;
+end;
+
+procedure TfrmWTSendFax.FaxDatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(FaxDatabase);
 end;
 
 procedure TfrmWTSendFax.FaxDatabaseLogin(AConnection: TFDCustomConnection;

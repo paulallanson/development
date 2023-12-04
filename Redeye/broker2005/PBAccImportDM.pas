@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TdmAccImport = class(TDataModule)
@@ -119,6 +119,9 @@ type
     qryGetNextSICharge: TFDQuery;
     qryAddSICharge: TFDQuery;
     qryGetVat: TFDQuery;
+    procedure Sage50DatabaseBeforeConnect(Sender: TObject);
+    procedure MaximiserDBBeforeConnect(Sender: TObject);
+    procedure QuickbooksDBBeforeConnect(Sender: TObject);
   private
     icustomer: integer;
     LastPaymentUpdate: TDateTime;
@@ -496,7 +499,7 @@ Const
 
 implementation
 
-uses PBAccExport3, PBDatabase, pbMainMenu;
+uses PBAccExport3, PBDatabase, pbMainMenu, CCSCommon;
 
 var
   iTotal, i: integer;
@@ -1795,6 +1798,11 @@ begin
       parambyname('Data_Import_Directory').asstring := sTemp;
       execsql;
     end;
+end;
+
+procedure TdmAccImport.Sage50DatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(Sage50Database);
 end;
 
 procedure TdmAccImport.SetAccountRef(const Value: string);
@@ -3506,6 +3514,11 @@ begin
     end;
 end;
 
+procedure TdmAccImport.QuickbooksDBBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(QuickbooksDB);
+end;
+
 function TdmAccImport.JBLineExists(tmpJB, tmpLine: integer): boolean;
 begin
   Result := false;
@@ -3518,6 +3531,11 @@ begin
       open;
       result := (recordcount > 0);
     end;
+end;
+
+procedure TdmAccImport.MaximiserDBBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(MaximiserDB);
 end;
 
 function TdmAccImport.UpdateOrder: boolean;

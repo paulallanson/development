@@ -29,9 +29,9 @@ E.g.: C:\dev\views\quaystone\Components
 6. Install the group project below, compiling both Release and Debug for all the packages in the group.
 
 C:\dev\views\quaystone\Components\QComponentsPG.groupproj
+C:\dev\views\quaystone\Components\Turbo Async Pro\packages\Alexandria\Delphi\AsyncProDelphi.groupproj
 
 7. Install the other components as usual:
 
 QuickReports
-Gnostice
 other packages as needed.

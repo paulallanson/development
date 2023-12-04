@@ -67,6 +67,7 @@ type
     procedure EmailDatabaseLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
     procedure PBLDatabaseBeforeConnect(Sender: TObject);
+    procedure EmailDatabaseBeforeConnect(Sender: TObject);
   private
     FUserName: string;
     FPassword: string;
@@ -306,9 +307,7 @@ end;
 
 procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);
 begin
-  PBLDataBase.FormatOptions.OwnMapRules := True;
-  PBLDataBase.FormatOptions.MapRules.Clear;
-  PBLDataBase.FormatOptions.MapRules.Add(dtBCD, dtCurrency);
+  SetConnectionMapRules(PBLDataBase);
 end;
 
 procedure TdmBroker.PBLDatabaseLogin(AConnection: TFDCustomConnection;
@@ -2705,6 +2704,11 @@ begin
         end;
       Close ;
     end;
+end;
+
+procedure TdmBroker.EmailDatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(EmailDatabase);
 end;
 
 procedure TdmBroker.EmailDatabaseLogin(AConnection: TFDCustomConnection;
