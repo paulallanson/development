@@ -1035,7 +1035,7 @@ object dtmdlContract: TdtmdlContract
       Origin = 'Sales_Invoice_No'
       Size = 15
     end
-    object qrySalesInvoicesInvoice_Date: TSQLTimeStampField
+    object qrySalesInvoicesInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
       Origin = 'Invoice_Date'
     end
