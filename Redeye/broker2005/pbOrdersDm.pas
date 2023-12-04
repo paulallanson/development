@@ -39,7 +39,7 @@ type
     qryOrdersName: TWideStringField;
     qryOrdersSales_order: TFloatField;
     qryOrdersLine: TIntegerField;
-    qryOrdersOrder_date: TSQLTimeStampField;
+    qryOrdersOrder_date: TDateTimeField;
     qryOrdersCust_Order_No: TStringField;
     qryOrdersDescription: TStringField;
     qryOrdersQuantity: TFloatField;
@@ -49,7 +49,7 @@ type
     qryOrdersSelling_unit: TFloatField;
     qryOrdersStock_Reference: TWideStringField;
     qryOrdersForm_Reference_ID: TWideStringField;
-    qryOrdersGoods_Required: TSQLTimeStampField;
+    qryOrdersGoods_Required: TDateTimeField;
     qryOrdersOrder_type: TStringField;
     qryOrdersOrder_Status: TIntegerField;
     qryOrdersStatus_Description: TWideStringField;

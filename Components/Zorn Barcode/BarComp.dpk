@@ -33,7 +33,7 @@ requires
   designide,
   dbrtl,
   vcldb,
-  QRWRunDXE11_w64;
+  QRWRunDXE11_3_w64;
 
 contains
   DBQBarcode in 'DBQBarcode.pas',

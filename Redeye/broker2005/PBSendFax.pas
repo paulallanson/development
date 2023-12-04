@@ -103,6 +103,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure ApdFaxDriverInterface1DocEnd(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     { Private declarations }
    FaxFinishedEvent: TEvent;
@@ -119,7 +120,7 @@ var
 implementation
 
 uses
-  UITypes, pbMainMenu, PBLogin, AnsiStrings;
+  UITypes, pbMainMenu, PBLogin, AnsiStrings, CCSCommon;
 
 {$R *.DFM}
 
@@ -395,6 +396,11 @@ begin
     GetExitCodeProcess(ProcessInfo.hProcess, dwRes);
     Result := Ord(dwRes);
   end;
+end;
+
+procedure TPBSendFaxFrm.FaxDatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(FaxDatabase);
 end;
 
 procedure TPBSendFaxFrm.FaxDatabaseLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

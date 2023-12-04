@@ -52,7 +52,7 @@ type
     qryGetTotalSICredits: TFDQuery;
     lblAccountCode: TLabel;
     qryPaymentsPayment: TFDAutoIncField;
-    qryPaymentsPayment_date: TSQLTimeStampField;
+    qryPaymentsPayment_date: TDateTimeField;
     qryPaymentsPaid_Amount: TCurrencyField;
     qryPaymentsPayment_Method: TIntegerField;
     qryPaymentsPayment_Description: TWideStringField;
@@ -64,7 +64,7 @@ type
     qryPaymentsAccount_Year: TWideStringField;
     qryPaymentsInvoice_no: TWideStringField;
     qryCreditNotesInvoice_no: TWideStringField;
-    qryCreditNotesInvoice_date: TSQLTimeStampField;
+    qryCreditNotesInvoice_date: TDateTimeField;
     qryCreditNotesGoods_value: TCurrencyField;
     qryCreditNotesVat_Value: TCurrencyField;
     qryCreditNotesReference: TWideStringField;

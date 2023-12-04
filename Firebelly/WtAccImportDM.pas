@@ -89,6 +89,9 @@ type
     qryAddThickness: TFDQuery;
     qryAddWTThickness: TFDQuery;
     qryCheckWorktopThickness: TFDQuery;
+    procedure Sage50DatabaseBeforeConnect(Sender: TObject);
+    procedure MaximiserDBBeforeConnect(Sender: TObject);
+    procedure QuickbooksDBBeforeConnect(Sender: TObject);
   private
     icustomer: integer;
     LastPaymentUpdate: TDateTime;
@@ -942,6 +945,16 @@ begin
     end;
 end;
 
+procedure TdmAccImport.MaximiserDBBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(MaximiserDB);
+end;
+
+procedure TdmAccImport.QuickbooksDBBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(QuickbooksDB);
+end;
+
 function  TdmAccImport.GetContactType(sType: string): integer;
 var
   iCode: integer;
@@ -1573,6 +1586,11 @@ begin
       parambyname('Data_Import_Directory').asstring := sTemp;
       execsql;
     end;
+end;
+
+procedure TdmAccImport.Sage50DatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(Sage50Database);
 end;
 
 procedure TdmAccImport.SetAccountRef(const Value: string);

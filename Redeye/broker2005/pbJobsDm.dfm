@@ -73,7 +73,7 @@ object dtmdlJobs: TdtmdlJobs
       Required = True
       Size = 100
     end
-    object qryJobsDate_Point: TSQLTimeStampField
+    object qryJobsDate_Point: TDateTimeField
       FieldName = 'Date_Point'
       Origin = 'Date_Point'
       Required = True
@@ -105,7 +105,7 @@ object dtmdlJobs: TdtmdlJobs
       Origin = 'Cust_Order_no'
       Size = 40
     end
-    object qryJobsGoods_Required: TSQLTimeStampField
+    object qryJobsGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
       Origin = 'Goods_Required'
     end
@@ -168,7 +168,7 @@ object dtmdlJobs: TdtmdlJobs
       Origin = 'On_Hold'
       Size = 1
     end
-    object qryJobsDate_Start: TSQLTimeStampField
+    object qryJobsDate_Start: TDateTimeField
       FieldName = 'Date_Start'
       Origin = 'Date_Start'
     end

@@ -760,6 +760,7 @@ object dmAccImport: TdmAccImport
   end
   object Sage50Database: TFDConnection
     ConnectionName = 'dbSage50'
+    BeforeConnect = Sage50DatabaseBeforeConnect
     Left = 408
     Top = 32
   end
@@ -1079,6 +1080,7 @@ object dmAccImport: TdmAccImport
   end
   object MaximiserDB: TFDConnection
     ConnectionName = 'dbMaximiser'
+    BeforeConnect = MaximiserDBBeforeConnect
     Left = 496
     Top = 8
   end
@@ -1218,6 +1220,7 @@ object dmAccImport: TdmAccImport
   end
   object QuickbooksDB: TFDConnection
     ConnectionName = 'dbQuickbooks'
+    BeforeConnect = QuickbooksDBBeforeConnect
     Left = 600
     Top = 8
   end

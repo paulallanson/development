@@ -42,7 +42,7 @@ type
     qryAllSalesInvoiceCharges: TFDQuery;
     qrySalesInvoicesSales_Invoice: TIntegerField;
     qrySalesInvoicesSales_Invoice_No: TWideStringField;
-    qrySalesInvoicesInvoice_Date: TSQLTimeStampField;
+    qrySalesInvoicesInvoice_Date: TDateTimeField;
     qrySalesInvoicesInvoice_Description: TWideStringField;
     qrySalesInvoicesInvoice_or_Credit: TWideStringField;
     qrySalesInvoicesGoods_Value: TFloatField;

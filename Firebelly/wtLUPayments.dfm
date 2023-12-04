@@ -86,8 +86,6 @@ object frmwtLUPayments: TfrmwtLUPayments
       item
         Width = 50
       end>
-    ExplicitTop = 496
-    ExplicitWidth = 779
   end
   object Panel1: TPanel
     Left = 0
@@ -97,8 +95,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 453
-    ExplicitWidth = 779
     DesignSize = (
       785
       43)
@@ -142,7 +138,6 @@ object frmwtLUPayments: TfrmwtLUPayments
       NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      ExplicitLeft = 663
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -162,8 +157,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 79
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 374
-    ExplicitWidth = 779
     DesignSize = (
       785
       79)
@@ -288,7 +281,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 4
-    ExplicitWidth = 779
     object lblSalesOrder: TLabel
       Left = 682
       Top = 14
@@ -415,8 +407,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 33
     Align = alBottom
     TabOrder = 6
-    ExplicitTop = 245
-    ExplicitWidth = 779
     object lblCreditNotes: TLabel
       Left = 8
       Top = 13
@@ -493,7 +483,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       Origin = 'Payment'
       ReadOnly = True
     end
-    object qryPaymentsPayment_date: TSQLTimeStampField
+    object qryPaymentsPayment_date: TDateTimeField
       FieldName = 'Payment_date'
       Origin = 'Payment_date'
       Required = True
@@ -663,7 +653,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       Origin = 'Invoice_no'
       Size = 10
     end
-    object qryCreditNotesInvoice_date: TSQLTimeStampField
+    object qryCreditNotesInvoice_date: TDateTimeField
       FieldName = 'Invoice_date'
       Origin = 'Invoice_date'
     end

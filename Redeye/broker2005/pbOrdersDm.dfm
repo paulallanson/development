@@ -122,7 +122,7 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Line'
       Required = True
     end
-    object qryOrdersOrder_date: TSQLTimeStampField
+    object qryOrdersOrder_date: TDateTimeField
       FieldName = 'Order_date'
       Origin = 'Order_date'
       Required = True
@@ -169,7 +169,7 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Form_Reference_ID'
       Size = 50
     end
-    object qryOrdersGoods_Required: TSQLTimeStampField
+    object qryOrdersGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
       Origin = 'Goods_Required'
     end

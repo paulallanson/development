@@ -187,7 +187,7 @@ type
     qryJBAllLinesUnit_Cost: TCurrencyField;
     qryJBAllLinesUnit_SSP: TCurrencyField;
     qryJBAllLinesInvoiced_By: TIntegerField;
-    qryJBAllLinesInvoiced_Date: TSQLTimeStampField;
+    qryJBAllLinesInvoiced_Date: TDateTimeField;
     qryJBAllLinesUnit_Cost_plus_OHD: TCurrencyField;
     qryJBAllLinesUnit_SSP_Original: TCurrencyField;
     qryJBAllLinesQuote: TFloatField;
@@ -205,7 +205,7 @@ type
     qryJBAllLinesVat_Description: TWideStringField;
     qryAllSalesInvoicesSales_Invoice: TIntegerField;
     qryAllSalesInvoicesSales_Invoice_No: TWideStringField;
-    qryAllSalesInvoicesInvoice_Date: TSQLTimeStampField;
+    qryAllSalesInvoicesInvoice_Date: TDateTimeField;
     qryAllSalesInvoicesInvoice_Description: TWideStringField;
     qryAllSalesInvoicesInvoice_or_Credit: TWideStringField;
     qryAllSalesInvoicesGoods_Value: TFloatField;
@@ -242,7 +242,7 @@ type
     qryJBRepeatLinesUnit_Cost: TCurrencyField;
     qryJBRepeatLinesUnit_SSP: TCurrencyField;
     qryJBRepeatLinesInvoiced_By: TIntegerField;
-    qryJBRepeatLinesInvoiced_Date: TSQLTimeStampField;
+    qryJBRepeatLinesInvoiced_Date: TDateTimeField;
     qryJBRepeatLinesUnit_Cost_plus_OHD: TCurrencyField;
     qryJBRepeatLinesUnit_SSP_Original: TCurrencyField;
     qryJBRepeatLinesQuote: TFloatField;
@@ -259,7 +259,7 @@ type
     qryAllPurchInvoicesSupplier_Name: TWideStringField;
     qryAllPurchInvoicesSupplier_Invoice: TIntegerField;
     qryAllPurchInvoicesSupplier_Invoice_no: TWideStringField;
-    qryAllPurchInvoicesInvoice_Date: TSQLTimeStampField;
+    qryAllPurchInvoicesInvoice_Date: TDateTimeField;
     qryAllPurchInvoicesSupp_Inv_Alt_Ref: TWideStringField;
     qryAllPurchInvoicesInvoice_or_Credit: TWideStringField;
     qryAllPurchInvoicesPurchase_order: TFloatField;
@@ -268,7 +268,7 @@ type
     qryAllPurchInvoicesVat_Value: TFloatField;
     qryAllPurchInvoicesTotal_Value: TFloatField;
     qryDataCollectJob_Bag_Time_Log: TIntegerField;
-    qryDataCollectDate_Point: TSQLTimeStampField;
+    qryDataCollectDate_Point: TDateTimeField;
     qryDataCollectWork_Centre_Operator: TIntegerField;
     qryDataCollectWC_Operator_Name: TWideStringField;
     qryDataCollectProcess_Group: TIntegerField;
@@ -284,8 +284,8 @@ type
     qryDataCollectNumber_Up: TIntegerField;
     qryDataCollectQuantity: TFloatField;
     qryDataCollectLaser_Format: TWideStringField;
-    qryDataCollectLabour_Time_From: TSQLTimeStampField;
-    qryDataCollectLabour_Time_To: TSQLTimeStampField;
+    qryDataCollectLabour_Time_From: TDateTimeField;
+    qryDataCollectLabour_Time_To: TDateTimeField;
     qryDataCollectLabour_Hours: TFloatField;
     qryDataCollectMachine_Hours: TFloatField;
     qryDataCollectLabour_Overtime_Hours: TFloatField;
