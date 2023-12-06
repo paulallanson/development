@@ -12,7 +12,7 @@ E.g.: C:\dev\views\quaystone\Components
 2. Add the entries below to "Library path":
 
 ==>> Win32
-;$(QSLIB)\dd-dropfiles-5.0.5\D280\Win32\Release;$(QSLIB)\CRPackage\D280\Win32\Release;$(QSLIB)\Zorn Barcode\D280\Win32\Release;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Release
+;$(QSLIB)\dd-dropfiles-5.0.5\D280\Win32\Release;$(QSLIB)\CRPackage\D280\Win32\Release;$(QSLIB)\Zorn Barcode\D280\Win32\Release;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Release;$(QSLIB)\Drag and Drop Tools
 
 3. Add the entries below to "Browsing path":
 
@@ -24,14 +24,14 @@ E.g.: C:\dev\views\quaystone\Components
 
 5. Alternatively, you can just add the path below to "Library path":
 
-;$(QSLIB)\dd-dropfiles-5.0.5;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\source
+;$(QSLIB)\dd-dropfiles-5.0.5;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\source;$(QSLIB)\Drag and Drop Tools
 
 6. Install the group project below, compiling both Release and Debug for all the packages in the group.
 
 C:\dev\views\quaystone\Components\QComponentsPG.groupproj
+C:\dev\views\quaystone\Components\Turbo Async Pro\packages\Alexandria\Delphi\AsyncProDelphi.groupproj
 
 7. Install the other components as usual:
 
 QuickReports
-Gnostice
 other packages as needed.

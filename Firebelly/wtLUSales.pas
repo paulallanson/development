@@ -1102,7 +1102,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
     SortType := ' ASC'
   else if dtmdlAllSales.SortType = ' DESC' then
       SortType := ' ASC'
@@ -1119,21 +1119,21 @@ begin
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsbold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
 
   dtmdlAllSales.SortOrder := SortField + SortType;
   dtmdlAllSales.SortType := SortType;
 
   dtmdlAllSales.refreshAlldata;
   with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
+  begin
+    try
+      if datasource.dataset.recordcount > 0 then
+        SelectedRows.CurrentRowSelected := true ;
+    except
     end;
+  end;
 end;
 
 end.

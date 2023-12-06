@@ -690,7 +690,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
     SortType := ' ASC'
   else if dtmdlFitting.SortType = ' DESC' then
       SortType := ' ASC'
@@ -707,8 +707,8 @@ begin
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsbold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
 
   dtmdlFitting.SortOrder := SortField + SortType;
   dtmdlFitting.SortType := SortType;

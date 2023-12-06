@@ -180,7 +180,7 @@ const
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, AllCommon,
   WTLogin, wtNotesDM, wtMain;
 
 {$R *.DFM}
@@ -780,9 +780,7 @@ end;
 
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
 begin
-  dtbsWorktops.FormatOptions.OwnMapRules := True;
-  dtbsWorktops.FormatOptions.MapRules.Clear;
-  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTime, dtDateTimeStamp);
+  SetConnectionMapRules(dtbsWorktops);
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

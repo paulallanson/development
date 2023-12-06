@@ -62,12 +62,12 @@ type
     qrlblReportMargin: TQRLabel;
     qrlblReportDate: TQRLabel;
     qrySalesOrdersSales_Order: TIntegerField;
-    qrySalesOrdersDate_Raised: TSQLTimeStampField;
+    qrySalesOrdersDate_Raised: TDateTimeField;
     qrySalesOrdersDescriptive_Reference: TWideStringField;
     qrySalesOrdersSales_Order_Status: TIntegerField;
     qrySalesOrdersSales_Order_Status_Desc: TWideStringField;
-    qrySalesOrdersTemplate_Date: TSQLTimeStampField;
-    qrySalesOrdersDate_Required: TSQLTimeStampField;
+    qrySalesOrdersTemplate_Date: TDateTimeField;
+    qrySalesOrdersDate_Required: TDateTimeField;
     qrySalesOrdersInstall_Address: TIntegerField;
     qrySalesOrdersCustomer_Name: TWideStringField;
     qrySalesOrdersReference: TWideStringField;
@@ -285,17 +285,17 @@ function qDate(const aDate : TDateTime) : string;
 begin
   case SelectBy of
     0: begin
-        qrySalesOrders.SQL.Add(' ((Sales_Order.Date_Raised >= :Date_From) and (Sales_Order.Date_Raised < :Date_To)) ');
+        qrySalesOrders.SQL.Add(' AND ((Sales_Order.Date_Raised >= :Date_From) and (Sales_Order.Date_Raised < :Date_To)) ');
        end;
     1: begin
-        qrySalesOrders.SQL.Add(' ((Sales_Order.Date_Required >= :Date_From) and (Sales_Order.Date_Required < :Date_To)) ');
+        qrySalesOrders.SQL.Add(' AND ((Sales_Order.Date_Required >= :Date_From) and (Sales_Order.Date_Required < :Date_To)) ');
        end;
     2: begin
-        qrySalesOrders.SQL.Add(' ((Sales_Order.Template_Date >= :Date_From) and (Sales_Order.Template_Date < :Date_To)) ');
+        qrySalesOrders.SQL.Add(' AND ((Sales_Order.Template_Date >= :Date_From) and (Sales_Order.Template_Date < :Date_To)) ');
        end;
     3: begin
-        qrySalesOrders.SQL.Add(' ((Sales_Order.Date_Raised >= :Date_From) and (Sales_Order.Date_Raised < :Date_To)) AND ');
-        qrySalesOrders.SQL.Add(' ((Sales_Order.Date_Type = ''T'')) ');
+        qrySalesOrders.SQL.Add(' AND ((Sales_Order.Date_Raised >= :Date_From) and (Sales_Order.Date_Raised < :Date_To)) AND ');
+        qrySalesOrders.SQL.Add(' AND ((Sales_Order.Date_Type = ''T'')) ');
        end;
   end;
 

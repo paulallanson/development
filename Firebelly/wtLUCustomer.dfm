@@ -141,14 +141,20 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     Height = 210
     Align = alClient
     DataSource = dtsCustomers
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     PopupMenu = pmnCustomer
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -317,7 +323,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 586
+      Left = 568
       Top = 8
       Width = 75
       Height = 25
@@ -872,7 +878,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       '        ON Payment_Terms.Payment_Terms = Customer.Payment_Terms'
       'where Customer_Name LIKE :Name AND'
       '((Not_Active = :Not_Active) or (Not_Active = '#39'N'#39'))'
-      'Order By Customer_Name'
+      'Order By Customer_Name '
       ' ')
     Left = 120
     Top = 200
@@ -880,9 +886,11 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       item
         Name = 'Name'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Not_Active'
+        ParamType = ptInput
       end>
   end
   object dtsCustomers: TDataSource

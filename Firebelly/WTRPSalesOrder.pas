@@ -58,11 +58,11 @@ type
     gtQRLabel1: TQRLabel;
     gtQRDBText1: TQRDBText;
     qrySalesOrdersSales_Order: TIntegerField;
-    qrySalesOrdersDate_Raised: TSQLTimeStampField;
+    qrySalesOrdersDate_Raised: TDateTimeField;
     qrySalesOrdersSales_Order_Status: TIntegerField;
     qrySalesOrdersSales_Order_Status_Desc: TWideStringField;
-    qrySalesOrdersTemplate_Date: TSQLTimeStampField;
-    qrySalesOrdersDate_Required: TSQLTimeStampField;
+    qrySalesOrdersTemplate_Date: TDateTimeField;
+    qrySalesOrdersDate_Required: TDateTimeField;
     qrySalesOrdersInstall_Address: TIntegerField;
     qrySalesOrdersCustomer_Name: TWideStringField;
     qrySalesOrdersReference: TWideStringField;

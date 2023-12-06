@@ -252,7 +252,7 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptInput
         Value = Null
       end>
-    object qryPartMvmntsDate_received: TSQLTimeStampField
+    object qryPartMvmntsDate_received: TDateTimeField
       FieldName = 'Date_received'
       Origin = 'Date_received'
     end
@@ -589,7 +589,7 @@ object dtmdlStock: TdtmdlStock
       Required = True
       Size = 100
     end
-    object qryPartSalesdate_ordered: TSQLTimeStampField
+    object qryPartSalesdate_ordered: TDateTimeField
       FieldName = 'date_ordered'
       Origin = 'date_ordered'
       Required = True
@@ -755,7 +755,7 @@ object dtmdlStock: TdtmdlStock
       Required = True
       Size = 100
     end
-    object qryPartProductionOrder_Date: TSQLTimeStampField
+    object qryPartProductionOrder_Date: TDateTimeField
       FieldName = 'Order_Date'
       Origin = 'Order_Date'
       Required = True
@@ -866,7 +866,7 @@ object dtmdlStock: TdtmdlStock
       Required = True
       Size = 100
     end
-    object qryPartPOsOrder_Date: TSQLTimeStampField
+    object qryPartPOsOrder_Date: TDateTimeField
       FieldName = 'Order_Date'
       Origin = 'Order_Date'
       Required = True

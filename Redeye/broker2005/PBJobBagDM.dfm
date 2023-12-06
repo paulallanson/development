@@ -686,7 +686,7 @@ object dmJobBag: TdmJobBag
       FieldName = 'Invoiced_By'
       Origin = 'Invoiced_By'
     end
-    object qryJBAllLinesInvoiced_Date: TSQLTimeStampField
+    object qryJBAllLinesInvoiced_Date: TDateTimeField
       FieldName = 'Invoiced_Date'
       Origin = 'Invoiced_Date'
     end
@@ -2012,7 +2012,7 @@ object dmJobBag: TdmJobBag
       FieldName = 'Invoiced_By'
       Origin = 'Invoiced_By'
     end
-    object qryJBRepeatLinesInvoiced_Date: TSQLTimeStampField
+    object qryJBRepeatLinesInvoiced_Date: TDateTimeField
       FieldName = 'Invoiced_Date'
       Origin = 'Invoiced_Date'
     end
@@ -2477,7 +2477,7 @@ object dmJobBag: TdmJobBag
       Origin = 'Sales_Invoice_No'
       Size = 15
     end
-    object qryAllSalesInvoicesInvoice_Date: TSQLTimeStampField
+    object qryAllSalesInvoicesInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
       Origin = 'Invoice_Date'
     end
@@ -3373,7 +3373,7 @@ object dmJobBag: TdmJobBag
       Origin = 'Supplier_Invoice_no'
       Required = True
     end
-    object qryAllPurchInvoicesInvoice_Date: TSQLTimeStampField
+    object qryAllPurchInvoicesInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
       Origin = 'Invoice_Date'
       Required = True
@@ -4092,7 +4092,7 @@ object dmJobBag: TdmJobBag
       Origin = 'Job_Bag_Time_Log'
       Required = True
     end
-    object qryDataCollectDate_Point: TSQLTimeStampField
+    object qryDataCollectDate_Point: TDateTimeField
       FieldName = 'Date_Point'
       Origin = 'Date_Point'
     end
@@ -4168,11 +4168,11 @@ object dmJobBag: TdmJobBag
       Origin = 'Laser_Format'
       Size = 1
     end
-    object qryDataCollectLabour_Time_From: TSQLTimeStampField
+    object qryDataCollectLabour_Time_From: TDateTimeField
       FieldName = 'Labour_Time_From'
       Origin = 'Labour_Time_From'
     end
-    object qryDataCollectLabour_Time_To: TSQLTimeStampField
+    object qryDataCollectLabour_Time_To: TDateTimeField
       FieldName = 'Labour_Time_To'
       Origin = 'Labour_Time_To'
     end

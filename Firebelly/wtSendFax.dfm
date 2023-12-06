@@ -16,8 +16,8 @@ object frmWTSendFax: TfrmWTSendFax
   object Label1: TLabel
     Left = 64
     Top = 48
-    Width = 260
-    Height = 24
+    Width = 250
+    Height = 25
     Caption = 'Send Fax Form - Never shown'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -101,6 +101,7 @@ object frmWTSendFax: TfrmWTSendFax
     Params.Strings = (
       'ConnectionDef=faxes')
     OnLogin = FaxDatabaseLogin
+    BeforeConnect = FaxDatabaseBeforeConnect
     Left = 176
     Top = 16
   end

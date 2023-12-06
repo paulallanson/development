@@ -218,7 +218,7 @@ type
     StringField42: TStringField;
     StringField43: TStringField;
     qryCheckInvoice: TFDQuery;
-    qrySIHeaderGridInvoice_Date: TSQLTimeStampField;
+    qrySIHeaderGridInvoice_Date: TDateTimeField;
     qrySIHeaderGridCustomer: TIntegerField;
     qrySIHeaderGridBranch_no: TIntegerField;
     qrySIHeaderGridInactive: TWideStringField;
@@ -238,7 +238,7 @@ type
     qrySIHeaderGridReference: TWideStringField;
     qrySIHeaderGridInvoice_Description: TWideStringField;
     qrySIHeaderGridfactoring_filename: TWideStringField;
-    qrySIHeaderGridfactoring_date: TSQLTimeStampField;
+    qrySIHeaderGridfactoring_date: TDateTimeField;
     qrySIHeaderGridpaid_status: TWideStringField;
     qrySIHeaderGridcash_sales: TWideStringField;
     qrySIHeaderGridrep: TIntegerField;
@@ -253,8 +253,8 @@ type
     qrySOAllSales_Order: TIntegerField;
     qrySOAllOffice_Contact: TIntegerField;
     qrySOAllOperator: TIntegerField;
-    qrySOAllDate_Required: TSQLTimeStampField;
-    qrySOAllDate_Ordered: TSQLTimeStampField;
+    qrySOAllDate_Required: TDateTimeField;
+    qrySOAllDate_Ordered: TDateTimeField;
     qrySOAllCust_Order_No: TWideStringField;
     qrySOAllCustomer: TIntegerField;
     qrySOAllBranch_no: TIntegerField;
@@ -281,15 +281,15 @@ type
     qrySOAllCash_Sales: TWideStringField;
     qrySOAllPayment_Transaction_ID: TIntegerField;
     qrySOAllinactive: TWideStringField;
-    qrySOAllinactive_date: TSQLTimeStampField;
+    qrySOAllinactive_date: TDateTimeField;
     qrySOAllinactive_reason: TIntegerField;
     qrySOAllOnline_Order_ID: TWideStringField;
     qrySOAllSub_Rep: TIntegerField;
     qrySOAllCustomer_Name: TWideStringField;
     qrySOAllBranch_Name: TWideStringField;
-    qrySOAllPick_date: TSQLTimeStampField;
-    qrySOAllDelivery_date: TSQLTimeStampField;
-    qrySCHeaderGridInvoice_Date: TSQLTimeStampField;
+    qrySOAllPick_date: TDateTimeField;
+    qrySOAllDelivery_date: TDateTimeField;
+    qrySCHeaderGridInvoice_Date: TDateTimeField;
     qrySCHeaderGridCustomer: TIntegerField;
     qrySCHeaderGridBranch_no: TIntegerField;
     qrySCHeaderGridInactive: TWideStringField;
@@ -311,7 +311,7 @@ type
     qrySCHeaderGridReference: TWideStringField;
     qrySCHeaderGridInvoice_Description: TWideStringField;
     qrySCHeaderGridfactoring_filename: TWideStringField;
-    qrySCHeaderGridfactoring_date: TSQLTimeStampField;
+    qrySCHeaderGridfactoring_date: TDateTimeField;
     qrySCHeaderGridpaid_status: TWideStringField;
     qrySCHeaderGridcash_sales: TWideStringField;
     qrySCHeaderGridrep: TIntegerField;

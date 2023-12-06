@@ -28,6 +28,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object CoolBar2: TCoolBar
       Left = 1
@@ -49,6 +50,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Align = alLeft
         BevelOuter = bvNone
         Color = clSilver
+        ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 0
@@ -147,13 +149,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     Height = 245
     Align = alClient
     DataSource = dtsSuppliers
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick

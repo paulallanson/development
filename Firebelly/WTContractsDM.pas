@@ -67,8 +67,8 @@ type
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
     qryAllContractsContract_Quote: TIntegerField;
-    qryAllContractsContract_Date: TSQLTimeStampField;
-    qryAllContractsExpiry_Date: TSQLTimeStampField;
+    qryAllContractsContract_Date: TDateTimeField;
+    qryAllContractsExpiry_Date: TDateTimeField;
     qryAllContractsContract_Quote_Number: TFloatField;
     qryAllContractsCustomer: TIntegerField;
     qryAllContractsContract_Description: TWideStringField;
@@ -108,6 +108,8 @@ type
     ShowInactive: string;
     ShowLive: boolean;
     TradeRetail: integer;
+    SortType: string;
+    SortOrder: string;
     property CurrentContract: integer read GetCurrentContract;
     property HeaderCount: integer read GetHeaderCount;
     property HeaderCountAll: integer read GetHeaderCountAll;
@@ -1464,7 +1466,12 @@ begin
 
 
 //      sTemp := sTemp + ' ORDER BY Contract_Quote.Contract_Quote desc';
-      sTemp := sTemp + ' ORDER BY Contract_Quote.Quote_Number desc';
+
+       if SortOrder = '' then
+        sTemp := sTemp + ' ORDER BY Contract_Quote.Quote_Number desc'
+      else
+        sTemp := sTemp + ' ORDER BY ' + SortOrder;
+
       sql.text := sTemp;
       open;
     end;

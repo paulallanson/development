@@ -450,7 +450,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
@@ -543,7 +543,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
     SortType := ' ASC'
   else if dtmdlAllPurchases.SortType = ' DESC' then
       SortType := ' ASC'
@@ -558,21 +558,21 @@ begin
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsbold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
 
   dtmdlAllPurchases.SortOrder := SortField + SortType;
   dtmdlAllPurchases.SortType := SortType;
 
   dtmdlAllPurchases.refreshAlldata;
   with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
+  begin
+    try
+      if datasource.dataset.recordcount > 0 then
+        SelectedRows.CurrentRowSelected := true ;
+    except
     end;
+  end;
 end;
 
 procedure TfrmwtLUPurchases.btnReceipts1Click(Sender: TObject);

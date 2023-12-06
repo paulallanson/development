@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BCD842FA-9D78-41FC-B290-5EEFB217FCFF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="dd-dropfiles-5.0.5\PJDropFile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CRPackage\CRPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CRPackage\MSAddIn.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Zorn Barcode\BarComp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PJDropFile">
+        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj"/>
+    </Target>
+    <Target Name="PJDropFile:Clean">
+        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PJDropFile:Make">
+        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CRPackage">
+        <MSBuild Projects="CRPackage\CRPackage.dproj"/>
+    </Target>
+    <Target Name="CRPackage:Clean">
+        <MSBuild Projects="CRPackage\CRPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CRPackage:Make">
+        <MSBuild Projects="CRPackage\CRPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MSAddIn">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj"/>
+    </Target>
+    <Target Name="MSAddIn:Clean">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MSAddIn:Make">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BarComp">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj"/>
+    </Target>
+    <Target Name="BarComp:Clean">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BarComp:Make">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PJDropFile;CRPackage;MSAddIn;BarComp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PJDropFile:Clean;CRPackage:Clean;MSAddIn:Clean;BarComp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PJDropFile:Make;CRPackage:Make;MSAddIn:Make;BarComp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

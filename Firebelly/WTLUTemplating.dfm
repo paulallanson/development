@@ -40,6 +40,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         1251
@@ -96,6 +97,11 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
       end
     end
   end
@@ -133,7 +139,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1007
+      Left = 987
       Top = 15
       Width = 59
       Height = 13
@@ -150,7 +156,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1171
+      Left = 1151
       Top = 9
       Width = 75
       Height = 25
@@ -168,7 +174,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1072
+      Left = 1052
       Top = 11
       Width = 73
       Height = 21
@@ -354,13 +360,19 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Height = 241
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    ParentFont = False
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -388,7 +400,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       end
       item
         Expanded = False
-        FieldName = 'Fitting_Date_New'
+        FieldName = 'Date_Required'
         Title.Caption = 'Date Required'
         Visible = True
       end
@@ -426,7 +438,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       end
       item
         Expanded = False
-        FieldName = 'Status_Text'
+        FieldName = 'sales_order_status_desc'
         Title.Caption = 'Status'
         Width = 134
         Visible = True
@@ -447,7 +459,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       end
       item
         Expanded = False
-        FieldName = 'Template_Date_New'
+        FieldName = 'Template_Date'
         Title.Caption = 'Template Date'
         Width = 123
         Visible = True

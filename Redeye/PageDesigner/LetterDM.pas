@@ -133,6 +133,7 @@ type
     qryGetExportFilter: TFDQuery;
     FDConn: TFDConnection;
     procedure ADOConnBeforeConnect(Sender: TObject);
+    procedure FDConnBeforeConnect(Sender: TObject);
   private
     FOldDatabase : Boolean;
     FDatabaseOpened : Boolean;
@@ -175,7 +176,7 @@ var
 
 implementation
 uses
-  PBDatabase;
+  PBDatabase, CCSCommon;
 {$R *.DFM}
 
 { TdmLetter }
@@ -681,6 +682,11 @@ begin
   for i := Low(HardCodedArray) to High(HardCodedArray) do
     with HardCodedArray[i] do
       AddElement(Letter, N, P, C, L, W, S, StringArray[i], T, D, F, O, A);
+end;
+
+procedure TdmLetter.FDConnBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(FDConn);
 end;
 
 function TdmLetter.GetFaxDefaultLayout: string;

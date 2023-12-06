@@ -1195,7 +1195,7 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
       Origin = 'Forms_per_Box'
       Size = 40
     end
-    object qryOrdersLast_Delivery: TSQLTimeStampField
+    object qryOrdersLast_Delivery: TDateTimeField
       FieldName = 'Last_Delivery'
       Origin = 'Last_Delivery'
       ReadOnly = True

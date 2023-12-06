@@ -64,11 +64,11 @@ type
     qrlblCustDiff: TQRLabel;
     qrlblReportDiff: TQRLabel;
     qrySalesOrdersSales_Order: TIntegerField;
-    qrySalesOrdersDate_Raised: TSQLTimeStampField;
+    qrySalesOrdersDate_Raised: TDateTimeField;
     qrySalesOrdersSales_Order_Status: TIntegerField;
     qrySalesOrdersSales_Order_Status_Desc: TWideStringField;
-    qrySalesOrdersTemplate_Date: TSQLTimeStampField;
-    qrySalesOrdersDate_Required: TSQLTimeStampField;
+    qrySalesOrdersTemplate_Date: TDateTimeField;
+    qrySalesOrdersDate_Required: TDateTimeField;
     qrySalesOrdersDescriptive_Reference: TWideStringField;
     qrySalesOrdersInstall_Address: TIntegerField;
     qrySalesOrdersCustomer_Name: TWideStringField;

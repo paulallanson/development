@@ -570,7 +570,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
@@ -597,7 +597,7 @@ begin
                begin
           		   Canvas.Brush.Color := Color;
         			   Canvas.Font.Color  := Font.Color;
-                 Canvas.Brush.Color := clNavy;
+                 Canvas.Brush.Color := clMenuHighlight;
         			   Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,Column.field.asstring);
                  (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
                end;
@@ -775,7 +775,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
     SortType := ' ASC'
   else if dtmdlAllSInvoices.SortType = ' DESC' then
       SortType := ' ASC'
@@ -785,21 +785,21 @@ begin
   SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsbold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
 
   dtmdlAllSInvoices.SortOrder := SortField + SortType;
   dtmdlAllSInvoices.SortType := SortType;
 
   dtmdlAllSInvoices.refreshdata;
   with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
+  begin
+    try
+      if datasource.dataset.recordcount > 0 then
+        SelectedRows.CurrentRowSelected := true ;
+    except
     end;
+  end;
 end;
 
 procedure TfrmWTLUSalesInvoices.btnRequestforPaymentClick(Sender: TObject);

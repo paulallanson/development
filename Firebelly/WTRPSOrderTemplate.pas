@@ -76,10 +76,10 @@ type
     qrySalesOrdersQuote: TIntegerField;
     qrySalesOrdersUnit_price: TCurrencyField;
     qrySalesOrdersJob: TFloatField;
-    qrySalesOrdersDate_Raised: TSQLTimeStampField;
+    qrySalesOrdersDate_Raised: TDateTimeField;
     qrySalesOrdersSales_Order_Status: TIntegerField;
     qrySalesOrdersSales_Order_Status_Desc: TWideStringField;
-    qrySalesOrdersTemplate_Date: TSQLTimeStampField;
+    qrySalesOrdersTemplate_Date: TDateTimeField;
     qrySalesOrdersInstall_Name: TWideStringField;
     qrySalesOrdersInstall_Phone: TWideStringField;
     qrySalesOrdersEmail_Address: TWideStringField;
@@ -109,10 +109,10 @@ type
     OLDqrySalesOrdersQuote: TIntegerField;
     OLDqrySalesOrdersUnit_price: TCurrencyField;
     OLDqrySalesOrdersJob: TFloatField;
-    OLDqrySalesOrdersDate_Raised: TSQLTimeStampField;
+    OLDqrySalesOrdersDate_Raised: TDateTimeField;
     OLDqrySalesOrdersSales_Order_Status: TIntegerField;
     OLDqrySalesOrdersSales_Order_Status_Desc: TWideStringField;
-    OLDqrySalesOrdersTemplate_Date: TSQLTimeStampField;
+    OLDqrySalesOrdersTemplate_Date: TDateTimeField;
     OLDqrySalesOrdersInstall_Name: TWideStringField;
     OLDqrySalesOrdersInstall_Phone: TWideStringField;
     OLDqrySalesOrdersEmail_Address: TWideStringField;

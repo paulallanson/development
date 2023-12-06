@@ -24,8 +24,8 @@ type
     qryAllPricesMaterial_Type_Description: TWideStringField;
     qryAllPricesWorktop_Group: TIntegerField;
     qryAllPricesWorktop_Group_Description: TWideStringField;
-    qryAllPricesEffective_Date: TSQLTimeStampField;
-    qryAllPricesDate_Changed: TSQLTimeStampField;
+    qryAllPricesEffective_Date: TDateTimeField;
+    qryAllPricesDate_Changed: TDateTimeField;
     qryAllPricesUnit_Price: TCurrencyField;
     qryAllPricesUnit_Cost: TCurrencyField;
     qryAllPricesPrice_Unit_Description: TWideStringField;
@@ -45,6 +45,8 @@ type
     ShowCurrent: boolean;
     ShowLive: boolean;
     Thickness: string;
+    SortType: string;
+    SortOrder: string;
     property HeaderCountAll: integer read GetHeaderCountAll;
     function UsingSearch: boolean;
     procedure RefreshWorktopData;
@@ -79,11 +81,12 @@ function qDate(const aDate : TDateTime) : string;
   end;
 { Local function }
 begin
-  sTemp := '';
   with qryAllPrices do
     begin
+      Close;
       sql.Clear;
-      
+      sTemp := '';
+
       case priceType of
           0: sTemp := qryDummyCurrent.sql.text;
           1: sTemp := qryDummyFuture.sql.text;
@@ -127,7 +130,11 @@ begin
                                 '      order by Prices.effective_date desc) <= '  + qDate(EffectiveDate+1);
         end;
 
-      sTemp := sTemp + ' ORDER BY Material_Type.Description, Worktop.Description, Worktop_Thickness.Thickness';
+      if SortOrder = '' then
+        sTemp := sTemp + ' ORDER BY Worktop_Description desc'
+      else
+        sTemp := sTemp + ' ORDER BY ' + SortOrder;
+
       sql.text := sTemp;
 
       if dtmdlWorktops.IsSQL then

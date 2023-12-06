@@ -266,7 +266,7 @@ begin
     begin
       if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 24) then {Don't delete if converted to order}
         begin
-          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', you cannot delete the quote.',
+          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you cannot delete the quote.',
               mtConfirmation, [mbOK], 0);
           exit;
         end;
@@ -277,7 +277,7 @@ begin
     begin
       if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 23) then
         begin
-          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', you can only requote through the sales order.',
+          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you can only requote through the sales order.',
               mtConfirmation, [mbOK], 0);
           exit;
         end;
@@ -294,7 +294,7 @@ begin
               if MessageDlg('This quote has expired. Do you want to continue?', mtConfirmation, [mbYes, mbNo], 0) = mrNo then
                 exit
 (*          else
-          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', continue?',
+          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', continue?',
               mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
           exit;
 *)
@@ -302,7 +302,7 @@ begin
       else
       if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger > 22) then
         begin
-          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', only the costs can be changed or deleted, continue?',
+          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', only the costs can be changed or deleted, continue?',
               mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
             exit
           else
@@ -810,7 +810,7 @@ begin
             begin
               (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
               (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-              (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+              (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
               (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
             end;
         end;
@@ -821,7 +821,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
           (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-          (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+          (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
           (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
         end;
     end;
@@ -836,7 +836,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
@@ -897,7 +897,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.style <> [fsUnderline, fsBold] then
     SortType := ' ASC'
   else if dtmdlAllQuote.SortType = ' DESC' then
       SortType := ' ASC'
@@ -906,14 +906,12 @@ begin
 
   if (column.FieldName = 'Status_Text') then
     SortField := 'Quote_Status.Quote_Status_Description'
-  else if (column.FieldName = 'Expiry_Date_New') then
-    SortField := 'Quote.Expiry_Date'
   else
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsbold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsUnderline, fsBold];
 
   dtmdlAllQuote.SortOrder := SortField + SortType;
   dtmdlAllQuote.SortType := SortType;

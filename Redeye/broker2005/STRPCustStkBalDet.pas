@@ -64,7 +64,7 @@ type
     qryOrdersQty_in_Stock: TFloatField;
     qryOrdersQuantity: TFloatField;
     qryOrdersForms_per_Box: TStringField;
-    qryOrdersLast_Delivery: TSQLTimeStampField;
+    qryOrdersLast_Delivery: TDateTimeField;
     function Getdetails(Sender: TObject): integer;
     procedure QuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
