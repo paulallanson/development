@@ -3036,7 +3036,7 @@
     Top = 8
   end
   object WorktopSQL: TFDQuery
-    ConnectionName = 'worktop'
+    ConnectionName = 'WT'
     MasterSource = MaterialSRC
     Params.Data = {010001000D4D6174657269616C5F7479706500000000}
     SQL.Strings = (
@@ -3073,7 +3073,7 @@
     Top = 81
   end
   object Thickness: TFDQuery
-    ConnectionName = 'worktop'
+    ConnectionName = 'WT'
     MasterSource = WorktopSRC
     Params.Data = {
       01000200074E6577446174650000000007776F726B746F700001020030000100}
@@ -3113,7 +3113,7 @@
     Top = 161
   end
   object MaterialSQL: TFDQuery
-    ConnectionName = 'worktop'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_type')
     Left = 160
@@ -3146,7 +3146,7 @@
     Top = 200
   end
   object CustSQL: TFDQuery
-    ConnectionName = 'worktop'
+    ConnectionName = 'WT'
     Params.Data = {0100010008437573746F6D657200030400000000000000}
     SQL.Strings = (
       'Select *'
@@ -3156,7 +3156,7 @@
     Top = 153
   end
   object PBandSQL: TFDQuery
-    ConnectionName = 'worktop'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Price_Bands'

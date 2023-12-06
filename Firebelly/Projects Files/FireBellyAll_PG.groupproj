@@ -3,9 +3,6 @@
         <ProjectGuid>{AF482FF9-2E87-4241-94E8-21E00182541F}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="AllFax.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="Firebelly_Aire.dproj">
             <Dependencies/>
         </Projects>
@@ -71,15 +68,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="AllFax">
-        <MSBuild Projects="AllFax.dproj"/>
-    </Target>
-    <Target Name="AllFax:Clean">
-        <MSBuild Projects="AllFax.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="AllFax:Make">
-        <MSBuild Projects="AllFax.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Firebelly_Aire">
         <MSBuild Projects="Firebelly_Aire.dproj"/>
     </Target>
@@ -252,13 +240,13 @@
         <MSBuild Projects="WorktopsLoad.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="AllFax;Firebelly_Aire;Firebelly_aktiv;Firebelly_bat;Firebelly_Bellagio;Firebelly_demo;Firebelly_Elite;Firebelly_EndUser;Firebelly_Free;Firebelly_gms;Firebelly_grantech;Firebelly_Lanzet;Firebelly_Mega;Firebelly_Meridian;Firebelly_qbs;Firebelly_roann;Firebelly_Romany;Firebelly_Ruby;Firebelly_York;WorktopsLoad"/>
+        <CallTarget Targets="Firebelly_Aire;Firebelly_aktiv;Firebelly_bat;Firebelly_Bellagio;Firebelly_demo;Firebelly_Elite;Firebelly_EndUser;Firebelly_Free;Firebelly_gms;Firebelly_grantech;Firebelly_Lanzet;Firebelly_Mega;Firebelly_Meridian;Firebelly_qbs;Firebelly_roann;Firebelly_Romany;Firebelly_Ruby;Firebelly_York;WorktopsLoad"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AllFax:Clean;Firebelly_Aire:Clean;Firebelly_aktiv:Clean;Firebelly_bat:Clean;Firebelly_Bellagio:Clean;Firebelly_demo:Clean;Firebelly_Elite:Clean;Firebelly_EndUser:Clean;Firebelly_Free:Clean;Firebelly_gms:Clean;Firebelly_grantech:Clean;Firebelly_Lanzet:Clean;Firebelly_Mega:Clean;Firebelly_Meridian:Clean;Firebelly_qbs:Clean;Firebelly_roann:Clean;Firebelly_Romany:Clean;Firebelly_Ruby:Clean;Firebelly_York:Clean;WorktopsLoad:Clean"/>
+        <CallTarget Targets="Firebelly_Aire:Clean;Firebelly_aktiv:Clean;Firebelly_bat:Clean;Firebelly_Bellagio:Clean;Firebelly_demo:Clean;Firebelly_Elite:Clean;Firebelly_EndUser:Clean;Firebelly_Free:Clean;Firebelly_gms:Clean;Firebelly_grantech:Clean;Firebelly_Lanzet:Clean;Firebelly_Mega:Clean;Firebelly_Meridian:Clean;Firebelly_qbs:Clean;Firebelly_roann:Clean;Firebelly_Romany:Clean;Firebelly_Ruby:Clean;Firebelly_York:Clean;WorktopsLoad:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AllFax:Make;Firebelly_Aire:Make;Firebelly_aktiv:Make;Firebelly_bat:Make;Firebelly_Bellagio:Make;Firebelly_demo:Make;Firebelly_Elite:Make;Firebelly_EndUser:Make;Firebelly_Free:Make;Firebelly_gms:Make;Firebelly_grantech:Make;Firebelly_Lanzet:Make;Firebelly_Mega:Make;Firebelly_Meridian:Make;Firebelly_qbs:Make;Firebelly_roann:Make;Firebelly_Romany:Make;Firebelly_Ruby:Make;Firebelly_York:Make;WorktopsLoad:Make"/>
+        <CallTarget Targets="Firebelly_Aire:Make;Firebelly_aktiv:Make;Firebelly_bat:Make;Firebelly_Bellagio:Make;Firebelly_demo:Make;Firebelly_Elite:Make;Firebelly_EndUser:Make;Firebelly_Free:Make;Firebelly_gms:Make;Firebelly_grantech:Make;Firebelly_Lanzet:Make;Firebelly_Mega:Make;Firebelly_Meridian:Make;Firebelly_qbs:Make;Firebelly_roann:Make;Firebelly_Romany:Make;Firebelly_Ruby:Make;Firebelly_York:Make;WorktopsLoad:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -22,7 +22,7 @@ object dtmdlWorktops: TdtmdlWorktops
   end
   object lkpPriceBasis: TFDTable
     IndexFieldNames = 'Price_Basis'
-    Connection = dtbsWorktops
+    ConnectionName = 'WT'
     TableName = 'Price_Basis'
     Left = 24
     Top = 192
@@ -132,7 +132,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 304
   end
   object qryGetLastIntSel: TFDQuery
-    ConnectionName = 'Wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Max(Int_Sel_Code) as Last_Code'
       'From Int_Sel'
@@ -142,7 +142,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 305
   end
   object qryDelWork: TFDQuery
-    ConnectionName = 'Wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
@@ -155,7 +155,7 @@ object dtmdlWorktops: TdtmdlWorktops
       end>
   end
   object qryAddWork: TFDQuery
-    ConnectionName = 'Wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -610,7 +610,7 @@ object dtmdlWorktops: TdtmdlWorktops
       end>
   end
   object qryComp: TFDQuery
-    ConnectionName = 'wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from'
       'Company')
@@ -618,7 +618,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 9
   end
   object qryAddIntSelFull: TFDQuery
-    ConnectionName = 'Wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Sel5, Tag, text100)'
