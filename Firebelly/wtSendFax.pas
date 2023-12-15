@@ -29,8 +29,6 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure ApdFaxDriverInterface1DocEnd(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FaxDatabaseLogin(AConnection: TFDCustomConnection;
-      AParams: TFDConnectionDefParams);
     procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     { Private declarations }
@@ -363,14 +361,9 @@ end;
 procedure TfrmWTSendFax.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
   SetConnectionMapRules(FaxDatabase);
-end;
-
-procedure TfrmWTSendFax.FaxDatabaseLogin(AConnection: TFDCustomConnection;
-  AParams: TFDConnectionDefParams);
-begin
   {Get user and password from login screen};
-  AParams.UserName := 'faxes';
-  AParams.Password := 'rabbit';
+  FaxDatabase.Params.UserName := 'faxes';
+  FaxDatabase.Params.Password := 'rabbit';
 end;
 
 procedure TfrmWTSendFax.FormCreate(Sender: TObject);

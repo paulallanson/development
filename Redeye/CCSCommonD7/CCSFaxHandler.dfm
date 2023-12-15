@@ -1,8 +1,5 @@
 object FaxHandler: TFaxHandler
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 242
-  Top = 195
   Height = 328
   Width = 648
   object GetOldFaxesQuery: TFDQuery
@@ -14,9 +11,7 @@ object FaxHandler: TFaxHandler
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Before'
-        ParamType = ptUnknown
       end>
   end
   object WaitForFaxFinishTimer: TTimer
@@ -25,10 +20,10 @@ object FaxHandler: TFaxHandler
     Left = 264
   end
   object FaxDatabase: TFDConnection
-    ConnectionDefName = 'faxes'
     ConnectionName = 'faxesSQL'
-
-    OnLogin = FaxDatabaseLogin
+    Params.Strings = (
+      'ConnectionDef=faxes')
+    BeforeConnect = FaxDatabaseBeforeConnect
     Left = 24
   end
   object DelFaxQuery: TFDQuery
@@ -40,9 +35,7 @@ object FaxHandler: TFaxHandler
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end>
   end
   object AddFaxSQL: TFDQuery
@@ -60,44 +53,29 @@ object FaxHandler: TFaxHandler
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'CreatedOn'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PhoneNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'NoOfRetries'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'LastTried'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'UserName'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qrySelCustBrnchFax: TFDQuery
@@ -114,14 +92,10 @@ object FaxHandler: TFaxHandler
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'branch'
-        ParamType = ptUnknown
       end>
   end
 end

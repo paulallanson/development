@@ -97,7 +97,6 @@ type
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
-    procedure FaxDatabaseLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
     procedure WaitForFaxFinish(Sender: TObject);
     procedure SendFax(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -401,13 +400,9 @@ end;
 procedure TPBSendFaxFrm.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
   SetConnectionMapRules(FaxDatabase);
-end;
-
-procedure TPBSendFaxFrm.FaxDatabaseLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
-begin
   {Get user and password from login screen};
-  AParams.UserName := 'faxes';
-  AParams.Password := 'rabbit';
+  FaxDatabase.Params.UserName := 'faxes';
+  FaxDatabase.Params.Password := 'rabbit';
 end;
 
 procedure TPBSendFaxFrm.WaitForFaxFinish(Sender: TObject);

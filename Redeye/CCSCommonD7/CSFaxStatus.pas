@@ -38,7 +38,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TfrmCSFaxStatus = class(TForm)
@@ -67,8 +67,8 @@ type
     procedure ReFreshBitBtnClick(Sender: TObject);
     function GetFaxStatus(TempFax: string): Shortstring;
     procedure BitBtn1Click(Sender: TObject);
-    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure Timer1Timer(Sender: TObject);
+    procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,6 +82,13 @@ var
 implementation
 
 {$R *.DFM}
+
+procedure TfrmCSFaxStatus.FaxDatabaseBeforeConnect(Sender: TObject);
+begin
+  {Get user and password from login screen};
+  FaxDatabase.Params.UserName := 'faxes';
+  FaxDatabase.Params.Password := 'rabbit';
+end;
 
 procedure TfrmCSFaxStatus.FormActivate(Sender: TObject);
 begin
@@ -200,14 +207,6 @@ end;
 procedure TfrmCSFaxStatus.BitBtn1Click(Sender: TObject);
 begin
   close;
-end;
-
-procedure TfrmCSFaxStatus.FaxDatabaseLogin(Database: TFDConnection;
-  LoginParams: TStrings);
-begin
-  {Get user and password from login screen};
-  LoginParams.Values['USER NAME'] := 'faxes';
-  LoginParams.Values['PASSWORD'] := 'rabbit';
 end;
 
 procedure TfrmCSFaxStatus.Timer1Timer(Sender: TObject);

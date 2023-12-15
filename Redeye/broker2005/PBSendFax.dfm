@@ -100,7 +100,6 @@ object PBSendFaxFrm: TPBSendFaxFrm
     ConnectionName = 'faxesSQL'
     Params.Strings = (
       'ConnectionDef=faxes')
-    OnLogin = FaxDatabaseLogin
     BeforeConnect = FaxDatabaseBeforeConnect
     Left = 144
     Top = 24
