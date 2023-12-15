@@ -28,6 +28,7 @@ object dtmdlOrders: TdtmdlOrders
       '  Purchase_OrderLine.On_Hold,'
       '  Purchase_OrderLine.Proof_Revision,'
       '  Purchase_Order.Supplier,'
+      '  Purchase_Order.Authorised_By,'
       '  Supplier.Name as Supplier_Name,'
       '  job_bag_line_dets.job_bag,'
       '  Purchase_OrderLine.Description_Reference,'
@@ -231,7 +232,7 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
     end
-    object qryOrdersRep_Name: TStringField
+    object qryOrdersRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Origin = 'Rep_Name'
       ReadOnly = True
@@ -244,7 +245,7 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
     end
-    object qryOrdersOperator_Name: TStringField
+    object qryOrdersOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       Origin = 'Operator_Name'
       ReadOnly = True
@@ -275,6 +276,9 @@ object dtmdlOrders: TdtmdlOrders
       FieldName = 'Order_Number'
       Origin = 'Order_Number'
       Required = True
+    end
+    object qryOrdersAuthorised_By: TIntegerField
+      FieldName = 'Authorised_By'
     end
   end
   object dtsOrders: TDataSource
@@ -1023,7 +1027,7 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptInput
         Value = Null
       end>
-    object qrySOHeadersDescription: TStringField
+    object qrySOHeadersDescription: TWideStringField
       FieldName = 'Description'
       Origin = 'Description'
       ReadOnly = True
