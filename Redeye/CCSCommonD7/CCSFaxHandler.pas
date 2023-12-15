@@ -39,7 +39,7 @@ var
 
 implementation
 
-uses STMenuMain, STSendFax, STFaxList;
+uses STMenuMain, STSendFax, STFaxList, CCSCommon;
 
 {$R *.DFM}
 
@@ -81,6 +81,7 @@ end;
 
 procedure TFaxHandler.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
+  SetConnectionMapRules(FaxDatabase);
   {Get user and password from login screen};
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password := 'rabbit';
