@@ -107,7 +107,7 @@
         <DCCReference Include="designide.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
         <DCCReference Include="vcldb.dcp"/>
-        <DCCReference Include="QRWRunDXE11_3_w64.dcp"/>
+        <DCCReference Include="QRWRunDXE11_w64.dcp"/>
         <DCCReference Include="DBQBarcode.pas"/>
         <DCCReference Include="DBZBarCode.pas"/>
         <DCCReference Include="Fieldprop.pas"/>

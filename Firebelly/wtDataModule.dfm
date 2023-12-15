@@ -5,26 +5,26 @@ object dtmdlWorktops: TdtmdlWorktops
   object dtbsWorktops: TFDConnection
     ConnectionName = 'WT'
     Params.Strings = (
-      'ConnectionDef=Worktop')
+      'ConnectionDef=Worktop'
+      'User_Name=sa')
     LoginPrompt = False
-    OnLogin = dtbsWorktopsLogin
     AfterConnect = dtbsWorktopsAfterConnect
     BeforeConnect = dtbsWorktopsBeforeConnect
-    Left = 24
+    Left = 48
     Top = 24
   end
   object qryNewPrice: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Price_Pointer) from Price_Pointer')
-    Left = 24
+    Left = 48
     Top = 80
   end
   object lkpPriceBasis: TFDTable
     IndexFieldNames = 'Price_Basis'
     ConnectionName = 'WT'
     TableName = 'Price_Basis'
-    Left = 24
+    Left = 48
     Top = 192
     object lkpPriceBasisPrice_Basis: TWideStringField
       FieldName = 'Price_Basis'
@@ -54,7 +54,7 @@ object dtmdlWorktops: TdtmdlWorktops
         't_Price,'
       'Unit_Cost,Date_Changed,Operator,Price_unit)'
       'values (:Pointer,:Date,:Basis,:Price,:Cost,:Change,:by,:Unit)')
-    Left = 24
+    Left = 48
     Top = 136
     ParamData = <
       item
@@ -88,7 +88,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'insert into Price_Pointer (Price_Pointer,Price_Type)'
       'values (:Pointer,:Type)'
       '')
-    Left = 24
+    Left = 48
     Top = 248
     ParamData = <
       item
@@ -103,7 +103,7 @@ object dtmdlWorktops: TdtmdlWorktops
     SQL.Strings = (
       'delete from Prices'
       'where Price_pointer = :Price_pointer')
-    Left = 102
+    Left = 150
     Top = 136
     ParamData = <
       item
@@ -115,7 +115,7 @@ object dtmdlWorktops: TdtmdlWorktops
     SQL.Strings = (
       'delete from Price_pointer'
       'where Price_pointer = :price_pointer')
-    Left = 195
+    Left = 251
     Top = 136
     ParamData = <
       item
@@ -128,7 +128,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'select  *'
       'from company'
       'where company = 1')
-    Left = 24
+    Left = 48
     Top = 304
   end
   object qryGetLastIntSel: TFDQuery
@@ -138,7 +138,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'From Int_Sel'
       ' '
       ' ')
-    Left = 104
+    Left = 152
     Top = 305
   end
   object qryDelWork: TFDQuery
@@ -147,7 +147,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
       ' ')
-    Left = 208
+    Left = 304
     Top = 305
     ParamData = <
       item
@@ -164,7 +164,7 @@ object dtmdlWorktops: TdtmdlWorktops
       ''
       ' '
       ' ')
-    Left = 304
+    Left = 384
     Top = 305
     ParamData = <
       item
@@ -192,7 +192,7 @@ object dtmdlWorktops: TdtmdlWorktops
       ' '
       ' '
       ' ')
-    Left = 376
+    Left = 456
     Top = 305
     ParamData = <
       item
@@ -331,7 +331,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'Workstation_Lock.Workstation <> :Workstation) AND'
       'Workstation_Lock.Workstation = Workstation.Workstation AND'
       'Workstation.Status_Descr = Operator.Login_Name')
-    Left = 40
+    Left = 48
     Top = 376
     ParamData = <
       item
@@ -383,7 +383,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'select max(Lock_No) as Last_Lock_No'
       'from Workstation_Lock'
       'where Workstation = :Workstation')
-    Left = 40
+    Left = 48
     Top = 432
     ParamData = <
       item
@@ -418,7 +418,7 @@ object dtmdlWorktops: TdtmdlWorktops
       ':Table_Name,'
       ':Form_Title'
       ')')
-    Left = 144
+    Left = 152
     Top = 376
     ParamData = <
       item
@@ -487,7 +487,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'Key_Value_4 = :Key_Value_4 AND'
       'Key_Value_5 = :Key_Value_5 AND'
       'Table_Name = :Table_Name')
-    Left = 144
+    Left = 152
     Top = 432
     ParamData = <
       item
@@ -556,7 +556,7 @@ object dtmdlWorktops: TdtmdlWorktops
       '        Delivery_Narrative'
       'from company'
       'where company = 1')
-    Left = 123
+    Left = 155
     Top = 248
   end
   object qryGetOneCustomer: TFDQuery
