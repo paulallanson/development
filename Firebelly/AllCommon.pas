@@ -166,7 +166,6 @@ type
     property OnSelChange: TSelChangeEvent read fOnSelChange write fOnSelChange;
   end;
 
-
 resourcestring
   SOFTWARE_KEY = 'Software\'; { where we put our entries  }
   CCS_KEY = 'Company Ltd\'; { the Company specific node }
@@ -636,8 +635,6 @@ var
   myFunction: function(param: integer; param1: boolean): integer stdcall;
   myFunctionTS: function(param: integer; param1: integer; param2: boolean): integer stdcall;
 begin
-  res := 0;
-
   if dtmdlWorktops.SchedulingSystem = 'Outlook' then
     begin
       dll_handle := Loadlibrary('FirebellyScheduler.dll');
@@ -1025,8 +1022,6 @@ var
   myFunction: function(param: integer; param1: boolean): integer stdcall;
   myFunctionTS: function(param: integer; param1: integer; param2: boolean): integer stdcall;
 begin
-  res := 0;
-
   if dtmdlWorktops.SchedulingSystem = 'Outlook' then
     begin
       dll_handle := Loadlibrary('FirebellyScheduler.dll');
@@ -1074,11 +1069,11 @@ begin
   StrLength := Length(StartStr);
   for Count := StrLength downto 1 do
   begin
-    CurrChar := Copy(StartStr, Count, 1);
+    CurrChar := ShortString(Copy(StartStr, Count, 1));
     Id := Pos(CurrChar, Numbers);
     if Id > 0 then
     begin
-      StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
+      StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Numbers), (Id + 1), 1) +
         Copy(StartStr, (Count + 1), (StrLength - Count));
       IncrementNo := StartStr;
       if Id < 10 then Exit;
@@ -1088,7 +1083,7 @@ begin
       Id := Pos(CurrChar, Alphas);
       if Id > 0 then
       begin
-        StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
+        StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Alphas), (Id + 1), 1) +
           Copy(StartStr, (Count + 1), (StrLength - Count));
         IncrementNo := StartStr;
         if Id < 27 then Exit;
@@ -1469,10 +1464,12 @@ var
   olePath: array[0..MAX_PATH] of TOLECHAR;
   chEaten: ULONG;
   dwAttributes: ULONG;
+  AnsiPath: AnsiString;
 begin
   if Succeeded(SHGetDesktopFolder(pDesktopFolder)) then
   try
-    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(APAth), -1, olePath, MAX_PATH);
+    AnsiPath := AnsiString(APath);
+    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(AnsiPath), -1, olePath, MAX_PATH);
     if Succeeded(pDesktopFolder.ParseDisplayName(0, nil, olePath, chEaten, pidl, dwAttributes)) then
       Result := pidl
     else
@@ -1914,7 +1911,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows directory');
+       raise EOSError.Create('Cannot get Windows directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1930,7 +1927,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows System directory');
+       raise EOSError.Create('Cannot get Windows System directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1946,7 +1943,7 @@ begin
      if PathLen > 0 then
        SetLength(Result, PathLen)
      else
-       raise EWin32Error.Create('Cannot get Windows temp directory');
+       raise EOSError.Create('Cannot get Windows temp directory');
    until PathLen <= BuffLen;
 end;
 
@@ -1987,8 +1984,10 @@ const
   SHGFP_TYPE_CURRENT = 0;
 var
   specialFolder : integer;
-  path: array [0..MAX_PATH] of char;
+  Path: array [0..MAX_PATH] of Char;
 begin
+  Result := EmptyStr;
+
   case folder of
     //[Current User]\My Documents
     0: specialFolder := CSIDL_PERSONAL;
@@ -2000,12 +1999,13 @@ begin
     3: specialFolder := CSIDL_PROGRAM_FILES;
     //All Users\Documents
     4: specialFolder := CSIDL_COMMON_DOCUMENTS;
+    else
+      specialFolder := SHGFP_TYPE_CURRENT;
   end;
 
   if SUCCEEDED(SHGetFolderPath(0,specialfolder,0,SHGFP_TYPE_CURRENT,@path[0])) then
-    Result := path
-  else
-    Result := '';
+    Result := Path;
+
 end;
 
 procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size:
@@ -2018,9 +2018,9 @@ var
    DevMode: PDevMode;
 
 
-   function Supported(Setting : integer) : boolean;
+   function Supported(Setting: Cardinal): Boolean;
    begin
-      Supported := (DevMode^.dmFields and Setting) = Setting;
+      Result := (DevMode^.dmFields and Setting) = Setting;
    end;
 
 

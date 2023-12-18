@@ -20,7 +20,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 103
+    Width = 117
     Height = 13
     Caption = 'Client Mail Application'
     Font.Charset = ANSI_CHARSET
@@ -33,7 +33,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   object Label2: TLabel
     Left = 16
     Top = 56
-    Width = 130
+    Width = 144
     Height = 13
     Caption = 'Default Attachment file type'
     Font.Charset = ANSI_CHARSET
@@ -46,7 +46,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   object Label3: TLabel
     Left = 16
     Top = 152
-    Width = 100
+    Width = 108
     Height = 13
     Caption = 'Fax storage Directory'
     Font.Charset = ANSI_CHARSET
@@ -59,7 +59,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   object Label4: TLabel
     Left = 16
     Top = 104
-    Width = 99
+    Width = 108
     Height = 13
     Caption = 'Default Mail Account'
     Font.Charset = ANSI_CHARSET
