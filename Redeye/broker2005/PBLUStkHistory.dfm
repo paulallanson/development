@@ -24,6 +24,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Height = 295
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
     object detsDBGrid: TDBGrid
       Left = 1
@@ -185,6 +186,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     DesignSize = (
@@ -193,39 +195,37 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 81
+      Width = 82
       Height = 13
       Caption = 'Stock Reference'
     end
     object Label2: TLabel
       Left = 8
       Top = 70
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label3: TLabel
       Left = 528
       Top = 44
-      Width = 67
+      Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Reorder Level'
-      ExplicitLeft = 536
     end
     object Label4: TLabel
       Left = 528
       Top = 19
-      Width = 67
+      Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Total In Stock'
-      ExplicitLeft = 536
     end
     object Label5: TLabel
       Left = 8
       Top = 19
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -291,6 +291,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     DesignSize = (

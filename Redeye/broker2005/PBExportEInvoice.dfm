@@ -21,8 +21,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Width = 854
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 8
       Top = 20
@@ -64,6 +64,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Items.Strings = (
         'New File'
         'Re-Send')
+      ParentBackground = False
       TabOrder = 2
       OnClick = rdgrpFileTypeClick
     end
@@ -73,6 +74,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Width = 377
       Height = 64
       Caption = 'Previous Files '
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object Label5: TLabel
@@ -106,8 +108,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Width = 854
     Height = 19
     Panels = <>
-    ExplicitTop = 411
-    ExplicitWidth = 848
   end
   object Panel3: TPanel
     Left = 760
@@ -115,9 +115,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Width = 94
     Height = 339
     Align = alRight
+    ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 754
-    ExplicitHeight = 330
     DesignSize = (
       94
       339)
@@ -178,7 +177,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
-      ExplicitTop = 254
     end
     object BitBtn2: TBitBtn
       Left = 11
@@ -189,7 +187,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitTop = 294
     end
     object btnExcel: TBitBtn
       Left = 11
@@ -253,9 +250,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Height = 339
     Align = alClient
     Caption = 'Panel4'
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 754
-    ExplicitHeight = 330
     object Panel5: TPanel
       Left = 1
       Top = 178
@@ -264,9 +260,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Align = alBottom
       BevelOuter = bvNone
       Caption = 'Panel3'
+      ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 169
-      ExplicitWidth = 752
       object pnlFTP: TPanel
         Left = 0
         Top = 0
@@ -274,6 +269,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         Height = 160
         Align = alLeft
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 5
@@ -351,7 +347,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         Style = lbOwnerDrawFixed
         Align = alClient
         TabOrder = 1
-        ExplicitWidth = 503
       end
     end
     object dbgDetails: TDBGrid

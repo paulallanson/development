@@ -17,9 +17,9 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 275
+    Left = 270
     Top = 448
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -47,11 +47,12 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
     Width = 637
     Height = 73
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object CustLabel: TLabel
       Left = 24
       Top = 12
-      Width = 75
+      Width = 81
       Height = 13
       Caption = 'Customer Name'
       Font.Charset = ANSI_CHARSET
@@ -64,7 +65,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
     object Label1: TLabel
       Left = 24
       Top = 44
-      Width = 69
+      Width = 75
       Height = 13
       Caption = 'Supplier Name'
       Font.Charset = ANSI_CHARSET
@@ -133,6 +134,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
     Width = 101
     Height = 417
     Align = alRight
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       101
@@ -144,6 +146,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       Height = 121
       Anchors = [akTop, akRight]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6

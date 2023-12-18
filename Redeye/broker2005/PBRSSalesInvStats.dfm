@@ -15,14 +15,14 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 55
+    Width = 60
     Height = 13
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 16
     Top = 64
-    Width = 87
+    Width = 96
     Height = 13
     Caption = 'Number of Periods'
   end
@@ -47,6 +47,7 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
       'Period'
       'Rep'
       'Customer')
+    ParentBackground = False
     TabOrder = 1
   end
   object PrintReportBitBtn: TBitBtn

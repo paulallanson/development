@@ -30,8 +30,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 848
   end
   object Panel2: TPanel
     Left = 0
@@ -39,9 +37,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Width = 854
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 372
-    ExplicitWidth = 848
     DesignSize = (
       854
       41)
@@ -70,7 +67,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 764
     end
     object btnOK: TBitBtn
       Left = 682
@@ -101,7 +97,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
-      ExplicitLeft = 676
     end
     object PrintBitBtn: TBitBtn
       Left = 560
@@ -135,7 +130,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ShowHint = True
       TabOrder = 3
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 554
     end
     object btnExcel: TBitBtn
       Left = 466
@@ -190,7 +184,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
-      ExplicitLeft = 460
     end
   end
   object Panel3: TPanel
@@ -199,8 +192,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Width = 854
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -257,8 +250,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
-    ExplicitWidth = 848
-    ExplicitHeight = 331
     ColWidths = (
       178
       201

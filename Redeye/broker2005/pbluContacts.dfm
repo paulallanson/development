@@ -114,7 +114,6 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 599
     end
     object chkbxShowInactive: TCheckBox
       Left = 8

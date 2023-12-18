@@ -19,7 +19,7 @@ object STMaintParamFrm: TSTMaintParamFrm
   object LblCour: TLabel
     Left = 288
     Top = 248
-    Width = 70
+    Width = 79
     Height = 13
     Caption = 'Default Courier'
   end
@@ -34,21 +34,21 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label1: TLabel
       Left = 8
       Top = 29
-      Width = 117
+      Width = 123
       Height = 13
       Caption = 'Last Purchase Order No.'
     end
     object Label2: TLabel
       Left = 8
       Top = 61
-      Width = 97
+      Width = 104
       Height = 13
       Caption = 'Last Store Order No.'
     end
     object SOrdLbl: TLabel
       Left = 8
       Top = 93
-      Width = 98
+      Width = 103
       Height = 13
       Caption = 'Last Sales Order No.'
     end
@@ -94,21 +94,21 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label3: TLabel
       Left = 8
       Top = 29
-      Width = 110
+      Width = 113
       Height = 13
       Caption = 'Purch Ord % Pack Size'
     end
     object Label4: TLabel
       Left = 8
       Top = 61
-      Width = 107
+      Width = 111
       Height = 13
       Caption = 'Store Ord % Pack Size'
     end
     object Label5: TLabel
       Left = 8
       Top = 92
-      Width = 67
+      Width = 69
       Height = 13
       Caption = 'Def W/House'
     end
@@ -205,7 +205,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label7: TLabel
       Left = 8
       Top = 29
-      Width = 63
+      Width = 65
       Height = 13
       Caption = 'Search Timer'
     end
@@ -310,7 +310,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label8: TLabel
       Left = 8
       Top = 19
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Def Price Unit'
     end

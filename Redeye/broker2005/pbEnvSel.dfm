@@ -20,6 +20,7 @@ object frmpbEnvSel: TfrmpbEnvSel
     Items.Strings = (
       'Live'
       'Test')
+    ParentBackground = False
     TabOrder = 0
   end
   object CancelBitBtn: TBitBtn
@@ -49,6 +50,7 @@ object frmpbEnvSel: TfrmpbEnvSel
     Items.Strings = (
       'Server'
       'Workstation')
+    ParentBackground = False
     TabOrder = 3
   end
 end

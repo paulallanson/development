@@ -18,14 +18,14 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   object PartLabel: TLabel
     Left = 8
     Top = 8
-    Width = 104
+    Width = 114
     Height = 13
     Caption = 'Suppliers For Product:'
   end
   object Label4: TLabel
     Left = 8
     Top = 360
-    Width = 121
+    Width = 132
     Height = 13
     Caption = 'Drag and Drop to change'
   end

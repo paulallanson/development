@@ -32,6 +32,7 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     ParentFont = False
   end
   object grpbxDetails: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 16
     Width = 377

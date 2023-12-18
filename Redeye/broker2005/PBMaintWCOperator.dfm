@@ -52,25 +52,26 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 8
     Width = 337
     Height = 231
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 10
       Top = 20
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end
     object Label2: TLabel
       Left = 8
       Top = 53
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Employee No:'
     end
     object Label3: TLabel
       Left = 8
       Top = 83
-      Width = 55
+      Width = 61
       Height = 13
       Caption = 'Department'
     end
@@ -84,14 +85,14 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     object Label5: TLabel
       Left = 8
       Top = 144
-      Width = 56
+      Width = 60
       Height = 13
       Caption = 'Hourly Rate'
     end
     object Label6: TLabel
       Left = 8
       Top = 176
-      Width = 78
+      Width = 87
       Height = 13
       Caption = 'No. of Operators'
     end

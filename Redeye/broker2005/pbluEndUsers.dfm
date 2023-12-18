@@ -34,6 +34,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 275
     Width = 1125
@@ -65,6 +66,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 939
       Top = 1
       Width = 185
@@ -93,6 +95,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1125
@@ -116,6 +119,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       ParentFont = False
     end
     object Panel4: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 400
@@ -140,6 +144,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object Panel5: TPanel
+      ParentBackground = False
       Left = 874
       Top = 1
       Width = 250

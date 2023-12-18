@@ -16,9 +16,9 @@ object STLUCourierFrm: TSTLUCourierFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 267
+    Left = 262
     Top = 264
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -129,6 +129,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 2
     object AddBitBtn: TBitBtn
       Left = 6
@@ -229,6 +230,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     Width = 321
     Height = 65
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 4
     object NameEdit: TEdit
       Left = 8

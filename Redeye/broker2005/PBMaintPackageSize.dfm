@@ -17,7 +17,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
   object DelLabel: TLabel
     Left = 120
     Top = 216
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -38,61 +38,62 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 28
+      Width = 32
       Height = 13
       Caption = 'Width'
     end
     object Label4: TLabel
       Left = 195
       Top = 76
-      Width = 16
+      Width = 18
       Height = 13
       Caption = 'mm'
     end
     object Label5: TLabel
       Left = 195
       Top = 52
-      Width = 16
+      Width = 18
       Height = 13
       Caption = 'mm'
     end
     object Label3: TLabel
       Left = 16
       Top = 52
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'Depth'
     end
     object Label6: TLabel
       Left = 16
       Top = 101
-      Width = 31
+      Width = 35
       Height = 13
       Caption = 'Height'
     end
     object Label7: TLabel
       Left = 195
       Top = 101
-      Width = 16
+      Width = 18
       Height = 13
       Caption = 'mm'
     end
     object Label8: TLabel
       Left = 16
       Top = 136
-      Width = 81
+      Width = 87
       Height = 13
       Caption = 'Volume per Cage'
     end

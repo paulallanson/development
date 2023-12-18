@@ -19,6 +19,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
   OnResize = FormResize
   TextHeight = 13
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 500
     Width = 795
@@ -28,6 +29,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     ExplicitTop = 491
     ExplicitWidth = 789
     object Panel4: TPanel
+      ParentBackground = False
       Left = 303
       Top = 1
       Width = 491
@@ -104,6 +106,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     ExplicitWidth = 789
   end
   object pnlNotes: TPanel
+    ParentBackground = False
     Left = 0
     Top = 72
     Width = 795
@@ -113,6 +116,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     ExplicitWidth = 789
     ExplicitHeight = 338
     object pnlNCAdetails: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 793
@@ -122,6 +126,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       TabOrder = 0
       ExplicitWidth = 787
       object Panel5: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 791
@@ -145,6 +150,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       end
     end
     object pnlResponse: TPanel
+      ParentBackground = False
       Left = 1
       Top = 101
       Width = 793
@@ -155,6 +161,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ExplicitWidth = 787
       ExplicitHeight = 36
       object Panel7: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 791
@@ -179,6 +186,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       end
     end
     object pnlAction: TPanel
+      ParentBackground = False
       Left = 1
       Top = 146
       Width = 793
@@ -189,6 +197,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ExplicitTop = 137
       ExplicitWidth = 787
       object Panel6: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 791
@@ -212,6 +221,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       end
     end
     object pnlPrevent: TPanel
+      ParentBackground = False
       Left = 1
       Top = 246
       Width = 793
@@ -222,6 +232,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ExplicitTop = 237
       ExplicitWidth = 787
       object Panel9: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 791
@@ -246,6 +257,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 419
     Width = 795
@@ -396,6 +408,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnClick = btnClearClick
     end
     object rdgrpJobRePrinted: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 3
       Width = 145
@@ -408,6 +421,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       TabOrder = 7
     end
     object rdgrpSamples: TRadioGroup
+      ParentBackground = False
       Left = 168
       Top = 3
       Width = 145
@@ -421,6 +435,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 795

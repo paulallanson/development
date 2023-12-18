@@ -20,6 +20,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
     Width = 418
     Height = 170
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       418
@@ -131,11 +132,12 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       Top = 5
       Width = 393
       Height = 116
+      ParentBackground = False
       TabOrder = 4
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 60
+        Width = 66
         Height = 13
         Caption = 'Works Order'
         Font.Charset = ANSI_CHARSET
@@ -148,14 +150,14 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 67
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end

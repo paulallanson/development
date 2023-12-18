@@ -93,6 +93,7 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     OnClick = SetupBitBtnClick
   end
   object OrderGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 385
@@ -129,6 +130,7 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 81
     Width = 385

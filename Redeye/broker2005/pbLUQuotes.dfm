@@ -29,6 +29,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
@@ -295,6 +296,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     Width = 848
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -318,6 +320,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         273

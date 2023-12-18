@@ -196,19 +196,20 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 33
+      Width = 38
       Height = 13
       Caption = 'Courier'
     end
     object Label6: TLabel
       Left = 16
       Top = 92
-      Width = 81
+      Width = 90
       Height = 13
       Caption = 'Short Description'
       Font.Charset = ANSI_CHARSET
@@ -221,14 +222,14 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     object Label8: TLabel
       Left = 16
       Top = 60
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblServiceCode: TLabel
       Left = 16
       Top = 124
-      Width = 64
+      Width = 65
       Height = 13
       Caption = 'Service Code'
     end

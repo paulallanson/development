@@ -16,6 +16,7 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 329
     Width = 860

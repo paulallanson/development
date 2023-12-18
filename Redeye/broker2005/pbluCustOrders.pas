@@ -1399,7 +1399,7 @@ begin
   if(dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Needs_Authorising').AsString = 'Y') then
@@ -1407,37 +1407,37 @@ begin
       if (dbgDetails.datasource.dataset.fieldByName('Order_Status').AsInteger = 5) then
         begin
           (Sender as TDBGrid).Canvas.Brush.color := cllime;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end
       else
         begin
           (Sender as TDBGrid).Canvas.font.Color := clLime;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end;
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Authorised_By').AsInteger <> 0) then
     begin
       (Sender as TDBGrid).Canvas.font.style := [fsBold];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := cllime;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if (Column.Title.Caption <> 'Order') and

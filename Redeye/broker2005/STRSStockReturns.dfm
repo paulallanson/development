@@ -140,6 +140,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     Items.Strings = (
       'All Location'
       'One Location')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpLocClick
   end
@@ -148,12 +149,13 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     Top = 19
     Width = 283
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 95
+      Width = 104
       Height = 13
       Caption = 'Production Location'
     end
@@ -186,12 +188,13 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     Top = 52
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

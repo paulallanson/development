@@ -22,14 +22,14 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 55
+    Width = 60
     Height = 13
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 64
+    Width = 70
     Height = 13
     Caption = 'No of Periods'
   end
@@ -43,6 +43,7 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Items.Strings = (
       'Revenue Centre'
       'Customer')
+    ParentBackground = False
     TabOrder = 11
     OnClick = rdgrpReportTypeClick
   end
@@ -66,6 +67,7 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Items.Strings = (
       'All Categories'
       'One Category')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgSelectionClick
   end
@@ -74,12 +76,13 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Top = 88
     Width = 267
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
@@ -247,12 +250,13 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Top = 75
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

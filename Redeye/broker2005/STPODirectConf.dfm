@@ -107,84 +107,84 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 77
+      Width = 82
       Height = 13
       Caption = 'Purchase Order:'
     end
     object Label2: TLabel
       Left = 224
       Top = 64
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label3: TLabel
       Left = 43
       Top = 40
-      Width = 55
+      Width = 60
       Height = 13
       Caption = 'Order Date:'
     end
     object Label4: TLabel
       Left = 556
       Top = 16
-      Width = 72
+      Width = 77
       Height = 13
       Caption = 'Required Date:'
     end
     object lblCustomer: TLabel
       Left = 296
       Top = 64
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end
     object lblPODate: TLabel
       Left = 120
       Top = 40
-      Width = 48
+      Width = 52
       Height = 13
       Caption = 'lblPODate'
     end
     object lblReqDate: TLabel
       Left = 648
       Top = 16
-      Width = 53
+      Width = 57
       Height = 13
       Caption = 'lblReqDate'
     end
     object lblPONumber: TLabel
       Left = 120
       Top = 16
-      Width = 62
+      Width = 69
       Height = 13
       Caption = 'lblPONumber'
     end
     object Label5: TLabel
       Left = 233
       Top = 16
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Supplier:'
     end
     object lblSupplier: TLabel
       Left = 296
       Top = 16
-      Width = 48
+      Width = 56
       Height = 13
       Caption = 'lblSupplier'
     end
     object Label6: TLabel
       Left = 37
       Top = 64
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Sales Order:'
     end
     object lblSalesOrder: TLabel
       Left = 120
       Top = 64
-      Width = 62
+      Width = 69
       Height = 13
       Caption = 'lblSalesOrder'
     end

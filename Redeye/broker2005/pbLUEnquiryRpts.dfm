@@ -20,6 +20,7 @@ object frmPBLUEnquiryRpts: TfrmPBLUEnquiryRpts
     Height = 230
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
@@ -77,6 +78,7 @@ object frmPBLUEnquiryRpts: TfrmPBLUEnquiryRpts
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       405

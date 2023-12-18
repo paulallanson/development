@@ -16,6 +16,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 454
     Width = 691

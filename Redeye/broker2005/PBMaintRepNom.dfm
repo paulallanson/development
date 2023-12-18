@@ -16,7 +16,7 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
   object DelLabel: TLabel
     Left = 86
     Top = 130
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -207,21 +207,21 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     object NomLbl: TLabel
       Left = 9
       Top = 46
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object AdditDetsLbl: TLabel
       Left = 9
       Top = 71
-      Width = 94
+      Width = 105
       Height = 13
       Caption = 'Nominal Description'
     end
     object Label2: TLabel
       Left = 10
       Top = 22
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end

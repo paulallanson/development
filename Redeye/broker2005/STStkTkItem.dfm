@@ -18,7 +18,7 @@ object STStkTkItemFrm: TSTStkTkItemFrm
   object Label1: TLabel
     Left = 16
     Top = 12
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Part Code'
     Font.Charset = ANSI_CHARSET
@@ -31,7 +31,7 @@ object STStkTkItemFrm: TSTStkTkItemFrm
   object Label3: TLabel
     Left = 16
     Top = 39
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = ANSI_CHARSET
@@ -132,12 +132,13 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     object ABinLbl: TLabel
       Left = 45
       Top = 89
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
       Font.Charset = ANSI_CHARSET
@@ -148,9 +149,9 @@ object STStkTkItemFrm: TSTStkTkItemFrm
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 24
+      Left = 19
       Top = 25
-      Width = 39
+      Width = 44
       Height = 13
       Alignment = taRightJustify
       Caption = 'Quantity'
@@ -165,7 +166,7 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     object ALotLbl: TLabel
       Left = 25
       Top = 120
-      Width = 35
+      Width = 37
       Height = 13
       Caption = 'Lot No.'
       Font.Charset = ANSI_CHARSET
@@ -178,7 +179,7 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     object Label2: TLabel
       Left = 12
       Top = 56
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
     end
@@ -232,19 +233,20 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object PBinLbl: TLabel
       Left = 41
       Top = 89
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end
     object Label6: TLabel
-      Left = 24
+      Left = 19
       Top = 25
-      Width = 39
+      Width = 44
       Height = 13
       Alignment = taRightJustify
       Caption = 'Quantity'
@@ -253,14 +255,14 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     object PLotLbl: TLabel
       Left = 17
       Top = 120
-      Width = 35
+      Width = 37
       Height = 13
       Caption = 'Lot No.'
     end
     object LblPackSize: TLabel
       Left = 12
       Top = 56
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
     end

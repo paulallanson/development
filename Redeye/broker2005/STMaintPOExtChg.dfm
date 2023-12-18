@@ -31,14 +31,14 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
   object Label3: TLabel
     Left = 24
     Top = 96
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object POrdLabel: TLabel
     Left = 8
     Top = 0
-    Width = 50
+    Width = 53
     Height = 13
     Caption = 'POrdLabel'
   end
@@ -211,7 +211,7 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
     object Label9: TLabel
       Left = 16
       Top = 28
-      Width = 27
+      Width = 30
       Height = 13
       Caption = 'Detail'
     end
@@ -225,7 +225,7 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
     object Label5: TLabel
       Left = 8
       Top = 94
-      Width = 49
+      Width = 48
       Height = 13
       Caption = 'VAT Code'
     end

@@ -20,6 +20,7 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
   OnKeyPress = FormKeyPress
   TextHeight = 13
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 482
     Width = 808
@@ -204,6 +205,7 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
       260)
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 808

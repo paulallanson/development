@@ -21,21 +21,21 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   object Label1: TLabel
     Left = 8
     Top = 12
-    Width = 57
+    Width = 61
     Height = 13
     Caption = 'Login Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 37
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object DelLabel: TLabel
     Left = 185
     Top = 529
-    Width = 146
+    Width = 125
     Height = 13
     Anchors = [akRight, akBottom]
     Caption = 'Really Delete This User ?'
@@ -45,13 +45,11 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 197
-    ExplicitTop = 538
   end
   object Label4: TLabel
     Left = 8
     Top = 186
-    Width = 75
+    Width = 78
     Height = 13
     Caption = 'Associated Rep'
   end
@@ -80,42 +78,42 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   object Label6: TLabel
     Left = 8
     Top = 134
-    Width = 66
+    Width = 71
     Height = 13
     Caption = 'Email Address'
   end
   object Label7: TLabel
     Left = 368
     Top = 37
-    Width = 29
+    Width = 34
     Height = 13
     Caption = 'Initials'
   end
   object Label8: TLabel
     Left = 8
     Top = 86
-    Width = 31
+    Width = 33
     Height = 13
     Caption = 'Phone'
   end
   object Label9: TLabel
     Left = 8
     Top = 109
-    Width = 51
+    Width = 57
     Height = 13
     Caption = 'Mobile No.'
   end
   object Label10: TLabel
     Left = 8
     Top = 158
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Web Email'
   end
   object Label13: TLabel
     Left = 8
     Top = 62
-    Width = 40
+    Width = 43
     Height = 13
     Caption = 'Job Title'
   end
@@ -255,7 +253,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object Label3: TLabel
         Left = 8
         Top = 156
-        Width = 70
+        Width = 72
         Height = 13
         Caption = 'Access Profile:'
       end
@@ -271,7 +269,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         object AllLabel: TLabel
           Left = 128
           Top = 10
-          Width = 11
+          Width = 13
           Height = 13
           Caption = 'All'
         end
@@ -354,22 +352,22 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         Left = 8
         Top = 8
         Width = 89
-        Height = 26
+        Height = 39
         Caption = 'Max Unauthorised PO Cost Value'
         WordWrap = True
       end
       object Label11: TLabel
         Left = 224
         Top = 202
-        Width = 201
+        Width = 208
         Height = 13
         Caption = 'Restrict Access to these Revenue Centres'
       end
       object Label12: TLabel
         Left = 8
         Top = 48
-        Width = 77
-        Height = 26
+        Width = 60
+        Height = 39
         Caption = 'Authorised Cost Value Limit'
         WordWrap = True
       end
@@ -406,9 +404,9 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         ParentBackground = False
         TabOrder = 3
         object lblValue: TLabel
-          Left = 22
+          Left = 21
           Top = 24
-          Width = 27
+          Width = 28
           Height = 13
           Alignment = taRightJustify
           Caption = 'Value'

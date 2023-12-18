@@ -37,49 +37,49 @@ object PBMaintJobBagRCFrm: TPBMaintJobBagRCFrm
     object lblDescription: TLabel
       Left = 8
       Top = 24
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblSupplier: TLabel
       Left = 8
       Top = 87
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object lblBranch: TLabel
       Left = 8
       Top = 113
-      Width = 34
+      Width = 35
       Height = 13
       Caption = 'Branch'
     end
     object lblCost: TLabel
       Left = 8
       Top = 143
-      Width = 51
+      Width = 54
       Height = 13
       Caption = 'Cost Value'
     end
     object lblSell: TLabel
       Left = 8
       Top = 172
-      Width = 47
+      Width = 49
       Height = 13
       Caption = 'Sell Value'
     end
     object lblVatRate: TLabel
       Left = 8
       Top = 203
-      Width = 47
+      Width = 44
       Height = 13
       Caption = 'VAT Rate'
     end
     object Label1: TLabel
       Left = 8
       Top = 54
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end

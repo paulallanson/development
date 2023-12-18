@@ -29,12 +29,13 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 124
-      Height = 20
+      Width = 117
+      Height = 21
       Caption = 'Form References'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -62,7 +63,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
       Width = 689
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 66
       Caption = 'ToolBar1'
       Images = imglst
       ShowCaptions = True
@@ -75,7 +76,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 66
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -83,7 +84,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 124
+        Left = 132
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -91,7 +92,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnDeleteClick
       end
       object btnNonStock: TToolButton
-        Left = 186
+        Left = 198
         Top = 0
         Width = 8
         Caption = 'btnNonStock'
@@ -99,7 +100,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         Style = tbsSeparator
       end
       object btnMovements: TToolButton
-        Left = 194
+        Left = 206
         Top = 0
         Caption = 'Movements'
         Enabled = False
@@ -107,7 +108,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnMovementsClick
       end
       object btnLocations: TToolButton
-        Left = 256
+        Left = 272
         Top = 0
         Caption = 'Locations'
         Enabled = False
@@ -115,7 +116,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnLocationsClick
       end
       object ToolButton2: TToolButton
-        Left = 318
+        Left = 338
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -123,7 +124,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 326
+        Left = 346
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -205,11 +206,12 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     Width = 704
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 81
+      Width = 86
       Height = 13
       Caption = 'Customer Search'
     end
@@ -228,6 +230,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object btnClose: TButton
         Left = 192

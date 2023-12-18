@@ -342,21 +342,21 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     object Label3: TLabel
       Left = 8
       Top = 18
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 48
-      Width = 22
+      Width = 23
       Height = 13
       Caption = 'Part:'
     end
     object Label2: TLabel
       Left = 376
       Top = 18
-      Width = 85
+      Width = 89
       Height = 13
       Caption = 'Show sales since:'
     end
@@ -454,7 +454,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

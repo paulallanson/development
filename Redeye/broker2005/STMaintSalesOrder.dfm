@@ -26,10 +26,9 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = 370
-    ExplicitWidth = 762
     DesignSize = (
       768
       36)
@@ -108,7 +107,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnConfirmClick
-      ExplicitLeft = 587
     end
     object CancelBitBtn: TBitBtn
       Left = 681
@@ -185,7 +183,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 675
     end
     object chkbxDoNotInvc: TCheckBox
       Left = 8
@@ -203,8 +200,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Width = 768
     Height = 19
     Panels = <>
-    ExplicitTop = 406
-    ExplicitWidth = 762
   end
   object Panel1: TPanel
     Left = 0
@@ -213,8 +208,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Height = 65
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 762
     DesignSize = (
       768
       65)
@@ -300,7 +295,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Color = clWhite
       ReadOnly = True
       TabOrder = 2
-      ExplicitLeft = 633
     end
     object edtAccountTeam: TEdit
       Left = 639
@@ -311,7 +305,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Color = clWhite
       ReadOnly = True
       TabOrder = 3
-      ExplicitLeft = 633
     end
   end
   object pnlHead: TPanel
@@ -326,9 +319,9 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 762
     DesignSize = (
       768
       120)
@@ -426,7 +419,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       ListField = 'Part_Store_Name'
       ListSource = STSalesOrdDM.StoreSRC
       TabOrder = 4
-      ExplicitLeft = 474
     end
     object dbLkpCmbRep: TDBLookupComboBox
       Left = 78
@@ -457,8 +449,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     ParentFont = False
     TabOrder = 4
     OnDblClick = sgLinesDblClick
-    ExplicitWidth = 762
-    ExplicitHeight = 185
     ColWidths = (
       38
       159

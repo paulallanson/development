@@ -48,6 +48,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 248
     Width = 321
@@ -159,6 +160,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 136
     Width = 87

@@ -17,7 +17,7 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
   object DelLabel: TLabel
     Left = 110
     Top = 192
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -37,40 +37,41 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 42
+      Width = 47
       Height = 13
       Caption = 'Question'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 108
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Sequence'
     end
     object Label5: TLabel
       Left = 16
       Top = 83
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Prompt Type'
     end
     object lblItems: TLabel
       Left = 312
       Top = 80
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Items'
     end

@@ -191,6 +191,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     TabOrder = 1
   end
   object grpbxDetails: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 369

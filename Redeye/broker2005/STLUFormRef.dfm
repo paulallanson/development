@@ -263,8 +263,6 @@ object frmSTLUFormRef: TfrmSTLUFormRef
       item
         Width = 50
       end>
-    ExplicitTop = 355
-    ExplicitWidth = 442
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

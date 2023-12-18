@@ -27,7 +27,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 779
     DesignSize = (
       785
       169)
@@ -150,7 +149,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Anchors = [akTop, akRight]
       TabOrder = 3
       OnExit = edtDateReqExit
-      ExplicitLeft = 393
     end
     object edtCustomer: TEdit
       Left = 80
@@ -197,7 +195,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn2Click
-      ExplicitLeft = 481
     end
     object BitBtn3: TBitBtn
       Left = 296
@@ -271,7 +268,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Anchors = [akTop, akRight]
       TabOrder = 16
       OnChange = CheckOK
-      ExplicitLeft = 609
     end
     object memQuantity: TMemo
       Left = 615
@@ -284,7 +280,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnEnter = memQuantityEnter
       OnExit = ValidateQty
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 609
     end
     object dblkpRep: TDBLookupComboBox
       Left = 80
@@ -321,7 +316,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 7
-      ExplicitLeft = 609
     end
     object btnAccountManager: TBitBtn
       Left = 738
@@ -338,7 +332,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       ParentFont = False
       TabOrder = 6
       OnClick = btnAccountManagerClick
-      ExplicitLeft = 732
     end
     object edtAccountManager: TEdit
       Left = 615
@@ -350,7 +343,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 5
-      ExplicitLeft = 609
     end
     object edtDescriptiveRef: TEdit
       Left = 80
@@ -374,7 +366,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 18
-      ExplicitLeft = 732
     end
     object btnShowWO: TBitBtn
       Left = 706
@@ -400,7 +391,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       NumGlyphs = 2
       TabOrder = 19
       OnClick = btnShowWOClick
-      ExplicitLeft = 700
     end
     object cmbJobBagWo: TComboBox
       Left = 618
@@ -410,7 +400,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Style = csDropDownList
       Anchors = [akTop, akRight]
       TabOrder = 20
-      ExplicitLeft = 612
     end
   end
   object PageControl1: TPageControl
@@ -421,8 +410,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     ActivePage = tsOrders
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 779
-    ExplicitHeight = 316
     object tsOrders: TTabSheet
       Caption = 'Orders'
       object Panel1: TPanel
@@ -434,8 +421,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 671
-        ExplicitHeight = 217
         object FuncGrpBox: TGroupBox
           Left = 6
           Top = -5
@@ -634,8 +619,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Caption = 'Panel5'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 671
-        ExplicitHeight = 217
         object dbgLines: TDBGrid
           Left = 1
           Top = 1
@@ -726,8 +709,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 217
-        ExplicitWidth = 771
         DesignSize = (
           777
           71)
@@ -870,8 +851,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 485
-    ExplicitWidth = 779
     object Panel4: TPanel
       Left = 393
       Top = 1
@@ -881,7 +860,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 387
       DesignSize = (
         391
         37)
@@ -948,8 +926,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 524
-    ExplicitWidth = 779
   end
   object PrinterSetupDialog1: TPrinterSetupDialog
     Left = 124

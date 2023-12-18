@@ -2,8 +2,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Left = 4
   Top = 76
   Caption = 'Enter Stock Count Details '
-  ClientHeight = 419
-  ClientWidth = 772
+  ClientHeight = 427
+  ClientWidth = 774
   Color = clBtnFace
   Constraints.MinHeight = 466
   Constraints.MinWidth = 790
@@ -22,10 +22,11 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 772
+    Width = 774
     Height = 41
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -68,16 +69,17 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
   end
   object Panel2: TPanel
-    Left = 686
+    Left = 688
     Top = 41
     Width = 86
-    Height = 359
+    Height = 367
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       86
-      359)
+      367)
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 8
@@ -223,8 +225,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 400
-    Width = 772
+    Top = 408
+    Width = 774
     Height = 19
     Panels = <
       item
@@ -237,22 +239,22 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 686
-    Height = 359
+    Width = 688
+    Height = 367
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 3
     object Panel4: TPanel
       Left = 0
-      Top = 327
-      Width = 692
+      Top = 326
+      Width = 688
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 318
-      ExplicitWidth = 686
       object Label3: TLabel
         Left = 5
         Top = 15
@@ -292,8 +294,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object CountGrid: TStringGrid
       Left = 0
       Top = 0
-      Width = 692
-      Height = 327
+      Width = 688
+      Height = 326
       Align = alClient
       ColCount = 7
       DefaultColWidth = 60
@@ -314,8 +316,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       OnDblClick = CountGridDblClick
       OnDrawCell = CountGridDrawCell
       OnSelectCell = CountGridSelectCell
-      ExplicitWidth = 686
-      ExplicitHeight = 318
       ColWidths = (
         89
         138

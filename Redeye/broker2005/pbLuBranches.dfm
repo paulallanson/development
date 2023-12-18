@@ -85,8 +85,6 @@ object frmpbluBranches: TfrmpbluBranches
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 205
-    ExplicitWidth = 612
     DesignSize = (
       618
       49)
@@ -106,7 +104,6 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = '&Add'
       TabOrder = 0
       OnClick = btnAddClick
-      ExplicitLeft = 255
     end
     object btnChange: TButton
       Left = 349
@@ -118,7 +115,6 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 1
       OnClick = btnChangeClick
-      ExplicitLeft = 343
     end
     object btnDelete: TButton
       Left = 437
@@ -130,7 +126,6 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
-      ExplicitLeft = 431
     end
     object btnClose: TButton
       Left = 523
@@ -141,7 +136,6 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = 'Clos&e'
       TabOrder = 3
       OnClick = btnCloseClick
-      ExplicitLeft = 517
     end
     object edtName: TEdit
       Left = 56
@@ -175,8 +169,6 @@ object frmpbluBranches: TfrmpbluBranches
       item
         Width = 50
       end>
-    ExplicitTop = 254
-    ExplicitWidth = 612
   end
   object dtsBranch: TDataSource
     DataSet = qrySBranch

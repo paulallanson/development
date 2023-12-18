@@ -12,7 +12,7 @@ object PBRPODueQteFrm: TPBRPODueQteFrm
   Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   TextHeight = 16
   object PrintODueQteQuickReport: TQuickRep
     Left = 0

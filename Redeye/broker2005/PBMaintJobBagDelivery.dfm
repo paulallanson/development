@@ -14,6 +14,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
   OnActivate = FormActivate
   TextHeight = 13
   object BottomPanel: TPanel
+    ParentBackground = False
     Left = 0
     Top = 433
     Width = 575
@@ -185,6 +186,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 575
@@ -192,6 +194,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
     Align = alClient
     TabOrder = 1
     object Panel1: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 573
@@ -207,6 +210,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         Caption = 'Date Required'
       end
       object AddrTypeRadGrp: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 16
         Width = 105
@@ -222,6 +226,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         OnClick = AddrTypeRadGrpClick
       end
       object AddrGrpBox: TGroupBox
+        ParentBackground = False
         Left = 160
         Top = 16
         Width = 377
@@ -403,6 +408,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         end
       end
       object QtysGrpBox: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 154
         Width = 145
@@ -576,6 +582,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       end
     end
     object pnlCourierService: TPanel
+      ParentBackground = False
       Left = 1
       Top = 297
       Width = 573
@@ -669,6 +676,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       end
     end
     object DelInstructPanel: TPanel
+      ParentBackground = False
       Left = 1
       Top = 361
       Width = 573

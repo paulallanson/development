@@ -144,6 +144,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     Width = 794
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       794
@@ -209,6 +210,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 3
     object Panel2: TPanel
       Left = 0
@@ -219,6 +221,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8

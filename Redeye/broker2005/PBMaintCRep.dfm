@@ -44,14 +44,14 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 55
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
@@ -77,7 +77,7 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     object Label4: TLabel
       Left = 8
       Top = 115
-      Width = 73
+      Width = 81
       Height = 13
       Caption = '% Responsibilty'
       Font.Charset = ANSI_CHARSET

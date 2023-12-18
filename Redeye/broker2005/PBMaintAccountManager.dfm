@@ -17,14 +17,14 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
   object Label1: TLabel
     Left = 10
     Top = 20
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label2: TLabel
     Left = 10
     Top = 56
-    Width = 70
+    Width = 71
     Height = 13
     Caption = 'Account Team'
   end

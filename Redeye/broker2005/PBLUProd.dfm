@@ -27,8 +27,6 @@ object PBLUProdFrm: TPBLUProdFrm
       item
         Width = 50
       end>
-    ExplicitTop = 406
-    ExplicitWidth = 659
   end
   object DetsDBGrid: TDBGrid
     Left = 0
@@ -68,9 +66,8 @@ object PBLUProdFrm: TPBLUProdFrm
     Height = 52
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 354
-    ExplicitWidth = 659
     object Label1: TLabel
       Left = 8
       Top = 20
@@ -94,8 +91,8 @@ object PBLUProdFrm: TPBLUProdFrm
       Height = 52
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 459
       object btnSelect: TBitBtn
         Left = 28
         Top = 11

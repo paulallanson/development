@@ -22,9 +22,8 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 364
-    ExplicitWidth = 728
     DesignSize = (
       734
       41)
@@ -37,7 +36,6 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 0
-      ExplicitLeft = 643
     end
   end
   object DBGrid1: TDBGrid
@@ -136,7 +134,5 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Width = 734
     Height = 19
     Panels = <>
-    ExplicitTop = 405
-    ExplicitWidth = 728
   end
 end

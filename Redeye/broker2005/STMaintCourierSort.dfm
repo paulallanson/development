@@ -185,6 +185,7 @@ object STMaintCourierSortFrm: TSTMaintCourierSortFrm
     OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 353

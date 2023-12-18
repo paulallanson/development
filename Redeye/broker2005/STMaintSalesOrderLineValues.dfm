@@ -20,18 +20,19 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Width = 574
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 15
       Top = 12
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
     end
     object Label8: TLabel
       Left = 15
       Top = 40
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
@@ -60,11 +61,12 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Width = 574
     Height = 82
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
       Left = 15
       Top = 20
-      Width = 48
+      Width = 50
       Height = 13
       Caption = 'Cost Price'
     end
@@ -78,14 +80,14 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     object Label5: TLabel
       Left = 250
       Top = 52
-      Width = 68
+      Width = 67
       Height = 13
       Caption = 'Sell Pack Size'
     end
     object Label9: TLabel
       Left = 15
       Top = 52
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
@@ -150,6 +152,7 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Width = 574
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       574
@@ -201,25 +204,26 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Width = 574
     Height = 112
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object Label2: TLabel
       Left = 15
       Top = 80
-      Width = 83
+      Width = 90
       Height = 13
       Caption = 'Quantity Invoiced'
     end
     object Label1: TLabel
       Left = 15
       Top = 16
-      Width = 80
+      Width = 90
       Height = 13
       Caption = 'Quantity Ordered'
     end
     object Label3: TLabel
       Left = 15
       Top = 47
-      Width = 87
+      Width = 95
       Height = 13
       Caption = 'Quantity Delivered'
     end

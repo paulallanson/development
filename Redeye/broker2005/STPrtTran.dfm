@@ -39,21 +39,21 @@ object STPrtTranFrm: TSTPrtTranFrm
     object Label3: TLabel
       Left = 16
       Top = 62
-      Width = 76
+      Width = 81
       Height = 13
       Caption = 'Movement Date'
     end
     object QtyLabel: TLabel
       Left = 256
       Top = 62
-      Width = 137
+      Width = 148
       Height = 13
       Caption = 'Quantity To Move (in singles)'
     end
     object MovedLabel: TLabel
       Left = 520
       Top = 62
-      Width = 127
+      Width = 140
       Height = 13
       Caption = 'Quantity Moved (in singles)'
     end
@@ -67,21 +67,21 @@ object STPrtTranFrm: TSTPrtTranFrm
       object Label1: TLabel
         Left = 8
         Top = 16
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Order No'
       end
       object Label4: TLabel
         Left = 184
         Top = 16
-        Width = 23
+        Width = 26
         Height = 13
         Caption = 'From'
       end
       object Label5: TLabel
         Left = 528
         Top = 16
-        Width = 24
+        Width = 23
         Height = 13
         Caption = 'GRN'
       end
@@ -120,14 +120,14 @@ object STPrtTranFrm: TSTPrtTranFrm
       object Label2: TLabel
         Left = 8
         Top = 20
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
       object Label8: TLabel
         Left = 344
         Top = 20
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
@@ -330,14 +330,14 @@ object STPrtTranFrm: TSTPrtTranFrm
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Store'
         end
         object FromDetsLabel: TLabel
           Left = 12
           Top = 56
-          Width = 48
+          Width = 52
           Height = 13
           Caption = 'From Dets'
         end
@@ -401,7 +401,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Store'
         end

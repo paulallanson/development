@@ -18,6 +18,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 805
@@ -191,6 +192,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     ExplicitWidth = 799
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 484
     Width = 805
@@ -200,6 +202,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     ExplicitTop = 475
     ExplicitWidth = 799
     object Panel4: TPanel
+      ParentBackground = False
       Left = 413
       Top = 1
       Width = 391
@@ -279,6 +282,7 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       86)
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 720
     Top = 97
     Width = 85

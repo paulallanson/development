@@ -17,7 +17,7 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
   object DelLabel: TLabel
     Left = 168
     Top = 138
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -183,25 +183,26 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
     Top = 8
     Width = 457
     Height = 113
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 89
+      Width = 98
       Height = 13
       Caption = 'Composite Product'
     end
     object Label2: TLabel
       Left = 8
       Top = 52
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label3: TLabel
       Left = 8
       Top = 85
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end

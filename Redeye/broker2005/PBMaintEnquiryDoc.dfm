@@ -17,14 +17,14 @@ object PBMaintEnquiryDocFrm: TPBMaintEnquiryDocFrm
   object Label1: TLabel
     Left = 12
     Top = 16
-    Width = 20
+    Width = 22
     Height = 13
     Caption = 'Title'
   end
   object Label2: TLabel
     Left = 12
     Top = 48
-    Width = 41
+    Width = 44
     Height = 13
     Caption = 'Location'
   end

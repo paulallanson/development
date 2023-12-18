@@ -16,7 +16,7 @@ object frmCCSProgressBar: TfrmCCSProgressBar
   object Label1: TLabel
     Left = 16
     Top = 64
-    Width = 189
+    Width = 192
     Height = 13
     Caption = 'Please wait ............................................'
   end
@@ -31,7 +31,7 @@ object frmCCSProgressBar: TfrmCCSProgressBar
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

@@ -20,32 +20,33 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
     Width = 493
     Height = 76
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 12
       Top = 16
-      Width = 20
+      Width = 22
       Height = 13
       Caption = 'Title'
     end
     object Label2: TLabel
       Left = 12
       Top = 48
-      Width = 41
+      Width = 44
       Height = 13
       Caption = 'Location'
     end
     object Label3: TLabel
       Left = 332
       Top = 16
-      Width = 63
+      Width = 67
       Height = 13
       Caption = 'Date Created'
     end
     object lblDateCreated: TLabel
       Left = 418
       Top = 16
-      Width = 70
+      Width = 77
       Height = 13
       Caption = 'lblDateCreated'
     end
@@ -79,6 +80,7 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
     Width = 493
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object lblDelete: TLabel
       Left = 148

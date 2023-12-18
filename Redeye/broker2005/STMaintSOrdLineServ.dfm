@@ -25,7 +25,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     object Label1: TLabel
       Left = 8
       Top = 19
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
       Font.Charset = ANSI_CHARSET
@@ -174,49 +174,49 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     object Label2: TLabel
       Left = 8
       Top = 13
-      Width = 48
+      Width = 50
       Height = 13
       Caption = 'Cost Price'
     end
     object Label3: TLabel
       Left = 8
       Top = 45
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 84
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label5: TLabel
       Left = 312
       Top = 12
-      Width = 71
+      Width = 80
       Height = 13
       Caption = 'Cost Uplift type'
     end
     object Label6: TLabel
       Left = 568
       Top = 12
-      Width = 54
+      Width = 60
       Height = 13
       Caption = 'Uplift Value'
     end
     object Label7: TLabel
       Left = 168
       Top = 13
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Cost unit'
     end
     object Label8: TLabel
       Left = 168
       Top = 45
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Sell unit'
     end

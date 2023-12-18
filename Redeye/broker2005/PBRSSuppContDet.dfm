@@ -22,8 +22,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Width = 751
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 745
     DesignSize = (
       751
       81)
@@ -32,6 +32,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       Top = 11
       Width = 147
       Height = 58
+      ParentBackground = False
       TabOrder = 0
       object Label2: TLabel
         Left = 8
@@ -67,8 +68,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       Items.Strings = (
         'Summary'
         'Detailed')
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 616
     end
     object chkbxSuppliers: TCheckBox
       Left = 448
@@ -95,9 +96,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Width = 751
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 424
-    ExplicitWidth = 745
     DesignSize = (
       751
       41)
@@ -108,8 +108,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 442
       DesignSize = (
         302
         39)
@@ -241,8 +241,6 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       item
         Width = 50
       end>
-    ExplicitTop = 465
-    ExplicitWidth = 745
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
@@ -313,6 +311,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Top = 252
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel

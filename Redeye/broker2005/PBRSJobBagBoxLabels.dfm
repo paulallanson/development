@@ -19,6 +19,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
   OnShow = FormShow
   TextHeight = 13
   object POGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
@@ -69,6 +70,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 126
     Width = 209
@@ -146,6 +148,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     end
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 126
     Width = 177
@@ -228,6 +231,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     OnClick = PreviewBitBtnClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 82
     Width = 393
@@ -305,6 +309,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     OnClick = PrintBitBtnClick
   end
   object GroupBox4: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 211
     Width = 177

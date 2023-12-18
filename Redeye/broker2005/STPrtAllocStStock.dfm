@@ -26,28 +26,28 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     object lblProduct: TLabel
       Left = 16
       Top = 8
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Product:'
     end
     object lblPartStore: TLabel
       Left = 16
       Top = 32
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Warehouse:'
     end
     object Label1: TLabel
       Left = 376
       Top = 8
-      Width = 80
+      Width = 90
       Height = 13
       Caption = 'Quantity Ordered'
     end
     object lblQtyOrdered: TLabel
       Left = 472
       Top = 8
-      Width = 64
+      Width = 73
       Height = 13
       Caption = 'lblQtyOrdered'
     end

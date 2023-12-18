@@ -22,6 +22,7 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
     Width = 281
     Height = 169
     Caption = 'Period End'
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
@@ -39,28 +40,28 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
     object Label4: TLabel
       Left = 8
       Top = 92
-      Width = 106
+      Width = 112
       Height = 13
       Caption = 'Next Period End Date:'
     end
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 104
+      Width = 109
       Height = 13
       Caption = 'Last Period End Date:'
     end
     object lblLastEndDate: TLabel
       Left = 152
       Top = 28
-      Width = 72
+      Width = 77
       Height = 13
       Caption = 'lblLastEndDate'
     end
     object lblProcessing: TLabel
       Left = 8
       Top = 120
-      Width = 52
+      Width = 55
       Height = 13
       Caption = 'Processing'
     end

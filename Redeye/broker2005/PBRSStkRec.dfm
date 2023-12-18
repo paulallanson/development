@@ -23,6 +23,7 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
       'Unconfirmed Call Offs with Bin allocations'
       'Confirmed Deliveries not assigned to Bins'
       'Confimed Call Offs with no Bin allocations')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgReportTypeClick
   end

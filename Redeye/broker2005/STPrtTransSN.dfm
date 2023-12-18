@@ -15,7 +15,7 @@ object STPrtTransSNFrm: TSTPrtTransSNFrm
   object ItemNoLabel: TLabel
     Left = 8
     Top = 8
-    Width = 60
+    Width = 64
     Height = 13
     Caption = 'ItemNoLabel'
   end

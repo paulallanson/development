@@ -58,25 +58,26 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Width = 273
     Height = 177
     Caption = 'Stock Calloffs'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 53
+      Width = 55
       Height = 13
       Caption = 'User Name'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Password'
     end
     object Label4: TLabel
       Left = 16
       Top = 92
-      Width = 47
+      Width = 49
       Height = 13
       Caption = 'User Role'
     end
@@ -131,11 +132,12 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Width = 265
     Height = 177
     Caption = 'Stationery'
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 28
-      Width = 61
+      Width = 66
       Height = 13
       Caption = 'Consumer ID'
     end

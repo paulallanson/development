@@ -23,8 +23,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     Width = 758
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 752
     object dbtxtSubject: TDBText
       Left = 72
       Top = 8
@@ -224,9 +224,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     Width = 758
     Height = 54
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 340
-    ExplicitWidth = 752
     DesignSize = (
       758
       54)
@@ -266,7 +265,6 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       Caption = 'Close'
       TabOrder = 3
       OnClick = Button1Click
-      ExplicitLeft = 658
     end
     object Button2: TButton
       Left = 576
@@ -277,7 +275,6 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       Caption = 'Activities'
       TabOrder = 4
       OnClick = Button2Click
-      ExplicitLeft = 570
     end
   end
   object stsbrDetails: TStatusBar
@@ -292,7 +289,5 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       item
         Width = 50
       end>
-    ExplicitTop = 394
-    ExplicitWidth = 752
   end
 end

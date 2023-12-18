@@ -22,6 +22,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Width = 705
     Height = 261
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object dbgrdCustStatus: TDBGrid
       Left = 1
@@ -109,6 +110,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Width = 705
     Height = 76
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object RadioGroup1: TRadioGroup
       Left = 8
@@ -120,6 +122,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Items.Strings = (
         'Summary'
         'Detail')
+      ParentBackground = False
       TabOrder = 0
     end
     object chkbxShowInactive: TCheckBox
@@ -138,6 +141,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Width = 705
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblRecordCount: TLabel
       Left = 104
@@ -148,7 +152,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Record Count:'
     end
@@ -159,6 +163,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewReportBitBtn: TBitBtn
         Left = 30

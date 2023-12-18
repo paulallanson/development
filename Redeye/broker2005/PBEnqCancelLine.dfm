@@ -23,25 +23,26 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Width = 654
     Height = 97
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblEnquiryNo: TLabel
       Left = 24
       Top = 16
-      Width = 55
+      Width = 60
       Height = 13
       Caption = 'Enquiry No:'
     end
     object lblCustomer: TLabel
       Left = 24
       Top = 44
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object lblDescription: TLabel
       Left = 24
       Top = 71
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
@@ -52,6 +53,7 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Width = 654
     Height = 58
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object btnOK: TBitBtn
       Left = 248
@@ -80,32 +82,33 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Width = 654
     Height = 239
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 24
       Top = 21
-      Width = 40
+      Width = 41
       Height = 13
       Caption = 'Reason:'
     end
     object Label5: TLabel
       Left = 24
       Top = 58
-      Width = 66
+      Width = 72
       Height = 13
       Caption = 'Winning Price'
     end
     object Label6: TLabel
       Left = 24
       Top = 95
-      Width = 53
+      Width = 61
       Height = 13
       Caption = 'Competitor:'
     end
     object Label45: TLabel
       Left = 215
       Top = 58
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
       Font.Charset = ANSI_CHARSET
@@ -118,7 +121,7 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     object Label2: TLabel
       Left = 24
       Top = 127
-      Width = 31
+      Width = 33
       Height = 13
       Caption = 'Notes:'
     end

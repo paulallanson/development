@@ -692,13 +692,13 @@ begin
   if (dbgDetails.datasource.dataset.fieldbyname('Not_in_Use').asstring = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldbyname('Store_Qty').asinteger < dbgDetails.datasource.dataset.fieldbyname('Reorder_Level').asinteger) then
     begin
       (Sender as TDBGrid).Canvas.font.color := cllime;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'In Stock') and

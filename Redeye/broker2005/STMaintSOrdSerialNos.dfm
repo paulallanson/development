@@ -26,42 +26,42 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     object label3: TLabel
       Left = 8
       Top = 16
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Product:'
     end
     object lblProductCode: TLabel
       Left = 72
       Top = 16
-      Width = 72
+      Width = 80
       Height = 13
       Caption = 'lblProductCode'
     end
     object Label4: TLabel
       Left = 432
       Top = 16
-      Width = 83
+      Width = 93
       Height = 13
       Caption = 'Quantity Ordered:'
     end
     object lblQuantity: TLabel
       Left = 544
       Top = 16
-      Width = 49
+      Width = 57
       Height = 13
       Caption = 'lblQuantity'
     end
     object Label5: TLabel
       Left = 8
       Top = 40
-      Width = 83
+      Width = 89
       Height = 13
       Caption = 'Total Serial items:'
     end
     object lblSerialItems: TLabel
       Left = 120
       Top = 40
-      Width = 61
+      Width = 68
       Height = 13
       Caption = 'lblSerialItems'
     end
@@ -107,7 +107,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     object Label2: TLabel
       Left = 8
       Top = 3
-      Width = 151
+      Width = 169
       Height = 13
       Caption = 'Serial Numbers on this order line'
     end
@@ -204,7 +204,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     object Label1: TLabel
       Left = 6
       Top = 5
-      Width = 162
+      Width = 176
       Height = 13
       Caption = 'Serial Numbers currently available:'
     end

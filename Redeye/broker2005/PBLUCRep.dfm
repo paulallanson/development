@@ -18,14 +18,14 @@ object PBLUCRepFrm: TPBLUCRepFrm
   object CustLabel: TLabel
     Left = 80
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 275
+    Left = 270
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -33,21 +33,21 @@ object PBLUCRepFrm: TPBLUCRepFrm
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end

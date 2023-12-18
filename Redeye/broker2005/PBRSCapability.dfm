@@ -20,9 +20,8 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
     Width = 702
     Height = 63
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 323
-    ExplicitWidth = 696
     DesignSize = (
       702
       63)
@@ -64,7 +63,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPreviewClick
-      ExplicitLeft = 444
     end
     object btnPrint: TBitBtn
       Left = 530
@@ -89,7 +87,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
-      ExplicitLeft = 524
     end
     object btnCancel: TBitBtn
       Left = 608
@@ -100,7 +97,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 602
     end
     object chkCapability: TCheckBox
       Left = 72
@@ -123,8 +119,6 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
       item
         Width = 50
       end>
-    ExplicitTop = 386
-    ExplicitWidth = 696
   end
   object DBGrid1: TDBGrid
     Left = 0

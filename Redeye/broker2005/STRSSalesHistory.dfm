@@ -14,6 +14,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
   OnCreate = FormCreate
   TextHeight = 13
   object pnlCustProd: TPanel
+    ParentBackground = False
     Left = 0
     Top = 272
     Width = 691
@@ -155,6 +156,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 691
@@ -162,6 +164,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     Align = alClient
     TabOrder = 1
     object pnlExportPrgrss: TPanel
+      ParentBackground = False
       Left = 208
       Top = 115
       Width = 289
@@ -195,6 +198,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Visible = False
     end
     object rdgrpProdType: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 96
       Width = 129
@@ -209,6 +213,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       OnClick = rdgrpProdTypeClick
     end
     object pnlProdType: TPanel
+      ParentBackground = False
       Left = 144
       Top = 102
       Width = 321
@@ -248,6 +253,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       end
     end
     object rdgrpCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 14
       Width = 129
@@ -261,6 +267,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       OnClick = rdgrpCustomerClick
     end
     object pnlCustomer: TPanel
+      ParentBackground = False
       Left = 144
       Top = 20
       Width = 321
@@ -304,6 +311,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       end
     end
     object rdgrpSortBy: TRadioGroup
+      ParentBackground = False
       Left = 512
       Top = 96
       Width = 145
@@ -316,6 +324,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       TabOrder = 6
     end
     object grpbxRange: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 171
       Width = 353
@@ -390,6 +399,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       end
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 512
       Top = 171
       Width = 185
@@ -424,6 +434,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       end
     end
     object GroupBox2: TGroupBox
+      ParentBackground = False
       Left = 512
       Top = 8
       Width = 185

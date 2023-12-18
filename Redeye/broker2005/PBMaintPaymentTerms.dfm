@@ -53,7 +53,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     object Label2: TLabel
       Left = 25
       Top = 24
-      Width = 76
+      Width = 82
       Height = 13
       Caption = 'Number of Days'
     end
@@ -89,6 +89,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
         'Direct Debit'
         'Credit Card'
         'Payment Upfront')
+      ParentBackground = False
       TabOrder = 2
       OnClick = rdgrpPaymentTypeClick
     end

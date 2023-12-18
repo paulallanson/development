@@ -17,7 +17,7 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
   object lblDocuments: TLabel
     Left = 11
     Top = 8
-    Width = 88
+    Width = 81
     Height = 13
     Caption = 'Job Documents'
     Font.Charset = DEFAULT_CHARSET

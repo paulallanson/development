@@ -17,7 +17,7 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
   object DelLabel: TLabel
     Left = 149
     Top = 184
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -43,14 +43,14 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 84
+      Width = 91
       Height = 13
       Caption = 'Claim/Declaration'
     end
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 75
+      Width = 83
       Height = 13
       Caption = 'Short Descrition'
     end
@@ -92,6 +92,7 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
       Items.Strings = (
         'FSC'
         'PEFC')
+      ParentBackground = False
       TabOrder = 3
     end
   end

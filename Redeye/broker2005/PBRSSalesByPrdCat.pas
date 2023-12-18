@@ -590,7 +590,7 @@ begin
   if dtsrcSalesbyInv.dataset.fieldbyname('Invoice_or_credit').asstring = 'C' then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
   if  (Column.Title.Caption <> 'Order') and
       (Column.Title.Caption <> 'Value') and

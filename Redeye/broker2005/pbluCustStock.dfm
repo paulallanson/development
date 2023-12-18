@@ -135,7 +135,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           Style = tbsDropDown
         end
         object btnMaintain: TToolButton
-          Left = 417
+          Left = 413
           Top = 0
           Caption = 'Maintain'
           Enabled = False
@@ -143,7 +143,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnMaintainClick
         end
         object btnTransfers: TToolButton
-          Left = 482
+          Left = 478
           Top = 0
           Caption = '&Moves'
           DropdownMenu = pmnMovements

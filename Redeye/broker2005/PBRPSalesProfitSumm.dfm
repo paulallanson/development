@@ -10,7 +10,7 @@ object PBRPSalesProfitSummFrm: TPBRPSalesProfitSummFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 13

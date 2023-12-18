@@ -439,8 +439,6 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
         Text = 'You may assign upto x suppliers.'
         Width = 50
       end>
-    ExplicitTop = 501
-    ExplicitWidth = 503
   end
   object GetSuppsSQL: TFDQuery
     ConnectionName = 'PB'

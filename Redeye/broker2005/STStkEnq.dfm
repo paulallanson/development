@@ -22,11 +22,12 @@ object STStkEnqFrm: TSTStkEnqFrm
     Height = 74
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 53
-      Width = 174
+      Width = 183
       Height = 13
       Caption = 'Quantity Key: Stock Quantity / Value'
     end
@@ -35,11 +36,12 @@ object STStkEnqFrm: TSTStkEnqFrm
       Top = 0
       Width = 713
       Height = 49
+      ParentBackground = False
       TabOrder = 0
       object Label2: TLabel
         Left = 8
         Top = 26
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
@@ -84,6 +86,7 @@ object STStkEnqFrm: TSTStkEnqFrm
     Width = 727
     Height = 44
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       727
@@ -118,6 +121,7 @@ object STStkEnqFrm: TSTStkEnqFrm
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
     object StockTreeView: TTreeView
       Left = 0

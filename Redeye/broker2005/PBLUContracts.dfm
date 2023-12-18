@@ -45,6 +45,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
@@ -143,6 +144,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     Width = 848
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label60: TLabel
       Left = 8
@@ -175,6 +177,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       DesignSize = (
         273

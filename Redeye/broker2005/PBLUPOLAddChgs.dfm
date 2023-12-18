@@ -14,7 +14,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 16
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -27,47 +27,48 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object lblPONumber: TLabel
       Left = 104
       Top = 8
-      Width = 62
+      Width = 69
       Height = 13
       Caption = 'lblPONumber'
     end
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 77
+      Width = 82
       Height = 13
       Caption = 'Purchase Order:'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label3: TLabel
       Left = 8
       Top = 48
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Supplier:'
     end
     object lblCustomer: TLabel
       Left = 104
       Top = 28
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end
     object lblSupplier: TLabel
       Left = 104
       Top = 48
-      Width = 48
+      Width = 56
       Height = 13
       Caption = 'lblSupplier'
     end
@@ -84,6 +85,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     object DelBitBtn: TBitBtn
@@ -130,6 +132,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Height = 215
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
     object DBGrid1: TDBGrid
       Left = 1

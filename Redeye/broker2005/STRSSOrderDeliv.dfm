@@ -20,9 +20,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Width = 733
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 386
-    ExplicitWidth = 727
     DesignSize = (
       733
       41)
@@ -55,7 +54,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       ParentFont = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 474
     end
     object PrintBitBtn: TBitBtn
       Left = 571
@@ -86,7 +84,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       ParentFont = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 565
     end
     object CancelBitBtn: TBitBtn
       Left = 655
@@ -104,7 +101,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 2
-      ExplicitLeft = 649
     end
     object btnEmail: TBitBtn
       Left = 15
@@ -224,8 +220,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Width = 733
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 727
     DesignSize = (
       733
       81)
@@ -252,6 +248,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Top = 4
       Width = 313
       Height = 69
+      ParentBackground = False
       TabOrder = 0
       Visible = False
       object Label3: TLabel
@@ -298,7 +295,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       TabOrder = 1
       OnChange = edtDateFromChange
       OnExit = edtDateFromExit
-      ExplicitLeft = 592
     end
     object edtDateTo: TEdit
       Left = 598
@@ -310,7 +306,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       TabOrder = 2
       OnChange = edtDateToChange
       OnExit = edtDateToExit
-      ExplicitLeft = 592
     end
     object btnDateFrom: TBitBtn
       Left = 694
@@ -334,7 +329,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnDateFromClick
-      ExplicitLeft = 688
     end
     object btnDateTo: TBitBtn
       Left = 694
@@ -358,7 +352,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = btnDateToClick
-      ExplicitLeft = 688
     end
     object rgCustomer: TRadioGroup
       Left = 8
@@ -369,6 +362,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 5
       OnClick = rgCustomerClick
     end
@@ -385,8 +379,6 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       item
         Width = 50
       end>
-    ExplicitTop = 427
-    ExplicitWidth = 727
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

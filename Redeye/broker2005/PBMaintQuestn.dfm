@@ -39,40 +39,41 @@ object PBMaintQuestnFrm: TPBMaintQuestnFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 42
+      Width = 47
       Height = 13
       Caption = 'Question'
     end
     object Label3: TLabel
       Left = 16
       Top = 112
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Sequence'
     end
     object Label4: TLabel
       Left = 16
       Top = 80
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object Label5: TLabel
       Left = 16
       Top = 51
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Prompt Type'
     end
     object lblItems: TLabel
       Left = 312
       Top = 80
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Items'
     end

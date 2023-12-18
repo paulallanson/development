@@ -266,9 +266,9 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
         309
         41)
       object CountLabel: TLabel
-        Left = 238
+        Left = 233
         Top = 18
-        Width = 54
+        Width = 59
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

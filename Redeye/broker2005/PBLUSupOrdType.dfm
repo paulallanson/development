@@ -67,6 +67,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 2
     object AddBitBtn: TBitBtn
       Left = 4
@@ -150,8 +151,6 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
       item
         Width = 50
       end>
-    ExplicitTop = 216
-    ExplicitWidth = 419
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

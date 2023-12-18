@@ -196,7 +196,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label2: TLabel
       Left = 12
       Top = 20
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
       Font.Charset = ANSI_CHARSET
@@ -209,7 +209,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label3: TLabel
       Left = 11
       Top = 67
-      Width = 38
+      Width = 41
       Height = 13
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
@@ -222,7 +222,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label7: TLabel
       Left = 11
       Top = 163
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
@@ -235,7 +235,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label8: TLabel
       Left = 11
       Top = 189
-      Width = 31
+      Width = 33
       Height = 13
       Caption = 'Phone'
       Font.Charset = ANSI_CHARSET
@@ -261,7 +261,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label10: TLabel
       Left = 11
       Top = 213
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Email'
       Font.Charset = ANSI_CHARSET
@@ -274,7 +274,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label4: TLabel
       Left = 11
       Top = 237
-      Width = 31
+      Width = 36
       Height = 13
       Caption = 'Mobile'
       Font.Charset = ANSI_CHARSET
@@ -287,14 +287,14 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label1: TLabel
       Left = 283
       Top = 21
-      Width = 57
+      Width = 61
       Height = 13
       Caption = 'Prefix/Suffix'
     end
     object Label5: TLabel
       Left = 11
       Top = 43
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Position'
       Font.Charset = ANSI_CHARSET
@@ -307,35 +307,35 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object ProdNomlbl: TLabel
       Left = 11
       Top = 345
-      Width = 78
+      Width = 86
       Height = 13
       Caption = 'Product Nominal'
     end
     object AdditDestslbl: TLabel
       Left = 11
       Top = 368
-      Width = 81
+      Width = 92
       Height = 13
       Caption = 'Additional Details'
     end
     object Label6: TLabel
       Left = 11
       Top = 381
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object Label11: TLabel
       Left = 11
       Top = 317
-      Width = 66
+      Width = 74
       Height = 13
       Caption = 'Commission %'
     end
     object Label12: TLabel
       Left = 11
       Top = 290
-      Width = 56
+      Width = 55
       Height = 13
       Caption = 'Sales Team'
       Font.Charset = ANSI_CHARSET
@@ -608,7 +608,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
       object Label13: TLabel
         Left = 9
         Top = 8
-        Width = 44
+        Width = 48
         Height = 13
         Caption = 'Company'
         Font.Charset = ANSI_CHARSET
@@ -621,7 +621,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
       object Label14: TLabel
         Left = 263
         Top = 8
-        Width = 22
+        Width = 23
         Height = 13
         Caption = 'Area'
         Font.Charset = ANSI_CHARSET

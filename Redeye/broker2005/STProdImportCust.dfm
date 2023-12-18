@@ -34,11 +34,12 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Height = 56
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 2
     object lblStep3: TLabel
       Left = 8
       Top = 8
-      Width = 149
+      Width = 164
       Height = 13
       Caption = '3. Select the file to be imported.'
     end
@@ -67,11 +68,12 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Width = 375
     Height = 55
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'Progress: '
     end
@@ -86,7 +88,7 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'records read.'
       Visible = False
@@ -94,7 +96,7 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 99
+      Width = 108
       Height = 13
       Caption = 'Reading Product file.'
     end
@@ -112,11 +114,12 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Width = 375
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 134
+      Width = 117
       Height = 13
       Caption = '1. Select the Customer.'
       Font.Charset = DEFAULT_CHARSET
@@ -149,11 +152,12 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Width = 375
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 82
+      Width = 90
       Height = 13
       Caption = '4. Run the Import'
     end
@@ -174,6 +178,7 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Width = 375
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 6
     object Cancel2BitBtn: TBitBtn
       Left = 288
@@ -192,11 +197,12 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     Width = 375
     Height = 107
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object lblStep2: TLabel
       Left = 8
       Top = 8
-      Width = 177
+      Width = 193
       Height = 13
       Caption = '2. Select the Customer product prefix.'
       Font.Charset = DEFAULT_CHARSET
@@ -209,21 +215,21 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     object Label3: TLabel
       Left = 32
       Top = 35
-      Width = 68
+      Width = 75
       Height = 13
       Caption = 'Product prefix:'
     end
     object Label2: TLabel
       Left = 32
       Top = 60
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
     end
     object Label4: TLabel
       Left = 32
       Top = 84
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end

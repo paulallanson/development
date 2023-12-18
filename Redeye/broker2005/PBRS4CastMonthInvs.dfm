@@ -17,7 +17,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
   object Label1: TLabel
     Left = 63
     Top = 19
-    Width = 86
+    Width = 93
     Height = 13
     Caption = 'Delivery due after:'
   end
@@ -45,7 +45,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
   object Label2: TLabel
     Left = 63
     Top = 64
-    Width = 95
+    Width = 103
     Height = 13
     Caption = 'Delivery due before:'
   end
@@ -73,7 +73,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
   object lblProcessing: TLabel
     Left = 64
     Top = 152
-    Width = 52
+    Width = 55
     Height = 13
     Caption = 'Processing'
   end
@@ -89,6 +89,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
       'By Customer'
       'By Rep'
       'By Account Manager')
+    ParentBackground = False
     TabOrder = 0
   end
   object DateFromEdit: TEdit
@@ -121,6 +122,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     Items.Strings = (
       'Summary'
       'Detailed')
+    ParentBackground = False
     TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn

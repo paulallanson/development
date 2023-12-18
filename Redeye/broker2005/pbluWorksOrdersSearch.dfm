@@ -18,28 +18,28 @@ object frmpbluWorksOrdersSearch: TfrmpbluWorksOrdersSearch
   object Label4: TLabel
     Left = 11
     Top = 26
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 90
+    Width = 100
     Height = 13
     Caption = 'Customer Order No'
   end
   object lblQuantity: TLabel
     Left = 11
     Top = 74
-    Width = 68
+    Width = 77
     Height = 13
     Caption = 'Order Quantity'
   end
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -52,7 +52,7 @@ object frmpbluWorksOrdersSearch: TfrmpbluWorksOrdersSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -65,28 +65,28 @@ object frmpbluWorksOrdersSearch: TfrmpbluWorksOrdersSearch
   object Label2: TLabel
     Left = 11
     Top = 170
-    Width = 66
+    Width = 72
     Height = 13
     Caption = 'Ordered since'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 98
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label1: TLabel
     Left = 11
     Top = 122
-    Width = 39
+    Width = 40
     Height = 13
     Caption = 'Job Bag'
   end
   object Label3: TLabel
     Left = 11
     Top = 146
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end

@@ -19,9 +19,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     Width = 834
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 338
-    ExplicitWidth = 828
     DesignSize = (
       834
       41)
@@ -41,7 +40,6 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Close'
       TabOrder = 1
       OnClick = btnCloseClick
-      ExplicitLeft = 747
     end
     object edtSearch: TEdit
       Left = 104
@@ -60,7 +58,6 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Select'
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 659
     end
   end
   object stsbrDetails: TStatusBar
@@ -75,8 +72,6 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       item
         Width = 50
       end>
-    ExplicitTop = 379
-    ExplicitWidth = 828
   end
   object dbgDetails: TDBGrid
     Left = 0

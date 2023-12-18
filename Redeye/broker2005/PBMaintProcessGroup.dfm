@@ -16,7 +16,7 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
   object DelLabel: TLabel
     Left = 117
     Top = 176
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -36,19 +36,20 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label7: TLabel
       Left = 7
       Top = 80
-      Width = 86
+      Width = 95
       Height = 13
       Caption = 'Department E-mail'
       Font.Charset = ANSI_CHARSET
@@ -61,7 +62,7 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     object Label5: TLabel
       Left = 81
       Top = 104
-      Width = 12
+      Width = 10
       Height = 13
       Caption = 'cc'
       Font.Charset = ANSI_CHARSET
@@ -74,7 +75,7 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     object Label2: TLabel
       Left = 7
       Top = 48
-      Width = 56
+      Width = 60
       Height = 13
       Caption = 'Hourly Rate'
       Font.Charset = ANSI_CHARSET

@@ -18,14 +18,14 @@ object STLUCourierServFrm: TSTLUCourierServFrm
   object lblCourier: TLabel
     Left = 8
     Top = 6
-    Width = 43
+    Width = 51
     Height = 13
     Caption = 'lblCourier'
   end
   object CountLabel: TLabel
-    Left = 195
+    Left = 190
     Top = 230
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -69,6 +69,7 @@ object STLUCourierServFrm: TSTLUCourierServFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 2
     object AddBitBtn: TBitBtn
       Left = 6
@@ -146,6 +147,7 @@ object STLUCourierServFrm: TSTLUCourierServFrm
     Width = 241
     Height = 74
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 3
     object NameEdit: TEdit
       Left = 8

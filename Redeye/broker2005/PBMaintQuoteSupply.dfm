@@ -119,6 +119,7 @@ object PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm
     TabOrder = 2
   end
   object grpbxDetails: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 489

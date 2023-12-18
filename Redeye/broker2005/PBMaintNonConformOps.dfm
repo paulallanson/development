@@ -106,6 +106,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     OnDblClick = lstbxNonMembersDblClick
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 275
     Width = 468

@@ -73,6 +73,7 @@ object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 301
     Width = 697

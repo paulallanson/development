@@ -22,21 +22,21 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     object Label1: TLabel
       Left = 16
       Top = 24
-      Width = 59
+      Width = 63
       Height = 13
       Caption = 'Bin Location'
     end
     object Label2: TLabel
       Left = 16
       Top = 56
-      Width = 45
+      Width = 48
       Height = 13
       Caption = 'Delivered'
     end
     object Label3: TLabel
       Left = 192
       Top = 56
-      Width = 44
+      Width = 48
       Height = 13
       Caption = 'Allocated'
     end
@@ -147,7 +147,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
       object Label4: TLabel
         Left = 16
         Top = 18
-        Width = 52
+        Width = 59
         Height = 13
         Caption = 'Adjustment'
       end

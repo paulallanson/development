@@ -24,11 +24,12 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     Width = 677
     Height = 70
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 16
       Top = 7
-      Width = 63
+      Width = 53
       Height = 13
       Caption = 'Rep Team:'
       Font.Charset = ANSI_CHARSET
@@ -41,7 +42,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object Label4: TLabel
       Left = 16
       Top = 31
-      Width = 86
+      Width = 74
       Height = 13
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
@@ -54,7 +55,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object lblRepTeamName: TLabel
       Left = 112
       Top = 7
-      Width = 100
+      Width = 91
       Height = 13
       Caption = 'lblRepTeamName'
       Font.Charset = ANSI_CHARSET
@@ -67,7 +68,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object lblFinancialYear: TLabel
       Left = 112
       Top = 31
-      Width = 91
+      Width = 81
       Height = 13
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
@@ -83,11 +84,12 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       Width = 249
       Height = 61
       Caption = 'Copy Budget Profile from:'
+      ParentBackground = False
       TabOrder = 0
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 50
+        Width = 49
         Height = 13
         Caption = 'Rep Team'
       end
@@ -122,6 +124,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     Width = 677
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object OKBitBtn: TBitBtn
       Left = 254

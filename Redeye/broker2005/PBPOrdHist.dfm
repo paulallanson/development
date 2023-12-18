@@ -26,8 +26,6 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving, goRowSelect]
     TabOrder = 0
-    ExplicitWidth = 647
-    ExplicitHeight = 232
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -35,8 +33,6 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Width = 651
     Height = 19
     Panels = <>
-    ExplicitTop = 232
-    ExplicitWidth = 647
   end
   object qrySelPOLine: TFDQuery
     ConnectionName = 'PB'

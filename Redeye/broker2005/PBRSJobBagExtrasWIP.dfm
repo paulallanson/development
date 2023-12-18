@@ -23,6 +23,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       781
@@ -34,6 +35,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewBitBtn: TBitBtn
         Left = 144
@@ -154,6 +156,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     Height = 274
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object DBGrid: TDBGrid
       Left = 0
@@ -236,12 +239,13 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Top = 92
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 2
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -262,6 +266,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     Height = 201
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       781
@@ -269,28 +274,28 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object Label3: TLabel
       Left = 8
       Top = 155
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 155
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
       Top = 155
-      Width = 81
+      Width = 92
       Height = 13
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 415
       Top = 3
-      Width = 86
+      Width = 93
       Height = 13
       Caption = 'Delivery due after:'
     end
@@ -318,7 +323,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object Label2: TLabel
       Left = 415
       Top = 48
-      Width = 95
+      Width = 103
       Height = 13
       Caption = 'Delivery due before:'
     end
@@ -353,6 +358,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
@@ -361,11 +367,12 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Top = 68
       Width = 281
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       object lblCustomer: TLabel
         Left = 8
         Top = 1
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
       end
@@ -463,6 +470,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       BevelOuter = bvNone
       Constraints.MinHeight = 201
       Constraints.MinWidth = 224
+      ParentBackground = False
       TabOrder = 5
       object TotByRadioGroup: TRadioGroup
         Left = 1
@@ -477,6 +485,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
           'By Rep'
           'By Account Manager'
           'Do not total')
+        ParentBackground = False
         TabOrder = 0
         OnClick = TotByRadioGroupClick
       end
@@ -490,6 +499,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
         Items.Strings = (
           'Summary'
           'Detail')
+        ParentBackground = False
         TabOrder = 1
       end
       object chkbxComplete: TCheckBox
@@ -530,6 +540,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Items.Strings = (
         'All Reps'
         'One Rep')
+      ParentBackground = False
       TabOrder = 8
       OnClick = rgRepClick
     end
@@ -538,12 +549,13 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Top = 8
       Width = 281
       Height = 50
+      ParentBackground = False
       TabOrder = 9
       Visible = False
       object lblRep: TLabel
         Left = 8
         Top = 4
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end

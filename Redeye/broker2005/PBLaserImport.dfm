@@ -29,6 +29,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     TabOrder = 0
   end
   object pnlImportFile: TPanel
+    ParentBackground = False
     Left = 0
     Top = 185
     Width = 624
@@ -61,6 +62,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlProgress: TPanel
+    ParentBackground = False
     Left = 0
     Top = 282
     Width = 624
@@ -106,6 +108,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlImport: TPanel
+    ParentBackground = False
     Left = 0
     Top = 241
     Width = 624
@@ -132,6 +135,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlCancel: TPanel
+    ParentBackground = False
     Left = 0
     Top = 458
     Width = 624
@@ -150,6 +154,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlDepartment: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 624

@@ -11,7 +11,7 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  Scaled = True
+  Scaled = False
   TextHeight = 13
   object qrAgedStk: TQuickRep
     Left = 0

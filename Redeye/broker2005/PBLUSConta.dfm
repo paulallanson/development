@@ -17,14 +17,14 @@ object PBLUSContaFrm: TPBLUSContaFrm
   object SuppLabel: TLabel
     Left = 80
     Top = 6
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 275
+    Left = 270
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -32,21 +32,21 @@ object PBLUSContaFrm: TPBLUSContaFrm
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 41
+    Width = 46
     Height = 13
     Caption = 'Supplier:'
   end
@@ -256,21 +256,21 @@ object PBLUSContaFrm: TPBLUSContaFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 34
+      Width = 39
       Height = 13
       Caption = 'Mobile:'
     end

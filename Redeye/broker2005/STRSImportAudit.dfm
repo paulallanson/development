@@ -16,7 +16,7 @@ object STRSImportAuditfrm: TSTRSImportAuditfrm
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 97
+    Width = 107
     Height = 13
     Caption = 'Date/time of transfer'
   end

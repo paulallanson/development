@@ -59,7 +59,6 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = PreviewReportBitBtnClick
-      ExplicitLeft = 505
     end
     object PrintReportBitBtn: TBitBtn
       Left = 587
@@ -84,7 +83,6 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = PrintReportBitBtnClick
-      ExplicitLeft = 593
     end
     object CancelBitBtn: TBitBtn
       Left = 677
@@ -95,7 +93,6 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 683
     end
     object chkbxIncCallOffs: TCheckBox
       Left = 16

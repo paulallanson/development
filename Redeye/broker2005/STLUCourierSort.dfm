@@ -61,6 +61,7 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 266
     Width = 321
@@ -175,6 +176,7 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 146
     Width = 87

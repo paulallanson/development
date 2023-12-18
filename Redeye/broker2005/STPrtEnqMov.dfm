@@ -21,42 +21,42 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
   object PartLabel: TLabel
     Left = 8
     Top = 12
-    Width = 65
+    Width = 70
     Height = 13
     Caption = 'Product Code'
   end
   object StoreLabel: TLabel
     Left = 8
     Top = 34
-    Width = 25
+    Width = 27
     Height = 13
     Caption = 'Store'
   end
   object DateLabel: TLabel
     Left = 8
     Top = 58
-    Width = 63
+    Width = 67
     Height = 13
     Caption = 'Dates:   From'
   end
   object Label1: TLabel
     Left = 264
     Top = 58
-    Width = 13
+    Width = 12
     Height = 13
     Caption = 'To'
   end
   object Label2: TLabel
     Left = 400
     Top = 34
-    Width = 15
+    Width = 16
     Height = 13
     Caption = 'Bin'
   end
   object Label3: TLabel
     Left = 400
     Top = 58
-    Width = 15
+    Width = 16
     Height = 13
     Caption = 'Lot'
   end

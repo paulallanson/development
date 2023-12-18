@@ -22,7 +22,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   object Label3: TLabel
     Left = 24
     Top = 235
-    Width = 33
+    Width = 36
     Height = 13
     Caption = 'Sort by'
   end
@@ -46,7 +46,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object Label2: TLabel
       Left = 16
       Top = 66
-      Width = 80
+      Width = 81
       Height = 13
       Caption = 'To Invoice Date:'
     end
@@ -74,7 +74,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object Label1: TLabel
       Left = 16
       Top = 23
-      Width = 90
+      Width = 95
       Height = 13
       Caption = 'From Invoice Date:'
     end
@@ -250,7 +250,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -352,7 +352,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

@@ -17,7 +17,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object lblFrom: TLabel
     Left = 463
     Top = 108
-    Width = 100
+    Width = 107
     Height = 13
     Caption = 'Live Proof Date from:'
   end
@@ -66,7 +66,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object lblTo: TLabel
     Left = 463
     Top = 156
-    Width = 89
+    Width = 94
     Height = 13
     Caption = 'Live Proof Date to:'
   end
@@ -75,12 +75,13 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Top = 123
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 12
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -113,6 +114,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Items.Strings = (
       'All Account Managers'
       'One Account Manager')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpAccMgrClick
   end
@@ -121,12 +123,13 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Top = 14
     Width = 281
     Height = 52
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblSupplier: TLabel
       Left = 8
       Top = 4
-      Width = 85
+      Width = 91
       Height = 13
       Caption = 'Account Manager'
     end
@@ -164,6 +167,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
@@ -172,12 +176,13 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Top = 92
     Width = 281
     Height = 52
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblCustomer: TLabel
       Left = 8
       Top = 4
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end
@@ -342,6 +347,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
       'Job Bag'
       'Account Manager'
       'Customer')
+    ParentBackground = False
     TabOrder = 10
   end
   object rdgrpReportType: TRadioGroup
@@ -355,6 +361,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
       'Data Services - Work in Progress'
       'Client Services - Work in Progess'
       'SEP Approvals Due')
+    ParentBackground = False
     TabOrder = 13
     OnClick = rdgrpReportTypeClick
   end

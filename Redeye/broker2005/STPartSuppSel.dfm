@@ -98,14 +98,14 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     object Label1: TLabel
       Left = 16
       Top = 40
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 33
       Top = 72
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end

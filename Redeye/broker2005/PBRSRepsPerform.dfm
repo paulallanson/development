@@ -19,7 +19,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   object Label1: TLabel
     Left = 8
     Top = 100
-    Width = 100
+    Width = 102
     Height = 13
     Caption = 'Select Financial Year'
   end
@@ -33,6 +33,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgRepClick
   end
@@ -41,12 +42,13 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     Width = 257
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -148,18 +150,19 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Width = 401
     Height = 41
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 6
     object Label2: TLabel
       Left = 8
       Top = 2
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'Progress: '
     end
     object Label3: TLabel
       Left = 80
       Top = 2
-      Width = 93
+      Width = 101
       Height = 13
       Caption = 'Reading invoice file'
     end
@@ -174,7 +177,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     object lblRecordCount: TLabel
       Left = 315
       Top = 2
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'records read.'
       Visible = False

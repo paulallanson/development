@@ -189,19 +189,20 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label9: TLabel
       Left = 8
       Top = 20
-      Width = 27
+      Width = 30
       Height = 13
       Caption = 'Detail'
     end
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 21
+      Width = 23
       Height = 13
       Caption = 'Cost'
     end

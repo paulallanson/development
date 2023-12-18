@@ -25,8 +25,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 549
-    ExplicitWidth = 620
     DesignSize = (
       624
       41)
@@ -120,7 +118,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 425
     end
     object CancelBitBtn: TBitBtn
       Left = 517
@@ -198,7 +195,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 513
     end
   end
   object pnlFormRef: TPanel
@@ -209,7 +205,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 620
     object POrderLbl: TLabel
       Left = 8
       Top = 4
@@ -306,8 +301,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 620
-    ExplicitHeight = 468
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
@@ -318,8 +311,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 612
-        ExplicitHeight = 88
         object Label10: TLabel
           Left = 16
           Top = 10
@@ -344,7 +335,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Caption = 'Panel1'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 612
         object Label9: TLabel
           Left = 160
           Top = 258
@@ -912,7 +902,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 612
         object lblCourier: TLabel
           Left = 16
           Top = 12
@@ -1172,8 +1161,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
-    ExplicitTop = 590
-    ExplicitWidth = 620
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup

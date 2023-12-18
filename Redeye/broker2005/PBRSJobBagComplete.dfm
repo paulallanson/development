@@ -20,7 +20,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   object Label1: TLabel
     Left = 462
     Top = 11
-    Width = 86
+    Width = 93
     Height = 13
     Caption = 'Delivery due after:'
   end
@@ -69,7 +69,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   object Label2: TLabel
     Left = 462
     Top = 56
-    Width = 95
+    Width = 103
     Height = 13
     Caption = 'Delivery due before:'
   end
@@ -88,12 +88,13 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Top = 80
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -134,6 +135,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Items.Strings = (
       'All Account Managers'
       'One Account Manager')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rgAccManagerClick
   end
@@ -142,11 +144,12 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Top = 20
     Width = 281
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     object lblSupplier: TLabel
       Left = 8
       Top = 4
-      Width = 85
+      Width = 91
       Height = 13
       Caption = 'Account Manager'
     end
@@ -184,6 +187,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rgCustomerClick
   end
@@ -192,11 +196,12 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Top = 105
     Width = 281
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     object lblCustomer: TLabel
       Left = 8
       Top = 3
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end
@@ -347,6 +352,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
       'By Account Manager'
       'By Customer'
       'Do not total')
+    ParentBackground = False
     TabOrder = 10
   end
   object rdgrpShowJobs: TRadioGroup
@@ -360,6 +366,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
       'To Invoice This Week'
       'Production Complete'
       'All')
+    ParentBackground = False
     TabOrder = 13
   end
 end

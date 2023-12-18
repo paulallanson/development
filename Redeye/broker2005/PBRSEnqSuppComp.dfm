@@ -191,6 +191,7 @@ object PBRSEnqSuppCompFrm: TPBRSEnqSuppCompFrm
     TabOrder = 7
   end
   object grpBxDate: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 56
     Width = 241
@@ -281,6 +282,7 @@ object PBRSEnqSuppCompFrm: TPBRSEnqSuppCompFrm
     TabOrder = 9
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 69
     Top = 67
     Width = 289

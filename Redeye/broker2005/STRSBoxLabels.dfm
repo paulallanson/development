@@ -32,8 +32,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     TabOrder = 0
     OnKeyPress = BoxQuantityEditKeyPress
     OnSelectCell = LineDetsStringGridSelectCell
-    ExplicitWidth = 753
-    ExplicitHeight = 248
     ColWidths = (
       38
       70
@@ -56,8 +54,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       item
         Width = 50
       end>
-    ExplicitTop = 410
-    ExplicitWidth = 753
   end
   object pnlFooter: TPanel
     Left = 0
@@ -67,8 +63,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 369
-    ExplicitWidth = 753
     object CancelBitBtn: TBitBtn
       Left = 656
       Top = 8
@@ -155,7 +149,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 753
     object POGroupBox: TGroupBox
       Left = 8
       Top = 8

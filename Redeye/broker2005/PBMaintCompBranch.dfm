@@ -18,7 +18,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   object DelLabel: TLabel
     Left = 112
     Top = 230
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -191,12 +191,13 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
       Top = 22
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
@@ -209,7 +210,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     object Label3: TLabel
       Left = 16
       Top = 46
-      Width = 38
+      Width = 41
       Height = 13
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
@@ -222,7 +223,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     object Label7: TLabel
       Left = 16
       Top = 145
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET

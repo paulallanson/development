@@ -247,7 +247,7 @@ begin
     (dmSalesInvoice.dsSIHeaderGrid.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clFuchsia;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
   if  (Column.Title.Caption <> 'Invoice No') and
       (Column.Title.Caption <> 'Goods Value') and
@@ -338,5 +338,4 @@ begin
 end;
 
 end.
-
 

@@ -20,7 +20,7 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   object DelLabel: TLabel
     Left = 69
     Top = 241
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -30,19 +30,18 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitTop = 250
   end
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 7
     Top = 149
-    Width = 56
+    Width = 60
     Height = 13
     Caption = 'Hourly Rate'
     Font.Charset = ANSI_CHARSET
@@ -55,36 +54,36 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   object Label3: TLabel
     Left = 7
     Top = 52
-    Width = 56
+    Width = 60
     Height = 13
     Caption = 'Short Name'
   end
   object Label4: TLabel
     Left = 7
     Top = 112
-    Width = 63
+    Width = 69
     Height = 13
     Caption = 'Feed Method'
   end
   object Label5: TLabel
     Left = 7
     Top = 84
-    Width = 79
+    Width = 86
     Height = 13
     Caption = 'Estimating Name'
   end
   object Label6: TLabel
     Left = 7
     Top = 184
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label7: TLabel
     Left = 215
     Top = 141
-    Width = 63
-    Height = 26
+    Width = 60
+    Height = 39
     Caption = 'Click Charge per 1000'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack

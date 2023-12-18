@@ -17,7 +17,7 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
   object DelLabel: TLabel
     Left = 112
     Top = 80
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -38,12 +38,13 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Reason'
     end

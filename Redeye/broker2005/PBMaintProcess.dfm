@@ -19,7 +19,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   object DelLabel: TLabel
     Left = 117
     Top = 343
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -33,7 +33,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   object Label1: TLabel
     Left = 15
     Top = 12
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
@@ -216,42 +216,42 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         object Label2: TLabel
           Left = 15
           Top = 160
-          Width = 83
+          Width = 90
           Height = 13
           Caption = 'Default Price Unit'
         end
         object Label3: TLabel
           Left = 15
           Top = 129
-          Width = 64
+          Width = 66
           Height = 13
           Caption = 'Product Type'
         end
         object Label4: TLabel
           Left = 15
           Top = 101
-          Width = 82
+          Width = 89
           Height = 13
           Caption = 'Product Category'
         end
         object Label6: TLabel
           Left = 15
           Top = 70
-          Width = 66
+          Width = 68
           Height = 13
           Caption = 'Process Code'
         end
         object Label8: TLabel
           Left = 15
           Top = 16
-          Width = 70
+          Width = 74
           Height = 13
           Caption = 'Process Group'
         end
         object Label11: TLabel
           Left = 15
           Top = 43
-          Width = 81
+          Width = 90
           Height = 13
           Caption = 'Short Description'
         end
@@ -354,14 +354,14 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       object Label7: TLabel
         Left = 8
         Top = 116
-        Width = 64
+        Width = 67
         Height = 13
         Caption = 'Number Type'
       end
       object Label10: TLabel
         Left = 8
         Top = 84
-        Width = 110
+        Width = 118
         Height = 13
         Caption = 'Paper Prompt Narrative'
       end
@@ -407,14 +407,14 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       object Label5: TLabel
         Left = 0
         Top = 8
-        Width = 93
+        Width = 99
         Height = 13
         Caption = 'Current Paper Sizes'
       end
       object Label9: TLabel
         Left = 256
         Top = 8
-        Width = 115
+        Width = 121
         Height = 13
         Caption = 'Unassigned Paper Sizes'
       end

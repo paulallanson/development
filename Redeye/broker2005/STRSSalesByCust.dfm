@@ -318,11 +318,10 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     object Label2: TLabel
       Left = 497
       Top = 26
-      Width = 52
+      Width = 56
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date From:'
-      ExplicitLeft = 513
     end
     object Label1: TLabel
       Left = 497
@@ -585,7 +584,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end

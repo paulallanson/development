@@ -18,14 +18,14 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   object lblFormReference: TLabel
     Left = 11
     Top = 251
-    Width = 60
+    Width = 65
     Height = 13
     Caption = 'Work Centre'
   end
   object lblQuantity: TLabel
     Left = 11
     Top = 154
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Job Name'
   end
@@ -39,7 +39,7 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -52,7 +52,7 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -65,49 +65,49 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   object Label2: TLabel
     Left = 11
     Top = 34
-    Width = 46
+    Width = 51
     Height = 13
     Caption = 'Date from'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 274
-    Width = 46
+    Width = 53
     Height = 13
     Caption = 'Operation'
   end
   object lblDescriptiveRef: TLabel
     Left = 11
     Top = 178
-    Width = 90
+    Width = 95
     Height = 13
     Caption = 'Non Job Bag Code'
   end
   object lblJobNumber: TLabel
     Left = 11
     Top = 130
-    Width = 57
+    Width = 62
     Height = 13
     Caption = 'Job Number'
   end
   object lblStatus: TLabel
     Left = 11
     Top = 202
-    Width = 55
+    Width = 61
     Height = 13
     Caption = 'Department'
   end
   object Label1: TLabel
     Left = 11
     Top = 68
-    Width = 35
+    Width = 38
     Height = 13
     Caption = 'Date to'
   end
   object Label4: TLabel
     Left = 11
     Top = 106
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end

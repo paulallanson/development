@@ -17,21 +17,21 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
   object Label1: TLabel
     Left = 8
     Top = 40
-    Width = 127
+    Width = 133
     Height = 13
     Caption = 'Current Process Sequence'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
     Top = 16
-    Width = 98
+    Width = 89
     Height = 13
     Caption = 'Production Type:'
     Font.Charset = DEFAULT_CHARSET
@@ -44,7 +44,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
   object lblProduction: TLabel
     Left = 120
     Top = 16
-    Width = 75
+    Width = 71
     Height = 13
     Caption = 'lblProduction'
     Font.Charset = DEFAULT_CHARSET
@@ -57,7 +57,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
   object Label4: TLabel
     Left = 288
     Top = 40
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
@@ -135,6 +135,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Width = 468
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object btnOK: TBitBtn
       Left = 153

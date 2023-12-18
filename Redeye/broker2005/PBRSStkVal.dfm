@@ -29,6 +29,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = rgCustomerClick
@@ -43,13 +44,14 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     Visible = False
     object lblCustomer: TLabel
       Left = 8
       Top = 4
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end
@@ -148,6 +150,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     OnClick = RepRadioGroupClick
@@ -162,6 +165,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 6
     Visible = False

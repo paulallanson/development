@@ -22,7 +22,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
   object DeleteLabel: TLabel
     Left = 134
     Top = 137
-    Width = 92
+    Width = 79
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete Details ?'
@@ -64,7 +64,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
@@ -84,11 +84,12 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       Height = 37
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object Label3: TLabel
         Left = 14
         Top = 12
-        Width = 55
+        Width = 62
         Height = 13
         Caption = 'Commission'
       end
@@ -111,11 +112,12 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       Height = 34
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object Label2: TLabel
         Left = 14
         Top = 12
-        Width = 30
+        Width = 35
         Height = 13
         Caption = 'Colour'
       end

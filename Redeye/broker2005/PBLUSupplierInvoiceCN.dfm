@@ -30,8 +30,6 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = 423
-    ExplicitWidth = 775
     DesignSize = (
       781
       84)
@@ -61,7 +59,6 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 656
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -153,8 +150,6 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       item
         Width = 50
       end>
-    ExplicitTop = 507
-    ExplicitWidth = 775
   end
   object dbgSupplierInvoice: TDBGrid
     Left = 0

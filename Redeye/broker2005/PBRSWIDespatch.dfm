@@ -17,7 +17,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object Label1: TLabel
     Left = 440
     Top = 15
-    Width = 98
+    Width = 104
     Height = 13
     Caption = 'From Despatch Date'
   end
@@ -45,7 +45,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object Label2: TLabel
     Left = 440
     Top = 76
-    Width = 91
+    Width = 93
     Height = 13
     Caption = 'To Despatch Date:'
   end
@@ -73,14 +73,14 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object Label3: TLabel
     Left = 8
     Top = 209
-    Width = 52
+    Width = 59
     Height = 13
     Caption = 'Sort first by'
   end
   object Label4: TLabel
     Left = 160
     Top = 209
-    Width = 55
+    Width = 62
     Height = 13
     Caption = 'then sort by'
   end
@@ -89,12 +89,13 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Top = 150
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 16
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -127,6 +128,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgRepClick
   end
@@ -135,12 +137,13 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Top = 78
     Width = 304
     Height = 50
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -191,12 +194,13 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Top = 144
     Width = 305
     Height = 50
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 1
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -234,6 +238,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Items.Strings = (
       'All Customers'
       'One Customer ')
+    ParentBackground = False
     TabOrder = 5
     OnClick = rgCustomerClick
   end
@@ -386,6 +391,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Items.Strings = (
       'All Couriers'
       'One Courier ')
+    ParentBackground = False
     TabOrder = 12
     OnClick = rgCourierClick
   end
@@ -394,12 +400,13 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     Top = 16
     Width = 305
     Height = 50
+    ParentBackground = False
     TabOrder = 13
     Visible = False
     object Label5: TLabel
       Left = 8
       Top = 4
-      Width = 33
+      Width = 38
       Height = 13
       Caption = 'Courier'
     end

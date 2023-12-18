@@ -17,7 +17,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
   object Label1: TLabel
     Left = 8
     Top = 156
-    Width = 33
+    Width = 36
     Height = 13
     Caption = 'Sort by'
   end
@@ -44,12 +44,13 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     Top = 16
     Width = 302
     Height = 57
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -96,6 +97,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpRepClick
   end
@@ -104,12 +106,13 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     Top = 81
     Width = 302
     Height = 58
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -147,6 +150,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 6
     OnClick = rdgrpCustClick
   end

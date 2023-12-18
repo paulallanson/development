@@ -53,6 +53,7 @@ object PBLUCapFrm: TPBLUCapFrm
     Width = 361
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -153,6 +154,7 @@ object PBLUCapFrm: TPBLUCapFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6

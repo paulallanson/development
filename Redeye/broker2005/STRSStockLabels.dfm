@@ -97,11 +97,12 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     Top = 8
     Width = 361
     Height = 137
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 108
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
       Font.Charset = ANSI_CHARSET
@@ -114,14 +115,14 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object CustomerLbl: TLabel
       Left = 120
       Top = 108
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
     object Label2: TLabel
       Left = 16
       Top = 47
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
       Font.Charset = ANSI_CHARSET
@@ -134,14 +135,14 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object DescrLbl: TLabel
       Left = 120
       Top = 47
-      Width = 42
+      Width = 43
       Height = 13
       Caption = 'DescrLbl'
     end
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
       Font.Charset = ANSI_CHARSET
@@ -154,14 +155,14 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object productlbl: TLabel
       Left = 120
       Top = 20
-      Width = 51
+      Width = 55
       Height = 13
       Caption = 'ProductLbl'
     end
     object Label4: TLabel
       Left = 16
       Top = 76
-      Width = 79
+      Width = 83
       Height = 13
       Caption = 'Form Reference:'
       Font.Charset = ANSI_CHARSET
@@ -174,7 +175,7 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object FromReferencelbl: TLabel
       Left = 120
       Top = 76
-      Width = 83
+      Width = 90
       Height = 13
       Caption = 'FromReferencelbl'
     end

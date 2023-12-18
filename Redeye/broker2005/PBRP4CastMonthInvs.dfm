@@ -10,7 +10,7 @@ object PBRP4CastMonthInvsFrm: TPBRP4CastMonthInvsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   TextHeight = 13
   object qckrpSalesProfit: TQuickRep
     Left = 8

@@ -17,6 +17,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   OnKeyPress = FormKeyPress
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1126
@@ -82,6 +83,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
       112)
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 527
     Width = 1126

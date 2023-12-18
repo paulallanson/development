@@ -111,49 +111,49 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
       object Label1: TLabel
         Left = 8
         Top = 21
-        Width = 98
+        Width = 106
         Height = 13
         Caption = 'Last Enquiry Number'
       end
       object Label2: TLabel
         Left = 8
         Top = 84
-        Width = 78
+        Width = 82
         Height = 13
         Caption = 'Last PO Number'
       end
       object Label5: TLabel
         Left = 8
         Top = 116
-        Width = 102
+        Width = 107
         Height = 13
         Caption = 'Last Job Bag Number'
       end
       object Label6: TLabel
         Left = 8
         Top = 148
-        Width = 123
+        Width = 133
         Height = 13
         Caption = 'Last Works Order Number'
       end
       object Label7: TLabel
         Left = 8
         Top = 52
-        Width = 92
+        Width = 99
         Height = 13
         Caption = 'Last Quote Number'
       end
       object Label8: TLabel
         Left = 8
         Top = 180
-        Width = 149
+        Width = 161
         Height = 13
         Caption = 'Last Non Conformance Number'
       end
       object Label9: TLabel
         Left = 8
         Top = 212
-        Width = 103
+        Width = 111
         Height = 13
         Caption = 'Last Contract Number'
       end
@@ -238,14 +238,14 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
       object Label3: TLabel
         Left = 8
         Top = 21
-        Width = 98
+        Width = 103
         Height = 13
         Caption = 'Last Invoice Number'
       end
       object Label4: TLabel
         Left = 8
         Top = 52
-        Width = 116
+        Width = 126
         Height = 13
         Caption = 'Last Credit Note Number'
       end

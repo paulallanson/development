@@ -86,8 +86,6 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       item
         Width = 50
       end>
-    ExplicitTop = 407
-    ExplicitWidth = 709
   end
   object Panel1: TPanel
     Left = 0
@@ -96,9 +94,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     Height = 96
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 311
-    ExplicitWidth = 709
     DesignSize = (
       715
       96)
@@ -108,6 +105,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       Width = 393
       Height = 49
       Caption = 'Type here to narrow the search'
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
@@ -142,8 +140,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       Height = 49
       Anchors = [akTop, akRight]
       Caption = 'Selected Job Bag'
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 420
       object edtJBNumber: TEdit
         Left = 8
         Top = 16
@@ -160,8 +158,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       Height = 81
       Anchors = [akTop, akRight]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 588
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

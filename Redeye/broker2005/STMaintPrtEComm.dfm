@@ -17,35 +17,35 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
   object lblProdCode: TLabel
     Left = 29
     Top = 16
-    Width = 68
+    Width = 73
     Height = 13
     Caption = 'Product Code:'
   end
   object lblPromptInfo: TLabel
     Left = 61
     Top = 50
-    Width = 36
+    Width = 40
     Height = 13
     Caption = 'Prompt:'
   end
   object lblThmNail: TLabel
     Left = 8
     Top = 84
-    Width = 89
+    Width = 96
     Height = 13
     Caption = 'Thumb Nail Image:'
   end
   object lblPopUp: TLabel
     Left = 29
     Top = 118
-    Width = 68
+    Width = 73
     Height = 13
     Caption = 'Pop-Up Image'
   end
   object lblPopImagePath: TLabel
     Left = 29
     Top = 152
-    Width = 68
+    Width = 72
     Height = 13
     Caption = 'Pop Up Image'
   end

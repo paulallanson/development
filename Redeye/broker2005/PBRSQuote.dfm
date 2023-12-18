@@ -22,6 +22,7 @@ object frmPBRSQuote: TfrmPBRSQuote
     Width = 414
     Height = 243
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       414
@@ -163,11 +164,12 @@ object frmPBRSQuote: TfrmPBRSQuote
       Top = 5
       Width = 393
       Height = 148
+      ParentBackground = False
       TabOrder = 5
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 29
+        Width = 32
         Height = 13
         Caption = 'Quote'
         Font.Charset = ANSI_CHARSET
@@ -180,21 +182,21 @@ object frmPBRSQuote: TfrmPBRSQuote
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 75
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object Label3: TLabel
         Left = 8
         Top = 111
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end

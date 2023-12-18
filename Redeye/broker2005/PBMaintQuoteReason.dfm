@@ -17,7 +17,7 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
   object DelLabel: TLabel
     Left = 237
     Top = 84
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -38,12 +38,13 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Reason'
     end
@@ -220,6 +221,7 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
     Items.Strings = (
       'Lost'
       'Won')
+    ParentBackground = False
     TabOrder = 3
   end
   object GetLastSQL: TFDQuery

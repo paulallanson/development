@@ -22,12 +22,13 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Height = 169
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 318
       Top = 131
-      Width = 60
-      Height = 26
+      Width = 58
+      Height = 39
       Caption = 'No. of days held in stock'
       WordWrap = True
     end
@@ -42,6 +43,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       DesignSize = (
@@ -50,14 +52,14 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       object Label2: TLabel
         Left = 14
         Top = 23
-        Width = 23
+        Width = 26
         Height = 13
         Caption = 'From'
       end
       object Label3: TLabel
         Left = 14
         Top = 52
-        Width = 13
+        Width = 12
         Height = 13
         Caption = 'To'
       end
@@ -150,6 +152,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 3
       OnClick = CustRadioGroupClick
@@ -164,6 +167,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       Font.Height = -12
       Font.Name = 'Arial'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 4
       Visible = False
@@ -173,7 +177,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       object Label5: TLabel
         Left = 8
         Top = 12
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
         Font.Charset = ANSI_CHARSET
@@ -328,6 +332,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Width = 749
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       749

@@ -69,12 +69,13 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Top = 16
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 72
+      Width = 79
       Height = 13
       Caption = 'Operator Name'
     end
@@ -117,18 +118,19 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Width = 180
     Height = 89
     Caption = 'Date Range'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 19
+      Width = 18
       Height = 13
       Caption = 'To: '
     end
@@ -203,6 +205,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Items.Strings = (
       'All Operators'
       'One Operator')
+    ParentBackground = False
     TabOrder = 5
     OnClick = rdgrpRepClick
   end
@@ -211,12 +214,13 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Top = 85
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -254,6 +258,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 7
     OnClick = rdgrpCustClick
   end
@@ -269,6 +274,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       'by Authorised by'
       'by Customer'
       'Do not total')
+    ParentBackground = False
     TabOrder = 8
     OnClick = TotByRadioGroupClick
   end
@@ -286,12 +292,13 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Top = 52
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

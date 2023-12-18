@@ -246,7 +246,7 @@ begin
   if(dbgDetails.datasource.dataset.fieldByName('Activity_Status').asinteger = 30) then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Due_Date_Time').Asdatetime = date) and
@@ -254,14 +254,14 @@ begin
       begin
           (Sender as TDBGrid).Canvas.font.color := clWhite;
           (Sender as TDBGrid).Canvas.Brush.color := clGreen;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
       end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Due_Date_Time').Asdatetime < now) and
       (dbgDetails.datasource.dataset.fieldByName('Activity_Status').asinteger < 30) then
     begin
       (Sender as TDBGrid).Canvas.Font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -269,7 +269,7 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 end;
 

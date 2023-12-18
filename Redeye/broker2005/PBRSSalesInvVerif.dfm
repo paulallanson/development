@@ -15,6 +15,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
   OnCreate = FormCreate
   TextHeight = 13
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 597
@@ -25,6 +26,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       597
       290)
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 72
       Width = 121
@@ -38,6 +40,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 136
       Top = 78
       Width = 305
@@ -76,6 +79,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       end
     end
     object TotByRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 448
       Top = 8
       Width = 137
@@ -99,6 +103,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       TabOrder = 3
     end
     object rgAccManager: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 121
@@ -112,6 +117,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       OnClick = rgAccManagerClick
     end
     object AccManagerPanel: TPanel
+      ParentBackground = False
       Left = 137
       Top = 14
       Width = 304
@@ -150,6 +156,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       end
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 144
       Width = 233
@@ -354,6 +361,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 172
     Top = 84
     Width = 289

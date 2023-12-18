@@ -22,7 +22,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 100
+    Width = 102
     Height = 13
     Caption = 'Select Financial Year'
   end
@@ -36,6 +36,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgRepClick
   end
@@ -44,12 +45,13 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Top = 48
     Width = 257
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -163,12 +165,13 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Top = 59
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -255,6 +258,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Items.Strings = (
       'Operating'
       'Target')
+    ParentBackground = False
     TabOrder = 10
     OnClick = rgRepClick
   end
@@ -279,6 +283,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Items.Strings = (
       'Rep'
       'Sub Rep')
+    ParentBackground = False
     TabOrder = 12
     OnClick = rgRepClick
   end
@@ -292,6 +297,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Items.Strings = (
       'Detailed'
       'Summary')
+    ParentBackground = False
     TabOrder = 13
     OnClick = rgRepClick
   end

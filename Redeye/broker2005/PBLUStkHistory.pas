@@ -311,7 +311,7 @@ begin
   if detsDBGrid.datasource.dataset.fieldbyname('Inactive').asstring = 'Y' then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Order No') and
@@ -333,7 +333,7 @@ begin
               begin
                 Canvas.Brush.Color := Color;
                 Canvas.Font.Color  := Font.Color;
-                (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+                (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
               end;
         END;
 			{Display the Columns Right justified in the cells}

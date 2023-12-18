@@ -21,8 +21,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Width = 1150
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1144
     object Label2: TLabel
       Left = 8
       Top = 16
@@ -44,9 +44,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Width = 1150
     Height = 46
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 418
-    ExplicitWidth = 1144
     DesignSize = (
       1150
       46)
@@ -76,7 +75,6 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
-      ExplicitLeft = 1054
     end
     object btnSelect: TBitBtn
       Left = 970
@@ -146,7 +144,6 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 964
     end
   end
   object dbgDetails: TDBGrid
@@ -241,8 +238,6 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       item
         Width = 50
       end>
-    ExplicitTop = 464
-    ExplicitWidth = 1144
   end
   object dtsStock: TDataSource
     DataSet = qryStock

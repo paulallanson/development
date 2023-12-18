@@ -15,14 +15,14 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   object Label1: TLabel
     Left = 17
     Top = 20
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label2: TLabel
     Left = 17
     Top = 52
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch '
     Font.Charset = ANSI_CHARSET

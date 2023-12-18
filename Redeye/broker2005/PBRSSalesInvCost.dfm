@@ -92,6 +92,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     TabOrder = 2
   end
   object pnlCustomer: TPanel
+    ParentBackground = False
     Left = 147
     Top = 101
     Width = 329
@@ -130,6 +131,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     end
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 13
     Top = 93
     Width = 129
@@ -143,6 +145,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     OnClick = rdgrpCustomerClick
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 100
     Top = 68
     Width = 289

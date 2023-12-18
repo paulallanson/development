@@ -71,12 +71,13 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Top = 16
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 59
+      Width = 62
       Height = 13
       Caption = 'Assigned To'
     end
@@ -121,18 +122,19 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Height = 89
     Anchors = [akLeft, akBottom]
     Caption = 'Date Range'
+    ParentBackground = False
     TabOrder = 6
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 19
+      Width = 18
       Height = 13
       Caption = 'To: '
     end
@@ -207,6 +209,7 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Items.Strings = (
       'All Operators'
       'One Operator')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpAssignedToClick
   end
@@ -215,12 +218,13 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Top = 85
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -258,6 +262,7 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustClick
   end
@@ -274,6 +279,7 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       'by Customer'
       'by Activity Type'
       'Do not sort')
+    ParentBackground = False
     TabOrder = 7
     OnClick = TotByRadioGroupClick
   end
@@ -291,12 +297,13 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Top = 108
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 14
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -390,6 +397,7 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Items.Strings = (
       'All Types'
       'One Type')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpActivityTypeClick
   end
@@ -398,12 +406,13 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Top = 153
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label4: TLabel
       Left = 8
       Top = 8
-      Width = 61
+      Width = 62
       Height = 13
       Caption = 'Activity Type'
     end

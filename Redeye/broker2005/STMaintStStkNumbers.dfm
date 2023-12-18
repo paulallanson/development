@@ -80,28 +80,28 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
     object Label1: TLabel
       Left = 32
       Top = 24
-      Width = 59
+      Width = 66
       Height = 13
       Caption = 'First Number'
     end
     object Label2: TLabel
       Left = 32
       Top = 56
-      Width = 60
+      Width = 64
       Height = 13
       Caption = 'Last Number'
     end
     object Label3: TLabel
       Left = 32
       Top = 88
-      Width = 95
+      Width = 104
       Height = 13
       Caption = 'Total count in range'
     end
     object lblCount: TLabel
       Left = 152
       Top = 88
-      Width = 38
+      Width = 45
       Height = 13
       Caption = 'lblCount'
     end

@@ -34,8 +34,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Height = 65
     Align = alTop
     BevelInner = bvRaised
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 972
     DesignSize = (
       978
       65)
@@ -230,7 +230,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ReadOnly = True
       TabOrder = 2
       OnChange = SupplierEditChange
-      ExplicitWidth = 344
     end
     object ContactEdit: TEdit
       Left = 214
@@ -242,7 +241,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       MaxLength = 40
       ReadOnly = True
       TabOrder = 4
-      ExplicitWidth = 314
     end
     object SelContactBtn: TButton
       Left = 542
@@ -259,7 +257,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 5
       OnClick = SelContactBtnClick
-      ExplicitLeft = 536
     end
     object SelSupBtn: TButton
       Left = 570
@@ -276,7 +273,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 3
       OnClick = SelSupBtnClick
-      ExplicitLeft = 564
     end
     object CurrDBLUCB: TDBLookupComboBox
       Left = 451
@@ -289,7 +285,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ListSource = PBPODM.CurrSRC
       TabOrder = 7
       Visible = False
-      ExplicitLeft = 445
     end
     object CurrClearBitBtn: TBitBtn
       Left = 481
@@ -317,7 +312,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 8
       Visible = False
       OnClick = CurrClearBitBtnClick
-      ExplicitLeft = 475
     end
     object ReqByDateEdit: TEdit
       Left = 812
@@ -329,7 +323,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 9
       OnChange = ReqByDateEditChange
       OnExit = ReqByDateEditExit
-      ExplicitLeft = 806
     end
     object edtAccountTeam: TEdit
       Left = 677
@@ -341,7 +334,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 6
-      ExplicitLeft = 671
     end
     object edtAccountManager: TEdit
       Left = 677
@@ -353,7 +345,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 10
-      ExplicitLeft = 671
     end
     object btnAccountManager: TButton
       Left = 778
@@ -370,7 +361,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 11
       OnClick = btnAccountManagerClick
-      ExplicitLeft = 772
     end
   end
   object stsbrDetails: TStatusBar
@@ -388,8 +378,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       item
         Width = 250
       end>
-    ExplicitTop = 537
-    ExplicitWidth = 972
   end
   object Panel4: TPanel
     Left = 0
@@ -397,9 +385,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Width = 978
     Height = 449
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 972
-    ExplicitHeight = 440
     object OrderLinePage: TPageControl
       Tag = 180
       Left = 1
@@ -410,8 +397,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Align = alClient
       TabOrder = 0
       OnChange = OrderLinePageChange
-      ExplicitWidth = 970
-      ExplicitHeight = 438
       object tsGeneral: TTabSheet
         Caption = 'General'
         DesignSize = (
@@ -1070,6 +1055,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 86
           Align = alBottom
+          ParentBackground = False
           TabOrder = 36
           ExplicitTop = 332
           ExplicitWidth = 964
@@ -1421,6 +1407,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 75
           Anchors = [akLeft, akBottom]
           Caption = 'Proofs'
+          ParentBackground = False
           TabOrder = 32
           ExplicitTop = 250
           object ProofByLabel: TLabel
@@ -1569,6 +1556,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 25
           Anchors = [akLeft, akBottom]
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 11
           ExplicitTop = 198
           object lblFSCClaim: TLabel
@@ -1636,6 +1624,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 337
           Height = 27
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 4
           Visible = False
           object lblCostCentre: TLabel
@@ -1697,14 +1686,15 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 964
+          Width = 968
           Height = 136
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           object sgPartDetails: TStringGrid
             Left = 1
             Top = 1
-            Width = 962
+            Width = 966
             Height = 134
             Align = alClient
             ColCount = 12
@@ -1802,6 +1792,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 138
           Align = alClient
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
           ExplicitWidth = 962
           ExplicitHeight = 129
@@ -1834,6 +1825,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Alignment = taLeftJustify
             BevelOuter = bvNone
             Caption = 'Notes'
+            ParentBackground = False
             TabOrder = 1
             ExplicitWidth = 962
           end
@@ -1846,6 +1838,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Align = alBottom
           BevelOuter = bvNone
           Caption = 'pnlVersions'
+          ParentBackground = False
           TabOrder = 2
           ExplicitTop = 265
           ExplicitWidth = 962
@@ -1858,6 +1851,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Alignment = taLeftJustify
             BevelOuter = bvNone
             Caption = 'Versions'
+            ParentBackground = False
             TabOrder = 0
             ExplicitWidth = 962
           end
@@ -1869,6 +1863,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Align = alRight
             Alignment = taRightJustify
             BevelOuter = bvNone
+            ParentBackground = False
             TabOrder = 1
             ExplicitLeft = 871
             object btnAddStockCode: TBitBtn
@@ -1935,6 +1930,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 386
           Align = alClient
+          ParentBackground = False
           TabOrder = 0
           object sbQuestions: TScrollBox
             Tag = 140
@@ -1952,6 +1948,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 33
           Align = alTop
+          ParentBackground = False
           TabOrder = 1
           object ProductQLbl: TLabel
             Left = 16
@@ -2068,6 +2065,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 249
           Height = 49
           Caption = 'Function'
+          ParentBackground = False
           TabOrder = 4
           object ExtChgAddBitBtn: TBitBtn
             Left = 40
@@ -2195,6 +2193,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 225
           Height = 44
           Caption = 'Function'
+          ParentBackground = False
           TabOrder = 8
           object btnAddSuppCustNotes: TBitBtn
             Left = 4
@@ -2508,6 +2507,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 419
           Align = alRight
           Enabled = False
+          ParentBackground = False
           TabOrder = 6
           object Label1: TLabel
             Left = 156
@@ -2537,6 +2537,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Height = 74
             Align = alBottom
             Enabled = False
+            ParentBackground = False
             TabOrder = 0
             object Label24: TLabel
               Left = 9
@@ -2567,6 +2568,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               'Rep'
               'Customer'
               'Company')
+            ParentBackground = False
             TabOrder = 1
           end
           object AddrGrpBox: TGroupBox
@@ -2576,6 +2578,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Height = 225
             Caption = 'Address Details'
             Enabled = False
+            ParentBackground = False
             TabOrder = 2
             object AddrTypeLabel: TLabel
               Left = 8
@@ -2743,6 +2746,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Height = 137
             Caption = 'Quantities'
             Enabled = False
+            ParentBackground = False
             TabOrder = 3
             object Label19: TLabel
               Left = 8
@@ -3259,10 +3263,11 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object pnlStockUsage: TPanel
           Left = 0
           Top = 0
-          Width = 964
+          Width = 968
           Height = 205
           Align = alTop
           Caption = 'pnlStockUsage'
+          ParentBackground = False
           TabOrder = 0
           DesignSize = (
             968
@@ -3275,7 +3280,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Caption = 'Usage'
           end
           object Label74: TLabel
-            Left = 801
+            Left = 805
             Top = 177
             Width = 60
             Height = 13
@@ -3284,7 +3289,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             ExplicitLeft = 797
           end
           object lblTotalUsage: TLabel
-            Left = 873
+            Left = 877
             Top = 177
             Width = 70
             Height = 13
@@ -3312,7 +3317,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object dbgStockUsage: TDBGrid
             Left = 8
             Top = 25
-            Width = 961
+            Width = 965
             Height = 140
             Anchors = [akLeft, akTop, akRight, akBottom]
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3393,9 +3398,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 214
           Align = alClient
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 964
-          ExplicitHeight = 213
           DesignSize = (
             968
             214)
@@ -3501,10 +3505,11 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         ImageIndex = 6
         object pnlDocs: TPanel
           Left = 0
-          Top = 208
-          Width = 964
+          Top = 209
+          Width = 968
           Height = 210
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
           OnResize = pnlDocsResize
           DesignSize = (
@@ -3560,7 +3565,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C0000000000000460000000000000000000000007069C021F009DA01
+              00000000C00000000000004600000000000000000000000040DF1DB9E731DA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3736,7 +3741,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              000000000000000000000000000000007069C021F009DA017069C021F009DA01
+              0000000000000000000000000000000040DF1DB9E731DA0140DF1DB9E731DA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4212,7 +4217,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C0000000000000460000000000000000000000007069C021F009DA01
+              00000000C00000000000004600000000000000000000000040DF1DB9E731DA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4515,7 +4520,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object strgrdDocs: TStringGrid
             Left = 12
             Top = 26
-            Width = 951
+            Width = 955
             Height = 151
             Anchors = [akLeft, akTop, akRight]
             ColCount = 2
@@ -4561,9 +4566,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 209
           Align = alClient
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 964
-          ExplicitHeight = 208
           DesignSize = (
             968
             209)
@@ -4727,9 +4731,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 85
           Height = 419
           Align = alRight
+          ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 877
-          ExplicitHeight = 410
           object btnAddNCA: TBitBtn
             Left = 8
             Top = 8
@@ -4781,9 +4784,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Height = 419
           Align = alClient
           Caption = 'Panel25'
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 877
-          ExplicitHeight = 410
           object sgNCADetails: TStringGrid
             Left = 1
             Top = 1
@@ -4799,7 +4801,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             OnClick = sgNCADetailsClick
             OnDblClick = sgNCADetailsDblClick
             OnDrawCell = sgNCADetailsDrawCell
-            ExplicitWidth = 875
             ColWidths = (
               40
               87
@@ -4818,8 +4819,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Width = 881
             Height = 24
             Align = alTop
+            ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 875
             object Label10: TLabel
               Left = 9
               Top = 6
@@ -4839,8 +4840,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               '')
             ReadOnly = True
             TabOrder = 2
-            ExplicitWidth = 875
-            ExplicitHeight = 272
           end
         end
       end
@@ -4851,9 +4850,10 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object pnlSalesInvs: TPanel
           Left = 0
           Top = 0
-          Width = 964
+          Width = 968
           Height = 217
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           DesignSize = (
             968
@@ -4876,7 +4876,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           object strgrdSalesInvs: TStringGrid
             Left = 8
             Top = 24
-            Width = 960
+            Width = 964
             Height = 129
             Anchors = [akLeft, akTop, akRight, akBottom]
             ColCount = 10
@@ -4974,9 +4974,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Width = 968
           Height = 202
           Align = alClient
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 964
-          ExplicitHeight = 201
           DesignSize = (
             968
             202)
@@ -5092,9 +5091,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Height = 32
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 505
-    ExplicitWidth = 972
     DesignSize = (
       978
       32)
@@ -5192,7 +5190,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 826
     end
     object OKBitBtn: TBitBtn
       Left = 750
@@ -5221,7 +5218,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = OKBitBtnClick
-      ExplicitLeft = 744
     end
     object OleContainer1: TOleContainer
       Left = 592

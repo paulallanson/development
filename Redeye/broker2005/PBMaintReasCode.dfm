@@ -46,7 +46,7 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

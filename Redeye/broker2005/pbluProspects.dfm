@@ -349,6 +349,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     Width = 1213
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblSearch: TLabel
       Left = 16
@@ -381,6 +382,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object btnClose: TButton
         Left = 96
@@ -424,6 +426,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
@@ -447,6 +450,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -470,6 +474,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       Align = alRight
       BevelInner = bvLowered
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         250

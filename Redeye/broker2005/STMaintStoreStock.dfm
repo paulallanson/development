@@ -15,6 +15,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
   OnActivate = FormActivate
   TextHeight = 13
   object pnlproduct: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 739
@@ -136,6 +137,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 81
     Width = 739
@@ -194,6 +196,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     end
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 153
     Width = 739

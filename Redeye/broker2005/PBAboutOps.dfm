@@ -19,6 +19,7 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
     Width = 679
     Height = 137
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       679
@@ -30,32 +31,33 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
       Height = 124
       Anchors = [akLeft, akTop, akRight, akBottom]
       Caption = ' Your Purchase Order Settings'
+      ParentBackground = False
       TabOrder = 0
       object lblName: TLabel
         Left = 16
         Top = 24
-        Width = 31
+        Width = 32
         Height = 13
         Caption = 'Name:'
       end
       object lblPOCost: TLabel
         Left = 16
         Top = 48
-        Width = 131
+        Width = 142
         Height = 13
         Caption = 'Max Unauthorised PO Cost:'
       end
       object lblMinSales: TLabel
         Left = 16
         Top = 74
-        Width = 79
+        Width = 83
         Height = 13
         Caption = 'Min Sales Value:'
       end
       object lblAuthoriseLevel: TLabel
         Left = 16
         Top = 98
-        Width = 93
+        Width = 102
         Height = 13
         Caption = 'Authorisation Level:'
       end
@@ -67,6 +69,7 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
     Width = 679
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       679

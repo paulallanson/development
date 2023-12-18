@@ -22,6 +22,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     Height = 306
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       105
@@ -33,6 +34,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       Height = 105
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
@@ -198,6 +200,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     Height = 306
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Panel3: TPanel
       Left = 0
@@ -206,6 +209,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       Height = 265
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object dbgrdDets: TDBGrid
         Left = 0
@@ -261,14 +265,15 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         309
         41)
       object CountLabel: TLabel
-        Left = 238
+        Left = 233
         Top = 18
-        Width = 54
+        Width = 59
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

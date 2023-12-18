@@ -18,9 +18,9 @@ object PBLUCustFrm: TPBLUCustFrm
   OnShow = FormShow
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 291
+    Left = 286
     Top = 272
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -338,14 +338,14 @@ object PBLUCustFrm: TPBLUCustFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end

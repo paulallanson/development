@@ -18,14 +18,14 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
   object lblProdCode: TLabel
     Left = 5
     Top = 16
-    Width = 68
+    Width = 73
     Height = 13
     Caption = 'Product Code:'
   end
   object Label1: TLabel
     Left = 5
     Top = 48
-    Width = 45
+    Width = 49
     Height = 13
     Caption = 'File name'
   end

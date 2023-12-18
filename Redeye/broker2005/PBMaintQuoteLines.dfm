@@ -117,11 +117,12 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 8
     Width = 489
     Height = 345
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 8
       Top = 22
-      Width = 55
+      Width = 61
       Height = 13
       Caption = 'Department'
     end
@@ -135,56 +136,56 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 161
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object lblCostPrice: TLabel
       Left = 8
       Top = 187
-      Width = 52
+      Width = 56
       Height = 13
       Caption = 'Direct Cost'
     end
     object Label4: TLabel
       Left = 8
       Top = 289
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 8
       Top = 239
-      Width = 77
+      Width = 80
       Height = 13
       Caption = 'Actual Sell Price'
     end
     object Label6: TLabel
       Left = 8
       Top = 213
-      Width = 98
+      Width = 103
       Height = 13
       Caption = 'Suggested Sell Price'
     end
     object Label9: TLabel
       Left = 251
       Top = 187
-      Width = 111
+      Width = 120
       Height = 13
       Caption = 'Direct Cost + Overhead'
     end
     object Label10: TLabel
       Left = 285
       Top = 213
-      Width = 77
+      Width = 78
       Height = 13
       Caption = 'Old System SSP'
     end
@@ -198,7 +199,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     object lblResellerPrice: TLabel
       Left = 8
       Top = 263
-      Width = 65
+      Width = 67
       Height = 13
       Caption = 'Reseller Price'
     end
@@ -383,32 +384,33 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 400
     Width = 489
     Height = 73
+    ParentBackground = False
     TabOrder = 2
     object Label3: TLabel
       Left = 352
       Top = 47
-      Width = 28
+      Width = 31
       Height = 13
       Caption = 'Hours'
     end
     object Label11: TLabel
       Left = 8
       Top = 18
-      Width = 92
+      Width = 101
       Height = 13
       Caption = 'Work Centre Group'
     end
     object Label12: TLabel
       Left = 8
       Top = 47
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'Work Centre'
     end
     object Label13: TLabel
       Left = 328
       Top = 18
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Staff Count'
     end
@@ -466,11 +468,12 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 353
     Width = 489
     Height = 41
+    ParentBackground = False
     TabOrder = 1
     object Label15: TLabel
       Left = 8
       Top = 16
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Markup %'
     end

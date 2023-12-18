@@ -23,39 +23,37 @@ object PBLUCContaFrm: TPBLUCContaFrm
   object CustLabel: TLabel
     Left = 85
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 287
+    Left = 282
     Top = 236
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'CountLabel'
-    ExplicitLeft = 299
-    ExplicitTop = 245
   end
   object BranchLabel: TLabel
     Left = 85
     Top = 22
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 13
     Top = 22
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 13
     Top = 6
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end
@@ -275,21 +273,21 @@ object PBLUCContaFrm: TPBLUCContaFrm
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 4
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 4
       Top = 34
-      Width = 34
+      Width = 39
       Height = 13
       Caption = 'Mobile:'
     end

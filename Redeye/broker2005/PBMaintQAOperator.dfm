@@ -48,6 +48,7 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     TabOrder = 1
   end
   object detsgrpbox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 337

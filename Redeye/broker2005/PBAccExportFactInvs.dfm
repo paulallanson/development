@@ -20,6 +20,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Width = 509
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnExport: TButton
       Left = 320
@@ -47,24 +48,26 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Height = 110
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object pnlNumberRange: TPanel
       Left = 274
       Top = 0
       Width = 241
       Height = 119
+      ParentBackground = False
       TabOrder = 0
       object lblInvNumber: TLabel
         Left = 9
         Top = 6
-        Width = 86
+        Width = 91
         Height = 13
         Caption = 'Invoice Number(s)'
       end
       object Label1: TLabel
         Left = 8
         Top = 68
-        Width = 204
+        Width = 194
         Height = 39
         Caption = 
           'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
@@ -101,6 +104,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Top = 0
       Width = 241
       Height = 119
+      ParentBackground = False
       TabOrder = 1
       object btnDateFrom: TSpeedButton
         Left = 200
@@ -147,7 +151,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       object lblDateFrom: TLabel
         Left = 9
         Top = 20
-        Width = 52
+        Width = 56
         Height = 13
         Caption = 'Date From:'
       end
@@ -183,6 +187,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Width = 137
       Height = 110
       Align = alLeft
+      ParentBackground = False
       TabOrder = 2
       object rdgrpInvOrCred: TRadioGroup
         Left = 8
@@ -194,6 +199,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         Items.Strings = (
           'Invoices'
           'Credits')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpInvOrCredClick
       end
@@ -204,6 +210,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Width = 137
       Height = 110
       Align = alLeft
+      ParentBackground = False
       TabOrder = 3
       object rdgrpExportBy: TRadioGroup
         Left = 8
@@ -215,6 +222,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         Items.Strings = (
           'Date Range'
           'Invoice Number')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpExportByClick
       end
@@ -226,11 +234,12 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Width = 509
     Height = 45
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblExpTo: TLabel
       Left = 72
       Top = 16
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'Export To:'
     end

@@ -18,21 +18,21 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   object Label12: TLabel
     Left = 8
     Top = 33
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label14: TLabel
     Left = 21
     Top = 63
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Contact'
   end
   object Label15: TLabel
     Left = 416
     Top = 4
-    Width = 61
+    Width = 66
     Height = 13
     Caption = 'Enquiry Date'
   end
@@ -82,42 +82,42 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   object Label16: TLabel
     Left = 406
     Top = 33
-    Width = 69
+    Width = 74
     Height = 13
     Caption = 'Date Required'
   end
   object Label1: TLabel
     Left = 0
     Top = 92
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 410
     Top = 92
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Office Contact'
   end
   object Label4: TLabel
     Left = 405
     Top = 63
-    Width = 67
+    Width = 72
     Height = 13
     Caption = 'Customer Rep'
   end
   object Label6: TLabel
     Left = 22
     Top = 4
-    Width = 35
+    Width = 39
     Height = 13
     Caption = 'Enquiry'
   end
   object lblEnqNo: TLabel
     Left = 72
     Top = 4
-    Width = 43
+    Width = 48
     Height = 13
     Caption = 'lblEnqNo'
   end
@@ -131,14 +131,14 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     object Label8: TLabel
       Left = 8
       Top = 10
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end
     object Label9: TLabel
       Left = 8
       Top = 52
-      Width = 61
+      Width = 66
       Height = 13
       Caption = 'Specification'
     end
@@ -152,28 +152,28 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     object Label11: TLabel
       Left = 360
       Top = 245
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
     object Label3: TLabel
       Left = 368
       Top = 10
-      Width = 77
+      Width = 82
       Height = 13
       Caption = 'Supplier/Branch'
     end
     object lblRunOn: TLabel
       Left = 360
       Top = 296
-      Width = 37
+      Width = 41
       Height = 13
       Caption = 'Run-On'
     end
     object lblRunOnPrice: TLabel
       Left = 504
       Top = 274
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
@@ -187,7 +187,7 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     object lblRunOnQty: TLabel
       Left = 408
       Top = 274
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end

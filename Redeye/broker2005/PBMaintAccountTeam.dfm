@@ -17,7 +17,7 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
   object DelLabel: TLabel
     Left = 110
     Top = 104
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -37,12 +37,13 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end

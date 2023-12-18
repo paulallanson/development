@@ -17,7 +17,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   object SupplierLabel: TLabel
     Left = 176
     Top = 8
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Supplier/Branch'
     Visible = False
@@ -25,7 +25,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   object PrdTypLabel: TLabel
     Left = 176
     Top = 88
-    Width = 64
+    Width = 66
     Height = 13
     Caption = 'Product Type'
     Visible = False
@@ -39,6 +39,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     TabOrder = 0
     OnClick = AllOrOneSuppRadioGroupClick
   end
@@ -117,6 +118,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Items.Strings = (
       'Product Type                       '
       'Supplier')
+    ParentBackground = False
     TabOrder = 5
   end
   object LUSuppButton: TButton
@@ -144,6 +146,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Items.Strings = (
       'All Product Groups'
       'One Product Group')
+    ParentBackground = False
     TabOrder = 7
     OnClick = AllOrOnePrdGrpRadioGroupClick
   end
