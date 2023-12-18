@@ -43,6 +43,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Caption = 'Product Group'
   end
   object rdGrpProducts: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 80
     Width = 105
@@ -65,6 +66,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Visible = False
   end
   object grpbxProducts: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 80
     Width = 249
@@ -106,6 +108,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     end
   end
   object BasisGroup: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 216
     Width = 141

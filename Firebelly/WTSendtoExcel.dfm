@@ -26,6 +26,7 @@ object frmWTSendtoExcel: TfrmWTSendtoExcel
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 0
     Top = 1
     Width = 292

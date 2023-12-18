@@ -17,64 +17,64 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
   object Label1: TLabel
     Left = 24
     Top = 24
-    Width = 37
+    Width = 39
     Height = 13
     Caption = 'Job No.'
   end
   object Label2: TLabel
     Left = 24
     Top = 80
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label3: TLabel
     Left = 24
     Top = 53
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label4: TLabel
     Left = 24
     Top = 188
-    Width = 54
-    Height = 26
+    Width = 52
+    Height = 39
     Caption = 'Proposed Fitting Date'
     WordWrap = True
   end
   object Label5: TLabel
     Left = 232
     Top = 196
-    Width = 87
+    Width = 96
     Height = 13
     Caption = 'Actual Fitting Date'
   end
   object Label6: TLabel
     Left = 368
     Top = 53
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object Label7: TLabel
     Left = 368
     Top = 80
-    Width = 91
+    Width = 102
     Height = 13
     Caption = 'Installation Address'
   end
   object Label8: TLabel
     Left = 216
     Top = 24
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Date'
   end
   object Label9: TLabel
     Left = 368
     Top = 24
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end

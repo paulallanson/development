@@ -30,7 +30,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 906
+        Width = 910
       end>
     object Panel3: TPanel
       Left = 11
@@ -114,7 +114,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 906
+        Width = 910
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -221,6 +221,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
+        Alignment = taLeftJustify
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Number'
@@ -277,6 +278,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 300
     Width = 912
@@ -299,6 +301,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 621
       Top = 1
       Width = 290

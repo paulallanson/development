@@ -69,6 +69,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     OnChange = EnableOK
   end
   object rdgrpUseFor: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 56
     Width = 185

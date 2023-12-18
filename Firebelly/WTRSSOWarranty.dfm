@@ -27,6 +27,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -62,6 +63,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 105
@@ -75,6 +77,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     OnClick = rdgrpCustomerClick
   end
   object grpbxDateSelect: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
@@ -159,6 +162,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 16
     Width = 249
@@ -231,6 +235,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 108
     Top = 63
     Width = 289
@@ -254,6 +259,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     end
   end
   object rdgrpSelectBy: TRadioGroup
+    ParentBackground = False
     Left = 384
     Top = 136
     Width = 113
@@ -268,6 +274,7 @@ object frmWTRSSOWarranty: TfrmWTRSSOWarranty
     OnClick = rdgrpSelectByClick
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 384
     Top = 16
     Width = 113

@@ -56,6 +56,7 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     ExplicitWidth = 417
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 248
     Width = 423

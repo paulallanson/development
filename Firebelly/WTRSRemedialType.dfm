@@ -67,6 +67,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = PreviewBitBtnClick
   end
   object pnlReasonSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 88
     Width = 286
@@ -107,6 +108,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     TabOrder = 12
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 5
     Top = 219
     Width = 180
@@ -189,6 +191,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpReason: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 80
     Width = 129
@@ -202,6 +205,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = rdgrpReasonClick
   end
   object pnlDeptSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 157
     Width = 286
@@ -232,6 +236,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpDept: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 149
     Width = 129
@@ -245,6 +250,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = rdgrpDeptClick
   end
   object TotByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 480
     Top = 8
     Width = 137
@@ -270,6 +276,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 180
     Top = 132
     Width = 289
@@ -356,6 +363,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = btnExcelClick
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -369,6 +377,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = rdgrpCategoryClick
   end
   object pnlCategorySearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 16
     Width = 286
@@ -399,6 +408,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpShow: TRadioGroup
+    ParentBackground = False
     Left = 480
     Top = 216
     Width = 137

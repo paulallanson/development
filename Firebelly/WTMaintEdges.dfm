@@ -20,14 +20,14 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label7: TLabel
     Left = 368
     Top = 1
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end

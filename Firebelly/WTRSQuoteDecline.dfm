@@ -38,6 +38,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = Button4Click
   end
   object rdgrpReason: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -51,6 +52,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = rdgrpReasonClick
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -64,6 +66,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
@@ -148,6 +151,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxReason: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 8
     Width = 219
@@ -177,6 +181,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 72
     Width = 219
@@ -246,6 +251,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 36
     Top = 87
     Width = 289
@@ -279,6 +285,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 240
     Top = 136
     Width = 105

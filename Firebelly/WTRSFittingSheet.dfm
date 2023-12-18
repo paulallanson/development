@@ -27,6 +27,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Visible = False
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 372
     Width = 526
@@ -90,6 +91,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     end
   end
   object pnlDocuments: TPanel
+    ParentBackground = False
     Left = 0
     Top = 138
     Width = 526
@@ -119,6 +121,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     end
   end
   object pnlSelection: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 526
@@ -126,6 +129,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Align = alTop
     TabOrder = 3
     object selectionGrp: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 7
       Width = 273
@@ -171,6 +175,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     end
   end
   object pnlDocumentDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 201
     Width = 526

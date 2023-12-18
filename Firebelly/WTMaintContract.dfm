@@ -22,6 +22,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   OnResize = FormResize
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 988
@@ -190,6 +191,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     ExplicitWidth = 982
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 636
     Width = 988
@@ -339,6 +341,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 36
     Width = 988
@@ -579,6 +582,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       OnChange = edtSitePhoneChange
     end
     object pnlRevenueCentre: TPanel
+      ParentBackground = False
       Left = 1
       Top = 56
       Width = 990
@@ -675,6 +679,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           118)
       end
       object pnlDrawings: TPanel
+        ParentBackground = False
         Left = 0
         Top = 259
         Width = 980
@@ -712,6 +717,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           ExplicitWidth = 876
         end
         object Panel3: TPanel
+          ParentBackground = False
           Left = 1
           Top = 80
           Width = 978
@@ -757,6 +763,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           end
         end
         object Panel5: TPanel
+          ParentBackground = False
           Left = 883
           Top = 1
           Width = 96
@@ -812,6 +819,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
       end
       object Panel4: TPanel
+        ParentBackground = False
         Left = 0
         Top = 240
         Width = 980
@@ -830,6 +838,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         ExplicitWidth = 974
       end
       object pnlPriceChange: TPanel
+        ParentBackground = False
         Left = 0
         Top = 205
         Width = 980
@@ -866,6 +875,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       Caption = 'Documents/Notes'
       ImageIndex = 1
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 976
@@ -923,6 +933,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         ExplicitWidth = 544
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 579
         Top = 17
         Width = 16
@@ -992,6 +1003,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
       end
       object pnlNotes: TPanel
+        ParentBackground = False
         Left = 595
         Top = 17
         Width = 385
@@ -1009,6 +1021,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           TabOrder = 0
         end
         object Panel2: TPanel
+          ParentBackground = False
           Left = 350
           Top = 0
           Width = 35
@@ -1038,6 +1051,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       Caption = 'Events'
       ImageIndex = 2
       object Panel9: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 976
@@ -1046,6 +1060,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         TabOrder = 0
       end
       object pnlEventFunc: TPanel
+        ParentBackground = False
         Left = 514
         Top = 17
         Width = 93
@@ -1083,6 +1098,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
       end
       object pnlEvents: TPanel
+        ParentBackground = False
         Left = 607
         Top = 17
         Width = 369

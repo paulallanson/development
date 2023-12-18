@@ -62,6 +62,7 @@ object frmWTLUDesigner: TfrmWTLUDesigner
     ExplicitWidth = 696
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 309
     Width = 702

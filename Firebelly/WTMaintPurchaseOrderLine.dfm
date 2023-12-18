@@ -14,6 +14,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   OnActivate = FormActivate
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 413
     Width = 750
@@ -92,6 +93,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 41
     Width = 750
@@ -304,6 +306,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 750
@@ -341,6 +344,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 265
     Width = 750
@@ -469,6 +473,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     end
   end
   object pnlNotes: TPanel
+    ParentBackground = False
     Left = 0
     Top = 330
     Width = 750

@@ -37,6 +37,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 415
     Width = 1446
@@ -87,6 +88,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnChange = edtMaterialChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 1342
       Top = 1
       Width = 103

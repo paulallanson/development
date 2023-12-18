@@ -48,6 +48,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     OnClick = Button4Click
   end
   object rdgrpSupplier: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 105
@@ -61,6 +62,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     OnClick = rdgrpSupplierClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 200
     Width = 209
@@ -145,6 +147,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     end
   end
   object grpbxSupplier: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 80
     Width = 249
@@ -187,6 +190,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 376
     Top = 8
     Width = 113
@@ -240,6 +244,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 76
     Top = 111
     Width = 289
@@ -263,6 +268,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     end
   end
   object rdgrpOperators: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -276,6 +282,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     OnClick = rdgrpOperatorsClick
   end
   object grpbxOperators: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 249

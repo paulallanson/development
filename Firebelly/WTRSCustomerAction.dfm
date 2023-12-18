@@ -39,6 +39,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     OnClick = Button4Click
   end
   object rdgrpSalesAction: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -52,6 +53,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     OnClick = rdgrpSalesActionClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 225
@@ -136,6 +138,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     end
   end
   object grpbxAction: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -173,6 +176,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     TabOrder = 5
   end
   object rdgrpOperators: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -186,6 +190,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     OnClick = rdgrpOperatorsClick
   end
   object grpbxOperators: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
@@ -245,6 +250,7 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 44
     Top = 87
     Width = 289

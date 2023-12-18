@@ -29,6 +29,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     ExplicitWidth = 1051
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 462
     Width = 1057
@@ -154,6 +155,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       end>
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1057
@@ -245,6 +247,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnClearClick
     end
     object grpInvDate: TGroupBox
+      ParentBackground = False
       Left = 782
       Top = 5
       Width = 233

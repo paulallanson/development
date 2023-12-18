@@ -123,6 +123,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 309
     Width = 1260
@@ -219,6 +220,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         'Selected Date')
     end
     object pnlDateSelection: TPanel
+      ParentBackground = False
       Left = 792
       Top = 1
       Width = 225

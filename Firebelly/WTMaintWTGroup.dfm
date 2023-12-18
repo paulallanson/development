@@ -17,14 +17,14 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
   object Label1: TLabel
     Left = 8
     Top = 52
-    Width = 29
+    Width = 33
     Height = 13
     Caption = 'Group'
   end
   object Label2: TLabel
     Left = 8
     Top = 20
-    Width = 64
+    Width = 68
     Height = 13
     Caption = 'Material Type'
   end

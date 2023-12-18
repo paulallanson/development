@@ -16,6 +16,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
   OnCreate = FormCreate
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 742
@@ -284,6 +285,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       OnExit = edtSlabCostExit
     end
     object pnlAdhesive: TPanel
+      ParentBackground = False
       Left = 0
       Top = 299
       Width = 742
@@ -435,6 +437,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       end
     end
     object pnlPrices: TPanel
+      ParentBackground = False
       Left = 0
       Top = 275
       Width = 742
@@ -512,6 +515,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       end
     end
     object pnlTotal: TPanel
+      ParentBackground = False
       Left = 0
       Top = 363
       Width = 742
@@ -566,6 +570,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 387
     Width = 742

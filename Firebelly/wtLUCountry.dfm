@@ -40,6 +40,7 @@ object frmWTLUCountry: TfrmWTLUCountry
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 241
     Width = 476

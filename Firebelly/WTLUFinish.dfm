@@ -62,6 +62,7 @@ object frmWTLUFinish: TfrmWTLUFinish
     ExplicitWidth = 390
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 158
     Width = 396

@@ -36,6 +36,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     Caption = '0 Records'
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 225

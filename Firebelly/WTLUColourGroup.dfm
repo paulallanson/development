@@ -62,6 +62,7 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
     ExplicitWidth = 396
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 167
     Width = 402

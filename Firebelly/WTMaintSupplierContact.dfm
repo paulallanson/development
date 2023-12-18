@@ -16,6 +16,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
   OnShow = FormShow
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 438
@@ -212,6 +213,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 304
     Width = 438

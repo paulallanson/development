@@ -16,6 +16,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   OnCreate = FormCreate
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536

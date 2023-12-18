@@ -40,6 +40,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = Button4Click
   end
   object rdgrpReps: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 72
     Width = 105
@@ -53,6 +54,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = rdgrpRepsClick
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 136
     Width = 105
@@ -66,6 +68,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = rdgrpCustomerClick
   end
   object grpbxDate: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 272
     Width = 209
@@ -223,6 +226,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = btnPreviewClick
   end
   object grpbxReps: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 72
     Width = 219
@@ -252,6 +256,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object rdgrpSortBy1: TRadioGroup
+    ParentBackground = False
     Left = 400
     Top = 8
     Width = 113
@@ -274,6 +279,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 11
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 522
     Top = 280
     Width = 105
@@ -294,6 +300,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object rdgrpContacts: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 8
     Width = 105
@@ -307,6 +314,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 8
     Width = 219
@@ -336,6 +344,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object rdgrpSortBy2: TRadioGroup
+    ParentBackground = False
     Left = 400
     Top = 168
     Width = 113
@@ -349,6 +358,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 15
   end
   object rdgrpDetailed: TRadioGroup
+    ParentBackground = False
     Left = 400
     Top = 280
     Width = 113
@@ -361,6 +371,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 16
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 522
     Top = 168
     Width = 105
@@ -377,6 +388,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Visible = False
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 136
     Width = 249
@@ -419,6 +431,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 148
     Top = 135
     Width = 289
@@ -451,6 +464,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Visible = False
   end
   object rdgrpValueBy: TRadioGroup
+    ParentBackground = False
     Left = 522
     Top = 8
     Width = 105

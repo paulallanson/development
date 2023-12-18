@@ -1518,12 +1518,13 @@ object frmwtAboutBox: TfrmwtAboutBox
     Height = 177
     BevelInner = bvRaised
     BevelOuter = bvLowered
+    ParentBackground = False
     ParentColor = True
     TabOrder = 0
     object ProductName: TLabel
       Left = 47
       Top = 16
-      Width = 118
+      Width = 127
       Height = 13
       Caption = 'Product Name:   Firebelly'
       IsControl = True
@@ -1531,7 +1532,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     object lblVersion: TLabel
       Left = 60
       Top = 40
-      Width = 81
+      Width = 88
       Height = 13
       Caption = 'Version Number: '
       IsControl = True
@@ -1539,7 +1540,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     object Copyright: TLabel
       Left = 95
       Top = 88
-      Width = 110
+      Width = 118
       Height = 13
       Caption = '(C)opyright 2005 - 2022'
       IsControl = True
@@ -1547,7 +1548,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     object Label1: TLabel
       Left = 45
       Top = 104
-      Width = 160
+      Width = 173
       Height = 13
       Caption = 'Quaystone Business Solutions Ltd'
       IsControl = True
@@ -1555,14 +1556,14 @@ object frmwtAboutBox: TfrmwtAboutBox
     object Label2: TLabel
       Left = 76
       Top = 136
-      Width = 129
+      Width = 132
       Height = 13
       Caption = 'Telephone: 0844 488 9206'
     end
     object Label3: TLabel
       Left = 26
       Top = 152
-      Width = 179
+      Width = 198
       Height = 13
       Caption = 'Email: info@quaystonesolutions.co.uk'
     end

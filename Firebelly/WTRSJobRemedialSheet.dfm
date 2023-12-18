@@ -14,6 +14,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
   OnActivate = FormActivate
   TextHeight = 13
   object pnlHead: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 628
@@ -130,6 +131,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 306
     Width = 628
@@ -140,6 +142,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       628
       41)
     object Panel3: TPanel
+      ParentBackground = False
       Left = 325
       Top = 1
       Width = 302

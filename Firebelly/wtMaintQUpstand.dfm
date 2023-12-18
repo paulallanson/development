@@ -21,7 +21,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   object lblDelete: TLabel
     Left = 88
     Top = 258
-    Width = 121
+    Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details?'
@@ -68,70 +68,70 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 44
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 73
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label4: TLabel
       Left = 424
       Top = 72
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label5: TLabel
       Left = 16
       Top = 100
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Height (mm)'
     end
     object Label6: TLabel
       Left = 16
       Top = 132
-      Width = 58
+      Width = 63
       Height = 13
       Caption = 'Length (mm)'
     end
     object Label8: TLabel
       Left = 16
       Top = 164
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label7: TLabel
       Left = 424
       Top = 164
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Total price'
     end
     object Label9: TLabel
       Left = 424
       Top = 100
-      Width = 68
+      Width = 71
       Height = 13
       Caption = 'Polish Price/m'
     end
     object Label10: TLabel
       Left = 16
       Top = 200
-      Width = 59
+      Width = 64
       Height = 13
       Caption = 'Material Use'
     end
@@ -152,28 +152,28 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     object Label11: TLabel
       Left = 424
       Top = 132
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Polish Cost/m'
     end
     object Label12: TLabel
       Left = 200
       Top = 100
-      Width = 105
+      Width = 113
       Height = 13
       Caption = 'No. of Polished Edges'
     end
     object Label13: TLabel
       Left = 200
       Top = 132
-      Width = 113
+      Width = 123
       Height = 13
       Caption = 'No. of Polished Lengths'
     end
     object Label14: TLabel
       Left = 424
       Top = 200
-      Width = 88
+      Width = 91
       Height = 13
       Caption = 'Total No of Pieces'
     end

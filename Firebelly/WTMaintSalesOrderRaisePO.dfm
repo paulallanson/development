@@ -13,6 +13,7 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 695
@@ -65,6 +66,7 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 308
     Width = 695

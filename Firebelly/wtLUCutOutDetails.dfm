@@ -86,8 +86,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 285
-    ExplicitWidth = 733
     DesignSize = (
       739
       69)
@@ -124,7 +122,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
-      ExplicitLeft = 297
     end
     object btnEdit: TBitBtn
       Left = 391
@@ -136,7 +133,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
-      ExplicitLeft = 385
     end
     object btnDelete: TBitBtn
       Left = 479
@@ -148,7 +144,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
-      ExplicitLeft = 473
     end
     object BitBtn4: TBitBtn
       Left = 655
@@ -160,7 +155,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
-      ExplicitLeft = 649
     end
     object btnExcel: TBitBtn
       Left = 567
@@ -172,7 +166,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 561
     end
   end
   object stsbrDetails: TStatusBar
@@ -187,8 +180,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       item
         Width = 50
       end>
-    ExplicitTop = 354
-    ExplicitWidth = 733
   end
   object Panel2: TPanel
     Left = 0
@@ -199,7 +190,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 733
     DesignSize = (
       739
       73)
@@ -315,7 +305,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
-      ExplicitLeft = 489
     end
     object btnGo: TButton
       Left = 656
@@ -327,7 +316,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 650
     end
   end
   object srclkpCOutThickness: TDataSource

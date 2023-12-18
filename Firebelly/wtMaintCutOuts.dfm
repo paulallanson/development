@@ -17,7 +17,7 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   object Label1: TLabel
     Left = 8
     Top = 29
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -30,7 +30,7 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   object Label7: TLabel
     Left = 368
     Top = 10
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end

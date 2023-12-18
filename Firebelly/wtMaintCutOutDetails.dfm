@@ -17,7 +17,7 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -30,7 +30,7 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   object Label4: TLabel
     Left = 8
     Top = 52
-    Width = 59
+    Width = 51
     Height = 13
     Caption = 'Cost Price'
     Font.Charset = DEFAULT_CHARSET
@@ -43,7 +43,7 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 72
+    Width = 63
     Height = 13
     Caption = 'Selling Price'
     Font.Charset = DEFAULT_CHARSET

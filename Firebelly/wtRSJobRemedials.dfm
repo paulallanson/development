@@ -40,6 +40,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     OnClick = Button4Click
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 225
@@ -134,6 +135,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 36
     Top = 71
     Width = 289
@@ -220,6 +222,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     OnClick = btnPreviewClick
   end
   object rdgrpContacts: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -233,6 +236,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
+    ParentBackground = False
     Left = 125
     Top = 8
     Width = 219

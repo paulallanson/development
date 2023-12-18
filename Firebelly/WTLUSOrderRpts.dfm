@@ -15,6 +15,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
   Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 442
@@ -94,6 +95,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 201
     Width = 442

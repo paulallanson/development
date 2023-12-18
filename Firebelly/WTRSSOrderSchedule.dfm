@@ -38,6 +38,7 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -51,6 +52,7 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 225
@@ -135,6 +137,7 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -176,6 +179,7 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113

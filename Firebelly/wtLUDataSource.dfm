@@ -57,6 +57,7 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     ExplicitWidth = 369
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 215
     Width = 375

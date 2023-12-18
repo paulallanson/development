@@ -39,6 +39,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 105
@@ -52,6 +53,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 225
@@ -136,6 +138,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 16
     Width = 219
@@ -248,6 +251,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 28
     Top = 111
     Width = 289

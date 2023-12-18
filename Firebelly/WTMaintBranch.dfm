@@ -267,6 +267,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Caption = 'Documents'
       ImageIndex = 1
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 514
@@ -336,6 +337,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 491
     Width = 514

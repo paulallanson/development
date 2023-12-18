@@ -209,6 +209,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = Button1Click
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 328
         Top = 40
         Width = 200

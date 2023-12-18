@@ -16,7 +16,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   object lblDelete: TLabel
     Left = 32
     Top = 152
-    Width = 121
+    Width = 106
     Height = 13
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
@@ -62,7 +62,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
@@ -76,28 +76,28 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 25
+      Width = 26
       Height = 13
       Caption = 'Edge'
     end
     object Label8: TLabel
       Left = 16
       Top = 108
-      Width = 33
+      Width = 36
       Height = 13
       Caption = 'Length'
     end
     object Label7: TLabel
       Left = 331
       Top = 108
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Total price'
     end
     object Label4: TLabel
       Left = 331
       Top = 76
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end

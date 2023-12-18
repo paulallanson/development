@@ -161,6 +161,7 @@ object frmWTRSContract: TfrmWTRSContract
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 84
     Top = 55
     Width = 289

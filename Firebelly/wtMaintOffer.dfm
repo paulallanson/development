@@ -104,6 +104,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = Button3Click
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 389
     Top = 59
     Width = 293

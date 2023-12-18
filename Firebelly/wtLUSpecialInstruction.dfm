@@ -50,6 +50,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 240
     Width = 701
@@ -148,6 +149,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     ExplicitWidth = 695
   end
   object pnlLookup: TPanel
+    ParentBackground = False
     Left = 618
     Top = 0
     Width = 83

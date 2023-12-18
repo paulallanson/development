@@ -22,6 +22,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
     Caption = 'Markup %'
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 208
     Width = 364
@@ -59,6 +60,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
     end
   end
   object rdgrpMarkupType: TRadioGroup
+    ParentBackground = False
     Left = 212
     Top = 8
     Width = 130

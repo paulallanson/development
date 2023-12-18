@@ -14,6 +14,7 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 292
     Width = 337
@@ -59,6 +60,7 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 337
@@ -118,6 +120,7 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     end
   end
   object pnldetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 73
     Width = 337

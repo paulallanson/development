@@ -17,6 +17,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
   OnShow = FormShow
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 528
     Top = 0
     Width = 98
@@ -86,6 +87,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       end>
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 345
     Width = 626

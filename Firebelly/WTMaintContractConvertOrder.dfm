@@ -17,6 +17,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 576
     Width = 594
@@ -70,6 +71,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     end
   end
   object pnlReference: TPanel
+    ParentBackground = False
     Left = 0
     Top = 514
     Width = 594
@@ -123,6 +125,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 594
@@ -310,6 +313,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       end>
   end
   object pnlSiteLocation: TPanel
+    ParentBackground = False
     Left = 0
     Top = 129
     Width = 594
@@ -464,6 +468,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       OnChange = EnableOK
     end
     object pnlCustomerBranch: TPanel
+      ParentBackground = False
       Left = 0
       Top = 30
       Width = 505

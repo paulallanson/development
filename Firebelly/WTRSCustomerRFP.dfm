@@ -20,6 +20,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
   OnShow = FormShow
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 462
@@ -159,6 +160,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 99
     Top = 46
     Width = 289
@@ -192,6 +194,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     Visible = False
   end
   object pnlLabourValue: TPanel
+    ParentBackground = False
     Left = 0
     Top = 137
     Width = 462
@@ -224,6 +227,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 184
     Width = 462

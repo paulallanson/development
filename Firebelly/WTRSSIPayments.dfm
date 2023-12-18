@@ -27,6 +27,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 144
     Width = 105
@@ -62,6 +63,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -75,6 +77,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 144
     Width = 209
@@ -159,6 +162,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 249
@@ -231,6 +235,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 76
     Top = 111
     Width = 289
@@ -254,6 +259,7 @@ object frmWTRSSIPayments: TfrmWTRSSIPayments
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 376
     Top = 8
     Width = 113

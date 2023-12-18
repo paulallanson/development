@@ -107,6 +107,7 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     OnClick = Button3Click
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 472
     Top = 138
     Width = 289

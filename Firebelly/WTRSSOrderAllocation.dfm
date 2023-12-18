@@ -39,6 +39,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     OnClick = Button4Click
   end
   object rdgrpFitter: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -52,6 +53,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     OnClick = rdgrpFitterClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 209
@@ -136,6 +138,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     end
   end
   object grpbxFitter: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -177,6 +180,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113
@@ -219,6 +223,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 72
     Width = 105
@@ -233,6 +238,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     TabOrder = 10
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 84
     Top = 63
     Width = 289

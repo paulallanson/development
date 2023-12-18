@@ -61,6 +61,7 @@ object frmWTLUMaterialType: TfrmWTLUMaterialType
     ExplicitWidth = 402
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 176
     Width = 408

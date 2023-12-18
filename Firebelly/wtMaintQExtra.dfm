@@ -19,7 +19,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   object lblDelete: TLabel
     Left = 72
     Top = 184
-    Width = 121
+    Width = 106
     Height = 13
     Anchors = [akLeft, akTop, akBottom]
     Caption = 'Delete these details?'
@@ -68,42 +68,42 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Extra charge'
     end
     object Label8: TLabel
       Left = 16
       Top = 48
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 16
       Top = 77
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 379
       Top = 77
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Total Price'
     end
     object Label1: TLabel
       Left = 16
       Top = 106
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Unit Cost'
     end
     object Label2: TLabel
       Left = 379
       Top = 106
-      Width = 48
+      Width = 51
       Height = 13
       Caption = 'Total Cost'
     end

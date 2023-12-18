@@ -16,6 +16,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
   OnCreate = FormCreate
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 168
     Width = 758
@@ -88,6 +89,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 25
     Width = 758
@@ -128,6 +130,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 758
@@ -136,6 +139,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
     TabOrder = 0
   end
   object pnlCosts: TPanel
+    ParentBackground = False
     Left = 0
     Top = 103
     Width = 758

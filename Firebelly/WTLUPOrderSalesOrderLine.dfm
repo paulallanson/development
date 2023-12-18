@@ -14,6 +14,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   OnCreate = FormCreate
   TextHeight = 13
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 912
@@ -55,6 +56,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 372
     Width = 912

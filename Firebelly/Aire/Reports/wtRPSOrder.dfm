@@ -10,7 +10,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
@@ -118,13 +118,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblSOCaption: TQRLabel
         Left = 200
         Top = 8
-        Width = 264
+        Width = 278
         Height = 40
         Size.Values = (
           105.833333333333300000
           529.166666666666700000
           21.166666666666670000
-          698.500000000000000000)
+          735.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

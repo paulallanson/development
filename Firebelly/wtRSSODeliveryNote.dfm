@@ -27,6 +27,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Visible = False
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 127
     Width = 355
@@ -82,6 +83,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     end
   end
   object pnlSelection: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 355
@@ -90,6 +92,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     BevelOuter = bvNone
     TabOrder = 2
     object selectionGrp: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 7
       Width = 345

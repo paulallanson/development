@@ -241,6 +241,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 318
     Width = 897
@@ -281,6 +282,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
+      ParentBackground = False
       Left = 711
       Top = 1
       Width = 185

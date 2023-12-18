@@ -13,6 +13,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 408
     Width = 882
@@ -63,6 +64,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 882
@@ -174,6 +176,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     end
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 784
     Top = 81
     Width = 98

@@ -17,6 +17,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
   OnShow = FormShow
   TextHeight = 13
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 751
@@ -66,6 +67,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       ParentFont = False
     end
     object pnlStatusSelect: TPanel
+      ParentBackground = False
       Left = 2
       Top = 8
       Width = 147
@@ -134,6 +136,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         'Rep')
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 149
       Top = 8
       Width = 147
@@ -163,6 +166,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       end
     end
     object Panel3: TPanel
+      ParentBackground = False
       Left = 296
       Top = 8
       Width = 147
@@ -192,6 +196,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       end
     end
     object RadioGroup1: TRadioGroup
+      ParentBackground = False
       Left = 636
       Top = 12
       Width = 120
@@ -227,6 +232,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 433
     Width = 751
@@ -237,6 +243,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       751
       41)
     object Panel1: TPanel
+      ParentBackground = False
       Left = 448
       Top = 1
       Width = 302
@@ -456,6 +463,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 268
     Top = 252
     Width = 289

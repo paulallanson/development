@@ -36,6 +36,7 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
     Caption = 'Time'
   end
   object BasisGroup: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 10
     Width = 143

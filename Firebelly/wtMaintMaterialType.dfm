@@ -102,6 +102,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         OnClick = Button3Click
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 472
         Top = 74
         Width = 289
@@ -1159,6 +1160,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         end
       end
       object GroupBox1: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 9
         Width = 233
@@ -1197,6 +1199,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         end
       end
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 120
         Width = 233
@@ -1281,6 +1284,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Caption = 'Upstand Polish Prices per ln metre'
       end
       object Panel2: TPanel
+        ParentBackground = False
         Left = 8
         Top = 40
         Width = 337
@@ -1288,6 +1292,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Caption = 'Panel2'
         TabOrder = 0
         object Panel3: TPanel
+          ParentBackground = False
           Left = 311
           Top = 1
           Width = 25
@@ -1382,6 +1387,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Caption = 'Thickness Weights'
       end
       object Panel4: TPanel
+        ParentBackground = False
         Left = 8
         Top = 40
         Width = 337
@@ -1389,6 +1395,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Caption = 'Panel2'
         TabOrder = 0
         object Panel5: TPanel
+          ParentBackground = False
           Left = 311
           Top = 1
           Width = 25

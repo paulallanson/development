@@ -74,6 +74,7 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
     ExplicitWidth = 478
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 184
     Width = 484

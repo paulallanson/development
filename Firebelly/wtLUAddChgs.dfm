@@ -83,8 +83,6 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       item
         Width = 50
       end>
-    ExplicitTop = 373
-    ExplicitWidth = 680
   end
   object Panel1: TPanel
     Left = 0
@@ -95,8 +93,6 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 310
-    ExplicitWidth = 680
     object Label4: TLabel
       Left = 16
       Top = 16

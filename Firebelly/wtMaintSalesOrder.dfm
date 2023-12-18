@@ -27,7 +27,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1154
     DesignSize = (
       1158
       36)
@@ -90,7 +89,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ListField = 'Operator_Name'
       ListSource = dtmdlSalesOrder.dtsOperator
       TabOrder = 2
-      ExplicitLeft = 943
     end
     object dtpckDate: TDateTimePicker
       Left = 280
@@ -111,7 +109,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Anchors = [akRight, akBottom]
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 1154
     DesignSize = (
       1158
       269)
@@ -242,7 +239,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'pnlAddress'
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 568
       DesignSize = (
         572
         121)
@@ -261,7 +257,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 0
         OnChange = CheckOK
-        ExplicitWidth = 546
       end
       object edtStreet: TEdit
         Left = 14
@@ -270,7 +265,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 1
-        ExplicitWidth = 546
       end
       object edtLocale: TEdit
         Left = 14
@@ -279,7 +273,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
-        ExplicitWidth = 546
       end
       object edtTown: TEdit
         Left = 14
@@ -288,7 +281,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 3
-        ExplicitWidth = 546
       end
       object edtPostcode: TEdit
         Left = 14
@@ -305,7 +297,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
-        ExplicitWidth = 406
       end
     end
     object grpMaterials: TGroupBox
@@ -317,7 +308,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Enabled = False
       ParentBackground = False
       TabOrder = 12
-      ExplicitLeft = 892
       DesignSize = (
         193
         77)
@@ -419,7 +409,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ShowHint = True
       TabOrder = 1
       OnClick = btnCustomerClick
-      ExplicitLeft = 644
     end
     object dblkpRep: TDBLookupComboBox
       Left = 89
@@ -440,7 +429,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Anchors = [akTop, akRight]
       TabOrder = 7
       OnChange = edtReferenceChange
-      ExplicitLeft = 809
     end
     object edtCustOrderNo: TEdit
       Left = 813
@@ -450,7 +438,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Anchors = [akTop, akRight]
       TabOrder = 8
       OnChange = edtCustOrderNoChange
-      ExplicitLeft = 809
     end
     object BitBtn3: TBitBtn
       Left = 651
@@ -470,7 +457,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ShowHint = True
       TabOrder = 3
       OnClick = BitBtn3Click
-      ExplicitLeft = 647
     end
     object btnLUReps: TBitBtn
       Left = 346
@@ -498,7 +484,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
       OnChange = edtContactChange
-      ExplicitWidth = 546
     end
     object edtDescription: TMemo
       Left = 89
@@ -510,7 +495,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ScrollBars = ssVertical
       TabOrder = 6
       OnChange = edtDescriptionChange
-      ExplicitWidth = 586
     end
     object chkbxMaterialRequired: TCheckBox
       Left = 896
@@ -521,7 +505,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Material Required'
       TabOrder = 11
       OnClick = chkbxMaterialRequiredClick
-      ExplicitLeft = 892
     end
     object rdgrpDateType: TRadioGroup
       Left = 702
@@ -543,7 +526,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ParentFont = False
       TabOrder = 9
       OnClick = rdgrpDateTypeClick
-      ExplicitLeft = 698
     end
     object grpDates: TGroupBox
       Left = 896
@@ -554,7 +536,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Dates'
       ParentBackground = False
       TabOrder = 10
-      ExplicitLeft = 892
       DesignSize = (
         194
         77)
@@ -661,7 +642,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ParentFont = False
       TabOrder = 13
       OnClick = rdgrpJobTypeClick
-      ExplicitLeft = 698
     end
     object pnlRevenueCentre: TPanel
       Left = 376
@@ -672,7 +652,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 14
-      ExplicitWidth = 298
       DesignSize = (
         302
         41)
@@ -730,7 +709,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         KeyField = 'Revenue_Centre'
         ListField = 'Revenue_Centre_Descr'
         TabOrder = 0
-        ExplicitWidth = 146
       end
     end
     object edtProject: TEdit
@@ -741,7 +719,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Anchors = [akTop, akRight]
       TabOrder = 15
       Visible = False
-      ExplicitLeft = 678
     end
   end
   object pnlBottom: TPanel
@@ -752,8 +729,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
-    ExplicitTop = 674
-    ExplicitWidth = 1154
     DesignSize = (
       1158
       41)
@@ -801,7 +776,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
-      ExplicitLeft = 928
     end
     object BitBtn2: TBitBtn
       Left = 1020
@@ -812,7 +786,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 1016
     end
     object chkbxonHold: TCheckBox
       Left = 8
@@ -852,8 +825,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       item
         Width = 50
       end>
-    ExplicitTop = 715
-    ExplicitWidth = 1154
   end
   object pnlFooter: TPanel
     Left = 0
@@ -863,8 +834,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 480
-    ExplicitWidth = 1154
     object Panel5: TPanel
       Left = 804
       Top = 1
@@ -875,7 +844,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = 800
       DesignSize = (
         353
         192)
@@ -1075,7 +1043,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Align = alClient
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 222
       DesignSize = (
         226
         192)
@@ -1524,8 +1491,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 1154
-    ExplicitHeight = 175
     object tbDetails: TTabSheet
       Caption = 'Details'
       object dbgLines: TStringGrid
@@ -1541,8 +1506,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         PopupMenu = pmnLines
         TabOrder = 0
         OnDblClick = dbgLinesDblClick
-        ExplicitWidth = 1146
-        ExplicitHeight = 147
         ColWidths = (
           40
           89
@@ -1729,7 +1692,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
           PassThrough = False
           OnDropFiles = dfDocumentsDropFiles
-          ExplicitWidth = 936
           object slvDocuments: TShellListView
             Left = 0
             Top = 0
@@ -1747,7 +1709,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             OnMouseMove = stvDocumentsMouseMove
             TabOrder = 0
             ViewStyle = vsReport
-            ExplicitWidth = 936
           end
         end
       end

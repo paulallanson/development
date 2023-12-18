@@ -21,35 +21,35 @@ object frmWTMaintReps: TfrmWTMaintReps
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 51
+    Width = 52
     Height = 13
     Caption = 'Rep Name'
   end
   object Label1: TLabel
     Left = 8
     Top = 140
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object lblCommissionRate: TLabel
     Left = 8
     Top = 79
-    Width = 76
+    Width = 85
     Height = 13
     Caption = 'Commission rate'
   end
   object Label3: TLabel
     Left = 8
     Top = 52
-    Width = 73
+    Width = 82
     Height = 13
     Caption = 'Commision type'
   end
   object lblCommissionPerc: TLabel
     Left = 184
     Top = 80
-    Width = 8
+    Width = 9
     Height = 13
     Caption = '%'
   end

@@ -149,6 +149,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       OnClick = Button3Click
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 120
       Top = 136
       Width = 217

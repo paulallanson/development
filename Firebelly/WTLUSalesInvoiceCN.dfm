@@ -24,9 +24,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
     Height = 359
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 793
-    ExplicitHeight = 350
     object dbgSalesInvoice: TDBGrid
       Left = 0
       Top = 0
@@ -109,9 +108,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 350
-    ExplicitWidth = 793
     DesignSize = (
       799
       80)
@@ -130,6 +128,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       Width = 285
       Height = 66
       Caption = 'Type here to narrow the search'
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -155,7 +154,6 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtSalesInvNoKeyPress
-      ExplicitLeft = 504
     end
     object GroupBox2: TGroupBox
       Left = 672
@@ -164,8 +162,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       Height = 76
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 666
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -258,8 +256,6 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       item
         Width = 50
       end>
-    ExplicitTop = 430
-    ExplicitWidth = 793
   end
   object SearchTimer: TTimer
     Enabled = False

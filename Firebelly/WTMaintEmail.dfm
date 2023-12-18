@@ -15,6 +15,7 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
   OnShow = FormShow
   TextHeight = 13
   object grpbxContact: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 497
@@ -56,6 +57,7 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 104
     Width = 497

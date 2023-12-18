@@ -108,8 +108,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     object Label2: TLabel
       Left = 8
       Top = 88
-      Width = 265
-      Height = 26
+      Width = 244
+      Height = 39
       Caption = 
         'Enter quote numbers and/or quote ranges separated by commas. For' +
         ' example, 1234, 1236, 1240-1245'

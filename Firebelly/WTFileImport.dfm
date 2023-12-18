@@ -15,6 +15,7 @@ object frmWTFileImport: TfrmWTFileImport
   OnActivate = FormActivate
   TextHeight = 13
   object pnlCustomer: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 378
@@ -59,6 +60,7 @@ object frmWTFileImport: TfrmWTFileImport
     end
   end
   object pnlImportFile: TPanel
+    ParentBackground = False
     Left = 0
     Top = 65
     Width = 378
@@ -107,6 +109,7 @@ object frmWTFileImport: TfrmWTFileImport
     end
   end
   object pnlImport: TPanel
+    ParentBackground = False
     Left = 0
     Top = 145
     Width = 378
@@ -132,6 +135,7 @@ object frmWTFileImport: TfrmWTFileImport
     end
   end
   object pnlProgress: TPanel
+    ParentBackground = False
     Left = 0
     Top = 186
     Width = 378
@@ -187,6 +191,7 @@ object frmWTFileImport: TfrmWTFileImport
     TabOrder = 4
   end
   object pnlCancel: TPanel
+    ParentBackground = False
     Left = 0
     Top = 372
     Width = 378

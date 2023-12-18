@@ -107,7 +107,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 81
+      Width = 86
       Height = 13
       Anchors = [akLeft, akBottom]
       Caption = 'Customer Search'

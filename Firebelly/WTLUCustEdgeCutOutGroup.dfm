@@ -31,6 +31,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     ExplicitWidth = 461
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 268
     Width = 467
@@ -108,6 +109,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 379
     Top = 33
     Width = 88
@@ -148,6 +150,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 467

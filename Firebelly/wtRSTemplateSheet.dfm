@@ -27,6 +27,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Visible = False
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 371
     Width = 513
@@ -90,6 +91,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     end
   end
   object pnlDocuments: TPanel
+    ParentBackground = False
     Left = 0
     Top = 138
     Width = 513
@@ -119,6 +121,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     end
   end
   object pnlSelection: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 513
@@ -126,6 +129,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alTop
     TabOrder = 3
     object selectionGrp: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 7
       Width = 273
@@ -170,6 +174,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     end
   end
   object pnlDocumentDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 200
     Width = 513

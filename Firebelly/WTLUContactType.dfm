@@ -56,6 +56,7 @@ object frmWTLUContactType: TfrmWTLUContactType
     ExplicitWidth = 470
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 267
     Width = 476

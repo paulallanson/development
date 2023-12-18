@@ -183,6 +183,7 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
     OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 9
     Top = 8
     Width = 312

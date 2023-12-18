@@ -16,6 +16,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   OnCreate = FormCreate
   TextHeight = 13
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1022
@@ -106,6 +107,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 433
     Width = 1022
@@ -113,6 +115,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Align = alBottom
     TabOrder = 1
     object Panel1: TPanel
+      ParentBackground = False
       Left = 719
       Top = 1
       Width = 302
@@ -294,6 +297,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 268
     Top = 252
     Width = 289
@@ -317,6 +321,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     end
   end
   object pnlSearch: TPanel
+    ParentBackground = False
     Left = 0
     Top = 388
     Width = 1022

@@ -69,6 +69,7 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
     ExplicitWidth = 472
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 175
     Width = 478

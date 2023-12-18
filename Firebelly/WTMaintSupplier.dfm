@@ -35,6 +35,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     ExplicitWidth = 1002
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 456
     Width = 1008
@@ -98,6 +99,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1008
@@ -352,6 +354,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 2
       OnShow = tsMaterialsShow
       object Panel3: TPanel
+        ParentBackground = False
         Left = 903
         Top = 0
         Width = 93
@@ -486,6 +489,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end>
       end
       object pnlMaterialsFooter: TPanel
+        ParentBackground = False
         Left = 0
         Top = 316
         Width = 996
@@ -539,6 +543,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterialChange
         end
         object Panel4: TPanel
+          ParentBackground = False
           Left = 896
           Top = 1
           Width = 103
@@ -663,6 +668,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 4
       OnShow = tsWorktopsShow
       object Panel2: TPanel
+        ParentBackground = False
         Left = 0
         Top = 316
         Width = 996
@@ -702,6 +708,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterial1Change
         end
         object Panel5: TPanel
+          ParentBackground = False
           Left = 896
           Top = 1
           Width = 103
@@ -749,6 +756,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
       end
       object Panel7: TPanel
+        ParentBackground = False
         Left = 907
         Top = 0
         Width = 93
@@ -847,6 +855,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 3
       OnShow = tsProductsShow
       object pnlProductsFooter: TPanel
+        ParentBackground = False
         Left = 0
         Top = 316
         Width = 996
@@ -961,6 +970,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end>
       end
       object Panel6: TPanel
+        ParentBackground = False
         Left = 907
         Top = 0
         Width = 93
@@ -1002,6 +1012,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Caption = 'Documents'
       ImageIndex = 3
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 996
@@ -1018,6 +1029,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
       end
       object Panel11: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 996

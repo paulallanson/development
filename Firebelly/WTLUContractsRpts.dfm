@@ -15,6 +15,7 @@ object frmWTLUContractRpts: TfrmWTLUContractRpts
   Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 412
@@ -62,6 +63,7 @@ object frmWTLUContractRpts: TfrmWTLUContractRpts
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 143
     Width = 412

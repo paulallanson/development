@@ -62,6 +62,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     ExplicitWidth = 491
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 319
     Width = 497
@@ -110,6 +111,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 408
     Top = 33
     Width = 89
@@ -178,6 +180,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 497

@@ -125,7 +125,7 @@ procedure TfrmwtLUAppointmentType.dbgDetailsDrawColumnCell(Sender: TObject;
 begin
 // (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('AppointmentColour').asinteger;
 // (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Font_Colour').asinteger;
-// (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+// (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure TfrmwtLUAppointmentType.BitBtn1Click(Sender: TObject);

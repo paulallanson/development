@@ -102,18 +102,17 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 37
+      Width = 39
       Height = 13
       Caption = 'Job No.'
     end
     object Label2: TLabel
       Left = 332
       Top = 8
-      Width = 75
+      Width = 80
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Sales Order No.'
-      ExplicitLeft = 384
     end
     object memSelection: TMemo
       Left = 8
@@ -147,7 +146,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     object Label3: TLabel
       Left = 8
       Top = 5
-      Width = 188
+      Width = 207
       Height = 13
       Caption = 'Include documents from selected folder:'
     end

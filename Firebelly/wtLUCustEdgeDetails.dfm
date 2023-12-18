@@ -72,6 +72,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 293
     Width = 735
@@ -175,6 +176,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 735

@@ -30,6 +30,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     ExplicitWidth = 969
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 401
     Width = 975
@@ -136,6 +137,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 975

@@ -56,6 +56,7 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
     ExplicitWidth = 418
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 263
     Width = 424

@@ -18,6 +18,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 595
     Width = 1289
@@ -41,6 +42,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       TabOrder = 0
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 998
       Top = 1
       Width = 290

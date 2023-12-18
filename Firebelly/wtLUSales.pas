@@ -801,7 +801,7 @@ begin
   if(dbgDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 (*
   if (dbgDetails.datasource.dataset.fieldByName('Sales_Order_Status').AsInteger < 100) and
@@ -837,14 +837,14 @@ begin
     begin
       (Sender as TDBGrid).Canvas.font.color := $00FF0080;
 //      (Sender as TDBGrid).Canvas.font.style := [fsBold];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end ;
 
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := clYellow;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if (gdFocused in State) or (gdSelected in State) then
@@ -852,7 +852,7 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   TFloatField(dbgDetails.DataSource.DataSet.FieldByName('Goods_Value')).DisplayFormat := '0.00';

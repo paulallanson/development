@@ -56,6 +56,7 @@ object frmwtLULevelofImportance: TfrmwtLULevelofImportance
     ExplicitWidth = 418
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 233
     Width = 424

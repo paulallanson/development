@@ -61,6 +61,7 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     ExplicitWidth = 733
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 272
     Width = 739
@@ -164,6 +165,7 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 739
@@ -188,6 +190,7 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 651
     Top = 33
     Width = 88

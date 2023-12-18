@@ -1,7 +1,6 @@
 object dtmdlPrices: TdtmdlPrices
-  Height = 451
-  Width = 993
-  PixelsPerInch = 120
+  Height = 361
+  Width = 794
   object qryAllPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
@@ -72,8 +71,8 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 54
-    Top = 43
+    Left = 43
+    Top = 34
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
       Origin = 'Worktop'
@@ -158,8 +157,8 @@ object dtmdlPrices: TdtmdlPrices
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 164
-    Top = 43
+    Left = 131
+    Top = 34
   end
   object qryDummyCurrent: TFDQuery
     SQL.Strings = (
@@ -237,8 +236,8 @@ object dtmdlPrices: TdtmdlPrices
       '        LEFT JOIN Worktop_thickness'
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 286
-    Top = 43
+    Left = 229
+    Top = 34
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -294,8 +293,8 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 420
-    Top = 43
+    Left = 336
+    Top = 34
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -304,8 +303,8 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 54
-    Top = 123
+    Left = 43
+    Top = 98
     ParamData = <
       item
         Name = 'Price_Pointer'

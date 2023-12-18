@@ -48,6 +48,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 105
@@ -61,6 +62,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 200
     Width = 209
@@ -145,6 +147,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 80
     Width = 249
@@ -187,6 +190,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 376
     Top = 8
     Width = 113
@@ -239,6 +243,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 76
     Top = 111
     Width = 289
@@ -262,6 +267,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     end
   end
   object rdgrpReps: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -275,6 +281,7 @@ object frmWTRSContractQuote: TfrmWTRSContractQuote
     OnClick = rdgrpRepsClick
   end
   object grpbxReps: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 249

@@ -19,7 +19,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   object lblDelete: TLabel
     Left = 40
     Top = 249
-    Width = 121
+    Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details?'
@@ -68,7 +68,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
@@ -82,56 +82,56 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 25
+      Width = 26
       Height = 13
       Caption = 'Edge'
     end
     object Label8: TLabel
       Left = 16
       Top = 204
-      Width = 33
+      Width = 36
       Height = 13
       Caption = 'Length'
     end
     object Label7: TLabel
       Left = 339
       Top = 140
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Total Price'
     end
     object Label4: TLabel
       Left = 16
       Top = 140
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Unit Price'
     end
     object Label5: TLabel
       Left = 16
       Top = 172
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Unit Cost'
     end
     object Label6: TLabel
       Left = 341
       Top = 172
-      Width = 48
+      Width = 51
       Height = 13
       Caption = 'Total Cost'
     end
     object Label9: TLabel
       Left = 16
       Top = 108
-      Width = 63
+      Width = 65
       Height = 13
       Caption = 'Std Sell Price'
     end
     object lblDiscount: TLabel
       Left = 304
       Top = 44
-      Width = 81
+      Width = 87
       Height = 13
       Caption = 'Edge Discount %'
     end

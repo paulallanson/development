@@ -39,6 +39,7 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     WordWrap = True
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 225

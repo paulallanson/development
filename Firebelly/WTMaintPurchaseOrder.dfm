@@ -18,6 +18,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 886
@@ -157,6 +158,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       end>
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 541
     Width = 886
@@ -238,6 +240,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 36
     Width = 886
@@ -506,6 +509,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           83)
       end
       object pnlFunctions: TPanel
+        ParentBackground = False
         Left = 793
         Top = 0
         Width = 85
@@ -565,6 +569,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Caption = 'Events'
       ImageIndex = 4
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 305
@@ -591,6 +596,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         end
       end
       object Panel18: TPanel
+        ParentBackground = False
         Left = 305
         Top = 0
         Width = 132
@@ -628,6 +634,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 437
         Top = 0
         Width = 441
@@ -650,6 +657,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Caption = 'Notes'
       ImageIndex = 2
       object Panel1: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 505
@@ -670,6 +678,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 413
     Width = 886
@@ -677,6 +686,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Align = alBottom
     TabOrder = 5
     object Panel5: TPanel
+      ParentBackground = False
       Left = 719
       Top = 1
       Width = 166
@@ -755,6 +765,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       end
     end
     object pnlFooterLeft: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 128
@@ -763,6 +774,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       BevelOuter = bvNone
       TabOrder = 1
       object rdgrpDelivery: TRadioGroup
+        ParentBackground = False
         Left = 13
         Top = 8
         Width = 105
@@ -777,6 +789,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       end
     end
     object pnlFooterAddress: TPanel
+      ParentBackground = False
       Left = 129
       Top = 1
       Width = 432

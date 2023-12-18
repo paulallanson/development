@@ -40,6 +40,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       end>
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 304
     Top = 0
     Width = 98
@@ -91,6 +92,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 248
     Width = 402

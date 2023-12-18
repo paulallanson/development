@@ -36,6 +36,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Caption = 'Time'
   end
   object BasisGroup: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 272
     Width = 143
@@ -100,6 +101,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     OnChange = edtChangeChange
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 16
     Width = 105
@@ -122,6 +124,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Visible = False
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 128
     Top = 16
     Width = 249
@@ -164,6 +167,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     end
   end
   object rdgrpPriceChange: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 136
     Width = 143
@@ -179,6 +183,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     OnClick = rdgrpPriceChangeClick
   end
   object rdGrpWTGroups: TRadioGroup
+    ParentBackground = False
     Left = 176
     Top = 136
     Width = 185
@@ -193,6 +198,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     OnClick = rdGrpWTGroupsClick
   end
   object grpbxWTGroups: TGroupBox
+    ParentBackground = False
     Left = 176
     Top = 200
     Width = 185

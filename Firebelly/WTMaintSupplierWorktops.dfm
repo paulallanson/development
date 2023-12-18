@@ -30,6 +30,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 500
     Width = 634
@@ -101,6 +102,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 634
