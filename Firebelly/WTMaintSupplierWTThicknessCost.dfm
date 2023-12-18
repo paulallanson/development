@@ -15,7 +15,7 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label1: TLabel
     Left = 24
     Top = 80
-    Width = 63
+    Width = 53
     Height = 13
     Caption = 'Thickness:'
     Font.Charset = DEFAULT_CHARSET
@@ -28,7 +28,7 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label2: TLabel
     Left = 24
     Top = 48
-    Width = 53
+    Width = 49
     Height = 13
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
@@ -41,21 +41,21 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label4: TLabel
     Left = 24
     Top = 116
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label5: TLabel
     Left = 224
     Top = 116
-    Width = 61
+    Width = 67
     Height = 13
     Caption = 'per sq. metre'
   end
   object lblWorktop: TLabel
     Left = 104
     Top = 48
-    Width = 62
+    Width = 59
     Height = 13
     Caption = 'lblWorktop'
     Font.Charset = DEFAULT_CHARSET
@@ -68,7 +68,7 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label7: TLabel
     Left = 24
     Top = 16
-    Width = 51
+    Width = 46
     Height = 13
     Caption = 'Supplier:'
     Font.Charset = DEFAULT_CHARSET
@@ -81,7 +81,7 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object lblSupplierName: TLabel
     Left = 104
     Top = 16
-    Width = 92
+    Width = 87
     Height = 13
     Caption = 'lblSupplierName'
     Font.Charset = DEFAULT_CHARSET
@@ -94,7 +94,7 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object lblThickness: TLabel
     Left = 104
     Top = 80
-    Width = 72
+    Width = 63
     Height = 13
     Caption = 'lblThickness'
     Font.Charset = DEFAULT_CHARSET

@@ -88,13 +88,13 @@ object frmwtLUPayments: TfrmwtLUPayments
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 462
     Width = 785
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       785
@@ -152,12 +152,12 @@ object frmwtLUPayments: TfrmwtLUPayments
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 383
     Width = 785
     Height = 79
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       785
@@ -276,13 +276,13 @@ object frmwtLUPayments: TfrmwtLUPayments
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 785
     Height = 89
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
     object lblSalesOrder: TLabel
       Left = 682
@@ -404,12 +404,12 @@ object frmwtLUPayments: TfrmwtLUPayments
       end>
   end
   object pnlCreditNotes: TPanel
-    ParentBackground = False
     Left = 0
     Top = 254
     Width = 785
     Height = 33
     Align = alBottom
+    ParentBackground = False
     TabOrder = 6
     object lblCreditNotes: TLabel
       Left = 8

@@ -21,7 +21,7 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 60
+    Width = 62
     Height = 13
     Caption = 'Data Source'
   end

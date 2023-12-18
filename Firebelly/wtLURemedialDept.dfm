@@ -58,20 +58,16 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
       item
         Width = 50
       end>
-    ExplicitTop = 379
-    ExplicitWidth = 694
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 301
     Width = 700
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 292
-    ExplicitWidth = 694
     DesignSize = (
       700
       87)

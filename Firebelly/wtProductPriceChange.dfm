@@ -17,33 +17,32 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   object lblPriceChange: TLabel
     Left = 16
     Top = 310
-    Width = 64
+    Width = 67
     Height = 13
     Caption = 'Price Change'
   end
   object Label2: TLabel
     Left = 16
     Top = 340
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 224
     Top = 340
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Time'
   end
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 69
+    Width = 76
     Height = 13
     Caption = 'Product Group'
   end
   object rdGrpProducts: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 80
     Width = 105
@@ -53,6 +52,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Items.Strings = (
       'All '
       'Selected')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdGrpProductsClick
   end
@@ -66,17 +66,17 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Visible = False
   end
   object grpbxProducts: TGroupBox
-    ParentBackground = False
     Left = 128
     Top = 80
     Width = 249
     Height = 113
     Enabled = False
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 10
-      Width = 42
+      Width = 45
       Height = 13
       Caption = 'Products'
     end
@@ -108,7 +108,6 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     end
   end
   object BasisGroup: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 216
     Width = 141
@@ -119,6 +118,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
       'Uplift price by %'
       'Reduce price by %'
       'Set Specific Price')
+    ParentBackground = False
     TabOrder = 3
     OnClick = BasisGroupClick
   end

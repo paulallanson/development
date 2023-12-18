@@ -41,16 +41,14 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 248
     Width = 511
     Height = 50
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 239
-    ExplicitWidth = 505
     DesignSize = (
       511
       50)
@@ -122,8 +120,6 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
       item
         Width = 50
       end>
-    ExplicitTop = 289
-    ExplicitWidth = 505
   end
   object srcPaymentTerms: TDataSource
     DataSet = qryPaymentTerms

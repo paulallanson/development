@@ -17,16 +17,14 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
   OnShow = FormShow
   TextHeight = 13
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 528
     Top = 0
     Width = 98
     Height = 345
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 522
-    ExplicitHeight = 336
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -87,16 +85,14 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       end>
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
     Top = 345
     Width = 626
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 336
-    ExplicitWidth = 620
     DesignSize = (
       626
       89)
@@ -137,7 +133,6 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 525
     end
     object BitBtn2: TBitBtn
       Left = 531
@@ -148,7 +143,6 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
-      ExplicitLeft = 525
     end
   end
   object stbrDetails: TStatusBar
@@ -163,8 +157,6 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       item
         Width = 50
       end>
-    ExplicitTop = 425
-    ExplicitWidth = 620
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

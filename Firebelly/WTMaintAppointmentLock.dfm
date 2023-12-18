@@ -16,12 +16,12 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 337
     Width = 862
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       862

@@ -21,7 +21,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
@@ -69,7 +69,6 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     OnChange = EnableOK
   end
   object rdgrpUseFor: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 56
     Width = 185
@@ -80,6 +79,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
       'All'
       'Worktops'
       'Splashbacks etc')
+    ParentBackground = False
     TabOrder = 4
   end
   object qryUpdate: TFDQuery

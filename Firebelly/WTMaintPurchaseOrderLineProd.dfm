@@ -16,12 +16,12 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
   OnActivate = FormActivate
   TextHeight = 13
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
     Top = 250
     Width = 758
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     TabStop = True
     DesignSize = (
@@ -94,24 +94,24 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 25
     Width = 758
     Height = 142
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 18
       Top = 13
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 18
       Top = 45
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
@@ -132,7 +132,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object OrdqtyLbl: TLabel
       Left = 18
       Top = 104
-      Width = 86
+      Width = 95
       Height = 13
       Caption = 'Order Qty (singles)'
       Font.Charset = DEFAULT_CHARSET
@@ -145,7 +145,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object lblQtyDelivered: TLabel
       Left = 202
       Top = 104
-      Width = 86
+      Width = 93
       Height = 13
       Caption = 'Delivered (singles)'
       Font.Charset = DEFAULT_CHARSET
@@ -159,7 +159,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object lblQtyInvoiced: TLabel
       Left = 423
       Top = 104
-      Width = 82
+      Width = 88
       Height = 13
       Caption = 'Invoiced (singles)'
       Font.Charset = DEFAULT_CHARSET
@@ -173,21 +173,21 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object Label12: TLabel
       Left = 18
       Top = 74
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Unit Cost'
     end
     object Label3: TLabel
       Left = 202
       Top = 74
-      Width = 84
+      Width = 93
       Height = 13
       Caption = 'Cost Unit (singles)'
     end
     object Label13: TLabel
       Left = 442
       Top = 74
-      Width = 53
+      Width = 58
       Height = 13
       Caption = 'Discount %'
     end
@@ -283,21 +283,21 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 758
     Height = 25
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
   end
   object pnlNotes: TPanel
-    ParentBackground = False
     Left = 0
     Top = 167
     Width = 758
     Height = 83
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       758
@@ -305,7 +305,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object Label7: TLabel
       Left = 18
       Top = 13
-      Width = 28
+      Width = 30
       Height = 13
       Caption = 'Notes'
     end

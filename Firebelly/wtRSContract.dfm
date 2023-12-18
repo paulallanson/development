@@ -23,7 +23,7 @@ object frmWTRSContract: TfrmWTRSContract
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 53
+    Width = 58
     Height = 13
     Caption = 'Quote No'#39's'
   end
@@ -161,17 +161,17 @@ object frmWTRSContract: TfrmWTRSContract
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 84
     Top = 55
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 9
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

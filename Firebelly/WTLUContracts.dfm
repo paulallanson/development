@@ -30,7 +30,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 910
+        Width = 906
       end>
     object Panel3: TPanel
       Left = 11
@@ -114,7 +114,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 910
+        Width = 906
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -278,12 +278,12 @@ object frmWTLUContracts: TfrmWTLUContracts
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 300
     Width = 912
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -301,7 +301,6 @@ object frmWTLUContracts: TfrmWTLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 621
       Top = 1
       Width = 290
@@ -309,6 +308,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         290

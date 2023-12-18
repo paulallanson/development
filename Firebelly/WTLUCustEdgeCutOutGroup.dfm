@@ -27,20 +27,16 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       item
         Width = 50
       end>
-    ExplicitTop = 322
-    ExplicitWidth = 461
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 268
     Width = 467
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 259
-    ExplicitWidth = 461
     DesignSize = (
       467
       63)
@@ -109,16 +105,14 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 379
     Top = 33
     Width = 88
     Height = 235
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 373
-    ExplicitHeight = 226
     DesignSize = (
       88
       235)
@@ -133,7 +127,6 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnEdgesClick
-      ExplicitTop = 2
     end
     object btnCutOuts: TBitBtn
       Left = 9
@@ -146,19 +139,17 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCutOutsClick
-      ExplicitTop = 42
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 467
     Height = 33
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 461
     object Label1: TLabel
       Left = 8
       Top = 8

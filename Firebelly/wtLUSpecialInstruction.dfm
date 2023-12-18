@@ -50,16 +50,14 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 240
     Width = 701
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 231
-    ExplicitWidth = 695
     DesignSize = (
       701
       40)
@@ -145,20 +143,16 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       item
         Width = 50
       end>
-    ExplicitTop = 271
-    ExplicitWidth = 695
   end
   object pnlLookup: TPanel
-    ParentBackground = False
     Left = 618
     Top = 0
     Width = 83
     Height = 240
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 612
-    ExplicitHeight = 231
     object btnSelect: TBitBtn
       Left = 5
       Top = 13

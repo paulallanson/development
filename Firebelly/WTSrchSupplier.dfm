@@ -40,13 +40,13 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       end>
   end
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 304
     Top = 0
     Width = 98
     Height = 248
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       98
@@ -92,13 +92,13 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     end
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
     Top = 248
     Width = 402
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       402
@@ -106,7 +106,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 75
+      Width = 80
       Height = 13
       Anchors = [akLeft, akBottom]
       Caption = 'Supplier Search'

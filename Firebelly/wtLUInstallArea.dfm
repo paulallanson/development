@@ -55,16 +55,14 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 241
     Width = 752
     Height = 67
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 232
-    ExplicitWidth = 746
     DesignSize = (
       752
       67)
@@ -156,8 +154,6 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       item
         Width = 50
       end>
-    ExplicitTop = 299
-    ExplicitWidth = 746
   end
   object dtsInstallationAreas: TDataSource
     DataSet = qryInstallationArea

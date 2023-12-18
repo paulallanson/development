@@ -20,60 +20,60 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
   OnShow = FormShow
   TextHeight = 13
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 462
     Height = 137
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 112
-      Width = 72
+      Width = 80
       Height = 13
       Caption = 'Application No:'
     end
     object Label2: TLabel
       Left = 240
       Top = 112
-      Width = 26
+      Width = 27
       Height = 13
       Caption = 'Date:'
     end
     object lblDateRange: TLabel
       Left = 8
       Top = 77
-      Width = 58
+      Width = 60
       Height = 13
       Caption = 'Date Range'
     end
     object Label4: TLabel
       Left = 288
       Top = 77
-      Width = 12
+      Width = 14
       Height = 13
       Caption = 'to:'
     end
     object Label5: TLabel
       Left = 112
       Top = 77
-      Width = 23
+      Width = 27
       Height = 13
       Caption = 'from:'
     end
     object Label6: TLabel
       Left = 8
       Top = 48
-      Width = 21
+      Width = 22
       Height = 13
       Caption = 'Site:'
     end
@@ -160,17 +160,17 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 99
     Top = 46
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -194,13 +194,13 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     Visible = False
   end
   object pnlLabourValue: TPanel
-    ParentBackground = False
     Left = 0
     Top = 137
     Width = 462
     Height = 47
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       462
@@ -208,7 +208,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     object Label7: TLabel
       Left = 8
       Top = 12
-      Width = 63
+      Width = 67
       Height = 13
       Caption = 'Labour Value'
     end
@@ -227,13 +227,13 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     end
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
     Top = 184
     Width = 462
     Height = 48
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       462

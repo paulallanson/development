@@ -19,7 +19,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 59
+    Width = 53
     Height = 13
     Caption = 'Site Name'
     Font.Charset = DEFAULT_CHARSET
@@ -32,7 +32,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object Label34: TLabel
     Left = 8
     Top = 51
-    Width = 35
+    Width = 30
     Height = 13
     Caption = 'Street'
     Font.Charset = DEFAULT_CHARSET
@@ -45,7 +45,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object Label35: TLabel
     Left = 8
     Top = 108
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Town/City'
     Font.Charset = DEFAULT_CHARSET
@@ -58,7 +58,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object Label37: TLabel
     Left = 8
     Top = 139
-    Width = 54
+    Width = 48
     Height = 13
     Caption = 'Postcode'
     Font.Charset = DEFAULT_CHARSET
@@ -71,7 +71,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object Label39: TLabel
     Left = 8
     Top = 171
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
     Font.Charset = DEFAULT_CHARSET
@@ -97,7 +97,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   object Label2: TLabel
     Left = 8
     Top = 203
-    Width = 90
+    Width = 101
     Height = 13
     Caption = 'Installation Contact'
     Font.Charset = DEFAULT_CHARSET
@@ -267,18 +267,18 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Caption = 'Documents'
       ImageIndex = 1
       object Panel12: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 514
         Height = 17
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object Label44: TLabel
           Left = 2
           Top = 4
-          Width = 54
+          Width = 58
           Height = 13
           Caption = 'Documents'
         end
@@ -337,12 +337,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 491
     Width = 514
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 9
     DesignSize = (
       514

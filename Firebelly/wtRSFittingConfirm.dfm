@@ -27,13 +27,13 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Visible = False
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 343
     Width = 536
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       536
@@ -91,13 +91,13 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     end
   end
   object pnlDocumentDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 193
     Width = 536
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object lstbxDocuments: TListBox
       Left = 8
@@ -120,18 +120,18 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     end
   end
   object pnlDocuments: TPanel
-    ParentBackground = False
     Left = 0
     Top = 138
     Width = 536
     Height = 55
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 188
+      Width = 207
       Height = 13
       Caption = 'Include documents from selected folder:'
     end
@@ -150,26 +150,26 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     end
   end
   object pnlSelection: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536
     Height = 138
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
     object selectionGrp: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 7
       Width = 273
       Height = 121
       Caption = 'Sales Order Selection'
+      ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 255
-        Height = 26
+        Width = 244
+        Height = 39
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'

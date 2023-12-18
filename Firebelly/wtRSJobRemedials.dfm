@@ -40,24 +40,24 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     OnClick = Button4Click
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 225
     Height = 73
     Caption = 'Installation Date'
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -135,17 +135,17 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 36
     Top = 71
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -222,7 +222,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     OnClick = btnPreviewClick
   end
   object rdgrpContacts: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -232,21 +231,22 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Items.Strings = (
       'All'
       'One Contact')
+    ParentBackground = False
     TabOrder = 7
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
-    ParentBackground = False
     Left = 125
     Top = 8
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 8
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 73
+      Width = 79
       Height = 13
       Caption = 'Office Contacts'
     end

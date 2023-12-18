@@ -20,7 +20,7 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 42
+    Width = 46
     Height = 13
     Caption = 'Category'
   end

@@ -21,21 +21,21 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   object Label1: TLabel
     Left = 16
     Top = 52
-    Width = 107
+    Width = 119
     Height = 13
     Caption = 'Delete records prior to:'
   end
   object lblnoRecords: TLabel
     Left = 16
     Top = 160
-    Width = 62
+    Width = 68
     Height = 13
     Caption = 'lblnoRecords'
   end
   object Label2: TLabel
     Left = 16
     Top = 20
-    Width = 103
+    Width = 93
     Height = 13
     Caption = 'Delete old Quotes'
     Font.Charset = DEFAULT_CHARSET

@@ -21,7 +21,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -34,7 +34,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 78
+    Width = 71
     Height = 13
     Caption = 'Material Type'
     Font.Charset = DEFAULT_CHARSET
@@ -47,7 +47,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label3: TLabel
     Left = 8
     Top = 108
-    Width = 38
+    Width = 43
     Height = 13
     Caption = 'Supplier'
   end
@@ -82,21 +82,21 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label4: TLabel
     Left = 8
     Top = 140
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 8
     Top = 172
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Ineffective Date'
   end
   object lblGroupID: TLabel
     Left = 8
     Top = 81
-    Width = 43
+    Width = 47
     Height = 13
     Caption = 'Group ID'
   end

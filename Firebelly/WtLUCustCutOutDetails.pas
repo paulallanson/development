@@ -48,7 +48,7 @@ type
     lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
     btnExcel: TBitBtn;
-    qryCustCutOutEdge_Type_Description: TStringField;
+    qryCustCutOutEdge_Type_Description: TWideStringField;
     qryCustCutOutGroup_Id: TIntegerField;
     qryDelCustCutOut: TFDQuery;
     lkpCustEdgeGroup: TFDQuery;

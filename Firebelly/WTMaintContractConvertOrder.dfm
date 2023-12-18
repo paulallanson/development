@@ -17,13 +17,13 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 576
     Width = 594
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
     DesignSize = (
       594
@@ -71,18 +71,18 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     end
   end
   object pnlReference: TPanel
-    ParentBackground = False
     Left = 0
     Top = 514
     Width = 594
     Height = 62
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 8
-      Width = 60
+      Width = 51
       Height = 13
       Caption = 'Reference'
       Font.Charset = DEFAULT_CHARSET
@@ -95,7 +95,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label9: TLabel
       Left = 16
       Top = 40
-      Width = 74
+      Width = 68
       Height = 13
       Caption = 'Customer PO'
       Font.Charset = DEFAULT_CHARSET
@@ -125,18 +125,18 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 594
     Height = 129
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
       Top = 16
-      Width = 49
+      Width = 46
       Height = 13
       Caption = 'Worktop'
       Font.Charset = DEFAULT_CHARSET
@@ -149,7 +149,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label3: TLabel
       Left = 16
       Top = 48
-      Width = 59
+      Width = 50
       Height = 13
       Caption = 'Thickness'
       Font.Charset = DEFAULT_CHARSET
@@ -162,7 +162,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object lblNoOfOrders: TLabel
       Left = 376
       Top = 16
-      Width = 100
+      Width = 94
       Height = 13
       Caption = 'Number of Orders'
       Font.Charset = DEFAULT_CHARSET
@@ -175,7 +175,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label8: TLabel
       Left = 16
       Top = 80
-      Width = 48
+      Width = 44
       Height = 13
       Caption = 'Upstand'
       Font.Charset = DEFAULT_CHARSET
@@ -188,7 +188,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label13: TLabel
       Left = 16
       Top = 107
-      Width = 53
+      Width = 50
       Height = 13
       Caption = 'Customer'
       Font.Charset = DEFAULT_CHARSET
@@ -313,25 +313,25 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       end>
   end
   object pnlSiteLocation: TPanel
-    ParentBackground = False
     Left = 0
     Top = 129
     Width = 594
     Height = 264
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
       Left = 16
       Top = 8
-      Width = 49
+      Width = 52
       Height = 13
       Caption = 'Developer'
     end
     object Label5: TLabel
       Left = 16
       Top = 208
-      Width = 71
+      Width = 62
       Height = 13
       Caption = 'Site Contact'
       Font.Charset = DEFAULT_CHARSET
@@ -344,7 +344,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label7: TLabel
       Left = 16
       Top = 239
-      Width = 63
+      Width = 56
       Height = 13
       Caption = 'Site Phone'
       Font.Charset = DEFAULT_CHARSET
@@ -357,7 +357,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label6: TLabel
       Left = 16
       Top = 67
-      Width = 46
+      Width = 42
       Height = 13
       Caption = 'Address'
       Font.Charset = DEFAULT_CHARSET
@@ -370,14 +370,14 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label10: TLabel
       Left = 16
       Top = 123
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'Town/City'
     end
     object Label11: TLabel
       Left = 16
       Top = 151
-      Width = 54
+      Width = 48
       Height = 13
       Caption = 'Postcode'
       Font.Charset = DEFAULT_CHARSET
@@ -390,7 +390,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object Label12: TLabel
       Left = 16
       Top = 179
-      Width = 33
+      Width = 37
       Height = 13
       Caption = 'County'
     end
@@ -468,12 +468,12 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       OnChange = EnableOK
     end
     object pnlCustomerBranch: TPanel
-      ParentBackground = False
       Left = 0
       Top = 30
       Width = 505
       Height = 27
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 8
       DesignSize = (
         505
@@ -481,7 +481,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       object Label14: TLabel
         Left = 16
         Top = 7
-        Width = 49
+        Width = 51
         Height = 13
         Caption = 'Site Name'
         Font.Charset = DEFAULT_CHARSET

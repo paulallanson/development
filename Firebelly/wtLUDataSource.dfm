@@ -53,19 +53,15 @@ object frmWTLUDataSource: TfrmWTLUDataSource
       item
         Width = 50
       end>
-    ExplicitTop = 287
-    ExplicitWidth = 369
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 215
     Width = 375
     Height = 81
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 206
-    ExplicitWidth = 369
     DesignSize = (
       375
       81)

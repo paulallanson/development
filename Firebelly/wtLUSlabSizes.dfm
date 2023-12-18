@@ -70,20 +70,16 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
       item
         Width = 50
       end>
-    ExplicitTop = 249
-    ExplicitWidth = 478
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 184
     Width = 484
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 175
-    ExplicitWidth = 478
     DesignSize = (
       484
       74)

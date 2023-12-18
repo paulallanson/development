@@ -28,7 +28,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -40,6 +39,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 9
   end
   object btnPrint: TButton
@@ -64,7 +64,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 105
@@ -74,28 +73,29 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Items.Strings = (
       'All'
       'Selected')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
   object grpbxDateSelect: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
     Height = 73
     Caption = 'Fitting Date'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -163,17 +163,17 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 16
     Width = 249
     Height = 113
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -236,17 +236,17 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 108
     Top = 63
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -260,7 +260,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     end
   end
   object rdgrpSelectBy: TRadioGroup
-    ParentBackground = False
     Left = 384
     Top = 136
     Width = 113
@@ -271,11 +270,11 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
       'All Orders'
       'Confirmed'
       'Provisonal')
+    ParentBackground = False
     TabOrder = 11
     OnClick = rdgrpSelectByClick
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 384
     Top = 16
     Width = 113
@@ -287,6 +286,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
       'Fitting Date'
       'Customer'
       'Rep')
+    ParentBackground = False
     TabOrder = 12
   end
   object chkbxShowOnlyScheduled: TCheckBox

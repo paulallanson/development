@@ -20,7 +20,7 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
   object Label1: TLabel
     Left = 24
     Top = 32
-    Width = 113
+    Width = 128
     Height = 13
     Caption = 'Number of drawing lines'
   end

@@ -38,7 +38,6 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = Button4Click
   end
   object rdgrpReason: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -48,11 +47,11 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     Items.Strings = (
       'All'
       'One Reason')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpReasonClick
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -62,28 +61,29 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 3
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
     Height = 73
     Caption = 'Date selection'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -151,17 +151,17 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxReason: TGroupBox
-    ParentBackground = False
     Left = 128
     Top = 8
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 81
+      Width = 84
       Height = 13
       Caption = 'Decline Reasons'
     end
@@ -181,17 +181,17 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 128
     Top = 72
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -251,17 +251,17 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 36
     Top = 87
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -285,7 +285,6 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 240
     Top = 136
     Width = 105
@@ -297,6 +296,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 12
   end
   object qryReason: TFDQuery

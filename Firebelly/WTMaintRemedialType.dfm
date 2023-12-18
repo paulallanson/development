@@ -20,7 +20,7 @@ object frmWTMaintRemedialType: TfrmWTMaintRemedialType
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 24
+    Width = 23
     Height = 13
     Caption = 'Type'
   end

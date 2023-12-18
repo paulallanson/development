@@ -21,28 +21,28 @@ object frmWTMaintPayments: TfrmWTMaintPayments
   object lblName: TLabel
     Left = 8
     Top = 24
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Date'
   end
   object Label2: TLabel
     Left = 8
     Top = 120
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label1: TLabel
     Left = 8
     Top = 56
-    Width = 36
+    Width = 41
     Height = 13
     Caption = 'Amount'
   end
   object Label3: TLabel
     Left = 8
     Top = 88
-    Width = 36
+    Width = 41
     Height = 13
     Caption = 'Method'
   end

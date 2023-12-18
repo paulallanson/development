@@ -19,8 +19,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   object Label3: TLabel
     Left = 8
     Top = 88
-    Width = 233
-    Height = 52
+    Width = 219
+    Height = 65
     Caption = 
       'This utility will allocate the quotation and health && safety do' +
       'cuments to the relevant folders in each sales order based on the' +
@@ -31,22 +31,22 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   object lblnoRecords: TLabel
     Left = 8
     Top = 184
-    Width = 49
+    Width = 50
     Height = 13
     Caption = '0 Records'
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 225
     Height = 57
     Caption = 'Sales Order Fitting Date Selection '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end

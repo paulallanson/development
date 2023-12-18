@@ -13,12 +13,12 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 408
     Width = 882
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       882
@@ -64,12 +64,12 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 882
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       882
@@ -77,14 +77,14 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 74
+      Width = 79
       Height = 13
       Caption = 'Purchase Order'
     end
     object Label2: TLabel
       Left = 264
       Top = 16
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
@@ -98,14 +98,14 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     object Label4: TLabel
       Left = 8
       Top = 48
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'GRN Number'
     end
     object Label5: TLabel
       Left = 664
       Top = 48
-      Width = 64
+      Width = 62
       Height = 13
       Caption = 'Reecived By:'
     end
@@ -176,12 +176,12 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     end
   end
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 784
     Top = 81
     Width = 98
     Height = 327
     Align = alRight
+    ParentBackground = False
     TabOrder = 2
     object btnAdd: TBitBtn
       Left = 14

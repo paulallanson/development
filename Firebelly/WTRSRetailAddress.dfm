@@ -16,17 +16,17 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   OnCreate = FormCreate
   TextHeight = 13
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1022
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 264
       Top = 10
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Ordered Since'
     end
@@ -107,21 +107,21 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
     Top = 433
     Width = 1022
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object Panel1: TPanel
-      ParentBackground = False
       Left = 719
       Top = 1
       Width = 302
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         302
@@ -297,17 +297,17 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 268
     Top = 252
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -321,12 +321,12 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     end
   end
   object pnlSearch: TPanel
-    ParentBackground = False
     Left = 0
     Top = 388
     Width = 1022
     Height = 45
     Align = alBottom
+    ParentBackground = False
     TabOrder = 6
     DesignSize = (
       1022
@@ -334,14 +334,14 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     object Label1: TLabel
       Left = 16
       Top = 18
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end
     object Label3: TLabel
       Left = 160
       Top = 18
-      Width = 28
+      Width = 30
       Height = 13
       Caption = 'Street'
     end
@@ -355,21 +355,21 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     object Label6: TLabel
       Left = 448
       Top = 18
-      Width = 27
+      Width = 28
       Height = 13
       Caption = 'Town'
     end
     object Label2: TLabel
       Left = 592
       Top = 18
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'Postcode'
     end
     object Label4: TLabel
       Left = 760
       Top = 18
-      Width = 33
+      Width = 37
       Height = 13
       Caption = 'County'
     end

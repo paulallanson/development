@@ -39,7 +39,6 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     OnClick = Button4Click
   end
   object rdgrpFitter: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -49,28 +48,29 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     Items.Strings = (
       'All'
       'One Fitter')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpFitterClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 209
     Height = 73
     Caption = 'Date'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -138,17 +138,17 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     end
   end
   object grpbxFitter: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 23
+      Width = 27
       Height = 13
       Caption = 'Fitter'
     end
@@ -180,7 +180,6 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     end
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113
@@ -192,6 +191,7 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
       'Date'
       'Sales Order'
       'Status')
+    ParentBackground = False
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
@@ -223,7 +223,6 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 72
     Width = 105
@@ -235,20 +234,21 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 10
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 84
     Top = 63
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 9
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

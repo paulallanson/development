@@ -13,14 +13,13 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
   OnCreate = FormCreate
   TextHeight = 13
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 912
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 906
     object Label3: TLabel
       Left = 664
       Top = 20
@@ -66,8 +65,6 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing]
     TabOrder = 1
-    ExplicitWidth = 906
-    ExplicitHeight = 298
     ColWidths = (
       178
       201
@@ -77,15 +74,13 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       76)
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 372
     Width = 912
     Height = 50
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 363
-    ExplicitWidth = 906
     DesignSize = (
       912
       50)
@@ -113,7 +108,6 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 822
     end
     object btnOK: TBitBtn
       Left = 740
@@ -143,7 +137,6 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
         0000}
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 734
     end
   end
   object stsbrDetails: TStatusBar
@@ -158,7 +151,5 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       item
         Width = 50
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 906
   end
 end

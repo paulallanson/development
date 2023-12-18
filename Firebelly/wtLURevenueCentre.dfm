@@ -58,20 +58,16 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       item
         Width = 50
       end>
-    ExplicitTop = 370
-    ExplicitWidth = 688
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 292
     Width = 694
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 283
-    ExplicitWidth = 688
     DesignSize = (
       694
       87)

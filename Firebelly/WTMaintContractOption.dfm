@@ -20,28 +20,28 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
   object Label1: TLabel
     Left = 16
     Top = 78
-    Width = 36
+    Width = 41
     Height = 13
     Caption = 'Caption'
   end
   object Label2: TLabel
     Left = 16
     Top = 16
-    Width = 31
+    Width = 37
     Height = 13
     Caption = 'Option'
   end
   object Label3: TLabel
     Left = 16
     Top = 110
-    Width = 85
+    Width = 94
     Height = 13
     Caption = 'Quote Description'
   end
   object Label4: TLabel
     Left = 16
     Top = 48
-    Width = 49
+    Width = 50
     Height = 13
     Caption = 'Thickness'
   end

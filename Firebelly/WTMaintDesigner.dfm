@@ -20,7 +20,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 42
+    Width = 46
     Height = 13
     Caption = 'Designer'
   end

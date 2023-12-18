@@ -16,95 +16,95 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
   OnCreate = FormCreate
   TextHeight = 13
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 742
     Height = 387
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 14
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 106
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 16
       Top = 166
-      Width = 58
+      Width = 63
       Height = 13
       Caption = 'Length (mm)'
     end
     object Label5: TLabel
       Left = 16
       Top = 196
-      Width = 54
+      Width = 59
       Height = 13
       Caption = 'Depth (mm)'
     end
     object Label4: TLabel
       Left = 208
       Top = 224
-      Width = 70
+      Width = 76
       Height = 13
       Caption = 'Unit Cost/sq m'
     end
     object Label7: TLabel
       Left = 563
       Top = 224
-      Width = 72
+      Width = 76
       Height = 13
       Caption = 'Total Slab Cost'
     end
     object Label8: TLabel
       Left = 16
       Top = 45
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label9: TLabel
       Left = 16
       Top = 136
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Slab Size'
     end
     object Label10: TLabel
       Left = 16
       Top = 252
-      Width = 42
+      Width = 44
       Height = 13
       Caption = 'Waste %'
     end
     object Label11: TLabel
       Left = 208
       Top = 252
-      Width = 75
+      Width = 85
       Height = 13
       Caption = 'Waste Multiplier'
     end
     object Label12: TLabel
       Left = 392
       Top = 252
-      Width = 55
+      Width = 58
       Height = 13
       Caption = 'Waste Cost'
     end
@@ -125,21 +125,21 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     object Label13: TLabel
       Left = 16
       Top = 224
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label14: TLabel
       Left = 400
       Top = 224
-      Width = 45
+      Width = 48
       Height = 13
       Caption = 'Slab Cost'
     end
     object Label26: TLabel
       Left = 588
       Top = 252
-      Width = 47
+      Width = 43
       Height = 13
       Caption = 'Area m2'
       Font.Charset = DEFAULT_CHARSET
@@ -285,32 +285,32 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       OnExit = edtSlabCostExit
     end
     object pnlAdhesive: TPanel
-      ParentBackground = False
       Left = 0
       Top = 299
       Width = 742
       Height = 64
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 14
       object Label19: TLabel
         Left = 16
         Top = 13
-        Width = 72
+        Width = 76
         Height = 13
         Caption = 'Adhesive Code'
       end
       object Label20: TLabel
         Left = 410
         Top = 45
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end
       object Label21: TLabel
         Left = 406
         Top = 13
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Unit Cost'
       end
@@ -331,21 +331,21 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       object Label22: TLabel
         Left = 539
         Top = 45
-        Width = 95
+        Width = 100
         Height = 13
         Caption = 'Total Adhesive Cost'
       end
       object Label24: TLabel
         Left = 590
         Top = 13
-        Width = 43
+        Width = 48
         Height = 13
         Caption = 'Cost Unit'
       end
       object Label25: TLabel
         Left = 16
         Top = 45
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
@@ -437,39 +437,39 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       end
     end
     object pnlPrices: TPanel
-      ParentBackground = False
       Left = 0
       Top = 275
       Width = 742
       Height = 24
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 15
       object Label15: TLabel
         Left = 16
         Top = 5
-        Width = 47
+        Width = 52
         Height = 13
         Caption = 'Markup %'
       end
       object Label16: TLabel
         Left = 208
         Top = 5
-        Width = 73
+        Width = 77
         Height = 13
         Caption = 'Unit Price/sq m'
       end
       object Label17: TLabel
         Left = 400
         Top = 5
-        Width = 48
+        Width = 49
         Height = 13
         Caption = 'Slab Price'
       end
       object Label18: TLabel
         Left = 560
         Top = 5
-        Width = 75
+        Width = 77
         Height = 13
         Caption = 'Total Slab Price'
       end
@@ -515,18 +515,18 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       end
     end
     object pnlTotal: TPanel
-      ParentBackground = False
       Left = 0
       Top = 363
       Width = 742
       Height = 24
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 16
       object Label23: TLabel
         Left = 574
         Top = 5
-        Width = 59
+        Width = 51
         Height = 13
         Caption = 'Total Cost'
         Font.Charset = DEFAULT_CHARSET
@@ -570,13 +570,13 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 387
     Width = 742
     Height = 46
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       742
@@ -584,7 +584,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     object lblDelete: TLabel
       Left = 112
       Top = 17
-      Width = 152
+      Width = 133
       Height = 13
       Anchors = [akLeft, akBottom]
       Caption = 'Delete these slab details ?'

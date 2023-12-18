@@ -67,11 +67,11 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = PreviewBitBtnClick
   end
   object pnlReasonSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 88
     Width = 286
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblCustBran: TLabel
@@ -108,24 +108,24 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     TabOrder = 12
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 5
     Top = 219
     Width = 180
     Height = 89
     Caption = 'Date Range'
+    ParentBackground = False
     TabOrder = 6
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 19
+      Width = 18
       Height = 13
       Caption = 'To: '
     end
@@ -191,7 +191,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpReason: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 80
     Width = 129
@@ -201,21 +200,22 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Items.Strings = (
       'All Reasons'
       'One Reason')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpReasonClick
   end
   object pnlDeptSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 157
     Width = 286
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Caused by'
     end
@@ -236,7 +236,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpDept: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 149
     Width = 129
@@ -246,11 +245,11 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Items.Strings = (
       'All'
       'One Selected')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpDeptClick
   end
   object TotByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 480
     Top = 8
     Width = 137
@@ -263,6 +262,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       'by Caused by'
       'by Customer'
       'Do not total')
+    ParentBackground = False
     TabOrder = 7
     OnClick = TotByRadioGroupClick
   end
@@ -276,17 +276,17 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 180
     Top = 132
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 13
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -363,7 +363,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = btnExcelClick
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -373,21 +372,22 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Items.Strings = (
       'All'
       'One Selected')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpCategoryClick
   end
   object pnlCategorySearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 16
     Width = 286
     Height = 57
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object Label4: TLabel
       Left = 8
       Top = 8
-      Width = 59
+      Width = 62
       Height = 13
       Caption = 'Reported By'
     end
@@ -408,7 +408,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpShow: TRadioGroup
-    ParentBackground = False
     Left = 480
     Top = 216
     Width = 137
@@ -419,6 +418,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       'All'
       'Completed'
       'Outstanding')
+    ParentBackground = False
     TabOrder = 15
     OnClick = TotByRadioGroupClick
   end

@@ -37,12 +37,12 @@ object frmWTLUPrices: TfrmWTLUPrices
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 415
     Width = 1446
     Height = 62
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -88,7 +88,6 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnChange = edtMaterialChange
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 1342
       Top = 1
       Width = 103
@@ -96,6 +95,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 4
       DesignSize = (
         103

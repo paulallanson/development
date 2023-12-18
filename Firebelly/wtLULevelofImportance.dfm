@@ -52,20 +52,16 @@ object frmwtLULevelofImportance: TfrmwtLULevelofImportance
       item
         Width = 50
       end>
-    ExplicitTop = 298
-    ExplicitWidth = 418
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 233
     Width = 424
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 224
-    ExplicitWidth = 418
     DesignSize = (
       424
       74)

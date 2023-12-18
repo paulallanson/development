@@ -17,18 +17,18 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object Label15: TLabel
     Left = 16
     Top = 21
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Markup %'
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 208
     Width = 364
     Height = 46
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 7
     DesignSize = (
       364
@@ -60,7 +60,6 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
     end
   end
   object rdgrpMarkupType: TRadioGroup
-    ParentBackground = False
     Left = 212
     Top = 8
     Width = 130
@@ -70,6 +69,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
       'Selected Column'
       'Selected Row'
       'Whole Contract')
+    ParentBackground = False
     TabOrder = 6
   end
   object chkbxMarkupCutOuts: TCheckBox

@@ -31,19 +31,15 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       item
         Width = 50
       end>
-    ExplicitTop = 489
-    ExplicitWidth = 1002
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 456
     Width = 1008
     Height = 42
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 447
-    ExplicitWidth = 1002
     DesignSize = (
       1008
       42)
@@ -74,7 +70,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
-      ExplicitLeft = 812
     end
     object BitBtn2: TBitBtn
       Left = 904
@@ -87,7 +82,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtn2Click
-      ExplicitLeft = 898
     end
     object chkbxInactive: TCheckBox
       Left = 13
@@ -99,15 +93,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1008
     Height = 49
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1002
     object Label1: TLabel
       Left = 24
       Top = 20
@@ -139,8 +132,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     ActivePage = tsDetails
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1002
-    ExplicitHeight = 398
     object tsDetails: TTabSheet
       Caption = 'Details'
       object Label2: TLabel
@@ -354,13 +345,15 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 2
       OnShow = tsMaterialsShow
       object Panel3: TPanel
-        ParentBackground = False
-        Left = 903
+        Left = 907
         Top = 0
         Width = 93
-        Height = 316
+        Height = 317
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 903
+        ExplicitHeight = 316
         object btnChange: TBitBtn
           Left = 10
           Top = 40
@@ -419,8 +412,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object dbgDetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 903
-        Height = 316
+        Width = 907
+        Height = 317
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 1
@@ -489,12 +482,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end>
       end
       object pnlMaterialsFooter: TPanel
-        ParentBackground = False
         Left = 0
-        Top = 316
-        Width = 996
+        Top = 317
+        Width = 1000
         Height = 62
         Align = alBottom
+        ParentBackground = False
         TabOrder = 2
         DesignSize = (
           1000
@@ -543,7 +536,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterialChange
         end
         object Panel4: TPanel
-          ParentBackground = False
           Left = 896
           Top = 1
           Width = 103
@@ -551,6 +543,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Align = alRight
           Alignment = taRightJustify
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 4
           ExplicitLeft = 892
         end
@@ -641,7 +634,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = BitBtn5Click
         end
         object btnSweep: TBitBtn
-          Left = 892
+          Left = 896
           Top = 6
           Width = 75
           Height = 25
@@ -668,12 +661,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 4
       OnShow = tsWorktopsShow
       object Panel2: TPanel
-        ParentBackground = False
         Left = 0
-        Top = 316
-        Width = 996
+        Top = 317
+        Width = 1000
         Height = 62
         Align = alBottom
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           1000
@@ -708,7 +701,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnChange = edtMaterial1Change
         end
         object Panel5: TPanel
-          ParentBackground = False
           Left = 896
           Top = 1
           Width = 103
@@ -716,6 +708,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Align = alRight
           Alignment = taRightJustify
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 3
           ExplicitLeft = 892
         end
@@ -756,12 +749,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
       end
       object Panel7: TPanel
-        ParentBackground = False
         Left = 907
         Top = 0
         Width = 93
         Height = 317
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         ExplicitLeft = 903
         ExplicitHeight = 316
@@ -855,12 +848,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 3
       OnShow = tsProductsShow
       object pnlProductsFooter: TPanel
-        ParentBackground = False
         Left = 0
-        Top = 316
-        Width = 996
+        Top = 317
+        Width = 1000
         Height = 62
         Align = alBottom
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           1000
@@ -890,7 +883,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = btnProdClearClick
         end
         object btnProdSweep: TBitBtn
-          Left = 916
+          Left = 920
           Top = 6
           Width = 75
           Height = 25
@@ -970,12 +963,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end>
       end
       object Panel6: TPanel
-        ParentBackground = False
         Left = 907
         Top = 0
         Width = 93
         Height = 317
         Align = alRight
+        ParentBackground = False
         TabOrder = 2
         ExplicitLeft = 903
         ExplicitHeight = 316
@@ -1012,13 +1005,13 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Caption = 'Documents'
       ImageIndex = 3
       object Panel12: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 996
         Height = 17
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object Label44: TLabel
           Left = 2
@@ -1029,13 +1022,13 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
       end
       object Panel11: TPanel
-        ParentBackground = False
         Left = 0
         Top = 17
         Width = 996
         Height = 361
         Align = alClient
         Caption = 'Panel11'
+        ParentBackground = False
         TabOrder = 1
         object lstvwDocuments: TListView
           Left = 1

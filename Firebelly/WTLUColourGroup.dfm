@@ -58,19 +58,15 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
       item
         Width = 50
       end>
-    ExplicitTop = 223
-    ExplicitWidth = 396
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 167
     Width = 402
     Height = 65
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 158
-    ExplicitWidth = 396
     DesignSize = (
       402
       65)

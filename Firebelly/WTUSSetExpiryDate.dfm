@@ -16,21 +16,21 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
   object Label62: TLabel
     Left = 8
     Top = 184
-    Width = 79
+    Width = 86
     Height = 13
     Caption = 'Quotes Expiry in:'
   end
   object Label63: TLabel
     Left = 208
     Top = 184
-    Width = 22
+    Width = 23
     Height = 13
     Caption = 'days'
   end
   object Label3: TLabel
     Left = 8
     Top = 112
-    Width = 223
+    Width = 219
     Height = 52
     Caption = 
       'This utility will set the expiry date of every quote within the ' +
@@ -39,24 +39,24 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     WordWrap = True
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 225
     Height = 89
     Caption = 'Quote Date Selection '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 56
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end

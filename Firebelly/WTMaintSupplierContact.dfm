@@ -16,18 +16,18 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
   OnShow = FormShow
   TextHeight = 13
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 438
     Height = 304
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 106
-      Width = 57
+      Width = 53
       Height = 13
       Caption = 'Full Name'
       Font.Charset = DEFAULT_CHARSET
@@ -54,7 +54,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label8: TLabel
       Left = 16
       Top = 18
-      Width = 20
+      Width = 22
       Height = 13
       Caption = 'Title'
       Font.Charset = DEFAULT_CHARSET
@@ -67,7 +67,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label7: TLabel
       Left = 16
       Top = 47
-      Width = 61
+      Width = 56
       Height = 13
       Caption = 'First Name'
       Font.Charset = DEFAULT_CHARSET
@@ -80,7 +80,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label6: TLabel
       Left = 16
       Top = 77
-      Width = 42
+      Width = 45
       Height = 13
       Caption = 'Surname'
       Font.Charset = DEFAULT_CHARSET
@@ -93,7 +93,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label9: TLabel
       Left = 16
       Top = 136
-      Width = 50
+      Width = 44
       Height = 13
       Caption = 'Job Title'
       Font.Charset = DEFAULT_CHARSET
@@ -106,21 +106,21 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label3: TLabel
       Left = 16
       Top = 225
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Email'
     end
     object Label10: TLabel
       Left = 16
       Top = 195
-      Width = 31
+      Width = 36
       Height = 13
       Caption = 'Mobile'
     end
     object Label11: TLabel
       Left = 16
       Top = 165
-      Width = 31
+      Width = 33
       Height = 13
       Caption = 'Phone'
       Font.Charset = DEFAULT_CHARSET
@@ -213,12 +213,12 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 304
     Width = 438
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       438
@@ -226,8 +226,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object lbldelete: TLabel
       Left = 118
       Top = 12
-      Width = 129
-      Height = 16
+      Width = 116
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Delete this contact'
       Font.Charset = DEFAULT_CHARSET

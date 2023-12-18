@@ -14,24 +14,24 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   OnCreate = FormCreate
   TextHeight = 13
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 912
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label3: TLabel
       Left = 680
       Top = 20
-      Width = 86
+      Width = 96
       Height = 13
       Caption = 'Sales Order Fitting'
     end
@@ -56,12 +56,12 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 372
     Width = 912
     Height = 50
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       912
@@ -69,7 +69,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end

@@ -58,20 +58,16 @@ object frmWTLUDesigner: TfrmWTLUDesigner
       item
         Width = 50
       end>
-    ExplicitTop = 387
-    ExplicitWidth = 696
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 309
     Width = 702
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 300
-    ExplicitWidth = 696
     DesignSize = (
       702
       87)

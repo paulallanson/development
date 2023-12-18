@@ -109,7 +109,6 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Default = True
     TabOrder = 3
     OnClick = btnSearchClick
-    ExplicitTop = 295
   end
   object edtTown: TEdit
     Left = 85
@@ -134,7 +133,6 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Caption = 'Clear Search'
     TabOrder = 5
     OnClick = ClearButtonClick
-    ExplicitTop = 295
   end
   object edtCounty: TEdit
     Left = 85

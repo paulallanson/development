@@ -57,20 +57,16 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
       item
         Width = 50
       end>
-    ExplicitTop = 337
-    ExplicitWidth = 733
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 272
     Width = 739
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 263
-    ExplicitWidth = 733
     DesignSize = (
       739
       74)
@@ -165,15 +161,14 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 739
     Height = 33
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 733
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -190,16 +185,14 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 651
     Top = 33
     Width = 88
     Height = 239
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 645
-    ExplicitHeight = 230
     object btnColours: TBitBtn
       Left = 9
       Top = 3

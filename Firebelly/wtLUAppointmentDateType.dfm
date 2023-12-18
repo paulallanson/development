@@ -52,20 +52,16 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
       item
         Width = 50
       end>
-    ExplicitTop = 298
-    ExplicitWidth = 418
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 263
     Width = 424
     Height = 44
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 254
-    ExplicitWidth = 418
     DesignSize = (
       424
       44)

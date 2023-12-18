@@ -26,18 +26,18 @@ object frmWTSendtoExcel: TfrmWTSendtoExcel
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 0
     Top = 1
     Width = 292
     Height = 69
     BevelInner = bvLowered
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

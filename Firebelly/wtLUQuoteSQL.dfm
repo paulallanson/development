@@ -18,15 +18,13 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 595
     Width = 1289
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 586
-    ExplicitWidth = 1283
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -42,7 +40,6 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       TabOrder = 0
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 998
       Top = 1
       Width = 290
@@ -50,8 +47,8 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 992
       DesignSize = (
         290
         39)

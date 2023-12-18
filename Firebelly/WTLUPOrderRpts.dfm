@@ -15,13 +15,13 @@ object frmWTLUPOrderRpts: TfrmWTLUPOrderRpts
   Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 412
     Height = 143
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
@@ -64,13 +64,13 @@ object frmWTLUPOrderRpts: TfrmWTLUPOrderRpts
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 143
     Width = 412
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       412

@@ -17,21 +17,21 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
   object Label4: TLabel
     Left = 8
     Top = 52
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Selling Price'
   end
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

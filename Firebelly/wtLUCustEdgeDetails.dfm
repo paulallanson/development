@@ -72,13 +72,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 293
     Width = 735
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       735
@@ -176,13 +176,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 735
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       735

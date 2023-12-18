@@ -65,20 +65,16 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       item
         Width = 50
       end>
-    ExplicitTop = 277
-    ExplicitWidth = 704
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 208
     Width = 710
     Height = 78
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 199
-    ExplicitWidth = 704
     DesignSize = (
       710
       78)

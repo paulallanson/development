@@ -13,17 +13,17 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 695
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 13
       Top = 17
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Date Required'
       Font.Charset = DEFAULT_CHARSET
@@ -66,12 +66,12 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 308
     Width = 695
     Height = 46
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       695

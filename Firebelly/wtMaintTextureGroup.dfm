@@ -20,14 +20,14 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label7: TLabel
     Left = 368
     Top = 1
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end
@@ -92,13 +92,13 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     OnClick = Button3Click
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 368
     Top = 50
     Width = 289
     Height = 100
     BorderStyle = bsSingle
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 7
     object imgWorktop: TImage
       Left = 1

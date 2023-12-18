@@ -72,13 +72,13 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 294
     Width = 739
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       739
@@ -176,13 +176,13 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 739
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       739

@@ -20,7 +20,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   object Label2: TLabel
     Left = 16
     Top = 20
-    Width = 202
+    Width = 182
     Height = 13
     Caption = 'Delete unattached Contract Quotes'
     Font.Charset = DEFAULT_CHARSET
@@ -33,21 +33,21 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   object Label1: TLabel
     Left = 16
     Top = 84
-    Width = 84
+    Width = 91
     Height = 13
     Caption = 'Delete records to:'
   end
   object lblnoRecords: TLabel
     Left = 16
     Top = 160
-    Width = 62
+    Width = 68
     Height = 13
     Caption = 'lblnoRecords'
   end
   object Label3: TLabel
     Left = 16
     Top = 52
-    Width = 95
+    Width = 104
     Height = 13
     Caption = 'Delete records from:'
   end

@@ -52,19 +52,15 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
       item
         Width = 50
       end>
-    ExplicitTop = 290
-    ExplicitWidth = 417
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 248
     Width = 423
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 239
-    ExplicitWidth = 417
     DesignSize = (
       423
       51)

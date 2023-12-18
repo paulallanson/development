@@ -38,7 +38,6 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -48,28 +47,29 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 225
     Height = 73
     Caption = 'Fitting date'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -137,17 +137,17 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -179,7 +179,6 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113
@@ -190,6 +189,7 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
       'Sales Order'
       'Template Date'
       'Customer')
+    ParentBackground = False
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox

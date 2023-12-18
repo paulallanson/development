@@ -122,12 +122,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 318
     Width = 1266
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       1266
@@ -219,12 +219,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnClick = chkbxShowOnlyScheduledClick
     end
     object pnlDateSelection: TPanel
-      ParentBackground = False
       Left = 792
       Top = 1
       Width = 225
       Height = 39
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 6
       Visible = False
       DesignSize = (
