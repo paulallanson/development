@@ -73,12 +73,12 @@ object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 301
     Width = 697
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       697
@@ -86,14 +86,14 @@ object frmpbluCustQuotesJB: TfrmpbluCustQuotesJB
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Label2: TLabel
       Left = 358
       Top = 16
-      Width = 67
+      Width = 75
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Quote number'

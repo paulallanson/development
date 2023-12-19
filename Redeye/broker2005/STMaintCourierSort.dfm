@@ -19,7 +19,7 @@ object STMaintCourierSortFrm: TSTMaintCourierSortFrm
   object DelLabel: TLabel
     Left = 69
     Top = 146
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -185,23 +185,23 @@ object STMaintCourierSortFrm: TSTMaintCourierSortFrm
     OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 353
     Height = 105
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 50
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 20
-      Width = 33
+      Width = 38
       Height = 13
       Caption = 'Courier'
     end

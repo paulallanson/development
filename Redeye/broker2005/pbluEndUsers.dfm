@@ -34,12 +34,12 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 275
     Width = 1125
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object lblSearch: TLabel
       Left = 16
@@ -66,13 +66,13 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 939
       Top = 1
       Width = 185
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object btnClose: TButton
         Left = 96
@@ -95,7 +95,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1125
@@ -104,6 +103,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
@@ -119,7 +119,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       ParentFont = False
     end
     object Panel4: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 400
@@ -128,6 +127,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -144,7 +144,6 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object Panel5: TPanel
-      ParentBackground = False
       Left = 874
       Top = 1
       Width = 250
@@ -152,6 +151,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       Align = alRight
       BevelInner = bvLowered
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         250

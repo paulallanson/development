@@ -16,15 +16,13 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 454
     Width = 691
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 445
-    ExplicitWidth = 685
     DesignSize = (
       691
       41)
@@ -55,7 +53,6 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 601
     end
   end
   object dbgDetails: TDBGrid
@@ -122,8 +119,6 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 486
-    ExplicitWidth = 685
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'

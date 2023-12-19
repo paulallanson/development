@@ -16,25 +16,25 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
   OnCreate = FormCreate
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 332
     Top = 0
     Width = 105
     Height = 306
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       105
       306)
     object FuncGrpBox: TGroupBox
-      ParentBackground = False
       Left = 10
       Top = 132
       Width = 87
       Height = 105
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
@@ -194,22 +194,22 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 332
     Height = 306
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Panel3: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 332
       Height = 265
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object dbgrdDets: TDBGrid
         Left = 0
@@ -240,21 +240,21 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       end
     end
     object Panel4: TPanel
-      ParentBackground = False
       Left = 0
       Top = 265
       Width = 332
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         332
         41)
       object CountLabel: TLabel
-        Left = 261
+        Left = 256
         Top = 10
-        Width = 54
+        Width = 59
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

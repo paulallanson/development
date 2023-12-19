@@ -22,14 +22,14 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
   object lblYear: TLabel
     Left = 16
     Top = 20
-    Width = 22
+    Width = 20
     Height = 13
     Caption = 'Year'
   end
   object Label2: TLabel
     Left = 16
     Top = 52
-    Width = 30
+    Width = 33
     Height = 13
     Caption = 'Period'
   end
@@ -92,17 +92,17 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     TabOrder = 2
   end
   object pnlCustomer: TPanel
-    ParentBackground = False
     Left = 147
     Top = 101
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -131,7 +131,6 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     end
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 13
     Top = 93
     Width = 129
@@ -141,21 +140,22 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpCustomerClick
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 100
     Top = 68
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

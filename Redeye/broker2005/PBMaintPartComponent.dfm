@@ -191,16 +191,16 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     TabOrder = 1
   end
   object grpbxDetails: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 369
     Height = 76
+    ParentBackground = False
     TabOrder = 2
     object ByLabel: TLabel
       Left = 8
       Top = 20
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
       Font.Charset = ANSI_CHARSET
@@ -213,7 +213,7 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
     object Label2: TLabel
       Left = 8
       Top = 52
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end

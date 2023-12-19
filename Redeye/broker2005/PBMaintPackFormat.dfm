@@ -20,8 +20,8 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
   object lblDelete: TLabel
     Left = 80
     Top = 124
-    Width = 151
-    Height = 13
+    Width = 144
+    Height = 15
     Anchors = [akLeft, akBottom]
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -32,16 +32,16 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     ParentFont = False
   end
   object grpbxDetails: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 16
     Width = 377
     Height = 81
+    ParentBackground = False
     TabOrder = 0
     object lblDescription: TLabel
       Left = 18
       Top = 22
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET

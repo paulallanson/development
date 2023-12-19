@@ -48,16 +48,16 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     TabOrder = 1
   end
   object detsgrpbox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 337
     Height = 73
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 10
       Top = 20
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end

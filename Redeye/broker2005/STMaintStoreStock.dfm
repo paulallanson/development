@@ -15,18 +15,18 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
   OnActivate = FormActivate
   TextHeight = 13
   object pnlproduct: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 739
     Height = 81
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 19
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
       Font.Charset = ANSI_CHARSET
@@ -39,7 +39,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     object Label5: TLabel
       Left = 312
       Top = 19
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET
@@ -52,7 +52,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     object Label14: TLabel
       Left = 8
       Top = 51
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
       Font.Charset = ANSI_CHARSET
@@ -65,7 +65,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     object Label15: TLabel
       Left = 512
       Top = 51
-      Width = 59
+      Width = 63
       Height = 13
       Caption = 'Bin Location'
       Font.Charset = ANSI_CHARSET
@@ -137,38 +137,38 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 81
     Width = 739
     Height = 72
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label6: TLabel
       Left = 8
       Top = 9
-      Width = 40
+      Width = 41
       Height = 13
       Caption = 'In Stock'
     end
     object Label10: TLabel
       Left = 176
       Top = 9
-      Width = 40
+      Width = 43
       Height = 13
       Caption = '(Singles)'
     end
     object Label12: TLabel
       Left = 320
       Top = 9
-      Width = 44
+      Width = 48
       Height = 13
       Caption = 'Allocated'
     end
     object Label13: TLabel
       Left = 464
       Top = 9
-      Width = 40
+      Width = 43
       Height = 13
       Caption = '(Singles)'
     end
@@ -196,12 +196,12 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     end
   end
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
     Top = 153
     Width = 739
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     TabStop = True
     DesignSize = (
@@ -210,7 +210,7 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
     object lblMessage: TLabel
       Left = 8
       Top = 24
-      Width = 520
+      Width = 470
       Height = 13
       Caption = 
         'Sales Orders currently exist with stock allocated to them. You c' +

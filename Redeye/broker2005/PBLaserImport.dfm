@@ -29,18 +29,18 @@ object PBLaserImportFrm: TPBLaserImportFrm
     TabOrder = 0
   end
   object pnlImportFile: TPanel
-    ParentBackground = False
     Left = 0
     Top = 185
     Width = 624
     Height = 56
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 1
     object lblStep2: TLabel
       Left = 8
       Top = 8
-      Width = 149
+      Width = 164
       Height = 13
       Caption = '2. Select the file to be imported.'
     end
@@ -62,17 +62,17 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlProgress: TPanel
-    ParentBackground = False
     Left = 0
     Top = 282
     Width = 624
     Height = 76
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'Progress: '
     end
@@ -87,7 +87,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'records read.'
       Visible = False
@@ -95,7 +95,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 142
+      Width = 154
       Height = 13
       Caption = 'Reading Laser Production file.'
     end
@@ -108,18 +108,18 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlImport: TPanel
-    ParentBackground = False
     Left = 0
     Top = 241
     Width = 624
     Height = 41
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 3
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 82
+      Width = 90
       Height = 13
       Caption = '3. Run the Import'
     end
@@ -135,12 +135,12 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlCancel: TPanel
-    ParentBackground = False
     Left = 0
     Top = 458
     Width = 624
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
     object Cancel2BitBtn: TBitBtn
       Left = 288
@@ -154,17 +154,17 @@ object PBLaserImportFrm: TPBLaserImportFrm
     end
   end
   object pnlDepartment: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 624
     Height = 185
     Align = alTop
+    ParentBackground = False
     TabOrder = 5
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 152
+      Width = 165
       Height = 13
       Caption = '1. Select the department details.'
       Font.Charset = DEFAULT_CHARSET
@@ -177,7 +177,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
     object Label3: TLabel
       Left = 16
       Top = 35
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'Department:'
     end
@@ -191,28 +191,28 @@ object PBLaserImportFrm: TPBLaserImportFrm
     object Label5: TLabel
       Left = 16
       Top = 100
-      Width = 49
+      Width = 56
       Height = 13
       Caption = 'Operation:'
     end
     object Label2: TLabel
       Left = 16
       Top = 132
-      Width = 78
+      Width = 88
       Height = 13
       Caption = 'Default Operator'
     end
     object Label6: TLabel
       Left = 16
       Top = 162
-      Width = 68
+      Width = 75
       Height = 13
       Caption = 'Labour time is:'
     end
     object Label7: TLabel
       Left = 168
       Top = 160
-      Width = 86
+      Width = 95
       Height = 13
       Caption = '% of Machine time'
     end
