@@ -1499,7 +1499,7 @@ end;
 
 procedure TfrmWTMaintQuote.FormCreate(Sender: TObject);
 var
-  TempArray: LPWSTR;
+  TempArray: array[0..255] of Char;
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 

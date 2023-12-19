@@ -66,28 +66,6 @@ type
     qryGetMaterialSlab: TFDQuery;
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
-    qryAllContractsContract_Quote: TIntegerField;
-    qryAllContractsContract_Date: TDateTimeField;
-    qryAllContractsExpiry_Date: TDateTimeField;
-    qryAllContractsContract_Quote_Number: TFloatField;
-    qryAllContractsCustomer: TIntegerField;
-    qryAllContractsContract_Description: TWideStringField;
-    qryAllContractsDeveloper: TWideStringField;
-    qryAllContractsSite_Location: TWideStringField;
-    qryAllContractsNotes: TIntegerField;
-    qryAllContractsCustomer_Name: TWideStringField;
-    qryAllContractsOperator: TIntegerField;
-    qryAllContractsQuote_Number: TFloatField;
-    qryAllContractsOriginal_Quote: TIntegerField;
-    qryAllContractsOperator_Name: TWideStringField;
-    qryAllContractsAccount_Manager: TIntegerField;
-    qryAllContractsAccount_Manager_Name: TWideStringField;
-    qryAllContractsinactive: TWideStringField;
-    qryAllContractsinactive_1: TWideStringField;
-    qryAllContractsinactive_reason: TIntegerField;
-    qryAllContractsInactive_reason_Descr: TWideStringField;
-    qryAllContractsIs_Retail_Customer: TWideStringField;
-    qryAllContractsCustomer_is_Speculative: TWideStringField;
   private
     function GetNextContractID: integer;
     function GetNextCQNumber: integer;
@@ -1411,7 +1389,7 @@ begin
     SQL.Clear;
     SQL.Add('Insert Into Contract_Quote ' +
             '(Contract_Quote, Contract_Date, Contract_Quote_Number, Customer, Contract_Description) ' +
-            'VALUES(''0'',''0'', ''0.00'', ''1'',''Dummy'')');
+            'VALUES(0, 0, 0.00, 1,''Dummy'')');
     try
       ExecSQL;
     except
@@ -1424,7 +1402,7 @@ begin
   with qryZero do
   begin
     SQL.Clear;
-    SQL.Add('Delete From Contract_Quote Where Contract_Quote = ''0''');
+    SQL.Add('Delete From Contract_Quote Where Contract_Quote = 0');
     try
       ExecSQL;
     except

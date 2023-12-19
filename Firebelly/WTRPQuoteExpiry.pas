@@ -248,8 +248,8 @@ begin
       parambyname('Date_From').Asdatetime := Datefrom;
       parambyname('Date_To').Asdatetime := DateTo;
       Open;
+      result := recordcount;
     end;
-  result := qryQuotes.RecordCount;
 end;
 
 procedure TfrmwtRPQuoteExpiry.QRBand2BeforePrint(Sender: TQRCustomBand;
