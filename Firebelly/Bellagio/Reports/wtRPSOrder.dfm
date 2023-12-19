@@ -395,13 +395,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel1: TQRLabel
         Left = 16
         Top = 176
-        Width = 57
+        Width = 56
         Height = 17
         Size.Values = (
           44.979166666666670000
           42.333333333333330000
           465.666666666666700000
-          150.812500000000000000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2445,7 +2445,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     SQL.Strings = (
       'select * from company'
       'where company = 1')
-    Left = 414
+    Left = 422
     Top = 159
   end
   object qrygetNotes: TFDQuery
@@ -2561,7 +2561,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       FieldName = 'Delivery_Price'
       DisplayFormat = '0.00'
     end
-    object qrySOLineDescription: TStringField
+    object qrySOLineDescription: TWideStringField
       FieldName = 'Description'
       Size = 50
     end
@@ -2575,7 +2575,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       FieldName = 'Vat_Rate'
       DisplayFormat = '0.00%'
     end
-    object qrySOLineVAT_Description: TStringField
+    object qrySOLineVAT_Description: TWideStringField
       FieldName = 'VAT_Description'
       Size = 40
     end
