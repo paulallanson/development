@@ -121,6 +121,7 @@ object frmpbLogin: TfrmpbLogin
     ParamData = <
       item
         Name = 'Login_Name'
+        ParamType = ptInput
       end>
   end
 end
