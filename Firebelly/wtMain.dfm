@@ -2,8 +2,8 @@ object frmWTMain: TfrmWTMain
   Left = 72
   Top = 61
   Caption = 'Firebelly Worktop Management System'
-  ClientHeight = 674
-  ClientWidth = 1481
+  ClientHeight = 687
+  ClientWidth = 1483
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,11 +19,12 @@ object frmWTMain: TfrmWTMain
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1481
+    Width = 1483
     Height = 40
     Bands = <
       item
@@ -32,6 +33,7 @@ object frmWTMain: TfrmWTMain
         MinHeight = 36
         Width = 1475
       end>
+    ExplicitWidth = 1481
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -75,7 +77,6 @@ object frmWTMain: TfrmWTMain
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
-        Visible = False
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
@@ -126,7 +127,6 @@ object frmWTMain: TfrmWTMain
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
-        Visible = False
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
@@ -134,7 +134,6 @@ object frmWTMain: TfrmWTMain
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
-        Visible = False
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
@@ -155,8 +154,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = 655
-    Width = 1481
+    Top = 668
+    Width = 1483
     Height = 19
     Panels = <
       item
@@ -168,6 +167,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
+    ExplicitTop = 655
+    ExplicitWidth = 1481
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

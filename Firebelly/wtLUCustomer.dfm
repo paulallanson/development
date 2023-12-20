@@ -32,7 +32,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 698
+        Width = 702
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -354,7 +354,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 696
+          Width = 700
         end>
       object Panel3: TPanel
         Left = 11
