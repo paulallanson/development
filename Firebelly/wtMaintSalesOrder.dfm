@@ -134,7 +134,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
     object Label12: TLabel
       Left = 717
-      Top = 12
+      Top = 11
       Width = 51
       Height = 13
       Anchors = [akTop, akRight]
@@ -145,7 +145,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 733
     end
     object Label13: TLabel
       Left = 716
@@ -164,7 +163,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
     object Label16: TLabel
       Left = 17
-      Top = 12
+      Top = 11
       Width = 50
       Height = 13
       Caption = 'Customer'
@@ -205,7 +204,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
     object Label23: TLabel
       Left = 17
-      Top = 72
+      Top = 73
       Width = 53
       Height = 13
       Caption = 'Town/City'
@@ -244,14 +243,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         121)
       object Label24: TLabel
         Left = 108
-        Top = 95
+        Top = 94
         Width = 37
         Height = 13
         Caption = 'County'
       end
       object edtCustomerName: TEdit
         Left = 14
-        Top = 8
+        Top = 7
         Width = 550
         Height = 21
         Anchors = [akLeft, akTop, akRight]
@@ -291,7 +290,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 4
       end
       object edtCounty: TEdit
-        Left = 152
+        Left = 154
         Top = 91
         Width = 410
         Height = 21
@@ -1636,7 +1635,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             TabOrder = 0
             OnChange = edtPlansDocumentChange
             OnDblClick = edtPlansDocumentDblClick
-            ExplicitWidth = 547
           end
           object Button5: TButton
             Left = 682
@@ -1647,7 +1645,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Caption = 'Browse'
             TabOrder = 1
             OnClick = Button5Click
-            ExplicitLeft = 686
           end
           object btnGenerateDocs: TButton
             Left = 986
@@ -1658,7 +1655,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Caption = 'Generate Docs'
             TabOrder = 2
             OnClick = btnGenerateDocsClick
-            ExplicitLeft = 990
           end
         end
         object stvDocuments: TShellTreeView

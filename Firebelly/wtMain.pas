@@ -264,6 +264,7 @@ type
     procedure mnuCustomerPriceOptionsClick(Sender: TObject);
     procedure mnuProductPriceChangesClick(Sender: TObject);
     procedure mnuAllocateDocumentstoOrdersClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
 {$IFDEF DEMO}
     procedure mnuDemoActivateClick(Sender: TObject);
 {$ENDIF}
@@ -286,6 +287,7 @@ type
     FUserName: string;
     FDBVersion: string;
     ServDir, LocalDir, LocalDrive: string;
+    FInitialiseButtons: Boolean;
     procedure CheckContractQuoting;
     procedure CheckPurchaseOrdering;
     procedure CheckRevenueCentres;
@@ -317,6 +319,8 @@ type
     procedure EndUserCheck(TempWarn: ByteBool);
     { Private declarations }
 {$ENDIF}
+  protected
+    procedure Loaded; override;
   public
     bEndUser: boolean;
     WorkStation, MaxUsers: Integer;
@@ -327,7 +331,7 @@ type
     property DataBaseDescr: string read FDataBaseDescr write SetDataBaseDescr;
     property DBVersion: string read FDBVersion write SetDBVersion;
     property FaxSystem: string read FFaxSystem write SetFaxSystem;
-    property Operator: integer read FOperator write SetOperator;
+    property &Operator: integer read FOperator write SetOperator;
     property OperatorEmail: string read FOperatorEmail write SetOperatorEmail;
     property OperatorName: string read FOperatorName write SetOperatorName;
     property OperatorRevenueCentre: integer read FOperatorRevenueCentre write SetOperatorRevenueCentre;
@@ -463,6 +467,17 @@ begin
     OnHint    := ShowHints;
   end; //with
   frmWTMain.windowstate := wsMaximized;
+end;
+
+procedure TfrmWTMain.FormShow(Sender: TObject);
+begin
+  if FInitialiseButtons then
+  begin
+    btnContracts.Visible := False;
+    btnStock.Visible := False;
+    btnPurchasing.Visible := False;
+    FInitialiseButtons := False;
+  end;
 end;
 
 procedure TfrmWTMain.actnCloseAllExecute(Sender: TObject);
@@ -930,6 +945,12 @@ begin
       Application.Terminate;
       Exit;
     end;
+end;
+
+procedure TfrmWTMain.Loaded;
+begin
+  inherited;
+  FInitialiseButtons := True;
 end;
 
 procedure TfrmWTMain.FormActivate(Sender: TObject);
