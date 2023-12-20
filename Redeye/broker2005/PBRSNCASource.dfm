@@ -62,7 +62,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end
@@ -88,7 +88,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label3: TLabel
       Left = 16
       Top = 28
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end
@@ -114,7 +114,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label2: TLabel
       Left = 16
       Top = 28
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end
@@ -140,7 +140,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label4: TLabel
       Left = 16
       Top = 28
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end

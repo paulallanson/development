@@ -10,7 +10,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpJobSheet: TQuickRep
@@ -219,13 +219,13 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       object QRLabel30: TQRLabel
         Left = 544
         Top = 624
-        Width = 9
+        Width = 10
         Height = 24
         Size.Values = (
           63.500000000000000000
           1439.333333333333000000
           1651.000000000000000000
-          23.812500000000000000)
+          26.458333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -337,13 +337,13 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       object QRLabel41: TQRLabel
         Left = 168
         Top = 625
-        Width = 9
+        Width = 10
         Height = 24
         Size.Values = (
           63.500000000000000000
           444.500000000000000000
           1653.645833333333000000
-          23.812500000000000000)
+          26.458333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

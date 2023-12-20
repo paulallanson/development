@@ -70,28 +70,28 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     object Label5: TLabel
       Left = 9
       Top = 50
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label1: TLabel
       Left = 9
       Top = 80
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
     end
     object QtyLabel: TLabel
       Left = 9
       Top = 110
-      Width = 59
+      Width = 60
       Height = 13
       Caption = 'No of Packs'
     end
     object BinLabel: TLabel
       Left = 9
       Top = 21
-      Width = 36
+      Width = 40
       Height = 13
       Caption = 'Into Bin'
     end
@@ -193,21 +193,21 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     object Label4: TLabel
       Left = 128
       Top = 42
-      Width = 87
+      Width = 94
       Height = 13
       Caption = 'sets per pad/book'
     end
     object Label6: TLabel
       Left = 9
       Top = 67
-      Width = 74
+      Width = 79
       Height = 13
       Caption = 'Purchase Order'
     end
     object Label7: TLabel
       Left = 9
       Top = 103
-      Width = 40
+      Width = 42
       Height = 13
       Caption = 'Pallet ID'
     end
@@ -288,7 +288,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
       object Label8: TLabel
         Left = 9
         Top = 13
-        Width = 57
+        Width = 62
         Height = 13
         Caption = 'Job Number'
       end

@@ -15,7 +15,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
   object DelLabel: TLabel
     Left = 112
     Top = 80
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -42,7 +42,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 54
+      Width = 61
       Height = 13
       Caption = 'Instructions'
     end

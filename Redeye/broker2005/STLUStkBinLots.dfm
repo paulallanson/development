@@ -27,8 +27,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     object dbgrdBinLots: TDBGrid
       Left = 1
       Top = 41
-      Width = 536
-      Height = 134
+      Width = 530
+      Height = 125
       Align = alClient
       DefaultDrawing = False
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -104,13 +104,12 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     object pnlPart: TPanel
       Left = 1
       Top = 1
-      Width = 536
+      Width = 530
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 530
       DesignSize = (
         530
         40)
@@ -143,7 +142,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
         Caption = 'lblStoreName'
       end
       object lblQuantities: TLabel
-        Left = 449
+        Left = 443
         Top = 8
         Width = 66
         Height = 13
@@ -179,7 +178,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     ParentBackground = False
     TabOrder = 0
     object Panel3: TPanel
-      Left = 434
+      Left = 428
       Top = 1
       Width = 103
       Height = 39
@@ -187,7 +186,6 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 428
       object BitBtn1: TBitBtn
         Left = 16
         Top = 8

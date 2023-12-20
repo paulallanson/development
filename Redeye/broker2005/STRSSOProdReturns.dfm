@@ -121,32 +121,33 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
     Top = 8
     Width = 402
     Height = 81
+    ParentBackground = False
     TabOrder = 4
     object Label5: TLabel
       Left = 16
       Top = 16
-      Width = 59
+      Width = 61
       Height = 13
       Caption = 'Job Bag No:'
     end
     object lblJobBag: TLabel
       Left = 96
       Top = 16
-      Width = 46
+      Width = 50
       Height = 13
       Caption = 'lblJobBag'
     end
     object Label1: TLabel
       Left = 16
       Top = 48
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object lblDescription: TLabel
       Left = 96
       Top = 48
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end

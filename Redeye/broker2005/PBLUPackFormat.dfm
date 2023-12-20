@@ -22,6 +22,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     Height = 306
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       105
@@ -33,6 +34,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       Height = 105
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
@@ -198,6 +200,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     Height = 306
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Panel3: TPanel
       Left = 0
@@ -206,6 +209,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       Height = 265
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object dbgrdDets: TDBGrid
         Left = 0
@@ -242,14 +246,15 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         332
         41)
       object CountLabel: TLabel
-        Left = 261
+        Left = 256
         Top = 10
-        Width = 54
+        Width = 59
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]

@@ -16,9 +16,9 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 283
+    Left = 278
     Top = 275
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -26,7 +26,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
     Font.Charset = ANSI_CHARSET
@@ -156,6 +156,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     Width = 97
     Height = 113
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 1
     object AddBitBtn: TBitBtn
       Left = 12
@@ -233,6 +234,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     Width = 329
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 4
     object NameEdit: TEdit
       Left = 8

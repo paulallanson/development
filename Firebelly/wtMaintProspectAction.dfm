@@ -21,7 +21,7 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

@@ -16,7 +16,7 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 27
+    Width = 24
     Height = 13
     Caption = 'Area'
     Font.Charset = DEFAULT_CHARSET
@@ -29,7 +29,7 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 44
+    Width = 42
     Height = 13
     Caption = 'Country'
     Font.Charset = DEFAULT_CHARSET
@@ -42,7 +42,7 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 63
+    Width = 58
     Height = 13
     Caption = 'Templating'
     Font.Charset = DEFAULT_CHARSET
@@ -55,7 +55,7 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
   object Label4: TLabel
     Left = 8
     Top = 119
-    Width = 36
+    Width = 34
     Height = 13
     Caption = 'Fitting'
     Font.Charset = DEFAULT_CHARSET

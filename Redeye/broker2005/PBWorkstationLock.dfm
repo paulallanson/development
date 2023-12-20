@@ -21,6 +21,7 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
     Width = 860
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       860

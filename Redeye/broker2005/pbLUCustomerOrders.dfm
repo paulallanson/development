@@ -142,9 +142,8 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
     Width = 817
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 304
-    ExplicitWidth = 811
     DesignSize = (
       817
       41)
@@ -173,7 +172,6 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 722
     end
     object edtSearch: TEdit
       Left = 104
@@ -191,7 +189,6 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtOrderKeyPress
-      ExplicitLeft = 536
     end
     object btnSelect: TButton
       Left = 640
@@ -202,7 +199,6 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 634
     end
     object chkbxShowAll: TCheckBox
       Left = 232
@@ -227,8 +223,6 @@ object PBLUCustomerOrdersFrm: TPBLUCustomerOrdersFrm
       item
         Width = 50
       end>
-    ExplicitTop = 345
-    ExplicitWidth = 811
   end
   object tmrSearch: TTimer
     Enabled = False

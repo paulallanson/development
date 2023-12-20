@@ -18,21 +18,21 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
   object Label3: TLabel
     Left = 8
     Top = 44
-    Width = 48
+    Width = 52
     Height = 13
     Caption = 'Store type'
   end
   object Label4: TLabel
     Left = 8
     Top = 12
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Product'
   end
   object lblDelete: TLabel
     Left = 8
     Top = 320
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
@@ -52,28 +52,28 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     object Label2: TLabel
       Left = 32
       Top = 64
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Maximum'
     end
     object Label1: TLabel
       Left = 32
       Top = 32
-      Width = 41
+      Width = 48
       Height = 13
       Caption = 'Minimum'
     end
     object ReplenLabel: TLabel
       Left = 32
       Top = 204
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Store'
     end
     object LblReordr: TLabel
       Left = 32
       Top = 96
-      Width = 67
+      Width = 69
       Height = 13
       Caption = 'Reorder Level'
     end

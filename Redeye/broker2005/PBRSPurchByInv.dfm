@@ -71,7 +71,6 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
           Expanded = False
           FieldName = 'goods'
           Title.Caption = 'Goods Value'
-          Width = 70
           Visible = True
         end
         item
@@ -110,14 +109,14 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     object Label3: TLabel
       Left = 8
       Top = 95
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 95
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -166,21 +165,21 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     object Label1: TLabel
       Left = 448
       Top = 7
-      Width = 90
+      Width = 95
       Height = 13
       Caption = 'From Invoice Date:'
     end
     object Label2: TLabel
       Left = 448
       Top = 52
-      Width = 80
+      Width = 81
       Height = 13
       Caption = 'To Invoice Date:'
     end
     object Label5: TLabel
       Left = 328
       Top = 95
-      Width = 89
+      Width = 96
       Height = 13
       Caption = 'Invoices to include'
     end
@@ -209,7 +208,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       object lblSuppBran: TLabel
         Left = 8
         Top = 1
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Supplier / Branch'
       end
@@ -358,7 +357,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Record Count:'
     end
@@ -493,7 +492,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

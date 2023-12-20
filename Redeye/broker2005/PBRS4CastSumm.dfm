@@ -16,7 +16,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
   object Label1: TLabel
     Left = 160
     Top = 96
-    Width = 67
+    Width = 73
     Height = 13
     Caption = 'Forecast from:'
   end
@@ -77,7 +77,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end

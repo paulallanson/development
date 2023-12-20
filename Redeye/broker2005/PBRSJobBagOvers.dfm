@@ -72,18 +72,19 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     Width = 180
     Height = 89
     Caption = 'Job Date'
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 19
+      Width = 18
       Height = 13
       Caption = 'To: '
     end
@@ -213,6 +214,7 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 5
     OnClick = rdgrpCustClick
   end
@@ -221,12 +223,13 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     Top = 19
     Width = 283
     Height = 57
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -259,12 +262,13 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     Top = 68
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

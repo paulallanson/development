@@ -305,7 +305,6 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
         Expanded = False
         FieldName = 'New_Date'
         Title.Caption = 'Date Created'
-        Width = 64
         Visible = True
       end>
   end

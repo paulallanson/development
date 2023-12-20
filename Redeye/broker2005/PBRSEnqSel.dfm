@@ -116,7 +116,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -154,7 +154,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 52
+      Width = 56
       Height = 13
       Caption = 'Date From:'
     end
@@ -259,7 +259,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 68
+      Width = 74
       Height = 13
       Caption = 'Office Contact'
     end
@@ -363,7 +363,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

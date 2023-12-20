@@ -43,63 +43,63 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   object Label1: TLabel
     Left = 40
     Top = 24
-    Width = 35
+    Width = 39
     Height = 13
     Caption = 'Enquiry'
   end
   object Label2: TLabel
     Left = 24
     Top = 50
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label3: TLabel
     Left = 40
     Top = 76
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label4: TLabel
     Left = 16
     Top = 104
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 384
     Top = 16
-    Width = 96
+    Width = 104
     Height = 13
     Caption = 'Enquiry Line Details:'
   end
   object Label7: TLabel
     Left = 392
     Top = 144
-    Width = 70
+    Width = 75
     Height = 13
     Caption = 'Supplier Prices'
   end
   object Label12: TLabel
     Left = 392
     Top = 336
-    Width = 227
+    Width = 255
     Height = 13
     Caption = 'Awaiting Responses from the following Suppliers'
   end
   object lblRunOnQty: TLabel
     Left = 392
     Top = 296
-    Width = 77
+    Width = 85
     Height = 13
     Caption = 'Run on Quantity'
   end
   object lblRunOnCost: TLabel
     Left = 584
     Top = 296
-    Width = 21
+    Width = 23
     Height = 13
     Caption = 'Cost'
   end
@@ -380,35 +380,35 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 91
+      Width = 97
       Height = 13
       Caption = 'Selected Suppliers:'
     end
     object Label9: TLabel
       Left = 8
       Top = 56
-      Width = 34
+      Width = 35
       Height = 13
       Caption = 'Branch'
     end
     object Label10: TLabel
       Left = 8
       Top = 96
-      Width = 50
+      Width = 51
       Height = 13
       Caption = 'Reference'
     end
     object Label11: TLabel
       Left = 168
       Top = 96
-      Width = 74
+      Width = 77
       Height = 13
       Caption = 'Response Date'
     end
     object Label13: TLabel
       Left = 168
       Top = 138
-      Width = 88
+      Width = 99
       Height = 13
       Caption = 'Additional Charges'
     end
@@ -436,7 +436,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     object Label8: TLabel
       Left = 8
       Top = 178
-      Width = 90
+      Width = 97
       Height = 13
       Caption = 'Delivery Comments'
     end

@@ -20,7 +20,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 78
+    Width = 71
     Height = 13
     Caption = 'Material Type'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 89
+    Width = 83
     Height = 13
     Caption = 'Retail Multiplier'
     Font.Charset = DEFAULT_CHARSET

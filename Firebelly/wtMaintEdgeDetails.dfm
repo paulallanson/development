@@ -17,21 +17,21 @@ object frmWTMaintEdgeDetails: TfrmWTMaintEdgeDetails
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label4: TLabel
     Left = 8
     Top = 56
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label3: TLabel
     Left = 8
     Top = 88
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Selling Price'
   end

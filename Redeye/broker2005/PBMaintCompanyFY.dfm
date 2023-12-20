@@ -39,25 +39,26 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Top = 8
     Width = 313
     Height = 129
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 56
       Top = 64
-      Width = 22
+      Width = 20
       Height = 13
       Caption = 'Year'
     end
     object Label2: TLabel
       Left = 56
       Top = 96
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end
     object Label3: TLabel
       Left = 7
       Top = 16
-      Width = 295
+      Width = 288
       Height = 26
       Caption = 
         'Enter the date in which the financial year will start. This date' +

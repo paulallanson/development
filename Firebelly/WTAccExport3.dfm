@@ -19,35 +19,35 @@ object frmWTAccExport3: TfrmWTAccExport3
   object AliasLbl: TLabel
     Left = 8
     Top = 72
-    Width = 92
+    Width = 99
     Height = 13
     Caption = 'Alias of Datasource'
   end
   object ExportLbl: TLabel
     Left = 8
     Top = 128
-    Width = 109
+    Width = 120
     Height = 13
     Caption = 'Export/Import Directory'
   end
   object Label2: TLabel
     Left = 8
     Top = 16
-    Width = 91
+    Width = 97
     Height = 13
     Caption = 'Accounting System'
   end
   object fileNameLbl: TLabel
     Left = 8
     Top = 72
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'File Name'
   end
   object lblStatus: TLabel
     Left = 8
     Top = 192
-    Width = 52
+    Width = 55
     Height = 13
     Caption = 'Processing'
     Visible = False

@@ -18,28 +18,28 @@ object frmWTContractSearch: TfrmWTContractSearch
   object Label1: TLabel
     Left = 10
     Top = 84
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 10
     Top = 35
-    Width = 49
+    Width = 52
     Height = 13
     Caption = 'Developer'
   end
   object lblMaterial: TLabel
     Left = 10
     Top = 60
-    Width = 62
+    Width = 66
     Height = 13
     Caption = 'Site Location'
   end
   object Label3: TLabel
     Left = 88
     Top = 8
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -52,21 +52,21 @@ object frmWTContractSearch: TfrmWTContractSearch
   object Label4: TLabel
     Left = 10
     Top = 108
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Office Contact'
   end
   object Label5: TLabel
     Left = 10
     Top = 132
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end
   object Label6: TLabel
     Left = 10
     Top = 156
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Quote'
   end

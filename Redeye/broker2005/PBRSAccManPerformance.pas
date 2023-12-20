@@ -159,14 +159,14 @@ begin
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clWhite;
       (Sender as TDBGrid).Canvas.Font.Color := clBlack;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger <> 0 then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger;
       (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Importance_Font_Color').asinteger;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (pos('Year',Column.Title.Caption) <> 0) or

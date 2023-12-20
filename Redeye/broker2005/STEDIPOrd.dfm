@@ -20,6 +20,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Width = 397
     Height = 222
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object strgrdPOsCreated: TStringGrid
       Left = 1
@@ -40,6 +41,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Width = 397
     Height = 129
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object rdgrpSupplier: TRadioGroup
       Left = 16
@@ -51,6 +53,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       ItemIndex = 0
       Items.Strings = (
         'Kingfield')
+      ParentBackground = False
       ParentColor = False
       TabOrder = 1
     end
@@ -60,6 +63,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
       Width = 233
       Height = 41
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 3
       object lblKingfieldSupplier: TLabel
         Left = 25
@@ -111,6 +115,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Width = 397
     Height = 0
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object mmResponseDtls: TMemo
       Left = 1
@@ -128,6 +133,7 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
     Width = 397
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       397

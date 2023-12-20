@@ -16,9 +16,9 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 163
+    Left = 158
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -53,6 +53,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     Width = 209
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -153,6 +154,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6

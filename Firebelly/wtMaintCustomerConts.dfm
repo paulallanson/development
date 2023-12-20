@@ -17,8 +17,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
   object lbldelete: TLabel
     Left = 128
     Top = 326
-    Width = 129
-    Height = 16
+    Width = 116
+    Height = 17
     Caption = 'Delete this contact'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -62,7 +62,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label1: TLabel
       Left = 16
       Top = 100
-      Width = 57
+      Width = 53
       Height = 13
       Caption = 'Full Name'
       Font.Charset = DEFAULT_CHARSET
@@ -75,7 +75,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label2: TLabel
       Left = 16
       Top = 159
-      Width = 37
+      Width = 34
       Height = 13
       Caption = 'Phone'
       Font.Charset = DEFAULT_CHARSET
@@ -95,21 +95,21 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label4: TLabel
       Left = 16
       Top = 219
-      Width = 31
+      Width = 36
       Height = 13
       Caption = 'Mobile'
     end
     object Label5: TLabel
       Left = 16
       Top = 249
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Email'
     end
     object Label7: TLabel
       Left = 16
       Top = 50
-      Width = 61
+      Width = 56
       Height = 13
       Caption = 'First Name'
       Font.Charset = DEFAULT_CHARSET
@@ -122,7 +122,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label8: TLabel
       Left = 16
       Top = 18
-      Width = 20
+      Width = 22
       Height = 13
       Caption = 'Title'
       Font.Charset = DEFAULT_CHARSET
@@ -135,7 +135,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label9: TLabel
       Left = 16
       Top = 127
-      Width = 50
+      Width = 44
       Height = 13
       Caption = 'Job Title'
       Font.Charset = DEFAULT_CHARSET
@@ -162,7 +162,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label6: TLabel
       Left = 16
       Top = 74
-      Width = 42
+      Width = 45
       Height = 13
       Caption = 'Surname'
       Font.Charset = DEFAULT_CHARSET

@@ -76,8 +76,6 @@ object frmPBLUReps: TfrmPBLUReps
       item
         Width = 100
       end>
-    ExplicitTop = 317
-    ExplicitWidth = 528
   end
   object Panel1: TPanel
     Left = 0
@@ -88,8 +86,6 @@ object frmPBLUReps: TfrmPBLUReps
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 278
-    ExplicitWidth = 528
     DesignSize = (
       534
       39)
@@ -102,7 +98,6 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Add'
       TabOrder = 0
       OnClick = btnAddClick
-      ExplicitLeft = 181
     end
     object btnDelete: TButton
       Left = 354
@@ -113,7 +108,6 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Delete'
       TabOrder = 1
       OnClick = btnDeleteClick
-      ExplicitLeft = 348
     end
     object btnClose: TButton
       Left = 445
@@ -124,7 +118,6 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = 'Clos&e'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 439
     end
     object btnChange: TButton
       Left = 271
@@ -135,7 +128,6 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Change'
       TabOrder = 3
       OnClick = btnChangeClick
-      ExplicitLeft = 265
     end
   end
   object qryReps: TFDQuery

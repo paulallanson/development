@@ -27,8 +27,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 472
-    ExplicitWidth = 832
     object lblDelete: TLabel
       Left = 397
       Top = 14
@@ -111,8 +109,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 832
-    ExplicitHeight = 472
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
@@ -767,7 +763,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 444
         object Label31: TLabel
           Left = 24
           Top = 67
@@ -951,8 +946,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Caption = 'Panel13'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 552
-        ExplicitHeight = 444
         object Panel15: TPanel
           Left = 1
           Top = 1
@@ -962,7 +955,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Material Types'
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 550
         end
         object pnlMaterialTypeFunctions: TPanel
           Left = 465
@@ -972,8 +964,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 459
-          ExplicitHeight = 360
           object btnMTAdd: TBitBtn
             Left = 10
             Top = 8
@@ -1041,8 +1031,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
-          ExplicitTop = 402
-          ExplicitWidth = 550
           object chkbxShowInactiveMaterialTypes: TCheckBox
             Left = 8
             Top = 8
@@ -2148,8 +2136,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 514
-    ExplicitWidth = 832
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer

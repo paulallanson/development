@@ -17,7 +17,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
   object Label1: TLabel
     Left = 8
     Top = 156
-    Width = 33
+    Width = 36
     Height = 13
     Caption = 'Sort by'
   end
@@ -52,12 +52,13 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Top = 16
     Width = 302
     Height = 57
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -104,6 +105,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpRepClick
   end
@@ -112,12 +114,13 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Top = 81
     Width = 302
     Height = 58
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -155,6 +158,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 6
     OnClick = rdgrpCustClick
   end
@@ -192,6 +196,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
       'All Orders'
       'Only Orders NOT IN Job Bags'
       'Only Orders IN Job Bags')
+    ParentBackground = False
     TabOrder = 9
   end
   object dblkpStatus: TDBLookupComboBox

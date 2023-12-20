@@ -17,7 +17,7 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
   object DelLabel: TLabel
     Left = 117
     Top = 216
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -38,19 +38,20 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label5: TLabel
       Left = 240
       Top = 47
-      Width = 56
+      Width = 59
       Height = 13
       Caption = 'Short Descr'
       Font.Charset = ANSI_CHARSET
@@ -64,21 +65,21 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object Label2: TLabel
       Left = 16
       Top = 56
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'Commission'
     end
     object Label3: TLabel
       Left = 176
       Top = 56
-      Width = 8
+      Width = 9
       Height = 13
       Caption = '%'
     end
     object Label4: TLabel
       Left = 208
       Top = 56
-      Width = 66
+      Width = 71
       Height = 13
       Caption = 'Analysis Code'
     end

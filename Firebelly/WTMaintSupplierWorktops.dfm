@@ -35,6 +35,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     Width = 634
     Height = 42
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       634
@@ -106,6 +107,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     Width = 634
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       634
@@ -113,7 +115,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     object Label2: TLabel
       Left = 16
       Top = 16
-      Width = 67
+      Width = 71
       Height = 13
       Caption = 'Material Type:'
       Font.Charset = DEFAULT_CHARSET
@@ -126,7 +128,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     object Label3: TLabel
       Left = 304
       Top = 16
-      Width = 29
+      Width = 33
       Height = 13
       Caption = 'Group'
       Font.Charset = DEFAULT_CHARSET

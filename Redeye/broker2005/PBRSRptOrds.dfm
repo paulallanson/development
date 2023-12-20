@@ -2,7 +2,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Left = 15
   Top = 30
   Caption = 'Expected Reorder Report'
-  ClientHeight = 418
+  ClientHeight = 423
   ClientWidth = 720
   Color = clBtnFace
   Constraints.MinHeight = 462
@@ -207,7 +207,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object pnlButton: TPanel
     Left = 0
-    Top = 358
+    Top = 363
     Width = 720
     Height = 41
     Align = alBottom
@@ -298,7 +298,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
-      ExplicitLeft = 536
     end
     object PrintBitBtn: TBitBtn
       Left = 618
@@ -323,14 +322,13 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 624
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
     Width = 720
-    Height = 245
+    Height = 250
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
@@ -451,7 +449,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 399
+    Top = 404
     Width = 720
     Height = 19
     Panels = <

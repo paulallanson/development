@@ -21,14 +21,14 @@ object PBRSProofNFrm: TPBRSProofNFrm
   object Label1: TLabel
     Left = 16
     Top = 64
-    Width = 69
+    Width = 74
     Height = 13
     Caption = 'Proof Revision'
   end
   object Label2: TLabel
     Left = 16
     Top = 96
-    Width = 55
+    Width = 58
     Height = 13
     Caption = 'New Status'
   end
@@ -118,7 +118,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
     object EstNumLabel: TLabel
       Left = 8
       Top = 22
-      Width = 61
+      Width = 65
       Height = 13
       Caption = 'P.O. Number'
       Font.Charset = ANSI_CHARSET

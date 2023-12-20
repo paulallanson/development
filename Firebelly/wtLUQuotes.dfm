@@ -397,19 +397,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1285
+    Width = 1303
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1279
+        Width = 1297
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1270
+      Width = 1288
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -417,7 +417,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1270
+        1288
         28)
       object Label2: TLabel
         Left = 0
@@ -448,7 +448,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 996
+        Left = 1014
         Top = 7
         Width = 78
         Height = 13
@@ -463,7 +463,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1026
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1076
+        Left = 1094
         Top = 3
         Width = 145
         Height = 21

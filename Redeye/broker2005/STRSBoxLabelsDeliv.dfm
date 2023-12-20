@@ -30,70 +30,70 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object lblCustomer: TLabel
       Left = 96
       Top = 44
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end
     object lblDeliveryto: TLabel
       Left = 96
       Top = 65
-      Width = 57
+      Width = 64
       Height = 13
       Caption = 'lblDeliveryto'
     end
     object Label2: TLabel
       Left = 8
       Top = 65
-      Width = 53
+      Width = 57
       Height = 13
       Caption = 'Delivery to:'
     end
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Sales Order:'
     end
     object lblSalesOrder: TLabel
       Left = 96
       Top = 16
-      Width = 62
+      Width = 69
       Height = 13
       Caption = 'lblSalesOrder'
     end
     object lblOrderDate: TLabel
       Left = 304
       Top = 16
-      Width = 59
+      Width = 67
       Height = 13
       Caption = 'lblOrderDate'
     end
     object Label7: TLabel
       Left = 232
       Top = 16
-      Width = 55
+      Width = 60
       Height = 13
       Caption = 'Order Date:'
     end
     object Label8: TLabel
       Left = 8
       Top = 96
-      Width = 67
+      Width = 72
       Height = 13
       Caption = 'Customer Ref:'
     end
     object lblCustomerRef: TLabel
       Left = 96
       Top = 96
-      Width = 71
+      Width = 79
       Height = 13
       Caption = 'lblCustomerRef'
     end
@@ -108,21 +108,21 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     object Label9: TLabel
       Left = 8
       Top = 24
-      Width = 67
+      Width = 70
       Height = 13
       Caption = 'Delivery Date:'
     end
     object Label5: TLabel
       Left = 9
       Top = 52
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'No. of boxes'
     end
     object Label4: TLabel
       Left = 218
       Top = 52
-      Width = 92
+      Width = 102
       Height = 13
       Caption = 'Start at box number'
     end
@@ -269,7 +269,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     object Label12: TLabel
       Left = 56
       Top = 20
-      Width = 53
+      Width = 56
       Height = 13
       Caption = 'Label Logo'
     end

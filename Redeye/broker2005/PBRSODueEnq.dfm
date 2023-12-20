@@ -21,7 +21,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   object DateLabel: TLabel
     Left = 16
     Top = 156
-    Width = 109
+    Width = 119
     Height = 13
     Caption = 'Include any due before'
     Font.Charset = ANSI_CHARSET
@@ -185,7 +185,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Supplier / Branch'
       Font.Charset = ANSI_CHARSET
@@ -272,7 +272,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end

@@ -29,6 +29,7 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = rgCustomerClick
@@ -43,13 +44,14 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     Visible = False
     object lblCustomer: TLabel
       Left = 8
       Top = 4
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end

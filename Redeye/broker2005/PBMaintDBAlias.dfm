@@ -17,7 +17,7 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
   object DelLabel: TLabel
     Left = 120
     Top = 176
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -37,26 +37,27 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 56
       Height = 13
       Caption = 'Alias Name'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 46
+      Width = 48
       Height = 13
       Caption = 'Database'
     end
     object Label3: TLabel
       Left = 16
       Top = 92
-      Width = 62
+      Width = 63
       Height = 13
       Caption = 'Server Name'
     end

@@ -78,7 +78,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
     object Label1: TLabel
       Left = 24
       Top = 12
-      Width = 32
+      Width = 35
       Height = 13
       Caption = 'Details'
     end
@@ -92,28 +92,28 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
     object Label3: TLabel
       Left = 24
       Top = 76
-      Width = 21
+      Width = 18
       Height = 13
       Caption = 'VAT'
     end
     object Nominal: TLabel
       Left = 271
       Top = 76
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object Label4: TLabel
       Left = 288
       Top = 44
-      Width = 21
+      Width = 23
       Height = 13
       Caption = 'Cost'
     end
     object Label5: TLabel
       Left = 196
       Top = 108
-      Width = 113
+      Width = 118
       Height = 13
       Caption = 'Associated Invoice Line'
     end

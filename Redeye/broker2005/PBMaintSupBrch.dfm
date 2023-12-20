@@ -17,7 +17,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
   object DelLabel: TLabel
     Left = 176
     Top = 429
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -205,14 +205,14 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label1: TLabel
           Left = 16
           Top = 28
-          Width = 38
+          Width = 43
           Height = 13
           Caption = 'Supplier'
         end
         object Label2: TLabel
           Left = 16
           Top = 60
-          Width = 68
+          Width = 70
           Height = 13
           Caption = 'Branch Name '
           Font.Charset = ANSI_CHARSET
@@ -225,7 +225,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label3: TLabel
           Left = 16
           Top = 99
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -238,7 +238,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label7: TLabel
           Left = 16
           Top = 195
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -251,7 +251,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label8: TLabel
           Left = 16
           Top = 227
-          Width = 31
+          Width = 33
           Height = 13
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
@@ -277,7 +277,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label10: TLabel
           Left = 16
           Top = 274
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
@@ -290,7 +290,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label11: TLabel
           Left = 16
           Top = 309
-          Width = 68
+          Width = 72
           Height = 13
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
@@ -303,7 +303,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label4: TLabel
           Left = 16
           Top = 171
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET

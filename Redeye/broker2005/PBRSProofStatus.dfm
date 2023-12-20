@@ -331,7 +331,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Record Count:'
     end

@@ -563,7 +563,7 @@ begin
     (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -571,7 +571,7 @@ begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
       (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Invoice No') and
@@ -599,7 +599,7 @@ begin
         			   Canvas.Font.Color  := Font.Color;
                  Canvas.Brush.Color := clMenuHighlight;
         			   Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,Column.field.asstring);
-                 (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+                 (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
                end;
       		END;
 			{Display the Columns Right justified in the cells}

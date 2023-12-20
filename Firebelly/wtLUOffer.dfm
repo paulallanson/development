@@ -65,8 +65,6 @@ object frmwtLUOffer: TfrmwtLUOffer
       item
         Width = 50
       end>
-    ExplicitTop = 289
-    ExplicitWidth = 450
   end
   object Panel1: TPanel
     Left = 0
@@ -75,9 +73,8 @@ object frmwtLUOffer: TfrmwtLUOffer
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 215
-    ExplicitWidth = 450
     DesignSize = (
       456
       74)

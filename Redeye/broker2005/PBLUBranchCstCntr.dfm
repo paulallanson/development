@@ -16,9 +16,9 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 240
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -26,14 +26,14 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
   object CustLabel: TLabel
     Left = 113
     Top = 14
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label2: TLabel
     Left = 17
     Top = 14
-    Width = 86
+    Width = 91
     Height = 13
     Caption = 'Customer/Branch:'
   end
@@ -157,6 +157,7 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 1
     object AddBitBtn: TBitBtn
       Left = 6

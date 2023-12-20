@@ -19,28 +19,28 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
   object Label1: TLabel
     Left = 10
     Top = 36
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 10
     Top = 88
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object lblMaterial: TLabel
     Left = 10
     Top = 116
-    Width = 37
+    Width = 42
     Height = 13
     Caption = 'Material'
   end
   object Label3: TLabel
     Left = 88
     Top = 8
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -53,63 +53,63 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
   object Label4: TLabel
     Left = 10
     Top = 144
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label5: TLabel
     Left = 10
     Top = 171
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Quote'
   end
   object Label6: TLabel
     Left = 10
     Top = 295
-    Width = 27
+    Width = 29
     Height = 13
     Caption = 'Show'
   end
   object Label7: TLabel
     Left = 186
     Top = 295
-    Width = 35
+    Width = 38
     Height = 13
     Caption = 'records'
   end
   object Label8: TLabel
     Left = 10
     Top = 64
-    Width = 33
+    Width = 35
     Height = 13
     Caption = 'Project'
   end
   object Label9: TLabel
     Left = 10
     Top = 265
-    Width = 58
+    Width = 63
     Height = 13
     Caption = 'Expires after'
   end
   object Label10: TLabel
     Left = 10
     Top = 234
-    Width = 64
+    Width = 67
     Height = 13
     Caption = 'Quotes Since'
   end
   object Label11: TLabel
     Left = 10
     Top = 202
-    Width = 50
+    Width = 52
     Height = 13
     Caption = 'Show Last'
   end
   object Label12: TLabel
     Left = 146
     Top = 202
-    Width = 70
+    Width = 79
     Height = 13
     Caption = 'Months quotes'
   end

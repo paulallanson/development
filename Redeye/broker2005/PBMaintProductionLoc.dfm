@@ -17,7 +17,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
   object DelLabel: TLabel
     Left = 112
     Top = 286
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -190,12 +190,13 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
       Top = 22
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
@@ -208,7 +209,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label3: TLabel
       Left = 16
       Top = 46
-      Width = 38
+      Width = 41
       Height = 13
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
@@ -221,7 +222,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label7: TLabel
       Left = 16
       Top = 145
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
@@ -234,14 +235,14 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label1: TLabel
       Left = 16
       Top = 208
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
     end
     object Label4: TLabel
       Left = 16
       Top = 235
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end

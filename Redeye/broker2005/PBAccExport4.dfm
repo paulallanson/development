@@ -27,6 +27,7 @@ object PBAccExport4Frm: TPBAccExport4Frm
     Top = 8
     Width = 321
     Height = 105
+    ParentBackground = False
     TabOrder = 1
     object RecordMemo: TMemo
       Left = 8

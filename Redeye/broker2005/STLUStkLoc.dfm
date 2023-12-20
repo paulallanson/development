@@ -23,8 +23,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 640
-    ExplicitHeight = 205
     object dbgrdLocations: TDBGrid
       Left = 1
       Top = 33
@@ -138,7 +136,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 638
       object lblPartDesc: TLabel
         Left = 184
         Top = 8
@@ -170,8 +167,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 205
-    ExplicitWidth = 640
     DesignSize = (
       646
       41)
@@ -199,7 +194,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 535
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -263,7 +257,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 426
     end
   end
   object StatusBar1: TStatusBar
@@ -272,8 +265,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     Width = 646
     Height = 19
     Panels = <>
-    ExplicitTop = 246
-    ExplicitWidth = 640
   end
   object pmnStock: TPopupMenu
     Left = 368

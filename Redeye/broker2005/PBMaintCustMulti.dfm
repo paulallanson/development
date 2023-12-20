@@ -21,119 +21,119 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
   object Label1: TLabel
     Left = 16
     Top = 40
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Town/City'
   end
   object Label2: TLabel
     Left = 16
     Top = 70
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end
   object Label3: TLabel
     Left = 16
     Top = 194
-    Width = 47
+    Width = 44
     Height = 13
     Caption = 'VAT Rate'
   end
   object Label4: TLabel
     Left = 16
     Top = 224
-    Width = 71
+    Width = 75
     Height = 13
     Caption = 'Customer Type'
   end
   object Label5: TLabel
     Left = 16
     Top = 287
-    Width = 78
+    Width = 81
     Height = 13
     Caption = 'Revenue Centre'
   end
   object Label6: TLabel
     Left = 16
     Top = 467
-    Width = 73
+    Width = 75
     Height = 13
     Caption = 'Payment Terms'
   end
   object Label7: TLabel
     Left = 16
     Top = 437
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label8: TLabel
     Left = 16
     Top = 497
-    Width = 79
+    Width = 87
     Height = 13
     Caption = 'Invoiced Upfront'
   end
   object Label9: TLabel
     Left = 16
     Top = 528
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Customer Active'
   end
   object Label10: TLabel
     Left = 16
     Top = 132
-    Width = 57
+    Width = 60
     Height = 13
     Caption = 'Primary Rep'
   end
   object Label11: TLabel
     Left = 16
     Top = 256
-    Width = 53
+    Width = 58
     Height = 13
     Caption = 'Importance'
   end
   object lblAnalysis1: TLabel
     Left = 16
     Top = 316
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Analysis Code 1'
   end
   object lblAnalysis2: TLabel
     Left = 16
     Top = 348
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Analysis Code 2'
   end
   object Label12: TLabel
     Left = 16
     Top = 100
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label13: TLabel
     Left = 16
     Top = 164
-    Width = 74
+    Width = 76
     Height = 13
     Caption = 'Secondary Rep'
   end
   object lblAnalysis3: TLabel
     Left = 16
     Top = 380
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Analysis Code 3'
   end
   object lblAnalysis4: TLabel
     Left = 16
     Top = 412
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Analysis Code 4'
   end
@@ -183,6 +183,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     Width = 265
     Height = 537
     Caption = 'Change from  '
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       265
@@ -343,6 +344,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     Width = 337
     Height = 537
     Caption = 'Change to  '
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       337

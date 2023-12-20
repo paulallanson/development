@@ -15,9 +15,9 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
   OnActivate = FormActivate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 270
+    Left = 265
     Top = 220
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'

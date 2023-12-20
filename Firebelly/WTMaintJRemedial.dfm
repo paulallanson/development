@@ -31,7 +31,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   object Label10: TLabel
     Left = 8
     Top = 384
-    Width = 78
+    Width = 82
     Height = 13
     Caption = 'Tools Required?'
   end
@@ -46,7 +46,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object lblDelete: TLabel
       Left = 245
       Top = 22
-      Width = 121
+      Width = 106
       Height = 13
       Caption = 'Delete these details?'
       Font.Charset = DEFAULT_CHARSET
@@ -140,7 +140,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 60
+      Width = 56
       Height = 13
       Caption = 'Logged by'
       Font.Charset = DEFAULT_CHARSET
@@ -153,7 +153,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label7: TLabel
       Left = 734
       Top = 16
-      Width = 23
+      Width = 24
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date'
@@ -161,21 +161,21 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label15: TLabel
       Left = 288
       Top = 48
-      Width = 71
+      Width = 73
       Height = 13
       Caption = 'Remedial Type'
     end
     object Label16: TLabel
       Left = 8
       Top = 48
-      Width = 58
+      Width = 63
       Height = 13
       Caption = 'Reported by'
     end
     object Label17: TLabel
       Left = 649
       Top = 48
-      Width = 50
+      Width = 53
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Caused by'
@@ -320,21 +320,21 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label3: TLabel
       Left = 677
       Top = 49
-      Width = 80
+      Width = 89
       Height = 13
       Caption = 'Proposed fit date'
     end
     object Label4: TLabel
       Left = 607
       Top = 81
-      Width = 70
+      Width = 77
       Height = 13
       Caption = 'Remedial Fitter'
     end
     object Label5: TLabel
       Left = 731
       Top = 17
-      Width = 26
+      Width = 23
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost'
@@ -348,21 +348,21 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label18: TLabel
       Left = 8
       Top = 17
-      Width = 85
+      Width = 95
       Height = 13
       Caption = 'Original Templater'
     end
     object Label19: TLabel
       Left = 8
       Top = 49
-      Width = 61
+      Width = 72
       Height = 13
       Caption = 'Original Fitter'
     end
     object Label20: TLabel
       Left = 8
       Top = 81
-      Width = 70
+      Width = 77
       Height = 13
       Caption = 'Sub-contractor'
     end
@@ -546,28 +546,28 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       object Label8: TLabel
         Left = 8
         Top = 112
-        Width = 166
+        Width = 184
         Height = 13
         Caption = 'What items needs returning to site?'
       end
       object Label11: TLabel
         Left = 8
         Top = 216
-        Width = 101
+        Width = 112
         Height = 13
         Caption = 'Tools required on site'
       end
       object Label13: TLabel
         Left = 8
         Top = 320
-        Width = 267
+        Width = 298
         Height = 13
         Caption = 'Additional Notes (Additional labour/Silicone colour used))'
       end
       object Label2: TLabel
         Left = 8
         Top = 8
-        Width = 91
+        Width = 80
         Height = 13
         Caption = 'Remedial Issue:'
         Font.Charset = DEFAULT_CHARSET
@@ -625,28 +625,28 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       object Label9: TLabel
         Left = 10
         Top = 112
-        Width = 110
+        Width = 122
         Height = 13
         Caption = 'What items still on site?'
       end
       object Label12: TLabel
         Left = 10
         Top = 216
-        Width = 158
+        Width = 179
         Height = 13
         Caption = 'Site requirements before returning'
       end
       object Label14: TLabel
         Left = 10
         Top = 320
-        Width = 174
+        Width = 186
         Height = 13
         Caption = 'Factory/Manufacturing Notes/Issues'
       end
       object Label1: TLabel
         Left = 11
         Top = 8
-        Width = 282
+        Width = 263
         Height = 13
         Caption = 'Requirements to make good (include dimensions):'
         Font.Charset = DEFAULT_CHARSET

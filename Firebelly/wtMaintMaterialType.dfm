@@ -20,7 +20,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
@@ -80,7 +80,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label7: TLabel
         Left = 472
         Top = 9
-        Width = 29
+        Width = 31
         Height = 13
         Caption = 'Image'
       end
@@ -108,6 +108,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Height = 100
         BorderStyle = bsSingle
         Caption = 'Panel1'
+        ParentBackground = False
         TabOrder = 2
         object imgWorktop: TImage
           Left = 1
@@ -1164,18 +1165,19 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Width = 233
         Height = 97
         Caption = 'Trade'
+        ParentBackground = False
         TabOrder = 3
         object Label2: TLabel
           Left = 8
           Top = 28
-          Width = 67
+          Width = 72
           Height = 13
           Caption = 'Sales Nominal'
         end
         object Label22: TLabel
           Left = 8
           Top = 63
-          Width = 86
+          Width = 92
           Height = 13
           Caption = 'Purchase Nominal'
         end
@@ -1202,18 +1204,19 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Width = 233
         Height = 97
         Caption = 'Retail'
+        ParentBackground = False
         TabOrder = 4
         object Label4: TLabel
           Left = 8
           Top = 28
-          Width = 67
+          Width = 72
           Height = 13
           Caption = 'Sales Nominal'
         end
         object Label5: TLabel
           Left = 8
           Top = 63
-          Width = 86
+          Width = 92
           Height = 13
           Caption = 'Purchase Nominal'
         end
@@ -1241,14 +1244,14 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label9: TLabel
         Left = 8
         Top = 14
-        Width = 81
+        Width = 90
         Height = 13
         Caption = 'Short Description'
       end
       object Label10: TLabel
         Left = 8
         Top = 46
-        Width = 80
+        Width = 88
         Height = 13
         Caption = 'Long Description'
       end
@@ -1276,7 +1279,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label3: TLabel
         Left = 8
         Top = 20
-        Width = 161
+        Width = 175
         Height = 13
         Caption = 'Upstand Polish Prices per ln metre'
       end
@@ -1286,6 +1289,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Width = 337
         Height = 105
         Caption = 'Panel2'
+        ParentBackground = False
         TabOrder = 0
         object Panel3: TPanel
           Left = 311
@@ -1293,6 +1297,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
           Width = 25
           Height = 103
           Align = alRight
+          ParentBackground = False
           TabOrder = 0
           object ToolBar2: TToolBar
             Left = 1
@@ -1377,7 +1382,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label6: TLabel
         Left = 8
         Top = 20
-        Width = 91
+        Width = 96
         Height = 13
         Caption = 'Thickness Weights'
       end
@@ -1387,6 +1392,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         Width = 337
         Height = 105
         Caption = 'Panel2'
+        ParentBackground = False
         TabOrder = 0
         object Panel5: TPanel
           Left = 311
@@ -1394,6 +1400,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
           Width = 25
           Height = 103
           Align = alRight
+          ParentBackground = False
           TabOrder = 0
           object ToolBar1: TToolBar
             Left = 1

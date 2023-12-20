@@ -10,7 +10,7 @@ object frmwtRPQuote: TfrmwtRPQuote
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
@@ -131,13 +131,13 @@ object frmwtRPQuote: TfrmwtRPQuote
       object qrlblQuoteCaption: TQRLabel
         Left = 8
         Top = 88
-        Width = 153
+        Width = 151
         Height = 40
         Size.Values = (
           105.833333333333300000
           21.166666666666670000
           232.833333333333300000
-          404.812500000000000000)
+          399.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

@@ -23,7 +23,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object SupplierLabel: TLabel
     Left = 152
     Top = 16
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Supplier/Branch'
     Visible = False
@@ -31,21 +31,21 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object DateLabel: TLabel
     Left = 8
     Top = 260
-    Width = 67
+    Width = 73
     Height = 13
     Caption = 'ie: Due before'
   end
   object Label1: TLabel
     Left = 8
     Top = 228
-    Width = 72
+    Width = 79
     Height = 13
     Caption = 'Due in the next'
   end
   object Label2: TLabel
     Left = 152
     Top = 228
-    Width = 25
+    Width = 26
     Height = 13
     Caption = 'days.'
   end
@@ -67,7 +67,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object Customerlbl: TLabel
     Left = 152
     Top = 88
-    Width = 83
+    Width = 88
     Height = 13
     Caption = 'Customer/Branch'
     Visible = False
@@ -105,7 +105,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object operatorlbl: TLabel
     Left = 152
     Top = 160
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
     Visible = False
@@ -338,7 +338,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

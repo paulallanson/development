@@ -17,7 +17,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
   object DelLabel: TLabel
     Left = 72
     Top = 128
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -30,7 +30,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
   object CustLabel: TLabel
     Left = 16
     Top = 10
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
     Font.Charset = ANSI_CHARSET
@@ -51,19 +51,20 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 56
-      Width = 44
+      Width = 46
       Height = 13
       Caption = 'Template'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 26
+      Width = 28
       Height = 13
       Caption = 'Prefix'
     end
@@ -248,46 +249,47 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     Height = 155
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 0
       Top = 32
-      Width = 130
+      Width = 139
       Height = 13
       Caption = '\ - Next character is a literal'
     end
     object Label4: TLabel
       Left = 0
       Top = 48
-      Width = 192
+      Width = 208
       Height = 13
       Caption = 'L - alphabetic character only (mandatory)'
     end
     object Label5: TLabel
       Left = 0
       Top = 80
-      Width = 185
+      Width = 201
       Height = 13
       Caption = 'A - alphanumeric character (mandatory)'
     end
     object Label6: TLabel
       Left = 0
       Top = 112
-      Width = 122
+      Width = 132
       Height = 13
       Caption = '0 - numeric character only'
     end
     object Label7: TLabel
       Left = 0
       Top = 128
-      Width = 128
+      Width = 141
       Height = 13
       Caption = 'S - auto sequential numeric'
     end
     object Label8: TLabel
       Left = 0
       Top = 8
-      Width = 99
+      Width = 89
       Height = 13
       Caption = 'Template Legend'
       Font.Charset = ANSI_CHARSET
@@ -300,14 +302,14 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     object Label9: TLabel
       Left = 0
       Top = 64
-      Width = 122
+      Width = 133
       Height = 13
       Caption = 'l - alphanumeric character'
     end
     object Label10: TLabel
       Left = 0
       Top = 96
-      Width = 126
+      Width = 136
       Height = 13
       Caption = 'a - alphanumeric character'
     end

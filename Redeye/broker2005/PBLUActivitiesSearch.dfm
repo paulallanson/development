@@ -19,7 +19,7 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object Label9: TLabel
     Left = 11
     Top = 10
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -32,7 +32,7 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object Label12: TLabel
     Left = 120
     Top = 10
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -45,88 +45,86 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object Label6: TLabel
     Left = 11
     Top = 35
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label13: TLabel
     Left = 11
     Top = 82
-    Width = 36
+    Width = 38
     Height = 13
     Caption = 'Subject'
   end
   object Label1: TLabel
     Left = 11
     Top = 300
-    Width = 65
+    Width = 69
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
-    ExplicitTop = 309
   end
   object Label4: TLabel
     Left = 11
     Top = 178
-    Width = 24
+    Width = 23
     Height = 13
     Caption = 'Type'
   end
   object Label2: TLabel
     Left = 11
     Top = 58
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Contact'
   end
   object Label5: TLabel
     Left = 11
     Top = 155
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label10: TLabel
     Left = 11
     Top = 202
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label14: TLabel
     Left = 11
     Top = 250
-    Width = 52
+    Width = 54
     Height = 13
     Caption = 'Created By'
   end
   object Label15: TLabel
     Left = 11
     Top = 226
-    Width = 59
+    Width = 62
     Height = 13
     Caption = 'Assigned To'
   end
   object lblDueDate: TLabel
     Left = 11
     Top = 270
-    Width = 46
+    Width = 48
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Due Date'
-    ExplicitTop = 279
   end
   object Label3: TLabel
     Left = 11
     Top = 107
-    Width = 31
+    Width = 36
     Height = 13
     Caption = 'Priority'
   end
   object Label7: TLabel
     Left = 11
     Top = 131
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end

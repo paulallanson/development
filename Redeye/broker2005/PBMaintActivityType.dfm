@@ -20,7 +20,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   object DelLabel: TLabel
     Left = 120
     Top = 123
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -42,12 +42,13 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 24
+      Width = 23
       Height = 13
       Caption = 'Type'
     end

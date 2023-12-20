@@ -21,7 +21,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
   object DelLabel: TLabel
     Left = 104
     Top = 229
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akRight, akBottom]
     Caption = 'Delete these details ?'
@@ -49,42 +49,42 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 42
+      Width = 47
       Height = 13
       Caption = 'Question'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 144
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Sequence'
     end
     object Label4: TLabel
       Left = 16
       Top = 112
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Category'
     end
     object Label5: TLabel
       Left = 16
       Top = 83
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Prompt Type'
     end
     object lblItems: TLabel
       Left = 312
       Top = 80
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Items'
     end

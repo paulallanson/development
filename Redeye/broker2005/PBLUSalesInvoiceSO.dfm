@@ -85,8 +85,6 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       item
         Width = 50
       end>
-    ExplicitTop = 398
-    ExplicitWidth = 705
   end
   object Panel1: TPanel
     Left = 0
@@ -95,9 +93,8 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     Height = 96
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 302
-    ExplicitWidth = 705
     DesignSize = (
       711
       96)
@@ -107,6 +104,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Width = 385
       Height = 49
       Caption = 'Type here to narrow the search'
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 24
@@ -141,8 +139,8 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Height = 49
       Anchors = [akTop, akRight]
       Caption = 'Selected Sales Order'
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 410
       object edtSONumber: TEdit
         Left = 8
         Top = 16
@@ -159,8 +157,8 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Height = 81
       Anchors = [akTop, akRight]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 578
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

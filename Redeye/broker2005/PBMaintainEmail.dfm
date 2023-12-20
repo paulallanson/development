@@ -21,8 +21,8 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     Width = 785
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 779
     DesignSize = (
       785
       81)
@@ -60,7 +60,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       Text = 'edtRecipient'
-      ExplicitWidth = 702
     end
     object edtSubject: TEdit
       Left = 72
@@ -70,7 +69,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 1
       Text = 'Edit1'
-      ExplicitWidth = 702
     end
   end
   object pnlFooter: TPanel
@@ -79,9 +77,8 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     Width = 785
     Height = 47
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 399
-    ExplicitWidth = 779
     DesignSize = (
       785
       47)
@@ -94,7 +91,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Caption = '&Send'
       TabOrder = 0
       OnClick = btnSendClick
-      ExplicitLeft = 596
     end
     object CancelBitBtn: TBitBtn
       Left = 688
@@ -114,7 +110,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       ParentFont = False
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 682
     end
   end
   object edtBody: TRichEdit
@@ -132,8 +127,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       'edtBody')
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 779
-    ExplicitHeight = 288
   end
   object StandardToolBar: TToolBar
     Left = 0
@@ -148,7 +141,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     ShowHint = True
     TabOrder = 3
     Wrapable = False
-    ExplicitWidth = 779
     object ToolButton1: TToolButton
       Left = 4
       Top = 0
@@ -246,7 +238,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       OnChange = edtFontSizeChange
     end
     object UpDown1: TUpDown
-      Left = 467
+      Left = 483
       Top = 0
       Width = 15
       Height = 22
@@ -254,7 +246,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       TabOrder = 2
     end
     object ToolButton2: TToolButton
-      Left = 482
+      Left = 498
       Top = 0
       Width = 8
       Caption = 'ToolButton2'
@@ -262,7 +254,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       Style = tbsSeparator
     end
     object BoldButton: TToolButton
-      Left = 490
+      Left = 506
       Top = 0
       Hint = 'Bold'
       ImageIndex = 8
@@ -270,7 +262,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       OnClick = BoldButtonClick
     end
     object ItalicButton: TToolButton
-      Left = 513
+      Left = 529
       Top = 0
       Hint = 'Italic'
       ImageIndex = 9
@@ -278,7 +270,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       OnClick = ItalicButtonClick
     end
     object UnderlineButton: TToolButton
-      Left = 536
+      Left = 552
       Top = 0
       Hint = 'Underline'
       ImageIndex = 10
@@ -286,14 +278,14 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       OnClick = UnderlineButtonClick
     end
     object ToolButton16: TToolButton
-      Left = 559
+      Left = 575
       Top = 0
       Width = 8
       ImageIndex = 12
       Style = tbsDivider
     end
     object LeftAlign: TToolButton
-      Left = 567
+      Left = 583
       Top = 0
       Hint = 'Align Left'
       Grouped = True
@@ -303,7 +295,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     end
     object CenterAlign: TToolButton
       Tag = 2
-      Left = 590
+      Left = 606
       Top = 0
       Hint = 'Center'
       Grouped = True
@@ -313,7 +305,7 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
     end
     object RightAlign: TToolButton
       Tag = 1
-      Left = 613
+      Left = 629
       Top = 0
       Hint = 'Align Right'
       Grouped = True
@@ -322,14 +314,14 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       OnClick = RightAlignClick
     end
     object ToolButton20: TToolButton
-      Left = 636
+      Left = 652
       Top = 0
       Width = 8
       ImageIndex = 15
       Style = tbsDivider
     end
     object BulletsButton: TToolButton
-      Left = 644
+      Left = 660
       Top = 0
       Hint = 'Bullets|Enter bullet mode'
       ImageIndex = 14
@@ -353,8 +345,6 @@ object PBMaintainEmailfrm: TPBMaintainEmailfrm
       item
         Width = 50
       end>
-    ExplicitTop = 446
-    ExplicitWidth = 779
   end
   object ToolbarImages: TImageList
     Left = 184

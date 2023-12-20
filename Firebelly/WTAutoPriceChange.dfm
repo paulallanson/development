@@ -17,28 +17,28 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   object lblPriceChange: TLabel
     Left = 16
     Top = 286
-    Width = 64
+    Width = 67
     Height = 13
     Caption = 'Price Change'
   end
   object Label2: TLabel
     Left = 16
     Top = 316
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 64
+    Width = 68
     Height = 13
     Caption = 'Material Type'
   end
   object Label5: TLabel
     Left = 224
     Top = 316
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Time'
   end
@@ -56,6 +56,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'Cut Outs'
       'Additional Details'
       'Update All')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpPriceChangeClick
   end
@@ -70,6 +71,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'Uplift price by %'
       'Reduce price by %'
       'Set specific price')
+    ParentBackground = False
     TabOrder = 1
     OnClick = BasisGroupClick
   end
@@ -124,6 +126,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Items.Strings = (
       'All Groups'
       'One Group')
+    ParentBackground = False
     TabOrder = 6
     OnClick = rdGrpWTGroupsClick
   end
@@ -132,12 +135,13 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Top = 128
     Width = 185
     Height = 65
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object Label3: TLabel
       Left = 10
       Top = 13
-      Width = 73
+      Width = 82
       Height = 13
       Caption = 'Worktop Group'
     end
@@ -168,12 +172,13 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Top = 200
     Width = 185
     Height = 73
+    ParentBackground = False
     TabOrder = 9
     Visible = False
     object Label1: TLabel
       Left = 10
       Top = 13
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end

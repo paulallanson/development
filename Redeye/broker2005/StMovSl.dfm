@@ -40,7 +40,7 @@ object StMovSlfrm: TStMovSlfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -62,7 +62,7 @@ object StMovSlfrm: TStMovSlfrm
     object Label1: TLabel
       Left = 43
       Top = 21
-      Width = 45
+      Width = 49
       Height = 13
       Caption = 'From Part'
       Font.Charset = ANSI_CHARSET
@@ -75,7 +75,7 @@ object StMovSlfrm: TStMovSlfrm
     object Label2: TLabel
       Left = 33
       Top = 86
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
       Font.Charset = ANSI_CHARSET
@@ -101,7 +101,7 @@ object StMovSlfrm: TStMovSlfrm
     object Label6: TLabel
       Left = 16
       Top = 118
-      Width = 77
+      Width = 80
       Height = 13
       Caption = 'Movement Type'
     end
@@ -353,7 +353,7 @@ object StMovSlfrm: TStMovSlfrm
     object Label3: TLabel
       Left = 16
       Top = 29
-      Width = 49
+      Width = 53
       Height = 13
       Caption = 'Date From'
       Font.Charset = ANSI_CHARSET

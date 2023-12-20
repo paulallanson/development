@@ -15,7 +15,7 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
   object DelLabel: TLabel
     Left = 104
     Top = 112
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -42,14 +42,14 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 34
+      Width = 37
       Height = 13
       Caption = 'Charge'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end

@@ -20,7 +20,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
   object DelLabel: TLabel
     Left = 48
     Top = 516
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -50,28 +50,28 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 30
+      Width = 35
       Height = 13
       Caption = 'Colour'
     end
     object Label7: TLabel
       Left = 16
       Top = 132
-      Width = 29
+      Width = 31
       Height = 13
       Caption = 'Image'
     end
     object Label3: TLabel
       Left = 16
       Top = 308
-      Width = 44
+      Width = 43
       Height = 26
       Caption = 'Payment Details'
       WordWrap = True
@@ -79,7 +79,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
     object Label4: TLabel
       Left = 16
       Top = 388
-      Width = 54
+      Width = 55
       Height = 39
       Caption = 'Registered Address Details'
       WordWrap = True
@@ -162,6 +162,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       Width = 409
       Height = 135
       BorderStyle = bsSingle
+      ParentBackground = False
       TabOrder = 7
       object imgLogo: TImage
         Left = 1

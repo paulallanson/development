@@ -25,8 +25,6 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Width = 646
     Height = 19
     Panels = <>
-    ExplicitTop = 479
-    ExplicitWidth = 640
   end
   object Panel1: TPanel
     Left = 0
@@ -34,9 +32,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Width = 646
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 438
-    ExplicitWidth = 640
     object OKBitBtn: TBitBtn
       Left = 243
       Top = 8
@@ -65,13 +62,14 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Width = 646
     Height = 83
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 640
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
       Width = 201
       Height = 40
+      ParentBackground = False
       TabOrder = 0
       Visible = False
       object lblBonus: TLabel
@@ -104,6 +102,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         'Monthly'
         'Quarterly'
         'Half Yearly')
+      ParentBackground = False
       TabOrder = 1
     end
     object rdgrpBonusType: TRadioGroup
@@ -116,6 +115,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Items.Strings = (
         'Percentage Rate'
         'Fixed Amount')
+      ParentBackground = False
       TabOrder = 2
       OnClick = rdgrpBonusTypeClick
     end
@@ -124,6 +124,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Top = 1
       Width = 201
       Height = 40
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object Label4: TLabel
@@ -156,6 +157,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         'Category Gross Profit'
         'Category Gross Profit + Bonus'
         'Category Specific')
+      ParentBackground = False
       TabOrder = 4
       OnClick = rdgrpCommTypeClick
     end
@@ -168,8 +170,6 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     ActivePage = tbshtCategory
     Align = alClient
     TabOrder = 3
-    ExplicitWidth = 640
-    ExplicitHeight = 285
     object tbshtCategory: TTabSheet
       Caption = 'Category Commission Rates'
       object grdCategory: TStringGrid
@@ -188,7 +188,6 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
-        ExplicitHeight = 257
         ColWidths = (
           200
           94
@@ -226,6 +225,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         Height = 22
         Align = alTop
         Caption = 'Panel5'
+        ParentBackground = False
         TabOrder = 0
         object Label3: TLabel
           Left = 6
@@ -316,8 +316,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Width = 646
     Height = 70
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 640
     object Label2: TLabel
       Left = 16
       Top = 7
@@ -376,6 +376,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       Width = 249
       Height = 61
       Caption = 'Copy Budget Profile from:'
+      ParentBackground = False
       TabOrder = 0
       object lblCustBran: TLabel
         Left = 8

@@ -23,25 +23,26 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Top = 8
     Width = 497
     Height = 121
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 60
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 92
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Email'
     end
     object Label4: TLabel
       Left = 8
       Top = 26
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
@@ -81,11 +82,12 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Width = 497
     Height = 49
     Anchors = [akLeft, akBottom]
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 20
-      Width = 36
+      Width = 38
       Height = 13
       Caption = 'Subject'
     end

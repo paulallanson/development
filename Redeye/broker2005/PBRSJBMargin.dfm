@@ -73,7 +73,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPreviewClick
-      ExplicitLeft = 626
     end
     object btnPrint: TBitBtn
       Left = 707
@@ -98,7 +97,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
-      ExplicitLeft = 713
     end
     object btnExcel: TBitBtn
       Left = 536
@@ -152,7 +150,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitLeft = 542
     end
   end
   object Panel2: TPanel
@@ -384,7 +381,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object Panel3: TPanel
-      Left = 538
+      Left = 532
       Top = 1
       Width = 268
       Height = 135
@@ -392,7 +389,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 4
-      ExplicitLeft = 532
       object chkbxPageBreak: TCheckBox
         Left = 140
         Top = 104

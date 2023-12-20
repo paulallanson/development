@@ -13,7 +13,7 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
   Font.Height = -16
   Font.Name = 'Courier New'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 18
   object JBDelivQuickReport: TQuickRep

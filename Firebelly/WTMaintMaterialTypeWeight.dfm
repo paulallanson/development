@@ -16,14 +16,14 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
   object Label1: TLabel
     Left = 16
     Top = 32
-    Width = 74
+    Width = 77
     Height = 13
     Caption = 'Thickness (mm)'
   end
   object Label2: TLabel
     Left = 16
     Top = 64
-    Width = 79
+    Width = 85
     Height = 13
     Caption = 'Weight (kg)/sqm'
   end

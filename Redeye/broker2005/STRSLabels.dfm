@@ -29,28 +29,28 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object CustomerLbl: TLabel
       Left = 80
       Top = 20
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
     object DescrLbl: TLabel
       Left = 80
       Top = 41
-      Width = 42
+      Width = 43
       Height = 13
       Caption = 'DescrLbl'
     end
     object Label2: TLabel
       Left = 8
       Top = 41
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
@@ -66,28 +66,28 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     object Label3: TLabel
       Left = 50
       Top = 21
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'Box Quantity'
     end
     object Label4: TLabel
       Left = 10
       Top = 108
-      Width = 92
+      Width = 102
       Height = 13
       Caption = 'Start at box number'
     end
     object Label5: TLabel
       Left = 49
       Top = 79
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'No. of boxes'
     end
     object Label10: TLabel
       Left = 15
       Top = 50
-      Width = 91
+      Width = 93
       Height = 13
       Caption = 'Sets per Book/Pad'
     end
@@ -139,14 +139,14 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     object Label6: TLabel
       Left = 24
       Top = 24
-      Width = 20
+      Width = 24
       Height = 13
       Caption = 'from'
     end
     object Label8: TLabel
       Left = 19
       Top = 56
-      Width = 26
+      Width = 28
       Height = 13
       Caption = 'Prefix'
     end
@@ -221,7 +221,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     object Label9: TLabel
       Left = 8
       Top = 24
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end

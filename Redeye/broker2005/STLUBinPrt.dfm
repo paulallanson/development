@@ -17,14 +17,14 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 28
+    Width = 30
     Height = 13
     Caption = 'Store:'
   end
   object Label2: TLabel
     Left = 8
     Top = 64
-    Width = 40
+    Width = 43
     Height = 13
     Caption = 'Product:'
   end
@@ -95,7 +95,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key1Label: TLabel
       Left = 32
       Top = 25
-      Width = 84
+      Width = 91
       Height = 13
       Caption = 'Can'#39't pick, empty.'
     end
@@ -108,7 +108,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key2Label: TLabel
       Left = 32
       Top = 46
-      Width = 79
+      Width = 84
       Height = 13
       Caption = 'Can pick, empty.'
     end
@@ -121,7 +121,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key3Label: TLabel
       Left = 32
       Top = 66
-      Width = 102
+      Width = 108
       Height = 13
       Caption = 'Can'#39't pick, has stock.'
     end
@@ -134,7 +134,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key4Label: TLabel
       Left = 32
       Top = 86
-      Width = 94
+      Width = 98
       Height = 13
       Caption = 'Can pick, has stock'
     end

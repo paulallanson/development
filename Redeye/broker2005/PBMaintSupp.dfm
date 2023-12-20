@@ -25,8 +25,6 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 521
-    ExplicitHeight = 540
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
@@ -39,6 +37,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ParentBackground = False
         ParentFont = False
         TabOrder = 0
         object Label1: TLabel
@@ -713,6 +712,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
             'FTP'
             'HTTPS'
             'None')
+          ParentBackground = False
           TabOrder = 3
         end
         object edtSiteURL: TEdit
@@ -844,9 +844,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 540
-    ExplicitWidth = 521
     object DelLabel: TLabel
       Left = 216
       Top = 20
@@ -1027,8 +1026,6 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Width = 527
     Height = 19
     Panels = <>
-    ExplicitTop = 595
-    ExplicitWidth = 521
   end
   object FlashTimer: TTimer
     Enabled = False

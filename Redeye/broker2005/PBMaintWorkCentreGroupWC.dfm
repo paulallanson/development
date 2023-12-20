@@ -17,21 +17,21 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
   object Label1: TLabel
     Left = 8
     Top = 40
-    Width = 102
+    Width = 112
     Height = 13
     Caption = 'Current Work Centres'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
     Top = 16
-    Width = 114
+    Width = 104
     Height = 13
     Caption = 'Work Centre Group:'
     Font.Charset = DEFAULT_CHARSET
@@ -44,7 +44,7 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
   object lblDetails: TLabel
     Left = 128
     Top = 16
-    Width = 53
+    Width = 48
     Height = 13
     Caption = 'lblDetails'
     Font.Charset = DEFAULT_CHARSET
@@ -57,7 +57,7 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
   object Label4: TLabel
     Left = 288
     Top = 40
-    Width = 127
+    Width = 138
     Height = 13
     Caption = 'Un-assigned Work Centres'
   end
@@ -137,6 +137,7 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
     Width = 468
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object btnOK: TBitBtn
       Left = 153

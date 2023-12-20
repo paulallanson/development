@@ -17,21 +17,21 @@ object STPickItemFrm: TSTPickItemFrm
   object Label1: TLabel
     Left = 24
     Top = 16
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Part Code'
   end
   object Label3: TLabel
     Left = 16
     Top = 43
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object SerialNoLbl: TLabel
-    Left = 26
+    Left = 22
     Top = 224
-    Width = 53
+    Width = 57
     Height = 13
     Alignment = taRightJustify
     Caption = 'Serial No.'#39's'
@@ -40,7 +40,7 @@ object STPickItemFrm: TSTPickItemFrm
   object Label2: TLabel
     Left = 24
     Top = 72
-    Width = 48
+    Width = 46
     Height = 13
     Caption = 'Pack Size'
   end
@@ -127,14 +127,14 @@ object STPickItemFrm: TSTPickItemFrm
     object ABinLbl: TLabel
       Left = 48
       Top = 57
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end
     object Label5: TLabel
-      Left = 24
+      Left = 19
       Top = 25
-      Width = 39
+      Width = 44
       Height = 13
       Alignment = taRightJustify
       Caption = 'Quantity'
@@ -143,7 +143,7 @@ object STPickItemFrm: TSTPickItemFrm
     object ALotLbl: TLabel
       Left = 28
       Top = 88
-      Width = 35
+      Width = 37
       Height = 13
       Caption = 'Lot No.'
     end
@@ -189,14 +189,14 @@ object STPickItemFrm: TSTPickItemFrm
     object PBinLbl: TLabel
       Left = 48
       Top = 53
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end
     object Label6: TLabel
-      Left = 24
+      Left = 19
       Top = 21
-      Width = 39
+      Width = 44
       Height = 13
       Alignment = taRightJustify
       Caption = 'Quantity'
@@ -205,7 +205,7 @@ object STPickItemFrm: TSTPickItemFrm
     object PLotLbl: TLabel
       Left = 28
       Top = 84
-      Width = 35
+      Width = 37
       Height = 13
       Caption = 'Lot No.'
     end

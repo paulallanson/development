@@ -20,7 +20,7 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 78
+    Width = 71
     Height = 13
     Caption = 'Material Type'
     Font.Charset = DEFAULT_CHARSET
@@ -46,14 +46,14 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
   object Label4: TLabel
     Left = 8
     Top = 100
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 8
     Top = 132
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Ineffective Date'
   end

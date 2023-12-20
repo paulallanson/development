@@ -19,6 +19,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     Width = 691
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       691
@@ -160,18 +161,20 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     Width = 691
     Height = 272
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object pnlExportPrgrss: TPanel
       Left = 208
       Top = 115
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 0
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -204,6 +207,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Items.Strings = (
         'All Product Types'
         'One Product Type')
+      ParentBackground = False
       TabOrder = 2
       TabStop = True
       OnClick = rdgrpProdTypeClick
@@ -213,12 +217,13 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Top = 102
       Width = 321
       Height = 59
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object lblPrdCat: TLabel
         Left = 8
         Top = 4
-        Width = 64
+        Width = 66
         Height = 13
         Caption = 'Product Type'
       end
@@ -257,6 +262,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 4
       OnClick = rdgrpCustomerClick
     end
@@ -265,12 +271,13 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Top = 20
       Width = 321
       Height = 57
+      ParentBackground = False
       TabOrder = 5
       Visible = False
       object Label3: TLabel
         Left = 8
         Top = 4
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -313,6 +320,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Items.Strings = (
         'Product'
         'Delivery Location')
+      ParentBackground = False
       TabOrder = 6
     end
     object grpbxRange: TGroupBox
@@ -326,19 +334,20 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 7
       object Label4: TLabel
         Left = 14
         Top = 32
-        Width = 23
+        Width = 26
         Height = 13
         Caption = 'From'
       end
       object Label5: TLabel
         Left = 14
         Top = 64
-        Width = 13
+        Width = 12
         Height = 13
         Caption = 'To'
       end
@@ -395,6 +404,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Width = 185
       Height = 94
       Caption = 'Show records'
+      ParentBackground = False
       TabOrder = 8
       object cmbShowRecords: TComboBox
         Left = 24
@@ -429,6 +439,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       Width = 185
       Height = 83
       Caption = 'Date Required: '
+      ParentBackground = False
       TabOrder = 9
       DesignSize = (
         185
@@ -436,7 +447,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       object Label2: TLabel
         Left = 13
         Top = 22
-        Width = 26
+        Width = 29
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'From:'
@@ -444,7 +455,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       object Label1: TLabel
         Left = 15
         Top = 54
-        Width = 16
+        Width = 15
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'To:'

@@ -20,7 +20,7 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   object Label1: TLabel
     Left = 456
     Top = 15
-    Width = 52
+    Width = 56
     Height = 13
     Caption = 'From Date:'
   end
@@ -83,6 +83,7 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Items.Strings = (
       'All Departments'
       'One Department')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgDepartmentClick
   end
@@ -96,6 +97,7 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Items.Strings = (
       'All Customers'
       'One Customer ')
+    ParentBackground = False
     TabOrder = 1
     OnClick = rgCustomerClick
   end
@@ -104,12 +106,13 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Top = 14
     Width = 304
     Height = 50
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 55
+      Width = 61
       Height = 13
       Caption = 'Department'
     end
@@ -143,12 +146,13 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Top = 83
     Width = 305
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 1
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -207,6 +211,7 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
       'by Job Bag'
       'by Work Centre'
       'Do not total')
+    ParentBackground = False
     TabOrder = 6
     OnClick = TotByRadioGroupClick
   end
@@ -336,12 +341,13 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Top = 52
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 12
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

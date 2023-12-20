@@ -26,8 +26,8 @@ object STMaintPickFrm: TSTMaintPickFrm
     Width = 770
     Height = 73
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 766
     object Label1: TLabel
       Left = 24
       Top = 41
@@ -79,9 +79,8 @@ object STMaintPickFrm: TSTMaintPickFrm
     Width = 97
     Height = 376
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 669
-    ExplicitHeight = 375
     DesignSize = (
       97
       376)
@@ -112,7 +111,6 @@ object STMaintPickFrm: TSTMaintPickFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = ConfirmBtnClick
-      ExplicitTop = 308
     end
     object BitBtn2: TBitBtn
       Left = 14
@@ -125,7 +123,6 @@ object STMaintPickFrm: TSTMaintPickFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      ExplicitTop = 348
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -178,9 +175,8 @@ object STMaintPickFrm: TSTMaintPickFrm
     Height = 376
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 669
-    ExplicitHeight = 375
     object sgDetails: TStringGrid
       Left = 1
       Top = 1
@@ -199,8 +195,6 @@ object STMaintPickFrm: TSTMaintPickFrm
       OnClick = sgDetailsClick
       OnDblClick = sgDetailsDblClick
       OnSelectCell = sgDetailsSelectCell
-      ExplicitWidth = 667
-      ExplicitHeight = 373
       ColWidths = (
         123
         183

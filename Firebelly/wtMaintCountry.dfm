@@ -16,7 +16,7 @@ object frmWTMaintCountry: TfrmWTMaintCountry
   object Label1: TLabel
     Left = 8
     Top = 28
-    Width = 33
+    Width = 31
     Height = 13
     Caption = 'Name'
     Font.Charset = DEFAULT_CHARSET

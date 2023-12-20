@@ -18,21 +18,21 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
   object lblMin: TLabel
     Left = 16
     Top = 20
-    Width = 73
+    Width = 79
     Height = 13
     Caption = 'Minimum Level:'
   end
   object lblMax: TLabel
     Left = 16
     Top = 52
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Maximum Level:'
   end
   object lblReOrder: TLabel
     Left = 16
     Top = 84
-    Width = 70
+    Width = 72
     Height = 13
     Caption = 'Reorder Level:'
   end

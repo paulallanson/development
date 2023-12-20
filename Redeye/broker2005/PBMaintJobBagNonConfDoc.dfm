@@ -24,9 +24,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Width = 795
     Height = 43
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 491
-    ExplicitWidth = 789
     object Panel4: TPanel
       Left = 303
       Top = 1
@@ -34,8 +33,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 297
       DesignSize = (
         491
         41)
@@ -100,8 +99,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Width = 795
     Height = 19
     Panels = <>
-    ExplicitTop = 534
-    ExplicitWidth = 789
   end
   object pnlNotes: TPanel
     Left = 0
@@ -109,9 +106,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Width = 795
     Height = 347
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 789
-    ExplicitHeight = 338
     object pnlNCAdetails: TPanel
       Left = 1
       Top = 1
@@ -119,8 +115,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Height = 100
       Align = alTop
       Caption = 'pnlNCAdetails'
+      ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 787
       object Panel5: TPanel
         Left = 1
         Top = 1
@@ -129,8 +125,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Non Conformance Details'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 785
       end
       object memDetails: TMemo
         Left = 1
@@ -141,7 +137,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memDetailsChange
-        ExplicitWidth = 785
       end
     end
     object pnlResponse: TPanel
@@ -151,9 +146,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Height = 45
       Align = alClient
       Caption = 'pnlResponse'
+      ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 787
-      ExplicitHeight = 36
       object Panel7: TPanel
         Left = 1
         Top = 1
@@ -162,8 +156,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Response Details'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 785
       end
       object memResponse: TMemo
         Left = 1
@@ -174,8 +168,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memResponseChange
-        ExplicitWidth = 785
-        ExplicitHeight = 14
       end
     end
     object pnlAction: TPanel
@@ -185,9 +177,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Height = 100
       Align = alBottom
       Caption = 'pnlAction'
+      ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 137
-      ExplicitWidth = 787
       object Panel6: TPanel
         Left = 1
         Top = 1
@@ -196,8 +187,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Corrective Action'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 785
       end
       object memAction: TMemo
         Left = 1
@@ -208,7 +199,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memActionChange
-        ExplicitWidth = 785
       end
     end
     object pnlPrevent: TPanel
@@ -218,9 +208,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Height = 100
       Align = alBottom
       Caption = 'pnlPrevent'
+      ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 237
-      ExplicitWidth = 787
       object Panel9: TPanel
         Left = 1
         Top = 1
@@ -229,8 +218,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Preventative Action'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 785
       end
       object memPrevent: TMemo
         Left = 1
@@ -241,7 +230,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = memPreventChange
-        ExplicitWidth = 785
       end
     end
   end
@@ -251,9 +239,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Width = 795
     Height = 81
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 410
-    ExplicitWidth = 789
     DesignSize = (
       795
       81)
@@ -312,7 +299,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
-      ExplicitLeft = 707
     end
     object BitBtn4: TBitBtn
       Left = 534
@@ -371,7 +357,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
-      ExplicitLeft = 707
     end
     object btnClear: TBitBtn
       Left = 568
@@ -405,6 +390,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 7
     end
     object rdgrpSamples: TRadioGroup
@@ -417,6 +403,7 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 8
     end
   end
@@ -426,8 +413,8 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
     Width = 795
     Height = 72
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 789
     DesignSize = (
       795
       72)
@@ -498,7 +485,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
-      ExplicitLeft = 642
     end
     object BitBtn2: TBitBtn
       Left = 759
@@ -515,7 +501,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 3
       OnClick = BitBtn2Click
-      ExplicitLeft = 753
     end
     object dblkpRaisedByDept: TDBLookupComboBox
       Left = 401
@@ -528,7 +513,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsRaisingDept
       TabOrder = 6
       OnClick = CheckOK
-      ExplicitLeft = 395
     end
     object dblkpSourceDept: TDBLookupComboBox
       Left = 649
@@ -541,7 +525,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsSourceDept
       TabOrder = 8
       OnClick = CheckOK
-      ExplicitLeft = 643
     end
     object dblkpNCType: TDBLookupComboBox
       Left = 402
@@ -554,7 +537,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ListSource = dtsNCType
       TabOrder = 4
       OnClick = CheckOK
-      ExplicitLeft = 396
     end
     object BitBtn1: TBitBtn
       Left = 544
@@ -571,7 +553,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 5
       OnClick = BitBtn1Click
-      ExplicitLeft = 538
     end
     object BitBtn3: TBitBtn
       Left = 543
@@ -588,7 +569,6 @@ object PBMaintJobBagNonConfDocFrm: TPBMaintJobBagNonConfDocFrm
       ParentFont = False
       TabOrder = 7
       OnClick = BitBtn3Click
-      ExplicitLeft = 537
     end
     object edtDateRaised: TEdit
       Left = 199

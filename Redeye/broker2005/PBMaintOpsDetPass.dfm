@@ -17,21 +17,21 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 65
+    Width = 71
     Height = 13
     Caption = 'Old Password'
   end
   object Label2: TLabel
     Left = 8
     Top = 50
-    Width = 71
+    Width = 75
     Height = 13
     Caption = 'New Password'
   end
   object Label3: TLabel
     Left = 8
     Top = 82
-    Width = 60
+    Width = 67
     Height = 13
     Caption = 'Confirm New'
   end

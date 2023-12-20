@@ -25,56 +25,56 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   object Label7: TLabel
     Left = 34
     Top = 19
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label9: TLabel
     Left = 26
     Top = 47
-    Width = 64
+    Width = 66
     Height = 13
     Caption = 'Product Type'
   end
   object Label12: TLabel
     Left = 64
     Top = 134
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Depth'
   end
   object Label13: TLabel
     Left = 66
     Top = 163
-    Width = 28
+    Width = 32
     Height = 13
     Caption = 'Width'
   end
   object Label10: TLabel
     Left = 7
     Top = 195
-    Width = 76
+    Width = 83
     Height = 13
     Caption = 'Number of Parts'
   end
   object Label15: TLabel
     Left = 36
     Top = 251
-    Width = 55
+    Width = 58
     Height = 13
     Caption = 'Qty per Box'
   end
   object Label11: TLabel
     Left = 482
     Top = 283
-    Width = 81
+    Width = 88
     Height = 13
     Caption = 'Number of Plates'
   end
   object Label1: TLabel
-    Left = 61
+    Left = 56
     Top = 275
-    Width = 36
+    Width = 41
     Height = 13
     Alignment = taRightJustify
     Caption = 'Artwork'
@@ -82,28 +82,28 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   object Label2: TLabel
     Left = 8
     Top = 224
-    Width = 83
+    Width = 82
     Height = 13
     Caption = 'NCR/OTC/Mixed'
   end
   object Label5: TLabel
     Left = 8
     Top = 75
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Form Reference'
   end
   object Label3: TLabel
     Left = 434
     Top = 227
-    Width = 79
+    Width = 87
     Height = 13
     Caption = 'Run On Quantity'
   end
   object Label4: TLabel
     Left = 36
     Top = 104
-    Width = 51
+    Width = 53
     Height = 13
     Caption = 'Form Desc'
   end

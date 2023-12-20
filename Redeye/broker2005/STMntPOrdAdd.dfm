@@ -80,14 +80,14 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 48
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

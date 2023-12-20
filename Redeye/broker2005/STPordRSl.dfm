@@ -151,7 +151,7 @@ object STPordRSlFrm: TSTPordRSlFrm
     object Label1: TLabel
       Left = 8
       Top = 71
-      Width = 232
+      Width = 220
       Height = 39
       Caption = 
         'Enter Order numbers and/or Order ranges separated by commas. For' +

@@ -25,14 +25,14 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   object lblProdCode: TLabel
     Left = 13
     Top = 8
-    Width = 68
+    Width = 73
     Height = 13
     Caption = 'Product Code:'
   end
   object lblPopUpImage: TLabel
     Left = 13
     Top = 32
-    Width = 69
+    Width = 74
     Height = 13
     Caption = 'Product Image'
   end

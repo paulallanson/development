@@ -30,14 +30,14 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object ByLabel: TLabel
     Left = 8
     Top = 28
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Product'
     Font.Charset = ANSI_CHARSET
@@ -222,19 +222,20 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object CstCntrLabel: TLabel
       Left = 11
       Top = 68
-      Width = 69
+      Width = 72
       Height = 13
       Caption = 'Discount Type'
     end
     object DescLabel: TLabel
       Left = 11
       Top = 100
-      Width = 72
+      Width = 77
       Height = 13
       Caption = 'Discount Value'
     end
@@ -247,7 +248,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object Label3: TLabel
       Left = 11
       Top = 150
-      Width = 68
+      Width = 70
       Height = 13
       Caption = 'Date Effective'
       Font.Charset = ANSI_CHARSET
@@ -260,7 +261,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object Label4: TLabel
       Left = 11
       Top = 182
-      Width = 76
+      Width = 80
       Height = 13
       Caption = 'Date Ineffective'
       Font.Charset = ANSI_CHARSET
@@ -273,7 +274,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object Label2: TLabel
       Left = 11
       Top = 28
-      Width = 72
+      Width = 73
       Height = 13
       Caption = 'Purchase Price'
     end

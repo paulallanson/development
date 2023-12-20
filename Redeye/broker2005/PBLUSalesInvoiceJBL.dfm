@@ -62,21 +62,21 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     object lblCustomer: TLabel
       Left = 8
       Top = 8
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object lblJobBag: TLabel
       Left = 8
       Top = 32
-      Width = 79
+      Width = 84
       Height = 13
       Caption = 'Job Bag Number'
     end
     object lblDescription: TLabel
       Left = 136
       Top = 32
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end

@@ -22,9 +22,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 360
-    ExplicitWidth = 748
     DesignSize = (
       754
       41)
@@ -58,7 +57,6 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 639
     end
   end
   object StatusBar1: TStatusBar
@@ -67,8 +65,6 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Width = 754
     Height = 19
     Panels = <>
-    ExplicitTop = 401
-    ExplicitWidth = 748
   end
   object Panel2: TPanel
     Left = 0
@@ -76,8 +72,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Width = 754
     Height = 113
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 748
     object Label2: TLabel
       Left = 8
       Top = 14
@@ -109,6 +105,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
@@ -117,6 +114,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Top = 43
       Width = 273
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -167,6 +165,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Width = 329
       Height = 57
       Caption = 'Copy costs from selected Customer:'
+      ParentBackground = False
       TabOrder = 3
       object edtCopyCustomer: TEdit
         Left = 8
@@ -209,9 +208,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Height = 256
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 748
-    ExplicitHeight = 247
     object Label1: TLabel
       Left = 8
       Top = 8

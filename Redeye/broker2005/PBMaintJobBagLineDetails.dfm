@@ -16,7 +16,7 @@ object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

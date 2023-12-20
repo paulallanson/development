@@ -19,11 +19,12 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Width = 626
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblCustomer: TLabel
       Left = 8
       Top = 8
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -34,6 +35,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Width = 626
     Height = 44
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       626

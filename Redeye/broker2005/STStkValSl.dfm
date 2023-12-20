@@ -36,7 +36,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -178,14 +178,14 @@ object STStkValSlfrm: TSTStkValSlfrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 64
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end

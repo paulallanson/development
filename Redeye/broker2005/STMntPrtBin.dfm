@@ -17,7 +17,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
   object StoreLabel: TLabel
     Left = 8
     Top = 8
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'StoreLabel'
   end
@@ -111,7 +111,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label1: TLabel
       Left = 32
       Top = 25
-      Width = 84
+      Width = 91
       Height = 13
       Caption = 'Can'#39't pick, empty.'
     end
@@ -124,7 +124,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label2: TLabel
       Left = 32
       Top = 46
-      Width = 79
+      Width = 84
       Height = 13
       Caption = 'Can pick, empty.'
     end
@@ -137,7 +137,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label3: TLabel
       Left = 32
       Top = 66
-      Width = 102
+      Width = 108
       Height = 13
       Caption = 'Can'#39't pick, has stock.'
     end
@@ -150,7 +150,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label4: TLabel
       Left = 32
       Top = 86
-      Width = 94
+      Width = 98
       Height = 13
       Caption = 'Can pick, has stock'
     end

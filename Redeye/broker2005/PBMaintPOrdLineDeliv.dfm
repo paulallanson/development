@@ -21,6 +21,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
     Width = 586
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object DelLabel: TLabel
       Left = 224
@@ -193,11 +194,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
     Width = 586
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object POrdLabel: TLabel
       Left = 8
       Top = 3
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'POrdLabel'
     end
@@ -217,6 +219,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
     Height = 464
     Align = alClient
     Caption = 'pnlDetails'
+    ParentBackground = False
     TabOrder = 1
     object Panel2: TPanel
       Left = 1
@@ -224,25 +227,26 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       Width = 584
       Height = 292
       Align = alTop
+      ParentBackground = False
       TabOrder = 0
       object Label9: TLabel
         Left = 160
         Top = 270
-        Width = 71
+        Width = 79
         Height = 13
         Caption = 'Cust req'#39'd date'
       end
       object Label11: TLabel
         Left = 378
         Top = 270
-        Width = 69
+        Width = 74
         Height = 13
         Caption = 'Date delivered'
       end
       object Label13: TLabel
         Left = 160
         Top = 242
-        Width = 75
+        Width = 83
         Height = 13
         Caption = 'Supp req'#39'd date'
       end
@@ -258,6 +262,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           'Rep'
           'Customer'
           'Company')
+        ParentBackground = False
         TabOrder = 0
         OnClick = AddrTypeRadGrpClick
       end
@@ -267,18 +272,19 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         Width = 388
         Height = 225
         Caption = 'Address Details'
+        ParentBackground = False
         TabOrder = 1
         object AddrTypeLabel: TLabel
           Left = 8
           Top = 24
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Addr Type'
         end
         object BranchNameLabel: TLabel
           Left = 8
           Top = 74
-          Width = 34
+          Width = 35
           Height = 13
           Caption = 'Branch'
           Font.Charset = ANSI_CHARSET
@@ -291,7 +297,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label4: TLabel
           Left = 8
           Top = 100
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -304,7 +310,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label7: TLabel
           Left = 8
           Top = 198
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -324,7 +330,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label3: TLabel
           Left = 184
           Top = 198
-          Width = 33
+          Width = 37
           Height = 13
           Caption = 'County'
           Font.Charset = ANSI_CHARSET
@@ -438,11 +444,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         Width = 145
         Height = 166
         Caption = 'Quantities'
+        ParentBackground = False
         TabOrder = 2
         object Label5: TLabel
           Left = 8
           Top = 20
-          Width = 49
+          Width = 50
           Height = 13
           Caption = 'To Deliver'
           Font.Charset = ANSI_CHARSET
@@ -455,7 +462,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label6: TLabel
           Left = 8
           Top = 46
-          Width = 45
+          Width = 48
           Height = 13
           Caption = 'Delivered'
           Font.Charset = ANSI_CHARSET
@@ -468,7 +475,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label8: TLabel
           Left = 8
           Top = 72
-          Width = 41
+          Width = 43
           Height = 13
           Caption = 'Invoiced'
           Font.Charset = ANSI_CHARSET
@@ -481,8 +488,8 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label1: TLabel
           Left = 8
           Top = 98
-          Width = 57
-          Height = 13
+          Width = 32
+          Height = 26
           Caption = 'No of boxes'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
@@ -495,7 +502,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         object Label14: TLabel
           Left = 8
           Top = 125
-          Width = 62
+          Width = 68
           Height = 13
           Caption = 'Weight (gms)'
           Font.Charset = ANSI_CHARSET
@@ -719,11 +726,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       Width = 584
       Height = 36
       Align = alTop
+      ParentBackground = False
       TabOrder = 1
       object Label2: TLabel
         Left = 160
         Top = 12
-        Width = 36
+        Width = 35
         Height = 13
         Caption = 'Service'
       end
@@ -738,7 +746,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       object Label16: TLabel
         Left = 377
         Top = 12
-        Width = 70
+        Width = 68
         Height = 13
         Caption = 'Package Type'
       end
@@ -769,11 +777,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       Width = 584
       Height = 65
       Align = alClient
+      ParentBackground = False
       TabOrder = 2
       object Label12: TLabel
         Left = 17
         Top = 10
-        Width = 69
+        Width = 73
         Height = 13
         Caption = 'Delivery Notes'
       end
@@ -793,11 +802,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       Width = 584
       Height = 69
       Align = alBottom
+      ParentBackground = False
       TabOrder = 3
       object Label10: TLabel
         Left = 17
         Top = 10
-        Width = 95
+        Width = 104
         Height = 13
         Caption = 'Delivery Instructions'
       end

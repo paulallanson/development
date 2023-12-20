@@ -31,6 +31,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     DesignSize = (
@@ -39,7 +40,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object Label1: TLabel
       Left = 607
       Top = 19
-      Width = 87
+      Width = 94
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Delivery Date from'
@@ -91,7 +92,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object Label2: TLabel
       Left = 607
       Top = 64
-      Width = 76
+      Width = 81
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Delivery Date to'
@@ -99,21 +100,21 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object Label3: TLabel
       Left = 8
       Top = 128
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 128
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
       Top = 128
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -132,6 +133,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       OnClick = rgCustomerClick
@@ -151,6 +153,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Items.Strings = (
         'All Stock items'
         'One Stock item')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
       Visible = False
@@ -166,13 +169,14 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
       Visible = False
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 81
+        Width = 82
         Height = 13
         Caption = 'Stock Reference'
       end
@@ -210,13 +214,14 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 3
       Visible = False
       object lblCustomer: TLabel
         Left = 8
         Top = 4
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
       end
@@ -344,6 +349,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Height = 262
     Align = alClient
     Caption = 'Panel2'
+    ParentBackground = False
     TabOrder = 1
     object DBGrid1: TDBGrid
       Left = 1
@@ -506,6 +512,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object CancelBitBtn: TBitBtn

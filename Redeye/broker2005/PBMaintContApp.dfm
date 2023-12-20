@@ -17,14 +17,14 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Date'
   end
   object Label2: TLabel
     Left = 160
     Top = 8
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Time'
   end

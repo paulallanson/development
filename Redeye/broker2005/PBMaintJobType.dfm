@@ -17,8 +17,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   object lblDelete: TLabel
     Left = 72
     Top = 132
-    Width = 151
-    Height = 13
+    Width = 144
+    Height = 15
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -33,11 +33,12 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Width = 377
     Height = 121
     Caption = 'Details'
+    ParentBackground = False
     TabOrder = 0
     object lblDescription: TLabel
       Left = 18
       Top = 22
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET

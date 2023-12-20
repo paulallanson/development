@@ -17,7 +17,7 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
   object Label1: TLabel
     Left = 462
     Top = 11
-    Width = 86
+    Width = 93
     Height = 13
     Caption = 'Delivery due after:'
   end
@@ -66,7 +66,7 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
   object Label2: TLabel
     Left = 462
     Top = 56
-    Width = 95
+    Width = 103
     Height = 13
     Caption = 'Delivery due before:'
   end
@@ -85,12 +85,13 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
     Top = 88
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -131,6 +132,7 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
     Items.Strings = (
       'All Account Managers'
       'One Account Manager')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rgAccManagerClick
   end
@@ -139,11 +141,12 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
     Top = 20
     Width = 281
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     object lblSupplier: TLabel
       Left = 8
       Top = 4
-      Width = 85
+      Width = 91
       Height = 13
       Caption = 'Account Manager'
     end
@@ -181,6 +184,7 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rgCustomerClick
   end
@@ -189,11 +193,12 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
     Top = 105
     Width = 281
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     object lblCustomer: TLabel
       Left = 8
       Top = 3
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end
@@ -340,6 +345,7 @@ object PBRSJobBagWIPStkReqFrm: TPBRSJobBagWIPStkReqFrm
       'By Account Manager'
       'By Customer'
       'Do not total')
+    ParentBackground = False
     TabOrder = 10
   end
 end

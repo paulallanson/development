@@ -412,47 +412,47 @@ begin
   if (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Job_Bag_Status').AsInteger = 5) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := cllime;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := clyellow;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
 //    (Sender as TDBGrid).Canvas.Brush.color := cllime
   else
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') or (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'P') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Production_Complete').Asstring = 'Y') and (dbgDetails.datasource.dataset.fieldByName('Job_bag_Status').Asinteger < 30) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clWhite;
       (Sender as TDBGrid).Canvas.Brush.color := clgreen;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Invoice_This_Week').Asstring = 'Y') and (dbgDetails.datasource.dataset.fieldByName('Job_bag_Status').Asinteger < 30) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := $000080FF;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -460,7 +460,7 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Quantity') then

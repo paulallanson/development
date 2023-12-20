@@ -19,7 +19,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
   object Label1: TLabel
     Left = 16
     Top = 16
-    Width = 131
+    Width = 137
     Height = 13
     Caption = 'Stock Count List Reference'
     Font.Charset = ANSI_CHARSET

@@ -17,7 +17,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
   object Label2: TLabel
     Left = 28
     Top = 112
-    Width = 48
+    Width = 46
     Height = 13
     Caption = 'Pack Size'
   end
@@ -37,14 +37,14 @@ object PBDelivStockFrm: TPBDelivStockFrm
     object PBinLbl: TLabel
       Left = 58
       Top = 149
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'Bin'
     end
     object Label6: TLabel
-      Left = 34
+      Left = 29
       Top = 21
-      Width = 39
+      Width = 44
       Height = 13
       Alignment = taRightJustify
       Caption = 'Quantity'
@@ -53,28 +53,28 @@ object PBDelivStockFrm: TPBDelivStockFrm
     object LblPackSize: TLabel
       Left = 27
       Top = 53
-      Width = 46
+      Width = 45
       Height = 13
       Caption = 'Pack size'
     end
     object LblBox: TLabel
       Left = 13
       Top = 85
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'No. of boxes'
     end
     object Label5: TLabel
       Left = 25
       Top = 117
-      Width = 48
+      Width = 47
       Height = 13
       Caption = 'Pack cost'
     end
     object lblSetsQty: TLabel
       Left = 184
       Top = 21
-      Width = 63
+      Width = 67
       Height = 13
       Caption = 'Sets per pad:'
     end
@@ -225,28 +225,28 @@ object PBDelivStockFrm: TPBDelivStockFrm
     object Label1: TLabel
       Left = 46
       Top = 24
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 61
       Top = 52
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
     object Label4: TLabel
       Left = 16
       Top = 80
-      Width = 28
+      Width = 32
       Height = 13
       Caption = 'Count'
     end
     object lblCount: TLabel
       Left = 88
       Top = 80
-      Width = 38
+      Width = 45
       Height = 13
       Caption = 'lblCount'
     end

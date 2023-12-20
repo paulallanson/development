@@ -26,28 +26,28 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 19
       Top = 48
-      Width = 55
+      Width = 60
       Height = 13
       Caption = 'Order Date:'
     end
     object OrderDatelbl: TLabel
       Left = 88
       Top = 48
-      Width = 59
+      Width = 67
       Height = 13
       Caption = 'OrderDatelbl'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 24
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
@@ -62,7 +62,7 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     object Label4: TLabel
       Left = 9
       Top = 26
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end

@@ -22,9 +22,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 784
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 461
-    ExplicitWidth = 778
     DesignSize = (
       784
       41)
@@ -37,7 +36,6 @@ object STMaintStockFrm: TSTMaintStockFrm
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 685
     end
   end
   object pnlLeft: TPanel
@@ -46,14 +44,15 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 337
     Height = 470
     Align = alLeft
+    ParentBackground = False
     TabOrder = 1
-    ExplicitHeight = 461
     object Panel5: TPanel
       Left = 1
       Top = 1
       Width = 335
       Height = 88
       Align = alTop
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -152,17 +151,16 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 355
     Height = 470
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 349
-    ExplicitHeight = 461
     object Panel6: TPanel
       Left = 1
       Top = 1
       Width = 353
       Height = 88
       Align = alTop
+      ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 347
       object Label2: TLabel
         Left = 16
         Top = 16
@@ -260,8 +258,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 92
     Height = 470
     Align = alLeft
+    ParentBackground = False
     TabOrder = 3
-    ExplicitHeight = 461
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
@@ -364,8 +362,6 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 784
     Height = 19
     Panels = <>
-    ExplicitTop = 502
-    ExplicitWidth = 778
   end
   object qryStockFrom: TFDQuery
     ConnectionName = 'PB'

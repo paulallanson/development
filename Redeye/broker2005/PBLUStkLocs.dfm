@@ -21,6 +21,7 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
     Height = 180
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
     object DetsDBGrid: TDBGrid
       Left = 1
@@ -83,6 +84,7 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
     Width = 654
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       654

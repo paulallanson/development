@@ -28,6 +28,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Width = 691
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       691
@@ -49,11 +50,12 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Width = 691
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 152
+      Width = 165
       Height = 13
       Caption = 'Select the category to maintain: '
     end
@@ -76,6 +78,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Width = 336
     Height = 346
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object dbgrdOut: TDBGrid
       Left = 1
@@ -124,6 +127,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Width = 350
     Height = 346
     Align = alRight
+    ParentBackground = False
     TabOrder = 3
     object pnlRight2: TPanel
       Left = 97
@@ -132,6 +136,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       Height = 344
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object dbgrdIn: TDBGrid
         Left = 0
@@ -181,6 +186,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       Height = 344
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object btnAdd: TButton
         Left = 12

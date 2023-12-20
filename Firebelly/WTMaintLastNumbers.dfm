@@ -18,49 +18,49 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
   object Label4: TLabel
     Left = 32
     Top = 28
-    Width = 92
+    Width = 99
     Height = 13
     Caption = 'Last Quote Number'
   end
   object Label5: TLabel
     Left = 32
     Top = 92
-    Width = 80
+    Width = 85
     Height = 13
     Caption = 'Last Job Number'
   end
   object Label19: TLabel
     Left = 32
     Top = 124
-    Width = 89
+    Width = 93
     Height = 13
     Caption = 'Last Sales Number'
   end
   object Label21: TLabel
     Left = 32
     Top = 188
-    Width = 98
+    Width = 103
     Height = 13
     Caption = 'Last Invoice Number'
   end
   object Label50: TLabel
     Left = 32
     Top = 220
-    Width = 90
+    Width = 98
     Height = 13
     Caption = 'Last Credit Number'
   end
   object Label51: TLabel
     Left = 32
     Top = 60
-    Width = 103
+    Width = 111
     Height = 13
     Caption = 'Last Contract Number'
   end
   object Label65: TLabel
     Left = 32
     Top = 156
-    Width = 78
+    Width = 82
     Height = 13
     Caption = 'Last PO Number'
   end

@@ -21,6 +21,7 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
     Width = 390
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnPreview: TBitBtn
       Left = 94
@@ -140,18 +141,19 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
     Width = 390
     Height = 144
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 22
+      Width = 20
       Height = 13
       Caption = 'Year'
     end
@@ -192,12 +194,13 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       Top = 24
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -220,6 +223,7 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       Items.Strings = (
         'Rep'
         'Account Team')
+      ParentBackground = False
       TabOrder = 5
       OnClick = rdgrpReportTypeClick
     end
@@ -233,6 +237,7 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       Items.Strings = (
         'Summary'
         'Detailed')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpReportTypeClick
     end

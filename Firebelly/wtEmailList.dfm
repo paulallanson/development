@@ -21,14 +21,13 @@ object frmWTEmailList: TfrmWTEmailList
     Height = 217
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 689
-    ExplicitHeight = 218
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 687
-      Height = 216
+      Width = 683
+      Height = 215
       Align = alClient
       ColCount = 6
       DefaultRowHeight = 20
@@ -79,9 +78,8 @@ object frmWTEmailList: TfrmWTEmailList
     Width = 685
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 218
-    ExplicitWidth = 689
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8

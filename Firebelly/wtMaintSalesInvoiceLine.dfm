@@ -86,7 +86,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object lblOrderNumber: TLabel
       Left = 96
       Top = 8
-      Width = 73
+      Width = 84
       Height = 13
       Caption = 'lblOrderNumber'
       Visible = False
@@ -124,7 +124,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object Label2: TLabel
       Left = 5
       Top = 16
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
@@ -138,42 +138,42 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object Label16: TLabel
       Left = 5
       Top = 97
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object Label5: TLabel
       Left = 301
       Top = 43
-      Width = 32
+      Width = 30
       Height = 13
       Caption = 'VAT %'
     end
     object lblCreditType: TLabel
       Left = 296
       Top = 16
-      Width = 54
+      Width = 57
       Height = 13
       Caption = 'Credit Type'
     end
     object lblPacks: TLabel
       Left = 176
       Top = 16
-      Width = 44
+      Width = 46
       Height = 13
       Caption = 'packs of:'
     end
     object lblVatValue: TLabel
       Left = 303
       Top = 70
-      Width = 46
+      Width = 47
       Height = 13
       Caption = 'Vat Value'
     end
     object lblCost: TLabel
       Left = 5
       Top = 70
-      Width = 21
+      Width = 23
       Height = 13
       Caption = 'Cost'
     end

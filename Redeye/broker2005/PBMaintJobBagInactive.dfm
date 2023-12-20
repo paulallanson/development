@@ -20,6 +20,7 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Width = 555
     Height = 47
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnOK: TBitBtn
       Left = 202
@@ -48,46 +49,47 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Width = 555
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
+      Width = 43
       Height = 13
       Caption = 'Job Bag:'
     end
     object lblJobBag: TLabel
       Left = 72
       Top = 16
-      Width = 46
+      Width = 50
       Height = 13
       Caption = 'lblJobBag'
     end
     object lblDescription: TLabel
       Left = 200
       Top = 16
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
     object Label2: TLabel
       Left = 16
       Top = 40
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object lblCustomer: TLabel
       Left = 72
       Top = 40
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end
     object lblTitle: TLabel
       Left = 160
       Top = 16
-      Width = 23
+      Width = 25
       Height = 13
       Caption = 'Title:'
     end
@@ -98,25 +100,26 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Width = 555
     Height = 82
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object Label3: TLabel
       Left = 16
       Top = 12
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Reason'
     end
     object lblDate: TLabel
       Left = 360
       Top = 12
-      Width = 76
+      Width = 80
       Height = 13
       Caption = 'Date Cancelled:'
     end
     object lblOperator: TLabel
       Left = 360
       Top = 44
-      Width = 65
+      Width = 67
       Height = 13
       Caption = 'Cancelled By:'
     end

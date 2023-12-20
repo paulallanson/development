@@ -29,9 +29,9 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       108
       251)
     object CountLabel: TLabel
-      Left = 19
+      Left = 14
       Top = 64
-      Width = 54
+      Width = 59
       Height = 13
       Alignment = taRightJustify
       Caption = 'CountLabel'
@@ -164,7 +164,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       object Label1: TLabel
         Left = 10
         Top = 16
-        Width = 74
+        Width = 79
         Height = 13
         Caption = 'Purchase Order'
       end

@@ -107,21 +107,21 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
     object Label1: TLabel
       Left = 10
       Top = 24
-      Width = 69
+      Width = 76
       Height = 13
       Caption = 'Quote Number'
     end
     object Label3: TLabel
       Left = 8
       Top = 186
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Total Price'
     end
     object Label2: TLabel
       Left = 232
       Top = 124
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
       Visible = False
@@ -129,7 +129,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
     object OrdqtyLbl: TLabel
       Left = 386
       Top = 130
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
       Font.Charset = DEFAULT_CHARSET
@@ -150,42 +150,42 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
     object Label6: TLabel
       Left = 483
       Top = 187
-      Width = 57
+      Width = 62
       Height = 13
       Caption = 'Job Number'
     end
     object lblJob: TLabel
       Left = 547
       Top = 187
-      Width = 27
+      Width = 31
       Height = 13
       Caption = 'lblJob'
     end
     object Label7: TLabel
       Left = 10
       Top = 52
-      Width = 27
+      Width = 31
       Height = 13
       Caption = 'Fixing'
     end
     object Label8: TLabel
       Left = 10
       Top = 76
-      Width = 82
+      Width = 83
       Height = 13
       Caption = 'Survey/Template'
     end
     object Label9: TLabel
       Left = 10
       Top = 100
-      Width = 38
+      Width = 40
       Height = 13
       Caption = 'Delivery'
     end
     object Supply: TLabel
       Left = 10
       Top = 124
-      Width = 32
+      Width = 35
       Height = 13
       Caption = 'Supply'
     end
@@ -200,7 +200,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
     object Label10: TLabel
       Left = 10
       Top = 148
-      Width = 42
+      Width = 46
       Height = 13
       Caption = 'Discount'
     end

@@ -72,7 +72,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -120,14 +120,14 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
+      Width = 32
       Height = 13
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 19
+      Width = 18
       Height = 13
       Caption = 'To: '
     end
@@ -217,7 +217,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end

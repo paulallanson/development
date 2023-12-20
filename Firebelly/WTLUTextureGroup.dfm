@@ -63,8 +63,6 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
       item
         Width = 50
       end>
-    ExplicitTop = 232
-    ExplicitWidth = 402
   end
   object Panel1: TPanel
     Left = 0
@@ -72,9 +70,8 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
     Width = 408
     Height = 65
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 167
-    ExplicitWidth = 402
     DesignSize = (
       408
       65)

@@ -40,7 +40,7 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
         end
         item
           Caption = 'Item No'
-          Width = 0
+          Width = 59
         end>
       Items.ItemData = {
         05F10200000700000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000

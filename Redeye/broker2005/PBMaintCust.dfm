@@ -29,8 +29,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1170
-    ExplicitHeight = 633
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -55,7 +53,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 605
         DesignSize = (
           481
           614)
@@ -68,7 +65,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Analysis  '
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 281
           DesignSize = (
             465
             290)
@@ -352,7 +348,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a Reseller Customer'
             TabOrder = 13
-            ExplicitTop = 229
           end
           object chkbxCTRLPCustomer: TCheckBox
             Left = 8
@@ -362,7 +357,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a CTRL-P Master Customer'
             TabOrder = 14
-            ExplicitTop = 253
           end
         end
         object grpbxDetails: TGroupBox
@@ -718,8 +712,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Caption = 'pnlHOContacts'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 681
-        ExplicitHeight = 605
         object Panel26: TPanel
           Left = 1
           Top = 1
@@ -730,7 +722,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Head Office Contacts'
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 679
         end
         object Panel27: TPanel
           Left = 677
@@ -741,8 +732,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 671
-          ExplicitHeight = 547
         end
         object CoolBar9: TCoolBar
           Left = 1
@@ -757,7 +746,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
-          ExplicitWidth = 679
           object ToolBar2: TToolBar
             Left = 11
             Top = 0
@@ -816,8 +804,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 3
-          ExplicitLeft = 495
-          ExplicitHeight = 547
           object Panel31: TPanel
             Left = 1
             Top = 1
@@ -848,8 +834,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 4
-          ExplicitLeft = 474
-          ExplicitHeight = 547
         end
         object Panel29: TPanel
           Left = 1
@@ -860,8 +844,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Panel29'
           ParentBackground = False
           TabOrder = 5
-          ExplicitWidth = 473
-          ExplicitHeight = 547
           object dbgHOContactDetails: TDBGrid
             Left = 1
             Top = 1
@@ -942,8 +924,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 381
-            ExplicitWidth = 471
             object LabelName: TLabel
               Left = 4
               Top = 10
@@ -1644,7 +1624,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
-          ExplicitWidth = 443
           DesignSize = (
             433
             580)
@@ -3926,12 +3905,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
+            Width = 64
             Visible = True
           end>
       end
@@ -5332,8 +5313,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 715
-    ExplicitWidth = 1170
   end
   object pnlFooter: TPanel
     Left = 0
@@ -5343,8 +5322,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 674
-    ExplicitWidth = 1170
     DesignSize = (
       1176
       41)
@@ -5438,7 +5415,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
-      ExplicitLeft = 949
     end
     object CancelBitBtn: TBitBtn
       Left = 1035
@@ -5516,7 +5492,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 1029
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5612,7 +5587,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1170
     DesignSize = (
       1176
       41)
@@ -5641,7 +5615,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
-      ExplicitWidth = 533
     end
   end
   object FlashTimer: TTimer

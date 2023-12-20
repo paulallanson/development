@@ -19,7 +19,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
   object DelLabel: TLabel
     Left = 104
     Top = 142
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akRight, akBottom]
     Caption = 'Delete these details ?'
@@ -47,14 +47,14 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end

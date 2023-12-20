@@ -123,39 +123,40 @@ object PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm
     Top = 8
     Width = 489
     Height = 273
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 108
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object lblCostPrice: TLabel
       Left = 8
       Top = 144
-      Width = 48
+      Width = 50
       Height = 13
       Caption = 'Cost Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 206
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 8
       Top = 176
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end

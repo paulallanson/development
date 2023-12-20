@@ -21,14 +21,14 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
   object lblYear: TLabel
     Left = 8
     Top = 20
-    Width = 22
+    Width = 20
     Height = 13
     Caption = 'Year'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 30
+    Width = 33
     Height = 13
     Caption = 'Period'
   end
@@ -52,6 +52,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgRepClick
   end
@@ -60,12 +61,13 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Top = 82
     Width = 257
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 51
+      Width = 52
       Height = 13
       Caption = 'Rep Name'
     end
@@ -124,6 +126,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Items.Strings = (
       'Summary'
       'Detailed')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpReportTypeClick
   end
@@ -271,6 +274,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Items.Strings = (
       'Operating'
       'Target')
+    ParentBackground = False
     TabOrder = 11
     OnClick = rgRepClick
   end
@@ -284,6 +288,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Items.Strings = (
       'Rep'
       'Sub Rep')
+    ParentBackground = False
     TabOrder = 12
     OnClick = rgRepClick
   end
@@ -292,12 +297,13 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Top = 107
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 14
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -321,6 +327,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
       'by Customer'
       'by Category'
       'Do not total')
+    ParentBackground = False
     TabOrder = 15
   end
   object dtsFY: TDataSource

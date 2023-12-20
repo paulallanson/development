@@ -27,6 +27,7 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
       'Zero stock balance items'
       'Non Zero stock balance items'
       'Stock balance <= Re-Order Level')
+    ParentBackground = False
     TabOrder = 0
     OnClick = IncRadioGroupClick
   end
@@ -45,6 +46,7 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     OnClick = rgCustomerClick
@@ -59,13 +61,14 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     Visible = False
     object lblCustomer: TLabel
       Left = 8
       Top = 4
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Customer/Branch'
     end

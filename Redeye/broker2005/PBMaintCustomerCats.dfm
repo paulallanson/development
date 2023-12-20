@@ -17,7 +17,7 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
   object Label1: TLabel
     Left = 10
     Top = 20
-    Width = 42
+    Width = 46
     Height = 13
     Caption = 'Category'
   end
@@ -91,14 +91,14 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     object Label3: TLabel
       Left = 10
       Top = 20
-      Width = 70
+      Width = 78
       Height = 13
       Caption = 'Minimum value'
     end
     object Label4: TLabel
       Left = 10
       Top = 52
-      Width = 74
+      Width = 80
       Height = 13
       Caption = 'Maximum Value'
     end

@@ -82,46 +82,47 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
     Height = 105
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 8
       Top = 19
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Statement No:'
     end
     object Label2: TLabel
       Left = 240
       Top = 80
-      Width = 26
+      Width = 27
       Height = 13
       Caption = 'Date:'
     end
     object lblDateRange: TLabel
       Left = 8
       Top = 48
-      Width = 58
+      Width = 60
       Height = 13
       Caption = 'Date Range'
     end
     object Label4: TLabel
       Left = 288
       Top = 48
-      Width = 12
+      Width = 14
       Height = 13
       Caption = 'to:'
     end
     object Label5: TLabel
       Left = 112
       Top = 48
-      Width = 23
+      Width = 27
       Height = 13
       Caption = 'from:'
     end
@@ -278,12 +279,13 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
     Top = 30
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

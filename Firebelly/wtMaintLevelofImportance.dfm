@@ -20,14 +20,14 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 16
     Top = 60
-    Width = 30
+    Width = 35
     Height = 13
     Caption = 'Colour'
   end

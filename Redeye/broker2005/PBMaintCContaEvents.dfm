@@ -19,7 +19,7 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
   object DelLabel: TLabel
     Left = 16
     Top = 347
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -198,21 +198,21 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 192
       Top = 60
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Time'
       Visible = False

@@ -24,11 +24,12 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Width = 671
     Height = 70
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 16
       Top = 7
-      Width = 28
+      Width = 23
       Height = 13
       Caption = 'Rep:'
       Font.Charset = ANSI_CHARSET
@@ -41,7 +42,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     object Label4: TLabel
       Left = 16
       Top = 31
-      Width = 86
+      Width = 74
       Height = 13
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
@@ -54,7 +55,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     object lblRepName: TLabel
       Left = 112
       Top = 7
-      Width = 69
+      Width = 64
       Height = 13
       Caption = 'lblRepName'
       Font.Charset = ANSI_CHARSET
@@ -67,7 +68,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     object lblFinancialYear: TLabel
       Left = 112
       Top = 31
-      Width = 91
+      Width = 81
       Height = 13
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
@@ -83,11 +84,12 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       Width = 249
       Height = 61
       Caption = 'Copy Budget Profile from:'
+      ParentBackground = False
       TabOrder = 0
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end
@@ -122,6 +124,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Width = 671
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object OKBitBtn: TBitBtn
       Left = 254
@@ -151,17 +154,19 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Width = 671
     Height = 85
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
       Width = 201
       Height = 40
+      ParentBackground = False
       TabOrder = 0
       object lblBonus: TLabel
         Left = 8
         Top = 16
-        Width = 41
+        Width = 44
         Height = 13
         Caption = 'Bonus %'
       end
@@ -186,6 +191,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         'Monthly'
         'Quarterly'
         'Half Yearly')
+      ParentBackground = False
       TabOrder = 1
     end
     object rdgrpBonusType: TRadioGroup
@@ -198,6 +204,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       Items.Strings = (
         'Percentage Rate'
         'Fixed Amount')
+      ParentBackground = False
       TabOrder = 2
       OnClick = rdgrpBonusTypeClick
     end
@@ -206,11 +213,12 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       Top = 1
       Width = 201
       Height = 40
+      ParentBackground = False
       TabOrder = 3
       object Label1: TLabel
         Left = 8
         Top = 16
-        Width = 92
+        Width = 100
         Height = 13
         Caption = 'Commission Rate %'
       end
@@ -235,6 +243,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         'Gross Profit'
         'Gross Profit + Bonus'
         'Period Specific')
+      ParentBackground = False
       TabOrder = 4
       OnClick = rdgrpCommTypeClick
     end

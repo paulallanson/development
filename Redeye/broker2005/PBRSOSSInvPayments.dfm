@@ -22,8 +22,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
     Width = 698
     Height = 121
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 692
     object Label3: TLabel
       Left = 8
       Top = 72
@@ -48,6 +48,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
@@ -56,6 +57,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Top = 8
       Width = 305
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -105,6 +107,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Height = 81
       Caption = 'Payments'
       Enabled = False
+      ParentBackground = False
       TabOrder = 3
       object Label1: TLabel
         Left = 12
@@ -225,9 +228,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
     Width = 698
     Height = 37
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 347
-    ExplicitWidth = 692
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -235,6 +237,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Height = 35
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         188
@@ -295,8 +298,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Height = 35
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 406
       DesignSize = (
         285
         35)
@@ -432,8 +435,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 384
-    ExplicitWidth = 692
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

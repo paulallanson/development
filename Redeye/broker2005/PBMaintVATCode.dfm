@@ -17,7 +17,7 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
   object DelLabel: TLabel
     Left = 120
     Top = 238
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -44,21 +44,21 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 52
-      Width = 41
+      Width = 38
       Height = 13
       Caption = 'VAT Ref'
     end
     object Label3: TLabel
       Left = 8
       Top = 84
-      Width = 47
+      Width = 44
       Height = 13
       Caption = 'VAT Rate'
     end

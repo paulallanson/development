@@ -33,8 +33,8 @@ object STRSPODelivNoteFrm: TSTRSPODelivNoteFrm
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 180
-      Height = 39
+      Width = 176
+      Height = 52
       Caption = 
         'Enter purchase order numbers and/or order ranges separated by co' +
         'mmas. For example, 1234, 1236, 1240-1245'

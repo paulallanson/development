@@ -17,14 +17,14 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 32
+    Width = 35
     Height = 13
     Caption = 'Details'
   end
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 21
+    Width = 23
     Height = 13
     Caption = 'Cost'
   end

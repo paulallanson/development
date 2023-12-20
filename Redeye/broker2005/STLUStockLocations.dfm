@@ -22,14 +22,15 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Width = 821
     Height = 38
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 815
     object Panel3: TPanel
       Left = 1
       Top = 1
       Width = 560
       Height = 36
       Align = alLeft
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -63,7 +64,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
           MinHeight = 30
           Width = 253
         end>
-      ExplicitWidth = 253
       object ToolBar2: TToolBar
         Left = 11
         Top = 0
@@ -104,9 +104,8 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Width = 821
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 363
-    ExplicitWidth = 815
     DesignSize = (
       821
       41)
@@ -136,7 +135,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
-      ExplicitLeft = 731
     end
     object btnPrint: TBitBtn
       Left = 649
@@ -161,7 +159,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
-      ExplicitLeft = 643
     end
     object btnPreview: TBitBtn
       Left = 563
@@ -192,7 +189,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       ParentFont = False
       TabOrder = 3
       OnClick = btnPreviewClick
-      ExplicitLeft = 557
     end
     object btnExcel: TBitBtn
       Left = 474
@@ -247,7 +243,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
-      ExplicitLeft = 468
     end
   end
   object stsbrDetails: TStatusBar
@@ -262,8 +257,6 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       item
         Width = 50
       end>
-    ExplicitTop = 404
-    ExplicitWidth = 815
   end
   object dbgDetails: TDBGrid
     Left = 0

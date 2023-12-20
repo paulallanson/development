@@ -17,7 +17,7 @@ object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
   object Label5: TLabel
     Left = 8
     Top = 132
-    Width = 49
+    Width = 48
     Height = 13
     Caption = 'VAT Code'
   end
@@ -31,14 +31,14 @@ object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
   object Label8: TLabel
     Left = 8
     Top = 70
-    Width = 29
+    Width = 33
     Height = 13
     Caption = 'Group'
   end
   object Label1: TLabel
     Left = 8
     Top = 352
-    Width = 71
+    Width = 77
     Height = 13
     Caption = 'List Mark-Up %'
     Visible = False
@@ -46,14 +46,14 @@ object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
   object Label2: TLabel
     Left = 8
     Top = 379
-    Width = 71
+    Width = 77
     Height = 13
     Caption = 'Cat Mark-Up %'
   end
   object Label6: TLabel
     Left = 8
     Top = 324
-    Width = 78
+    Width = 77
     Height = 13
     Caption = 'Purch Price (PK)'
   end
@@ -67,35 +67,35 @@ object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
   object Label4: TLabel
     Left = 8
     Top = 409
-    Width = 84
+    Width = 88
     Height = 13
     Caption = 'Invoice Price Unit'
   end
   object Label9: TLabel
     Left = 8
     Top = 38
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label10: TLabel
     Left = 8
     Top = 102
-    Width = 24
+    Width = 23
     Height = 13
     Caption = 'Type'
   end
   object Label11: TLabel
     Left = 8
     Top = 438
-    Width = 75
+    Width = 83
     Height = 13
     Caption = 'Unit of Measure'
   end
   object Label12: TLabel
     Left = 8
     Top = 160
-    Width = 61
+    Width = 68
     Height = 26
     Caption = 'Product Classification'
     WordWrap = True

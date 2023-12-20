@@ -21,7 +21,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
@@ -73,28 +73,28 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label10: TLabel
         Left = 8
         Top = 63
-        Width = 67
+        Width = 72
         Height = 13
         Caption = 'Sales Nominal'
       end
       object Label22: TLabel
         Left = 8
         Top = 95
-        Width = 86
+        Width = 92
         Height = 13
         Caption = 'Purchase Nominal'
       end
       object Label7: TLabel
         Left = 368
         Top = 9
-        Width = 29
+        Width = 31
         Height = 13
         Caption = 'Image'
       end
       object Label3: TLabel
         Left = 8
         Top = 28
-        Width = 57
+        Width = 66
         Height = 13
         Caption = 'Composition'
       end
@@ -1221,14 +1221,14 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label9: TLabel
         Left = 8
         Top = 16
-        Width = 81
+        Width = 90
         Height = 13
         Caption = 'Short Description'
       end
       object Label2: TLabel
         Left = 8
         Top = 56
-        Width = 80
+        Width = 88
         Height = 13
         Caption = 'Long Description'
       end
@@ -1256,14 +1256,14 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label4: TLabel
         Left = 8
         Top = 28
-        Width = 84
+        Width = 93
         Height = 13
         Caption = 'Preferred Supplier'
       end
       object Label5: TLabel
         Left = 392
         Top = 20
-        Width = 74
+        Width = 77
         Height = 13
         Caption = 'Slab Sizes (mm)'
       end
@@ -1390,14 +1390,14 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label8: TLabel
         Left = 8
         Top = 6
-        Width = 43
+        Width = 47
         Height = 13
         Caption = 'Warranty'
       end
       object Label11: TLabel
         Left = 0
         Top = 126
-        Width = 62
+        Width = 67
         Height = 13
         Caption = 'Maintenance'
       end

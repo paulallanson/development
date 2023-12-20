@@ -27,8 +27,6 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
       item
         Width = 50
       end>
-    ExplicitTop = 400
-    ExplicitWidth = 937
   end
   object Panel1: TPanel
     Left = 0
@@ -36,9 +34,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
     Width = 943
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 359
-    ExplicitWidth = 937
     object Panel2: TPanel
       Left = 669
       Top = 1
@@ -46,8 +43,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 663
       DesignSize = (
         273
         39)
@@ -84,9 +81,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
     Width = 95
     Height = 263
     Align = alRight
+    ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 842
-    ExplicitHeight = 254
     object btnReturns: TButton
       Left = 12
       Top = 15
@@ -104,8 +100,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
     Height = 105
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 937
     DesignSize = (
       943
       105)
@@ -158,8 +154,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
       Height = 93
       Anchors = [akTop, akRight]
       Caption = 'Current Production Quantities'
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 652
       object Label4: TLabel
         Left = 17
         Top = 24

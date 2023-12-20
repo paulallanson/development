@@ -20,7 +20,7 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -46,42 +46,42 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 97
+    Width = 103
     Height = 13
     Caption = 'Customer Reference'
   end
   object Label13: TLabel
     Left = 11
     Top = 74
-    Width = 39
+    Width = 44
     Height = 13
     Caption = 'Quantity'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 122
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
     Top = 98
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label3: TLabel
     Left = 11
     Top = 27
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label1: TLabel
     Left = 11
     Top = 275
-    Width = 66
+    Width = 72
     Height = 13
     Caption = 'Ordered since'
   end
@@ -95,28 +95,28 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
   object Label5: TLabel
     Left = 11
     Top = 194
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
     Top = 218
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end
   object Label8: TLabel
     Left = 11
     Top = 170
-    Width = 74
+    Width = 76
     Height = 13
     Caption = 'Secondary Rep'
   end
   object Label10: TLabel
     Left = 11
     Top = 243
-    Width = 44
+    Width = 46
     Height = 13
     Caption = 'End User'
   end

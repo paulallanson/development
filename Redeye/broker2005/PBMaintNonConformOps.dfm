@@ -17,21 +17,21 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 112
+    Width = 120
     Height = 13
     Caption = 'Current NCA Recipients'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
   object Label4: TLabel
     Left = 288
     Top = 16
-    Width = 108
+    Width = 120
     Height = 13
     Caption = 'Un-assigned Operators'
   end
@@ -111,6 +111,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Width = 468
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object btnOK: TBitBtn
       Left = 153

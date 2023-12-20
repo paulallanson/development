@@ -22,11 +22,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 40
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object EnqLabel: TLabel
       Left = 8
       Top = 4
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'EnqLabel'
       Font.Charset = ANSI_CHARSET
@@ -39,7 +40,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object CustomerLabel: TLabel
       Left = 8
       Top = 22
-      Width = 70
+      Width = 76
       Height = 13
       Caption = 'CustomerLabel'
       Font.Charset = ANSI_CHARSET
@@ -52,7 +53,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label11: TLabel
       Left = 384
       Top = 17
-      Width = 105
+      Width = 108
       Height = 13
       Caption = 'Expected Life (weeks)'
       Visible = False
@@ -75,11 +76,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 40
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
       Left = 8
       Top = 13
-      Width = 68
+      Width = 77
       Height = 13
       Caption = 'Order Quantity'
       Font.Charset = ANSI_CHARSET
@@ -107,6 +109,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 38
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object OKBitBtn: TBitBtn
       Left = 443
@@ -134,25 +137,26 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 40
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 68
+      Width = 77
       Height = 13
       Caption = 'Order Quantity'
     end
     object Label12: TLabel
       Left = 424
       Top = 12
-      Width = 34
+      Width = 37
       Height = 13
       Caption = 'RunOn'
     end
     object Label13: TLabel
       Left = 216
       Top = 12
-      Width = 77
+      Width = 86
       Height = 13
       Caption = 'Quoted Quantity'
     end
@@ -192,11 +196,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 136
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
       Top = 52
-      Width = 67
+      Width = 74
       Height = 13
       Caption = 'Cust Order No'
       Font.Charset = ANSI_CHARSET
@@ -209,36 +214,36 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object DatePointLabel: TLabel
       Left = 8
       Top = 20
-      Width = 52
+      Width = 57
       Height = 13
       Caption = 'Order Date'
     end
     object Label10: TLabel
       Left = 441
       Top = 12
-      Width = 67
-      Height = 26
+      Width = 47
+      Height = 52
       Caption = 'Date required from Supplier'
       WordWrap = True
     end
     object Label2: TLabel
       Left = 9
       Top = 80
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Supplier Desc'
     end
     object Label5: TLabel
       Left = 9
       Top = 110
-      Width = 72
+      Width = 76
       Height = 13
       Caption = 'Customer Desc'
     end
     object Label14: TLabel
       Left = 225
       Top = 12
-      Width = 78
+      Width = 74
       Height = 26
       Caption = 'Date required by Customer'
       WordWrap = True
@@ -267,18 +272,19 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Width = 243
       Height = 78
       Caption = 'Proofs'
+      ParentBackground = False
       TabOrder = 8
       object ProofByLabel: TLabel
         Left = 36
         Top = 25
-        Width = 12
+        Width = 11
         Height = 13
         Caption = 'By'
       end
       object ProofStatLabel: TLabel
         Left = 12
         Top = 52
-        Width = 30
+        Width = 32
         Height = 13
         Caption = 'Status'
       end
@@ -448,6 +454,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 136
     Align = alTop
+    ParentBackground = False
     TabOrder = 5
     object AddrTypeRadGrp: TRadioGroup
       Left = 7
@@ -461,6 +468,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         'Rep'
         'Customer'
         'Company')
+      ParentBackground = False
       TabOrder = 0
       OnClick = AddrTypeRadGrpClick
     end
@@ -470,6 +478,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Width = 259
       Height = 123
       Caption = 'Delivery Address'
+      ParentBackground = False
       TabOrder = 1
       object mmDeliveryAddress: TMemo
         Left = 8
@@ -533,11 +542,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 6
     object SuppLabel: TLabel
       Left = 8
       Top = 6
-      Width = 83
+      Width = 88
       Height = 13
       Caption = 'Supplier/Branch: '
       Font.Charset = ANSI_CHARSET
@@ -550,7 +560,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label7: TLabel
       Left = 8
       Top = 30
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
@@ -594,11 +604,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Width = 624
     Height = 56
     Align = alTop
+    ParentBackground = False
     TabOrder = 7
     object Label6: TLabel
       Left = 8
       Top = 13
-      Width = 53
+      Width = 57
       Height = 13
       Caption = 'Order Price'
       Font.Charset = ANSI_CHARSET
@@ -611,7 +622,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object PriceLbl: TLabel
       Left = 104
       Top = 37
-      Width = 38
+      Width = 39
       Height = 13
       Caption = 'PriceLbl'
       Visible = False
@@ -619,7 +630,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label8: TLabel
       Left = 208
       Top = 13
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Selling Price'
       Font.Charset = ANSI_CHARSET
@@ -632,7 +643,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object SellLbl: TLabel
       Left = 288
       Top = 37
-      Width = 31
+      Width = 33
       Height = 13
       Caption = 'SellLbl'
       Visible = False
@@ -640,7 +651,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label9: TLabel
       Left = 408
       Top = 13
-      Width = 43
+      Width = 44
       Height = 13
       Caption = 'List Price'
       Font.Charset = ANSI_CHARSET
@@ -654,7 +665,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object ListLbl: TLabel
       Left = 472
       Top = 37
-      Width = 26
+      Width = 30
       Height = 13
       Caption = 'Listlbl'
       Visible = False

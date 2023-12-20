@@ -21,7 +21,7 @@ object frmWTMaintParams: TfrmWTMaintParams
   object Label8: TLabel
     Left = 16
     Top = 12
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Company Name'
   end
@@ -37,70 +37,70 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label11: TLabel
         Left = 16
         Top = 20
-        Width = 38
+        Width = 41
         Height = 13
         Caption = 'Address'
       end
       object Label13: TLabel
         Left = 16
         Top = 81
-        Width = 27
+        Width = 28
         Height = 13
         Caption = 'Town'
       end
       object Label14: TLabel
         Left = 16
         Top = 112
-        Width = 45
+        Width = 47
         Height = 13
         Caption = 'Postcode'
       end
       object Label15: TLabel
         Left = 16
         Top = 143
-        Width = 33
+        Width = 37
         Height = 13
         Caption = 'County'
       end
       object Label16: TLabel
         Left = 16
         Top = 174
-        Width = 51
+        Width = 54
         Height = 13
         Caption = 'Telephone'
       end
       object Label12: TLabel
         Left = 16
         Top = 204
-        Width = 55
+        Width = 60
         Height = 13
         Caption = 'Fax number'
       end
       object Label17: TLabel
         Left = 16
         Top = 235
-        Width = 64
+        Width = 68
         Height = 13
         Caption = 'Web Address'
       end
       object Label18: TLabel
         Left = 16
         Top = 264
-        Width = 66
+        Width = 71
         Height = 13
         Caption = 'Email Address'
       end
       object Label28: TLabel
         Left = 16
         Top = 320
-        Width = 84
+        Width = 85
         Height = 13
         Caption = 'VAT Reg Number'
       end
       object Label70: TLabel
         Left = 16
         Top = 368
-        Width = 75
+        Width = 77
         Height = 13
         Caption = 'Unique Tax Ref'
       end
@@ -207,49 +207,49 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 118
+        Width = 131
         Height = 13
         Caption = 'Daily Installation Charges'
       end
       object Label2: TLabel
         Left = 8
         Top = 52
-        Width = 124
+        Width = 128
         Height = 13
         Caption = 'Survey/Template Charges'
       end
       object Label7: TLabel
         Left = 8
         Top = 148
-        Width = 126
+        Width = 136
         Height = 13
         Caption = 'Customer Deposit Terms %'
       end
       object Label29: TLabel
         Left = 8
         Top = 228
-        Width = 111
+        Width = 118
         Height = 13
         Caption = 'Upstand Polish Price/m'
       end
       object Label33: TLabel
         Left = 8
         Top = 116
-        Width = 121
+        Width = 130
         Height = 13
         Caption = 'Default Trade Discount %'
       end
       object Label9: TLabel
         Left = 8
         Top = 197
-        Width = 92
+        Width = 97
         Height = 13
         Caption = 'Upstand Thickness'
       end
       object Label3: TLabel
         Left = 11
         Top = 398
-        Width = 58
+        Width = 63
         Height = 13
         Caption = 'Quote Prefix'
         Visible = False
@@ -257,7 +257,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label6: TLabel
         Left = 11
         Top = 428
-        Width = 46
+        Width = 49
         Height = 13
         Caption = 'Job Prefix'
         Visible = False
@@ -265,7 +265,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label43: TLabel
         Left = 345
         Top = 228
-        Width = 108
+        Width = 117
         Height = 13
         Caption = 'Upstand Polish Cost/m'
       end
@@ -300,42 +300,42 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label62: TLabel
         Left = 11
         Top = 288
-        Width = 73
+        Width = 81
         Height = 13
         Caption = 'Quote Valid for:'
       end
       object Label63: TLabel
         Left = 243
         Top = 287
-        Width = 22
+        Width = 23
         Height = 13
         Caption = 'days'
       end
       object Label71: TLabel
         Left = 8
         Top = 84
-        Width = 80
+        Width = 85
         Height = 13
         Caption = 'Delivery Charges'
       end
       object Label74: TLabel
         Left = 11
         Top = 320
-        Width = 102
+        Width = 114
         Height = 13
         Caption = 'Quote follow up days:'
       end
       object Label75: TLabel
         Left = 243
         Top = 319
-        Width = 22
+        Width = 23
         Height = 13
         Caption = 'days'
       end
       object Label76: TLabel
         Left = 11
         Top = 352
-        Width = 100
+        Width = 105
         Height = 13
         Caption = 'Customer Sales Lead'
       end
@@ -488,42 +488,42 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label23: TLabel
         Left = 16
         Top = 4
-        Width = 49
+        Width = 55
         Height = 13
         Caption = 'Availability'
       end
       object Label24: TLabel
         Left = 16
         Top = 100
-        Width = 73
+        Width = 75
         Height = 13
         Caption = 'Payment Terms'
       end
       object Label35: TLabel
         Left = 16
         Top = 291
-        Width = 114
+        Width = 120
         Height = 13
         Caption = 'Invoice Payment Details'
       end
       object Label42: TLabel
         Left = 16
         Top = 387
-        Width = 144
+        Width = 152
         Height = 13
         Caption = 'Retail Invoice Payment Details'
       end
       object Label52: TLabel
         Left = 16
         Top = 196
-        Width = 103
+        Width = 107
         Height = 13
         Caption = 'Retail Payment Terms'
       end
       object Label64: TLabel
         Left = 16
         Top = 483
-        Width = 164
+        Width = 173
         Height = 13
         Caption = 'Factored Invoices Payment Details'
       end
@@ -594,56 +594,56 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label10: TLabel
         Left = 16
         Top = 190
-        Width = 67
+        Width = 72
         Height = 13
         Caption = 'Sales Nominal'
       end
       object Label22: TLabel
         Left = 16
         Top = 220
-        Width = 86
+        Width = 92
         Height = 13
         Caption = 'Purchase Nominal'
       end
       object Label25: TLabel
         Left = 16
         Top = 260
-        Width = 91
+        Width = 92
         Height = 13
         Caption = 'Accounts Package'
       end
       object Label26: TLabel
         Left = 16
         Top = 288
-        Width = 73
+        Width = 81
         Height = 13
         Caption = 'Export directory'
       end
       object Label27: TLabel
         Left = 16
         Top = 316
-        Width = 70
+        Width = 76
         Height = 13
         Caption = 'Last export no.'
       end
       object Label36: TLabel
         Left = 16
         Top = 158
-        Width = 67
+        Width = 71
         Height = 13
         Caption = 'Nominal Level'
       end
       object Label40: TLabel
         Left = 16
         Top = 120
-        Width = 84
+        Width = 85
         Height = 13
         Caption = 'Default VAT Rate'
       end
       object Label67: TLabel
         Left = 16
         Top = 436
-        Width = 73
+        Width = 78
         Height = 13
         Caption = 'Delivery Details'
       end
@@ -718,14 +718,14 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label77: TLabel
           Left = 24
           Top = 96
-          Width = 102
+          Width = 112
           Height = 13
           Caption = 'Drawing Folder Name'
         end
         object Label4: TLabel
           Left = 24
           Top = 64
-          Width = 78
+          Width = 80
           Height = 13
           Caption = 'Inactive Reason'
         end
@@ -837,7 +837,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label5: TLabel
           Left = 24
           Top = 30
-          Width = 84
+          Width = 90
           Height = 13
           Caption = 'Remedial Product'
         end
@@ -909,56 +909,56 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label30: TLabel
         Left = 8
         Top = 48
-        Width = 79
+        Width = 87
         Height = 13
         Caption = 'Production Email'
       end
       object Label31: TLabel
         Left = 8
         Top = 208
-        Width = 74
+        Width = 79
         Height = 13
         Caption = 'Job Documents'
       end
       object Label32: TLabel
         Left = 8
         Top = 177
-        Width = 83
+        Width = 87
         Height = 13
         Caption = 'Sales Documents'
       end
       object Label34: TLabel
         Left = 8
         Top = 85
-        Width = 101
+        Width = 110
         Height = 13
         Caption = 'Customer Documents'
       end
       object Label41: TLabel
         Left = 8
         Top = 147
-        Width = 86
+        Width = 93
         Height = 13
         Caption = 'Quote Documents'
       end
       object Label54: TLabel
         Left = 8
         Top = 240
-        Width = 97
+        Width = 105
         Height = 13
         Caption = 'Contract Documents'
       end
       object Label56: TLabel
         Left = 8
         Top = 16
-        Width = 54
+        Width = 56
         Height = 13
         Caption = 'Sales Email'
       end
       object Label68: TLabel
         Left = 8
         Top = 115
-        Width = 95
+        Width = 104
         Height = 13
         Caption = 'Supplier Documents'
       end
@@ -999,28 +999,28 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label37: TLabel
           Left = 24
           Top = 32
-          Width = 138
+          Width = 149
           Height = 13
           Caption = 'Default Mileage Rate (p/mile)'
         end
         object Label38: TLabel
           Left = 24
           Top = 64
-          Width = 131
+          Width = 141
           Height = 13
           Caption = 'Default Labour Rate (/hour)'
         end
         object Label39: TLabel
           Left = 24
           Top = 96
-          Width = 159
+          Width = 172
           Height = 13
           Caption = 'Default Handling Rate (/sq metre)'
         end
         object Label20: TLabel
           Left = 24
           Top = 128
-          Width = 99
+          Width = 111
           Height = 13
           Caption = 'Waste Cost Multiplier'
         end
@@ -1228,14 +1228,14 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label53: TLabel
           Left = 16
           Top = 28
-          Width = 90
+          Width = 96
           Height = 13
           Caption = 'Scheduling System'
         end
         object Label73: TLabel
           Left = 16
           Top = 60
-          Width = 66
+          Width = 72
           Height = 13
           Caption = 'Shared Folder'
         end
@@ -1249,21 +1249,21 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label65: TLabel
             Left = 24
             Top = 24
-            Width = 46
+            Width = 53
             Height = 13
             Caption = 'Quotation'
           end
           object Label78: TLabel
             Left = 24
             Top = 52
-            Width = 73
+            Width = 80
             Height = 13
             Caption = 'Health && Safety'
           end
           object Label79: TLabel
             Left = 24
             Top = 80
-            Width = 49
+            Width = 52
             Height = 13
             Caption = 'Remedials'
           end
@@ -1385,28 +1385,28 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label44: TLabel
         Left = 8
         Top = 16
-        Width = 96
+        Width = 106
         Height = 13
         Caption = 'Template Conditions'
       end
       object Label45: TLabel
         Left = 8
         Top = 56
-        Width = 60
+        Width = 62
         Height = 13
         Caption = 'Sales T && Cs'
       end
       object Label46: TLabel
         Left = 8
         Top = 96
-        Width = 49
+        Width = 55
         Height = 13
         Caption = 'Availability'
       end
       object Label55: TLabel
         Left = 8
         Top = 156
-        Width = 87
+        Width = 101
         Height = 13
         Caption = 'Order Confirmation'
       end
@@ -1488,14 +1488,14 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label47: TLabel
             Left = 15
             Top = 13
-            Width = 93
+            Width = 103
             Height = 13
             Caption = 'Quotation Preamble'
           end
           object Label60: TLabel
             Left = 15
             Top = 191
-            Width = 164
+            Width = 177
             Height = 13
             Caption = 'Retail Specific Quotation Preamble'
           end
@@ -1547,14 +1547,14 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label48: TLabel
             Left = 15
             Top = 14
-            Width = 134
+            Width = 147
             Height = 13
             Caption = 'Sales Confirmation Preamble'
           end
           object Label69: TLabel
             Left = 15
             Top = 190
-            Width = 252
+            Width = 272
             Height = 13
             Caption = 'Retail/Proforma Specific Sales Confirmation Preamble'
           end
@@ -1582,7 +1582,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label72: TLabel
             Left = 15
             Top = 366
-            Width = 136
+            Width = 155
             Height = 13
             Caption = 'Fitting Confirmation Preamble'
           end
@@ -1623,7 +1623,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label66: TLabel
             Left = 15
             Top = 15
-            Width = 121
+            Width = 129
             Height = 13
             Caption = 'Purchase Order Preamble'
           end
@@ -1671,7 +1671,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label49: TLabel
             Left = 15
             Top = 16
-            Width = 82
+            Width = 86
             Height = 13
             Caption = 'Invoice Preamble'
           end
@@ -1718,56 +1718,56 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label57: TLabel
         Left = 16
         Top = 28
-        Width = 104
+        Width = 115
         Height = 13
         Caption = 'Default Web Operator'
       end
       object Label58: TLabel
         Left = 16
         Top = 68
-        Width = 122
+        Width = 132
         Height = 13
         Caption = 'Default Account Manager'
       end
       object Label59: TLabel
         Left = 16
         Top = 108
-        Width = 90
+        Width = 91
         Height = 13
         Caption = 'Sales Lead Source'
       end
       object Label61: TLabel
         Left = 16
         Top = 148
-        Width = 108
+        Width = 116
         Height = 13
         Caption = 'Image Parent Directory'
       end
       object Label19: TLabel
         Left = 16
         Top = 260
-        Width = 124
+        Width = 133
         Height = 13
         Caption = 'Template Documents  Out'
       end
       object Label21: TLabel
         Left = 16
         Top = 292
-        Width = 116
+        Width = 123
         Height = 13
         Caption = 'Template Documents  In'
       end
       object Label50: TLabel
         Left = 16
         Top = 324
-        Width = 105
+        Width = 118
         Height = 13
         Caption = 'Fitting Documents Out'
       end
       object Label51: TLabel
         Left = 16
         Top = 356
-        Width = 97
+        Width = 108
         Height = 13
         Caption = 'Fitting Documents In'
       end
@@ -1880,8 +1880,6 @@ object frmWTMaintParams: TfrmWTMaintParams
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 669
-    ExplicitWidth = 752
     object btnOK: TBitBtn
       Left = 283
       Top = 4

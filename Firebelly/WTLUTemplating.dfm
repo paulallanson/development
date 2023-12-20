@@ -127,6 +127,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Width = 1266
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       1266
@@ -223,6 +224,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Width = 225
       Height = 39
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 6
       Visible = False
       DesignSize = (

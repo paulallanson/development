@@ -22,6 +22,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Width = 751
     Height = 117
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       751
@@ -70,6 +71,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
@@ -138,6 +140,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 4
       object Label2: TLabel
         Left = 8
@@ -167,6 +170,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 5
       object Label7: TLabel
         Left = 8
@@ -204,6 +208,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
         'Show Rep'
         'Show Address'
         'Rep && Address')
+      ParentBackground = False
       TabOrder = 6
       OnClick = RadioGroup1Click
     end
@@ -232,6 +237,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Width = 751
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       751
@@ -243,6 +249,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         302
@@ -460,6 +467,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Top = 252
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel

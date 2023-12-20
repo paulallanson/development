@@ -16,7 +16,7 @@ object PBMaintPOAddNotesFrm: TPBMaintPOAddNotesFrm
   object DelLabel: TLabel
     Left = 90
     Top = 189
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET

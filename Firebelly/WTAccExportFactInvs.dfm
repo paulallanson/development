@@ -60,14 +60,14 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       object lblInvNumber: TLabel
         Left = 9
         Top = 6
-        Width = 86
+        Width = 91
         Height = 13
         Caption = 'Invoice Number(s)'
       end
       object Label1: TLabel
         Left = 8
         Top = 68
-        Width = 204
+        Width = 194
         Height = 39
         Caption = 
           'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
@@ -151,7 +151,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       object lblDateFrom: TLabel
         Left = 9
         Top = 20
-        Width = 52
+        Width = 56
         Height = 13
         Caption = 'Date From:'
       end
@@ -239,7 +239,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     object lblExpTo: TLabel
       Left = 72
       Top = 16
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'Export To:'
     end

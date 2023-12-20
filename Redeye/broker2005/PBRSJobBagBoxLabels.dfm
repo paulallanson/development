@@ -24,46 +24,47 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Width = 393
     Height = 82
     Caption = 'Delivery details for order '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object CustomerLbl: TLabel
       Left = 80
       Top = 20
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
     object DescrLbl: TLabel
       Left = 80
       Top = 41
-      Width = 42
+      Width = 43
       Height = 13
       Caption = 'DescrLbl'
     end
     object Label2: TLabel
       Left = 8
       Top = 41
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object Label7: TLabel
       Left = 27
       Top = 62
-      Width = 42
+      Width = 47
       Height = 13
       Caption = 'Quantity:'
     end
     object QtyLbl: TLabel
       Left = 80
       Top = 62
-      Width = 30
+      Width = 32
       Height = 13
       Caption = 'QtyLbl'
     end
@@ -74,32 +75,33 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Width = 209
     Height = 171
     Caption = 'Box Quantities'
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 49
       Top = 28
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'Box Quantity'
     end
     object Label4: TLabel
       Left = 17
       Top = 98
-      Width = 92
+      Width = 102
       Height = 13
       Caption = 'Start at box number'
     end
     object Label5: TLabel
       Left = 49
       Top = 61
-      Width = 60
+      Width = 65
       Height = 13
       Caption = 'No. of boxes'
     end
     object Label11: TLabel
       Left = 77
       Top = 132
-      Width = 32
+      Width = 36
       Height = 13
       Caption = 'Format'
     end
@@ -151,18 +153,19 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Width = 177
     Height = 83
     Caption = 'Numbering'
+    ParentBackground = False
     TabOrder = 2
     object Label6: TLabel
       Left = 24
       Top = 28
-      Width = 20
+      Width = 24
       Height = 13
       Caption = 'from'
     end
     object Label8: TLabel
       Left = 19
       Top = 60
-      Width = 26
+      Width = 28
       Height = 13
       Caption = 'Prefix'
     end
@@ -232,11 +235,12 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Top = 82
     Width = 393
     Height = 45
+    ParentBackground = False
     TabOrder = 5
     object Label9: TLabel
       Left = 8
       Top = 20
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end
@@ -310,6 +314,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Width = 177
     Height = 86
     Caption = 'Address'
+    ParentBackground = False
     TabOrder = 7
     object chkAddressOnly: TCheckBox
       Left = 8

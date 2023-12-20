@@ -103,11 +103,12 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           Caption = 'Re-quote'
           Enabled = False
           ImageIndex = 10
+          Wrap = True
           OnClick = btnrequoteClick
         end
         object btnHistory: TToolButton
-          Left = 390
-          Top = 0
+          Left = 0
+          Top = 44
           Hint = 'Show Order History'
           Caption = '&History'
           Enabled = False
@@ -115,8 +116,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnHistoryClick
         end
         object btnseparator1: TToolButton
-          Left = 455
-          Top = 0
+          Left = 65
+          Top = 44
           Width = 8
           Caption = 'btnseparator1'
           ImageIndex = 7
@@ -124,8 +125,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           Visible = False
         end
         object btnAllocatefnc: TToolButton
-          Left = 463
-          Top = 0
+          Left = 73
+          Top = 44
           Caption = 'Al&locate'
           DropdownMenu = pmnAllocate
           Enabled = False
@@ -134,40 +135,40 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnAllocatefncClick
         end
         object btnPicking: TToolButton
-          Left = 547
-          Top = 0
+          Left = 153
+          Top = 44
           Caption = 'Pic&king'
           DropdownMenu = pmnPicking
           Enabled = False
           ImageIndex = 7
         end
         object ToolButton3: TToolButton
-          Left = 612
-          Top = 0
+          Left = 218
+          Top = 44
           Width = 8
           Caption = 'ToolButton3'
           ImageIndex = 7
           Style = tbsSeparator
         end
         object btnProofs: TToolButton
-          Left = 620
-          Top = 0
+          Left = 226
+          Top = 44
           Caption = 'Proo&fs'
           DropdownMenu = pmnProofs
           Enabled = False
           ImageIndex = 7
         end
         object btnDeliveriesSpacer: TToolButton
-          Left = 685
-          Top = 0
+          Left = 291
+          Top = 44
           Width = 8
           Caption = 'btnDeliveriesSpacer'
           ImageIndex = 7
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 693
-          Top = 0
+          Left = 299
+          Top = 44
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
           Enabled = False
@@ -175,8 +176,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
           OnClick = btnDeliveriesClick
         end
         object btnHold: TToolButton
-          Left = 758
-          Top = 0
+          Left = 364
+          Top = 44
           Hint = 'On Hold'
           Caption = '&Hold'
           Enabled = False

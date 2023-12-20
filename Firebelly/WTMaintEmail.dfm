@@ -20,18 +20,19 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Width = 497
     Height = 89
     Caption = 'Supplier'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Email'
     end
@@ -60,11 +61,12 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Top = 104
     Width = 497
     Height = 49
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 20
-      Width = 36
+      Width = 38
       Height = 13
       Caption = 'Subject'
     end

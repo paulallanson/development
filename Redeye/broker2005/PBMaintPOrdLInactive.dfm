@@ -17,7 +17,7 @@ object PBMaintPOrdLInactiveFrm: TPBMaintPOrdLInactiveFrm
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Reason'
   end

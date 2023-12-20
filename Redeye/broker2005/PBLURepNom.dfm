@@ -14,9 +14,9 @@ object PBLURepNomFrm: TPBLURepNomFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 232
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -24,7 +24,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
   object RepLabel: TLabel
     Left = 8
     Top = 8
-    Width = 46
+    Width = 47
     Height = 13
     Caption = 'RepLabel'
     Font.Charset = ANSI_CHARSET

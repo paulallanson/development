@@ -195,7 +195,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object Label5: TLabel
       Left = 11
       Top = 23
-      Width = 33
+      Width = 31
       Height = 13
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
@@ -208,7 +208,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object Label1: TLabel
       Left = 11
       Top = 56
-      Width = 63
+      Width = 55
       Height = 13
       Caption = 'Store Type'
       Font.Charset = ANSI_CHARSET
@@ -274,7 +274,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object StreetLabel: TLabel
       Left = 8
       Top = 16
-      Width = 35
+      Width = 30
       Height = 13
       Caption = 'Street'
       Font.Charset = ANSI_CHARSET
@@ -287,21 +287,21 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object DistrictLabel: TLabel
       Left = 8
       Top = 40
-      Width = 32
+      Width = 36
       Height = 13
       Caption = 'District'
     end
     object TownLabel: TLabel
       Left = 8
       Top = 64
-      Width = 27
+      Width = 28
       Height = 13
       Caption = 'Town'
     end
     object PostLabel: TLabel
       Left = 8
       Top = 88
-      Width = 54
+      Width = 48
       Height = 13
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
@@ -314,7 +314,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object TelLabel: TLabel
       Left = 8
       Top = 112
-      Width = 61
+      Width = 54
       Height = 13
       Caption = 'Telephone'
       Font.Charset = ANSI_CHARSET
@@ -327,7 +327,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object FaxLabel: TLabel
       Left = 8
       Top = 136
-      Width = 57
+      Width = 61
       Height = 13
       Caption = 'Fax Number'
     end

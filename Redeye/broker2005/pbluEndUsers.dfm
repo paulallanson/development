@@ -39,6 +39,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     Width = 1125
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object lblSearch: TLabel
       Left = 16
@@ -71,6 +72,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object btnClose: TButton
         Left = 96
@@ -101,6 +103,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
@@ -124,6 +127,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -147,6 +151,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       Align = alRight
       BevelInner = bvLowered
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         250

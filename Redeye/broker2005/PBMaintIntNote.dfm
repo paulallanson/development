@@ -36,21 +36,21 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 176
       Top = 60
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Time'
     end
@@ -106,7 +106,7 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     object DelLabel: TLabel
       Left = 16
       Top = 20
-      Width = 151
+      Width = 133
       Height = 13
       Caption = 'Delete the above details ?'
       Font.Charset = ANSI_CHARSET

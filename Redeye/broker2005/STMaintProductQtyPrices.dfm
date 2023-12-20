@@ -25,6 +25,7 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Width = 808
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object OKBitBtn: TBitBtn
       Left = 320
@@ -209,32 +210,33 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Width = 808
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Product:'
     end
     object lblProduct: TLabel
       Left = 88
       Top = 8
-      Width = 47
+      Width = 53
       Height = 13
       Caption = 'lblProduct'
     end
     object Label2: TLabel
       Left = 8
       Top = 32
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object lblDescription: TLabel
       Left = 88
       Top = 32
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end

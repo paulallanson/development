@@ -30,6 +30,7 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Items.Strings = (
       'Print My Purchase Orders'
       'Print All Purchase Orders')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end
@@ -47,6 +48,7 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Items.Strings = (
       'All Unprinted'
       'One Purchase Order')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     OnClick = AllOrOneRadioGroupClick
@@ -61,19 +63,20 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object Label3: TLabel
       Left = 8
       Top = 15
-      Width = 63
+      Width = 66
       Height = 13
       Caption = 'Paper Layout'
     end
     object Label4: TLabel
       Left = 8
       Top = 42
-      Width = 62
+      Width = 66
       Height = 13
       Caption = 'Letter Layout'
     end
@@ -100,6 +103,7 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Width = 420
     Height = 201
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object CancelBitBtn: TBitBtn
       Left = 8
@@ -261,12 +265,13 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 6
       object Label1: TLabel
         Left = 8
         Top = 71
-        Width = 232
+        Width = 220
         Height = 39
         Caption = 
           'Enter Order numbers and/or Order ranges separated by commas. For' +
@@ -328,6 +333,7 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Items.Strings = (
       'Purchase Order'
       'Acknowledgement')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 4
     OnClick = TypeRadioGroupClick

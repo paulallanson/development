@@ -19,7 +19,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
   object DelLabel: TLabel
     Left = 48
     Top = 373
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -198,14 +198,14 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
@@ -218,7 +218,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label3: TLabel
       Left = 8
       Top = 72
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
@@ -231,7 +231,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label4: TLabel
       Left = 8
       Top = 124
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Contact Type'
       Font.Charset = ANSI_CHARSET
@@ -244,7 +244,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label6: TLabel
       Left = 8
       Top = 166
-      Width = 31
+      Width = 33
       Height = 13
       Caption = 'Phone'
       Font.Charset = ANSI_CHARSET
@@ -257,7 +257,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label7: TLabel
       Left = 8
       Top = 260
-      Width = 69
+      Width = 75
       Height = 13
       Caption = 'E-Mail address'
       Font.Charset = ANSI_CHARSET
@@ -270,7 +270,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label8: TLabel
       Left = 8
       Top = 98
-      Width = 47
+      Width = 53
       Height = 13
       Caption = 'Salutation'
     end
@@ -284,14 +284,14 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label9: TLabel
       Left = 8
       Top = 218
-      Width = 51
+      Width = 57
       Height = 13
       Caption = 'Mobile No.'
     end
     object Label10: TLabel
       Left = 8
       Top = 280
-      Width = 73
+      Width = 63
       Height = 26
       Alignment = taCenter
       Caption = 'Accept Files of type '

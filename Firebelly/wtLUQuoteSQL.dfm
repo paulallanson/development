@@ -23,9 +23,8 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
     Width = 1289
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 586
-    ExplicitWidth = 1283
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -48,8 +47,8 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 992
       DesignSize = (
         290
         39)

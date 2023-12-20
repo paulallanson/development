@@ -17,7 +17,7 @@ object PBMaintCompanyDocNameFrm: TPBMaintCompanyDocNameFrm
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end

@@ -318,7 +318,7 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'Q' + sAttachmentType;
+              printFileName := 'Q' + EmailArray[irow,1];
               TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
 
               if iQuoteCount = 1 then
@@ -404,7 +404,7 @@ begin
 
               frmwtRPQuote.GetDetails;
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'Q' + sAttachmentType;
+              printFileName := 'Q' + EmailArray[irow,1];
               TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1] + ' - ' + frmwtRPQuote.qryReport.fieldbyname('Reference').asstring;
@@ -614,7 +614,7 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'Q' + sAttachmentType;
+              printFileName := 'Q' + EmailArray[irow,1];
               TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
 
               if iQuoteCount = 1 then
@@ -714,7 +714,7 @@ begin
               frmwtRPQuoteSummary.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'Q' + sAttachmentType;
+              printFileName := 'Q' + EmailArray[irow,1];
               TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1];

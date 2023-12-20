@@ -27,8 +27,8 @@ object frmWTMaintContract: TfrmWTMaintContract
     Width = 988
     Height = 36
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 982
     DesignSize = (
       988
       36)
@@ -132,7 +132,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       ListField = 'Operator_Name'
       ListSource = dtmdlSalesOrder.dtsOperator
       TabOrder = 2
-      ExplicitLeft = 789
     end
     object dtpckDate: TDateTimePicker
       Left = 304
@@ -186,8 +185,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       item
         Width = 50
       end>
-    ExplicitTop = 668
-    ExplicitWidth = 982
   end
   object pnlBottom: TPanel
     Left = 0
@@ -195,9 +192,8 @@ object frmWTMaintContract: TfrmWTMaintContract
     Width = 988
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 627
-    ExplicitWidth = 982
     DesignSize = (
       988
       41)
@@ -260,7 +256,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 774
     end
     object BitBtn2: TBitBtn
       Left = 868
@@ -271,7 +266,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 862
     end
     object chkbxInactive: TCheckBox
       Left = 8
@@ -306,7 +300,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnSaveClick
-      ExplicitLeft = 686
     end
     object edtQuoteValue: TMemo
       Left = 552
@@ -322,7 +315,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       TabOrder = 4
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 546
     end
     object cmbOptions: TComboBox
       Left = 320
@@ -335,7 +327,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       ShowHint = True
       TabOrder = 5
       OnClick = cmbOptionsClick
-      ExplicitWidth = 123
     end
   end
   object pnlHeader: TPanel
@@ -345,8 +336,8 @@ object frmWTMaintContract: TfrmWTMaintContract
     Height = 199
     Align = alTop
     Anchors = [akRight, akBottom]
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 982
     DesignSize = (
       988
       199)
@@ -490,7 +481,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       ShowHint = True
       TabOrder = 1
       OnClick = btnCustomerClick
-      ExplicitLeft = 666
     end
     object edtCustomerName: TEdit
       Left = 104
@@ -501,7 +491,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       ReadOnly = True
       TabOrder = 0
       OnClick = edtCustomerNameClick
-      ExplicitWidth = 555
     end
     object edtDeveloper: TEdit
       Left = 104
@@ -511,7 +500,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 5
       OnChange = edtDeveloperChange
-      ExplicitWidth = 827
     end
     object edtLocation: TEdit
       Left = 104
@@ -521,7 +509,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 6
       OnChange = edtLocationChange
-      ExplicitWidth = 827
     end
     object edtDescription: TEdit
       Left = 104
@@ -531,7 +518,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 9
       OnChange = edtDescriptionChange
-      ExplicitWidth = 827
     end
     object btnContactSearch: TBitBtn
       Left = 549
@@ -550,7 +536,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       ParentFont = False
       TabOrder = 3
       OnClick = btnContactSearchClick
-      ExplicitLeft = 543
     end
     object edtContact: TEdit
       Left = 104
@@ -560,7 +545,6 @@ object frmWTMaintContract: TfrmWTMaintContract
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
       OnChange = edtContactChange
-      ExplicitWidth = 427
     end
     object edtSiteContact: TEdit
       Left = 104
@@ -584,6 +568,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       Width = 990
       Height = 26
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 4
       object Label59: TLabel
         Left = 15
@@ -648,8 +633,6 @@ object frmWTMaintContract: TfrmWTMaintContract
     ActivePage = tsQuotes
     Align = alClient
     TabOrder = 4
-    ExplicitWidth = 982
-    ExplicitHeight = 392
     object tsQuotes: TTabSheet
       Caption = 'Quotes'
       object sgDetails: TStringGrid
@@ -668,8 +651,6 @@ object frmWTMaintContract: TfrmWTMaintContract
         OnDrawCell = sgDetailsDrawCell
         OnKeyUp = sgDetailsKeyUp
         OnSelectCell = sgDetailsSelectCell
-        ExplicitWidth = 974
-        ExplicitHeight = 196
         ColWidths = (
           40
           118)
@@ -680,9 +661,8 @@ object frmWTMaintContract: TfrmWTMaintContract
         Width = 980
         Height = 114
         Align = alBottom
+        ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 250
-        ExplicitWidth = 974
         object lstvwLineDocuments: TListView
           Left = 1
           Top = 1
@@ -709,7 +689,6 @@ object frmWTMaintContract: TfrmWTMaintContract
           SmallImages = imgDocuments
           TabOrder = 0
           OnDblClick = lstvwLineDocumentsDblClick
-          ExplicitWidth = 876
         end
         object Panel3: TPanel
           Left = 1
@@ -718,8 +697,8 @@ object frmWTMaintContract: TfrmWTMaintContract
           Height = 33
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 972
           object Label8: TLabel
             Left = 11
             Top = 10
@@ -763,8 +742,8 @@ object frmWTMaintContract: TfrmWTMaintContract
           Height = 79
           Align = alRight
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 2
-          ExplicitLeft = 877
           object btnLineAttach: TBitBtn
             Left = 13
             Top = 9
@@ -824,10 +803,9 @@ object frmWTMaintContract: TfrmWTMaintContract
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
+        ParentBackground = False
         ParentFont = False
         TabOrder = 2
-        ExplicitTop = 231
-        ExplicitWidth = 974
       end
       object pnlPriceChange: TPanel
         Left = 0
@@ -835,9 +813,8 @@ object frmWTMaintContract: TfrmWTMaintContract
         Width = 980
         Height = 35
         Align = alBottom
+        ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 196
-        ExplicitWidth = 974
         object Label12: TLabel
           Left = 5
           Top = 12
@@ -868,10 +845,11 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 976
+        Width = 980
         Height = 17
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           980
@@ -884,7 +862,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Caption = 'Documents'
         end
         object lblNotes: TLabel
-          Left = 537
+          Left = 541
           Top = 0
           Width = 30
           Height = 13
@@ -929,6 +907,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Height = 356
         Align = alRight
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
         ExplicitLeft = 575
       end
@@ -998,6 +977,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Height = 356
         Align = alRight
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 4
         ExplicitLeft = 591
         object memNotes: TMemo
@@ -1015,6 +995,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Height = 356
           Align = alRight
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
           object bynSpecialInstructions: TBitBtn
             Left = 8
@@ -1043,6 +1024,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Width = 976
         Height = 17
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
       end
       object pnlEventFunc: TPanel
@@ -1051,6 +1033,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Width = 93
         Height = 356
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object btnAddEvents: TBitBtn
           Left = 8
@@ -1089,6 +1072,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Height = 356
         Align = alRight
         Caption = 'pnlEvents'
+        ParentBackground = False
         TabOrder = 2
         object memEventNotes: TMemo
           Left = 1

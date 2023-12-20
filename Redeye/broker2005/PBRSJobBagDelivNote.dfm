@@ -98,32 +98,33 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Width = 385
     Height = 73
     Caption = 'Delivery Details for job bag: '
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object DescrLbl: TLabel
       Left = 88
       Top = 48
-      Width = 42
+      Width = 43
       Height = 13
       Caption = 'DescrLbl'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 24
-      Width = 58
+      Width = 64
       Height = 13
       Caption = 'CustomerLbl'
     end
@@ -133,18 +134,19 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Top = 81
     Width = 385
     Height = 80
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 9
       Top = 54
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end
     object Label3: TLabel
       Left = 35
       Top = 20
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end

@@ -20,6 +20,7 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       577
@@ -43,32 +44,33 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Height = 65
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
     end
     object Label2: TLabel
       Left = 8
       Top = 40
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblDescription: TLabel
       Left = 72
       Top = 40
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
     object lblProduct: TLabel
       Left = 72
       Top = 16
-      Width = 47
+      Width = 53
       Height = 13
       Caption = 'lblProduct'
     end
@@ -117,6 +119,7 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Height = 274
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     object AddBitBtn: TBitBtn
       Left = 14

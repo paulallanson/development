@@ -62,6 +62,7 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
     Width = 289
     Height = 49
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 3
     object AddBitBtn: TBitBtn
       Left = 46

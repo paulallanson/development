@@ -20,14 +20,14 @@ object PBCapCatsFrm: TPBCapCatsFrm
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 53
+    Width = 60
     Height = 13
     Caption = 'Capabilities'
   end
   object Label2: TLabel
     Left = 302
     Top = 8
-    Width = 64
+    Width = 66
     Height = 13
     Anchors = [akRight]
     Caption = 'Product Type'
@@ -104,10 +104,13 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Enabled = False
     Lines.Strings = (
       'Click ADD to add the '
-      'selected capabilities(s) onto '
-      'all the product groups in the '
+      'selected capabilities(s) '
+      'onto '
+      'all the product groups '
+      'in the '
       'selected category.'
-      'Note that this action cannot '
+      'Note that this action '
+      'cannot '
       'be undone.')
     TabOrder = 3
   end

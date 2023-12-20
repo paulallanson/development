@@ -12,7 +12,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
@@ -248,13 +248,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QtyInvoicedLbl: TQRLabel
         Left = 396
         Top = 3
-        Width = 83
+        Width = 85
         Height = 20
         Size.Values = (
           52.916666666666670000
           1047.750000000000000000
           7.937500000000000000
-          219.604166666666700000)
+          224.895833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -984,13 +984,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object lblReference: TQRLabel
         Left = 16
         Top = 158
-        Width = 73
+        Width = 71
         Height = 18
         Size.Values = (
           47.625000000000000000
           42.333333333333330000
           418.041666666666700000
-          193.145833333333300000)
+          187.854166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

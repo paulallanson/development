@@ -20,21 +20,21 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label7: TLabel
     Left = 16
     Top = 59
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end
   object Label2: TLabel
     Left = 16
     Top = 91
-    Width = 76
+    Width = 79
     Height = 13
     Caption = 'Document Type'
   end

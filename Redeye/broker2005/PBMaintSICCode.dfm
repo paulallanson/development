@@ -20,7 +20,7 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
   object DelLabel: TLabel
     Left = 120
     Top = 132
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -42,19 +42,20 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 60
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 59
+      Width = 60
       Height = 13
       Caption = 'SIC Code ID'
     end

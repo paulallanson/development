@@ -18,7 +18,7 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
   object Label1: TLabel
     Left = 16
     Top = 87
-    Width = 52
+    Width = 56
     Height = 13
     Caption = 'From Date:'
   end
@@ -81,6 +81,7 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Items.Strings = (
       'All Departments'
       'One Department')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgDepartmentClick
   end
@@ -89,12 +90,13 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Top = 14
     Width = 304
     Height = 50
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 55
+      Width = 61
       Height = 13
       Caption = 'Department'
     end
@@ -254,12 +256,13 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Top = 76
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

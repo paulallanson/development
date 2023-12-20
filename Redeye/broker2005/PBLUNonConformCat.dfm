@@ -15,9 +15,9 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -53,6 +53,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     Width = 321
     Height = 65
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -164,6 +165,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6

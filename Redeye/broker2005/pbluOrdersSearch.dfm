@@ -21,42 +21,42 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   object Label4: TLabel
     Left = 11
     Top = 26
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object lblFormReference: TLabel
     Left = 11
     Top = 172
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Form Reference'
   end
   object Label6: TLabel
     Left = 11
     Top = 50
-    Width = 90
+    Width = 100
     Height = 13
     Caption = 'Customer Order No'
   end
   object lblQuantity: TLabel
     Left = 11
     Top = 196
-    Width = 68
+    Width = 77
     Height = 13
     Caption = 'Order Quantity'
   end
   object lblProductCode: TLabel
     Left = 11
     Top = 147
-    Width = 65
+    Width = 70
     Height = 13
     Caption = 'Product Code'
   end
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -69,7 +69,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -82,7 +82,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   object Label2: TLabel
     Left = 11
     Top = 343
-    Width = 66
+    Width = 72
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Ordered since'
@@ -90,35 +90,35 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   object lblDescription: TLabel
     Left = 11
     Top = 221
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object lblSupplier: TLabel
     Left = 11
     Top = 74
-    Width = 38
+    Width = 43
     Height = 13
     Caption = 'Supplier'
   end
   object lblDescriptiveRef: TLabel
     Left = 11
     Top = 245
-    Width = 106
+    Width = 110
     Height = 13
     Caption = 'Descriptive Reference'
   end
   object lblJobNumber: TLabel
     Left = 11
     Top = 99
-    Width = 57
+    Width = 62
     Height = 13
     Caption = 'Job Number'
   end
   object lblStatus: TLabel
     Left = 11
     Top = 123
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
@@ -132,14 +132,14 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   object Label5: TLabel
     Left = 11
     Top = 294
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
     Top = 318
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end

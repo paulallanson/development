@@ -20,7 +20,7 @@ object PBMaintCountryFrm: TPBMaintCountryFrm
   object DelLabel: TLabel
     Left = 120
     Top = 98
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -42,12 +42,13 @@ object PBMaintCountryFrm: TPBMaintCountryFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 36
+      Width = 41
       Height = 13
       Caption = 'Country'
     end

@@ -17,14 +17,14 @@ object frmWTLicence: TfrmWTLicence
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 25
+    Width = 27
     Height = 13
     Caption = 'Code'
   end
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 24
+    Width = 26
     Height = 13
     Caption = 'Entry'
   end

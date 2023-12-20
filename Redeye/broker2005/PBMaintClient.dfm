@@ -22,7 +22,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 103
+    Width = 117
     Height = 13
     Caption = 'Client Mail Application'
     Font.Charset = ANSI_CHARSET
@@ -35,7 +35,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label2: TLabel
     Left = 16
     Top = 56
-    Width = 130
+    Width = 144
     Height = 13
     Caption = 'Default Attachment file type'
     Font.Charset = ANSI_CHARSET
@@ -48,7 +48,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label3: TLabel
     Left = 16
     Top = 197
-    Width = 108
+    Width = 118
     Height = 13
     Caption = 'Email storage Directory'
     Font.Charset = ANSI_CHARSET
@@ -61,7 +61,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label4: TLabel
     Left = 16
     Top = 104
-    Width = 139
+    Width = 151
     Height = 13
     Caption = 'Default General Mail Account'
     Font.Charset = ANSI_CHARSET
@@ -74,21 +74,21 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label5: TLabel
     Left = 16
     Top = 344
-    Width = 120
+    Width = 129
     Height = 13
     Caption = 'Activity Reminder Interval'
   end
   object Label6: TLabel
     Left = 88
     Top = 365
-    Width = 21
+    Width = 24
     Height = 13
     Caption = 'mins'
   end
   object Label7: TLabel
     Left = 16
     Top = 152
-    Width = 145
+    Width = 158
     Height = 13
     Caption = 'Default Invoicing Mail Account'
     Font.Charset = ANSI_CHARSET
@@ -101,7 +101,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   object Label8: TLabel
     Left = 16
     Top = 248
-    Width = 89
+    Width = 98
     Height = 13
     Caption = 'Default Email Font:'
   end

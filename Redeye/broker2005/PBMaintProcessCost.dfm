@@ -19,6 +19,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Width = 534
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
@@ -30,7 +31,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     object lblProcessDescription: TLabel
       Left = 80
       Top = 13
-      Width = 101
+      Width = 110
       Height = 13
       Caption = 'lblProcessDescription'
     end
@@ -41,11 +42,12 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Width = 534
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object DelLabel: TLabel
       Left = 93
       Top = 14
-      Width = 125
+      Width = 109
       Height = 13
       Caption = 'Delete these details ?'
       Font.Charset = ANSI_CHARSET
@@ -214,39 +216,40 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Width = 534
     Height = 205
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 16
       Top = 8
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblCostPrice: TLabel
       Left = 16
       Top = 116
-      Width = 48
+      Width = 50
       Height = 13
       Caption = 'Cost Price'
     end
     object Label6: TLabel
       Left = 16
       Top = 148
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
     object Label4: TLabel
       Left = 16
       Top = 174
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
     object Label3: TLabel
       Left = 312
       Top = 174
-      Width = 77
+      Width = 78
       Height = 13
       Caption = 'Price Reference'
     end

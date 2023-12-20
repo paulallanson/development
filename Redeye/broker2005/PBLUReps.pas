@@ -197,7 +197,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.font.color := clwhite;
       (Sender as TDBGrid).Canvas.Brush.color := clGreen;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 end;
 

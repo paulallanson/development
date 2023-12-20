@@ -21,7 +21,7 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
   object DelLabel: TLabel
     Left = 16
     Top = 387
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -192,26 +192,27 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 76
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 192
       Top = 76
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Time'
       Visible = False
@@ -219,14 +220,14 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label4: TLabel
       Left = 8
       Top = 104
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Action'
     end

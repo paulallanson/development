@@ -195,7 +195,7 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     object Label2: TLabel
       Left = 12
       Top = 20
-      Width = 56
+      Width = 60
       Height = 13
       Caption = 'Short Name'
       Font.Charset = ANSI_CHARSET
@@ -208,7 +208,7 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     object Label5: TLabel
       Left = 12
       Top = 43
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET

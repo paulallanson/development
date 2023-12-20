@@ -20,6 +20,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
     Width = 597
     Height = 290
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       597
@@ -34,6 +35,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
@@ -42,12 +44,13 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Top = 78
       Width = 305
       Height = 49
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
         Left = 8
         Top = 4
-        Width = 89
+        Width = 94
         Height = 13
         Caption = 'Customer / Branch'
       end
@@ -86,6 +89,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
         'by Account Manager'
         'by Customer'
         'Do not total')
+      ParentBackground = False
       TabOrder = 2
       OnClick = TotByRadioGroupClick
     end
@@ -108,6 +112,7 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Items.Strings = (
         'All Acc Managers'
         'One Acc Manager')
+      ParentBackground = False
       TabOrder = 4
       OnClick = rgAccManagerClick
     end
@@ -116,12 +121,13 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Top = 14
       Width = 304
       Height = 50
+      ParentBackground = False
       TabOrder = 5
       Visible = False
       object lblRep: TLabel
         Left = 8
         Top = 4
-        Width = 85
+        Width = 91
         Height = 13
         Caption = 'Account Manager'
       end
@@ -155,11 +161,12 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
       Width = 233
       Height = 105
       Caption = 'Invoice Selection  '
+      ParentBackground = False
       TabOrder = 6
       object Label1: TLabel
         Left = 16
         Top = 36
-        Width = 52
+        Width = 56
         Height = 13
         Caption = 'Date From:'
       end
@@ -358,12 +365,13 @@ object PBRSSalesInvVerifFrm: TPBRSSalesInvVerifFrm
     Top = 84
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

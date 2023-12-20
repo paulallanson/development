@@ -20,7 +20,7 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   object DelLabel: TLabel
     Left = 37
     Top = 176
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -34,21 +34,21 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   object Label1: TLabel
     Left = 7
     Top = 52
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 7
     Top = 100
-    Width = 30
+    Width = 35
     Height = 13
     Caption = 'Colour'
   end
   object Label3: TLabel
     Left = 7
     Top = 20
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Status Code'
   end

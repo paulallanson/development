@@ -17,14 +17,14 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   object SuppLabel: TLabel
     Left = 8
     Top = 6
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 275
+    Left = 270
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -264,14 +264,14 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end

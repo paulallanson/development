@@ -133,7 +133,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnAllocatefncClick
         end
         object btnPrintPickNote: TToolButton
-          Left = 547
+          Left = 543
           Top = 0
           Hint = 'Print Picking Note'
           Caption = 'Pic&king'
@@ -142,7 +142,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPrintPickNoteClick
         end
         object btnPickConfirm: TToolButton
-          Left = 612
+          Left = 608
           Top = 0
           Caption = 'Con&firm'
           Enabled = False
@@ -150,7 +150,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPickConfirmClick
         end
         object ToolButton3: TToolButton
-          Left = 677
+          Left = 673
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -158,7 +158,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 685
+          Left = 681
           Top = 0
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
@@ -167,7 +167,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnDeliveriesClick
         end
         object ToolButton2: TToolButton
-          Left = 750
+          Left = 746
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -175,7 +175,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object ToolButton1: TToolButton
-          Left = 758
+          Left = 754
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4

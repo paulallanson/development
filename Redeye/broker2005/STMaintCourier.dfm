@@ -122,25 +122,26 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     Top = 8
     Width = 425
     Height = 209
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 64
+      Width = 70
       Height = 13
       Caption = 'Courier Name'
     end
     object Label2: TLabel
       Left = 8
       Top = 44
-      Width = 88
+      Width = 95
       Height = 13
       Caption = 'Our Account Code'
     end
     object Label3: TLabel
       Left = 8
       Top = 76
-      Width = 85
+      Width = 88
       Height = 13
       Caption = 'Transfer File Type'
     end

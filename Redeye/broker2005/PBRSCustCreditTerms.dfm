@@ -21,14 +21,14 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
   object lblCustomerName: TLabel
     Left = 8
     Top = 24
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end
   object Label1: TLabel
     Left = 8
     Top = 56
-    Width = 37
+    Width = 39
     Height = 13
     Caption = 'Sender:'
   end

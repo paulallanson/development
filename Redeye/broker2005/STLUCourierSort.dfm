@@ -19,19 +19,18 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     340)
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 272
+    Left = 267
     Top = 250
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Anchors = [akLeft, akBottom]
     Caption = 'CountLabel'
-    ExplicitTop = 259
   end
   object lblCourier: TLabel
     Left = 8
     Top = 8
-    Width = 43
+    Width = 51
     Height = 13
     Caption = 'lblCourier'
   end
@@ -67,6 +66,7 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     Height = 65
     Anchors = [akLeft, akBottom]
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -180,6 +180,7 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6

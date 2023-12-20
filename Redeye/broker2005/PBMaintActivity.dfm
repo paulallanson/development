@@ -24,9 +24,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 493
-    ExplicitWidth = 882
     DesignSize = (
       888
       41)
@@ -121,7 +120,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 680
     end
     object btnCancel: TBitBtn
       Left = 774
@@ -198,7 +196,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 768
     end
   end
   object Panel2: TPanel
@@ -207,9 +204,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     Width = 888
     Height = 502
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 882
-    ExplicitHeight = 493
     object pgActivities: TPageControl
       Left = 1
       Top = 161
@@ -218,8 +214,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       ActivePage = tbCurrent
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 880
-      ExplicitHeight = 331
       object tbCurrent: TTabSheet
         Caption = 'Current Activity'
         DesignSize = (
@@ -272,8 +266,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ScrollBars = ssVertical
           TabOrder = 0
           OnChange = memDetailsChange
-          ExplicitWidth = 755
-          ExplicitHeight = 134
         end
         object dblkpType: TDBLookupComboBox
           Left = 80
@@ -285,7 +277,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ListField = 'Activity_Type_Description'
           TabOrder = 1
           OnClick = dblkpTypeClick
-          ExplicitWidth = 219
         end
         object btnActivityType: TButton
           Left = 315
@@ -302,7 +293,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ParentFont = False
           TabOrder = 2
           OnClick = btnActivityTypeClick
-          ExplicitLeft = 309
         end
         object edtSubject: TEdit
           Left = 80
@@ -313,7 +303,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           TabOrder = 3
           Text = 'edtSubject'
           OnChange = edtSubjectChange
-          ExplicitWidth = 755
         end
         object dblkpPriority: TDBLookupComboBox
           Left = 637
@@ -325,8 +314,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ListField = 'Activity_Priority_Description'
           TabOrder = 4
           OnClick = dblkpPriorityClick
-          ExplicitLeft = 631
-          ExplicitTop = 223
         end
         object dblkpStatus: TDBLookupComboBox
           Left = 80
@@ -338,7 +325,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ListField = 'Activity_Status_Description'
           TabOrder = 5
           OnClick = dblkpStatusClick
-          ExplicitTop = 223
         end
         object pnlReminder: TPanel
           Left = 0
@@ -347,9 +333,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Height = 36
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 6
-          ExplicitTop = 267
-          ExplicitWidth = 872
           DesignSize = (
             878
             36)
@@ -453,7 +438,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             ListField = 'Name'
             TabOrder = 2
             OnClick = dblkpAssignedToClick
-            ExplicitLeft = 575
           end
           object Button4: TButton
             Left = 820
@@ -469,7 +453,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 3
-            ExplicitLeft = 814
           end
         end
       end
@@ -482,15 +465,15 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Width = 878
           Height = 163
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 148
-          ExplicitWidth = 874
           object Panel17: TPanel
             Left = 1
             Top = 1
             Width = 876
             Height = 24
             Align = alTop
+            ParentBackground = False
             TabOrder = 0
             ExplicitWidth = 880
             object Label61: TLabel
@@ -607,6 +590,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Width = 882
           Height = 323
           Align = alClient
+          ParentBackground = False
           TabOrder = 0
           object Panel7: TPanel
             Left = 1
@@ -615,6 +599,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Height = 24
             Align = alBottom
             BevelOuter = bvNone
+            ParentBackground = False
             TabOrder = 0
             object lblDocumentDir: TLabel
               Left = 8
@@ -668,8 +653,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       Height = 160
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 880
       DesignSize = (
         886
         160)
@@ -774,7 +759,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ReadOnly = True
         TabOrder = 0
         Text = 'edtCustomer'
-        ExplicitWidth = 427
       end
       object dblkpBranch: TDBLookupComboBox
         Left = 80
@@ -786,7 +770,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ListField = 'Name'
         TabOrder = 1
         OnClick = dblkpBranchClick
-        ExplicitWidth = 427
       end
       object btnBranch: TButton
         Left = 523
@@ -803,7 +786,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 2
         OnClick = btnBranchClick
-        ExplicitLeft = 517
       end
       object pnlModule: TPanel
         Left = 272
@@ -812,8 +794,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Height = 33
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 591
         DesignSize = (
           597
           33)
@@ -842,7 +824,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ReadOnly = True
           TabOrder = 2
           Text = 'edtDescription'
-          ExplicitWidth = 376
         end
         object btnModuleLU: TButton
           Left = 172
@@ -875,7 +856,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 4
         OnClick = Button1Click
-        ExplicitLeft = 309
       end
       object dblkpContact: TDBLookupComboBox
         Left = 80
@@ -887,7 +867,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ListField = 'Name'
         TabOrder = 5
         OnClick = dblkpContactClick
-        ExplicitWidth = 219
       end
       object dblkpModule: TDBLookupComboBox
         Left = 80
@@ -914,7 +893,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 7
         OnClick = btnCustomerClick
-        ExplicitLeft = 517
       end
       object Button2: TButton
         Left = 365
@@ -925,7 +903,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Caption = 'Email:'
         TabOrder = 8
         OnClick = Button2Click
-        ExplicitLeft = 359
       end
     end
   end
@@ -941,8 +918,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       item
         Width = 250
       end>
-    ExplicitTop = 534
-    ExplicitWidth = 882
   end
   object imgIcons: TImageList
     Left = 32

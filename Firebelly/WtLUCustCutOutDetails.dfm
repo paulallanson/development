@@ -78,6 +78,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       739
@@ -181,6 +182,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       739

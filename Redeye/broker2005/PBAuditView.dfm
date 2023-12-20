@@ -16,18 +16,18 @@ object PBAuditViewFrm: TPBAuditViewFrm
     522)
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 608
+    Left = 606
     Top = 440
-    Width = 69
+    Width = 71
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
   end
   object SequenceLabel: TLabel
-    Left = 608
+    Left = 606
     Top = 456
-    Width = 69
+    Width = 71
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
@@ -84,6 +84,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Height = 89
     Anchors = [akLeft, akBottom]
     Caption = 'Include'
+    ParentBackground = False
     TabOrder = 1
     object ProgMoveCheckBox: TCheckBox
       Left = 8
@@ -143,6 +144,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
         'All'
         'Current'
         'Selected')
+      ParentBackground = False
       TabOrder = 0
       OnClick = UsersRadioGroupClick
     end
@@ -166,6 +168,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Height = 41
     Anchors = [akLeft, akBottom]
     Caption = 'Date From'
+    ParentBackground = False
     TabOrder = 3
     object DateFromDateTimePicker: TDateTimePicker
       Left = 8
@@ -194,6 +197,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Height = 41
     Anchors = [akLeft, akBottom]
     Caption = 'Date To'
+    ParentBackground = False
     TabOrder = 4
     object DateToDateTimePicker: TDateTimePicker
       Left = 8

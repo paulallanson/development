@@ -22,7 +22,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
   object Label1: TLabel
     Left = 16
     Top = 156
-    Width = 102
+    Width = 107
     Height = 13
     Caption = 'Last Movement Date:'
   end
@@ -104,14 +104,14 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object Label2: TLabel
       Left = 14
       Top = 27
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 14
       Top = 59
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -235,7 +235,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 65
+      Width = 66
       Height = 13
       Caption = 'Selected Rep'
     end
@@ -282,7 +282,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 89
+      Width = 95
       Height = 13
       Caption = 'Selected Customer'
     end
@@ -457,7 +457,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

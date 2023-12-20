@@ -20,11 +20,12 @@ object PBFileImportFrm: TPBFileImportFrm
     Width = 378
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 145
+      Width = 129
       Height = 13
       Caption = '1. Select the Import type.'
       Font.Charset = DEFAULT_CHARSET
@@ -63,11 +64,12 @@ object PBFileImportFrm: TPBFileImportFrm
     Width = 378
     Height = 56
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object lblStep3: TLabel
       Left = 8
       Top = 8
-      Width = 149
+      Width = 164
       Height = 13
       Caption = '2. Select the file to be imported.'
     end
@@ -94,11 +96,12 @@ object PBFileImportFrm: TPBFileImportFrm
     Width = 378
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 82
+      Width = 90
       Height = 13
       Caption = '3. Run the Import'
     end
@@ -119,11 +122,12 @@ object PBFileImportFrm: TPBFileImportFrm
     Width = 378
     Height = 55
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'Progress: '
     end
@@ -138,7 +142,7 @@ object PBFileImportFrm: TPBFileImportFrm
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'records read.'
       Visible = False
@@ -146,7 +150,7 @@ object PBFileImportFrm: TPBFileImportFrm
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 99
+      Width = 108
       Height = 13
       Caption = 'Reading Product file.'
     end
@@ -174,6 +178,7 @@ object PBFileImportFrm: TPBFileImportFrm
     Width = 378
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 5
     object Cancel2BitBtn: TBitBtn
       Left = 288

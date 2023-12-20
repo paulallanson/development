@@ -23,18 +23,19 @@ object STRSPordFrm: TSTRSPordFrm
     Width = 241
     Height = 89
     Caption = 'Product range'
+    ParentBackground = False
     TabOrder = 4
     object Label2: TLabel
       Left = 24
       Top = 30
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 40
       Top = 62
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -171,18 +172,19 @@ object STRSPordFrm: TSTRSPordFrm
     Width = 241
     Height = 89
     Caption = 'Date range'
+    ParentBackground = False
     TabOrder = 7
     object Label4: TLabel
       Left = 24
       Top = 27
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label5: TLabel
       Left = 39
       Top = 56
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -260,6 +262,7 @@ object STRSPordFrm: TSTRSPordFrm
       'Product'
       'Customer'
       'Supplier')
+    ParentBackground = False
     TabOrder = 5
     OnClick = RadioGroup1Click
   end
@@ -272,6 +275,7 @@ object STRSPordFrm: TSTRSPordFrm
     Items.Strings = (
       'Summary'
       'Detail')
+    ParentBackground = False
     TabOrder = 6
     OnClick = RDGrpSummClick
   end
@@ -289,6 +293,7 @@ object STRSPordFrm: TSTRSPordFrm
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = SuppRadioGroupClick
@@ -303,13 +308,14 @@ object STRSPordFrm: TSTRSPordFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     Visible = False
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 83
+      Width = 89
       Height = 13
       Caption = 'Selected Supplier'
     end
@@ -357,6 +363,7 @@ object STRSPordFrm: TSTRSPordFrm
     Items.Strings = (
       'Delivery Quantity'
       'Order Quantity')
+    ParentBackground = False
     TabOrder = 9
     OnClick = RadioGroup2Click
   end
@@ -429,12 +436,13 @@ object STRSPordFrm: TSTRSPordFrm
     Top = 115
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 15
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -461,6 +469,7 @@ object STRSPordFrm: TSTRSPordFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     OnClick = CustRadioGroupClick
@@ -475,13 +484,14 @@ object STRSPordFrm: TSTRSPordFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
     Visible = False
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 89
+      Width = 95
       Height = 13
       Caption = 'Selected Customer'
     end

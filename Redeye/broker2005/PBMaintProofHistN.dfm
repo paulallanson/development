@@ -29,7 +29,7 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
   object PurchOrdLabel: TLabel
     Left = 8
     Top = 6
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
     Font.Charset = ANSI_CHARSET
@@ -56,7 +56,7 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end

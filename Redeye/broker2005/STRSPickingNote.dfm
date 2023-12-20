@@ -21,8 +21,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Width = 652
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 648
     object Label3: TLabel
       Left = 8
       Top = 8
@@ -72,9 +72,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Width = 652
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 363
-    ExplicitWidth = 648
     DesignSize = (
       652
       51)
@@ -131,7 +130,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 0
       OnClick = PreviewbitbtnClick
-      ExplicitLeft = 386
     end
     object PrintBitBtn: TBitBtn
       Left = 479
@@ -163,7 +161,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 475
     end
     object CancelBitBtn: TBitBtn
       Left = 568
@@ -182,7 +179,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 2
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 564
     end
   end
   object Panel3: TPanel
@@ -191,8 +187,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Width = 652
     Height = 56
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 648
     object Label2: TLabel
       Left = 8
       Top = 4
@@ -272,8 +268,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
     OnSelectCell = sgDetailsSelectCell
-    ExplicitWidth = 648
-    ExplicitHeight = 250
     ColWidths = (
       119
       203

@@ -21,49 +21,49 @@ object frmWTMaintOperators: TfrmWTMaintOperators
   object Label1: TLabel
     Left = 8
     Top = 15
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 45
-    Width = 57
+    Width = 61
     Height = 13
     Caption = 'Login Name'
   end
   object Label3: TLabel
     Left = 8
     Top = 169
-    Width = 31
+    Width = 36
     Height = 13
     Caption = 'Mobile'
   end
   object Label5: TLabel
     Left = 8
     Top = 108
-    Width = 40
+    Width = 43
     Height = 13
     Caption = 'Job Title'
   end
   object Label6: TLabel
     Left = 8
     Top = 140
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Telephone'
   end
   object Label7: TLabel
     Left = 8
     Top = 198
-    Width = 25
+    Width = 27
     Height = 13
     Caption = 'Email'
   end
   object Label8: TLabel
     Left = 8
     Top = 77
-    Width = 46
+    Width = 49
     Height = 13
     Caption = 'Password'
   end
@@ -149,7 +149,7 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     object Label4: TLabel
       Left = 16
       Top = 36
-      Width = 34
+      Width = 37
       Height = 13
       Caption = 'Quotes'
     end

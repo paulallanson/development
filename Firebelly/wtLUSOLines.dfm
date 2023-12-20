@@ -114,14 +114,14 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Sales Order'
     end
     object Label2: TLabel
       Left = 184
       Top = 12
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end

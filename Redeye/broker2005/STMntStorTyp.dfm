@@ -194,7 +194,7 @@ object STMntStorTypFrm: TSTMntStorTypFrm
     object Label5: TLabel
       Left = 43
       Top = 28
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
@@ -207,7 +207,7 @@ object STMntStorTypFrm: TSTMntStorTypFrm
     object ReplenLabel: TLabel
       Left = 128
       Top = 108
-      Width = 25
+      Width = 27
       Height = 13
       Caption = 'Store'
     end

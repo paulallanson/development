@@ -19,7 +19,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
   object Label7: TLabel
     Left = 16
     Top = 16
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Warehouse:'
   end
@@ -39,6 +39,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       'New Pallet labels'
       'Reprint Pallet labels'
       'Bin Location labels')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     OnClick = rdgrpLabelTypeClick
@@ -134,18 +135,19 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Width = 217
     Height = 85
     Caption = 'Pallet Range'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 24
       Top = 56
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -174,18 +176,19 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Width = 217
     Height = 85
     Caption = 'Bin Range'
+    ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 24
       Top = 24
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label4: TLabel
       Left = 24
       Top = 56
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -248,18 +251,19 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Width = 217
     Height = 85
     Caption = 'New Pallets labels'
+    ParentBackground = False
     TabOrder = 5
     object Label5: TLabel
       Left = 24
       Top = 24
-      Width = 71
+      Width = 75
       Height = 13
       Caption = 'Next Pallet No.'
     end
     object Label6: TLabel
       Left = 24
       Top = 53
-      Width = 79
+      Width = 88
       Height = 13
       Caption = 'Number of labels'
     end

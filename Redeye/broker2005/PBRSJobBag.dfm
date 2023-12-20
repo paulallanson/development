@@ -20,6 +20,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     Width = 412
     Height = 207
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object CancelBitBtn: TBitBtn
       Left = 9
@@ -158,7 +159,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 39
+        Width = 40
         Height = 13
         Caption = 'Job Bag'
         Font.Charset = ANSI_CHARSET
@@ -171,21 +172,21 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 67
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object Label3: TLabel
         Left = 8
         Top = 111
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end
@@ -269,6 +270,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
         Items.Strings = (
           'Print Job Bag Charges'
           'Client Schedule')
+        ParentBackground = False
         TabOrder = 5
         OnClick = rdgReportTypeClick
       end

@@ -16,7 +16,7 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
   object DelLabel: TLabel
     Left = 110
     Top = 128
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -36,12 +36,13 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 46
+      Width = 53
       Height = 13
       Caption = 'Operation'
     end

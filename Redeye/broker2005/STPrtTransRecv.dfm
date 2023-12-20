@@ -17,14 +17,14 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
   object BinLabel: TLabel
     Left = 8
     Top = 108
-    Width = 15
+    Width = 16
     Height = 13
     Caption = 'Bin'
   end
   object QtyLabel: TLabel
     Left = 8
     Top = 12
-    Width = 59
+    Width = 60
     Height = 13
     Caption = 'No of Packs'
   end

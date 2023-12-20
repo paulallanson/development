@@ -16,9 +16,9 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -54,6 +54,7 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     Width = 321
     Height = 73
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -165,6 +166,7 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6

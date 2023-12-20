@@ -27,8 +27,6 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       item
         Width = 250
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 906
   end
   object Panel1: TPanel
     Left = 0
@@ -36,14 +34,15 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Width = 912
     Height = 113
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 906
     object GroupBox2: TGroupBox
       Left = 16
       Top = 8
       Width = 233
       Height = 89
       Caption = 'Date Selection '
+      ParentBackground = False
       TabOrder = 0
       object lblDateFrom: TLabel
         Left = 9
@@ -216,9 +215,8 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Width = 912
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 372
-    ExplicitWidth = 906
     object lblExpTo: TLabel
       Left = 8
       Top = 16
