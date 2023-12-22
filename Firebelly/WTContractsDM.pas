@@ -748,7 +748,7 @@ begin
             begin
               QuoteNumber := FDataModule.GetNextCQNumber;
               Parambyname('Quote_Number').asfloat   := QuoteNumber;
-              Parambyname('Original_Quote').asfloat := QuoteNumber;
+              Parambyname('Original_Quote').asInteger := Trunc(QuoteNumber);
               Parambyname('Contract_Quote_Number').asfloat := QuoteNumber;
 
               OriginalQuote := trunc(QuoteNumber);
@@ -909,7 +909,7 @@ begin
     begin
       close;
 //      parambyname('Last_Contract_Quote_number').asinteger := dbKey;
-      parambyname('Last_Contract_Quote_number').asfloat := QuoteNumber;
+      parambyname('Last_Contract_Quote_number').asInteger := trunc(QuoteNumber);
       execsql;
     end;
 end;
