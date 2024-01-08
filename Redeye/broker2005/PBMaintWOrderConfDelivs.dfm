@@ -21,67 +21,68 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Height = 193
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 45
-      Width = 33
+      Width = 38
       Height = 13
       Caption = 'Courier'
     end
     object Label2: TLabel
       Left = 8
       Top = 74
-      Width = 36
+      Width = 35
       Height = 13
       Caption = 'Service'
     end
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 402
       Top = 16
-      Width = 72
+      Width = 75
       Height = 13
       Caption = 'Despatch Date'
     end
     object Label7: TLabel
       Left = 8
       Top = 158
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
     end
     object Label8: TLabel
       Left = 400
       Top = 158
-      Width = 90
+      Width = 94
       Height = 13
       Caption = 'Pack Weight (gms)'
     end
     object lblHandoverDate: TLabel
       Left = 402
       Top = 74
-      Width = 73
+      Width = 77
       Height = 13
       Caption = 'Handover Date'
     end
     object Label14: TLabel
       Left = 8
       Top = 101
-      Width = 19
+      Width = 21
       Height = 13
       Caption = 'Sort'
     end
     object Label15: TLabel
       Left = 8
       Top = 132
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Speed'
     end
@@ -259,11 +260,12 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Width = 615
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object lblDelete: TLabel
       Left = 112
       Top = 12
-      Width = 121
+      Width = 106
       Height = 13
       Caption = 'Delete these details?'
       Font.Charset = DEFAULT_CHARSET
@@ -304,6 +306,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Height = 87
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 1
     object rdgrpAccountType: TRadioGroup
       Left = 8
@@ -314,6 +317,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Items.Strings = (
         'Client Account'
         'Our Account')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpAccountTypeClick
     end
@@ -323,18 +327,19 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Width = 369
       Height = 65
       Enabled = False
+      ParentBackground = False
       TabOrder = 1
       object Label11: TLabel
         Left = 8
         Top = 16
-        Width = 68
+        Width = 72
         Height = 13
         Caption = 'Account Code'
       end
       object Label12: TLabel
         Left = 8
         Top = 40
-        Width = 71
+        Width = 74
         Height = 13
         Caption = 'Account Name'
       end
@@ -365,32 +370,33 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Height = 165
     Align = alClient
     Enabled = False
+    ParentBackground = False
     TabOrder = 2
     object Label6: TLabel
       Left = 8
       Top = 36
-      Width = 38
+      Width = 41
       Height = 13
       Caption = 'Address'
     end
     object Label9: TLabel
       Left = 8
       Top = 140
-      Width = 45
+      Width = 47
       Height = 13
       Caption = 'Postcode'
     end
     object Label10: TLabel
       Left = 8
       Top = 114
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'City/Town'
     end
     object Label5: TLabel
       Left = 8
       Top = 12
-      Width = 69
+      Width = 72
       Height = 13
       Caption = 'Delivery Name'
     end
@@ -453,11 +459,12 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     Width = 615
     Height = 35
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object Label13: TLabel
       Left = 384
       Top = 10
-      Width = 105
+      Width = 110
       Height = 13
       Caption = 'Actual Despatch Date'
     end

@@ -20,14 +20,14 @@ object STRSProductListFrm: TSTRSProductListFrm
   object Label4: TLabel
     Left = 8
     Top = 196
-    Width = 154
+    Width = 165
     Height = 13
     Caption = 'Apply Discount to Sales Price of:'
   end
   object Label5: TLabel
     Left = 280
     Top = 196
-    Width = 8
+    Width = 9
     Height = 13
     Caption = '%'
   end
@@ -58,14 +58,14 @@ object STRSProductListFrm: TSTRSProductListFrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 60
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -152,7 +152,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 114
+      Width = 122
       Height = 13
       Caption = 'Selected Product Group'
     end
@@ -334,7 +334,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

@@ -22,9 +22,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Width = 784
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 461
-    ExplicitWidth = 778
     DesignSize = (
       784
       41)
@@ -37,7 +36,6 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 685
     end
   end
   object pnlLeft: TPanel
@@ -46,14 +44,15 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Width = 337
     Height = 470
     Align = alLeft
+    ParentBackground = False
     TabOrder = 1
-    ExplicitHeight = 461
     object Panel5: TPanel
       Left = 1
       Top = 1
       Width = 335
       Height = 72
       Align = alTop
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -123,8 +122,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Height = 49
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 411
       DesignSize = (
         335
         49)
@@ -162,17 +161,16 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Width = 355
     Height = 470
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 349
-    ExplicitHeight = 461
     object Panel6: TPanel
       Left = 1
       Top = 1
       Width = 353
       Height = 72
       Align = alTop
+      ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 347
       object Label2: TLabel
         Left = 16
         Top = 16
@@ -241,9 +239,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Height = 49
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 411
-      ExplicitWidth = 347
       DesignSize = (
         353
         49)
@@ -281,8 +278,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Width = 92
     Height = 470
     Align = alLeft
+    ParentBackground = False
     TabOrder = 3
-    ExplicitHeight = 461
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
@@ -383,8 +380,6 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Width = 784
     Height = 19
     Panels = <>
-    ExplicitTop = 502
-    ExplicitWidth = 778
   end
   object qryProductsFrom: TFDQuery
     ConnectionName = 'PB'

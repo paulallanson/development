@@ -20,21 +20,21 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 49
+    Width = 50
     Height = 13
     Caption = 'Hex Value'
   end
   object Label3: TLabel
     Left = 248
     Top = 47
-    Width = 68
+    Width = 75
     Height = 13
     Caption = 'Sample Colour'
   end

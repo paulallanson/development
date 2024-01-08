@@ -20,7 +20,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
   object Label1: TLabel
     Left = 8
     Top = 88
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
@@ -35,14 +35,14 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     object Label2: TLabel
       Left = 24
       Top = 30
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 40
       Top = 62
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -106,7 +106,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

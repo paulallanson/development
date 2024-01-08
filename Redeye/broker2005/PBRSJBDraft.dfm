@@ -25,28 +25,28 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 8
       Top = 48
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object lblDescription: TLabel
       Left = 72
       Top = 48
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
     object lblCustomer: TLabel
       Left = 72
       Top = 24
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end

@@ -20,7 +20,7 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
   object DelLabel: TLabel
     Left = 29
     Top = 98
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -34,14 +34,14 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 7
     Top = 52
-    Width = 56
+    Width = 60
     Height = 13
     Caption = 'Short Name'
   end

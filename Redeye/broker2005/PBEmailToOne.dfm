@@ -17,21 +17,21 @@ object PBEmailToOneFrm: TPBEmailToOneFrm
   object FaxDescrLabel: TLabel
     Left = 64
     Top = 10
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Emailing To:'
   end
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 42
+    Width = 47
     Height = 13
     Caption = 'Emailing:'
   end
   object Label2: TLabel
     Left = 8
     Top = 42
-    Width = 41
+    Width = 44
     Height = 13
     Caption = 'Address:'
   end

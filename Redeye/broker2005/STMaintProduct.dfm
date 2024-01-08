@@ -38,28 +38,28 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         object Label1: TLabel
           Left = 8
           Top = 40
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Code'
         end
         object Label2: TLabel
           Left = 8
           Top = 67
-          Width = 53
+          Width = 59
           Height = 13
           Caption = 'Description'
         end
         object Label11: TLabel
           Left = 8
           Top = 17
-          Width = 44
+          Width = 49
           Height = 13
           Caption = 'Customer'
         end
         object Label8: TLabel
           Left = 8
           Top = 120
-          Width = 29
+          Width = 33
           Height = 13
           Caption = 'Group'
         end
@@ -75,7 +75,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         object Label5: TLabel
           Left = 8
           Top = 299
-          Width = 49
+          Width = 48
           Height = 13
           Caption = 'VAT Code'
         end
@@ -97,7 +97,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         object Label13: TLabel
           Left = 363
           Top = 353
-          Width = 47
+          Width = 52
           Height = 13
           Caption = 'Markup %'
         end
@@ -111,28 +111,28 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         object Label4: TLabel
           Left = 8
           Top = 353
-          Width = 67
+          Width = 66
           Height = 13
           Caption = 'Sell Price (PK)'
         end
         object Label3: TLabel
           Left = 8
           Top = 382
-          Width = 75
+          Width = 81
           Height = 13
           Caption = 'Cost Uplift Type'
         end
         object Label14: TLabel
           Left = 365
           Top = 381
-          Width = 24
+          Width = 29
           Height = 13
           Caption = 'Uplift'
         end
         object Label10: TLabel
           Left = 8
           Top = 409
-          Width = 75
+          Width = 83
           Height = 13
           Caption = 'Unit of Measure'
         end
@@ -157,28 +157,28 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         object Label15: TLabel
           Left = 8
           Top = 437
-          Width = 84
+          Width = 88
           Height = 13
           Caption = 'Invoice Price Unit'
         end
         object Label16: TLabel
           Left = 8
           Top = 243
-          Width = 64
+          Width = 66
           Height = 13
           Caption = 'Product Type'
         end
         object Label17: TLabel
           Left = 8
           Top = 93
-          Width = 76
+          Width = 80
           Height = 13
           Caption = 'Form Reference'
         end
         object lblPrefix: TLabel
           Left = 376
           Top = 40
-          Width = 26
+          Width = 28
           Height = 13
           Caption = 'Prefix'
         end
@@ -716,14 +716,14 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           object lblFSCClaim: TLabel
             Left = 8
             Top = 6
-            Width = 48
+            Width = 50
             Height = 13
             Caption = 'FSC Claim'
           end
           object lblFSCMix: TLabel
             Left = 280
             Top = 6
-            Width = 27
+            Width = 30
             Height = 13
             Caption = '% Mix'
           end
@@ -913,7 +913,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     object lblDelete: TLabel
       Left = 190
       Top = 16
-      Width = 151
+      Width = 133
       Height = 13
       Caption = 'Delete the above details ?'
       Font.Charset = ANSI_CHARSET

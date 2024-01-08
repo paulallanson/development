@@ -18,7 +18,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   object SelPOLabel: TLabel
     Left = 110
     Top = 16
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Purchase Order:'
   end
@@ -33,7 +33,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   object Label7: TLabel
     Left = 36
     Top = 100
-    Width = 61
+    Width = 66
     Height = 13
     Caption = 'Enquiry Date'
   end
@@ -61,7 +61,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   object Label3: TLabel
     Left = 26
     Top = 132
-    Width = 69
+    Width = 74
     Height = 13
     Caption = 'Date Required'
   end
@@ -98,21 +98,21 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   object Label1: TLabel
     Left = 21
     Top = 16
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Purchase Order:'
   end
   object Label2: TLabel
     Left = 16
     Top = 40
-    Width = 82
+    Width = 90
     Height = 13
     Caption = 'Customer Details:'
   end
   object Label4: TLabel
     Left = 42
     Top = 64
-    Width = 56
+    Width = 62
     Height = 13
     Caption = 'Description:'
   end

@@ -23,7 +23,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 79
+    Width = 85
     Height = 13
     Caption = 'Sales Order No'#39's'
   end

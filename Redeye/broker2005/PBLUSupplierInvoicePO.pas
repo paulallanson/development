@@ -505,19 +505,19 @@ begin
   if (dbgDetails.datasource.dataset.fieldByName('Needs_Authorising').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clLime;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Authorised_By').AsInteger <> 0) then
     begin
       (Sender as TDBGrid).Canvas.font.style := [fsBold];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if (Column.Title.Caption <> 'Order') and

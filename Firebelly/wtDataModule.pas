@@ -55,8 +55,6 @@ type
     lkpPriceBasisDescription: TWideStringField;
     lkpPriceBasisQty_Basis_Required: TWideStringField;
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
-    procedure dtbsWorktopsLogin(AConnection: TFDCustomConnection;
-      AParams: TFDConnectionDefParams);
     procedure dtbsWorktopsBeforeConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
   private
@@ -781,10 +779,6 @@ end;
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
 begin
   SetConnectionMapRules(dtbsWorktops);
-end;
-
-procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
-begin
 {$IFDEF DEMO}
   UserName := 'admin';
   Password := '';
@@ -793,8 +787,8 @@ begin
 {$ELSE}
   UserName := frmWTLogin.UserEdit.Text;
   Password := Trim(frmWTLogin.PasswordEdit.Text);
-  AParams.UserName := Username;
-  AParams.Password := Password;
+  dtbsWorktops.Params.UserName := Username;
+  dtbsWorktops.Params.Password := Password;
 {$ENDIF}
 end;
 

@@ -21,28 +21,28 @@ object frmWTMaintFitters: TfrmWTMaintFitters
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 54
+    Width = 59
     Height = 13
     Caption = 'Fitter Name'
   end
   object Label1: TLabel
     Left = 8
     Top = 52
-    Width = 48
+    Width = 51
     Height = 13
     Caption = 'Phone No'
   end
   object Label2: TLabel
     Left = 8
     Top = 78
-    Width = 48
+    Width = 54
     Height = 13
     Caption = 'Mobile No'
   end
   object Label3: TLabel
     Left = 8
     Top = 104
-    Width = 66
+    Width = 71
     Height = 13
     Caption = 'Email Address'
   end

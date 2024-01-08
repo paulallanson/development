@@ -78,7 +78,7 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 32
+      Width = 35
       Height = 13
       Caption = 'Details'
     end
@@ -92,21 +92,21 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
     object Label3: TLabel
       Left = 8
       Top = 76
-      Width = 21
+      Width = 18
       Height = 13
       Caption = 'VAT'
     end
     object Nominal: TLabel
       Left = 272
       Top = 76
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object Label4: TLabel
       Left = 8
       Top = 108
-      Width = 74
+      Width = 79
       Height = 13
       Caption = 'Purchase Order'
     end

@@ -221,6 +221,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
+        Alignment = taLeftJustify
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Number'
@@ -282,6 +283,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     Width = 912
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -306,6 +308,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         290

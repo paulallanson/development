@@ -78,9 +78,8 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
     Width = 697
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 292
-    ExplicitWidth = 691
     DesignSize = (
       697
       41)
@@ -109,7 +108,6 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 610
     end
     object edtSearch: TEdit
       Left = 104
@@ -127,7 +125,6 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 424
     end
     object btnSelect: TButton
       Left = 528
@@ -138,7 +135,6 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 522
     end
   end
   object stsbrDetails: TStatusBar
@@ -153,8 +149,6 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       item
         Width = 50
       end>
-    ExplicitTop = 333
-    ExplicitWidth = 691
   end
   object tmrSearch: TTimer
     Enabled = False

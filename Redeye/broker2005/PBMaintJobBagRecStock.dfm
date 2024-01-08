@@ -21,46 +21,47 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Height = 89
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 24
       Top = 16
-      Width = 39
+      Width = 40
       Height = 13
       Caption = 'Job Bag'
     end
     object lblJobBag: TLabel
       Left = 96
       Top = 16
-      Width = 46
+      Width = 50
       Height = 13
       Caption = 'lblJobBag'
     end
     object Label3: TLabel
       Left = 24
       Top = 64
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblDescription: TLabel
       Left = 96
       Top = 64
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
     object Label6: TLabel
       Left = 24
       Top = 40
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object lblCustomerName: TLabel
       Left = 96
       Top = 40
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
@@ -71,6 +72,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Width = 95
     Height = 303
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
     object btnReconcile: TButton
       Left = 12
@@ -87,6 +89,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Width = 805
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       805
@@ -98,6 +101,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
     end
     object btnOK: TBitBtn

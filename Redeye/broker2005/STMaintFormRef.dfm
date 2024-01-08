@@ -31,14 +31,14 @@ object frmSTMaintFormRef: TfrmSTMaintFormRef
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label6: TLabel
       Left = 8
       Top = 72
-      Width = 76
+      Width = 80
       Height = 13
       Caption = 'Form Reference'
       Font.Charset = ANSI_CHARSET
@@ -51,14 +51,14 @@ object frmSTMaintFormRef: TfrmSTMaintFormRef
     object Label8: TLabel
       Left = 8
       Top = 100
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label3: TLabel
       Left = 8
       Top = 18
-      Width = 81
+      Width = 82
       Height = 13
       Caption = 'Stock Reference'
     end

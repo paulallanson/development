@@ -120,6 +120,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     Width = 857
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
@@ -143,6 +144,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         185
@@ -325,6 +327,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8

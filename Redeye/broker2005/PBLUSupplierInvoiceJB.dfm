@@ -28,8 +28,6 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       item
         Width = 50
       end>
-    ExplicitTop = 474
-    ExplicitWidth = 768
   end
   object Panel3: TPanel
     Left = 0
@@ -38,9 +36,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     Height = 91
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 383
-    ExplicitWidth = 768
     object Panel1: TPanel
       Left = 0
       Top = 9
@@ -48,6 +45,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       Height = 73
       BevelOuter = bvNone
       Caption = 'Panel1'
+      ParentBackground = False
       TabOrder = 0
       object CustomerGroupBox: TGroupBox
         Left = 8
@@ -55,6 +53,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         Width = 285
         Height = 60
         Caption = 'Type here to narrow the search'
+        ParentBackground = False
         TabOrder = 0
         object Label1: TLabel
           Left = 8
@@ -80,14 +79,15 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       Height = 91
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 447
       object GroupBox2: TGroupBox
         Left = 212
         Top = 6
         Width = 105
         Height = 76
         Caption = 'Function'
+        ParentBackground = False
         TabOrder = 0
         object btnSelect: TBitBtn
           Left = 14
@@ -173,6 +173,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         Width = 209
         Height = 76
         Caption = 'Job Bag'
+        ParentBackground = False
         TabOrder = 1
         object Label2: TLabel
           Left = 34
@@ -215,9 +216,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel4'
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 768
-    ExplicitHeight = 383
     object dbgJB: TDBGrid
       Left = 0
       Top = 0

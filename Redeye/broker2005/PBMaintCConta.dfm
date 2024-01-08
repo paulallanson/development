@@ -24,7 +24,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object DelLabel: TLabel
     Left = 60
     Top = 559
-    Width = 151
+    Width = 133
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete the above details ?'
@@ -38,7 +38,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object Label1: TLabel
     Left = 9
     Top = 12
-    Width = 53
+    Width = 50
     Height = 13
     Caption = 'Customer'
     Font.Charset = ANSI_CHARSET
@@ -51,7 +51,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object Label2: TLabel
     Left = 9
     Top = 36
-    Width = 45
+    Width = 39
     Height = 13
     Caption = 'Branch '
     Font.Charset = ANSI_CHARSET
@@ -64,7 +64,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object Label3: TLabel
     Left = 9
     Top = 60
-    Width = 33
+    Width = 31
     Height = 13
     Caption = 'Name'
     Font.Charset = ANSI_CHARSET
@@ -252,7 +252,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label5: TLabel
           Left = 9
           Top = 20
-          Width = 58
+          Width = 53
           Height = 13
           Caption = 'Salutation'
           Font.Charset = ANSI_CHARSET
@@ -265,7 +265,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label4: TLabel
           Left = 9
           Top = 116
-          Width = 77
+          Width = 68
           Height = 13
           Caption = 'Contact Type'
           Font.Charset = ANSI_CHARSET
@@ -278,7 +278,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label6: TLabel
           Left = 9
           Top = 44
-          Width = 31
+          Width = 33
           Height = 13
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
@@ -291,7 +291,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label7: TLabel
           Left = 9
           Top = 216
-          Width = 85
+          Width = 78
           Height = 13
           Caption = 'E-Mail Address'
           Font.Charset = ANSI_CHARSET
@@ -304,14 +304,14 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object MobileLabel: TLabel
           Left = 9
           Top = 92
-          Width = 51
+          Width = 57
           Height = 13
           Caption = 'Mobile No.'
         end
         object lblcontactLevel: TLabel
           Left = 9
           Top = 140
-          Width = 66
+          Width = 68
           Height = 13
           Caption = 'Contact Level'
         end
@@ -340,14 +340,14 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label10: TLabel
           Left = 9
           Top = 164
-          Width = 30
+          Width = 32
           Height = 13
           Caption = 'Status'
         end
         object Label11: TLabel
           Left = 9
           Top = 189
-          Width = 80
+          Width = 90
           Height = 13
           Caption = 'Default Margin %'
         end
@@ -544,7 +544,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object lblContName: TLabel
             Left = 12
             Top = 20
-            Width = 84
+            Width = 77
             Height = 13
             Caption = 'Account Name'
             Font.Charset = ANSI_CHARSET
@@ -557,7 +557,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object Label8: TLabel
             Left = 12
             Top = 44
-            Width = 95
+            Width = 89
             Height = 13
             Caption = 'Account Number'
             Font.Charset = ANSI_CHARSET
@@ -570,7 +570,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object lblAccExp: TLabel
             Left = 12
             Top = 68
-            Width = 66
+            Width = 59
             Height = 13
             Caption = 'Expiry Date'
             Font.Charset = ANSI_CHARSET
@@ -583,7 +583,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object Label12: TLabel
             Left = 164
             Top = 68
-            Width = 5
+            Width = 4
             Height = 13
             Caption = '/'
           end
@@ -682,14 +682,14 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       object Label15: TLabel
         Left = 0
         Top = 8
-        Width = 87
+        Width = 97
         Height = 13
         Caption = 'Current Categories'
       end
       object Label16: TLabel
         Left = 256
         Top = 8
-        Width = 109
+        Width = 119
         Height = 13
         Caption = 'Unassigned Categories'
       end
@@ -788,14 +788,14 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       object Label13: TLabel
         Left = 0
         Top = 8
-        Width = 97
+        Width = 107
         Height = 13
         Caption = 'Current Cost Centres'
       end
       object Label14: TLabel
         Left = 256
         Top = 8
-        Width = 119
+        Width = 129
         Height = 13
         Caption = 'Unassigned Cost Centres'
       end

@@ -27,28 +27,28 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 105
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label4: TLabel
       Left = 208
       Top = 104
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
@@ -69,7 +69,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     object Label9: TLabel
       Left = 16
       Top = 44
-      Width = 56
+      Width = 60
       Height = 13
       Caption = 'Price Group'
     end

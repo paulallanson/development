@@ -19,21 +19,21 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
   object Label2: TLabel
     Left = 18
     Top = 104
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object lblMaterial: TLabel
     Left = 18
     Top = 131
-    Width = 73
+    Width = 82
     Height = 13
     Caption = 'Customer Order'
   end
   object Label3: TLabel
     Left = 96
     Top = 24
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -46,56 +46,56 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
   object Label4: TLabel
     Left = 18
     Top = 240
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 18
     Top = 52
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 18
     Top = 185
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Office Contact'
   end
   object Label6: TLabel
     Left = 18
     Top = 213
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end
   object Label7: TLabel
     Left = 18
     Top = 78
-    Width = 33
+    Width = 35
     Height = 13
     Caption = 'Project'
   end
   object Label8: TLabel
     Left = 18
     Top = 157
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Quote'
   end
   object Label9: TLabel
     Left = 18
     Top = 271
-    Width = 27
+    Width = 29
     Height = 13
     Caption = 'Show'
   end
   object Label10: TLabel
     Left = 194
     Top = 271
-    Width = 35
+    Width = 38
     Height = 13
     Caption = 'records'
   end

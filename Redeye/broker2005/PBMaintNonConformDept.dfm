@@ -20,7 +20,7 @@ object PBMaintNonConformDeptFrm: TPBMaintNonConformDeptFrm
   object DelLabel: TLabel
     Left = 37
     Top = 80
-    Width = 125
+    Width = 109
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
@@ -34,7 +34,7 @@ object PBMaintNonConformDeptFrm: TPBMaintNonConformDeptFrm
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 55
+    Width = 61
     Height = 13
     Caption = 'Department'
   end

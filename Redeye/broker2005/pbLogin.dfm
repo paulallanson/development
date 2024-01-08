@@ -20,35 +20,35 @@ object frmpbLogin: TfrmpbLogin
   object Label1: TLabel
     Left = 32
     Top = 84
-    Width = 61
+    Width = 65
     Height = 13
     Caption = 'Logon Name'
   end
   object Label2: TLabel
     Left = 32
     Top = 116
-    Width = 46
+    Width = 49
     Height = 13
     Caption = 'Password'
   end
   object lblLogInto: TLabel
     Left = 32
     Top = 148
-    Width = 46
+    Width = 48
     Height = 13
     Caption = 'Database'
   end
   object Label3: TLabel
     Left = 32
     Top = 16
-    Width = 256
+    Width = 281
     Height = 13
     Caption = 'Welcome to the Print Management Information System'
   end
   object Label4: TLabel
     Left = 32
     Top = 48
-    Width = 209
+    Width = 229
     Height = 13
     Caption = 'Please enter your logon name and password'
   end
@@ -121,6 +121,7 @@ object frmpbLogin: TfrmpbLogin
     ParamData = <
       item
         Name = 'Login_Name'
+        ParamType = ptInput
       end>
   end
 end

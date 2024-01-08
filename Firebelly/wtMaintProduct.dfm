@@ -21,7 +21,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label1: TLabel
     Left = 16
     Top = 60
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -34,7 +34,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label2: TLabel
     Left = 16
     Top = 28
-    Width = 78
+    Width = 71
     Height = 13
     Caption = 'Product Code'
     Font.Charset = DEFAULT_CHARSET
@@ -47,14 +47,14 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label3: TLabel
     Left = 16
     Top = 92
-    Width = 69
+    Width = 76
     Height = 13
     Caption = 'Product Group'
   end
   object Label6: TLabel
     Left = 16
     Top = 124
-    Width = 69
+    Width = 58
     Height = 13
     Caption = 'VAT Rate %'
     Font.Charset = DEFAULT_CHARSET
@@ -67,42 +67,42 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label4: TLabel
     Left = 16
     Top = 232
-    Width = 67
+    Width = 72
     Height = 13
     Caption = 'Sales Nominal'
   end
   object Label5: TLabel
     Left = 216
     Top = 232
-    Width = 86
+    Width = 92
     Height = 13
     Caption = 'Purchase Nominal'
   end
   object Label9: TLabel
     Left = 16
     Top = 196
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Selling Price'
   end
   object Label10: TLabel
     Left = 16
     Top = 164
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label8: TLabel
     Left = 248
     Top = 196
-    Width = 50
+    Width = 55
     Height = 13
     Caption = 'Selling Qty'
   end
   object Label7: TLabel
     Left = 247
     Top = 164
-    Width = 51
+    Width = 55
     Height = 13
     Caption = 'Buying Qty'
   end

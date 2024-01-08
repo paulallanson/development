@@ -22,9 +22,8 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
     Width = 817
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 304
-    ExplicitWidth = 811
     DesignSize = (
       817
       41)
@@ -53,7 +52,6 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 722
     end
     object edtSearch: TEdit
       Left = 104
@@ -71,7 +69,6 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtJobBagKeyPress
-      ExplicitLeft = 536
     end
     object btnSelect: TButton
       Left = 640
@@ -82,7 +79,6 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 634
     end
   end
   object stsbrDetails: TStatusBar
@@ -97,8 +93,6 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 345
-    ExplicitWidth = 811
   end
   object dbgDetails: TDBGrid
     Left = 0

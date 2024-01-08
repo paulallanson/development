@@ -355,14 +355,14 @@ begin
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := clYellow;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Template_Docs_Returned').Asstring = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clBlue;
       (Sender as TDBGrid).Canvas.Brush.color := clLime;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
   if  (dbgDetails.datasource.dataset.fieldByName('Remedial_Production').AsString = 'Y') or
@@ -370,7 +370,7 @@ begin
     begin
       (Sender as TDBGrid).Canvas.font.color := $00FF0080;
       (Sender as TDBGrid).Canvas.Brush.color := clNavy;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end ;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -378,7 +378,7 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Order Value') and

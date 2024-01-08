@@ -18,7 +18,7 @@ object PBAccExport1Frm: TPBAccExport1Frm
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 136
+    Width = 151
     Height = 13
     Caption = 'Choose an action to perform:'
   end
@@ -73,6 +73,7 @@ object PBAccExport1Frm: TPBAccExport1Frm
     Width = 313
     Height = 89
     Caption = 'Description'
+    ParentBackground = False
     TabOrder = 3
     object DescriptionLbl: TLabel
       Left = 8

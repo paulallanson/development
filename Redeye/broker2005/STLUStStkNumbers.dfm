@@ -27,35 +27,35 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     object lblProduct: TLabel
       Left = 8
       Top = 8
-      Width = 40
+      Width = 43
       Height = 13
       Caption = 'Product:'
     end
     object lblDescription: TLabel
       Left = 8
       Top = 27
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object Label4: TLabel
       Left = 248
       Top = 8
-      Width = 95
+      Width = 104
       Height = 13
       Caption = 'Movement Quantity:'
     end
     object lblQuantity: TLabel
       Left = 360
       Top = 8
-      Width = 49
+      Width = 57
       Height = 13
       Caption = 'lblQuantity'
     end
     object lblSetsperPad: TLabel
       Left = 8
       Top = 45
-      Width = 92
+      Width = 98
       Height = 13
       Caption = 'Sets per pad/book:'
     end
@@ -118,7 +118,7 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Number Sequence'
     end

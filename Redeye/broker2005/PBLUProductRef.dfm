@@ -17,14 +17,14 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   object CustLabel: TLabel
     Left = 80
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 347
+    Left = 342
     Top = 352
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -32,21 +32,21 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end
@@ -87,6 +87,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -123,6 +124,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 4
@@ -202,6 +204,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 5
     object DBContactText: TDBText
       Left = 83
@@ -220,7 +223,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end

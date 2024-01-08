@@ -57,8 +57,6 @@ object frmWtLUThickness: TfrmWtLUThickness
       item
         Width = 50
       end>
-    ExplicitTop = 340
-    ExplicitWidth = 686
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +67,6 @@ object frmWtLUThickness: TfrmWtLUThickness
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 271
-    ExplicitWidth = 686
     DesignSize = (
       692
       69)

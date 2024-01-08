@@ -17,21 +17,21 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
   object lblPriceChange: TLabel
     Left = 16
     Top = 114
-    Width = 61
+    Width = 66
     Height = 13
     Caption = 'Cost Change'
   end
   object Label2: TLabel
     Left = 16
     Top = 154
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 232
     Top = 154
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Time'
   end
@@ -46,6 +46,7 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
       'Set specific cost'
       'Uplift cost by %'
       'Reduce cost by %')
+    ParentBackground = False
     TabOrder = 0
     OnClick = BasisGroupClick
   end

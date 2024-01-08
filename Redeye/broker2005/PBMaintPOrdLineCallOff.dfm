@@ -43,14 +43,14 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label9: TLabel
       Left = 16
       Top = 158
-      Width = 46
+      Width = 48
       Height = 13
       Caption = 'Due Date'
     end
     object Label11: TLabel
       Left = 16
       Top = 191
-      Width = 64
+      Width = 67
       Height = 13
       Caption = 'Delivery Date'
     end
@@ -80,14 +80,14 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object AddrTypeLabel: TLabel
         Left = 8
         Top = 20
-        Width = 49
+        Width = 51
         Height = 13
         Caption = 'Addr Type'
       end
       object BranchNameLabel: TLabel
         Left = 8
         Top = 67
-        Width = 34
+        Width = 35
         Height = 13
         Caption = 'Branch'
         Font.Charset = ANSI_CHARSET
@@ -100,7 +100,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label10: TLabel
         Left = 8
         Top = 91
-        Width = 38
+        Width = 41
         Height = 13
         Caption = 'Address'
         Font.Charset = ANSI_CHARSET
@@ -113,7 +113,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label12: TLabel
         Left = 8
         Top = 186
-        Width = 45
+        Width = 47
         Height = 13
         Caption = 'Postcode'
         Font.Charset = ANSI_CHARSET
@@ -244,7 +244,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label13: TLabel
         Left = 8
         Top = 18
-        Width = 49
+        Width = 50
         Height = 13
         Caption = 'To Deliver'
         Font.Charset = ANSI_CHARSET
@@ -257,7 +257,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label14: TLabel
         Left = 8
         Top = 50
-        Width = 45
+        Width = 48
         Height = 13
         Caption = 'Delivered'
         Font.Charset = ANSI_CHARSET
@@ -270,7 +270,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label16: TLabel
         Left = 8
         Top = 104
-        Width = 28
+        Width = 31
         Height = 13
         Caption = 'No Of'
         Font.Charset = ANSI_CHARSET
@@ -296,7 +296,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label2: TLabel
         Left = 8
         Top = 80
-        Width = 37
+        Width = 38
         Height = 13
         Caption = 'Box Qty'
       end
@@ -368,7 +368,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label18: TLabel
         Left = 337
         Top = 2
-        Width = 95
+        Width = 104
         Height = 13
         Caption = 'Delivery Instructions'
       end
@@ -390,28 +390,28 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         object Label15: TLabel
           Left = 8
           Top = 46
-          Width = 17
+          Width = 18
           Height = 13
           Caption = 'Sell'
         end
         object Label19: TLabel
           Left = 8
           Top = 22
-          Width = 21
+          Width = 23
           Height = 13
           Caption = 'Cost'
         end
         object Label21: TLabel
           Left = 136
           Top = 46
-          Width = 39
+          Width = 43
           Height = 13
           Caption = 'Sell Unit'
         end
         object Label22: TLabel
           Left = 136
           Top = 22
-          Width = 43
+          Width = 48
           Height = 13
           Caption = 'Cost Unit'
         end
@@ -544,21 +544,21 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label1: TLabel
       Left = 33
       Top = 22
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end
     object Label7: TLabel
       Left = 512
       Top = 23
-      Width = 52
+      Width = 57
       Height = 13
       Caption = 'Order Date'
     end
     object Label25: TLabel
       Left = 27
       Top = 42
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
@@ -666,49 +666,49 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label6: TLabel
       Left = 32
       Top = 20
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Name'
     end
     object Label8: TLabel
       Left = 23
       Top = 45
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label5: TLabel
       Left = 7
       Top = 93
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label20: TLabel
       Left = 382
       Top = 45
-      Width = 43
+      Width = 46
       Height = 13
       Caption = 'Form Ref'
     end
     object Label3: TLabel
       Left = 372
       Top = 70
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label4: TLabel
       Left = 379
       Top = 20
-      Width = 46
+      Width = 51
       Height = 13
       Caption = 'Order No.'
     end
     object Label23: TLabel
       Left = 374
       Top = 118
-      Width = 51
+      Width = 58
       Height = 13
       Caption = 'Numbering'
     end

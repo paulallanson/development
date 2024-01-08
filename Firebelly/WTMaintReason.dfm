@@ -21,7 +21,7 @@ object frmWTMaintReason: TfrmWTMaintReason
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Reason'
   end

@@ -322,7 +322,7 @@ begin
   if dbgPO.datasource.dataset.fieldbyname('Invoice_upfront').asstring = 'Y' then
     begin
       (Sender as TDBGrid).Canvas.font.Color := clRed;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
   if  (Column.Title.Caption <> 'Number') and
       (Column.Title.Caption <> 'Qty on Order') and

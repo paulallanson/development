@@ -18,14 +18,14 @@ object PBMaintCustStockPrefixFrm: TPBMaintCustStockPrefixFrm
   object Label1: TLabel
     Left = 23
     Top = 20
-    Width = 66
+    Width = 71
     Height = 13
     Caption = 'Product Prefix'
   end
   object Label12: TLabel
     Left = 16
     Top = 44
-    Width = 76
+    Width = 82
     Height = 13
     Caption = 'Existing Prefixes'
   end

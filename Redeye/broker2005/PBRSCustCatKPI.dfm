@@ -17,7 +17,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   object Label2: TLabel
     Left = 24
     Top = 143
-    Width = 100
+    Width = 107
     Height = 13
     Caption = 'From Date Delivered:'
   end
@@ -45,7 +45,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   object Label3: TLabel
     Left = 24
     Top = 196
-    Width = 90
+    Width = 93
     Height = 13
     Caption = 'To Date Delivered:'
   end
@@ -73,7 +73,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   object lblCustBran: TLabel
     Left = 26
     Top = 31
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
@@ -88,7 +88,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -137,7 +137,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     object lblPrdCat: TLabel
       Left = 8
       Top = 4
-      Width = 82
+      Width = 89
       Height = 13
       Caption = 'Product Category'
     end

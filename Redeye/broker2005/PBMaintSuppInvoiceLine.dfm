@@ -85,14 +85,14 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
     object lblOrderNumber: TLabel
       Left = 112
       Top = 8
-      Width = 73
+      Width = 84
       Height = 13
       Caption = 'lblOrderNumber'
     end
     object lblDescription: TLabel
       Left = 112
       Top = 32
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
@@ -121,7 +121,7 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
     object Label2: TLabel
       Left = 5
       Top = 16
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
@@ -135,42 +135,42 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
     object Label16: TLabel
       Left = 5
       Top = 80
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Nominal'
     end
     object lblPriceUnit: TLabel
       Left = 173
       Top = 48
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 381
       Top = 48
-      Width = 21
+      Width = 18
       Height = 13
       Caption = 'VAT'
     end
     object lblPacks: TLabel
       Left = 176
       Top = 16
-      Width = 44
+      Width = 46
       Height = 13
       Caption = 'packs of:'
     end
     object lblCreditType: TLabel
       Left = 348
       Top = 16
-      Width = 54
+      Width = 57
       Height = 13
       Caption = 'Credit Type'
     end
     object lblVatValue: TLabel
       Left = 356
       Top = 80
-      Width = 46
+      Width = 47
       Height = 13
       Caption = 'Vat Value'
     end

@@ -137,7 +137,7 @@ object frmPBRSNonConform: TfrmPBRSNonConform
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 62
+        Width = 66
         Height = 13
         Caption = 'NCA Number'
         Font.Charset = ANSI_CHARSET
@@ -150,21 +150,21 @@ object frmPBRSNonConform: TfrmPBRSNonConform
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 75
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object lblJobBag: TLabel
         Left = 8
         Top = 111
-        Width = 39
+        Width = 40
         Height = 13
         Caption = 'Job Bag'
       end

@@ -18,7 +18,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 53
+    Width = 50
     Height = 13
     Caption = 'Customer'
     Font.Charset = DEFAULT_CHARSET
@@ -31,7 +31,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label18: TLabel
     Left = 16
     Top = 43
-    Width = 35
+    Width = 30
     Height = 13
     Caption = 'Street'
     Font.Charset = DEFAULT_CHARSET
@@ -44,7 +44,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label23: TLabel
     Left = 16
     Top = 100
-    Width = 59
+    Width = 53
     Height = 13
     Caption = 'Town/City'
     Font.Charset = DEFAULT_CHARSET
@@ -57,7 +57,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label20: TLabel
     Left = 16
     Top = 128
-    Width = 54
+    Width = 48
     Height = 13
     Caption = 'Postcode'
     Font.Charset = DEFAULT_CHARSET
@@ -70,14 +70,14 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label6: TLabel
     Left = 16
     Top = 156
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Contact'
   end
   object Telephone: TLabel
     Left = 16
     Top = 182
-    Width = 61
+    Width = 54
     Height = 13
     Caption = 'Telephone'
     Font.Charset = DEFAULT_CHARSET
@@ -90,14 +90,14 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Email: TLabel
     Left = 16
     Top = 208
-    Width = 25
+    Width = 27
     Height = 13
     Caption = 'Email'
   end
   object Label24: TLabel
     Left = 207
     Top = 128
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end

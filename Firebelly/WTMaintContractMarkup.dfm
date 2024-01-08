@@ -17,7 +17,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object Label15: TLabel
     Left = 16
     Top = 21
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Markup %'
   end
@@ -28,6 +28,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
     Height = 46
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 7
     DesignSize = (
       364
@@ -68,6 +69,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
       'Selected Column'
       'Selected Row'
       'Whole Contract')
+    ParentBackground = False
     TabOrder = 6
   end
   object chkbxMarkupCutOuts: TCheckBox

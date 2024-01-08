@@ -24,8 +24,8 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
     object lblDelete: TLabel
       Left = 32
       Top = 17
-      Width = 110
-      Height = 16
+      Width = 92
+      Height = 17
       Caption = 'Delete Record?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -70,21 +70,21 @@ object frmWTMaintJEvents: TfrmWTMaintJEvents
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 44
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 184
       Top = 44
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Time'
       Visible = False

@@ -20,7 +20,7 @@ object PBRSEnqSuppCompFrm: TPBRSEnqSuppCompFrm
   object lblSupplier: TLabel
     Left = 16
     Top = 28
-    Width = 38
+    Width = 43
     Height = 13
     Caption = 'Supplier'
   end
@@ -196,18 +196,19 @@ object PBRSEnqSuppCompFrm: TPBRSEnqSuppCompFrm
     Width = 241
     Height = 89
     Caption = 'Date Selection'
+    ParentBackground = False
     TabOrder = 8
     object Label1: TLabel
       Left = 24
       Top = 30
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 32
       Top = 62
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -285,12 +286,13 @@ object PBRSEnqSuppCompFrm: TPBRSEnqSuppCompFrm
     Top = 67
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

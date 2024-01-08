@@ -20,35 +20,35 @@ object frmwtMaintOffer: TfrmwtMaintOffer
   object Label1: TLabel
     Left = 16
     Top = 28
-    Width = 20
+    Width = 22
     Height = 13
     Caption = 'Title'
   end
   object Label2: TLabel
     Left = 16
     Top = 144
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label3: TLabel
     Left = 16
     Top = 176
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Ineffective Date'
   end
   object Label7: TLabel
     Left = 389
     Top = 5
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end
   object Label9: TLabel
     Left = 16
     Top = 62
-    Width = 81
+    Width = 90
     Height = 13
     Caption = 'Short Description'
   end
@@ -110,6 +110,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Height = 113
     BorderStyle = bsSingle
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 13
     object imgOffer: TImage
       Left = 1

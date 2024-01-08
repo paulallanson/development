@@ -17,7 +17,7 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 55
+    Width = 58
     Height = 13
     Caption = 'New Status'
   end

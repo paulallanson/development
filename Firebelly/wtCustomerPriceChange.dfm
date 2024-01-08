@@ -17,21 +17,21 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
   object lblPriceChange: TLabel
     Left = 16
     Top = 366
-    Width = 64
+    Width = 67
     Height = 13
     Caption = 'Price Change'
   end
   object Label2: TLabel
     Left = 16
     Top = 396
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 224
     Top = 396
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Time'
   end
@@ -45,6 +45,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Items.Strings = (
       'Uplift price by %'
       'Reduce price by %')
+    ParentBackground = False
     TabOrder = 5
     OnClick = BasisGroupClick
   end
@@ -109,6 +110,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Items.Strings = (
       'All'
       'Selected')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpCustomerClick
   end
@@ -127,11 +129,12 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Width = 249
     Height = 113
     Enabled = False
+    ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -175,6 +178,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
       'Edge Options'
       'Cut Out Options'
       'Update All')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpPriceChangeClick
   end
@@ -188,6 +192,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Items.Strings = (
       'All Groups'
       'One Group')
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     OnClick = rdGrpWTGroupsClick
@@ -197,12 +202,13 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 200
     Width = 185
     Height = 65
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object Label3: TLabel
       Left = 10
       Top = 13
-      Width = 73
+      Width = 82
       Height = 13
       Caption = 'Worktop Group'
     end

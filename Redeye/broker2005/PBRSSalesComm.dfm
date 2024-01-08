@@ -127,14 +127,14 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object Label3: TLabel
       Left = 8
       Top = 84
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 84
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -183,14 +183,14 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object Label1: TLabel
       Left = 600
       Top = 8
-      Width = 96
+      Width = 102
       Height = 13
       Caption = 'From Payment Date:'
     end
     object Label2: TLabel
       Left = 600
       Top = 64
-      Width = 86
+      Width = 88
       Height = 13
       Caption = 'To Payment Date:'
     end
@@ -219,7 +219,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end
@@ -342,7 +342,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Record Count:'
     end
@@ -499,7 +499,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

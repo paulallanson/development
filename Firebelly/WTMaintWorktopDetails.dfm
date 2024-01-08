@@ -16,56 +16,56 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label3: TLabel
     Left = 8
     Top = 52
-    Width = 64
+    Width = 68
     Height = 13
     Caption = 'Material Type'
   end
   object Label2: TLabel
     Left = 8
     Top = 84
-    Width = 29
+    Width = 33
     Height = 13
     Caption = 'Group'
   end
   object Label4: TLabel
     Left = 8
     Top = 119
-    Width = 49
+    Width = 50
     Height = 13
     Caption = 'Thickness'
   end
   object Label5: TLabel
     Left = 8
     Top = 152
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label6: TLabel
     Left = 8
     Top = 184
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Selling Price'
   end
   object Label7: TLabel
     Left = 200
     Top = 152
-    Width = 61
+    Width = 67
     Height = 13
     Caption = 'per sq. metre'
   end
   object Label8: TLabel
     Left = 200
     Top = 184
-    Width = 61
+    Width = 67
     Height = 13
     Caption = 'per sq. metre'
   end

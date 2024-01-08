@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TFaxHandler = class(TDataModule)
@@ -19,8 +19,8 @@ type
     AddFaxSQL: TFDQuery;
     qrySelCustBrnchFax: TFDQuery;
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
-    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure DataModuleCreate(Sender: TObject);
+    procedure FaxDatabaseBeforeConnect(Sender: TObject);
   private
     FaxFileName: string;
     TimedFax: ByteBool;
@@ -39,7 +39,7 @@ var
 
 implementation
 
-uses STMenuMain, STSendFax, STFaxList;
+uses STMenuMain, STSendFax, STFaxList, CCSCommon;
 
 {$R *.DFM}
 
@@ -79,12 +79,12 @@ begin
   end;
 end;
 
-procedure TFaxHandler.FaxDatabaseLogin(Database: TFDConnection;
-  LoginParams: TStrings);
+procedure TFaxHandler.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
+  SetConnectionMapRules(FaxDatabase);
   {Get user and password from login screen};
-  LoginParams.Values['USER NAME'] := 'faxes';
-  LoginParams.Values['PASSWORD'] := 'rabbit';
+  FaxDatabase.Params.UserName := 'faxes';
+  FaxDatabase.Params.Password := 'rabbit';
 end;
 
 function TFaxHandler.OutToFax(FaxNo, FaxDescr,

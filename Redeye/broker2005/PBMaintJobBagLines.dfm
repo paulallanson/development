@@ -124,46 +124,47 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 8
     Width = 481
     Height = 337
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 8
       Top = 22
-      Width = 82
+      Width = 89
       Height = 13
       Caption = 'Product Category'
     end
     object Label8: TLabel
       Left = 8
       Top = 52
-      Width = 64
+      Width = 66
       Height = 13
       Caption = 'Product Type'
     end
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 188
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label3: TLabel
       Left = 8
       Top = 236
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Selling Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 284
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end
@@ -177,14 +178,14 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     object lblCostPrice: TLabel
       Left = 8
       Top = 212
-      Width = 52
+      Width = 56
       Height = 13
       Caption = 'Direct Cost'
     end
     object lblResellerPrice: TLabel
       Left = 8
       Top = 260
-      Width = 65
+      Width = 67
       Height = 13
       Caption = 'Reseller Price'
     end
@@ -344,11 +345,12 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 352
     Width = 481
     Height = 41
+    ParentBackground = False
     TabOrder = 3
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 47
+      Width = 52
       Height = 13
       Caption = 'Markup %'
     end

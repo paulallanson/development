@@ -33,12 +33,13 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Top = 184
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -56,11 +57,12 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Top = 13
     Width = 353
     Height = 63
+    ParentBackground = False
     TabOrder = 5
     object Label1: TLabel
       Left = 8
       Top = 2
-      Width = 89
+      Width = 94
       Height = 13
       Caption = 'Customer / Branch'
     end
@@ -121,6 +123,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Top = 288
     Width = 353
     Height = 36
+    ParentBackground = False
     TabOrder = 0
     object ChkBxExcProd: TCheckBox
       Left = 9
@@ -202,18 +205,19 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Width = 209
     Height = 89
     Caption = 'Date range'
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 24
       Top = 27
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label5: TLabel
       Left = 39
       Top = 56
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -289,6 +293,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Items.Strings = (
       'Summary'
       'Detail')
+    ParentBackground = False
     TabOrder = 6
   end
   object btnExcel: TBitBtn
@@ -351,6 +356,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Width = 449
     Height = 110
     Caption = 'Product range'
+    ParentBackground = False
     TabOrder = 10
     object memProduct: TMemo
       Left = 8
@@ -373,7 +379,8 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Lines.Strings = (
         
           'Enter full or partial product codes separated by commas. To repo' +
-          'rt on products with a '
+          'rt on products '
+        'with a '
         
           'specific suffix, type the '#39'>'#39' character then the suffix. e.g.  A' +
           'BC/, EGG/>/TP, MID/')

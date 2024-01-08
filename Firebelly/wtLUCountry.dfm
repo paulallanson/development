@@ -46,9 +46,8 @@ object frmWTLUCountry: TfrmWTLUCountry
     Height = 67
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 232
-    ExplicitWidth = 470
     DesignSize = (
       476
       67)
@@ -116,8 +115,6 @@ object frmWTLUCountry: TfrmWTLUCountry
       item
         Width = 50
       end>
-    ExplicitTop = 299
-    ExplicitWidth = 470
   end
   object dtsCountry: TDataSource
     DataSet = qryCountry

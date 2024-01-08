@@ -158,9 +158,8 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Width = 854
     Height = 36
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 336
-    ExplicitWidth = 848
     DesignSize = (
       854
       36)
@@ -210,7 +209,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 764
     end
     object memOvertime: TMemo
       Left = 610
@@ -224,7 +222,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 1
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 604
     end
     object memLabour: TMemo
       Left = 450
@@ -238,7 +235,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 2
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 444
     end
     object dtmDateFrom: TDateTimePicker
       Left = 72
@@ -257,9 +253,8 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Width = 854
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 372
-    ExplicitWidth = 848
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -291,8 +286,8 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 570
       DesignSize = (
         277
         39)
@@ -372,8 +367,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       item
         Width = 200
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 848
   end
   object tmrSearch: TTimer
     OnTimer = tmrSearchTimer

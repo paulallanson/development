@@ -26,8 +26,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       item
         Width = 50
       end>
-    ExplicitTop = 462
-    ExplicitWidth = 969
   end
   object Panel1: TPanel
     Left = 0
@@ -36,9 +34,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Height = 70
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 392
-    ExplicitWidth = 969
     DesignSize = (
       975
       70)
@@ -58,7 +55,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
-      ExplicitLeft = 550
     end
     object btnEdit: TBitBtn
       Left = 639
@@ -69,7 +65,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Edit'
       Enabled = False
       TabOrder = 1
-      ExplicitLeft = 633
     end
     object btnDelete: TBitBtn
       Left = 722
@@ -80,7 +75,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Delete'
       Enabled = False
       TabOrder = 2
-      ExplicitLeft = 716
     end
     object BitBtn4: TBitBtn
       Left = 889
@@ -92,7 +86,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 883
     end
     object btnThickness: TBitBtn
       Left = 473
@@ -103,7 +96,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Caption = '&Prices'
       Enabled = False
       TabOrder = 4
-      ExplicitLeft = 467
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -132,7 +124,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Enabled = False
       TabOrder = 7
       OnClick = btnExcelClick
-      ExplicitLeft = 799
     end
   end
   object Panel2: TPanel
@@ -142,8 +133,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Height = 65
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 969
     object Label1: TLabel
       Left = 16
       Top = 16

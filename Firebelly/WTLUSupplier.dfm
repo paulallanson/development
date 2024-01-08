@@ -246,6 +246,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     Width = 897
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 8
@@ -286,6 +287,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       Width = 185
       Height = 39
       Align = alRight
+      ParentBackground = False
       TabOrder = 3
       DesignSize = (
         185

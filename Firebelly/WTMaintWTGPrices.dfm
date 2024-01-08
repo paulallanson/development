@@ -17,42 +17,42 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   object Label1: TLabel
     Left = 24
     Top = 20
-    Width = 29
+    Width = 33
     Height = 13
     Caption = 'Group'
   end
   object Label3: TLabel
     Left = 24
     Top = 55
-    Width = 49
+    Width = 50
     Height = 13
     Caption = 'Thickness'
   end
   object Label4: TLabel
     Left = 24
     Top = 88
-    Width = 48
+    Width = 50
     Height = 13
     Caption = 'Cost Price'
   end
   object Label5: TLabel
     Left = 24
     Top = 120
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Selling Price'
   end
   object Label6: TLabel
     Left = 224
     Top = 88
-    Width = 61
+    Width = 67
     Height = 13
     Caption = 'per sq. metre'
   end
   object Label7: TLabel
     Left = 224
     Top = 120
-    Width = 58
+    Width = 64
     Height = 13
     Caption = 'per sq.metre'
   end

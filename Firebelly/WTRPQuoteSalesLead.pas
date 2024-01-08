@@ -280,6 +280,7 @@ begin
       parambyname('Date_From').Asdatetime := Datefrom;
       parambyname('Date_To').Asdatetime := DateTo;
       Open;
+      result := recordcount;
     end;
 end;
 

@@ -19,7 +19,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
   object DateLabel: TLabel
     Left = 8
     Top = 86
-    Width = 144
+    Width = 158
     Height = 13
     Caption = 'Include any quotes due before'
     Font.Charset = ANSI_CHARSET
@@ -185,7 +185,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 112
+      Width = 118
       Height = 13
       Caption = 'Selected Customer Rep'
     end

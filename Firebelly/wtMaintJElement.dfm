@@ -18,7 +18,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   object lblDelete: TLabel
     Left = 24
     Top = 232
-    Width = 173
+    Width = 154
     Height = 13
     Caption = 'Delete these element details ?'
     Font.Charset = DEFAULT_CHARSET
@@ -64,56 +64,56 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 72
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 97
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 16
       Top = 124
-      Width = 58
+      Width = 63
       Height = 13
       Caption = 'Length (mm)'
     end
     object Label5: TLabel
       Left = 16
       Top = 156
-      Width = 54
+      Width = 59
       Height = 13
       Caption = 'Depth (mm)'
     end
     object Label8: TLabel
       Left = 200
       Top = 156
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 200
       Top = 96
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 352
       Top = 156
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Total price'
     end
@@ -134,7 +134,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label9: TLabel
       Left = 16
       Top = 44
-      Width = 56
+      Width = 60
       Height = 13
       Caption = 'Price Group'
     end
@@ -168,7 +168,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label10: TLabel
       Left = 16
       Top = 188
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

@@ -189,19 +189,20 @@ object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 32
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label6: TLabel
       Left = 16
       Top = 60
-      Width = 53
+      Width = 56
       Height = 13
       Caption = 'Order Type'
       Font.Charset = ANSI_CHARSET
@@ -214,7 +215,7 @@ object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
     object Label8: TLabel
       Left = 16
       Top = 92
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

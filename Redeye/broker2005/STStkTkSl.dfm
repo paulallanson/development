@@ -35,7 +35,7 @@ object STStkTkslfrm: TSTStkTkslfrm
     object StoreLabel: TLabel
       Left = 8
       Top = 65
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Warehouse'
       Font.Charset = ANSI_CHARSET
@@ -48,7 +48,7 @@ object STStkTkslfrm: TSTStkTkslfrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 112
+      Width = 117
       Height = 13
       Caption = 'Stock Count Reference'
       Font.Charset = ANSI_CHARSET
@@ -68,12 +68,13 @@ object STStkTkslfrm: TSTStkTkslfrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
       object RngFrmLabel: TLabel
         Left = 8
         Top = 18
-        Width = 48
+        Width = 52
         Height = 13
         Caption = 'Part From '
         Font.Charset = ANSI_CHARSET
@@ -175,6 +176,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Items.Strings = (
         'Part Number'
         'Bin Number')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 3
       TabStop = True
@@ -260,6 +262,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 6
       OnClick = CustRadioGroupClick
@@ -274,13 +277,14 @@ object STStkTkslfrm: TSTStkTkslfrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 7
       Visible = False
       object Label5: TLabel
         Left = 8
         Top = 8
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
@@ -326,6 +330,7 @@ object STStkTkslfrm: TSTStkTkslfrm
         'All Stock'
         'Paid Stock'
         'Unpaid Stock')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 8
     end
@@ -334,12 +339,13 @@ object STStkTkslfrm: TSTStkTkslfrm
       Top = 112
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 9
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end

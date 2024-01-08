@@ -105,7 +105,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     object Label1: TLabel
       Left = 5
       Top = 23
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
       Font.Charset = ANSI_CHARSET
@@ -118,14 +118,14 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     object lblSource: TLabel
       Left = 5
       Top = 48
-      Width = 87
+      Width = 92
       Height = 13
       Caption = 'Replenish Source:'
     end
     object lblReplenishName: TLabel
       Left = 112
       Top = 48
-      Width = 85
+      Width = 93
       Height = 13
       Caption = 'lblReplenishName'
     end
@@ -214,21 +214,21 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label6: TLabel
         Left = 8
         Top = 57
-        Width = 72
+        Width = 73
         Height = 13
         Caption = 'Purchase Price'
       end
       object Label3: TLabel
         Left = 8
         Top = 86
-        Width = 53
+        Width = 58
         Height = 13
         Caption = 'Discount %'
       end
       object Label8: TLabel
         Left = 8
         Top = 114
-        Width = 78
+        Width = 85
         Height = 13
         Caption = 'Discounted Cost'
       end
@@ -323,14 +323,14 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label4: TLabel
         Left = 10
         Top = 54
-        Width = 90
+        Width = 91
         Height = 13
         Caption = 'Sell Price per Pack'
       end
       object Label5: TLabel
         Left = 10
         Top = 80
-        Width = 69
+        Width = 72
         Height = 13
         Caption = 'Discount Type'
       end
@@ -361,14 +361,14 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object lblDiscount: TLabel
         Left = 10
         Top = 109
-        Width = 53
+        Width = 58
         Height = 13
         Caption = 'Discount %'
       end
       object PBinLbl: TLabel
         Left = 10
         Top = 135
-        Width = 81
+        Width = 86
         Height = 13
         Caption = 'Discounted Price'
         Font.Charset = ANSI_CHARSET
@@ -381,15 +381,15 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label9: TLabel
         Left = 10
         Top = 164
-        Width = 82
+        Width = 90
         Height = 13
         Caption = 'Quantity (Singles)'
       end
       object OrdqtyLbl: TLabel
         Left = 10
         Top = 193
-        Width = 78
-        Height = 13
+        Width = 87
+        Height = 15
         Caption = 'Quantity (Packs)'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -401,7 +401,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object lblOvers: TLabel
         Left = 10
         Top = 220
-        Width = 71
+        Width = 75
         Height = 13
         Caption = 'Overs (Singles)'
         Visible = False
@@ -537,7 +537,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label15: TLabel
         Left = 8
         Top = 24
-        Width = 79
+        Width = 81
         Height = 13
         Caption = 'Total Free Stock'
       end
@@ -581,56 +581,56 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label10: TLabel
         Left = 8
         Top = 26
-        Width = 86
+        Width = 94
         Height = 13
         Caption = 'In this Warehouse'
       end
       object Label11: TLabel
         Left = 8
         Top = 53
-        Width = 44
+        Width = 48
         Height = 13
         Caption = 'Allocated'
       end
       object Label12: TLabel
         Left = 8
         Top = 81
-        Width = 52
+        Width = 53
         Height = 13
         Caption = 'Free Stock'
       end
       object Label13: TLabel
         Left = 8
         Top = 109
-        Width = 39
+        Width = 42
         Height = 13
         Caption = 'Paid For'
       end
       object Label14: TLabel
         Left = 8
         Top = 137
-        Width = 34
+        Width = 38
         Height = 13
         Caption = 'Unpaid'
       end
       object Label16: TLabel
         Left = 8
         Top = 165
-        Width = 41
+        Width = 48
         Height = 13
         Caption = 'Minimum'
       end
       object Label17: TLabel
         Left = 8
         Top = 193
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Maximum'
       end
       object Label18: TLabel
         Left = 8
         Top = 221
-        Width = 67
+        Width = 69
         Height = 13
         Caption = 'Reorder Level'
       end

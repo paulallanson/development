@@ -8,7 +8,7 @@ inherited frmWTRSJobCutSched: TfrmWTRSJobCutSched
   object Label1: TLabel [0]
     Left = 334
     Top = 79
-    Width = 41
+    Width = 44
     Height = 13
     Caption = 'Job No'#39's'
   end

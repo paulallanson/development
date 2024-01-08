@@ -29,7 +29,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -120,14 +120,14 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 60
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end
@@ -263,7 +263,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 65
+      Width = 66
       Height = 13
       Caption = 'Selected Rep'
     end
@@ -329,7 +329,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 89
+      Width = 95
       Height = 13
       Caption = 'Selected Customer'
     end

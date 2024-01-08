@@ -17,91 +17,91 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   object Label1: TLabel
     Left = 8
     Top = 14
-    Width = 58
+    Width = 62
     Height = 13
     Caption = 'Sales Order:'
   end
   object lblSalesOrder: TLabel
     Left = 112
     Top = 14
-    Width = 62
+    Width = 69
     Height = 13
     Caption = 'lblSalesOrder'
   end
   object Label3: TLabel
     Left = 8
     Top = 67
-    Width = 33
+    Width = 38
     Height = 13
     Caption = 'Courier'
   end
   object Label4: TLabel
     Left = 8
     Top = 39
-    Width = 64
+    Width = 67
     Height = 13
     Caption = 'Delivery Date'
   end
   object Label5: TLabel
     Left = 8
     Top = 133
-    Width = 81
+    Width = 90
     Height = 13
     Caption = 'Consignment No.'
   end
   object Label6: TLabel
     Left = 288
     Top = 14
-    Width = 89
+    Width = 95
     Height = 13
     Caption = 'Despatch Number:'
   end
   object lblDespatchNo: TLabel
     Left = 400
     Top = 14
-    Width = 70
+    Width = 76
     Height = 13
     Caption = 'lblDespatchNo'
   end
   object Label8: TLabel
     Left = 8
     Top = 166
-    Width = 72
+    Width = 79
     Height = 13
     Caption = 'Delivery weight'
   end
   object Label9: TLabel
     Left = 296
     Top = 166
-    Width = 80
+    Width = 88
     Height = 13
     Caption = 'Number of boxes'
   end
   object Label10: TLabel
     Left = 224
     Top = 166
-    Width = 22
+    Width = 24
     Height = 13
     Caption = 'Kilos'
   end
   object Label11: TLabel
     Left = 8
     Top = 192
-    Width = 95
+    Width = 104
     Height = 13
     Caption = 'Delivery Instructions'
   end
   object Label12: TLabel
     Left = 288
     Top = 39
-    Width = 59
+    Width = 60
     Height = 13
     Caption = 'Date Picked'
   end
   object Label13: TLabel
     Left = 8
     Top = 99
-    Width = 76
+    Width = 79
     Height = 13
     Caption = 'Service Number'
   end

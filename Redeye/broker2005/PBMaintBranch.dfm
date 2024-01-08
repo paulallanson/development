@@ -38,14 +38,14 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   object Label1: TLabel
     Left = 8
     Top = 18
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
   object Label2: TLabel
     Left = 8
     Top = 47
-    Width = 68
+    Width = 70
     Height = 13
     Caption = 'Branch Name '
     Font.Charset = ANSI_CHARSET
@@ -243,7 +243,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label3: TLabel
           Left = 16
           Top = 12
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -256,7 +256,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label7: TLabel
           Left = 16
           Top = 108
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -269,7 +269,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label8: TLabel
           Left = 16
           Top = 132
-          Width = 31
+          Width = 33
           Height = 13
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
@@ -295,7 +295,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label10: TLabel
           Left = 16
           Top = 181
-          Width = 25
+          Width = 27
           Height = 13
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
@@ -308,7 +308,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label11: TLabel
           Left = 16
           Top = 212
-          Width = 68
+          Width = 72
           Height = 13
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
@@ -321,14 +321,14 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label4: TLabel
           Left = 16
           Top = 238
-          Width = 30
+          Width = 32
           Height = 13
           Caption = 'Status'
         end
         object lblShortCode: TLabel
           Left = 16
           Top = 268
-          Width = 53
+          Width = 58
           Height = 13
           Caption = 'Short Code'
           Font.Charset = ANSI_CHARSET
@@ -341,7 +341,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label5: TLabel
           Left = 16
           Top = 84
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET
@@ -354,7 +354,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label18: TLabel
           Left = 223
           Top = 108
-          Width = 33
+          Width = 37
           Height = 13
           Caption = 'County'
           Font.Charset = ANSI_CHARSET
@@ -500,7 +500,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           object InvToCustLabel: TLabel
             Left = 72
             Top = 25
-            Width = 75
+            Width = 81
             Height = 13
             Anchors = [akLeft, akTop, akRight]
             Caption = 'Customer Name'
@@ -508,7 +508,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           object InvToBranchLabel: TLabel
             Left = 72
             Top = 53
-            Width = 65
+            Width = 67
             Height = 13
             Anchors = [akLeft, akTop, akRight]
             Caption = 'Branch Name'
@@ -516,21 +516,21 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           object Label35: TLabel
             Left = 16
             Top = 25
-            Width = 44
+            Width = 49
             Height = 13
             Caption = 'Customer'
           end
           object Label36: TLabel
             Left = 16
             Top = 53
-            Width = 34
+            Width = 35
             Height = 13
             Caption = 'Branch'
           end
           object Label37: TLabel
             Left = 16
             Top = 85
-            Width = 25
+            Width = 27
             Height = 13
             Caption = 'Email'
           end
@@ -849,7 +849,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       object Label6: TLabel
         Left = 8
         Top = 21
-        Width = 73
+        Width = 78
         Height = 13
         Caption = 'Recipient Email'
         Font.Charset = ANSI_CHARSET

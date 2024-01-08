@@ -37,7 +37,7 @@ object STProdImportFrm: TSTProdImportFrm
     object lblStep2: TLabel
       Left = 8
       Top = 8
-      Width = 149
+      Width = 164
       Height = 13
       Caption = '2. Select the file to be imported.'
     end
@@ -69,7 +69,7 @@ object STProdImportFrm: TSTProdImportFrm
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'Progress: '
     end
@@ -84,7 +84,7 @@ object STProdImportFrm: TSTProdImportFrm
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'records read.'
       Visible = False
@@ -92,7 +92,7 @@ object STProdImportFrm: TSTProdImportFrm
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 99
+      Width = 108
       Height = 13
       Caption = 'Reading Product file.'
     end
@@ -115,7 +115,7 @@ object STProdImportFrm: TSTProdImportFrm
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 128
+      Width = 110
       Height = 13
       Caption = '1. Select the Supplier.'
       Font.Charset = DEFAULT_CHARSET
@@ -153,7 +153,7 @@ object STProdImportFrm: TSTProdImportFrm
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 82
+      Width = 90
       Height = 13
       Caption = '3. Run the Import'
     end

@@ -19,7 +19,7 @@ object frmWTSupplierSearch: TfrmWTSupplierSearch
   object Label1: TLabel
     Left = 10
     Top = 36
-    Width = 28
+    Width = 30
     Height = 13
     Caption = 'Street'
   end
@@ -33,14 +33,14 @@ object frmWTSupplierSearch: TfrmWTSupplierSearch
   object lblMaterial: TLabel
     Left = 10
     Top = 90
-    Width = 27
+    Width = 28
     Height = 13
     Caption = 'Town'
   end
   object Label3: TLabel
     Left = 80
     Top = 8
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -53,21 +53,21 @@ object frmWTSupplierSearch: TfrmWTSupplierSearch
   object Label4: TLabel
     Left = 10
     Top = 118
-    Width = 45
+    Width = 47
     Height = 13
     Caption = 'Postcode'
   end
   object Label5: TLabel
     Left = 10
     Top = 145
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end
   object Label6: TLabel
     Left = 10
     Top = 172
-    Width = 31
+    Width = 33
     Height = 13
     Caption = 'Phone'
   end

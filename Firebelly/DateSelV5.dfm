@@ -28,6 +28,7 @@ object DateSelV5Form: TDateSelV5Form
     Width = 225
     Height = 33
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       225

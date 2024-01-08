@@ -16,9 +16,9 @@ object PBLUCustomerCatsFrm: TPBLUCustomerCatsFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 264
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -26,7 +26,7 @@ object PBLUCustomerCatsFrm: TPBLUCustomerCatsFrm
   object CustLabel: TLabel
     Left = 10
     Top = 14
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
     Font.Charset = ANSI_CHARSET

@@ -240,6 +240,7 @@ begin
       parambyname('Date_To').Asdatetime := DateTo;
       parambyname('Importance').AsString := Importance;
       Open;
+      result := recordcount;
     end;
 end;
 

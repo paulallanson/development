@@ -19,7 +19,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   object Label3: TLabel
     Left = 8
     Top = 139
-    Width = 33
+    Width = 36
     Height = 13
     Caption = 'Sort by'
     Visible = False
@@ -30,6 +30,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 115
     Height = 65
     Caption = 'No. of Suppliers'
+    ParentBackground = False
     TabOrder = 7
   end
   object GrpBxDts: TGroupBox
@@ -38,11 +39,12 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 217
     Height = 137
     Caption = 'Selected Invoice Dates'
+    ParentBackground = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
       Top = 66
-      Width = 80
+      Width = 81
       Height = 13
       Caption = 'To Invoice Date:'
     end
@@ -70,7 +72,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     object Label1: TLabel
       Left = 16
       Top = 23
-      Width = 90
+      Width = 95
       Height = 13
       Caption = 'From Invoice Date:'
     end
@@ -153,6 +155,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Items.Strings = (
       'Ascending'
       'Descending')
+    ParentBackground = False
     TabOrder = 2
   end
   object cbSort1: TComboBox
@@ -236,12 +239,13 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Top = 44
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

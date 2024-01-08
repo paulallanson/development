@@ -10,7 +10,7 @@ object StMovRepFrm: TStMovRepFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnActivate = FormActivate
   TextHeight = 13
   object StMoveQuickRep: TQuickRep

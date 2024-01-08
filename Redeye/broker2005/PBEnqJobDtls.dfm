@@ -16,32 +16,33 @@ object PBEnqJobDtlsFrm: TPBEnqJobDtlsFrm
     Top = 8
     Width = 265
     Height = 273
+    ParentBackground = False
     TabOrder = 0
     object Label10: TLabel
       Left = 8
       Top = 8
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label11: TLabel
       Left = 8
       Top = 48
-      Width = 34
+      Width = 35
       Height = 13
       Caption = 'Branch'
     end
     object Label9: TLabel
       Left = 8
       Top = 152
-      Width = 49
+      Width = 54
       Height = 13
       Caption = 'Comments'
     end
     object Label8: TLabel
       Left = 47
       Top = 244
-      Width = 75
+      Width = 85
       Height = 13
       Caption = 'Additional Costs'
     end
@@ -63,7 +64,7 @@ object PBEnqJobDtlsFrm: TPBEnqJobDtlsFrm
     object Label1: TLabel
       Left = 8
       Top = 96
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price Unit'
     end

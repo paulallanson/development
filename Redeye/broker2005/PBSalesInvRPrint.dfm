@@ -32,8 +32,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 265
-      Height = 26
+      Width = 244
+      Height = 39
       Caption = 
         'Enter invoice numbers and/or invoice ranges separated by commas.' +
         ' For example, 1234, 1236, 1240-1245'

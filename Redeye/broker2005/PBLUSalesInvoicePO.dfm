@@ -22,9 +22,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Height = 117
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 334
-    ExplicitWidth = 773
     DesignSize = (
       779
       117)
@@ -58,6 +57,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Height = 49
       Anchors = [akLeft, akBottom]
       Caption = 'Type here to narrow the search'
+      ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
         Left = 8
@@ -92,8 +92,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Height = 49
       Anchors = [akRight, akBottom]
       Caption = 'Selected Purchase Order'
+      ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 466
       object edtPONumber: TEdit
         Left = 8
         Top = 16
@@ -110,8 +110,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Height = 81
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = 642
       object btnSelect: TBitBtn
         Left = 16
         Top = 20
@@ -206,9 +206,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Height = 343
     Align = alClient
     Caption = 'Panel2'
+    ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 773
-    ExplicitHeight = 334
     object dbgPO: TDBGrid
       Left = 1
       Top = 1
@@ -320,8 +319,6 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       item
         Width = 50
       end>
-    ExplicitTop = 451
-    ExplicitWidth = 773
   end
   object SearchTimer: TTimer
     Enabled = False

@@ -20,18 +20,19 @@ object STStoreStockFrm: TSTStoreStockFrm
     Width = 499
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblDetailLine1: TLabel
       Left = 8
       Top = 8
-      Width = 209
+      Width = 225
       Height = 13
       Caption = 'Part , Date, Quantity values get shown here.'
     end
     object lblDetailLine2: TLabel
       Left = 8
       Top = 32
-      Width = 179
+      Width = 195
       Height = 13
       Caption = 'Store, Bin, Lot details get shown here.'
     end
@@ -42,25 +43,26 @@ object STStoreStockFrm: TSTStoreStockFrm
     Width = 499
     Height = 98
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object lblCost: TLabel
       Left = 72
       Top = 44
-      Width = 24
+      Width = 26
       Height = 13
       Caption = 'Cost:'
     end
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 84
+      Width = 85
       Height = 13
       Caption = 'Stock Reference:'
     end
     object lblPackSize: TLabel
       Left = 266
       Top = 12
-      Width = 51
+      Width = 49
       Height = 13
       Caption = 'Pack Size:'
       Font.Charset = ANSI_CHARSET
@@ -73,7 +75,7 @@ object STStoreStockFrm: TSTStoreStockFrm
     object Label2: TLabel
       Left = 8
       Top = 76
-      Width = 92
+      Width = 98
       Height = 13
       Caption = 'Sets per pad/book:'
     end
@@ -134,6 +136,7 @@ object STStoreStockFrm: TSTStoreStockFrm
     Width = 499
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object btbtnOK: TBitBtn
       Left = 312

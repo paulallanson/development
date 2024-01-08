@@ -19,11 +19,12 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     Width = 768
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 84
+      Width = 90
       Height = 13
       Caption = 'Revision Number:'
     end
@@ -43,6 +44,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     Width = 768
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       768
@@ -65,6 +67,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     Width = 265
     Height = 322
     Align = alLeft
+    ParentBackground = False
     TabOrder = 2
     object Panel15: TPanel
       Left = 1
@@ -73,6 +76,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Height = 20
       Align = alTop
       Enabled = False
+      ParentBackground = False
       TabOrder = 0
       object chkbxArtRequired: TCheckBox
         Left = 8
@@ -97,21 +101,21 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       object Label13: TLabel
         Left = 9
         Top = 12
-        Width = 32
+        Width = 34
         Height = 13
         Caption = 'Due In'
       end
       object Label14: TLabel
         Left = 9
         Top = 39
-        Width = 71
+        Width = 78
         Height = 13
         Caption = 'Proof Required'
       end
       object Label15: TLabel
         Left = 9
         Top = 67
-        Width = 88
+        Width = 96
         Height = 13
         Caption = 'Approval Required'
       end
@@ -150,6 +154,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Height = 20
       Align = alTop
       Caption = 'Other Information'
+      ParentBackground = False
       TabOrder = 2
     end
     object memScheduleNotes: TMemo
@@ -168,6 +173,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     Width = 240
     Height = 322
     Align = alClient
+    ParentBackground = False
     TabOrder = 3
     object Panel16: TPanel
       Left = 1
@@ -176,6 +182,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Height = 20
       Align = alTop
       Enabled = False
+      ParentBackground = False
       TabOrder = 0
       object chkbxDSRequired: TCheckBox
         Left = 8
@@ -200,28 +207,28 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       object Label16: TLabel
         Left = 9
         Top = 12
-        Width = 58
+        Width = 61
         Height = 13
         Caption = 'Data Due In'
       end
       object Label17: TLabel
         Left = 9
         Top = 39
-        Width = 62
+        Width = 69
         Height = 13
         Caption = 'Client Brief In'
       end
       object Label18: TLabel
         Left = 9
         Top = 67
-        Width = 56
+        Width = 57
         Height = 13
         Caption = 'Text Due In'
       end
       object Label19: TLabel
         Left = 9
         Top = 108
-        Width = 51
+        Width = 54
         Height = 13
         Caption = 'Brief to DS'
       end
@@ -235,49 +242,49 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       object Label21: TLabel
         Left = 9
         Top = 201
-        Width = 94
+        Width = 99
         Height = 13
         Caption = 'Text Proof Req'#39'd by'
       end
       object Label22: TLabel
         Left = 9
         Top = 332
-        Width = 98
+        Width = 103
         Height = 13
         Caption = 'Live Proofs Req'#39'd by'
       end
       object Label23: TLabel
         Left = 9
         Top = 359
-        Width = 93
+        Width = 99
         Height = 13
         Caption = 'Live Proof Approval'
       end
       object Label24: TLabel
         Left = 9
         Top = 134
-        Width = 53
+        Width = 55
         Height = 13
         Caption = 'Data to DS'
       end
       object Label29: TLabel
         Left = 9
         Top = 266
-        Width = 94
+        Width = 99
         Height = 13
         Caption = 'PDF Proof Req'#39'd by'
       end
       object Label30: TLabel
         Left = 9
         Top = 292
-        Width = 94
+        Width = 100
         Height = 13
         Caption = 'PDF Proof Approval'
       end
       object Label31: TLabel
         Left = 9
         Top = 240
-        Width = 103
+        Width = 113
         Height = 13
         Caption = 'Artwork for PDF Proof'
       end
@@ -397,6 +404,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
     Width = 263
     Height = 322
     Align = alRight
+    ParentBackground = False
     TabOrder = 4
     object Panel17: TPanel
       Left = 1
@@ -405,6 +413,7 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Height = 20
       Align = alTop
       Enabled = False
+      ParentBackground = False
       TabOrder = 0
       object chkbxSamples: TCheckBox
         Left = 8
@@ -429,14 +438,14 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       object Label27: TLabel
         Left = 9
         Top = 12
-        Width = 90
+        Width = 94
         Height = 13
         Caption = 'SEPs to client date'
       end
       object Label28: TLabel
         Left = 9
         Top = 39
-        Width = 95
+        Width = 98
         Height = 13
         Caption = 'SEPs Approval date'
       end
@@ -467,32 +476,33 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       Align = alBottom
       BevelInner = bvLowered
       Enabled = False
+      ParentBackground = False
       TabOrder = 2
       object lblRevision: TLabel
         Left = 8
         Top = 13
-        Width = 61
+        Width = 64
         Height = 13
         Caption = 'Revision No:'
       end
       object lblScheduleDate: TLabel
         Left = 8
         Top = 34
-        Width = 26
+        Width = 27
         Height = 13
         Caption = 'Date:'
       end
       object lblScheduleOp: TLabel
         Left = 8
         Top = 56
-        Width = 44
+        Width = 50
         Height = 13
         Caption = 'Operator:'
       end
       object Label26: TLabel
         Left = 8
         Top = 91
-        Width = 69
+        Width = 72
         Height = 13
         Caption = 'Approval Type'
       end

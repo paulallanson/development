@@ -21,6 +21,7 @@ object frmPBLUFormReferenceRpts: TfrmPBLUFormReferenceRpts
     Height = 235
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
@@ -70,6 +71,7 @@ object frmPBLUFormReferenceRpts: TfrmPBLUFormReferenceRpts
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       413

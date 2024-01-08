@@ -189,35 +189,35 @@ object STMaintCustPartFrm: TSTMaintCustPartFrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
     end
     object Label2: TLabel
       Left = 8
       Top = 75
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label3: TLabel
       Left = 8
       Top = 104
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label4: TLabel
       Left = 8
       Top = 136
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
     object Label5: TLabel
       Left = 248
       Top = 136
-      Width = 68
+      Width = 67
       Height = 13
       Caption = 'Sell Pack Size'
     end

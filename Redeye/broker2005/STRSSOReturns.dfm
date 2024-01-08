@@ -101,6 +101,7 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     Items.Strings = (
       'All Account Mgrs'
       'One Account Mgr')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
     OnClick = AllorOneRadioGroupClick
@@ -115,13 +116,14 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 4
     Visible = False
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 130
+      Width = 137
       Height = 13
       Caption = 'Selected Account Manager'
     end
@@ -165,6 +167,7 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     OnClick = CustRadioGroupClick
@@ -179,13 +182,14 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 6
     Visible = False
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 89
+      Width = 95
       Height = 13
       Caption = 'Selected Customer'
     end

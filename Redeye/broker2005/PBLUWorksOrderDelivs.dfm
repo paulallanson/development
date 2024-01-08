@@ -40,6 +40,7 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
     Width = 86
     Height = 286
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
     object btnConfirm: TBitBtn
       Left = 8

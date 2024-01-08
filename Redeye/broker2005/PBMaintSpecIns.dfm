@@ -17,7 +17,7 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   object Label1: TLabel
     Left = 8
     Top = 240
-    Width = 81
+    Width = 90
     Height = 13
     Caption = 'Short Description'
   end

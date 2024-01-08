@@ -16,70 +16,70 @@ object PBEnqQuantitiesFrm: TPBEnqQuantitiesFrm
   object lbl1: TLabel
     Left = 8
     Top = 12
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 1:'
   end
   object lbl2: TLabel
     Left = 8
     Top = 36
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 2:'
   end
   object lbl3: TLabel
     Left = 8
     Top = 60
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 3:'
   end
   object lbl4: TLabel
     Left = 8
     Top = 84
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 4:'
   end
   object lbl5: TLabel
     Left = 8
     Top = 108
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 5:'
   end
   object lbl6: TLabel
     Left = 8
     Top = 132
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 6:'
   end
   object lbl7: TLabel
     Left = 8
     Top = 156
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 7:'
   end
   object lbl8: TLabel
     Left = 8
     Top = 180
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 8:'
   end
   object lbl9: TLabel
     Left = 8
     Top = 204
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Quantity No 9:'
   end
   object lbl10: TLabel
     Left = 8
     Top = 228
-    Width = 74
+    Width = 80
     Height = 13
     Caption = 'Quantity No 10:'
   end

@@ -21,7 +21,7 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
   object Label1: TLabel
     Left = 24
     Top = 20
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
@@ -118,14 +118,14 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     object Label2: TLabel
       Left = 24
       Top = 27
-      Width = 23
+      Width = 26
       Height = 13
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 24
       Top = 62
-      Width = 13
+      Width = 12
       Height = 13
       Caption = 'To'
     end

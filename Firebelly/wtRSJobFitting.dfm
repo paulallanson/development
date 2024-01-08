@@ -19,7 +19,7 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 41
+    Width = 44
     Height = 13
     Caption = 'Job No'#39's'
   end

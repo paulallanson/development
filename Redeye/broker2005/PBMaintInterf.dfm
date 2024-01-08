@@ -119,42 +119,42 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         object Label5: TLabel
           Left = 8
           Top = 28
-          Width = 43
+          Width = 42
           Height = 13
           Caption = 'Package'
         end
         object Label1: TLabel
           Left = 7
           Top = 60
-          Width = 74
+          Width = 83
           Height = 13
           Caption = 'Import Directory'
         end
         object Label2: TLabel
           Left = 8
           Top = 92
-          Width = 75
+          Width = 82
           Height = 13
           Caption = 'Export Directory'
         end
         object Label3: TLabel
           Left = 8
           Top = 125
-          Width = 104
+          Width = 109
           Height = 13
           Caption = 'Last File No (invoices)'
         end
         object Label4: TLabel
           Left = 8
           Top = 157
-          Width = 109
+          Width = 114
           Height = 13
           Caption = 'Last File No (accounts)'
         end
         object Label8: TLabel
           Left = 280
           Top = 125
-          Width = 121
+          Width = 129
           Height = 13
           Caption = 'Last File No (Direct Debit)'
         end
@@ -267,7 +267,7 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         object Label7: TLabel
           Left = 8
           Top = 28
-          Width = 43
+          Width = 42
           Height = 13
           Caption = 'Package'
         end
@@ -329,7 +329,7 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         object Label6: TLabel
           Left = 7
           Top = 28
-          Width = 84
+          Width = 90
           Height = 13
           Caption = 'Transfer Directory'
         end

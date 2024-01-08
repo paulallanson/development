@@ -17,14 +17,14 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   object CustLabel: TLabel
     Left = 85
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 280
+    Left = 275
     Top = 316
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -32,49 +32,49 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   object BranchLabel: TLabel
     Left = 85
     Top = 22
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 13
     Top = 22
-    Width = 37
+    Width = 38
     Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 13
     Top = 6
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Customer:'
   end
   object Label3: TLabel
     Left = 13
     Top = 38
-    Width = 40
+    Width = 43
     Height = 13
     Caption = 'Contact:'
   end
   object ContactLabel: TLabel
     Left = 85
     Top = 38
-    Width = 37
+    Width = 40
     Height = 13
     Caption = 'Contact'
   end
   object LblPhone: TLabel
     Left = 13
     Top = 54
-    Width = 34
+    Width = 36
     Height = 13
     Caption = 'Phone:'
   end
   object LblTelNo: TLabel
     Left = 85
     Top = 54
-    Width = 31
+    Width = 33
     Height = 13
     Caption = 'Phone'
   end

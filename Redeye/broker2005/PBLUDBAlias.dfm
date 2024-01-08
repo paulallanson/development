@@ -29,6 +29,7 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 1
     object AddBitBtn: TBitBtn
       Left = 6

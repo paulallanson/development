@@ -38,6 +38,7 @@ object PBMaintCapFrm: TPBMaintCapFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel

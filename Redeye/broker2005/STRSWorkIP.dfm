@@ -246,7 +246,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -282,28 +282,28 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     object Label3: TLabel
       Left = 8
       Top = 128
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 128
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
       Top = 128
-      Width = 81
+      Width = 92
       Height = 13
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 439
       Top = 3
-      Width = 69
+      Width = 75
       Height = 13
       Caption = 'Ordered since:'
     end
@@ -331,7 +331,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     object Label2: TLabel
       Left = 439
       Top = 48
-      Width = 95
+      Width = 103
       Height = 13
       Caption = 'Delivery due before:'
     end
@@ -432,7 +432,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object lblCustomer: TLabel
         Left = 8
         Top = 4
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
       end

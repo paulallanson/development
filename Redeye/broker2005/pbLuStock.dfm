@@ -122,7 +122,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object btnCustomerCodes: TToolButton
-          Left = 441
+          Left = 437
           Top = 0
           Caption = 'Codes'
           Enabled = False
@@ -130,7 +130,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnCustomerCodesClick
         end
         object ToolButton2: TToolButton
-          Left = 510
+          Left = 506
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -138,7 +138,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnEnquiry: TToolButton
-          Left = 518
+          Left = 514
           Top = 0
           Caption = 'Enquiry'
           DropdownMenu = pmnEnquiry
@@ -147,7 +147,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object btnMovementsSep: TToolButton
-          Left = 606
+          Left = 598
           Top = 0
           Width = 8
           Caption = 'btnMovementsSep'
@@ -155,7 +155,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnReceipts: TToolButton
-          Left = 614
+          Left = 606
           Top = 0
           Caption = 'Receipts'
           Enabled = False
@@ -163,7 +163,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnReceiptsClick
         end
         object btnTransfers: TToolButton
-          Left = 683
+          Left = 675
           Top = 0
           Caption = '&Transfers'
           Enabled = False
@@ -171,7 +171,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnTransfersClick
         end
         object btnAdjustIn: TToolButton
-          Left = 752
+          Left = 744
           Top = 0
           Caption = 'Adjust in'
           Enabled = False
@@ -179,7 +179,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnAdjustInClick
         end
         object btnAdjustOut: TToolButton
-          Left = 821
+          Left = 813
           Top = 0
           Caption = 'Adjust Out'
           Enabled = False
@@ -187,7 +187,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnAdjustOutClick
         end
         object btnOvers: TToolButton
-          Left = 890
+          Left = 882
           Top = 0
           Caption = '&Overs'
           Enabled = False
@@ -195,7 +195,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnOversClick
         end
         object btnUsage: TToolButton
-          Left = 959
+          Left = 951
           Top = 0
           Hint = 'Production Usage'
           Caption = '&Usage'
@@ -203,14 +203,14 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnUsageClick
         end
         object btnReturns: TToolButton
-          Left = 1028
+          Left = 1020
           Top = 0
           Caption = 'Returns'
           ImageIndex = 16
           OnClick = btnReturnsClick
         end
         object btnStkTakeSep: TToolButton
-          Left = 1097
+          Left = 1089
           Top = 0
           Width = 8
           Caption = 'btnStkTakeSep'
@@ -218,7 +218,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnStockTake: TToolButton
-          Left = 1105
+          Left = 1097
           Top = 0
           Caption = 'Stk Take'
           DropdownMenu = pmuStocktake
@@ -226,7 +226,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object ToolButton3: TToolButton
-          Left = 1193
+          Left = 1181
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -234,7 +234,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 1201
+          Left = 1189
           Top = 0
           Caption = 'Reports'
           ImageIndex = 10

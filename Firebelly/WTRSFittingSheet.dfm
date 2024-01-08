@@ -33,6 +33,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       526
@@ -96,11 +97,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Height = 63
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 188
+      Width = 207
       Height = 13
       Caption = 'Include documents from selected folder:'
     end
@@ -124,6 +126,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Width = 526
     Height = 138
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object selectionGrp: TGroupBox
       Left = 8
@@ -131,12 +134,13 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
       Width = 273
       Height = 121
       Caption = 'Sales Order Selection'
+      ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 255
-        Height = 26
+        Width = 244
+        Height = 39
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -176,6 +180,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Width = 526
     Height = 171
     Align = alClient
+    ParentBackground = False
     TabOrder = 4
     object pcDocumentDetails: TPageControl
       Left = 1

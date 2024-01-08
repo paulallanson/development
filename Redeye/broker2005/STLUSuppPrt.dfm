@@ -237,8 +237,6 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
       item
         Width = 50
       end>
-    ExplicitTop = 278
-    ExplicitWidth = 550
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

@@ -20,7 +20,7 @@ object frmWTMaintEdgeType: TfrmWTMaintEdgeType
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

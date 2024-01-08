@@ -20,6 +20,7 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
     Width = 249
     Height = 232
     Align = alLeft
+    ParentBackground = False
     TabOrder = 0
     object Panel6: TPanel
       Left = 5
@@ -29,6 +30,7 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
       Alignment = taLeftJustify
       BevelOuter = bvNone
       Caption = 'User Name:'
+      ParentBackground = False
       TabOrder = 0
     end
     object edtUserName: TEdit
@@ -56,6 +58,7 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
       Alignment = taLeftJustify
       BevelOuter = bvNone
       Caption = 'Password:'
+      ParentBackground = False
       TabOrder = 3
     end
     object Panel5: TPanel
@@ -66,6 +69,7 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
       Alignment = taLeftJustify
       BevelOuter = bvNone
       Caption = 'FTP Address:'
+      ParentBackground = False
       TabOrder = 4
     end
     object edtFTP: TEdit
@@ -92,18 +96,19 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
     Width = 609
     Height = 40
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 5
       Top = 13
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'PO Number:'
     end
     object Label2: TLabel
       Left = 190
       Top = 13
-      Width = 41
+      Width = 46
       Height = 13
       Caption = 'Supplier:'
     end
@@ -130,6 +135,7 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
     Width = 609
     Height = 45
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object btnSend: TBitBtn
       Left = 223

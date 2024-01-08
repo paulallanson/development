@@ -148,21 +148,21 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
       object lblPartDesc: TLabel
         Left = 152
         Top = 8
-        Width = 54
+        Width = 57
         Height = 13
         Caption = 'lblPartDesc'
       end
       object lblPartCode: TLabel
         Left = 56
         Top = 8
-        Width = 54
+        Width = 60
         Height = 13
         Caption = 'lblPartCode'
       end
       object lblPart: TLabel
         Left = 8
         Top = 8
-        Width = 40
+        Width = 43
         Height = 13
         Caption = 'Product:'
       end

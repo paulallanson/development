@@ -157,7 +157,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
     object Label1: TLabel
       Left = 456
       Top = 15
-      Width = 90
+      Width = 96
       Height = 13
       Caption = 'From Delivery Date'
     end
@@ -206,7 +206,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
     object Label2: TLabel
       Left = 456
       Top = 76
-      Width = 83
+      Width = 85
       Height = 13
       Caption = 'To Delivery Date:'
     end
@@ -235,7 +235,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       object lblRep: TLabel
         Left = 8
         Top = 4
-        Width = 25
+        Width = 28
         Height = 13
         Caption = 'Claim'
       end
@@ -289,7 +289,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 1
-        Width = 63
+        Width = 64
         Height = 13
         Caption = 'Prodyct Type'
       end
@@ -378,7 +378,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end

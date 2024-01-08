@@ -20,21 +20,21 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
   object Label2: TLabel
     Left = 18
     Top = 109
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object lblOrderReference: TLabel
     Left = 18
     Top = 80
-    Width = 55
+    Width = 59
     Height = 13
     Caption = 'Sales Order'
   end
   object Label3: TLabel
     Left = 96
     Top = 24
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -47,28 +47,28 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
   object Label4: TLabel
     Left = 18
     Top = 224
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 18
     Top = 52
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 18
     Top = 166
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Office Contact'
   end
   object Label6: TLabel
     Left = 18
     Top = 195
-    Width = 52
+    Width = 54
     Height = 13
     Caption = 'Created By'
   end

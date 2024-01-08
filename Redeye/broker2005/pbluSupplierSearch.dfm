@@ -19,7 +19,7 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -32,7 +32,7 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -45,28 +45,28 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 45
+    Width = 47
     Height = 13
     Caption = 'Postcode'
   end
   object Label13: TLabel
     Left = 11
     Top = 98
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Telephone'
   end
   object Label3: TLabel
     Left = 11
     Top = 27
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Town/City'
   end
   object Label1: TLabel
     Left = 11
     Top = 148
-    Width = 65
+    Width = 69
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
@@ -82,7 +82,7 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
   object Label5: TLabel
     Left = 11
     Top = 75
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end

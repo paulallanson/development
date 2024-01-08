@@ -21,14 +21,14 @@ object PBLUBranchFrm: TPBLUBranchFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 275
+    Left = 270
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -44,14 +44,14 @@ object PBLUBranchFrm: TPBLUBranchFrm
     object lblImport: TLabel
       Left = 16
       Top = 16
-      Width = 43
+      Width = 51
       Height = 13
       Caption = 'Importing'
     end
     object lblProgress: TLabel
-      Left = 241
+      Left = 232
       Top = 64
-      Width = 112
+      Width = 121
       Height = 13
       Alignment = taRightJustify
       Caption = 'x of y Records Imported'
@@ -361,14 +361,14 @@ object PBLUBranchFrm: TPBLUBranchFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end

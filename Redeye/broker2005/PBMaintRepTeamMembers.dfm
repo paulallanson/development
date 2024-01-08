@@ -17,7 +17,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
   object Label2: TLabel
     Left = 328
     Top = 80
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
@@ -27,6 +27,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Width = 468
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnOK: TBitBtn
       Left = 153
@@ -54,11 +55,12 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Width = 468
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 63
+      Width = 53
       Height = 13
       Caption = 'Rep Team:'
       Font.Charset = DEFAULT_CHARSET
@@ -71,7 +73,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     object lblDetails: TLabel
       Left = 92
       Top = 16
-      Width = 53
+      Width = 48
       Height = 13
       Caption = 'lblDetails'
       Font.Charset = DEFAULT_CHARSET
@@ -88,11 +90,12 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Width = 468
     Height = 224
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object Label5: TLabel
       Left = 8
       Top = 8
-      Width = 75
+      Width = 67
       Height = 13
       Caption = 'Current Reps'
       Font.Charset = DEFAULT_CHARSET
@@ -105,7 +108,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     object Label6: TLabel
       Left = 288
       Top = 8
-      Width = 104
+      Width = 93
       Height = 13
       Caption = 'Un-assigned Reps'
       Font.Charset = DEFAULT_CHARSET

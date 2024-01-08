@@ -107,28 +107,28 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label1: TLabel
       Left = 10
       Top = 24
-      Width = 65
+      Width = 70
       Height = 13
       Caption = 'Product Code'
     end
     object Label3: TLabel
       Left = 10
       Top = 78
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Price/unit'
     end
     object Label2: TLabel
       Left = 208
       Top = 78
-      Width = 42
+      Width = 45
       Height = 13
       Caption = 'Unit Size'
     end
     object OrdqtyLbl: TLabel
       Left = 10
       Top = 139
-      Width = 76
+      Width = 85
       Height = 13
       Caption = 'Order Qty (units)'
       Font.Charset = DEFAULT_CHARSET
@@ -141,7 +141,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label4: TLabel
       Left = 10
       Top = 105
-      Width = 66
+      Width = 70
       Height = 13
       Caption = 'Sell Price/unit'
     end
@@ -155,7 +155,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object lblQtyDelivered: TLabel
       Left = 210
       Top = 139
-      Width = 76
+      Width = 83
       Height = 13
       Caption = 'Delivered (units)'
       Font.Charset = DEFAULT_CHARSET
@@ -169,14 +169,14 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label7: TLabel
       Left = 10
       Top = 52
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object lblQtyInvoiced: TLabel
       Left = 410
       Top = 139
-      Width = 72
+      Width = 78
       Height = 13
       Caption = 'Invoiced (units)'
       Font.Charset = DEFAULT_CHARSET
@@ -190,7 +190,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label6: TLabel
       Left = 10
       Top = 172
-      Width = 57
+      Width = 62
       Height = 13
       Caption = 'Job Number'
     end

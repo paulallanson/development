@@ -10,7 +10,7 @@ object frmWTRPCustContDet: TfrmWTRPCustContDet
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   TextHeight = 13
   object QRPCustStat: TQuickRep
     Left = -24
@@ -1082,87 +1082,87 @@ object frmWTRPCustContDet: TfrmWTRPCustContDet
       ' ')
     Left = 144
     Top = 48
-    object GetDetsQryContact_Name: TStringField
+    object GetDetsQryContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       Size = 30
     end
-    object GetDetsQryTitle: TStringField
+    object GetDetsQryTitle: TWideStringField
       FieldName = 'Title'
       Size = 10
     end
-    object GetDetsQryForename: TStringField
+    object GetDetsQryForename: TWideStringField
       FieldName = 'Forename'
       Size = 30
     end
-    object GetDetsQryEmail_address: TStringField
+    object GetDetsQryEmail_address: TWideStringField
       FieldName = 'Email_address'
       Size = 100
     end
-    object GetDetsQryContact_Phone: TStringField
+    object GetDetsQryContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
       Size = 30
     end
-    object GetDetsQryMobile_Number: TStringField
+    object GetDetsQryMobile_Number: TWideStringField
       FieldName = 'Mobile_Number'
       Size = 30
     end
-    object GetDetsQryContact_Fax: TStringField
+    object GetDetsQryContact_Fax: TWideStringField
       FieldName = 'Contact_Fax'
       Size = 30
     end
     object GetDetsQryContact_Type: TIntegerField
       FieldName = 'Contact_Type'
     end
-    object GetDetsQryContact_Type_Description: TStringField
+    object GetDetsQryContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       Size = 50
     end
-    object GetDetsQryStreet: TStringField
+    object GetDetsQryStreet: TWideStringField
       FieldName = 'Street'
       Size = 50
     end
-    object GetDetsQryLocale: TStringField
+    object GetDetsQryLocale: TWideStringField
       FieldName = 'Locale'
       Size = 50
     end
-    object GetDetsQryTown_City: TStringField
+    object GetDetsQryTown_City: TWideStringField
       FieldName = 'Town_City'
       Size = 50
     end
-    object GetDetsQryPostcode: TStringField
+    object GetDetsQryPostcode: TWideStringField
       FieldName = 'Postcode'
     end
-    object GetDetsQryCounty_State: TStringField
+    object GetDetsQryCounty_State: TWideStringField
       FieldName = 'County_State'
       Size = 30
     end
-    object GetDetsQryCustomer_Phone: TStringField
+    object GetDetsQryCustomer_Phone: TWideStringField
       FieldName = 'Customer_Phone'
       Size = 30
     end
-    object GetDetsQryCustomer_Fax: TStringField
+    object GetDetsQryCustomer_Fax: TWideStringField
       FieldName = 'Customer_Fax'
       Size = 30
     end
-    object GetDetsQryCustomer_Name: TStringField
+    object GetDetsQryCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
     object GetDetsQryCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object GetDetsQryinactive: TStringField
+    object GetDetsQryinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end
     object GetDetsQryRep: TIntegerField
       FieldName = 'Rep'
     end
-    object GetDetsQryCustomer_Type_Description: TStringField
+    object GetDetsQryCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 40
     end
-    object GetDetsQryRep_Name: TStringField
+    object GetDetsQryRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end

@@ -17,7 +17,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   object lblDelete: TLabel
     Left = 24
     Top = 152
-    Width = 121
+    Width = 106
     Height = 13
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
@@ -63,42 +63,42 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 42
       Height = 13
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 49
+      Width = 50
       Height = 13
       Caption = 'Thickness'
     end
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 31
+      Width = 36
       Height = 13
       Caption = 'Cutout'
     end
     object Label8: TLabel
       Left = 16
       Top = 108
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 331
       Top = 76
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 331
       Top = 108
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Total price'
     end

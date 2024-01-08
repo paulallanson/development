@@ -16,7 +16,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   object lblDelete: TLabel
     Left = 8
     Top = 160
-    Width = 121
+    Width = 106
     Height = 13
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
@@ -62,28 +62,28 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Extra charge'
     end
     object Label8: TLabel
       Left = 16
       Top = 52
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 16
       Top = 84
-      Width = 45
+      Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 283
       Top = 84
-      Width = 50
+      Width = 53
       Height = 13
       Caption = 'Total price'
     end

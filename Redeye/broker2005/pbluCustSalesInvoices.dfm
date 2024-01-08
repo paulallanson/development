@@ -28,6 +28,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object Panel2: TPanel
       Left = 0
@@ -38,6 +39,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -315,6 +317,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     Width = 792
     Height = 38
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -338,6 +341,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       Height = 36
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         283

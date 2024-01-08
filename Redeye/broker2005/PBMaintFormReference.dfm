@@ -25,19 +25,20 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 37
+      Width = 38
       Height = 13
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
@@ -50,7 +51,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     object Label6: TLabel
       Left = 8
       Top = 72
-      Width = 76
+      Width = 80
       Height = 13
       Caption = 'Form Reference'
       Font.Charset = ANSI_CHARSET
@@ -63,21 +64,21 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     object Label8: TLabel
       Left = 8
       Top = 124
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label11: TLabel
       Left = 264
       Top = 154
-      Width = 67
+      Width = 69
       Height = 13
       Caption = 'Reorder Level'
     end
     object Label3: TLabel
       Left = 8
       Top = 98
-      Width = 56
+      Width = 58
       Height = 13
       Caption = 'Stock Code'
     end
@@ -206,6 +207,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     Height = 31
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object DelLabel: TLabel
       Left = 128

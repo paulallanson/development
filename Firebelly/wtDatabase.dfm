@@ -33,7 +33,7 @@ object frmWTDatabase: TfrmWTDatabase
       Width = 560
       Height = 37
       ButtonHeight = 36
-      ButtonWidth = 60
+      ButtonWidth = 63
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
@@ -47,37 +47,37 @@ object frmWTDatabase: TfrmWTDatabase
         ImageIndex = 0
       end
       object ToolButton2: TToolButton
-        Left = 60
+        Left = 63
         Top = 0
         Caption = 'Materials'
         ImageIndex = 1
       end
       object ToolButton3: TToolButton
-        Left = 120
+        Left = 126
         Top = 0
         Caption = 'Sizes'
         ImageIndex = 2
       end
       object ToolButton4: TToolButton
-        Left = 180
+        Left = 189
         Top = 0
         Caption = 'Worktops'
         ImageIndex = 3
       end
       object ToolButton5: TToolButton
-        Left = 240
+        Left = 252
         Top = 0
         Caption = 'Edges'
         ImageIndex = 4
       end
       object ToolButton6: TToolButton
-        Left = 300
+        Left = 315
         Top = 0
         Caption = 'Cut Outs'
         ImageIndex = 5
       end
       object ToolButton7: TToolButton
-        Left = 360
+        Left = 378
         Top = 0
         Caption = 'Extras'
         ImageIndex = 6

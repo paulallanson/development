@@ -76,8 +76,6 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       item
         Width = 50
       end>
-    ExplicitTop = 296
-    ExplicitWidth = 596
   end
   object Panel1: TPanel
     Left = 0
@@ -88,8 +86,6 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 245
-    ExplicitWidth = 596
     object BitBtn1: TBitBtn
       Left = 8
       Top = 17
@@ -148,7 +144,6 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 596
     object Label1: TLabel
       Left = 8
       Top = 8

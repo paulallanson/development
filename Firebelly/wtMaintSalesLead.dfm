@@ -21,7 +21,7 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 90
+    Width = 91
     Height = 13
     Caption = 'Sales Lead Source'
   end

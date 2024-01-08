@@ -14,21 +14,21 @@ object frmWTMaintSalesOrderLineProperty: TfrmWTMaintSalesOrderLineProperty
   object Label1: TLabel
     Left = 24
     Top = 20
-    Width = 32
+    Width = 33
     Height = 13
     Caption = 'Label1'
   end
   object Label2: TLabel
     Left = 24
     Top = 72
-    Width = 32
+    Width = 33
     Height = 13
     Caption = 'Label2'
   end
   object Label3: TLabel
     Left = 24
     Top = 104
-    Width = 32
+    Width = 33
     Height = 13
     Caption = 'Label3'
   end

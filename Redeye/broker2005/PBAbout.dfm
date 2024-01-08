@@ -831,7 +831,7 @@ object PBAboutFrm: TPBAboutFrm
     Left = 264
     Top = 16
     Width = 9
-    Height = 37
+    Height = 45
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -32
@@ -903,7 +903,7 @@ object PBAboutFrm: TPBAboutFrm
   object UserLabel: TLabel
     Left = 267
     Top = 144
-    Width = 46
+    Width = 48
     Height = 13
     Alignment = taCenter
     Caption = 'Database'

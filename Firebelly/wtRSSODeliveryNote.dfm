@@ -33,6 +33,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       355
@@ -88,6 +89,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Height = 138
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object selectionGrp: TGroupBox
       Left = 8
@@ -95,12 +97,13 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
       Width = 345
       Height = 121
       Caption = 'Sales Order Selection'
+      ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 255
-        Height = 26
+        Width = 244
+        Height = 39
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'

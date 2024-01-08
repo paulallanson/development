@@ -5,8 +5,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
   ClientHeight = 347
   ClientWidth = 571
   Position = poMainFormCenter
-  ExplicitWidth = 583
-  ExplicitHeight = 385
+  ExplicitWidth = 587
+  ExplicitHeight = 386
   TextHeight = 13
   object Label2: TLabel [0]
     Left = 224
@@ -56,56 +56,56 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
   inherited stsbrDetails: TStatusBar
     Top = 328
     Width = 571
-    ExplicitTop = 319
-    ExplicitWidth = 565
+    ExplicitTop = 328
+    ExplicitWidth = 571
   end
   inherited Panel1: TPanel
     Top = 263
     Width = 571
-    ExplicitTop = 254
-    ExplicitWidth = 565
+    ExplicitTop = 263
+    ExplicitWidth = 571
     DesignSize = (
       571
       65)
     inherited BitBtn1: TBitBtn
       Left = 198
       Top = 312
-      ExplicitLeft = 192
+      ExplicitLeft = 198
       ExplicitTop = 312
     end
     inherited btnEdit: TBitBtn
       Left = 286
       Top = 312
-      ExplicitLeft = 280
+      ExplicitLeft = 286
       ExplicitTop = 312
     end
     inherited btnDelete: TBitBtn
       Left = 374
       Top = 312
-      ExplicitLeft = 368
+      ExplicitLeft = 374
       ExplicitTop = 312
     end
     inherited BitBtn4: TBitBtn
       Left = 462
       Top = 312
-      ExplicitLeft = 456
+      ExplicitLeft = 462
       ExplicitTop = 312
     end
     inherited btnThickness: TBitBtn
       Left = 243
       Top = 312
       Visible = False
-      ExplicitLeft = 237
+      ExplicitLeft = 243
       ExplicitTop = 312
     end
     inherited btnExcel: TBitBtn
       Left = 588
-      ExplicitLeft = 582
+      ExplicitLeft = 588
     end
   end
   inherited Panel2: TPanel
     Width = 571
-    ExplicitWidth = 565
+    ExplicitWidth = 571
   end
   object dblkpEdgeType: TDBLookupComboBox [5]
     Left = 224

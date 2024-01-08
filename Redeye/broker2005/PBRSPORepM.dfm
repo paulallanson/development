@@ -18,7 +18,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
   object SupplierLabel: TLabel
     Left = 176
     Top = 8
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Supplier/Branch'
     Visible = False
@@ -26,7 +26,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
   object Label1: TLabel
     Left = 8
     Top = 160
-    Width = 52
+    Width = 56
     Height = 13
     Caption = 'Date From:'
     Visible = False
@@ -84,7 +84,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
   object CustBranchLabel: TLabel
     Left = 176
     Top = 80
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
     Visible = False
@@ -98,6 +98,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     TabOrder = 0
     OnClick = AllOrOneRadioGroupClick
   end
@@ -181,6 +182,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
       'Estimator                          '
       'Account Type'
       'Customer Branch')
+    ParentBackground = False
     TabOrder = 5
   end
   object DateFromEdit: TEdit
@@ -226,6 +228,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 9
     OnClick = CustRadioGroupClick
   end
@@ -265,6 +268,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
       'Order'
       'Product Type'
       'Job Description')
+    ParentBackground = False
     TabOrder = 12
   end
   object Panel1: TPanel
@@ -272,6 +276,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
     Top = 307
     Width = 217
     Height = 86
+    ParentBackground = False
     TabOrder = 13
     object ExCallOffsChkBox: TCheckBox
       Left = 16
@@ -316,6 +321,7 @@ object PBRSPORepMFrm: TPBRSPORepMFrm
     Items.Strings = (
       'All Purchase Orders'
       'Invoice on Call Off Orders')
+    ParentBackground = False
     TabOrder = 15
   end
 end

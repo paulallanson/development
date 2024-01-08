@@ -20,8 +20,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
   object DelLabel: TLabel
     Left = 120
     Top = 237
-    Width = 125
-    Height = 13
+    Width = 119
+    Height = 15
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -42,47 +42,48 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 20
+      Width = 22
       Height = 13
       Caption = 'Title'
     end
     object Label2: TLabel
       Left = 8
       Top = 84
-      Width = 22
+      Width = 20
       Height = 13
       Caption = 'Year'
     end
     object Label3: TLabel
       Left = 8
       Top = 52
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'Start Month'
     end
     object Label4: TLabel
       Left = 8
       Top = 117
-      Width = 66
+      Width = 74
       Height = 13
       Caption = 'No. of periods'
     end
     object Label19: TLabel
       Left = 8
       Top = 176
-      Width = 57
+      Width = 62
       Height = 13
       Caption = 'Budget type'
     end
     object Label5: TLabel
       Left = 8
       Top = 144
-      Width = 83
+      Width = 90
       Height = 13
       Caption = 'Commission Basis'
     end

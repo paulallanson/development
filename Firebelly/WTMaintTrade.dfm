@@ -20,70 +20,70 @@ object frmWTMaintTrade: TfrmWTMaintTrade
   object Label8: TLabel
     Left = 16
     Top = 12
-    Width = 75
+    Width = 80
     Height = 13
     Caption = 'Company Name'
   end
   object Label11: TLabel
     Left = 16
     Top = 52
-    Width = 38
+    Width = 41
     Height = 13
     Caption = 'Address'
   end
   object Label13: TLabel
     Left = 15
     Top = 100
-    Width = 27
+    Width = 28
     Height = 13
     Caption = 'Town'
   end
   object Label14: TLabel
     Left = 16
     Top = 124
-    Width = 45
+    Width = 47
     Height = 13
     Caption = 'Postcode'
   end
   object Label15: TLabel
     Left = 16
     Top = 148
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end
   object Label16: TLabel
     Left = 16
     Top = 188
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Telephone'
   end
   object Label12: TLabel
     Left = 16
     Top = 212
-    Width = 55
+    Width = 60
     Height = 13
     Caption = 'Fax number'
   end
   object Label17: TLabel
     Left = 16
     Top = 236
-    Width = 64
+    Width = 68
     Height = 13
     Caption = 'Web Address'
   end
   object Label18: TLabel
     Left = 16
     Top = 260
-    Width = 66
+    Width = 71
     Height = 13
     Caption = 'Email Address'
   end
   object Label28: TLabel
     Left = 16
     Top = 292
-    Width = 84
+    Width = 85
     Height = 13
     Caption = 'VAT Reg Number'
   end

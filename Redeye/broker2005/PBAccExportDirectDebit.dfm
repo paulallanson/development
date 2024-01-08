@@ -20,6 +20,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Width = 529
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnExport: TButton
       Left = 352
@@ -47,6 +48,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Height = 318
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object pnlNumberRange: TPanel
       Left = 153
@@ -55,19 +57,20 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Height = 318
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object lblInvNumber: TLabel
         Left = 24
         Top = 6
-        Width = 86
+        Width = 91
         Height = 13
         Caption = 'Invoice Number(s)'
       end
       object Label1: TLabel
         Left = 24
         Top = 68
-        Width = 267
-        Height = 26
+        Width = 244
+        Height = 39
         Caption = 
           'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
           ' For example, 1234, 1236, 1240-1245'
@@ -104,6 +107,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Width = 380
       Height = 319
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object GroupBox2: TGroupBox
         Left = 152
@@ -111,11 +115,12 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
         Width = 217
         Height = 76
         Caption = 'Selection '
+        ParentBackground = False
         TabOrder = 0
         object lblDateFrom: TLabel
           Left = 9
           Top = 20
-          Width = 52
+          Width = 56
           Height = 13
           Caption = 'Date From:'
         end
@@ -195,6 +200,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Height = 318
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object rdgrpExportBy: TRadioGroup
         Left = 8
@@ -206,6 +212,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
         Items.Strings = (
           'Date Range'
           'Invoice Number')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpExportByClick
       end
@@ -217,11 +224,12 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Width = 529
     Height = 44
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblExpTo: TLabel
       Left = 8
       Top = 16
-      Width = 49
+      Width = 51
       Height = 13
       Caption = 'Export To:'
     end

@@ -17,7 +17,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
   object Label2: TLabel
     Left = 328
     Top = 80
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
@@ -27,6 +27,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Width = 468
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnOK: TBitBtn
       Left = 153
@@ -54,11 +55,12 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Width = 468
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 140
+      Width = 126
       Height = 13
       Caption = 'Account Manager Team:'
       Font.Charset = DEFAULT_CHARSET
@@ -71,7 +73,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     object lblDetails: TLabel
       Left = 156
       Top = 16
-      Width = 53
+      Width = 48
       Height = 13
       Caption = 'lblDetails'
       Font.Charset = DEFAULT_CHARSET
@@ -88,18 +90,19 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Width = 468
     Height = 176
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 127
+      Width = 138
       Height = 13
       Caption = 'Current Account Managers'
     end
     object Label4: TLabel
       Left = 288
       Top = 8
-      Width = 152
+      Width = 164
       Height = 13
       Caption = 'Un-assigned Account Managers'
     end
@@ -196,18 +199,19 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Width = 468
     Height = 173
     Align = alClient
+    ParentBackground = False
     TabOrder = 3
     object Label5: TLabel
       Left = 8
       Top = 8
-      Width = 62
+      Width = 67
       Height = 13
       Caption = 'Current Reps'
     end
     object Label6: TLabel
       Left = 288
       Top = 8
-      Width = 87
+      Width = 93
       Height = 13
       Caption = 'Un-assigned Reps'
     end

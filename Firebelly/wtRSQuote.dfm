@@ -3,8 +3,8 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 353
-  ClientWidth = 432
+  ClientHeight = 355
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSQuote: TfrmWTRSQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    432
-    353)
+    462
+    355)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 316
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -28,10 +28,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
+    ExplicitTop = 316
   end
   object Button4: TButton
-    Left = 368
-    Top = 316
+    Left = 374
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -68,7 +69,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 316
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -76,10 +77,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
+    ExplicitTop = 316
   end
   object btnEmail: TButton
     Left = 184
-    Top = 316
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -87,6 +89,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
+    ExplicitTop = 316
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
@@ -108,8 +111,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     object Label2: TLabel
       Left = 8
       Top = 88
-      Width = 265
-      Height = 26
+      Width = 244
+      Height = 39
       Caption = 
         'Enter quote numbers and/or quote ranges separated by commas. For' +
         ' example, 1234, 1236, 1240-1245'
@@ -152,7 +155,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   object chkbxPrintTemplate: TCheckBox
     Left = 216
     Top = 192
-    Width = 233
+    Width = 242
     Height = 17
     Caption = 'Print/Email Template Conditions Document'
     Checked = True
@@ -172,7 +175,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   object chkbxPrintTerms: TCheckBox
     Left = 216
     Top = 240
-    Width = 233
+    Width = 238
     Height = 17
     Caption = 'Print/Email Terms && Conditions Document'
     Checked = True

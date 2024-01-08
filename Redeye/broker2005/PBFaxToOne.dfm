@@ -14,21 +14,21 @@ object PBFaxToOneFrm: TPBFaxToOneFrm
   object FaxDescrLabel: TLabel
     Left = 64
     Top = 10
-    Width = 36
+    Width = 35
     Height = 13
     Caption = 'Fax To:'
   end
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 34
+    Width = 37
     Height = 13
     Caption = 'Faxing:'
   end
   object Label2: TLabel
     Left = 8
     Top = 36
-    Width = 40
+    Width = 44
     Height = 13
     Caption = 'Number:'
   end

@@ -15,9 +15,9 @@ object PBLUPrdTypOChgFrm: TPBLUPrdTypOChgFrm
   OnCreate = FormCreate
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 259
+    Left = 254
     Top = 224
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -25,14 +25,14 @@ object PBLUPrdTypOChgFrm: TPBLUPrdTypOChgFrm
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 67
+    Width = 69
     Height = 13
     Caption = 'Product Type:'
   end
   object PrdTypLabel: TLabel
     Left = 88
     Top = 8
-    Width = 67
+    Width = 69
     Height = 13
     Caption = 'Product Type:'
   end

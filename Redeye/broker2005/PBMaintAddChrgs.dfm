@@ -17,7 +17,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
   object lblDelete: TLabel
     Left = 72
     Top = 110
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -38,7 +38,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     object lblDescription: TLabel
       Left = 16
       Top = 22
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET
@@ -51,7 +51,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     object lblCost: TLabel
       Left = 16
       Top = 62
-      Width = 21
+      Width = 23
       Height = 13
       Caption = 'Cost'
       Font.Charset = ANSI_CHARSET
@@ -64,7 +64,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     object lblCharge: TLabel
       Left = 232
       Top = 62
-      Width = 17
+      Width = 18
       Height = 13
       Caption = 'Sell'
       Font.Charset = ANSI_CHARSET

@@ -20,6 +20,7 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
     Width = 506
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object DelLabel: TLabel
       Left = 163
@@ -126,11 +127,12 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
     Width = 506
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Process: TLabel
       Left = 24
       Top = 24
-      Width = 92
+      Width = 98
       Height = 13
       Caption = 'Production Process'
     end
@@ -164,18 +166,19 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
     Width = 506
     Height = 88
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 24
       Top = 16
-      Width = 60
+      Width = 63
       Height = 13
       Caption = 'Product Size'
     end
     object Label8: TLabel
       Left = 24
       Top = 52
-      Width = 92
+      Width = 101
       Height = 13
       Caption = 'Work Centre Group'
     end
@@ -235,32 +238,33 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
     Width = 506
     Height = 147
     Align = alClient
+    ParentBackground = False
     TabOrder = 3
     object Label4: TLabel
       Left = 24
       Top = 20
-      Width = 74
+      Width = 79
       Height = 13
       Caption = 'Simplex/Duplex'
     end
     object Label5: TLabel
       Left = 24
       Top = 53
-      Width = 74
+      Width = 81
       Height = 13
       Caption = 'No. of elements'
     end
     object Label6: TLabel
       Left = 24
       Top = 86
-      Width = 39
+      Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label7: TLabel
       Left = 24
       Top = 120
-      Width = 58
+      Width = 65
       Height = 13
       Caption = 'No. of hours'
     end

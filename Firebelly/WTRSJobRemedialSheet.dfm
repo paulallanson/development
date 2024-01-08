@@ -19,11 +19,12 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Width = 628
     Height = 113
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 24
       Top = 16
-      Width = 72
+      Width = 68
       Height = 13
       Caption = 'Job Number:'
       Font.Charset = DEFAULT_CHARSET
@@ -36,7 +37,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label2: TLabel
       Left = 24
       Top = 40
-      Width = 57
+      Width = 53
       Height = 13
       Caption = 'Customer:'
       Font.Charset = DEFAULT_CHARSET
@@ -49,7 +50,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label3: TLabel
       Left = 24
       Top = 64
-      Width = 69
+      Width = 62
       Height = 13
       Caption = 'Description:'
       Font.Charset = DEFAULT_CHARSET
@@ -104,7 +105,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label4: TLabel
       Left = 352
       Top = 16
-      Width = 64
+      Width = 54
       Height = 13
       Caption = 'Reference:'
       Font.Charset = DEFAULT_CHARSET
@@ -135,6 +136,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Width = 628
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       628
@@ -146,6 +148,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         302

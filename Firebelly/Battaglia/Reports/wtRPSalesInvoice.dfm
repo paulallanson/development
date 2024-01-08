@@ -13,7 +13,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
@@ -190,9 +190,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Left = 557
         Top = 5
         Width = 59
-        Height = 16
+        Height = 17
         Size.Values = (
-          42.333333333333330000
+          44.979166666666670000
           1473.729166666667000000
           13.229166666666670000
           156.104166666666700000)
@@ -249,13 +249,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QtyInvoicedLbl: TQRLabel
         Left = 396
         Top = 3
-        Width = 83
+        Width = 85
         Height = 20
         Size.Values = (
           52.916666666666670000
           1047.750000000000000000
           7.937500000000000000
-          219.604166666666700000)
+          224.895833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -309,15 +309,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object GoodsLbl: TQRLabel
-        Left = 567
+        Left = 564
         Top = 3
-        Width = 53
+        Width = 56
         Height = 19
         Size.Values = (
           50.270833333333330000
-          1500.187500000000000000
+          1492.250000000000000000
           7.937500000000000000
-          140.229166666666700000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -487,15 +487,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object InvoiceDateLbl: TQRLabel
-        Left = 619
+        Left = 618
         Top = 267
-        Width = 95
+        Width = 96
         Height = 20
         Size.Values = (
           52.916666666666670000
-          1637.770833333333000000
+          1635.125000000000000000
           706.437500000000000000
-          251.354166666666700000)
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -609,13 +609,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object qrlblInvoiceLabel: TQRLabel
         Left = 440
         Top = 238
-        Width = 73
+        Width = 72
         Height = 20
         Size.Values = (
           52.916666666666670000
           1164.166666666667000000
           629.708333333333300000
-          193.145833333333300000)
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -667,13 +667,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QRLabel7: TQRLabel
         Left = 440
         Top = 326
-        Width = 81
+        Width = 77
         Height = 19
         Size.Values = (
           50.270833333333330000
           1164.166666666667000000
           862.541666666666700000
-          214.312500000000000000)
+          203.729166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -696,13 +696,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QRLabel6: TQRLabel
         Left = 440
         Top = 297
-        Width = 101
+        Width = 95
         Height = 20
         Size.Values = (
           52.916666666666670000
           1164.166666666667000000
           785.812500000000000000
-          267.229166666666700000)
+          251.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -789,13 +789,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QRLabel8: TQRLabel
         Left = 18
         Top = 382
-        Width = 127
+        Width = 130
         Height = 22
         Size.Values = (
           58.208333333333330000
           47.625000000000000000
           1010.708333333333000000
-          336.020833333333300000)
+          343.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -816,15 +816,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 11
       end
       object QRLabel10: TQRLabel
-        Left = 631
+        Left = 632
         Top = 382
-        Width = 83
+        Width = 82
         Height = 22
         Size.Values = (
           58.208333333333330000
-          1669.520833333333000000
+          1672.166666666667000000
           1010.708333333333000000
-          219.604166666666700000)
+          216.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -870,15 +870,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         YIncrement = 50
       end
       object qrlblAccountCode: TQRLabel
-        Left = 597
+        Left = 600
         Top = 326
-        Width = 117
+        Width = 114
         Height = 19
         Size.Values = (
           50.270833333333330000
-          1579.562500000000000000
+          1587.500000000000000000
           862.541666666666700000
-          309.562500000000000000)
+          301.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -899,15 +899,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 538
+        Left = 540
         Top = 382
-        Width = 79
+        Width = 77
         Height = 22
         Size.Values = (
           58.208333333333330000
-          1423.458333333333000000
+          1428.750000000000000000
           1010.708333333333000000
-          209.020833333333300000)
+          203.729166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1054,13 +1054,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object lblReference: TQRLabel
         Left = 16
         Top = 177
-        Width = 73
+        Width = 71
         Height = 18
         Size.Values = (
           47.625000000000000000
           42.333333333333330000
           468.312500000000000000
-          193.145833333333300000)
+          187.854166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1083,13 +1083,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QRLabel11: TQRLabel
         Left = 436
         Top = 14
-        Width = 61
+        Width = 53
         Height = 21
         Size.Values = (
           55.562500000000000000
           1153.583333333333000000
           37.041666666666670000
-          161.395833333333300000)
+          140.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1111,15 +1111,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object GoodsValueLbl: TQRLabel
-        Left = 533
+        Left = 537
         Top = 15
-        Width = 90
+        Width = 86
         Height = 17
         Size.Values = (
           44.979166666666670000
-          1410.229166666667000000
+          1420.812500000000000000
           39.687500000000000000
-          238.125000000000000000)
+          227.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1141,15 +1141,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object VATValueLbl: TQRLabel
-        Left = 547
+        Left = 553
         Top = 44
-        Width = 76
+        Width = 70
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1447.270833333333000000
+          1463.145833333333000000
           116.416666666666700000
-          201.083333333333300000)
+          185.208333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1173,13 +1173,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object QRLabel12: TQRLabel
         Left = 436
         Top = 43
-        Width = 60
+        Width = 52
         Height = 19
         Size.Values = (
           50.270833333333330000
           1153.583333333333000000
           113.770833333333300000
-          158.750000000000000000)
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1219,13 +1219,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object qrlblDepositPaid: TQRLabel
         Left = 436
         Top = 105
-        Width = 75
+        Width = 72
         Height = 16
         Size.Values = (
           42.333333333333330000
           1153.583333333333000000
           277.812500000000000000
-          198.437500000000000000)
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1247,15 +1247,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object DepositLbl: TQRLabel
-        Left = 559
+        Left = 562
         Top = 105
-        Width = 64
+        Width = 61
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1479.020833333333000000
+          1486.958333333333000000
           277.812500000000000000
-          169.333333333333300000)
+          161.395833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1277,15 +1277,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object TotalValueLbl: TQRLabel
-        Left = 532
+        Left = 545
         Top = 76
-        Width = 91
+        Width = 78
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1407.583333333333000000
+          1441.979166666667000000
           201.083333333333300000
-          240.770833333333300000)
+          206.375000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1309,13 +1309,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object qrlblInvoiceTotal: TQRLabel
         Left = 436
         Top = 76
-        Width = 87
+        Width = 72
         Height = 16
         Size.Values = (
           42.333333333333330000
           1153.583333333333000000
           201.083333333333300000
-          230.187500000000000000)
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1401,13 +1401,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object qrlblToPay: TQRLabel
         Left = 436
         Top = 135
-        Width = 40
+        Width = 38
         Height = 16
         Size.Values = (
           42.333333333333330000
           1153.583333333333000000
           357.187500000000000000
-          105.833333333333300000)
+          100.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1429,15 +1429,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object ToPayLbl: TQRLabel
-        Left = 570
+        Left = 571
         Top = 135
-        Width = 53
+        Width = 52
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1508.125000000000000000
+          1510.770833333333000000
           357.187500000000000000
-          140.229166666666700000)
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1461,13 +1461,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object qrlblPaymentTerms: TQRLabel
         Left = 12
         Top = 34
-        Width = 109
+        Width = 97
         Height = 16
         Size.Values = (
           42.333333333333330000
           31.750000000000000000
           89.958333333333330000
-          288.395833333333300000)
+          256.645833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1623,15 +1623,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object lblWorktopSize: TQRLabel
-        Left = 325
+        Left = 320
         Top = 2
-        Width = 84
+        Width = 89
         Height = 19
         Size.Values = (
           50.270833333333330000
-          859.895833333333300000
+          846.666666666666700000
           5.291666666666667000
-          222.250000000000000000)
+          235.479166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1731,15 +1731,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblCutOut: TQRLabel
-        Left = 341
+        Left = 343
         Top = 3
-        Width = 68
+        Width = 66
         Height = 19
         Size.Values = (
           50.270833333333330000
-          902.229166666666700000
+          907.520833333333300000
           7.937500000000000000
-          179.916666666666700000)
+          174.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1781,15 +1781,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblLength: TQRLabel
-        Left = 452
+        Left = 450
         Top = 2
-        Width = 62
+        Width = 64
         Height = 19
         Size.Values = (
           50.270833333333330000
-          1195.916666666667000000
+          1190.625000000000000000
           5.291666666666667000
-          164.041666666666700000)
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1810,15 +1810,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblEdgeDescription: TQRLabel
-        Left = 294
+        Left = 289
         Top = 3
-        Width = 115
+        Width = 120
         Height = 19
         Size.Values = (
           50.270833333333330000
-          777.875000000000000000
+          764.645833333333300000
           7.937500000000000000
-          304.270833333333300000)
+          317.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1860,15 +1860,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblExtraQuantity: TQRDBText
-        Left = 464
+        Left = 463
         Top = 4
-        Width = 49
+        Width = 50
         Height = 19
         Size.Values = (
           50.270833333333330000
-          1227.666666666667000000
+          1225.020833333333000000
           10.583333333333330000
-          129.645833333333300000)
+          132.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1892,15 +1892,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblExtraDescription: TQRLabel
-        Left = 291
+        Left = 288
         Top = 3
-        Width = 118
+        Width = 121
         Height = 19
         Size.Values = (
           50.270833333333330000
-          769.937500000000000000
+          762.000000000000000000
           7.937500000000000000
-          312.208333333333300000)
+          320.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

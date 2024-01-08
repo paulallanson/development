@@ -23,8 +23,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Width = 774
     Height = 19
     Panels = <>
-    ExplicitTop = 471
-    ExplicitWidth = 768
   end
   object Panel1: TPanel
     Left = 0
@@ -32,9 +30,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Width = 774
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 430
-    ExplicitWidth = 768
     object OKBitBtn: TBitBtn
       Left = 312
       Top = 8
@@ -81,8 +78,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Width = 774
     Height = 73
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 768
     object Label1: TLabel
       Left = 16
       Top = 14
@@ -134,8 +131,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     OnKeyPress = grdDetailsKeyPress
     OnSelectCell = grdDetailsSelectCell
     OnTopLeftChanged = grdDetailsTopLeftChanged
-    ExplicitWidth = 768
-    ExplicitHeight = 335
     ColWidths = (
       211
       70
@@ -176,8 +171,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Height = 22
     Align = alTop
     Caption = 'Panel5'
+    ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 768
     object Label3: TLabel
       Left = 6
       Top = 3
@@ -194,7 +189,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
-      ExplicitWidth = 557
       object StringGrid1: TStringGrid
         Left = -2
         Top = -3

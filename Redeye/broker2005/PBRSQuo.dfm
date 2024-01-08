@@ -32,6 +32,7 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Items.Strings = (
       'Print My Quotations'
       'Print All Quotations')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = MyOrAllRadioGroupClick
@@ -50,6 +51,7 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Items.Strings = (
       'All Unprinted Quotations'
       'Selected Quotations')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     OnClick = AllOrOneRadioGroupClick
@@ -60,6 +62,7 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Width = 430
     Height = 213
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object cbPrintLogo: TCheckBox
       Left = 14
@@ -209,12 +212,13 @@ object PBRSQuoFrm: TPBRSQuoFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 6
       object Label3: TLabel
         Left = 8
         Top = 71
-        Width = 202
+        Width = 191
         Height = 39
         Caption = 
           'Enter quotation numbers and/or quotation separated by commas. Fo' +
@@ -268,18 +272,19 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Top = 71
     Width = 256
     Height = 68
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 15
-      Width = 63
+      Width = 66
       Height = 13
       Caption = 'Paper Layout'
     end
     object Label2: TLabel
       Left = 8
       Top = 42
-      Width = 62
+      Width = 66
       Height = 13
       Caption = 'Letter Layout'
     end
@@ -314,6 +319,7 @@ object PBRSQuoFrm: TPBRSQuoFrm
     Items.Strings = (
       'One letter per line'
       'One letter for all lines')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 4
     OnClick = TypeRadioGroupClick

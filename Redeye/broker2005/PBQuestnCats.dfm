@@ -20,14 +20,14 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Questions'
   end
   object Label2: TLabel
     Left = 322
     Top = 8
-    Width = 64
+    Width = 66
     Height = 13
     Anchors = [akRight]
     Caption = 'Product Type'
@@ -116,10 +116,13 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Enabled = False
     Lines.Strings = (
       'Click ADD to add the '
-      'selected question(s) onto all '
-      'the product groups in the '
+      'selected question(s) onto '
+      'all '
+      'the product groups in '
+      'the '
       'selected category.'
-      'Note that this action cannot '
+      'Note that this action '
+      'cannot '
       'be undone.')
     TabOrder = 4
   end

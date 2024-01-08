@@ -39,8 +39,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       item
         Width = 50
       end>
-    ExplicitTop = 470
-    ExplicitWidth = 777
   end
   object pnlBottom: TPanel
     Left = 0
@@ -48,9 +46,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Width = 783
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 429
-    ExplicitWidth = 777
     DesignSize = (
       783
       41)
@@ -97,7 +94,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 527
     end
     object CancelBitBtn: TBitBtn
       Left = 613
@@ -127,7 +123,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 607
     end
     object CloseBitBtn: TBitBtn
       Left = 693
@@ -139,7 +134,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
-      ExplicitLeft = 687
     end
   end
   object pnlTop: TPanel
@@ -148,8 +142,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Width = 783
     Height = 141
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 777
     DesignSize = (
       783
       141)
@@ -197,8 +191,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Width = 759
       Height = 75
       Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 3
-      ExplicitWidth = 753
       object Label1: TLabel
         Left = 8
         Top = 20
@@ -251,8 +245,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Width = 760
       Height = 73
       Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 754
       DesignSize = (
         760
         73)
@@ -319,7 +313,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
-        ExplicitWidth = 291
       end
       object edtFormReference: TEdit
         Left = 128
@@ -343,7 +336,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ReadOnly = True
         TabOrder = 4
         OnKeyPress = PartEditKeyPress
-        ExplicitWidth = 291
       end
       object dblkpVersions: TDBLookupComboBox
         Left = 128
@@ -427,7 +419,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 6
-      ExplicitLeft = 608
     end
     object dblkpMoveType: TDBLookupComboBox
       Left = 392
@@ -448,9 +439,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Height = 297
     Align = alClient
     Caption = 'pnlcentre'
+    ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 777
-    ExplicitHeight = 288
     object pnlCentreRight: TPanel
       Left = 401
       Top = 1
@@ -459,9 +449,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Align = alClient
       BevelOuter = bvNone
       Caption = 'pnlCentreRight'
+      ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 375
-      ExplicitHeight = 286
       DesignSize = (
         381
         295)
@@ -472,9 +461,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Height = 273
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 355
-        ExplicitHeight = 264
         DesignSize = (
           361
           273)
@@ -521,8 +509,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnDragDrop = ToTreeViewDragDrop
           OnDragOver = ToTreeViewDragOver
           OnStartDrag = ToTreeViewStartDrag
-          ExplicitWidth = 336
-          ExplicitHeight = 177
         end
       end
     end
@@ -534,8 +520,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Align = alLeft
       BevelOuter = bvNone
       Caption = 'pnlCentreLeft'
+      ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 286
       DesignSize = (
         400
         295)
@@ -546,8 +532,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Height = 274
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move From'
+        ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 265
         DesignSize = (
           384
           274)
@@ -594,7 +580,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnChange = FromTreeViewChange
           OnDblClick = FromTreeViewDblClick
           OnStartDrag = FromTreeViewStartDrag
-          ExplicitHeight = 177
         end
       end
     end

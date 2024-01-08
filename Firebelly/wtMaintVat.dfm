@@ -21,7 +21,7 @@ object frmwtMaintVat: TfrmwtMaintVat
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 69
+    Width = 58
     Height = 13
     Caption = 'VAT Rate %'
     Font.Charset = DEFAULT_CHARSET
@@ -34,7 +34,7 @@ object frmwtMaintVat: TfrmwtMaintVat
   object Label2: TLabel
     Left = 16
     Top = 52
-    Width = 65
+    Width = 59
     Height = 13
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
@@ -47,7 +47,7 @@ object frmwtMaintVat: TfrmwtMaintVat
   object Label3: TLabel
     Left = 16
     Top = 84
-    Width = 58
+    Width = 49
     Height = 13
     Caption = 'VAT Code'
     Font.Charset = DEFAULT_CHARSET
@@ -108,7 +108,7 @@ object frmwtMaintVat: TfrmwtMaintVat
     object Label5: TLabel
       Left = 8
       Top = 60
-      Width = 58
+      Width = 56
       Height = 13
       Caption = 'VAT Rate %'
       Font.Charset = DEFAULT_CHARSET

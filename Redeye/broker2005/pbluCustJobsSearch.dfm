@@ -16,7 +16,7 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -29,7 +29,7 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -42,35 +42,35 @@ object frmpbluCustJobsSearch: TfrmpbluCustJobsSearch
   object Label4: TLabel
     Left = 11
     Top = 26
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 97
+    Width = 103
     Height = 13
     Caption = 'Customer Reference'
   end
   object Label1: TLabel
     Left = 11
     Top = 75
-    Width = 65
+    Width = 70
     Height = 13
     Caption = 'Product Code'
   end
   object Label3: TLabel
     Left = 11
     Top = 99
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Form Reference'
   end
   object Label13: TLabel
     Left = 11
     Top = 122
-    Width = 68
+    Width = 77
     Height = 13
     Caption = 'Order Quantity'
   end

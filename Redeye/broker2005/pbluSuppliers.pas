@@ -335,7 +335,7 @@ begin
   if(dbgDetails.datasource.dataset.fieldByName('Acc_Active').AsString = 'N') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 end;
 

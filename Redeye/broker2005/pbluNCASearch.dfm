@@ -20,7 +20,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -46,28 +46,28 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object Label6: TLabel
     Left = 11
     Top = 27
-    Width = 47
+    Width = 49
     Height = 13
     Caption = 'Raised by'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 146
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
     Top = 74
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 11
     Top = 219
-    Width = 61
+    Width = 63
     Height = 13
     Caption = 'Raised since'
   end
@@ -81,28 +81,28 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object Label5: TLabel
     Left = 11
     Top = 194
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label8: TLabel
     Left = 11
     Top = 99
-    Width = 93
+    Width = 102
     Height = 13
     Caption = 'Raising Department'
   end
   object Label10: TLabel
     Left = 11
     Top = 123
-    Width = 92
+    Width = 99
     Height = 13
     Caption = 'Source Department'
   end
   object Label3: TLabel
     Left = 11
     Top = 51
-    Width = 60
+    Width = 63
     Height = 13
     Caption = 'Reason type'
   end

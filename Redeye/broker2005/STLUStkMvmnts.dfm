@@ -144,7 +144,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       object lblPart: TLabel
         Left = 8
         Top = 8
-        Width = 40
+        Width = 43
         Height = 13
         Caption = 'Product:'
         Font.Charset = ANSI_CHARSET
@@ -157,7 +157,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       object Label1: TLabel
         Left = 528
         Top = 8
-        Width = 55
+        Width = 56
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Total Stock'
@@ -171,7 +171,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       object Label2: TLabel
         Left = 528
         Top = 24
-        Width = 52
+        Width = 53
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Free Stock'
@@ -183,18 +183,18 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
         ParentFont = False
       end
       object lblTotalStock: TLabel
-        Left = 608
+        Left = 604
         Top = 8
-        Width = 62
+        Width = 66
         Height = 13
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblTotalStock'
       end
       object lblFreeStock: TLabel
-        Left = 611
+        Left = 607
         Top = 24
-        Width = 59
+        Width = 63
         Height = 13
         Alignment = taRightJustify
         Anchors = [akTop, akRight]

@@ -20,7 +20,7 @@ object frmWTMaintWT: TfrmWTMaintWT
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 33
+    Width = 31
     Height = 13
     Caption = 'Name'
     Font.Charset = DEFAULT_CHARSET
@@ -77,7 +77,7 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label3: TLabel
         Left = 0
         Top = 52
-        Width = 78
+        Width = 71
         Height = 13
         Caption = 'Material Type'
         Font.Charset = DEFAULT_CHARSET
@@ -90,28 +90,28 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label2: TLabel
         Left = 0
         Top = 84
-        Width = 29
+        Width = 33
         Height = 13
         Caption = 'Group'
       end
       object Label5: TLabel
         Left = 0
         Top = 17
-        Width = 27
+        Width = 31
         Height = 13
         Caption = 'Finish'
       end
       object Label7: TLabel
         Left = 328
         Top = 1
-        Width = 29
+        Width = 31
         Height = 13
         Caption = 'Image'
       end
       object Label8: TLabel
         Left = 0
         Top = 193
-        Width = 75
+        Width = 84
         Height = 13
         Caption = 'Online Discount'
       end
@@ -215,6 +215,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Height = 200
         BorderStyle = bsSingle
         Caption = 'Panel1'
+        ParentBackground = False
         TabOrder = 10
         object imgWorktop: TImage
           Left = 1
@@ -1328,14 +1329,14 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label4: TLabel
         Left = 8
         Top = 8
-        Width = 124
+        Width = 136
         Height = 13
         Caption = 'Currently Selected Colours'
       end
       object Label6: TLabel
         Left = 272
         Top = 8
-        Width = 97
+        Width = 105
         Height = 13
         Caption = 'Un-Selected Colours'
       end
@@ -1449,14 +1450,14 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label9: TLabel
         Left = 8
         Top = 24
-        Width = 81
+        Width = 90
         Height = 13
         Caption = 'Short Description'
       end
       object Label10: TLabel
         Left = 8
         Top = 56
-        Width = 80
+        Width = 88
         Height = 13
         Caption = 'Long Description'
       end

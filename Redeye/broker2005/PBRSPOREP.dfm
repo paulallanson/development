@@ -21,7 +21,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object SupplierLabel: TLabel
     Left = 160
     Top = 8
-    Width = 77
+    Width = 82
     Height = 13
     Caption = 'Supplier/Branch'
     Visible = False
@@ -29,7 +29,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object Label1: TLabel
     Left = 8
     Top = 144
-    Width = 52
+    Width = 56
     Height = 13
     Caption = 'Date From:'
     Visible = False
@@ -87,7 +87,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object CustBranchLabel: TLabel
     Left = 160
     Top = 80
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
     Visible = False
@@ -98,6 +98,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Width = 226
     Height = 85
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 13
     object exCallOffsChkBox: TCheckBox
       Left = 16
@@ -141,6 +142,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     TabOrder = 0
     OnClick = AllOrOneRadioGroupClick
   end
@@ -228,6 +230,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
       'Account Type'
       'Customer Branch'
       'Account Manager')
+    ParentBackground = False
     TabOrder = 5
   end
   object DateFromEdit: TEdit
@@ -273,6 +276,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 9
     OnClick = CustRadioGroupClick
   end
@@ -312,6 +316,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
       'Order'
       'Product Type'
       'Job Description')
+    ParentBackground = False
     TabOrder = 12
   end
   object OleContainer1: TOleContainer
@@ -329,12 +334,13 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Top = 172
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 15
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -410,6 +416,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Items.Strings = (
       'All Purchase Orders'
       'Orders to be invoiced on call off')
+    ParentBackground = False
     TabOrder = 17
   end
   object chkbxExcludeCosts: TCheckBox

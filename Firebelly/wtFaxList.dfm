@@ -20,6 +20,7 @@ object frmWTFaxList: TfrmWTFaxList
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Panel2: TPanel
       Left = 286
@@ -28,6 +29,7 @@ object frmWTFaxList: TfrmWTFaxList
       Height = 43
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object BitBtn1: TBitBtn
         Left = 6
@@ -56,6 +58,7 @@ object frmWTFaxList: TfrmWTFaxList
     Height = 168
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 1
     object FaxListGrid: TStringGrid
       Left = 1

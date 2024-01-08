@@ -19,21 +19,21 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 72
+    Width = 82
     Height = 13
     Caption = 'Import directory'
   end
   object Label2: TLabel
     Left = 8
     Top = 104
-    Width = 47
+    Width = 51
     Height = 13
     Caption = 'Filenames'
   end
   object Label3: TLabel
     Left = 8
     Top = 56
-    Width = 94
+    Width = 105
     Height = 13
     Caption = 'Replenish orders for'
   end

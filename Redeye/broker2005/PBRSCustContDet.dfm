@@ -25,7 +25,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 970
     DesignSize = (
       976
       117)
@@ -238,7 +237,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentBackground = False
       TabOrder = 6
       OnClick = RadioGroup1Click
-      ExplicitLeft = 857
     end
     object spnedtMarkup: TSpinEdit
       Left = 707
@@ -251,7 +249,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 7
       Value = 0
       OnExit = spnedtMarkupExit
-      ExplicitLeft = 701
     end
     object chkbxCustomers: TCheckBox
       Left = 707
@@ -262,7 +259,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Caption = 'Include inactive Customers'
       TabOrder = 8
       OnClick = cmbbxContStatusChange
-      ExplicitLeft = 701
     end
     object chkbxContacts: TCheckBox
       Left = 707
@@ -273,7 +269,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Caption = 'Include inactive Contacts'
       TabOrder = 9
       OnClick = cmbbxContStatusChange
-      ExplicitLeft = 701
     end
     object chkbxShowStatus: TCheckBox
       Left = 707
@@ -283,7 +278,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Anchors = [akTop, akRight]
       Caption = 'Show Status'
       TabOrder = 10
-      ExplicitLeft = 701
     end
     object Panel4: TPanel
       Left = 443
@@ -373,8 +367,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 424
-    ExplicitWidth = 970
     DesignSize = (
       976
       41)
@@ -387,7 +379,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 667
       DesignSize = (
         302
         39)
@@ -519,8 +510,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       item
         Width = 50
       end>
-    ExplicitTop = 465
-    ExplicitWidth = 970
   end
   object dbgrdContStatus: TDBGrid
     Left = 0

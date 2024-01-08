@@ -17,21 +17,21 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
   object Label1: TLabel
     Left = 8
     Top = 40
-    Width = 68
+    Width = 77
     Height = 13
     Caption = 'Current Clients'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 95
+    Width = 98
     Height = 13
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
     Top = 16
-    Width = 105
+    Width = 96
     Height = 13
     Caption = 'Account Manager:'
     Font.Charset = DEFAULT_CHARSET
@@ -44,7 +44,7 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
   object lblDetails: TLabel
     Left = 120
     Top = 16
-    Width = 53
+    Width = 48
     Height = 13
     Caption = 'lblDetails'
     Font.Charset = DEFAULT_CHARSET
@@ -57,7 +57,7 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
   object Label4: TLabel
     Left = 328
     Top = 40
-    Width = 93
+    Width = 103
     Height = 13
     Caption = 'Un-assigned Clients'
   end
@@ -137,6 +137,7 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
     Width = 542
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
     object btnOK: TBitBtn
       Left = 189

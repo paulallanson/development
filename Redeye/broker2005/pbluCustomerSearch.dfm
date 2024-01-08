@@ -19,7 +19,7 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -32,7 +32,7 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -45,28 +45,28 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 45
+    Width = 47
     Height = 13
     Caption = 'Postcode'
   end
   object Label13: TLabel
     Left = 11
     Top = 98
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Telephone'
   end
   object Label3: TLabel
     Left = 11
     Top = 27
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Town/City'
   end
   object Label1: TLabel
     Left = 11
     Top = 437
-    Width = 65
+    Width = 69
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
@@ -88,7 +88,7 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   object Label5: TLabel
     Left = 11
     Top = 75
-    Width = 33
+    Width = 37
     Height = 13
     Caption = 'County'
   end
@@ -102,70 +102,70 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   object Label8: TLabel
     Left = 11
     Top = 410
-    Width = 78
+    Width = 81
     Height = 13
     Caption = 'Revenue Centre'
   end
   object Label10: TLabel
     Left = 11
     Top = 194
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label11: TLabel
     Left = 11
     Top = 266
-    Width = 53
+    Width = 58
     Height = 13
     Caption = 'Importance'
   end
   object lblAnalysis1: TLabel
     Left = 11
     Top = 290
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Analysis 1'
   end
   object lblAnalysis2: TLabel
     Left = 11
     Top = 314
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Analysis 2'
   end
   object Label14: TLabel
     Left = 11
     Top = 242
-    Width = 71
+    Width = 75
     Height = 13
     Caption = 'Customer Type'
   end
   object Label15: TLabel
     Left = 11
     Top = 218
-    Width = 77
+    Width = 84
     Height = 13
     Caption = 'Customer Status'
   end
   object Label16: TLabel
     Left = 11
     Top = 170
-    Width = 74
+    Width = 76
     Height = 13
     Caption = 'Secondary Rep'
   end
   object lblAnalysis3: TLabel
     Left = 11
     Top = 338
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Analysis 3'
   end
   object lblAnalysis4: TLabel
     Left = 11
     Top = 362
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'Analysis 4'
   end

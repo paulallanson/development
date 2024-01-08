@@ -20,28 +20,28 @@ object frmWtMaintFinish: TfrmWtMaintFinish
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label7: TLabel
     Left = 472
     Top = 89
-    Width = 29
+    Width = 31
     Height = 13
     Caption = 'Image'
   end
   object Label9: TLabel
     Left = 8
     Top = 54
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label10: TLabel
     Left = 8
     Top = 86
-    Width = 32
+    Width = 35
     Height = 13
     Caption = 'Details'
   end
@@ -113,6 +113,7 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Height = 100
     BorderStyle = bsSingle
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 9
     object imgWorktop: TImage
       Left = 1

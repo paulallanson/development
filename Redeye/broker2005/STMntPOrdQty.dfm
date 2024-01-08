@@ -36,14 +36,14 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
       object Label1: TLabel
         Left = 7
         Top = 11
-        Width = 48
+        Width = 46
         Height = 13
         Caption = 'Pack Size'
       end
       object QtyLabel: TLabel
         Left = 7
         Top = 43
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end
@@ -57,7 +57,7 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
       object DiscLbl: TLabel
         Left = 191
         Top = 76
-        Width = 53
+        Width = 58
         Height = 13
         Caption = 'Discount %'
       end
@@ -133,28 +133,28 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     object lblPartLabel: TLabel
       Left = 7
       Top = 8
-      Width = 25
+      Width = 26
       Height = 13
       Caption = 'Part: '
     end
     object Label2: TLabel
       Left = 7
       Top = 28
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
     object lblPart: TLabel
       Left = 72
       Top = 8
-      Width = 29
+      Width = 33
       Height = 13
       Caption = 'lblPart'
     end
     object lblPartDesc: TLabel
       Left = 72
       Top = 28
-      Width = 29
+      Width = 33
       Height = 13
       Caption = 'lblPart'
     end

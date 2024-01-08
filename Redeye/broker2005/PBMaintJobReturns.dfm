@@ -19,11 +19,12 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     Width = 540
     Height = 89
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Product'
     end
@@ -46,21 +47,21 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     object Label4: TLabel
       Left = 16
       Top = 64
-      Width = 39
+      Width = 40
       Height = 13
       Caption = 'Job Bag'
     end
     object lblJobBag: TLabel
       Left = 72
       Top = 64
-      Width = 46
+      Width = 50
       Height = 13
       Caption = 'lblJobBag'
     end
     object Label6: TLabel
       Left = 16
       Top = 40
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -79,6 +80,7 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     Width = 540
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object OKBitBtn: TBitBtn
       Left = 189
@@ -237,25 +239,26 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     Width = 540
     Height = 81
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 16
       Top = 14
-      Width = 28
+      Width = 29
       Height = 13
       Caption = 'Overs'
     end
     object Label9: TLabel
       Left = 255
       Top = 14
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Return to Stock'
     end
     object Label10: TLabel
       Left = 255
       Top = 46
-      Width = 43
+      Width = 45
       Height = 13
       Caption = 'Wastage'
     end

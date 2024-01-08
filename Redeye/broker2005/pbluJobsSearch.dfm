@@ -20,7 +20,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -46,42 +46,42 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label6: TLabel
     Left = 11
     Top = 51
-    Width = 97
+    Width = 103
     Height = 13
     Caption = 'Customer Reference'
   end
   object Label13: TLabel
     Left = 11
     Top = 74
-    Width = 59
+    Width = 65
     Height = 13
     Caption = 'Job Quantity'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 146
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
     Top = 98
-    Width = 30
+    Width = 32
     Height = 13
     Caption = 'Status'
   end
   object Label3: TLabel
     Left = 11
     Top = 27
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object Label1: TLabel
     Left = 11
     Top = 348
-    Width = 66
+    Width = 72
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Ordered since'
@@ -89,7 +89,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object lblDescriptiveRef: TLabel
     Left = 11
     Top = 170
-    Width = 106
+    Width = 110
     Height = 13
     Caption = 'Descriptive Reference'
   end
@@ -103,28 +103,28 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label5: TLabel
     Left = 11
     Top = 266
-    Width = 85
+    Width = 91
     Height = 13
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
     Top = 290
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end
   object Label8: TLabel
     Left = 11
     Top = 122
-    Width = 84
+    Width = 92
     Height = 13
     Caption = 'Production Status'
   end
   object Label10: TLabel
     Left = 11
     Top = 372
-    Width = 57
+    Width = 62
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Required by'
@@ -132,21 +132,21 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label11: TLabel
     Left = 11
     Top = 194
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Quote'
   end
   object Label14: TLabel
     Left = 11
     Top = 242
-    Width = 74
+    Width = 76
     Height = 13
     Caption = 'Secondary Rep'
   end
   object Label15: TLabel
     Left = 11
     Top = 316
-    Width = 44
+    Width = 46
     Height = 13
     Caption = 'End User'
   end

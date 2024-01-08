@@ -20,7 +20,7 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 87
+    Width = 79
     Height = 13
     Caption = 'Payment Terms'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 91
+    Width = 85
     Height = 13
     Caption = 'Number of Days'
     Font.Charset = DEFAULT_CHARSET

@@ -47,9 +47,8 @@ object frmWTLUReason: TfrmWTLUReason
     Height = 48
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 335
-    ExplicitWidth = 777
     DesignSize = (
       783
       48)
@@ -136,8 +135,6 @@ object frmWTLUReason: TfrmWTLUReason
       item
         Width = 50
       end>
-    ExplicitTop = 383
-    ExplicitWidth = 777
   end
   object srcReason: TDataSource
     DataSet = qryReason

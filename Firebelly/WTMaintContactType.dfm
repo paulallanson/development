@@ -21,7 +21,7 @@ object frmWTMaintContactType: TfrmWTMaintContactType
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 64
+    Width = 66
     Height = 13
     Caption = 'Contact Type'
   end

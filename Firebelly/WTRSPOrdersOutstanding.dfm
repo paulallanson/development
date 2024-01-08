@@ -57,6 +57,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Items.Strings = (
       'All'
       'Selected')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpSupplierClick
   end
@@ -66,18 +67,19 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Width = 209
     Height = 73
     Caption = 'Order Date'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -150,11 +152,12 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Width = 249
     Height = 113
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 43
+      Width = 48
       Height = 13
       Caption = 'Suppliers'
     end
@@ -199,6 +202,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
       'Supplier'
       'Status'
       'Office Contact')
+    ParentBackground = False
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
@@ -244,12 +248,13 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Top = 111
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -272,6 +277,7 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Items.Strings = (
       'All'
       'One Contact')
+    ParentBackground = False
     TabOrder = 11
     OnClick = rdgrpOperatorsClick
   end
@@ -280,11 +286,12 @@ object frmWTRSPOrdersOutstanding: TfrmWTRSPOrdersOutstanding
     Top = 8
     Width = 249
     Height = 57
+    ParentBackground = False
     TabOrder = 12
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 68
+      Width = 74
       Height = 13
       Caption = 'Office Contact'
     end

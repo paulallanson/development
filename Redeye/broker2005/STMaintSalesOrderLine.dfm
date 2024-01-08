@@ -20,6 +20,7 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
     Width = 491
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       491
@@ -71,39 +72,40 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
     Width = 491
     Height = 103
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 15
       Top = 16
-      Width = 88
+      Width = 96
       Height = 13
       Caption = 'Quantity Produced'
     end
     object Label4: TLabel
       Left = 15
       Top = 76
-      Width = 44
+      Width = 45
       Height = 13
       Caption = 'Sell Price'
     end
     object Label6: TLabel
       Left = 274
       Top = 76
-      Width = 48
+      Width = 46
       Height = 13
       Caption = 'Pack Size'
     end
     object Label9: TLabel
       Left = 15
       Top = 46
-      Width = 75
+      Width = 80
       Height = 13
       Caption = 'Return to Stock'
     end
     object Label10: TLabel
       Left = 279
       Top = 46
-      Width = 43
+      Width = 45
       Height = 13
       Caption = 'Wastage'
     end
@@ -173,18 +175,19 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
     Width = 491
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label7: TLabel
       Left = 15
       Top = 12
-      Width = 68
+      Width = 73
       Height = 13
       Caption = 'Product Code:'
     end
     object Label8: TLabel
       Left = 15
       Top = 40
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
     end
@@ -213,18 +216,19 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
     Width = 491
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 15
       Top = 16
-      Width = 80
+      Width = 90
       Height = 13
       Caption = 'Quantity Ordered'
     end
     object Label2: TLabel
       Left = 239
       Top = 16
-      Width = 83
+      Width = 87
       Height = 13
       Caption = 'Overs Requested'
     end

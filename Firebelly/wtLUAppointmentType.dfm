@@ -52,8 +52,6 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
       item
         Width = 50
       end>
-    ExplicitTop = 298
-    ExplicitWidth = 418
   end
   object Panel1: TPanel
     Left = 0
@@ -62,9 +60,8 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
     Height = 44
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 254
-    ExplicitWidth = 418
     DesignSize = (
       424
       44)

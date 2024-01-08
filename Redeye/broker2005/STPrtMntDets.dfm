@@ -18,28 +18,28 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   object Label1: TLabel
     Left = 8
     Top = 4
-    Width = 25
+    Width = 27
     Height = 13
     Caption = 'Code'
   end
   object Label2: TLabel
     Left = 8
     Top = 30
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label4: TLabel
     Left = 8
     Top = 256
-    Width = 67
+    Width = 66
     Height = 13
     Caption = 'Sell Price (PK)'
   end
   object Label5: TLabel
     Left = 8
     Top = 185
-    Width = 49
+    Width = 48
     Height = 13
     Caption = 'VAT Code'
   end
@@ -61,7 +61,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   object Label8: TLabel
     Left = 8
     Top = 80
-    Width = 29
+    Width = 33
     Height = 13
     Caption = 'Group'
   end
@@ -75,14 +75,14 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   object Label10: TLabel
     Left = 8
     Top = 338
-    Width = 84
+    Width = 88
     Height = 13
     Caption = 'Invoice Price Unit'
   end
   object Label11: TLabel
     Left = 8
     Top = 56
-    Width = 44
+    Width = 49
     Height = 13
     Caption = 'Customer'
   end
@@ -116,21 +116,21 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   object Label3: TLabel
     Left = 8
     Top = 304
-    Width = 75
+    Width = 81
     Height = 13
     Caption = 'Cost Uplift Type'
   end
   object Label13: TLabel
     Left = 384
     Top = 256
-    Width = 47
+    Width = 52
     Height = 13
     Caption = 'Markup %'
   end
   object Label14: TLabel
     Left = 384
     Top = 304
-    Width = 24
+    Width = 29
     Height = 13
     Caption = 'Uplift'
   end

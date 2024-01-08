@@ -21,6 +21,7 @@ object frmWTLUPOrderRpts: TfrmWTLUPOrderRpts
     Height = 143
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
@@ -69,6 +70,7 @@ object frmWTLUPOrderRpts: TfrmWTLUPOrderRpts
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       412

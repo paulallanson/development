@@ -377,6 +377,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     Width = 1142
     Height = 56
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
@@ -400,6 +401,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       Height = 54
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         295
@@ -503,6 +505,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8

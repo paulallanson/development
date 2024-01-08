@@ -29,8 +29,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       item
         Width = 50
       end>
-    ExplicitTop = 535
-    ExplicitWidth = 890
   end
   object pnlBottom: TPanel
     Left = 0
@@ -40,8 +38,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 494
-    ExplicitWidth = 890
     DesignSize = (
       896
       41)
@@ -88,7 +84,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 704
     end
     object BitBtn2: TBitBtn
       Left = 790
@@ -100,7 +95,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      ExplicitLeft = 784
     end
     object btnNotes: TBitBtn
       Left = 8
@@ -171,7 +165,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ParentBackground = False
       TabOrder = 4
       Visible = False
-      ExplicitWidth = 392
       DesignSize = (
         398
         25)
@@ -193,7 +186,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         ListSource = dmSalesInvoice.dtsCreditReason
         TabOrder = 0
         OnClick = dblkpCreditReasonClick
-        ExplicitWidth = 272
       end
       object BitBtn1: TBitBtn
         Left = 366
@@ -213,7 +205,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         ShowHint = True
         TabOrder = 1
         OnClick = BitBtn1Click
-        ExplicitLeft = 360
       end
     end
   end
@@ -225,7 +216,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 890
     DesignSize = (
       896
       36)
@@ -333,7 +323,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ListSource = dmSalesInvoice.dsOperator
       TabOrder = 3
       OnClick = dblkpOperatorClick
-      ExplicitLeft = 703
     end
     object edtAltInvoiceNumber: TEdit
       Left = 567
@@ -352,8 +341,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 374
-    ExplicitWidth = 890
     DesignSize = (
       896
       120)
@@ -367,7 +354,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 419
       DesignSize = (
         425
         118)
@@ -410,7 +396,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           '')
         ReadOnly = True
         TabOrder = 0
-        ExplicitLeft = 302
       end
       object memVAT: TMemo
         Left = 308
@@ -423,7 +408,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           '')
         ReadOnly = True
         TabOrder = 1
-        ExplicitLeft = 302
       end
       object memTotal: TMemo
         Left = 308
@@ -436,7 +420,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           '')
         ReadOnly = True
         TabOrder = 2
-        ExplicitLeft = 302
       end
       object pnlPackPrice: TPanel
         Left = 0
@@ -447,7 +430,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 419
         DesignSize = (
           425
           29)
@@ -480,7 +462,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           ListField = 'Description'
           TabOrder = 0
           OnClick = dblkpPriceUnitClick
-          ExplicitLeft = 303
         end
         object FormRefClrBitBtn: TBitBtn
           Left = 401
@@ -507,7 +488,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           ShowHint = True
           TabOrder = 1
           OnClick = FormRefClrBitBtnClick
-          ExplicitLeft = 395
         end
         object memQuantity: TMemo
           Left = 161
@@ -520,7 +500,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           OnEnter = memQuantityEnter
           OnExit = ValidateQty
           OnKeyPress = memQuantityKeyPress
-          ExplicitLeft = 155
         end
       end
     end
@@ -631,7 +610,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 890
     DesignSize = (
       896
       197)
@@ -807,7 +785,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 559
     end
     object edtAccountCode: TEdit
       Left = 565
@@ -817,7 +794,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 1
-      ExplicitLeft = 559
     end
     object btnInvToCustomer: TBitBtn
       Left = 845
@@ -837,7 +813,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ShowHint = True
       TabOrder = 2
       OnClick = btnInvToCustomerClick
-      ExplicitLeft = 839
     end
     object memCustomer: TMemo
       Left = 96
@@ -885,7 +860,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       AutoSize = False
       Caption = 'lblReference'
       TabOrder = 6
-      ExplicitLeft = 671
     end
     object dblkpJobRevenue: TDBLookupComboBox
       Left = 96
@@ -907,7 +881,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Caption = 'Cash Sale'
       TabOrder = 8
       OnClick = chkbxCashSaleClick
-      ExplicitLeft = 559
     end
     object pnlSubReps: TPanel
       Left = 0
@@ -999,8 +972,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     OnDblClick = sgLinesDblClick
     OnDrawCell = sgLinesDrawCell
     OnTopLeftChanged = sgLinesTopLeftChanged
-    ExplicitWidth = 890
-    ExplicitHeight = 83
     ColWidths = (
       40
       89
@@ -1025,7 +996,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 6
-    ExplicitWidth = 890
     DesignSize = (
       896
       27)
@@ -1066,7 +1036,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = edtDescChange
-      ExplicitWidth = 345
     end
     object edtCustOrderNo: TEdit
       Left = 565
@@ -1076,7 +1045,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akTop, akRight]
       TabOrder = 1
       OnChange = edtCustOrderNoChange
-      ExplicitLeft = 559
     end
   end
   object btnDelete: TBitBtn
@@ -1116,7 +1084,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     ParentBackground = False
     TabOrder = 8
     Visible = False
-    ExplicitWidth = 890
     DesignSize = (
       896
       31)
@@ -1135,7 +1102,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
-      ExplicitWidth = 305
     end
     object btnEndUser: TBitBtn
       Left = 420
@@ -1152,7 +1118,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ParentFont = False
       TabOrder = 1
       OnClick = btnEndUserClick
-      ExplicitLeft = 414
     end
   end
   object pmnLines: TPopupMenu

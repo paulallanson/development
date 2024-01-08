@@ -29,6 +29,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Width = 94
     Height = 276
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       94
@@ -81,24 +82,25 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Height = 276
     Align = alClient
     Caption = 'Panel4'
+    ParentBackground = False
     TabOrder = 2
     object Panel5: TPanel
       Left = 1
-      Top = 124
-      Width = 766
+      Top = 115
+      Width = 760
       Height = 160
       Align = alBottom
       BevelOuter = bvNone
       Caption = 'Panel3'
+      ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 115
-      ExplicitWidth = 760
       object pnlFTP: TPanel
         Left = 0
         Top = 0
         Width = 249
         Height = 160
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 5
@@ -184,6 +186,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Width = 760
       Height = 114
       Align = alClient
+      ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
         Left = 24

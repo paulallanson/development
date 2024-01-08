@@ -17,7 +17,7 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 41
+    Width = 45
     Height = 13
     Caption = 'Bin From'
   end

@@ -18,7 +18,7 @@ object frmWTAccExport1: TfrmWTAccExport1
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 136
+    Width = 151
     Height = 13
     Caption = 'Choose an action to perform:'
   end

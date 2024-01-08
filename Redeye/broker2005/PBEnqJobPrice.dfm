@@ -43,28 +43,28 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
     object Label10: TLabel
       Left = 8
       Top = 16
-      Width = 38
+      Width = 43
       Height = 13
       Caption = 'Supplier'
     end
     object Label11: TLabel
       Left = 8
       Top = 64
-      Width = 34
+      Width = 35
       Height = 13
       Caption = 'Branch'
     end
     object Label9: TLabel
       Left = 10
       Top = 112
-      Width = 49
+      Width = 54
       Height = 13
       Caption = 'Comments'
     end
     object Label8: TLabel
       Left = 47
       Top = 228
-      Width = 75
+      Width = 85
       Height = 13
       Caption = 'Additional Costs'
     end
@@ -433,37 +433,36 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       object Label1: TLabel
         Left = 8
         Top = 16
-        Width = 35
+        Width = 39
         Height = 13
         Caption = 'Enquiry'
       end
       object Label2: TLabel
         Left = 144
         Top = 16
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
       object Label5: TLabel
         Left = 8
         Top = 41
-        Width = 25
+        Width = 26
         Height = 13
         Caption = 'Lines'
       end
       object Label6: TLabel
         Left = 571
         Top = 72
-        Width = 51
+        Width = 54
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Price Units'
-        ExplicitLeft = 613
       end
       object Label3: TLabel
         Left = 520
         Top = 16
-        Width = 37
+        Width = 40
         Height = 13
         Caption = 'Contact'
       end

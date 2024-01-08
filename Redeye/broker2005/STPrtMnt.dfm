@@ -28,7 +28,6 @@ object STPrtMntFrm: TSTPrtMntFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 704
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -47,7 +46,6 @@ object STPrtMntFrm: TSTPrtMntFrm
           MinHeight = 41
           Width = 704
         end>
-      ExplicitWidth = 704
       object ToolBar1: TToolBar
         Left = 11
         Top = 0
@@ -187,8 +185,6 @@ object STPrtMntFrm: TSTPrtMntFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 388
-    ExplicitWidth = 704
     DesignSize = (
       710
       88)
@@ -215,7 +211,6 @@ object STPrtMntFrm: TSTPrtMntFrm
       Caption = 'Show All Products'
       TabOrder = 0
       OnClick = ShowAllCheckBoxClick
-      ExplicitLeft = 571
     end
     object CodeEdit: TEdit
       Left = 88
@@ -239,7 +234,6 @@ object STPrtMntFrm: TSTPrtMntFrm
         item
           Width = 50
         end>
-      ExplicitWidth = 702
     end
     object EdtDesc: TEdit
       Left = 88
@@ -261,8 +255,6 @@ object STPrtMntFrm: TSTPrtMntFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 704
-    ExplicitHeight = 343
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1

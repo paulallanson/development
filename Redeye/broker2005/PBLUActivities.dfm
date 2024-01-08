@@ -29,6 +29,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
@@ -81,6 +82,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     Width = 910
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object Label60: TLabel
       Left = 8
@@ -96,6 +98,7 @@ object frmPBLUActivities: TfrmPBLUActivities
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object btnClose: TButton
         Left = 192

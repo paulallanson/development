@@ -17,7 +17,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
   object Label1: TLabel
     Left = 0
     Top = 212
-    Width = 135
+    Width = 146
     Height = 13
     Caption = 'Reason for marking inactive '
   end
@@ -38,7 +38,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
   object DescDBText: TDBText
     Left = 40
     Top = 0
-    Width = 61
+    Width = 58
     Height = 13
     AutoSize = True
     DataField = 'Description'

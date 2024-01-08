@@ -21,7 +21,7 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
   object DelLabel: TLabel
     Left = 16
     Top = 387
-    Width = 151
+    Width = 133
     Height = 13
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
@@ -199,21 +199,21 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
     object Label1: TLabel
       Left = 8
       Top = 68
-      Width = 37
+      Width = 40
       Height = 13
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 100
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 192
       Top = 100
-      Width = 23
+      Width = 24
       Height = 13
       Caption = 'Time'
       Visible = False
@@ -221,14 +221,14 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
     object Label4: TLabel
       Left = 8
       Top = 40
-      Width = 34
+      Width = 35
       Height = 13
       Caption = 'Branch'
     end
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end

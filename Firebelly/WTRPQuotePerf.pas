@@ -276,6 +276,7 @@ begin
       parambyname('Date_To').Asdatetime := DateTo;
       stext := SQL.text;
       Open;
+      result := recordcount;
     end;
 end;
 

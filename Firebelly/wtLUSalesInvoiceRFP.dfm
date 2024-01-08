@@ -25,8 +25,6 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       item
         Width = 50
       end>
-    ExplicitTop = 506
-    ExplicitWidth = 1051
   end
   object pnlFooter: TPanel
     Left = 0
@@ -34,9 +32,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Width = 1057
     Height = 53
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 473
     DesignSize = (
       1057
       53)
@@ -60,7 +57,6 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       Caption = 'Close'
       TabOrder = 1
       OnClick = Button4Click
-      ExplicitLeft = 931
     end
     object btnSweep: TButton
       Left = 8
@@ -159,8 +155,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Width = 1057
     Height = 89
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 1051
     DesignSize = (
       1057
       89)
@@ -250,8 +246,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       Width = 233
       Height = 73
       Anchors = [akTop, akRight]
+      ParentBackground = False
       TabOrder = 4
-      ExplicitLeft = 776
       DesignSize = (
         233
         73)

@@ -23,6 +23,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Width = 886
     Height = 36
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       886
@@ -30,7 +31,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 89
+      Width = 79
       Height = 13
       Caption = 'Purchase Order'
       Font.Charset = DEFAULT_CHARSET
@@ -43,7 +44,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label2: TLabel
       Left = 216
       Top = 12
-      Width = 71
+      Width = 61
       Height = 13
       Caption = 'Date Raised'
       Font.Charset = DEFAULT_CHARSET
@@ -56,7 +57,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label9: TLabel
       Left = 641
       Top = 12
-      Width = 83
+      Width = 73
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Office Contact'
@@ -70,7 +71,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label3: TLabel
       Left = 396
       Top = 12
-      Width = 83
+      Width = 74
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date Required'
@@ -162,6 +163,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Width = 886
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       886
@@ -244,6 +246,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Height = 197
     Align = alTop
     Anchors = [akRight, akBottom]
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       886
@@ -251,7 +254,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label7: TLabel
       Left = 17
       Top = 126
-      Width = 45
+      Width = 40
       Height = 13
       Caption = 'Contact'
       Font.Charset = DEFAULT_CHARSET
@@ -264,7 +267,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label12: TLabel
       Left = 515
       Top = 12
-      Width = 60
+      Width = 51
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Reference'
@@ -278,7 +281,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label16: TLabel
       Left = 17
       Top = 12
-      Width = 47
+      Width = 43
       Height = 13
       Caption = 'Supplier'
       Font.Charset = DEFAULT_CHARSET
@@ -291,7 +294,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label28: TLabel
       Left = 17
       Top = 149
-      Width = 65
+      Width = 59
       Height = 13
       Caption = 'Description'
       Font.Charset = DEFAULT_CHARSET
@@ -304,7 +307,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label18: TLabel
       Left = 17
       Top = 31
-      Width = 35
+      Width = 30
       Height = 13
       Caption = 'Street'
       Font.Charset = DEFAULT_CHARSET
@@ -317,7 +320,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label23: TLabel
       Left = 17
       Top = 72
-      Width = 59
+      Width = 53
       Height = 13
       Caption = 'Town/City'
       Font.Charset = DEFAULT_CHARSET
@@ -330,7 +333,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label20: TLabel
       Left = 17
       Top = 95
-      Width = 54
+      Width = 48
       Height = 13
       Caption = 'Postcode'
       Font.Charset = DEFAULT_CHARSET
@@ -343,7 +346,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object Label24: TLabel
       Left = 184
       Top = 95
-      Width = 33
+      Width = 37
       Height = 13
       Caption = 'County'
     end
@@ -511,6 +514,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Width = 85
         Height = 152
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object btnAdd: TBitBtn
           Left = 8
@@ -570,6 +574,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Width = 305
         Height = 152
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         object sgEvents: TStringGrid
           Left = 1
@@ -596,6 +601,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Width = 132
         Height = 152
         Align = alClient
+        ParentBackground = False
         TabOrder = 1
         object btnAddEvents: TBitBtn
           Left = 8
@@ -633,6 +639,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Width = 441
         Height = 152
         Align = alRight
+        ParentBackground = False
         TabOrder = 2
         object memEventNotes: TMemo
           Left = 1
@@ -655,6 +662,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Width = 505
         Height = 152
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         object memNotes: TMemo
           Left = 1
@@ -675,6 +683,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Width = 886
     Height = 128
     Align = alBottom
+    ParentBackground = False
     TabOrder = 5
     object Panel5: TPanel
       Left = 719
@@ -684,6 +693,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Align = alRight
       Anchors = [akRight, akBottom]
       BevelOuter = bvLowered
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         166
@@ -691,15 +701,15 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label4: TLabel
         Left = 11
         Top = 16
-        Width = 31
+        Width = 34
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Goods'
       end
       object Label5: TLabel
-        Left = 11
+        Left = 14
         Top = 43
-        Width = 21
+        Width = 18
         Height = 13
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
@@ -709,7 +719,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label8: TLabel
         Left = 11
         Top = 72
-        Width = 24
+        Width = 25
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Total'
@@ -761,6 +771,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Height = 126
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object rdgrpDelivery: TRadioGroup
         Left = 13
@@ -772,6 +783,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Items.Strings = (
           'Here'
           'Other Address')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpDeliveryClick
       end
@@ -783,6 +795,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Height = 126
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       Visible = False
       DesignSize = (
@@ -791,7 +804,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label6: TLabel
         Left = 17
         Top = 12
-        Width = 28
+        Width = 29
         Height = 13
         Caption = 'Name'
         Font.Charset = DEFAULT_CHARSET
@@ -804,7 +817,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label10: TLabel
         Left = 17
         Top = 34
-        Width = 28
+        Width = 30
         Height = 13
         Caption = 'Street'
         Font.Charset = DEFAULT_CHARSET
@@ -817,7 +830,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label11: TLabel
         Left = 17
         Top = 80
-        Width = 49
+        Width = 51
         Height = 13
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
@@ -830,7 +843,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label13: TLabel
         Left = 17
         Top = 103
-        Width = 45
+        Width = 47
         Height = 13
         Caption = 'Postcode'
         Font.Charset = DEFAULT_CHARSET
@@ -843,7 +856,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label14: TLabel
         Left = 184
         Top = 103
-        Width = 33
+        Width = 37
         Height = 13
         Caption = 'County'
       end

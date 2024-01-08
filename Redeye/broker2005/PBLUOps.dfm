@@ -19,15 +19,13 @@ object PBLUOpsFrm: TPBLUOpsFrm
     346)
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 267
+    Left = 262
     Top = 268
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Anchors = []
     Caption = 'CountLabel'
-    ExplicitLeft = 278
-    ExplicitTop = 275
   end
   object DetsDBGrid: TDBGrid
     Left = 8

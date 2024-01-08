@@ -121,7 +121,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
-      ExplicitLeft = 811
     end
     object edtSONumber: TEdit
       Left = 706
@@ -131,7 +130,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtSONumberKeyPress
-      ExplicitLeft = 712
     end
     object btnClose: TBitBtn
       Left = 893
@@ -143,7 +141,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       ModalResult = 2
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 899
     end
     object chkbxShow: TCheckBox
       Left = 8

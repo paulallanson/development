@@ -15,7 +15,7 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 90
+    Width = 97
     Height = 13
     Caption = 'Response Quantity'
   end
@@ -29,7 +29,7 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
   object Label3: TLabel
     Left = 200
     Top = 48
-    Width = 19
+    Width = 22
     Height = 13
     Caption = 'Unit'
   end

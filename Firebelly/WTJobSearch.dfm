@@ -19,7 +19,7 @@ object frmWTJobSearch: TfrmWTJobSearch
   object Label3: TLabel
     Left = 96
     Top = 24
-    Width = 117
+    Width = 123
     Height = 13
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
@@ -32,49 +32,49 @@ object frmWTJobSearch: TfrmWTJobSearch
   object Label1: TLabel
     Left = 18
     Top = 44
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 18
     Top = 99
-    Width = 50
+    Width = 51
     Height = 13
     Caption = 'Reference'
   end
   object lblMaterial: TLabel
     Left = 18
     Top = 127
-    Width = 37
+    Width = 42
     Height = 13
     Caption = 'Material'
   end
   object Label4: TLabel
     Left = 18
     Top = 156
-    Width = 70
+    Width = 77
     Height = 13
     Caption = 'Cust Order No.'
   end
   object Label5: TLabel
     Left = 18
     Top = 71
-    Width = 33
+    Width = 35
     Height = 13
     Caption = 'Project'
   end
   object Label9: TLabel
     Left = 18
     Top = 188
-    Width = 27
+    Width = 29
     Height = 13
     Caption = 'Show'
   end
   object Label10: TLabel
     Left = 194
     Top = 188
-    Width = 35
+    Width = 38
     Height = 13
     Caption = 'records'
   end

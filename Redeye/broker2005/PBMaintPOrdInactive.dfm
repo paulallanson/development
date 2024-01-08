@@ -20,6 +20,7 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Height = 120
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       566
@@ -34,21 +35,21 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     object Label3: TLabel
       Left = 352
       Top = 20
-      Width = 59
+      Width = 61
       Height = 13
       Caption = 'Cancel Date'
     end
     object Label4: TLabel
       Left = 8
       Top = 49
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
     object lblOperatorName: TLabel
       Left = 88
       Top = 49
-      Width = 41
+      Width = 47
       Height = 13
       Caption = 'Operator'
     end
@@ -154,39 +155,40 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Width = 566
     Height = 89
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 77
+      Width = 82
       Height = 13
       Caption = 'Purchase Order:'
     end
     object lblPOrder: TLabel
       Left = 104
       Top = 16
-      Width = 43
+      Width = 49
       Height = 13
       Caption = 'lblPOrder'
     end
     object lblDescription: TLabel
       Left = 224
       Top = 16
-      Width = 63
+      Width = 72
       Height = 13
       Caption = 'lblDescription'
     end
     object lblSupplier: TLabel
       Left = 8
       Top = 40
-      Width = 48
+      Width = 56
       Height = 13
       Caption = 'lblSupplier'
     end
     object lblCustomer: TLabel
       Left = 8
       Top = 64
-      Width = 54
+      Width = 62
       Height = 13
       Caption = 'lblCustomer'
     end

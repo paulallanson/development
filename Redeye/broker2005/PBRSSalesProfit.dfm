@@ -26,7 +26,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     object Label3: TLabel
       Left = 16
       Top = 56
-      Width = 75
+      Width = 81
       Height = 13
       Caption = 'Customer Name'
     end
@@ -86,7 +86,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 51
+        Width = 52
         Height = 13
         Caption = 'Rep Name'
       end
@@ -191,14 +191,14 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     object Label1: TLabel
       Left = 16
       Top = 124
-      Width = 22
+      Width = 20
       Height = 13
       Caption = 'Year'
     end
     object Label2: TLabel
       Left = 16
       Top = 156
-      Width = 30
+      Width = 33
       Height = 13
       Caption = 'Period'
     end

@@ -24,8 +24,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Height = 97
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 799
     DesignSize = (
       805
       97)
@@ -115,7 +115,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 3
-      ExplicitLeft = 689
     end
     object edtStartDate: TEdit
       Left = 466
@@ -124,7 +123,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 2
-      ExplicitLeft = 460
     end
     object edtCustomer: TEdit
       Left = 80
@@ -134,7 +132,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 4
-      ExplicitWidth = 233
     end
     object edtDescription: TEdit
       Left = 80
@@ -158,7 +155,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 6
-      ExplicitLeft = 657
     end
     object edtRep: TEdit
       Left = 663
@@ -169,7 +165,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Anchors = [akTop, akRight]
       ReadOnly = True
       TabOrder = 7
-      ExplicitLeft = 657
     end
   end
   object stsbrDetails: TStatusBar
@@ -187,8 +182,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       item
         Width = 50
       end>
-    ExplicitTop = 514
-    ExplicitWidth = 799
   end
   object Panel2: TPanel
     Left = 0
@@ -196,9 +189,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Width = 805
     Height = 39
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 475
-    ExplicitWidth = 799
     object Panel4: TPanel
       Left = 413
       Top = 1
@@ -206,8 +198,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
       Height = 37
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 407
       DesignSize = (
         391
         37)
@@ -264,8 +256,6 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
     TabOrder = 3
     OnDblClick = sgDetailsDblClick
-    ExplicitWidth = 714
-    ExplicitHeight = 378
     ColWidths = (
       40
       87
@@ -284,9 +274,8 @@ object PBMaintJobBagNonConformFrm: TPBMaintJobBagNonConformFrm
     Width = 85
     Height = 387
     Align = alRight
+    ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 714
-    ExplicitHeight = 378
     object btnAdd: TBitBtn
       Left = 8
       Top = 8

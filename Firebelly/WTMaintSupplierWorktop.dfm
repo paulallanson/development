@@ -16,7 +16,7 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label2: TLabel
     Left = 24
     Top = 44
-    Width = 53
+    Width = 49
     Height = 13
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
@@ -29,14 +29,14 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label4: TLabel
     Left = 24
     Top = 76
-    Width = 72
+    Width = 76
     Height = 13
     Caption = 'Adhesive Code'
   end
   object lblWorktop: TLabel
     Left = 120
     Top = 44
-    Width = 62
+    Width = 59
     Height = 13
     Caption = 'lblWorktop'
     Font.Charset = DEFAULT_CHARSET
@@ -49,7 +49,7 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label7: TLabel
     Left = 24
     Top = 16
-    Width = 51
+    Width = 46
     Height = 13
     Caption = 'Supplier:'
     Font.Charset = DEFAULT_CHARSET
@@ -62,7 +62,7 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object lblSupplierName: TLabel
     Left = 120
     Top = 16
-    Width = 92
+    Width = 87
     Height = 13
     Caption = 'lblSupplierName'
     Font.Charset = DEFAULT_CHARSET
@@ -75,14 +75,14 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label1: TLabel
     Left = 24
     Top = 140
-    Width = 91
+    Width = 96
     Height = 13
     Caption = 'Adhesives per Slab'
   end
   object Label3: TLabel
     Left = 24
     Top = 108
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

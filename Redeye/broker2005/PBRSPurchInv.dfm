@@ -22,6 +22,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     Width = 765
     Height = 285
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object dbgrdProofStatus: TDBGrid
       Left = 1
@@ -127,12 +128,13 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Top = 85
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -152,18 +154,19 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     Width = 765
     Height = 137
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 92
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 92
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
@@ -177,6 +180,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Items.Strings = (
         'All Suppliers'
         'One Supplier ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgSupplierClick
     end
@@ -185,12 +189,13 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Top = 16
       Width = 305
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 80
+        Width = 85
         Height = 13
         Caption = 'Supplier/ Branch'
       end
@@ -256,6 +261,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Items.Strings = (
         'By Supplier'
         'By Rep')
+      ParentBackground = False
       TabOrder = 4
     end
     object chkbxUnmatchedOnly: TCheckBox
@@ -287,11 +293,12 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Top = 8
       Width = 153
       Height = 121
+      ParentBackground = False
       TabOrder = 8
       object lblDatefrom: TLabel
         Left = 16
         Top = 24
-        Width = 81
+        Width = 89
         Height = 13
         Caption = 'From Order Date:'
       end
@@ -319,7 +326,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       object lblDateto: TLabel
         Left = 16
         Top = 72
-        Width = 71
+        Width = 75
         Height = 13
         Caption = 'To Order Date:'
       end
@@ -381,6 +388,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     Width = 765
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblRecordCount: TLabel
       Left = 104
@@ -391,7 +399,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 69
+      Width = 74
       Height = 13
       Caption = 'Record Count:'
     end
@@ -402,6 +410,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         320

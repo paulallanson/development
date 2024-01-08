@@ -18,6 +18,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       749
@@ -29,6 +30,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewBitBtn: TBitBtn
         Left = 144
@@ -94,32 +96,33 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     Height = 177
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 128
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 128
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
       Top = 128
-      Width = 81
+      Width = 92
       Height = 13
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 439
       Top = 3
-      Width = 86
+      Width = 93
       Height = 13
       Caption = 'Delivery due after:'
     end
@@ -146,7 +149,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     object Label2: TLabel
       Left = 439
       Top = 48
-      Width = 95
+      Width = 103
       Height = 13
       Caption = 'Delivery due before:'
     end
@@ -180,6 +183,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Items.Strings = (
         'All Suppliers'
         'One Supplier')
+      ParentBackground = False
       TabOrder = 0
     end
     object rgCustomer: TRadioGroup
@@ -192,6 +196,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 1
     end
     object SupplierPanel: TPanel
@@ -199,11 +204,12 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Top = 6
       Width = 281
       Height = 49
+      ParentBackground = False
       TabOrder = 2
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 77
+        Width = 82
         Height = 13
         Caption = 'Supplier/Branch'
       end
@@ -235,11 +241,12 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Top = 68
       Width = 281
       Height = 57
+      ParentBackground = False
       TabOrder = 3
       object lblCustomer: TLabel
         Left = 8
         Top = 1
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
       end
@@ -325,6 +332,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Height = 177
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 7
       object chkbxPageBreak: TCheckBox
         Left = 33
@@ -355,6 +363,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
           'By Supplier'
           'By Rep'
           'Do not total')
+        ParentBackground = False
         TabOrder = 2
       end
       object chkbxShowSales: TCheckBox

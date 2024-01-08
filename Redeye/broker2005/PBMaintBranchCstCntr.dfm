@@ -30,14 +30,14 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 47
+    Width = 50
     Height = 13
     Caption = 'CustLabel'
   end
   object BranchLabel: TLabel
     Left = 8
     Top = 32
-    Width = 60
+    Width = 62
     Height = 13
     Caption = 'BranchLabel'
   end
@@ -204,19 +204,20 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object CstCntrLabel: TLabel
       Left = 11
       Top = 24
-      Width = 55
+      Width = 60
       Height = 13
       Caption = 'Cost Centre'
     end
     object DescLabel: TLabel
       Left = 11
       Top = 56
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end

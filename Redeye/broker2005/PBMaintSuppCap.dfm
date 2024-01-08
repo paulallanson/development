@@ -32,7 +32,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       object Label1: TLabel
         Left = 1
         Top = 1
-        Width = 98
+        Width = 106
         Height = 13
         Caption = 'Selected Capabilities'
       end
@@ -119,7 +119,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         object Label3: TLabel
           Left = 2
           Top = 1
-          Width = 110
+          Width = 120
           Height = 13
           Caption = 'Unselected Capabilities'
         end
@@ -204,7 +204,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         object Label2: TLabel
           Left = 2
           Top = 1
-          Width = 126
+          Width = 131
           Height = 13
           Caption = 'Unselected Product Types'
         end

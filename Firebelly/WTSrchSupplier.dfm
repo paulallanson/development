@@ -46,6 +46,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Height = 248
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       98
@@ -97,6 +98,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       402
@@ -104,7 +106,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 75
+      Width = 80
       Height = 13
       Anchors = [akLeft, akBottom]
       Caption = 'Supplier Search'

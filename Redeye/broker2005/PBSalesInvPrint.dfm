@@ -19,7 +19,7 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   object Label1: TLabel
     Left = 232
     Top = 106
-    Width = 23
+    Width = 24
     Height = 13
     Caption = 'Date'
     Visible = False

@@ -19,6 +19,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
     Width = 575
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object lblDelete: TLabel
       Left = 224
@@ -190,6 +191,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
     Width = 575
     Height = 433
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Panel1: TPanel
       Left = 1
@@ -198,11 +200,12 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       Height = 296
       Align = alTop
       Caption = 'pnlDetails'
+      ParentBackground = False
       TabOrder = 0
       object Label9: TLabel
         Left = 160
         Top = 266
-        Width = 69
+        Width = 74
         Height = 13
         Caption = 'Date Required'
       end
@@ -218,6 +221,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
           'Rep'
           'Customer'
           'Company')
+        ParentBackground = False
         TabOrder = 0
         OnClick = AddrTypeRadGrpClick
       end
@@ -227,18 +231,19 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         Width = 377
         Height = 225
         Caption = 'Address Details'
+        ParentBackground = False
         TabOrder = 1
         object AddrTypeLabel: TLabel
           Left = 8
           Top = 19
-          Width = 49
+          Width = 51
           Height = 13
           Caption = 'Addr Type'
         end
         object BranchNameLabel: TLabel
           Left = 8
           Top = 66
-          Width = 34
+          Width = 35
           Height = 13
           Caption = 'Branch'
           Font.Charset = ANSI_CHARSET
@@ -251,7 +256,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         object Label4: TLabel
           Left = 8
           Top = 89
-          Width = 38
+          Width = 41
           Height = 13
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
@@ -264,7 +269,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         object Label7: TLabel
           Left = 8
           Top = 184
-          Width = 45
+          Width = 47
           Height = 13
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
@@ -408,11 +413,12 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         Width = 145
         Height = 135
         Caption = 'Quantities'
+        ParentBackground = False
         TabOrder = 2
         object Label5: TLabel
           Left = 8
           Top = 21
-          Width = 49
+          Width = 50
           Height = 13
           Caption = 'To Deliver'
           Font.Charset = ANSI_CHARSET
@@ -425,7 +431,7 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         object Label1: TLabel
           Left = 8
           Top = 73
-          Width = 57
+          Width = 62
           Height = 13
           Caption = 'No of boxes'
           Font.Charset = ANSI_CHARSET
@@ -438,14 +444,14 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
         object Label14: TLabel
           Left = 8
           Top = 47
-          Width = 37
+          Width = 38
           Height = 13
           Caption = 'Box Qty'
         end
         object Label2: TLabel
           Left = 8
           Top = 100
-          Width = 62
+          Width = 68
           Height = 13
           Caption = 'Weight (gms)'
           Font.Charset = ANSI_CHARSET
@@ -581,25 +587,26 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       Width = 573
       Height = 64
       Align = alTop
+      ParentBackground = False
       TabOrder = 1
       object lblCourier: TLabel
         Left = 16
         Top = 11
-        Width = 33
+        Width = 38
         Height = 13
         Caption = 'Courier'
       end
       object Label20: TLabel
         Left = 16
         Top = 40
-        Width = 36
+        Width = 35
         Height = 13
         Caption = 'Service'
       end
       object Label21: TLabel
         Left = 321
         Top = 40
-        Width = 70
+        Width = 68
         Height = 13
         Caption = 'Package Type'
       end
@@ -674,11 +681,12 @@ object PBMaintJobBagDeliveryfrm: TPBMaintJobBagDeliveryfrm
       Width = 573
       Height = 71
       Align = alClient
+      ParentBackground = False
       TabOrder = 2
       object Label10: TLabel
         Left = 16
         Top = 10
-        Width = 95
+        Width = 104
         Height = 13
         Caption = 'Delivery Instructions'
       end

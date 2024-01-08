@@ -94,6 +94,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       785
@@ -156,6 +157,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Width = 785
     Height = 79
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       785
@@ -280,6 +282,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 89
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
     object lblSalesOrder: TLabel
       Left = 682
@@ -406,6 +409,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Width = 785
     Height = 33
     Align = alBottom
+    ParentBackground = False
     TabOrder = 6
     object lblCreditNotes: TLabel
       Left = 8

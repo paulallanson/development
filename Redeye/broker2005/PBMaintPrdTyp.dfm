@@ -18,7 +18,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   object DelLabel: TLabel
     Left = 133
     Top = 336
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -31,7 +31,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   object Label1: TLabel
     Left = 8
     Top = 12
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
@@ -212,14 +212,14 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label2: TLabel
           Left = 16
           Top = 18
-          Width = 42
+          Width = 46
           Height = 13
           Caption = 'Category'
         end
         object Label5: TLabel
           Left = 16
           Top = 48
-          Width = 53
+          Width = 59
           Height = 26
           Caption = 'Short Description'
           Font.Charset = ANSI_CHARSET
@@ -233,7 +233,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label11: TLabel
           Left = 16
           Top = 97
-          Width = 60
+          Width = 63
           Height = 13
           Caption = 'Nominal Acc'
           Font.Charset = ANSI_CHARSET
@@ -246,7 +246,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label3: TLabel
           Left = 16
           Top = 130
-          Width = 60
+          Width = 63
           Height = 13
           Caption = 'Nominal Acc'
           Font.Charset = ANSI_CHARSET
@@ -259,7 +259,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label4: TLabel
           Left = 16
           Top = 116
-          Width = 45
+          Width = 46
           Height = 13
           Caption = 'Purchase'
         end
@@ -273,15 +273,15 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label7: TLabel
           Left = 16
           Top = 152
-          Width = 155
-          Height = 26
+          Width = 147
+          Height = 39
           Caption = 'Minimum no of Suppliers to send enquiries for this product type'
           WordWrap = True
         end
         object lblFSCProductType: TLabel
           Left = 16
           Top = 196
-          Width = 87
+          Width = 88
           Height = 13
           Caption = 'FSC Product Type'
         end
@@ -415,21 +415,21 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       object Label8: TLabel
         Left = 0
         Top = 8
-        Width = 88
+        Width = 96
         Height = 13
         Caption = 'Current Price Units'
       end
       object Label9: TLabel
         Left = 256
         Top = 8
-        Width = 110
+        Width = 118
         Height = 13
         Caption = 'Unassigned Price Units'
       end
       object Label10: TLabel
         Left = 0
         Top = 188
-        Width = 34
+        Width = 38
         Height = 13
         Caption = 'Default'
       end

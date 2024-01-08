@@ -22,14 +22,14 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 55
+    Width = 60
     Height = 13
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 64
+    Width = 70
     Height = 13
     Caption = 'No of Periods'
   end
@@ -82,7 +82,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     object lblSelection: TLabel
       Left = 8
       Top = 8
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -256,7 +256,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

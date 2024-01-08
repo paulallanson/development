@@ -49,6 +49,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Items.Strings = (
       'All'
       'One Rep')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpRepsClick
   end
@@ -62,6 +63,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Items.Strings = (
       'All'
       'Selected')
+    ParentBackground = False
     TabOrder = 3
     OnClick = rdgrpCustomerClick
   end
@@ -71,18 +73,19 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Width = 209
     Height = 73
     Caption = 'Invoice Date'
+    ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -227,6 +230,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Top = 72
     Width = 219
     Height = 57
+    ParentBackground = False
     TabOrder = 9
     object Label3: TLabel
       Left = 8
@@ -263,6 +267,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'Rep'
       'Customer'
       'Worktops')
+    ParentBackground = False
     TabOrder = 10
   end
   object chkbxPageBreak: TCheckBox
@@ -279,6 +284,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Width = 105
     Height = 65
     Caption = 'Select Top '
+    ParentBackground = False
     TabOrder = 12
     Visible = False
     object NoofCustSpin: TSpinEdit
@@ -303,6 +309,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Items.Strings = (
       'All'
       'One Contact')
+    ParentBackground = False
     TabOrder = 13
     OnClick = rdgrpContactsClick
   end
@@ -311,11 +318,12 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Top = 8
     Width = 219
     Height = 57
+    ParentBackground = False
     TabOrder = 14
     object Label6: TLabel
       Left = 8
       Top = 12
-      Width = 68
+      Width = 74
       Height = 13
       Caption = 'Office Contact'
     end
@@ -346,6 +354,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'Composition'
       'Material Type'
       'Worktops')
+    ParentBackground = False
     TabOrder = 15
   end
   object rdgrpDetailed: TRadioGroup
@@ -358,6 +367,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Items.Strings = (
       'Detailed'
       'Summary')
+    ParentBackground = False
     TabOrder = 16
   end
   object rdgrpCategory: TRadioGroup
@@ -373,6 +383,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 17
     Visible = False
   end
@@ -382,11 +393,12 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Width = 249
     Height = 113
     Enabled = False
+    ParentBackground = False
     TabOrder = 18
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -423,12 +435,13 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Top = 135
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 6
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -460,6 +473,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Items.Strings = (
       'Order'
       'Material')
+    ParentBackground = False
     TabOrder = 20
   end
   object qryReps: TFDQuery

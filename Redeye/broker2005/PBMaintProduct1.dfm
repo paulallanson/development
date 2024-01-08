@@ -28,7 +28,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label1: TLabel
         Left = 5
         Top = 20
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
@@ -65,21 +65,21 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label2: TLabel
         Left = 8
         Top = 56
-        Width = 95
+        Width = 100
         Height = 13
         Caption = 'Available Templates'
       end
       object Label4: TLabel
         Left = 232
         Top = 56
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
       object Label3: TLabel
         Left = 5
         Top = 20
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
@@ -120,46 +120,47 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Width = 143
         Height = 121
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 3
         object Label16: TLabel
           Left = 0
           Top = 32
-          Width = 130
+          Width = 139
           Height = 13
           Caption = '\ - Next character is a literal'
         end
         object Label17: TLabel
           Left = 0
           Top = 48
-          Width = 134
+          Width = 144
           Height = 13
           Caption = 'L - alphabetic character only'
         end
         object Label18: TLabel
           Left = 0
           Top = 64
-          Width = 127
+          Width = 137
           Height = 13
           Caption = 'A - alphanumeric character'
         end
         object Label19: TLabel
           Left = 0
           Top = 80
-          Width = 122
+          Width = 132
           Height = 13
           Caption = '0 - numeric character only'
         end
         object Label20: TLabel
           Left = 0
           Top = 96
-          Width = 128
+          Width = 141
           Height = 13
           Caption = 'S - auto sequential numeric'
         end
         object Label21: TLabel
           Left = 0
           Top = 8
-          Width = 99
+          Width = 89
           Height = 13
           Caption = 'Template Legend'
           Font.Charset = ANSI_CHARSET
@@ -179,14 +180,14 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label14: TLabel
         Left = 5
         Top = 20
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
       object Label15: TLabel
         Left = 5
         Top = 52
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
@@ -219,14 +220,14 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label6: TLabel
         Left = 5
         Top = 52
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
       object Label7: TLabel
         Left = 5
         Top = 132
-        Width = 64
+        Width = 66
         Height = 13
         Caption = 'Product Type'
       end
@@ -240,14 +241,14 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label5: TLabel
         Left = 5
         Top = 20
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
       object Label9: TLabel
         Left = 5
         Top = 196
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
@@ -364,21 +365,21 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label11: TLabel
         Left = 5
         Top = 20
-        Width = 89
+        Width = 95
         Height = 13
         Caption = 'Selected Customer'
       end
       object Label12: TLabel
         Left = 5
         Top = 52
-        Width = 65
+        Width = 70
         Height = 13
         Caption = 'Product Code'
       end
       object Label13: TLabel
         Left = 5
         Top = 84
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
@@ -428,6 +429,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       452

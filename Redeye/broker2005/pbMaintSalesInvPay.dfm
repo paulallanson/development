@@ -58,18 +58,19 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     Width = 481
     Height = 54
     Caption = 'Payment Details'
+    ParentBackground = False
     TabOrder = 2
     object Label5: TLabel
       Left = 267
       Top = 22
-      Width = 48
+      Width = 50
       Height = 13
       Caption = 'Total Paid'
     end
     object Label10: TLabel
       Left = 8
       Top = 22
-      Width = 47
+      Width = 49
       Height = 13
       Caption = 'Paid Date'
     end
@@ -132,39 +133,40 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     Width = 481
     Height = 113
     Caption = 'Invoice Details'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 56
-      Width = 52
+      Width = 54
       Height = 13
       Caption = 'Invoice No'
     end
     object Label3: TLabel
       Left = 267
       Top = 56
-      Width = 61
+      Width = 63
       Height = 13
       Caption = 'Invoice Date'
     end
     object Label4: TLabel
       Left = 267
       Top = 84
-      Width = 58
+      Width = 62
       Height = 13
       Caption = 'Total Goods'
     end
     object Label6: TLabel
       Left = 8
       Top = 84
-      Width = 55
+      Width = 59
       Height = 13
       Caption = 'Sales Order'
     end
@@ -221,32 +223,33 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     Height = 105
     Caption = 'Credit Card Details'
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label7: TLabel
       Left = 10
       Top = 24
-      Width = 80
+      Width = 86
       Height = 13
       Caption = 'Account Number'
     end
     object Label8: TLabel
       Left = 10
       Top = 52
-      Width = 71
+      Width = 74
       Height = 13
       Caption = 'Account Name'
     end
     object Label9: TLabel
       Left = 10
       Top = 84
-      Width = 54
+      Width = 57
       Height = 13
       Caption = 'Expiry Date'
     end
     object Label13: TLabel
       Left = 164
       Top = 84
-      Width = 5
+      Width = 4
       Height = 13
       Caption = '/'
     end
@@ -315,6 +318,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       'Credit Card'
       'Cheque'
       'BACS')
+    ParentBackground = False
     TabOrder = 5
     OnClick = rdgrpPaymentTypeClick
   end

@@ -27,7 +27,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 770
     object Label1: TLabel
       Left = 600
       Top = 10
@@ -72,8 +71,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 673
-    ExplicitHeight = 418
     DesignSize = (
       97
       419)
@@ -104,7 +101,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = ConfirmBtnClick
-      ExplicitTop = 344
     end
     object BitBtn2: TBitBtn
       Left = 14
@@ -134,7 +130,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      ExplicitTop = 384
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -178,8 +173,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 673
-    ExplicitHeight = 418
     object PickingGrid: TStringGrid
       Left = 1
       Top = 1
@@ -198,8 +191,6 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       OnClick = PickingGridClick
       OnDblClick = PickingGridDblClick
       OnSelectCell = PickingGridSelectCell
-      ExplicitWidth = 671
-      ExplicitHeight = 416
       ColWidths = (
         123
         183

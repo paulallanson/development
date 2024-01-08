@@ -188,6 +188,7 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object labEnquiryNo: TLabel
@@ -209,18 +210,19 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       Width = 232
       Height = 71
       Caption = 'Proofs'
+      ParentBackground = False
       TabOrder = 5
       object ProofByLabel: TLabel
         Left = 88
         Top = 21
-        Width = 12
+        Width = 11
         Height = 13
         Caption = 'By'
       end
       object ProofStatLabel: TLabel
         Left = 12
         Top = 46
-        Width = 30
+        Width = 32
         Height = 13
         Caption = 'Status'
       end
@@ -282,33 +284,34 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object Label2: TLabel
         Left = 8
         Top = 70
-        Width = 50
+        Width = 51
         Height = 13
         Caption = 'Reference'
       end
       object Label4: TLabel
         Left = 8
         Top = 98
-        Width = 37
+        Width = 38
         Height = 13
         Caption = 'Job Ref'
       end
       object Label24: TLabel
-        Left = 12
+        Left = 7
         Top = 129
-        Width = 36
+        Width = 41
         Height = 13
         Alignment = taRightJustify
         Caption = 'Artwork'
@@ -362,54 +365,55 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object Label5: TLabel
         Left = 8
         Top = 120
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Description'
       end
       object Label6: TLabel
         Left = 393
         Top = 76
-        Width = 46
+        Width = 51
         Height = 13
         Caption = 'Order No.'
       end
       object Label8: TLabel
         Left = 8
         Top = 16
-        Width = 28
+        Width = 29
         Height = 13
         Caption = 'Name'
       end
       object Label9: TLabel
         Left = 8
         Top = 41
-        Width = 34
+        Width = 35
         Height = 13
         Caption = 'Branch'
       end
       object Label20: TLabel
         Left = 395
         Top = 120
-        Width = 43
+        Width = 46
         Height = 13
         Caption = 'Form Ref'
       end
       object Label10: TLabel
         Left = 368
         Top = 44
-        Width = 69
+        Width = 74
         Height = 13
         Caption = 'Date Required'
       end
       object Label11: TLabel
         Left = 576
         Top = 45
-        Width = 105
+        Width = 108
         Height = 13
         Caption = 'Expected Life (weeks)'
       end
@@ -423,14 +427,14 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       object Label25: TLabel
         Left = 8
         Top = 68
-        Width = 37
+        Width = 40
         Height = 13
         Caption = 'Contact'
       end
       object Label17: TLabel
         Left = 385
         Top = 148
-        Width = 51
+        Width = 53
         Height = 13
         Caption = 'Form Desc'
       end
@@ -644,39 +648,40 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       Width = 489
       Height = 72
       Caption = 'Quantities and Values'
+      ParentBackground = False
       TabOrder = 3
       object Label15: TLabel
         Left = 8
         Top = 21
-        Width = 39
+        Width = 44
         Height = 13
         Caption = 'Quantity'
       end
       object Label16: TLabel
         Left = 138
         Top = 21
-        Width = 53
+        Width = 57
         Height = 13
         Caption = 'Order Price'
       end
       object Label18: TLabel
         Left = 130
         Top = 49
-        Width = 58
+        Width = 62
         Height = 13
         Caption = 'Selling Price'
       end
       object Label13: TLabel
         Left = 284
         Top = 21
-        Width = 48
+        Width = 55
         Height = 13
         Caption = 'Order Unit'
       end
       object Label7: TLabel
         Left = 296
         Top = 49
-        Width = 39
+        Width = 43
         Height = 13
         Caption = 'Sell Unit'
       end
@@ -766,47 +771,48 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
       object Label12: TLabel
         Left = 8
         Top = 16
-        Width = 64
+        Width = 66
         Height = 13
         Caption = 'Product Type'
       end
       object Label3: TLabel
         Left = 8
         Top = 44
-        Width = 29
+        Width = 32
         Height = 13
         Caption = 'Depth'
       end
       object Label22: TLabel
         Left = 208
         Top = 52
-        Width = 111
+        Width = 123
         Height = 13
         Caption = 'Default to standard size'
       end
       object Label14: TLabel
         Left = 8
         Top = 72
-        Width = 28
+        Width = 32
         Height = 13
         Caption = 'Width'
       end
       object Label21: TLabel
         Left = 8
         Top = 105
-        Width = 55
+        Width = 58
         Height = 13
         Caption = 'Qty per Box'
       end
       object PlateChangeLbl: TLabel
-        Left = 232
+        Left = 225
         Top = 137
-        Width = 81
+        Width = 88
         Height = 13
         Alignment = taRightJustify
         Caption = 'Number of Plates'
@@ -814,14 +820,14 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
       object Label26: TLabel
         Left = 8
         Top = 162
-        Width = 51
+        Width = 58
         Height = 13
         Caption = 'Numbering'
       end
       object Label23: TLabel
         Left = 8
         Top = 136
-        Width = 53
+        Width = 56
         Height = 13
         Caption = 'No. of Sets'
       end

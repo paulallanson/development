@@ -144,8 +144,6 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 292
-    ExplicitWidth = 803
     DesignSize = (
       809
       41)
@@ -174,7 +172,6 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 722
     end
     object edtSearch: TEdit
       Left = 104
@@ -192,7 +189,6 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtOrderKeyPress
-      ExplicitLeft = 536
     end
     object btnSelect: TButton
       Left = 640
@@ -203,7 +199,6 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 634
     end
     object chkbxShowAll: TCheckBox
       Left = 232
@@ -227,8 +222,6 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       item
         Width = 50
       end>
-    ExplicitTop = 333
-    ExplicitWidth = 803
   end
   object tmrSearch: TTimer
     Enabled = False

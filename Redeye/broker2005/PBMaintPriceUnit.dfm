@@ -17,7 +17,7 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
   object DelLabel: TLabel
     Left = 120
     Top = 176
-    Width = 125
+    Width = 109
     Height = 13
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
@@ -44,14 +44,14 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 52
+      Width = 57
       Height = 13
       Caption = 'Unit Factor'
     end

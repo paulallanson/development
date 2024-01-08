@@ -26,6 +26,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     Width = 273
     Height = 137
     Caption = 'Invoice Number Selection'
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
@@ -111,6 +112,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     Items.Strings = (
       'Summary'
       'Detailed')
+    ParentBackground = False
     TabOrder = 6
   end
   object InvRPrintSQL: TFDQuery

@@ -20,35 +20,35 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 33
+    Width = 36
     Height = 13
     Caption = 'Length'
   end
   object Label3: TLabel
     Left = 16
     Top = 60
-    Width = 29
+    Width = 32
     Height = 13
     Caption = 'Depth'
   end
   object Label2: TLabel
     Left = 171
     Top = 24
-    Width = 16
+    Width = 18
     Height = 13
     Caption = 'mm'
   end
   object Label4: TLabel
     Left = 171
     Top = 64
-    Width = 16
+    Width = 18
     Height = 13
     Caption = 'mm'
   end
   object Label5: TLabel
     Left = 16
     Top = 100
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end

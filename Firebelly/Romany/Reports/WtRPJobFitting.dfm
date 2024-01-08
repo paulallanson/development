@@ -10,7 +10,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpJobSheet: TQuickRep
@@ -167,13 +167,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel7: TQRLabel
         Left = 8
         Top = 424
-        Width = 225
+        Width = 235
         Height = 19
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           1121.833333333333000000
-          595.312500000000000000)
+          621.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -243,13 +243,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel13: TQRLabel
         Left = 8
         Top = 456
-        Width = 76
+        Width = 80
         Height = 19
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           1206.500000000000000000
-          201.083333333333300000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1383,13 +1383,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel2: TQRLabel
         Left = 568
         Top = 255
-        Width = 33
+        Width = 51
         Height = 21
         Size.Values = (
           55.562500000000000000
           1502.833333333333000000
           674.687500000000000000
-          87.312500000000000000)
+          134.937500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1412,13 +1412,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRDBText2: TQRDBText
         Left = 632
         Top = 96
-        Width = 24
+        Width = 27
         Height = 22
         Size.Values = (
           58.208333333333330000
           1672.166666666667000000
           254.000000000000000000
-          63.500000000000000000)
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1444,13 +1444,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel3: TQRLabel
         Left = 569
         Top = 96
-        Width = 45
+        Width = 64
         Height = 21
         Size.Values = (
           55.562500000000000000
           1505.479166666667000000
           254.000000000000000000
-          119.062500000000000000)
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1473,13 +1473,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRDBText4: TQRDBText
         Left = 112
         Top = 200
-        Width = 54
+        Width = 59
         Height = 22
         Size.Values = (
           58.208333333333330000
           296.333333333333300000
           529.166666666666700000
-          142.875000000000000000)
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1505,13 +1505,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel5: TQRLabel
         Left = 9
         Top = 200
-        Width = 72
+        Width = 79
         Height = 22
         Size.Values = (
           58.208333333333330000
           23.812500000000000000
           529.166666666666700000
-          190.500000000000000000)
+          209.020833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1551,13 +1551,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel4: TQRLabel
         Left = 8
         Top = 232
-        Width = 88
+        Width = 100
         Height = 19
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           613.833333333333300000
-          232.833333333333300000)
+          264.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1597,13 +1597,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel9: TQRLabel
         Left = 568
         Top = 385
-        Width = 154
+        Width = 213
         Height = 20
         Size.Values = (
           52.916666666666670000
           1502.833333333333000000
           1018.645833333333000000
-          407.458333333333300000)
+          563.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1651,13 +1651,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel12: TQRLabel
         Left = 568
         Top = 127
-        Width = 42
+        Width = 66
         Height = 21
         Size.Values = (
           55.562500000000000000
           1502.833333333333000000
           336.020833333333300000
-          111.125000000000000000)
+          174.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1713,13 +1713,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel15: TQRLabel
         Left = 568
         Top = 191
-        Width = 95
+        Width = 149
         Height = 21
         Size.Values = (
           55.562500000000000000
           1502.833333333333000000
           505.354166666666700000
-          251.354166666666700000)
+          394.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1742,13 +1742,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel16: TQRLabel
         Left = 8
         Top = 340
-        Width = 233
+        Width = 248
         Height = 19
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           899.583333333333300000
-          616.479166666666700000)
+          656.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1771,13 +1771,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel19: TQRLabel
         Left = 8
         Top = 380
-        Width = 76
+        Width = 80
         Height = 19
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           1005.416666666667000000
-          201.083333333333300000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1830,13 +1830,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel21: TQRLabel
         Left = 344
         Top = 380
-        Width = 19
+        Width = 23
         Height = 19
         Size.Values = (
           50.270833333333330000
           910.166666666666700000
           1005.416666666667000000
-          50.270833333333330000)
+          60.854166666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1893,13 +1893,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel22: TQRLabel
         Left = 9
         Top = 172
-        Width = 86
+        Width = 91
         Height = 22
         Size.Values = (
           58.208333333333330000
           23.812500000000000000
           455.083333333333300000
-          227.541666666666700000)
+          240.770833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2037,13 +2037,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRSysData1: TQRSysData
         Left = 568
         Top = 279
-        Width = 40
+        Width = 42
         Height = 22
         Size.Values = (
           58.208333333333330000
           1502.833333333333000000
           738.187500000000000000
-          105.833333333333300000)
+          111.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2066,13 +2066,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel29: TQRLabel
         Left = 568
         Top = 321
-        Width = 142
+        Width = 196
         Height = 19
         Size.Values = (
           50.270833333333330000
           1502.833333333333000000
           849.312500000000000000
-          375.708333333333300000)
+          518.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2317,13 +2317,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel75: TQRLabel
         Left = 336
         Top = 232
-        Width = 105
+        Width = 103
         Height = 19
         Size.Values = (
           50.270833333333330000
           889.000000000000000000
           613.833333333333300000
-          277.812500000000000000)
+          272.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2346,13 +2346,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object QRLabel76: TQRLabel
         Left = 336
         Top = 280
-        Width = 100
+        Width = 107
         Height = 19
         Size.Values = (
           50.270833333333330000
           889.000000000000000000
           740.833333333333300000
-          264.583333333333300000)
+          283.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

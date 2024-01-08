@@ -2,8 +2,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   Left = 283
   Top = 87
   Caption = 'Work In Progress Report'
-  ClientHeight = 453
-  ClientWidth = 832
+  ClientHeight = 461
+  ClientWidth = 834
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 850
@@ -18,18 +18,18 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 393
-    Width = 832
+    Top = 401
+    Width = 834
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      832
+      834
       41)
     object pnlRightControl: TPanel
-      Left = 501
+      Left = 503
       Top = 0
       Width = 331
       Height = 41
@@ -155,14 +155,14 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 832
+    Width = 834
     Height = 201
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     object pnlDates: TPanel
-      Left = 660
+      Left = 656
       Top = 0
       Width = 178
       Height = 201
@@ -170,7 +170,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 654
       object chkbxPageBreak: TCheckBox
         Left = 17
         Top = 136
@@ -216,7 +215,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel1: TPanel
-      Left = 463
+      Left = 459
       Top = 0
       Width = 197
       Height = 201
@@ -224,7 +223,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 457
       object Label1: TLabel
         Left = 19
         Top = 3
@@ -351,13 +349,12 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object Panel2: TPanel
       Left = 0
       Top = 0
-      Width = 463
+      Width = 459
       Height = 201
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 457
       object Label3: TLabel
         Left = 8
         Top = 152
@@ -545,16 +542,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 434
-    Width = 832
+    Top = 442
+    Width = 834
     Height = 19
     Panels = <>
   end
   object DBGrid: TDBGrid
     Left = 0
     Top = 201
-    Width = 832
-    Height = 192
+    Width = 834
+    Height = 200
     Align = alClient
     DataSource = dsReport
     ReadOnly = True

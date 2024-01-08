@@ -10,7 +10,7 @@ object STRPPickfrm: TSTRPPickfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object PickSOListQuickReport: TQuickRep

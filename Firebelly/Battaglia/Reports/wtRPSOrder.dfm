@@ -10,7 +10,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
@@ -163,15 +163,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         VertAdjust = 0
       end
       object qrlblSOCaption: TQRLabel
-        Left = 409
+        Left = 376
         Top = -1
-        Width = 310
+        Width = 343
         Height = 56
         Size.Values = (
           148.166666666666700000
-          1082.145833333333000000
+          994.833333333333300000
           -2.645833333333333000
-          820.208333333333300000)
+          907.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -194,13 +194,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel2: TQRLabel
         Left = 435
         Top = 94
-        Width = 77
-        Height = 14
+        Width = 66
+        Height = 16
         Size.Values = (
-          37.041666666666670000
+          42.333333333333330000
           1150.937500000000000000
           248.708333333333300000
-          203.729166666666700000)
+          174.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -221,15 +221,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object QRDBText1: TQRDBText
-        Left = 633
+        Left = 642
         Top = 94
-        Width = 82
+        Width = 73
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1674.812500000000000000
+          1698.625000000000000000
           248.708333333333300000
-          216.958333333333300000)
+          193.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -253,15 +253,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object QRDBText2: TQRDBText
-        Left = 638
+        Left = 642
         Top = 64
-        Width = 77
+        Width = 73
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1688.041666666667000000
+          1698.625000000000000000
           169.333333333333300000
-          203.729166666666700000)
+          193.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -287,13 +287,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel3: TQRLabel
         Left = 435
         Top = 64
-        Width = 63
-        Height = 14
+        Width = 55
+        Height = 16
         Size.Values = (
-          37.041666666666670000
+          42.333333333333330000
           1150.937500000000000000
           169.333333333333300000
-          166.687500000000000000)
+          145.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -349,13 +349,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel5: TQRLabel
         Left = 15
         Top = 328
-        Width = 98
-        Height = 13
+        Width = 90
+        Height = 15
         Size.Values = (
-          34.395833333333330000
+          39.687500000000000000
           39.687500000000000000
           867.833333333333300000
-          259.291666666666700000)
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -378,13 +378,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel1: TQRLabel
         Left = 16
         Top = 202
-        Width = 57
+        Width = 56
         Height = 17
         Size.Values = (
           44.979166666666670000
           42.333333333333330000
           534.458333333333300000
-          150.812500000000000000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -407,13 +407,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel9: TQRLabel
         Left = 16
         Top = 388
-        Width = 68
+        Width = 64
         Height = 16
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
           1026.583333333333000000
-          179.916666666666700000)
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -436,13 +436,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel12: TQRLabel
         Left = 512
         Top = 388
-        Width = 51
+        Width = 45
         Height = 16
         Size.Values = (
           42.333333333333330000
           1354.666666666667000000
           1026.583333333333000000
-          134.937500000000000000)
+          119.062500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -465,13 +465,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel14: TQRLabel
         Left = 576
         Top = 388
-        Width = 55
+        Width = 54
         Height = 16
         Size.Values = (
           42.333333333333330000
           1524.000000000000000000
           1026.583333333333000000
-          145.520833333333300000)
+          142.875000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -494,13 +494,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object QRLabel15: TQRLabel
         Left = 680
         Top = 388
-        Width = 31
+        Width = 28
         Height = 16
         Size.Values = (
           42.333333333333330000
           1799.166666666667000000
           1026.583333333333000000
-          82.020833333333330000)
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -640,13 +640,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object gtQRLabel1: TQRLabel
         Left = 435
         Top = 124
-        Width = 98
-        Height = 14
+        Width = 84
+        Height = 16
         Size.Values = (
-          37.041666666666670000
+          42.333333333333330000
           1150.937500000000000000
           328.083333333333300000
-          259.291666666666700000)
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -794,13 +794,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object gtQRLabel2: TQRLabel
         Left = 22
         Top = 199
-        Width = 66
+        Width = 57
         Height = 16
         Size.Values = (
           42.333333333333330000
           58.208333333333330000
           526.520833333333300000
-          174.625000000000000000)
+          150.812500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -823,13 +823,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object gtQRLabel3: TQRLabel
         Left = 398
         Top = 199
-        Width = 77
+        Width = 63
         Height = 16
         Size.Values = (
           42.333333333333330000
           1053.041666666667000000
           526.520833333333300000
-          203.729166666666700000)
+          166.687500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -852,13 +852,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object gtQRLabel7: TQRLabel
         Left = 460
         Top = 388
-        Width = 37
+        Width = 34
         Height = 16
         Size.Values = (
           42.333333333333330000
           1217.083333333333000000
           1026.583333333333000000
-          97.895833333333330000)
+          89.958333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -896,13 +896,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblTemplateDate: TQRLabel
         Left = 232
         Top = 352
-        Width = 100
+        Width = 86
         Height = 16
         Size.Values = (
           42.333333333333330000
           613.833333333333300000
           931.333333333333300000
-          264.583333333333300000)
+          227.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -925,13 +925,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblDateRequired: TQRLabel
         Left = 472
         Top = 352
-        Width = 99
+        Width = 86
         Height = 16
         Size.Values = (
           42.333333333333330000
           1248.833333333333000000
           931.333333333333300000
-          261.937500000000000000)
+          227.541666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -954,13 +954,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblTemplateDateLabel: TQRLabel
         Left = 233
         Top = 327
-        Width = 154
-        Height = 13
+        Width = 140
+        Height = 15
         Size.Values = (
-          34.395833333333330000
+          39.687500000000000000
           616.479166666666700000
           865.187500000000000000
-          407.458333333333300000)
+          370.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -983,13 +983,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblFitDateLabel: TQRLabel
         Left = 473
         Top = 327
-        Width = 113
-        Height = 13
+        Width = 101
+        Height = 15
         Size.Values = (
-          34.395833333333330000
+          39.687500000000000000
           1251.479166666667000000
           865.187500000000000000
-          298.979166666666700000)
+          267.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1030,15 +1030,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblTotalPrice: TQRLabel
-        Left = 629
+        Left = 633
         Top = 4
-        Width = 84
+        Width = 80
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1664.229166666667000000
+          1674.812500000000000000
           10.583333333333330000
-          222.250000000000000000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1059,15 +1059,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblUnitPrice: TQRLabel
-        Left = 554
+        Left = 556
         Top = 4
-        Width = 77
+        Width = 75
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1465.791666666667000000
+          1471.083333333333000000
           10.583333333333330000
-          203.729166666666700000)
+          198.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1122,15 +1122,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object QRDBText7: TQRDBText
-        Left = 513
+        Left = 519
         Top = 4
-        Width = 51
+        Width = 45
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1357.312500000000000000
+          1373.187500000000000000
           10.583333333333330000
-          134.937500000000000000)
+          119.062500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1154,15 +1154,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object gtQRDBText2: TQRDBText
-        Left = 462
+        Left = 465
         Top = 4
-        Width = 37
+        Width = 34
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1222.375000000000000000
+          1230.312500000000000000
           10.583333333333330000
-          97.895833333333330000)
+          89.958333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1300,15 +1300,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         VertAdjust = 0
       end
       object QRLabel17: TQRLabel
-        Left = 527
+        Left = 535
         Top = 47
-        Width = 60
+        Width = 52
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1394.354166666667000000
+          1415.520833333333000000
           124.354166666666700000
-          158.750000000000000000)
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1358,15 +1358,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblVAT: TQRLabel
-        Left = 661
+        Left = 667
         Top = 47
-        Width = 52
+        Width = 46
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1748.895833333333000000
+          1764.770833333333000000
           124.354166666666700000
-          137.583333333333300000)
+          121.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1416,15 +1416,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblNett: TQRLabel
-        Left = 660
+        Left = 666
         Top = 17
-        Width = 53
+        Width = 47
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1746.250000000000000000
+          1762.125000000000000000
           44.979166666666670000
-          140.229166666666700000)
+          124.354166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1548,15 +1548,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         VertAdjust = 0
       end
       object gtQRLabel4: TQRLabel
-        Left = 527
+        Left = 535
         Top = 17
-        Width = 61
+        Width = 53
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1394.354166666667000000
+          1415.520833333333000000
           44.979166666666670000
-          161.395833333333300000)
+          140.229166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1824,15 +1824,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       PrintBefore = False
       PrintIfEmpty = True
       object lblWorktopSize: TQRLabel
-        Left = 263
+        Left = 271
         Top = 2
-        Width = 90
+        Width = 82
         Height = 16
         Size.Values = (
           42.333333333333330000
-          695.854166666666700000
+          717.020833333333300000
           5.291666666666667000
-          238.125000000000000000)
+          216.958333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1853,15 +1853,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object lblWorktopArea: TQRLabel
-        Left = 365
+        Left = 374
         Top = 2
-        Width = 93
+        Width = 84
         Height = 16
         Size.Values = (
           42.333333333333330000
-          965.729166666666700000
+          989.541666666666700000
           5.291666666666667000
-          246.062500000000000000)
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1903,15 +1903,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblQuantity: TQRLabel
-        Left = 381
+        Left = 389
         Top = 3
-        Width = 77
+        Width = 69
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1008.062500000000000000
+          1029.229166666667000000
           7.937500000000000000
-          203.729166666666700000)
+          182.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1932,15 +1932,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblCutOut: TQRLabel
-        Left = 285
+        Left = 290
         Top = 3
-        Width = 68
+        Width = 63
         Height = 16
         Size.Values = (
           42.333333333333330000
-          754.062500000000000000
+          767.291666666666700000
           7.937500000000000000
-          179.916666666666700000)
+          166.687500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1982,15 +1982,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblLength: TQRLabel
-        Left = 391
+        Left = 395
         Top = 2
-        Width = 67
+        Width = 63
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1034.520833333333000000
+          1045.104166666667000000
           5.291666666666667000
-          177.270833333333300000)
+          166.687500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2011,15 +2011,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblEdgeDescription: TQRLabel
-        Left = 230
+        Left = 236
         Top = 3
-        Width = 123
+        Width = 117
         Height = 16
         Size.Values = (
           42.333333333333330000
-          608.541666666666700000
+          624.416666666666700000
           7.937500000000000000
-          325.437500000000000000)
+          309.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2061,15 +2061,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblExtraQuantity: TQRDBText
-        Left = 406
+        Left = 412
         Top = 4
-        Width = 51
+        Width = 45
         Height = 16
         Size.Values = (
           42.333333333333330000
-          1074.208333333333000000
+          1090.083333333333000000
           10.583333333333330000
-          134.937500000000000000)
+          119.062500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2092,15 +2092,15 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 9
       end
       object qrlblExtraDescription: TQRLabel
-        Left = 230
+        Left = 238
         Top = 3
-        Width = 123
+        Width = 115
         Height = 16
         Size.Values = (
           42.333333333333330000
-          608.541666666666700000
+          629.708333333333300000
           7.937500000000000000
-          325.437500000000000000)
+          304.270833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

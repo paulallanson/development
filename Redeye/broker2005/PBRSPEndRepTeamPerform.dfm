@@ -22,7 +22,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 100
+    Width = 102
     Height = 13
     Caption = 'Select Financial Year'
   end
@@ -36,6 +36,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Items.Strings = (
       'All Teams'
       'One Team ')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgRepClick
   end
@@ -44,6 +45,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Top = 48
     Width = 257
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblCustBran: TLabel
@@ -232,6 +234,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Items.Strings = (
       'Operating'
       'Target')
+    ParentBackground = False
     TabOrder = 10
     OnClick = rgRepClick
   end
@@ -246,6 +249,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
       'Product Category'
       'Team Members - Reps'
       'Team Members - Sub Reps')
+    ParentBackground = False
     TabOrder = 11
   end
   object pnlExportPrgrss: TPanel
@@ -253,12 +257,13 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Top = 83
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end

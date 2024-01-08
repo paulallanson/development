@@ -20,6 +20,7 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
     Width = 347
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnPreview: TBitBtn
       Left = 87
@@ -139,18 +140,19 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
     Width = 347
     Height = 126
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 16
       Top = 64
-      Width = 75
+      Width = 81
       Height = 13
       Caption = 'Customer Name'
     end
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 22
+      Width = 20
       Height = 13
       Caption = 'Year'
     end
@@ -203,12 +205,13 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       Top = 33
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 3
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end

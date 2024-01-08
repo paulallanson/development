@@ -78,6 +78,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       735
@@ -181,6 +182,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       735

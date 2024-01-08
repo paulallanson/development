@@ -22,6 +22,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       752
@@ -33,6 +34,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewBitBtn: TBitBtn
         Left = 144
@@ -153,6 +155,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     Height = 259
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object DBGrid: TDBGrid
       Left = 0
@@ -242,12 +245,13 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Top = 92
       Width = 289
       Height = 61
+      ParentBackground = False
       TabOrder = 2
       Visible = False
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 53
+        Width = 59
         Height = 13
         Caption = 'Exporting...'
       end
@@ -268,32 +272,33 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     Height = 177
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object Label3: TLabel
       Left = 8
       Top = 136
-      Width = 52
+      Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 136
-      Width = 55
+      Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
       Top = 136
-      Width = 81
+      Width = 92
       Height = 13
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 439
       Top = 3
-      Width = 86
+      Width = 93
       Height = 13
       Caption = 'Delivery due after:'
     end
@@ -321,7 +326,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     object Label2: TLabel
       Left = 439
       Top = 48
-      Width = 95
+      Width = 103
       Height = 13
       Caption = 'Delivery due before:'
     end
@@ -356,6 +361,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Items.Strings = (
         'All Suppliers'
         'One Supplier')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgSupplierClick
     end
@@ -369,6 +375,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 1
       OnClick = rgCustomerClick
     end
@@ -377,11 +384,12 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Top = 6
       Width = 281
       Height = 49
+      ParentBackground = False
       TabOrder = 2
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 77
+        Width = 82
         Height = 13
         Caption = 'Supplier/Branch'
       end
@@ -414,11 +422,12 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Top = 68
       Width = 281
       Height = 57
+      ParentBackground = False
       TabOrder = 3
       object lblCustomer: TLabel
         Left = 8
         Top = 1
-        Width = 83
+        Width = 88
         Height = 13
         Caption = 'Customer/Branch'
       end
@@ -514,6 +523,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Height = 177
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 7
       object chkbxPageBreak: TCheckBox
         Left = 33
@@ -537,6 +547,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
           'By Rep'
           'By Account Manager'
           'Do not total')
+        ParentBackground = False
         TabOrder = 1
         OnClick = TotByRadioGroupClick
       end

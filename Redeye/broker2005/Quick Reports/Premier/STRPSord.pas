@@ -114,7 +114,7 @@ var
 
 implementation
 
-uses PBSendFax, pbMainMenu, CCSCommon, pbImages;
+uses UITypes, PBSendFax, pbMainMenu, CCSCommon, pbImages;
 
 var
   iGoods, iVAT: Real;

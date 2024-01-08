@@ -20,7 +20,7 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
   object Label9: TLabel
     Left = 11
     Top = 2
-    Width = 51
+    Width = 54
     Height = 13
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
@@ -33,7 +33,7 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 148
+    Width = 159
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -46,35 +46,35 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
   object Label1: TLabel
     Left = 11
     Top = 51
-    Width = 65
+    Width = 70
     Height = 13
     Caption = 'Product Code'
   end
   object Label3: TLabel
     Left = 11
     Top = 75
-    Width = 76
+    Width = 80
     Height = 13
     Caption = 'Form Reference'
   end
   object Label2: TLabel
     Left = 11
     Top = 26
-    Width = 34
+    Width = 35
     Height = 13
     Caption = 'Branch'
   end
   object lblDescription: TLabel
     Left = 11
     Top = 122
-    Width = 53
+    Width = 59
     Height = 13
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 11
     Top = 221
-    Width = 59
+    Width = 65
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Enquiry date'
@@ -82,21 +82,21 @@ object frmpbluEnqsSearch: TfrmpbluEnqsSearch
   object Label6: TLabel
     Left = 11
     Top = 98
-    Width = 64
+    Width = 66
     Height = 13
     Caption = 'Product Type'
   end
   object Label7: TLabel
     Left = 11
     Top = 170
-    Width = 68
+    Width = 74
     Height = 13
     Caption = 'Office Contact'
   end
   object Label8: TLabel
     Left = 11
     Top = 194
-    Width = 41
+    Width = 47
     Height = 13
     Caption = 'Operator'
   end

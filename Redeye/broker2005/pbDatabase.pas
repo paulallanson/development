@@ -62,10 +62,6 @@ type
     qryGetCustomerSubRep: TFDQuery;
     qryCompanySupplier: TFDQuery;
     procedure PBLDatabaseAfterConnect(Sender: TObject);
-    procedure PBLDatabaseLogin(AConnection: TFDCustomConnection;
-      AParams: TFDConnectionDefParams);
-    procedure EmailDatabaseLogin(AConnection: TFDCustomConnection;
-      AParams: TFDConnectionDefParams);
     procedure PBLDatabaseBeforeConnect(Sender: TObject);
     procedure EmailDatabaseBeforeConnect(Sender: TObject);
   private
@@ -308,21 +304,16 @@ end;
 procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);
 begin
   SetConnectionMapRules(PBLDataBase);
-end;
-
-procedure TdmBroker.PBLDatabaseLogin(AConnection: TFDCustomConnection;
-  AParams: TFDConnectionDefParams);
-begin
 {$IFDEF DEMO}
-  AParams.UserName := 'admin';
-  AParams.Password := '';
   UserName := 'admin';
   Password := '';
+  PBLDataBase.Params.UserName := UserName;
+  PBLDataBase.Params.Password := Password;
 {$ELSE}
-  AParams.UserName := frmpbLogin.UserEdit.Text;
-  AParams.Password := Trim(frmpbLogin.PasswordEdit.Text);
   UserName := frmpbLogin.UserEdit.Text;
   Password := Trim(frmpbLogin.PasswordEdit.Text);
+  PBLDataBase.Params.UserName := UserName;
+  PBLDataBase.Params.Password := Password;
 {$ENDIF}
 end;
 
@@ -2709,13 +2700,8 @@ end;
 procedure TdmBroker.EmailDatabaseBeforeConnect(Sender: TObject);
 begin
   SetConnectionMapRules(EmailDatabase);
-end;
-
-procedure TdmBroker.EmailDatabaseLogin(AConnection: TFDCustomConnection;
-  AParams: TFDConnectionDefParams);
-begin
-  AParams.UserName := Self.UserName;
-  AParams.Password := Self.Password;
+  EmailDatabase.Params.UserName := Self.UserName;
+  EmailDatabase.Params.Password := Self.Password;
 end;
 
 procedure TdmBroker.EmailViaGeneric(sSenderName, sSenderEmail, sRecipientName, sRecipient, sSubject, sBody: string;

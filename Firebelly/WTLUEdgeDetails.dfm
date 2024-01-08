@@ -92,8 +92,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       item
         Width = 50
       end>
-    ExplicitTop = 354
-    ExplicitWidth = 741
   end
   object pnlFoot: TPanel
     Left = 0
@@ -106,8 +104,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Constraints.MinWidth = 741
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 297
-    ExplicitWidth = 741
     DesignSize = (
       747
       57)
@@ -128,7 +124,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 0
-      ExplicitLeft = 647
     end
     object btnDelete: TBitBtn
       Left = 477
@@ -140,7 +135,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 1
       OnClick = btnDeleteClick
-      ExplicitLeft = 471
     end
     object btnEdit: TBitBtn
       Left = 389
@@ -152,7 +146,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
-      ExplicitLeft = 383
     end
     object BitBtn1: TBitBtn
       Left = 301
@@ -163,7 +156,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = '&Add'
       TabOrder = 3
       OnClick = BitBtn1Click
-      ExplicitLeft = 295
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -192,7 +184,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 559
     end
   end
   object Panel1: TPanel
@@ -204,7 +195,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 741
     DesignSize = (
       747
       65)
@@ -320,7 +310,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
-      ExplicitLeft = 472
     end
     object btnGo: TButton
       Left = 654
@@ -332,7 +321,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 648
     end
   end
   object qryDelEdgeThick: TFDQuery

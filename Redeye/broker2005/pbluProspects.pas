@@ -1066,26 +1066,26 @@ begin
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 10) then
         begin
           (Sender as TDBGrid).Canvas.Brush.color := clGreen;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 20) then
         begin
           (Sender as TDBGrid).Canvas.font.color := clblue;
           (Sender as TDBGrid).Canvas.Brush.color := clyellow;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 30) then
         begin
           (Sender as TDBGrid).Canvas.Brush.color := $000080FF;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 40) then
         begin
           (Sender as TDBGrid).Canvas.Brush.color := clRed;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end;
     end
   else
@@ -1095,7 +1095,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Customer_Type_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Customer_Type_Font_Color').asinteger;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end
     end
   else
@@ -1105,7 +1105,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Importance_Font_Color').asinteger;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end;
     end
   else
@@ -1115,7 +1115,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Invoice_location_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Invoice_location_Font_Color').asinteger;
-          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+          (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
         end;
     end;
 
@@ -1124,13 +1124,13 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if dbgDetails.datasource.dataset.fieldByName('Customer_Status').asinteger = 90 then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 end;
 

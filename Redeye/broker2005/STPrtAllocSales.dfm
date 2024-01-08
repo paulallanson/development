@@ -2,7 +2,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   Left = 15
   Top = 33
   Caption = 'Allocate Stock To Store Orders'
-  ClientHeight = 477
+  ClientHeight = 485
   ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 524
@@ -21,7 +21,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Left = 0
     Top = 41
     Width = 733
-    Height = 376
+    Height = 384
     Align = alClient
     DataSource = DetsDataSource
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -91,7 +91,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 417
+    Top = 425
     Width = 733
     Height = 41
     Align = alBottom
@@ -135,7 +135,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 560
     end
     object CancelBitBtn: TBitBtn
       Left = 642
@@ -146,7 +145,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 648
     end
     object AllBitBtn: TBitBtn
       Left = 462
@@ -174,7 +172,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       ShowHint = True
       TabOrder = 2
       OnClick = AllBitBtnClick
-      ExplicitLeft = 468
     end
     object cmbAllocateSeq: TComboBox
       Left = 112
@@ -191,7 +188,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object stsDetails: TStatusBar
     Left = 0
-    Top = 458
+    Top = 466
     Width = 733
     Height = 19
     Panels = <

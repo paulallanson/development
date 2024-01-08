@@ -22,8 +22,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
     Width = 360
     Height = 64
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 364
     object lblStep1: TLabel
       Left = 8
       Top = 8
@@ -61,9 +61,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
     Height = 181
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 364
-    ExplicitHeight = 182
     object Label2: TLabel
       Left = 8
       Top = 8
@@ -122,8 +121,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
     Width = 360
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 364
     object Label1: TLabel
       Left = 8
       Top = 4
@@ -153,9 +152,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
     Width = 360
     Height = 48
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 311
-    ExplicitWidth = 364
     object btnClose: TBitBtn
       Left = 272
       Top = 15

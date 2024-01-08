@@ -16,14 +16,14 @@ object frmWTExpiryDate: TfrmWTExpiryDate
   object Label1: TLabel
     Left = 24
     Top = 60
-    Width = 79
+    Width = 83
     Height = 13
     Caption = 'New Expiry Date'
   end
   object Label2: TLabel
     Left = 24
     Top = 20
-    Width = 73
+    Width = 79
     Height = 13
     Caption = 'Old Expiry Date'
   end

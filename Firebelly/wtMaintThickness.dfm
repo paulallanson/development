@@ -21,7 +21,7 @@ object frmWtMaintThickness: TfrmWtMaintThickness
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 74
+    Width = 77
     Height = 13
     Caption = 'Thickness (mm)'
   end

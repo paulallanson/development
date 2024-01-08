@@ -18,7 +18,7 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
   object Label1: TLabel
     Left = 8
     Top = 312
-    Width = 74
+    Width = 77
     Height = 13
     Caption = 'Contact Search'
   end

@@ -42,6 +42,7 @@ object frmWTLUPrices: TfrmWTLUPrices
     Width = 1446
     Height = 62
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -94,6 +95,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 4
       DesignSize = (
         103

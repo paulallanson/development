@@ -48,7 +48,7 @@ type
     procedure setDirec(const Value: string);
     procedure SetAccountName(const Value: string);
   private
-    procedure getEmailDefaults;
+    procedure GetEmailDefaults;
     procedure WriteEmailDefaults;
     property AccountName: string read FAccountName write SetAccountName;
     property AttachType: string read fAttachType write setAttachType;
@@ -77,7 +77,7 @@ begin
   try
      DirDlg.InitialPath := AttachDirecEdit.Text;
     if DirDlg.Execute then
-      AttachDirecEdit.Text := DirDlg.Pathname;
+      AttachDirecEdit.Text := DirDlg.PathName;
   finally
     DirDlg.Free;
   end;
@@ -96,20 +96,20 @@ end;
 
 procedure TfrmWTMaintClient.getEmailDefaults;
 var
-  TempArray: array[0..255] of Char;
+  TempArray: array [0..255] of Char;
   sAliasName: string;
 begin
   GetPrivateProfileString('Email', 'Application', '', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   Applic := TempArray;
 
   GetPrivateProfileString('Email', 'DEF Attachment Type', '', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   AttachType := TempArray;
   GetPrivateProfileString('Fax', 'DEF Fax Directory', '', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   Direc := TempArray;
 
@@ -138,9 +138,9 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Email', 'Application',Applic);
-      WriteString('Email', 'Def Attachment Type',AttachType);
-      WriteString('Fax', 'Def Fax Directory',Direc);
+      WriteString('Email', 'Application', Applic);
+      WriteString('Email', 'Def Attachment Type', AttachType);
+      WriteString('Fax', 'Def Fax Directory', Direc);
       WriteString('Email', pchar(sAliasName + ' Email Account'), AccountName);
     end;
   finally

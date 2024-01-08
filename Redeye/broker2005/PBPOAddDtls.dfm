@@ -15,7 +15,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   object Label2: TLabel
     Left = 16
     Top = 8
-    Width = 31
+    Width = 33
     Height = 13
     Caption = 'Notes:'
   end
@@ -57,6 +57,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
       'Supplier only'
       'Customer only'
       'Both Supplier and Customer')
+    ParentBackground = False
     TabOrder = 3
   end
   object BitBtn1: TBitBtn

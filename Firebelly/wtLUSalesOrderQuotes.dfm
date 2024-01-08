@@ -73,7 +73,6 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
-      ExplicitLeft = 810
     end
     object edtNumber: TEdit
       Left = 689
@@ -83,7 +82,6 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 695
     end
     object edtCustomerName: TEdit
       Left = 72
@@ -104,7 +102,6 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       ModalResult = 2
       TabOrder = 3
       OnClick = BitBtn1Click
-      ExplicitLeft = 898
     end
     object edtReference: TEdit
       Left = 72
