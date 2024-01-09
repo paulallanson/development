@@ -8,7 +8,7 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Scaled = False
   TextHeight = 13
@@ -1503,6 +1503,7 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       '        Sales_Order.Customer_Name,'
       '        Customer.Is_Retail_Customer,'
       '        Customer.Is_Commercial_Customer,'
+      '        Customer.Requires_App_For_Payment,'
       '        (select top 1 Job'
       '        from sales_order_line, sales_Order SO'
       '        where sales_order_line.sales_order = SO.sales_order and'
@@ -1542,16 +1543,29 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       
         '      (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND ' +
         '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
-        '(:Is_Retail_Customer = '#39'A'#39'))'
+        '(:Is_Retail_Customer = '#39'A'#39')) AND'
+      
+        '      ((Customer.Requires_App_For_Payment = :Requires_App_For_Pa' +
+        'yment) OR (:Requires_App_For_Payment = '#39'A'#39'))'
+      ''
       '')
     Left = 116
     Top = 342
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Customer'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Rep'
+        ParamType = ptUnknown
       end
       item
         Name = 'Rep'
@@ -1591,9 +1605,22 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       end
       item
         Name = 'Is_Commercial_Customer'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Requires_App_For_Payment'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Requires_App_For_Payment'
+        ParamType = ptUnknown
       end>
   end
 end

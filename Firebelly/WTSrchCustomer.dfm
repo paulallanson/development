@@ -8,7 +8,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -26,7 +26,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'Segoe UI'
+    TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -184,7 +184,10 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       'where Customer_name like :Name and'
       
         '(Not_Active = '#39'N'#39' or Not_Active is NULL or Not_Active = :Not_Act' +
-        'ive)'
+        'ive) AND'
+      
+        '((Requires_App_For_Payment = :Requires_App_For_Payment) OR (Requ' +
+        'ires_App_For_Payment = '#39'Y'#39'))'
       'order by Customer_Name')
     Left = 64
     Top = 64
@@ -194,7 +197,14 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
         DataType = ftString
       end
       item
+        DataType = ftUnknown
         Name = 'Not_Active'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Requires_App_For_Payment'
+        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource

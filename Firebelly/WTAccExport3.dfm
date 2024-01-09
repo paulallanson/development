@@ -8,7 +8,7 @@ object frmWTAccExport3: TfrmWTAccExport3
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -16,122 +16,211 @@ object frmWTAccExport3: TfrmWTAccExport3
   OnDestroy = FormDestroy
   OnShow = FormShow
   TextHeight = 13
-  object AliasLbl: TLabel
-    Left = 8
-    Top = 72
-    Width = 99
-    Height = 13
-    Caption = 'Alias of Datasource'
-  end
-  object ExportLbl: TLabel
-    Left = 8
-    Top = 128
-    Width = 120
-    Height = 13
-    Caption = 'Export/Import Directory'
-  end
-  object Label2: TLabel
-    Left = 8
-    Top = 16
-    Width = 97
-    Height = 13
-    Caption = 'Accounting System'
-  end
-  object fileNameLbl: TLabel
-    Left = 8
-    Top = 72
-    Width = 50
-    Height = 13
-    Caption = 'File Name'
-  end
-  object lblStatus: TLabel
-    Left = 8
-    Top = 192
-    Width = 55
-    Height = 13
-    Caption = 'Processing'
-    Visible = False
-  end
-  object cbsource: TComboBox
-    Left = 8
-    Top = 88
-    Width = 177
-    Height = 21
-    Style = csDropDownList
-    TabOrder = 7
-    OnChange = cbsourceChange
-  end
-  object ExportPathEdit: TEdit
-    Left = 8
-    Top = 144
-    Width = 249
-    Height = 21
-    ReadOnly = True
+  object pnlBottom: TPanel
+    Left = 0
+    Top = 303
+    Width = 363
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvNone
     TabOrder = 0
-    Text = 'ExportPathEdit'
-    OnKeyUp = ExportPathEditKeyUp
+    object BitBtn1: TBitBtn
+      Left = 96
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Back'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object FinishBtn: TBitBtn
+      Left = 176
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Finish'
+      TabOrder = 1
+      OnClick = FinishBtnClick
+    end
+    object BitBtn3: TBitBtn
+      Left = 256
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Cancel'
+      TabOrder = 2
+      OnClick = BitBtn3Click
+    end
   end
-  object BitBtn1: TBitBtn
-    Left = 96
-    Top = 256
-    Width = 75
-    Height = 25
-    Caption = 'Back'
+  object pnlRevenueCentre: TPanel
+    Left = 0
+    Top = 0
+    Width = 363
+    Height = 73
+    Align = alTop
+    BevelOuter = bvNone
     TabOrder = 1
-    OnClick = BitBtn1Click
+    object rdgrpRevenueCentre: TRadioGroup
+      Left = 8
+      Top = 3
+      Width = 121
+      Height = 62
+      Caption = 'Revenue Centre '
+      ItemIndex = 0
+      Items.Strings = (
+        'Default'
+        'Selected')
+      TabOrder = 0
+      OnClick = rdgrpRevenueCentreClick
+    end
+    object grpbxRevCentre: TGroupBox
+      Left = 134
+      Top = 3
+      Width = 203
+      Height = 62
+      TabOrder = 1
+      Visible = False
+      object Label3: TLabel
+        Left = 8
+        Top = 12
+        Width = 78
+        Height = 13
+        Caption = 'Revenue Centre'
+      end
+      object dblkpRevCentre: TDBLookupComboBox
+        Left = 8
+        Top = 32
+        Width = 185
+        Height = 21
+        KeyField = 'Revenue_Centre'
+        ListField = 'Revenue_Centre_Descr'
+        TabOrder = 0
+        OnClick = dblkpRevCentreClick
+      end
+    end
   end
-  object FinishBtn: TBitBtn
-    Left = 176
-    Top = 256
-    Width = 75
-    Height = 25
-    Caption = 'Finish'
+  object pnlDetails: TPanel
+    Left = 0
+    Top = 73
+    Width = 363
+    Height = 230
+    Align = alClient
+    BevelOuter = bvNone
     TabOrder = 2
-    OnClick = FinishBtnClick
+    object Label2: TLabel
+      Left = 8
+      Top = 8
+      Width = 91
+      Height = 13
+      Caption = 'Accounting System'
+    end
+    object AliasLbl: TLabel
+      Left = 8
+      Top = 56
+      Width = 92
+      Height = 13
+      Caption = 'Alias of Datasource'
+    end
+    object fileNameLbl: TLabel
+      Left = 8
+      Top = 56
+      Width = 47
+      Height = 13
+      Caption = 'File Name'
+    end
+    object ExportLbl: TLabel
+      Left = 8
+      Top = 104
+      Width = 109
+      Height = 13
+      Caption = 'Export/Import Directory'
+    end
+    object lblStatus: TLabel
+      Left = 8
+      Top = 160
+      Width = 52
+      Height = 13
+      Caption = 'Processing'
+      Visible = False
+    end
+    object AccSystemEdit: TEdit
+      Left = 8
+      Top = 24
+      Width = 329
+      Height = 21
+      ReadOnly = True
+      TabOrder = 0
+      Text = 'AccSystemEdit'
+    end
+    object cbsource: TComboBox
+      Left = 8
+      Top = 72
+      Width = 177
+      Height = 21
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 1
+      OnChange = cbsourceChange
+    end
+    object FileNameEdit: TEdit
+      Left = 8
+      Top = 72
+      Width = 137
+      Height = 21
+      ReadOnly = True
+      TabOrder = 2
+      Text = 'FileNameEdit'
+      OnKeyUp = FileNameEditKeyUp
+    end
+    object ExportPathEdit: TEdit
+      Left = 8
+      Top = 120
+      Width = 249
+      Height = 21
+      ReadOnly = True
+      TabOrder = 3
+      Text = 'ExportPathEdit'
+      OnKeyUp = ExportPathEditKeyUp
+    end
+    object BrowseBtn: TBitBtn
+      Left = 264
+      Top = 120
+      Width = 75
+      Height = 25
+      Caption = 'Browse'
+      TabOrder = 4
+      OnClick = BrowseBtnClick
+    end
+    object Progress: TProgressBar
+      Left = 7
+      Top = 175
+      Width = 330
+      Height = 18
+      TabOrder = 5
+      Visible = False
+    end
   end
-  object BitBtn3: TBitBtn
-    Left = 256
-    Top = 256
-    Width = 75
-    Height = 25
-    Caption = 'Cancel'
-    TabOrder = 3
-    OnClick = BitBtn3Click
+  object qryRevenueCentre: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Revenue_Centre.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr,'
+      '        Revenue_Centre.Inactive,'
+      '        Revenue_Centre.Prefix_Value,'
+      '        Revenue_Centre.Accounts_Package,'
+      '        Accounts_Package.Accounts_Package_Description'
+      'FROM Accounts_Package'
+      '        RIGHT JOIN Revenue_Centre'
+      
+        '          ON Accounts_Package.Accounts_Package = Revenue_Centre.' +
+        'Accounts_Package'
+      'ORDER BY Revenue_Centre_Descr')
+    Left = 208
+    Top = 8
   end
-  object AccSystemEdit: TEdit
-    Left = 8
-    Top = 32
-    Width = 329
-    Height = 21
-    ReadOnly = True
-    TabOrder = 4
-    Text = 'AccSystemEdit'
-  end
-  object FileNameEdit: TEdit
-    Left = 8
-    Top = 88
-    Width = 137
-    Height = 21
-    ReadOnly = True
-    TabOrder = 5
-    Text = 'FileNameEdit'
-    OnKeyUp = FileNameEditKeyUp
-  end
-  object BrowseBtn: TBitBtn
-    Left = 264
-    Top = 144
-    Width = 75
-    Height = 25
-    Caption = 'Browse'
-    TabOrder = 6
-    OnClick = BrowseBtnClick
-  end
-  object Progress: TProgressBar
-    Left = 7
-    Top = 209
-    Width = 330
-    Height = 18
-    TabOrder = 8
-    Visible = False
+  object dtsRevenueCentre: TDataSource
+    DataSet = qryRevenueCentre
+    Left = 296
+    Top = 8
   end
 end

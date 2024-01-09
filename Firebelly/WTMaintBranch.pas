@@ -64,6 +64,7 @@ type
     N2: TMenuItem;
     pmnuSelectAll: TMenuItem;
     DocOpenDialog: TOpenDialog;
+    chkbxInactive: TCheckBox;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -124,6 +125,7 @@ begin
       edtName.Text := '';
       edtName.SetFocus;
       iAddress := 0;
+      chkbxInactive.Checked := false;
     end
   else
     begin
@@ -138,6 +140,7 @@ begin
 
           dblkpInstallationContact.KeyValue := fieldbyname('Installation_Contact').asinteger;
           dblkpQSContact.KeyValue := fieldbyname('Site_QS_Contact').asinteger;
+          chkbxInactive.Checked := (fieldbyname('inActive').asstring = 'Y');
 
           GetAddress(iAddress);
           memInstallationNotes.text := GetNotes(fieldbyname('Special_Instructions').asinteger);
@@ -214,6 +217,11 @@ begin
             parambyname('Site_QS_Contact').asinteger := dblkpQSContact.KeyValue
           else
             parambyname('Site_QS_Contact').clear;
+
+          if chkbxInactive.Checked then
+            ParamByName('inActive').asstring := 'Y'
+          else
+            ParamByName('inActive').asstring := 'N';
           execsql;
         end;
       dtmdlWorktops.CreateCustomerSiteDocDirectory(self.CustomerName, edtName.Text);
@@ -285,6 +293,11 @@ begin
             parambyname('Site_QS_Contact').asinteger := dblkpQSContact.KeyValue
           else
             parambyname('Site_QS_Contact').clear;
+
+          if chkbxInactive.Checked then
+            ParamByName('inActive').asstring := 'Y'
+          else
+            ParamByName('inActive').asstring := 'N';
           execsql;
         end;
     end

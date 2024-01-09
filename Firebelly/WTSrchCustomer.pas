@@ -77,6 +77,7 @@ type
     procedure SetSurveyPrice(const Value: double);
     { Private declarations }
   public
+    bOnlyShowAFP: boolean;
     bNewCustomer: boolean;
     procedure Refreshdata;
     property Address: integer read FAddress write SetAddress;
@@ -126,7 +127,13 @@ begin
         parambyname('Not_Active').asstring := 'Y'
       else
         parambyname('Not_Active').asstring := 'N';
+      if bOnlyShowAFP then
+        parambyname('Requires_App_For_Payment').asstring := 'Y'
+      else
+        parambyname('Requires_App_For_Payment').asstring := 'N';
       open;
+
+      stsbrDetails.panels[0].text := inttostr(qrydetails.recordcount) + ' records displayed';
       if not Locate('Customer', Variant(inttostr(CodeSelected)),[lopartialKey]) then
         first;
     end;

@@ -85,13 +85,17 @@ type
     exporting: boolean;
     exportFile: textFile;
     FCustomerCategory: integer;
+    FChargeType: integer;
     procedure SetCustomerCategory(const Value: integer);
+    procedure SetChargeType(const Value: integer);
   public
+    bOnlyShowAFP: boolean;
     bShowOnlyScheduled: boolean;
     bIncludeInvoiced: boolean;
     SortBy: integer;
     customer, rep: integer;
     DateFrom, DateTo: TDateTime;
+    property ChargeType: integer read FChargeType write SetChargeType;
     property CustomerCategory: integer read FCustomerCategory write SetCustomerCategory;
     function GetDetails: integer;
     procedure ExporttoFile(filename: string);
@@ -119,9 +123,9 @@ begin
       end;
     1:begin
         qrbGroupFooter.enabled := true;
-        qrbGroupHeader.Expression := 'qrySalesOrders.Template_Date';
-        qrGroupByText.DataField := 'Template_Date';
-        qrlblSortBy.Caption := 'Template Date';
+        qrbGroupHeader.Expression := 'qrySalesOrders.Date_Raised';
+        qrGroupByText.DataField := 'Date_Raised';
+        qrlblSortBy.Caption := 'Order Date';
       end;
     2:begin
         qrbGroupFooter.enabled := true;
@@ -140,6 +144,12 @@ begin
         qrbGroupHeader.Expression := 'qrySalesOrders.Rep_Name';
         qrGroupByText.DataField := 'Rep_Name';
         qrlblSortBy.Caption := 'Rep';
+      end;
+    5:begin
+        qrbGroupFooter.enabled := true;
+        qrbGroupHeader.Expression := 'qrySalesOrders.Date_Required';
+        qrGroupByText.DataField := 'Date_Required';
+        qrlblSortBy.Caption := 'Date Required';
       end;
   end;
 
@@ -185,7 +195,7 @@ begin
         qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Sales_Order');
       end;
     1:begin
-        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Template_Date, Sales_Order.Sales_Order');
+        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Date_Raised, Sales_Order.Sales_Order');
       end;
     2:begin
         qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Customer_Name, Sales_Order.Sales_Order');
@@ -195,6 +205,9 @@ begin
       end;
     4:begin
         qrySalesOrders.SQL.Add('ORDER BY Rep.Rep_Name, Sales_Order.Sales_Order ASC');
+      end;
+    5:begin
+        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Date_Required, Sales_Order.Sales_Order ASC');
       end;
   end;
 
@@ -227,6 +240,29 @@ begin
     qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 110
   else
     qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 100;
+
+  case ChargeType of
+        0:  begin
+              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'A';
+              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'A';
+              qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'A';
+            end;
+        1:  begin
+              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'N';
+              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'N';
+            end;
+        2:  begin
+              qrySalesOrders.ParambyName('Is_Retail_Customer').asstring := 'N';
+              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'Y';
+            end;
+        3:  begin
+              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'Y';
+              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'N';
+            end;
+  end;
 
   qrySalesOrders.parambyname('Customer').asinteger := customer;
   qrySalesOrders.parambyname('Rep').asinteger := Rep;
@@ -369,6 +405,7 @@ begin
     + ',"Deposit Paid"'
     + ',"Total to Invoice"'
     + ',"In Schedule"'
+    + ',"Charge Type"'
     + ',"Status"';
 
 
@@ -432,6 +469,15 @@ begin
     //Total Value
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('IsFittingInOutlook').asstring + '"';
 
+    //Charge Type
+    if qrySalesOrders.fieldbyname('Is_Retail_Customer').asstring = 'Y' then
+      tempStr := tempStr + ',"' + 'Retail' + '"'
+    else
+    if qrySalesOrders.fieldbyname('Requires_App_For_Payment').asstring = 'Y' then
+      tempStr := tempStr + ',"' + 'Application for Payment' + '"'
+    else
+      tempStr := tempStr + ',"' + 'Invoice' + '"';
+
     //Status
     tempStr := tempStr + ',"' + gtqrStatus.caption + '"';
 
@@ -462,6 +508,11 @@ begin
   qrlblCustDeposit.caption := formatfloat('#,##0.00',CustomerDeposit);
   qrlblCustTotal.caption := formatfloat('#,##0.00',(CustomerGoods + CustomerVAT - CustomerDeposit));
   qrlblReportTotal.caption := formatfloat('#,##0.00',(rGoods + rVAT - rDeposit));
+end;
+
+procedure TfrmwtRPSOAntInvoice.SetChargeType(const Value: integer);
+begin
+  FChargeType := Value;
 end;
 
 end.

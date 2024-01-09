@@ -42,6 +42,7 @@ type
     chkbxPageBreak: TCheckBox;
     chkbxShowOnlyScheduled: TCheckBox;
     chkbxIncludeInvoiced: TCheckBox;
+    rdgrpChargeType: TRadioGroup;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
@@ -104,6 +105,8 @@ begin
       frmwtRPSOAntInvoice.dateto := 0
     else
       frmwtRPSOAntInvoice.dateto := padatestr(edtDateTo.Text);
+
+    frmwtRPSOAntInvoice.ChargeType := rdgrpChargeType.itemindex;
 
     frmwtRPSOAntInvoice.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmwtRPSOAntInvoice.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;
@@ -282,6 +285,8 @@ begin
       frmwtRPSOAntInvoice.dateto := 0
     else
       frmwtRPSOAntInvoice.dateto := padatestr(edtDateTo.Text);
+
+    frmwtRPSOAntInvoice.ChargeType := rdgrpChargeType.itemindex;
 
     frmwtRPSOAntInvoice.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmwtRPSOAntInvoice.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;

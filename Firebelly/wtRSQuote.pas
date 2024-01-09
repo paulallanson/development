@@ -80,7 +80,6 @@ type
     function BuildQueryString: string;
     function GetQuoteMaterial(tempQuote: integer): string;
     function IncrementNo(StartStr: String): String;
-    procedure PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
     procedure PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
     procedure PrintDocument(const documentToPrint: string);
     procedure PrintDocuments;

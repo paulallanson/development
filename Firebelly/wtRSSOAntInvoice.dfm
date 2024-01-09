@@ -9,7 +9,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -374,6 +374,20 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Height = 17
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 15
+  end
+  object rdgrpChargeType: TRadioGroup
+    Left = 368
+    Top = 152
+    Width = 153
+    Height = 90
+    Caption = 'Charge Type: '
+    ItemIndex = 0
+    Items.Strings = (
+      'All'
+      'Invoice'
+      'Application for Payment'
+      'Retail')
+    TabOrder = 16
   end
   object qryReps: TFDQuery
     ConnectionName = 'WT'

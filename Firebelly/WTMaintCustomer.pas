@@ -212,6 +212,7 @@ type
     dbgMaterialTypes: TDBGrid;
     pnlMaterialTypeFooter: TPanel;
     chkbxShowInactiveMaterialTypes: TCheckBox;
+    chkbxRequiresAppForPay: TCheckBox;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -547,6 +548,7 @@ begin
       chkbxFactored.Checked := false;
       chkbxShowLabourCharges.Checked := false;
       chkbxOnline.Checked := false;
+      chkbxRequiresAppForPay.checked := false;
 
       chkbxInactive.Checked := false;
 
@@ -624,6 +626,8 @@ begin
       frmWTDBMemo.LoadMemoData(qryOneCustomer.FieldByName('Narrative').AsInteger);
       chkbxOnline.Checked := (qryOneCustomer.fieldbyname('Use_Online_Ordering').asstring = 'Y');
       chkbxUseforGeneralQuoting.Checked := (qryOneCustomer.fieldbyname('Use_for_General_Quoting').asstring = 'Y');
+
+      chkbxRequiresAppForPay.Checked := (qryOneCustomer.fieldbyname('Requires_App_For_Payment').asstring = 'Y');
 
       chkbxShowLabourCharges.Checked := (qryOneCustomer.fieldbyname('Separate_Labour_Invoice_Value').asstring = 'Y');
       chkbxSpeculative.Checked := (qryOneCustomer.fieldbyname('Customer_is_Speculative').asstring = 'Y');
@@ -2675,6 +2679,11 @@ begin
         parambyname('Separate_Labour_Invoice_Value').asstring := 'Y'
       else
         parambyname('Separate_Labour_Invoice_Value').asstring := 'N';
+
+      if chkbxRequiresAppForPay.checked then
+        parambyname('Requires_App_For_Payment').asstring := 'Y'
+      else
+        parambyname('Requires_App_For_Payment').asstring := 'N';
 
       if chkbxFactored.checked then
         parambyname('Account_Is_Factored').asstring := 'Y'

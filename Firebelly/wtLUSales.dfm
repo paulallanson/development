@@ -8,7 +8,7 @@ object frmwtLUSales: TfrmwtLUSales
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
   Position = poScreenCenter
@@ -206,6 +206,22 @@ object frmwtLUSales: TfrmwtLUSales
         ImageIndex = 5
         OnClick = btnTemplateClick
       end
+      object btnAllocate: TToolButton
+        Left = 442
+        Top = 0
+        Caption = 'Allocate'
+        Enabled = False
+        ImageIndex = 3
+        OnClick = btnAllocateClick
+      end
+      object btnDeAllocate: TToolButton
+        Left = 504
+        Top = 0
+        Caption = 'De-Allocate'
+        Enabled = False
+        ImageIndex = 5
+        OnClick = btnDeAllocateClick
+      end
       object btnConvert: TToolButton
         Left = 421
         Top = 0
@@ -271,8 +287,8 @@ object frmwtLUSales: TfrmwtLUSales
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -300,7 +316,7 @@ object frmwtLUSales: TfrmwtLUSales
       end
       item
         Expanded = False
-        FieldName = 'Date_Required'
+        FieldName = 'Fitting_Date_New'
         Title.Caption = 'Date Required'
         Visible = True
       end
@@ -338,7 +354,7 @@ object frmwtLUSales: TfrmwtLUSales
       end
       item
         Expanded = False
-        FieldName = 'sales_order_status_desc'
+        FieldName = 'Status_Text'
         Title.Caption = 'Status'
         Width = 134
         Visible = True
@@ -359,7 +375,7 @@ object frmwtLUSales: TfrmwtLUSales
       end
       item
         Expanded = False
-        FieldName = 'Template_Date'
+        FieldName = 'Template_Date_New'
         Title.Caption = 'Template Date'
         Width = 123
         Visible = True
@@ -380,7 +396,7 @@ object frmwtLUSales: TfrmwtLUSales
       end
       item
         Expanded = False
-        FieldName = 'is_retail_customer'
+        FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
         Width = 50
         Visible = True
@@ -415,6 +431,14 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Branch_Name'
+        Title.Caption = 'Site Name'
+        Width = 113
         Visible = True
       end>
   end
@@ -452,7 +476,7 @@ object frmwtLUSales: TfrmwtLUSales
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -19
-        Font.Name = 'Segoe UI'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
       end
@@ -466,7 +490,7 @@ object frmwtLUSales: TfrmwtLUSales
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -16
-        Font.Name = 'Segoe UI'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentColor = False
         ParentFont = False
@@ -481,7 +505,7 @@ object frmwtLUSales: TfrmwtLUSales
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'Segoe UI'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
         ExplicitLeft = 1148

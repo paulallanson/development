@@ -38,22 +38,58 @@ type
     qryUpAddress: TFDQuery;
     qryDelAddress: TFDQuery;
     qryVAT: TFDQuery;
+    qryVATVat: TIntegerField;
+    qryVATVat_Rate: TFloatField;
+    qryVATDescription: TWideStringField;
+    qryVATVat_Code: TWideStringField;
     dtsVAT: TDataSource;
     qryjobHeader: TFDQuery;
     qryGetVat: TFDQuery;
     qryQHeader: TFDQuery;
-    qryCustQuotes: TFDQuery;
+    qryAllSalesSales_Order: TIntegerField;
+    qryAllSalesDate_Raised: TDateTimeField;
+    qryAllSalesDate_Required: TDateTimeField;
+    qryAllSalesCustomer: TIntegerField;
+    qryAllSalesReference: TWideStringField;
+    qryAllSalesExtra_Notes: TIntegerField;
+    qryAllSalesOperator: TIntegerField;
+    qryAllSalesContact_Name: TWideStringField;
+    qryAllSalesOrder_ref_no: TWideStringField;
+    qryAllSalesSales_Order_Status: TIntegerField;
+    qryAllSalesDeposit_amount: TFloatField;
+    qryAllSalesDeposit_Terms: TFloatField;
+    qryAllSalesGoods_Value: TFloatField;
+    qryAllSalesVAT_Value: TFloatField;
+    qryAllSalesRep: TIntegerField;
+    qryAllSalesInstall_Address: TIntegerField;
+    qryAllSalesInactive: TWideStringField;
+    qryAllSalesCustomer_Name: TWideStringField;
+    qryAllSalesInactive_Reason: TIntegerField;
+    qryAllSalesAddress: TIntegerField;
+    qryAllSalesTemplate_Date: TDateTimeField;
+    qryAllSalesoriginal_customer_name: TWideStringField;
+    qryAllSalesOperator_name: TWideStringField;
+    qryAllSalesTotal_Value: TFloatField;
+    qryAllSalessales_order_status_desc: TWideStringField;
+    qryCustQuotes: TFDQuery;    
     dsCustQuotes: TDataSource;
     dsDummy: TDataSource;
     qryGetQuoteJob: TFDQuery;
     qryGetSOLines: TFDQuery;
-    qrySOUpStatus: TFDQuery;
+    qrySOUpStatus: TFDQuery;    
+    qryAllSalesOn_Hold: TWideStringField;
+    qryAllSalesStatus_Text: TWideStringField;
     qrySOUpdLine: TFDQuery;
     qryGetSOrderInvoices: TFDQuery;
     qrySetSOrderInactive: TFDQuery;
     qryUpCustomer: TFDQuery;
-    qryUpQuote: TFDQuery;
+    qryUpQuote: TFDQuery;    
+    qryAllSalesDescriptive_Reference: TWideStringField;
+    qryAllSalesTemplate_Date_New: TWideStringField;
+    qryAllSalesFitting_Date_New: TWideStringField;
     qrySOUpSalesInvoice: TFDQuery;
+    qryAllSalesOffice_Contact_Name: TWideStringField;
+    qryAllSalesIs_Retail_Customer: TWideStringField;   
     qryGetLinkedQuotes: TFDQuery;
     dtsGetLinkedQuotes: TDataSource;
     qryGetSOHead: TFDQuery;
@@ -254,6 +290,7 @@ type
     ProjectReference: string;
     QuoteReference: string;
     Reference: string;
+    SiteName: string;
     Status: string;
     TemplateName: string;
     TradeRetail: integer;
@@ -462,6 +499,8 @@ type
     FPONumber: integer;
     FSINumber: string;
     FVatDescription: string;
+    FStockAllocationEndDate: TDateTime;
+    FStockAllocationStartDate: TDateTime;
     procedure SetSOLNumber(const Value: integer);
     procedure SetQuantity(const Value: double);
     procedure SetParent(const Value: TSOrder);
@@ -493,6 +532,8 @@ type
     procedure SetPONumber(const Value: integer);
     procedure SetSINumber(const Value: string);
     procedure SetVatDescription(const Value: string);
+    procedure SetStockAllocationEndDate(const Value: TDateTime);
+    procedure SetStockAllocationStartDate(const Value: TDateTime);
   public
     constructor Create(SOrder : TSOrder);
     destructor Destroy; override;
@@ -526,6 +567,8 @@ type
     property SellUnit: integer read FSellUnit write SetSellUnit;
     property SINumber: string read FSINumber write SetSINumber;
     property SOLNumber: integer read FSOLNumber write SetSOLNumber;
+    property StockAllocationEndDate: TDateTime read FStockAllocationEndDate write SetStockAllocationEndDate;
+    property StockAllocationStartDate: TDateTime read FStockAllocationStartDate write SetStockAllocationStartDate;
     property StockCode: string read FStockCode write SetStockCode;
     property StockDescription: string read FStockDescription write SetStockDescription;
     property StockItem: integer read FStockItem write SetStockItem;
@@ -683,6 +726,8 @@ type
     FCustomerBranch: integer;
     FBranchExist: boolean;
     FCustomerBranchName: string;
+    FStockAllocationEndDate: TDateTime;
+    FStockAllocationStartDate: TDateTime;
     procedure SetdbKey(const Value: integer);
     procedure SetContactName(const Value: string);
     procedure SetCustomer(const Value: integer);
@@ -753,6 +798,8 @@ type
     procedure SetCustomerBranch(const Value: integer);
     procedure SetBranchExist(const Value: boolean);
     procedure SetCustomerBranchName(const Value: string);
+    procedure SetStockAllocationEndDate(const Value: TDateTime);
+    procedure SetStockAllocationStartDate(const Value: TDateTime);
   public
     constructor Create(DataModule : TdtmdlSalesOrder);
     destructor Destroy; override;
@@ -839,6 +886,8 @@ type
     property Speculative: boolean read FSpeculative write SetSpeculative;
     property Status: integer read FStatus write SetStatus;
     property StatusDescr: string read FStatusDescr write SetStatusDescr;
+    property StockAllocationStartDate: TDateTime read FStockAllocationStartDate write SetStockAllocationStartDate;
+    property StockAllocationEndDate: TDateTime read FStockAllocationEndDate write SetStockAllocationEndDate;
     property SupplyOnly: string read FSupplyOnly write SetSupplyOnly;
     property Templater: integer read FTemplater write SetTemplater;
     property TemplateInSchedule: boolean read FTemplateInSchedule write SetTemplateInSchedule;
@@ -1174,6 +1223,8 @@ begin
         sTemp := sTemp + ' AND Sales_order.Customer_name LIKE ''%' + CustomerName + '%''';
       if CustomerOrder <> '' then
         sTemp := sTemp + ' AND Sales_Order.Order_ref_no LIKE ''%' + CustomerOrder + '%''';
+      if SiteName <> '' then
+        sTemp := sTemp + ' AND Customer_Branch.Branch_Name LIKE ''%' + SiteName + '%''';
       if ProjectReference <> '' then
         sTemp := sTemp + ' AND Sales_order.Project_Reference LIKE ''%' + ProjectReference + '%''';
       if QuoteReference <> '' then
@@ -1362,6 +1413,7 @@ begin
   if (CustomerName <> '') or
             (CustomerOrder <> '') or
             (ProjectReference <> '') or
+            (SiteName <> '') or
             (Reference <> '') or
             (QuoteReference <> '') or
             (JobNo <> 0) or
@@ -1448,6 +1500,8 @@ begin
   Result.OriginalSalesOrder := self.OriginalSalesOrder;
   Result.RevenueCentre :=   self.RevenueCentre;
   Result.SalesOrderNumber :=  self.SalesOrderNumber;
+  Result.StockAllocationStartDate := self.StockAllocationStartDate;
+  Result.StockAllocationEndDate := self.StockAllocationEndDate;
   Result.Speculative :=   self.Speculative;
   Result.Templater :=     self.Templater;
   Result.TemplateDate :=  self.TemplateDate;
@@ -1700,7 +1754,8 @@ begin
         else
           OriginalSalesOrder := fieldbyname('Original_Sales_Order').AsInteger;
       end;
-
+    StockAllocationStartDate := fieldbyname('Stock_Allocation_Start_Date').AsDateTime;
+    StockAllocationEndDate := fieldbyname('Stock_Allocation_End_Date').AsDateTime;
     Close;
   end;
   LoadLines;
@@ -1878,6 +1933,8 @@ begin
         aline.PONumber := FieldByName('Purchase_Order').asinteger;
 
       aline.Product := FieldByName('Product').asinteger;
+      aline.StockAllocationEndDate := FieldByName('Stock_Allocation_End_Date').asdatetime;
+      aline.StockAllocationStartDate := FieldByName('Stock_Allocation_Start_Date').asdatetime;
       aLine.StockDescription := FieldByName('Product_Description').asstring;
       aLine.StockCode := FieldByName('Product_Code').asstring;
       aLine.SurveyPrice := FieldByName('Survey_Price').asfloat;
@@ -2907,6 +2964,16 @@ begin
   FCustomerBranchName := Value;
 end;
 
+procedure TSOrder.SetStockAllocationEndDate(const Value: TDateTime);
+begin
+  FStockAllocationEndDate := Value;
+end;
+
+procedure TSOrder.SetStockAllocationStartDate(const Value: TDateTime);
+begin
+  FStockAllocationStartDate := Value;
+end;
+
 { TSOLines }
 
 procedure TSOLines.Add(aLine: TSOLine);
@@ -3020,6 +3087,10 @@ begin
   Result.SellUnit             := self.SellUnit;
   Result.SINumber             := self.SINumber;
   Result.SOLNumber            := self.SOLNumber;
+  Result.StockAllocationEndDate
+                              := self.StockAllocationEndDate;
+  Result.StockAllocationStartDate
+                              := self.StockAllocationStartDate;
   Result.StockCode            := self.StockCode;
   Result.StockDescription     := self.StockDescription;
   Result.StockItem            := self.StockItem;
@@ -3045,7 +3116,8 @@ end;
 
 function TSOLine.GetTotalGoods: currency;
 begin
-  if (self.Quote <> 0) or (self.Job <> 0) then
+//  if (self.Quote <> 0) or (self.Job <> 0) then
+  if (self.Quote <> 0) then
     result := self.InstallPrice + self.DeliveryPrice + self.SurveyPrice +
               self.NettPrice - self.DiscountValue + self.MarkupValue + self.WasteValue
   else
@@ -3143,6 +3215,8 @@ begin
     SellUnit := FieldByName('Sell_Unit').asinteger;
     SINumber := FieldByName('Sales_Invoice_Number').asstring;
     SOLNumber := FieldByName('Sales_Order_Line_no').asinteger;
+    StockAllocationEndDate := FieldByName('Stock_Allocation_End_Date').asdatetime;
+    StockAllocationStartDate := FieldByName('Stock_Allocation_Start_Date').asdatetime;
     StockCode := FieldByName('Stock_Code').asstring;
     StockDescription := FieldByName('Stock_Description').asstring;
     StockItem := FieldByName('Stock_Item').asinteger;
@@ -3429,7 +3503,6 @@ begin
         end;
     end;
   result := iAddress;
-
 end;
 
 procedure TdtmdlSalesOrder.SaveNarrative(var iNarrative: Integer;
@@ -3658,6 +3731,16 @@ end;
 procedure TSOLine.SetVatDescription(const Value: string);
 begin
   FVatDescription := Value;
+end;
+
+procedure TSOLine.SetStockAllocationEndDate(const Value: TDateTime);
+begin
+  FStockAllocationEndDate := Value;
+end;
+
+procedure TSOLine.SetStockAllocationStartDate(const Value: TDateTime);
+begin
+  FStockAllocationStartDate := Value;
 end;
 
 { TSOEvent }
@@ -4211,6 +4294,12 @@ begin
   with qrySOUpRemedial do
     begin
       close;
+
+      if not dtmdlWorktops.IsSQL then
+        begin
+          SQL.Text := qrySOUpRemedial_Access.sql.text;
+        end;
+
       parambyname('Sales_Order').asinteger := tempCode;
       parambyname('Completed').asstring := tempStatus;
       execsql;

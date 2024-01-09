@@ -9,7 +9,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -28,7 +28,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'Segoe UI'
+    TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick

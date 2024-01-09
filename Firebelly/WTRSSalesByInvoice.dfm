@@ -9,7 +9,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
@@ -316,6 +316,20 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
       Items.Strings = (
         'All Reps')
     end
+  end
+  object rdgrpChargeType: TRadioGroup
+    Left = 369
+    Top = 160
+    Width = 153
+    Height = 90
+    Caption = 'Charge Type: '
+    ItemIndex = 0
+    Items.Strings = (
+      'All'
+      'Invoice'
+      'Application for Payment'
+      'Retail')
+    TabOrder = 14
   end
   object qryReps: TFDQuery
     ConnectionName = 'WT'

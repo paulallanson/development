@@ -32,6 +32,8 @@ type
   private
     iIntselcode: integer;
     FPrintType: string;
+    FDefaultBin: integer;
+    FDefaultPrinter: string;
     procedure EmailReport;
     procedure RunReport(const bPreview: boolean);
     procedure SetPrintType(const Value: string);
@@ -40,10 +42,14 @@ type
     procedure GetSelection;
     function BuildQueryString: string;
     function GetSupplierEmailCCs: string;
-    { Private declarations }
+    procedure SetDefaultBin(const Value: integer);
+    procedure SetDefaultPrinter(const Value: string);
+    procedure SetPrinterBin(BinCode: integer);
   public
     Contact: integer;
     Supplier: integer;
+    property DefaultBin: integer read FDefaultBin write SetDefaultBin;
+    property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
     property PrintType: string read FPrintType write SetPrintType;
   end;
 
@@ -80,30 +86,57 @@ begin
 end;
 
 procedure TfrmWTRSPOrder.RunReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   frmwtRPPOrder := TfrmwtRPPOrder.create(self);
   try
-    frmwtRPPOrder.PurchaseOrder := strtoint(memSelection.text);
-    frmwtRPPOrder.bPrintLogo := chkbxPrintLogo.checked;
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
 
-    if (frmwtRPPOrder.GetDetails = 0) then
-      MessageDlg('There are no purchase orders to print', mtError, [mbAbort], 0)
-    else
-      begin
-        if bPreview then
-          begin
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
+
+      frmwtRPPOrder.PurchaseOrder := strtoint(memSelection.text);
+      frmwtRPPOrder.bPrintLogo := chkbxPrintLogo.checked;
+
+      if (frmwtRPPOrder.GetDetails = 0) then
+        MessageDlg('There are no purchase orders to print', mtError, [mbAbort], 0)
+      else
+        begin
+          if bPreview then
+            begin
               frmwtRPPOrder.bPreview := true;
               frmwtRPPOrder.qrpDetails.Preview;
-          end
-        else
-          begin
+            end
+          else
+            begin
               frmwtRPPOrder.bPreview := false;
-              frmwtRPPOrder.qrpDetails.PrinterSetup;
+(*              frmwtRPPOrder.qrpDetails.PrinterSetup;
               if frmwtRPPOrder.qrpDetails.tag = 0 then
                 frmwtRPPOrder.qrpDetails.Print;
+*)
+              if SetUpPrinter(PrinterSettings) then
+                begin
+                  frmwtRPPOrder.qrpDetails.Print;
+                end;
               close;
-          end;
-      end;
+            end;
+        end;
+    finally
+      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmwtRPPOrder.free;
   end;
@@ -243,6 +276,7 @@ begin
     with IniFile do
     begin
       chkbxPrintLogo.Checked := (ReadString('Purchase Order', 'Print Logo', 'N') = 'Y');
+      DefaultPrinter := ReadString('Purchase Order', 'Default Printer', '');
     end;
   finally
     IniFile.Free;
@@ -386,5 +420,31 @@ begin
   Result := sTemp
 end;
 
+
+procedure TfrmWTRSPOrder.SetDefaultBin(const Value: integer);
+begin
+  FDefaultBin := Value;
+end;
+
+procedure TfrmWTRSPOrder.SetDefaultPrinter(const Value: string);
+begin
+  FDefaultPrinter := Value;
+end;
+
+procedure TfrmWTRSPOrder.SetPrinterBin(BinCode: integer);
+var
+  DevMode : PDeviceMode;
+  hDevMode: THandle;
+  Device,Driver,Port: array [0..1024] of Char;
+begin
+  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  if hDevMode <> 0 then
+  begin
+        DevMode := GlobalLock (hDevMode);
+        // here we can catch members of DevMode
+        DevMode^.DMDEFAULTSOURCE := BinCode;
+        GlobalUnlock (hDevMode);
+  end;
+end;
 
 end.

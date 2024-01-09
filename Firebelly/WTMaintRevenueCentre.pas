@@ -12,41 +12,51 @@ uses
 
 type
   TfrmWTMaintRevenueCentre = class(TForm)
-    DetsGrpBox: TGroupBox;
-    Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     qryGetLast: TFDQuery;
     qryUpdate: TFDQuery;
     qryDelete: TFDQuery;
-    DescrEdit: TEdit;
     DetsSRC: TDataSource;
     qryZero: TFDQuery;
+    ColorDialog1: TColorDialog;
+    OpenPictureDialog1: TOpenPictureDialog;
+    qryAdd: TFDQuery;
+    chkbxInActive: TCheckBox;
+    qryAccounts: TFDQuery;
+    dtsAccounts: TDataSource;
+    pcDetails: TPageControl;
+    tbsGeneral: TTabSheet;
+    Label1: TLabel;
     Label2: TLabel;
+    Label7: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label25: TLabel;
+    Label6: TLabel;
+    DescrEdit: TEdit;
     edtColor: TEdit;
     Button1: TButton;
-    ColorDialog1: TColorDialog;
     Button2: TButton;
-    Label7: TLabel;
     edtLogoPath: TEdit;
     Button3: TButton;
     Panel1: TPanel;
     imgLogo: TImage;
-    OpenPictureDialog1: TOpenPictureDialog;
-    Label3: TLabel;
-    Label4: TLabel;
     memRegistered: TMemo;
     memPayment: TMemo;
-    Label5: TLabel;
     edtVATRegistrationNo: TEdit;
-    qryAdd: TFDQuery;
-    Label25: TLabel;
     dblkpAccountsPackage: TDBLookupComboBox;
-    chkbxInActive: TCheckBox;
-    qryAccounts: TFDQuery;
-    dtsAccounts: TDataSource;
-    Label6: TLabel;
     edtCompanyRegNo: TEdit;
+    tbsNumbers: TTabSheet;
+    grpbxNumbers: TGroupBox;
+    Label21: TLabel;
+    Label50: TLabel;
+    edtLastInvoiceNumber: TCREditInt;
+    edtLastCreditNoteNumber: TCREditInt;
+    chkbxUseSeparateInvoiceSeq: TCheckBox;
+    Label8: TLabel;
+    edtPrefixValue: TEdit;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -58,6 +68,8 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure chkbxUseSeparateInvoiceSeqClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     iPaymentNarrative: integer;
     procedure AddZero;
@@ -104,6 +116,11 @@ begin
     edtCompanyRegNo.Text := '';
     edtVATRegistrationNo.Text := '';
     dblkpAccountsPackage.keyvalue := '';
+
+    chkbxUseSeparateInvoiceSeq.Checked := false;
+    edtPrefixValue.text := '';
+    edtLastInvoiceNumber.text := '0';
+    edtLastCreditNoteNumber.text := '0';
   end
   else
   begin
@@ -138,10 +155,16 @@ begin
       edtCompanyRegNo.Text := fieldbyname('Company_Reg_Number').asstring;
       edtVATRegistrationNo.Text := fieldbyname('VAT_Registration_No').asstring;
       dblkpAccountsPackage.keyvalue := fieldByName('Accounts_Package').Asstring;
+
+      chkbxUseSeparateInvoiceSeq.Checked := (fieldByName('Use_Separate_Invoice_Seq').Asstring = 'Y');
+      edtLastInvoiceNumber.text := inttostr(fieldbyname('Last_Invoice_Number').asinteger);
+      edtLastCreditNoteNumber.text := inttostr(fieldbyname('Last_Credit_Note_Number').asinteger);
+      edtPrefixValue.text := fieldbyname('Prefix_Value').asstring;
+      grpbxNumbers.Enabled := chkbxUseSeparateInvoiceSeq.Checked;
     end;
   end;
 
-  DetsGrpBox.Enabled := (FunctionMode <> 'D');
+  pcDetails.Enabled := (FunctionMode <> 'D');
   CheckOK(Self);
 end;
 
@@ -202,6 +225,16 @@ begin
             ParambyName('Accounts_Package').clear
           else
             ParambyName('Accounts_Package').asstring := dblkpAccountsPackage.KeyValue;
+
+          if chkbxUseSeparateInvoiceSeq.Checked then
+            parambyname('Use_Separate_Invoice_Seq').asstring := 'Y'
+          else
+            parambyname('Use_Separate_Invoice_Seq').asstring := 'N';
+
+          parambyname('Last_Invoice_Number').asinteger := strtoint(edtLastInvoiceNumber.text);
+          parambyname('Last_Credit_Note_Number').asinteger := strtoint(edtLastCreditNoteNumber.text);
+
+          parambyname('Prefix_Value').asstring := edtPrefixValue.text;
           ExecSQL;
           iCode := GetLastKey;
         end;
@@ -236,6 +269,16 @@ begin
             ParambyName('Accounts_Package').clear
           else
             ParambyName('Accounts_Package').asstring := dblkpAccountsPackage.KeyValue;
+
+          if chkbxUseSeparateInvoiceSeq.Checked then
+            parambyname('Use_Separate_Invoice_Seq').asstring := 'Y'
+          else
+            parambyname('Use_Separate_Invoice_Seq').asstring := 'N';
+
+          parambyname('Last_Invoice_Number').asinteger := strtoint(edtLastInvoiceNumber.text);
+          parambyname('Last_Credit_Note_Number').asinteger := strtoint(edtLastCreditNoteNumber.text);
+
+          parambyname('Prefix_Value').asstring := edtPrefixValue.text;
           ExecSQL;
         end;
     end;
@@ -385,5 +428,16 @@ begin
     end;
 end;
 
+
+procedure TfrmWTMaintRevenueCentre.chkbxUseSeparateInvoiceSeqClick(
+  Sender: TObject);
+begin
+  self.grpbxNumbers.Enabled := (Sender as TCheckbox).checked;
+end;
+
+procedure TfrmWTMaintRevenueCentre.FormCreate(Sender: TObject);
+begin
+  pcDetails.ActivePage := tbsGeneral;
+end;
 
 end.

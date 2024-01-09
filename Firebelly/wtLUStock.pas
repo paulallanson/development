@@ -31,7 +31,6 @@ type
     stsBrDetails: TStatusBar;
     imgLstHot: TImageList;
     tmrSearch: TTimer;
-    Query1: TFDQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -42,6 +41,7 @@ type
     procedure btnChangeClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     dtmdlAllStock: TdtmdlStock;
     FDisableNameChangeEvent: boolean;
@@ -173,6 +173,11 @@ end;
 procedure TfrmWTLUStock.SetDisableNameChangeEvent(const Value: boolean);
 begin
   FDisableNameChangeEvent := Value;
+end;
+
+procedure TfrmWTLUStock.FormActivate(Sender: TObject);
+begin
+  dtmdlAllStock.RefreshAlldata;
 end;
 
 end.

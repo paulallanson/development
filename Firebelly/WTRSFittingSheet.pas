@@ -48,6 +48,8 @@ type
     qrySalesOrdersOld: TFDQuery;
     qryGetSalesOrders: TFDQuery;
     qryGetSalesOrderEmails: TFDQuery;
+    qryOrders: TFDQuery;
+    qryEmails: TFDQuery;
     procedure EnableRun(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
@@ -241,7 +243,8 @@ begin
       with frmwtRPJobFitting.qryReport do
         begin
           close;
-          sql.Text := qryGetSalesOrders.sql.Text;
+          sql.Text := qryOrders.sql.Text;
+//          sql.Text := qryGetSalesOrders.sql.Text;
 
           ParamBYName('Int_sel').AsInteger := iIntselcode;
           Open;
@@ -273,7 +276,6 @@ begin
             begin
               frmwtRPJobFitting.qrpJobSheet.Print;
             end
-
           else
             bCancelledPrint := true;
           close;
@@ -604,7 +606,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-          GetSiteDocuments(strtoint(EmailArray[irow,1]));
+          if chkbxAllSiteDocuments.Checked then
+            GetSiteDocuments(strtoint(EmailArray[irow,1]));
 
 (*          {If only one fitting sheet then add any documents listed}
           if SalesOrderCount = 1 then
@@ -832,7 +835,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-            GetSiteDocuments(strtoint(EmailArray[irow,1]));
+            if chkbxAllSiteDocuments.Checked then
+              GetSiteDocuments(strtoint(EmailArray[irow,1]));
 
             {Merge all the PDF Documents into one}
             sMergedPDF := sLocation + 'TS' + sOrderNumber + '-' + inttostr(iOrderCount) + '_Merged.PDF';
@@ -936,7 +940,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-            GetSiteDocuments(strtoint(EmailArray[irow,1]));
+            if chkbxAllSiteDocuments.Checked then
+              GetSiteDocuments(strtoint(EmailArray[irow,1]));
 
             {Merge all the PDF Documents into one}
             sMergedPDF := sLocation + 'FS' + sOrderNumber + '-' + inttostr(iOrderCount) + '_Merged.PDF';
@@ -996,6 +1001,8 @@ var
 begin
   with qryGetSalesOrderEmails do
   begin
+    sql.Text := qryEmails.SQL.Text;
+
     Close;
     ParamBYName('Int_sel').AsInteger := iIntselcode;
     Open;
@@ -1534,6 +1541,7 @@ begin
             for icount := 0 to pred(Printers.Printer.Printers.count) do
               begin
                 if pos(DefaultPrinter,Printers.Printer.printers[icount]) > 0 then
+                if DefaultPrinter = Printer.Printer.printers[icount] then
                   Printers.Printer.PrinterIndex := icount;
               end;
 

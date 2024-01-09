@@ -40,6 +40,7 @@ type
     cmbReps: TComboBox;
     qryReps: TFDQuery;
     dtsReps: TDataSource;
+    rdgrpChargeType: TRadioGroup;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
@@ -96,6 +97,7 @@ begin
     frmWTRPSalesbyInvoice.Sortby := rdgrpSortBy.itemindex;
 
     frmWTRPSalesbyInvoice.CustomerCategory := rdgrpCategory.itemindex;
+    frmWTRPSalesbyInvoice.ChargeType := rdgrpChargeType.itemindex;
 
     if frmWTRPSalesbyInvoice.GetDetails = 0 then
       begin
@@ -257,6 +259,8 @@ begin
     frmWTRPSalesbyInvoice.Sortby := rdgrpSortBy.itemindex;
 
     frmWTRPSalesbyInvoice.CustomerCategory := rdgrpCategory.itemindex;
+    frmWTRPSalesbyInvoice.ChargeType := rdgrpChargeType.itemindex;
+
 
     //  Check if any records exist
     reccount := frmWTRPSalesbyInvoice.GetDetails;

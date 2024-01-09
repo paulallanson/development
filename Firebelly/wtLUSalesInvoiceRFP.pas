@@ -92,6 +92,7 @@ begin
   frmwtSrchCustomer := TfrmwtSrchCustomer.create(self);
   try
     frmwtSrchCustomer.CodeSelected := Customer;
+    frmwtSrchCustomer.bOnlyShowAFP := true;
     frmwtSrchCustomer.showmodal;
     if frmwtSrchCustomer.modalresult = idOK then
       begin
@@ -132,6 +133,8 @@ begin
     tempdate := edtDateFrom.text;
 
   edtDateFrom.text := paDatestr(InputDate(paDateStr(tempdate)));
+  DateFrom := paDateStr(edtDateFrom.text);
+  RefreshData;
 end;
 
 function TfrmWTLUSalesInvoiceRFP.InputDate(TempDate: TDateTime): TDateTime;
@@ -249,6 +252,8 @@ begin
     tempdate := edtDateto.text;
 
   edtDateto.text := paDatestr(InputDate(paDateStr(tempdate)));
+  DateTo := paDateStr(edtDateto.text);
+  RefreshData;
 end;
 
 procedure TfrmWTLUSalesInvoiceRFP.btnSweepClick(Sender: TObject);
@@ -380,8 +385,6 @@ begin
 end;
 
 procedure TfrmWTLUSalesInvoiceRFP.FormDestroy(Sender: TObject);
-var
-  fileName: string;
 begin
   ApplicationList.Free;
   allCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);

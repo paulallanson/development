@@ -12,18 +12,24 @@ type
     stbrDetails: TStatusBar;
     dbgDetails: TDBGrid;
     Panel2: TPanel;
-    btnSelect: TBitBtn;
-    edtSONumber: TEdit;
-    Label1: TLabel;
     tmrSearch: TTimer;
-    btnClose: TBitBtn;
     chkbxShow: TCheckBox;
+    chkbxShowFutureOrders: TCheckBox;
+    pnlFooter: TPanel;
     CustomerGroupBox: TGroupBox;
     Label2: TLabel;
     edtCustomerName: TEdit;
     btnSweep: TBitBtn;
-    chkbxShowFutureOrders: TCheckBox;
     btnExcel: TBitBtn;
+    Label1: TLabel;
+    edtSONumber: TEdit;
+    btnSelect: TBitBtn;
+    btnClose: TBitBtn;
+    pnlRevenueCentre: TPanel;
+    rdgrpRevenueCentre: TRadioGroup;
+    grpbxRevCentre: TGroupBox;
+    Label3: TLabel;
+    dblkpRevCentre: TDBLookupComboBox;
     procedure btnSelectClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -35,9 +41,15 @@ type
     procedure chkbxShowClick(Sender: TObject);
     procedure btnSweepClick(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure rdgrpRevenueCentreClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure dblkpRevCentreClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     FDisableNameChangeEvent: boolean;
     FInvoiceDate: string;
+    rRevenueCentre: integer;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure SetInvoiceDate(const Value: string);
@@ -123,13 +135,40 @@ begin
 end;
 
 procedure TfrmWTLUSalesInvoiceSO.FormCreate(Sender: TObject);
+var
+  IniFile : TIniFile;
+  iRevenueCentre: integer;
 begin
-  stbrDetails.Top := Screen.Height - stbrDetails.Height;
-
+  pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   dtmdlSalesInvoice := TdtmdlSalesInvoice.Create(Self);
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;
   dtmdlSalesInvoice.qrySOAll.AfterScroll := SetSalesOrderEdit;
+  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+
+  IniFile := TIniFile.Create('myWorktops.ini');
+
+  try
+    with IniFile do
+      begin
+        try
+          rdgrpRevenueCentre.itemindex := strtoint(ReadString('Raise Sales Invoice', 'Revenue Centre Option', ''));
+        except
+          rdgrpRevenueCentre.itemindex := 0;
+        end;
+        try
+          iRevenueCentre := strtoint(ReadString('Raise Sales Invoice', 'Revenue Centre', '-1'));
+        except
+          iRevenueCentre := -1;
+        end;
+      end;
+  finally
+    IniFile.Free;
+  end;
+
+  {Set the revenue centre details}
+  dtmdlSalesInvoice.RevenueCentre := iRevenueCentre
+
 end;
 
 procedure TfrmWTLUSalesInvoiceSO.SetButtons(Sender: TObject; Field: TField);
@@ -258,6 +297,76 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.btnExcelClick(Sender: TObject);
 begin
   frmwtMain.ExportToExcel(frmWTLUSalesInvoiceSO);
+end;
+
+procedure TfrmWTLUSalesInvoiceSO.rdgrpRevenueCentreClick(Sender: TObject);
+begin
+  grpbxRevCentre.Visible := false;
+  case (Sender as TRadioGroup).ItemIndex of
+      0:  begin
+            dtmdlSalesInvoice.RevenueCentre := -1;
+            dtmdlSalesInvoice.RefreshSOData;
+          end;
+      1:  begin
+            dtmdlSalesInvoice.RevenueCentre := 0;
+            dtmdlSalesInvoice.RefreshSOData;
+          end;
+  else
+    begin
+      grpbxRevCentre.Visible := true;
+      if dblkpRevCentre.text <> '' then
+        begin
+          dtmdlSalesInvoice.RevenueCentre := dblkpRevCentre.keyvalue;
+          dtmdlSalesInvoice.RefreshSOData;
+        end;
+    end;
+  end;
+
+end;
+
+procedure TfrmWTLUSalesInvoiceSO.FormActivate(Sender: TObject);
+begin
+  dblkpRevCentre.ListSource := dtmdlSalesInvoice.dtsRevenueCentre;
+
+  with dtmdlSalesInvoice.qryRevenueCentre do
+    begin
+      close;
+      open;
+    end;
+
+  if dtmdlSalesInvoice.RevenueCentre > 1 then
+    dblkpRevCentre.KeyValue := dtmdlSalesInvoice.RevenueCentre;
+end;
+
+procedure TfrmWTLUSalesInvoiceSO.dblkpRevCentreClick(Sender: TObject);
+begin
+  dtmdlSalesInvoice.RevenueCentre := dblkpRevCentre.KeyValue;
+  dtmdlSalesInvoice.RefreshSOData;
+end;
+
+procedure TfrmWTLUSalesInvoiceSO.FormDestroy(Sender: TObject);
+var
+  IniFile : TIniFile;
+begin
+  IniFile := TIniFile.Create('myWorktops.ini');
+
+  with IniFile do
+    begin
+      WriteString('Raise Sales Invoice', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+(*      if dblkpRevCentre.text <> '' then
+        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dblkpRevCentre.keyvalue))
+      else
+        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
+*)
+      WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
+    end;
+end;
+
+procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+
 end;
 
 end.

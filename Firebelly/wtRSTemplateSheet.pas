@@ -256,6 +256,7 @@ begin
             for icount := 0 to pred(Printers.Printer.Printers.Count) do
               begin
                 if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
+                if DefaultPrinter = Printer.Printers.printers[icount] then
                   Printers.Printer.PrinterIndex := icount;
               end;
 
@@ -315,86 +316,79 @@ begin
 end;
 
 procedure TfrmWTRSTemplateSheet.RunTemplateReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   GetSelection;
 
   frmwtRPTemplate := TfrmwtRPTemplate.create(self);
   try
-    with frmwtRPTemplate.qryReport do
-      begin
-        close;
-        sql.Text := qryGetSalesOrders.sql.Text;
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
 
-        ParamBYName('Int_sel').AsInteger := iIntselcode;
-        Open;
-        if recordCount = 0 then
-  	      begin
-            MessageDlg('There are no valid template documents to print in this selection',mterror,[mbOK],0);
-            exit;
-    	    end;
-      end;
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
 
-    frmwtRPTemplate.bEndUser := false ;
+      with frmwtRPTemplate.qryReport do
+        begin
+          close;
+          sql.Text := qryGetSalesOrders.sql.Text;
 
-//    frmwtRPTemplate.qrpDetails.Prepare;
-//    frmwtRPTemplate.qrlblTotalPages.Caption := ' of ' + inttostr(frmwtRPTemplate.qrpDetails.QRPrinter.PageCount);
+          ParamBYName('Int_sel').AsInteger := iIntselcode;
+          Open;
+          if recordCount = 0 then
+  	        begin
+              MessageDlg('There are no valid template documents to print in this selection',mterror,[mbOK],0);
+              exit;
+    	      end;
+        end;
 
-    if bPreview then
-      begin
-        frmwtRPTemplate.bPreview := true;
-        frmwtRPTemplate.qrpDetails.Preview;
-      end
-    else
-      begin
-        bCancelledPrint := false;
-        frmwtRPTemplate.bPreview := false;
-        frmwtRPTemplate.qrpDetails.PrinterSetup;
-        if frmwtRPTemplate.qrpDetails.tag = 0 then
-          begin
-            frmWtRPTemplate.qrpDetails.Print;
-            DefaultPrinter := Printers.Printer.Printers[Printers.printer.printerindex];
-            DefaultBin := GetBinSelection;
-          end
-        else
-          bCancelledPrint := true;
-        close;
-      end;
+      frmwtRPTemplate.bEndUser := false ;
+
+      if bPreview then
+        begin
+          frmwtRPTemplate.bPreview := true;
+          frmwtRPTemplate.qrpDetails.Preview;
+        end
+      else
+        begin
+          bCancelledPrint := false;
+          frmwtRPTemplate.bPreview := false;
+(*          frmwtRPTemplate.qrpDetails.PrinterSetup;
+          if frmwtRPTemplate.qrpDetails.tag = 0 then
+            begin
+              frmWtRPTemplate.qrpDetails.Print;
+              DefaultPrinter := Printers.printer.Printers[printer.printerindex];
+              DefaultBin := GetBinSelection;
+            end
+*)
+          if SetUpPrinter(PrinterSettings) then
+            begin
+              frmwtRPTemplate.qrpDetails.Print;
+            end
+
+          else
+            bCancelledPrint := true;
+          close;
+        end;
+    finally
+      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmwtRPTemplate.Free;
   end;
-(*
-  frmwtRPTemplate := TfrmwtRPTemplate.create(self);
-  try
-    frmwtRPTemplate.SalesOrder := strtoint(memSelection.text);
-
-    if (frmwtRPTemplate.GetDetails = 0) then
-      MessageDlg('There are no template documents to print', mtError, [mbAbort], 0)
-    else
-      begin
-// decide which address to show on quote
-        frmwtRPTemplate.bEndUser := false ;
-        if bPreview then
-          begin
-              frmwtRPTemplate.bPreview := true;
-              frmwtRPTemplate.qrpDetails.Preview;
-          end
-        else
-          begin
-              frmwtRPTemplate.bPreview := false;
-              frmwtRPTemplate.qrpDetails.PrinterSetup;
-              if frmwtRPTemplate.qrpDetails.tag = 0 then
-                begin
-                  frmwtRPTemplate.qrpDetails.Print;
-                  DefaultPrinter := printer.Printers[printer.printerindex];
-                  DefaultBin := GetBinSelection;
-                end;
-              close;
-          end;
-      end;
-  finally
-    frmwtRPTemplate.free;
-  end;
-*)
 end;
 
 procedure TfrmWTRSTemplateSheet.PrintDocuments;
@@ -723,7 +717,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-          GetSiteDocuments(strtoint(EmailArray[irow,1]));
+          if chkbxAllSiteDocuments.Checked then
+            GetSiteDocuments(strtoint(EmailArray[irow,1]));
 (*
           {If only one template sheet then add any documents listed}
           if SalesOrderCount = 1 then
@@ -956,7 +951,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-            GetSiteDocuments(strtoint(EmailArray[irow,1]));
+            if chkbxAllSiteDocuments.Checked then
+              GetSiteDocuments(strtoint(EmailArray[irow,1]));
 
             {Merge all the PDF Documents into one}
             sMergedPDF := sLocation + 'TS' + sOrderNumber + '-' + inttostr(iOrderCount) + '_Merged.PDF';
@@ -1101,7 +1097,8 @@ begin
               GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
             end;
 
-            GetSiteDocuments(strtoint(EmailArray[irow,1]));
+            if chkbxAllSiteDocuments.Checked then
+              GetSiteDocuments(strtoint(EmailArray[irow,1]));
 
             {Merge all the PDF Documents into one}
             sMergedPDF := sLocation + 'TS' + sOrderNumber + '-' + inttostr(iOrderCount) + '_Merged.PDF';

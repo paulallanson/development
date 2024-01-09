@@ -9,7 +9,7 @@ object frmWTMaintParams: TfrmWTMaintParams
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -30,7 +30,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 609
-    ActivePage = TabSheet6
+    ActivePage = tsGeneral
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -901,6 +901,39 @@ object frmWTMaintParams: TfrmWTMaintParams
         Caption = 'Use Remedial As Orders'
         TabOrder = 16
         OnClick = chkbxUseRemedialsAsOrdersClick
+      end
+      object grpbxStockSystem: TGroupBox
+        Left = 408
+        Top = 216
+        Width = 273
+        Height = 57
+        TabOrder = 17
+        object Label80: TLabel
+          Left = 24
+          Top = 27
+          Width = 65
+          Height = 13
+          Caption = 'Stock System'
+        end
+        object dblkpStockSystem: TDBLookupComboBox
+          Left = 112
+          Top = 23
+          Width = 145
+          Height = 21
+          KeyField = 'Stock_System'
+          ListField = 'Stock_System_Description'
+          ListSource = dtsStockSystem
+          TabOrder = 0
+        end
+      end
+      object chkbxUseStockSystem: TCheckBox
+        Left = 418
+        Top = 213
+        Width = 111
+        Height = 17
+        Caption = 'Use Stock System'
+        TabOrder = 18
+        OnClick = chkbxUseStockSystemClick
       end
     end
     object TabSheet2: TTabSheet
@@ -2220,7 +2253,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       '  Quotation_Document_Folder = :Quotation_Document_Folder,'
       '  Safety_Document_Folder = :Safety_Document_Folder,'
       '  Remedial_Document_Folder = :Remedial_Document_Folder,'
-      '  Use_Remedials_As_Orders = :Use_Remedials_As_Orders'
+      '  Use_Remedials_As_Orders = :Use_Remedials_As_Orders,'
+      '  Stock_System = :Stock_System'
       'WHERE Company = 1')
     Left = 676
     Top = 280
@@ -2513,6 +2547,12 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       item
         Name = 'Use_Remedials_As_Orders'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Stock_System'
+        ParamType = ptUnknown
       end>
   end
   object qryCustSalesSource: TFDQuery
@@ -2563,5 +2603,19 @@ object frmWTMaintParams: TfrmWTMaintParams
       item
         Name = 'Product'
       end>
+  end
+  object qryStockSystem: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Stock_System'
+      'ORDER BY Stock_System_Description')
+    Left = 428
+    Top = 344
+  end
+  object dtsStockSystem: TDataSource
+    DataSet = qryStockSystem
+    Left = 508
+    Top = 344
   end
 end

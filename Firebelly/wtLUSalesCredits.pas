@@ -664,6 +664,7 @@ begin
     frmWTSInvoiceSearch.dtmdlSalesInvoice := dtmdlAllSCredits;
     frmWTSInvoiceSearch.bInvoice := false;
     frmWTSInvoiceSearch.edtDescription.text := dtmdlAllSCredits.Description;
+    frmWTSInvoiceSearch.edtSiteName.text := dtmdlAllSCredits.SiteName;
     frmWTSInvoiceSearch.edtCustomerOrder.text := dtmdlAllSCredits.CustomerOrder;
 //    frmWTSInvoiceSearch.edtProjectReference.Text := dtmdlAllSCredits.ProjectReference;
     frmWTSInvoiceSearch.edtReference.Text := dtmdlAllSCredits.Reference;
@@ -685,7 +686,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+  if Column.Title.Font.style <> [fsbold] then
     SortType := ' ASC'
   else if dtmdlAllSCredits.SortType = ' DESC' then
       SortType := ' ASC'
@@ -695,8 +696,8 @@ begin
   SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsbold];
 
   dtmdlAllSCredits.SortOrder := SortField + SortType;
   dtmdlAllSCredits.SortType := SortType;

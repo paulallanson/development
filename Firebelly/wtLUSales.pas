@@ -41,6 +41,8 @@ type
     btnProforma: TToolButton;
     btnPayments: TToolButton;
     btnFittingEmail: TToolButton;
+    btnAllocate: TToolButton;
+    btnDeAllocate: TToolButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -68,6 +70,8 @@ type
     procedure btnPaymentsClick(Sender: TObject);
     procedure btnFittingEmailClick(Sender: TObject);
     procedure dbgDetailsTitleClick(Column: TColumn);
+    procedure btnAllocateClick(Sender: TObject);
+    procedure btnDeAllocateClick(Sender: TObject);
   private
     ActiveCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -128,6 +132,9 @@ begin
   dtmdlAllSales := TdtmdlSalesOrder.create(Application);
   dtmdlAllSales.dtsAllSales.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllSales.dtsAllSales;
+
+  btnAllocate.Visible := dtmdlWorktops.UseStockSystem;
+  btnDeAllocate.Visible := btnAllocate.Visible;
 
   try
     with IniFile do
@@ -234,6 +241,8 @@ begin
     btnFittingEmail.Enabled := HeaderCountAll > 0;
     btnCopy.Enabled := HeaderCountAll > 0;
     btnDelete.Enabled := HeaderCountAll > 0;
+    btnAllocate.Enabled := (HeaderCountAll > 0) and btnAllocate.Visible;
+    btnDeAllocate.Enabled := btnAllocate.Enabled;
     btnPayments.Enabled := HeaderCountAll > 0;
     btnConvert.Enabled := HeaderCountAll > 0;
     edtNumber.text := dbgDetails.datasource.dataset.fieldbyname('Sales_Order').asstring;
@@ -675,6 +684,7 @@ begin
     frmWTSOrderSearch.dtmdlSalesOrder := dtmdlAllSales;
     frmWTSOrderSearch.edtDescription.text := dtmdlAllSales.Description;
     frmWTSOrderSearch.edtCustomerOrder.text := dtmdlAllSales.CustomerOrder;
+    frmWTSOrderSearch.edtSiteName.text := dtmdlAllSales.SiteName;
     frmWTSOrderSearch.edtProjectReference.Text := dtmdlAllSales.ProjectReference;
     frmWTSOrderSearch.edtQuote.Text := dtmdlAllSales.QuoteReference;
     frmWTSOrderSearch.edtReference.Text := dtmdlAllSales.Reference;
@@ -1102,7 +1112,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+  if Column.Title.Font.style <> [fsbold] then
     SortType := ' ASC'
   else if dtmdlAllSales.SortType = ' DESC' then
       SortType := ' ASC'
@@ -1119,20 +1129,54 @@ begin
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsbold];
 
   dtmdlAllSales.SortOrder := SortField + SortType;
   dtmdlAllSales.SortType := SortType;
 
   dtmdlAllSales.refreshAlldata;
   with dbgDetails do
-  begin
-    try
-      if datasource.dataset.recordcount > 0 then
-        SelectedRows.CurrentRowSelected := true ;
-    except
+    begin
+      try
+        if datasource.dataset.recordcount > 0 then
+          SelectedRows.CurrentRowSelected := true ;
+      except
+      end;
     end;
+end;
+
+procedure TfrmwtLUSales.btnAllocateClick(Sender: TObject);
+var
+  OldCursor : TCursor;
+  key: integer;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+
+  frmWTRSSOStockAllocation := TfrmWTRSSOStockAllocation.Create( Application );
+  try
+    frmWTRSSOStockAllocation.showmodal;
+  finally
+    frmWTRSSOStockAllocation.free;
+    Screen.Cursor := OldCursor;
+  end;
+end;
+
+procedure TfrmwtLUSales.btnDeAllocateClick(Sender: TObject);
+var
+  OldCursor : TCursor;
+  key: integer;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+
+  frmWTRSSOStockDeAllocation := TfrmWTRSSOStockDeAllocation.Create( Application );
+  try
+    frmWTRSSOStockDeAllocation.showmodal;
+  finally
+    frmWTRSSOStockDeAllocation.free;
+    Screen.Cursor := OldCursor;
   end;
 end;
 

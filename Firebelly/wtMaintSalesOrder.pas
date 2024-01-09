@@ -452,6 +452,8 @@ type
     procedure CreateandCopyRemedialSheet(iSOrder, iJob, iRemedial: integer);
     procedure CreateQuoteDocument(iSOrder, iQuote: integer);
     procedure MoveSiteDocuments(iSOrder: integer);
+    procedure DeleteQuoteDocuments;
+    procedure UpdateQuoteDocuments;
     { Private declarations }
   public
     bOK: boolean;
@@ -955,6 +957,7 @@ begin
             ParseInstallationAddress(memInstallAddress);
 
           edtSiteName.Text := SOrder.CustomerBranchName;
+          btnCustomerBranch.Visible := SOrder.BranchExist;
 
         end;
 
@@ -2297,6 +2300,12 @@ begin
               SOLine.Mode := 'A';
               SOLine.Parent.Lines.Add(SOLine);
             end;
+
+          if SOrder.TemplateInSchedule and dtmdlWorktops.UseDocumentTransfer then
+            begin
+              {Delete all PDf documents and then re-add existing quote docs}
+              UpdateQuoteDocuments;
+            end;
         end;
     finally
       Frm.Free;
@@ -2307,6 +2316,7 @@ begin
 
   ShowLineDetails;
   ShowTotals;
+
   checkok(self);
 end;
 
@@ -2378,7 +2388,9 @@ begin
             SOrder.CustomerName := frmwtSrchCustomer.NameSelected;
 
             SOrder.BranchExist := dtmdlWorktops.DoesCustomerBranchExist(SOrder.Customer);
-            SetInstallationAddressFields(0);
+
+            if SOrder.CustomerBranch <> 0 then
+              SetInstallationAddressFields(0);
 
             SOrder.DepositTerms := frmWTSrchCustomer.DepositTerms;
             bChangeRate := true;
@@ -2552,6 +2564,12 @@ begin
       begin
         ShowLineDetails;
         ShowTotals;
+
+        if SOrder.TemplateInSchedule and dtmdlWorktops.UseDocumentTransfer then
+          begin
+            {Delete all PDf documents and then re-add existing quote docs}
+            UpdateQuoteDocuments;
+          end;
       end;
   finally
     Frm.Free;
@@ -2570,6 +2588,7 @@ begin
 
   dtmdlSalesOrder.dtsRep.DataSet.active := false;
   dtmdlSalesOrder.dtsRep.DataSet.active := true;
+
 end;
 
 procedure TfrmWTMaintSalesOrder.FormDestroy(Sender: TObject);
@@ -5199,28 +5218,29 @@ begin
             sInstallName := frmWTLUCustomerSite.SelectedInstallName;
             sInstallEmail := frmWTLUCustomerSite.SelectedInstallEmail;
             sInstallPhone := frmWTLUCustomerSite.SelectedInstallMobile;
+
+            if (trim(edtInstallName.Text) <> '') or (trim(edtInstallPhone.Text) <> '') then
+              begin
+                if messagedlg('Overwite the existing installation contact details?',
+                  mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+                  begin
+                    edtInstallName.Text := sInstallName;
+                    edtInstallEmail.Text := sInstallEmail;
+                    edtInstallPhone.Text := sInstallPhone;
+                  end;
+              end
+            else
+              begin
+                edtInstallName.Text := sInstallName;
+                edtInstallEmail.Text := sInstallEmail;
+                edtInstallPhone.Text := sInstallPhone;
+              end;
           end;
       end;
   finally
     frmWTLUCustomerSite.free;
   end;
 
-  if (trim(edtInstallName.Text) <> '') or (trim(edtInstallPhone.Text) <> '') then
-    begin
-      if messagedlg('Overwite the existing installation contact details?',
-        mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-        begin
-          edtInstallName.Text := sInstallName;
-          edtInstallEmail.Text := sInstallEmail;
-          edtInstallPhone.Text := sInstallPhone;
-        end;
-    end
-  else
-    begin
-      edtInstallName.Text := sInstallName;
-      edtInstallEmail.Text := sInstallEmail;
-      edtInstallPhone.Text := sInstallPhone;
-    end;
 end;
 
 procedure TfrmWTMaintSalesOrder.btnClearCustomerBranchClick(
@@ -5346,4 +5366,46 @@ begin
     end;
 end;
 
+procedure TfrmWTMaintSalesOrder.UpdateQuoteDocuments;
+var
+  icount: integer;
+begin
+  DeleteQuoteDocuments;
+  for icount := 0 to pred(SOrder.Lines.count) do
+    begin
+      if SOrder.Lines[icount].Quote > 0 then
+        CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
+    end;
+end;
+
+procedure TfrmWTMaintSalesOrder.DeleteQuoteDocuments;
+var
+  SearchRec: TSearchRec;
+  sLocation, sDest, sQuoteFolder, sFileName: string;
+  icount: integer;
+begin
+  sQuoteFolder := dtmdlWorktops.GetCompanyQuoteDocumentFolder;
+
+  {We don't want to delete everything out of the parent folder}
+  if sQuoteFolder = '' then
+    exit;
+
+  if sQuoteFolder <> '' then
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(SOrder.dbKey) + '\' + sQuoteFolder + '\'
+  else
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(SOrder.dbKey) + '\';
+
+  icount := FindFirst(sDest + '*.*', faArchive, SearchRec);
+
+  while icount = 0 do
+    begin
+      sFileName := SearchRec.Name;
+
+      deletefile(sDest + sFilename);
+
+      iCount := FindNext(SearchRec);
+    end;
+end;
+
 end.
+

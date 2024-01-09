@@ -42,6 +42,9 @@ type
     procedure btnExcelClick(Sender: TObject);
   private
     iIntselcode: integer;
+    FPrintType: string;
+    FDefaultBin: integer;
+    FDefaultPrinter: string;
     procedure RunReport(const bPreview: boolean);
     procedure EmailReport;
     procedure BuildEmailDetails;
@@ -51,10 +54,14 @@ type
     procedure BuildRange(sFirst, sLast: string);
     function BuildQueryString: string;
     function GetQuoteMaterial(tempQuote: integer): string;
-    { Private declarations }
+    procedure SetDefaultBin(const Value: integer);
+    procedure SetDefaultPrinter(const Value: string);
+    procedure SetPrinterBin(BinCode: integer);
   public
     bRetail: boolean;
     key: integer;
+    property DefaultBin: integer read FDefaultBin write SetDefaultBin;
+    property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
   end;
 
 var
@@ -210,14 +217,31 @@ begin
 end;
 
 procedure TfrmWTRSContract.RunReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   frmWTRPContract := TfrmWTRPContract.create(self);
   try
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
+
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
+
 //    frmWTRPContract.ContractQuote := strtoint(memSelection.text);
-    frmWTRPContract.ContractQuote := Key;
-    frmWTRPContract.bPrintLogo := chkbxPrintLogo.checked;
-    frmWTRPContract.bIncludeTemplating := chkbxIncludeTemplating.checked;
-    frmWTRPContract.bValuebyUnits := chkbxValue.checked;
+      frmWTRPContract.ContractQuote := Key;
+      frmWTRPContract.bPrintLogo := chkbxPrintLogo.checked;
+      frmWTRPContract.bIncludeTemplating := chkbxIncludeTemplating.checked;
+      frmWTRPContract.bValuebyUnits := chkbxValue.checked;
 
     if (frmWTRPContract.GetDetails = 0) then
       MessageDlg('There are no quotes to print', mtError, [mbAbort], 0)
@@ -237,13 +261,23 @@ begin
         else
           begin
               frmWTRPContract.bPreview := false;
-              frmWTRPContract.qrpDetails.PrinterSetup;
+(*              frmWTRPContract.qrpDetails.PrinterSetup;
 
               if frmWTRPContract.qrpDetails.tag = 0 then
                 frmWTRPContract.qrpDetails.Print;
+*)
+              if SetUpPrinter(PrinterSettings) then
+                begin
+                  frmWTRPContract.qrpDetails.Print;
+                end;
               close;
-          end;
-      end;
+            end;
+        end;
+    finally
+      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmWTRPContract.free;
   end;
@@ -461,6 +495,7 @@ begin
       chkbxPrintLogo.Checked := (ReadString('Contract Quote', 'Print Logo', 'N') = 'Y');
       chkbxIncludeTemplating.Checked := (ReadString('Contract Quote', 'Include Temp and Fitting', 'N') = 'Y');
       chkbxValue.Checked := (ReadString('Contract Quote', 'Value based on units', 'N') = 'Y');
+      DefaultPrinter := ReadString('Contract Quote', 'Default Printer', '');
     end;
   finally
     IniFile.Free;
@@ -503,6 +538,32 @@ begin
   finally
     frmWTRPContract.Free;
     Application.ProcessMessages;
+  end;
+end;
+
+procedure TfrmWTRSContract.SetDefaultBin(const Value: integer);
+begin
+  FDefaultBin := Value;
+end;
+
+procedure TfrmWTRSContract.SetDefaultPrinter(const Value: string);
+begin
+  FDefaultPrinter := Value;
+end;
+
+procedure TfrmWTRSContract.SetPrinterBin(BinCode: integer);
+var
+  DevMode : PDeviceMode;
+  hDevMode: THandle;
+  Device,Driver,Port: array [0..1024] of Char;
+begin
+  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  if hDevMode <> 0 then
+  begin
+        DevMode := GlobalLock (hDevMode);
+        // here we can catch members of DevMode
+        DevMode^.DMDEFAULTSOURCE := BinCode;
+        GlobalUnlock (hDevMode);
   end;
 end;
 

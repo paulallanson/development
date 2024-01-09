@@ -212,7 +212,13 @@ begin
           if bPreview then
             frmWTRPCustContDet.qrpCustStat.Preview
           else
-            frmWTRPCustContDet.qrpCustStat.Print;
+            begin
+              frmWTRPCustContDet.qrpCustStat.PrinterSetup;
+              if frmWTRPCustContDet.qrpCustStat.tag = 0 then
+                begin
+                  frmWTRPCustContDet.qrpCustStat.Print;
+                end;
+            end;
           frmWTRPCustContDet.Free;
     finally
 //      PrinterSettings.Free;
