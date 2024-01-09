@@ -240,6 +240,16 @@ end;
 
 procedure TfrmWTMaintQUpstand.ShowDetails;
 begin
+  if QUpstand.Parent.ContractQuote then
+    begin
+      {If using slab pricing then worktop prices must be zero}
+      if dtmdlWorktops.UseSlabContractQuoting then
+        begin
+          self.PolishCost := 0.00;
+          self.PolishPrice := 0.00;
+        end;
+    end;
+
   if Mode <> qelAdd then
   begin
     dblkpMaterial.keyvalue := QUpstand.Material;
@@ -397,6 +407,13 @@ begin
           open;
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QUpstand.PriceUnit := fieldbyname('Price_unit').asinteger;
+        end;
+
+      {If using slab pricing then worktop prices must be zero}
+      if dtmdlWorktops.UseSlabContractQuoting then
+        begin
+          edtUnitPrice.Text := formatfloat('0.00',0.00);
+          edtUnitPrice.enabled := false;
         end;
     end
   else

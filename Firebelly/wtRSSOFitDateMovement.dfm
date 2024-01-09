@@ -1,26 +1,28 @@
-object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
+object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   Left = 450
   Top = 166
   BorderStyle = bsDialog
-  Caption = 'Anticipated Invoicing Report'
-  ClientHeight = 327
-  ClientWidth = 467
+  Caption = 'Fit Date Movement Report'
+  ClientHeight = 406
+  ClientWidth = 475
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
+  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    467
-    327)
+    475
+    406)
+  PixelsPerInch = 96
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 288
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -30,9 +32,10 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object Button4: TButton
     Left = 376
-    Top = 290
+    Top = 367
     Width = 75
     Height = 25
+    Anchors = [akRight, akBottom]
     Caption = 'Close'
     ModalResult = 2
     TabOrder = 1
@@ -48,7 +51,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Items.Strings = (
       'All'
       'One Rep')
-    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpRepsClick
   end
@@ -62,29 +64,27 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Items.Strings = (
       'All'
       'One Customer')
-    ParentBackground = False
     TabOrder = 3
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 219
     Width = 209
     Height = 73
-    Caption = 'Date required'
-    ParentBackground = False
+    Caption = 'Fitting Date'
     TabOrder = 4
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 29
+      Width = 26
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'To:'
     end
@@ -111,6 +111,8 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       Top = 14
       Width = 25
       Height = 25
+      TabOrder = 2
+      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -125,14 +127,14 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
-      TabOrder = 2
-      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
+      TabOrder = 3
+      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -147,8 +149,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
-      TabOrder = 3
-      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
@@ -157,12 +157,11 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Width = 219
     Height = 57
     Enabled = False
-    ParentBackground = False
     TabOrder = 5
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 49
+      Width = 44
       Height = 13
       Caption = 'Customer'
     end
@@ -204,17 +203,16 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 52
-    Top = 79
+    Left = 76
+    Top = 63
     Width = 289
     Height = 61
-    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
+      Width = 53
       Height = 13
       Caption = 'Exporting...'
     end
@@ -229,11 +227,13 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 288
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
+    TabOrder = 8
+    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -277,12 +277,10 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
-    TabOrder = 8
-    OnClick = btnExcelClick
   end
   object btnPreview: TButton
     Left = 96
-    Top = 288
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -302,7 +300,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       'Trade'
       'Retail'
       'Commercial')
-    ParentBackground = False
     TabOrder = 10
   end
   object grpbxReps: TGroupBox
@@ -310,7 +307,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Top = 8
     Width = 219
     Height = 57
-    ParentBackground = False
     TabOrder = 11
     object Label3: TLabel
       Left = 8
@@ -327,6 +323,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
+      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reps'
@@ -348,7 +345,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       'Customer'
       'Status'
       'Rep')
-    ParentBackground = False
     TabOrder = 12
   end
   object chkbxPageBreak: TCheckBox
@@ -361,36 +357,108 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object chkbxShowOnlyScheduled: TCheckBox
     Left = 8
-    Top = 224
+    Top = 305
     Width = 217
     Height = 17
+    Anchors = [akLeft, akBottom]
     Caption = 'Only Show Scheduled Orders'
     TabOrder = 14
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 256
+    Top = 329
     Width = 217
     Height = 17
+    Anchors = [akLeft, akBottom]
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 15
   end
-  object rdgrpChargeType: TRadioGroup
-    Left = 368
-    Top = 152
-    Width = 153
-    Height = 90
-    Caption = 'Charge Type: '
-    ItemIndex = 0
-    Items.Strings = (
-      'All'
-      'Invoice'
-      'Application for Payment'
-      'Retail')
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 136
+    Width = 209
+    Height = 73
+    Caption = 'Movement Date'
     TabOrder = 16
+    object Label5: TLabel
+      Left = 16
+      Top = 20
+      Width = 26
+      Height = 13
+      Caption = 'From:'
+    end
+    object Label6: TLabel
+      Left = 26
+      Top = 48
+      Width = 16
+      Height = 13
+      Caption = 'To:'
+    end
+    object edtMoveDateFrom: TEdit
+      Left = 56
+      Top = 16
+      Width = 100
+      Height = 21
+      TabOrder = 0
+      OnChange = enableOK
+      OnExit = edtDateFromExit
+    end
+    object edtMoveDateTo: TEdit
+      Left = 56
+      Top = 44
+      Width = 100
+      Height = 21
+      TabOrder = 1
+      OnChange = enableOK
+      OnExit = edtDateFromExit
+    end
+    object BitBtn1: TBitBtn
+      Left = 168
+      Top = 14
+      Width = 25
+      Height = 25
+      TabOrder = 2
+      OnClick = BitBtn1Click
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+        333337FFFFFFFF77333330000000000333333777777777733333}
+      NumGlyphs = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 168
+      Top = 42
+      Width = 25
+      Height = 25
+      TabOrder = 3
+      OnClick = BitBtn2Click
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+        333337FFFFFFFF77333330000000000333333777777777733333}
+      NumGlyphs = 2
+    end
   end
-  object qryReps: TFDQuery
-    ConnectionName = 'WT'
+  object qryReps: TQuery
+    DatabaseName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

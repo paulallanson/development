@@ -10,7 +10,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -39,7 +39,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -66,7 +66,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 867
@@ -121,7 +121,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -142,7 +142,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -156,7 +156,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 732
@@ -170,7 +170,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -184,7 +184,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -211,7 +211,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -224,7 +224,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -515,7 +515,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       Items.Strings = (
         'Provisional'
@@ -628,7 +628,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ItemIndex = 0
       Items.Strings = (
@@ -663,7 +663,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -1196,7 +1196,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1209,7 +1209,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1222,7 +1222,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -1235,7 +1235,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1248,7 +1248,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -1261,7 +1261,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -1274,7 +1274,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -1410,7 +1410,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1424,7 +1424,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -1438,7 +1438,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
@@ -2006,7 +2006,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgJobsDblClick
         Columns = <
@@ -2125,7 +2125,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgRemedialsDblClick
         Columns = <
@@ -2271,7 +2271,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgPurchasesDblClick
         Columns = <
@@ -2399,7 +2399,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         OnDblClick = dbgSalesInvoicesDblClick
@@ -2524,7 +2524,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         Columns = <
           item
