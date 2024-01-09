@@ -15,9 +15,7 @@ type
     btnAdd: TToolButton;
     btnChange: TToolButton;
     dbgDetails: TDBGrid;
-    Panel1: TPanel;
-    Label1: TLabel;
-    edtSearch: TEdit;
+    pnlFooter: TPanel;
     stsbrDetails: TStatusBar;
     imglstFunctions: TImageList;
     tmrSearch: TTimer;
@@ -27,7 +25,6 @@ type
     btnDelete: TToolButton;
     edtSalesInvNo: TEdit;
     Label2: TLabel;
-    chkbxShowArchived: TCheckBox;
     ToolButton3: TToolButton;
     Label3: TLabel;
     edtInvoiceDate: TEdit;
@@ -38,11 +35,20 @@ type
     btnReprint: TToolButton;
     Label5: TLabel;
     cmbCustomerFilter: TComboBox;
-    BitBtn1: TBitBtn;
     btnPayments: TToolButton;
     ToolButton1: TToolButton;
-    btnSearch: TBitBtn;
     btnRequestforPayment: TToolButton;
+    pnlRevenueCentre: TPanel;
+    rdgrpRevenueCentre: TRadioGroup;
+    grpbxRevCentre: TGroupBox;
+    Label6: TLabel;
+    dblkpRevCentre: TDBLookupComboBox;
+    pnlSearch: TPanel;
+    Label1: TLabel;
+    edtSearch: TEdit;
+    chkbxShowArchived: TCheckBox;
+    BitBtn1: TBitBtn;
+    btnSearch: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -71,6 +77,8 @@ type
     procedure btnSearchClick(Sender: TObject);
     procedure dbgDetailsTitleClick(Column: TColumn);
     procedure btnRequestforPaymentClick(Sender: TObject);
+    procedure rdgrpRevenueCentreClick(Sender: TObject);
+    procedure dblkpRevCentreClick(Sender: TObject);
   private
     activeCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -111,7 +119,6 @@ uses
 procedure TfrmWTLUSalesInvoices.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -123,9 +130,22 @@ end;
 procedure TfrmWTLUSalesInvoices.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
+  iRevenueCentre: integer;
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+  
+  pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
+  if not pnlRevenueCentre.Visible then
+    pnlFooter.Height := 70;
 
+  windowstate := wsMaximized;
+
+  dtmdlAllSInvoices := TdtmdlSalesInvoice.create(self);
+
+  dtmdlAllSInvoices.dsSIHeaderGrid.OnDataChange := SetButtons;
+  dbgDetails.DataSource := dtmdlAllSInvoices.dsSIHeaderGrid;
+
+  {Set the revenue centre details}
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
@@ -143,18 +163,28 @@ begin
       if (ReadString('Sales Invoices', 'Customer Filter', '3') = '3') then
         cmbCustomerFilter.itemindex := 3;
 
+      try
+        rdgrpRevenueCentre.itemindex := strtoint(ReadString('Sales Invoices', 'Revenue Centre Option', '0'));
+      except
+        rdgrpRevenueCentre.itemindex := 0;
+      end;
+
+      try
+        iRevenueCentre := strtoint(ReadString('Sales Invoices', 'Revenue Centre', '-1'));
+      except
+        iRevenueCentre := -1;
+      end;
+
       DefaultPrinter := ReadString('Sales Invoices', 'Invoice Printer', '');
     end;
   finally
     IniFile.Free;
   end;
 
-  windowstate := wsMaximized;
-
-  dtmdlAllSInvoices := TdtmdlSalesInvoice.create(self);
-
-  dtmdlAllSInvoices.dsSIHeaderGrid.OnDataChange := SetButtons;
-  dbgDetails.DataSource := dtmdlAllSInvoices.dsSIHeaderGrid;
+  if not dtmdlWorktops.UseRevenueCentres then
+    iRevenueCentre := -1;
+    
+  dtmdlAllSInvoices.RevenueCentre := iRevenueCentre;
 
   edtInvoiceDate.text := paDateStr(date);
 
@@ -357,6 +387,7 @@ begin
     Key := dbgDetails.Datasource.Dataset.FieldByName('Sales_Invoice').AsInteger;
     try
       Frm.icode := Key;
+      Frm.RevenueCentre := dtmdlAllSInvoices.RevenueCentre;
       Frm.InvoicePrint := true;
       Frm.ShowModal;
     finally
@@ -428,10 +459,10 @@ procedure TfrmWTLUSalesInvoices.btnReprintClick(Sender: TObject);
 var
   icount: integer;
   key: integer;
-  SINumber: integer;
+  SINumber: string;
   frm : TfrmwtRSSalesInvoiceReprint;
 begin
-  SINumber := dbgDetails.Datasource.Dataset.FieldByName('Invoice_no').AsInteger;
+  SINumber := dbgDetails.Datasource.Dataset.FieldByName('Invoice_no').Asstring;
   Key := dbgDetails.Datasource.Dataset.FieldByName('sales_invoice').AsInteger;
   try
     Frm := TfrmWTRSSalesInvoiceReprint.Create(Self);
@@ -528,6 +559,17 @@ end;
 
 procedure TfrmWTLUSalesInvoices.FormActivate(Sender: TObject);
 begin
+  dblkpRevCentre.ListSource := dtmdlAllSInvoices.dtsRevenueCentre;
+
+  with dtmdlAllSInvoices.qryRevenueCentre do
+    begin
+      close;
+      open;
+    end;
+
+  if dtmdlAllSInvoices.RevenueCentre > 0 then
+    dblkpRevCentre.KeyValue := dtmdlAllSInvoices.RevenueCentre;
+
   dtmdlAllSInvoices.TradeRetail := cmbCustomerFilter.itemindex;
   dtmdlAllSInvoices.refreshdata;
   dbgDetails.datasource.DataSet.locate('sales_invoice', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
@@ -610,7 +652,8 @@ begin
           (Column.Title.Caption = 'VAT') then
         begin
           TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
-        end;
+        end else
+          sValue := Column.field.asstring;
 
       Column.Alignment := taRightJustify;
     end;
@@ -642,6 +685,8 @@ begin
     begin
       WriteString('Sales Invoices', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
       WriteString('Sales Invoices', 'Invoice Printer',DefaultPrinter);
+      WriteString('Sales Invoices', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+      WriteString('Sales Invoices', 'Revenue Centre', inttostr(dtmdlAllSInvoices.RevenueCentre));
     end;
   finally
     IniFile.Free;
@@ -649,6 +694,7 @@ begin
 
 
   Printers.Printer.PrinterIndex := -1;
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', const_myworktops.ini, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);
@@ -753,6 +799,7 @@ begin
     frmWTSInvoiceSearch.dtmdlSalesInvoice := dtmdlAllSInvoices;
     frmWTSInvoiceSearch.bInvoice := true;
     frmWTSInvoiceSearch.edtDescription.text := dtmdlAllSInvoices.Description;
+    frmWTSInvoiceSearch.edtSiteName.text := dtmdlAllSInvoices.SiteName;
     frmWTSInvoiceSearch.edtCustomerOrder.text := dtmdlAllSInvoices.CustomerOrder;
 //    frmWTSInvoiceSearch.edtProjectReference.Text := dtmdlAllSInvoices.ProjectReference;
     frmWTSInvoiceSearch.edtReference.Text := dtmdlAllSInvoices.Reference;
@@ -775,7 +822,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+  if Column.Title.Font.style <> [fsBold] then
     SortType := ' ASC'
   else if dtmdlAllSInvoices.SortType = ' DESC' then
       SortType := ' ASC'
@@ -785,8 +832,8 @@ begin
   SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsBold];
 
   dtmdlAllSInvoices.SortOrder := SortField + SortType;
   dtmdlAllSInvoices.SortType := SortType;
@@ -828,5 +875,36 @@ begin
     end;
 end;
 
+
+procedure TfrmWTLUSalesInvoices.rdgrpRevenueCentreClick(Sender: TObject);
+begin
+  grpbxRevCentre.Visible := false;
+  case (Sender as TRadioGroup).ItemIndex of
+      0:  begin
+            dtmdlAllSInvoices.RevenueCentre := -1;
+            dtmdlAllSInvoices.refreshdata;
+          end;
+      1:  begin
+            dtmdlAllSInvoices.RevenueCentre := 0;
+            dtmdlAllSInvoices.refreshdata;
+          end;
+  else
+    begin
+      grpbxRevCentre.Visible := true;
+      if dblkpRevCentre.text <> '' then
+        begin
+          dtmdlAllSInvoices.RevenueCentre := dblkpRevCentre.keyvalue;
+          dtmdlAllSInvoices.refreshdata;
+        end;
+    end;
+  end;
+
+end;
+
+procedure TfrmWTLUSalesInvoices.dblkpRevCentreClick(Sender: TObject);
+begin
+  dtmdlAllSInvoices.RevenueCentre := dblkpRevCentre.KeyValue;
+  dtmdlAllSInvoices.RefreshData;
+end;
 
 end.

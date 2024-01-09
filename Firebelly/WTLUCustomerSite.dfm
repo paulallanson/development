@@ -9,7 +9,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -28,7 +28,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'Segoe UI'
+    TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
@@ -186,7 +186,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Segoe UI'
+      Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -211,7 +211,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       '    Customer_Branch.*, '
       #9#9'Customer_contact.Contact_name as Install_Contact_Name,'
       #9#9'Customer_contact.Email_address as Install_Email_Address,'
-      #9#9'Customer_contact.Mobile_number as Install_Mobile_Number'
+      #9#9'Customer_contact.Mobile_number as Install_Mobile_Number,'
+      #9#9'Customer_contact.Telephone_number as Install_Phone_Number'
       'FROM Customer_Branch '
       #9#9'LEFT JOIN Customer_contact '
       

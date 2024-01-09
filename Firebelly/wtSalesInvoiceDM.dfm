@@ -595,76 +595,99 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '        Customer.Is_Retail_Customer,'
       '        Sales_Invoice.Deposit_Amount,'
       '        Sales_Invoice.Paid_Amount,'
-      '        Sales_Invoice.Paid_Status'
-      'from Sales_Invoice,'
-      '     Customer,'
-      '     Sales_Invoice_Status'
-      'where'
+      '        Sales_Invoice.Paid_Status,'
+      '        Operator.Operator_Name,'
+      '        Account_Manager.Operator_Name as Account_Manager_Name,'
+      '        Rep.Rep_Name,'
+      '        (SELECT TOP 1 Sales_Order.Date_Required'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Date_Required,'
+      '        (SELECT TOP 1 Sales_Order.Reference'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Order_Reference,'
+      '        Customer_Branch.Branch_Name,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
+      '        RIGHT JOIN (Sales_invoice_status'
+      '        INNER JOIN (Rep'
+      '        INNER JOIN (Operator AS Account_Manager'
+      '        RIGHT JOIN (Customer'
+      '        INNER JOIN (Customer_Branch'
+      '        RIGHT JOIN (Operator'
+      '        INNER JOIN Sales_Invoice'
+      '          ON Operator.Operator = Sales_Invoice.Operator)'
+      
+        '          ON (Customer_Branch.Customer = Sales_Invoice.Customer)' +
+        ' AND (Customer_Branch.Branch_No = Sales_Invoice.Branch_No))'
+      '          ON Customer.Customer = Sales_Invoice.Customer)'
+      
+        '          ON Account_Manager.Operator = Sales_Invoice.Account_Ma' +
+        'nager)'
+      '          ON Rep.Rep = Sales_Invoice.Rep)'
+      
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_I' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON Revenue_Centre.Revenue_Centre = Sales_Invoice.Reven' +
+        'ue_Centre'
+      'WHERE'
       '('
-      '(Sales_Invoice.invoice_or_credit <> '#39'C'#39') or'
-      '(invoice_or_credit is null)'
-      ') and'
-      '('
-      '(Sales_Invoice.Customer_Name Like :Code_From) or'
-      '(Customer.Account_code Like :Code_From)'
+      '  (Sales_Invoice.invoice_or_credit <> '#39'C'#39') or'
+      '  (invoice_or_credit is null)'
       ') AND'
       '('
-      '(Sales_invoice.Sales_invoice_status < :Status) or'
-      '(:Status = 0)'
-      ') and'
-      '('
-      '((:Inactive = '#39'N'#39')  and (Sales_Invoice.Inactive is null )) or'
-      '(:Inactive = '#39'Y'#39')'
-      ') and'
-      '(Sales_invoice.Customer = Customer.Customer) and'
       
-        '(Sales_invoice.Sales_invoice_Status = Sales_invoice_status.Sales' +
-        '_invoice_Status) and'
+        '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
+        'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
+        'ail_Customer = '#39'A'#39')'
+      ') AND'
       
-        '((Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custome' +
-        'r.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Reta' +
-        'il_Customer = '#39'A'#39'))'
-      'order by Sales_Invoice.Sales_Invoice desc'
+        '    ((Sales_order.Revenue_Centre = :Revenue_Centre) OR (0 = :Rev' +
+        'enue_Centre))'
       '')
     Left = 304
     Top = 8
     ParamData = <
       item
-        Name = 'Code_From'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Status'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Inactive'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
         Name = 'Is_Retail_Customer'
-        DataType = ftString
-        ParamType = ptInput
+        ParamType = ptUnknown
       end
       item
-        Name = 'Is_Commercial_Customer'
         DataType = ftString
-        ParamType = ptInput
+        Name = 'Is_Commercial_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
-      Origin = 'Invoice_Date'
-      Required = True
     end
     object qrySIHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
     end
     object qrySIHeaderGridInactive: TWideStringField
       FieldName = 'Inactive'
@@ -725,31 +748,53 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     end
     object qrySIHeaderGridDescription: TWideStringField
       FieldName = 'Description'
-      Origin = 'Description'
-      Size = 255
-    end
-    object qrySIHeaderGridCustomer_Name: TWideStringField
-      FieldName = 'Customer_Name'
-      Origin = 'Customer_Name'
       Size = 50
     end
     object qrySIHeaderGridIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
-      Origin = 'Is_Retail_Customer'
+      Size = 3
+    end
+    object qrySIHeaderGridPaid_Amount: TFloatField
+      FieldName = 'Paid_Amount'
+      DisplayFormat = '0.00'
+    end
+    object qrySIHeaderGridPaid_Status: TWideStringField
+      FieldName = 'Paid_Status'
       Size = 1
     end
     object qrySIHeaderGridDeposit_Amount: TFloatField
       FieldName = 'Deposit_Amount'
       Origin = 'Deposit_Amount'
     end
-    object qrySIHeaderGridPaid_Amount: TCurrencyField
-      FieldName = 'Paid_Amount'
-      Origin = 'Paid_Amount'
+    object qrySIHeaderGridRep_Name: TWideStringField
+      FieldName = 'Rep_Name'
+      Size = 50
     end
-    object qrySIHeaderGridPaid_Status: TWideStringField
-      FieldName = 'Paid_Status'
-      Origin = 'Paid_Status'
-      Size = 1
+    object qrySIHeaderGridOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Size = 50
+    end
+    object qrySIHeaderGridAccount_Manager_Name: TWideStringField
+      FieldName = 'Account_Manager_Name'
+      Size = 50
+    end
+    object qrySIHeaderGridOrder_Reference: TWideStringField
+      FieldName = 'Order_Reference'
+      Size = 50
+    end
+    object qrySIHeaderGridAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+    end
+    object qrySIHeaderGridBranch_Name: TWideStringField
+      FieldName = 'Branch_Name'
+      Size = 50
+    end
+    object qrySIHeaderGridDate_Required: TDateTimeField
+      FieldName = 'Date_Required'
+    end
+    object qrySIHeaderGridRevenue_Centre_Descr: TWideStringField
+      FieldName = 'Revenue_Centre_Descr'
+      Size = 50
     end
   end
   object qryOperator: TFDQuery
@@ -2210,8 +2255,31 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     end
     object qrySCHeaderGridIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
-      Origin = 'Is_Retail_Customer'
-      Size = 1
+      Size = 3
+    end
+    object qrySCHeaderGridRep_Name: TStringField
+      FieldName = 'Rep_Name'
+      Size = 50
+    end
+    object qrySCHeaderGridOperator_Name: TStringField
+      FieldName = 'Operator_Name'
+      Size = 50
+    end
+    object qrySCHeaderGridAccount_Manager_Name: TStringField
+      FieldName = 'Account_Manager_Name'
+      Size = 50
+    end
+    object qrySCHeaderGridOrder_Reference: TStringField
+      FieldName = 'Order_Reference'
+      Size = 50
+    end
+    object qrySCHeaderGridBranch_Name: TStringField
+      FieldName = 'Branch_Name'
+      Size = 100
+    end
+    object qrySCHeaderGridRevenue_Centre_Descr: TStringField
+      FieldName = 'Revenue_Centre_Descr'
+      Size = 50
     end
   end
   object dsSCHeaderGrid: TDataSource
@@ -2373,12 +2441,15 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '        Sales_Order.Reference,'
       '        Sales_Order.Descriptive_Reference,'
       '        Sales_Order.Sales_Order_Status,'
-      '        Sales_Order_Status.Sales_Order_Status_Desc'
-      'FROM Sales_Order_Status'
-      '      INNER JOIN Sales_Order'
+      '        Sales_Order_Status.Sales_Order_Status_Desc, '
+      #9#9'    Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre '
+      #9#9'RIGHT JOIN (Sales_Order_Status '
+      #9#9'INNER JOIN Sales_Order '
       
-        '        ON Sales_Order_Status.Sales_Order_Status = Sales_Order.S' +
-        'ales_Order_Status'
+        #9#9#9'ON Sales_Order_Status.Sales_Order_Status = Sales_Order.Sales_' +
+        'Order_Status) '
+      #9#9#9'ON Revenue_Centre.Revenue_Centre = Sales_Order.Revenue_Centre'
       'WHERE Customer_Name LIKE :Code_From AND'
       '    (Sales_Order.Sales_Order_Status >= :Status) AND'
       '    (Sales_Order.Sales_Order_Status <= 90) AND'
@@ -2388,6 +2459,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       
         '    ((Sales_order.Do_not_Invoice is NULL) OR (Sales_Order.Do_not' +
         '_Invoice = '#39'N'#39')) AND'
+      
+        '    ((Sales_order.Revenue_Centre = :Revenue_Centre) OR (0 = :Rev' +
+        'enue_Centre)) AND'
       '    (Sales_Order.Date_Required <= :Date_Required)'
       'ORDER BY Sales_Order.Sales_Order desc')
     Left = 24
@@ -2398,6 +2472,17 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Status'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
       end
       item
         Name = 'Date_Required'
@@ -2669,26 +2754,32 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       
         '                sales_order.sales_order = sales_invoice_line.Sal' +
         'es_order) as Order_Reference,'
-      '        Customer_Branch.Branch_Name'
-      'FROM Customer_Branch'
+      '        Customer_Branch.Branch_Name,'
+      '        Sales_invoice.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
       '        RIGHT JOIN (Sales_invoice_status'
       '        INNER JOIN (Rep'
       '        INNER JOIN (Operator AS Account_Manager'
       '        RIGHT JOIN (Customer'
-      '        INNER JOIN (Operator'
+      '        INNER JOIN (Customer_Branch'
+      '        RIGHT JOIN (Operator'
       '        INNER JOIN Sales_Invoice'
-      '            ON Operator.Operator = Sales_Invoice.Operator)'
-      '            ON Customer.Customer = Sales_Invoice.Customer)'
+      '          ON Operator.Operator = Sales_Invoice.Operator)'
       
-        '            ON Account_Manager.Operator = Sales_Invoice.Account_' +
-        'Manager)'
-      '            ON Rep.Rep = Sales_Invoice.Rep)'
+        '          ON (Customer_Branch.Customer = Sales_Invoice.Customer)' +
+        ' AND (Customer_Branch.Branch_No = Sales_Invoice.Branch_No))'
+      '          ON Customer.Customer = Sales_Invoice.Customer)'
       
-        '            ON Sales_invoice_status.Sales_invoice_status = Sales' +
-        '_Invoice.Sales_invoice_status)'
+        '          ON Account_Manager.Operator = Sales_Invoice.Account_Ma' +
+        'nager)'
+      '          ON Rep.Rep = Sales_Invoice.Rep)'
       
-        '            ON (Customer_Branch.Branch_No = Sales_Invoice.Branch' +
-        '_No) AND (Customer_Branch.Customer = Sales_Invoice.Customer)'
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_I' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON Revenue_Centre.Revenue_Centre = Sales_Invoice.Reven' +
+        'ue_Centre'
       'WHERE'
       '('
       '  (Sales_Invoice.invoice_or_credit <> '#39'C'#39') or'
@@ -2699,7 +2790,10 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
         'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
         'ail_Customer = '#39'A'#39')'
-      ')'
+      ') AND'
+      
+        '    ((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :R' +
+        'evenue_Centre))'
       ''
       '')
     Left = 448
@@ -2713,6 +2807,17 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
       end>
   end
   object qrySCHeaderBase: TFDQuery
@@ -2751,22 +2856,32 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         'sales_invoice AND'
       
         '                sales_order.sales_order = sales_invoice_line.Sal' +
-        'es_order) as Order_Reference'
-      'FROM Rep'
+        'es_order) as Order_Reference,Customer_Branch.Branch_Name,'
+      '        Sales_Invoice.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
+      '      RIGHT JOIN (Sales_invoice_status'
+      '      INNER JOIN (Rep'
       '      INNER JOIN (Operator AS Account_Manager'
+      '      RIGHT JOIN (Customer'
+      '      INNER JOIN (Customer_Branch'
       '      RIGHT JOIN (Operator'
-      '      INNER JOIN (Sales_invoice_status'
-      '      INNER JOIN (Customer'
       '      INNER JOIN Sales_Invoice'
-      '        ON Customer.Customer = Sales_Invoice.Customer)'
+      '          ON Operator.Operator = Sales_Invoice.Operator)'
       
-        '        ON Sales_invoice_status.Sales_invoice_status = Sales_Inv' +
-        'oice.Sales_invoice_status)'
-      '        ON Operator.Operator = Sales_Invoice.Operator)'
+        '          ON (Customer_Branch.Customer = Sales_Invoice.Customer)' +
+        ' AND (Customer_Branch.Branch_No = Sales_Invoice.Branch_No))'
+      '          ON Customer.Customer = Sales_Invoice.Customer)'
       
-        '        ON Account_Manager.Operator = Sales_Invoice.Account_Mana' +
-        'ger)'
-      '        ON Rep.Rep = Sales_Invoice.Rep'
+        '          ON Account_Manager.Operator = Sales_Invoice.Account_Ma' +
+        'nager)'
+      '          ON Rep.Rep = Sales_Invoice.Rep)'
+      
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_I' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON Revenue_Centre.Revenue_Centre = Sales_Invoice.Reven' +
+        'ue_Centre'
       'WHERE'
       '  (Sales_Invoice.invoice_or_credit = '#39'C'#39') AND'
       '('
@@ -2879,6 +2994,269 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrySCHeaderBaseOlder: TQuery
+    SQL.Strings = (
+      'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
+      '        Sales_Invoice.Inactive,'
+      '        Sales_Invoice.Invoice_or_Credit,'
+      '        Customer.Customer_Name as Original_Name,'
+      
+        '        Sales_Invoice_Status.Invoice_Status_Description as Statu' +
+        's_Description,'
+      '        Sales_invoice.Goods_Value,'
+      '        Sales_invoice.Vat_Value,'
+      
+        '        ((Sales_Invoice.Goods_Value + Sales_Invoice.Vat_Value) *' +
+        ' -1) as Total_Credit,'
+      '        Sales_invoice.Goods_Value * -1 as Goods_Credit,'
+      '        Sales_invoice.Vat_Value * -1 as VAT_Credit,'
+      '        Sales_Invoice.Invoice_no,'
+      '        Sales_Invoice.Sales_invoice_status,'
+      '        Sales_Invoice.Sales_Invoice,'
+      '        Sales_invoice.Reference,'
+      '        Sales_invoice.Description,'
+      '        Sales_invoice.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Sales_Invoice.Deposit_Amount,'
+      '        Sales_Invoice.Paid_Amount,'
+      '        Sales_Invoice.Paid_Status,'
+      '        Operator.Operator_Name,'
+      '        Account_Manager.Operator_Name as Account_Manager_Name,'
+      '        Rep.Rep_Name,'
+      '        (SELECT TOP 1 Sales_Order.Reference'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Order_Reference'
+      'FROM Rep'
+      '      INNER JOIN (Operator AS Account_Manager'
+      '      RIGHT JOIN (Operator'
+      '      INNER JOIN (Sales_invoice_status'
+      '      INNER JOIN (Customer'
+      '      INNER JOIN Sales_Invoice'
+      '        ON Customer.Customer = Sales_Invoice.Customer)'
+      
+        '        ON Sales_invoice_status.Sales_invoice_status = Sales_Inv' +
+        'oice.Sales_invoice_status)'
+      '        ON Operator.Operator = Sales_Invoice.Operator)'
+      
+        '        ON Account_Manager.Operator = Sales_Invoice.Account_Mana' +
+        'ger)'
+      '        ON Rep.Rep = Sales_Invoice.Rep'
+      'WHERE'
+      '  (Sales_Invoice.invoice_or_credit = '#39'C'#39') AND'
+      '('
+      
+        '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
+        'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
+        'ail_Customer = '#39'A'#39')'
+      ')'
+      ''
+      '')
+    Left = 944
+    Top = 352
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Commercial_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrySIHeaderBaseOld: TQuery
+    SQL.Strings = (
+      'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
+      '        Sales_Invoice.Inactive,'
+      '        Sales_Invoice.Invoice_or_Credit,'
+      '        Customer.Customer_Name as Original_Name,'
+      '        Customer.Account_Code,'
+      
+        '        Sales_Invoice_Status.Invoice_Status_Description as Statu' +
+        's_Description,'
+      '        Sales_invoice.Goods_Value,'
+      '        Sales_invoice.Vat_Value,'
+      
+        '        (Sales_Invoice.Goods_Value + Sales_Invoice.Vat_Value) as' +
+        ' Total_Value,'
+      '        Sales_Invoice.Invoice_no,'
+      '        Sales_Invoice.Sales_invoice_status,'
+      '        Sales_Invoice.Sales_Invoice,'
+      '        Sales_invoice.Reference,'
+      '        Sales_invoice.Description,'
+      '        Sales_invoice.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Sales_Invoice.Deposit_Amount,'
+      '        Sales_Invoice.Paid_Amount,'
+      '        Sales_Invoice.Paid_Status,'
+      '        Operator.Operator_Name,'
+      '        Account_Manager.Operator_Name as Account_Manager_Name,'
+      '        Rep.Rep_Name,'
+      '        (SELECT TOP 1 Sales_Order.Date_Required'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Date_Required,'
+      '        (SELECT TOP 1 Sales_Order.Reference'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Order_Reference,'
+      '        Customer_Branch.Branch_Name'
+      'FROM Customer_Branch'
+      '        RIGHT JOIN (Sales_invoice_status'
+      '        INNER JOIN (Rep'
+      '        INNER JOIN (Operator AS Account_Manager'
+      '        RIGHT JOIN (Customer'
+      '        INNER JOIN (Operator'
+      '        INNER JOIN Sales_Invoice'
+      '            ON Operator.Operator = Sales_Invoice.Operator)'
+      '            ON Customer.Customer = Sales_Invoice.Customer)'
+      
+        '            ON Account_Manager.Operator = Sales_Invoice.Account_' +
+        'Manager)'
+      '            ON Rep.Rep = Sales_Invoice.Rep)'
+      
+        '            ON Sales_invoice_status.Sales_invoice_status = Sales' +
+        '_Invoice.Sales_invoice_status)'
+      
+        '            ON (Customer_Branch.Branch_No = Sales_Invoice.Branch' +
+        '_No) AND (Customer_Branch.Customer = Sales_Invoice.Customer)'
+      'WHERE'
+      '('
+      '  (Sales_Invoice.invoice_or_credit <> '#39'C'#39') or'
+      '  (invoice_or_credit is null)'
+      ') AND'
+      '('
+      
+        '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
+        'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
+        'ail_Customer = '#39'A'#39')'
+      ')'
+      ''
+      '')
+    Left = 944
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Commercial_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrySCHeaderBaseOld: TQuery
+    SQL.Strings = (
+      'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
+      '        Sales_Invoice.Inactive,'
+      '        Sales_Invoice.Invoice_or_Credit,'
+      '        Customer.Customer_Name as Original_Name,'
+      
+        '        Sales_Invoice_Status.Invoice_Status_Description as Statu' +
+        's_Description,'
+      '        Sales_invoice.Goods_Value,'
+      '        Sales_invoice.Vat_Value,'
+      
+        '        ((Sales_Invoice.Goods_Value + Sales_Invoice.Vat_Value) *' +
+        ' -1) as Total_Credit,'
+      '        Sales_invoice.Goods_Value * -1 as Goods_Credit,'
+      '        Sales_invoice.Vat_Value * -1 as VAT_Credit,'
+      '        Sales_Invoice.Invoice_no,'
+      '        Sales_Invoice.Sales_invoice_status,'
+      '        Sales_Invoice.Sales_Invoice,'
+      '        Sales_invoice.Reference,'
+      '        Sales_invoice.Description,'
+      '        Sales_invoice.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Sales_Invoice.Deposit_Amount,'
+      '        Sales_Invoice.Paid_Amount,'
+      '        Sales_Invoice.Paid_Status,'
+      '        Operator.Operator_Name,'
+      '        Account_Manager.Operator_Name as Account_Manager_Name,'
+      '        Rep.Rep_Name,'
+      '        (SELECT TOP 1 Sales_Order.Reference'
+      '         FROM Sales_Order, sales_Invoice_line'
+      
+        '         WHERE sales_Invoice_line.sales_invoice = Sales_Invoice.' +
+        'sales_invoice AND'
+      
+        '                sales_order.sales_order = sales_invoice_line.Sal' +
+        'es_order) as Order_Reference,Customer_Branch.Branch_Name'
+      'FROM Customer_Branch'
+      '      RIGHT JOIN (Sales_invoice_status'
+      '      INNER JOIN (Rep'
+      '      INNER JOIN (Operator AS Account_Manager'
+      '      RIGHT JOIN (Customer'
+      '      INNER JOIN (Operator'
+      '      INNER JOIN Sales_Invoice'
+      '          ON Operator.Operator = Sales_Invoice.Operator)'
+      '          ON Customer.Customer = Sales_Invoice.Customer)'
+      
+        '          ON Account_Manager.Operator = Sales_Invoice.Account_Ma' +
+        'nager)'
+      '          ON Rep.Rep = Sales_Invoice.Rep)'
+      
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_I' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON (Customer_Branch.Branch_No = Sales_Invoice.Branch_N' +
+        'o) AND (Customer_Branch.Customer = Sales_Invoice.Customer)'
+      'WHERE'
+      '  (Sales_Invoice.invoice_or_credit = '#39'C'#39') AND'
+      '('
+      
+        '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
+        'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
+        'ail_Customer = '#39'A'#39')'
+      ')'
+      ''
+      '')
+    Left = 944
+    Top = 408
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Commercial_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
       end>
   end
 end

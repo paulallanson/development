@@ -9,7 +9,7 @@ object frmwtAboutBox: TfrmwtAboutBox
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
@@ -1524,7 +1524,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     object ProductName: TLabel
       Left = 47
       Top = 16
-      Width = 127
+      Width = 118
       Height = 13
       Caption = 'Product Name:   Firebelly'
       IsControl = True
@@ -1532,7 +1532,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     object lblVersion: TLabel
       Left = 60
       Top = 40
-      Width = 88
+      Width = 81
       Height = 13
       Caption = 'Version Number: '
       IsControl = True
@@ -1540,15 +1540,15 @@ object frmwtAboutBox: TfrmwtAboutBox
     object Copyright: TLabel
       Left = 95
       Top = 88
-      Width = 118
+      Width = 110
       Height = 13
-      Caption = '(C)opyright 2005 - 2022'
+      Caption = '(C)opyright 2005 - 2024'
       IsControl = True
     end
     object Label1: TLabel
       Left = 45
       Top = 104
-      Width = 173
+      Width = 160
       Height = 13
       Caption = 'Quaystone Business Solutions Ltd'
       IsControl = True
@@ -1556,14 +1556,14 @@ object frmwtAboutBox: TfrmwtAboutBox
     object Label2: TLabel
       Left = 76
       Top = 136
-      Width = 132
+      Width = 129
       Height = 13
       Caption = 'Telephone: 0844 488 9206'
     end
     object Label3: TLabel
       Left = 26
       Top = 152
-      Width = 198
+      Width = 179
       Height = 13
       Caption = 'Email: info@quaystonesolutions.co.uk'
     end
@@ -1576,7 +1576,7 @@ object frmwtAboutBox: TfrmwtAboutBox
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'Segoe UI'
+    Font.Name = 'MS Sans Serif'
     Font.Style = []
     Kind = bkClose
     NumGlyphs = 2

@@ -262,6 +262,20 @@ begin
       qrlblWorktopMaterial.caption := fieldbyname('Worktop_Material').asstring;
     end;
 
+  qrlblStockCode.caption := '';
+
+  with qryGetStockCode do
+    begin
+      close;
+      parambyname('Worktop').asinteger := qrySalesOrders.fieldbyname('Worktop').asinteger;
+      parambyname('Thickness').asinteger := qrySalesOrders.fieldbyname('Thickness').asinteger;
+      parambyname('Length').asinteger := qrySalesOrders.fieldbyname('Slab_Length').asinteger;
+      parambyname('Depth').asinteger := qrySalesOrders.fieldbyname('Slab_Depth').asinteger;
+      open;
+
+      qrlblStockCode.caption := fieldbyname('Stock_Code').asstring;
+    end;
+
 (*
   CustomerVAT := CustomerVat + qrySalesOrders.fieldbyname('Vat_Value').asfloat;
   CustomerTotal := CustomerTotal + qrySalesOrders.fieldbyname('Total_Value').asfloat;
@@ -344,12 +358,17 @@ begin
       ' Worktop.Description, ' +
       ' Material_Type.Description, ' +
       ' Thickness.Thickness_mm, ' +
+      ' Quote_Slab.Worktop, ' +
+      ' Quote_Slab.Thickness, ' +
       ' Quote_Slab.Length, ' +
       ' Quote_Slab.Depth, ' +
       ' Sales_Order_Status.Sales_Order_Status_Desc, '+
       ' Sales_Order.Goods_Value, '+
       ' Sales_Order.VAT_Value, '+
       ' Sales_Order_Line.Unit_Price');
+
+  if dtmdlWorktops.IsSQL then
+    qrySalesOrders.SQL.Add('HAVING (SUM(Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_Allocated,0)) > 0) ');
 
   case sortby of
     0:begin
@@ -445,7 +464,8 @@ begin
     + ',"Worktop Thickness"'
     + ',"Worktop Colour"'
     + ',"Worktop Material"'
-    + ',"Status"';
+    + ',"Status"'
+    + ',"Stock Code"';
 
 
   writeLn(self.exportFile, tempStr);
@@ -522,6 +542,9 @@ begin
 
     //Status
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Sales_Order_Status_Desc').asstring + '"';
+
+    //Stock Code
+    tempStr := tempStr + ',"' + qrlblStockCode.caption + '"';
 
     writeln(self.exportFile, tempStr);
     frmWTRSSOAntOrdering.prgbrExport.StepIt;

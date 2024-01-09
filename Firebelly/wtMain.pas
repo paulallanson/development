@@ -88,7 +88,6 @@ type
     WorktopGroupPrices1: TMenuItem;
     WorktopPrices1: TMenuItem;
     ypes1: TMenuItem;
-    mnuFaxManager: TMenuItem;
     N7: TMenuItem;
     mnuClientSettings: TMenuItem;
     btnStock: TToolButton;

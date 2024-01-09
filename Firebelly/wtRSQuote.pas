@@ -49,6 +49,8 @@ type
     procedure chkbxOnlyShowGrandTotalClick(Sender: TObject);
     procedure chkbxHideAllPricesClick(Sender: TObject);
   private
+    FDefaultBin: integer;
+    FDefaultPrinter: string;
     iIntselcode: integer;
     FEmailAttachment : TstringList;
     FPrintType: string;
@@ -56,6 +58,9 @@ type
     sAttachmentType: string;
     sAvailabilityFile: string;
     sTermsAndConditionsFile: string;
+    procedure SetDefaultBin(const Value: integer);
+    procedure SetPrinterBin(BinCode: integer);
+    procedure SetDefaultPrinter(const Value: string);
     procedure RunReport(const bPreview: boolean);
     procedure RunSummaryReport(const bPreview: boolean);
     procedure EmailReport;
@@ -75,9 +80,12 @@ type
     function BuildQueryString: string;
     function GetQuoteMaterial(tempQuote: integer): string;
     function IncrementNo(StartStr: String): String;
+    procedure PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
+    procedure PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
     procedure PrintDocument(const documentToPrint: string);
     procedure PrintDocuments;
-    { Private declarations }
+    property DefaultBin: integer read FDefaultBin write SetDefaultBin;
+    property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
   public
     bPrinted: boolean;
     bRetail: boolean;
@@ -152,7 +160,8 @@ begin
   if PrintType = 'T' then
     begin
       RunTemplateReport(false);
-      RunReport(false);
+      if bPrinted then
+        RunReport(false);
     end
   else
   if dtmdlWorktops.UseTradeDetails and not self.bRetail then
@@ -396,9 +405,12 @@ begin
               frmwtRPQuote.bPrintLogo := chkbxPrintLogo.checked;
               frmwtRPQuote.bShowOffer := chkbxShowOffer.checked;
               frmwtRPQuote.bPrintDetail := chkbxShowDetail.checked;
+              frmwtRPQuote.bPrintDiscount := chkbxShowDiscount.checked;
               frmwtRPQuote.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
               frmwtRPQuote.bExcludeTemplate := chkbxExcludeTemplate.checked;
               frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
+              frmwtRPQuote.bHideAllPrices := chkbxHideAllPrices.checked;
+              frmwtRPQuote.bApplyEndUserMarkup := chkbxEndUserMarkup.checked;
 
               frmwtRPQuote.qrpDetails.ShowProgress := false;
 
@@ -832,11 +844,29 @@ begin
 end;
 
 procedure TfrmWTRSQuote.RunReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   GetSelection;
 
   frmwtRPQuote := TfrmwtRPQuote.create(self);
   try
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
+
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
+
 //    frmwtRPQuote.Quote := strtoint(memSelection.text);
     frmwtRPQuote.bPrintLogo := chkbxPrintLogo.checked;
     frmwtRPQuote.bShowOffer := chkbxShowOffer.checked;
@@ -888,27 +918,64 @@ begin
     else
       begin
         frmwtRPQuote.bPreview := false;
-        if PrintType <> 'T' then
-          frmwtRPQuote.qrpDetails.PrinterSetup;
+(*          if PrintType <> 'T' then
+            frmwtRPQuote.qrpDetails.PrinterSetup;
 
-        if frmwtRPQuote.qrpDetails.tag = 0 then
-          begin
-            frmwtRPQuote.qrpDetails.Print;
-            bPrinted := true;
-          end;
-        close;
-      end;
+          if frmwtRPQuote.qrpDetails.tag = 0 then
+            begin
+              frmwtRPQuote.qrpDetails.Print;
+              bPrinted := true;
+            end;
+*)
+          if PrintType <> 'T' then
+            begin
+              if SetUpPrinter(PrinterSettings) then
+                begin
+                  frmwtRPQuote.qrpDetails.Print;
+                  bPrinted := true;
+                end
+            end
+          else
+            begin
+              frmwtRPQuote.qrpDetails.Print;
+              bPrinted := true;
+            end;
+          close;
+        end;
+    finally
+      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmwtRPQuote.free;
   end;
 end;
 
 procedure TfrmWTRSQuote.RunSummaryReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   GetSelection;
 
   frmwtRPQuoteSummary := TfrmwtRPQuoteSummary.create(self);
   try
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
+
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
+  
     frmwtRPQuoteSummary.bPrintLogo := chkbxPrintLogo.checked;
     frmwtRPQuoteSummary.bShowOffer := chkbxShowOffer.checked;
     frmwtRPQuoteSummary.bPrintDiscount := chkbxShowDiscount.checked;
@@ -934,7 +1001,6 @@ begin
         MessageDlg('There are no quotes to print.',mterror,[mbOK],0);
         exit;
     	end;
-
     bPrinted := false;
     frmwtRPQuoteSummary.bEndUser := false ;
     if bPreview then
@@ -945,7 +1011,7 @@ begin
     else
       begin
         frmwtRPQuoteSummary.bPreview := false;
-        if PrintType <> 'T' then
+(*        if PrintType <> 'T' then
           frmwtRPQuoteSummary.qrpDetails.PrinterSetup;
 
         if frmwtRPQuoteSummary.qrpDetails.tag = 0 then
@@ -953,6 +1019,13 @@ begin
             frmwtRPQuoteSummary.qrpDetails.Print;
             bPrinted := true;
           end;
+*)    
+          if SetUpPrinter(PrinterSettings) then
+            begin
+              frmwtRPQuoteSummary.qrpDetails.Print;
+              bPrinted := true;
+            end;
+      
         close;
       end;
   finally
@@ -1097,9 +1170,27 @@ begin
 end;
 
 procedure TfrmWTRSQuote.RunTemplateReport(const bPreview: boolean);
+var
+  PrinterSettings: TPrinterSettings;
+  icount: integer;
 begin
   frmwtRPTemplate := TfrmwtRPTemplate.create(self);
   try
+    PrinterSettings := TPrinterSettings.Create;
+    try
+      Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printer.Printers.count) do
+        begin
+//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+          if DefaultPrinter = Printer.printers[icount] then
+            Printer.PrinterIndex := icount;
+        end;
+
+      if DefaultPrinter <> '' then
+        begin
+          SetPrinterBin(DefaultBin);
+        end;
+  
     frmwtRPTemplate.Quote := strtoint(memSelection.text);
 
     if (frmwtRPTemplate.GetQuoteDetails = 0) then
@@ -1108,6 +1199,7 @@ begin
       begin
 // decide which address to show on quote
         frmwtRPTemplate.bEndUser := false ;
+        Printed := false;
         if bPreview then
           begin
               frmwtRPTemplate.bPreview := true;
@@ -1116,12 +1208,23 @@ begin
         else
           begin
               frmwtRPTemplate.bPreview := false;
-              frmwtRPTemplate.qrpDetails.PrinterSetup;
+(*            frmwtRPTemplate.qrpDetails.PrinterSetup;
               if frmwtRPTemplate.qrpDetails.tag = 0 then
                 frmwtRPTemplate.qrpDetails.Print;
+*)
+              if SetUpPrinter(PrinterSettings) then
+                begin
+                  frmwtRPTemplate.qrpDetails.Print;
+                  bPrinted := true;
+                end;
               close;
           end;
       end;
+    finally
+      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmwtRPTemplate.free;
   end;
@@ -1330,6 +1433,8 @@ begin
       chkbxPrintTemplate.Visible := false;
       chkbxPrintAvailability.Visible := false;
       chkbxPrintTerms.Visible := false;
+      chkbxEndUserMarkup.Visible := false;
+      chkbxHideAllPrices.Visible := false;
       btnEmail.Visible := false;
     end
   else
@@ -1458,6 +1563,7 @@ begin
         WriteString('Quote', 'Apply End User Markup', 'Y')
       else
         WriteString('Quote', 'Apply End User Markup', 'N');
+      WriteString('Quote', 'Default Printer', DefaultPrinter);
     end;
   finally
     IniFile.Free;
@@ -1487,6 +1593,7 @@ begin
       chkbxPrintAvailability.checked := (ReadString('Quote', 'Print Availability Document', 'N') = 'Y');
       chkbxPrintTerms.checked := (ReadString('Quote', 'Print Terms and Conditions', 'N') = 'Y');
       chkbxEndUserMarkup.checked := (ReadString('Quote', 'Apply End User Markup', 'N') = 'Y');
+      DefaultPrinter := ReadString('Quote', 'Default Printer', '');
     end;
   finally
     IniFile.Free;
@@ -1874,6 +1981,32 @@ begin
       chkbxOnlyShowGrandTotal.enabled := true;
     end;
 
+end;
+
+procedure TfrmWTRSQuote.SetDefaultBin(const Value: integer);
+begin
+  FDefaultBin := Value;
+end;
+
+procedure TfrmWTRSQuote.SetDefaultPrinter(const Value: string);
+begin
+  FDefaultPrinter := Value;
+end;
+
+procedure TfrmWTRSQuote.SetPrinterBin(BinCode: integer);
+var
+  DevMode : PDeviceMode;
+  hDevMode: THandle;
+  Device,Driver,Port: array [0..1024] of Char;
+begin
+  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  if hDevMode <> 0 then
+  begin
+        DevMode := GlobalLock (hDevMode);
+        // here we can catch members of DevMode
+        DevMode^.DMDEFAULTSOURCE := BinCode;
+        GlobalUnlock (hDevMode);
+  end;
 end;
 
 end.

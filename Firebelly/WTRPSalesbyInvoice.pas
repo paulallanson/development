@@ -89,6 +89,32 @@ type
     qrlblReportCostPerc: TQRLabel;
     qryReportIs_Retail_Customer: TStringField;
     qryReportIs_Commercial_customer: TStringField;
+    qryReportOld: TQuery;
+    IntegerField1: TIntegerField;
+    StringField1: TStringField;
+    IntegerField2: TIntegerField;
+    StringField2: TStringField;
+    StringField3: TStringField;
+    DateTimeField1: TDateTimeField;
+    FloatField1: TFloatField;
+    FloatField2: TFloatField;
+    FloatField3: TFloatField;
+    IntegerField3: TIntegerField;
+    StringField4: TStringField;
+    StringField5: TStringField;
+    IntegerField4: TIntegerField;
+    StringField6: TStringField;
+    StringField7: TStringField;
+    StringField8: TStringField;
+    StringField9: TStringField;
+    StringField10: TStringField;
+    IntegerField5: TIntegerField;
+    StringField11: TStringField;
+    FloatField4: TFloatField;
+    StringField12: TStringField;
+    StringField13: TStringField;
+    qryReportRevenue_Centre_Descr: TStringField;
+    qryReportRequires_App_For_Payment: TStringField;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
@@ -106,14 +132,18 @@ type
   private
     CustomerSell, CustomerCost, CustomerMargin, CustomerVat, CustomerTotal, ReportSell, ReportCost, ReportMargin, ReportVat, ReportTotal: real;
     FCustomerCategory: integer;
+    FChargeType: integer;
     procedure SetCustomerCategory(const Value: integer);
+    procedure SetChargeType(const Value: integer);
   public
+    bOnlyShowAFP: boolean;
     SortBy: integer;
     customer, rep: integer;
     DateFrom, DateTo: TDateTime;
     exporting: boolean;
     exportFile: textFile;
     property CustomerCategory: integer read FCustomerCategory write SetCustomerCategory;
+    property ChargeType: integer read FChargeType write SetChargeType;
     function GetDetails: integer;
     procedure ExporttoFile(filename: string);
   end;
@@ -270,6 +300,29 @@ begin
             end;
   end;
 
+  case ChargeType of
+        0:  begin
+              qryReport.Parambyname('Is_Retail_Customer').asstring := 'A';
+              qryReport.Parambyname('Is_Commercial_Customer').asstring := 'A';
+              qryReport.Parambyname('Requires_App_For_Payment').asstring := 'A';
+            end;
+        1:  begin
+              qryReport.Parambyname('Is_Retail_Customer').asstring := 'N';
+              qryReport.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qryReport.Parambyname('Requires_App_For_Payment').asstring := 'N';
+            end;
+        2:  begin
+              qryReport.ParambyName('Is_Retail_Customer').asstring := 'N';
+              qryReport.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qryReport.Parambyname('Requires_App_For_Payment').asstring := 'Y';
+            end;
+        3:  begin
+              qryReport.Parambyname('Is_Retail_Customer').asstring := 'Y';
+              qryReport.Parambyname('Is_Commercial_Customer').asstring := 'N';
+              qryReport.Parambyname('Requires_App_For_Payment').asstring := 'N';
+            end;
+  end;
+
   qryReport.parambyname('Customer').asinteger := customer;
   qryReport.parambyname('Rep').asinteger := Rep;
   qryReport.parambyname('Date_From').Asdatetime := Datefrom;
@@ -347,7 +400,9 @@ begin
     + ',"Total"'
     + ',"Cost"'
     + ',"Margin"'
-    + ',"Cost Percentage"';
+    + ',"Cost Percentage"'
+    + ',"Revenue Centre"'
+    + ',"Charge Type"';
 
 
   writeLn(self.exportFile, tempStr);
@@ -417,6 +472,18 @@ begin
     //Cost Perc
     tempStr := tempStr + ',"' + qrlblCostPerc.caption + '"';
 
+    //Revenue Centre
+    tempStr := tempStr + ',"' + qryReport.fieldbyname('Revenue_Centre_Descr').asstring + '"';
+
+    //Charge Type
+    if qryReport.fieldbyname('Is_Retail_Customer').asstring = 'Y' then
+      tempStr := tempStr + ',"' + 'Retail' + '"'
+    else
+    if qryReport.fieldbyname('Requires_App_For_Payment').asstring = 'Y' then
+      tempStr := tempStr + ',"' + 'Application for Payment' + '"'
+    else
+      tempStr := tempStr + ',"' + 'Invoice' + '"';
+
     writeln(self.exportFile, tempStr);
     frmWTRSSalesbyInvoice.prgbrExport.StepIt;
   end;
@@ -425,6 +492,11 @@ end;
 procedure TfrmwtRPSalesbyInvoice.SetCustomerCategory(const Value: integer);
 begin
   FCustomerCategory := Value;
+end;
+
+procedure TfrmwtRPSalesbyInvoice.SetChargeType(const Value: integer);
+begin
+  FChargeType := Value;
 end;
 
 end.

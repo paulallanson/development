@@ -363,6 +363,78 @@ type
     Acc224Q5: TFDQuery;
     Acc224Q6: TFDQuery;
     Acc224Q7: TFDQuery;
+    Acc225Q1: TFDQuery;
+    Acc225Q2: TFDQuery;
+    Acc225Q3: TFDQuery;
+    Acc225Q4: TFDQuery;
+    Acc225Q5: TFDQuery;
+    Acc225Q6: TFDQuery;
+    Acc225Q7: TFDQuery;
+    Acc225Q9: TFDQuery;
+    sql225Q1: TFDQuery;
+    sql225Q2: TFDQuery;
+    sql225Q3: TFDQuery;
+    sql225Q4: TFDQuery;
+    sql225Q5: TFDQuery;
+    sql225Q6: TFDQuery;
+    sql225Q7: TFDQuery;
+    sql225Q9: TFDQuery;
+    Acc225Q8: TFDQuery;
+    sql225Q8: TFDQuery;
+    Acc226Q1: TFDQuery;
+    Acc226Q2: TFDQuery;
+    Acc226Q3: TFDQuery;
+    sql226Q1: TFDQuery;
+    sql226Q2: TFDQuery;
+    sql226Q3: TFDQuery;
+    Acc226Q4: TFDQuery;
+    sql226Q4: TFDQuery;
+    Acc227Q1: TFDQuery;
+    Acc227Q2: TFDQuery;
+    Acc227Q3: TFDQuery;
+    Acc227Q4: TFDQuery;
+    Acc227Q5: TFDQuery;
+    sql227Q1: TFDQuery;
+    sql227Q2: TFDQuery;
+    sql227Q3: TFDQuery;
+    sql227Q4: TFDQuery;
+    sql227Q5: TFDQuery;
+    Acc228Q1: TFDQuery;
+    sql228Q1: TFDQuery;
+    Acc228Q2: TFDQuery;
+    Acc228Q3: TFDQuery;
+    Acc228Q4: TFDQuery;
+    Acc228Q5: TFDQuery;
+    Acc228Q6: TFDQuery;
+    Acc228Q7: TFDQuery;
+    Acc228Q8: TFDQuery;
+    Acc228Q9: TFDQuery;
+    sql228Q2: TFDQuery;
+    sql228Q3: TFDQuery;
+    sql228Q4: TFDQuery;
+    sql228Q5: TFDQuery;
+    sql228Q6: TFDQuery;
+    sql228Q7: TFDQuery;
+    sql228Q8: TFDQuery;
+    sql228Q9: TFDQuery;
+    Acc229Q1: TFDQuery;
+    Acc229Q2: TFDQuery;
+    sql229Q1: TFDQuery;
+    sql229Q2: TFDQuery;
+    Acc229Q3: TFDQuery;
+    sql229Q3: TFDQuery;
+    Acc23Q1: TFDQuery;
+    Acc23Q4: TFDQuery;
+    sql23Q1: TFDQuery;
+    sql23Q4: TFDQuery;
+    Acc23Q2: TFDQuery;
+    sql23Q2: TFDQuery;
+    Acc23Q3: TFDQuery;
+    sql23Q3: TFDQuery;
+    Acc231Q1: TFDQuery;
+    Acc231Q2: TFDQuery;
+    sql231Q1: TFDQuery;
+    sql231Q2: TFDQuery;
   private
     QryFails :boolean;
     sDb_Version :String;
@@ -837,6 +909,69 @@ begin
         QryFails := RunBatch('sql224', 7)
       else
         QryFails := RunBatch('Acc224', 7);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.4') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql225', 9)
+      else
+        QryFails := RunBatch('Acc225', 9);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.5') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql226', 4)
+      else
+        QryFails := RunBatch('Acc226', 4);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.6') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql227', 5)
+      else
+        QryFails := RunBatch('Acc227', 5);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.7') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql228', 9)
+      else
+        QryFails := RunBatch('Acc228', 9);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.8') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql229', 3)
+      else
+        QryFails := RunBatch('Acc229', 3);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '22.9') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql23', 4)
+      else
+        QryFails := RunBatch('Acc23', 4);
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '23') then
+    begin
+      if dtmdlWorktops.IsSQL then
+        QryFails := RunBatch('sql231', 2)
+      else
+        QryFails := RunBatch('Acc231', 2);
     end;
 end;
 

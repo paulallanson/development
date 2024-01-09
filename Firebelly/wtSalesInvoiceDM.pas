@@ -84,18 +84,20 @@ type
     qryPeriodEnd: TFDQuery;
     qrySOAll: TFDQuery;
     qryGetAddress: TFDQuery;
-    qryGetSOQuote: TFDQuery;
-    qryPaymentTerms: TFDQuery;
-    dsPaymentTerms: TDataSource;
-    qryGetCustTypeNominal: TFDQuery;
-    qryCheckInvoice: TFDQuery;
-    qryGetSOLines: TFDQuery;
-    qryGetCustomerVat: TFDQuery;
-    qrySIHeaderBase: TFDQuery;
-    qrySCHeaderBase: TFDQuery;
-    qryRevenueCentre: TFDQuery;
-    dtsRevenueCentre: TDataSource;
-    qrySIHeaderBaseOld: TFDQuery;
+    qrySIHeaderGridInvoice_Date: TDateTimeField;
+    qrySIHeaderGridCustomer: TIntegerField;
+    qrySIHeaderGridInactive: TWideStringField;
+    qrySIHeaderGridInvoice_or_Credit: TWideStringField;
+    qrySIHeaderGridCustomer_Name: TWideStringField;
+    qrySIHeaderGridStatus_Description: TWideStringField;
+    qrySIHeaderGridGoods_Value: TFloatField;
+    qrySIHeaderGridVat_Value: TFloatField;
+    qrySIHeaderGridTotal_Value: TFloatField;
+    qrySIHeaderGridInvoice_no: TWideStringField;
+    qrySIHeaderGridSales_invoice_status: TIntegerField;
+    qrySIHeaderGridSales_Invoice: TIntegerField;
+    qrySIHeaderGridReference: TWideStringField;
+    qrySIHeaderGridDescription: TWideStringField;
     qrySCHeaderGridInvoice_Date: TDateTimeField;
     qrySCHeaderGridCustomer: TIntegerField;
     qrySCHeaderGridInactive: TWideStringField;
@@ -110,29 +112,44 @@ type
     qrySCHeaderGridInvoice_no: TWideStringField;
     qrySCHeaderGridSales_invoice_status: TIntegerField;
     qrySCHeaderGridSales_Invoice: TIntegerField;
-    qrySCHeaderGridReference: TWideStringField;
+    qrySCHeaderGridReference: TStringField;
     qrySCHeaderGridDescription: TWideStringField;
     qrySCHeaderGridCustomer_Name: TWideStringField;
-    qrySCHeaderGridIs_Retail_Customer: TWideStringField;
-    qrySIHeaderGridInvoice_Date: TDateTimeField;
-    qrySIHeaderGridCustomer: TIntegerField;
-    qrySIHeaderGridInactive: TWideStringField;
-    qrySIHeaderGridInvoice_or_Credit: TWideStringField;
-    qrySIHeaderGridOriginal_Name: TWideStringField;
-    qrySIHeaderGridStatus_Description: TWideStringField;
-    qrySIHeaderGridGoods_Value: TCurrencyField;
-    qrySIHeaderGridVat_Value: TCurrencyField;
-    qrySIHeaderGridTotal_Value: TCurrencyField;
-    qrySIHeaderGridInvoice_no: TWideStringField;
-    qrySIHeaderGridSales_invoice_status: TIntegerField;
-    qrySIHeaderGridSales_Invoice: TIntegerField;
-    qrySIHeaderGridReference: TWideStringField;
-    qrySIHeaderGridDescription: TWideStringField;
-    qrySIHeaderGridCustomer_Name: TWideStringField;
+    qrySCHeaderGridTotal_Credit: TCurrencyField;
+    qryGetSOQuote: TFDQuery;
+    qryPaymentTerms: TFDQuery;
+    dsPaymentTerms: TDataSource;
+    qryGetCustTypeNominal: TFDQuery;
+    qryCheckInvoice: TFDQuery;
     qrySIHeaderGridIs_Retail_Customer: TWideStringField;
-    qrySIHeaderGridDeposit_Amount: TFloatField;
+    qrySCHeaderGridIs_Retail_Customer: TWideStringField;
     qrySIHeaderGridPaid_Amount: TCurrencyField;
     qrySIHeaderGridPaid_Status: TWideStringField;
+    qrySIHeaderGridDeposit_Amount: TCurrencyField;
+    qryGetSOLines: TFDQuery;
+    qryGetCustomerVat: TFDQuery;
+    qrySIHeaderBase: TFDQuery;
+    qrySIHeaderGridRep_Name: TWideStringField;
+    qrySIHeaderGridOperator_Name: TWideStringField;
+    qrySIHeaderGridAccount_Manager_Name: TWideStringField;
+    qrySCHeaderBase: TFDQuery;
+    qrySCHeaderGridRep_Name: TWideStringField;
+    qrySCHeaderGridOperator_Name: TWideStringField;
+    qrySCHeaderGridAccount_Manager_Name: TWideStringField;
+    qrySIHeaderGridOrder_Reference: TWideStringField;
+    qrySCHeaderGridOrder_Reference: TWideStringField;
+    qrySIHeaderGridAccount_Code: TWideStringField;
+    qryRevenueCentre: TFDQuery;
+    dtsRevenueCentre: TDataSource;
+    qrySIHeaderBaseOlder: TFDQuery;
+    qrySIHeaderGridBranch_Name: TWideStringField;
+    qrySIHeaderGridDate_Required: TDateTimeField;
+    qrySCHeaderBaseOlder: TFDQuery;
+    qrySCHeaderGridBranch_Name: TWideStringField;
+    qrySIHeaderBaseOld: TFDQuery;
+    qrySIHeaderGridRevenue_Centre_Descr: TWideStringField;
+    qrySCHeaderBaseOld: TFDQuery;
+    qrySCHeaderGridRevenue_Centre_Descr: TWideStringField;
     procedure qrySIHeaderGridCalcFields(DataSet: TDataSet);
   private
     function GetCreditHeaderCount: integer;
@@ -164,10 +181,12 @@ type
     PONumber: real;
     SONumber: integer;
     SInvoiceNumber: integer;
+    SiteName: string;
     ShowInactive: boolean;
     SortType: string;
     SortOrder: string;
     Status: string;
+    RevenueCentre: integer;
     Reference: string;
     RepName: string;
     TradeRetail: integer;
@@ -1411,8 +1430,9 @@ begin
     else
       AccountManager := fieldbyname('Account_Manager').asinteger;
     Customer :=            FieldByName('Customer').AsInteger;
-    CustomerBranch :=        FieldByName('Branch_No').AsInteger;
     CustomerName :=        FieldByName('Customer_Name').AsString;
+    CustomerBranch :=        FieldByName('Branch_No').AsInteger;
+    CustomerBranchName :=   dtmdlWorktops.GetCustomerBranchName(Customer, CustomerBranch);
 
     BranchExist := dtmdlWorktops.DoesCustomerBranchExist(Customer);
 
@@ -2400,6 +2420,8 @@ begin
 
     if Description <> '' then
       sTemp := sTemp + ' AND Sales_Invoice.Description LIKE ''%' + Description + '%''';
+    if SiteName <> '' then
+      sTemp := sTemp + ' AND Customer_Branch.Branch_Name LIKE ''%' + SiteName + '%''';
     if Customer <> '' then
       sTemp := sTemp + ' AND Sales_Invoice.Customer_name LIKE ''%' + Customer + '%''';
     if OfficeContact <> '' then
@@ -2446,6 +2468,12 @@ begin
           end;
     end;
     
+    case Revenuecentre of
+        -1: parambyname('Revenue_Centre').clear;
+    else
+        parambyname('Revenue_Centre').asinteger := RevenueCentre
+    end;
+
     if SortOrder = '' then
       sTemp := sTemp + ' ORDER BY Sales_Invoice.Sales_Invoice desc'
     else
@@ -2534,6 +2562,12 @@ begin
           endDate := date;
           Parambyname('Date_Required').asdatetime := endDate;
         end;
+      case Revenuecentre of
+        -1: parambyname('Revenue_Centre').clear;
+      else
+        parambyname('Revenue_Centre').asinteger := RevenueCentre
+      end;
+
       Open;
 //      First;
     end;
@@ -2840,6 +2874,8 @@ begin
 *)
     sTemp := sTemp + qrySCHeaderBase.sql.text;
 
+    if SiteName <> '' then
+      sTemp := sTemp + ' AND Customer_Branch.Branch_Name LIKE ''%' + SiteName + '%''';
     if Description <> '' then
       sTemp := sTemp + ' AND Sales_Invoice.Description LIKE ''%' + Description + '%''';
     if Customer <> '' then
@@ -2994,6 +3030,7 @@ begin
   if (CustomerName <> '') or
             (CustomerOrder <> '') or
             (ProjectReference <> '') or
+            (SiteName <> '') or
             (Reference <> '') or
             (Description <> '') or
             (OfficeContact <> '') or

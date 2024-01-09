@@ -168,20 +168,29 @@ uses
 
 type
   TfrmWTAccExport3 = class(TForm)
-    ExportLbl: TLabel;
-    ExportPathEdit: TEdit;
+    pnlBottom: TPanel;
     BitBtn1: TBitBtn;
     FinishBtn: TBitBtn;
     BitBtn3: TBitBtn;
+    pnlRevenueCentre: TPanel;
+    rdgrpRevenueCentre: TRadioGroup;
+    grpbxRevCentre: TGroupBox;
+    Label3: TLabel;
+    dblkpRevCentre: TDBLookupComboBox;
+    pnlDetails: TPanel;
     Label2: TLabel;
     AccSystemEdit: TEdit;
-    fileNameLbl: TLabel;
-    FileNameEdit: TEdit;
-    BrowseBtn: TBitBtn;
     AliasLbl: TLabel;
+    fileNameLbl: TLabel;
     cbsource: TComboBox;
+    FileNameEdit: TEdit;
+    ExportLbl: TLabel;
+    ExportPathEdit: TEdit;
+    BrowseBtn: TBitBtn;
     lblStatus: TLabel;
     Progress: TProgressBar;
+    qryRevenueCentre: TQuery;
+    dtsRevenueCentre: TDataSource;
     procedure FinishBtnClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
@@ -195,6 +204,8 @@ type
       Shift: TShiftState);
     procedure FormDestroy(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure rdgrpRevenueCentreClick(Sender: TObject);
+    procedure dblkpRevCentreClick(Sender: TObject);
   private
     { Private declarations }
     procedure CreateAccExportFile;
@@ -256,6 +267,9 @@ type
     procedure CreateQBooksSupplierHeader;
   public
     { Public declarations }
+    sAccountsPackage: string;
+    sRevCentrePrefix: string;
+    iRevenueCentre: integer;
     sLastForm: TForm;
     procedure UpdateCustomers(UpCustomerDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
     procedure UpdateSuppliers(UpSupplierDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
@@ -357,6 +371,15 @@ begin
       {Sales Invoice export}
       if itemindex = 2 then
         begin
+          {Check if using Revenue Centres}
+          case rdgrpRevenueCentre.itemindex of
+            0:  begin
+                  iRevenueCentre := 0;
+                end;
+          else
+            iRevenueCentre := dblkpRevCentre.keyvalue;
+          end;
+          
           CreateAccExportFile;
           CreateInvExportFile;
           {Change the status of Customer 'Prospects' to 'Invoice' Customers}
@@ -405,7 +428,7 @@ begin
       {Import Currency Rates}
       if itemindex = 5 then
         begin
-          if dmAccExport.CompanySQl.fieldbyname('Accounts_PAckage').asstring = 'SAGE50' then
+          if sAccountsPackage = 'SAGE50' then
             ImportSage50Currency
           else
             ImportCurrency;
@@ -414,7 +437,7 @@ begin
       {Import Stock References}
       if itemindex = 6 then
         begin
-          if dmAccExport.CompanySQl.fieldbyname('Accounts_PAckage').asstring = 'SAGE50' then
+          if sAccountsPackage = 'SAGE50' then
             ImportSage50Stock
           else
             ImportStock;
@@ -425,7 +448,7 @@ begin
         begin
           progress.show;
           lblStatus.show;
-          if dmAccExport.CompanySQl.fieldbyname('Accounts_PAckage').asstring = 'SAGE50' then
+          if sAccountsPackage = 'SAGE50' then
             ImportSage50CreditLimits
           else
             ImportCreditLimits;
@@ -1537,7 +1560,31 @@ end;
 
 procedure TfrmWTAccExport3.GetSalesInvoices;
 begin
-  with dmAccExport.CompanySQl do
+  if sAccountsPackage = 'SAGE50' then
+    begin
+      Sage50GetSalesInvoices;
+      Sage50CreateExportFile;
+    end
+  else
+  if sAccountsPackage = 'SAGEMMS' then
+    begin
+      SageMMSGetSalesInvoices;
+      SageMMSCreateExportFile;
+    end
+  else
+  if sAccountsPackage = 'XERO' then
+    begin
+      XeroGetSalesInvoices;
+      XeroCreateExportHeader;
+      XeroCreateExportFile;
+    end
+  else
+  if sAccountsPackage = 'QBOOKS' then
+    begin
+      QBooksGetSalesInvoices;
+      QBooksCreateExportFile;
+    end;
+(*  with dmAccExport.CompanySQl do
     begin
       if fieldbyname('Accounts_Package').asstring = 'SAGE50' then
         begin
@@ -1564,6 +1611,7 @@ begin
           QBooksCreateExportFile;
         end;
     end;
+*)
 end;
 
 procedure TfrmWTAccExport3.LinkerSalesInvoices;
@@ -2880,12 +2928,12 @@ begin
     sAccFileName := SStrCopy(sAccFileName, 4, 256);
 
   {Set the file extension}
-  if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50') or
-     (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGEMMS') or
-     (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'XERO') then
+  if (sAccountsPackage = 'SAGE50') or
+     (sAccountsPackage = 'SAGEMMS') or
+     (sAccountsPackage = 'XERO') then
     sPrefix := '.csv'
   else
-  if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'QBOOKS') then
+  if (sAccountsPackage = 'QBOOKS') then
     sPrefix := '.iif'
   else
     sPrefix := '.txt';
@@ -2896,7 +2944,7 @@ begin
   begin
     sNextAccFile := IntToStr(dmAccExport.CompanySQL.FieldByName('Last_file_No_Acc').AsInteger
       + 1);
-    sNewFilename := sPathEdit + 'SACC' + sAccFileName + sPrefix;
+    sNewFilename := sPathEdit + sRevCentrePrefix + 'SACC' + sAccFileName + sPrefix;
     //see if file with this name already exists
 
     StrPCopy(NewFilename, sNewFilename);
@@ -2907,7 +2955,7 @@ begin
   begin
     sNextAccFile := IntToStr(dmAccExport.CompanySQL.FieldByName('Last_file_No_Acc').AsInteger
       + 1);
-    sNewFilename := sPathEdit + 'PACC' + sAccFileName + sPrefix;
+    sNewFilename := sPathEdit + sRevCentrePrefix + 'PACC' + sAccFileName + sPrefix;
     //see if file with this name already exists
 
     StrPCopy(NewFilename, sNewFilename);
@@ -2932,12 +2980,12 @@ begin
     sNextInvFile := SStrCopy(sNextInvFile, 4, 256);
 
   {Set the file extension}
-  if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50') or
-     (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGEMMS') or
-     (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'XERO') then
+  if (sAccountsPackage = 'SAGE50') or
+     (sAccountsPackage = 'SAGEMMS') or
+     (sAccountsPackage = 'XERO') then
     sPrefix := '.csv'
   else
-  if (dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'QBOOKS') then
+  if (sAccountsPackage = 'QBOOKS') then
     sPrefix := '.iif'
   else
     sPrefix := '.txt';
@@ -2946,7 +2994,7 @@ begin
   closefile(invfile);
   if (iSupplierInv > 0) and (frmWTAccExport1.ActionListBox.itemindex = 3) then
     begin
-      sNewFilename := sPathEdit + 'PINV' + sNextInvFile + sPrefix;
+      sNewFilename := sPathEdit + sRevCentrePrefix + 'PINV' + sNextInvFile + sPrefix;
       StrPCopy(NewFilename, sNewFilename);
       RenameFile(InvFilename, NewFilename);
       dmAccExport.UpdatePIFilename(sNewFilename);
@@ -2954,7 +3002,7 @@ begin
   else
   if (iSalesInv > 0) and (frmWTAccExport1.ActionListBox.itemindex = 2) then
     begin
-      sNewFilename := sPathEdit + 'SINV' + sNextInvFile + sPrefix;
+      sNewFilename := sPathEdit + sRevCentrePrefix + 'SINV' + sNextInvFile + sPrefix;
       StrPCopy(NewFilename, sNewFilename);
       RenameFile(InvFilename, NewFilename);
       dmAccExport.UpdateSIFilename(sNewFilename);
@@ -3007,6 +3055,13 @@ begin
     with dmAccExport.UpSalesInvHeadSQL do
     begin
       Close;
+      if bUseRevenueCentre then
+        begin
+          if iRevenueCentre = 0 then
+            sql.Text := sql.Text + ' AND Sales_invoice.Revenue_Centre is NULL '
+          else
+            sql.Text := sql.Text + ' AND Sales_invoice.Revenue_Centre = ' + inttostr(iRevenueCentre);
+        end;
       parambyname('Status_From').asinteger := iStatusFrom;
       parambyname('Status_To').asinteger := iStatusTo;
       ExecSQL;
@@ -3063,7 +3118,7 @@ begin
          end;
       {Decide whether to show the ODBC prompts}
       if (itemindex > 4) and
-         (dmAccExport.CompanySQL.fieldbyname('Accounts_Package').asstring = 'SAGE50') then
+         (sAccountsPackage = 'SAGE50') then
          begin
            Filenamelbl.Visible := false;
            FilenameEdit.visible := false;
@@ -3094,7 +3149,7 @@ begin
   with frmWTAccExport1.ActionListBox do
     begin
       if (itemindex > 4) and
-         (dmAccExport.CompanySQL.fieldbyname('Accounts_Package').asstring = 'SAGE50') then
+         (sAccountsPackage = 'SAGE50') then
         begin
           if cbsource.text = '' then
             begin
@@ -3104,6 +3159,11 @@ begin
         end
       else
         begin
+          if (rdgrpRevenueCentre.ItemIndex = 1) and (dblkpRevCentre.KeyValue < 0) then
+            begin
+              FinishBtn.enabled := false;
+              exit;
+            end;
           if (FileNameedit.text = '') or
              (ExportPathEdit.text = '') then
             begin
@@ -3378,6 +3438,7 @@ begin
   GetDataSource;
   icustomers := 0;
   isuppliers := 0;
+  bUseRevenueCentre := false;
 end;
 
 procedure TfrmWTAccExport3.cbsourceChange(Sender: TObject);
@@ -3448,6 +3509,25 @@ end;
 
 procedure TfrmWTAccExport3.FormActivate(Sender: TObject);
 begin
+  pnlRevenueCentre.Visible := false;
+  bUseRevenueCentre := dtmdlWorktops.UseRevenueCentres;
+
+  if frmWTAccExport1.ActionListBox.itemindex = 2 then
+    begin
+      pnlRevenueCentre.Visible := bUseRevenueCentre;
+    end;
+
+  dblkpRevCentre.ListSource := dtsRevenueCentre;
+
+  with qryRevenueCentre do
+    begin
+      close;
+      open;
+    end;
+
+  sAccountsPackage := dmAccExport.CompanySQl.fieldbyname('Accounts_Package').asstring;
+  sRevCentrePrefix := '';
+  
   Progress.Position := 0;
 end;
 
@@ -3464,7 +3544,7 @@ begin
   else
     sFilename := sPathEdit + 'INV' + FileNameEdit.Text;
     
-  if dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50' then
+  if sAccountsPackage = 'SAGE50' then
     sFilename := sFilename + '.csv'
   else
     sFilename := sFilename + '.txt';
@@ -3506,7 +3586,7 @@ begin
   else
     sFilename := sPathEdit + 'ACC' + FileNameEdit.Text;
 
-  if dmAccExport.CompanySQL.FieldByName('Accounts_package').AsString = 'SAGE50' then
+  if sAccountsPackage = 'SAGE50' then
     sFilename := sFilename + '.csv'
   else
     sFilename := sFilename + '.txt';
@@ -4683,6 +4763,31 @@ begin
   sQBooksText := trim(sQBooksText) + QBooksIIFFormat('COMPANYNAME');
 
   Writeln(AccFile, sQBooksText);
+end;
+
+procedure TfrmWTAccExport3.rdgrpRevenueCentreClick(Sender: TObject);
+begin
+  grpbxRevCentre.Visible := false;
+  case (Sender as TRadioGroup).ItemIndex of
+      0:  begin
+            dblkpRevCentre.keyvalue := -1;
+            sAccountsPackage := dmAccExport.CompanySQl.fieldbyname('Accounts_Package').asstring;
+            sRevCentrePrefix := '';
+          end;
+  else
+    begin
+      grpbxRevCentre.Visible := true;
+    end;
+  end;
+  EnableFinishBtn;
+end;
+
+procedure TfrmWTAccExport3.dblkpRevCentreClick(Sender: TObject);
+begin
+  sAccountsPackage := qryRevenueCentre.fieldbyname('Accounts_Package').asstring;
+  AccSystemEdit.Text := qryRevenueCentre.fieldbyname('Accounts_Package_Description').asstring;
+  sRevCentrePrefix := qryRevenueCentre.fieldbyname('Prefix_Value').asstring;
+  EnableFinishBtn;
 end;
 
 end.

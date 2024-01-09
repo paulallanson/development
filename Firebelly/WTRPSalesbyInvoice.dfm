@@ -8,7 +8,7 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Scaled = False
   TextHeight = 13
@@ -1524,6 +1524,7 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       '        Customer.Is_Retail_Customer,'
       '        Customer.Is_Commercial_Customer,'
       '        Customer_Type.Description AS Customer_Type_Description,'
+      '        Customer.Requires_App_For_Payment,'
       '        Rep.Rep_Name,'
       '        Operator.Operator_Name as Account_Manager_Name,'
       '        Sales_invoice.Account_Manager,'
@@ -1538,20 +1539,28 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         'rline.Sales_Order)'
       
         '         WHERE Sales_Invoice_Line.Sales_Invoice = Sales_invoice.' +
-        'Sales_invoice) as Total_Materials'
-      'FROM Operator'
+        'Sales_invoice) as Total_Materials,'
+      '        Sales_invoice.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
       '      RIGHT JOIN (Sales_invoice_status'
       '      INNER JOIN (Rep'
+      '      RIGHT JOIN (Operator'
       '      RIGHT JOIN ((Customer_Type'
       '      INNER JOIN Customer'
-      '        ON Customer_Type.Customer_Type = Customer.Customer_type)'
-      '      INNER JOIN Sales_invoice'
-      '        ON Customer.Customer = Sales_invoice.Customer)'
-      '        ON Rep.Rep = Sales_invoice.Rep)'
       
-        '        ON Sales_invoice_status.Sales_invoice_status = Sales_inv' +
-        'oice.Sales_invoice_status)'
-      '        ON Operator.Operator = Sales_invoice.Account_Manager'
+        '          ON Customer_Type.Customer_Type = Customer.Customer_typ' +
+        'e)'
+      '      INNER JOIN Sales_invoice'
+      '          ON Customer.Customer = Sales_invoice.Customer)'
+      '          ON Operator.Operator = Sales_invoice.Account_Manager)'
+      '          ON Rep.Rep = Sales_invoice.Rep)'
+      
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_i' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON Revenue_Centre.Revenue_Centre = Sales_invoice.Reven' +
+        'ue_Centre'
       
         'WHERE ((Sales_Invoice.Customer = :Customer) or (0 = :Customer)) ' +
         'and'
@@ -1566,7 +1575,10 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       
         '(((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND (Custo' +
         'mer.Is_Commercial_Customer = :Is_Commercial_Customer)) or (:Is_R' +
-        'etail_Customer = '#39'A'#39'))'
+        'etail_Customer = '#39'A'#39')) AND'
+      
+        '((Customer.Requires_App_For_Payment = :Requires_App_For_Payment)' +
+        ' OR (:Requires_App_For_Payment = '#39'A'#39'))'
       '')
     Left = 176
     Top = 64
@@ -1601,6 +1613,17 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       end
       item
         Name = 'Is_Retail_Customer'
+        
+      end
+      item
+        
+        Name = 'Requires_App_For_Payment'
+        
+      end
+      item
+        
+        Name = 'Requires_App_For_Payment'
+        
       end>
     object qryReportSales_invoice: TIntegerField
       FieldName = 'Sales_invoice'
@@ -1684,6 +1707,230 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Size = 1
     end
     object qryReportIs_Commercial_customer: TStringField
+      FieldName = 'Is_Commercial_customer'
+      Size = 1
+    end
+    object qryReportRevenue_Centre_Descr: TStringField
+      FieldName = 'Revenue_Centre_Descr'
+      Size = 50
+    end
+    object qryReportRequires_App_For_Payment: TStringField
+      FieldName = 'Requires_App_For_Payment'
+      Size = 1
+    end
+  end
+  object qryReportOld: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'SELECT  Sales_invoice.Sales_invoice,'
+      '        Sales_invoice.Inactive,'
+      '        Sales_invoice.Customer,'
+      '        Sales_invoice.Account_code,'
+      '        Sales_invoice.Invoice_no,'
+      '        Sales_invoice.Invoice_date,'
+      '        Sales_invoice.Goods_value,'
+      '        Sales_invoice.Vat_Value,'
+      
+        '        (Sales_invoice.Goods_value+Sales_invoice.vat_value) AS T' +
+        'otal_Value,'
+      '        Sales_invoice.Sales_invoice_status,'
+      '        Sales_invoice.Invoice_or_Credit,'
+      '        Sales_invoice.description,'
+      '        Sales_invoice.Rep,'
+      '        Sales_invoice.Reference,'
+      '        Sales_invoice.Customer_Name,'
+      '        Sales_invoice_status.Invoice_Status_description,'
+      '        Customer.Is_Retail_Customer,'
+      '        Customer.Is_Commercial_Customer,'
+      '        Customer_Type.Description AS Customer_Type_Description,'
+      '        Customer.Requires_App_For_Payment,'
+      '        Rep.Rep_Name,'
+      '        Operator.Operator_Name as Account_Manager_Name,'
+      '        Sales_invoice.Account_Manager,'
+      
+        '        (SELECT SUM((Purchase_orderline.Quantity_Delivered/Purch' +
+        'ase_orderline.Cost_Pack_Quantity) * Purchase_orderline.Unit_cost' +
+        ')'
+      '          FROM Sales_invoice_line'
+      '            INNER JOIN Purchase_orderline'
+      
+        '              ON (Sales_invoice_line.Sales_Order = Purchase_orde' +
+        'rline.Sales_Order)'
+      
+        '         WHERE Sales_Invoice_Line.Sales_Invoice = Sales_invoice.' +
+        'Sales_invoice) as Total_Materials'
+      'FROM Operator'
+      '      RIGHT JOIN (Sales_invoice_status'
+      '      INNER JOIN (Rep'
+      '      RIGHT JOIN ((Customer_Type'
+      '      INNER JOIN Customer'
+      '        ON Customer_Type.Customer_Type = Customer.Customer_type)'
+      '      INNER JOIN Sales_invoice'
+      '        ON Customer.Customer = Sales_invoice.Customer)'
+      '        ON Rep.Rep = Sales_invoice.Rep)'
+      
+        '        ON Sales_invoice_status.Sales_invoice_status = Sales_inv' +
+        'oice.Sales_invoice_status)'
+      '        ON Operator.Operator = Sales_invoice.Account_Manager'
+      
+        'WHERE ((Sales_Invoice.Customer = :Customer) or (0 = :Customer)) ' +
+        'and'
+      '((Sales_Invoice.Rep = :Rep) or (0 = :Rep)) and'
+      
+        '((Sales_Invoice.Invoice_Date BETWEEN :Date_From AND :Date_To)) a' +
+        'nd'
+      '(Sales_Invoice.Sales_invoice_Status > 10) AND'
+      
+        '((Sales_invoice.inactive is NULL) or (Sales_invoice.inactive = '#39 +
+        'N'#39')) AND'
+      
+        '(((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND (Custo' +
+        'mer.Is_Commercial_Customer = :Is_Commercial_Customer)) or (:Is_R' +
+        'etail_Customer = '#39'A'#39')) AND'
+      
+        '((Customer.Requires_App_For_Payment = :Requires_App_For_Payment)' +
+        ' OR (:Requires_App_For_Payment = '#39'A'#39'))'
+      '')
+    Left = 304
+    Top = 64
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Rep'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Rep'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'Date_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'Date_To'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Commercial_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Requires_App_For_Payment'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Requires_App_For_Payment'
+        ParamType = ptUnknown
+      end>
+    object IntegerField1: TIntegerField
+      FieldName = 'Sales_invoice'
+    end
+    object StringField1: TStringField
+      FieldName = 'Inactive'
+      Size = 1
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'Customer'
+    end
+    object StringField2: TStringField
+      FieldName = 'Account_code'
+      Size = 10
+    end
+    object StringField3: TStringField
+      FieldName = 'Invoice_no'
+      Size = 10
+    end
+    object DateTimeField1: TDateTimeField
+      FieldName = 'Invoice_date'
+    end
+    object FloatField1: TFloatField
+      FieldName = 'Goods_value'
+      DisplayFormat = '#,##0.00'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'Vat_Value'
+      DisplayFormat = '#,##0.00'
+    end
+    object FloatField3: TFloatField
+      FieldName = 'Total_Value'
+      DisplayFormat = '#,##0.00'
+    end
+    object IntegerField3: TIntegerField
+      FieldName = 'Sales_invoice_status'
+    end
+    object StringField4: TStringField
+      FieldName = 'Invoice_or_Credit'
+      Size = 1
+    end
+    object StringField5: TStringField
+      FieldName = 'description'
+      Size = 255
+    end
+    object IntegerField4: TIntegerField
+      FieldName = 'Rep'
+    end
+    object StringField6: TStringField
+      FieldName = 'Reference'
+    end
+    object StringField7: TStringField
+      FieldName = 'Customer_Name'
+      Size = 50
+    end
+    object StringField8: TStringField
+      FieldName = 'Invoice_Status_description'
+      Size = 30
+    end
+    object StringField9: TStringField
+      FieldName = 'Customer_Type_Description'
+      Size = 40
+    end
+    object StringField10: TStringField
+      FieldName = 'Rep_Name'
+      Size = 50
+    end
+    object IntegerField5: TIntegerField
+      FieldName = 'Account_Manager'
+    end
+    object StringField11: TStringField
+      FieldName = 'Account_Manager_Name'
+      Size = 50
+    end
+    object FloatField4: TFloatField
+      FieldName = 'Total_Materials'
+      DisplayFormat = '#,##0.00'
+    end
+    object StringField12: TStringField
+      FieldName = 'Is_Retail_Customer'
+      Size = 1
+    end
+    object StringField13: TStringField
       FieldName = 'Is_Commercial_customer'
       Size = 1
     end

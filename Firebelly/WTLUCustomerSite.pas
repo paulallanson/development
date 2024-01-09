@@ -249,7 +249,10 @@ begin
   SelectedName := qryCustomerBranch.fieldbyname('Branch_Name').asstring;
   SelectedInstallName := qryCustomerBranch.fieldbyname('Install_Contact_Name').asstring;
   SelectedInstallEmail := qryCustomerBranch.fieldbyname('Install_Email_Address').asstring;
-  SelectedInstallMobile := qryCustomerBranch.fieldbyname('Install_Mobile_Number').asstring;
+  if trim(qryCustomerBranch.fieldbyname('Install_Mobile_Number').asstring) = '' then
+    SelectedInstallMobile := qryCustomerBranch.fieldbyname('Install_Phone_Number').asstring
+  else
+    SelectedInstallMobile := qryCustomerBranch.fieldbyname('Install_Mobile_Number').asstring;
   close;
 end;
 

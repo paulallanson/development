@@ -8,7 +8,7 @@ object frmWTMain: TfrmWTMain
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIForm
   Menu = mnMenu
@@ -24,19 +24,19 @@ object frmWTMain: TfrmWTMain
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1483
+    Width = 1150
     Height = 40
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1477
+        Width = 1146
       end>
     object ToolBar1: TToolBar
-      Left = 11
+      Left = 9
       Top = 0
-      Width = 1468
+      Width = 1133
       Height = 36
       AutoSize = True
       ButtonHeight = 36
@@ -47,7 +47,7 @@ object frmWTMain: TfrmWTMain
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Segoe UI'
+      Font.Name = 'MS Sans Serif'
       Font.Style = []
       Images = imgLstHot
       ParentFont = False
@@ -72,14 +72,14 @@ object frmWTMain: TfrmWTMain
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 128
+        Left = 130
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
-        Left = 192
+        Left = 195
         Top = 0
         Hint = 'Quotes|Maintain Quotes Estimates and Quotations'
         Caption = '&Quotes'
@@ -90,21 +90,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnQuotesClick
       end
       object btnSales: TToolButton
-        Left = 256
+        Left = 260
         Top = 0
         Caption = '&Sales'
         ImageIndex = 6
         OnClick = btnSalesClick
       end
       object btnTemplating: TToolButton
-        Left = 320
+        Left = 325
         Top = 0
         Caption = '&Templating'
         ImageIndex = 11
         OnClick = btnTemplatingClick
       end
       object btnJobs: TToolButton
-        Left = 384
+        Left = 390
         Top = 0
         Hint = 'Jobs|Maintain Job details'
         Caption = '&Jobs'
@@ -122,28 +122,28 @@ object frmWTMain: TfrmWTMain
         OnClick = btnFittingClick
       end
       object btnStock: TToolButton
-        Left = 512
+        Left = 520
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
-        Left = 576
+        Left = 585
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
-        Left = 640
+        Left = 650
         Top = 0
         Caption = '&Invoicing'
         DropdownMenu = pmnuSInvoicing
         ImageIndex = 4
       end
       object btnPrices: TToolButton
-        Left = 704
+        Left = 715
         Top = 0
         Caption = 'Colours'
         ImageIndex = 10
@@ -153,8 +153,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = 668
-    Width = 1483
+    Top = 419
+    Width = 1150
     Height = 19
     Panels = <
       item
@@ -1005,6 +1005,17 @@ object frmWTMain: TfrmWTMain
     end
     object mnuStockSettings: TMenuItem
       Caption = 'Stock'
+      object StockSystems1: TMenuItem
+        Caption = 'Stock Systems'
+        OnClick = StockSystems1Click
+      end
+      object N14: TMenuItem
+        Caption = '-'
+      end
+      object Stores1: TMenuItem
+        Caption = 'Stores ...'
+        OnClick = Stores1Click
+      end
       object ProductGroups1: TMenuItem
         Caption = 'Product Groups ...'
         OnClick = ProductGroups1Click
@@ -1079,14 +1090,13 @@ object frmWTMain: TfrmWTMain
       object N5: TMenuItem
         Caption = '-'
       end
-      object mnuFaxManager: TMenuItem
-        Caption = 'Fax Manager'
-        Visible = False
-        OnClick = mnuFaxManagerClick
-      end
       object mnuCheckPrices: TMenuItem
         Caption = 'Database Utilities'
         OnClick = mnuCheckPricesClick
+      end
+      object ManageDatabaseAliases1: TMenuItem
+        Caption = 'Manage Database Aliases'
+        OnClick = ManageDatabaseAliases1Click
       end
       object mnuScripts: TMenuItem
         Caption = 'Scripts'

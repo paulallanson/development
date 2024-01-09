@@ -19,11 +19,14 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
+    FRevenueCentre: integer;
     procedure RunReport(const bPreview: Boolean);
+    procedure SetRevenueCentre(const Value: integer);
     { Private declarations }
   public
     iCode: integer;
     InvoicePrint: boolean;
+    property RevenueCentre: integer read FRevenueCentre write SetRevenueCentre;
   end;
 
 var
@@ -68,10 +71,14 @@ begin
         frmWTRPSalesInvoice.bDetailed := True;
 
       frmWTRPSalesInvoice.SelCode := iCode;
+      frmWTRPSalesInvoice.RevenueCentre := RevenueCentre;
 
       frmWTRPSalesInvoice.GetInvoiceData;
       if bPreview then
-        frmWTRPSalesInvoice.InvoiceReport.Preview
+        begin
+          frmWTRPSalesInvoice.bPreview := true;
+          frmWTRPSalesInvoice.InvoiceReport.Preview;
+        end
       else
         begin
 (*          frmWTRPSalesInvoice.InvoiceReport.PrinterSetup;
@@ -136,6 +143,11 @@ begin
   finally
     IniFile.Free;
   end;
+end;
+
+procedure TfrmwtRSSalesInvoice.SetRevenueCentre(const Value: integer);
+begin
+  FRevenueCentre := Value;
 end;
 
 end.
