@@ -168,6 +168,10 @@ type
     mnuProductPriceChanges: TMenuItem;
     N13: TMenuItem;
     mnuAllocateDocumentstoOrders: TMenuItem;
+    StockSystems1: TMenuItem;
+    N14: TMenuItem;
+    ManageDatabaseAliases1: TMenuItem;
+    Stores1: TMenuItem;
     procedure Brands1Click(Sender: TObject);
     procedure btnCustomersClick(Sender: TObject);
     procedure btnSuppliersClick(Sender: TObject);
@@ -264,6 +268,9 @@ type
     procedure mnuCustomerPriceOptionsClick(Sender: TObject);
     procedure mnuProductPriceChangesClick(Sender: TObject);
     procedure mnuAllocateDocumentstoOrdersClick(Sender: TObject);
+    procedure StockSystems1Click(Sender: TObject);
+    procedure Stores1Click(Sender: TObject);
+    procedure ManageDatabaseAliases1Click(Sender: TObject);    
     procedure FormShow(Sender: TObject);
 {$IFDEF DEMO}
     procedure mnuDemoActivateClick(Sender: TObject);
@@ -292,6 +299,7 @@ type
     procedure CheckPurchaseOrdering;
     procedure CheckRevenueCentres;
     procedure CheckScheduling;
+    procedure CheckStockSystem;
     procedure GetCompanyDetails;
     procedure GetEmailDetails;
     procedure SetOperator(const Value: integer);
@@ -366,7 +374,8 @@ uses
   wtLUOffer, WTMaintAppointmentLock, wtLUQuoteSQL, WTLUTemplating, WTLUFitting,
   WTMaintLastNumbers, WTRunScripts, wtLURemedialType, wtLURemedialCategory,
   wtLURemedialDept,wtLURevenueCentre, AllImages, wtCustomerPriceChange,
-  wtProductPriceChange, WTUSSetDocuments;
+  wtProductPriceChange, WTUSSetDocuments, wtLUStockSystem, WTLUDBAlias,
+  WTLUStore;
 
 {$R *.DFM}
 
@@ -429,8 +438,12 @@ var
 begin
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := ExtractFilePath(Application.ExeName);
-  StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
-
+	
+  if pos('Application Data',LocalDir) > 0 then	
+    StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE)
+  else
+    StrPCopy(AppIniFile, myWorktops_INIFILE);    
+    
 {$IFDEF DEMO}
 //  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
 {$ELSE}
@@ -441,8 +454,8 @@ begin
   ComputerName := GetUserFromWindows;
   stsbrStatus.Panels[0].Text := ComputerName;
 {$ENDIF}
-  SWVersion := '22.4.';
-  SWSubVersion := '23.07.06a';
+  SWVersion := '23.1.';
+  SWSubVersion := '24.01.01a';
 
   IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
   try
@@ -561,6 +574,7 @@ begin
   mnuScheduling.Visible := dtmdlWorktops.SchedulingSystem <> '';
   btnContracts.Visible := dtmdlWorktops.UseContractQuoting;
   btnPurchasing.Visible := dtmdlWorktops.UsePurchaseOrdering;
+  btnStock.Visible := dtmdlWorktops.UseStockSystem;
 end;
 
 procedure TfrmWTMain.mnuOffersClick(Sender: TObject);
@@ -1059,6 +1073,7 @@ begin
         begin
           Factivated := true;
 {$ENDIF}
+
           frmAllImages.LoadReportLogo(Self);
 
           with dtmdlWorktops.qryDeleteWorkStations do
@@ -1132,6 +1147,9 @@ begin
 
           {Check if using Purchase Ordering}
           CheckScheduling;
+
+          {Check if using Stock}
+          CheckStockSystem;
 
           GetCompanyDetails;
           GetEmailDetails;
@@ -1834,6 +1852,21 @@ begin
   end; // try..finally
 end;
 
+procedure TfrmWTMain.StockSystems1Click(Sender: TObject);
+var
+  OldCursor : TCursor;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+  frmWTLUStockSystem := TfrmWTLUStockSystem.Create( Application );
+  try
+    frmWTLUStockSystem.showmodal;
+  finally
+    frmWTLUStockSystem.free;
+    Screen.Cursor := OldCursor;
+  end; // try..finally
+end;
+
 procedure TfrmWTMain.Products1Click(Sender: TObject);
 var
   OldCursor : TCursor;
@@ -1927,12 +1960,12 @@ end;
 
 procedure TfrmWTMain.mnuSalesCreditsClick(Sender: TObject);
 begin
-  btnSalesCreditsClick(Self);
+  mnuSalesCreditsClick(self);
 end;
 
 procedure TfrmWTMain.mnuPricesClick(Sender: TObject);
 begin
-  btnPricesClick(self);
+  mnuPricesClick(self);
 end;
 
 procedure TfrmWTMain.mnuFittersClick(Sender: TObject);
@@ -2187,6 +2220,11 @@ begin
   mnuScheduling.visible := dtmdlWorktops.SchedulingSystem <> '';
 end;
 
+procedure TfrmWTMain.CheckStockSystem;
+begin
+  btnStock.visible := dtmdlWorktops.UseStockSystem;
+end;
+
 procedure TfrmWTMain.Brands1Click(Sender: TObject);
 var
   OldCursor : TCursor;
@@ -2273,6 +2311,32 @@ begin
     frmwtLUInstallArea.showmodal;
   finally
     frmwtLUInstallArea.free;
+    Screen.Cursor := OldCursor;
+  end; // try..finally
+end;
+
+procedure TfrmWTMain.ManageDatabaseAliases1Click(Sender: TObject);
+begin
+  WTLUDBAliasFrm := TWTLUDBAliasFrm.create(self);
+  try
+    WTLUDBAliasFrm.showmodal;
+  finally
+    WTLUDBAliasFrm.free;
+  end;
+end;
+
+procedure TfrmWTMain.Stores1Click(Sender: TObject);
+var
+  OldCursor : TCursor;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+  frmWTLUStore := TfrmWTLUStore.Create( Application );
+  try
+    frmWTLUStore.isLookup := false;
+    frmWTLUStore.showmodal;
+  finally
+    frmWTLUStore.free;
     Screen.Cursor := OldCursor;
   end; // try..finally
 end;

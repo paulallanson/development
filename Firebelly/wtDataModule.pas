@@ -157,6 +157,7 @@ type
     function OperatorCanUpdateSchedule(tmpCode: integer): boolean;
     function PricesAreTrade: boolean;
     function SchedulingSystem: string;
+    function StockSystemCode: string;
     function UseContractQuoting: boolean;
     function UseCostingSystem: boolean;
     function UseDocumentTransfer: boolean;
@@ -164,6 +165,7 @@ type
     function UseRemedialsAsOrders: boolean;
     function UseRevenueCentres: boolean;
     function UseSlabContractQuoting: boolean;
+    function UseStockSystem: boolean;
     function UseTradeDetails: boolean;
   end;
 
@@ -1501,6 +1503,26 @@ begin
     Open;
     result := recordcount > 0
   end;
+end;
+
+function TdtmdlWorktops.UseStockSystem: boolean;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := (fieldbyname('Stock_System').asstring <> '');
+    end;
+end;
+
+function TdtmdlWorktops.StockSystemCode: string;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := fieldbyname('Stock_System').asstring;
+    end;
 end;
 
 end.

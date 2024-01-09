@@ -11,17 +11,3 @@ initialization
  SetThreadLocale(LOCALE_USER_DEFAULT);
  GetFormatSettings;
 end.
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
