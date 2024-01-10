@@ -129,6 +129,13 @@ type
     memPaymentNotes: TQRMemo;
     qriHeadLogoBell: TQRImage;
     qriHeadLogoMI: TQRImage;
+    qryUpdRevenueCentre: TFDQuery;
+    qryUniqueInv: TFDQuery;
+    qryQLabour: TFDQuery;
+    qrsdQLabour: TQRSubDetail;
+    qrlblLabourVAT: TQRLabel;
+    qrlblLabourUTR: TQRLabel;
+    qrlblLabourCharge: TQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -208,6 +215,7 @@ type
     procedure GetPaymentNotes;
     procedure GetRevenuePayment;
     procedure GetCompanyAddress;
+    procedure GetRevenueCentreInfo(const iNoOfInvoices : integer);
     procedure GetRevenueCentreAddress;
     procedure UpdateRevenueCreditNoteNumber(const iCode, iNo: integer);
     procedure UpdateRevenueInvoiceNumber(const iCode, iNo: integer);

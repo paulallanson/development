@@ -4,9 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, Printers, QrExport,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -226,7 +226,7 @@ var
 implementation
 
 uses
-  wtDataModule, AllCommon, Printer.Tools;
+  wtDataModule, AllCommon, Printer.Tools, qrprntr;
 
 var
   rGrossTotal: real;
@@ -254,7 +254,7 @@ var
   Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  qrpDetails.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrpDetails.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }

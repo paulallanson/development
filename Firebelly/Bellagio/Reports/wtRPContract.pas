@@ -185,7 +185,7 @@ var
 
 implementation
 
-uses wtDataModule;
+uses wtDataModule, qrprntr, AllCommon;
 
 {$R *.dfm}
 

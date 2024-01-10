@@ -83,7 +83,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     PreviewTop = 0
     object InvoiceFooter: TQRBand
       Left = 38
-      Top = 646
+      Top = 672
       Width = 756
       Height = 3
       AfterPrint = InvoiceFooterAfterPrint
@@ -152,7 +152,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     end
     object AddChargesFooter: TQRBand
       Left = 38
-      Top = 594
+      Top = 620
       Width = 756
       Height = 23
       AfterPrint = AddChargesFooterAfterPrint
@@ -13395,7 +13395,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     end
     object QRBand2: TQRBand
       Left = 38
-      Top = 649
+      Top = 675
       Width = 756
       Height = 216
       AlignToBottom = False
@@ -13955,7 +13955,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     end
     object qrLoopB: TQRLoopBand
       Left = 38
-      Top = 617
+      Top = 643
       Width = 756
       Height = 29
       AlignToBottom = False
@@ -14416,20 +14416,17 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Top = 594
       Width = 756
       Height = 26
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrsdQLabourBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         68.791666666666670000
         2000.250000000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = InvoiceLine
       DataSet = qryQLabour
       PrintBefore = False
@@ -14439,20 +14436,16 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Top = 5
         Width = 127
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1005.416666666667000000
           13.229166666666670000
           336.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Labour Content - UTR: '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -14462,7 +14455,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblLabourCharge: TQRLabel
@@ -14470,20 +14465,16 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Top = 5
         Width = 105
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1611.312500000000000000
           13.229166666666670000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblLabourCharge'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -14493,7 +14484,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblLabourVAT: TQRLabel
@@ -14501,20 +14494,16 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Top = 5
         Width = 85
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1404.937500000000000000
           13.229166666666670000
           224.895833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblLabourVAT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -14524,7 +14513,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
@@ -14566,14 +14557,12 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 112
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object InvHeadSRC: TDataSource
@@ -14658,15 +14647,12 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 113
     ParamData = <
       item
-        Name = 'Sales_Invoice'
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpInvHeadSQL: TFDQuery
@@ -14792,14 +14778,12 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 21
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetNarrSQL: TFDQuery
@@ -15022,7 +15006,6 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     ParamData = <
       item
         Name = 'Revenue_Centre'
-        
       end>
   end
   object qryUpdRevenueCentre: TFDQuery
@@ -15040,9 +15023,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 361
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryQLabour: TFDQuery
@@ -15062,14 +15043,10 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
       end>
   end
 end

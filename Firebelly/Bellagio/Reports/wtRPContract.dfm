@@ -2,8 +2,8 @@ object frmWTRPContract: TfrmWTRPContract
   Left = 178
   Top = 125
   Caption = 'Contract Quote Report'
-  ClientHeight = 581
-  ClientWidth = 1298
+  ClientHeight = 580
+  ClientWidth = 1294
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -60,6 +60,7 @@ object frmWTRPContract: TfrmWTRPContract
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
     PrinterSettings.ColorOption = 2
     PrintIfEmpty = True

@@ -181,6 +181,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         OnClick = Button3Click
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 120
         Top = 136
         Width = 217
@@ -250,6 +251,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       Caption = 'Invoicing'
       ImageIndex = 1
       object grpbxNumbers: TGroupBox
+        ParentBackground = False
         Left = 16
         Top = 24
         Width = 265

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, Printers, StdCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -134,6 +134,9 @@ implementation
 
 {$R *.dfm}
 
+uses
+  AllCommon, qrprntr;
+
 function TfrmwtRPJobRemedialSheet.Getdetails: integer;
 begin
   with qryReport do
@@ -158,7 +161,7 @@ var
   Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  qrpJobSheet.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrpJobSheet.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrpJobSheet.PrinterSettings.OutputBin := Bin;   {set the output bin the }

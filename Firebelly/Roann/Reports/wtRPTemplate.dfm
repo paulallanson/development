@@ -2,8 +2,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
   Left = 1
   Top = 1
   Caption = 'Template Check List'
-  ClientHeight = 683
-  ClientWidth = 1348
+  ClientHeight = 682
+  ClientWidth = 1344
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -62,6 +62,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
     PrinterSettings.ColorOption = 2
     PrintIfEmpty = True

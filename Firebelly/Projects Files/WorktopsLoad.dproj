@@ -57,7 +57,7 @@
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
         <DCC_ExeOutput>..\</DCC_ExeOutput>
         <DCC_DcuOutput>..\WorktopsLoad\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_UnitSearchPath>..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\;..\..\Components\Drag and Drop Tools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_Define>FIREBELLY;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">

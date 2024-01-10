@@ -186,6 +186,9 @@ implementation
 
 {$R *.dfm}
 
+uses
+  qrprntr, AllCommon;
+
 function TfrmWTRPContract.Getdetails: integer;
 begin
   with qryReport do

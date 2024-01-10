@@ -2,8 +2,8 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
   Left = 2
   Top = 0
   Caption = 'Quote Print'
-  ClientHeight = 695
-  ClientWidth = 1008
+  ClientHeight = 694
+  ClientWidth = 1004
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

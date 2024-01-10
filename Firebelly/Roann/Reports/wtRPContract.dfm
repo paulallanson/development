@@ -2,8 +2,8 @@ object frmWTRPContract: TfrmWTRPContract
   Left = 312
   Top = 5
   Caption = 'Contract Quote Report'
-  ClientHeight = 842
-  ClientWidth = 1256
+  ClientHeight = 841
+  ClientWidth = 1252
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

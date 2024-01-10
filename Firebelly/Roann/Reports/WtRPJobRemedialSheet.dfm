@@ -2,8 +2,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
   Left = 261
   Top = 73
   Caption = 'Remedial Sheet Print'
-  ClientHeight = 720
-  ClientWidth = 1230
+  ClientHeight = 719
+  ClientWidth = 1226
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
