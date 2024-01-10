@@ -159,6 +159,16 @@ begin
     finally
       frmWTRSSOWarranty.free;
     end
+  end
+  else
+  if TempForm = 'FRMWTRSSOFITDATEMOVEMENT' then
+  begin
+    frmWTRSSOFitDateMovement := TfrmWTRSSOFitDateMovement.Create(self);
+    try
+      frmWTRSSOFitDateMovement.showmodal;
+    finally
+      frmWTRSSOFitDateMovement.free;
+    end
   end;
 end;
 

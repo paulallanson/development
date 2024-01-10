@@ -1,24 +1,30 @@
 object frmwtRPJobSheet: TfrmwtRPJobSheet
-  Left = 148
+  Left = 194
   Top = 101
-  Caption = 'Sales Order Print'
-  ClientHeight = 728
-  ClientWidth = 1128
+  Width = 1169
+  Height = 767
+  Caption = 'Job Sheet'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
+  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 13
   object qrpJobSheet: TQuickRep
-    Left = 104
-    Top = -238
+    Left = 144
+    Top = -110
     Width = 794
     Height = 1123
-    ShowingPreview = False
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -40,7 +46,6 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
-    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -54,16 +59,13 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
-    PrinterSettings.MemoryLimit = 1000000
-    PrinterSettings.Collate = 0
-    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Sales Order Print'
     SnapToGrid = True
@@ -71,29 +73,25 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
-    PreviewWidth = 500
-    PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
-    PreviewDefaultSaveType = stPDF
-    PreviewLeft = 0
-    PreviewTop = 0
     object qrgJob: TQRGroup
       Left = 38
-      Top = 498
+      Top = 961
       Width = 718
-      Height = 2
+      Height = 5
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrgJobBeforePrint
-      TransparentBand = False
+      Color = clWhite
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
+        13.229166666666670000
         1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
       Expression = 'Job'
-      FooterBand = qrbJobFooter
       Master = qrpJobSheet
       ReprintOnNewPage = False
     end
@@ -101,67 +99,113 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
       Left = 38
       Top = 38
       Width = 718
-      Height = 460
-      Frame.DrawBottom = True
+      Height = 923
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbPageHeaderBeforePrint
-      TransparentBand = False
+      Color = clWhite
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        1217.083333333333000000
+        2442.104166666667000000
         1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
       BandType = rbPageHeader
-      object gtQRShape9: TQRShape
-        Left = 386
-        Top = 158
-        Width = 326
-        Height = 137
+      object gtQRShape14: TgtQRShape
+        Left = 0
+        Top = 389
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          362.479166666666700000
-          1021.291666666667000000
-          418.041666666666700000
-          862.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          169.333333333333300000
+          0.000000000000000000
+          1029.229166666667000000
+          1899.708333333333000000)
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape1: TQRShape
-        Left = 12
-        Top = 158
-        Width = 353
-        Height = 137
+      object gtQRShape13: TgtQRShape
+        Left = 0
+        Top = 326
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          362.479166666666700000
-          31.750000000000000000
-          418.041666666666700000
-          933.979166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          169.333333333333300000
+          0.000000000000000000
+          862.541666666666700000
+          1899.708333333333000000)
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblSOCaption: TQRLabel
-        Left = 504
+      object gtQRShape11: TgtQRShape
+        Left = 0
+        Top = 263
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          695.854166666666700000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape10: TgtQRShape
+        Left = 0
+        Top = 200
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          529.166666666666700000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object qrlblSOCaption: TgtQRLabel
+        Left = 344
         Top = 8
-        Width = 209
+        Width = 371
         Height = 43
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
-          1333.500000000000000000
+          910.166666666666700000
           21.166666666666670000
-          552.979166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          981.604166666666700000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'JOB SHEET'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'PRODUCTION FORM'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -170,1441 +214,209 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 28
       end
-      object gtQRLabel4: TQRLabel
-        Left = 17
-        Top = 439
-        Width = 48
-        Height = 16
+      object QRShape2: TgtQRShape
+        Left = 0
+        Top = 137
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333330000
-          44.979166666666670000
-          1161.520833333333000000
-          127.000000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Quantity'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRLabel5: TQRLabel
-        Left = 97
-        Top = 439
-        Width = 26
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          256.645833333333300000
-          1161.520833333333000000
-          68.791666666666670000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Item'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRShape2: TQRShape
-        Left = 416
-        Top = 57
-        Width = 297
-        Height = 80
-        Size.Values = (
-          211.666666666666700000
-          1100.666666666667000000
-          150.812500000000000000
-          785.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          169.333333333333300000
+          0.000000000000000000
+          362.479166666666700000
+          1899.708333333333000000)
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape3: TQRShape
-        Left = 416
-        Top = 79
-        Width = 297
-        Height = 5
-        Size.Values = (
-          13.229166666666670000
-          1100.666666666667000000
-          209.020833333333300000
-          785.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object gtQRShape1: TQRShape
-        Left = 416
-        Top = 108
-        Width = 297
-        Height = 5
-        Size.Values = (
-          13.229166666666670000
-          1100.666666666667000000
-          285.750000000000000000
-          785.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object QRLabel3: TQRLabel
-        Left = 425
-        Top = 61
-        Width = 72
+      object QRLabel3: TgtQRLabel
+        Left = 9
+        Top = 205
+        Width = 35
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          1124.479166666667000000
-          161.395833333333300000
-          190.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          23.812500000000000000
+          542.395833333333300000
+          92.604166666666670000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Job Number:'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Brand'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-      object QRDBText2: TQRDBText
-        Left = 668
-        Top = 61
-        Width = 22
-        Height = 17
+      object QRDBText2: TgtQRDBText
+        Left = 124
+        Top = 169
+        Width = 27
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          44.979166666666670000
-          1767.416666666667000000
-          161.395833333333300000
-          58.208333333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taRightJustify
+          50.270833333333330000
+          328.083333333333300000
+          447.145833333333300000
+          71.437500000000000000)
+        Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -16
         Font.Name = 'Arial'
-        Font.Style = [fsBold]
+        Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
+        WordWrap = True
+        FontSize = 12
       end
-      object QRLabel2: TQRLabel
-        Left = 425
-        Top = 88
-        Width = 30
-        Height = 17
+      object gtQRDBText3: TgtQRDBText
+        Left = 8
+        Top = 169
+        Width = 90
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          44.979166666666670000
-          1124.479166666667000000
-          232.833333333333300000
-          79.375000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          50.270833333333330000
+          21.166666666666670000
+          447.145833333333300000
+          238.125000000000000000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Date:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText1: TQRDBText
-        Left = 616
-        Top = 88
-        Width = 74
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1629.833333333333000000
-          232.833333333333300000
-          195.791666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taRightJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Date_Raised'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRLabel3: TQRLabel
-        Left = 425
-        Top = 115
-        Width = 70
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1124.479166666667000000
-          304.270833333333300000
-          185.208333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Sales Order:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRDBText3: TQRDBText
-        Left = 619
-        Top = 115
-        Width = 71
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1637.770833333333000000
-          304.270833333333300000
-          187.854166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taRightJustify
-        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
+        WordWrap = True
+        FontSize = 12
       end
-      object qriHeadLogo: TQRImage
-        Left = 12
+      object qriHeadLogo: TgtQRImage
+        Left = 0
         Top = 0
         Width = 220
         Height = 65
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           171.979166666666700000
-          31.750000000000000000
+          0.000000000000000000
           0.000000000000000000
           582.083333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Stretch = True
       end
-      object gtQRShape3: TQRShape
-        Left = 12
-        Top = 302
-        Width = 701
-        Height = 128
+      object QRDBText4: TgtQRDBText
+        Left = 240
+        Top = 161
+        Width = 217
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          338.666666666666700000
-          31.750000000000000000
-          799.041666666666700000
-          1854.729166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShape5: TQRShape
-        Left = 12
-        Top = 328
-        Width = 701
-        Height = 3
-        Size.Values = (
-          7.937500000000000000
-          31.750000000000000000
-          867.833333333333300000
-          1854.729166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object qrmAddress: TQRMemo
-        Left = 40
-        Top = 180
-        Width = 250
-        Height = 109
-        Size.Values = (
-          288.395833333333300000
-          105.833333333333300000
-          476.250000000000000000
-          661.458333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
-        FontSize = 9
-      end
-      object QRLabel5: TQRLabel
-        Left = 17
-        Top = 335
-        Width = 61
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
-          886.354166666666700000
-          161.395833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Reference:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText4: TQRDBText
-        Left = 120
-        Top = 335
-        Width = 58
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          317.500000000000000000
-          886.354166666666700000
-          153.458333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Reference'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRLabel7: TQRLabel
-        Left = 17
-        Top = 393
-        Width = 64
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
-          1039.812500000000000000
-          169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Description'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRDBText2: TQRDBText
-        Left = 104
-        Top = 393
-        Width = 600
-        Height = 35
-        Size.Values = (
-          92.604166666666670000
-          275.166666666666700000
-          1039.812500000000000000
-          1587.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRLabel1: TQRLabel
-        Left = 392
-        Top = 163
-        Width = 63
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1037.166666666667000000
-          431.270833333333300000
-          166.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Installation'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrmSiteAddress: TQRMemo
-        Left = 392
-        Top = 180
-        Width = 297
-        Height = 109
-        Size.Values = (
-          288.395833333333300000
-          1037.166666666667000000
-          476.250000000000000000
-          785.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
-        FontSize = 9
-      end
-      object gtQRShape2: TQRShape
-        Left = 12
-        Top = 298
-        Width = 701
-        Height = 8
-        Size.Values = (
-          21.166666666666670000
-          31.750000000000000000
-          788.458333333333300000
-          1854.729166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object gtQRShape4: TQRShape
-        Left = 12
-        Top = 352
-        Width = 701
-        Height = 8
-        Size.Values = (
-          21.166666666666670000
-          31.750000000000000000
-          931.333333333333300000
-          1854.729166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object gtQRShape6: TQRShape
-        Left = 12
-        Top = 380
-        Width = 701
-        Height = 8
-        Size.Values = (
-          21.166666666666670000
-          31.750000000000000000
-          1005.416666666667000000
-          1854.729166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-      object gtQRShape7: TQRShape
-        Left = 362
-        Top = 302
-        Width = 9
-        Height = 83
-        Size.Values = (
-          219.604166666666700000
-          957.791666666666700000
-          799.041666666666700000
-          23.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsVertLine
-        VertAdjust = 0
-      end
-      object gtQRLabel2: TQRLabel
-        Left = 17
-        Top = 362
-        Width = 83
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
-          957.791666666666700000
-          219.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Order Number:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRDBText1: TQRDBText
-        Left = 120
-        Top = 362
-        Width = 81
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          317.500000000000000000
-          957.791666666666700000
-          214.312500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Order_Ref_No'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblShowroomLabel: TQRLabel
-        Left = 16
-        Top = 308
-        Width = 64
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          42.333333333333330000
-          814.916666666666700000
-          169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Showroom:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblShowroom: TQRLabel
-        Left = 120
-        Top = 308
-        Width = 85
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          317.500000000000000000
-          814.916666666666700000
-          224.895833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'qrlblShowroom'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblFitter: TQRLabel
-        Left = 376
-        Top = 308
-        Width = 31
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          994.833333333333300000
-          814.916666666666700000
-          82.020833333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Fitter:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText9: TQRDBText
-        Left = 480
-        Top = 308
-        Width = 145
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1270.000000000000000000
-          814.916666666666700000
-          383.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Fitter_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblFitterNumber: TQRLabel
-        Left = 376
-        Top = 335
-        Width = 49
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          994.833333333333300000
-          886.354166666666700000
-          129.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Number:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText12: TQRDBText
-        Left = 480
-        Top = 335
-        Width = 145
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1270.000000000000000000
-          886.354166666666700000
-          383.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Fitter_Number'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRLabel6: TQRLabel
-        Left = 376
-        Top = 362
-        Width = 66
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          994.833333333333300000
-          957.791666666666700000
-          174.625000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Fitting Date:'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object gtQRDBText4: TQRDBText
-        Left = 480
-        Top = 362
-        Width = 65
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          1270.000000000000000000
-          957.791666666666700000
-          171.979166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Installation_date'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRShape6: TQRShape
-        Left = 541
-        Top = 57
-        Width = 9
-        Height = 80
-        Size.Values = (
-          211.666666666666700000
-          1431.395833333333000000
-          150.812500000000000000
-          23.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsVertLine
-        VertAdjust = 0
-      end
-      object memAddress: TQRMemo
-        Left = 16
-        Top = 77
-        Width = 145
-        Height = 30
-        Enabled = False
-        Size.Values = (
-          79.375000000000000000
-          42.333333333333330000
-          203.729166666666700000
-          383.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taCenter
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
-        FontSize = 10
-      end
-    end
-    object qrsdJElements: TQRSubDetail
-      Left = 38
-      Top = 500
-      Width = 718
-      Height = 20
-      AlignToBottom = False
-      BeforePrint = qrsdJElementsBeforePrint
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        52.916666666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Master = qrpJobSheet
-      DataSet = qryJElements
-      PrintBefore = False
-      PrintIfEmpty = True
-      object lblWorktopArea: TQRLabel
-        Left = 17
-        Top = 2
-        Width = 84
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          44.979166666666670000
-          5.291666666666667000
-          222.250000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'lblWorktopArea'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object lblWorktopSize: TQRLabel
-        Left = 97
-        Top = 2
-        Width = 82
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          256.645833333333300000
-          5.291666666666667000
-          216.958333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'lblWorktopSize'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-    end
-    object qrsdJCutOuts: TQRSubDetail
-      Left = 38
-      Top = 520
-      Width = 718
-      Height = 20
-      AlignToBottom = False
-      BeforePrint = qrsdJCutOutsBeforePrint
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        52.916666666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Master = qrpJobSheet
-      DataSet = qryJCutOuts
-      PrintBefore = False
-      PrintIfEmpty = True
-      object qrlblQuantity: TQRLabel
-        Left = 17
-        Top = 2
-        Width = 69
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
-          5.291666666666667000
-          182.562500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'qrlblQuantity'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblCutOutDescription: TQRDBText
-        Left = 97
-        Top = 2
-        Width = 64
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          256.645833333333300000
-          5.291666666666667000
-          169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryJCutOuts
-        DataField = 'Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-    end
-    object qrsdJEdges: TQRSubDetail
-      Left = 38
-      Top = 540
-      Width = 718
-      Height = 20
-      AlignToBottom = False
-      BeforePrint = qrsdJEdgesBeforePrint
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        52.916666666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Master = qrpJobSheet
-      DataSet = qryJEdges
-      PrintBefore = False
-      PrintIfEmpty = True
-      object qrlblEdgeDescription: TQRDBText
-        Left = 97
-        Top = 2
-        Width = 64
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          256.645833333333300000
-          5.291666666666667000
-          169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryJEdges
-        DataField = 'Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object qrlblLength: TQRLabel
-        Left = 18
-        Top = 2
-        Width = 63
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          47.625000000000000000
-          5.291666666666667000
-          166.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'qrlblLength'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-    end
-    object qrsdJExtras: TQRSubDetail
-      Left = 38
-      Top = 560
-      Width = 718
-      Height = 20
-      AlignToBottom = False
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        52.916666666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Master = qrpJobSheet
-      DataSet = qryJExtras
-      PrintBefore = False
-      PrintIfEmpty = True
-      object qrlblExtraDescription: TQRDBText
-        Left = 97
-        Top = 3
-        Width = 64
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          256.645833333333300000
-          7.937500000000000000
-          169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryJExtras
-        DataField = 'Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText3: TQRDBText
-        Left = 17
-        Top = 3
-        Width = 45
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          44.979166666666670000
-          7.937500000000000000
-          119.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryJExtras
-        DataField = 'Quantity'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-    end
-    object qrsdJRemedials: TQRSubDetail
-      Left = 38
-      Top = 626
-      Width = 718
-      Height = 20
-      AlignToBottom = False
-      BeforePrint = qrsdJRemedialsBeforePrint
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        52.916666666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Master = qrpJobSheet
-      DataSet = qryJRemedials
-      PrintBefore = False
-      PrintIfEmpty = True
-      object qrmRemedials: TQRMemo
-        Left = 264
-        Top = 2
-        Width = 449
-        Height = 16
-        Size.Values = (
-          42.333333333333340000
-          698.500000000000000000
-          5.291666666666667000
-          1187.979166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          50.270833333333330000
+          635.000000000000000000
+          425.979166666666700000
+          574.145833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
         AutoStretch = True
         Color = clWhite
+        DataSet = qryReport
+        DataField = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
-        FontSize = 9
+        WordWrap = True
+        FontSize = 12
       end
-      object QRDBText5: TQRDBText
-        Left = 160
-        Top = 2
+      object QRShape6: TgtQRShape
+        Left = 229
+        Top = 138
+        Width = 5
+        Height = 314
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          830.791666666666700000
+          605.895833333333300000
+          365.125000000000000000
+          13.229166666666670000)
+        Shape = qrsVertLine
+        VertAdjust = 0
+      end
+      object gtQRLabel4: TgtQRLabel
+        Left = 9
+        Top = 141
         Width = 69
-        Height = 16
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          42.333333333333330000
-          423.333333333333300000
-          5.291666666666667000
+          44.979166666666670000
+          23.812500000000000000
+          373.062500000000000000
           182.562500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        Color = clWhite
-        DataSet = qryJRemedials
-        DataField = 'Fitter_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-      object QRDBText7: TQRDBText
-        Left = 88
-        Top = 2
-        Width = 73
-        Height = 16
-        Size.Values = (
-          42.333333333333340000
-          232.833333333333400000
-          5.291666666666667000
-          193.145833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        Color = clWhite
-        DataSet = qryJRemedials
-        DataField = 'Installation_Date'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
-    end
-    object qrgJRemedials: TQRGroup
-      Left = 38
-      Top = 580
-      Width = 718
-      Height = 46
-      Frame.DrawBottom = True
-      AlignToBottom = False
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        121.708333333333300000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      Expression = 'Remedial_Number'
-      Master = qrsdJRemedials
-      ReprintOnNewPage = False
-      object QRLabel22: TQRLabel
-        Left = 88
-        Top = 24
-        Width = 27
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          232.833333333333300000
-          63.500000000000000000
-          71.437500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Date'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sales Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1613,27 +425,47 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-      object QRLabel23: TQRLabel
-        Left = 160
-        Top = 24
-        Width = 30
+      object gtQRShape12: TgtQRShape
+        Left = 464
+        Top = 138
+        Width = 8
+        Height = 314
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          830.791666666666700000
+          1227.666666666667000000
+          365.125000000000000000
+          21.166666666666670000)
+        Shape = qrsVertLine
+        VertAdjust = 0
+      end
+      object gtQRLabel5: TgtQRLabel
+        Left = 241
+        Top = 141
+        Width = 85
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          423.333333333333300000
-          63.500000000000000000
-          79.375000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          637.645833333333300000
+          373.062500000000000000
+          224.895833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Fitter'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Plot Reference'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1642,27 +474,29 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-      object QRLabel24: TQRLabel
-        Left = 264
-        Top = 24
-        Width = 40
+      object gtQRLabel8: TgtQRLabel
+        Left = 481
+        Top = 141
+        Width = 76
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          698.500000000000000000
-          63.500000000000000000
-          105.833333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          1272.645833333333000000
+          373.062500000000000000
+          201.083333333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Details'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Day Required'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1671,27 +505,29 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-      object qrlblRemedial: TQRLabel
-        Left = 16
-        Top = 24
-        Width = 61
+      object gtQRLabel9: TgtQRLabel
+        Left = 241
+        Top = 205
+        Width = 60
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          42.333333333333330000
-          63.500000000000000000
-          161.395833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          637.645833333333300000
+          542.395833333333300000
+          158.750000000000000000)
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Remedials'
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Thickness'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1700,44 +536,681 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-    end
-    object qrcbNotes: TQRChildBand
-      Left = 38
-      Top = 651
-      Width = 718
-      Height = 60
-      AlignToBottom = False
-      BeforePrint = qrcbNotesBeforePrint
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        158.750000000000000000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      ParentBand = qrbJobFooter
-      PrintOrder = cboAfterParent
-      object qrlNotes: TQRLabel
-        Left = 16
-        Top = 8
+      object gtQRLabel10: TgtQRLabel
+        Left = 481
+        Top = 205
+        Width = 112
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1272.645833333333000000
+          542.395833333333300000
+          296.333333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Colour & Thickness'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel11: TgtQRLabel
+        Left = 9
+        Top = 269
+        Width = 53
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          711.729166666666700000
+          140.229166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Slab Size'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel12: TgtQRLabel
+        Left = 241
+        Top = 269
+        Width = 95
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          637.645833333333300000
+          711.729166666666700000
+          251.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Number of Slabs'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel13: TgtQRLabel
+        Left = 481
+        Top = 269
+        Width = 69
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1272.645833333333000000
+          711.729166666666700000
+          182.562500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Edge Profile'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel14: TgtQRLabel
+        Left = 9
+        Top = 333
+        Width = 55
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          881.062500000000000000
+          145.520833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Upstands'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel15: TgtQRLabel
+        Left = 241
+        Top = 333
+        Width = 141
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          637.645833333333300000
+          881.062500000000000000
+          373.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Window Cill/Downstands'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel16: TgtQRLabel
+        Left = 481
+        Top = 333
+        Width = 68
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1272.645833333333000000
+          881.062500000000000000
+          179.916666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Backsplash'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel17: TgtQRLabel
+        Left = 9
+        Top = 397
+        Width = 102
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1050.395833333333000000
+          269.875000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Polished Cut Outs'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel18: TgtQRLabel
+        Left = 241
+        Top = 397
+        Width = 47
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          637.645833333333300000
+          1050.395833333333000000
+          124.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Handing'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRShape15: TgtQRShape
+        Left = 0
+        Top = 452
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          1195.916666666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape16: TgtQRShape
+        Left = 0
+        Top = 515
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          1362.604166666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape17: TgtQRShape
+        Left = 0
+        Top = 578
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          1529.291666666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape18: TgtQRShape
+        Left = 352
+        Top = 452
+        Width = 8
+        Height = 190
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          502.708333333333300000
+          931.333333333333300000
+          1195.916666666667000000
+          21.166666666666670000)
+        Shape = qrsVertLine
+        VertAdjust = 0
+      end
+      object gtQRLabel20: TgtQRLabel
+        Left = 9
+        Top = 461
+        Width = 109
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1219.729166666667000000
+          288.395833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Unpolished Cut Out'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel21: TgtQRLabel
+        Left = 369
+        Top = 461
+        Width = 70
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          976.312500000000000000
+          1219.729166666667000000
+          185.208333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Cut Out Size'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel22: TgtQRLabel
+        Left = 9
+        Top = 525
+        Width = 93
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1389.062500000000000000
+          246.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Drainer Grooves'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel23: TgtQRLabel
+        Left = 369
+        Top = 525
+        Width = 47
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          976.312500000000000000
+          1389.062500000000000000
+          124.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Handing'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel24: TgtQRLabel
+        Left = 9
+        Top = 589
+        Width = 92
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1558.395833333333000000
+          243.416666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'No. of Tap Holes'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel25: TgtQRLabel
+        Left = 369
+        Top = 589
+        Width = 32
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          976.312500000000000000
+          1558.395833333333000000
+          84.666666666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sizes'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRShape19: TgtQRShape
+        Left = 0
+        Top = 641
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          1695.979166666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape20: TgtQRShape
+        Left = 0
+        Top = 704
+        Width = 718
+        Height = 64
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          169.333333333333300000
+          0.000000000000000000
+          1862.666666666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel26: TgtQRLabel
+        Left = 9
+        Top = 645
+        Width = 48
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1706.562500000000000000
+          127.000000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sockets'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRLabel27: TgtQRLabel
+        Left = 9
+        Top = 709
+        Width = 90
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          23.812500000000000000
+          1875.895833333333000000
+          238.125000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Pop Up sockets'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRShape1: TgtQRShape
+        Left = 0
+        Top = 767
+        Width = 718
+        Height = 154
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          407.458333333333300000
+          0.000000000000000000
+          2029.354166666667000000
+          1899.708333333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object qrlNotes: TgtQRLabel
+        Left = 8
+        Top = 772
         Width = 34
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
-          42.333333333333330000
           21.166666666666670000
+          2042.583333333333000000
           89.958333333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Notes'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1747,176 +1220,717 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 9
       end
-      object qrrchTextNotes: TQRRichText
-        Left = 16
-        Top = 34
-        Width = 665
-        Height = 22
+      object qrrchTextNotes: TgtQRRichText
+        Left = 8
+        Top = 793
+        Width = 337
+        Height = 118
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          58.208333333333340000
-          42.333333333333340000
-          89.958333333333340000
-          1759.479166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
+          312.208333333333300000
+          21.166666666666670000
+          2098.145833333333000000
+          891.645833333333300000)
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = ANSI_CHARSET
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
-        HiresExport = False
-        Transparent = False
-        YIncrement = 50
       end
-      object gtQRShape8: TQRShape
-        Left = 0
-        Top = 26
-        Width = 721
-        Height = 5
+      object gtQRDBText1: TgtQRDBText
+        Left = 480
+        Top = 169
+        Width = 108
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
-          13.229166666666670000
-          0.000000000000000000
-          68.791666666666680000
-          1907.645833333333000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsHorLine
-        VertAdjust = 0
-      end
-    end
-    object qrbJobFooter: TQRBand
-      Left = 38
-      Top = 646
-      Width = 718
-      Height = 5
-      AlignToBottom = False
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        13.229166666666670000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      BandType = rbGroupFooter
-    end
-    object QRBand2: TQRBand
-      Left = 38
-      Top = 711
-      Width = 718
-      Height = 34
-      AlignToBottom = False
-      TransparentBand = False
-      ForceNewColumn = False
-      ForceNewPage = False
-      Size.Values = (
-        89.958333333333330000
-        1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
-      BandType = rbPageFooter
-      object qrlblCompanyAdd: TQRLabel
-        Left = 119
-        Top = 7
-        Width = 479
-        Height = 26
-        Size.Values = (
-          68.791666666666670000
-          314.854166666666700000
-          18.520833333333330000
-          1267.354166666667000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taCenter
-        AlignToBand = True
-        AutoSize = False
-        AutoStretch = True
-        Caption = 'Some Unit, Some business Park, Some town and postcode'
+          50.270833333333330000
+          1270.000000000000000000
+          447.145833333333300000
+          285.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Color = clWhite
+        DataSet = qryReport
+        DataField = 'Date_Required'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 10
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblBrand: TgtQRLabel
+        Left = 9
+        Top = 237
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          627.062500000000000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblBrand'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblThickness: TgtQRLabel
+        Left = 241
+        Top = 237
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          637.645833333333300000
+          627.062500000000000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblThickness'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblColour: TgtQRLabel
+        Left = 481
+        Top = 237
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1272.645833333333000000
+          627.062500000000000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblColour'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblSlabSize: TgtQRLabel
+        Left = 9
+        Top = 301
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          796.395833333333300000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblSlabSize'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblNoOfSlabs: TgtQRLabel
+        Left = 241
+        Top = 301
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          637.645833333333300000
+          796.395833333333300000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblNoOfSlabs'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblEdgeProfile: TgtQRLabel
+        Left = 481
+        Top = 301
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1272.645833333333000000
+          796.395833333333300000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblEdgeProfile'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblUpstands: TgtQRLabel
+        Left = 9
+        Top = 365
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          965.729166666666700000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblUpstands'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblCills: TgtQRLabel
+        Left = 241
+        Top = 365
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          637.645833333333300000
+          965.729166666666700000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblCills'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblBacksplash: TgtQRLabel
+        Left = 481
+        Top = 365
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1272.645833333333000000
+          965.729166666666700000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblBacksplash'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblPolishedCutOuts: TgtQRLabel
+        Left = 9
+        Top = 421
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          1113.895833333333000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblPolishedCutOuts'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblUnPolishedCutOuts: TgtQRLabel
+        Left = 9
+        Top = 485
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          1283.229166666667000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblUnPolishedCutOuts'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblDrainerGrooves: TgtQRLabel
+        Left = 9
+        Top = 549
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          1452.562500000000000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblDrainerGrooves'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblTapHoles: TgtQRLabel
+        Left = 9
+        Top = 613
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          23.812500000000000000
+          1621.895833333333000000
+          571.500000000000000000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblTapHoles'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object gtQRShape2: TgtQRShape
+        Left = 352
+        Top = 769
+        Width = 8
+        Height = 151
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          399.520833333333300000
+          931.333333333333300000
+          2034.645833333333000000
+          21.166666666666670000)
+        Shape = qrsVertLine
+        VertAdjust = 0
+      end
+      object gtQRLabel1: TgtQRLabel
+        Left = 368
+        Top = 772
+        Width = 99
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          973.666666666666700000
+          2042.583333333333000000
+          261.937500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Appliance Details'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object qrrchApplianceDetails: TgtQRRichText
+        Left = 368
+        Top = 793
+        Width = 345
+        Height = 118
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          312.208333333333300000
+          973.666666666666700000
+          2098.145833333333000000
+          912.812500000000000000)
+        Alignment = taLeftJustify
+        AutoStretch = False
+        Color = clWindow
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+      end
+      object qrlblSockets: TgtQRLabel
+        Left = 49
+        Top = 677
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          129.645833333333300000
+          1791.229166666667000000
+          571.500000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblSockets'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblPopUpSockets: TgtQRLabel
+        Left = 49
+        Top = 741
+        Width = 216
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          129.645833333333300000
+          1960.562500000000000000
+          571.500000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblTapHoles'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object gtQRLabel2: TgtQRLabel
+        Left = 121
+        Top = 141
+        Width = 70
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          320.145833333333300000
+          373.062500000000000000
+          185.208333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Job Number'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object gtQRShape3: TgtQRShape
+        Left = 112
+        Top = 138
+        Width = 2
+        Height = 63
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          166.687500000000000000
+          296.333333333333300000
+          365.125000000000000000
+          5.291666666666667000)
+        Shape = qrsVertLine
+        VertAdjust = 0
       end
     end
   end
-  object qryReport: TFDQuery
-    ConnectionName = 'wt'
+  object qryReport: TQuery
+    DatabaseName = 'wt'
     SQL.Strings = (
-      'select Job.*,'
+      'select  Job.*,'
       '        Operator.Operator_Name,'
-      '        Operator.Telephone_number,'
-      '        Vat.Vat_Rate,'
-      '        (select Designer_Name'
-      '        from Designer'
+      '        (select TOP 1 Sales_order'
+      '         from Sales_Order_Line'
+      '         where sales_order_line.Job = Job.Job) as Sales_Order,'
+      '         (select TOP 1 Sales_order.Order_Ref_No'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
       
-        '        where Designer.Designer = Job.Designer) as Designer_Name' +
-        ','
-      '        (select Branch_Name'
-      '        from Customer_Branch'
-      '        where Customer_Branch.Customer = Job.Customer and'
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Ref_No,'
+      '         (select TOP 1 Sales_order.Appliance_Details'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
       
-        '              Customer_Branch.Branch_no = Job.Branch_no) as Show' +
-        'room_Name,'
-      '        (select Fitter_Name'
-      '        from Fitter'
-      '        where Fitter.Fitter = Job.Fitter) as Fitter_Name,'
-      '        (select telephone_number'
-      '        from Fitter'
-      '        where Fitter.Fitter = Job.Fitter) as Fitter_Number,'
-      '        (Select Sales_Order from'
-      '         Sales_order_line'
-      '         WHERE Sales_Order_Line.job = job.job) as Sales_Order'
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Appliance_Details,'
+      '         (select TOP 1 Sales_order.Extra_Notes'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
       
-        'FROM Vat RIGHT JOIN (Operator INNER JOIN Job ON Operator.Operato' +
-        'r = Job.Operator) ON Vat.Vat = Job.VAT'
-      'where Job= :Job')
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Extra_Notes,'
+      '         (select TOP 1 Sales_order.Reference'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Reference,'
+      '         (select TOP 1 Sales_order.Date_Required'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Date_Required,'
+      '         (select TOP 1 Sales_order.Contact_Name'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Contact_Name'
+      'from Job, Operator'
+      'where Job = :Job and'
+      'Job.Operator = Operator.Operator')
     Left = 963
-    Top = 194
+    Top = 34
     ParamData = <
       item
-        Name = 'Job'
         DataType = ftInteger
+        Name = 'Job'
+        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
     DataSet = qryReport
-    Left = 1040
-    Top = 195
+    Left = 1032
+    Top = 35
   end
-  object qryAddress: TFDQuery
-    ConnectionName = 'WT'
-    SQL.Strings = (
-      'select *'
-      'from Address'
-      'where Address = :Address')
-    Left = 958
-    Top = 119
-    ParamData = <
-      item
-        Name = 'Address'
-      end>
-  end
-  object qryCustomer: TFDQuery
-    ConnectionName = 'WT'
+  object qryCustomer: TQuery
+    DatabaseName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -1934,24 +1948,21 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 543
     ParamData = <
       item
-        Name = 'Customer'
         DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
       end>
   end
-  object dtsAddress: TDataSource
-    Left = 958
-    Top = 487
-  end
-  object qryCompany: TFDQuery
-    ConnectionName = 'wt'
+  object qryCompany: TQuery
+    DatabaseName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 958
     Top = 267
   end
-  object qrygetNotes: TFDQuery
-    ConnectionName = 'wt'
+  object qrygetNotes: TQuery
+    DatabaseName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1961,11 +1972,13 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 273
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Notes_Code'
+        ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TFDQuery
-    ConnectionName = 'WT'
+  object qryEndUser: TQuery
+    DatabaseName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -1981,112 +1994,164 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 410
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'End_User'
+        ParamType = ptUnknown
       end>
   end
-  object qryJElements: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'WT'
+  object qryQElements: TQuery
+    DatabaseName = 'WT'
+    DataSource = dtsReport
     SQL.Strings = (
-      'SELECT  Job_Element.*,'
+      'SELECT  TOP 1'
+      '        Quote_Slab.Quote,'
+      '        Quote_Slab.Worktop,'
+      '        Worktop.Description as Worktop_Description,'
+      '        Material_Type.Material_Type,'
+      '        Material_Type.Description as Material_Description,'
+      '        Thickness.Thickness,'
       '        Thickness.Thickness_mm,'
-      '        Worktop.Description,'
-      '        Material_Use.Use_Description'
+      '        Quote_Slab.Length,'
+      '        Quote_Slab.Depth,'
+      '        Quote_Slab.Quantity'
       'FROM Thickness'
-      '      INNER JOIN (Worktop'
-      '      INNER JOIN (Worktop_thickness'
-      '      INNER JOIN (Material_Use'
-      '      RIGHT JOIN Job_Element'
-      '        ON Material_Use.Material_Use = Job_Element.Material_Use)'
+      '        INNER JOIN (Material_Type'
+      '        INNER JOIN (Worktop'
+      '        INNER JOIN Quote_Slab'
+      '            ON Worktop.Worktop = Quote_Slab.Worktop)'
       
-        '        ON (Worktop_thickness.Thickness = Job_Element.Thickness)' +
-        ' AND (Worktop_thickness.Worktop = Job_Element.Worktop))'
-      '        ON Worktop.Worktop = Worktop_thickness.Worktop)'
-      '        ON Thickness.Thickness = Worktop_thickness.Thickness'
-      'where Job = :Job'
-      'Order By Element_number')
+        '            ON Material_Type.Material_Type = Worktop.Material_Ty' +
+        'pe)'
+      '            ON Thickness.Thickness = Quote_Slab.Thickness'
+      'WHERE Quote_Slab.Quote = :Quote'
+      '')
     Left = 960
-    Top = 340
+    Top = 212
     ParamData = <
       item
-        Name = 'Job'
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
       end>
   end
-  object qryJCutOuts: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'WT'
+  object qryQCutOuts: TQuery
+    DatabaseName = 'WT'
+    DataSource = dtsReport
     SQL.Strings = (
-      'select Job_CutOut.*, CutOut.Description'
-      'from Job_CutOut, CutOut'
-      'where Job = :Job and'
-      'Job_CutOut.CutOut = CutOut.CutOut')
-    Left = 1038
-    Top = 42
+      'SELECT DISTINCT'
+      '        Quote_Cutout.Quote,'
+      '        CutOut.CutOut,'
+      '        CutOut.Description,'
+      '        Quote_Cutout.Quantity'
+      'FROM CutOut'
+      '        INNER JOIN Quote_Cutout'
+      '            ON CutOut.CutOut = Quote_Cutout.Cutout'
+      'WHERE Quote_Cutout.Quote = :Quote')
+    Left = 966
+    Top = 338
     ParamData = <
       item
-        Name = 'Job'
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
       end>
   end
-  object qryJEdges: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'wt'
+  object qryQEdges: TQuery
+    DatabaseName = 'wt'
+    DataSource = dtsReport
     SQL.Strings = (
-      'select Job_Edge.*, Edge_Profile.Description'
-      'from Job_Edge, Edge_Profile'
-      'where Job = :Job and'
-      'Job_Edge.Edge_Profile = Edge_Profile.Edge_Profile'
-      'order by Edge_number')
-    Left = 1038
-    Top = 122
+      'SELECT TOP 1'
+      '        Quote_Edge.Quote,'
+      '        Quote_Edge.Edge_number,'
+      '        Edge_profile.Edge_profile,'
+      '        Edge_profile.Description as Edge_Description'
+      'FROM Edge_profile'
+      '        INNER JOIN Quote_Edge'
+      '          ON Edge_profile.Edge_profile = Quote_Edge.Edge_profile'
+      'WHERE Quote_Edge.Quote = :Quote'
+      'ORDER BY Quote_Edge.Quote, Quote_Edge.Edge_number'
+      '')
+    Left = 963
+    Top = 90
     ParamData = <
       item
-        Name = 'Job'
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
       end>
   end
-  object qryJExtras: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'WT'
+  object qryJExtras: TQuery
+    DatabaseName = 'WT'
+    DataSource = dtsReport
     SQL.Strings = (
       'select Job_Extra.*, Extra_Charge.Description'
       'from Job_Extra, Extra_Charge'
       'where Job = :Job and'
       'Job_Extra.Extra_Charge = Extra_Charge.Extra_Charge')
     Left = 958
-    Top = 53
+    Top = 677
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Job'
+        ParamType = ptUnknown
       end>
   end
-  object Query1: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'WT'
+  object Query1: TQuery
+    DatabaseName = 'WT'
+    DataSource = dtsReport
     SQL.Strings = (
       'select Job_Extra.*, Extra_Charge.Description'
       'from Job_Extra, Extra_Charge'
       'where Job = :Job and'
       'Job_Extra.Extra_Charge = Extra_Charge.Extra_Charge')
     Left = 958
-    Top = 53
+    Top = 613
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Job'
+        ParamType = ptUnknown
       end>
   end
-  object qryJRemedials: TFDQuery
-    MasterSource = dtsReport
-    ConnectionName = 'WT'
+  object qryJRemedials: TQuery
+    DatabaseName = 'WT'
+    DataSource = dtsReport
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
       'from Job_Remedial, Fitter'
       'where Job= :Job and'
       'Job_Remedial.Fitter = Fitter.Fitter'
       'ORDER BY Job, Remedial_Number')
-    Left = 878
-    Top = 174
+    Left = 1022
+    Top = 614
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Job'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryQUpstand: TQuery
+    DatabaseName = 'wt'
+    DataSource = dtsReport
+    SQL.Strings = (
+      'SELECT DISTINCT Quote_Element.Quote,'
+      '        Material_Use.Use_Description'
+      'FROM Material_Use'
+      '        RIGHT JOIN Quote_Element'
+      
+        '          ON Material_Use.Material_Use = Quote_Element.Material_' +
+        'Use'
+      'WHERE Element_number > 1000 AND Quote = :Quote'
+      '')
+    Left = 963
+    Top = 158
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
       end>
   end
 end

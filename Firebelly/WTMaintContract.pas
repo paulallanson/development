@@ -140,6 +140,7 @@ type
     Label59: TLabel;
     SpeedButton1: TSpeedButton;
     dblkpRevenueCentre: TDBLookupComboBox;
+    chkbxOverridePrices: TCheckBox;
     procedure btnCustomerClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -221,6 +222,7 @@ type
     procedure edtSitePhoneChange(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
+    procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -509,6 +511,7 @@ begin
   tsDocuments.enabled := not(Mode = cqView) and not(Mode = cqDelete) and not(Mode = cqCopy) and not(Mode = cqRequote);
   tsEvents.enabled := not(Mode = cqView) and not(Mode = cqDelete) and not(Mode = cqCopy) and not(Mode = cqRequote);
 
+  chkbxOverridePrices.Visible := Mode = cqChange;
   btnLineAttach.Visible := not(Mode = cqCopy)and not(Mode = cqRequote);
   btnOK.Visible := not(Mode = cqView);
   btnSave.Visible := (Mode = cqAdd) or (Mode = cqCopy) or (Mode = cqRequote);
@@ -688,13 +691,14 @@ end;
 procedure TfrmWTMaintContract.sgDetailsSelectCell(Sender: TObject; Col,
   Row: Integer; var CanSelect: Boolean);
 begin
-  with sgDetails do
-    begin
-	    if (Col = 1) then
-        Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
-      else
-        Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing];
-    end;
+{Cell Override}
+  if (Col = 1) then
+    sgDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+  else
+  if chkbxOverridePrices.checked then
+    sgDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+  else
+    sgDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing];
 end;
 
 function TfrmWTMaintContract.UpdateNotes: Integer;
@@ -1088,13 +1092,30 @@ procedure TfrmWTMaintContract.sgDetailsKeyUp(Sender: TObject;
 var
   irow: integer;
 //  ContractLine: TContractLine;
+  ContractOption: TContractOption;
 begin
   with sgDetails do
     begin
       irow := row;
       ContractLine := Contract.Lines[irow-1];
       ContractLine.DrawingNumber := cells[1,irow];
+
+{cell override}
+      if iColumn > 1 then
+        begin
+          ContractOption := ContractLine.Options[iColumn-2];
+
+          with ContractOption do
+            begin
+              try
+                cellvalue := strtofloat(cells[icolumn, irow]);
+              except
+                cellvalue := NettPrice + InstallPrice + SurveyPrice + DeliveryPrice - DiscountValue + MarkupValue;
+              end;
+            end;
+        end;
     end;
+
   edtSupplierreference.Text := ContractLine.SupplierReference;
   memUnits.Text := formatfloat('0',ContractLine.NumberOfUnits);
 end;
@@ -1273,6 +1294,7 @@ begin
             ContractOption.SurveyPrice := aQuote.SurveyPrice;
             ContractOption.DiscountValue := aQuote.DiscountValue;
             ContractOption.MarkupValue := aQuote.MarkupValue;
+            ContractOption.CellValue := aQuote.TotalGross;
             ContractOption.Incompatible := false;
           end;
       finally
@@ -1314,6 +1336,7 @@ var
   iOldCustomer: integer;
   iQty: integer;
   rTotalArea, rSlabArea: real;
+  sInstallationName: string;
 begin
   if  (Contract.ExpiryDate <> 0) and
       (Contract.ExpiryDate < date) then
@@ -1484,8 +1507,12 @@ begin
                     aSOrder.DbKey := 0;
                     aSOrder.LoadFromQuote;
 
+                    sInstallationName := frm.edtSiteName.text;
+                    if trim(sInstallationName) = '' then
+                      sInstallationName := frm.edtDeveloper.Text;
+
                     aSOrder.InstallationAddress := aSOrder.DataModule.SetAddress(aSOrder.InstallationAddress,
-                                                frm.edtSiteName.text,
+                                                sInstallationName,
                                                 frm.edtStreet.text,
                                                 frm.edtLocale.text,
                                                 frm.edtTown.text,
@@ -1696,6 +1723,7 @@ begin
           ContractOption.SurveyPrice := 0;
           ContractOption.DiscountValue := 0;
           ContractOption.MarkupValue := 0;
+          ContractOption.CellValue := 0;
           sgDetails.Cells[icolumn, irow] := formatfloat('£#,##0.00',0);
 
         end;
@@ -2282,6 +2310,7 @@ begin
           ContractOption.SurveyPrice := aQuote.SurveyPrice;
           ContractOption.DiscountValue := aQuote.DiscountValue;
           ContractOption.MarkupValue := aQuote.MarkupValue;
+          ContractOption.CellValue := aQuote.TotalGross;
 
           aQuote.ContractQuote := true;
           aQuote.ContractQuoteNumber := Contract.dbKey;
@@ -2363,6 +2392,9 @@ begin
 
   if messagedlg('Requote for ' + ContractOptionNext.Description + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
+
+      bUseSlabQuoting := dtmdlWorktops.UseSlabContractQuoting;
+
       ContractOptionNext.Incompatible := false;
 
       aQuote := TQuote.Create(dtmdlAllQuote);
@@ -2387,7 +2419,10 @@ begin
                 if ContractOptionNext.Thickness <> 0 then
                   iThickness := ContractOptionNext.Thickness;
 
-                rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
+                if bUseSlabQuoting then
+                  rUnitSell := 0.00
+                else
+                  rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
 
                 for icount := 0 to pred(aQuote.elements.Count) do
                   begin
@@ -2404,7 +2439,10 @@ begin
                 {Get the unit price for this thickness and add the new upstands}
                 iThickness := aQuote.Upstands[0].thickness;
 
-                rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
+                if bUseSlabQuoting then
+                  rUnitSell := 0.00
+                else
+                  rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
 
                 for icount := 0 to pred(aQuote.upstands.Count) do
                   begin
@@ -2429,8 +2467,6 @@ begin
 
                     rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
                     rUnitCost := Contract.DataModule.GetCustomerGroupCost(Contract.Customer, ContractOptionNext.Group, iThickness);
-
-                    bUseSlabQuoting := dtmdlWorktops.UseSlabContractQuoting;
 
                     for icount := 0 to pred(aQuote.slabs.Count) do
                       begin
@@ -2556,7 +2592,9 @@ begin
             ContractOptionNext.SurveyPrice := aQuote.SurveyPrice;
             ContractOptionNext.DiscountValue := aQuote.DiscountValue;
             ContractOptionNext.MarkupValue := aQuote.MarkupValue;
-            
+{Cell Override}
+            ContractOptionNext.CellValue := aQuote.TotalGross;
+
             if ContractOptionNext.Incompatible then
               sgDetails.Cells[icolumn+1, irow] := 'ERROR'
             else
@@ -2611,6 +2649,9 @@ begin
 
   if messagedlg('Requote for all remaining options? Any existing values will be overwritten.', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
+
+      bUseSlabQuoting := dtmdlWorktops.UseSlabContractQuoting;
+
       iCount1 := 1;
 
       For iOption := (iColumn-1) to pred(ContractLine.Options.count) do
@@ -2639,7 +2680,10 @@ begin
                     if ContractOptionNext.Thickness <> 0 then
                       iThickness := ContractOptionNext.Thickness;
 
-                    rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
+                    if bUseSlabQuoting then
+                      rUnitSell := 0.00
+                    else
+                      rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
 
                     for icount := 0 to pred(aQuote.elements.Count) do
                       begin
@@ -2654,7 +2698,10 @@ begin
                   begin
                     iThickness := aQuote.Upstands[0].thickness;
 
-                    rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
+                    if bUseSlabQuoting then
+                      rUnitSell := 0.00
+                    else
+                      rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
 
                     for icount := 0 to pred(aQuote.Upstands.Count) do
                       begin
@@ -2681,8 +2728,6 @@ begin
 
                         rUnitSell := Contract.DataModule.GetCustomerGroupPrice(Contract.Customer, ContractOptionNext.Group, iThickness);
                         rUnitCost := Contract.DataModule.GetCustomerGroupCost(Contract.Customer, ContractOptionNext.Group, iThickness);
-
-                        bUseSlabQuoting := dtmdlWorktops.UseSlabContractQuoting;
 
                         for icount := 0 to pred(aQuote.slabs.Count) do
                           begin
@@ -2808,6 +2853,7 @@ begin
                 ContractOptionNext.SurveyPrice := aQuote.SurveyPrice;
                 ContractOptionNext.DiscountValue := aQuote.DiscountValue;
                 ContractOptionNext.MarkupValue := aQuote.MarkupValue;
+                ContractOptionNext.CellValue := aQuote.TotalGross;
 
                 if ContractOptionNext.Incompatible then
                   sgDetails.Cells[icolumn+iCount1, irow] := 'ERROR'
@@ -3528,6 +3574,7 @@ begin
                     ContractOption.SurveyPrice := aQuote.SurveyPrice;
                     ContractOption.DiscountValue := aQuote.DiscountValue;
                     ContractOption.MarkupValue := aQuote.MarkupValue;
+                    ContractOption.CellValue := aQuote.TotalGross;
 
                     if ContractOption.Incompatible then
                       sgDetails.Cells[icolumn+iCol, irow] := 'ERROR'
@@ -4210,6 +4257,7 @@ begin
      ContractOption.SurveyPrice := aQuote.SurveyPrice;
      ContractOption.DiscountValue := aQuote.DiscountValue;
      ContractOption.MarkupValue := aQuote.MarkupValue;
+     ContractOption.CellValue := aQuote.TotalGross;
   finally
     aQuote.Free;
   end;
@@ -4309,6 +4357,7 @@ begin
             ContractOption.SurveyPrice := aQuote.SurveyPrice;
             ContractOption.DiscountValue := aQuote.DiscountValue;
             ContractOption.MarkupValue := aQuote.MarkupValue;
+            ContractOption.CellValue := aQuote.TotalGross;
             ContractOption.QuoteMarkup := 0;
           finally
             aOriginalQuote.free;
@@ -4399,6 +4448,28 @@ end;
 procedure TfrmWTMaintContract.dblkpRevenueCentreClick(Sender: TObject);
 begin
   Contract.RevenueCentre := dblkpREvenueCentre.KeyValue;
+end;
+
+procedure TfrmWTMaintContract.sgDetailsKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  with sgDetails do
+    begin
+	    if (Col > 1) then
+        begin
+          case Ord(key) of
+            $30..$39: ;
+            vk_back: ;
+            vk_return: ;
+            vk_tab: ;
+            VK_DECIMAL	: ;
+            Ord('.'): ;
+          else
+            MessageBeep(0);
+            key := #0;
+          end;
+        end;
+    end;
 end;
 
 end.

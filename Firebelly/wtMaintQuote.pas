@@ -4238,7 +4238,8 @@ begin
   dblkpMaterial.Enabled := not FContractQuote;
   btnCustomerSearch.enabled := not FContractQuote;
 //  pnlTotals.Enabled := not FContractQuote;
-  tbWorktops.Enabled := (not FContractQuote) or (not dtmdlWorktops.UseSlabContractQuoting);
+//  26/9/2023 Allow adding worktop sizes but prices should be zero if using Slab Contratc Quoting
+//  tbWorktops.Enabled := (not FContractQuote) or (not dtmdlWorktops.UseSlabContractQuoting);
 //  tbUpstands.Enabled := tbWorktops.Enabled;
   Quote.ContractQuote := FContractQuote;
 end;
@@ -4726,6 +4727,7 @@ begin
 end;
 
 end.
+
 
 
 

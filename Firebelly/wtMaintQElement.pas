@@ -401,6 +401,13 @@ begin
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QElement.PriceUnit := fieldbyname('Price_unit').asinteger;
         end;
+
+      {If using slab pricing then worktop prices must be zero}
+      if dtmdlWorktops.UseSlabContractQuoting then
+        begin
+          edtUnitPrice.Text := formatfloat('0.00',0.00);
+          edtUnitPrice.enabled := false;
+        end;
     end
   else
   if self.UseCustomerPrices then

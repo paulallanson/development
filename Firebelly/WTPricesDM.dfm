@@ -59,8 +59,7 @@ object dtmdlPrices: TdtmdlPrices
         'er and'
       '            Prices.Operator = Operator.Operator and'
       '            Prices.effective_date <= GetDate()'
-      '      order by Prices.effective_date desc) AS Operator_Name,'
-      '      Worktop_Group.inactive'
+      '      order by Prices.effective_date desc) AS Operator_Name'
       'FROM (Worktop_Group'
       '      RIGHT JOIN (Material_Type'
       '      INNER JOIN Worktop'
@@ -154,6 +153,19 @@ object dtmdlPrices: TdtmdlPrices
       Origin = 'inactive'
       Size = 1
     end
+    object qryAllPricesStock_Item: TIntegerField
+      FieldName = 'Stock_Item'
+    end
+    object qryAllPricesStock_Code: TStringField
+      FieldName = 'Stock_Code'
+    end
+    object qryAllPricesStock_Description: TStringField
+      FieldName = 'Stock_Description'
+      Size = 50
+    end
+    object qryAllPricesSlab_Count: TIntegerField
+      FieldName = 'Slab_Count'
+    end
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
@@ -173,6 +185,191 @@ object dtmdlPrices: TdtmdlPrices
         '     where Thickness.Thickness = Worktop_Thickness.Thickness) as' +
         ' Thickness_mm, '
       '    Worktop_thickness.Price_pointer,'
+      '    Worktop_thickness.Stock_item,'
+      '    Worktop.Material_Type,'
+      '    Worktop.Show_Online,'
+      '    Material_Type.Description AS Material_Type_Description,'
+      '    Worktop.Worktop_Group,'
+      '    Worktop_Group.Worktop_Group_Description,'
+      '    (select top 1 Effective_Date'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Effective_Date,'
+      '    (select top 1 Date_Changed'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Date_Changed,'
+      '    (select top 1 Unit_price'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Unit_Price,'
+      '    (select top 1 Unit_cost'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Unit_Cost,'
+      '    (select top 1 Price_Unit_Description'
+      '      from Prices, Price_unit'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.Price_unit = Price_Unit.Price_Unit and'
+      '            Prices.effective_date <= now()'
+      
+        '      order by Prices.effective_date desc) AS Price_Unit_Descrip' +
+        'tion,'
+      '    (select top 1 Operator.Operator_Name'
+      '      from Prices, Operator'
+      
+        '      where Prices.Price_pointer = worktop_thickness.price_point' +
+        'er and'
+      '            Prices.Operator = Operator.Operator and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Operator_Name,'
+      '      Stock_item.Stock_Description,'
+      '      Stock_item.Stock_code,'
+      '      (SELECT COUNT(Slab_Size_ID)'
+      '       FROM Worktop_Thickness_Slab_Size'
+      
+        '       WHERE Worktop_Thickness_Slab_Size.Worktop = worktop_thick' +
+        'ness.Worktop AND'
+      
+        '             Worktop_Thickness_Slab_Size.Thickness = worktop_thi' +
+        'ckness.Thickness) as Slab_Count'
+      'FROM Stock_item'
+      '        RIGHT JOIN ((Worktop_Group'
+      '        RIGHT JOIN (Material_Type'
+      '        INNER JOIN Worktop'
+      
+        '          ON Material_Type.Material_Type = Worktop.Material_Type' +
+        ')'
+      
+        '          ON Worktop_Group.Worktop_Group = Worktop.Worktop_Group' +
+        ')'
+      '        LEFT JOIN Worktop_thickness'
+      '          ON Worktop.Worktop = Worktop_thickness.Worktop)'
+      
+        '          ON Stock_item.Stock_item = Worktop_thickness.Stock_Ite' +
+        'm'
+      'WHERE 1=1'
+      '')
+    Left = 152
+    Top = 8
+  end
+  object qryDummyFuture: TQuery
+    SQL.Strings = (
+      'SELECT  Worktop_thickness.Worktop,'
+      '        Worktop.inactive,'
+      '        Worktop.Description as Worktop_Description,'
+      '        Worktop_thickness.Thickness,'
+      '        Thickness.Thickness_mm,'
+      '        Worktop_thickness.Price_pointer,'
+      '        Worktop_thickness.Stock_item,'
+      '        Worktop.Material_Type,'
+      '        Worktop.Show_Online,'
+      '        Material_Type.Description as Material_Type_Description,'
+      '        Worktop.Worktop_Group,'
+      '        Worktop_Group.Worktop_Group_Description,'
+      '        Price_Pointer.Price_Type,'
+      '        Prices.Effective_Date,'
+      '        Prices.Price_Basis,'
+      '        Price_Basis.Description as Price_Basis_Description,'
+      '        Prices.Unit_Price,'
+      '        Prices.Unit_Cost,'
+      '        Prices.Date_Changed,'
+      '        Prices.Operator,'
+      '        Operator.Operator_Name,'
+      '        Prices.Price_unit,'
+      '        Price_unit.Price_unit_description,'
+      '        Stock_item.Stock_code,'
+      '        Stock_item.Stock_Description,'
+      '        (SELECT COUNT(Slab_Size_ID)'
+      '        FROM Worktop_Thickness_Slab_Size'
+      
+        '        WHERE Worktop_Thickness_Slab_Size.Worktop = worktop_thic' +
+        'kness.Worktop AND'
+      
+        '              Worktop_Thickness_Slab_Size.Thickness = worktop_th' +
+        'ickness.Thickness) as Slab_Count'
+      'FROM Stock_item'
+      '        RIGHT JOIN ((Worktop_Group'
+      '        RIGHT JOIN (Material_Type'
+      '        INNER JOIN Worktop'
+      
+        '          ON Material_Type.Material_Type = Worktop.Material_Type' +
+        ')'
+      
+        '          ON Worktop_Group.Worktop_Group = Worktop.Worktop_Group' +
+        ')'
+      '        INNER JOIN (Thickness'
+      '        INNER JOIN ((Price_Pointer'
+      '        INNER JOIN Worktop_thickness'
+      
+        '          ON Price_Pointer.Price_Pointer = Worktop_thickness.Pri' +
+        'ce_pointer)'
+      '        INNER JOIN (Price_Basis'
+      '        INNER JOIN (Price_unit'
+      '        INNER JOIN (Operator'
+      '        INNER JOIN Prices'
+      '          ON Operator.Operator = Prices.Operator)'
+      '          ON Price_unit.Price_unit = Prices.Price_unit)'
+      '          ON Price_Basis.Price_Basis = Prices.Price_Basis)'
+      '          ON Price_Pointer.Price_Pointer = Prices.Price_Pointer)'
+      '          ON Thickness.Thickness = Worktop_thickness.Thickness)'
+      '          ON Worktop.Worktop = Worktop_thickness.Worktop)'
+      
+        '          ON Stock_item.Stock_item = Worktop_thickness.Stock_Ite' +
+        'm'
+      'WHERE 1=1')
+    Left = 240
+    Top = 8
+  end
+  object qryDeletePrices: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'DELETE FROM Prices'
+      
+        'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
+        'tive_Date')
+    Left = 24
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Price_Pointer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Effective_Date'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDummyCurrentOld: TQuery
+    SQL.Strings = (
+      'SELECT'
+      '    Worktop.Worktop,'
+      '    Worktop.inactive,'
+      '    Worktop.Description AS Worktop_Description,'
+      '    Worktop_thickness.Thickness,'
+      '    (select Thickness_mm '
+      '     from Thickness'
+      
+        '     where Thickness.Thickness = Worktop_Thickness.Thickness) as' +
+        ' Thickness_mm, '
+      '    Worktop_thickness.Price_pointer,'
+      '    Worktop_thickness.Stock_item,'
       '    Worktop.Material_Type,'
       '    Worktop.Show_Online,'
       '    Material_Type.Description AS Material_Type_Description,'
@@ -235,9 +432,10 @@ object dtmdlPrices: TdtmdlPrices
         ')'
       '        LEFT JOIN Worktop_thickness'
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
-      'WHERE 1=1')
-    Left = 229
-    Top = 34
+      'WHERE 1=1'
+      '')
+    Left = 376
+    Top = 16
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -247,6 +445,7 @@ object dtmdlPrices: TdtmdlPrices
       '        Worktop_thickness.Thickness,'
       '        Thickness.Thickness_mm,'
       '        Worktop_thickness.Price_pointer,'
+      '        Worktop_thickness.Stock_item,'
       '        Worktop.Material_Type,'
       '        Worktop.Show_Online,'
       '        Material_Type.Description as Material_Type_Description,'
@@ -293,24 +492,7 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 336
-    Top = 34
-  end
-  object qryDeletePrices: TFDQuery
-    ConnectionName = 'WT'
-    SQL.Strings = (
-      'DELETE FROM Prices'
-      
-        'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
-        'tive_Date')
-    Left = 43
-    Top = 98
-    ParamData = <
-      item
-        Name = 'Price_Pointer'
-      end
-      item
-        Name = 'Effective_Date'
-      end>
+    Left = 488
+    Top = 16
   end
 end

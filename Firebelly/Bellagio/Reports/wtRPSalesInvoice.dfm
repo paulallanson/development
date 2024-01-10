@@ -14411,6 +14411,123 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Shape = qrsVertLine
       VertAdjust = 0
     end
+    object qrsdQLabour: TQRSubDetail
+      Left = 38
+      Top = 594
+      Width = 756
+      Height = 26
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      BeforePrint = qrsdQLabourBeforePrint
+      Color = clWhite
+      Enabled = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        68.791666666666670000
+        2000.250000000000000000)
+      Master = InvoiceLine
+      DataSet = qryQLabour
+      PrintBefore = False
+      PrintIfEmpty = True
+      object qrlblLabourUTR: TgtQRLabel
+        Left = 380
+        Top = 5
+        Width = 127
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1005.416666666667000000
+          13.229166666666670000
+          336.020833333333300000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Labour Content - UTR: '
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object qrlblLabourCharge: TgtQRLabel
+        Left = 609
+        Top = 5
+        Width = 105
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1611.312500000000000000
+          13.229166666666670000
+          277.812500000000000000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'qrlblLabourCharge'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object qrlblLabourVAT: TgtQRLabel
+        Left = 531
+        Top = 5
+        Width = 85
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          1404.937500000000000000
+          13.229166666666670000
+          224.895833333333300000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'qrlblLabourVAT'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+    end
   end
   object InvHeadSQL: TFDQuery
     ConnectionName = 'wt'
@@ -14425,6 +14542,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Is_Retail_Customer,'
       '           Customer.Customer_is_Speculative,'
       '           Customer.Account_Is_Factored,'
+      '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
@@ -14439,10 +14557,24 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '(Sales_Invoice.Invoice_or_credit is null)'
       ') and'
       '(Sales_Invoice.Sales_invoice_Status = 10) AND'
-      '(Sales_Invoice.Customer = Customer.Customer)'
+      '(Sales_Invoice.Customer = Customer.Customer) AND'
+      
+        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
+        'ue_Centre))'
       'Order by Sales_invoice')
     Left = 1008
     Top = 112
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end>
   end
   object InvHeadSRC: TDataSource
     DataSet = InvOneHeadSQL
@@ -14507,6 +14639,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Is_Retail_Customer,'
       '           Customer.Customer_is_Speculative,'
       '           Customer.Account_Is_Factored,'
+      '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
@@ -14517,13 +14650,23 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '        Customer'
       'where'
       '(Sales_Invoice.Sales_invoice = :Sales_Invoice) AND '
-      '(Sales_Invoice.Customer = Customer.Customer)')
+      '(Sales_Invoice.Customer = Customer.Customer) AND'
+      
+        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
+        'ue_Centre))')
     Left = 850
     Top = 113
     ParamData = <
       item
         Name = 'Sales_Invoice'
         DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
       end>
   end
   object UpInvHeadSQL: TFDQuery
@@ -14583,6 +14726,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Is_Retail_Customer,'
       '           Customer.Customer_is_Speculative,'
       '           Customer.Account_Is_Factored,'
+      '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
@@ -14625,6 +14769,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Is_Retail_Customer,'
       '           Customer.Customer_is_Speculative,'
       '           Customer.Account_Is_Factored,'
+      '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
@@ -14638,10 +14783,24 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '(Sales_Invoice.Invoice_or_credit = '#39'C'#39') '
       ') and'
       '(Sales_Invoice.Sales_invoice_Status = 10) AND'
-      '(Sales_Invoice.Customer = Customer.Customer)'
-      ' ')
+      '(Sales_Invoice.Customer = Customer.Customer) AND'
+      
+        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
+        'ue_Centre))'
+      '')
     Left = 312
     Top = 21
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Revenue_Centre'
+        ParamType = ptUnknown
+      end>
   end
   object GetNarrSQL: TFDQuery
     ConnectionName = 'wt'
@@ -14765,7 +14924,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       'Telephone_number,'
       'Fax_Number, '
       'Company_Name,'
-      'VAT_Number '
+      'VAT_Number,'
+      'Company_Reg_Number,'
+      'Unique_Tax_Reference '
       'from Company')
     Left = 944
     Top = 180
@@ -14861,6 +15022,54 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     ParamData = <
       item
         Name = 'Revenue_Centre'
+        
+      end>
+  end
+  object qryUpdRevenueCentre: TQuery
+    DatabaseName = 'WT'
+    Left = 944
+    Top = 296
+  end
+  object qryUniqueInv: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Category'
+      'where Category = :Category')
+    Left = 944
+    Top = 361
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Category'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryQLabour: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_order_line.Sales_Order,'
+      '        Sales_order_line.Sales_order_Line_no,'
+      '        Sales_order_line.Installation_price,'
+      '        Sales_order_line.Survey_price,'
+      '        Sales_order_line.Delivery_Price,'
+      '        Sales_order_line.Markup_Value,'
+      '        Sales_order_line.Waste_Value'
+      'FROM Sales_order_line'
+      'WHERE Sales_Order = :Sales_Order and'
+      'Sales_Order_Line_no = :Sales_Order_Line_no')
+    Left = 936
+    Top = 384
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Sales_Order'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Sales_Order_Line_no'
+        ParamType = ptUnknown
       end>
   end
 end

@@ -1563,4 +1563,31 @@ object dtmdlContract: TdtmdlContract
     Left = 944
     Top = 24
   end
+  object qryUpdQuote: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'UPDATE Quote'
+      
+        'SET Discount_Value = :Discount_Value, Discount_Rate = :Discount_' +
+        'Rate'
+      'WHERE Quote = :Quote')
+    Left = 856
+    Top = 80
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Discount_Value'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Discount_Rate'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end>
+  end
 end

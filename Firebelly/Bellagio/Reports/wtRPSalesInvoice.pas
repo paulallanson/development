@@ -177,6 +177,8 @@ type
       var PrintBand: Boolean);
     procedure InvoiceGroupHeaderAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
+    procedure qrsdQLabourBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
   private
     FInvoiceNo : integer;
     FLoops: integer;
@@ -184,6 +186,8 @@ type
     LineCount: integer;
     sReverseChargeText: string;
     sWorktop: string;
+    FPrefix: boolean;
+    FPrefixValue: string;
     procedure GetSODeliveryDetails(tempCode: string);
     function GetSOCustOrderNo(tempCode: string): string;
     function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
@@ -205,14 +209,20 @@ type
     procedure GetRevenuePayment;
     procedure GetCompanyAddress;
     procedure GetRevenueCentreAddress;
+    procedure UpdateRevenueCreditNoteNumber(const iCode, iNo: integer);
+    procedure UpdateRevenueInvoiceNumber(const iCode, iNo: integer);
+    function UseSeparateInvoice(tempCode: integer): boolean;
   public
     bInvoice: boolean;
     bDetailed: boolean;
     bUpdate: boolean;
+    bPreview: boolean;
     bReprint: boolean;
+    bShowLabour: boolean;
     bAll: boolean;
     bLineUp : Boolean;
     bReverseCharge: boolean;
+    RevenueCentre: integer;
     SelCode: Integer;
     function GetInvoiceData: integer;
   end;
@@ -289,7 +299,7 @@ begin
   begin
     InvoiceReport.OnNeedData := nil;
     Dummy06.Enabled := false;
-    GetCompanyInfo(InvoiceReport.DataSet.RecordCount);
+//    GetCompanyInfo(InvoiceReport.DataSet.RecordCount);
 
     CustomerSQl.active := True;
     InvLineSQL.active := True;
@@ -393,6 +403,13 @@ begin
   begin
     InvOneHeadSQL.Close;
     InvOneHeadSQL.ParamByName('Sales_Invoice').AsInteger := selcode;
+    
+    case Revenuecentre of
+        -1: InvOneHeadSQL.parambyname('Revenue_Centre').clear;
+    else
+        InvOneHeadSQL.parambyname('Revenue_Centre').asinteger := RevenueCentre
+    end;
+
     InvOneHeadSQL.Open;
     InvHeadSRC.dataset := InvOneHeadSQL;
     InvoiceGroupHeader.Expression := 'InvOneHeadSQL.Sales_invoice';
@@ -402,6 +419,13 @@ begin
     InvHeadSQL.Close;
     if not bInvoice then
       InvHeadSQL.SQL := CreditHeadSQL.SQL;
+
+    case Revenuecentre of
+        -1: InvHeadSQL.parambyname('Revenue_Centre').clear;
+    else
+        InvHeadSQL.parambyname('Revenue_Centre').asinteger := RevenueCentre
+    end;
+
     InvHeadSQL.Open;
     InvHeadSRC.dataset := InvHeadSQL;
     InvoiceGroupHeader.Expression := 'InvHeadSQL.Sales_invoice';
@@ -413,7 +437,7 @@ end;
 procedure TfrmWTRPSalesInvoice.InvoiceLineBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
-  rGoodsTotal, rVatValue: Real;
+  rGoodsTotal, rVatValue, rFittingValue, rFittingVat: Real;
   sPriceUnit: string;
 begin
   PrintBand := true;
@@ -428,8 +452,54 @@ begin
 
   sWorktop := '';
   
+  rFittingValue := 0.00;
+
+  if bDetailed then
+    begin
+      with qryQElements do
+        begin
+          close;
+          open;
+          qrsdQElements.Enabled := (recordcount > 0)
+        end;
+      with qryQCutOuts do
+        begin
+          close;
+          open;
+          qrsdQCutOuts.Enabled := (recordcount > 0)
+        end;
+      with qryQEdges do
+        begin
+          close;
+          open;
+          qrsdQEdges.Enabled := (recordcount > 0)
+        end;
+      with qryQExtras do
+        begin
+          close;
+          open;
+          qrsdQExtras.Enabled := (recordcount > 0)
+        end;
+    end;
+
+  if bShowLabour then
+    begin
+      with qryQLabour do
+        begin
+          close;
+          parambyname('Sales_Order').asinteger := InvLineSRC.Dataset.FieldByName('Sales_Order').Asinteger;
+          parambyname('Sales_Order_Line_no').asinteger := InvLineSRC.Dataset.FieldByName('Sales_Order_Line_no').Asinteger;
+          open;
+          rFittingValue := fieldbyname('Installation_price').asfloat
+        end;
+
+      qrlblLabourCharge.Caption := formatfloat('0.00', rFittingValue);
+      rFittingVat := StrToFloat(qrlblLabourCharge.Caption) * (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100);
+      qrlblLabourVAT.Caption := formatfloat('0.00', rFittingVat);
+    end;
+
   rGoodsTotal := (InvLineSRC.Dataset.FieldByName('Quantity_Invoiced').Asinteger/InvLineSRC.Dataset.fieldbyname('Sell_unit').asinteger)
-                * InvLineSRC.Dataset.FieldByName('Unit_Price').AsFloat ;
+                * (InvLineSRC.Dataset.FieldByName('Unit_Price').AsFloat - rFittingValue);
 
   {Check for Reverse charge on first line of invoice}
   if FLines = 0 then
@@ -488,34 +558,6 @@ begin
     AddChargesFooter.enabled := false
   else
     AddChargesFooter.enabled := true;
-
-  if bDetailed then
-    begin
-      with qryQElements do
-        begin
-          close;
-          open;
-          qrsdQElements.Enabled := (recordcount > 0)
-        end;
-      with qryQCutOuts do
-        begin
-          close;
-          open;
-          qrsdQCutOuts.Enabled := (recordcount > 0)
-        end;
-      with qryQEdges do
-        begin
-          close;
-          open;
-          qrsdQEdges.Enabled := (recordcount > 0)
-        end;
-      with qryQExtras do
-        begin
-          close;
-          open;
-          qrsdQExtras.Enabled := (recordcount > 0)
-        end;
-    end;
 end;
 
 procedure TfrmWTRPSalesInvoice.FreeCompanyRecord;
@@ -789,6 +831,10 @@ begin
     BranchAddMemo.Lines.Add(qryAddress.Fields[icount].AsString);
   end;
 *)
+
+  bShowLabour := (InvHeadSRC.DataSet.fieldbyname('Separate_Labour_Invoice_Value').asstring = 'Y') AND bInvoice;
+  qrsdQLabour.Enabled := bShowLabour;
+
   qrlblAccountCode.Caption := InvHeadSRC.DataSet.fieldbyname('Account_Code').asstring;
   {Create the Customer Address details memo}
   if (InvHeadSRC.DataSet.fieldbyname('Is_Retail_Customer').AsString = 'Y') OR (InvHeadSRC.DataSet.fieldbyname('Customer_is_Speculative').AsString = 'Y') then
@@ -809,6 +855,9 @@ begin
         end
     end;
 
+  FPrefix := false;
+  FPrefixValue := '';
+
   {Find the Next Invoice Number}
   if bReprint then
   begin
@@ -819,8 +868,23 @@ begin
   end
   else
   begin
-    Inc(FInvoiceNo);
-    InvoiceNumberLbl.Caption := IntToStr(FInvoiceNo);
+    if bPreview then
+      InvoiceNumberLbl.Caption := 'PREVIEW'
+    else
+      begin
+        if (InvHeadSRC.Dataset.FieldByName('Revenue_Centre').asinteger <> 0) and UseSeparateInvoice(InvHeadSRC.Dataset.FieldByName('Revenue_Centre').asinteger) then
+          GetRevenueCentreInfo(1)
+        else
+          GetCompanyInfo(1);
+
+        Inc(FInvoiceNo);
+
+        if FPrefix then
+          InvoiceNumberLbl.Caption := trim(FPrefixValue) + IntToStr(FInvoiceNo)
+        else
+          InvoiceNumberLbl.Caption := IntToStr(FInvoiceNo);
+      end;
+
     InvoiceDateLbl.Caption := FormatDateTime('dd"/"mm"/"yyyyy',
       InvHeadSRC.Dataset.FieldByName('invoice_date').AsDateTime);
   end;
@@ -1237,7 +1301,13 @@ var
   tempAddress: string;
   iCount: integer;
 begin
+  qrlblCompanyRegNo.caption := 'Registered in England No: ' + qryCompanyAddress.fieldbyname('Company_Reg_Number').asstring;
   qrlblVATReg.caption := 'VAT Registration No. ' + qryCompanyAddress.fieldbyname('VAT_Number').asstring;
+
+  if trim(qryCompanyAddress.fieldbyname('Unique_Tax_Reference').asstring) = '' then
+    qrlblLabourUTR.caption := 'LABOUR CONTENT'
+  else
+    qrlblLabourUTR.caption := 'LABOUR CONTENT - UTR: ' + qryCompanyAddress.fieldbyname('Unique_Tax_Reference').asstring;
 
   memAddress.lines.Clear;
 
@@ -1266,6 +1336,7 @@ var
 begin
 
   memAddress.lines.clear;
+  
   with qryRevenueCentre do
     begin
       close;
@@ -1280,8 +1351,90 @@ begin
       qrlblCompanyRegNo.caption := 'Registered in England No: ' + fieldbyname('Company_Reg_Number').asstring;
       qrlblVATReg.caption := 'VAT Registration No: ' + fieldbyname('VAT_Registration_No').asstring;
     end;
+
   memAddress.lines.add(tempAddress);
 end;
 
+
+procedure TfrmWTRPSalesInvoice.GetRevenueCentreInfo(const iNoOfInvoices: integer);
+begin
+  with qryRevenueCentre do
+    begin
+      close;
+      parambyname('Revenue_Centre').asinteger := InvHeadSRC.Dataset.FieldByName('Revenue_Centre').AsInteger;
+      open;
+
+      if bInvoice then
+        FInvoiceNo := FieldByName('Last_Invoice_Number').AsInteger
+      else
+        FInvoiceNo := FieldByName('Last_Credit_Note_Number').AsInteger;
+
+      FPrefix :=  (trim(FieldByName('Prefix_Value').asstring) <> '');
+      FPrefixValue := (FieldByName('Prefix_Value').asstring);
+    end;
+
+  if bUpdate then
+    begin
+      {Check for Invoice or Credit Note}
+      if bInvoice then
+        UpdateRevenueInvoiceNumber(InvHeadSRC.Dataset.FieldByName('Revenue_Centre').AsInteger, FInvoiceNo + 1)
+      else
+        UpdateRevenueCreditNoteNumber(InvHeadSRC.Dataset.FieldByName('Revenue_Centre').AsInteger, FInvoiceNo + 1);
+    end;
+end;
+
+procedure TfrmWTRPSalesInvoice.UpdateRevenueInvoiceNumber(const iCode, iNo : integer);
+begin
+  if bLineUp then
+    Exit;
+
+  with qryUpdRevenueCentre do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('Update Revenue_Centre Set Last_Invoice_Number = ' + IntToStr(iNo) +
+            ' Where Revenue_Centre = ' + inttostr(iCode));
+    ExecSQL;
+  end;
+end;
+
+procedure TfrmWTRPSalesInvoice.UpdateRevenueCreditNoteNumber(const iCode, iNo : integer);
+begin
+  if bLineUp then
+    Exit;
+  with qryUpdRevenueCentre do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('Update Revenue_Centre Set Last_Credit_Note_Number = ' + IntToStr(iNo) +
+            ' Where Revenue_Centre = ' + inttostr(iCode));
+    ExecSQL;
+  end;
+end;
+
+function TfrmWTRPSalesInvoice.UseSeparateInvoice(tempCode: integer): boolean;
+begin
+  if tempCode = 0 then
+    result := false;
+
+  with qryRevenueCentre do
+    begin
+      close;
+      parambyname('Revenue_Centre').asinteger := tempCode;
+      open;
+
+      result := (fieldbyname('Use_Separate_Invoice_Seq').asstring = 'Y');
+
+//      FCategory := fieldbyname('Category').asinteger;
+    end;
+end;
+
+procedure TfrmWTRPSalesInvoice.qrsdQLabourBeforePrint(
+  Sender: TQRCustomBand; var PrintBand: Boolean);
+begin
+  PrintBand := bShowLabour and (InvLineSQL.Fieldbyname('Quote').asinteger > 0);
+  iGoods := iGoods + StrToFloat(qrlblLabourCharge.Caption);
+  ivat := ivat + StrToFloat(qrlblLabourVAT.Caption);
+end;
 
 end.

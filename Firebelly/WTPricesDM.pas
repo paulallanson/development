@@ -30,7 +30,14 @@ type
     qryAllPricesUnit_Cost: TCurrencyField;
     qryAllPricesPrice_Unit_Description: TWideStringField;
     qryAllPricesOperator_Name: TWideStringField;
+    qryDeletePrices: TFDQuery;
     qryAllPricesinactive: TWideStringField;
+    qryAllPricesStock_Item: TIntegerField;
+    qryDummyCurrentOld: TQuery;
+    qryAllPricesStock_Code: TWideStringField;
+    qryAllPricesStock_Description: TWideStringField;
+    qryDummyFutureOld: TFDQuery;
+    qryAllPricesSlab_Count: TIntegerField;
   private
     function GetHeaderCountAll: integer;
     { Private declarations }

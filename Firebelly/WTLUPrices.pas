@@ -48,6 +48,7 @@ type
     chkbxShowWebPrices: TCheckBox;
     chkbxShowInactive: TCheckBox;
     ToolButton1: TToolButton;
+    btnStockCode: TToolButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -78,7 +79,7 @@ type
     procedure chkbxShowInactiveClick(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
     procedure ToolButton1Click(Sender: TObject);
-    procedure dbgDetailsTitleClick(Column: TColumn);
+    procedure btnStockCodeClick(Sender: TObject);
   private
     ActiveCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -174,6 +175,7 @@ begin
   begin
     btnChange.Enabled := HeaderCountAll > 0;
     btnDelete.Enabled := HeaderCountAll > 0;
+    btnStockCode.Enabled := HeaderCountAll > 0;
 
     lblCurrentPrices.Visible := ShowLive;
     stsBrDetails.panels[0].text := inttostr(HeaderCountAll) + ' records displayed';
@@ -298,41 +300,6 @@ begin
   		if Assigned(Column.Field) then
         Column.Alignment := taRightJustify;
     end;
-end;
-
-procedure TfrmWTLUPrices.dbgDetailsTitleClick(Column: TColumn);
-var
-  icolumn: integer;
-  SortType, SortField: string;
-begin
-  if dbgDetails.Dragging then exit;
-
-  if Column.Title.Font.style <> [fsUnderline, fsBold] then
-    SortType := ' ASC'
-  else if dtmdlAllPrices.SortType = ' DESC' then
-      SortType := ' ASC'
-  else
-    SortType := ' DESC';
-
-  SortField := Column.FieldName;
-
-  for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
-
-  dtmdlAllPrices.SortOrder := SortField + SortType;
-  dtmdlAllPrices.SortType := SortType;
-
-  dtmdlAllPrices.RefreshWorktopData;
-
-  with dbgDetails do
-  begin
-    try
-      if datasource.dataset.recordcount > 0 then
-        SelectedRows.CurrentRowSelected := true;
-      except
-    end;
-  end;
 end;
 
 procedure TfrmWTLUPrices.btnEffectiveDateClick(Sender: TObject);
@@ -525,7 +492,7 @@ end;
 procedure TfrmWTLUPrices.CallMaintScreen(FuncMode: string);
 var
   OldCursor : TCursor;
-  iCode: integer;
+  iCode, iThickness: integer;
 begin
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
@@ -540,8 +507,11 @@ begin
     frmWTMaintWT.Worktop := iCode;
     frmWTMaintWT.showmodal;
     iCode := frmWTMaintWT.iCode;
+    iThickness := dbgDetails.datasource.dataset.fieldbyname('Thickness').asinteger ;
+    
     dtmdlAllPrices.refreshWorktopData;
-    dbgDetails.DataSource.DataSet.Locate('Worktop',Variant(inttostr(iCode)),[]);
+//    dbgDetails.DataSource.DataSet.Locate('Worktop; Thickness',Variant(inttostr(iCode)),[]);   VarArrayOf(
+    dbgDetails.DataSource.DataSet.Locate('Worktop; Thickness',VarArrayOf([inttostr(iCode),inttostr(iThickness)]),[lopartialKey]);
   finally
     Screen.Cursor := OldCursor;
     frmWTMaintWT.free;
@@ -583,6 +553,47 @@ begin
   finally
     Screen.Cursor := OldCursor;
     frmWTLUWTThickness.free;
+  end;
+end;
+
+procedure TfrmWTLUPrices.btnStockCodeClick(Sender: TObject);
+var
+  iCode, iThickness: integer;
+  OldCursor : TCursor;
+begin
+(*  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+  frmWTMaintWTThicknessStockCode := TfrmWTMaintWTThicknessStockCode.create(Application);
+  try
+    iCode := dbgDetails.datasource.dataset.fieldbyname('Worktop').asinteger;
+    iThickness := dbgDetails.datasource.dataset.fieldbyname('Thickness').asinteger;
+    frmWTMaintWTThicknessStockCode.worktop := dbgDetails.datasource.dataset.fieldbyname('Worktop').asinteger;
+    frmWTMaintWTThicknessStockCode.thickness := dbgDetails.datasource.dataset.fieldbyname('Thickness').asinteger;
+    frmWTMaintWTThicknessStockCode.StockItem := dbgDetails.datasource.dataset.fieldbyname('Stock_Item').asinteger;
+    frmWTMaintWTThicknessStockCode.Description := dbgDetails.datasource.dataset.FieldByName('Thickness_mm').asstring + ' ' + dbgDetails.datasource.dataset.FieldByName('Worktop_Description').asstring + ' ' + dbgDetails.datasource.dataset.FieldByName('Material_Type_Description').asstring;
+    frmWTMaintWTThicknessStockCode.PricePointer := dbgDetails.datasource.dataset.fieldbyname('Price_Pointer').asinteger;
+    frmWTMaintWTThicknessStockCode.showmodal;
+    dtmdlAllPrices.refreshWorktopData;
+    dbgDetails.DataSource.DataSet.Locate('Worktop; Thickness',VarArrayOf([inttostr(iCode),inttostr(iThickness)]),[lopartialKey]);
+  finally
+    Screen.Cursor := OldCursor;
+    frmWTMaintWTThicknessStockCode.free;
+  end;
+*)
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+  frmWTLUWorktopThicknessSlabs := TfrmWTLUWorktopThicknessSlabs.create(Application);
+  try
+    frmWTLUWorktopThicknessSlabs.MaterialType := dbgDetails.datasource.dataset.fieldbyname('Material_Type').asinteger;
+    frmWTLUWorktopThicknessSlabs.MaterialTypeDescription := dbgDetails.datasource.dataset.fieldbyname('Material_Type_Description').asstring;
+    frmWTLUWorktopThicknessSlabs.worktop := dbgDetails.datasource.dataset.fieldbyname('Worktop').asinteger;
+    frmWTLUWorktopThicknessSlabs.thickness := dbgDetails.datasource.dataset.fieldbyname('Thickness').asinteger;
+    frmWTLUWorktopThicknessSlabs.Description := dbgDetails.datasource.dataset.FieldByName('Thickness_mm').asstring + ' ' + dbgDetails.datasource.dataset.FieldByName('Worktop_Description').asstring + ' ' + dbgDetails.datasource.dataset.FieldByName('Material_Type_Description').asstring;
+    frmWTLUWorktopThicknessSlabs.StockCode := dbgDetails.datasource.dataset.FieldByName('Stock_Code').asstring;
+    frmWTLUWorktopThicknessSlabs.showmodal;
+  finally
+    Screen.Cursor := OldCursor;
+    frmWTLUWorktopThicknessSlabs.free;
   end;
 end;
 

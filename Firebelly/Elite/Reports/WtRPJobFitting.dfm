@@ -3912,15 +3912,76 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     SQL.Strings = (
       'select  Job.*,'
       '        Operator.Operator_Name,'
-      '        (select Sales_order'
+      '        (select TOP 1 Sales_order'
       '         from Sales_Order_Line'
       '         where sales_order_line.Job = Job.Job) as Sales_Order,'
-      '         (select Sales_order.Order_Ref_No'
+      '         (select TOP 1 Sales_order.Order_Ref_No'
       '         from Sales_Order_Line, sales_Order'
       '         where sales_order_line.Job = Job.Job and'
       
         '               Sales_Order_line.sales_Order = Sales_order.sales_' +
-        'order) as Order_Ref_No'
+        'order) as Order_Ref_No,'
+      '         (select TOP 1 Sales_order.Appliance_Details'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Appliance_Details,'
+      '         (select TOP 1 Sales_order.Extra_Notes'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Extra_Notes,'
+      '         (select TOP 1 Sales_order.Install_Address'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Install_Address,'
+      '         (select TOP 1 Sales_order.Install_Name'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Install_Name,'
+      '         (select TOP 1 Sales_order.Install_Phone'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Install_Phone,'
+      '         (select TOP 1 Sales_order.Reference'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Reference,'
+      '         (select TOP 1 Sales_order.Date_Required'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Date_Required,'
+      '         (select TOP 1 Sales_order.Contact_Name'
+      '         from Sales_Order_Line, sales_Order'
+      '         where sales_order_line.Job = Job.Job and'
+      
+        '               Sales_Order_line.sales_Order = Sales_order.sales_' +
+        'order) as Order_Contact_Name,'
+      '         (SELECT Customer_Branch.Special_Instructions'
+      '         FROM Customer_Branch'
+      '              INNER JOIN (Sales_Order'
+      '              INNER JOIN Sales_Order_Line'
+      
+        '                  ON Sales_Order.Sales_Order = Sales_Order_Line.' +
+        'Sales_Order)'
+      
+        '                  ON (Customer_Branch.Branch_No = Sales_Order.Br' +
+        'anch_no) AND (Customer_Branch.Customer = Sales_Order.Customer)'
+      
+        '         WHERE sales_order_line.Job = Job.Job) as Site_Instructi' +
+        'ons'
       'from Job, Operator'
       'where Job = :Job and'
       'Job.Operator = Operator.Operator')

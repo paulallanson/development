@@ -198,10 +198,12 @@ type
     bDetailed: boolean;
     bUpdate: boolean;
     bReprint: boolean;
+    bPreview: boolean;
     bShowLabour: boolean;
     bAll: boolean;
     bLineUp : Boolean;
     bReverseCharge: boolean;
+    RevenueCentre: integer;
     SelCode: Integer;
     function GetInvoiceData: integer;
   end;
@@ -810,7 +812,9 @@ begin
 *)
 
   bShowLabour := (InvHeadSRC.DataSet.fieldbyname('Separate_Labour_Invoice_Value').asstring = 'Y') AND bInvoice;
-  qrsdQLabour.Enabled := bShowLabour and bDetailed;
+
+//  qrsdQLabour.Enabled := bShowLabour and bDetailed;
+  qrsdQLabour.Enabled := bShowLabour;
 
   qrlblAccountCode.Caption := InvHeadSRC.DataSet.fieldbyname('Account_Code').asstring;
   {Create the Customer Address details memo}
@@ -1213,7 +1217,8 @@ end;
 procedure TfrmWTRPSalesInvoice.qrsdQLabourBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
-  PrintBand := bShowLabour and bDetailed and (InvLineSQL.Fieldbyname('Quote').asinteger > 0);
+//  PrintBand := bShowLabour and bDetailed and (InvLineSQL.Fieldbyname('Quote').asinteger > 0);
+  PrintBand := bShowLabour and (InvLineSQL.Fieldbyname('Quote').asinteger > 0);
   iGoods := iGoods + StrToFloatDef(qrlblLabourCharge.Caption, 0, FormatSettings);
   ivat := ivat + StrToFloatDef(qrlblLabourVAT.Caption, 0, FormatSettings);
 end;

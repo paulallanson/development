@@ -79,6 +79,13 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
     Height = 13
     Caption = 'Rep'
   end
+  object Label11: TLabel
+    Left = 18
+    Top = 110
+    Width = 49
+    Height = 13
+    Caption = 'Site Name'
+  end
   object edtReference: TEdit
     Left = 96
     Top = 105
@@ -157,5 +164,12 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
     Width = 209
     Height = 21
     TabOrder = 3
+  end
+  object edtSiteName: TEdit
+    Left = 96
+    Top = 106
+    Width = 209
+    Height = 21
+    TabOrder = 2
   end
 end

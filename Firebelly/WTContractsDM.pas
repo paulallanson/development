@@ -66,6 +66,7 @@ type
     qryGetMaterialSlab: TFDQuery;
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
+    qryUpdQuote: TQuery;
   private
     function GetNextContractID: integer;
     function GetNextCQNumber: integer;
@@ -200,6 +201,7 @@ type
     FIncompatible: boolean;
     FQuoteMarkup: double;
     FOriginalQuote: integer;
+    FCellValue: currency;
     procedure SetDescription(const Value: string);
     procedure SetOptionNumber(const Value: integer);
     procedure SetQuote(const Value: integer);
@@ -216,12 +218,15 @@ type
     procedure SetIncompatible(const Value: boolean);
     procedure SetQuoteMarkup(const Value: double);
     procedure SetOriginalQuote(const Value: integer);
+    procedure SetCellValue(const Value: currency);
   public
     constructor Create(ContractLine: TContractLine);
     destructor Destroy; override;
     function Clone : TContractOption;
     procedure CopyQuote;
     procedure SaveToDB;
+{Cell Override}
+    property CellValue: currency read FCellValue write SetCellValue;
     property DeliveryPrice: currency read FDeliveryPrice write SetDeliveryPrice;
     property Description: string read FDescription write SetDescription;
     property DiscountValue: currency read FDiscountValue write SetDiscountValue;
@@ -956,6 +961,8 @@ begin
             aOption.QuoteDescription  := fieldbyname('Quote_Description').asstring;
             aOption.SurveyPrice       := fieldbyname('Survey_Price').asfloat;
             aOption.Thickness         := fieldbyname('Thickness').asinteger;
+
+            aOption.CellValue         := aOption.NettPrice + aOption.InstallPrice + aOption.SurveyPrice + aOption.DeliveryPrice - aOption.DiscountValue + aOption.MarkupValue;
 
             if (cqMode = cqCopy) or (cqMode = cqRequote) then
               aOption.QuoteMarkup       := 0
@@ -2006,6 +2013,7 @@ end;
 function TContractOption.Clone: TContractOption;
 begin
   Result :=                   TContractOption.Create(FParent);
+  Result.CellValue      :=    self.CellValue;
   Result.DeliveryPrice  :=    self.DeliveryPrice;
   Result.Description    :=    self.Description;
   Result.DiscountValue  :=    self.DiscountValue;
@@ -2059,7 +2067,24 @@ begin
 end;
 
 procedure TContractOption.SaveToDB;
+var
+  rCellAdjustment, rQuoteGross, rDiscountRate: real;
+  sQuoteGross: string;
 begin
+  rQuoteGross := self.NettPrice + self.InstallPrice + self.SurveyPrice + self.DeliveryPrice - self.DiscountValue + self.MarkupValue;
+  sQuoteGross := formatfloat('0.0000',rQuoteGross);
+
+  rQuoteGross := strtofloat(sQuoteGross);
+  rCellAdjustment := rQuoteGross - self.CellValue;
+
+  DiscountValue := DiscountValue + rCellAdjustment;
+
+  if Nettprice > 0 then
+    rDiscountRate := (DiscountValue/NettPrice)*100.0000
+  else
+    rDiscountRate := 0.0000;
+
+
   with FParent.FParent.FDataModule.qryCQLAddOption do
   begin
     close;
@@ -2087,6 +2112,23 @@ begin
     ParambyName('Markup_Percentage').asfloat := QuoteMarkup;
     ExecSQL;
   end;
+
+  if Quote <> 0 then
+    begin
+      with FParent.FParent.FDataModule.qryUpdQuote do
+        begin
+          close;
+          ParambyName('Quote').asinteger := Quote;
+          ParambyName('Discount_Value').asfloat := DiscountValue;
+          ParambyName('Discount_Rate').asfloat := rDiscountRate;
+          execsql;
+        end;
+    end;
+end;
+
+procedure TContractOption.SetCellValue(const Value: currency);
+begin
+  FCellValue := Value;
 end;
 
 procedure TContractOption.SetDeliveryPrice(const Value: currency);

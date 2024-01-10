@@ -15,11 +15,16 @@ type
     qryAllStock: TFDQuery;
     dtsAllStock: TDataSource;
     qryDummy: TFDQuery;
+    wtStkDatabase: TDatabase;
+    qryStockSystem: TFDQuery;
     qryProduct: TFDQuery;
+    qryGSmart: TFDQuery;
+    procedure DataModuleCreate(Sender: TObject);
   private
     function GetHeaderCountAll: integer;
     { Private declarations }
   public
+    sAlias: string;
     Description: string;
     property HeaderCountAll: integer read GetHeaderCountAll;
     function CheckProductExists(tempCode: string): boolean;
@@ -46,14 +51,26 @@ begin
 end;
 
 procedure TdtmdlStock.RefreshAlldata;
-var
-  sTemp: string;
 begin
-  sTemp := '';
-  with qryAllStock do
+  if sAlias = 'GSmart' then
     begin
-      sql.Clear;
-      sTemp := qryDummy.sql.text;
+      dtsAllStock.DataSet := qryGSmart;
+      with qryGSmart do
+        begin
+          close;
+          parambyname('Code').asstring := Description;
+          open;
+        end;
+    end
+  else
+    begin
+      with qryAllStock do
+        begin
+          sql.Clear;
+          sql.text := qryDummy.sql.text;
+          parambyname('Code').asstring := Description;
+          open;
+        end;
     end;
 end;
 
@@ -168,6 +185,34 @@ begin
       parambyname('Product_Code').asstring := tempCode;
       open;
       result := fieldbyname('Product').asinteger;
+    end;
+end;
+
+procedure TdtmdlStock.DataModuleCreate(Sender: TObject);
+var
+  sUserName, sPassword: string;
+begin
+  with qryStockSystem do
+    begin
+      close;
+      parambyname('Stock_System').asstring := dtmdlWorktops.StockSystemCode;
+      open;
+
+      if fieldbyname('External_System').asstring = 'Y' then
+        begin
+          sAlias := fieldbyname('Database_Alias_Name').asstring;
+          sUserName := fieldbyname('Login_Username').asstring;
+          sPassword := fieldbyname('Login_Password').asstring;
+
+
+          with wtStkDatabase do
+            begin
+
+              AliasName := sAlias;
+              params[0] := 'User Name=readonly';
+              params[1] := 'Password=R34donly4';
+            end;
+        end;
     end;
 end;
 

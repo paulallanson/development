@@ -911,7 +911,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label80: TLabel
           Left = 24
           Top = 27
-          Width = 65
+          Width = 66
           Height = 13
           Caption = 'Stock System'
         end
@@ -2547,12 +2547,10 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       item
         Name = 'Use_Remedials_As_Orders'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Stock_System'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryCustSalesSource: TFDQuery

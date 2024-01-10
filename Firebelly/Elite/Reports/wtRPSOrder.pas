@@ -458,9 +458,10 @@ begin
 
   if bDetailed then
     begin
-      if bPricebySlab then
+(*      if bPricebySlab then
         qryQElements.sql.text := qryQSlabs.sql.text
       else
+*)
         qryQElements.sql.text := qryQElementsDummy.sql.text;
 
       with qryQElements do

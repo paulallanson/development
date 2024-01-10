@@ -1532,6 +1532,32 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
         VerticalAlignment = tlTop
         FontSize = 8
       end
+      object qrlblStockCode: TgtQRLabel
+        Tag = 1
+        Left = 691
+        Top = 17
+        Width = 73
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1828.270833333333000000
+          44.979166666666670000
+          193.145833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'qrlblStockCode'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
+      end      
     end
   end
   object qrySalesOrders: TFDQuery
@@ -1553,6 +1579,8 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
       '        Worktop.Description as Worktop_Description,'
       '        Material_Type.Description as Material_Description,'
       '        Thickness.Thickness_mm,'
+      '        Quote_Slab.Worktop,'
+      '        Quote_Slab.Thickness,'
       '        Quote_Slab.Length as Slab_Length,'
       '        Quote_Slab.Depth as Slab_Depth,'
       '        Sales_Order_Status.Sales_Order_Status_Desc,'
@@ -1786,6 +1814,45 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
       end
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetStockCode: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT Stock_item.Stock_code'
+      'FROM Stock_item'
+      '        RIGHT JOIN Worktop_Thickness_Slab_Size'
+      
+        '          ON Stock_item.Stock_item = Worktop_Thickness_Slab_Size' +
+        '.Stock_Item'
+      'WHERE Worktop_Thickness_Slab_Size.Worktop = :Worktop AND'
+      '      Worktop_Thickness_Slab_Size.Thickness = :Thickness AND'
+      '      Worktop_Thickness_Slab_Size.Length = :Length AND'
+      '      Worktop_Thickness_Slab_Size.Depth = :Depth'
+      '')
+    Left = 792
+    Top = 48
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Worktop'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Thickness'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Length'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Depth'
+        ParamType = ptUnknown
       end>
   end
 end

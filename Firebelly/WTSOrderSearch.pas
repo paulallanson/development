@@ -32,6 +32,8 @@ type
     Label9: TLabel;
     Label10: TLabel;
     spnedtRecords: TSpinEdit;
+    Label11: TLabel;
+    edtSiteName: TEdit;
     procedure btnSearchClick(Sender: TObject);
     procedure ClearButtonClick(Sender: TObject);
   private
@@ -52,6 +54,7 @@ begin
   dtmdlSalesOrder.CustomerOrder := Trim(edtCustomerOrder.Text);
   dtmdlSalesOrder.Description := Trim(edtDescription.Text);
   dtmdlSalesOrder.ProjectReference := Trim(edtProjectReference.Text);
+  dtmdlSalesOrder.SiteName := Trim(edtSiteName.Text);
   dtmdlSalesOrder.Reference := Trim(edtReference.Text);
   dtmdlSalesOrder.QuoteReference := Trim(edtQuote.Text);
   dtmdlSalesOrder.status := Trim(edtStatus.Text);

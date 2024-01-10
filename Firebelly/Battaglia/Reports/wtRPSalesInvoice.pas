@@ -180,10 +180,12 @@ type
     bInvoice: boolean;
     bDetailed: boolean;
     bUpdate: boolean;
+    bPreview: boolean;
     bReprint: boolean;
     bAll: boolean;
     bLineUp : Boolean;
     bReverseCharge: boolean;
+    RevenueCentre: integer;
     SelCode: Integer;
     function GetInvoiceData: integer;
   end;

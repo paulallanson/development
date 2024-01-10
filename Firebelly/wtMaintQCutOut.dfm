@@ -406,7 +406,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       '        Customer_Cutout_Edge_Group.Material_Type,'
       '        Customer_Cutout.CutOut,'
       '        Customer_Cutout.Price_Pointer,'
-      '        Customer_Cutout.Edge_Type'
+      '        Customer_Cutout.Edge_Type,'
       '        (select top 1 Unit_Price'
       '         from Prices'
       '         where Price_Pointer = Customer_Cutout.Price_pointer and'

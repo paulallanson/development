@@ -79,6 +79,8 @@ type
     Button4: TButton;
     Label42: TLabel;
     memRetailPayment: TMemo;
+    qryVatVat_Rate: TFloatField;
+    qryVatVat: TIntegerField;
     Label43: TLabel;
     TabSheet1: TTabSheet;
     Label44: TLabel;
@@ -254,8 +256,12 @@ type
     btnLUProducts: TButton;
     btnClearProduct: TSpeedButton;
     chkbxUseRemedialsAsOrders: TCheckBox;
-    qryVatVat: TIntegerField;
-    qryVatVat_Rate: TFloatField;
+    grpbxStockSystem: TGroupBox;
+    chkbxUseStockSystem: TCheckBox;
+    Label80: TLabel;
+    dblkpStockSystem: TDBLookupComboBox;
+    qryStockSystem: TFDQuery;
+    dtsStockSystem: TDataSource;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
@@ -286,6 +292,7 @@ type
     procedure btnClearProductClick(Sender: TObject);
     procedure chkbxUseDocumentTransferClick(Sender: TObject);
     procedure chkbxUseRemedialsAsOrdersClick(Sender: TObject);
+    procedure chkbxUseStockSystemClick(Sender: TObject);
   private
     iProduct: integer;
     iTerms, iRetailTerms, iAvailability, iPayments, iRetailPayments, iFactoredPayments, iConfirmation: integer;
@@ -363,6 +370,9 @@ begin
 
   qryInactiveReason.Active := false;
   qryInactiveReason.Active := true;
+
+  qryStockSystem.Active := false;
+  qryStockSystem.Active := true;
 
   qryScheduling.Active := false;
   qryScheduling.Active := true;
@@ -487,6 +497,11 @@ begin
       chkbxUseRemedialsAsOrders.Checked := (qryCompany.fieldbyname('Use_Remedials_As_Orders').asstring = 'Y');
       chkbxUseRemedialsAsOrdersClick(Self);
       
+      chkbxUseStockSystem.Checked := (qryCompany.fieldbyname('Stock_System').asstring <> '');
+      chkbxUseStockSystemClick(Self);
+      if qryCompany.fieldbyname('Stock_System').asstring <> '' then
+        dblkpStockSystem.KeyValue := qryCompany.fieldbyname('Stock_System').asstring;
+        
       chkbxUseDocumentTransfer.Checked := (qryCompany.fieldbyname('Use_Document_Transfer').asstring = 'Y');
       edtQuotationDocumentFolder.Text := fieldbyname('Quotation_Document_Folder').asstring;
       edtSafetyDocumentFolder.Text := fieldbyname('Safety_Document_Folder').asstring;
@@ -731,6 +746,11 @@ begin
         ParamByName('Use_Remedials_As_Orders').asstring := 'Y'
       else
         ParamByName('Use_Remedials_As_Orders').asstring := 'N';
+
+      if not chkbxUseStockSystem.Checked then
+        ParamByName('Stock_System').clear
+      else
+        ParamByName('Stock_System').asstring := dblkpStockSystem.keyvalue;
 
       parambyname('Quotation_Document_Folder').asstring := edtQuotationDocumentFolder.Text;
       parambyname('Safety_Document_Folder').asstring := edtSafetyDocumentFolder.Text;
@@ -1248,6 +1268,13 @@ begin
   edtRemedialProduct.Enabled := chkbxUseRemedialsAsOrders.checked ;
   btnLUProducts.Enabled := chkbxUseRemedialsAsOrders.checked ;
   btnClearProduct.Enabled := chkbxUseRemedialsAsOrders.checked ;
+end;
+
+procedure TfrmWTMaintParams.chkbxUseStockSystemClick(Sender: TObject);
+begin
+  grpbxStockSystem.enabled := chkbxUseStockSystem.checked ;
+  if not chkbxUseStockSystem.checked then
+    dblkpStockSystem.keyvalue := '';
 end;
 
 end.

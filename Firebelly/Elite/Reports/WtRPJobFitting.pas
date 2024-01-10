@@ -268,11 +268,11 @@ begin
 
   {Installation Address Details}
   qrrchTextInstallAddress.lines.clear;
-  qrrchTextInstallAddress.lines.add(BuildNotes(qryReport.fieldbyname('Install_Address').asinteger));
+  qrrchTextInstallAddress.lines.add(BuildNotes(qryReport.fieldbyname('Order_Install_Address').asinteger));
 
   {Installation Address Details}
   qrrchTextInstallAddress1.lines.clear;
-  qrrchTextInstallAddress1.lines.add(BuildNotes(qryReport.fieldbyname('Install_Address').asinteger));
+  qrrchTextInstallAddress1.lines.add(BuildNotes(qryReport.fieldbyname('Order_Install_Address').asinteger));
 
   {Actual Company Name and address}
   tempAddress := '';
@@ -376,8 +376,8 @@ begin
       qryCustomer.open;
       dtsAddress.dataset := qryCustomer;
     end;
-  if trim(qryReport.FieldByName('Contact_Name').AsString) <> '' then
-    qrlblContact.caption := qryReport.FieldByName('Contact_Name').AsString
+  if trim(qryReport.FieldByName('Order_Contact_Name').AsString) <> '' then
+    qrlblContact.caption := qryReport.FieldByName('Order_Contact_Name').AsString
   else
     qrlblContact.caption := '';
 

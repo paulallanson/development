@@ -99,6 +99,13 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
     Height = 13
     Caption = 'records'
   end
+  object Label11: TLabel
+    Left = 18
+    Top = 107
+    Width = 49
+    Height = 13
+    Caption = 'Site Name'
+  end
   object edtReference: TEdit
     Left = 96
     Top = 100
@@ -203,5 +210,12 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
     MinValue = 0
     TabOrder = 8
     Value = 0
+  end
+  object edtSiteName: TEdit
+    Left = 96
+    Top = 103
+    Width = 209
+    Height = 21
+    TabOrder = 2
   end
 end

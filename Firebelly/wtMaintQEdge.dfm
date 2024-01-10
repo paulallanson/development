@@ -400,7 +400,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       '        Customer_Cutout_Edge_Group.Material_Type,'
       '        Customer_Edge.Edge_Profile,'
       '        Customer_Edge.Price_Pointer,'
-      '        Customer_Edge.Edge_Type'
+      '        Customer_Edge.Edge_Type,'
       '        (select top 1 Unit_Price'
       '         from Prices'
       '         where Price_Pointer = Customer_Edge.Price_pointer and'

@@ -11,7 +11,10 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnShow = FormShow
   TextHeight = 13
   object stbrDetails: TStatusBar
@@ -89,6 +92,13 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         Title.Caption = 'Required Date'
         Width = 87
         Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Revenue_Centre_Descr'
+        Title.Caption = 'Revenue Centre'
+        Width = 119
+        Visible = True
       end>
   end
   object Panel2: TPanel
@@ -99,49 +109,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    DesignSize = (
-      984
-      138)
-    object Label1: TLabel
-      Left = 642
-      Top = 100
-      Width = 59
-      Height = 13
-      Anchors = [akRight, akBottom]
-      Caption = 'Sales Order'
-      ExplicitLeft = 660
-    end
-    object btnSelect: TBitBtn
-      Left = 805
-      Top = 94
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = 'Select'
-      ModalResult = 1
-      TabOrder = 0
-      OnClick = btnSelectClick
-    end
-    object edtSONumber: TEdit
-      Left = 706
-      Top = 96
-      Width = 89
-      Height = 21
-      Anchors = [akRight, akBottom]
-      TabOrder = 1
-      OnKeyPress = edtSONumberKeyPress
-    end
-    object btnClose: TBitBtn
-      Left = 893
-      Top = 94
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = 'Close'
-      ModalResult = 2
-      TabOrder = 2
-      OnClick = btnCloseClick
-    end
     object chkbxShow: TCheckBox
       Left = 8
       Top = 41
@@ -151,72 +118,170 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       TabOrder = 3
       OnClick = chkbxShowClick
     end
-    object CustomerGroupBox: TGroupBox
-      Left = 8
-      Top = 82
-      Width = 385
-      Height = 49
-      Caption = 'Type here to narrow the search'
-      ParentBackground = False
-      TabOrder = 4
-      object Label2: TLabel
-        Left = 24
-        Top = 22
-        Width = 49
-        Height = 13
-        Caption = 'Customer'
-      end
-      object edtCustomerName: TEdit
-        Left = 72
-        Top = 18
-        Width = 209
-        Height = 21
-        TabOrder = 0
-        OnChange = edtCustomerNameChange
-      end
-      object btnSweep: TBitBtn
-        Left = 296
-        Top = 16
-        Width = 75
-        Height = 25
-        Caption = 'S&weep'
-        Enabled = False
-        TabOrder = 1
-        OnClick = btnSweepClick
-      end
-    end
     object chkbxShowFutureOrders: TCheckBox
       Left = 8
       Top = 13
       Width = 273
       Height = 17
       Caption = 'Show future fitted orders'
-      TabOrder = 5
+      TabOrder = 1
       OnClick = chkbxShowClick
     end
-    object btnExcel: TBitBtn
-      Left = 406
-      Top = 94
-      Width = 75
-      Height = 25
-      Caption = 'Excel'
-      Enabled = False
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-        33333FFFFFFFFFFFFFFF000000000000000077777777777777770FFFFFFFFFFF
-        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
-        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
-        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
-        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
-        FFF07FFFFFFFFFFFFFF70CCCCCCCCCCCCCC07777777777777777088CCCCCCCCC
-        C8807FF7777777777FF700000000000000007777777777777777333333333333
-        3333333333333333333333333333333333333333333333333333}
-      NumGlyphs = 2
-      TabOrder = 6
-      OnClick = btnExcelClick
+    object pnlFooter: TPanel
+      Left = 1
+      Top = 84
+      Width = 998
+      Height = 53
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 2
+      DesignSize = (
+        998
+        53)
+      object Label1: TLabel
+        Left = 657
+        Top = 18
+        Width = 55
+        Height = 13
+        Anchors = [akRight, akBottom]
+        Caption = 'Sales Order'
+      end
+      object CustomerGroupBox: TGroupBox
+        Left = 8
+        Top = 0
+        Width = 385
+        Height = 49
+        Caption = 'Type here to narrow the search'
+        TabOrder = 0
+        object Label2: TLabel
+          Left = 24
+          Top = 22
+          Width = 44
+          Height = 13
+          Caption = 'Customer'
+        end
+        object edtCustomerName: TEdit
+          Left = 72
+          Top = 18
+          Width = 209
+          Height = 21
+          TabOrder = 0
+          OnChange = edtCustomerNameChange
+        end
+        object btnSweep: TBitBtn
+          Left = 296
+          Top = 16
+          Width = 75
+          Height = 25
+          Caption = 'S&weep'
+          Enabled = False
+          TabOrder = 1
+          OnClick = btnSweepClick
+        end
+      end
+      object btnExcel: TBitBtn
+        Left = 406
+        Top = 12
+        Width = 75
+        Height = 25
+        Caption = 'Excel'
+        Enabled = False
+        TabOrder = 1
+        OnClick = btnExcelClick
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333FFFFFFFFFFFFFFF000000000000000077777777777777770FFFFFFFFFFF
+          FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+          FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+          FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+          FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+          FFF07FFFFFFFFFFFFFF70CCCCCCCCCCCCCC07777777777777777088CCCCCCCCC
+          C8807FF7777777777FF700000000000000007777777777777777333333333333
+          3333333333333333333333333333333333333333333333333333}
+        NumGlyphs = 2
+      end
+      object edtSONumber: TEdit
+        Left = 721
+        Top = 14
+        Width = 89
+        Height = 21
+        Anchors = [akRight, akBottom]
+        TabOrder = 2
+        OnKeyPress = edtSONumberKeyPress
+      end
+      object btnSelect: TBitBtn
+        Left = 820
+        Top = 12
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = 'Select'
+        ModalResult = 1
+        TabOrder = 3
+        OnClick = btnSelectClick
+      end
+      object btnClose: TBitBtn
+        Left = 908
+        Top = 12
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = 'Close'
+        ModalResult = 2
+        TabOrder = 4
+        OnClick = btnCloseClick
+      end
+    end
+    object pnlRevenueCentre: TPanel
+      Left = 616
+      Top = 1
+      Width = 383
+      Height = 83
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 3
+      object rdgrpRevenueCentre: TRadioGroup
+        Left = 40
+        Top = 3
+        Width = 121
+        Height = 73
+        Caption = 'Revenue Centre '
+        ItemIndex = 0
+        Items.Strings = (
+          'Default'
+          'All'
+          'Selected')
+        TabOrder = 0
+        OnClick = rdgrpRevenueCentreClick
+      end
+      object grpbxRevCentre: TGroupBox
+        Left = 166
+        Top = 3
+        Width = 203
+        Height = 73
+        TabOrder = 1
+        Visible = False
+        object Label3: TLabel
+          Left = 8
+          Top = 12
+          Width = 78
+          Height = 13
+          Caption = 'Revenue Centre'
+        end
+        object dblkpRevCentre: TDBLookupComboBox
+          Left = 8
+          Top = 32
+          Width = 185
+          Height = 21
+          KeyField = 'Revenue_Centre'
+          ListField = 'Revenue_Centre_Descr'
+          TabOrder = 0
+          OnClick = dblkpRevCentreClick
+        end
+      end
     end
   end
   object tmrSearch: TTimer

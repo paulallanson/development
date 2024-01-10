@@ -105,9 +105,9 @@ type
     bPreview: boolean;
     bPrintLogo: boolean;
     bAccountsCopy: boolean;
+    bRemedialTemplate: boolean;
     RemedialNo: integer;
     RemedialOrder: integer;
-    bRemedialTemplate: Boolean;
     function Getdetails: integer;
   end;
 

@@ -183,10 +183,12 @@ type
     bInvoice: boolean;
     bDetailed: boolean;
     bUpdate: boolean;
+    bPreview: boolean;
     bReprint: boolean;
     bAll: boolean;
     bLineUp : Boolean;
     bReverseCharge: boolean;
+    REvenueCentre: integer;
     SelCode: Integer;
     function GetInvoiceData: integer;
   end;

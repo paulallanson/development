@@ -184,6 +184,7 @@ type
     bPrintLogo: boolean;
     bPrintAcceptance: boolean;
     bPrintTotals: boolean;
+    bHideAllPrices: boolean;
     bShowOffer: boolean;
     bApplyEndUserMarkup: boolean;
     function Getdetails: integer;

@@ -212,7 +212,20 @@ procedure TfrmWTRPContract.qrpDetailsBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
 var
   iCount: integer;
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
 begin
+  {set the printer to what the user selected}
+  qrpDetails.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  qrpDetails.PrinterSettings.copies := Copies;   {set the number of copies }
+  qrpDetails.PrinterSettings.PaperSize := Size;   {set the number of copies }
+
   for iCount := 1 to 7 do
      OptionTotals[iCount] := 0;
      

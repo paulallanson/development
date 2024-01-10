@@ -26,6 +26,8 @@ type
     edtOperatorName: TEdit;
     Label8: TLabel;
     edtRepName: TEdit;
+    Label11: TLabel;
+    edtSiteName: TEdit;
     procedure btnSearchClick(Sender: TObject);
     procedure ClearButtonClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -47,6 +49,7 @@ procedure TfrmWTSInvoiceSearch.btnSearchClick(Sender: TObject);
 begin
   dtmdlSalesInvoice.CustomerOrder := Trim(edtCustomerOrder.Text);
   dtmdlSalesInvoice.Description := Trim(edtDescription.Text);
+  dtmdlSalesInvoice.SiteName := Trim(edtSiteName.Text);
 //  dtmdlSalesInvoice.ProjectReference := Trim(edtProjectReference.Text);
   dtmdlSalesInvoice.Reference := Trim(edtReference.Text);
   dtmdlSalesInvoice.status := Trim(edtStatus.Text);

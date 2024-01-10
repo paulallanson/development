@@ -194,6 +194,19 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Height = 13
       Caption = 'Job Number'
     end
+    object Label8: TLabel
+      Left = 10
+      Top = 171
+      Width = 75
+      Height = 13
+      Caption = 'Allocated (units)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
     object edtProduct: TEdit
       Left = 96
       Top = 20
@@ -328,6 +341,18 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateQty
     end
     object edtJobNumber: TMemo
+      Left = 96
+      Top = 199
+      Width = 81
+      Height = 21
+      TabOrder = 11
+      WantReturns = False
+      WordWrap = False
+      OnChange = CheckOK
+      OnEnter = SaveValue
+      OnExit = ValidateQty
+    end
+    object edtAllocated: TMemo
       Left = 96
       Top = 167
       Width = 81

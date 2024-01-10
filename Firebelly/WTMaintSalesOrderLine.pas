@@ -35,6 +35,8 @@ type
     edtInvoiced: TMemo;
     Label6: TLabel;
     edtJobNumber: TMemo;
+    Label8: TLabel;
+    edtAllocated: TMemo;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure edtProductKeyPress(Sender: TObject; var Key: Char);
@@ -125,6 +127,7 @@ begin
     edtProduct.text := SOLine.StockCode;
     edtDescription.text := SOLine.Description;
     edtQtyPacks.text := floattostr(SOLine.Quantity);
+    edtAllocated.text := floattostr(SOLine.QtyAllocated);
     edtDelivered.text := floattostr(SOLine.QtyDelivered);
     edtInvoiced.text := floattostr(SOLine.QtyInvoiced);
     edtPackSize.text := floattostr(SOLine.SellUnit);
@@ -138,6 +141,7 @@ begin
     edtProduct.text := '';
     edtDescription.text := '';
     edtQtyPacks.text := '';
+    edtAllocated.text := '0';
     edtDelivered.text := '0';
     edtInvoiced.text := '0';
     edtPackSize.text := '';
@@ -261,6 +265,7 @@ begin
   SOLine.UnitPrice := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
   SOLine.SellUnit := strtoint(edtPackSize.text);
   SOLine.Quantity := strtoint(edtQtyPacks.text) * SOLine.SellUnit;
+  SOLine.QtyAllocated := strtoint(edtAllocated.text) * SOLine.SellUnit;
   SOLine.QtyDelivered := strtoint(edtDelivered.text) * SOLine.SellUnit;
   SOLine.QtyInvoiced := strtoint(edtInvoiced.text) * SOLine.SellUnit;
   SOLine.Description := edtDescription.Text;

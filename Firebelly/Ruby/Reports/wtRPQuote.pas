@@ -193,8 +193,8 @@ type
     bPrintAcceptance: boolean;
     bPrintTotals: boolean;
     bShowOffer: boolean;
-    bApplyEndUserMarkup: boolean;
     bHideAllPrices: boolean;
+    bApplyEndUserMarkup: boolean;
     function Getdetails: integer;
     function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
   end;

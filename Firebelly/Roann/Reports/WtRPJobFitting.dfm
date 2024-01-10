@@ -3384,34 +3384,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VerticalAlignment = tlTop
         FontSize = 10
       end
-      object qrrchTextInstallAddress2: TQRRichText
-        Left = 16
-        Top = 208
-        Width = 321
-        Height = 97
-        Size.Values = (
-          256.645833333333300000
-          42.333333333333330000
-          550.333333333333300000
-          849.312500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AutoStretch = False
-        Color = clWindow
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = []
-        HiresExport = False
-        Transparent = False
-        YIncrement = 50
-        Lines.Strings = (
-          'InstallAddress')
-      end
-      object gtQRLabel34: TQRLabel
+      object gtQRLabel34: TgtQRLabel
         Left = 16
         Top = 185
         Width = 84
@@ -3493,9 +3466,33 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrrchTextInstallAddress2: TgtQRMemo
+        Left = 16
+        Top = 208
+        Width = 321
+        Height = 97
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          256.645833333333300000
+          42.333333333333330000
+          550.333333333333300000
+          849.312500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Lines.Strings = (
+          'InstallAddress')
+        Transparent = False
+        WordWrap = True
         FontSize = 10
       end
     end

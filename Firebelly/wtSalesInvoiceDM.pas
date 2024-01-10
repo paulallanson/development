@@ -115,7 +115,6 @@ type
     qrySCHeaderGridReference: TStringField;
     qrySCHeaderGridDescription: TWideStringField;
     qrySCHeaderGridCustomer_Name: TWideStringField;
-    qrySCHeaderGridTotal_Credit: TCurrencyField;
     qryGetSOQuote: TFDQuery;
     qryPaymentTerms: TFDQuery;
     dsPaymentTerms: TDataSource;

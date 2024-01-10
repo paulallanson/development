@@ -151,7 +151,20 @@ procedure TfrmwtRPJobRemedialSheet.qrpJobSheetBeforePrint(Sender: TCustomQuickRe
 var
   icount: integer;
   TempAddress: string;
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
 begin
+  {set the printer to what the user selected}
+  qrpJobSheet.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  qrpJobSheet.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  qrpJobSheet.PrinterSettings.copies := Copies;   {set the number of copies }
+  qrpJobSheet.PrinterSettings.PaperSize := Size;   {set the number of copies }
+
   sWorktop := '';
 
   with qryJobWorktops do

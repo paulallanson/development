@@ -655,6 +655,169 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     ParamData = <
       item
         Name = 'Int_sel'
+        
+      end>
+  end
+  object qryOrders: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Sales_Order.Customer,'
+      '      Sales_Order.Customer_Name,'
+      '      Sales_Order.Contact_Name,'
+      '      Sales_Order.Address,'
+      '      Sales_Order.Descriptive_Reference as Description,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Sales_Order_Number,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes AS SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes AS Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes AS Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address AS Order_Install_Address,'
+      '      Sales_Order.Install_Name AS Order_Install_Name,'
+      '      Sales_Order.Install_Phone AS Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address AS Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address AS Order_Email_Address,'
+      '      Sales_Order.Reference AS Order_Reference,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Sales_Order.Date_Required AS Order_Date_Required,'
+      '      Sales_Order.Contact_Name AS Order_Contact_Name,'
+      '      (SELECT Customer_Branch.Special_Instructions'
+      '       FROM Customer_Branch'
+      '            INNER JOIN Sales_Order AS SO'
+      
+        '              ON (Customer_Branch.Branch_No = SO.Branch_no) AND ' +
+        '(Customer_Branch.Customer = SO.Customer)'
+      
+        '       WHERE SO.Sales_Order = Sales_Order.Sales_Order) AS Site_I' +
+        'nstructions,'
+      '      (SELECT TOP 1 Sales_Order_Line.Quote'
+      '       FROM Sales_Order_Line'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der) as Quote,'
+      '      (SELECT TOP 1 Sales_Order_Line.Job'
+      '       FROM Sales_Order_Line'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der) as Job,'
+      '      (SELECT TOP 1 Job.Risk_Notes'
+      '       FROM Sales_Order_Line, Job'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der AND'
+      #9#9#9' (Sales_order_line.Job = Job.Job)) as Risk_Notes,'
+      '      (SELECT TOP 1 Job.Job_Status'
+      '       FROM Sales_Order_Line, Job'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der AND'
+      #9#9#9' (Sales_order_line.Job = Job.Job)) as Job_Status'
+      'FROM Operator'
+      '      INNER JOIN (Int_Sel'
+      '      INNER JOIN Sales_Order'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Operator.Operator = Sales_Order.Operator'
+      'WHERE'
+      '  (Int_sel.Int_sel_Code = :Int_sel)'
+      '')
+    Left = 464
+    Top = 248
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryEmails: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Sales_Order.Customer,'
+      '      Sales_Order.Customer_Name,'
+      '      Sales_Order.Address,'
+      '      Sales_Order.Descriptive_Reference as Description,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Customer,'
+      '      Sales_Order.Customer_Name,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes AS SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes AS Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes AS Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address AS Order_Install_Address,'
+      '      Sales_Order.Install_Name AS Order_Install_Name,'
+      '      Sales_Order.Install_Phone AS Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address AS Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address AS Order_Email_Address,'
+      '      Sales_Order.Reference AS Order_Reference,'
+      '      Sales_Order.Date_Required AS Order_Date_Required,'
+      '      Sales_Order.Fitter AS Order_Fitter,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Fitter.Fitter_Name,'
+      '      Fitter.Email_Address AS Email,'
+      '      Fitter.Email_Address AS Contact_Email,'
+      '      '#39'Adobe Acrobat Document (*.pdf)'#39' AS export_filter_desc,'
+      '      '#39'PDF'#39' AS ExportFilter, '#39' '#39' AS CC_Email,'
+      '      (SELECT Customer_Branch.Special_Instructions'
+      '       FROM Customer_Branch'
+      '            INNER JOIN Sales_Order AS SO'
+      
+        '              ON (Customer_Branch.Branch_No = SO.Branch_no) AND ' +
+        '(Customer_Branch.Customer = SO.Customer)'
+      
+        '       WHERE SO.Sales_Order = Sales_Order.Sales_Order) AS Site_I' +
+        'nstructions,'
+      '      (SELECT TOP 1 Sales_Order_Line.Quote'
+      '       FROM Sales_Order_Line'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der) as Quote,'
+      '      (SELECT TOP 1 Sales_Order_Line.Job'
+      '       FROM Sales_Order_Line'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der) as Job,'
+      '      (SELECT TOP 1 Job.Risk_Notes'
+      '       FROM Sales_Order_Line, Job'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der AND'
+      #9#9#9' (Sales_order_line.Job = Job.Job)) as Risk_Notes,'
+      '      (SELECT TOP 1 Job.Job_Status'
+      '       FROM Sales_Order_Line, Job'
+      
+        '       WHERE Sales_Order_line.Sales_Order = Sales_Order.Sales_Or' +
+        'der AND'
+      #9#9#9' (Sales_order_line.Job = Job.Job)) as Job_Status'
+      'FROM Fitter'
+      '      RIGHT JOIN (Operator'
+      '      INNER JOIN (Int_Sel'
+      '      INNER JOIN Sales_Order'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Operator.Operator = Sales_Order.Operator)'
+      '        ON Fitter.Fitter = Sales_Order.Fitter'
+      'WHERE'
+      '  (Int_sel.Int_sel_Code = :Int_sel)'
+      'ORDER BY'
+      '    Fitter.Fitter_Name,'
+      '    sales_order.Sales_Order'
+      '')
+    Left = 464
+    Top = 304
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
       end>
   end
 end
