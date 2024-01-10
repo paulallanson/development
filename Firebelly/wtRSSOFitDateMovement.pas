@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, gtQrCtrls, DB,
-  DBTables, IniFiles;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
+  DBTables, IniFiles, FireDAC.Comp.Client, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+  FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTRSSOFitDateMovement = class(TForm)
@@ -34,7 +37,7 @@ type
     grpbxReps: TGroupBox;
     Label3: TLabel;
     cmbReps: TComboBox;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     rdgrpSortBy: TRadioGroup;
     chkbxPageBreak: TCheckBox;
@@ -257,7 +260,7 @@ var
   DateFrom, DateTo, DateMoveFrom, DateMoveTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   try
   with IniFile do
@@ -404,7 +407,7 @@ procedure TfrmWTRSSOFitDateMovement.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   with IniFile do
     begin

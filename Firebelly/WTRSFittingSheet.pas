@@ -1541,7 +1541,7 @@ begin
             for icount := 0 to pred(Printers.Printer.Printers.count) do
               begin
                 if pos(DefaultPrinter,Printers.Printer.printers[icount]) > 0 then
-                if DefaultPrinter = Printer.Printer.printers[icount] then
+                if DefaultPrinter = Printers.Printer.printers[icount] then
                   Printers.Printer.PrinterIndex := icount;
               end;
 

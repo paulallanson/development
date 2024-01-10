@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Grids, DBGrids, DBTables, DB, QrCtrls, ExtCtrls,
-  ComCtrls;
+  ComCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
 
 type
   TfrmWTLUStore = class(TForm)
@@ -15,8 +18,8 @@ type
     Panel1: TPanel;
     chkbxShowInactive: TCheckBox;
     BitBtn4: TBitBtn;
-    qryStore: TQuery;
-    qryDelete: TQuery;
+    qryStore: TFDQuery;
+    qryDelete: TFDQuery;
     Panel2: TPanel;
     BitBtn1: TBitBtn;
     btnEdit: TBitBtn;

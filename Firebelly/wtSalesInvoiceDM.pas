@@ -140,7 +140,6 @@ type
     qrySIHeaderGridAccount_Code: TWideStringField;
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
-    qrySIHeaderBaseOlder: TFDQuery;
     qrySIHeaderGridBranch_Name: TWideStringField;
     qrySIHeaderGridDate_Required: TDateTimeField;
     qrySCHeaderBaseOlder: TFDQuery;

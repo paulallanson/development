@@ -96,10 +96,6 @@ type
     procedure sgLinesDblClick(Sender: TObject);
     procedure mnChangeChgClick(Sender: TObject);
     procedure mnAddChgClick(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgChargesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure btnNotesClick(Sender: TObject);
     procedure CheckNotes(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
@@ -124,6 +120,8 @@ type
     procedure SpeedButton2Click(Sender: TObject);
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     bNotesFlash: ByteBool;
     bIntNotesFlash: ByteBool;
@@ -515,6 +513,12 @@ begin
   sgLines.cells[8,0] := 'Nominal';
   sgLines.cells[9,0] := 'Credit Type';
   sgLines.cells[10,0] := 'Cost';
+
+  for var i := 0 to sgLines.ColCount-1 do
+  begin
+    if not (i in [0,1,2]) then
+      sgLines.ColAlignments[i] := taRightJustify;
+  end;
 end;
 
 procedure TfrmWTMaintSalesInvoice.btnOKClick(Sender: TObject);
@@ -745,26 +749,10 @@ begin
     mnChangeLineClick(self);
 end;
 
-procedure TfrmWTMaintSalesInvoice.mnChangeChgClick(Sender: TObject);
+procedure TfrmWTMaintSalesInvoice.sgLinesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  CallMaintChgsScreen(sicChange);
-end;
-
-procedure TfrmWTMaintSalesInvoice.CallMaintChgsScreen(aMode : TsicMode);
-begin
-end;
-
-procedure TfrmWTMaintSalesInvoice.mnAddChgClick(Sender: TObject);
-begin
-  CallMaintChgsScreen(sicAdd);
-end;
-
-procedure TfrmWTMaintSalesInvoice.sgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) or (vCol = 11) then
+  if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 11) then
   	begin
       if (ARow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
         (Sender as TStringGrid).Canvas.font.Color := clRed;

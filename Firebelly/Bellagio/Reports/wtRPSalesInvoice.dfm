@@ -14434,7 +14434,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       DataSet = qryQLabour
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblLabourUTR: TgtQRLabel
+      object qrlblLabourUTR: TQRLabel
         Left = 380
         Top = 5
         Width = 127
@@ -14465,7 +14465,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLabourCharge: TgtQRLabel
+      object qrlblLabourCharge: TQRLabel
         Left = 609
         Top = 5
         Width = 105
@@ -14496,7 +14496,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLabourVAT: TgtQRLabel
+      object qrlblLabourVAT: TQRLabel
         Left = 531
         Top = 5
         Width = 85
@@ -15025,13 +15025,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         
       end>
   end
-  object qryUpdRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryUpdRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     Left = 944
     Top = 296
   end
-  object qryUniqueInv: TQuery
-    DatabaseName = 'PB'
+  object qryUniqueInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -15045,8 +15045,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryQLabour: TQuery
-    DatabaseName = 'WT'
+  object qryQLabour: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_order_line.Sales_Order,'
       '        Sales_order_line.Sales_order_Line_no,'

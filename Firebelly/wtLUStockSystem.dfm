@@ -114,8 +114,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     Left = 152
     Top = 120
   end
-  object qryStockSystem: TQuery
-    DatabaseName = 'WT'
+  object qryStockSystem: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'
@@ -124,8 +124,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     Left = 72
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

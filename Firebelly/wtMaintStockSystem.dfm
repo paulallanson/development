@@ -21,14 +21,14 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   object label1: TLabel
     Left = 8
     Top = 52
-    Width = 28
+    Width = 29
     Height = 13
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 20
-    Width = 65
+    Width = 66
     Height = 13
     Caption = 'Stock System'
   end
@@ -85,42 +85,42 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     object Label3: TLabel
       Left = 24
       Top = 24
-      Width = 71
+      Width = 75
       Height = 13
       Caption = 'Database Alias'
     end
     object Label4: TLabel
       Left = 24
       Top = 48
-      Width = 48
+      Width = 51
       Height = 13
       Caption = 'Username'
     end
     object Label5: TLabel
       Left = 24
       Top = 72
-      Width = 46
+      Width = 49
       Height = 13
       Caption = 'Password'
     end
     object Label6: TLabel
       Left = 24
       Top = 130
-      Width = 103
+      Width = 116
       Height = 13
       Caption = 'Order Import Directory'
     end
     object Label7: TLabel
       Left = 24
       Top = 101
-      Width = 119
+      Width = 129
       Height = 13
       Caption = 'Order Processing Interval'
     end
     object Label8: TLabel
       Left = 192
       Top = 101
-      Width = 25
+      Width = 24
       Height = 13
       Caption = 'secs.'
     end
@@ -185,8 +185,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     TabOrder = 2
     OnClick = chkbxExternalSystemClick
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Stock_System'
       'SET'
@@ -203,48 +203,32 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_System_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'External_System'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Database_Alias_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Login_Username'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Login_Password'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Process_Interval'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Import_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_System'
-        ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Stock_System'
       '        (Stock_System,'
@@ -258,18 +242,14 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_System'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_System_Description'
-        ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 296
     Top = 72
   end

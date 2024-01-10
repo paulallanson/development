@@ -1719,8 +1719,8 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Size = 1
     end
   end
-  object qryReportOld: TQuery
-    DatabaseName = 'Wt'
+  object qryReportOld: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_invoice.Sales_invoice,'
       '        Sales_invoice.Inactive,'

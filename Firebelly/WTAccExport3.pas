@@ -164,7 +164,8 @@ uses
   StdCtrls, Buttons, DB, Grids, DBGrids, ComCtrls, Inifiles,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls,
+  Vcl.ExtCtrls;
 
 type
   TfrmWTAccExport3 = class(TForm)
@@ -189,7 +190,7 @@ type
     BrowseBtn: TBitBtn;
     lblStatus: TLabel;
     Progress: TProgressBar;
-    qryRevenueCentre: TQuery;
+    qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
     procedure FinishBtnClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
@@ -271,6 +272,7 @@ type
     sRevCentrePrefix: string;
     iRevenueCentre: integer;
     sLastForm: TForm;
+    bUseRevenueCentre: boolean;
     procedure UpdateCustomers(UpCustomerDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
     procedure UpdateSuppliers(UpSupplierDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
     procedure UpdateSalesStatus(UpSalesInvSQL: TFDQuery; iStatusFrom: integer; iStatusTo: integer);
@@ -284,7 +286,7 @@ implementation
 
 uses
   UITypes, WTAccExport1, WTAccExport4, WTAccExport2, WTAccExportDM, AllCommon,
-  WtAccImportDM, WTMain;
+  WtAccImportDM, WTMain, wtDataModule;
 
 var
   sPathEdit: string[255];

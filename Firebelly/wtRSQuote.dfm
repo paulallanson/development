@@ -3,8 +3,8 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 355
-  ClientWidth = 462
+  ClientHeight = 354
+  ClientWidth = 458
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSQuote: TfrmWTRSQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    462
-    355)
+    458
+    354)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 318
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -32,13 +32,14 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object Button4: TButton
     Left = 374
-    Top = 318
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
+    ExplicitTop = 318
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -69,7 +70,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 318
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -81,7 +82,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnEmail: TButton
     Left = 184
-    Top = 318
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

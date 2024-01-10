@@ -267,7 +267,7 @@ object dtmdlPrices: TdtmdlPrices
     Left = 152
     Top = 8
   end
-  object qryDummyFuture: TQuery
+  object qryDummyFuture: TFDQuery
     SQL.Strings = (
       'SELECT  Worktop_thickness.Worktop,'
       '        Worktop.inactive,'
@@ -335,8 +335,8 @@ object dtmdlPrices: TdtmdlPrices
     Left = 240
     Top = 8
   end
-  object qryDeletePrices: TQuery
-    DatabaseName = 'WT'
+  object qryDeletePrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Prices'
       
@@ -356,7 +356,7 @@ object dtmdlPrices: TdtmdlPrices
         ParamType = ptUnknown
       end>
   end
-  object qryDummyCurrentOld: TQuery
+  object qryDummyCurrentOld: TFDQuery
     SQL.Strings = (
       'SELECT'
       '    Worktop.Worktop,'
@@ -437,7 +437,7 @@ object dtmdlPrices: TdtmdlPrices
     Left = 376
     Top = 16
   end
-  object qryDummyFuture: TFDQuery
+  object qryDummyFutureOld: TFDQuery
     SQL.Strings = (
       'SELECT  Worktop_thickness.Worktop,'
       '        Worktop.inactive,'

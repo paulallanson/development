@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, Activex;
+  Dialogs, StdCtrls, Buttons, DB, DBTables, Activex, FireDAC.Comp.Client,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTMaintWTThicknessStockCode = class(TForm)
@@ -12,12 +15,12 @@ type
     edtStockCode: TEdit;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryAdd: TQuery;
-    qryUpdate: TQuery;
-    qryGetStockItem: TQuery;
-    qryZero: TQuery;
-    qryGetLast: TQuery;
-    qryUpdWT: TQuery;
+    qryAdd: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryGetStockItem: TFDQuery;
+    qryZero: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryUpdWT: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

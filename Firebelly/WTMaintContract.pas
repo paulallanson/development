@@ -1090,7 +1090,7 @@ end;
 procedure TfrmWTMaintContract.sgDetailsKeyUp(Sender: TObject;
   var Key: Word; Shift: TShiftState);
 var
-  irow: integer;
+  irow, icolumn: integer;
 //  ContractLine: TContractLine;
   ContractOption: TContractOption;
 begin

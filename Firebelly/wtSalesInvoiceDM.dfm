@@ -2919,7 +2919,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 944
     Top = 8
   end
-  object qrySIHeaderBaseOld: TFDQuery
+  object qrySIHeaderBaseOlder: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -2997,7 +2997,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySCHeaderBaseOlder: TQuery
+  object qrySCHeaderBaseOlder: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3078,7 +3078,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIHeaderBaseOld: TQuery
+  object qrySIHeaderBaseOld: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3174,7 +3174,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySCHeaderBaseOld: TQuery
+  object qrySCHeaderBaseOld: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'

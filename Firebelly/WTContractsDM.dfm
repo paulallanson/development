@@ -1563,8 +1563,8 @@ object dtmdlContract: TdtmdlContract
     Left = 944
     Top = 24
   end
-  object qryUpdQuote: TQuery
-    DatabaseName = 'WT'
+  object qryUpdQuote: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote'
       

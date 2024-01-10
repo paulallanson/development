@@ -131,13 +131,13 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       object qrlblQuoteCaption: TQRLabel
         Left = 8
         Top = 88
-        Width = 151
+        Width = 153
         Height = 40
         Size.Values = (
           105.833333333333300000
           21.166666666666670000
           232.833333333333300000
-          399.520833333333300000)
+          404.812500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

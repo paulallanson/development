@@ -2,9 +2,9 @@ unit wtRSSOStockDeAllocation;
 
 interface
 
-uses
+uses FireDAC.Comp.Client, 
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, gtQrCtrls, ComCtrls, OleCtnrs, DB,
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
   DBTables, Menus, Dateutils, IniFiles, Grids, DBGrids;
 
 type
@@ -27,15 +27,15 @@ type
     prgbrRecords: TProgressBar;
     btnAllocate: TButton;
     dtsSalesOrders: TDataSource;
-    qrySalesOrders: TQuery;
-    qryDummy: TQuery;
-    qryGetGSmart: TQuery;
-    qryGetStockCode: TQuery;
+    qrySalesOrders: TFDQuery;
+    qryDummy: TFDQuery;
+    qryGetGSmart: TFDQuery;
+    qryGetStockCode: TFDQuery;
     wtStkDatabase: TDatabase;
-    qryUpdSOLine: TQuery;
-    qryUpdSO: TQuery;
-    qryGetSalesOrder: TQuery;
-    qryGetStockSystem: TQuery;
+    qryUpdSOLine: TFDQuery;
+    qryUpdSO: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
+    qryGetStockSystem: TFDQuery;
     GroupBox2: TGroupBox;
     Label5: TLabel;
     Label6: TLabel;
@@ -43,9 +43,9 @@ type
     edtMoveDateTo: TEdit;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    qryDummyOld: TQuery;
-    qryDeAllocQuoteSlab: TQuery;
-    qryGetSalesOrderLine: TQuery;
+    qryDummyOld: TFDQuery;
+    qryDeAllocQuoteSlab: TFDQuery;
+    qryGetSalesOrderLine: TFDQuery;
     procedure btnCloseClick(Sender: TObject);
     procedure btnDatefromClick(Sender: TObject);
     procedure enableOK(Sender: TObject);
@@ -184,7 +184,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   try
   with IniFile do
@@ -204,7 +204,7 @@ begin
   edtDateTo.Text := paDateStr(dateTo);
 
   StockSystem := dtmdlWorktops.StockSystemCode;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
 end;
 
 procedure TfrmWTRSSOStockDeAllocation.rdgrpSelectByClick(Sender: TObject);
@@ -216,12 +216,12 @@ procedure TfrmWTRSSOStockDeAllocation.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   with IniFile do
     begin
     end;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
 end;
 
 procedure TfrmWTRSSOStockDeAllocation.FormActivate(Sender: TObject);

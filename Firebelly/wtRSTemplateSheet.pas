@@ -256,7 +256,7 @@ begin
             for icount := 0 to pred(Printers.Printer.Printers.Count) do
               begin
                 if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
-                if DefaultPrinter = Printer.Printers.printers[icount] then
+                if DefaultPrinter = Printers.Printer.Printers[icount] then
                   Printers.Printer.PrinterIndex := icount;
               end;
 
@@ -326,12 +326,12 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
+      printers.Printer.printerindex := -1;
+      for icount := 0 to pred(Printers.Printer.Printers.count) do
         begin
 //          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-          if DefaultPrinter = Printer.printers[icount] then
-            Printer.PrinterIndex := icount;
+          if DefaultPrinter = Printers.Printer.Printers[icount] then
+            printers.Printer.printerindex := icount;
         end;
 
       if DefaultPrinter <> '' then
@@ -382,7 +382,7 @@ begin
           close;
         end;
     finally
-      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
       DefaultBin := GetBinSelection;
       PrinterSettings.Free;
     end;

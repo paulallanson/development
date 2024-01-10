@@ -1532,7 +1532,7 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
         VerticalAlignment = tlTop
         FontSize = 8
       end
-      object qrlblStockCode: TgtQRLabel
+      object qrlblStockCode: TQRLabel
         Tag = 1
         Left = 691
         Top = 17
@@ -1817,8 +1817,8 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
         ParamType = ptUnknown
       end>
   end
-  object qryGetStockCode: TQuery
-    DatabaseName = 'WT'
+  object qryGetStockCode: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Stock_item.Stock_code'
       'FROM Stock_item'

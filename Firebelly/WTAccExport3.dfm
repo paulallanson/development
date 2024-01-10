@@ -18,12 +18,15 @@ object frmWTAccExport3: TfrmWTAccExport3
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 303
-    Width = 363
+    Top = 247
+    Width = 343
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 246
+    ExplicitWidth = 339
     object BitBtn1: TBitBtn
       Left = 96
       Top = 8
@@ -55,11 +58,13 @@ object frmWTAccExport3: TfrmWTAccExport3
   object pnlRevenueCentre: TPanel
     Left = 0
     Top = 0
-    Width = 363
+    Width = 343
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 339
     object rdgrpRevenueCentre: TRadioGroup
       Left = 8
       Top = 3
@@ -70,6 +75,7 @@ object frmWTAccExport3: TfrmWTAccExport3
       Items.Strings = (
         'Default'
         'Selected')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpRevenueCentreClick
     end
@@ -78,12 +84,13 @@ object frmWTAccExport3: TfrmWTAccExport3
       Top = 3
       Width = 203
       Height = 62
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object Label3: TLabel
         Left = 8
         Top = 12
-        Width = 78
+        Width = 81
         Height = 13
         Caption = 'Revenue Centre'
       end
@@ -102,43 +109,46 @@ object frmWTAccExport3: TfrmWTAccExport3
   object pnlDetails: TPanel
     Left = 0
     Top = 73
-    Width = 363
-    Height = 230
+    Width = 343
+    Height = 174
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 339
+    ExplicitHeight = 173
     object Label2: TLabel
       Left = 8
       Top = 8
-      Width = 91
+      Width = 97
       Height = 13
       Caption = 'Accounting System'
     end
     object AliasLbl: TLabel
       Left = 8
       Top = 56
-      Width = 92
+      Width = 99
       Height = 13
       Caption = 'Alias of Datasource'
     end
     object fileNameLbl: TLabel
       Left = 8
       Top = 56
-      Width = 47
+      Width = 50
       Height = 13
       Caption = 'File Name'
     end
     object ExportLbl: TLabel
       Left = 8
       Top = 104
-      Width = 109
+      Width = 120
       Height = 13
       Caption = 'Export/Import Directory'
     end
     object lblStatus: TLabel
       Left = 8
       Top = 160
-      Width = 52
+      Width = 55
       Height = 13
       Caption = 'Processing'
       Visible = False
@@ -158,7 +168,6 @@ object frmWTAccExport3: TfrmWTAccExport3
       Width = 177
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = cbsourceChange
     end
@@ -200,8 +209,8 @@ object frmWTAccExport3: TfrmWTAccExport3
       Visible = False
     end
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Revenue_Centre.Revenue_Centre,'
       '        Revenue_Centre.Revenue_Centre_Descr,'

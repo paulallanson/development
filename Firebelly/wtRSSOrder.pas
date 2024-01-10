@@ -74,7 +74,7 @@ var
 
 implementation
 
-uses
+uses Printers, 
   System.UITypes,
   wtRPQuote, wtDataModule, wtSendFax, wtFaxList, wtRPSOrder, AllEmailHandler,
   wtRPTemplate, wtMain;
@@ -693,4 +693,3 @@ begin
 end;
 
 end.
-

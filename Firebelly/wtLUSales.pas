@@ -97,7 +97,8 @@ uses
   System.UITypes, System.Types, Math,
   WtMaintSalesOrder, wtRSSOrder, WTJobsDM, WtMaintJob, wtLUSOLines,
   WTLUSOrderRpts, WTSOrderSearch, wtRSTemplateSheet, wtDataModule,
-  wtLUPayments, wtMain, wtRSFittingConfirm;
+  wtLUPayments, wtMain, wtRSFittingConfirm, wtRSSOStockAllocation,
+  wtRSSOStockDeAllocation;
 
 {$R *.DFM}
 

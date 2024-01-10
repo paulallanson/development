@@ -88,7 +88,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 413
         Top = 3
         Width = 209
@@ -119,7 +119,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 0
         Top = 73
         Width = 59
@@ -150,7 +150,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 64
         Top = 73
         Width = 23
@@ -181,7 +181,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 128
         Top = 73
         Width = 47
@@ -212,7 +212,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 304
         Top = 73
         Width = 52
@@ -243,7 +243,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 414
         Top = 73
         Width = 45
@@ -274,7 +274,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 521
         Top = 73
         Width = 62
@@ -305,7 +305,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 936
         Top = 73
         Width = 102
@@ -336,7 +336,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 704
         Top = 73
         Width = 33
@@ -367,7 +367,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 877
         Top = 73
         Width = 53
@@ -398,7 +398,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 770
         Top = 73
         Width = 23
@@ -429,7 +429,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 24
         Width = 74
@@ -460,7 +460,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 601
         Top = 73
         Width = 49
@@ -491,7 +491,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 806
         Top = 73
         Width = 60
@@ -522,7 +522,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -551,7 +551,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         Transparent = False
         FontSize = 8
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -581,7 +581,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         Transparent = False
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -641,7 +641,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText12: TgtQRDBText
+      object QRDBText12: TQRDBText
         Tag = 1
         Left = 786
         Top = 0
@@ -669,7 +669,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText11: TgtQRDBText
+      object QRDBText11: TQRDBText
         Tag = 1
         Left = 662
         Top = 0
@@ -697,7 +697,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Tag = 1
         Left = -5
         Top = 1
@@ -724,7 +724,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Tag = 1
         Left = 64
         Top = 1
@@ -751,7 +751,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Tag = 1
         Left = 304
         Top = 1
@@ -778,7 +778,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Tag = 1
         Left = 128
         Top = 1
@@ -805,7 +805,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Tag = 1
         Left = 415
         Top = 0
@@ -832,7 +832,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Tag = 1
         Left = 742
         Top = 0
@@ -860,7 +860,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Tag = 1
         Left = 872
         Top = 0
@@ -888,7 +888,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOriginalDate: TgtQRLabel
+      object qrlblOriginalDate: TQRLabel
         Tag = 1
         Left = 521
         Top = 0
@@ -920,7 +920,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblNewDate: TgtQRLabel
+      object qrlblNewDate: TQRLabel
         Tag = 1
         Left = 601
         Top = 0
@@ -952,7 +952,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblMovementDate: TgtQRLabel
+      object qrlblMovementDate: TQRLabel
         Tag = 1
         Left = 937
         Top = 0
@@ -984,7 +984,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object gtqrStatus: TgtQRLabel
+      object gtqrStatus: TQRLabel
         Tag = 1
         Left = 993
         Top = 0
@@ -1031,7 +1031,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 841
         Top = 9
         Width = 90
@@ -1062,7 +1062,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDeposit: TgtQRLabel
+      object qrlblDeposit: TQRLabel
         Left = 772
         Top = 9
         Width = 95
@@ -1093,7 +1093,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblVATTotal: TgtQRLabel
+      object qrlblVATTotal: TQRLabel
         Left = 704
         Top = 9
         Width = 90
@@ -1124,7 +1124,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 570
         Top = 9
         Width = 68
@@ -1155,7 +1155,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 656
         Top = -1
         Width = 281
@@ -1173,7 +1173,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblGoodsTotal: TgtQRLabel
+      object qrlblGoodsTotal: TQRLabel
         Left = 649
         Top = 9
         Width = 89
@@ -1225,7 +1225,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -1256,7 +1256,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 72
         Top = 8
         Width = 80
@@ -1309,7 +1309,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         100.541666666666700000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustDeposit: TgtQRLabel
+      object qrlblCustDeposit: TQRLabel
         Left = 772
         Top = 10
         Width = 95
@@ -1340,7 +1340,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 852
         Top = 10
         Width = 79
@@ -1371,7 +1371,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 656
         Top = -1
         Width = 281
@@ -1389,7 +1389,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 495
         Top = 10
         Width = 108
@@ -1420,7 +1420,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 610
         Top = 10
         Width = 28
@@ -1451,7 +1451,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustGoods: TgtQRLabel
+      object qrlblCustGoods: TQRLabel
         Left = 649
         Top = 10
         Width = 88
@@ -1482,7 +1482,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustVAT: TgtQRLabel
+      object qrlblCustVAT: TQRLabel
         Left = 718
         Top = 10
         Width = 75
@@ -1515,8 +1515,8 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
       end
     end
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT'#9'DISTINCT'
       '        Sales_Order.Sales_Order,'
@@ -1820,8 +1820,8 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         ParamType = ptUnknown
       end>
   end
-  object qryGetMovedOutDates: TQuery
-    DatabaseName = 'WT'
+  object qryGetMovedOutDates: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1'
       '        Sales_Order_Date_Log.Change_Date,'
@@ -1884,8 +1884,8 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         ParamType = ptUnknown
       end>
   end
-  object qryGetMovedInDates: TQuery
-    DatabaseName = 'WT'
+  object qryGetMovedInDates: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1'
       '        Sales_Order_Date_Log.Change_Date,'

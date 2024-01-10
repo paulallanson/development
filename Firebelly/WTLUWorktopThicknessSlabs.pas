@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, DBTables, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, ActiveX,
-  ComCtrls;
+  ComCtrls, FireDAC.Comp.Client, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTLUWorktopThicknessSlabs = class(TForm)
@@ -17,16 +19,16 @@ type
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     dbgDetails: TDBGrid;
-    qrySlabs: TQuery;
+    qrySlabs: TFDQuery;
     dtsSlabs: TDataSource;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     BitBtn1: TBitBtn;
-    qryAddSlab: TQuery;
-    qryGetSlabs: TQuery;
-    qryAddStock: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
-    qryUpdStock: TQuery;
+    qryAddSlab: TFDQuery;
+    qryGetSlabs: TFDQuery;
+    qryAddStock: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
+    qryUpdStock: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);

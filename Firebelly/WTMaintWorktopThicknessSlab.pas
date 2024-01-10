@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, CRControls, DB, DBTables, ActiveX;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, CRControls, DB, DBTables, ActiveX,
+  FireDAC.Comp.Client, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTMaintWorktopThicknessSlab = class(TForm)
@@ -18,14 +21,14 @@ type
     edtLength: TCREditInt;
     edtDepth: TCREditInt;
     edtSlabSizeDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
     Label6: TLabel;
     edtStockCode: TEdit;
-    qryAddStock: TQuery;
-    qryUpdStock: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryAddStock: TFDQuery;
+    qryUpdStock: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     Label7: TLabel;
     edtStockDescription: TEdit;
     Label8: TLabel;

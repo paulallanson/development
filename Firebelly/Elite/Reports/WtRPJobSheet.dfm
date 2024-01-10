@@ -114,7 +114,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         2442.104166666667000000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object gtQRShape14: TgtQRShape
+      object gtQRShape14: TQRShape
         Left = 0
         Top = 389
         Width = 718
@@ -132,7 +132,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape13: TgtQRShape
+      object gtQRShape13: TQRShape
         Left = 0
         Top = 326
         Width = 718
@@ -150,7 +150,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape11: TgtQRShape
+      object gtQRShape11: TQRShape
         Left = 0
         Top = 263
         Width = 718
@@ -168,7 +168,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape10: TgtQRShape
+      object gtQRShape10: TQRShape
         Left = 0
         Top = 200
         Width = 718
@@ -186,7 +186,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblSOCaption: TgtQRLabel
+      object qrlblSOCaption: TQRLabel
         Left = 344
         Top = 8
         Width = 371
@@ -217,7 +217,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 28
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 0
         Top = 137
         Width = 718
@@ -235,7 +235,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 9
         Top = 205
         Width = 35
@@ -266,7 +266,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TRDBText
         Left = 124
         Top = 169
         Width = 27
@@ -298,7 +298,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 8
         Top = 169
         Width = 90
@@ -330,7 +330,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 0
         Top = 0
         Width = 220
@@ -347,7 +347,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
           582.083333333333300000)
         Stretch = True
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 240
         Top = 161
         Width = 217
@@ -379,7 +379,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 229
         Top = 138
         Width = 5
@@ -397,7 +397,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 9
         Top = 141
         Width = 69
@@ -428,7 +428,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape12: TgtQRShape
+      object gtQRShape12: TQRShape
         Left = 464
         Top = 138
         Width = 8
@@ -446,7 +446,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 241
         Top = 141
         Width = 85
@@ -477,7 +477,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 481
         Top = 141
         Width = 76
@@ -508,7 +508,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 241
         Top = 205
         Width = 60
@@ -539,7 +539,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 481
         Top = 205
         Width = 112
@@ -570,7 +570,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 9
         Top = 269
         Width = 53
@@ -601,7 +601,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 241
         Top = 269
         Width = 95
@@ -632,7 +632,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 481
         Top = 269
         Width = 69
@@ -663,7 +663,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel14: TgtQRLabel
+      object gtQRLabel14: TQRLabel
         Left = 9
         Top = 333
         Width = 55
@@ -694,7 +694,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel15: TgtQRLabel
+      object gtQRLabel15: TQRLabel
         Left = 241
         Top = 333
         Width = 141
@@ -725,7 +725,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel16: TgtQRLabel
+      object gtQRLabel16: TQRLabel
         Left = 481
         Top = 333
         Width = 68
@@ -756,7 +756,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel17: TgtQRLabel
+      object gtQRLabel17: TQRLabel
         Left = 9
         Top = 397
         Width = 102
@@ -787,7 +787,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel18: TgtQRLabel
+      object gtQRLabel18: TQRLabel
         Left = 241
         Top = 397
         Width = 47
@@ -818,7 +818,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape15: TgtQRShape
+      object gtQRShape15: TQRShape
         Left = 0
         Top = 452
         Width = 718
@@ -836,7 +836,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape16: TgtQRShape
+      object gtQRShape16: TQRShape
         Left = 0
         Top = 515
         Width = 718
@@ -854,7 +854,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape17: TgtQRShape
+      object gtQRShape17: TQRShape
         Left = 0
         Top = 578
         Width = 718
@@ -872,7 +872,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape18: TgtQRShape
+      object gtQRShape18: TQRShape
         Left = 352
         Top = 452
         Width = 8
@@ -890,7 +890,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel20: TgtQRLabel
+      object gtQRLabel20: TQRLabel
         Left = 9
         Top = 461
         Width = 109
@@ -921,7 +921,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel21: TgtQRLabel
+      object gtQRLabel21: TQRLabel
         Left = 369
         Top = 461
         Width = 70
@@ -952,7 +952,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel22: TgtQRLabel
+      object gtQRLabel22: TQRLabel
         Left = 9
         Top = 525
         Width = 93
@@ -983,7 +983,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel23: TgtQRLabel
+      object gtQRLabel23: TQRLabel
         Left = 369
         Top = 525
         Width = 47
@@ -1014,7 +1014,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel24: TgtQRLabel
+      object gtQRLabel24: TQRLabel
         Left = 9
         Top = 589
         Width = 92
@@ -1045,7 +1045,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel25: TgtQRLabel
+      object gtQRLabel25: TQRLabel
         Left = 369
         Top = 589
         Width = 32
@@ -1076,7 +1076,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape19: TgtQRShape
+      object gtQRShape19: TQRShape
         Left = 0
         Top = 641
         Width = 718
@@ -1094,7 +1094,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape20: TgtQRShape
+      object gtQRShape20: TQRShape
         Left = 0
         Top = 704
         Width = 718
@@ -1112,7 +1112,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel26: TgtQRLabel
+      object gtQRLabel26: TQRLabel
         Left = 9
         Top = 645
         Width = 48
@@ -1143,7 +1143,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel27: TgtQRLabel
+      object gtQRLabel27: TQRLabel
         Left = 9
         Top = 709
         Width = 90
@@ -1174,7 +1174,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 0
         Top = 767
         Width = 718
@@ -1192,7 +1192,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlNotes: TgtQRLabel
+      object qrlNotes: TQRLabel
         Left = 8
         Top = 772
         Width = 34
@@ -1223,7 +1223,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object qrrchTextNotes: TgtQRRichText
+      object qrrchTextNotes: TQRRichText
         Left = 8
         Top = 793
         Width = 337
@@ -1247,7 +1247,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Name = 'Arial'
         Font.Style = []
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 480
         Top = 169
         Width = 108
@@ -1279,7 +1279,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblBrand: TgtQRLabel
+      object qrlblBrand: TQRLabel
         Left = 9
         Top = 237
         Width = 216
@@ -1310,7 +1310,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblThickness: TgtQRLabel
+      object qrlblThickness: TQRLabel
         Left = 241
         Top = 237
         Width = 216
@@ -1341,7 +1341,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblColour: TgtQRLabel
+      object qrlblColour: TQRLabel
         Left = 481
         Top = 237
         Width = 216
@@ -1372,7 +1372,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblSlabSize: TgtQRLabel
+      object qrlblSlabSize: TQRLabel
         Left = 9
         Top = 301
         Width = 216
@@ -1403,7 +1403,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblNoOfSlabs: TgtQRLabel
+      object qrlblNoOfSlabs: TQRLabel
         Left = 241
         Top = 301
         Width = 216
@@ -1434,7 +1434,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblEdgeProfile: TgtQRLabel
+      object qrlblEdgeProfile: TQRLabel
         Left = 481
         Top = 301
         Width = 216
@@ -1465,7 +1465,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblUpstands: TgtQRLabel
+      object qrlblUpstands: TQRLabel
         Left = 9
         Top = 365
         Width = 216
@@ -1496,7 +1496,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblCills: TgtQRLabel
+      object qrlblCills: TQRLabel
         Left = 241
         Top = 365
         Width = 216
@@ -1527,7 +1527,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblBacksplash: TgtQRLabel
+      object qrlblBacksplash: TQRLabel
         Left = 481
         Top = 365
         Width = 216
@@ -1558,7 +1558,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblPolishedCutOuts: TgtQRLabel
+      object qrlblPolishedCutOuts: TQRLabel
         Left = 9
         Top = 421
         Width = 216
@@ -1589,7 +1589,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblUnPolishedCutOuts: TgtQRLabel
+      object qrlblUnPolishedCutOuts: TQRLabel
         Left = 9
         Top = 485
         Width = 216
@@ -1620,7 +1620,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblDrainerGrooves: TgtQRLabel
+      object qrlblDrainerGrooves: TQRLabel
         Left = 9
         Top = 549
         Width = 216
@@ -1651,7 +1651,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblTapHoles: TgtQRLabel
+      object qrlblTapHoles: TQRLabel
         Left = 9
         Top = 613
         Width = 216
@@ -1682,7 +1682,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 352
         Top = 769
         Width = 8
@@ -1700,7 +1700,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 368
         Top = 772
         Width = 99
@@ -1731,7 +1731,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object qrrchApplianceDetails: TgtQRRichText
+      object qrrchApplianceDetails: TQRRichText
         Left = 368
         Top = 793
         Width = 345
@@ -1755,7 +1755,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Font.Name = 'Arial'
         Font.Style = []
       end
-      object qrlblSockets: TgtQRLabel
+      object qrlblSockets: TQRLabel
         Left = 49
         Top = 677
         Width = 216
@@ -1786,7 +1786,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object qrlblPopUpSockets: TgtQRLabel
+      object qrlblPopUpSockets: TQRLabel
         Left = 49
         Top = 741
         Width = 216
@@ -1817,7 +1817,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 121
         Top = 141
         Width = 70
@@ -1848,7 +1848,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 112
         Top = 138
         Width = 2
@@ -1868,8 +1868,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Job.*,'
       '        Operator.Operator_Name,'
@@ -1929,8 +1929,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Left = 1032
     Top = 35
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -1953,16 +1953,16 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 958
     Top = 267
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1977,8 +1977,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TQuery
-    DatabaseName = 'WT'
+  object qryEndUser: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -1999,8 +1999,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQElements: TQuery
-    DatabaseName = 'WT'
+  object qryQElements: TFDQuery
+    ConnectionName = 'WT'
     DataSource = dtsReport
     SQL.Strings = (
       'SELECT  TOP 1'
@@ -2034,8 +2034,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQCutOuts: TQuery
-    DatabaseName = 'WT'
+  object qryQCutOuts: TFDQuery
+    ConnectionName = 'WT'
     DataSource = dtsReport
     SQL.Strings = (
       'SELECT DISTINCT'
@@ -2056,8 +2056,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQEdges: TQuery
-    DatabaseName = 'wt'
+  object qryQEdges: TFDQuery
+    ConnectionName = 'wt'
     DataSource = dtsReport
     SQL.Strings = (
       'SELECT TOP 1'
@@ -2080,8 +2080,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryJExtras: TQuery
-    DatabaseName = 'WT'
+  object qryJExtras: TFDQuery
+    ConnectionName = 'WT'
     DataSource = dtsReport
     SQL.Strings = (
       'select Job_Extra.*, Extra_Charge.Description'
@@ -2097,8 +2097,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object Query1: TQuery
-    DatabaseName = 'WT'
+  object Query1: TFDQuery
+    ConnectionName = 'WT'
     DataSource = dtsReport
     SQL.Strings = (
       'select Job_Extra.*, Extra_Charge.Description'
@@ -2114,8 +2114,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryJRemedials: TQuery
-    DatabaseName = 'WT'
+  object qryJRemedials: TFDQuery
+    ConnectionName = 'WT'
     DataSource = dtsReport
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
@@ -2132,8 +2132,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryQUpstand: TFDQuery
+    ConnectionName = 'wt'
     DataSource = dtsReport
     SQL.Strings = (
       'SELECT DISTINCT Quote_Element.Quote,'

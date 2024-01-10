@@ -2,8 +2,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   Left = 506
   Top = 152
   Caption = 'Search for customer'
-  ClientHeight = 443
-  ClientWidth = 410
+  ClientHeight = 442
+  ClientWidth = 406
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 312
-    Height = 335
+    Width = 308
+    Height = 334
     Align = alClient
     DataSource = dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -40,17 +40,19 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       end>
   end
   object pnlFunctions: TPanel
-    Left = 312
+    Left = 308
     Top = 0
     Width = 98
-    Height = 335
+    Height = 334
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 312
+    ExplicitHeight = 335
     DesignSize = (
       98
-      335)
+      334)
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -82,7 +84,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     end
     object btnSweep: TBitBtn
       Left = 15
-      Top = 297
+      Top = 296
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -90,19 +92,22 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
+      ExplicitTop = 297
     end
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 335
-    Width = 410
+    Top = 334
+    Width = 406
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 335
+    ExplicitWidth = 410
     DesignSize = (
-      410
+      406
       89)
     object Label1: TLabel
       Left = 8
@@ -132,7 +137,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 329
+      Left = 321
       Top = 16
       Width = 75
       Height = 25
@@ -141,9 +146,10 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 329
     end
     object BitBtn2: TBitBtn
-      Left = 329
+      Left = 321
       Top = 54
       Width = 75
       Height = 25
@@ -151,12 +157,13 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
+      ExplicitLeft = 329
     end
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 424
-    Width = 410
+    Top = 423
+    Width = 406
     Height = 19
     Panels = <
       item
@@ -165,6 +172,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 424
+    ExplicitWidth = 410
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'
@@ -197,14 +206,10 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
         DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Not_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource

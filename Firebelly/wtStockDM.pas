@@ -6,7 +6,9 @@ uses
   SysUtils, Classes, DB,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Bde.DBTables,
+  FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait;
 
 type
   TstkMode   = (stkAdd, stkChange, stkDelete, stkCopy, stkView);
@@ -15,7 +17,7 @@ type
     qryAllStock: TFDQuery;
     dtsAllStock: TDataSource;
     qryDummy: TFDQuery;
-    wtStkDatabase: TDatabase;
+    wtStkDatabase: TFDConnection;
     qryStockSystem: TFDQuery;
     qryProduct: TFDQuery;
     qryGSmart: TFDQuery;
@@ -207,10 +209,9 @@ begin
 
           with wtStkDatabase do
             begin
-
-              AliasName := sAlias;
-              params[0] := 'User Name=readonly';
-              params[1] := 'Password=R34donly4';
+              ConnectionName := sAlias;
+              Params.UserName := 'readonly';
+              Params.Password := 'R34donly4';
             end;
         end;
     end;

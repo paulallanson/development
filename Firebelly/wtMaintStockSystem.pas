@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables, QrCtrls, Spin;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables, QrCtrls, Spin,
+  FireDAC.Comp.Client, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTMaintStockSystem = class(TForm)
@@ -12,9 +15,9 @@ type
     BitBtn2: TBitBtn;
     label1: TLabel;
     edtStockSystemDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryZero: TFDQuery;
     Label2: TLabel;
     edtStockSystem: TEdit;
     pnlStockSystem: TGroupBox;

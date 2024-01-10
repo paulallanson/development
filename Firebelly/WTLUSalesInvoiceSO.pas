@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, wtSalesInvoiceDM, AllCommon, ExtCtrls, Grids,
-  DBGrids, ComCtrls, DB, QrCtrls;
+  DBGrids, ComCtrls, DB, QrCtrls, Vcl.DBCtrls;
 
 type
   TfrmWTLUSalesInvoiceSO = class(TForm)
@@ -67,7 +67,7 @@ implementation
 
 uses
   System.UITypes,
-  WTMaintSalesInvoice, wtMain;
+  WTMaintSalesInvoice, wtMain, wtDataModule, System.IniFiles;
 
 {$R *.dfm}
 
@@ -144,9 +144,9 @@ begin
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;
   dtmdlSalesInvoice.qrySOAll.AfterScroll := SetSalesOrderEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', myWorktops_INIFILE, self.dbgDetails);
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   try
     with IniFile do
@@ -348,7 +348,7 @@ procedure TfrmWTLUSalesInvoiceSO.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   with IniFile do
     begin
@@ -365,7 +365,7 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', myWorktops_INIFILE, self.dbgDetails);
 
 end;
 

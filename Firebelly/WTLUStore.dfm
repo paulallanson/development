@@ -182,8 +182,8 @@ object frmWTLUStore: TfrmWTLUStore
     Left = 136
     Top = 56
   end
-  object qryStore: TQuery
-    DatabaseName = 'WT'
+  object qryStore: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Store.Store,'
       '        Store.Address,'
@@ -211,18 +211,14 @@ object frmWTLUStore: TfrmWTLUStore
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 304
     Top = 56
   end

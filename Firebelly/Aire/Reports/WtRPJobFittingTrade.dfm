@@ -219,13 +219,13 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       object QRLabel30: TQRLabel
         Left = 544
         Top = 624
-        Width = 10
+        Width = 9
         Height = 24
         Size.Values = (
           63.500000000000000000
           1439.333333333333000000
           1651.000000000000000000
-          26.458333333333330000)
+          23.812500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

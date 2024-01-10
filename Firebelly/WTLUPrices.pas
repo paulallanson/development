@@ -103,7 +103,8 @@ implementation
 
 uses
   System.UITypes, System.Types,
-  wtMain, DateSelV5, wtMaintWT, wtLUWTThickness;
+  wtMain, DateSelV5, wtMaintWT, wtLUWTThickness,
+  WTMaintWTThicknessStockCode, WTLUWorktopThicknessSlabs;
 
 {$R *.dfm}
 

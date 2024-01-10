@@ -66,7 +66,7 @@ type
     qryGetMaterialSlab: TFDQuery;
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
-    qryUpdQuote: TQuery;
+    qryUpdQuote: TFDQuery;
   private
     function GetNextContractID: integer;
     function GetNextCQNumber: integer;

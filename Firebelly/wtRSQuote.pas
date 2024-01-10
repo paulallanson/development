@@ -4,10 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, DB, IniFiles, wtRPQuote,
+  Dialogs, StdCtrls, ExtCtrls, Printers, DB, IniFiles, wtRPQuote,
   QrExport, StrUtils, ShellAPI, wtRPQuoteSummary,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -80,7 +80,6 @@ type
     function BuildQueryString: string;
     function GetQuoteMaterial(tempQuote: integer): string;
     function IncrementNo(StartStr: String): String;
-    procedure PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
     procedure PrintDocument(const documentToPrint: string);
     procedure PrintDocuments;
     property DefaultBin: integer read FDefaultBin write SetDefaultBin;
@@ -853,12 +852,12 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
+      Printers.Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printers.Printer.Printers.count) do
         begin
 //          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-          if DefaultPrinter = Printer.printers[icount] then
-            Printer.PrinterIndex := icount;
+          if DefaultPrinter = Printers.Printer.Printers[icount] then
+            printers.Printer.printerindex := icount;
         end;
 
       if DefaultPrinter <> '' then
@@ -942,7 +941,7 @@ begin
           close;
         end;
     finally
-      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
       DefaultBin := GetBinSelection;
       PrinterSettings.Free;
     end;
@@ -962,71 +961,76 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
+      printers.Printer.printerindex := -1;
+      for icount := 0 to pred(Printers.Printer.Printers.count) do
         begin
 //          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-          if DefaultPrinter = Printer.printers[icount] then
-            Printer.PrinterIndex := icount;
+          if DefaultPrinter = Printers.Printer.Printers[icount] then
+            printers.Printer.printerindex := icount;
         end;
 
       if DefaultPrinter <> '' then
         begin
           SetPrinterBin(DefaultBin);
         end;
-  
-    frmwtRPQuoteSummary.bPrintLogo := chkbxPrintLogo.checked;
-    frmwtRPQuoteSummary.bShowOffer := chkbxShowOffer.checked;
-    frmwtRPQuoteSummary.bPrintDiscount := chkbxShowDiscount.checked;
-    frmwtRPQuoteSummary.bPrintDetail := chkbxShowDetail.checked;
-    frmwtRPQuoteSummary.bExcludeTemplate := chkbxExcludeTemplate.checked;
-    frmwtRPQuoteSummary.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
-    frmwtRPQuoteSummary.bPrintAcceptance := chkbxIncludeConfirm.checked;
 
-    if printType = 'T' then
-      begin
-        frmwtRPQuoteSummary.bPrintLogo := false;
-        frmwtRPQuoteSummary.bPrintDetail := false;
-        frmwtRPQuoteSummary.bPrintAcceptance := false;
-        frmwtRPQuoteSummary.bPrintTotals := false;
-      end;
+      frmwtRPQuoteSummary.bPrintLogo := chkbxPrintLogo.checked;
+      frmwtRPQuoteSummary.bShowOffer := chkbxShowOffer.checked;
+      frmwtRPQuoteSummary.bPrintDiscount := chkbxShowDiscount.checked;
+      frmwtRPQuoteSummary.bPrintDetail := chkbxShowDetail.checked;
+      frmwtRPQuoteSummary.bExcludeTemplate := chkbxExcludeTemplate.checked;
+      frmwtRPQuoteSummary.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
+      frmwtRPQuoteSummary.bPrintAcceptance := chkbxIncludeConfirm.checked;
 
-    frmwtRPQuoteSummary.qryReport.Close;
-    frmwtRPQuoteSummary.qryReport.SQL.Text := qryReport.SQL.text;
-    frmwtRPQuoteSummary.qryReport.Parambyname('Int_sel').AsInteger := iIntselcode;
-    frmwtRPQuoteSummary.qryReport.Open;
-    if frmwtRPQuoteSummary.qryreport.recordCount = 0 then
-  	  begin
-        MessageDlg('There are no quotes to print.',mterror,[mbOK],0);
-        exit;
-    	end;
-    bPrinted := false;
-    frmwtRPQuoteSummary.bEndUser := false ;
-    if bPreview then
-      begin
-        frmwtRPQuoteSummary.bPreview := true;
-        frmwtRPQuoteSummary.qrpDetails.Preview;
-      end
-    else
-      begin
-        frmwtRPQuoteSummary.bPreview := false;
-(*        if PrintType <> 'T' then
-          frmwtRPQuoteSummary.qrpDetails.PrinterSetup;
+      if printType = 'T' then
+        begin
+          frmwtRPQuoteSummary.bPrintLogo := false;
+          frmwtRPQuoteSummary.bPrintDetail := false;
+          frmwtRPQuoteSummary.bPrintAcceptance := false;
+          frmwtRPQuoteSummary.bPrintTotals := false;
+        end;
 
-        if frmwtRPQuoteSummary.qrpDetails.tag = 0 then
-          begin
-            frmwtRPQuoteSummary.qrpDetails.Print;
-            bPrinted := true;
-          end;
-*)    
-          if SetUpPrinter(PrinterSettings) then
+      frmwtRPQuoteSummary.qryReport.Close;
+      frmwtRPQuoteSummary.qryReport.SQL.Text := qryReport.SQL.text;
+      frmwtRPQuoteSummary.qryReport.Parambyname('Int_sel').AsInteger := iIntselcode;
+      frmwtRPQuoteSummary.qryReport.Open;
+      if frmwtRPQuoteSummary.qryreport.recordCount = 0 then
+        begin
+          MessageDlg('There are no quotes to print.',mterror,[mbOK],0);
+          exit;
+        end;
+      bPrinted := false;
+      frmwtRPQuoteSummary.bEndUser := false ;
+      if bPreview then
+        begin
+          frmwtRPQuoteSummary.bPreview := true;
+          frmwtRPQuoteSummary.qrpDetails.Preview;
+        end
+      else
+        begin
+          frmwtRPQuoteSummary.bPreview := false;
+  (*        if PrintType <> 'T' then
+            frmwtRPQuoteSummary.qrpDetails.PrinterSetup;
+
+          if frmwtRPQuoteSummary.qrpDetails.tag = 0 then
             begin
               frmwtRPQuoteSummary.qrpDetails.Print;
               bPrinted := true;
             end;
-      
-        close;
-      end;
+  *)
+            if SetUpPrinter(PrinterSettings) then
+              begin
+                frmwtRPQuoteSummary.qrpDetails.Print;
+                bPrinted := true;
+              end;
+
+          close;
+        end;
+    finally
+      DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
+      DefaultBin := GetBinSelection;
+      PrinterSettings.Free;
+    end;
   finally
     frmwtRPQuoteSummary.free;
   end;
@@ -1177,12 +1181,12 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
+      printers.Printer.printerindex := -1;
+      for icount := 0 to pred(Printers.Printer.Printers.count) do
         begin
 //          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-          if DefaultPrinter = Printer.printers[icount] then
-            Printer.PrinterIndex := icount;
+          if DefaultPrinter = Printers.Printer.Printers[icount] then
+            printers.Printer.printerindex := icount;
         end;
 
       if DefaultPrinter <> '' then
@@ -1198,7 +1202,7 @@ begin
       begin
 // decide which address to show on quote
         frmwtRPTemplate.bEndUser := false ;
-        Printed := false;
+        bPrinted := false;
         if bPreview then
           begin
               frmwtRPTemplate.bPreview := true;
@@ -1220,7 +1224,7 @@ begin
           end;
       end;
     finally
-      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
       DefaultBin := GetBinSelection;
       PrinterSettings.Free;
     end;
@@ -1659,8 +1663,7 @@ For Count := StrLength downto 1 do
     Id := Pos(CurrChar,Numbers) ;
     if Id > 0 then
        begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
+       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) + Copy(StartStr,(Count + 1), (StrLength - Count));
        IncrementNo := StartStr ;
        if Id < 10 then exit ;
        end
@@ -1669,274 +1672,13 @@ For Count := StrLength downto 1 do
         Id := Pos(CurrChar,Alphas) ;
         if Id > 0 then
                begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
+               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) + Copy(StartStr,(Count + 1), (StrLength - Count));
         IncrementNo := StartStr ;
         if Id < 27 then exit ;
                end ;
         end ;
        end ;
 end ;
-
-(*
-procedure TfrmWTRSQuote.PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
-var
-  i: integer;
-  sLocation, sFileName: string;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
-begin
-//  FEmailAttachment.clear;
-
-  sLocation := GetWinTempDir;
-
-  sFileName := 'Q'+tempCode;
-
-  AFilters := TgtQRFilters.Create(self);
-
-  if sAttachmentType = 'RTF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.rtf');
-      RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(RTFFilter);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        RTFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'HTML' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.htm');
-      HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(HTMLFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        HTMLFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'PDF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.pdf');
-      PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(PDFFilter);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        PDFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'GIF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.gif');
-      GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(GIFFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        GIFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'JPEG' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.jpg');
-      JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(JPEGFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        JPEGFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'BMP' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.bmp');
-      BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
- //       ExportToRTF(frmWTRPQuote.qrpDetails, sLocation + sFilename + '.bmp');
-      frmWTRPQuote.qrpDetails.ExportToFilter(BMPFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        BMPFilter.Free;
-      end;
-    end;
-
-
-  AFilters.free;
-end;
-
-procedure TfrmWTRSQuote.PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
-var
-  i: integer;
-  sLocation, sFileName: string;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
-begin
-//  FEmailAttachment.clear;
-
-  sLocation := GetWinTempDir;
-
-  sFileName := 'Q'+tempCode;
-
-  AFilters := TgtQRFilters.Create(self);
-
-  if sAttachmentType = 'RTF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.rtf');
-      RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(RTFFilter);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        RTFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'HTML' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.htm');
-      HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(HTMLFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        HTMLFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'PDF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.pdf');
-      PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(PDFFilter);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        PDFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'GIF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.gif');
-      GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(GIFFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        GIFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'JPEG' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.jpg');
-      JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
-        frmWTRPQuote.qrpDetails.ExportToFilter(JPEGFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        JPEGFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'BMP' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.bmp');
-      BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
-      try
-        frmWTRPQuote.qrpDetails.Prepare;
- //       ExportToRTF(frmWTRPQuote.qrpDetails, sLocation + sFilename + '.bmp');
-      frmWTRPQuote.qrpDetails.ExportToFilter(BMPFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmWTRPQuote.qrpDetails.QRPrinter.Free;
-        frmWTRPQuote.qrpDetails.QRPrinter := nil;
-        BMPFilter.Free;
-      end;
-    end;
-
-
-  AFilters.free;
-end;
-*)
 
 procedure TfrmWTRSQuote.chkbxOnlyShowGrandTotalClick(Sender: TObject);
 begin
@@ -1998,7 +1740,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);

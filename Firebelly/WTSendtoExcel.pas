@@ -15,7 +15,7 @@ type
     prgbrExport: TProgressBar;
     procedure FormActivate(Sender: TObject);
   private
-    procedure ExportQueryToExcel;
+    procedure ExporTFDQueryToExcel;
     procedure ExportTableToExcel;
     procedure ExportToExcel;
     { Private declarations }
@@ -47,10 +47,10 @@ begin
   if ExportType = 'T' then
     ExportTabletoExcel
   else
-    ExportQueryToExcel;
+    ExporTFDQueryToExcel;
 end;
 
-procedure TfrmWTSendtoExcel.ExportQueryToExcel;
+procedure TfrmWTSendtoExcel.ExporTFDQueryToExcel;
 var
   icol, icolcount: integer;
   tmpQuery: TFDQuery;

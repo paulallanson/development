@@ -1553,19 +1553,13 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
     Top = 342
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
         Name = 'Rep'
@@ -1605,22 +1599,15 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       end
       item
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end>
   end
 end

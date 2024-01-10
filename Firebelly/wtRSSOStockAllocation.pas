@@ -4,8 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, gtQrCtrls, ComCtrls, OleCtnrs, DB,
-  DBTables, Menus, Dateutils, IniFiles, Grids, DBGrids, ActiveX;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
+  DBTables, Menus, Dateutils, IniFiles, Grids, DBGrids, ActiveX,
+  FireDAC.Comp.Client;
 
 type
   TfrmWTRSSOStockAllocation = class(TForm)
@@ -40,34 +41,34 @@ type
     prgbrRecords: TProgressBar;
     btnAllocate: TButton;
     dtsSalesOrders: TDataSource;
-    qrySalesOrders: TQuery;
-    qryDummy: TQuery;
-    qryGetGSMStock: TQuery;
-    qryGetStockCode: TQuery;
+    qrySalesOrders: TFDQuery;
+    qryDummy: TFDQuery;
+    qryGetGSMStock: TFDQuery;
+    qryGetStockCode: TFDQuery;
     wtStkDatabase: TDatabase;
-    qryUpdSOLine: TQuery;
-    qryUpdSO: TQuery;
-    qryGetSalesOrder: TQuery;
-    qryGetStockSystem: TQuery;
+    qryUpdSOLine: TFDQuery;
+    qryUpdSO: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
+    qryGetStockSystem: TFDQuery;
     btnExclude: TButton;
     rdgrpAllocate: TRadioGroup;
-    qryDeleteStoreStock: TQuery;
-    qryGetGSmartAll: TQuery;
-    qryCheckStockCode: TQuery;
-    qryAddStock: TQuery;
-    qryAdd: TQuery;
-    qryUpdate: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
-    qryUpdStock: TQuery;
-    qryAddStoreStock: TQuery;
-    qryGetLastSS: TQuery;
-    qryGetStock: TQuery;
-    qryUpStoreStock: TQuery;
-    qryGetSalesOrderLine: TQuery;
-    qryDummyOld: TQuery;
-    qryAllocQuoteSlab: TQuery;
-    qryDeAllocQuoteSlab: TQuery;
+    qryDeleteStoreStock: TFDQuery;
+    qryGetGSmartAll: TFDQuery;
+    qryCheckStockCode: TFDQuery;
+    qryAddStock: TFDQuery;
+    qryAdd: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
+    qryUpdStock: TFDQuery;
+    qryAddStoreStock: TFDQuery;
+    qryGetLastSS: TFDQuery;
+    qryGetStock: TFDQuery;
+    qryUpStoreStock: TFDQuery;
+    qryGetSalesOrderLine: TFDQuery;
+    qryDummyOld: TFDQuery;
+    qryAllocQuoteSlab: TFDQuery;
+    qryDeAllocQuoteSlab: TFDQuery;
     procedure btnCloseClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
     procedure rdgrpCustomerClick(Sender: TObject);
@@ -156,7 +157,7 @@ begin
 //        edtCustomer.Clear;
         for iCount := (frmwtSrchCustomer.dbgDetails.SelectedRows.Count - 1) downto 0 do
           begin
-            frmwtSrchCustomer.dbgDetails.datasource.DataSet.GotoBookmark(Pointer(frmwtSrchCustomer.dbgDetails.SelectedRows[iCount])) ;
+            frmwtSrchCustomer.dbgDetails.datasource.DataSet.GotoBookmark(TBookMark(frmwtSrchCustomer.dbgDetails.SelectedRows[iCount])) ;
             lstbxCustomersCode.Items.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer').asstring);
             lstbxCustomers.Items.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer_Name').asstring);
 //            edtCustomer.Lines.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer_Name').asstring);
@@ -263,7 +264,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   try
   with IniFile do
@@ -283,7 +284,7 @@ begin
   edtDateTo.Text := paDateStr(dateTo);
 
   StockSystem := dtmdlWorktops.StockSystemCode;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
 end;
 
 procedure TfrmWTRSSOStockAllocation.Delete1Click(Sender: TObject);
@@ -315,7 +316,7 @@ procedure TfrmWTRSSOStockAllocation.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(myWorktops_INIFILE);
 
   with IniFile do
     begin
@@ -329,7 +330,7 @@ begin
       else
         WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'N');
     end;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
 end;
 
 procedure TfrmWTRSSOStockAllocation.FormActivate(Sender: TObject);
@@ -1130,7 +1131,7 @@ begin
     begin
       for iCount := (dbgDetails.SelectedRows.Count - 1) downto 0 do
         begin
-          dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+          dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
           AllocateStockOrder(dbgDetails.datasource.DataSet.fieldbyname('Sales_Order').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Sales_Order_Line_No').asinteger, 0, 0);
 
           AllocateQuoteSlab(dbgDetails.datasource.DataSet.fieldbyname('Quote').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Worktop').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Thickness').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Length').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Depth').asinteger);

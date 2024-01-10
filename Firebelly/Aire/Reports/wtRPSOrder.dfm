@@ -118,13 +118,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       object qrlblSOCaption: TQRLabel
         Left = 200
         Top = 8
-        Width = 278
+        Width = 264
         Height = 40
         Size.Values = (
           105.833333333333300000
           529.166666666666700000
           21.166666666666670000
-          735.541666666666700000)
+          698.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

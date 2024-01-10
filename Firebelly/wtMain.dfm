@@ -24,19 +24,20 @@ object frmWTMain: TfrmWTMain
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1150
+    Width = 1483
     Height = 40
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1146
+        Width = 1477
       end>
+    ExplicitWidth = 1479
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1133
+      Width = 1468
       Height = 36
       AutoSize = True
       ButtonHeight = 36
@@ -72,14 +73,14 @@ object frmWTMain: TfrmWTMain
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 130
+        Left = 128
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
-        Left = 195
+        Left = 192
         Top = 0
         Hint = 'Quotes|Maintain Quotes Estimates and Quotations'
         Caption = '&Quotes'
@@ -90,21 +91,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnQuotesClick
       end
       object btnSales: TToolButton
-        Left = 260
+        Left = 256
         Top = 0
         Caption = '&Sales'
         ImageIndex = 6
         OnClick = btnSalesClick
       end
       object btnTemplating: TToolButton
-        Left = 325
+        Left = 320
         Top = 0
         Caption = '&Templating'
         ImageIndex = 11
         OnClick = btnTemplatingClick
       end
       object btnJobs: TToolButton
-        Left = 390
+        Left = 384
         Top = 0
         Hint = 'Jobs|Maintain Job details'
         Caption = '&Jobs'
@@ -122,28 +123,28 @@ object frmWTMain: TfrmWTMain
         OnClick = btnFittingClick
       end
       object btnStock: TToolButton
-        Left = 520
+        Left = 512
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
-        Left = 585
+        Left = 576
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
-        Left = 650
+        Left = 640
         Top = 0
         Caption = '&Invoicing'
         DropdownMenu = pmnuSInvoicing
         ImageIndex = 4
       end
       object btnPrices: TToolButton
-        Left = 715
+        Left = 704
         Top = 0
         Caption = 'Colours'
         ImageIndex = 10
@@ -153,8 +154,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = 419
-    Width = 1150
+    Top = 668
+    Width = 1483
     Height = 19
     Panels = <
       item
@@ -166,6 +167,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
+    ExplicitTop = 667
+    ExplicitWidth = 1479
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

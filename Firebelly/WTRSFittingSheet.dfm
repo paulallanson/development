@@ -3,8 +3,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   Top = 139
   BorderStyle = bsDialog
   Caption = 'Fitting Sheet Print'
-  ClientHeight = 452
-  ClientWidth = 526
+  ClientHeight = 451
+  ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,15 +28,17 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 372
-    Width = 526
+    Top = 371
+    Width = 522
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 372
+    ExplicitWidth = 526
     DesignSize = (
-      526
+      522
       80)
     object btnPrint: TButton
       Left = 8
@@ -93,12 +95,13 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 526
+    Width = 522
     Height = 63
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 526
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -123,11 +126,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 526
+    Width = 522
     Height = 138
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 526
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -177,11 +181,13 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 201
-    Width = 526
-    Height = 171
+    Width = 522
+    Height = 170
     Align = alClient
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 526
+    ExplicitHeight = 171
     object pcDocumentDetails: TPageControl
       Left = 1
       Top = 1
@@ -655,11 +661,10 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     ParamData = <
       item
         Name = 'Int_sel'
-        
       end>
   end
-  object qryOrders: TQuery
-    DatabaseName = 'Wt'
+  object qryOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Sales_Order.Customer,'
@@ -729,13 +734,11 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
-  object qryEmails: TQuery
-    DatabaseName = 'WT'
+  object qryEmails: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Sales_Order.Customer,'
@@ -815,9 +818,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
 end

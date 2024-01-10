@@ -354,8 +354,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Left = 120
     Top = 280
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT'
       #9#9'    Sales_order_Date_log.Change_Date,'
@@ -494,8 +494,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'Wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT'
       #9#9'    Sales_order_Date_log.Change_Date,'
@@ -643,8 +643,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetGSmart: TQuery
-    DatabaseName = 'STK'
+  object qryGetGSmart: TFDQuery
+    ConnectionName = 'STK'
     SQL.Strings = (
       'SELECT'
       #9#9'Stock.ID,'
@@ -677,8 +677,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetStockCode: TQuery
-    DatabaseName = 'WT'
+  object qryGetStockCode: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Stock_item.Stock_code'
       'FROM Stock_item'
@@ -714,19 +714,18 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object wtStkDatabase: TDatabase
-    AliasName = 'GSmart'
-    DatabaseName = 'STK'
+  object wtstkDatabase: TFDConnection
+    ConnectionDefName = 'GSmart'
+    ConnectionName = 'STK'
     LoginPrompt = False
     Params.Strings = (
       'User Name=readonly'
       'Password=R34donly4')
-    SessionName = 'Default'
     Left = 808
     Top = 96
   end
-  object qryUpdSOLine: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSOLine: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order_line'
       'SET Quantity_Allocated = :Quantity_Allocated,'
@@ -763,8 +762,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSO: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order'
       'SET Stock_Allocation_Start_Date = :Stock_Allocation_Start_Date,'
@@ -789,8 +788,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -858,8 +857,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetStockSystem: TQuery
-    DatabaseName = 'WT'
+  object qryGetStockSystem: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'
@@ -873,8 +872,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDummyOld: TQuery
-    DatabaseName = 'Wt'
+  object qryDummyOld: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT'
       #9#9'    Sales_order_Date_log.Change_Date,'
@@ -1020,8 +1019,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDeAllocQuoteSlab: TQuery
-    DatabaseName = 'WT'
+  object qryDeAllocQuoteSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote_Slab'
       'SET Quantity_Allocated = 0'
@@ -1060,8 +1059,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderLine: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderLine: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'

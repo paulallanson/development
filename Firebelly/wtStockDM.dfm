@@ -1,8 +1,5 @@
 object dtmdlStock: TdtmdlStock
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 362
-  Top = 108
   Height = 467
   Width = 572
   object qryAllStock: TFDQuery
@@ -19,7 +16,7 @@ object dtmdlStock: TdtmdlStock
     Left = 240
     Top = 88
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT  Stock_item.Stock_item,'
       '        Stock_item.Stock_code,'
@@ -45,29 +42,25 @@ object dtmdlStock: TdtmdlStock
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end>
   end
-  object wtStkDatabase: TDatabase
-    AliasName = 'GSmart'
-    DatabaseName = 'STK'
-    LoginPrompt = False
+  object wtStkDatabase: TFDConnection
+    ConnectionDefName = 'GSmart'
+    ConnectionName = 'STK'
     Params.Strings = (
-      'User Name=readonly'
-      'Password=R34donly4')
-    SessionName = 'Default'
+      'User_Name=readonly'
+      'Password=R34donly4'
+      'DriverID=MSSQL')
+    LoginPrompt = False
     Left = 496
     Top = 16
   end
-  object qryStockSystem: TQuery
-    DatabaseName = 'WT'
+  object qryStockSystem: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'
@@ -76,9 +69,7 @@ object dtmdlStock: TdtmdlStock
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_System'
-        ParamType = ptUnknown
       end>
   end
   object qryProduct: TFDQuery
@@ -110,11 +101,10 @@ object dtmdlStock: TdtmdlStock
     ParamData = <
       item
         Name = 'Product_Code'
-        ParamType = ptUnknown
       end>
   end
-  object qryGSmart: TQuery
-    DatabaseName = 'STK'
+  object qryGSmart: TFDQuery
+    ConnectionName = 'STK'
     SQL.Strings = (
       'SELECT  Stock.ID,'
       '        Stock.Stockcode AS Stock_Code,'
@@ -147,14 +137,10 @@ object dtmdlStock: TdtmdlStock
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -2897,8 +2897,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         Name = 'Remedial_Number'
       end>
   end
-  object qrySOUpRemedial: TQuery
-    DatabaseName = 'WT'
+  object qrySOUpRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Job_Remedial'
       'SET'#9'Job_Remedial.Completed = :Completed'
@@ -2920,8 +2920,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryJobsDummyOlder: TQuery
-    DatabaseName = 'WT'
+  object qryJobsDummyOlder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '    sales_order.*,'
       '    Customer.Customer_name AS Original_Customer_name,'
@@ -2990,7 +2990,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 80
   end
   object qrySOUpRemedial_Access: TFDQuery
-    DatabaseName = 'WT'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Job_Remedial'
       #9#9'INNER JOIN Sales_order'
@@ -3074,8 +3074,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 208
     Top = 24
   end
-  object qryJobsDummyOld: TQuery
-    DatabaseName = 'WT'
+  object qryJobsDummyOld: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '  Sales_Order.*,'
       '  Customer.Customer_name AS Original_Customer_name,'

@@ -31,7 +31,7 @@ implementation
 
 uses WTRSSOrderTemplate, wtRSSOAntInvoice, WTRSSOrderSchedule,
   WTRSSalesOrder, WTRSSOrderAllocation, WTRSMaterialAnalysis, WTRSSOCostAnalysis,
-  WTRSSalesOrderInvoice, WTRSSOProduction, WTRSSOAntOrdering, WTRSSOWarranty;
+  WTRSSalesOrderInvoice, WTRSSOProduction, WTRSSOAntOrdering, WTRSSOWarranty, WTRSSOFitDateMovement;
 
 {$R *.DFM}
 

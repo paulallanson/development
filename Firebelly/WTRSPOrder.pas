@@ -58,7 +58,7 @@ var
 
 implementation
 
-uses
+uses Printers, 
   wtDataModule, wtRPPOrder, AllEmailHandler, System.UITypes, AllCommon, wtMain;
 
 const

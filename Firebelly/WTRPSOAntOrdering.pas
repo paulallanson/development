@@ -66,6 +66,8 @@ type
     qrlblWorktopMaterial: TQRLabel;
     qryWTElement: TFDQuery;
     OLDqrySalesOrders: TFDQuery;
+    qryGetStockCode: TFDQuery;
+    qrlblStockCode: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;

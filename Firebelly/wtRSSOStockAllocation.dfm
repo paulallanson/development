@@ -424,8 +424,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Left = 120
     Top = 280
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -551,8 +551,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'Wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -700,8 +700,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetGSMStock: TQuery
-    DatabaseName = 'STK'
+  object qryGetGSMStock: TFDQuery
+    ConnectionName = 'STK'
     SQL.Strings = (
       'SELECT'
       #9#9'Stock.ID,'
@@ -735,8 +735,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetStockCode: TQuery
-    DatabaseName = 'WT'
+  object qryGetStockCode: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Stock_item.Stock_code'
       'FROM Stock_item'
@@ -772,19 +772,18 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object wtStkDatabase: TDatabase
-    AliasName = 'GSmart'
-    DatabaseName = 'STK'
+  object wtstkDatabase: TFDConnection
+    ConnectionDefName = 'GSmart'
+    ConnectionName = 'STK'
     LoginPrompt = False
     Params.Strings = (
       'User Name=readonly'
       'Password=R34donly4')
-    SessionName = 'Default'
     Left = 808
     Top = 96
   end
-  object qryUpdSOLine: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSOLine: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order_line'
       'SET Stock_Allocation_Start_Date = :Stock_Allocation_Start_Date,'
@@ -815,8 +814,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSO: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order'
       'SET Stock_Allocation_Start_Date = :Stock_Allocation_Start_Date,'
@@ -841,8 +840,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -910,8 +909,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetStockSystem: TQuery
-    DatabaseName = 'WT'
+  object qryGetStockSystem: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'
@@ -925,15 +924,15 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteStoreStock: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteStoreStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Store_Stock')
     Left = 24
     Top = 424
   end
-  object qryGetGSmartAll: TQuery
-    DatabaseName = 'STK'
+  object qryGetGSmartAll: TFDQuery
+    ConnectionName = 'STK'
     SQL.Strings = (
       'SELECT  Stock.ID,'
       '        Stock.Stockcode AS Stock_Code,'
@@ -962,8 +961,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Left = 696
     Top = 264
   end
-  object qryCheckStockCode: TQuery
-    DatabaseName = 'Wt'
+  object qryCheckStockCode: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT TOP 1 Stock_Item.Stock_Item'
       'FROM Stock_Item'
@@ -977,8 +976,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryAddStock: TQuery
-    DatabaseName = 'WT'
+  object qryAddStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Stock_Item'
       '        (Stock_Item,'
@@ -996,8 +995,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop_Thickness_Slab_Size'
       '( Slab_Size_Description,'
@@ -1049,8 +1048,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop_Thickness_Slab_Size'
       'SET'
@@ -1089,8 +1088,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Stock_Item'
       'From Stock_Item'
@@ -1104,13 +1103,13 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 224
     Top = 488
   end
-  object qryUpdStock: TQuery
-    DatabaseName = 'WT'
+  object qryUpdStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Stock_Item'
       'SET Stock_Code = :Stock_Code,'
@@ -1135,8 +1134,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryAddStoreStock: TQuery
-    DatabaseName = 'WT'
+  object qryAddStoreStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Store_Stock'
       '(     Store_Stock,'
@@ -1251,16 +1250,16 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastSS: TQuery
-    DatabaseName = 'WT'
+  object qryGetLastSS: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT ISNULL(MAX(Store_Stock),0) as Last_Item'
       'FROM Store_Stock')
     Left = 432
     Top = 488
   end
-  object qryGetStock: TQuery
-    DatabaseName = 'WT'
+  object qryGetStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Store_Stock.Store_Stock,'
       '        Stock_Item.Stock_Code,'
@@ -1280,8 +1279,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryUpStoreStock: TQuery
-    DatabaseName = 'WT'
+  object qryUpStoreStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Store_Stock'
       
@@ -1302,8 +1301,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderLine: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderLine: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -1401,8 +1400,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDummyOld: TQuery
-    DatabaseName = 'Wt'
+  object qryDummyOld: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
@@ -1558,8 +1557,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryAllocQuoteSlab: TQuery
-    DatabaseName = 'WT'
+  object qryAllocQuoteSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote_Slab'
       'SET Quantity_Allocated = Quantity'
@@ -1598,8 +1597,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryDeAllocQuoteSlab: TQuery
-    DatabaseName = 'WT'
+  object qryDeAllocQuoteSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote_Slab'
       'SET Quantity_Allocated = 0'

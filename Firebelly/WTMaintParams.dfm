@@ -903,6 +903,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = chkbxUseRemedialsAsOrdersClick
       end
       object grpbxStockSystem: TGroupBox
+        ParentBackground = False
         Left = 408
         Top = 216
         Width = 273

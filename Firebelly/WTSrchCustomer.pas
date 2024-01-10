@@ -26,7 +26,7 @@ type
     edtSearch: TEdit;
     btnSelect: TBitBtn;
     BitBtn2: TBitBtn;
-    stbrDetails: TStatusBar;
+    stsbrDetails: TStatusBar;
     btnSweep: TBitBtn;
     qryDelete: TFDQuery;
     procedure tmrSearchTimer(Sender: TObject);

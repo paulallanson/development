@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, wtSalesInvoiceDM,
   Data.DB, System.ImageList, Vcl.Buttons,
-  QrCtrls, IniFiles;
+  QrCtrls, IniFiles, Vcl.DBCtrls;
 
 type
   TfrmWTLUSalesInvoices = class(TForm)
@@ -112,7 +112,7 @@ uses
   System.UITypes, System.Types,
   AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
-  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtMain;
+  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtMain, wtDataModule;
 
 {$R *.DFM}
 
@@ -694,7 +694,7 @@ begin
 
 
   Printers.Printer.PrinterIndex := -1;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', const_myworktops.ini, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', myWorktops_INIFILE, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);

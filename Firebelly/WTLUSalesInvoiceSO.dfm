@@ -115,7 +115,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       Width = 273
       Height = 17
       Caption = 'Show orders not yet fitted'
-      TabOrder = 3
+      TabOrder = 0
       OnClick = chkbxShowClick
     end
     object chkbxShowFutureOrders: TCheckBox
@@ -130,18 +130,20 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     object pnlFooter: TPanel
       Left = 1
       Top = 84
-      Width = 998
+      Width = 982
       Height = 53
       Align = alBottom
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 998
       DesignSize = (
-        998
+        982
         53)
       object Label1: TLabel
         Left = 657
         Top = 18
-        Width = 55
+        Width = 59
         Height = 13
         Anchors = [akRight, akBottom]
         Caption = 'Sales Order'
@@ -152,11 +154,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         Width = 385
         Height = 49
         Caption = 'Type here to narrow the search'
+        ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 24
           Top = 22
-          Width = 44
+          Width = 49
           Height = 13
           Caption = 'Customer'
         end
@@ -186,8 +189,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         Height = 25
         Caption = 'Excel'
         Enabled = False
-        TabOrder = 1
-        OnClick = btnExcelClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -202,6 +203,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           C8807FF7777777777FF700000000000000007777777777777777333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnExcelClick
       end
       object edtSONumber: TEdit
         Left = 721
@@ -236,13 +239,15 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       end
     end
     object pnlRevenueCentre: TPanel
-      Left = 616
+      Left = 600
       Top = 1
       Width = 383
       Height = 83
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 616
       object rdgrpRevenueCentre: TRadioGroup
         Left = 40
         Top = 3
@@ -254,6 +259,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           'Default'
           'All'
           'Selected')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpRevenueCentreClick
       end
@@ -262,12 +268,13 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         Top = 3
         Width = 203
         Height = 73
+        ParentBackground = False
         TabOrder = 1
         Visible = False
         object Label3: TLabel
           Left = 8
           Top = 12
-          Width = 78
+          Width = 81
           Height = 13
           Caption = 'Revenue Centre'
         end

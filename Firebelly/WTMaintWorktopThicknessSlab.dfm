@@ -3,21 +3,19 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Maintain Slab Sizes'
-  ClientHeight = 319
-  ClientWidth = 480
+  ClientHeight = 318
+  ClientWidth = 476
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    480
-    319)
-  PixelsPerInch = 96
+    476
+    318)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -84,7 +82,7 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   end
   object btnOK: TBitBtn
     Left = 162
-    Top = 266
+    Top = 265
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -92,21 +90,23 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 266
   end
   object BitBtn2: TBitBtn
     Left = 242
-    Top = 266
+    Top = 265
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
+    ExplicitTop = 266
   end
   object edtLength: TCREditInt
     Left = 104
@@ -153,8 +153,8 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     TabOrder = 6
     Text = 'edtStockCode'
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop_Thickness_Slab_Size'
       'SET'
@@ -168,33 +168,24 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_ID'
-        ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop_Thickness_Slab_Size'
       '( Slab_Size_Description,'
@@ -216,38 +207,27 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryAddStock: TQuery
-    DatabaseName = 'WT'
+  object qryAddStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Stock_Item'
       '        (Stock_Item,'
@@ -260,13 +240,11 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdStock: TQuery
-    DatabaseName = 'WT'
+  object qryUpdStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Stock_Item'
       'SET Stock_Code = :Stock_Code,'
@@ -276,23 +254,17 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Item'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Stock_Item'
       'From Stock_Item'
@@ -301,13 +273,13 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 288
     Top = 184
   end

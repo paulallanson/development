@@ -1,24 +1,22 @@
 object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   Left = 461
   Top = 153
-  Width = 578
-  Height = 326
   Caption = 'Maintain Slabs'
+  ClientHeight = 287
+  ClientWidth = 562
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 276
-    Width = 570
+    Top = 268
+    Width = 562
     Height = 19
     Panels = <
       item
@@ -27,17 +25,21 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       item
         Width = 50
       end>
+    ExplicitTop = 276
+    ExplicitWidth = 570
   end
   object Panel1: TPanel
     Left = 0
-    Top = 203
-    Width = 570
+    Top = 195
+    Width = 562
     Height = 73
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 203
+    ExplicitWidth = 570
     DesignSize = (
-      570
+      562
       73)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -87,9 +89,9 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       Anchors = [akRight, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object BitBtn1: TBitBtn
       Left = 272
@@ -105,8 +107,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 570
-    Height = 203
+    Width = 562
+    Height = 195
     Align = alClient
     DataSource = dtsSlabs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -153,8 +155,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
         Visible = False
       end>
   end
-  object qrySlabs: TQuery
-    DatabaseName = 'WT'
+  object qrySlabs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop_Thickness_Slab_Size.Slab_Size_ID,'
       '        Worktop_Thickness_Slab_Size.Slab_Size_Description,'
@@ -187,19 +189,13 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object dtsSlabs: TDataSource
@@ -208,13 +204,13 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Left = 144
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end
-  object qryAddSlab: TQuery
-    DatabaseName = 'WT'
+  object qryAddSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop_Thickness_Slab_Size'
       '( Slab_Size_Description,'
@@ -236,38 +232,27 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryGetSlabs: TQuery
-    DatabaseName = 'WT'
+  object qryGetSlabs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select'
       '  Slab_Size,'
@@ -282,13 +267,11 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddStock: TQuery
-    DatabaseName = 'WT'
+  object qryAddStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Stock_Item'
       '        (Stock_Item,'
@@ -301,13 +284,11 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Stock_Item'
       'From Stock_Item'
@@ -316,18 +297,18 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 32
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 504
     Top = 32
   end
-  object qryUpdStock: TQuery
-    DatabaseName = 'WT'
+  object qryUpdStock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Stock_Item'
       'SET Stock_Code = :Stock_Code,'
@@ -337,19 +318,13 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Item'
-        ParamType = ptUnknown
       end>
   end
 end

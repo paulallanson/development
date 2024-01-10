@@ -6,16 +6,19 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, DB, DBTables, QrCtrls, DBCtrls, ComCtrls,
   ExtCtrls, ToolWin, ImgList, SHELLAPI, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls, System.ImageList;
+  CRControls, System.ImageList, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintStore = class(TForm)
     lblName: TLabel;
     edtName: TEdit;
-    qryGetLastNo: TQuery;
-    qryAdd: TQuery;
-    qryUpd: TQuery;
-    qryDel: TQuery;
+    qryGetLastNo: TFDQuery;
+    qryAdd: TFDQuery;
+    qryUpd: TFDQuery;
+    qryDel: TFDQuery;
     Label34: TLabel;
     edtStreet: TEdit;
     edtLocale: TEdit;
@@ -25,16 +28,16 @@ type
     edtPostcode: TEdit;
     Label39: TLabel;
     edtCounty: TEdit;
-    qryGetAddress: TQuery;
-    qryAddAddress: TQuery;
-    qryUpAddress: TQuery;
-    qryGetNextAdd: TQuery;
+    qryGetAddress: TFDQuery;
+    qryAddAddress: TFDQuery;
+    qryUpAddress: TFDQuery;
+    qryGetNextAdd: TFDQuery;
     imgDocuments: TImageList;
     imgIcons: TImageList;
     chkbxInactive: TCheckBox;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryGetStore: TQuery;
+    qryGetStore: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -244,12 +247,12 @@ end;
 
 procedure TfrmWTMaintStore.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
 end;
 
 procedure TfrmWTMaintStore.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
 end;
 
 end.

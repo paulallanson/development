@@ -3384,7 +3384,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VerticalAlignment = tlTop
         FontSize = 10
       end
-      object gtQRLabel34: TgtQRLabel
+      object gtQRLabel34: TQRLabel
         Left = 16
         Top = 185
         Width = 84
@@ -3469,7 +3469,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextInstallAddress2: TgtQRMemo
+      object qrrchTextInstallAddress2: TQRMemo
         Left = 16
         Top = 208
         Width = 321

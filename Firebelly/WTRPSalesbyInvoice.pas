@@ -89,7 +89,7 @@ type
     qrlblReportCostPerc: TQRLabel;
     qryReportIs_Retail_Customer: TStringField;
     qryReportIs_Commercial_customer: TStringField;
-    qryReportOld: TQuery;
+    qryReportOld: TFDQuery;
     IntegerField1: TIntegerField;
     StringField1: TStringField;
     IntegerField2: TIntegerField;
