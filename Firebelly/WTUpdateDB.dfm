@@ -3111,6 +3111,664 @@ object dtmdlUpdateDB: TdtmdlUpdateDB
       'Update Company'
       'set Database_Version = 22.4')
     Left = 1368
-    Top = 639
+    Top = 527
+  end
+  object Acc225Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Worktop_Thickness ADD'
+      '    Stock_Item  int NULL')
+    Left = 16
+    Top = 616
+  end
+  object Acc225Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Worktop_Thickness ADD CONSTRAINT FK_WT_Stock_Item'
+      'FOREIGN KEY (Stock_Item)'
+      'REFERENCES Stock_Item')
+    Left = 72
+    Top = 616
+  end
+  object Acc225Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Stock_System'
+      '('
+      'Stock_System             text(15)  NOT NULL,'
+      'Stock_System_Description text(50)  NOT NULL,'
+      'External_System          text(1)     NULL,'
+      'Login_Username          text(30)  NULL,'
+      'Login_Password           text(30)  NULL,'
+      'Sales_Order_Import_Directory     text(200)    NULL,'
+      'Database_Alias_Name       text(10)    NULL,'
+      'PRIMARY KEY (Stock_System)'
+      ')')
+    Left = 128
+    Top = 616
+  end
+  object Acc225Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Company ADD'
+      '    Stock_System        text(15)   NULL')
+    Left = 176
+    Top = 616
+  end
+  object Acc225Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Company ADD CONSTRAINT FK_Company_Stock_System'
+      '    FOREIGN KEY (Stock_System)'
+      '    REFERENCES Stock_System')
+    Left = 224
+    Top = 616
+  end
+  object Acc225Q6: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order ADD'
+      '      Stock_Allocation_Start_Date datetime  NULL')
+    Left = 280
+    Top = 616
+  end
+  object Acc225Q7: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order ADD'
+      '      Stock_Allocation_End_Date datetime  NULL')
+    Left = 336
+    Top = 616
+  end
+  object Acc225Q9: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.5')
+    Left = 448
+    Top = 615
+  end
+  object sql225Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Worktop_Thickness ADD'
+      '    Stock_Item  int NULL')
+    Left = 16
+    Top = 656
+  end
+  object sql225Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Worktop_Thickness ADD CONSTRAINT FK_WT_Stock_Item'
+      'FOREIGN KEY (Stock_Item)'
+      'REFERENCES Stock_Item')
+    Left = 72
+    Top = 656
+  end
+  object sql225Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Stock_System'
+      '('
+      'Stock_System            nvarchar(15)  NOT NULL,'
+      'Stock_System_Description nvarchar(50)  NOT NULL,'
+      'External_System          nvarchar(1)     NULL,'
+      'Login_Username          nvarchar(30)  NULL,'
+      'Login_Password           nvarchar(30)  NULL,'
+      'Sales_Order_Import_Directory     nvarchar(200)    NULL,'
+      'Database_Alias_Name       nvarchar(10)    NULL,'
+      'PRIMARY KEY (Stock_System)'
+      ')')
+    Left = 128
+    Top = 656
+  end
+  object sql225Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Company ADD'
+      '    Stock_System        nvarchar(15)   NULL')
+    Left = 176
+    Top = 656
+  end
+  object sql225Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Company ADD CONSTRAINT FK_Company_Stock_System'
+      '    FOREIGN KEY (Stock_System)'
+      '    REFERENCES Stock_System')
+    Left = 224
+    Top = 656
+  end
+  object sql225Q6: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order ADD'
+      '      Stock_Allocation_Start_Date datetime  NULL')
+    Left = 280
+    Top = 656
+  end
+  object sql225Q7: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order ADD'
+      '      Stock_Allocation_End_Date datetime  NULL')
+    Left = 336
+    Top = 656
+  end
+  object sql225Q9: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.5')
+    Left = 448
+    Top = 655
+  end
+  object Acc225Q8: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Sales_Order_Date_Log'
+      '('
+      #9'ID'#9#9'AUTOINCREMENT NOT NULL,'
+      #9'Sales_Order      int     NOT NULL,'
+      #9'Original_Date      datetime    NOT NULL,'
+      #9'New_Date        datetime     NOT NULL,'
+      '  Date_Type        text(1) NULL,'
+      'PRIMARY KEY (ID)'
+      ')'
+      '')
+    Left = 392
+    Top = 616
+  end
+  object sql225Q8: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Sales_Order_Date_Log'
+      '('
+      #9'ID'#9#9'INT           NOT NULL    IDENTITY    PRIMARY KEY,'
+      #9'Sales_Order      int     NOT NULL,'
+      #9'Original_Date      datetime    NOT NULL,'
+      #9'New_Date        datetime     NOT NULL,'
+      '  Date_Type        nvarchar(1) NULL'
+      ')'
+      '')
+    Left = 392
+    Top = 656
+  end
+  object Acc226Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Product_Group int NULL')
+    Left = 496
+    Top = 614
+  end
+  object Acc226Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Price_Pointer int NULL')
+    Left = 552
+    Top = 614
+  end
+  object Acc226Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Vat int NULL')
+    Left = 608
+    Top = 614
+  end
+  object sql226Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Product_Group int NULL')
+    Left = 496
+    Top = 654
+  end
+  object sql226Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Price_Pointer int NULL')
+    Left = 552
+    Top = 654
+  end
+  object sql226Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_Item ALTER COLUMN '
+      #9'Vat int NULL')
+    Left = 608
+    Top = 654
+  end
+  object Acc226Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.6')
+    Left = 664
+    Top = 613
+  end
+  object sql226Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.6')
+    Left = 664
+    Top = 653
+  end
+  object Acc227Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log DROP COLUMN Original_Date')
+    Left = 720
+    Top = 614
+  end
+  object Acc227Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log ADD'
+      #9'Change_Date datetime'#9'null')
+    Left = 768
+    Top = 614
+  end
+  object Acc227Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log ADD'
+      #9'Change_Function'#9'text(1)'#9'NULL')
+    Left = 824
+    Top = 614
+  end
+  object Acc227Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT * FROM Company')
+    Left = 872
+    Top = 614
+  end
+  object Acc227Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.7')
+    Left = 928
+    Top = 613
+  end
+  object sql227Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log DROP COLUMN Original_Date')
+    Left = 720
+    Top = 654
+  end
+  object sql227Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log ADD'
+      #9'Change_Date datetime'#9'null')
+    Left = 768
+    Top = 654
+  end
+  object sql227Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Date_Log ADD'
+      #9'Change_Function'#9'nvarchar(1)'#9'NULL')
+    Left = 824
+    Top = 654
+  end
+  object sql227Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TRIGGER trgSalesOrder_DateRequired  '
+      ' ON Sales_Order  '
+      ' AFTER  UPDATE, DELETE  '
+      ' AS  '
+      ' IF ( UPDATE ([Date_Required]) )  '
+      ' BEGIN  '
+      #9'insert into Sales_Order_Date_Log   '
+      #9'select i.sales_Order, i.Date_Required,'#39'F'#39', getdate(), '#39'N'#39' '
+      #9#9'FROM inserted as i  '
+      '    UNION'
+      '    SELECT d.sales_Order, d.Date_Required,'#39'F'#39', getdate(), '#39'O'#39
+      #9#9'FROM deleted AS d; '
+      ' END')
+    Left = 872
+    Top = 654
+  end
+  object sql227Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.7')
+    Left = 928
+    Top = 653
+  end
+  object Acc228Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Worktop_Thickness_Slab_Size'
+      '('
+      #9'Slab_Size_ID'#9#9'AUTOINCREMENT NOT NULL,'
+      '  Slab_Size_Description    text(100)   NOT NULL,'
+      '  Length  int  NOT NULL,'
+      '  Depth   int  NOT NULL,'
+      '  Worktop int  NULL,'
+      '  Thickness int  NULL,'
+      #9'Stock_Item      int     NULL,'
+      '  inactive    text(1)   NULL,'
+      'PRIMARY KEY (Slab_Size_ID)'
+      ')'
+      '')
+    Left = 984
+    Top = 614
+  end
+  object sql228Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'CREATE TABLE Worktop_Thickness_Slab_Size'
+      '('
+      
+        #9'Slab_Size_ID'#9#9'INT           NOT NULL    IDENTITY    PRIMARY KEY' +
+        ','
+      '  Slab_Size_Description    nvarchar(100)   NOT NULL,'
+      '  Length  int  NOT NULL,'
+      '  Depth   int  NOT NULL,'
+      '  Worktop int  NULL,'
+      '  Thickness int  NULL,'
+      #9'Stock_Item      int     NULL,'
+      '  inactive    nvarchar(1)   NULL'
+      ')'
+      '')
+    Left = 984
+    Top = 654
+  end
+  object Acc228Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      
+        'ALTER TABLE Worktop_Thickness_Slab_Size ADD CONSTRAINT FK_WTSS_W' +
+        'orktopThickness'
+      '    FOREIGN KEY (Worktop, Thickness)'
+      '    REFERENCES Worktop_Thickness')
+    Left = 1040
+    Top = 614
+  end
+  object Acc228Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      
+        'ALTER TABLE Worktop_Thickness_Slab_Size ADD CONSTRAINT FK_WTSS_S' +
+        'tock_Item'
+      '    FOREIGN KEY (Stock_Item)'
+      '    REFERENCES Stock_Item ')
+    Left = 1096
+    Top = 614
+  end
+  object Acc228Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Use_Separate_Invoice_Seq  text(1)   NULL')
+    Left = 1144
+    Top = 614
+  end
+  object Acc228Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Last_Invoice_Number  int   NULL')
+    Left = 1200
+    Top = 614
+  end
+  object Acc228Q6: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Last_Credit_Note_Number  int   NULL')
+    Left = 1256
+    Top = 614
+  end
+  object Acc228Q7: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Use_Invoice_Prefix  text(1)   NULL')
+    Left = 1304
+    Top = 614
+  end
+  object Acc228Q8: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Prefix_Value   text(10)   NULL')
+    Left = 1352
+    Top = 614
+  end
+  object Acc228Q9: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.8')
+    Left = 1408
+    Top = 613
+  end
+  object sql228Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      
+        'ALTER TABLE Worktop_Thickness_Slab_Size ADD CONSTRAINT FK_WTSS_W' +
+        'orktopThickness'
+      '    FOREIGN KEY (Worktop, Thickness)'
+      '    REFERENCES Worktop_Thickness')
+    Left = 1040
+    Top = 654
+  end
+  object sql228Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      
+        'ALTER TABLE Worktop_Thickness_Slab_Size ADD CONSTRAINT FK_WTSS_S' +
+        'tock_Item'
+      '    FOREIGN KEY (Stock_Item)'
+      '    REFERENCES Stock_Item ')
+    Left = 1096
+    Top = 654
+  end
+  object sql228Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Use_Separate_Invoice_Seq  nvarchar(1)   NULL')
+    Left = 1144
+    Top = 654
+  end
+  object sql228Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Last_Invoice_Number  int   NULL')
+    Left = 1200
+    Top = 654
+  end
+  object sql228Q6: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Last_Credit_Note_Number  int   NULL')
+    Left = 1256
+    Top = 654
+  end
+  object sql228Q7: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Use_Invoice_Prefix  nvarchar(1)   NULL')
+    Left = 1304
+    Top = 654
+  end
+  object sql228Q8: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Revenue_Centre ADD'
+      '    Prefix_Value   nvarchar(10)   NULL')
+    Left = 1352
+    Top = 654
+  end
+  object sql228Q9: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.8')
+    Left = 1408
+    Top = 653
+  end
+  object Acc229Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Line ADD'
+      '      Stock_Allocation_Start_Date datetime  NULL')
+    Left = 16
+    Top = 712
+  end
+  object Acc229Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Line ADD'
+      '      Stock_Allocation_End_Date datetime  NULL')
+    Left = 72
+    Top = 712
+  end
+  object sql229Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Line ADD'
+      '      Stock_Allocation_Start_Date datetime  NULL')
+    Left = 16
+    Top = 752
+  end
+  object sql229Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order_Line ADD'
+      '      Stock_Allocation_End_Date datetime  NULL')
+    Left = 72
+    Top = 752
+  end
+  object Acc229Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.9')
+    Left = 128
+    Top = 712
+  end
+  object sql229Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 22.9')
+    Left = 128
+    Top = 752
+  end
+  object Acc23Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Customer ADD'
+      '      Requires_App_For_Payment  text(1)  NULL')
+    Left = 192
+    Top = 712
+  end
+  object Acc23Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 23')
+    Left = 336
+    Top = 712
+  end
+  object sql23Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Customer ADD'
+      '      Requires_App_For_Payment  nvarchar(1)  NULL')
+    Left = 192
+    Top = 752
+  end
+  object sql23Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 23')
+    Left = 336
+    Top = 760
+  end
+  object Acc23Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Customer'
+      'SET    Requires_App_For_Payment = '#39'N'#39)
+    Left = 240
+    Top = 712
+  end
+  object sql23Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Customer'
+      'SET    Requires_App_For_Payment = '#39'N'#39)
+    Left = 240
+    Top = 752
+  end
+  object Acc23Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_System ADD'
+      '  Order_Process_Interval  int NULL'
+      '')
+    Left = 288
+    Top = 712
+  end
+  object sql23Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Stock_System ADD'
+      '  Order_Process_Interval  int NULL'
+      '')
+    Left = 288
+    Top = 752
+  end
+  object Acc231Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Quote_Slab ADD'
+      '      Quantity_Allocated  double NULL')
+    Left = 408
+    Top = 712
+  end
+  object Acc231Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 23.1')
+    Left = 456
+    Top = 712
+  end
+  object sql231Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Quote_Slab ADD'
+      '      Quantity_Allocated  float NULL')
+    Left = 408
+    Top = 752
+  end
+  object sql231Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = 23.1')
+    Left = 456
+    Top = 752
   end
 end
