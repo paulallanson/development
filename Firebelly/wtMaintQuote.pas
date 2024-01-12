@@ -2749,13 +2749,13 @@ var
   inx: integer;
 begin
   inx := sgEvents.row;
-  try
-    inx := Quote.Events.IndexOf(inx);
+  inx := Quote.Events.IndexOf(inx);
+  if inx >= 0 then
+  begin
     QEvent := Quote.Events[inx];
     memEventNotes.Text := QEvent.Narrative.DataInfo;
-  except
+  end else
     memEventNotes.Lines.Clear;
-  end;
 end;
 
 procedure TfrmWTMaintQuote.sgEventsDblClick(Sender: TObject);
@@ -3312,11 +3312,10 @@ begin
   rSell := Quote.DeliveryPrice;
 
   rMargin := rSell - rCost;
-  try
-    rMarginPerc := (rMargin / rSell) * 100;
-  except
+
+  if rSell <> 0 then
+    rMarginPerc := (rMargin / rSell) * 100 else
     rMarginPerc := 0;
-  end;
 
   memDeliveryMargin.Text := formatfloat('#,##0.00', rMargin);
   memDeliveryMarginPerc.Text := formatfloat('#,##0.00', rMarginPerc);

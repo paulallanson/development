@@ -2,8 +2,8 @@ object frmwtLUSales: TfrmwtLUSales
   Left = 13
   Top = 98
   Caption = 'Sales Order details'
-  ClientHeight = 413
-  ClientWidth = 1392
+  ClientHeight = 412
+  ClientWidth = 1388
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUSales: TfrmwtLUSales
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 394
-    Width = 1392
+    Top = 393
+    Width = 1388
     Height = 19
     Panels = <
       item
@@ -35,17 +35,21 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Width = 50
       end>
+    ExplicitTop = 394
+    ExplicitWidth = 1392
   end
   object Panel1: TPanel
     Left = 0
-    Top = 353
-    Width = 1392
+    Top = 352
+    Width = 1388
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 353
+    ExplicitWidth = 1392
     DesignSize = (
-      1392
+      1388
       41)
     object Label1: TLabel
       Left = 8
@@ -61,7 +65,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 1111
+      Left = 1103
       Top = 15
       Width = 59
       Height = 13
@@ -71,7 +75,7 @@ object frmwtLUSales: TfrmwtLUSales
       ExplicitLeft = 1179
     end
     object Button1: TButton
-      Left = 1275
+      Left = 1267
       Top = 10
       Width = 75
       Height = 25
@@ -79,6 +83,7 @@ object frmwtLUSales: TfrmwtLUSales
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
+      ExplicitLeft = 1275
     end
     object edtSearch: TEdit
       Left = 104
@@ -89,13 +94,14 @@ object frmwtLUSales: TfrmwtLUSales
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1176
+      Left = 1168
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 1176
     end
     object btnSearch: TBitBtn
       Left = 288
@@ -110,15 +116,16 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1392
+    Width = 1388
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1386
+        Width = 1390
       end>
+    ExplicitWidth = 1392
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -272,8 +279,8 @@ object frmwtLUSales: TfrmwtLUSales
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1392
-    Height = 276
+    Width = 1388
+    Height = 275
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     Font.Charset = DEFAULT_CHARSET
@@ -431,7 +438,6 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
-        Width = 64
         Visible = True
       end
       item
@@ -445,15 +451,16 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1392
+    Width = 1388
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1386
+        Width = 1390
       end>
+    ExplicitWidth = 1392
     object Panel3: TPanel
       Left = 11
       Top = 0
@@ -465,7 +472,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1377
+        1373
         28)
       object Label2: TLabel
         Left = 0
@@ -496,7 +503,7 @@ object frmwtLUSales: TfrmwtLUSales
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1110
+        Left = 1106
         Top = 7
         Width = 78
         Height = 13
@@ -511,7 +518,7 @@ object frmwtLUSales: TfrmwtLUSales
         ExplicitLeft = 1148
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1190
+        Left = 1186
         Top = 3
         Width = 145
         Height = 21

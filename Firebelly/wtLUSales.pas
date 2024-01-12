@@ -798,17 +798,14 @@ end;
 procedure TfrmwtLUSales.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-(*
 var
   idays: integer;
-*)
 begin
-(*
   if dbgDetails.datasource.dataset.fieldbyname('Date_Required').asdatetime <> 0 then
     iDays :=  DaysBetween(now, dbgDetails.datasource.dataset.fieldbyname('Date_Required').asDateTime)
   else
     iDays := 1000;
-*)
+
   if(dbgDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];

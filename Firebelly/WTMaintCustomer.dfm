@@ -455,6 +455,46 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Height = 13
           Caption = 'Value'
         end
+        object dbgAccountCodes: TDBGrid
+          Tag = 200
+          Left = 383
+          Top = 213
+          Width = 442
+          Height = 111
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          DataSource = dtsGetAccountCodes
+          TabOrder = 28
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          Visible = False
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Account_Code'
+              Title.Caption = 'Account Code'
+              Width = 93
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Customer_Name'
+              Title.Caption = 'Customer'
+              Width = 261
+              Visible = True
+            end>
+        end
+        object chkbxRequiresAppForPay: TCheckBox
+          Left = 384
+          Top = 278
+          Width = 265
+          Height = 17
+          Caption = 'Requires Application for Payment'
+          TabOrder = 30
+        end
         object dblkpCustomerType: TDBLookupComboBox
           Left = 501
           Top = 39
@@ -705,38 +745,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Height = 21
           TabOrder = 23
           Text = 'edtEndUserMarkup'
-        end
-        object dbgAccountCodes: TDBGrid
-          Tag = 200
-          Left = 383
-          Top = 213
-          Width = 357
-          Height = 111
-          TabStop = False
-          Anchors = [akLeft, akTop, akRight]
-          DataSource = dtsGetAccountCodes
-          TabOrder = 28
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -11
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
-          Visible = False
-          Columns = <
-            item
-              Expanded = False
-              FieldName = 'Account_Code'
-              Title.Caption = 'Account Code'
-              Width = 93
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Customer_Name'
-              Title.Caption = 'Customer'
-              Width = 261
-              Visible = True
-            end>
         end
         object cmbbxEndUserPriceFactor: TComboBox
           Left = 501

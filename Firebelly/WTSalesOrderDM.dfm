@@ -70,19 +70,19 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'Sales_Order_Status'
       Required = True
     end
-    object qryAllSalesDeposit_amount: TFloatField
+    object qryAllSalesDeposit_amount: TCurrencyField
       FieldName = 'Deposit_amount'
       Origin = 'Deposit_amount'
     end
-    object qryAllSalesDeposit_Terms: TFloatField
+    object qryAllSalesDeposit_Terms: TCurrencyField
       FieldName = 'Deposit_Terms'
       Origin = 'Deposit_Terms'
     end
-    object qryAllSalesGoods_Value: TFloatField
+    object qryAllSalesGoods_Value: TCurrencyField
       FieldName = 'Goods_Value'
       Origin = 'Goods_Value'
     end
-    object qryAllSalesVAT_Value: TFloatField
+    object qryAllSalesVAT_Value: TCurrencyField
       FieldName = 'VAT_Value'
       Origin = 'VAT_Value'
     end
@@ -179,7 +179,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'Customer_is_Speculative'
       Size = 1
     end
-    object qryAllSalesDeposit_Required: TFloatField
+    object qryAllSalesDeposit_Required: TCurrencyField
       FieldName = 'Deposit_Required'
       Origin = 'Deposit_Required'
       ReadOnly = True
@@ -227,7 +227,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ReadOnly = True
       Required = True
     end
-    object qryAllSalesWorktop_Weight: TFloatField
+    object qryAllSalesWorktop_Weight: TCurrencyField
       FieldName = 'Worktop_Weight'
       DisplayFormat = '#,##0'
     end
@@ -1323,7 +1323,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qryVATVat_Rate: TFloatField
+    object qryVATVat_Rate: TCurrencyField
       FieldName = 'Vat_Rate'
       Origin = 'Vat_Rate'
       Required = True
@@ -1866,7 +1866,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'Sales_order_Line_no'
       Required = True
     end
-    object qryGetLinkedQuotesQuote_Number: TFloatField
+    object qryGetLinkedQuotesQuote_Number: TCurrencyField
       FieldName = 'Quote_Number'
       Origin = 'Quote_Number'
     end
@@ -1916,12 +1916,12 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'Survey_price'
       Required = True
     end
-    object qryGetLinkedQuotesComplete_Price: TFloatField
+    object qryGetLinkedQuotesComplete_Price: TCurrencyField
       FieldName = 'Complete_Price'
       Origin = 'Complete_Price'
       ReadOnly = True
     end
-    object qryGetLinkedQuotesTotal_Price: TFloatField
+    object qryGetLinkedQuotesTotal_Price: TCurrencyField
       FieldName = 'Total_Price'
       Origin = 'Total_Price'
       ReadOnly = True
@@ -1932,7 +1932,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Required = True
       Size = 50
     end
-    object qryGetLinkedQuotesMaterial_Type_Description: TStringField
+    object qryGetLinkedQuotesMaterial_Type_Description: TWideStringField
       FieldName = 'Material_Type_Description'
       Size = 30
     end
@@ -2218,8 +2218,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Size = 255
     end
     object qrySOPurchasesUnit_cost: TCurrencyField
-      FieldName = 'Unit_cost'     
-      
+      FieldName = 'Unit_cost'
     end
     object qrySOPurchasesSlab_Unit_Cost: TCurrencyField
       FieldName = 'Slab_Unit_Cost'
@@ -2335,7 +2334,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       FieldName = 'Total_Cost'
       DisplayFormat = #163'0.00'
     end
-    object qrySOPurchasesQuantity: TFloatField
+    object qrySOPurchasesQuantity: TCurrencyField
       FieldName = 'Quantity'
     end
   end
@@ -2910,14 +2909,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Completed'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryJobsDummyOlder: TFDQuery

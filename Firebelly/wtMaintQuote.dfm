@@ -42,6 +42,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1107
     object pnlRevenueCentre: TPanel
       Left = 1
       Top = 128
@@ -50,6 +51,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 1105
       DesignSize = (
         1109
         40)
@@ -116,6 +118,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Align = alClient
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 1105
       DesignSize = (
         1109
         127)
@@ -146,7 +149,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object Label15: TLabel
-        Left = 853
+        Left = 849
         Top = 12
         Width = 73
         Height = 13
@@ -187,7 +190,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 639
+        Left = 635
         Top = 90
         Width = 51
         Height = 13
@@ -202,7 +205,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 653
       end
       object Label3: TLabel
-        Left = 532
+        Left = 528
         Top = 12
         Width = 80
         Height = 13
@@ -217,7 +220,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 546
       end
       object btnHigh: TSpeedButton
-        Left = 753
+        Left = 749
         Top = 6
         Width = 25
         Height = 25
@@ -244,7 +247,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 814
       end
       object btnLow: TSpeedButton
-        Left = 777
+        Left = 773
         Top = 6
         Width = 25
         Height = 25
@@ -284,7 +287,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 838
       end
       object btnCalendarTask: TSpeedButton
-        Left = 809
+        Left = 805
         Top = 6
         Width = 25
         Height = 25
@@ -360,7 +363,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 870
       end
       object Label63: TLabel
-        Left = 639
+        Left = 635
         Top = 66
         Width = 35
         Height = 13
@@ -405,7 +408,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 1
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 941
+        Left = 937
         Top = 8
         Width = 114
         Height = 21
@@ -413,6 +416,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         TabOrder = 2
+        ExplicitLeft = 933
       end
       object dblkpMaterial: TDBLookupComboBox
         Left = 96
@@ -425,13 +429,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         OnClick = dblkpMaterialClick
       end
       object edtReference: TEdit
-        Left = 712
+        Left = 708
         Top = 86
         Width = 345
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 4
         OnChange = edtReferenceChange
+        ExplicitLeft = 704
       end
       object btnLUMatType: TBitBtn
         Left = 352
@@ -451,7 +456,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object edtDescription: TMemo
         Left = 96
         Top = 62
-        Width = 516
+        Width = 512
         Height = 59
         Anchors = [akLeft, akTop, akRight]
         Lines.Strings = (
@@ -459,18 +464,20 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         MaxLength = 255
         TabOrder = 6
         OnChange = edtDescriptionChange
+        ExplicitWidth = 508
       end
       object edtFollowUpDate: TEdit
-        Left = 624
+        Left = 620
         Top = 8
         Width = 89
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 7
         OnExit = edtFollowUpDateExit
+        ExplicitLeft = 616
       end
       object btnFollowUpDate: TBitBtn
-        Left = 720
+        Left = 716
         Top = 6
         Width = 25
         Height = 25
@@ -491,15 +498,17 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         NumGlyphs = 2
         TabOrder = 8
         OnClick = btnFollowUpDateClick
+        ExplicitLeft = 712
       end
       object edtProject: TEdit
-        Left = 712
+        Left = 708
         Top = 62
         Width = 345
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 9
         OnChange = edtProjectChange
+        ExplicitLeft = 704
       end
       object edtExpiryDate: TEdit
         Left = 443
@@ -545,6 +554,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       item
         Width = 50
       end>
+    ExplicitTop = 644
+    ExplicitWidth = 1107
   end
   object pcDetails: TPageControl
     Left = 0
@@ -554,6 +565,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     ActivePage = tbCustomer
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1107
+    ExplicitHeight = 294
     object tbCustomer: TTabSheet
       Caption = 'Customer'
       ImageIndex = 7
@@ -620,7 +633,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object lblAccepted: TLabel
-        Left = 665
+        Left = 661
         Top = 205
         Width = 74
         Height = 13
@@ -630,7 +643,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ExplicitLeft = 679
       end
       object Label30: TLabel
-        Left = 665
+        Left = 661
         Top = 237
         Width = 84
         Height = 13
@@ -647,7 +660,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Caption = 'Showroom'
       end
       object btnContactClear: TSpeedButton
-        Left = 553
+        Left = 549
         Top = 121
         Width = 23
         Height = 22
@@ -696,7 +709,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
       end
       object btnCustomerSearch: TBitBtn
-        Left = 526
+        Left = 522
         Top = 12
         Width = 22
         Height = 22
@@ -712,19 +725,21 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 0
         OnClick = btnCustomerSearchClick
+        ExplicitLeft = 518
       end
       object pnlAddress: TPanel
         Left = 74
         Top = 0
-        Width = 451
+        Width = 447
         Height = 153
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         Enabled = False
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 443
         DesignSize = (
-          451
+          447
           153)
         object Label24: TLabel
           Left = 104
@@ -736,35 +751,39 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object edtCustomerName: TEdit
           Left = 8
           Top = 12
-          Width = 433
+          Width = 429
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = edtCustomerNameChange
+          ExplicitWidth = 425
         end
         object edtStreet: TEdit
           Left = 8
           Top = 36
-          Width = 433
+          Width = 429
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
+          ExplicitWidth = 425
         end
         object edtlocale: TEdit
           Left = 8
           Top = 56
-          Width = 433
+          Width = 429
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
+          ExplicitWidth = 425
         end
         object edtTown: TEdit
           Left = 8
           Top = 77
-          Width = 433
+          Width = 429
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
+          ExplicitWidth = 425
         end
         object edtPostcode: TEdit
           Left = 8
@@ -777,23 +796,25 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object edtCounty: TEdit
           Left = 152
           Top = 97
-          Width = 289
+          Width = 285
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
+          ExplicitWidth = 281
         end
         object edtContact: TEdit
           Left = 8
           Top = 120
-          Width = 434
+          Width = 430
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 6
           OnChange = edtContactChange
+          ExplicitWidth = 426
         end
       end
       object btnContactSearch: TBitBtn
-        Left = 526
+        Left = 522
         Top = 121
         Width = 22
         Height = 22
@@ -809,9 +830,10 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 2
         OnClick = btnContactSearchClick
+        ExplicitLeft = 518
       end
       object pnlTelephone: TPanel
-        Left = 664
+        Left = 660
         Top = 0
         Width = 391
         Height = 153
@@ -819,6 +841,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
+        ExplicitLeft = 656
         object Telephone: TLabel
           Left = 0
           Top = 16
@@ -908,7 +931,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object edtAccepted: TEdit
-        Left = 753
+        Left = 749
         Top = 201
         Width = 90
         Height = 21
@@ -916,9 +939,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 4
         Visible = False
         OnExit = edtTemplateExit
+        ExplicitLeft = 745
+        ExplicitTop = 200
       end
       object btnAccepted: TBitBtn
-        Left = 849
+        Left = 845
         Top = 199
         Width = 25
         Height = 25
@@ -940,9 +965,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 5
         Visible = False
         OnClick = btnAcceptedClick
+        ExplicitLeft = 841
+        ExplicitTop = 198
       end
       object edtTemplate: TEdit
-        Left = 753
+        Left = 749
         Top = 233
         Width = 90
         Height = 21
@@ -950,9 +977,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 6
         Visible = False
         OnExit = edtTemplateExit
+        ExplicitLeft = 745
+        ExplicitTop = 232
       end
       object btntemplate: TBitBtn
-        Left = 849
+        Left = 845
         Top = 231
         Width = 25
         Height = 25
@@ -974,29 +1003,33 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 7
         Visible = False
         OnClick = btntemplateClick
+        ExplicitLeft = 841
+        ExplicitTop = 230
       end
       object dblkpShowroom: TDBLookupComboBox
         Left = 82
         Top = 155
-        Width = 369
+        Width = 365
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Branch_no'
         ListField = 'Branch_Name'
         TabOrder = 8
+        ExplicitWidth = 361
       end
       object dblkpDesigner: TDBLookupComboBox
         Left = 82
         Top = 184
-        Width = 369
+        Width = 365
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Designer'
         ListField = 'Designer_Name'
         TabOrder = 9
+        ExplicitWidth = 361
       end
       object btnDesigner: TBitBtn
-        Left = 461
+        Left = 457
         Top = 183
         Width = 22
         Height = 22
@@ -1012,6 +1045,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentFont = False
         TabOrder = 12
         OnClick = btnDesignerClick
+        ExplicitLeft = 453
       end
       object dblkpLeadSource: TDBLookupComboBox
         Left = 81
@@ -1756,13 +1790,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       object Panel11: TPanel
         Left = 0
         Top = 0
-        Width = 1103
+        Width = 1099
         Height = 17
         Align = alTop
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1099
         object Label25: TLabel
           Left = 2
           Top = 0
@@ -1772,10 +1805,10 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object ToolBar1: TToolBar
-        Left = 1062
+        Left = 1058
         Top = 17
         Width = 41
-        Height = 250
+        Height = 249
         Align = alRight
         ButtonHeight = 30
         ButtonWidth = 30
@@ -1786,8 +1819,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
-        ExplicitLeft = 1058
-        ExplicitHeight = 249
         object btnExcel: TToolButton
           Left = 0
           Top = 0
@@ -1836,7 +1867,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Left = 0
         Top = 17
         Width = 161
-        Height = 250
+        Height = 249
         ObjectTypes = [otFolders]
         Root = 'C:\'
         ShellListView = slvDocuments
@@ -3305,6 +3336,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 463
+    ExplicitWidth = 1107
     DesignSize = (
       1111
       181)
@@ -3407,6 +3440,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 600
       DesignSize = (
         506
         179)
@@ -3691,135 +3725,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Top = 172
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -4077,12 +3983,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
+      2800000040000000200000000100010000000000000100000000000000000000
       000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

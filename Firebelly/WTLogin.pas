@@ -30,6 +30,7 @@ type
     procedure CompLogoImageDblClick(Sender: TObject);
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -289,6 +290,14 @@ begin
   finally
     IniFile.Free;
   end;
+end;
+
+procedure TfrmWTLogin.FormShow(Sender: TObject);
+begin
+  {$IFDEF ADMINUSER}
+  UserEdit.Text := 'FIREBELLY';
+  PasswordEdit.Text := 'firebelly';
+  {$ENDIF}
 end;
 
 procedure TfrmWTLogin.SetEndUser(const Value: boolean);
