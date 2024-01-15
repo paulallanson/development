@@ -168,6 +168,8 @@ type
     GetLastSQL: TFDQuery;
     UpdPOSQL: TFDQuery;
     lblProofRevision: TQRLabel;
+    gtlblFSCClaim: TQRLabel;
+    qryGetFSCClaim: TFDQuery;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
     procedure DetailQRBandBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -260,6 +262,7 @@ procedure TPBRPProofFrm.DetailQRBandBeforePrint(Sender: TQRCustomBand; var
 var
   irow: Integer;
   sAddress: string;
+  sFSCClaim: string;
 begin
  with GetPOSQL do
    begin
@@ -307,6 +310,35 @@ begin
   LabJobTitle.caption := POsSRC.Dataset.fieldbyname('Customers_Desc').asstring;
   LabDepth.caption := POsSRC.Dataset.fieldbyname('Depth').asstring + ' ' + POsSRC.Dataset.fieldbyname('Depth_Unit').asstring;
   LabWidth.caption := POsSRC.Dataset.fieldbyname('Width').asstring + ' ' + POsSRC.Dataset.fieldbyname('Width_Unit').asstring;
+
+  {FSC Claim}
+  gtlblFSCClaim.Enabled := false;
+  gtlblFSCClaim.Caption := '';
+  if POsSRC.Dataset.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+    begin
+      with qryGetFSCClaim do
+        begin
+          close;
+          parambyname('FSC_Material_Claim').asinteger := POsSRC.Dataset.fieldbyname('FSC_Material_Claim').asinteger;
+          open;
+          if recordcount > 0 then
+            begin
+              gtlblFSCClaim.Enabled := true;
+              if fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',POsSRC.Dataset.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := fieldbyname('Short_Description').asstring;
+              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
+                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
+              else
+                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              gtlblFSCClaim.Caption := '';
+            end;
+        end;
+    end;
 
   if POsSRC.Dataset.fieldbyname('Form_Reference').asstring <> '' then
     begin

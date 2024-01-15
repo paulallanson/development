@@ -60,6 +60,7 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
     PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
@@ -365,6 +366,36 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         VerticalAlignment = tlTop
         FontSize = 12
       end
+      object gtlblFSCClaim: TQRLabel
+        Left = 218
+        Top = 306
+        Width = 267
+        Height = 16
+        Size.Values = (
+          42.333333333333330000
+          576.791666666666700000
+          809.625000000000000000
+          706.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        Caption = 'FSC Claim:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
     end
   end
   object RepSQL: TFDQuery
@@ -377,7 +408,9 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
       '        Part.Part,'
       '        Part.Part_Description,'
       '        Customer.Name,'
-      '        Part.Sell_Pack_Quantity'
+      '        Part.Sell_Pack_Quantity,'
+      '        Part.FSC_Material_Claim,'
+      '        Part.FSC_Mixed_Percentage'
       'FROM (Part LEFT JOIN Customer ON'
       '      Part.Customer=Customer.Customer)'
       '      INNER JOIN Int_Sel ON Part.Part=Int_Sel.Text100'
@@ -408,6 +441,19 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     ParamData = <
       item
         Name = 'Stock_Reference'
+      end>
+  end
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from FSC_Material_Claim'
+      'where FSC_Material_Claim = :FSC_Material_Claim')
+    Left = 390
+    Top = 158
+    ParamData = <
+      item
+        Name = 'FSC_Material_Claim'
       end>
   end
 end

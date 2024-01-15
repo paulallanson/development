@@ -443,6 +443,21 @@ type
     dblkpPackFormat: TDBLookupComboBox;
     btnPackFormat: TBitBtn;
     rdgrpEnclosingType: TRadioGroup;
+    pnlRep: TPanel;
+    Label60: TLabel;
+    Label61: TLabel;
+    Label62: TLabel;
+    Label63: TLabel;
+    repTotalCost: TLabel;
+    RepTotalSell: TLabel;
+    RepTotalMargin: TLabel;
+    repTotalMarginPerc: TLabel;
+    Label68: TLabel;
+    pmnuSI: TPopupMenu;
+    pmnuViewSI: TMenuItem;
+    pmnuRePrintSI: TMenuItem;
+    pmnuPI: TPopupMenu;
+    pmnuViewPI: TMenuItem;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -1135,6 +1150,16 @@ begin
           sgLines.ColWidths[6] := -1;
         end;
       pnlReseller.Visible := pnlEndUser.Visible;
+
+      if dmBroker.ShowRepTotals then
+        begin
+          pnlRep.Visible := true;
+        end
+      else
+        begin
+          pnlRep.Visible := false;
+        end;
+
       imgChkbxInvoiceAll.left := cellleft(sgLines,8);
 
       if (Mode = jbRepeat) or (Mode = jbConvert) then
@@ -1252,6 +1277,12 @@ begin
   reselTotalSell.Caption := FloatToStrF(JobBag.TotalReseller, ffCurrency, 15, 2);
   reselTotalMargin.Caption := FloatToStrF(JobBag.TotalResellerMargin, ffCurrency, 15, 2);
   reselTotalMarginPerc.Caption := FloatToStrF(JobBag.TotalResellerMarginPerc, ffFixed, 15, 2);
+
+  {Show total rep values}
+  repTotalCost.Caption := FloatToStrF(JobBag.TotalRepCost, ffCurrency, 15, 2);
+  repTotalSell.Caption := FloatToStrF(JobBag.TotalSell, ffCurrency, 15, 2);
+  repTotalMargin.Caption := FloatToStrF(JobBag.TotalRepMargin, ffCurrency, 15, 2);
+  repTotalMarginPerc.Caption := FloatToStrF(JobBag.TotalRepMarginPerc, ffFixed, 15, 2);
 end;
 
 procedure TPBMaintJobBagFrm.ShowUnitPrice;
@@ -2230,65 +2261,65 @@ begin
     inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
     inx := jobbag.Lines.IndexOfSequence(inx);
     JobBagLine := JobBag.Lines[inx];
-
-    if JobBagLine.JBLineType = 'P' then
-      begin
-        if bComeFromOrder then exit;
-        dtmdlJBOrders := TdtmdlOrders.create(self);
-        try
-          SelectCode(JobBagLine.PurchaseOrder);
-          if btempCanUpd then
-            CallMaintScreen(jblChange)
-          else
-          if bTempView or bTempNotes or (Mode = jbView) then
-            CallMaintScreen(jblView)
-          else
-            begin
-              messagedlg('You do not have access to the Purchase Ordering module.', mtError, [mbOk], 0);
-              exit;
-            end;
-        finally
-          dtmdlJBOrders.free;
-        end;
-      end
-    else
-    if JobBagLine.JBLineType = 'S' then
-      begin
-        if bComeFromOrder then exit;
-        dtmdlJBOrders := TdtmdlOrders.create(self);
-        try
-          SelectSalesOrder(JobBagLine.SONumber);
-          if trim(btnChange.caption) = '&View' then
-            CallMaintStockScreen('S')
-          else
-            CallMaintStockScreen('C');
-        finally
-          dtmdlJBOrders.free;
-        end;
-      end
-    else
-    if JobBagLine.JBLineType = 'W' then
-      begin
-        if bComeFromOrder then exit;
-        dtmdlJBWOrders := TdtmdlWOrders.create(self);
-        try
-          SelectWorksOrder(JobBagLine.WONumber);
-          CallMaintWOrderScreen(jbChange);
-        finally
-          dtmdlJBWOrders.free;
-        end;
-      end
-    else
-    if JobBagLine.JBLineType = 'A' then
-      begin
-        if trim(btnChange.caption) = '&View' then
-          CallMaintLines(jblView)
-        else
-          CallMaintLines(jblChange);
-      end
-    else
-      CallMaintForm(jblChange)
   end;
+
+  if JobBagLine.JBLineType = 'P' then
+    begin
+      if bComeFromOrder then exit;
+      dtmdlJBOrders := TdtmdlOrders.create(self);
+      try
+        SelectCode(JobBagLine.PurchaseOrder);
+        if btempCanUpd then
+          CallMaintScreen(jblChange)
+        else
+        if bTempView or bTempNotes or (Mode = jbView) then
+          CallMaintScreen(jblView)
+        else
+          begin
+            messagedlg('You do not have access to the Purchase Ordering module.', mtError, [mbOk], 0);
+            exit;
+          end;
+      finally
+        dtmdlJBOrders.free;
+      end;
+    end
+  else
+  if JobBagLine.JBLineType = 'S' then
+    begin
+      if bComeFromOrder then exit;
+      dtmdlJBOrders := TdtmdlOrders.create(self);
+      try
+        SelectSalesOrder(JobBagLine.SONumber);
+        if trim(btnChange.caption) = '&View' then
+          CallMaintStockScreen('S')
+        else
+          CallMaintStockScreen('C');
+      finally
+        dtmdlJBOrders.free;
+      end;
+    end
+  else
+  if JobBagLine.JBLineType = 'W' then
+    begin
+      if bComeFromOrder then exit;
+      dtmdlJBWOrders := TdtmdlWOrders.create(self);
+      try
+        SelectWorksOrder(JobBagLine.WONumber);
+        CallMaintWOrderScreen(jbChange);
+      finally
+        dtmdlJBWOrders.free;
+      end;
+    end
+  else
+  if JobBagLine.JBLineType = 'A' then
+    begin
+      if trim(btnChange.caption) = '&View' then
+        CallMaintLines(jblView)
+      else
+        CallMaintLines(jblChange);
+    end
+  else
+    CallMaintForm(jblChange)
 end;
 
 procedure TPBMaintJobBagFrm.btnDeleteClick(Sender: TObject);

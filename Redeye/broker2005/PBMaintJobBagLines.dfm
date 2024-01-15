@@ -3,8 +3,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Job bag extras'
-  ClientHeight = 445
-  ClientWidth = 495
+  ClientHeight = 444
+  ClientWidth = 491
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    495
-    445)
+    491
+    444)
   TextHeight = 13
   object DelLabel: TLabel
     Left = 117
-    Top = 413
+    Top = 412
     Width = 184
     Height = 15
     Anchors = [akLeft, akBottom]
@@ -31,10 +31,11 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 413
   end
   object OKBitBtn: TBitBtn
     Left = 325
-    Top = 408
+    Top = 407
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -106,47 +107,27 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
-    TabOrder = 1
+    TabOrder = 5
     OnClick = OKBitBtnClick
+    ExplicitTop = 408
   end
   object CancelBitBtn: TBitBtn
     Left = 405
-    Top = 408
+    Top = 407
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 408
   end
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 8
     Width = 481
-    Height = 337
-    ParentBackground = False
-    TabOrder = 0
-    object Label7: TLabel
-      Left = 8
-      Top = 22
-      Width = 89
-      Height = 13
-      Caption = 'Product Category'
-    end
-    object Label8: TLabel
-      Left = 8
-      Top = 52
-      Width = 66
-      Height = 13
-      Caption = 'Product Type'
-    end
-    object Label1: TLabel
-      Left = 8
-      Top = 80
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-    end
+    Height = 167
+    TabOrder = 1
     object Label2: TLabel
       Left = 8
       Top = 188
@@ -189,36 +170,12 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Height = 13
       Caption = 'Reseller Price'
     end
-    object edtProductType: TEdit
-      Left = 104
-      Top = 48
-      Width = 185
-      Height = 21
-      ReadOnly = True
-      TabOrder = 1
-      Text = 'edtProductType'
-    end
-    object btnProdType: TButton
-      Left = 300
-      Top = 46
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 2
-      OnClick = btnProdTypeClick
-    end
     object memQuantity: TMemo
       Left = 104
       Top = 184
       Width = 105
       Height = 21
-      TabOrder = 4
+      TabOrder = 3
       WantReturns = False
       WordWrap = False
       OnChange = CheckOK
@@ -231,7 +188,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Top = 232
       Width = 105
       Height = 21
-      TabOrder = 6
+      TabOrder = 0
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
@@ -247,7 +204,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
-      TabOrder = 8
+      TabOrder = 1
       OnClick = CheckOK
     end
     object dblkpVat: TDBLookupComboBox
@@ -258,43 +215,15 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       KeyField = 'Vat_Code'
       ListField = 'VAT_Rate'
       ListSource = dtsVat
-      TabOrder = 9
+      TabOrder = 2
       OnClick = CheckOK
-    end
-    object edtDescription: TRichEdit
-      Left = 104
-      Top = 80
-      Width = 337
-      Height = 97
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Lines.Strings = (
-        'edtDescription')
-      MaxLength = 255
-      ParentFont = False
-      TabOrder = 3
-      OnChange = CheckOK
-    end
-    object dblkpProductCat: TDBLookupComboBox
-      Left = 104
-      Top = 18
-      Width = 185
-      Height = 21
-      KeyField = 'Category'
-      ListField = 'Description'
-      ListSource = dtsProductCat
-      TabOrder = 0
-      OnClick = dblkpProductCatClick
     end
     object memCostPrice: TMemo
       Left = 104
       Top = 208
       Width = 105
       Height = 21
-      TabOrder = 5
+      TabOrder = 4
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
@@ -308,30 +237,14 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Width = 97
       Height = 17
       Caption = 'Line Inactive'
-      TabOrder = 10
-    end
-    object btnProducts: TButton
-      Left = 448
-      Top = 80
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Enabled = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 11
-      OnClick = btnProductsClick
+      TabOrder = 6
     end
     object memResellerPrice: TMemo
       Left = 104
       Top = 256
       Width = 105
       Height = 21
-      TabOrder = 7
+      TabOrder = 5
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
@@ -376,6 +289,102 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Caption = 'Internal Cost'
     TabOrder = 4
     OnClick = chkbxInternalCostClick
+  end
+  object grpbxHeader: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 481
+    Height = 185
+    TabOrder = 0
+    object Label7: TLabel
+      Left = 8
+      Top = 22
+      Width = 89
+      Height = 13
+      Caption = 'Product Category'
+    end
+    object Label8: TLabel
+      Left = 8
+      Top = 52
+      Width = 66
+      Height = 13
+      Caption = 'Product Type'
+    end
+    object Label1: TLabel
+      Left = 8
+      Top = 80
+      Width = 59
+      Height = 13
+      Caption = 'Description'
+    end
+    object dblkpProductCat: TDBLookupComboBox
+      Left = 104
+      Top = 18
+      Width = 185
+      Height = 21
+      KeyField = 'Category'
+      ListField = 'Description'
+      ListSource = dtsProductCat
+      TabOrder = 0
+      OnClick = dblkpProductCatClick
+    end
+    object edtProductType: TEdit
+      Left = 104
+      Top = 48
+      Width = 185
+      Height = 21
+      ReadOnly = True
+      TabOrder = 1
+      Text = 'edtProductType'
+    end
+    object edtDescription: TRichEdit
+      Left = 104
+      Top = 80
+      Width = 337
+      Height = 97
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Lines.Strings = (
+        'edtDescription')
+      MaxLength = 255
+      ParentFont = False
+      TabOrder = 3
+      OnChange = CheckOK
+    end
+    object btnProducts: TButton
+      Left = 448
+      Top = 80
+      Width = 25
+      Height = 25
+      Caption = '...'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnProductsClick
+    end
+    object btnProdType: TButton
+      Left = 300
+      Top = 46
+      Width = 25
+      Height = 25
+      Caption = '...'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btnProdTypeClick
+    end
   end
   object qryVat: TFDQuery
     ConnectionName = 'pb'

@@ -95,6 +95,8 @@ type
     procedure btnLUContactClick(Sender: TObject);
     procedure btnClearClick(Sender: TObject);
     procedure CustReqDateEditExit(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
   private
     FDeliveryLine: TDeliveryLine;
     FFuncMode: Char;
@@ -150,7 +152,8 @@ implementation
 uses FireDAC.Stan.Param, 
   System.UITypes,
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod,
-  DateSelV5, PBLUCConta, PBMaintPOrd, PBLUSConta, pbLUCompBranch;
+  DateSelV5, PBLUCConta, PBMaintPOrd, PBLUSConta, pbLUCompBranch,
+  pbMainMenu;
 
 {$R *.DFM}
 
@@ -972,6 +975,17 @@ begin
   end;
 
   CustReqDateEdit.Text := PBDatestr(NewDate);
+end;
+
+procedure TPBMaintPOrdLineDelivFrm.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
+end;
+
+procedure TPBMaintPOrdLineDelivFrm.FormCreate(Sender: TObject);
+begin
+  CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 
 end.

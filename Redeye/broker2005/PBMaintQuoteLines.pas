@@ -16,10 +16,6 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     grpbxDetails: TGroupBox;
-    Label7: TLabel;
-    Label8: TLabel;
-    btnProdType: TButton;
-    Label1: TLabel;
     Label2: TLabel;
     memQuantity: TMemo;
     memCostPrice: TMemo;
@@ -32,7 +28,6 @@ type
     dtsPriceUnit: TDataSource;
     qryGetPUnit: TFDQuery;
     qryGetProductType: TFDQuery;
-    dblkpProcessGroup: TDBLookupComboBox;
     Label5: TLabel;
     memASPrice: TMemo;
     Label6: TLabel;
@@ -68,6 +63,12 @@ type
     memMarkupPerc: TMemo;
     memResellerPrice: TMemo;
     lblResellerPrice: TLabel;
+    grpbxHeader: TGroupBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    btnProdType: TButton;
+    Label1: TLabel;
+    dblkpProcessGroup: TDBLookupComboBox;
     procedure btnProdTypeClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);

@@ -104,6 +104,8 @@ type
     GetDetsSQLProof_Description: TStringField;
     DummySRC: TDataSource;
     GetDetsSQLProof_Approved: TStringField;
+    chkbxActiveOnly: TCheckBox;
+    GetDetsSQLinactive: TStringField;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
@@ -121,6 +123,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure GetDetsSQLProof_DescriptionGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
+    procedure chkbxActiveOnlyClick(Sender: TObject);
+    procedure DetsDBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     bDisableNameChangeEvent: ByteBool;
   public
@@ -167,6 +172,10 @@ begin
   begin
     Close;
     ParamByName('Code_From').AsString := '%' + NameEdit.Text + '%';
+    if chkbxActiveOnly.Checked then
+      ParamByName('inactive').AsString := 'N'
+    else
+      ParamByName('inactive').AsString := 'Y';
     Open;
     SelectBitBtn.Enabled := RecordCount > 0;
     ChgBitBtn.Enabled := RecordCount > 0;
@@ -322,6 +331,24 @@ begin
     text := GetDetsSQLDescription.asstring + ' (Default)'
   else
     text := GetDetsSQLDescription.asstring;
+end;
+
+procedure TPBLUProofStatusFrm.chkbxActiveOnlyClick(Sender: TObject);
+begin
+  showgrid(self);
+end;
+
+procedure TPBLUProofStatusFrm.DetsDBGridDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn;
+  State: TGridDrawState);
+begin
+  if (DetsDBGrid.datasource.dataset.fieldByName('InActive').AsString = 'Y') then
+  with (Sender as TDBGrid) do
+  begin
+    Canvas.Brush.Color := Color;
+    Canvas.Font.Color := Font.Color;
+    Canvas.Font.Style := [fsStrikeout];
+  end;
 end;
 
 end.

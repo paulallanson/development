@@ -297,9 +297,18 @@ object PBRSProofNFrm: TPBRSProofNFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
-      'from Proof_Status')
+      'FROM Proof_Status'
+      'WHERE ((inactive = '#39'N'#39') or (inactive is NULL)) OR'
+      '(Proof_Status = :Proof_Status)'
+      '')
     Left = 88
     Top = 16
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Proof_Status'
+        ParamType = ptUnknown
+      end>
   end
   object ProofStatusSRC: TDataSource
     DataSet = ProofStatusSQL

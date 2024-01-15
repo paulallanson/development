@@ -15,11 +15,6 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     grpbxDetails: TGroupBox;
-    Label7: TLabel;
-    edtProductType: TEdit;
-    Label8: TLabel;
-    btnProdType: TButton;
-    Label1: TLabel;
     Label2: TLabel;
     memQuantity: TMemo;
     memSellPrice: TMemo;
@@ -40,17 +35,23 @@ type
     qryWOProcess: TFDQuery;
     dtsWOProcess: TDataSource;
     qryGetProcess: TFDQuery;
-    dblkpProductCat: TDBLookupComboBox;
     memCostPrice: TMemo;
     lblCostPrice: TLabel;
     chkbxInactive: TCheckBox;
-    btnProducts: TButton;
     grpbxInternalCost: TGroupBox;
     Label6: TLabel;
     memMarkupPerc: TMemo;
     lblResellerPrice: TLabel;
     memResellerPrice: TMemo;
     chkbxInternalCost: TCheckBox;
+    grpbxHeader: TGroupBox;
+    Label7: TLabel;
+    dblkpProductCat: TDBLookupComboBox;
+    Label8: TLabel;
+    edtProductType: TEdit;
+    Label1: TLabel;
+    btnProducts: TButton;
+    btnProdType: TButton;
     procedure btnProdTypeClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
@@ -557,7 +558,8 @@ end;
 
 procedure TPBMaintJobBagLinesFrm.chkbxInternalCostClick(Sender: TObject);
 begin
-  grpbxInternalCost.enabled := (Sender as TCheckBox).checked
+  grpbxInternalCost.enabled := (Sender as TCheckBox).checked;
+  grpbxDetails.Enabled := not grpbxInternalCost.enabled ;
 end;
 
 end.

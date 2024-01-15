@@ -51,6 +51,8 @@ type
     QRLabel4: TQRLabel;
     
     ReportImage: TQRImage;
+    gtlblFSCClaim: TQRLabel;
+    qryGetFSCClaim: TFDQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -86,7 +88,7 @@ procedure TPBRPDelivFrm.QRBand1BeforePrint(Sender: TQRCustomBand; var
   PrintBand: Boolean);
 var
   irow: Integer;
-  sTemp : string;
+  sTemp, sFSCClaim : string;
   UseBrnchNm, UseFAO: boolean;
 begin
   if blineup then Exit;
@@ -222,6 +224,35 @@ begin
     if AddressSRC.dataset.Fields[irow].AsString = '' then Continue;
     AddressMemo.Lines.Add(Trim(AddressSRC.dataset.Fields[irow].AsString));
   end;
+
+  {Display FSC Claim}
+  gtlblFSCClaim.Enabled := false;
+  gtlblFSCClaim.Caption := '';
+  if PODelivSQl.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+    begin
+      with qryGetFSCClaim do
+        begin
+          close;
+          parambyname('FSC_Material_Claim').asinteger := PODelivSQl.fieldbyname('FSC_Material_Claim').asinteger;
+          open;
+          if recordcount > 0 then
+            begin
+              gtlblFSCClaim.Enabled := true;
+              if fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',PODelivSQl.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := fieldbyname('Short_Description').asstring;
+              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
+                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
+              else
+                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              gtlblFSCClaim.Caption := '';
+            end;
+        end;
+    end;
 
   {Display Form Reference}
   if trim(PODelivSQl.FieldbyName('Form_Reference_ID').asstring) <> '' then

@@ -62,8 +62,9 @@ type
     qryGetCustomerSubRep: TFDQuery;
     qryCompanySupplier: TFDQuery;
     procedure PBLDatabaseAfterConnect(Sender: TObject);
-    procedure PBLDatabaseBeforeConnect(Sender: TObject);
-    procedure EmailDatabaseBeforeConnect(Sender: TObject);
+    procedure EmailDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
+    procedure PBLDatabaseLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
   private
     FUserName: string;
     FPassword: string;
@@ -230,10 +231,11 @@ type
     procedure LockCompanyRecord;
     function LockRecord(key1, key2, key3, key4, key5, tmpTable, tmpCaption: string; tmpWorkstation: integer;
                         bCanView: boolean): integer;
-    procedure UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer);
+    function UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer): integer;
     procedure SaveNarrative(var iNarrative: Integer; const Data: string);
     procedure ScreenAccessControl(Sender: TObject; sButtonName: String;
                         iOperator, iDataOp, iDataRep: integer);
+    function ShowRepTotals: boolean;
     function StockCodeMandatory: boolean;
     function SuppAccountMandatory: boolean;
     function SupplierAccCodeUnique: boolean;
@@ -301,19 +303,19 @@ begin
     FIsSQL := true;
 end;
 
-procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);
+procedure TdmBroker.PBLDatabaseLogin(AConnection: TFDCustomConnection;
+  AParams: TFDConnectionDefParams);
 begin
-  SetConnectionMapRules(PBLDataBase);
 {$IFDEF DEMO}
+  AParams.Values['USER NAME'] := 'admin';
+  AParams.Values['PASSWORD'] := '';
   UserName := 'admin';
   Password := '';
-  PBLDataBase.Params.UserName := UserName;
-  PBLDataBase.Params.Password := Password;
 {$ELSE}
+  AParams.Values['USER NAME'] := frmpbLogin.UserEdit.Text;
+  AParams.Values['PASSWORD'] := Trim(frmpbLogin.PasswordEdit.Text);
   UserName := frmpbLogin.UserEdit.Text;
   Password := Trim(frmpbLogin.PasswordEdit.Text);
-  PBLDataBase.Params.UserName := UserName;
-  PBLDataBase.Params.Password := Password;
 {$ENDIF}
 end;
 
@@ -1893,7 +1895,7 @@ begin
     end;
 end;
 
-procedure TdmBroker.UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer);
+function TdmBroker.UnLockRecord(key1, key2, key3, key4, key5, tmpTable: string; tmpWorkstation: integer): integer;
 var
   icount: integer;
 begin
@@ -2697,13 +2699,6 @@ begin
     end;
 end;
 
-procedure TdmBroker.EmailDatabaseBeforeConnect(Sender: TObject);
-begin
-  SetConnectionMapRules(EmailDatabase);
-  EmailDatabase.Params.UserName := Self.UserName;
-  EmailDatabase.Params.Password := Self.Password;
-end;
-
 procedure TdmBroker.EmailViaGeneric(sSenderName, sSenderEmail, sRecipientName, sRecipient, sSubject, sBody: string;
                                     sAttachment: Tstrings; EmailApplication, EmailAccount, OperatorName, Workstation: string);
 var
@@ -2811,6 +2806,13 @@ begin
     end;
 end;
 
+procedure TdmBroker.EmailDatabaseLogin(Database: TFDConnection;
+  LoginParams: TStrings);
+begin
+  LoginParams.Values['USER NAME'] := self.UserName;
+  LoginParams.Values['PASSWORD'] := self.Password;
+end;
+
 function TdmBroker.GetCompanyContractDirectory: string;
 begin
   with qryCompany do
@@ -2830,6 +2832,16 @@ begin
     Open;
     result := (FieldByName('Payment_Terms').Asinteger);
   end;
+end;
+
+function TdmBroker.ShowRepTotals: boolean;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := (fieldbyname('Use_Acquired_Customers').asstring = 'N') and (fieldbyname('Default_Quote_Cost_Process').asinteger <> 0) ;
+    end;
 end;
 
 end.

@@ -61,6 +61,7 @@ type
     GetDetsSQLAudit_Table_Name: TStringField;
     GetDetsSQLAudit_Code_1_Field: TStringField;
     GetDetsSqlSQLAudit_Code_1_Field: TStringField;
+    btnExcel: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure GetDetsSQLAudit_TextGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
@@ -75,6 +76,7 @@ type
     procedure DateToCheckBoxClick(Sender: TObject);
     procedure GetDetsSQLAudit_Type_DescrGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
+    procedure btnExcelClick(Sender: TObject);
   private
     { Private declarations }
     sSequence, sSeqName: String;
@@ -139,6 +141,7 @@ If sSequence <> 'Date_Time_Entered' then
 GetDetsSQL.SQL.Add('Date_Time_Entered desc') ;
 GetDetsSQL.Open ;
 CountLabel.Caption := IntToStr(GetDetsSQL.RecordCount) + ' items' ;
+btnExcel.Enabled := GetDetsSQL.RecordCount > 0;
 SequenceLabel.Caption := 'Sequenced by ' + sSeqName ;
 end;
 
@@ -205,6 +208,11 @@ procedure TPBAuditViewFrm.GetDetsSQLAudit_Type_DescrGetText(Sender: TField;
   var Text: String; DisplayText: Boolean);
 begin
 Text := PBAuditDataMod.GetAuditOperation(Sender.DataSet) + (Sender As TStringField).AsString ;
+end;
+
+procedure TPBAuditViewFrm.btnExcelClick(Sender: TObject);
+begin
+  frmpbMainMenu.ExportToExcel(PBAuditViewFrm);
 end;
 
 end.

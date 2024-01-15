@@ -4,7 +4,7 @@ object PBRPProofFrm: TPBRPProofFrm
   Width = 918
   Height = 586
   HorzScrollBar.Range = 1200
-  VertScrollBar.Position = 1457
+  VertScrollBar.Position = 1452
   VertScrollBar.Range = 2000
   Caption = 'Print Proof Approval Letter'
   Color = clBtnFace
@@ -18,7 +18,7 @@ object PBRPProofFrm: TPBRPProofFrm
   TextHeight = 14
   object PrintPOsQuickReport: TQuickRep
     Left = 24
-    Top = 71
+    Top = 76
     Width = 794
     Height = 1123
     ShowingPreview = False
@@ -63,6 +63,7 @@ object PBRPProofFrm: TPBRPProofFrm
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
     PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
@@ -1838,6 +1839,19 @@ object PBRPProofFrm: TPBRPProofFrm
       end
       item
         Name = 'Line'
+      end>
+  end
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from FSC_Material_Claim'
+      'where FSC_Material_Claim = :FSC_Material_Claim')
+    Left = 430
+    Top = 286
+    ParamData = <
+      item
+        Name = 'FSC_Material_Claim'
       end>
   end
 end

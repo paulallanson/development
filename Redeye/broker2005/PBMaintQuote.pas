@@ -65,10 +65,6 @@ type
     memSpec: TMemo;
     btnBrowse: TButton;
     btnOKEstimate: TBitBtn;
-    chkbxDeclined: TCheckBox;
-    lblReason: TLabel;
-    dblkpReason: TDBLookupComboBox;
-    btnReason: TButton;
     Panel9: TPanel;
     Label8: TLabel;
     Label25: TLabel;
@@ -160,6 +156,25 @@ type
     labUnitSell: TLabel;
     dblkpPriceUnit: TDBLookupComboBox;
     bitbtnPriceUnitClear: TBitBtn;
+    pnlRep: TPanel;
+    Label60: TLabel;
+    Label61: TLabel;
+    Label62: TLabel;
+    Label63: TLabel;
+    repTotalCost: TLabel;
+    RepTotalSell: TLabel;
+    RepTotalMargin: TLabel;
+    repTotalMarginPerc: TLabel;
+    Label68: TLabel;
+    chkbxDeclined: TCheckBox;
+    lblReason: TLabel;
+    dblkpReason: TDBLookupComboBox;
+    btnReason: TButton;
+    pnlPackFormat: TPanel;
+    Label59: TLabel;
+    dblkpPackFormat: TDBLookupComboBox;
+    btnPackFormat: TBitBtn;
+    rdgrpEnclosingType: TRadioGroup;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -232,6 +247,10 @@ type
     procedure btnExcelChargeClick(Sender: TObject);
     procedure btnSubRepsClick(Sender: TObject);
     procedure btnEndUserClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnPackFormatClick(Sender: TObject);
+    procedure dblkpPackFormatClick(Sender: TObject);
+    procedure rdgrpEnclosingTypeClick(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -301,7 +320,7 @@ uses UITypes, FireDAC.Stan.Param, pbDatabase, pbMainMenu, CCSCommon, PBImages, D
   PBLUCConta, PBLUCRep, PBLUOps, PBDBMemo, PBMaintQuoteLines, PBWordOLE,
   PBExcelOLE, PBDocObjects, PBMaintEmail, PBMaintQuoteDoc, PBLUQuoteEnqsQty,
   PBLUQuoteReason, ComObj, AxCtrls, taoMapi, PBLUAdHoc, PBLURep, PBMaintQuoteSupply,
-  PBSendtoExcel;
+  PBSendtoExcel, PBLUPackFormat;
 
 {$R *.dfm}
 
@@ -339,6 +358,10 @@ begin
 
     with Quote.DataModule do
     begin
+      qryPackFormat.close;
+      qryPackFormat.parambyname('ID').asinteger := Quote.PackFormat;
+      qryPackFormat.Open;
+
       qryPriceUnit.close;
       qryPriceUnit.open;
       qryPriceUnit.First;
@@ -350,6 +373,7 @@ begin
 
     bUseProspects := dmBroker.UseProspects;
 
+    dblkpPackFormat.listsource := Quote.DataModule.dtsPackFormat;
     dblkpCustomerContact.listsource := Quote.DataModule.srcCustContact;
     dblkpPriceUnit.listsource := Quote.DataModule.dtsPriceUnit;
     dblkpReason.listsource := Quote.DataModule.dtsQReason;
@@ -477,6 +501,7 @@ begin
       chkbxDeclined.Visible := false;
       chkbxDeclined.Checked := false;
       edtEndUser.Text := '';
+      dblkpPackFormat.keyvalue := -1;
     end
   else
     begin
@@ -508,7 +533,7 @@ begin
       if Quote.AcquiredCustomer then
         begin
           pnlEndUser.Visible := true;
-          edtEndUser.text := Quote.EndUserCustomerName; {Put Edn USer name here}
+          edtEndUser.text := Quote.EndUserCustomerName; {Put End User name here}
           pnlReseller.Visible := true;
           sgLines.ColWidths[6] := 80;
         end
@@ -518,6 +543,15 @@ begin
           edtEndUser.text := '';
           pnlReseller.Visible := false;
           sgLines.ColWidths[6] := -1;
+        end;
+
+      if dmBroker.ShowRepTotals then
+        begin
+          pnlRep.Visible := true;
+        end
+      else
+        begin
+          pnlRep.Visible := false;
         end;
 
       edtEmail.text := Quote.Email;
@@ -551,6 +585,9 @@ begin
           edtOfficeContact.text := Quote.OfficeContactName;
         end;
 
+      rdgrpEnclosingType.itemindex := rdgrpEnclosingType.Items.IndexOf(Quote.EnclosingType);
+
+      dblkpPackFormat.KeyValue := Quote.PackFormat;
       if (rdgType.ItemIndex = 0) or (Quote.Adhoc = 0) then
         GetCustomerContacts(Quote.ContactNo);
       edtRep.Text := Quote.DataModule.GetRepName(Quote.rep);
@@ -595,6 +632,12 @@ begin
   reselTotalSell.Caption := FloatToStrF(Quote.TotalReseller, ffCurrency, 15, 2);
   reselTotalMargin.Caption := FloatToStrF(Quote.TotalResellerMargin, ffCurrency, 15, 2);
   reselTotalMarginPerc.Caption := FloatToStrF(Quote.TotalResellerMarginPerc, ffFixed, 15, 2);
+
+  {Show total rep values}
+  repTotalCost.Caption := FloatToStrF(Quote.TotalRepCost, ffCurrency, 15, 2);
+  repTotalSell.Caption := FloatToStrF(Quote.TotalSell, ffCurrency, 15, 2);
+  repTotalMargin.Caption := FloatToStrF(Quote.TotalRepMargin, ffCurrency, 15, 2);
+  repTotalMarginPerc.Caption := FloatToStrF(Quote.TotalRepMarginPerc, ffFixed, 15, 2);
 end;
 
 procedure TPBMaintQuoteFrm.ShowSpecification;
@@ -1519,6 +1562,13 @@ begin
             Quote.EstimateFile := '';
             Quote.LastEstimateDate := 0;
           end;
+        end;
+
+      if dmBroker.UseSAPIntegration and (dblkpPackFormat.Text = '') then
+        begin
+          messagedlg('Please specify the Pack Format and Enclosing Type', mtError,[mbOk], 0);
+          dblkpPackFormat.setfocus;
+          exit;
         end;
 
       for i := 0 to pred(Quote.lines.count) do
@@ -3407,6 +3457,39 @@ begin
   finally
     PBLUCustFrm.Free;
   end;
+end;
+
+procedure TPBMaintQuoteFrm.FormShow(Sender: TObject);
+begin
+  pnlPackFormat.Visible := dmBroker.UseSAPIntegration;
+end;
+
+procedure TPBMaintQuoteFrm.btnPackFormatClick(Sender: TObject);
+begin
+  var PBLUPackFormatFrm := TPBLUPackFormatFrm.Create(Self);
+  try
+    PBLUPackFormatFrm.bIs_Lookup := True;
+    PBLUPackFormatFrm.bAllow_Upd := True;
+    PBLUPackFormatFrm.ShowModal;
+    with Quote.DataModule do
+      begin
+        qryPackFormat.close;
+        qryPackFormat.parambyname('ID').asinteger := Quote.PackFormat;
+        qryPackFormat.Open;
+      end;
+  finally
+    PBLUPackFormatFrm.Free;
+  end;
+end;
+
+procedure TPBMaintQuoteFrm.dblkpPackFormatClick(Sender: TObject);
+begin
+  Quote.PackFormat := (Sender as TDBLookupComboBox).KeyValue;
+end;
+
+procedure TPBMaintQuoteFrm.rdgrpEnclosingTypeClick(Sender: TObject);
+begin
+  Quote.EnclosingType := (Sender as TRadioGroup).items[(Sender as TRadioGroup).itemindex];
 end;
 
 end.

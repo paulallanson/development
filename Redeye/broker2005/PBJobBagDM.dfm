@@ -615,19 +615,47 @@ object dmJobBag: TdmJobBag
       FieldName = 'Currency_Code'
       Origin = 'Currency_Code'
     end
+    object qryJBAllLinesMargin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'Margin'
+      OnGetText = qryJBAllLinesMarginGetText
+      Calculated = True
+    end
+    object qryJBAllLinesTypeDesc: TWideStringField
+      FieldKind = fkLookup
+      FieldName = 'TypeDesc'
+      LookupDataSet = qryJBType
+      LookupKeyFields = 'Job_Bag_Line_Type'
+      LookupResultField = 'Job_Bag_LT_Descr'
+      KeyFields = 'Job_Bag_Line_Type'
+      Lookup = True
+    end
+    object qryJBAllLinesSupplierName: TWideStringField
+      FieldName = 'SupplierName'
+      FixedChar = True
+      Size = 80
+    end
+    object qryJBAllLinesBranchName: TWideStringField
+      FieldName = 'BranchName'
+      FixedChar = True
+      Size = 80
+    end
     object qryJBAllLinessupp_inv_recd: TWideStringField
       FieldName = 'supp_inv_recd'
-      Origin = 'supp_inv_recd'
-      Size = 2
+      Origin = 'PB.Job_Bag_Line_Dets.supp_inv_recd'
+      FixedChar = True
+      Size = 4
+    end
+    object qryJBAllLinesInactive: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Inactive'
+      OnGetText = qryJBAllLinesInactiveGetText
+      Size = 1
+      Calculated = True
     end
     object qryJBAllLinesProduct_Type: TIntegerField
       FieldName = 'Product_Type'
-      Origin = 'Product_Type'
-    end
-    object qryJBAllLinesinactive: TWideStringField
-      FieldName = 'inactive'
-      Origin = 'inactive'
-      Size = 1
+      Origin = 'PB.Job_Bag_Line_Dets.Product_Type'
     end
     object qryJBAllLinesOperator: TIntegerField
       FieldName = 'Operator'
@@ -640,6 +668,12 @@ object dmJobBag: TdmJobBag
     object qryJBAllLinesSales_Order_Line_no: TIntegerField
       FieldName = 'Sales_Order_Line_no'
       Origin = 'Sales_Order_Line_no'
+    end
+    object qryJBAllLinesOrderNumber: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'OrderNumber'
+      OnGetText = qryJBAllLinesOrderNumberGetText
+      Calculated = True
     end
     object qryJBAllLinesJob_Bag_Line_Status: TIntegerField
       FieldName = 'Job_Bag_Line_Status'
@@ -660,15 +694,15 @@ object dmJobBag: TdmJobBag
     object qryJBAllLinesSelling_Price: TCurrencyField
       FieldName = 'Selling_Price'
       Origin = 'Selling_Price'
-    end
-    object qryJBAllLinesSequence_no: TIntegerField
-      FieldName = 'Sequence_no'
-      Origin = 'Sequence_no'
-    end
-    object qryJBAllLinesReady_to_invoice: TWideStringField
-      FieldName = 'Ready_to_invoice'
-      Origin = 'Ready_to_invoice'
-      Size = 1
+    
+    
+    
+    
+    
+    
+    
+    
+    
     end
     object qryJBAllLinesQty_Invoiced: TFloatField
       FieldName = 'Qty_Invoiced'
@@ -682,17 +716,8 @@ object dmJobBag: TdmJobBag
       FieldName = 'Unit_SSP'
       Origin = 'Unit_SSP'
     end
-    object qryJBAllLinesInvoiced_By: TIntegerField
-      FieldName = 'Invoiced_By'
-      Origin = 'Invoiced_By'
-    end
-    object qryJBAllLinesInvoiced_Date: TDateTimeField
-      FieldName = 'Invoiced_Date'
-      Origin = 'Invoiced_Date'
-    end
-    object qryJBAllLinesUnit_Cost_plus_OHD: TCurrencyField
-      FieldName = 'Unit_Cost_plus_OHD'
-      Origin = 'Unit_Cost_plus_OHD'
+    object qryJBAllLinesUnit_Cost_Plus_OHD: TCurrencyField
+      FieldName = 'Unit_Cost_Plus_OHD'
     end
     object qryJBAllLinesUnit_SSP_Original: TCurrencyField
       FieldName = 'Unit_SSP_Original'
@@ -720,12 +745,6 @@ object dmJobBag: TdmJobBag
     end
     object qryJBAllLinesJob_Cost_Markup_Perc: TFloatField
       FieldName = 'Job_Cost_Markup_Perc'
-      Origin = 'Job_Cost_Markup_Perc'
-    end
-    object qryJBAllLinesLine_Is_Internal_Cost: TWideStringField
-      FieldName = 'Line_Is_Internal_Cost'
-      Origin = 'Line_Is_Internal_Cost'
-      Size = 1
     end
     object qryJBAllLinesReseller_Price: TCurrencyField
       FieldName = 'Reseller_Price'
@@ -733,29 +752,6 @@ object dmJobBag: TdmJobBag
     end
     object qryJBAllLinesJob_Bag_Line_Reseller: TCurrencyField
       FieldName = 'Job_Bag_Line_Reseller'
-      Origin = 'Job_Bag_Line_Reseller'
-    end
-    object qryJBAllLinesSupplierName: TWideStringField
-      FieldName = 'SupplierName'
-      Origin = 'SupplierName'
-      Required = True
-      Size = 100
-    end
-    object qryJBAllLinesBranchName: TWideStringField
-      FieldName = 'BranchName'
-      Origin = 'BranchName'
-      Required = True
-      Size = 40
-    end
-    object qryJBAllLinesLine_Inactive: TWideStringField
-      FieldName = 'Line_Inactive'
-      Origin = 'Line_Inactive'
-      Size = 1
-    end
-    object qryJBAllLinesVat_Description: TWideStringField
-      FieldName = 'Vat_Description'
-      Origin = 'Vat_Description'
-      Size = 40
     end
   end
   object qryJBAddLine: TFDQuery
@@ -1941,19 +1937,51 @@ object dmJobBag: TdmJobBag
       FieldName = 'Currency_Code'
       Origin = 'Currency_Code'
     end
-    object qryJBRepeatLinessupp_inv_recd: TWideStringField
+    object FloatField2: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'Margin'
+      OnGetText = qryJBAllLinesMarginGetText
+      Calculated = True
+    end
+    object StringField4: TWideStringField
+      FieldKind = fkLookup
+      FieldName = 'TypeDesc'
+      LookupDataSet = qryJBType
+      LookupKeyFields = 'Job_Bag_Line_Type'
+      LookupResultField = 'Job_Bag_LT_Descr'
+      KeyFields = 'Job_Bag_Line_Type'
+      Lookup = True
+    end
+    object StringField5: TWideStringField
+      FieldName = 'SupplierName'
+      FixedChar = True
+      Size = 80
+    end
+    object StringField6: TWideStringField
+      FieldName = 'BranchName'
+      FixedChar = True
+      Size = 80
+    end
+    object StringField7: TWideStringField
       FieldName = 'supp_inv_recd'
       Origin = 'supp_inv_recd'
       Size = 2
     end
+    object StringField8: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Inactive'
+      OnGetText = qryJBAllLinesInactiveGetText
+      Size = 1
+      Calculated = True
+    end
     object qryJBRepeatLinesProduct_Type: TIntegerField
       FieldName = 'Product_Type'
       Origin = 'Product_Type'
-    end
-    object qryJBRepeatLinesinactive: TWideStringField
-      FieldName = 'inactive'
-      Origin = 'inactive'
-      Size = 1
+
+
+
+
+
     end
     object qryJBRepeatLinesOperator: TIntegerField
       FieldName = 'Operator'
@@ -1967,7 +1995,13 @@ object dmJobBag: TdmJobBag
       FieldName = 'Sales_Order_Line_no'
       Origin = 'Sales_Order_Line_no'
     end
-    object qryJBRepeatLinesJob_Bag_Line_Status: TIntegerField
+    object StringField9: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'OrderNumber'
+      OnGetText = qryJBAllLinesOrderNumberGetText
+      Calculated = True
+    end
+    object IntegerField13: TIntegerField
       FieldName = 'Job_Bag_Line_Status'
       Origin = 'Job_Bag_Line_Status'
     end
@@ -1987,13 +2021,8 @@ object dmJobBag: TdmJobBag
       FieldName = 'Selling_Price'
       Origin = 'Selling_Price'
     end
-    object qryJBRepeatLinesSequence_no: TIntegerField
-      FieldName = 'Sequence_no'
-      Origin = 'Sequence_no'
-    end
-    object qryJBRepeatLinesReady_to_invoice: TWideStringField
-      FieldName = 'Ready_to_invoice'
-      Origin = 'Ready_to_invoice'
+    object qryJBRepeatLinesLine_Is_Internal_Cost: TWideStringField
+      FieldName = 'Line_Is_Internal_Cost'
       Size = 1
     end
     object qryJBRepeatLinesQty_Invoiced: TFloatField
@@ -2008,70 +2037,11 @@ object dmJobBag: TdmJobBag
       FieldName = 'Unit_SSP'
       Origin = 'Unit_SSP'
     end
-    object qryJBRepeatLinesInvoiced_By: TIntegerField
-      FieldName = 'Invoiced_By'
-      Origin = 'Invoiced_By'
-    end
-    object qryJBRepeatLinesInvoiced_Date: TDateTimeField
-      FieldName = 'Invoiced_Date'
-      Origin = 'Invoiced_Date'
-    end
-    object qryJBRepeatLinesUnit_Cost_plus_OHD: TCurrencyField
-      FieldName = 'Unit_Cost_plus_OHD'
-      Origin = 'Unit_Cost_plus_OHD'
+    object qryJBRepeatLinesUnit_Cost_Plus_OHD: TCurrencyField
+      FieldName = 'Unit_Cost_Plus_OHD'
     end
     object qryJBRepeatLinesUnit_SSP_Original: TCurrencyField
       FieldName = 'Unit_SSP_Original'
-      Origin = 'Unit_SSP_Original'
-    end
-    object qryJBRepeatLinesQuote: TFloatField
-      FieldName = 'Quote'
-      Origin = 'Quote'
-    end
-    object qryJBRepeatLinesQuote_Line_no: TIntegerField
-      FieldName = 'Quote_Line_no'
-      Origin = 'Quote_Line_no'
-    end
-    object qryJBRepeatLinesCost_Number: TIntegerField
-      FieldName = 'Cost_Number'
-      Origin = 'Cost_Number'
-    end
-    object qryJBRepeatLinesCategory_Number: TIntegerField
-      FieldName = 'Category_Number'
-      Origin = 'Category_Number'
-    end
-    object qryJBRepeatLinesSub_Category: TIntegerField
-      FieldName = 'Sub_Category'
-      Origin = 'Sub_Category'
-    end
-    object qryJBRepeatLinesJob_Cost_Markup_Perc: TFloatField
-      FieldName = 'Job_Cost_Markup_Perc'
-      Origin = 'Job_Cost_Markup_Perc'
-    end
-    object qryJBRepeatLinesLine_Is_Internal_Cost: TWideStringField
-      FieldName = 'Line_Is_Internal_Cost'
-      Origin = 'Line_Is_Internal_Cost'
-      Size = 1
-    end
-    object qryJBRepeatLinesReseller_Price: TCurrencyField
-      FieldName = 'Reseller_Price'
-      Origin = 'Reseller_Price'
-    end
-    object qryJBRepeatLinesJob_Bag_Line_Reseller: TCurrencyField
-      FieldName = 'Job_Bag_Line_Reseller'
-      Origin = 'Job_Bag_Line_Reseller'
-    end
-    object qryJBRepeatLinesSupplierName: TWideStringField
-      FieldName = 'SupplierName'
-      Origin = 'SupplierName'
-      Required = True
-      Size = 100
-    end
-    object qryJBRepeatLinesBranchName: TWideStringField
-      FieldName = 'BranchName'
-      Origin = 'BranchName'
-      Required = True
-      Size = 40
     end
   end
   object qryJBWO: TFDQuery
@@ -2503,8 +2473,21 @@ object dmJobBag: TdmJobBag
     end
     object qryAllSalesInvoicesTotal_Value: TFloatField
       FieldName = 'Total_Value'
-      Origin = 'Total_Value'
-      ReadOnly = True
+    end
+    object qryAllSalesInvoicesTotal_Goods: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Goods'
+      Calculated = True
+    end
+    object qryAllSalesInvoicesTotal_Vat: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Vat'
+      Calculated = True
+    end
+    object qryAllSalesInvoicesTotal_Invoice: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Invoice'
+      Calculated = True
     end
   end
   object srcAllSalesInvoices: TDataSource
@@ -3408,8 +3391,22 @@ object dmJobBag: TdmJobBag
     end
     object qryAllPurchInvoicesTotal_Value: TFloatField
       FieldName = 'Total_Value'
-      Origin = 'Total_Value'
-      ReadOnly = True
+    end
+    object qryAllPurchInvoicesTotal_Goods: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Goods'
+      currency = False
+      Calculated = True
+    end
+    object qryAllPurchInvoicesTotal_Vat: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Vat'
+      Calculated = True
+    end
+    object qryAllPurchInvoicesTotal_Invoice: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Total_Invoice'
+      Calculated = True
     end
   end
   object srcAllPurchInvoices: TDataSource
@@ -3461,6 +3458,8 @@ object dmJobBag: TdmJobBag
       '      Price_Unit.Price_Unit_Factor,'
       '      Quote.Convert_Percentage,'
       '      Quote.Price_Unit,'
+      '      Quote.Enclosing_Type,'
+      '      Quote.Pack_Format_ID,'
       '      (select Name'
       '      from Operator'
       

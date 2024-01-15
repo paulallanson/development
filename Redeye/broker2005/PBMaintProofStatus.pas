@@ -97,6 +97,7 @@ type
     CheckSQL: TFDQuery;
     chkBxDefault: TCheckBox;
     chkbxApproved: TCheckBox;
+    chkbxActive: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -137,6 +138,7 @@ begin
   begin
     {Empty details}
     DescrEdit.Text := '';
+    ChkBxActive.Checked := True;
   end
   else
   begin
@@ -146,6 +148,7 @@ begin
       DescrEdit.Text := FieldByName('Description').AsString;
       chkBxDefault.checked := (fieldbyname('Proof_Approval_Status').asstring = 'Y');
       chkBxApproved.checked := (fieldbyname('Proof_Approved').asstring = 'Y');
+      ChkBxActive.checked := not (fieldByName('InActive').AsString = 'Y');
     end;
   end;
   {Enable or disable the buttons}
@@ -215,6 +218,11 @@ begin
         ParamByName('Proof_Approved').asstring := 'Y'
       else
         ParamByName('Proof_Approved').asstring := 'N';
+
+      if ChkBxActive.checked then
+        ParamByName('InActive').AsString := 'N'
+      else
+        ParamByName('InActive').AsString := 'Y';
       ExecSQL;
     end;
   end

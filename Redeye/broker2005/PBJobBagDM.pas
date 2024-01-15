@@ -1592,6 +1592,8 @@ type
     FEndUserCustomerName: string;
     FPackFormat: integer;
     FEnclosingType: string;
+    FTotalRepMargin: currency;
+    FTotalRepMarginPerc: double;
     procedure AddZero;
     procedure DeleteZero;
     function  ReserveASlot : integer;
@@ -1613,6 +1615,9 @@ type
     function GetTotalCost: currency;
     function GetTotalMargin: currency;
     function GetTotalMarginPerc: double;
+    function GetTotalRepCost: currency;
+    function GetTotalRepMargin: currency;
+    function GetTotalRepMarginPerc: double;
     function GetTotalReseller: currency;
     function GetTotalResellerMargin: currency;
     function GetTotalResellerMarginPerc: double;
@@ -1876,6 +1881,9 @@ type
     property TotalCost : currency read GetTotalCost;
     property TotalMargin : currency read GetTotalMargin;
     property TotalMarginPerc : double read GetTotalMarginPerc;
+    property TotalRepCost : currency read GetTotalRepCost;
+    property TotalRepMargin : currency read GetTotalRepMargin;
+    property TotalRepMarginPerc : double read GetTotalRepMarginPerc;
     property TotalReseller: currency read GetTotalReseller;
     property TotalResellerMargin : currency read GetTotalResellerMargin;
     property TotalResellerMarginPerc : double read GetTotalResellerMarginPerc;
@@ -2433,7 +2441,7 @@ var
 begin
   Result := 0;
   for i := 0 to Pred(FJobBagLines.Count) do
-    if not FJobBagLines[i].JBLineInactive then
+    if not FJobBagLines[i].JBLineInactive and not FJobBagLines[i].FInternalCostLine then
       Result := Result + roundfloat(FJobBagLines[i].JBLineCost,2);
 end;
 
@@ -4210,7 +4218,7 @@ begin
     Date :=           now;
     Description :=    FieldByName('Description').AsString;
     DescriptiveRef := FieldByName('Descriptive_Reference').AsString;
-
+    EnclosingType := FieldByName('Enclosing_Type').AsString;
     EndUserCustomer :=  FieldByName('End_User_Customer').AsInteger;
     EndUserCustomerName := FieldByName('End_User_Customer_Name').Asstring;
     EndUserBranch :=  FieldByName('End_User_Branch_No').AsInteger;
@@ -4219,6 +4227,7 @@ begin
     Quantity :=       FieldByName('Quantity').Asinteger;
     CustOrderNo :=    '';
 
+    PackFormat :=     Fieldbyname('Pack_Format_ID').asinteger;
     PriceUnit :=      Fieldbyname('Price_Unit').asinteger;
 
     Rep :=            FieldbyName('Rep').asinteger;
@@ -4999,6 +5008,32 @@ end;
 procedure TJobBag.SetEnclosingType(const Value: string);
 begin
   FEnclosingType := Value;
+end;
+
+function TJobBag.GetTotalRepCost: currency;
+var
+  i : integer;
+begin
+  Result := 0;
+  for i := 0 to Pred(FJobBagLines.Count) do
+    if not FJobBagLines[i].JBLineInactive then
+      Result := Result + roundfloat(FJobBagLines[i].JBLineCost,2);
+end;
+
+function TJobBag.GetTotalRepMargin: currency;
+begin
+  Result := TotalSell - TotalRepCost;
+end;
+
+function TJobBag.GetTotalRepMarginPerc: double;
+begin
+  if FJobBagLines.Count = 0 then
+    Result := 0
+  else
+  if TotalSell <> 0 then
+    Result := (TotalRepMargin/TotalSell) * 100
+  else
+    Result := -999999;
 end;
 
 { TJobBagLines }

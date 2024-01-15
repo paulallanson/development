@@ -590,13 +590,13 @@ function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
+  AFilters: TQRFilters;
+  RTFFilter: TQRRTFFilter;
+  HTMLFilter: TQRHTMLFilter;
+  PDFFilter: TQRPDFFilter;
+  BMPFilter: TQRBMPFilter;
+  GIFFilter: TQRGIFFilter;
+  JPEGFilter: TQRJPEGFilter;
   i: integer;
 begin
   Result := TStringList.Create;
@@ -614,10 +614,10 @@ begin
   fileLocation := GetWinTempDir;
   fileName := fileLocation + 'DEL' + FloatToStr(PONo)+ '_' + IntToStr(DelLine) + '.' + attachmentType;
 
-  AFilters := TgtQRFilters.Create(self);
+  AFilters := TQRFilters.Create(self);
   if AnsiLowerCase(attachmentType) = 'pdf' then
   begin
-    PDFFilter := TgtQRPDFFilter.Create(fileName);
+    PDFFilter := TQRPDFFilter.Create(fileName);
     try
       PBDelivQuickReport.ExportToFilter(PDFFilter);
       Result.add(fileName);
@@ -629,7 +629,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'rtf' then
   begin
-    RTFFilter := TgtQRRTFFilter.Create(fileName);
+    RTFFilter := TQRRTFFilter.Create(fileName);
     try
       PBDelivQuickReport.ExportToFilter(RTFFilter);
       Result.add(fileName);
@@ -641,7 +641,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'gif' then
   begin
-    GIFFilter := TgtQRGIFFilter.Create(fileName);
+    GIFFilter := TQRGIFFilter.Create(fileName);
     try
       PBDelivQuickReport.Prepare;
       PBDelivQuickReport.ExportToFilter(GIFFilter);
@@ -657,7 +657,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'bmp' then
   begin
-    BMPFilter := TgtQRBMPFilter.Create(fileName);
+    BMPFilter := TQRBMPFilter.Create(fileName);
     try
       PBDelivQuickReport.Prepare;
       PBDelivQuickReport.ExportToFilter(BMPFilter);
@@ -673,7 +673,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'html' then
   begin
-    HTMLFilter := TgtQRHTMLFilter.Create(fileName);
+    HTMLFilter := TQRHTMLFilter.Create(fileName);
     try
       PBDelivQuickReport.Prepare;
       PBDelivQuickReport.ExportToFilter(HTMLFilter);
@@ -689,7 +689,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'jpeg' then
   begin
-    JPEGFilter := TgtQRJPEGFilter.Create(fileName);
+    JPEGFilter := TQRJPEGFilter.Create(fileName);
     try
       PBDelivQuickReport.Prepare;
       PBDelivQuickReport.ExportToFilter(JPEGFilter);

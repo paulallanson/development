@@ -68,6 +68,10 @@ type
     qryGetQuoteCostDefaults: TFDQuery;
     qryGetCustomerSubRep: TFDQuery;
     qryDummyOld: TFDQuery;
+    qryJBHeader: TFDQuery;
+    qryJBAllLines: TFDQuery;
+    dtsPackFormat: TDataSource;
+    qryPackFormat: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     function GetHeaderCount: integer;
@@ -79,6 +83,7 @@ type
     CustomerRef: string;
     Description: string;
     EndUserName: string;
+    JobNo: integer;
     Rep: integer;
     RepName: string;
     RepIsSubRep: boolean;
@@ -90,6 +95,8 @@ type
     Status: string;
     ShowInactive: string;
     ShowLive: boolean;
+    SortType: string;
+    SortOrder: string;
     QuoteDate: TDateTime;
     property HeaderCount: integer read GetHeaderCount;
     property headerCountJB: integer read GetHeaderCountJB;
@@ -114,8 +121,8 @@ type
     function GetWorkCentreGroupbyWC(tempCode: integer): integer;
     function IsProspect(tempCode: integer): boolean;
     procedure SaveNarrative(var iNarrative: Integer; const Data: string);
-    function UsingSearch: boolean;
     procedure UpdateQuoteStatus(tempCode: real; tempStatus: integer);
+    function UsingSearch: boolean;
   end;
 
   TQuote = class;
@@ -513,10 +520,15 @@ type
     FEndUserBranch: integer;
     FEndUserCustomer: integer;
     FEndUserCustomerName: string;
+    FPackFormat: integer;
+    FEnclosingType: string;
     function GetTotalNonInternalCost: currency;
     function GetTotalCost: currency;
     function GetTotalMargin: currency;
     function GetTotalMarginPerc: double;
+    function GetTotalRepCost: currency;
+    function GetTotalRepMargin: currency;
+    function GetTotalRepMarginPerc: double;
     function GetTotalReseller: currency;
     function GetTotalResellerMargin: currency;
     function GetTotalResellerMarginPerc: double;
@@ -584,6 +596,8 @@ type
     procedure SetEndUserBranch(const Value: integer);
     procedure SetEndUserCustomer(const Value: integer);
     procedure SetEndUserCustomerName(const Value: string);
+    procedure SetEnclosingType(const Value: string);
+    procedure SetPackFormat(const Value: integer);
   public
     constructor Create(DataModule : TdtmdlQuotes);
     destructor Destroy; override;
@@ -593,6 +607,8 @@ type
     function GetCompanyMarkup: real;
     function GetCustomerMarkup(Customer: integer; var bOverride: boolean; var rMarkup: real): boolean;
     procedure LoadFromDB;
+    procedure LoadFromJobBag;
+    procedure LoadJobBagLines;
     procedure LoadCostLine;
     procedure LoadLines;
     procedure LoadSupplies;
@@ -623,6 +639,7 @@ type
     property DescriptiveRef: string read FDescriptiveRef write SetDescriptiveRef;
     property Documents : TQuoteDocs read FQuoteDocs;
     property Email: string read FEmail write SetEmail;
+    property EnclosingType: string read FEnclosingType write SetEnclosingType;
     property EndUserBranch: integer read FEndUserBranch write SetEndUserBranch;
     property EndUserCustomer: integer read FEndUserCustomer write SetEndUserCustomer;
     property EndUserCustomerName: string read FEndUserCustomerName write SetEndUserCustomerName;
@@ -642,6 +659,7 @@ type
     property Operator: integer read FOperator write SetOperator;
     property OperatorName: string read FOperatorName write SetOperatorName;
     property OriginalQuote: real read FOriginalQuote write SetOriginalQuote;
+    property PackFormat: integer read FPackFormat write SetPackFormat;
     property Phone: string read FPhone write SetPhone;
     property PriceUnit: integer read FPriceUnit write SetPriceUnit;
     property PriceUnitFactor : integer read FPriceUnitFactor write SetPriceUnitFactor;
@@ -657,6 +675,9 @@ type
     property TotalCost : currency read GetTotalCost;
     property TotalMargin : currency read GetTotalMargin;
     property TotalMarginPerc : double read GetTotalMarginPerc;
+    property TotalRepCost: currency read GetTotalRepCost;
+    property TotalRepMargin : currency read GetTotalRepMargin;
+    property TotalRepMarginPerc : double read GetTotalRepMarginPerc;
     property TotalReseller: currency read GetTotalReseller;
     property TotalResellerMargin : currency read GetTotalResellerMargin;
     property TotalResellerMarginPerc : double read GetTotalResellerMarginPerc;
@@ -701,6 +722,7 @@ begin
   Result.DbKey :=           Self.DbKey;
   Result.Description :=     Self.Description;
   Result.DescriptiveRef :=  Self.DescriptiveRef;
+  Result.EnclosingType :=   self.EnclosingType;
   Result.Email :=           Self.Email;
   Result.EndUserCustomer := Self.EndUserCustomer;
   Result.EndUserCustomerName := Self.EndUserCustomerName;
@@ -719,6 +741,7 @@ begin
   Result.Operator :=        Self.Operator;
   Result.OperatorName :=    Self.OperatorName;
   Result.OriginalQuote :=   Self.OriginalQuote;
+  Result.PackFormat :=      self.PackFormat;
   Result.Phone :=           Self.Phone;
   Result.PriceUnit  :=      Self.PriceUnit;
   Result.PriceUnitFactor  :=      Self.PriceUnitFactor;
@@ -776,11 +799,15 @@ begin
   result := 0.000;
   for i := 0 to Pred(FQuoteLines.Count) do
     begin
+      if FQuoteLines[i].InternalCostLine then
+        continue;
+
       if FQuoteLines[i].PriceUnitFactor = 0 then
         result := Result + FQuoteLines[i].UnitCost
       else
         result := Result + FQuoteLines[i].UnitCost*(FQuoteLines[i].Quantity/FQuoteLines[i].PriceUnitFactor);
     end;
+
   for i := 0 to Pred(FQuoteSupplies.Count) do
     begin
       if FQuoteSupplies[i].PriceUnitFactor = 0 then
@@ -871,6 +898,44 @@ begin
     end;
 end;
 
+function TQuote.GetTotalRepCost: currency;
+var
+  i: integer;
+begin
+  result := 0.000;
+  for i := 0 to Pred(FQuoteLines.Count) do
+    begin
+      if FQuoteLines[i].PriceUnitFactor = 0 then
+        result := Result + FQuoteLines[i].UnitCost
+      else
+        result := Result + FQuoteLines[i].UnitCost*(FQuoteLines[i].Quantity/FQuoteLines[i].PriceUnitFactor);
+    end;
+
+  for i := 0 to Pred(FQuoteSupplies.Count) do
+    begin
+      if FQuoteSupplies[i].PriceUnitFactor = 0 then
+        result := Result + FQuoteSupplies[i].UnitCost
+      else
+        result := Result + FQuoteSupplies[i].UnitCost*(FQuoteSupplies[i].Quantity/FQuoteSupplies[i].PriceUnitFactor);
+    end;
+end;
+
+function TQuote.GetTotalRepMargin: currency;
+begin
+  result := TotalSell - TotalRepCost;
+end;
+
+function TQuote.GetTotalRepMarginPerc: double;
+begin
+  if FQuoteLines.Count = 0 then
+    Result := 0
+  else
+  if TotalSell <> 0 then
+    result := ((TotalRepMargin)/TotalSell)*100
+  else
+    Result := -999999;
+end;
+
 procedure TQuote.LoadFromDB;
 begin
   Clear;
@@ -888,7 +953,7 @@ begin
     Adhoc :=          Fieldbyname('Ad_Hoc_Address').asinteger;
     AdhocName :=      Fieldbyname('Ad_Hoc_Name').asstring;
     AcquiredCustomer := (Fieldbyname('Customer_is_Acquired').asstring = 'Y');
-    
+
     OfficeContact :=
                       FieldByName('Office_Contact').asinteger;
     OfficeContactName :=
@@ -904,6 +969,9 @@ begin
     DescriptiveRef := FieldByName('Descriptive_Reference').AsString;
     DateRequired :=   FieldByName('Date_Required').AsDateTime;
     DateQuoteRequired :=   FieldByName('Quote_Required_By').AsDateTime;
+
+    EnclosingType := FieldbyName('Enclosing_Type').asstring;
+
     Email :=          Fieldbyname('Email').asstring;
 
     EndUserCustomer :=  FieldByName('End_User_Customer').AsInteger;
@@ -951,6 +1019,7 @@ begin
     else
       inactive :=     'N';
 
+    PackFormat :=           Fieldbyname('Pack_Format_ID').asinteger;
     Phone :=          fieldbyname('Phone').asstring;
     QuoteReason := fieldbyname('Quote_Reason').asinteger;
     try
@@ -1067,6 +1136,178 @@ begin
         end;
       LoadCostLine;
     end;
+end;
+
+procedure TQuote.LoadJobBagLines;
+var
+  aLine : TQuoteLine;
+  icount: integer;
+  rMarkup: real;
+  Result, bOverride: boolean;
+begin
+  icount := 0;
+  FQuoteLines.Clear;
+
+  with FDataModule.qryJBAllLines do
+  begin
+    Close;
+    ParamByName('JobBag').AsInteger := FDataModule.JobNo;
+    Open;
+    while not(EOF) do
+    begin
+      inc(icount);
+      aLine := TQuoteLine.Create(Self);
+      aLine.QuoteLineNo := icount;
+      aLine.CatNumber := fieldbyname('Category_Number').asinteger;
+      aLine.CostNumber := fieldbyname('Cost_Number').asinteger;
+      aLine.CostingToolFlag := false;
+      aLine.Description := fieldbyname('Job_Bag_Line_Descr').asstring;
+      aLine.UnitCost := fieldbyname('Unit_Cost').asfloat;
+      aLine.UnitResellerPrice := fieldbyname('Reseller_Price').asfloat;
+      aLine.UnitSell := fieldbyname('Selling_Price').asfloat;
+      aLine.UnitSSP := fieldbyname('Unit_SSP').asfloat;
+      aLine.UnitCostOHD := fieldbyname('Unit_Cost_Plus_OHD').asfloat;
+      aLine.UnitSSPOrig := fieldbyname('Unit_SSP_Original').asfloat;
+      aLine.Quantity := fieldbyname('Job_Bag_Quantity').asinteger;
+      aLine.InternalCostLine := (fieldbyname('Line_Is_Internal_Cost').asstring = 'Y');
+      aLine.InternalCostMarkupPercentage := fieldbyname('Job_Cost_Markup_Perc').asfloat;
+      aLine.LineConverted := false;
+      aLine.NoOfHours := 0;
+      aLine.PriceUnit := fieldbyname('Price_Unit').asinteger;
+      aLine.PriceUnitFactor := fieldbyname('Price_Unit_Factor').asinteger;
+      aLine.PriceUnitDesc := fieldbyname('Price_Unit_Description').asstring;
+      if fieldbyname('Process').asinteger > 0 then
+        aLine.Process := fieldbyname('Process').asinteger
+      else
+        aLine.Process := fieldbyname('Product_Type_Process').asinteger ;
+
+      aLine.ProcessDesc := FDataModule.GetProcessDescription(aLine.Process);
+
+      if fieldbyname('Process_Group').asinteger > 0 then
+        aLine.ProcessGroup := fieldbyname('Process_Group').asinteger
+      else
+        aLine.ProcessGroup := fieldbyname('Product_Type_Process_Group').asinteger;
+
+      aLine.ProductType := fieldbyname('Product_Type').asinteger;
+      aLine.ProductTypeDesc := fieldbyname('Product_Type_Description').asstring;
+      aLine.Sequence := icount;
+      aLine.SubNumber := fieldbyName('Sub_Category').asinteger;
+      aLine.JustMoved := False;
+      aLine.TeamCount := 1;
+      aLine.VatCode := fieldbyname('Vat_Code').AsInteger;
+      aLine.WorkCentre := 0;
+      aLine.WorkCentreGroup := 0;
+      aLine.InternalCostLine := (fieldbyname('Line_Is_Internal_Cost').asstring = 'Y');
+
+      if aLine.InternalCostLine then
+        begin
+          if (qMode = qRepeat) or (qMode = qCopy) or (qMode = qReQuote) then
+            begin
+              {Get the customer and check if there is an ovveride on the cost markup}
+              bOverride := false;
+              rMarkup := dmBroker.GetDefaultCostMarkupPerc;
+              {The Override is checked and markup set within the function}
+              Result := self.GetCustomerMarkup(Customer, bOverride, rMarkup);
+              aLine.InternalCostMarkupPercentage := rMarkup;
+            end
+          else
+            aLine.InternalCostMarkupPercentage := fieldbyname('Job_Cost_Markup_Perc').asfloat;
+        end
+      else
+        aLine.InternalCostMarkupPercentage := 0.00;
+
+      FQuoteLines.Add(aLine);
+      next
+    end;
+  end;
+  if iCount = 0 then
+    begin
+      LoadCostLine;
+    end;
+
+(*      aLine.CurrencyCode := FieldByName('Currency_Code').AsInteger;
+      aLine.JBLine :=  FieldByName('Job_Bag_Line').AsInteger;
+      aLine.JBLineType := FieldByName('Job_Bag_Line_Type').AsString[1];
+      aLine.PurchaseOrder := FieldByName('Purchase_Order').asfloat;
+      aLine.Line := FieldByName('Line').AsInteger;
+      aLine.Supplier:= FieldByName('Supplier').AsInteger;
+      aLine.BranchNo := FieldByName('Branch_No').AsInteger;
+      aLine.SupplierName:= FieldByName('SupplierName').AsString;
+      aLine.BranchName := FieldByName('BranchName').AsString;
+      aLine.JBLineDescr := FieldByName('Job_Bag_Line_Descr').AsString;
+      aLine.JBLineCost := FieldByName('Job_Bag_Line_Cost').AsFloat;
+      aLine.JBLineSell := FieldByName('Job_Bag_Line_Sell').AsFloat;
+      aLine.JBLineReseller := FieldByName('Job_Bag_Line_Reseller').AsFloat;
+
+      if aLine.PurchaseOrder <> 0 then
+        aLine.JBLineInactive := aLine.GetJBLineInactive(aLine.PurchaseOrder,aLine.Line)
+      else
+        begin
+          stest := trim(fieldbyname('Line_Inactive').AsString);
+          if stest = 'Y' then
+            aLine.JBLineInactive := true
+          else
+            aLine.JBLineInactive := false;
+        end;
+
+      aLine.Quote := fieldbyname('Quote').asfloat;
+      aLine.QuoteLineNo := fieldbyname('Quote_Line_no').asinteger;
+
+      aLine.SONumber := FieldByName('Sales_Order').asinteger;
+      aLine.SOLineNo := FieldByName('Sales_Order_Line_no').AsInteger;
+
+      if aLine.PurchaseOrder <> 0 then
+        aLine.JBLineInvoiced := aLine.GetPOLineStatus(aLine.PurchaseOrder,aLine.Line)
+      else
+      if aLine.SONumber <> 0 then
+        aLine.JBLineInvoiced := aLine.GetSOLineStatus(aLine.SONumber, aLine.SOLineNo)
+      else
+        aLine.JBLineInvoiced := FieldByName('Job_Bag_Line_Invoiced').AsString;
+
+      aLine.JBQtyInvoiced := FieldbyName('Qty_Invoiced').asinteger;
+      aLine.JBLinePurchInvd := FieldByName('supp_inv_recd').AsString = 'Y';
+      aLine.JBQuantity := FieldByName('Job_Bag_Quantity').AsInteger;
+      aLine.ProductType := FieldByName('Product_Type').AsInteger;
+      aLine.VATCode := FieldByName('VAT_Code').AsInteger;
+      aLine.VATDescription := FieldByName('VAT_Description').AsString;
+      aLine.WONumber := FieldbyName('Works_Order').asinteger;
+      aLine.WorksOrderNumber := FDataModule.GetWONumber(aLine.WONumber);
+      aLine.Process := FieldbyName('Process').asinteger;
+      aLine.PriceUnit := Fieldbyname('Price_Unit').asinteger;
+      aLine.ResellerPrice := Fieldbyname('Reseller_Price').asfloat;
+      aLine.SellPrice := Fieldbyname('Selling_Price').asfloat;
+      aLine.CostPrice := FieldbyName('Unit_Cost').asfloat;
+      aLine.SuggPrice := fieldbyName('Unit_SSP').asfloat;
+      aLine.CostPriceOHD := FieldbyName('Unit_Cost_plus_OHD').asfloat;
+      aLine.SSPOrig := fieldbyName('Unit_SSP_Original').asfloat;
+      aLine.JBLineMode := 'C';
+      aLine.JBLineStatus := Fieldbyname('Job_Bag_line_status').asinteger;
+      if aLine.PurchaseOrder <> 0 then
+        begin
+          aLine.JBLineStatusText := FDataModule.GetPOStatus(aLine.PurchaseOrder, aLine.Line, dbKey, aLine.JBLine, aLine.JBLineInvoiced);
+        end
+      else
+      if aLine.SONumber <> 0 then
+        begin
+          aLine.JBLineStatusText := FDataModule.GetSOStatus(aLine.SONumber, dbKey, aLine.JBLine, aLine.JBLineInvoiced);
+        end
+      else
+        begin
+          aLine.JBLineStatusText := FDataModule.GetSundryStatus(dbKey, aLine.JBLine, aLine.JBLineInvoiced);
+          if aLine.JBLineInactive then
+            aLine.JBLineStatusText := '*Deleted*';
+        end;
+
+      aLine.Sequence := icount;
+      aLine.JustMoved := false;
+      aLine.ReadyToInvoice := fieldbyname('Ready_to_invoice').asstring;
+      aLine.ClearedFundsReq := FDataModule.GetPOClearedFunds(aLine.PurchaseOrder, aline.Line);
+      aLine.ClearedFundsRec := FDataModule.GetInvClearedFunds(aLine.PurchaseOrder, aLine.Line);
+      aLine.NeedsAuthorising := FDataModule.GetPOAuthorised(aLine.PurchaseOrder);
+
+      aLine.InternalCostLine := (fieldbyname('Line_Is_Internal_Cost').asstring = 'Y');
+      aLine.InternalCostMarkupPercentage := fieldbyname('Job_Cost_Markup_Perc').asfloat;
+*)
 end;
 
 procedure TQuote.LoadCostLine;
@@ -1261,6 +1502,14 @@ begin
           Parambyname('Operator').AsInteger := frmPBMainMenu.iOperator;
           ParamByName('Descriptive_Reference').AsString := DescriptiveRef;
           ParamByName('Quantity').Asinteger := Quantity;
+
+          Parambyname('Enclosing_Type').asstring := EnclosingType;
+
+          if PackFormat = 0 then
+            Parambyname('Pack_Format_ID').clear
+          else
+            Parambyname('Pack_Format_ID').asinteger := PackFormat;
+
           ParamByName('Phone').Asstring := Phone;
 
           ParamByName('Rep').Asinteger := Rep;
@@ -1358,6 +1607,13 @@ begin
             end;
 
           ParamByName('Quantity').Asinteger := Quantity;
+
+          Parambyname('Enclosing_Type').asstring := EnclosingType;
+
+          if PackFormat = 0 then
+            Parambyname('Pack_Format_ID').clear
+          else
+            Parambyname('Pack_Format_ID').asinteger := PackFormat;
 
           ParamByName('Phone').Asstring := Phone;
           ParamByName('Rep').Asinteger := Rep;
@@ -1664,7 +1920,12 @@ begin
   if ShowLive then
     sTemp := sTemp + ' AND (Quote.Quote_Status < 100)';
 
-  sTemp := sTemp + ' ORDER BY Quote.Quote desc ';
+  if SortOrder = '' then
+      sTemp := sTemp + ' ORDER BY Quote.Quote desc '
+  else
+    sTemp := sTemp + ' ORDER BY ' + SortOrder;
+
+//  sTemp := sTemp + ' ORDER BY Quote.Quote desc ';
 
   qryQHeaderGrid.SQL.text := qryQHeaderGrid.SQL.text + sTemp;
 
@@ -2141,6 +2402,233 @@ begin
   else
     Result := -999999;
 
+end;
+
+procedure TQuote.LoadFromJobBag;
+begin
+  { Load the header record then all lines belonging to this job bag }
+  Clear;
+  with FDataModule.qryJBHeader do
+  begin
+    Close;
+    ParamByName('JobBag').AsInteger := FDataModule.JobNo;
+    Open;
+
+    QuoteStatus :=    10;
+
+    Adhoc :=          0;
+    AdhocName :=      '';
+    AcquiredCustomer := (Fieldbyname('Customer_is_Acquired').asstring = 'Y');
+
+    OfficeContact :=
+                      FieldByName('Office_Contact').asinteger;
+    OfficeContactName := dmBroker.GetOperatorDocDirectory(OfficeContact);
+    Branch :=         FieldByName('Branch_No').AsInteger;
+    BranchName :=     FieldByName('Branch_Name').AsString;
+    Customer :=       FieldByName('Customer').AsInteger;
+    CustomerName :=   FieldByName('Cust_Name').AsString;
+    ContactNo :=      FieldByName('Contact_no').Asinteger;
+
+//    ContactName :=    Fieldbyname('Contact_Name').asstring;
+    Date :=           date;
+    Description :=    FieldByName('Job_Bag_Descr').AsString;
+    DescriptiveRef := FieldByName('Description_Reference').AsString;
+    DateRequired :=   date;
+    DateQuoteRequired :=   date;
+//    Email :=          Fieldbyname('Email').asstring;
+
+    EndUserCustomer :=  FieldByName('End_User_Customer').AsInteger;
+    EndUserBranch :=  FieldByName('End_User_Branch_No').AsInteger;
+    EndUserCustomerName := FieldByName('End_User_Customer_Name').Asstring;
+
+    Quantity :=       FieldByName('Quantity').Asinteger;
+    JobBag :=         0;
+
+    LastEstimateDate :=    date;
+    ProspectQuote := false;
+
+    Rep :=          FDataModule.GetCustomerRep(Customer, Branch);
+    SubRep :=       FDataModule.GetCustomerSubRep(Customer, Branch);
+
+    EstimateFile := '';
+
+    EstimateFileOrig := '';
+
+    Narrative :=      FieldByName('Narrative').AsInteger;
+    NarrativeText :=  FDataModule.GetNarrative(Narrative);
+    Narrative :=      0;
+
+    OriginalQuote :=  0;
+
+    inactive :=     'N';
+
+    Phone :=          '';
+    QuoteReason := 0;
+
+    StartDate :=  date;
+
+    Operator :=       frmPBMainMenu.iOperator;
+    OperatorName :=   frmPBMainMenu.sOperator_Name;
+    PriceUnit :=   Fieldbyname('Price_Unit').asinteger;
+    PriceUnitFactor :=   Fieldbyname('Price_Unit_Factor').asinteger;
+    ConvertPercentage :=   0;
+
+    Close;
+
+  LoadJobBagLines;
+(*
+    AccountManagerName :=
+                      FieldByName('Office_Contact_Name').asstring;
+    AccountTeam :=    FieldByName('Account_Team').asinteger;
+    AcquiredCustomer := (Fieldbyname('Customer_is_Acquired').asstring = 'Y');
+    Branch :=         FieldByName('Branch_No').AsInteger;
+    BranchName :=     FieldByName('Branch_Name').AsString;
+    CashSale :=       (FieldbyName('Cash_Sales').asstring = 'Y');
+    CostCentre :=     Fieldbyname('Cost_Centre').asstring;
+    Customer :=       FieldByName('Customer').AsInteger;
+    CustomerName :=   FieldByName('Cust_Name').AsString;
+    ContactNo :=      FieldByName('Contact_no').Asinteger;
+    Date :=           FieldByName('Date_Point').AsDateTime;
+    Description :=    FieldByName('Job_Bag_Descr').AsString;
+    DescriptiveRef := FieldbyName('Description_Reference').asstring;
+
+    EnclosingType := FieldbyName('Enclosing_Type').asstring;
+    EndUserCustomer :=  FieldByName('End_User_Customer').AsInteger;
+    EndUserCustomerName := FieldByName('End_User_Customer_Name').Asstring;
+    EndUserBranch :=  FieldByName('End_User_Branch_No').AsInteger;
+
+    GoodsRequired :=  FieldByName('Goods_Required').AsDateTime;
+    OfficeContact :=  FieldByName('Office_Contact').Asinteger;
+    Quantity :=       FieldByName('Quantity').Asinteger;
+    CustOrderNo :=    FieldByName('Cust_Order_No').Asstring;
+
+    if JBMode = jbrepeat then
+      begin
+        Rep :=          FDataModule.GetCustomerRep(Customer, Branch);
+        SubRep :=       FDataModule.GetCustomerSubRep(Customer, Branch);
+      end
+    else
+      begin
+        Rep :=          FieldbyName('Rep').asinteger;
+        SubRep :=       FieldbyName('Sub_Rep').asinteger;
+        if SubRep = 0 then
+          SubRep :=          FDataModule.GetCustomerSubRep(Customer, Branch);
+      end;
+
+    DefaultVAtCode := FieldbyName('Vat_Code_Def').asinteger;
+    Narrative :=      FieldByName('Narrative').AsInteger;
+    NarrativeText :=  FDataModule.GetNarrative(Narrative);
+
+    ProductionComplete := (fieldbyname('Production_Complete').asstring = 'Y');
+    try
+      ProductionCompleteBy := fieldbyname('Production_Complete_by').asinteger;
+      ProductionCompleteByName := dmBroker.GetOperatorName(ProductionCompleteBy);
+    except
+      ProductionCompleteBy := 0;
+      ProductionCompleteByName := '';
+    end;
+
+    ProductionDate := fieldbyname('Production_Complete_Date').asdatetime;
+    ReadyToInvoice := Fieldbyname('Ready_for_invoicing').asstring;
+    if FieldbyName('Inactive').asstring = 'Y' then
+      inactive  :=    'Y'
+    else
+      inactive :=     'N';
+
+    try
+      if fieldbyname('Date_Start').asstring = '' then
+        StartDate :=  date
+      else
+        StartDate :=  fieldbyname('Date_Start').asdatetime;
+    except
+      StartDate :=  date;
+    end;
+
+    try
+      InvoiceBy := fieldbyname('Invoiced_by').asinteger;
+      InvoiceByName := dmBroker.getOperatorName(InvoiceBy);
+      InvoiceByDate :=  fieldbyname('Invoiced_Date').asdatetime;
+    except
+      InvoiceBy := 0;
+      InvoiceByName := '';
+      InvoiceByDate :=  0;
+    end;
+
+    if (JBMode = jbRepeat) or (JBMode = jbConvert) then
+      begin
+        InvoiceThisWeek := false;
+        InvoiceThisWeekBy := 0;
+        InvoiceThisWeekDate := 0;
+        InvoiceThisWeekName := '';
+      end
+    else
+      begin
+        InvoiceThisWeek := (fieldbyname('Invoice_This_Week').asstring = 'Y');
+        InvoiceThisWeekBy := fieldbyname('Invoice_This_Week_By').asinteger;
+        InvoiceThisWeekDate := fieldbyname('Invoice_This_Week_Date').asDateTime;
+        InvoiceThisWeekName := Fieldbyname('Invoice_This_Week_Name').asstring;
+      end;
+
+
+    InvoiceLocation := FieldbyName('Invoice_Location').asinteger;
+    Operator :=       Fieldbyname('Operator').asinteger;
+    OperatorName :=   Fieldbyname('Operator_Name').asstring;
+    OriginalJBOrder := Fieldbyname('Original_Job_Bag').asfloat;
+    OnHold :=         Fieldbyname('On_Hold').asstring;
+    ProductionStatus := fieldbyname('Job_Bag_Production_Status').asinteger;
+
+    ArtRequired  :=        (Fieldbyname('Artwork_Required').asstring = 'Y');
+    ArtDueDate :=           Fieldbyname('Artwork_Due_Date').asdatetime;
+    ArtProofDate :=         Fieldbyname('Artwork_Proof_Date').asdatetime;
+    ArtProofDate :=         Fieldbyname('Artwork_Approval_Date').asdatetime;
+    DSRequired :=           (Fieldbyname('Data_Services_Required').asstring = 'Y');
+    DataRequiredDate :=     Fieldbyname('Data_Required_Date').asdatetime;
+    BriefRequiredDate  :=   Fieldbyname('Brief_Required_Date').asdatetime;
+    TextRequiredDate :=     Fieldbyname('Text_Required_Date').asdatetime;
+    BriefAvailableDate :=   Fieldbyname('Brief_Available_Date').asdatetime;
+    TextAvailableDate  :=   Fieldbyname('Text_Available_Date').asdatetime;
+    TextProofDate  :=       Fieldbyname('Text_Proof_Date').asdatetime;
+
+    PackFormat :=           Fieldbyname('Pack_Format_ID').asinteger;
+    PriceUnit :=            Fieldbyname('Price_Unit').asinteger;
+    PriceUnitFactor :=      Fieldbyname('Price_unit_Factor').asinteger;
+
+    ProofRequiredDate  :=   Fieldbyname('Proof_Required_Date').asdatetime;
+    ProofApprovalDate  :=   Fieldbyname('Proof_Approval_Date').asdatetime;
+
+    FileCopiesReceived :=   (Fieldbyname('File_Copies_Received_Date').asdatetime <> 0);
+    FileCopiesReceivedDate :=   Fieldbyname('File_Copies_Received_Date').asdatetime;
+    FileCopiesReceivedBy := Fieldbyname('File_Copies_Received_by').asinteger;
+    FileCopiesReceivedName := Fieldbyname('Files_Received_by_Name').asstring;
+
+    try
+      ProofByMethod     :=  Fieldbyname('Proof_By_Method').AsString;
+    except
+      ProofByMethod     :=  'PDF';
+    end;
+
+    SamplesRequired  :=     (Fieldbyname('Samples_Required').asstring = 'Y');
+    SampleToClientDate :=   Fieldbyname('Sample_To_Client').asdatetime;
+    SampleApprovalDate :=   Fieldbyname('Sample_Approval').asdatetime;
+    ScheduleApproved :=     (Fieldbyname('Schedule_Approved').asstring = 'Y');
+    Status :=               Fieldbyname('Job_Bag_Status').asinteger;
+
+    if JBMode = jbrepeat then
+      QuoteNo := 0
+    else
+      QuoteNo :=              fieldbyname('Quote').asfloat;
+*)
+  end;
+end;
+
+procedure TQuote.SetEnclosingType(const Value: string);
+begin
+  FEnclosingType := Value;
+end;
+
+procedure TQuote.SetPackFormat(const Value: integer);
+begin
+  FPackFormat := Value;
 end;
 
 { TQuoteDocs }

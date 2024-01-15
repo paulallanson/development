@@ -1,20 +1,17 @@
-unit PBRPDeliv;
+unit PBRPJobBagDelivNote;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, CCSPrint, PBPOObjects,
-  QrExport,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
+  gtQrCtrls, gtQrExport;
 
 type
-  TPBRPDelivFrm = class(TForm)
-    PBDelivQuickReport: TQuickRep;
-    PODelivSQL: TFDQuery;
-    PODelivSRC: TDataSource;
+  TPBRPJobBagDelivNoteFrm = class(TForm)
+    JBDelivQuickReport: TQuickRep;
+    JBDelivSQL: TFDQuery;
+    JBDelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     PONumberLbl: TQRLabel;
     AddressMemo: TQRMemo;
@@ -38,9 +35,6 @@ type
     Account: TQRDBText;
     CustDetsSQL: TFDQuery;
     Accountlbl: TQRLabel;
-    DelInstructMemo: TQRMemo;
-    FormRefLbl: TQRLabel;
-    FormRefDescLbl: TQRLabel;
     DeliveryDateLbl: TQRLabel;
     QRLabel1: TQRLabel;
     QRLabel3: TQRLabel;
@@ -52,13 +46,6 @@ type
     QRLabel9: TQRLabel;
     QRLabel10: TQRLabel;
     QRLabel11: TQRLabel;
-    QRBand2: TQRSubDetail;
-    QRLabel2: TQRLabel;
-    QRShape1: TQRShape;
-    GetPickDataSource: TDataSource;
-    GetPickSQL: TFDQuery;
-    QRLabel13: TQRLabel;
-    QRLabel14: TQRLabel;
     QRBand3: TQRBand;
     QRLabel12: TQRLabel;
     QRShape2: TQRShape;
@@ -66,8 +53,7 @@ type
     QRLabel15: TQRLabel;
     QRLabel16: TQRLabel;
     QRShape4: TQRShape;
-    GetPickCallOffSQL: TFDQuery;
-    
+    gtQRFilters1: TQRFilters;
     gtQRLabel1: TQRLabel;
     qrlblContact: TQRDBText;
     lbldelInst: TQRLabel;
@@ -101,21 +87,18 @@ type
     gtQRLabel14: TQRLabel;
     gtQRShape9: TQRShape;
     qrlblWeight: TQRLabel;
-    lblDelNote: TQRLabel;
-    QRMemoCmpnyNm: TQRMemo;
+    qryGetFSCClaim: TFDQuery;
+    gtQRImage2: TQRImage;
+    qrmRegNumber: TQRMemo;
     qrlblVatNo: TQRMemo;
     ReportImage: TQRImage;
-    gtlblFSCClaim: TQRLabel;
-    qryGetFSCClaim: TFDQuery;
+    lblDelNote: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
-    procedure GetPickLocations(Sender: TObject);
-    procedure PBDelivQuickReportBeforePrint(Sender: TCustomQuickRep; var
+    procedure JBDelivQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
-    procedure QRBand2BeforePrint(Sender: TQRCustomBand;
-      var PrintBand: Boolean);
     procedure qrbCourierBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
   private
@@ -124,10 +107,9 @@ type
     procedure SetDeliveryDate(const Value: string);
   public
     bPrintLogo: boolean;
-    PONo: real;
-    POLine, DelLine: integer;
+    JobBag: integer;
+    DelLine: integer;
     OnlyMine, Preview: ByteBool;
-    bLineup: boolean;
     PrinterSettings : TPrinterSettings;
     property DeliveryDate: string read FDeliveryDate write SetDeliveryDate;
     function PrintToFile(PONo: real; POLine, DelLine: integer;
@@ -135,7 +117,7 @@ type
   end;
 
 var
-  PBRPDelivFrm: TPBRPDelivFrm;
+  PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm;
 
 implementation
 
@@ -143,14 +125,13 @@ uses pbMainMenu, PBPODataMod, CCSCommon, PBImages;
 
 {$R *.DFM}
 
-procedure TPBRPDelivFrm.QRBand1BeforePrint(Sender: TQRCustomBand; var
+procedure TPBRPJobBagDelivNoteFrm.QRBand1BeforePrint(Sender: TQRCustomBand; var
   PrintBand: Boolean);
 var
   irow: Integer;
   sTemp, sFSCClaim: string;
   UseBrnchNm, UseFAO: boolean;
 begin
-  if blineup then Exit;
   DateLbl.Enabled := False;
   YourRefLbl.Enabled := False;
   OrderRefLbl.Enabled := False;
@@ -160,43 +141,39 @@ begin
   UseFAO := false;
 
   if DeliveryDate = '' then
-    DeliveryDateLbl.Caption := PODelivSQL.FieldByName('Date_Point').AsString
+    DeliveryDateLbl.Caption := JBDelivSQL.FieldByName('Date_Point').AsString
   else
     DeliveryDateLbl.Caption := DeliveryDate;
 
-  if PODelivSQL.FieldByName('No_of_Boxes').Asinteger = 0 then
+  if JBDelivSQL.FieldByName('No_of_Boxes').Asinteger = 0 then
     BoxesLbl.Caption := ''
   else
-    BoxesLbl.Caption := PODelivSQL.FieldByName('No_of_Boxes').AsString;
+    BoxesLbl.Caption := JBDelivSQL.FieldByName('No_of_Boxes').AsString;
 
-  if PODelivSQL.FieldByName('Job_Bag').Asinteger <> 0 then
+  if JBDelivSQL.FieldByName('Job_Bag').Asinteger <> 0 then
     begin
-      PONumberLbl.Caption := PODelivSQL.FieldByName('Job_Bag').AsString
+      PONumberLbl.Caption := JBDelivSQL.FieldByName('Job_Bag').AsString
     end
   else
     begin
-      PONumberLbl.Caption := PODelivSQL.FieldByName('Purchase_Order').AsString;
+      PONumberLbl.Caption := JBDelivSQL.FieldByName('Purchase_Order').AsString;
     end;
 
-  if (PODelivSQL.FieldByName('Courier').Asinteger <> 0) then
+  if (JBDelivSQL.FieldByName('Courier').Asinteger <> 0) then
     begin
       qrbcourier.enabled := true;
-      lbldelNote.caption := 'Transport Requisition';
-      qrlblDeliveryNote.Caption := 'Purchase Order';
     end
   else
     begin
       qrbcourier.enabled := false;
-      lblDelNote.caption := 'Delivery Note';
-      qrlblDeliveryNote.Caption := 'Delivery Note No.';
     end;
 
   AddressMemo.Lines.Clear;
   DeliveryMemo.Lines.Clear;
 
-  if PODelivSQL.FieldByName('Customer').AsString <> '' then
+  if JBDelivSQL.FieldByName('Customer').AsString <> '' then
   begin
-    if PODelivSQL.FieldByName('contact_name').asString <> '' then
+    if JBDelivSQL.FieldByName('contact_name').asString <> '' then
     begin
       UseFAO := true;
     end;
@@ -205,9 +182,9 @@ begin
     begin
       Close;
       ParamByName('Customer').AsInteger :=
-        PODelivSQL.FieldByName('Customer').AsInteger;
+        JBDelivSQL.FieldByName('Customer').AsInteger;
       ParamByName('Branch_no').AsInteger :=
-        PODelivSQL.FieldByName('Branch_no0').AsInteger;
+        JBDelivSQL.FieldByName('Branch_no').AsInteger;
       Open;
       UseBrnchNm := FieldByName('Use_Branch_Name').AsString = 'Y';
       BuildDeliveryNotes(CustomerSQL, FieldByName('Delivery_Narrative').AsInteger);
@@ -215,9 +192,9 @@ begin
     AddressSRC.Dataset := CustomerSQL;
   end
   else
-    if PODelivSQL.FieldByName('Ad_hoc_Address').AsString <> '' then
+    if JBDelivSQL.FieldByName('Ad_hoc_Address').AsString <> '' then
     begin
-      if PODelivSQL.FieldByName('contact_name').asString <> '' then
+      if JBDelivSQL.FieldByName('contact_name').asString <> '' then
       begin
         UseFAO := true;
       end;
@@ -226,7 +203,7 @@ begin
       begin
         Close;
         ParamByName('Ad_hoc_Address').AsInteger :=
-          PODelivSQL.FieldByName('Ad_hoc_Address').AsInteger;
+          JBDelivSQL.FieldByName('Ad_hoc_Address').AsInteger;
         Open;
         BuildDeliveryNotes(AdHocSQL,
           FieldByName('Delivery_Narrative').AsInteger);
@@ -234,27 +211,27 @@ begin
       AddressSRC.Dataset := AdhocSQL;
     end
     else
-      if PODelivSQL.FieldByName('Rep').AsString <> '' then
+      if JBDelivSQL.FieldByName('Rep').AsString <> '' then
       begin
         with RepSQl do
         begin
           Close;
           ParamByName('Rep').AsInteger :=
-            PODelivSQL.FieldByName('Rep').AsInteger;
+            JBDelivSQL.FieldByName('Rep').AsInteger;
           Open;
         end;
         AddressSRC.Dataset := RepSQL;
       end
       else
-        if PODelivSQL.FieldByName('Supplier').AsString <> '' then
+        if JBDelivSQL.FieldByName('Supplier').AsString <> '' then
         begin
           with SupplierSQl do
           begin
             Close;
             ParamByName('Supplier').AsInteger :=
-              PODelivSQL.FieldByName('Supplier').AsInteger;
-            ParamByName('Branch_no').AsInteger :=
-              PODelivSQL.FieldByName('Branch_no').AsInteger;
+              JBDelivSQL.FieldByName('Supplier').AsInteger;
+            ParamByName('Supplier_Branch_').AsInteger :=
+              JBDelivSQL.FieldByName('Supplier_Branch').AsInteger;
             Open;
           end;
           AddressSRC.Dataset := SupplierSQL;
@@ -272,7 +249,7 @@ begin
         end;
   { This may be a database not upgraded so take the exception }
   try
-    sTemp := PODelivSQL.FieldByName('Delivery_Instructions').AsString
+    sTemp := JBDelivSQL.FieldByName('Delivery_Instructions').AsString
   except
     sTemp := '';  { Ignore missing data }
   end;
@@ -282,14 +259,10 @@ begin
   else
     DeliveryMemo.Lines.Text := DeliveryMemo.Lines.Text + cLFCR + sTemp;
 
-  sTemp := PODelivSQl.FieldbyName('Number_Instructions').asstring;
-    
-  DelInstructMemo.Lines.Text := sTemp;
-
   {Build the Address Memo field}
   if UseFAO then
   begin
-    AddressMemo.Lines.Add(Trim(PODelivSQL.FieldByName('contact_Name').AsString));
+    AddressMemo.Lines.Add(Trim(JBDelivSQL.FieldByName('contact_Name').AsString));
   end;
 
   if UseBrnchNm then
@@ -307,65 +280,15 @@ begin
   if trim(Deliverymemo.lines.text) = '' then
     lblDelInst.Enabled := false;
 
-  {Display FSC Claim}
-  gtlblFSCClaim.Enabled := false;
-  gtlblFSCClaim.Caption := '';
-  if PODelivSQl.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
-    begin
-      with qryGetFSCClaim do
-        begin
-          close;
-          parambyname('FSC_Material_Claim').asinteger := PODelivSQl.fieldbyname('FSC_Material_Claim').asinteger;
-          open;
-          if recordcount > 0 then
-            begin
-              gtlblFSCClaim.Enabled := true;
-              if fieldbyname('Mixed_Claim').asstring = 'Y' then
-                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',PODelivSQl.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
-              else
-                sFSCClaim := fieldbyname('Short_Description').asstring;
-              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
-                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
-              else
-                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
-            end
-          else
-            begin
-              gtlblFSCClaim.Caption := '';
-            end;
-        end;
-    end;
+end;
 
-  {Display Form Reference}
-  if trim(PODelivSQl.FieldbyName('Form_Reference_ID').asstring) <> '' then
-    begin
-      FormRefLbl.Caption := 'Form Ref: ' + PODelivSQl.FieldbyName('Form_Reference_ID').asstring;
-      FormRefDescLbl.Caption := 'Description: ' + PODelivSQl.FieldbyName('Form_Reference_Descr').asstring;
-
-      FormRefLbl.enabled := PODelivSQl.FieldbyName('Form_Reference_ID').asstring <> '';
-      FormRefDescLbl.enabled := PODelivSQl.FieldbyName('Form_Reference_Descr').asstring <> '';
-    end
-  else
-    begin
-      FormRefLbl.Caption := '';
-      FormRefDescLbl.Caption := '';
-    end;
-    GetPickLocations(Self);
-  end;
-
-function TPBRPDelivFrm.GetDetails(Sender: TObject): Integer;
+function TPBRPJobBagDelivNoteFrm.GetDetails(Sender: TObject): Integer;
 begin
   {Activate the main report SQL}
-  with PODelivSQL do
+  with JBDelivSQL do
   begin
     Close;
-    ParamByName('Purchase_Order').asfloat := PONo;
-(*    if OnlyMine then
-      ParamByName('Operator').AsInteger := PBMenuMainFrm.iOperator
-    else
-      ParamByName('Operator').AsInteger := 0;
-*)
-    ParamByName('Line').asinteger := POLine;
+    ParamByName('Job_Bag').asinteger := JobBag;
     ParamByName('Delivery_no').asinteger := DelLine;
     Open;
     Result := RecordCount;
@@ -377,25 +300,25 @@ begin
       with qryCourierService do
         begin
           close;
-          parambyname('Courier').asinteger := PODelivSQL.FieldByName('Courier').Asinteger;
-          parambyname('Service_no').asinteger := PODelivSQL.FieldByName('Service_no').Asinteger;
+          parambyname('Courier').asinteger := JBDelivSQL.FieldByName('Courier').Asinteger;
+          parambyname('Service_no').asinteger := JBDelivSQL.FieldByName('Service_no').Asinteger;
           open;
         end;
 
       with qryPackageType do
         begin
           close;
-          parambyname('Package_Type').asinteger := PODelivSQL.FieldByName('Package_Type').Asinteger;
+          parambyname('Package_Type').asinteger := JBDelivSQL.FieldByName('Package_Type').Asinteger;
           open;
         end;
       end;
   end;
 end;
 
-procedure TPBRPDelivFrm.PBDelivQuickReportBeforePrint(Sender: TCustomQuickRep;
+procedure TPBRPJobBagDelivNoteFrm.JBDelivQuickReportBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
 begin
-  with PBDelivQuickReport.PrinterSettings do
+  with JBDelivQuickReport.PrinterSettings do
   begin
     PrinterIndex := PrinterSettings.PrinterIndex;
     Copies := PrinterSettings.Copies;
@@ -411,18 +334,18 @@ begin
   begin
     ReportImage.Picture := PBImagesFrm.ReportImage.Picture;
     ReportImage.Enabled := true;
-    qrMemoCmpnyNm.Enabled := true;
+    qrmRegNumber.Enabled := true;
     qrlblVatNo.Enabled := true;
   end
   else
   begin
     ReportImage.Enabled := false;
-    qrMemoCmpnyNm.Enabled := false;
+    qrmRegNumber.Enabled := false;
     qrlblVatNo.Enabled := false;
   end
 end;
 
-procedure TPBRPDelivFrm.BuildDeliveryNotes(aQuery: TFDQuery;
+procedure TPBRPJobBagDelivNoteFrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -448,43 +371,19 @@ begin
   end;
 end;
 
-procedure TPBRPDelivFrm.SetDeliveryDate(const Value: string);
+procedure TPBRPJobBagDelivNoteFrm.SetDeliveryDate(const Value: string);
 begin
   FDeliveryDate := Value;
 end;
 
-procedure TPBRPDelivFrm.GetPickLocations(Sender: TObject);
-begin
-  with GetPickCallOffSQL do
-    begin
-      close;
-      parambyname('Purchase_order').asfloat :=PODelivSQL.FieldByName('Original_Order').Asfloat;
-      parambyname('Line').asinteger := PODelivSQL.FieldByName('Original_OrderLine').AsInteger;
-      ParamByName('Delivery_no').Asinteger := PODelivSQL.FieldByName('Delivery_No').AsInteger;
-      ParamByName('Calloff_order').Asfloat := PODelivSQL.FieldByName('Purchase_Order').Asfloat;
-      ParamByName('Calloff_Line').Asinteger := PODelivSQL.FieldByName('Line').AsInteger;
-      open;
-      if recordcount > 0 then
-        begin
-          QRBand2.enabled := True;
-          QRLabel2.Caption := 'Picking information for '+GetPickCallOffSQL.FieldByName('Stock_Location_Desc').AsString;
-        end
-      else
-        begin
-          QRBand2.enabled := False;
-          QRLabel2.Caption := '';
-        end;
-        end;
-end;
-
-procedure TPBRPDelivFrm.FormCreate(Sender: TObject);
+procedure TPBRPJobBagDelivNoteFrm.FormCreate(Sender: TObject);
 var
   irow: integer;
   sAddress: string;
 begin
   CompSQL.close;
   CompSQL.open;
-  with QRMemoCmpnyNm do
+(*  with QRMemoCmpnyNm do
   begin
     sAddress := '';
     Lines.Clear;
@@ -498,16 +397,10 @@ begin
     Lines.Append('T ' + Trim(CompSQL.FieldByName('Phone').AsString) + ' F ' + Trim(CompSQL.FieldByName('Fax_Number').AsString));
     Lines.Append('www.latchamdirect.co.uk');
   end;
+*)
 end;
 
-procedure TPBRPDelivFrm.QRBand2BeforePrint(Sender: TQRCustomBand;
-  var PrintBand: Boolean);
-begin
-QRLabel13.Caption := GetPickCallOffSQL.FieldByName('Description').AsString;
-QRLabel14.Caption := formatfloat('####',GetPickCallOffSql.fieldByName('quantity_Picked').asfloat);
-end;
-
-function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
+function TPBRPJobBagDelivNoteFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
@@ -521,16 +414,14 @@ var
   i: integer;
 begin
   Result := TStringList.Create;
-  self.PONo := PONo;
-  self.POLine := POLine;
+  self.JobBag:= JobBag;
   self.DelLine := DelLine;
 
-  self.bLineup := false;
   self.Preview := false;
   if self.GetDetails(self) = 0 then
     exit;
-    
-  PBDelivQuickReport.Prepare;
+
+  JBDelivQuickReport.Prepare;
 
   fileLocation := GetWinTempDir;
   fileName := fileLocation + 'DEL' + FloatToStr(PONo)+ '_' + IntToStr(DelLine) + '.' + attachmentType;
@@ -540,11 +431,11 @@ begin
   begin
     PDFFilter := TQRPDFFilter.Create(fileName);
     try
-      PBDelivQuickReport.ExportToFilter(PDFFilter);
+      JBDelivQuickReport.ExportToFilter(PDFFilter);
       Result.add(fileName);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       PDFFilter.Free;
     end;
   end
@@ -552,11 +443,11 @@ begin
   begin
     RTFFilter := TQRRTFFilter.Create(fileName);
     try
-      PBDelivQuickReport.ExportToFilter(RTFFilter);
+      JBDelivQuickReport.ExportToFilter(RTFFilter);
       Result.add(fileName);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       RTFFilter.Free;
     end;
   end
@@ -564,15 +455,15 @@ begin
   begin
     GIFFilter := TQRGIFFilter.Create(fileName);
     try
-      PBDelivQuickReport.Prepare;
-      PBDelivQuickReport.ExportToFilter(GIFFilter);
+      JBDelivQuickReport.Prepare;
+      JBDelivQuickReport.ExportToFilter(GIFFilter);
 
       //Assign all the Filenames to the Attachment list
       for i := 0 to pred(AFilters.RepFileCount) do
         Result.add(fileLocation + AFilters.RepFileNames[i]);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       GIFFilter.Free;
     end;
   end
@@ -580,15 +471,15 @@ begin
   begin
     BMPFilter := TQRBMPFilter.Create(fileName);
     try
-      PBDelivQuickReport.Prepare;
-      PBDelivQuickReport.ExportToFilter(BMPFilter);
+      JBDelivQuickReport.Prepare;
+      JBDelivQuickReport.ExportToFilter(BMPFilter);
 
       //Assign all the Filenames to the Attachment list
       for i := 0 to pred(AFilters.RepFileCount) do
         Result.add(fileLocation + AFilters.RepFileNames[i]);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       BMPFilter.Free;
     end;
   end
@@ -596,15 +487,15 @@ begin
   begin
     HTMLFilter := TQRHTMLFilter.Create(fileName);
     try
-      PBDelivQuickReport.Prepare;
-      PBDelivQuickReport.ExportToFilter(HTMLFilter);
+      JBDelivQuickReport.Prepare;
+      JBDelivQuickReport.ExportToFilter(HTMLFilter);
 
       //Assign all the Filenames to the Attachment list
       for i := 0 to pred(AFilters.RepFileCount) do
         Result.add(fileLocation + AFilters.RepFileNames[i]);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       HTMLFilter.Free;
     end;
   end
@@ -612,15 +503,15 @@ begin
   begin
     JPEGFilter := TQRJPEGFilter.Create(fileName);
     try
-      PBDelivQuickReport.Prepare;
-      PBDelivQuickReport.ExportToFilter(JPEGFilter);
+      JBDelivQuickReport.Prepare;
+      JBDelivQuickReport.ExportToFilter(JPEGFilter);
 
       //Assign all the Filenames to the Attachment list
       for i := 0 to pred(AFilters.RepFileCount) do
         Result.add(fileLocation + AFilters.RepFileNames[i]);
     finally
-      PBDelivQuickReport.QRPrinter.Free;
-      PBDelivQuickReport.QRPrinter := nil;
+      JBDelivQuickReport.QRPrinter.Free;
+      JBDelivQuickReport.QRPrinter := nil;
       JPEGFilter.Free;
     end;
   end;
@@ -628,10 +519,10 @@ begin
   AFilters.free;
 end;
 
-procedure TPBRPDelivFrm.qrbCourierBeforePrint(Sender: TQRCustomBand;
+procedure TPBRPJobBagDelivNoteFrm.qrbCourierBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  qrlblWeight.Caption := formatfloat('#,##0.000',(PODelivSQL.fieldbyname('Delivery_Weight_Kilos').asinteger/1000));
+  qrlblWeight.Caption := formatfloat('#,##0.000',(JBDelivSQL.fieldbyname('Delivery_Weight_Kilos').asinteger/1000));
 end;
 
 end.

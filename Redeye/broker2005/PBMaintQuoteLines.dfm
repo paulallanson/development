@@ -3,8 +3,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   Top = 85
   BorderStyle = bsDialog
   Caption = 'Maintain Quote details'
-  ClientHeight = 523
-  ClientWidth = 503
+  ClientHeight = 522
+  ClientWidth = 499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -116,30 +116,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 8
     Top = 8
     Width = 489
-    Height = 345
-    ParentBackground = False
-    TabOrder = 0
-    object Label7: TLabel
-      Left = 8
-      Top = 22
-      Width = 61
-      Height = 13
-      Caption = 'Department'
-    end
-    object Label8: TLabel
-      Left = 8
-      Top = 52
-      Width = 38
-      Height = 13
-      Caption = 'Process'
-    end
-    object Label1: TLabel
-      Left = 8
-      Top = 80
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-    end
+    Height = 201
+    TabOrder = 5
     object Label2: TLabel
       Left = 8
       Top = 161
@@ -203,27 +181,12 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Height = 13
       Caption = 'Reseller Price'
     end
-    object btnProdType: TButton
-      Left = 308
-      Top = 46
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 2
-      OnClick = btnProdTypeClick
-    end
     object memQuantity: TMemo
       Left = 112
       Top = 157
       Width = 105
       Height = 21
-      TabOrder = 5
+      TabOrder = 2
       WantReturns = False
       WordWrap = False
       OnChange = CheckOK
@@ -236,7 +199,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 183
       Width = 105
       Height = 21
-      TabOrder = 6
+      TabOrder = 4
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -252,19 +215,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
-      TabOrder = 10
-      OnClick = CheckOK
-    end
-    object dblkpProcessGroup: TDBLookupComboBox
-      Left = 112
-      Top = 18
-      Width = 185
-      Height = 21
-      KeyField = 'Process_Group'
-      ListField = 'Process_Group_Description'
-      ListSource = dtsProcessGroup
       TabOrder = 0
-      OnClick = dblkpProcessGroupClick
+      OnClick = CheckOK
     end
     object memASPrice: TMemo
       Left = 112
@@ -284,7 +236,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 209
       Width = 105
       Height = 21
-      TabOrder = 7
+      TabOrder = 6
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -297,7 +249,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 183
       Width = 105
       Height = 21
-      TabOrder = 12
+      TabOrder = 1
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -310,49 +262,13 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 209
       Width = 105
       Height = 21
-      TabOrder = 13
+      TabOrder = 3
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
       OnEnter = SaveValue
       OnExit = ValidateMoney4DP
       OnKeyPress = CheckKeyIsFloat
-    end
-    object dblkpProcess: TDBLookupComboBox
-      Left = 112
-      Top = 48
-      Width = 185
-      Height = 21
-      KeyField = 'Process'
-      ListField = 'Process_Description'
-      ListSource = dtsProcess
-      TabOrder = 1
-      OnClick = dblkpProcessClick
-    end
-    object btnProducts: TButton
-      Left = 455
-      Top = 80
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Enabled = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 4
-      OnClick = btnProductsClick
-    end
-    object edtDescription: TMemo
-      Left = 112
-      Top = 80
-      Width = 337
-      Height = 73
-      Lines.Strings = (
-        'edtDescription')
-      TabOrder = 3
     end
     object dblkpVat: TDBLookupComboBox
       Left = 112
@@ -362,7 +278,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = dtsVat
-      TabOrder = 11
+      TabOrder = 5
       OnClick = CheckOK
     end
     object memResellerPrice: TMemo
@@ -370,7 +286,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 259
       Width = 105
       Height = 21
-      TabOrder = 9
+      TabOrder = 7
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -488,6 +404,96 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnEnter = SaveValue
       OnExit = ValidateMoney3DP
       OnKeyPress = CheckKeyIsFloat
+    end
+  end
+  object grpbxHeader: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 489
+    Height = 145
+    TabOrder = 0
+    object Label7: TLabel
+      Left = 10
+      Top = 14
+      Width = 61
+      Height = 13
+      Caption = 'Department'
+    end
+    object Label8: TLabel
+      Left = 11
+      Top = 41
+      Width = 38
+      Height = 13
+      Caption = 'Process'
+    end
+    object Label1: TLabel
+      Left = 12
+      Top = 72
+      Width = 59
+      Height = 13
+      Caption = 'Description'
+    end
+    object btnProdType: TButton
+      Left = 304
+      Top = 35
+      Width = 25
+      Height = 25
+      Caption = '...'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnProdTypeClick
+    end
+    object dblkpProcessGroup: TDBLookupComboBox
+      Left = 112
+      Top = 10
+      Width = 185
+      Height = 21
+      KeyField = 'Process_Group'
+      ListField = 'Process_Group_Description'
+      ListSource = dtsProcessGroup
+      TabOrder = 1
+      OnClick = dblkpProcessGroupClick
+    end
+    object dblkpProcess: TDBLookupComboBox
+      Left = 112
+      Top = 37
+      Width = 185
+      Height = 21
+      KeyField = 'Process'
+      ListField = 'Process_Description'
+      ListSource = dtsProcess
+      TabOrder = 2
+      OnClick = dblkpProcessClick
+    end
+    object edtDescription: TMemo
+      Left = 112
+      Top = 64
+      Width = 337
+      Height = 73
+      Lines.Strings = (
+        'edtDescription')
+      TabOrder = 3
+    end
+    object btnProducts: TButton
+      Left = 456
+      Top = 64
+      Width = 25
+      Height = 25
+      Caption = '...'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnProductsClick
     end
   end
   object qryPriceUnit: TFDQuery

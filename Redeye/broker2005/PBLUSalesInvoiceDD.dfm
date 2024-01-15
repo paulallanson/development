@@ -271,6 +271,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     SQL.Strings = (
       'select sales_invoice.sales_invoice,'
       'sales_invoice.Sales_Invoice_No,'
+      'sales_invoice.Invoice_or_Credit,'
       'sales_invoice.Invoice_Date,'
       'sales_invoice.Goods_Value,'
       'sales_invoice.Vat_Value,'
@@ -283,6 +284,17 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       'Customer.Name as Customer_Name,'
       'Customer_Branch.Account_Code,'
       'Customer.Direct_Debit_Code,'
+      '(SELECT Customer_Contact.Email'
+      ' FROM Customer_Contact'
+      
+        ' WHERE Customer_Contact.Customer = Customer_Branch.Inv_to_Custom' +
+        'er AND'
+      
+        '       Customer_Contact.Branch_no = Customer_Branch.Inv_to_Branc' +
+        'h AND'
+      
+        '       Customer_Contact.Contact_No = Customer_Branch.Inv_to_Cont' +
+        'act) as Contact_Email,'
       'sales_invoice.direct_debit_filename'
       'FROM Payment_Terms'
       '    RIGHT JOIN (Customer'
@@ -300,7 +312,6 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       
         'and ((sales_invoice.inactive <> '#39'Y'#39') or (sales_invoice.inactive ' +
         'is null))'
-      'and sales_invoice.invoice_or_credit = '#39'I'#39
       
         'and ((sales_invoice.direct_debit_filename = '#39#39') or(sales_invoice' +
         '.direct_debit_filename is null) or (:Show_All = '#39'Y'#39'))'
@@ -333,6 +344,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     SQL.Strings = (
       'select sales_invoice.sales_invoice,'
       '  sales_invoice.Sales_Invoice_No,'
+      '  sales_invoice.Invoice_or_Credit,'
       '  sales_invoice.Invoice_Date,'
       '  sales_invoice.Goods_Value,'
       '  sales_invoice.Vat_Value,'
@@ -344,7 +356,18 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       '  Payment_Terms.Number_of_Days,'
       '  Customer.Name as Customer_Name,'
       '  Customer_Branch.Account_Code,'
-      '  Customer.Direct_Debit_Code'
+      '  Customer.Direct_Debit_Code,'
+      '  (SELECT Customer_Contact.Email'
+      '  FROM Customer_Contact'
+      
+        '  WHERE Customer_Contact.Customer = Customer_Branch.Inv_to_Custo' +
+        'mer AND'
+      
+        '       Customer_Contact.Branch_no = Customer_Branch.Inv_to_Branc' +
+        'h AND'
+      
+        '       Customer_Contact.Contact_No = Customer_Branch.Inv_to_Cont' +
+        'act) as Contact_Email'
       'FROM Payment_Terms'
       '    RIGHT JOIN (Customer'
       '    INNER JOIN ((Int_Sel'

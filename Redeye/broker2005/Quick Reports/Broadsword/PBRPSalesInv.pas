@@ -74,7 +74,6 @@ type
     lblReference: TQRLabel;
     ExtrasVatLbl: TQRLabel;
     qrySIHead: TFDQuery;
-    
     qrlblInvoiceTotal: TQRLabel;
     qrlblVatTotal: TQRLabel;
     qrlblNetTotal: TQRLabel;
@@ -111,6 +110,9 @@ type
     memPayment: TQRMemo;
     imgReport: TQRImage;
     imgTUV: TQRImage;
+    chldbndFSCClaim: TQRChildBand;
+    gtlblFSCClaim: TQRLabel;
+    qryGetFSCClaim: TFDQuery;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -167,6 +169,8 @@ type
     procedure BuildInvoiceNotes(aQuery : TFDQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
+    function GetPOFSCClaim(tempCode: real; tempLine: integer): string;
+    function GetSOLineFSCClaim(tempCode, tempLine: integer): string;
   public
     bCustomerisReseller: boolean;
     bInvoice: boolean;
@@ -417,7 +421,10 @@ begin
                                               InvLineSQL.fieldbyname('Line').asinteger);
 (*      lblFormRef.caption := GetFormRefDesc(InvLineSQL.fieldbyname('Purchase_Order').asfloat,
                                               InvLineSQL.fieldbyname('Line').asinteger);
-*)      lblPriceUnit.caption := InvLineSQl.Fieldbyname('Sales_unit_Desc').asstring;
+*)
+      lblPriceUnit.caption := InvLineSQl.Fieldbyname('Sales_unit_Desc').asstring;
+      gtlblFSCClaim.caption := GetPOFSCClaim(InvLineSQL.fieldbyname('Purchase_Order').asfloat,
+                                              InvLineSQL.fieldbyname('Line').asinteger);
     end
   else
   if InvLineSRC.Dataset.fieldbyname('Sales_Order').asinteger <> 0 then
@@ -436,6 +443,9 @@ begin
           lblPriceUnit.caption := sPriceUnit;
           rUnitPrice := strtoint(sPriceUnit) * rUnitPrice;
         end;
+
+      gtlblFSCClaim.caption := GetSOLineFSCClaim(InvLineSQL.fieldbyname('Sales_Order').asinteger,
+                                              InvLineSQL.fieldbyname('Sales_order_Line_no').asinteger);
     end
   else
     begin
@@ -444,6 +454,7 @@ begin
                                               InvLineSQL.fieldbyname('Job_Bag_Line').asinteger);
 //      lblFormRef.caption := '';
       lblPriceUnit.caption := InvLineSQl.Fieldbyname('Sales_unit_Desc').asstring;
+      gtlblFSCClaim.caption := '';
     end;
 
   if not bInvoice then
@@ -501,12 +512,17 @@ begin
       lblDescription.width := 320;
     end;
     
-  InvoiceLine.height := lblDescription.height + 3
+  InvoiceLine.height := lblDescription.height + 3;
 (*  if trim(lblFormRef.caption) = '' then
     InvoiceLine.height := lblDescription.height + 3
   else
     InvoiceLine.height := lblDescription.height + 5 + lblFormRef.height;
 *)
+  if trim(gtlblFSCClaim.caption) = '' then
+    chldbndFSCClaim.enabled := false
+  else
+    chldbndFSCClaim.enabled := True;
+  PrintBand := not (InvLineSRC.Dataset.fieldbyname('Not_Printed').asstring = 'Y');
 end;
 
 procedure TPBRPSalesInvFrm.FreeCompanyRecord;
@@ -1171,6 +1187,83 @@ begin
       parambyname('Sales_Invoice_no').asstring := tempcode;
       open;
       result := fieldbyname('Sales_invoice_type').asstring;
+    end;
+end;
+
+function TPBRPSalesInvFrm.GetPOFSCClaim(tempCode: real;
+  tempLine: integer): string;
+var
+  sFSCClaim: string;
+begin
+  result := '';
+  with qryPOLine do
+    begin
+      close;
+      parambyname('Purchase_order').asfloat := tempcode;
+      parambyname('Line').asinteger := tempLine;
+      open;
+
+      {Display FSC Claim}
+      if fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+        begin
+          qryGetFSCClaim.close;
+          qryGetFSCClaim.parambyname('FSC_Material_Claim').asinteger := fieldbyname('FSC_Material_Claim').asinteger;
+          qryGetFSCClaim.open;
+          if qryGetFSCClaim.recordcount > 0 then
+            begin
+              if qryGetFSCClaim.fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(qryGetFSCClaim.fieldbyname('Short_Description').asstring,'X',formatfloat('0',fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := qryGetFSCClaim.fieldbyname('Short_Description').asstring;
+
+              if trim(qryGetFSCClaim.fieldbyname('Claim_Type').asstring) = 'FSC' then
+                result := 'FSC Claim: ' + sFSCClaim
+              else
+                result := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              result := '';
+            end;
+        end;
+    end;
+end;
+
+function TPBRPSalesInvFrm.GetSOLineFSCClaim(tempCode, tempLine: integer): string;
+var
+  sFSCClaim: string;
+begin
+  result := '';
+  with qrySOLine do
+    begin
+      close;
+      parambyname('Sales_order').asinteger := tempcode;
+      parambyname('Sales_order_Line_no').asinteger := tempLine;
+      open;
+
+      {Display FSC Claim}
+      if fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+        begin
+          qryGetFSCClaim.close;
+          qryGetFSCClaim.parambyname('FSC_Material_Claim').asinteger := fieldbyname('FSC_Material_Claim').asinteger;
+          qryGetFSCClaim.open;
+          if qryGetFSCClaim.recordcount > 0 then
+            begin
+              if qryGetFSCClaim.fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(qryGetFSCClaim.fieldbyname('Short_Description').asstring,'X',formatfloat('0',fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := qryGetFSCClaim.fieldbyname('Short_Description').asstring;
+
+              if trim(qryGetFSCClaim.fieldbyname('Claim_Type').asstring) = 'FSC' then
+                result := 'FSC Claim: ' + sFSCClaim
+              else
+                result := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              result := '';
+            end;
+        end;
     end;
 end;
 

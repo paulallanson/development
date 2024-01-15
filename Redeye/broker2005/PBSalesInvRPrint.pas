@@ -43,6 +43,7 @@ type
     InvCSVSQL: TFDQuery;
     OleContainer1: TOleContainer;
     btbtnExcel: TBitBtn;
+    InvLineChgsCSVSQL: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure PrintBtnClick(Sender: TObject);
     procedure PreviewBtnClick(Sender: TObject);
@@ -809,154 +810,6 @@ begin
   TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
 end;
 
-(*
-procedure TPBSalesInvRPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
-var
-  i: integer;
-  sLocation, sFileName: string;
-  zLocation, zFileName: array[0..255] of char;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
-begin
-  FEmailAttachment.clear;
-
-  sLocation := GetWinTempDir;
-
-//  sFileName := 'SI'+tempCode;
-
-  {Code used to generate a unique filename}
-  strPCopy(zLocation, sLocation);
-
-  GetTempFileName(zLocation, '', 0, zFileName);
-
-  sFileName := zFileName;
-  sFileName := trim(stringReplace(sFileName,'.TMP','',[rfIgnoreCase]));
-
-  sFileName := trim(stringReplace(sFileName,sLocation,'',[rfIgnoreCase]));
-
-  {Format is 'Si' + Enquiry Number + Random Number}
-  if self.CreditNotePrint then
-    sFileName := 'SC' + tempcode + '-' + sFilename
-  else
-    sFileName := 'SI' + tempcode + '-' + sFilename;
-
-  AFilters := TgtQRFilters.Create(self);
-
-  if sAttachmentType = 'RTF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.rtf');
-      RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
-        PBRPSalesInvFrm.InvoiceReport.ExportToFilter(RTFFilter);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        RTFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'HTML' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.htm');
-      HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
-        PBRPSalesInvFrm.InvoiceReport.ExportToFilter(HTMLFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        HTMLFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'PDF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.pdf');
-      PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
-        PBRPSalesInvFrm.InvoiceReport.ExportToFilter(PDFFilter);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        PDFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'GIF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.gif');
-      GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
-        PBRPSalesInvFrm.InvoiceReport.ExportToFilter(GIFFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        GIFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'JPEG' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.jpg');
-      JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
-        PBRPSalesInvFrm.InvoiceReport.ExportToFilter(JPEGFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        JPEGFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'BMP' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.bmp');
-      BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPSalesInvFrm.InvoiceReport.Prepare;
- //       ExportToRTF(PBRPSalesInvFrm.InvoiceReport, sLocation + sFilename + '.bmp');
-      PBRPSalesInvFrm.InvoiceReport.ExportToFilter(BMPFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter.Free;
-        PBRPSalesInvFrm.InvoiceReport.QRPrinter := nil;
-        BMPFilter.Free;
-      end;
-    end;
-
-
-  AFilters.free;
-end;
-*)
-
 procedure TPBSalesInvRPrintFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
@@ -1076,23 +929,19 @@ begin
             rResellerLineTotal := (fieldbyname('Qty_Invoiced').asinteger/fieldbyname('Price_Unit_Factor').asinteger) * fieldbyname('Reseller_Price').asfloat;
           end;
 
-        sDescription := '';
-        if Assigned(PBRPSalesInvFrm) then
-        begin
-          if fieldbyname('Purchase_Order').asfloat <> 0 then
-            begin
-              sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
-            end
-          else
-          if fieldbyname('Sales_Order').asinteger <> 0 then
-            begin
-              sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
-            end
-          else
-            begin
-              sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
-            end;
-        end;
+        if fieldbyname('Purchase_Order').asfloat <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+          end
+        else
+        if fieldbyname('Sales_Order').asinteger <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
+          end
+        else
+          begin
+            sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+          end;
 
         rLineMargin := rResellerLineTotal - rLineTotal;
         try
@@ -1158,7 +1007,7 @@ var
   CSVFile: TextFile;
   rLineTotal, rResellerLineTotal, rLineMargin, rLineMarginPerc: real;
   rTotal, rResellerTotal, rMargin, rMarginPerc, rCostPrice, rTotalCost: real;
-  iCount: integer;
+  iCount, iInvoiceNumber, iLineNo: integer;
   iPriceUnitFactor: integer;
 begin
   sLocation := GetWinTempDir;
@@ -1322,6 +1171,54 @@ begin
         rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
+
+        iInvoiceNumber := fieldbyname('Sales_Invoice').asinteger;
+        iLineNo := fieldbyname('Invoice_line_no').asinteger;
+
+        {Check for any additional charges}
+        InvLineChgsCSVSQL.close;
+        InvLineChgsCSVSQL.parambyname('Sales_invoice').asinteger := iInvoiceNumber;
+        InvLineChgsCSVSQL.parambyname('Invoice_line_no').asinteger := iLineNo;
+        InvLineChgsCSVSQL.open;
+
+        while InvLineChgsCSVSQL.eof <> true do
+          begin
+            iCount := iCount + 1;
+            tempStr := fieldbyname('Customer_Name').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Cust_Order_No').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Invoice_Description').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Job_Reference').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;
+            tempStr := tempstr + ',' + sOrderDate;
+            tempStr := tempstr + ',' + fieldbyname('Invoice_Date').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Purchase_Order').asstring;
+            tempStr := tempstr + ',' + sSupplierName;
+            tempStr := tempstr + ',' + fieldbyname('Alt_Purchase_Order').asstring;
+            tempStr := tempStr + ',' + fieldbyname('Qty_Invoiced').asstring;
+            tempStr := tempstr + ',' + 'per Job';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Cost_Price').asfloat)+ '"';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Cost_Price').asfloat)+ '"';
+            tempStr := tempstr + ',' + inttostr(icount);
+            tempStr := tempstr + ',' + sProductTypeDescription;
+            tempStr := tempstr + ',' + stringreplace(InvLineChgsCSVSQL.fieldbyname('Details').asstring,',','',[rfReplaceAll]);
+            tempStr := tempStr + ',' + '1';
+            tempStr := tempStr + ',' + 'per Job';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.0000',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat) + '"';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat)+ '"';
+            tempStr := tempStr + ',' + formatfloat('0.00%',InvLineChgsCSVSQL.fieldbyname('Vat_Rate').asfloat);
+
+            rLineTotal := InvLineChgsCSVSQL.fieldbyname('Amount').asfloat;
+
+            WriteLn(CSVFile, tempStr);
+
+            {Recalculate line totals to add to invoice totals}
+            rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+            rTotal := rTotal + rLineTotal;
+
+            InvLineChgsCSVSQL.Next;
+          end;
         next;
       end;
     end;
@@ -1355,7 +1252,7 @@ var
   CSVFile: TextFile;
   rLineTotal, rResellerLineTotal, rLineMargin, rLineMarginPerc: real;
   rTotal, rResellerTotal, rMargin, rMarginPerc, rCostPrice, rTotalCost: real;
-  iCount: integer;
+  iCount, iInvoiceNumber, iLineNo: integer;
   iPriceUnitFactor: integer;
   tempCode: string;
 begin
@@ -1496,7 +1393,7 @@ begin
         tempStr := fieldbyname('Customer_Name').asstring;
         tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;
         tempStr := tempstr + ',' + fieldbyname('Cust_Order_No').asstring;
-        tempStr := tempstr + ',' + fieldbyname('Invoice_Description').asstring;
+        tempStr := tempstr + ',' + stringreplace(fieldbyname('Invoice_Description').asstring,',','',[rfReplaceAll]);
         tempStr := tempstr + ',' + fieldbyname('Job_Reference').asstring;
         tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_no').asstring;
         tempStr := tempstr + ',' + sOrderDate;
@@ -1511,6 +1408,8 @@ begin
 //        tempStr := tempstr + ',' + inttostr(icount);
         tempStr := tempstr + ',' + fieldbyname('Invoice_Line_no').asstring;
         tempStr := tempstr + ',' + sProductTypeDescription;
+
+        sDescription := StringReplace(StringReplace(sDescription, #10, ' ', [rfReplaceAll]), #13, ' ', [rfReplaceAll]);
         tempStr := tempstr + ',' + stringreplace(sDescription,',','',[rfReplaceAll]);
         tempStr := tempStr + ',' + fieldbyname('Qty_Invoiced').asstring;
         tempStr := tempStr + ',' + fieldbyname('Sales_Unit_Desc').asstring;
@@ -1524,6 +1423,55 @@ begin
         rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
+
+        iInvoiceNumber := fieldbyname('Sales_Invoice').asinteger;
+        iLineNo := fieldbyname('Invoice_line_no').asinteger;
+
+        {Check for any additional charges}
+        InvLineChgsCSVSQL.close;
+        InvLineChgsCSVSQL.parambyname('Sales_invoice').asinteger := iInvoiceNumber;
+        InvLineChgsCSVSQL.parambyname('Invoice_line_no').asinteger := iLineNo;
+        InvLineChgsCSVSQL.open;
+
+        while InvLineChgsCSVSQL.eof <> true do
+          begin
+            iCount := iCount + 1;
+            tempStr := fieldbyname('Customer_Name').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Cust_Order_No').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Invoice_Description').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Job_Reference').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;
+            tempStr := tempstr + ',' + sOrderDate;
+            tempStr := tempstr + ',' + fieldbyname('Invoice_Date').asstring;
+            tempStr := tempstr + ',' + fieldbyname('Purchase_Order').asstring;
+            tempStr := tempstr + ',' + sSupplierName;
+            tempStr := tempstr + ',' + fieldbyname('Alt_Purchase_Order').asstring;
+            tempStr := tempStr + ',' + fieldbyname('Qty_Invoiced').asstring;
+            tempStr := tempstr + ',' + 'per Job';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Cost_Price').asfloat)+ '"';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Cost_Price').asfloat)+ '"';
+            tempStr := tempstr + ',' + fieldbyname('Invoice_Line_no').asstring;
+            tempStr := tempstr + ',' + sProductTypeDescription;
+            tempStr := tempstr + ',' + stringreplace(InvLineChgsCSVSQL.fieldbyname('Details').asstring,',','',[rfReplaceAll]);
+            tempStr := tempStr + ',' + '1';
+            tempStr := tempStr + ',' + 'per Job';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.0000',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat) + '"';
+            tempStr := tempStr + ',' + '"' + formatfloat('£#,##0.00',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat)+ '"';
+            tempStr := tempStr + ',' + formatfloat('0.00%',InvLineChgsCSVSQL.fieldbyname('Vat_Rate').asfloat);
+
+            rLineTotal := InvLineChgsCSVSQL.fieldbyname('Amount').asfloat;
+
+            WriteLn(CSVFile, tempStr);
+
+            {Recalculate line totals to add to invoice totals}
+            rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+            rTotal := rTotal + rLineTotal;
+            
+            InvLineChgsCSVSQL.Next;
+          end;
+
         next;
       end;
       finally

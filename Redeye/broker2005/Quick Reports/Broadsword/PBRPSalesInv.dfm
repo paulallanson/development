@@ -62,6 +62,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
     PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
@@ -135,7 +136,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     end
     object InvoiceFooter: TQRBand
       Left = 0
-      Top = 554
+      Top = 571
       Width = 794
       Height = 3
       AfterPrint = InvoiceFooterAfterPrint
@@ -172,7 +173,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     end
     object AddChargesFooter: TQRBand
       Left = 0
-      Top = 514
+      Top = 531
       Width = 794
       Height = 40
       AlignToBottom = False
@@ -525,7 +526,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     end
     object InvoiceCharges: TQRSubDetail
       Left = 0
-      Top = 492
+      Top = 509
       Width = 794
       Height = 22
       AlignToBottom = False
@@ -1390,7 +1391,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     end
     object QRBand2: TQRBand
       Left = 0
-      Top = 557
+      Top = 574
       Width = 794
       Height = 386
       AlignToBottom = False
@@ -7911,6 +7912,53 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000}
       Stretch = True
     end
+    object chldbndFSCClaim: TQRChildBand
+      Left = 0
+      Top = 492
+      Width = 794
+      Height = 17
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      LinkBand = InvoiceLine
+      Size.Values = (
+        44.979166666666670000
+        2100.791666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      ParentBand = InvoiceLine
+      PrintOrder = cboAfterParent
+      object gtlblFSCClaim: TQRLabel
+        Left = 119
+        Top = 1
+        Width = 58
+        Height = 15
+        Size.Values = (
+          39.687500000000000000
+          314.854166666666700000
+          2.645833333333333000
+          153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'FSC Claim:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+    end
   end
   object InvHeadSQL: TFDQuery
     ConnectionName = 'PB'
@@ -8366,7 +8414,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       'SELECT  Purchase_orderLine.Customers_Desc, '
       '        Purchase_OrderLine.Cust_Order_no,'
       '        Form_Reference.Form_Reference_ID,'
-      '        Form_Reference.Form_Reference_Descr'
+      '        Form_Reference.Form_Reference_Descr,'
+      '        Purchase_OrderLine.FSC_Material_Claim,'
+      '        Purchase_orderline.FSC_Mixed_Percentage'
       'FROM Form_Reference'
       '      RIGHT JOIN Purchase_orderLine ON'
       
@@ -8391,7 +8441,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       'select Part.Part, '
       '          Part_Description, '
       '          Sales_order_line.Sell_Pack_Quantity, '
-      '          Price_Unit'
+      '          Price_Unit,'
+      '          Part.FSC_Material_Claim,'
+      '          Part.FSC_Mixed_Percentage'
       'from Sales_order_line, '
       '        Part'
       'where Sales_Order = :Sales_Order and'
@@ -8499,5 +8551,18 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       ' ')
     Left = 341
     Top = 376
+  end
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from FSC_Material_Claim'
+      'where FSC_Material_Claim = :FSC_Material_Claim')
+    Left = 638
+    Top = 310
+    ParamData = <
+      item
+        Name = 'FSC_Material_Claim'
+      end>
   end
 end

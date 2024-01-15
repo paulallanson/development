@@ -1407,10 +1407,39 @@ object STRPLabelsFrm: TSTRPLabelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 12
+      end
+      object gtlblFSCClaim: TQRLabel
+        Left = 91
+        Top = 284
+        Width = 63
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333330000
+          240.770833333333300000
+          751.416666666666700000
+          166.687500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'FSC Claim:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 8
       end
     end
   end
@@ -1419,7 +1448,8 @@ object STRPLabelsFrm: TSTRPLabelsFrm
     SQL.Strings = (
       
         'SELECT Int_Sel.*, Sales_Order.*, Part.Part_Description, Sales_Or' +
-        'der_Line.Sell_Pack_Quantity, Part.Part, Part.Numbered'
+        'der_Line.Sell_Pack_Quantity, Part.Part, Part.Numbered, Part.FSC_' +
+        'Material_Claim, Part.FSC_Mixed_Percentage'
       'FROM Part INNER JOIN ((Int_Sel INNER JOIN Sales_Order ON'
       
         '  Int_Sel.Sel2 = Sales_Order.Sales_Order) INNER JOIN Sales_Order' +
@@ -1498,6 +1528,22 @@ object STRPLabelsFrm: TSTRPLabelsFrm
       end
       item
         Name = 'Branch_no'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from FSC_Material_Claim'
+      'where FSC_Material_Claim = :FSC_Material_Claim')
+    Left = 526
+    Top = 326
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FSC_Material_Claim'
+        ParamType = ptUnknown
       end>
   end
 end

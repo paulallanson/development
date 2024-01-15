@@ -69,6 +69,7 @@ type
     procedure btnConvertClick(Sender: TObject);
     procedure btnWonClick(Sender: TObject);
     procedure btnRequoteClick(Sender: TObject);
+    procedure dbgDetailsTitleClick(Column: TColumn);
   private
     FActivated: boolean;
     ActiveCode: integer;
@@ -620,6 +621,37 @@ begin
   if not CheckInput then
     exit;
   CallMaintScreen(qReQuote);
+end;
+
+procedure TfrmPBLUQuotes.dbgDetailsTitleClick(Column: TColumn);
+var
+  icolumn: integer;
+  SortType, SortField: string;
+begin
+  if dbgDetails.Dragging then exit;
+
+  if Column.Title.Font.style <> [fsbold] then
+    SortType := ' ASC'
+  else if dtmdlAllQuotes.SortType = ' DESC' then
+      SortType := ' ASC'
+  else
+    SortType := ' DESC';
+
+(*  if (column.fieldname = 'Status_Text') then
+    SortField := 'Job_Bag_Status_Descr'
+  else
+    SortField := Column.FieldName;
+*)
+  SortField := Column.FieldName;
+
+  for icolumn := 0 to pred(dbgDetails.columns.count) do
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsbold];
+
+  dtmdlAllQuotes.SortOrder := SortField + SortType;
+  dtmdlAllQuotes.SortType := SortType;
+
+  dtmdlAllQuotes.refreshdata;
 end;
 
 end.

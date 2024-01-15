@@ -73,6 +73,14 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       Caption = 'This status indicates Proof Approved'
       TabOrder = 2
     end
+    object chkbxActive: TCheckBox
+      Left = 16
+      Top = 96
+      Width = 185
+      Height = 17
+      Caption = 'Proof Status is active'
+      TabOrder = 3
+    end
   end
   object OKBitBtn: TBitBtn
     Left = 256
@@ -277,7 +285,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       'Update Proof_Status'
       'Set     Description = :Description, '
       'Proof_Approval_Status = :Proof_Approval_Status,'
-      'Proof_Approved = :Proof_Approved'
+      'Proof_Approved = :Proof_Approved,'
+      'inactive = :inactive'
       'Where'
       '(Proof_Status = :Proof_Status) '
       '')
@@ -294,6 +303,12 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
         Name = 'Proof_Approved'
       end
       item
+        DataType = ftUnknown
+        Name = 'inactive'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
         Name = 'Proof_Status'
       end>
   end

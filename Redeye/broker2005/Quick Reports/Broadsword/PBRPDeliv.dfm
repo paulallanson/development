@@ -843,6 +843,37 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ActiveInPreview = False
         Stretch = True
       end
+      object gtlblFSCClaim: TQRLabel
+        Left = 16
+        Top = 645
+        Width = 50
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          42.333333333333330000
+          1706.562500000000000000
+          132.291666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'FSC Claim'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Gill Sans MT'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
     end
   end
   object PODelivSQL: TFDQuery
@@ -857,7 +888,9 @@ object PBRPDelivFrm: TPBRPDelivFrm
       'Purchase_OrderLine.Branch_No as iBranch,'
       'Form_Reference.Form_Reference_id,'
       'Form_Reference.Form_Reference_Descr,'
-      'Purchase_OrderLine.Number_Instructions'
+      'Purchase_OrderLine.Number_Instructions,'
+      '  Purchase_Orderline.FSC_Material_Claim,'
+      '  Purchase_Orderline.FSC_Mixed_Percentage'
       'FROM'
       '((Delivery_Detail INNER JOIN Purchase_Order'
       
@@ -1109,6 +1142,19 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Name = 'iBranch'
         DataType = ftInteger
         ParamType = ptInput
+      end>
+  end
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from FSC_Material_Claim'
+      'where FSC_Material_Claim = :FSC_Material_Claim')
+    Left = 406
+    Top = 350
+    ParamData = <
+      item
+        Name = 'FSC_Material_Claim'
       end>
   end
 end

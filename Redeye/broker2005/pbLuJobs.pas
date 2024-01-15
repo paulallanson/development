@@ -51,6 +51,8 @@ type
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
     btnInvoiceThisWeek: TToolButton;
+    btnConvert: TToolButton;
+    pmnuConvert: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure tmrSearchTimer(Sender: TObject);
@@ -79,6 +81,7 @@ type
     procedure RadioButton2Click(Sender: TObject);
     procedure RadioButton3Click(Sender: TObject);
     procedure btnInvoiceThisWeekClick(Sender: TObject);
+    procedure btnConvertClick(Sender: TObject);
   private
     FActivated: boolean;
     ActiveCode: integer;
@@ -93,6 +96,7 @@ type
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure CallMaintScreen(aMode: TJBMode);
     function CheckInput: boolean;
+    procedure ConvertToQuote;
     { Private declarations }
   public
     property DisableNameChangeEvent: boolean read FDisableNameChangeEvent write SetDisableNameChangeEvent;
@@ -107,7 +111,7 @@ uses
   System.UITypes,
   CCSCommon, PBMaintJobBagDets, pbLUJobRpts, pbluJobsSearch, pbDatabase,
   pbMainMenu, PBRSJBDraft, PBMaintJobBag, PBRSJobBag,
-  PBMaintJobBagInactive, PBMaintJobBagNonConform;
+  PBMaintJobBagInactive, PBMaintJobBagNonConform, PBMaintQuote, pbQuotesDM;
 
 {$R *.DFM}
 
@@ -208,6 +212,7 @@ begin
     btnChange.Enabled := HeaderCount > 0;
 //    btnDelete.Enabled := HeaderCount > 0;
     btnRepeat.Enabled := HeaderCount > 0;
+    btnConvert.Enabled := HeaderCount > 0;
     btnPrint.Enabled := HeaderCount > 0;
     btnDelete.Enabled := HeaderCount > 0;
     btnDraft.Enabled := HeaderCount > 0;
@@ -250,6 +255,7 @@ begin
       btnChange.Caption := '   &View   ';
     end;
   btnRepeat.Visible := bTempCanUpd ;
+  btnConvert.Visible := bTempCanUpd ;
 
   btnInvoiceThisWeek.Visible := bTempCanUpd and dmBroker.ConfirmProduction;
   btnDelete.Visible := bTempCanUpd and dmBroker.OperatorCanDeleteJobBag(frmPBMainMenu.iOperator);
@@ -257,6 +263,7 @@ begin
   pmnuAdd.Visible := btnAdd.Visible;
   pmnuChange.Visible := btnChange.Visible;
   pmnuRepeat.Visible := btnRepeat.Visible;
+  pmnuConvert.Visible := btnConvert.Visible;
   pmnuPrint.Visible := btnPrint.Visible;
   pmnuDelete.visible := btnDelete.Visible
 end;
@@ -784,6 +791,56 @@ begin
     
   dtmdlAllJobs.RefreshData;
   dbgDetails.DataSource.DataSet.Locate('Job_Bag', Variant(inttostr(Key)),[lopartialKey]) ;
+end;
+
+procedure TfrmPBLUJobs.btnConvertClick(Sender: TObject);
+begin
+  if not CheckInput then
+    exit;
+  ConvertToQuote;
+
+end;
+
+procedure TfrmPBLUJobs.ConvertToQuote;
+var
+  Key: integer;
+  JobNo: integer;
+  frm : TPBMaintQuoteFrm;
+  aQuote : TQuote;
+  dtmdlQuote: TdtmdlQuotes;
+begin
+  if MessageDlg('Do you want to requote the selected job bag ' + edtNumber.text + '?',
+    mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+      exit;
+
+  dtmdlQuote := TdtmdlQuotes.create(application);
+  JobNo := 0;
+  Key := 0;
+  try
+    aQuote := TQuote.Create(dtmdlQuote);
+    try
+      JobNo := dbgdetails.DataSource.DataSet.FieldByName('Job_Bag').asinteger;
+      aQuote.DataModule.JobNo := JobNo;
+      aQuote.DbKey := key;
+      aQuote.LoadFromJobBag;
+      Frm := TPBMaintQuoteFrm.Create(Self);
+      try
+        Frm.Mode := qCopy;
+        Frm.Quote := aQuote;
+        Frm.ShowModal;
+        if Frm.ModalResult = idOK then
+          begin
+//            dtmdlAllQuotes.UpdateQuoteStatus(aJob.DataModule.QuoteNo,100);
+          end;
+      finally
+        Frm.Free;
+      end;
+    finally
+      aQuote.Free;
+    end;
+  finally
+    dtmdlQuote.free;
+  end;
 end;
 
 end.

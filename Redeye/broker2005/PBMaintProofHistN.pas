@@ -165,6 +165,7 @@ procedure TPBMaintProofHistNFrm.FormActivate(Sender: TObject);
 begin
   {Re-activate the lookup SQLs}
   GetStatSQL.Active := False;
+  GetStatSQL.parambyname('Proof_Status').Asstring := PBLUProofHistNFrm.GetDetsSQL.FieldByName('Proof_Status').AsString;
   GetStatSQL.Active := True;
   {Setup titles}
   if sFuncMode = 'A' then

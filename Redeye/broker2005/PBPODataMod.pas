@@ -215,6 +215,7 @@ type
     UpdateContactStatusSQL: TFDQuery;
     qryProofStatus: TFDQuery;
     qryGetCustomerSubRep: TFDQuery;
+    qryJBAddLine: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private

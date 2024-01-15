@@ -151,7 +151,9 @@ type
     procedure popChangeClick(Sender: TObject);
     procedure popDeleteClick(Sender: TObject);
     procedure pMnBinsPopup(Sender: TObject);
-    procedure sgPickDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgBinsDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
+    procedure sgPickDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure FormCreate(Sender: TObject);
     procedure sgPickSelectCell(Sender: TObject; ACol, ARow: Integer;
@@ -168,7 +170,7 @@ type
     procedure StockChangeClick(Sender: TObject);
     procedure StockDelClick(Sender: TObject);
     procedure StockShowClick(Sender: TObject);
-    procedure SGStockDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure SGStockDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure pMenuStockPopup(Sender: TObject);
     procedure FlashDelivTimerTimer(Sender: TObject);
@@ -1720,19 +1722,86 @@ begin
     end;
 end;
 
-procedure TPBMaintDelivFrm.sgPickDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintDelivFrm.sgBinsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  WITH Sender AS TStringGrid DO
-    BEGIN
-      if vRow <> 0 then
-        begin
-          Canvas.Brush.Color := Color;
-        	Canvas.Font.Color  := Font.Color;
-        end;
-    END;
+  with Sender as TStringGrid do
+  begin
+    if ARow <> 0 then
+    begin
+      Canvas.Brush.Color := Color;
+      Canvas.Font.Color := Font.Color;
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
+    end;
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 0) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end else
+    begin
+      {Display the Columns Right justified in the cells}
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end;
+  end;
+end;
+
+procedure TPBMaintDelivFrm.sgPickDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
+begin
+  with Sender as TStringGrid do
+  begin
+    if ARow <> 0 then
+    begin
+      Canvas.Brush.Color := Color;
+      Canvas.Font.Color := Font.Color;
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
+    end;
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol <= 1) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end else
+    begin
+      {Display the Columns Right justified in the cells}
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end;
+  end;
 end;
 
 procedure TPBMaintDelivFrm.FormCreate(Sender: TObject);
@@ -2224,19 +2293,45 @@ begin
   fPackSize := Value;
 end;
 
-procedure TPBMaintDelivFrm.SGStockDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintDelivFrm.SGStockDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  WITH Sender AS TStringGrid DO
-    BEGIN
-      if vRow <> 0 then
-        begin
-          Canvas.Brush.Color := Color;
-        	Canvas.Font.Color  := Font.Color;
-        end;
-    END;
+  with Sender as TStringGrid do
+  begin
+    if ARow <> 0 then
+    begin
+      Canvas.Brush.Color := Color;
+      Canvas.Font.Color := Font.Color;
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
+    end;
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 0) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end else
+    begin
+      {Display the Columns Right justified in the cells}
+      if gdFixed in State then
+        Canvas.Brush.Color := FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end;
+  end;
 end;
 
 procedure TPBMaintDelivFrm.TransferStock;

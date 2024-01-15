@@ -2,8 +2,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
   Left = 149
   Top = 26
   Caption = 'Maintain Contract'
-  ClientHeight = 622
-  ClientWidth = 958
+  ClientHeight = 621
+  ClientWidth = 954
   Color = clBtnFace
   Constraints.MinHeight = 660
   Constraints.MinWidth = 970
@@ -19,8 +19,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 603
-    Width = 958
+    Top = 602
+    Width = 954
     Height = 19
     Panels = <
       item
@@ -32,17 +32,20 @@ object PBMaintContractFrm: TPBMaintContractFrm
       item
         Width = 50
       end>
+    ExplicitTop = 603
+    ExplicitWidth = 958
   end
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 958
+    Width = 954
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 958
     DesignSize = (
-      958
+      954
       41)
     object lblQuoteNo: TLabel
       Left = 9
@@ -71,7 +74,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
     end
     object lblAccountManager: TLabel
-      Left = 674
+      Left = 666
       Top = 15
       Width = 93
       Height = 13
@@ -138,7 +141,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnClick = btnDateClick
     end
     object edtOfficeContact: TEdit
-      Left = 788
+      Left = 780
       Top = 11
       Width = 95
       Height = 21
@@ -147,9 +150,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 3
+      ExplicitLeft = 788
     end
     object btnAccountManager: TButton
-      Left = 901
+      Left = 893
       Top = 8
       Width = 23
       Height = 25
@@ -163,6 +167,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
       TabOrder = 4
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 901
     end
     object edtEffectiveDate: TEdit
       Left = 562
@@ -197,12 +202,14 @@ object PBMaintContractFrm: TPBMaintContractFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 564
-    Width = 958
+    Top = 563
+    Width = 954
     Height = 39
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 564
+    ExplicitWidth = 958
     object lblGDPRSignedStatement: TLabel
       Left = 11
       Top = 13
@@ -316,13 +323,14 @@ object PBMaintContractFrm: TPBMaintContractFrm
   object pnlHeader: TPanel
     Left = 0
     Top = 41
-    Width = 958
+    Width = 954
     Height = 224
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 958
     DesignSize = (
-      958
+      954
       224)
     object Label2: TLabel
       Left = 8
@@ -364,7 +372,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 702
+      Left = 694
       Top = 13
       Width = 67
       Height = 13
@@ -392,7 +400,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 679
+      Left = 671
       Top = 40
       Width = 97
       Height = 13
@@ -407,7 +415,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ExplicitLeft = 681
     end
     object Label10: TLabel
-      Left = 731
+      Left = 723
       Top = 67
       Width = 46
       Height = 13
@@ -423,7 +431,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ExplicitLeft = 733
     end
     object Label11: TLabel
-      Left = 644
+      Left = 636
       Top = 149
       Width = 133
       Height = 13
@@ -433,7 +441,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ExplicitLeft = 646
     end
     object Label12: TLabel
-      Left = 657
+      Left = 649
       Top = 176
       Width = 120
       Height = 13
@@ -450,7 +458,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Caption = 'Payment Terms'
     end
     object Label14: TLabel
-      Left = 705
+      Left = 697
       Top = 202
       Width = 72
       Height = 13
@@ -460,7 +468,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ExplicitLeft = 707
     end
     object Label7: TLabel
-      Left = 723
+      Left = 715
       Top = 96
       Width = 54
       Height = 13
@@ -478,14 +486,15 @@ object PBMaintContractFrm: TPBMaintContractFrm
     object edtCustomer: TEdit
       Left = 84
       Top = 6
-      Width = 308
+      Width = 300
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
+      ExplicitWidth = 308
     end
     object btnCustomer: TBitBtn
-      Left = 405
+      Left = 397
       Top = 4
       Width = 25
       Height = 25
@@ -499,6 +508,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
       TabOrder = 1
       OnClick = btnCustomerClick
+      ExplicitLeft = 405
     end
     object BitBtn4: TBitBtn
       Left = 324
@@ -526,7 +536,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnClick = dblkpContactClick
     end
     object memQuantity: TMemo
-      Left = 788
+      Left = 780
       Top = 8
       Width = 81
       Height = 21
@@ -536,6 +546,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnEnter = memQuantityEnter
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 788
     end
     object btnRep: TBitBtn
       Left = 324
@@ -600,7 +611,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       end
     end
     object memMinVolume: TMemo
-      Left = 788
+      Left = 780
       Top = 35
       Width = 81
       Height = 21
@@ -610,9 +621,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnEnter = memQuantityEnter
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 788
     end
     object dblkpDurationType: TDBLookupComboBox
-      Left = 858
+      Left = 850
       Top = 63
       Width = 81
       Height = 21
@@ -621,9 +633,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 14
       OnClick = dblkpDurationTypeClick
+      ExplicitLeft = 858
     end
     object memNoticePeriod: TMemo
-      Left = 788
+      Left = 780
       Top = 145
       Width = 53
       Height = 21
@@ -632,9 +645,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memNoticePeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 788
     end
     object dblkpNoticeType: TDBLookupComboBox
-      Left = 858
+      Left = 850
       Top = 145
       Width = 81
       Height = 21
@@ -643,9 +657,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 18
       OnClick = dblkpNoticeTypeClick
+      ExplicitLeft = 858
     end
     object memTermPeriod: TMemo
-      Left = 788
+      Left = 780
       Top = 172
       Width = 53
       Height = 21
@@ -654,9 +669,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memTermPeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 788
     end
     object dblkpTermType: TDBLookupComboBox
-      Left = 858
+      Left = 850
       Top = 172
       Width = 81
       Height = 21
@@ -665,6 +681,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 20
       OnClick = dblkpTermTypeClick
+      ExplicitLeft = 858
     end
     object dblkpPaymentTerms: TDBLookupComboBox
       Left = 84
@@ -677,7 +694,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnClick = dblkpPaymentTermsClick
     end
     object memReviewPeriod: TMemo
-      Left = 788
+      Left = 780
       Top = 198
       Width = 53
       Height = 21
@@ -686,9 +703,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memReviewPeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 788
     end
     object dblkpReviewType: TDBLookupComboBox
-      Left = 858
+      Left = 850
       Top = 198
       Width = 81
       Height = 21
@@ -697,6 +715,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 22
       OnClick = dblkpReviewTypeClick
+      ExplicitLeft = 858
     end
     object btnTerms: TBitBtn
       Tag = 100
@@ -751,7 +770,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = edtDescriptionChange
     end
     object dblkpFrequencyType: TDBLookupComboBox
-      Left = 858
+      Left = 850
       Top = 92
       Width = 81
       Height = 21
@@ -760,9 +779,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 16
       OnClick = dblkpFrequencyTypeClick
+      ExplicitLeft = 858
     end
     object spnDuration: TSpinEdit
-      Left = 788
+      Left = 780
       Top = 62
       Width = 53
       Height = 22
@@ -772,9 +792,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       TabOrder = 13
       Value = 1
       OnChange = spnDurationChange
+      ExplicitLeft = 788
     end
     object spnFrequency: TSpinEdit
-      Left = 788
+      Left = 780
       Top = 91
       Width = 53
       Height = 22
@@ -784,16 +805,19 @@ object PBMaintContractFrm: TPBMaintContractFrm
       TabOrder = 15
       Value = 1
       OnChange = spnFrequencyChange
+      ExplicitLeft = 788
     end
   end
   object pgDetails: TPageControl
     Left = 0
     Top = 265
-    Width = 958
-    Height = 222
+    Width = 954
+    Height = 221
     ActivePage = TabSheet3
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 958
+    ExplicitHeight = 222
     object TabSheet3: TTabSheet
       Caption = 'Job Bags'
       ImageIndex = 2
@@ -1206,7 +1230,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
         ParentBackground = False
         TabOrder = 2
         DesignSize = (
-          950
+          946
           28)
         object Label42: TLabel
           Left = 342
@@ -1356,13 +1380,15 @@ object PBMaintContractFrm: TPBMaintContractFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 487
-    Width = 958
+    Top = 486
+    Width = 954
     Height = 77
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 487
+    ExplicitWidth = 958
     object btnNotes: TBitBtn
       Left = 8
       Top = 13

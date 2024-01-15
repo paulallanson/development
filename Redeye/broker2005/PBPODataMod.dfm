@@ -4915,6 +4915,234 @@ object PBPODM: TPBPODM
       end
       item
         Name = 'Branch_no'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryJBAddLine: TFDQuery
+    ConnectionName = 'PB'
+    FilterOptions = [foCaseInsensitive]
+    SQL.Strings = (
+      'INSERT INTO Job_Bag_Line_Dets'
+      #9'(Job_Bag,Job_Bag_Line,Job_Bag_Line_Type,Purchase_Order,Line,'
+      #9'Supplier,Branch_No,Job_Bag_Line_Descr,Job_Bag_Line_Cost,'
+      #9'Job_Bag_Line_Sell,Job_Bag_Line_Invoiced,Job_Bag_Quantity,'
+      
+        #9'VAT_Code,Currency_Code, Product_Type, Sales_Order, Sales_Order_' +
+        'line_no,'
+      
+        '  Works_order, Price_Unit, Process, Reseller_Price, Selling_Pric' +
+        'e, Job_Bag_Line_Status, Sequence_no,'
+      
+        '  Qty_Invoiced, Ready_To_Invoice, Unit_Cost, Unit_SSP, Unit_Cost' +
+        '_Plus_OHD, Unit_SSP_Original, Inactive, Quote, Quote_Line_no,'
+      
+        '  Job_Cost_Markup_Perc, Line_Is_Internal_Cost, Job_Bag_Line_Rese' +
+        'ller)'
+      'VALUES'
+      
+        #9'(:Job_Bag,:Job_Bag_Line,:Job_Bag_Line_Type,:Purchase_Order,:Lin' +
+        'e,'
+      #9':Supplier,:Branch_No,:Job_Bag_Line_Descr,:Job_Bag_Line_Cost,'
+      #9':Job_Bag_Line_Sell,:Job_Bag_Line_Invoiced,:Job_Bag_Quantity,'
+      
+        #9':VAT_Code,:Currency_Code,:Product_Type, :Sales_Order, :Sales_Or' +
+        'der_line_no,'
+      
+        '  :works_order, :Price_Unit, :Process, :Reseller_Price, :Selling' +
+        '_Price, :Job_Bag_Line_Status, :Sequence_no,'
+      
+        '  :Qty_Invoiced, :Ready_To_Invoice, :Unit_Cost, :Unit_SSP, :Unit' +
+        '_Cost_Plus_OHD, :Unit_SSP_Original, :Inactive, :Quote, :Quote_Li' +
+        'ne_no,'
+      
+        '  :Job_Cost_Markup_Perc, :Line_Is_Internal_Cost, :Job_Bag_Line_R' +
+        'eseller)'
+      ''
+      ' '
+      ' '
+      ' ')
+    Left = 952
+    Top = 664
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Job_Bag'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Job_Bag_Line'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'Job_Bag_Line_Type'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Purchase_Order'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Line'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Supplier'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Branch_No'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'Job_Bag_Line_Descr'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Job_Bag_Line_Cost'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Job_Bag_Line_Sell'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'Job_Bag_Line_Invoiced'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Job_Bag_Quantity'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'VAT_Code'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Currency_Code'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftInteger
+        Name = 'Product_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sales_Order'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sales_Order_line_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'works_order'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Price_Unit'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Process'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Reseller_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Selling_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Job_Bag_Line_Status'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sequence_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Qty_Invoiced'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Ready_To_Invoice'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Unit_Cost'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Unit_SSP'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Unit_Cost_Plus_OHD'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Unit_SSP_Original'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Inactive'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftFloat
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Quote_Line_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Job_Cost_Markup_Perc'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Line_Is_Internal_Cost'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Job_Bag_Line_Reseller'
+        ParamType = ptUnknown
       end>
   end
 end

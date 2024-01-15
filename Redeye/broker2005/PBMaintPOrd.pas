@@ -373,10 +373,15 @@ type
     procedure LineAddBitBtnClick(Sender: TObject);
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; Col,
+      Row: Longint; var CanSelect: Boolean);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; Col,
+      Row: Longint; Rect: TRect; State: TGridDrawState);
     procedure ShowDelivGrid(Sender: TObject);
     procedure DelivAddBitBtnClick(Sender: TObject);
     procedure DelivChgBitBtnClick(Sender: TObject);
     procedure DelivDelBitBtnClick(Sender: TObject);
+    procedure LineDetsStringGridDblClick(Sender: TObject);
     procedure DelivDetsStringGridDblClick(Sender: TObject);
     procedure DelivDetsStringGridDrawCell(Sender: TObject; ACol,
       ARow: Integer; Rect: TRect; State: TGridDrawState);
@@ -1580,6 +1585,9 @@ procedure TPBMaintPOrdFrm.HandleJobBagLine(Query: TFDQuery;
 var
   dmJobBag : TdmJobBag;
   i, iJobBag, iJobBagLine, iSubRep: Integer;
+  bOverride: boolean;
+  rMarkup: real;
+  result: real;
 begin
 
   GetCompany;
@@ -1600,47 +1608,120 @@ begin
           if not FAddJobBag then exit;
           if JobBagNo = 0 then
             begin
-            iJobBag := PBPODM.GetNextJobBagNumber;
-            while PBPODM.CheckJobBagExist(iJobBag) do
               iJobBag := PBPODM.GetNextJobBagNumber;
-            {Add a Job Bag Header record}
-            PBPODM.AddJobBagHeadSQL.close;
-            PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag').asinteger := iJobBag;
-            PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag_Descr').asstring := CustomersDesc;
-            PBPODM.AddJobBagHeadSQL.parambyname('Customer').asinteger := Customer;
-            PBPODM.AddJobBagHeadSQL.parambyname('Branch_no').asinteger := BranchNo;
-            PBPODM.AddJobBagHeadSQL.parambyname('Date_Point').asdatetime := StrToDate(DateEdit.Text);
-            PBPODM.AddJobBagHeadSQL.parambyname('Contact_no').asinteger := CustomerContact;
+              while PBPODM.CheckJobBagExist(iJobBag) do
+                iJobBag := PBPODM.GetNextJobBagNumber;
+              {Add a Job Bag Header record}
+              PBPODM.AddJobBagHeadSQL.close;
+              PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag').asinteger := iJobBag;
+              PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag_Descr').asstring := CustomersDesc;
+              PBPODM.AddJobBagHeadSQL.parambyname('Customer').asinteger := Customer;
+              PBPODM.AddJobBagHeadSQL.parambyname('Branch_no').asinteger := BranchNo;
+              PBPODM.AddJobBagHeadSQL.parambyname('Date_Point').asdatetime := StrToDate(DateEdit.Text);
+              PBPODM.AddJobBagHeadSQL.parambyname('Contact_no').asinteger := CustomerContact;
 //            PBPODM.AddJobBagHeadSQL.parambyname('Goods_Required').asdatetime := GoodsRequired;
-            PBPODM.AddJobBagHeadSQL.parambyname('Goods_Required').asdatetime := GoodsRequiredByCust;
-            PBPODM.AddJobBagHeadSQL.parambyname('Quantity').asfloat := Quantity;
-            PBPODM.AddJobBagHeadSQL.parambyname('Cust_Order_no').asstring := CustOrderNo;
-            PBPODM.AddJobBagHeadSQL.parambyname('Rep').asinteger := Rep;
+              PBPODM.AddJobBagHeadSQL.parambyname('Goods_Required').asdatetime := GoodsRequiredByCust;
+              PBPODM.AddJobBagHeadSQL.parambyname('Quantity').asfloat := Quantity;
+              PBPODM.AddJobBagHeadSQL.parambyname('Cust_Order_no').asstring := CustOrderNo;
+              PBPODM.AddJobBagHeadSQL.parambyname('Rep').asinteger := Rep;
 
-            if dmBroker.UseSubReps then
-              begin
-                iSubRep := PBPODM.GetCustomerSubRep(Customer, BranchNo);
-                if iSubRep = 0 then
-                  PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').clear
-                else
-                  PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').asinteger := iSubRep;
-              end
-            else
-              PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').clear;
+              if dmBroker.UseSubReps then
+                begin
+                  iSubRep := PBPODM.GetCustomerSubRep(Customer, BranchNo);
+                  if iSubRep = 0 then
+                    PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').clear
+                  else
+                    PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').asinteger := iSubRep;
+                end
+              else
+                PBPODM.AddJobBagHeadSQL.parambyname('Sub_Rep').clear;
 
-            PBPODM.AddJobBagHeadSQL.parambyname('Operator').asinteger := frmPBMainMenu.iOperator;
-            PBPODM.AddJobBagHeadSQL.parambyname('Office_Contact').asinteger := PurchaseOrder.OfficeContact;
-            PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag_Status').asinteger := 10;
-            PBPODM.AddJobBagHeadSQL.parambyname('Invoice_upfront').asstring := InvoiceUpfront;
-            PBPODM.AddJobBagHeadSQL.parambyname('Account_Team').asinteger := PurchaseOrder.AccountTeam;
-            PBPODM.AddJobBagHeadSQL.execsql;
+              PBPODM.AddJobBagHeadSQL.parambyname('Operator').asinteger := frmPBMainMenu.iOperator;
+              PBPODM.AddJobBagHeadSQL.parambyname('Office_Contact').asinteger := PurchaseOrder.OfficeContact;
+              PBPODM.AddJobBagHeadSQL.parambyname('Job_Bag_Status').asinteger := 10;
+              PBPODM.AddJobBagHeadSQL.parambyname('Invoice_upfront').asstring := InvoiceUpfront;
+              PBPODM.AddJobBagHeadSQL.parambyname('Account_Team').asinteger := PurchaseOrder.AccountTeam;
+              PBPODM.AddJobBagHeadSQL.execsql;
 
-            JobBagNo := iJobBag;
-            Query.SQL := PBPODM.AddJobBagSQL.SQL;
+              {If using production then create a cost line}
+              if dmBroker.UseProduction then
+                begin
+                  dmJobBag.qryGetQuoteCostDefaults.close;
+                  dmJobBag.qryGetQuoteCostDefaults.open;
+
+                  if dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Default_Quote_Cost_Process').asinteger <> 0 then
+                    begin
+                      PBPODM.qryJBAddLine.close;
+                      for i := 0 to Pred(PBPODM.qryJBAddLine.Params.Count) do
+                        PBPODM.qryJBAddLine.Params[i].Clear;
+
+                      PBPODM.qryJBAddLine.ParamByName('Job_Bag').asinteger := iJobBag;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line').asinteger :=  1;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Type').asstring := 'A';
+                      PBPODM.qryJBAddLine.Parambyname('Purchase_Order').clear;
+                      PBPODM.qryJBAddLine.Parambyname('Line').clear;
+                      PBPODM.qryJBAddLine.Parambyname('Supplier').asinteger := dmBroker.GetCompanySupplier;
+                      PBPODM.qryJBAddLine.Parambyname('Branch_No').asinteger := dmBroker.GetCompanySupplierBranch;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Descr').asstring := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Default_Quote_Cost_Description').asstring;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Sell').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Cost').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Invoiced').asstring := 'N';
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Quantity').asfloat := 1;
+                      PBPODM.qryJBAddLine.Parambyname('Vat_Code').asinteger := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Vat_Code').AsInteger;
+                      PBPODM.qryJBAddLine.Parambyname('Currency_Code').clear;
+                      PBPODM.qryJBAddLine.Parambyname('Product_Type').asinteger := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Product_Type').asinteger;
+
+                      PBPODM.qryJBAddLine.Parambyname('Sales_Order').clear;
+                      PBPODM.qryJBAddLine.Parambyname('Sales_Order_line_no').clear;
+
+                      PBPODM.qryJBAddLine.Parambyname('Works_Order').clear;
+
+                      PBPODM.qryJBAddLine.Parambyname('Price_Unit').asinteger := 2;
+                      PBPODM.qryJBAddLine.Parambyname('Process').asinteger := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Default_Quote_Cost_Process').asinteger;
+
+                      PBPODM.qryJBAddLine.Parambyname('Reseller_Price').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Selling_Price').asfloat := 0.00;
+
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Status').asinteger := 10;
+
+                      PBPODM.qryJBAddLine.Parambyname('Sequence_no').clear;
+
+                      PBPODM.qryJBAddLine.Parambyname('Qty_Invoiced').asinteger := 0;
+                      PBPODM.qryJBAddLine.Parambyname('Ready_To_Invoice').asstring := 'N';
+
+                      PBPODM.qryJBAddLine.Parambyname('Unit_Cost').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Unit_SSP').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Unit_Cost_Plus_OHD').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.Parambyname('Unit_SSP_Original').asfloat := 0.00;
+
+                      PBPODM.qryJBAddLine.Parambyname('inactive').asstring := 'N';
+
+                      PBPODM.qryJBAddLine.Parambyname('Quote').clear;
+                      PBPODM.qryJBAddLine.Parambyname('Quote_line_No').clear;
+
+                      {Get the customer and check if there is an ovveride on the cost markup}
+                      bOverride := false;
+                      rMarkup := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Default_Quote_Cost_markup_perc').asfloat;
+
+(*                    Result := dmJobBag.GetCustomerMarkup(Customer, bOverride, rMarkup);
+                      if result and not bOverride then
+                        rMarkup := dmJobBag.qryGetQuoteCostDefaults.fieldbyname('Default_Quote_Cost_markup_perc').asfloat;
+*)
+                      PBPODM.qryJBAddLine.Parambyname('Job_Cost_Markup_Perc').asfloat := rMarkup;
+                      PBPODM.qryJBAddLine.Parambyname('Line_Is_Internal_Cost').asstring := 'Y';
+                      PBPODM.qryJBAddLine.Parambyname('Job_Bag_Line_Reseller').asfloat := 0.00;
+                      PBPODM.qryJBAddLine.execsql;
+                    end;
+                end;
+
+              JobBagNo := iJobBag;
+              Query.SQL := PBPODM.AddJobBagSQL.SQL;
             end
           else
             iJobBag := JobBagNo;
+
           iJobBagLine := 0;
+
         end
       else
         begin
@@ -1648,6 +1729,8 @@ begin
           iJobBagLine := PBPODM.GetJobBagDetsSQL.fieldbyname('Job_bag_Line').asinteger;
         end;
 
+
+      {Create a standard jopb bag line based on the PO}
       for i := 0 to Pred(Params.Count) do
         Params[i].Clear;
 
@@ -2403,6 +2486,48 @@ begin
   end;
 end;
 
+procedure TPBMaintPOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
+  Col, Row: Longint; var CanSelect: Boolean);
+begin
+(*  if FSelectedLineIndex = Row - 1 then Exit;
+  FSelectedLineIndex := Row - 1;
+  SelectionChanged;
+*)end;
+
+procedure TPBMaintPOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; Col,
+  Row: Longint; Rect: TRect; State: TGridDrawState);
+//var
+//  Txt: array[0..255] of Char;
+begin
+(*  {The following is code extracted from the Delphi Info Base}
+  {Display the Columns Right justified in the cells}
+  if (Col < 1) or (Col > 2) then
+  begin
+    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
+    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
+      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
+      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
+    if ((Col > 2) and (Row > 0) and (LineDetsStringGrid.Cells[3, Row] <>
+      LineDetsStringGrid.Cells[4, Row])) then
+    begin
+      LineDetsStringGrid.Canvas.Font.Color := clRed;
+      bDelivsBalance := False;
+    end;
+    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  end
+  else
+  begin
+    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
+    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
+      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
+      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
+    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  end;
+*)
+end;
+
 procedure TPBMaintPOrdFrm.SetLineDetails;
 var
   OrderLine: TOrderLine;
@@ -2434,6 +2559,7 @@ begin
     qryFSCClaim.Active := True;
 
     GetProofStatSQL.Active := False;
+    GetProofStatSQL.parambyname('Proof_Status').Asstring := OrderLine.ProofStatus;
     GetProofStatSQL.Active := True;
 
     qryVatCode.Active := false;
@@ -3076,6 +3202,16 @@ begin
   chkInvoiceUpfront.enabled :=  (Trunc(SelectedLine.DeliveryLines.TotalStock) > 0) and
                                 (dmBroker.CanOverridePaidStock(frmPBMainMenu.iOperator));
 
+end;
+
+procedure TPBMaintPOrdFrm.LineDetsStringGridDblClick(Sender: TObject);
+begin
+(*  if LineChgBitBtn.Enabled then
+    if FFuncMode <> poView then
+      LineChgBitBtnClick(Self)
+    else
+      SelectBitBtnClick(Self);
+*)
 end;
 
 procedure TPBMaintPOrdFrm.DelivDetsStringGridDblClick(Sender: TObject);
@@ -8249,7 +8385,6 @@ begin
       end;
     end;
 end;
-
 procedure TPBMaintPOrdFrm.dblkpJobTypeClick(Sender: TObject);
 begin
   UpdateOrderLine;

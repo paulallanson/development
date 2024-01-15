@@ -72,6 +72,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBtnClick
+    ExplicitTop = 255
   end
   object PreviewBtn: TBitBtn
     Left = 210
@@ -96,6 +97,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBtnClick
+    ExplicitTop = 255
   end
   object CloseBitBtn: TBitBtn
     Left = 16
@@ -106,6 +108,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 255
   end
   object SelectLst: TListBox
     Left = 336
@@ -140,6 +143,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = EmailBitBtnClick
+    ExplicitTop = 255
   end
   object chkbxPrintLogo: TCheckBox
     Left = 16
@@ -176,7 +180,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = 387
+    Left = 383
     Top = 256
     Width = 75
     Height = 25
@@ -227,6 +231,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
+    ExplicitLeft = 379
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'
@@ -1179,6 +1184,34 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       end
       item
         Name = 'Int_Sel'
+      end>
+  end
+  object InvLineChgsCSVSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT  Sales_Invoice_Add_charge.Sales_Invoice,'
+      '        Sales_Invoice_Add_charge.Invoice_line_no,'
+      '        Sales_Invoice_Add_charge.Details,'
+      '        Sales_Invoice_Add_charge.Amount,'
+      '        Sales_Invoice_Add_charge.Cost_Price,'
+      '        Sales_Invoice_Add_charge.Vat_Code,'
+      '        Vat_Code.Vat_Rate'
+      'FROM Vat_Code'
+      '        INNER JOIN Sales_Invoice_Add_charge'
+      
+        '          ON Vat_Code.Vat_Code = Sales_Invoice_Add_charge.Vat_Co' +
+        'de'
+      'WHERE Sales_invoice = :Sales_invoice AND'
+      '      Invoice_line_no = :Invoice_line_no'
+      'ORDER BY Invoice_line_no')
+    Left = 408
+    Top = 200
+    ParamData = <
+      item
+        Name = 'Sales_invoice'
+      end
+      item
+        Name = 'Invoice_line_no'
       end>
   end
 end

@@ -38,6 +38,8 @@ type
     FormRefSQL: TFDQuery;
     lblFormRefID: TQRLabel;
     lblFormRefDesc: TQRLabel;
+    gtlblFSCClaim: TQRLabel;
+    qryGetFSCClaim: TFDQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -76,7 +78,7 @@ end;
 procedure TSTRPBxLabelsFrm.QRBand1BeforePrint(Sender: TQRCustomBand; var
   PrintBand: Boolean);
 var
-  sFrom, sTo: string;
+  sFrom, sTo, sFSCClaim: string;
 begin
   if (blineup) then Exit;
 
@@ -107,8 +109,38 @@ begin
   else
   begin
     FromLbl.Enabled := false;
-  end
+  end;
 
+  {Display FSC Claim}
+  gtlblFSCClaim.Enabled := false;
+  gtlblFSCClaim.Caption := '';
+  if RepSQL.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+    begin
+      with qryGetFSCClaim do
+        begin
+          close;
+          parambyname('FSC_Material_Claim').asinteger := RepSQL.fieldbyname('FSC_Material_Claim').asinteger;
+          open;
+          if recordcount > 0 then
+            begin
+              gtlblFSCClaim.Enabled := true;
+              if fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',RepSQL.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := fieldbyname('Short_Description').asstring;
+
+              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
+                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
+              else
+                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              gtlblFSCClaim.Enabled := false;
+              gtlblFSCClaim.Caption := '';
+            end;
+        end;
+    end;
 end;
 
 procedure TSTRPBxLabelsFrm.SetCaptions;

@@ -35,13 +35,14 @@ type
     qryPOProofStatus: TFDQuery;
     qrySetSOInvoice: TFDQuery;
     qrySOLines: TFDQuery;
+    qrySOHeadersDescription: TWideStringField;
     qryOrdersCustomer: TIntegerField;
     qryOrdersName: TWideStringField;
     qryOrdersSales_order: TFloatField;
     qryOrdersLine: TIntegerField;
-    qryOrdersOrder_date: TDateTimeField;
-    qryOrdersCust_Order_No: TStringField;
-    qryOrdersDescription: TStringField;
+    qryOrdersOrder_date: TSQLTimeStampField;
+    qryOrdersCust_Order_No: TWideStringField;
+    qryOrdersDescription: TWideStringField;
     qryOrdersQuantity: TFloatField;
     qryOrdersOrder_Price: TCurrencyField;
     qryOrdersOrder_unit: TFloatField;
@@ -49,8 +50,8 @@ type
     qryOrdersSelling_unit: TFloatField;
     qryOrdersStock_Reference: TWideStringField;
     qryOrdersForm_Reference_ID: TWideStringField;
-    qryOrdersGoods_Required: TDateTimeField;
-    qryOrdersOrder_type: TStringField;
+    qryOrdersGoods_Required: TSQLTimeStampField;
+    qryOrdersOrder_type: TWideStringField;
     qryOrdersOrder_Status: TIntegerField;
     qryOrdersStatus_Description: TWideStringField;
     qryOrdersBranch_Name: TWideStringField;
@@ -69,8 +70,41 @@ type
     qryOrdersSupp_Inv_Recd: TWideStringField;
     qryOrdersNeeds_Authorising: TWideStringField;
     qryOrdersOrder_Number: TFloatField;
-    qrySOHeadersDescription: TWideStringField;
-    qryOrdersAuthorised_By: TIntegerField;
+    qryCallOffscustomer: TIntegerField;
+    qryCallOffsName: TWideStringField;
+    qryCallOffssales_order: TIntegerField;
+    qryCallOffsLine: TIntegerField;
+    qryCallOffsOrder_date: TSQLTimeStampField;
+    qryCallOffscust_order_no: TWideStringField;
+    qryCallOffsDescription: TWideStringField;
+    qryCallOffsQuantity: TIntegerField;
+    qryCallOffsorder_price: TCurrencyField;
+    qryCallOffsorder_unit: TIntegerField;
+    qryCallOffsselling_price: TCurrencyField;
+    qryCallOffsselling_unit: TIntegerField;
+    qryCallOffsStock_Reference: TWideStringField;
+    qryCallOffsForm_Reference_id: TWideStringField;
+    qryCallOffsGoods_Required: TSQLTimeStampField;
+    qryCallOffsOrder_Type: TWideStringField;
+    qryCallOffsOrder_status: TIntegerField;
+    qryCallOffsStatus_Description: TWideStringField;
+    qryCallOffsBranch_Name: TWideStringField;
+    qryCallOffsAccount_Code: TWideStringField;
+    qryCallOffsOn_Hold: TWideStringField;
+    qryCallOffsProof_Revision: TWideStringField;
+    qryCallOffsSupplier: TIntegerField;
+    qryCallOffsSupplier_name: TWideStringField;
+    qryCallOffsjob_bag: TIntegerField;
+    qryCallOffsDescription_Reference: TWideStringField;
+    qryCallOffsRep: TIntegerField;
+    qryCallOffsRep_Name: TWideStringField;
+    qryCallOffsOperator: TIntegerField;
+    qryCallOffsOperator_Name: TWideStringField;
+    qryCallOffsoriginal_order: TIntegerField;
+    qryCallOffsInactive: TWideStringField;
+    qryCallOffsSupp_Inv_Recd: TWideStringField;
+    qryCallOffsNeeds_Authorising: TWideStringField;
+    qryCallOffsAuthorised_By: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryCallOffsStatus_TextGetText(Sender: TField;
       var Text: string; DisplayText: Boolean);
@@ -78,6 +112,7 @@ type
       DisplayText: Boolean);
     procedure qryOrdersStatus_DescriptionGetText(Sender: TField;
       var Text: string; DisplayText: Boolean);
+    procedure dtsCallOffsDataChange(Sender: TObject; Field: TField);
   private
     function GetHeaderCount: integer;
     function GetCalloffHeaderCount: integer;
@@ -660,6 +695,12 @@ begin
         stockinuse := false;
       end;
     end;
+end;
+
+procedure TdtmdlOrders.dtsCallOffsDataChange(Sender: TObject;
+  Field: TField);
+begin
+
 end;
 
 function TdtmdlOrders.GetCalloffHeaderCount: integer;

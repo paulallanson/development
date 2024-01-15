@@ -2,8 +2,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   Left = 129
   Top = 4
   Caption = 'Maintain Purchase Order Line Deliveries'
-  ClientHeight = 610
-  ClientWidth = 624
+  ClientHeight = 609
+  ClientWidth = 620
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 610
@@ -19,17 +19,19 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   TextHeight = 13
   object BottomPanel: TPanel
     Left = 0
-    Top = 550
-    Width = 624
+    Top = 549
+    Width = 620
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 550
+    ExplicitWidth = 624
     DesignSize = (
-      624
+      620
       41)
     object DelLabel: TLabel
-      Left = 269
+      Left = 261
       Top = 11
       Width = 145
       Height = 15
@@ -44,7 +46,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       ExplicitLeft = 277
     end
     object OKBitBtn: TBitBtn
-      Left = 429
+      Left = 421
       Top = 6
       Width = 75
       Height = 25
@@ -118,9 +120,10 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 429
     end
     object CancelBitBtn: TBitBtn
-      Left = 517
+      Left = 509
       Top = 6
       Width = 75
       Height = 25
@@ -195,16 +198,18 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 517
     end
   end
   object pnlFormRef: TPanel
     Left = 0
     Top = 0
-    Width = 624
+    Width = 620
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 624
     object POrderLbl: TLabel
       Left = 8
       Top = 4
@@ -296,11 +301,13 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   object pgDeliveryDetails: TPageControl
     Left = 0
     Top = 81
-    Width = 624
-    Height = 469
+    Width = 620
+    Height = 468
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 624
+    ExplicitHeight = 469
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
@@ -1151,8 +1158,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 591
-    Width = 624
+    Top = 590
+    Width = 620
     Height = 19
     Panels = <
       item
@@ -1161,6 +1168,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
+    ExplicitTop = 591
+    ExplicitWidth = 624
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup

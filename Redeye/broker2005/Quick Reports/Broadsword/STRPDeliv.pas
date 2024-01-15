@@ -49,6 +49,9 @@ type
     lblSerialCaption: TQRLabel;
     lblSerialRange: TQRLabel;
     ReportImage: TQRImage;
+    chldbndFSCClaim: TQRChildBand;
+    gtlblFSCClaim: TQRLabel;
+    qryGetFSCClaim: TFDQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
@@ -257,10 +260,41 @@ end;
 
 procedure TSTRPDelivfrm.QRSubDetail1BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
+var
+  sFSCClaim: string;
 begin
   QrLabelQty.Caption := GetAllocDetQuery.FieldbyName('Quantity_Delivered').Asstring;
   QRLabeldlvrd.Caption := ShowinPacks(GetAllocDetQuery.FieldbyName('Quantity_Delivered').AsInteger,GetAllocDetQuery.fieldByname('Sell_Pack_Quantity').AsInteger);
 
+  gtlblFSCClaim.Caption := '';
+  {Display the FSC Claim details}
+  if GetAllocDetQuery.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+    begin
+      with qryGetFSCClaim do
+        begin
+          close;
+          parambyname('FSC_Material_Claim').asinteger := GetAllocDetQuery.fieldbyname('FSC_Material_Claim').asinteger;
+          open;
+          if recordcount > 0 then
+            begin
+              if fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',GetAllocDetQuery.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := fieldbyname('Short_Description').asstring;
+
+              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
+                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
+              else
+                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              gtlblFSCClaim.Caption := '';
+            end;
+        end;
+    end;
+
+  chldbndFSCClaim.Enabled := (gtlblFSCClaim.caption <> '');
   GetAllocSerialNoSQL.active := false;
   GetAllocSerialNoSQL.ParamByName('sales_order').asInteger := GetAllocDetQuery.FieldByName('sales_order').asInteger;
   GetAllocSerialNoSQL.ParamByName('sales_order_line_no').asInteger := GetAllocDetQuery.FieldByName('sales_order_line_no').asInteger;

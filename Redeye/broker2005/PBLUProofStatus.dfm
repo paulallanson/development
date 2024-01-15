@@ -62,6 +62,17 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
       TabOrder = 0
       OnChange = NameEditChange
     end
+    object chkbxActiveOnly: TCheckBox
+      Left = 8
+      Top = 42
+      Width = 217
+      Height = 17
+      Caption = 'Only show active proof status'
+      Checked = True
+      State = cbChecked
+      TabOrder = 1
+      OnClick = chkbxActiveOnlyClick
+    end
   end
   object SelectBitBtn: TBitBtn
     Left = 344
@@ -235,7 +246,10 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
     SQL.Strings = (
       'Select  *'
       'from Proof_Status'
-      'Where (Proof_Status.Description Like :Code_From) '
+      'Where (Proof_Status.Description Like :Code_From) and'
+      
+        '((Inactive = '#39'N'#39') or (Inactive is NULL) or (Inactive = :Inactive' +
+        '))'
       'Order By Proof_Status.Description')
     Left = 24
     Top = 24
@@ -243,6 +257,9 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
       item
         Name = 'Code_From'
         DataType = ftString
+      end
+      item
+        Name = 'Inactive'
       end>
     object GetDetsSQLProof_Status: TStringField
       FieldName = 'Proof_Status'
@@ -269,6 +286,10 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
     object GetDetsSQLProof_Approved: TStringField
       FieldName = 'Proof_Approved'
       Size = 3
+    end
+    object GetDetsSQLinactive: TStringField
+      FieldName = 'inactive'
+      Size = 1
     end
   end
   object SearchTimer: TTimer

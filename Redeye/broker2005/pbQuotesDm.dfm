@@ -31,6 +31,7 @@ object dtmdlQuotes: TdtmdlQuotes
       '      Quote.Contact_no,'
       '      Quote.Date_Required,'
       '      Quote.Contact_Name,'
+      '      Quote.Enclosing_Type,'
       '      Quote.Email,'
       '      Quote.Phone,'
       '      Quote.Office_Contact,'
@@ -46,6 +47,7 @@ object dtmdlQuotes: TdtmdlQuotes
       '      Quote.Convert_Percentage,'
       '      Quote.Quote_status,'
       '      Quote_Status.Quote_Status_Description,'
+      '      Quote.Pack_Format_ID,'
       '      Quote.Price_Unit,'
       '      Price_Unit.Description as Price_Unit_Description,'
       '      Price_Unit.Price_Unit_Factor,'
@@ -136,7 +138,9 @@ object dtmdlQuotes: TdtmdlQuotes
       'Original_Quote,'
       'End_User_Customer,'
       'End_User_Branch_No,'
-      'Prospect_Quote'
+      'Prospect_Quote,'
+      'Enclosing_Type,'
+      'Pack_Format_ID'
       ')'
       'VALUES ('
       ':Quote,'
@@ -173,7 +177,9 @@ object dtmdlQuotes: TdtmdlQuotes
       ':Original_Quote,'
       ':End_User_Customer,'
       ':End_User_Branch_No,'
-      ':Prospect_Quote'
+      ':Prospect_Quote,'
+      ':Enclosing_Type,'
+      ':Pack_Format_ID'
       ')'
       ''
       ''
@@ -300,6 +306,17 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Prospect_Quote'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Enclosing_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Pack_Format_ID'
+        ParamType = ptUnknown
       end>
   end
   object qryQUpdHeader: TFDQuery
@@ -339,7 +356,9 @@ object dtmdlQuotes: TdtmdlQuotes
       '      Original_Quote = :Original_Quote,'
       '      End_User_Customer = :End_User_Customer,'
       '      End_User_Branch_No = :End_User_Branch_no,'
-      '      Prospect_Quote = :Prospect_Quote'
+      '      Prospect_Quote = :Prospect_Quote,'
+      '      Enclosing_Type = :Enclosing_Type,'
+      '      Pack_Format_ID = :Pack_Format_ID'
       'WHERE Quote=:Quote'
       ''
       ''
@@ -463,8 +482,20 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Prospect_Quote'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
+        Name = 'Enclosing_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Pack_Format_ID'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
         Name = 'Quote'
       end>
   end
@@ -1235,12 +1266,15 @@ object dtmdlQuotes: TdtmdlQuotes
       '       Quote.Estimate_File,'
       '       Quote.Date_Last_Estimated,'
       '       Quote.Prospect_Quote,'
+      '       Quote.Enclosing_Type,'
+      '       Pack_Format.Pack_Format_Description,'
       '       (select top 1 Job_Bag.Job_Bag'
       '       from Job_Bag'
       '       where Job_Bag.Quote = Quote.Quote and'
       '             Job_Bag.inactive = '#39'N'#39') as Job_Bag,'
       '       End_User.Name as End_User_Name'
       'FROM Customer AS End_User'
+      '      RIGHT JOIN (Pack_Format'
       '      RIGHT JOIN (Rep AS SubRep'
       '      RIGHT JOIN (Quote_Status'
       '      INNER JOIN (Operator AS AM'
@@ -1258,6 +1292,7 @@ object dtmdlQuotes: TdtmdlQuotes
       '        ON AM.Operator = Quote.Office_Contact)'
       '        ON Quote_Status.Quote_Status = Quote.Quote_Status)'
       '        ON SubRep.Rep = Quote.Sub_Rep)'
+      '        ON Pack_Format.ID = Quote.Pack_Format_ID)'
       '        ON End_User.Customer = Quote.End_User_Customer'
       'WHERE ((Quote.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Quote.Description LIKE :Description)')
@@ -1679,6 +1714,192 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Description'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryJBHeader: TFDQuery
+    ConnectionName = 'PB'
+    FilterOptions = [foCaseInsensitive]
+    SQL.Strings = (
+      'SELECT Job_Bag.Job_Bag,'
+      '      Job_Bag.Job_Bag_Descr,'
+      '      Customer.Name as Cust_Name,'
+      '      Job_Bag.Date_Point,'
+      '      Job_Bag.Date_Start,'
+      '      Customer_Branch.Name as Branch_Name,'
+      '      Customer.Customer,'
+      '      Customer_Branch.Branch_No,'
+      '      Customer.Customer_is_Acquired,'
+      '      Job_Bag.Job_Bag_Status,'
+      '      Job_Bag.Contact_no,'
+      '      Job_Bag.Goods_Required,'
+      '      Job_Bag.Office_Contact,'
+      '      Job_Bag.Cust_Order_no,'
+      '      Job_Bag.Quantity,'
+      '      Customer.Vat_Code_Def,'
+      '      Job_Bag.Rep,'
+      '      Job_Bag.Sub_Rep,'
+      '      Job_Bag.Inactive,'
+      '      Ready_for_invoicing,'
+      '      Job_Bag.Operator,'
+      '      Operator.Name as Operator_Name,'
+      '      Job_Bag.Account_Team,'
+      '      Job_Bag.Narrative,'
+      '      (select Name'
+      '      from Operator'
+      
+        '      where Operator.Operator = Office_Contact) as Office_Contac' +
+        't_Name,'
+      '      Description_Reference,'
+      '      Original_Job_Bag,'
+      '      Job_Bag.Invoice_Location,'
+      '      Invoiced_By,'
+      '      Invoiced_Date,'
+      '      End_User_Customer,'
+      '      End_User_Branch_no,'
+      '      (select Customer.Name'
+      '       from Customer'
+      
+        '       where Customer.Customer = Job_Bag.End_User_Customer) as E' +
+        'nd_User_Customer_Name,'
+      '      On_Hold,'
+      '      Artwork_Required,'
+      '      Artwork_Due_Date,'
+      '      Artwork_Proof_Date,'
+      '      Artwork_Approval_Date,'
+      '      Data_Services_Required,'
+      '      Data_Required_Date,'
+      '      Brief_Required_Date,'
+      '      Text_Required_Date,'
+      '      Brief_Available_Date,'
+      '      Text_Available_Date,'
+      '      Text_Proof_Date,'
+      '      Proof_Required_Date,'
+      '      Proof_Approval_Date,'
+      '      Samples_Required,'
+      '      Sample_To_Client,'
+      '      Sample_Approval,'
+      '      Schedule_Approved,'
+      '      Quote,'
+      '      Job_Bag_Production_Status,'
+      '      Cost_Centre,'
+      '      Cash_Sales,'
+      '      Job_Bag.Price_Unit,'
+      '      Price_Unit.Description as Price_Unit_Description,'
+      '      Price_Unit.Price_Unit_Factor,'
+      '      Production_Complete,'
+      '      Production_Complete_Date,'
+      '      Production_Complete_by,'
+      '      File_Copies_Received_Date,'
+      '      File_Copies_Received_by,'
+      '      Invoice_This_Week,'
+      '      Invoice_This_Week_By,'
+      '      Invoice_This_Week_Date,'
+      '      Pack_Format_ID,'
+      '      Enclosing_Type,'
+      '      (select Name'
+      '      from Operator'
+      
+        '      where Operator.Operator = Invoice_This_Week_By) as Invoice' +
+        '_This_Week_Name,'
+      '      (select Name'
+      '      from Operator'
+      
+        '      where Operator.Operator = File_Copies_Received_by) as File' +
+        's_Received_by_Name'
+      'FROM Price_Unit'
+      '  RIGHT JOIN (Operator'
+      '  INNER JOIN (Customer'
+      '  INNER JOIN (Customer_Branch'
+      '  INNER JOIN Job_Bag'
+      
+        '    ON (Customer_Branch.Branch_no = Job_Bag.Branch_No) AND (Cust' +
+        'omer_Branch.Customer = Job_Bag.Customer))'
+      '    ON Customer.Customer = Customer_Branch.Customer)'
+      '    ON Operator.Operator = Job_Bag.Operator)'
+      '    ON Price_Unit.Price_Unit = Job_Bag.Price_Unit'
+      'WHERE'
+      '  (Job_Bag.Job_Bag = :jobbag)'
+      ''
+      ''
+      ''
+      '')
+    Left = 720
+    Top = 88
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'jobbag'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryJBAllLines: TFDQuery
+    ConnectionName = 'PB'
+    FilterOptions = [foCaseInsensitive]
+    SQL.Strings = (
+      'SELECT DISTINCT Job_Bag_Line_Dets.*, '
+      #9#9'Vat_Code.Vat_Rate, '
+      #9#9'Price_Unit.Price_Unit_Factor,'
+      #9#9'Price_Unit.Description as Price_Unit_Description,'
+      #9#9'Product_Type.Description as Product_Type_Description,'
+      #9#9'Process.Process_Group,'
+      #9#9'(SELECT TOP 1 PR.Process'
+      #9#9'FROM Process PR'
+      
+        #9#9'WHERE PR.Product_Type = Job_Bag_line_Dets.Product_Type) as Pro' +
+        'duct_Type_Process,'
+      #9#9'(SELECT TOP 1 PR.Process_Group'
+      #9#9'FROM Process PR'
+      
+        #9#9'WHERE PR.Product_Type = Job_Bag_line_Dets.Product_Type) as Pro' +
+        'duct_Type_Process_Group'
+      'FROM (Product_Type '
+      #9#9'INNER JOIN (Price_Unit '
+      #9#9'INNER JOIN (Vat_Code '
+      #9#9'INNER JOIN Job_Bag_Line_Dets '
+      #9#9#9'ON Vat_Code.Vat_Code = Job_Bag_Line_Dets.VAT_Code) '
+      #9#9#9'ON Price_Unit.Price_Unit = Job_Bag_Line_Dets.price_unit) '
+      
+        #9#9#9'ON Product_Type.Product_Type = Job_Bag_Line_Dets.Product_Type' +
+        ') '
+      #9#9'LEFT JOIN Process '
+      #9#9#9'ON Job_Bag_Line_Dets.Process = Process.Process'
+      'WHERE (Job_Bag_Line_Dets.Job_Bag = :JobBag)'
+      'ORDER BY Sequence_no, Job_Bag_Line'
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 800
+    Top = 88
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'JobBag'
+        ParamType = ptInput
+      end>
+  end
+  object dtsPackFormat: TDataSource
+    DataSet = qryPackFormat
+    Left = 720
+    Top = 152
+  end
+  object qryPackFormat: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT * FROM Pack_Format'
+      'WHERE'
+      '      ((Inactive = '#39'N'#39')) or (ID = :ID)'
+      'ORDER BY Pack_Format_Description')
+    Left = 784
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
       end>
   end
 end

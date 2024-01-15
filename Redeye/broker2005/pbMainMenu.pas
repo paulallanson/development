@@ -9,7 +9,8 @@ uses
   IniFiles, PBActivityDM, System.Actions, System.ImageList;
 
 type
-  TfrmpbMainMenu = class(TForm)
+  TfrmpbMainMenu = class(TForm)                                                                                
+    CoolBar1: TCoolBar;
     File1: TMenuItem;
     miExit: TMenuItem;
     N2: TMenuItem;
@@ -171,7 +172,7 @@ type
     pmnSalesInvoicing: TPopupMenu;
     btnSalesInvoicing1: TMenuItem;
     btnSalesCredits1: TMenuItem;
-    MainMenuToolbar: TToolBar;
+    MainMenuToolBar: TToolBar;
     btnActivities: TToolButton;
     btnCustomers: TToolButton;
     btnProspects: TToolButton;
@@ -197,6 +198,7 @@ type
     mnuEndUsers: TMenuItem;
     mnuDocumentLogos: TMenuItem;
     mnuPackFormats: TMenuItem;
+    mnuResetClientScreenSettings: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure btnCustomersClick(Sender: TObject);
@@ -242,6 +244,7 @@ type
     procedure mnuProofClick(Sender: TObject);
     procedure mnuPeriodEndClick(Sender: TObject);
     procedure mnuProfitReportsClick(Sender: TObject);
+    procedure mnuResetClientScreenSettingsClick(Sender: TObject);
     procedure mnuClientClick(Sender: TObject);
     procedure mnuViewAuditTrailClick(Sender: TObject);
     procedure PrintWorksheet1Click(Sender: TObject);
@@ -511,8 +514,8 @@ end;
 
 procedure TfrmpbMainMenu.FormCreate(Sender: TObject);
 var
-  TempUser                    : array[0..255] of Char;
-  TempUserSize                : DWORD;
+  TempUser: array[0..255] of Char;
+  TempUserSize: DWORD;
   iCount: Integer;
   TempArray: array[0..255] of Char;
   iActivityInterval: integer;
@@ -569,7 +572,7 @@ begin
   stsbrMainMenu.Panels[0].Text := TempUser;
 
   sSoft_Version := '2023';
-  sSoft_subVersion := '/July07a';
+  sSoft_subVersion := '/Nov27a';
 
   {Search the INI file for Activity Interval}
   {This method used for backward compatibility with WIN95}
@@ -744,7 +747,7 @@ begin
 {$ENDIF}
 
 {$IFDEF SOUTHERN MAIL}
-  MaxUsers := 7 ;
+  MaxUsers := 9 ;
 {$ENDIF}
 
 {$IFDEF BESLEYCOPP}
@@ -1844,6 +1847,27 @@ begin
   end;
 end;
 
+procedure TfrmpbMainMenu.mnuResetClientScreenSettingsClick(
+  Sender: TObject);
+var
+  IniFile : TIniFile;
+  iCount: integer;
+begin
+  if messagedlg('Reset your Redeye screen settings?',
+    mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    IniFile := TIniFile.Create(AppIniFile);
+
+    try
+      IniFile.EraseSection('FormPositions');
+    finally
+      IniFile.Free;
+    end;
+
+    MessageDlg('Your screen settings have been reset.', mtInformation, [mbOk], 0);
+  end;
+end;
+
 procedure TfrmpbMainMenu.mnuManageLocksClick(Sender: TObject);
 begin
   PBWorkstationLockFrm := TPBWorkstationLockFrm.Create(Self);
@@ -2496,7 +2520,7 @@ begin
 {$ENDIF}
 
 {$IFDEF SOUTHERN MAIL}
-  MaxUsers := 7 ;
+  MaxUsers := 9 ;
 {$ENDIF}
 
 {$IFDEF BESLEYCOPP}

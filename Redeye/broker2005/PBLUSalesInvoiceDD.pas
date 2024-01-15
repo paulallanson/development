@@ -231,7 +231,8 @@ begin
               + ',"Invoice Number"'
               + ',"Payer Reference"'
               + ',"Amount"'
-              + ',"Collection Date"';
+              + ',"Collection Date"'
+              + ',"Email Address"';
 //              + ',"Invoice Number"';
 
   WriteLn(factorFile, tempStr);
@@ -241,11 +242,16 @@ begin
   while not self.qrySalesInvs.eof do
   begin
     tempStr := sCompanyDirectDebitID;
-    tempStr := tempstr + ',' + qrySalesInvs.fieldByName('Sales_Invoice_No').asString;
+    if qrySalesInvs.fieldByName('Invoice_or_Credit').asString = 'C' then
+      tempStr := tempstr + ',' + 'CN/' + qrySalesInvs.fieldByName('Sales_Invoice_No').asString
+    else
+      tempStr := tempstr + ',' + qrySalesInvs.fieldByName('Sales_Invoice_No').asString;
+      
     tempStr := tempstr + ',' + qrySalesInvs.fieldByName('Direct_Debit_Code').asString;
 //    tempStr := tempStr + ',' + self.qrySalesInvs.fieldByName('Total_Value').asString;
     tempStr := tempStr + ',' + CurrencyDisp(frmPBMainMenu.sCurrencyMask,self.qrySalesInvs.fieldByName('Total_Value').asString);
     tempStr := tempStr + ',' + formatdatetime('dd"/"mm"/"yyyy',self.qrySalesInvs.fieldByName('Invoice_Date').asdatetime + self.qrySalesInvs.fieldByName('Number_Of_Days').asinteger);
+    tempStr := tempstr + ',' + qrySalesInvs.fieldByName('Contact_Email').asString;
 //    tempStr := tempStr + ',' + self.qrySalesInvs.fieldByName('Sales_Invoice_no').asstring;
 
     WriteLn(factorFile, tempStr);
@@ -260,7 +266,7 @@ begin
   WriteLn(factorFile, tempStr);
 
   {write away the Amount Total}
-  tempstr     := '"' + '","' + '","' + formatfloat('0.00',rTotal) + '"';
+  tempstr     := '"' + '","' + '","' + '","' + formatfloat('0.00',rTotal) + '"';
   WriteLn(factorFile, tempStr);
 
   CloseFile(factorFile);
