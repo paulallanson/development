@@ -2,7 +2,7 @@ object dtmdlCustomers: TdtmdlCustomers
   Height = 794
   Width = 1095
   object qryCustomers: TFDQuery
-    Connection = dmBroker.PBLDatabase
+    Connection = dmBroker.EmailDatabase
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -240,263 +240,427 @@ object dtmdlCustomers: TdtmdlCustomers
         Name = 'NAME'
         DataType = ftString
         ParamType = ptInput
+        Size = 100
         Value = Null
       end
       item
         Name = 'ACC_ACTIVE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'CREDIT_LIMIT'
+        DataType = ftCurrency
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'SETTLEMENT_DAYS'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'SETTLEMENT_DISCOUNT'
+        DataType = ftCurrency
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CREDIT_STATUS'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'INTRASTAT_ID'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'COUNTRY_ID'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'VAT_REFERENCE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'AVAILABLE_CREDIT'
+        DataType = ftCurrency
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CURRENCY_CODE_DEF'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CUSTOMER_TYPE'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'VAT_CODE_DEF'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CUSTOMER_STATUS'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ONLINE_ORDERING'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'EMAIL_ORD'
+        DataType = ftString
         ParamType = ptInput
+        Size = 100
+        Value = Null
       end
       item
         Name = 'CONSUMER_CODE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'INVOICE_UPFRONT'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'DATE_CREATED'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'PRODUCT_CODE_PREFIX'
+        DataType = ftString
         ParamType = ptInput
+        Size = 10
+        Value = Null
       end
       item
         Name = 'CALL_OFF_DELIVERY_NOTE_TYPE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'CONTRACT_CODE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'TRANSFER_SITE_URL'
+        DataType = ftString
         ParamType = ptInput
+        Size = 150
+        Value = Null
       end
       item
         Name = 'TRANSFER_PROTOCOL_TYPE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 5
+        Value = Null
       end
       item
         Name = 'CLIENT_ACCOUNT_CODE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'CONNECTION_USERNAME'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'CONNECTION_PASSWORD'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'E_INVOICING_SYSTEM'
+        DataType = ftString
         ParamType = ptInput
+        Size = 10
+        Value = Null
       end
       item
         Name = 'ELECTRONIC_INVOICE_REQUIRED'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'USE_KINGFIELD_ORDERING'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'USE_PRINT_EVOLVED'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'COST_CENTRE_LEVEL'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'USE_DISCOUNT_INVOICE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'PAYMENT_TERMS'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CREATE_BRANCH_ONLINE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'CUSTOMER_LOGO_FILE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 100
+        Value = Null
       end
       item
         Name = 'PRODUCT_PREFIX_NOT_REQUIRED'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'SHOW_AVAILABLE_STOCK'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'ANALYSIS_CODE_1'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'ANALYSIS_CODE_2'
+        DataType = ftString
         ParamType = ptInput
+        Size = 20
+        Value = Null
       end
       item
         Name = 'ANALYSIS_CODE_3'
+        DataType = ftString
         ParamType = ptInput
+        Size = 50
+        Value = Null
       end
       item
         Name = 'ANALYSIS_CODE_4'
+        DataType = ftString
         ParamType = ptInput
+        Size = 50
+        Value = Null
       end
       item
         Name = 'PRE_PAY_BALANCE'
+        DataType = ftCurrency
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'INVOICE_LOCATION'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'DIRECT_DEBIT_CODE'
+        DataType = ftString
         ParamType = ptInput
+        Size = 10
+        Value = Null
       end
       item
         Name = 'CREATED_BY'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CREDIT_SCORE'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CREDIT_RATING'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'LAST_ANNUAL_RETURN_DATE'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ACCOUNTS_LODGED_DATE'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'LATEST_FILED_ACCOUNTS_DATE'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ACCOUNTS_REFERENCE_DATE'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ISSUED_CAPITAL'
+        DataType = ftFloat
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'COMPANY_TYPE'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'SIC_CODE'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'LEVEL_OF_IMPORTANCE'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'GDPR_LETTER_SENT'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'GDPR_LETTER_SIGNED'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'GDPR_LETTER_SIGNED_DATE'
+        DataType = ftDateTime
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'GDPR_LETTER_SIGNED_OPERATOR'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CUSTOMER_IS_ACQUIRED'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'OVERRIDE_COST_MARKUP_PERC'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'DEFAULT_QUOTE_COST_MARKUP_PERC'
+        DataType = ftCurrency
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'CTRLP_MASTER_CUSTOMER'
+        DataType = ftString
         ParamType = ptInput
+        Size = 1
+        Value = Null
       end
       item
         Name = 'CUSTOMER'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end>
   end
   object GetCurrSQL: TFDQuery

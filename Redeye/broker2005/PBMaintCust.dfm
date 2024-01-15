@@ -26,7 +26,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1176
     Height = 642
-    ActivePage = tbInvoices
+    ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
     ExplicitWidth = 1172
@@ -400,7 +400,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Label22: TLabel
             Left = 7
-            Top = 187
+            Top = 186
             Width = 34
             Height = 13
             Caption = 'Phone'
@@ -413,7 +413,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Label23: TLabel
             Left = 7
-            Top = 247
+            Top = 214
             Width = 17
             Height = 13
             Caption = 'Fax'
@@ -426,7 +426,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Label24: TLabel
             Left = 7
-            Top = 248
+            Top = 252
             Width = 27
             Height = 13
             Caption = 'Email'
@@ -3525,8 +3525,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 594
-        ExplicitWidth = 1164
       end
       object Panel3: TPanel
         Left = 0
@@ -3536,8 +3534,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 553
-        ExplicitWidth = 1164
         DesignSize = (
           1168
           41)
@@ -3573,7 +3569,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtOrderNumberKeyPress
-          ExplicitLeft = 1008
         end
         object chkbxShowUnauthorised: TCheckBox
           Left = 376
@@ -3606,7 +3601,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             MinHeight = 41
             Width = 1162
           end>
-        ExplicitWidth = 1164
         object PageScroller1: TPageScroller
           Left = 11
           Top = 0
@@ -3627,7 +3621,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowCaptions = True
             ShowHint = True
             TabOrder = 0
-            ExplicitWidth = 1137
             object btnOrderAdd: TToolButton
               Left = 0
               Top = 0
@@ -4479,6 +4472,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
+        ExplicitTop = 556
+        ExplicitWidth = 1164
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4492,6 +4487,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             MinHeight = 40
             Width = 1162
           end>
+        ExplicitWidth = 1164
         object PageScroller3: TPageScroller
           Left = 11
           Top = 0
@@ -4515,6 +4511,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowHint = True
             TabOrder = 0
             Wrapable = False
+            ExplicitWidth = 1137
             object btnInvoiceChange: TToolButton
               Left = 0
               Top = 0
@@ -4616,6 +4613,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
+        ExplicitTop = 575
+        ExplicitWidth = 1164
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4640,6 +4639,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 880
           object Label54: TLabel
             Left = 88
             Top = 13

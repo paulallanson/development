@@ -224,11 +224,11 @@ begin
         begin
         TempParam := SQLTo.Params[iCount] ;
         {Try to find the same field name in the INPUT dataset} ;
-        Try
-                TempField := DSFrom.FieldByName(TempParam.Name) ;
-        Except
-                Continue ;
-                end;
+          var Field := DSFrom.FindField(TempParam.Name);
+          if Assigned(Field) then
+            TempField := DSFrom.FieldByName(Field.FieldName) else
+            Continue ;
+
         {If found OK, access the field type. Currently this only handles STRINGS, FLOATS and INTEGERS} ;
         {Any other types brings up a message} ;
         TempFieldType := TempParam.DataType ;
@@ -261,7 +261,8 @@ begin
                                                 sTempFrom := FloatToStr(TempField.AsFloat) ;
                                                 sTempTo := FloatToStr(TempParam.AsFloat) ;
                                                 end
-                                        else MessageDlg('Audit trail does not know type: ',mtinformation,[mbOK],0) ;
+                                        else
+                                          MessageDlg('Audit trail does not know type: ' + Field.FieldName, mtWarning, [mbOK], 0);
         {Compare the field with the parameter} ;
         If sTempFrom <> sTempTo then
                 begin

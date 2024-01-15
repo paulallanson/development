@@ -3,8 +3,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   Top = 99
   ActiveControl = Panel1
   Caption = 'Customer details'
-  ClientHeight = 354
-  ClientWidth = 1120
+  ClientHeight = 353
+  ClientWidth = 1116
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 335
-    Width = 1120
+    Top = 334
+    Width = 1116
     Height = 19
     Panels = <
       item
@@ -37,14 +37,14 @@ object frmpbluCustomers: TfrmpbluCustomers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1120
+    Width = 1116
     Height = 46
     Bands = <
       item
         Control = Toolbar1
         ImageIndex = -1
         MinHeight = 43
-        Width = 1114
+        Width = 1110
       end>
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -55,7 +55,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     object Toolbar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1105
+      Width = 1101
       Height = 43
       Align = alClient
       ButtonHeight = 36
@@ -200,8 +200,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 76
-    Width = 1120
-    Height = 218
+    Width = 1116
+    Height = 217
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -381,8 +381,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 294
-    Width = 1120
+    Top = 293
+    Width = 1116
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -403,7 +403,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 934
+      Left = 930
       Top = 1
       Width = 185
       Height = 39
@@ -453,7 +453,7 @@ object frmpbluCustomers: TfrmpbluCustomers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1120
+    Width = 1116
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -500,7 +500,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       end
     end
     object Panel5: TPanel
-      Left = 869
+      Left = 865
       Top = 1
       Width = 250
       Height = 28
@@ -548,7 +548,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     object PageScroller2: TPageScroller
       Left = 401
       Top = 1
-      Width = 468
+      Width = 464
       Height = 28
       Align = alClient
       Control = clbrDashboard
@@ -556,20 +556,20 @@ object frmpbluCustomers: TfrmpbluCustomers
       object clbrDashboard: TCoolBar
         Left = 0
         Top = 0
-        Width = 456
+        Width = 452
         Height = 28
         Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 450
+            Width = 446
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 441
+          Width = 437
           Height = 25
           Align = alClient
           ButtonWidth = 66
