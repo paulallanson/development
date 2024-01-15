@@ -1,12 +1,13 @@
 object PBPODM: TPBPODM
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 780
-  Width = 1066
+  Height = 975
+  Width = 1333
+  PixelsPerInch = 120
   object CurrSRC: TDataSource
     DataSet = GetCurrSQL
-    Left = 256
-    Top = 108
+    Left = 320
+    Top = 135
   end
   object GetCurrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -14,13 +15,13 @@ object PBPODM: TPBPODM
       'Select Currency_Code_Descr, Currency_Code'
       'From Currency_Code'
       'Order by Currency_Code_Descr')
-    Left = 256
-    Top = 156
+    Left = 320
+    Top = 195
   end
   object InvMethSRC: TDataSource
     DataSet = GetInvMethSQL
-    Left = 248
-    Top = 15
+    Left = 310
+    Top = 19
   end
   object GetInvMethSQL: TFDQuery
     ConnectionName = 'PB'
@@ -28,8 +29,8 @@ object PBPODM: TPBPODM
       'Select *'
       'From Purch_Ord_Inv_Method'
       'Order By Description')
-    Left = 248
-    Top = 60
+    Left = 310
+    Top = 75
   end
   object GetSuppAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -49,8 +50,8 @@ object PBPODM: TPBPODM
       'Where (Supplier_Branch.Supplier = :Supplier) and'
       '      (Supplier_Branch.Branch_No = :Branch_No) and'
       '      (Supplier.Supplier = Supplier_Branch.Supplier)')
-    Left = 176
-    Top = 47
+    Left = 220
+    Top = 59
     ParamData = <
       item
         Name = 'Supplier'
@@ -75,8 +76,8 @@ object PBPODM: TPBPODM
       'From Company'
       'Where (Company = 1)'
       '')
-    Left = 176
-    Top = 142
+    Left = 220
+    Top = 178
   end
   object GetCustAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -100,8 +101,8 @@ object PBPODM: TPBPODM
       '      (Customer_Branch.Branch_No = :Branch_No) and'
       '      (Customer.Customer = Customer_Branch.Customer)'
       ' ')
-    Left = 176
-    Top = 94
+    Left = 220
+    Top = 118
     ParamData = <
       item
         Name = 'Customer'
@@ -120,16 +121,16 @@ object PBPODM: TPBPODM
       'From Rep'
       'Where (Rep = :Rep)'
       '')
-    Left = 176
-    Top = 198
+    Left = 220
+    Top = 248
     ParamData = <
       item
         Name = 'Rep'
       end>
   end
   object AddrSRC: TDataSource
-    Left = 176
-    Top = 248
+    Left = 220
+    Top = 310
   end
   object GetAddHocAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -142,8 +143,8 @@ object PBPODM: TPBPODM
       'From Ad_Hoc_Address'
       'Where (Ad_Hoc_Address = :Ad_Hoc_Address)'
       '')
-    Left = 176
-    Top = 2
+    Left = 220
+    Top = 3
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'
@@ -169,8 +170,8 @@ object PBPODM: TPBPODM
       'Where'
       'Purchase_Order = :Purchase_Order'
       '')
-    Left = 104
-    Top = 208
+    Left = 130
+    Top = 260
     ParamData = <
       item
         Name = 'Supplier'
@@ -229,8 +230,8 @@ object PBPODM: TPBPODM
       'Delete From Purchase_Order'
       'Where'
       '(Purchase_Order = :Purchase_Order)')
-    Left = 104
-    Top = 160
+    Left = 130
+    Top = 200
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -242,8 +243,8 @@ object PBPODM: TPBPODM
       'Update Purchase_OrderLine'
       'Set Is_Updated = '#39'N'#39
       'Where (Purchase_Order = :Purchase_Order)')
-    Left = 712
-    Top = 112
+    Left = 890
+    Top = 140
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -256,8 +257,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '       (Line = :Line)'
       '')
-    Left = 712
-    Top = 64
+    Left = 890
+    Top = 80
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -333,8 +334,8 @@ object PBPODM: TPBPODM
       '      (Line = :Line)'
       ' '
       ' ')
-    Left = 712
-    Top = 160
+    Left = 890
+    Top = 200
     ParamData = <
       item
         Name = 'Cust_Order_No'
@@ -681,8 +682,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 712
-    Top = 208
+    Left = 890
+    Top = 260
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -962,8 +963,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '      (Line = :Line)'
       '')
-    Left = 712
-    Top = 16
+    Left = 890
+    Top = 20
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -979,8 +980,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '       (Is_Updated = '#39'N'#39')'
       '')
-    Left = 37
-    Top = 42
+    Left = 46
+    Top = 53
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -995,8 +996,8 @@ object PBPODM: TPBPODM
       '      (Line = :Line) and'
       '      (Delivery_No = :Delivery_No)'
       '')
-    Left = 37
-    Top = 2
+    Left = 46
+    Top = 3
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1014,8 +1015,8 @@ object PBPODM: TPBPODM
       'Update Delivery_Detail'
       'Set Is_Updated = '#39'N'#39
       'Where (Purchase_Order = :Purchase_Order)')
-    Left = 37
-    Top = 90
+    Left = 46
+    Top = 113
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1054,8 +1055,8 @@ object PBPODM: TPBPODM
       '  (Line = :Line) and'
       '  (Delivery_No = :Delivery_No)'
       ' ')
-    Left = 37
-    Top = 186
+    Left = 46
+    Top = 233
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'
@@ -1206,8 +1207,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 37
-    Top = 138
+    Left = 46
+    Top = 173
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1329,8 +1330,8 @@ object PBPODM: TPBPODM
       'From Purchase_OrderLine'
       'Where Purchase_Order = :Purchase_Order'
       'Order By Line')
-    Left = 632
-    Top = 72
+    Left = 790
+    Top = 90
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1343,8 +1344,8 @@ object PBPODM: TPBPODM
       'From Delivery_Detail'
       'Where Purchase_Order = :Purchase_Order'
       'Order By Line, Delivery_No')
-    Left = 632
-    Top = 16
+    Left = 790
+    Top = 20
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1362,8 +1363,8 @@ object PBPODM: TPBPODM
       'WHERE Proof_History = :Proof_History'
       ''
       ' ')
-    Left = 320
-    Top = 128
+    Left = 400
+    Top = 160
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -1401,8 +1402,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '       (Line = :Line)'
       '')
-    Left = 320
-    Top = 224
+    Left = 400
+    Top = 280
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1418,8 +1419,8 @@ object PBPODM: TPBPODM
       'From Supplier_BranchContacts'
       'Where (Supplier = :Supplier) and'
       '      (Branch_No = :Branch_No)')
-    Left = 408
-    Top = 156
+    Left = 510
+    Top = 195
     ParamData = <
       item
         Name = 'Supplier'
@@ -1436,8 +1437,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '      (Is_Updated = '#39'N'#39')'
       '')
-    Left = 408
-    Top = 56
+    Left = 510
+    Top = 70
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1456,8 +1457,8 @@ object PBPODM: TPBPODM
       'From  Purchase_OrderLine,Narrative_Line'
       'Where (Purchase_OrderLine.Purchase_Order = :Purchase_Order) and'
       '      (Narrative_Line.Narrative = Purchase_OrderLine.Narrative)')
-    Left = 408
-    Top = 104
+    Left = 510
+    Top = 130
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -1475,8 +1476,8 @@ object PBPODM: TPBPODM
       '      (Line = :Line) and'
       '      (Additional_Charge = :Additional_Charge)'
       '')
-    Left = 488
-    Top = 8
+    Left = 610
+    Top = 10
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1494,8 +1495,8 @@ object PBPODM: TPBPODM
       'Update Purch_Ord_Line_Add_Chg'
       'Set Is_Updated = '#39'N'#39
       'Where (Purchase_Order = :Purchase_Order)')
-    Left = 488
-    Top = 216
+    Left = 610
+    Top = 270
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1508,8 +1509,8 @@ object PBPODM: TPBPODM
       'From Purch_Ord_Line_Add_Chg'
       'Where Purchase_Order = :Purchase_Order'
       'Order By Line, Details')
-    Left = 488
-    Top = 168
+    Left = 610
+    Top = 210
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1530,8 +1531,8 @@ object PBPODM: TPBPODM
       '             :Quotation_Price, '#39'Y'#39', :Vat_Code)'
       ''
       '')
-    Left = 488
-    Top = 72
+    Left = 610
+    Top = 90
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1574,8 +1575,8 @@ object PBPODM: TPBPODM
       ''
       ''
       ' ')
-    Left = 488
-    Top = 120
+    Left = 610
+    Top = 150
     ParamData = <
       item
         Name = 'Details'
@@ -1607,8 +1608,8 @@ object PBPODM: TPBPODM
       'Where (Purchase_Order = :Purchase_Order) and'
       '       (Is_Updated = '#39'N'#39')'
       '')
-    Left = 488
-    Top = 272
+    Left = 610
+    Top = 340
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1620,8 +1621,8 @@ object PBPODM: TPBPODM
       'update Enquiry'
       'set Enquiry_Status = :Status'
       'where enquiry = :Enquiry')
-    Left = 632
-    Top = 192
+    Left = 790
+    Top = 240
     ParamData = <
       item
         Name = 'Status'
@@ -1636,8 +1637,8 @@ object PBPODM: TPBPODM
       'Select Purch_Ord_Line_Status.Description'
       'From Purch_Ord_Line_Status'
       'Where Purch_Ord_Line_Status = :Purch_Ord_Line_Status')
-    Left = 560
-    Top = 40
+    Left = 700
+    Top = 50
     ParamData = <
       item
         Name = 'Purch_Ord_Line_Status'
@@ -1650,8 +1651,8 @@ object PBPODM: TPBPODM
       'set Enquiry_Status = :status'
       'where Enquiry = :Enquiry AND'
       '           Line = :Line')
-    Left = 712
-    Top = 256
+    Left = 890
+    Top = 320
     ParamData = <
       item
         Name = 'status'
@@ -1669,8 +1670,8 @@ object PBPODM: TPBPODM
       'Delete From Job_Bag_Line_Dets'
       'Where (Purchase_Order = :Purchase_Order) and'
       '      ((Line = :Line) or (:Line = 0)) ')
-    Left = 560
-    Top = 96
+    Left = 700
+    Top = 120
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1702,8 +1703,8 @@ object PBPODM: TPBPODM
       'where Job_Bag = :Job_Bag and'
       '       Job_Bag_line = :Job_Bag_Line '
       ' ')
-    Left = 560
-    Top = 144
+    Left = 700
+    Top = 180
     ParamData = <
       item
         Name = 'Supplier'
@@ -1770,8 +1771,8 @@ object PBPODM: TPBPODM
       'WHERE Enquiry=:Enquiry AND Line=:EnqLine'
       ''
       ' ')
-    Left = 51
-    Top = 248
+    Left = 64
+    Top = 310
     ParamData = <
       item
         Name = 'PONumber'
@@ -1804,8 +1805,8 @@ object PBPODM: TPBPODM
       ' WHERE E.Enquiry=:Enquiry AND E.Line=:EnqLine'
       ' AND L.Enquiry=:Enquiry AND L.Line=:EnqLine'
       '')
-    Left = 51
-    Top = 296
+    Left = 64
+    Top = 370
     ParamData = <
       item
         Name = 'PONumber'
@@ -1839,8 +1840,8 @@ object PBPODM: TPBPODM
       ' WHERE (Purchase_Order = :PONumber) AND'
       '   ((Line = :POLine) OR (:AllLines = '#39'Y'#39'))'
       '')
-    Left = 51
-    Top = 400
+    Left = 64
+    Top = 500
     ParamData = <
       item
         Name = 'PONumber'
@@ -1865,8 +1866,8 @@ object PBPODM: TPBPODM
       ' WHERE (Purchase_Order = :PONumber) AND'
       '   ((Line = :POLine) OR (:AllLines = '#39'Y'#39'))'
       '')
-    Left = 51
-    Top = 344
+    Left = 64
+    Top = 430
     ParamData = <
       item
         Name = 'PONumber'
@@ -1890,8 +1891,8 @@ object PBPODM: TPBPODM
       'From Supplier'
       'Where Supplier = :Supplier'
       '')
-    Left = 624
-    Top = 244
+    Left = 780
+    Top = 305
     ParamData = <
       item
         Name = 'Supplier'
@@ -1900,8 +1901,8 @@ object PBPODM: TPBPODM
   end
   object VATSRC: TDataSource
     DataSet = GetSupplierSQL
-    Left = 624
-    Top = 292
+    Left = 780
+    Top = 365
   end
   object GetPriceUnitSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1909,27 +1910,36 @@ object PBPODM: TPBPODM
       'Select Price_unit, Description, Price_unit_Factor'
       'From Price_Unit'
       'Order By Description')
-    Left = 712
-    Top = 316
+    Left = 890
+    Top = 395
   end
   object PriceUnitSRC: TDataSource
     DataSet = GetPriceUnitSQL
-    Left = 712
-    Top = 364
+    Left = 890
+    Top = 455
   end
   object GetProofStatSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Proof_Status, Description'
       'From Proof_Status'
+      'WHERE ((inactive = '#39'N'#39') or (inactive is NULL)) OR'
+      '(Proof_Status = :Proof_Status)'
       'Order By Proof_Status')
-    Left = 400
-    Top = 268
+    Left = 500
+    Top = 335
+    ParamData = <
+      item
+        Name = 'Proof_Status'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end>
   end
   object ProofStatSRC: TDataSource
     DataSet = GetProofStatSQL
-    Left = 400
-    Top = 316
+    Left = 500
+    Top = 395
   end
   object GetJobBagDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1938,8 +1948,8 @@ object PBPODM: TPBPODM
       'From Job_Bag_Line_Dets'
       'Where (Purchase_Order = :Purchase_Order) and'
       '      (Line = :Line)')
-    Left = 240
-    Top = 276
+    Left = 300
+    Top = 345
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1954,8 +1964,8 @@ object PBPODM: TPBPODM
       'Select Form_Reference_ID, Form_Reference_Descr, Stock_Reference'
       'From Form_Reference'
       'Where Form_Reference = :Form_Reference')
-    Left = 240
-    Top = 324
+    Left = 300
+    Top = 405
     ParamData = <
       item
         Name = 'Form_Reference'
@@ -1966,8 +1976,8 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'Select * From Customer'
       'Where Customer = :Customer')
-    Left = 240
-    Top = 420
+    Left = 300
+    Top = 525
     ParamData = <
       item
         Name = 'Customer'
@@ -1979,8 +1989,8 @@ object PBPODM: TPBPODM
       'Select Name From Customer_Branch'
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)')
-    Left = 240
-    Top = 372
+    Left = 300
+    Top = 465
     ParamData = <
       item
         Name = 'Customer'
@@ -1995,8 +2005,8 @@ object PBPODM: TPBPODM
       'Select Name, Position, Rep_Suffix_or_Prefix, Product_Nominal_Def'
       'From Rep'
       'Where Rep = :Rep')
-    Left = 320
-    Top = 292
+    Left = 400
+    Top = 365
     ParamData = <
       item
         Name = 'Rep'
@@ -2012,8 +2022,8 @@ object PBPODM: TPBPODM
       'From Product_Type, Category'
       'Where Product_Type = :Product_Type and'
       'Product_Type.Category = Category.Category')
-    Left = 320
-    Top = 344
+    Left = 400
+    Top = 430
     ParamData = <
       item
         Name = 'Product_Type'
@@ -2027,8 +2037,8 @@ object PBPODM: TPBPODM
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)'
       'Order By Is_Main_Rep Desc')
-    Left = 436
-    Top = 262
+    Left = 545
+    Top = 328
     ParamData = <
       item
         Name = 'Customer'
@@ -2044,8 +2054,8 @@ object PBPODM: TPBPODM
       'From Purchase_OrderLinePart_Detail'
       'Where Purchase_Order = :Purchase_Order'
       'Order By Line, Part_No')
-    Left = 464
-    Top = 333
+    Left = 580
+    Top = 416
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2059,8 +2069,8 @@ object PBPODM: TPBPODM
       'From Purchase_OrderLineAddtl_Dtls'
       'Where Purchase_Order = :Purchase_Order'
       'Order By Line, Additional_Details')
-    Left = 472
-    Top = 381
+    Left = 590
+    Top = 476
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2083,8 +2093,8 @@ object PBPODM: TPBPODM
       ':Left_Margin_Width,:Right_Margin_Type,'
       ':Right_Margin_Width,:No_of_plate_changes,:Part_Description)'
       '')
-    Left = 128
-    Top = 264
+    Left = 160
+    Top = 330
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2184,8 +2194,8 @@ object PBPODM: TPBPODM
         '(:Purchase_Order,:Line,:Additional_Details,:FAO_Flag,:Details,:N' +
         'arrative)'
       '')
-    Left = 128
-    Top = 328
+    Left = 160
+    Top = 410
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2216,43 +2226,43 @@ object PBPODM: TPBPODM
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from NCR_OTC_Mix')
-    Left = 624
-    Top = 352
+    Left = 780
+    Top = 440
   end
   object ProductSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Product_Type')
-    Left = 144
-    Top = 400
+    Left = 180
+    Top = 500
   end
   object StdSizeSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from  Paper_size'
       'order by Description')
-    Left = 400
-    Top = 376
+    Left = 500
+    Top = 470
   end
   object NCRSRC: TDataSource
     AutoEdit = False
     DataSet = NCRSQL
-    Left = 624
-    Top = 400
+    Left = 780
+    Top = 500
   end
   object OperatorSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator'
       'order by Name')
-    Left = 560
-    Top = 208
+    Left = 700
+    Top = 260
   end
   object OperatorSRC: TDataSource
     AutoEdit = False
     DataSet = OperatorSQL
-    Left = 560
-    Top = 256
+    Left = 700
+    Top = 320
   end
   object GetPOSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2280,8 +2290,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 352
-    Top = 238
+    Left = 440
+    Top = 298
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2297,8 +2307,8 @@ object PBPODM: TPBPODM
         'r'
       'From Price_Unit'
       'where Price_Unit = :Price_Unit')
-    Left = 712
-    Top = 420
+    Left = 890
+    Top = 525
     ParamData = <
       item
         Name = 'Price_Unit'
@@ -2312,8 +2322,8 @@ object PBPODM: TPBPODM
       'select * from customer_contact'
       'where Customer = :Customer and '
       '           Branch_No = :Branch')
-    Left = 240
-    Top = 472
+    Left = 300
+    Top = 590
     ParamData = <
       item
         Name = 'Customer'
@@ -2330,8 +2340,8 @@ object PBPODM: TPBPODM
       'Select Last_PO_Number'
       'From Company'
       'Where Company = 1')
-    Left = 104
-    Top = 20
+    Left = 130
+    Top = 25
   end
   object UpdLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2339,8 +2349,8 @@ object PBPODM: TPBPODM
       'Update Company'
       'Set Last_PO_Number = :Last_PO_Number'
       'Where Company = 1')
-    Left = 104
-    Top = 64
+    Left = 130
+    Top = 80
     ParamData = <
       item
         Name = 'Last_PO_Number'
@@ -2380,8 +2390,8 @@ object PBPODM: TPBPODM
       '         :Needs_Authorising,'
       '         :Authorised_Reason)'
       '')
-    Left = 104
-    Top = 113
+    Left = 130
+    Top = 141
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2433,8 +2443,8 @@ object PBPODM: TPBPODM
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select In_Use_By from Company Where Company = 1')
-    Left = 368
-    Top = 8
+    Left = 460
+    Top = 10
   end
   object GetSuppBranchSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2447,8 +2457,8 @@ object PBPODM: TPBPODM
       '      (Supplier_Branch.Branch_No = :Branch_No) and'
       '      (Supplier.Supplier = Supplier_Branch.Supplier)'
       ' ')
-    Left = 536
-    Top = 439
+    Left = 670
+    Top = 549
     ParamData = <
       item
         Name = 'Supplier'
@@ -2471,8 +2481,8 @@ object PBPODM: TPBPODM
       'on P.Question = Q.Question and P.Product_Type = Q.Product_Type'
       'Where'
       'P.Purchase_Order = :Purchase_Order')
-    Left = 296
-    Top = 64
+    Left = 370
+    Top = 80
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2487,8 +2497,8 @@ object PBPODM: TPBPODM
       ' WHERE (Purchase_Order = :PONumber) AND'
       '   ((Line = :POLine) OR (:AllLines = '#39'Y'#39'))'
       '')
-    Left = 51
-    Top = 456
+    Left = 64
+    Top = 570
     ParamData = <
       item
         Name = 'PONumber'
@@ -2513,8 +2523,8 @@ object PBPODM: TPBPODM
       
         'VALUES(:Product_Type, :Question, :PONumber, :POLine, :Product_An' +
         'swer)')
-    Left = 155
-    Top = 456
+    Left = 194
+    Top = 570
     ParamData = <
       item
         Name = 'Product_Type'
@@ -2548,8 +2558,8 @@ object PBPODM: TPBPODM
       'select NCR_OTC_Descr'
       'from NCR_OTC_Mix'
       'where NCR_OTC_Mix = :NCR_OTC_Mix')
-    Left = 256
-    Top = 200
+    Left = 320
+    Top = 250
     ParamData = <
       item
         Name = 'NCR_OTC_Mix'
@@ -2562,8 +2572,8 @@ object PBPODM: TPBPODM
       'From Product_TypeQuestion '
       'Where Product_Type = :Product_Type'
       'Order by Sequence_Reference')
-    Left = 336
-    Top = 176
+    Left = 420
+    Top = 220
     ParamData = <
       item
         Name = 'Product_Type'
@@ -2576,13 +2586,13 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'select *'
       'from')
-    Left = 408
-    Top = 208
+    Left = 510
+    Top = 260
   end
   object qryGeneral: TFDQuery
     ConnectionName = 'PB'
-    Left = 424
-    Top = 8
+    Left = 530
+    Top = 10
   end
   object GetLineProdTypeSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2600,8 +2610,8 @@ object PBPODM: TPBPODM
       'Purchase_order = :Purchase_Order'
       'order by Line, Sequence_Reference'
       ' ')
-    Left = 304
-    Top = 16
+    Left = 380
+    Top = 20
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -2617,8 +2627,8 @@ object PBPODM: TPBPODM
       '      Product_Type = :Product_Type and'
       '      Question = :Question'
       ' ')
-    Left = 352
-    Top = 80
+    Left = 440
+    Top = 100
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2639,8 +2649,8 @@ object PBPODM: TPBPODM
       'Select Name, Email, Phone'
       'From Operator'
       'Where Operator = :Operator')
-    Left = 360
-    Top = 268
+    Left = 450
+    Top = 335
     ParamData = <
       item
         Name = 'Operator'
@@ -2656,8 +2666,8 @@ object PBPODM: TPBPODM
       '      (Supplier_BranchContacts.Branch_No = :Branch_No) and'
       '      (Supplier_BranchContacts.Contact_no = :Contact_no)'
       ' ')
-    Left = 302
-    Top = 241
+    Left = 378
+    Top = 301
     ParamData = <
       item
         Name = 'Supplier'
@@ -2737,8 +2747,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 176
-    Top = 328
+    Left = 220
+    Top = 410
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2749,13 +2759,13 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'select * from Company'
       'where company = 1')
-    Left = 16
-    Top = 232
+    Left = 20
+    Top = 290
   end
   object CustContactSRC: TDataSource
     DataSet = CustContactSQL
-    Left = 320
-    Top = 312
+    Left = 400
+    Top = 390
   end
   object GetLastJBSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2763,8 +2773,8 @@ object PBPODM: TPBPODM
       'Select Last_Job_Bag_Number'
       'From Company'
       'Where Company = 1')
-    Left = 208
-    Top = 4
+    Left = 260
+    Top = 5
   end
   object UpdLastJBSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2772,7 +2782,7 @@ object PBPODM: TPBPODM
       'Update Company'
       'Set Last_Job_Bag_Number = :Last_Job_Bag_Number'
       'Where Company = 1')
-    Left = 336
+    Left = 420
     ParamData = <
       item
         Name = 'Last_Job_Bag_Number'
@@ -2815,8 +2825,8 @@ object PBPODM: TPBPODM
       '        :Invoice_upfront,'
       '        :Account_Team)'
       ' ')
-    Left = 304
-    Top = 176
+    Left = 380
+    Top = 220
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2904,8 +2914,8 @@ object PBPODM: TPBPODM
       '    :Currency_Code,'
       '    :Job_Bag_Line_status)'
       '')
-    Left = 439
-    Top = 152
+    Left = 549
+    Top = 190
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2960,8 +2970,8 @@ object PBPODM: TPBPODM
       'select *'
       'from Price_unit'
       'where Price_unit = :Price_Unit')
-    Left = 240
-    Top = 232
+    Left = 300
+    Top = 290
     ParamData = <
       item
         Name = 'Price_Unit'
@@ -2974,8 +2984,8 @@ object PBPODM: TPBPODM
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line and'
       'Delivery_No = :Delivery_no')
-    Left = 304
-    Top = 317
+    Left = 380
+    Top = 396
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -3011,8 +3021,8 @@ object PBPODM: TPBPODM
       '      Delivery_location.Line = :Line'
       ' '
       ' ')
-    Left = 464
-    Top = 304
+    Left = 580
+    Top = 380
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -3033,8 +3043,8 @@ object PBPODM: TPBPODM
       'Calloff_order = :calloff_order and'
       'Calloff_line = :Calloff_Line and'
       'Calloff_Delivery = :Calloff_Delivery')
-    Left = 360
-    Top = 304
+    Left = 450
+    Top = 380
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -3067,8 +3077,8 @@ object PBPODM: TPBPODM
       'Line = :Line and'
       'Delivery_no = :Delivery_no and'
       'Location_no = :Location_no')
-    Left = 264
-    Top = 301
+    Left = 330
+    Top = 376
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -3118,8 +3128,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 200
-    Top = 304
+    Left = 250
+    Top = 380
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -3150,8 +3160,8 @@ object PBPODM: TPBPODM
       'where CallOff_Order = :Calloff_order and'
       'CallOff_Line = :Calloff_Line and'
       'Calloff_Delivery = :Calloff_Delivery')
-    Left = 104
-    Top = 389
+    Left = 130
+    Top = 486
     ParamData = <
       item
         Name = 'Calloff_order'
@@ -3170,8 +3180,8 @@ object PBPODM: TPBPODM
       'from Product_TypeQList'
       'where Product_Type = :Product_Type and '
       'Question = :Question')
-    Left = 440
-    Top = 264
+    Left = 550
+    Top = 330
     ParamData = <
       item
         Name = 'Product_Type'
@@ -3182,8 +3192,8 @@ object PBPODM: TPBPODM
   end
   object QryStock: TFDQuery
     ConnectionName = 'PB'
-    Left = 112
-    Top = 312
+    Left = 140
+    Top = 390
   end
   object GetLastJBLineSQL: TFDQuery
     ConnectionName = 'PB'
@@ -3191,8 +3201,8 @@ object PBPODM: TPBPODM
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag')
-    Left = 536
-    Top = 376
+    Left = 670
+    Top = 470
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3204,8 +3214,8 @@ object PBPODM: TPBPODM
       'select Job_Bag'
       'from Job_Bag'
       'where Job_Bag = :Job_Bag')
-    Left = 552
-    Top = 320
+    Left = 690
+    Top = 400
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3221,8 +3231,8 @@ object PBPODM: TPBPODM
       'where purchase_order = :purchase_order and '
       ' line = :line '
       'order by Purchase_OrderLineInt_Notes.Date_Time_Entered;')
-    Left = 320
-    Top = 336
+    Left = 400
+    Top = 420
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3240,8 +3250,8 @@ object PBPODM: TPBPODM
       'values'
       '(:Purchase_Order, :Line, :Internal_Notes, :Date_Time_Entered,'
       ' :Narrative, :Operator);')
-    Left = 288
-    Top = 328
+    Left = 360
+    Top = 410
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -3268,8 +3278,8 @@ object PBPODM: TPBPODM
       'delete from Purchase_OrderLineInt_Notes where '
       'purchase_order = :purchase_order and '
       'line = :line;')
-    Left = 296
-    Top = 112
+    Left = 370
+    Top = 140
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3289,8 +3299,8 @@ object PBPODM: TPBPODM
       '   Invoice_upfront = :Invoice_upfront'
       'where job_Bag = :Job_Bag'
       ' ')
-    Left = 320
-    Top = 336
+    Left = 400
+    Top = 420
     ParamData = <
       item
         Name = 'Job_Bag_Descr'
@@ -3317,8 +3327,8 @@ object PBPODM: TPBPODM
       'Select Top 1 Purchase_order from Job_Bag_Line_Dets'
       'where job_Bag = :Job_Bag and Purchase_Order = :Purchase_Order '
       ' ')
-    Left = 304
-    Top = 320
+    Left = 380
+    Top = 400
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3328,8 +3338,8 @@ object PBPODM: TPBPODM
       end>
   end
   object ActionList1: TActionList
-    Left = 272
-    Top = 176
+    Left = 340
+    Top = 220
   end
   object qryDelExpLife: TFDQuery
     ConnectionName = 'PB'
@@ -3338,8 +3348,8 @@ object PBPODM: TPBPODM
       'set expected_life = :expLife '
       'where purchase_order = :purchase_order '
       ' and line = :line')
-    Left = 144
-    Top = 8
+    Left = 180
+    Top = 10
     ParamData = <
       item
         Name = 'expLife'
@@ -3360,8 +3370,8 @@ object PBPODM: TPBPODM
       'set Product_type = :Product_type'
       'where purchase_order = :Purchase_order and '
       'Line = :Line')
-    Left = 464
-    Top = 432
+    Left = 580
+    Top = 540
     ParamData = <
       item
         Name = 'Product_type'
@@ -3387,8 +3397,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 192
+    Left = 180
+    Top = 240
     ParamData = <
       item
         Name = 'job_bag'
@@ -3400,8 +3410,8 @@ object PBPODM: TPBPODM
       'update job_bag '
       'set Job_Bag_Status = :status '
       'where job_bag = :job_bag;')
-    Left = 372
-    Top = 156
+    Left = 465
+    Top = 195
     ParamData = <
       item
         Name = 'Status'
@@ -3415,8 +3425,8 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'select * from Vat_Code'
       'order by Vat_rate')
-    Left = 456
-    Top = 56
+    Left = 570
+    Top = 70
     object qryVatCodeVat_Code: TIntegerField
       FieldName = 'Vat_Code'
     end
@@ -3424,12 +3434,12 @@ object PBPODM: TPBPODM
       FieldName = 'Vat_Rate'
       DisplayFormat = '0.00%'
     end
-    object qryVatCodeDescription: TStringField
+    object qryVatCodeDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object qryVatCodeVAT_Ref: TStringField
+    object qryVatCodeVAT_Ref: TWideStringField
       FieldName = 'VAT_Ref'
       FixedChar = True
       Size = 2
@@ -3437,8 +3447,8 @@ object PBPODM: TPBPODM
   end
   object dtsVatCode: TDataSource
     DataSet = qryVatCode
-    Left = 512
-    Top = 56
+    Left = 640
+    Top = 70
   end
   object qryGetPOLineDocs: TFDQuery
     ConnectionName = 'PB'
@@ -3447,8 +3457,8 @@ object PBPODM: TPBPODM
       'where purchase_order = :purchase_order '
       'order by Document_no;'
       ' ')
-    Left = 216
-    Top = 148
+    Left = 270
+    Top = 185
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3459,8 +3469,8 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'delete from Purchase_orderlineDocs'
       'where purchase_order = :purchase_order and line = :line; ')
-    Left = 228
-    Top = 200
+    Left = 285
+    Top = 250
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3479,8 +3489,8 @@ object PBPODM: TPBPODM
         '(:Purchase_Order, :Line, :Document_no, :Document_Title, :Documen' +
         't)'
       ' ')
-    Left = 232
-    Top = 108
+    Left = 290
+    Top = 135
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -3504,8 +3514,8 @@ object PBPODM: TPBPODM
       'update Job_Bag'
       'set Inactive = '#39'Y'#39
       'where Job_Bag = :Job_Bag')
-    Left = 312
-    Top = 242
+    Left = 390
+    Top = 303
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3517,8 +3527,8 @@ object PBPODM: TPBPODM
       'select count(Job_Bag_Line) as Line_Count'
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag')
-    Left = 184
-    Top = 376
+    Left = 230
+    Top = 470
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3530,8 +3540,8 @@ object PBPODM: TPBPODM
       'select Vat_Rate from Vat_Code'
       'where Vat_code = :Vat_code'
       '')
-    Left = 152
-    Top = 248
+    Left = 190
+    Top = 310
     ParamData = <
       item
         Name = 'Vat_code'
@@ -3583,8 +3593,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 328
-    Top = 305
+    Left = 410
+    Top = 381
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3635,8 +3645,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 372
-    Top = 305
+    Left = 465
+    Top = 381
     ParamData = <
       item
         Name = 'purchase_order'
@@ -3651,13 +3661,13 @@ object PBPODM: TPBPODM
       'select *'
       'from Job_Type'
       'order by Job_Type_Description')
-    Left = 320
-    Top = 400
+    Left = 400
+    Top = 500
   end
   object dtsJobType: TDataSource
     DataSet = qryJobType
-    Left = 360
-    Top = 400
+    Left = 450
+    Top = 500
   end
   object qryGetJobType: TFDQuery
     ConnectionName = 'PB'
@@ -3665,8 +3675,8 @@ object PBPODM: TPBPODM
       'select *'
       'from Job_Type'
       'where Job_Type = :Job_Type')
-    Left = 416
-    Top = 424
+    Left = 520
+    Top = 530
     ParamData = <
       item
         Name = 'Job_Type'
@@ -3678,8 +3688,8 @@ object PBPODM: TPBPODM
       'select rep'
       'from reps_branches'
       'where customer = :customer and branch_no = :branch_no')
-    Left = 632
-    Top = 136
+    Left = 790
+    Top = 170
     ParamData = <
       item
         Name = 'customer'
@@ -3697,8 +3707,8 @@ object PBPODM: TPBPODM
       'and Branch_No = :Branch '
       'and ((Inactive = '#39'N'#39') or (Inactive is NULL))'
       '')
-    Left = 328
-    Top = 452
+    Left = 410
+    Top = 565
     ParamData = <
       item
         Name = 'Customer'
@@ -3716,8 +3726,8 @@ object PBPODM: TPBPODM
       'from Account_Team_Member, Account_Team'
       'where Operator = :Operator and'
       '(Account_Team_Member.Account_Team = Account_Team.Account_Team)')
-    Left = 800
-    Top = 16
+    Left = 1000
+    Top = 20
     ParamData = <
       item
         Name = 'Operator'
@@ -3730,8 +3740,8 @@ object PBPODM: TPBPODM
       'from Product_Type'
       'where Product_type = :Product_Type and '
       '((inactive is NULL) or (inactive = '#39'N'#39'))')
-    Left = 800
-    Top = 120
+    Left = 1000
+    Top = 150
     ParamData = <
       item
         Name = 'Product_Type'
@@ -3743,8 +3753,8 @@ object PBPODM: TPBPODM
       'select *'
       'from account_team'
       'where account_team = :account_team')
-    Left = 800
-    Top = 72
+    Left = 1000
+    Top = 90
     ParamData = <
       item
         Name = 'account_team'
@@ -3756,8 +3766,8 @@ object PBPODM: TPBPODM
       'select *'
       'from Operator'
       'where Operator = :Operator')
-    Left = 800
-    Top = 168
+    Left = 1000
+    Top = 210
     ParamData = <
       item
         Name = 'Operator'
@@ -3769,8 +3779,8 @@ object PBPODM: TPBPODM
       'Select Price_unit, Description, Price_unit_Factor'
       'From Price_Unit'
       'Order By Description')
-    Left = 816
-    Top = 316
+    Left = 1020
+    Top = 395
   end
   object qryCheckPI: TFDQuery
     ConnectionName = 'PB'
@@ -3780,8 +3790,8 @@ object PBPODM: TPBPODM
       'Where Purchase_Order = :Purchase_Order and'
       'Line = :Line and'
       'Supp_invoice_status >= 20')
-    Left = 800
-    Top = 224
+    Left = 1000
+    Top = 280
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -3800,8 +3810,8 @@ object PBPODM: TPBPODM
       'where Product_Type = :Product_Type and'
       'Product_TypePrice_Unit.Price_Unit = Price_Unit.Price_Unit'
       'order by Price_Unit.Description')
-    Left = 816
-    Top = 376
+    Left = 1020
+    Top = 470
     ParamData = <
       item
         Name = 'Product_Type'
@@ -3844,35 +3854,35 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 816
-    Top = 432
+    Left = 1020
+    Top = 540
     ParamData = <
       item
         Name = 'purchase_order'
       end>
-    object qryPartMvmntsDate_received: TDateTimeField
+    object qryPartMvmntsDate_received: TSQLTimeStampField
       FieldName = 'Date_received'
     end
-    object qryPartMvmntsPart_Store_Name: TStringField
+    object qryPartMvmntsPart_Store_Name: TWideStringField
       FieldName = 'Part_Store_Name'
       FixedChar = True
       Size = 60
     end
-    object qryPartMvmntsPart_Movement_Bin: TStringField
+    object qryPartMvmntsPart_Movement_Bin: TWideStringField
       FieldName = 'Part_Movement_Bin'
       FixedChar = True
     end
-    object qryPartMvmntsPart_Store_Lot: TStringField
+    object qryPartMvmntsPart_Store_Lot: TWideStringField
       FieldName = 'Part_Store_Lot'
       FixedChar = True
       Size = 40
     end
-    object qryPartMvmntsPart_Move_Type_Descr: TStringField
+    object qryPartMvmntsPart_Move_Type_Descr: TWideStringField
       FieldName = 'Part_Move_Type_Descr'
       FixedChar = True
       Size = 40
     end
-    object qryPartMvmntsPart_Movement_Reference: TStringField
+    object qryPartMvmntsPart_Movement_Reference: TWideStringField
       FieldName = 'Part_Movement_Reference'
       FixedChar = True
       Size = 60
@@ -3889,14 +3899,14 @@ object PBPODM: TPBPODM
     object qryPartMvmntsPart_Store_Total_Quantity: TFloatField
       FieldName = 'Part_Store_Total_Quantity'
     end
-    object qryPartMvmntsAudit_User: TStringField
+    object qryPartMvmntsAudit_User: TWideStringField
       FieldName = 'Audit_User'
     end
   end
   object dtsrcPartMvmnts: TDataSource
     DataSet = qryPartMvmnts
-    Left = 880
-    Top = 432
+    Left = 1100
+    Top = 540
   end
   object qryPartStoreBins: TFDQuery
     ConnectionName = 'PB'
@@ -3964,8 +3974,8 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 704
-    Top = 488
+    Left = 880
+    Top = 610
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -3973,8 +3983,8 @@ object PBPODM: TPBPODM
   end
   object dtsrcPartStoreBins: TDataSource
     DataSet = qryPartStoreBins
-    Left = 792
-    Top = 488
+    Left = 990
+    Top = 610
   end
   object qryGetTotalUsage: TFDQuery
     ConnectionName = 'PB'
@@ -3989,8 +3999,8 @@ object PBPODM: TPBPODM
       '          (Part_movement.Part_movement_type = '#39'D'#39') or'
       '          (Part_movement.Part_Movement_type = '#39'P'#39')'
       '          )')
-    Left = 944
-    Top = 432
+    Left = 1180
+    Top = 540
     ParamData = <
       item
         Name = 'purchase_order'
@@ -4003,8 +4013,8 @@ object PBPODM: TPBPODM
       'from     Store_Stock'
       'where    (Store_Stock.purchase_order = :Purchase_order)'
       '')
-    Left = 944
-    Top = 488
+    Left = 1180
+    Top = 610
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -4059,8 +4069,8 @@ object PBPODM: TPBPODM
       ':Goods_Reqd_By_Customer,'
       ':Product_Type'
       ')')
-    Left = 928
-    Top = 224
+    Left = 1160
+    Top = 280
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4162,8 +4172,8 @@ object PBPODM: TPBPODM
       '      (AT2.Audit_Type >= 2000) and (AT2.Audit_Type < 3000)'
       ''
       ' ')
-    Left = 904
-    Top = 16
+    Left = 1130
+    Top = 20
     ParamData = <
       item
         Name = 'Audit_Table_Name'
@@ -4179,8 +4189,8 @@ object PBPODM: TPBPODM
       'from Purchase_OrderLineHistory'
       'where Purchase_Order = :Purchase_Order and '
       'Line = :Line')
-    Left = 928
-    Top = 304
+    Left = 1160
+    Top = 380
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4215,8 +4225,8 @@ object PBPODM: TPBPODM
       'purchase_orderlinehistory.Order_Unit = Order_Unit.Price_Unit and'
       'purchase_orderlinehistory.Sell_Unit = Sell_Unit.Price_Unit'
       'ORDER BY History_no desc')
-    Left = 904
-    Top = 72
+    Left = 1130
+    Top = 90
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4226,7 +4236,7 @@ object PBPODM: TPBPODM
         Name = 'Line'
         DataType = ftInteger
       end>
-    object qryGetPOPriceHistDate_point: TDateTimeField
+    object qryGetPOPriceHistDate_point: TSQLTimeStampField
       FieldName = 'Date_point'
     end
     object qryGetPOPriceHistOperator: TIntegerField
@@ -4264,10 +4274,10 @@ object PBPODM: TPBPODM
       FixedChar = True
       Size = 80
     end
-    object qryGetPOPriceHistGoods_Reqd_by_Customer: TDateTimeField
+    object qryGetPOPriceHistGoods_Reqd_by_Customer: TSQLTimeStampField
       FieldName = 'Goods_Reqd_by_Customer'
     end
-    object qryGetPOPriceHistGoods_Required: TDateTimeField
+    object qryGetPOPriceHistGoods_Required: TSQLTimeStampField
       FieldName = 'Goods_Required'
     end
     object qryGetPOPriceHistOn_Hold: TStringField
@@ -4282,8 +4292,8 @@ object PBPODM: TPBPODM
   end
   object dtsGetPOPriceHist: TDataSource
     DataSet = qryGetPOPriceHist
-    Left = 968
-    Top = 72
+    Left = 1210
+    Top = 90
   end
   object GetCompBrAddrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -4301,8 +4311,8 @@ object PBPODM: TPBPODM
       
         'Where (Company_Branch.Company = 1) and (Company_Branch.Company =' +
         ' 1 and Company_Branch.Branch_no = :Branch_no)')
-    Left = 912
-    Top = 136
+    Left = 1140
+    Top = 170
     ParamData = <
       item
         Name = 'Branch_no'
@@ -4314,8 +4324,8 @@ object PBPODM: TPBPODM
       'select *'
       'from Company_Branch'
       'where company = 1')
-    Left = 808
-    Top = 272
+    Left = 1010
+    Top = 340
   end
   object UpdStoreStockSQL: TFDQuery
     ConnectionName = 'PB'
@@ -4325,8 +4335,8 @@ object PBPODM: TPBPODM
         'set Invoice_upfront = :Invoice_upfront, Store_Cost = (Store_Quan' +
         'tity*:Unit_Cost)'
       'where Purchase_Order = :Purchase_Order')
-    Left = 616
-    Top = 520
+    Left = 770
+    Top = 650
     ParamData = <
       item
         Name = 'Invoice_upfront'
@@ -4345,8 +4355,8 @@ object PBPODM: TPBPODM
       'from Proof_History'
       'where Purchase_order = :Purchase_Order and Line = :Line'
       'Order by Proof_History DESC')
-    Left = 616
-    Top = 464
+    Left = 770
+    Top = 580
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4361,8 +4371,8 @@ object PBPODM: TPBPODM
       'Delete From Purchase_OrderLineHistory'
       'Where (Purchase_Order = :Purchase_Order) and'
       '      ((Line = :Line) or (:Line = 0)) ')
-    Left = 912
-    Top = 184
+    Left = 1140
+    Top = 230
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4380,13 +4390,13 @@ object PBPODM: TPBPODM
       'select *'
       'from FSC_Material_Claim'
       'Order By Claim_Description')
-    Left = 880
-    Top = 368
+    Left = 1100
+    Top = 460
   end
   object dtsFSCClaim: TDataSource
     DataSet = qryFSCClaim
-    Left = 952
-    Top = 368
+    Left = 1190
+    Top = 460
   end
   object qryGetCustCC: TFDQuery
     ConnectionName = 'PB'
@@ -4395,8 +4405,8 @@ object PBPODM: TPBPODM
       'from Customer_CostCentre'
       'where Customer = :Customer and '
       'Cost_centre = :Cost_Centre')
-    Left = 864
-    Top = 248
+    Left = 1080
+    Top = 310
     ParamData = <
       item
         Name = 'Customer'
@@ -4413,8 +4423,8 @@ object PBPODM: TPBPODM
       'where Customer = :Customer and'
       'Branch_no = :Branch_no and '
       'Cost_centre = :Cost_Centre')
-    Left = 944
-    Top = 272
+    Left = 1180
+    Top = 340
     ParamData = <
       item
         Name = 'Customer'
@@ -4432,8 +4442,8 @@ object PBPODM: TPBPODM
       'select *'
       'from FSC_Material_Claim'
       'where FSC_Material_Claim = :FSC_Material_Claim')
-    Left = 56
-    Top = 504
+    Left = 70
+    Top = 630
     ParamData = <
       item
         Name = 'FSC_Material_Claim'
@@ -4449,8 +4459,8 @@ object PBPODM: TPBPODM
       'where Courier_Service.Courier = :Courier and '
       'Courier_service.Courier = Courier.courier'
       'Order By Service_Description')
-    Left = 272
-    Top = 512
+    Left = 340
+    Top = 640
     ParamData = <
       item
         Name = 'Courier'
@@ -4462,18 +4472,18 @@ object PBPODM: TPBPODM
       'select *'
       'from Package_Type'
       'ORDER BY Package_Type_Descr')
-    Left = 416
-    Top = 512
+    Left = 520
+    Top = 640
   end
   object dtsCourierService: TDataSource
     DataSet = qryCourierService
-    Left = 328
-    Top = 520
+    Left = 410
+    Top = 650
   end
   object dtsPackageType: TDataSource
     DataSet = qryPackageType
-    Left = 496
-    Top = 512
+    Left = 620
+    Top = 640
   end
   object qryGetCustomerContact: TFDQuery
     ConnectionName = 'PB'
@@ -4485,8 +4495,8 @@ object PBPODM: TPBPODM
       'Customer_Contact.Branch_no = :Branch_no and'
       'Contact_No = :Contact_No and'
       '(Customer_Contact.Contact_Info = Contact_Info.Contact_info)')
-    Left = 944
-    Top = 544
+    Left = 1180
+    Top = 680
     ParamData = <
       item
         Name = 'Customer'
@@ -4565,8 +4575,8 @@ object PBPODM: TPBPODM
         'rm.Non_Conform_Status'
       'WHERE Purchase_Order = :Purchase_Order'
       'ORDER BY Job_bag_Non_Conform')
-    Left = 224
-    Top = 568
+    Left = 280
+    Top = 710
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4578,8 +4588,8 @@ object PBPODM: TPBPODM
       'Select Last_Non_Conform_Number'
       'From Company'
       'Where Company = 1')
-    Left = 128
-    Top = 512
+    Left = 160
+    Top = 640
   end
   object qryUpdateLastNC: TFDQuery
     ConnectionName = 'PB'
@@ -4587,8 +4597,8 @@ object PBPODM: TPBPODM
       'Update Company'
       'Set Last_Non_Conform_Number = :Last_Non_Conform_Number'
       'Where Company = 1')
-    Left = 208
-    Top = 512
+    Left = 260
+    Top = 640
     ParamData = <
       item
         Name = 'Last_Non_Conform_Number'
@@ -4599,8 +4609,8 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'delete from Job_Bag_Non_Conform'
       'where Purchase_Order = :Purchase_Order')
-    Left = 56
-    Top = 568
+    Left = 70
+    Top = 710
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4662,8 +4672,8 @@ object PBPODM: TPBPODM
       ':Samples_Available,'
       ':Non_Conform_Category'
       ')')
-    Left = 136
-    Top = 568
+    Left = 170
+    Top = 710
     ParamData = <
       item
         Name = 'Job_Bag_Non_Conform'
@@ -4754,8 +4764,8 @@ object PBPODM: TPBPODM
       'select *'
       'from Part'
       'where part = :Part')
-    Left = 56
-    Top = 632
+    Left = 70
+    Top = 790
     ParamData = <
       item
         Name = 'Part'
@@ -4779,8 +4789,8 @@ object PBPODM: TPBPODM
         '      Purchase_OrderLineStockCode.Form_Reference = Form_Referenc' +
         'e.Form_Reference'
       'Order By Line, Stock_Code_No')
-    Left = 504
-    Top = 584
+    Left = 630
+    Top = 730
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4791,8 +4801,8 @@ object PBPODM: TPBPODM
     SQL.Strings = (
       'delete from Purchase_OrderLineStockCode'
       'where Purchase_Order = :Purchase_Order')
-    Left = 616
-    Top = 584
+    Left = 770
+    Top = 730
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4819,8 +4829,8 @@ object PBPODM: TPBPODM
       ':Quantity_Ordered,'
       ':Quantity_Delivered'
       ')')
-    Left = 712
-    Top = 584
+    Left = 890
+    Top = 730
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -4852,8 +4862,8 @@ object PBPODM: TPBPODM
       '      Supplier_BranchContacts.Branch_no = :Branch_no AND'
       '      Supplier_BranchContacts.Contact_no = :Contact_no AND'
       '      ((inactive IS NULL) OR (inactive = '#39'N'#39'))')
-    Left = 944
-    Top = 600
+    Left = 1180
+    Top = 750
     ParamData = <
       item
         Name = 'Supplier'
@@ -4873,8 +4883,8 @@ object PBPODM: TPBPODM
       'WHERE Customer = :Customer AND'
       '      Branch_No = :Branch_no AND'
       '      Contact_No = :Contact_No')
-    Left = 224
-    Top = 624
+    Left = 280
+    Top = 780
     ParamData = <
       item
         Name = 'Customer'
@@ -4892,8 +4902,8 @@ object PBPODM: TPBPODM
       'SELECT *'
       'FROM Proof_Status'
       'WHERE Proof_Status = :Proof_Status')
-    Left = 800
-    Top = 552
+    Left = 1000
+    Top = 690
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -4907,20 +4917,19 @@ object PBPODM: TPBPODM
       #9'INNER JOIN reps_branches ON Rep.Rep = reps_branches.Rep'
       'WHERE ((Customer = :Customer) and (Branch_no = :Branch_no)) AND'
       '      (Rep.Rep_Is_Sub_Rep = '#39'Y'#39')')
-    Left = 504
-    Top = 632
+    Left = 630
+    Top = 790
     ParamData = <
       item
         Name = 'Customer'
       end
       item
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryJBAddLine: TFDQuery
-    ConnectionName = 'PB'
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag_Line_Dets'
       #9'(Job_Bag,Job_Bag_Line,Job_Bag_Line_Type,Purchase_Order,Line,'
@@ -4961,188 +4970,153 @@ object PBPODM: TPBPODM
       ' '
       ' '
       ' ')
-    Left = 952
-    Top = 664
+    Left = 1190
+    Top = 830
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Type'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Cost'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Sell'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Cost'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Sell'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Job_Bag_Line_Invoiced'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Quantity'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'VAT_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'works_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Reseller_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Selling_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sequence_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Ready_To_Invoice'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_SSP'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_Cost_Plus_OHD'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_SSP_Original'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Quote'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Qty_Invoiced'
+      end
+      item
+        Name = 'Ready_To_Invoice'
+      end
+      item
+        Name = 'Unit_Cost'
+      end
+      item
+        Name = 'Unit_SSP'
+      end
+      item
+        Name = 'Unit_Cost_Plus_OHD'
+      end
+      item
+        Name = 'Unit_SSP_Original'
+      end
+      item
+        Name = 'Inactive'
+      end
+      item
+        Name = 'Quote'
+        DataType = ftFloat
+      end
+      item
         Name = 'Quote_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Cost_Markup_Perc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Is_Internal_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Reseller'
-        ParamType = ptUnknown
       end>
   end
 end

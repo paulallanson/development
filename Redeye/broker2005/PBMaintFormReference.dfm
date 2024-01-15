@@ -209,6 +209,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 181
+    ExplicitWidth = 458
     object DelLabel: TLabel
       Left = 128
       Top = 6
@@ -376,7 +378,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   end
   object btnImage: TBitBtn
     Left = 8
-    Top = 192
+    Top = 184
     Width = 75
     Height = 25
     Caption = 'Image'

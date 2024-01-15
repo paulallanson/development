@@ -1,7 +1,8 @@
 object dtmdlOrders: TdtmdlOrders
   OnCreate = DataModuleCreate
-  Height = 480
-  Width = 696
+  Height = 600
+  Width = 870
+  PixelsPerInch = 120
   object qryOrders: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -82,16 +83,15 @@ object dtmdlOrders: TdtmdlOrders
       
         'WHERE ((Purchase_orderline.Customer = :Customer) or (0 = :Custom' +
         'er)) and'
-      '      Purchase_orderline.Customers_desc Like :Description'
-      ''
-      ' '
-      ' ')
-    Left = 16
-    Top = 40
+      '      Purchase_orderline.Customers_desc Like :Description')
+    Left = 20
+    Top = 50
     ParamData = <
       item
         Name = 'RECORDS'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = 10
       end
       item
         Name = 'Customer'
@@ -130,12 +130,12 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Order_date'
       Required = True
     end
-    object qryOrdersCust_Order_No: TWideStringField
+    object qryOrdersCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
       Origin = 'Cust_Order_No'
       Size = 50
     end
-    object qryOrdersDescription: TWideStringField
+    object qryOrdersDescription: TStringField
       FieldName = 'Description'
       Origin = 'Description'
       Size = 80
@@ -176,7 +176,7 @@ object dtmdlOrders: TdtmdlOrders
       FieldName = 'Goods_Required'
       Origin = 'Goods_Required'
     end
-    object qryOrdersOrder_type: TWideStringField
+    object qryOrdersOrder_type: TStringField
       FieldName = 'Order_type'
       Origin = 'Order_type'
       ReadOnly = True
@@ -300,8 +300,8 @@ object dtmdlOrders: TdtmdlOrders
   end
   object dtsOrders: TDataSource
     DataSet = qryOrders
-    Left = 72
-    Top = 40
+    Left = 90
+    Top = 50
   end
   object qrySOrders: TFDQuery
     ConnectionName = 'PB'
@@ -395,8 +395,8 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_OrderRep.Rep = Rep.Rep'
       ''
       '')
-    Left = 152
-    Top = 40
+    Left = 190
+    Top = 50
     ParamData = <
       item
         Name = 'RECORDS'
@@ -530,8 +530,8 @@ object dtmdlOrders: TdtmdlOrders
       ''
       ' '
       ' ')
-    Left = 216
-    Top = 40
+    Left = 270
+    Top = 50
     ParamData = <
       item
         Name = 'RECORDS'
@@ -563,8 +563,8 @@ object dtmdlOrders: TdtmdlOrders
         ') and'
       '(Sales_Profit.Line = Purchase_OrderLine.Line)'
       ')')
-    Left = 288
-    Top = 40
+    Left = 360
+    Top = 50
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -580,8 +580,8 @@ object dtmdlOrders: TdtmdlOrders
       'set On_hold = :On_Hold'
       'where Purchase_order = :Purchase_order and'
       'Line = :Line')
-    Left = 16
-    Top = 168
+    Left = 20
+    Top = 210
     ParamData = <
       item
         Name = 'On_Hold'
@@ -598,8 +598,8 @@ object dtmdlOrders: TdtmdlOrders
     SQL.Strings = (
       'select * from company'
       'where company = 1')
-    Left = 80
-    Top = 168
+    Left = 100
+    Top = 210
   end
   object qrySOHead: TFDQuery
     ConnectionName = 'PB'
@@ -607,8 +607,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from Sales_Order'
       'where sales_order = :sales_order')
-    Left = 152
-    Top = 168
+    Left = 190
+    Top = 210
     ParamData = <
       item
         Name = 'sales_order'
@@ -620,8 +620,8 @@ object dtmdlOrders: TdtmdlOrders
       'select distinct Sales_Order, Picking_List_Ref'
       'from Part_Store_Allocation'
       'where Sales_Order = :Sales_Order')
-    Left = 152
-    Top = 216
+    Left = 190
+    Top = 270
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -638,8 +638,8 @@ object dtmdlOrders: TdtmdlOrders
       '(Sales_invoice_Line.Line = :Line)'
       ') and'
       '(Sales_Invoice_Line.Sales_Invoice = Sales_Invoice.Sales_Invoice)')
-    Left = 288
-    Top = 144
+    Left = 360
+    Top = 180
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -661,8 +661,8 @@ object dtmdlOrders: TdtmdlOrders
       '('
       '(Sales_invoice_Line.Sales_order = :Sales_Order)'
       ')')
-    Left = 288
-    Top = 200
+    Left = 360
+    Top = 250
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -772,8 +772,8 @@ object dtmdlOrders: TdtmdlOrders
       ' '
       ' '
       ' ')
-    Left = 216
-    Top = 96
+    Left = 270
+    Top = 120
     ParamData = <
       item
         Name = 'Customer'
@@ -815,8 +815,8 @@ object dtmdlOrders: TdtmdlOrders
       ''
       ' '
       ' ')
-    Left = 32
-    Top = 272
+    Left = 40
+    Top = 340
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -824,8 +824,8 @@ object dtmdlOrders: TdtmdlOrders
   end
   object dtsCallOffs: TDataSource
     DataSet = qryCallOffs
-    Left = 512
-    Top = 40
+    Left = 640
+    Top = 50
   end
   object qryCallOffs: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -903,8 +903,8 @@ object dtmdlOrders: TdtmdlOrders
         'ce '
       ' '
       ' ')
-    Left = 440
-    Top = 40
+    Left = 550
+    Top = 50
     ParamData = <
       item
         Name = 'Customer'
@@ -951,6 +951,36 @@ object dtmdlOrders: TdtmdlOrders
       Required = True
       Size = 40
     end
+    object qryCallOffsDescription: TWideStringField
+      FieldName = 'Description'
+      Origin = 'Description'
+      Size = 150
+    end
+    object qryCallOffsQuantity: TIntegerField
+      FieldName = 'Quantity'
+      Origin = 'Quantity'
+      Required = True
+    end
+    object qryCallOffsorder_price: TCurrencyField
+      FieldName = 'order_price'
+      Origin = 'order_price'
+      Required = True
+    end
+    object qryCallOffsorder_unit: TIntegerField
+      FieldName = 'order_unit'
+      Origin = 'order_unit'
+      Required = True
+    end
+    object qryCallOffsselling_price: TCurrencyField
+      FieldName = 'selling_price'
+      Origin = 'selling_price'
+      Required = True
+    end
+    object qryCallOffsselling_unit: TIntegerField
+      FieldName = 'selling_unit'
+      Origin = 'selling_unit'
+      Required = True
+    end
     object qryCallOffsStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
       Origin = 'Stock_Reference'
@@ -995,14 +1025,14 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Account_Code'
       Size = 10
     end
-    object qryCallOffsOn_Hold: TWideStringField
+    object qryCallOffsOn_Hold: TStringField
       FieldName = 'On_Hold'
       Origin = 'On_Hold'
       ReadOnly = True
       Required = True
       Size = 1
     end
-    object qryCallOffsProof_Revision: TWideStringField
+    object qryCallOffsProof_Revision: TStringField
       FieldName = 'Proof_Revision'
       Origin = 'Proof_Revision'
       ReadOnly = True
@@ -1024,7 +1054,7 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'job_bag'
       ReadOnly = True
     end
-    object qryCallOffsDescription_Reference: TWideStringField
+    object qryCallOffsDescription_Reference: TStringField
       FieldName = 'Description_Reference'
       Origin = 'Description_Reference'
       ReadOnly = True
@@ -1037,7 +1067,7 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
     end
-    object qryCallOffsRep_Name: TWideStringField
+    object qryCallOffsRep_Name: TStringField
       FieldName = 'Rep_Name'
       Origin = 'Rep_Name'
       ReadOnly = True
@@ -1050,7 +1080,7 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
     end
-    object qryCallOffsOperator_Name: TWideStringField
+    object qryCallOffsOperator_Name: TStringField
       FieldName = 'Operator_Name'
       Origin = 'Operator_Name'
       ReadOnly = True
@@ -1063,54 +1093,26 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
     end
-    object qryCallOffsInactive: TWideStringField
+    object qryCallOffsInactive: TStringField
       FieldName = 'Inactive'
       Origin = 'Inactive'
       ReadOnly = True
       Required = True
       Size = 1
     end
-    object qryCallOffsSupp_Inv_Recd: TWideStringField
+    object qryCallOffsSupp_Inv_Recd: TStringField
       FieldName = 'Supp_Inv_Recd'
       Origin = 'Supp_Inv_Recd'
       ReadOnly = True
       Required = True
       Size = 1
     end
-    object qryCallOffsNeeds_Authorising: TWideStringField
+    object qryCallOffsNeeds_Authorising: TStringField
       FieldName = 'Needs_Authorising'
       Origin = 'Needs_Authorising'
       ReadOnly = True
       Required = True
       Size = 1
-    end
-    object qryCallOffsPart: TWideStringField
-      FieldName = 'Part'
-      Size = 25
-    end
-    object qryCallOffsDescription: TWideStringField
-      FieldName = 'Description'
-      Size = 100
-    end
-    object qryCallOffsQuantity: TIntegerField
-      FieldName = 'Quantity'
-    end
-    object qryCallOffsOrder_Price: TFloatField
-      FieldName = 'Order_Price'
-      DisplayFormat = '#,###,##0.000'
-    end
-    object qryCallOffsOrder_unit: TIntegerField
-      FieldName = 'Order_unit'
-    end
-    object qryCallOffsSelling_Price: TFloatField
-      FieldName = 'Selling_Price'
-      DisplayFormat = '#,###,##0.000'
-    end
-    object qryCallOffsSelling_Unit: TIntegerField
-      FieldName = 'Selling_Unit'
-    end
-    object qryCallOffsJob_Bag_no: TIntegerField
-      FieldName = 'Job_Bag_no'
     end
     object qryCallOffsAuthorised_By: TIntegerField
       FieldName = 'Authorised_By'
@@ -1124,8 +1126,8 @@ object dtmdlOrders: TdtmdlOrders
     SQL.Strings = (
       'select * from customer'
       'where customer = :customer')
-    Left = 376
-    Top = 40
+    Left = 470
+    Top = 50
     ParamData = <
       item
         Name = 'customer'
@@ -1232,8 +1234,8 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_Order.Order_type = Order_Type.Order_Type'
       ''
       '')
-    Left = 584
-    Top = 40
+    Left = 730
+    Top = 50
     ParamData = <
       item
         Name = 'RECORDS'
@@ -1261,8 +1263,8 @@ object dtmdlOrders: TdtmdlOrders
         'sales_order.sales_order_head_status = sales_Order_head_Status.sa' +
         'les_Order_head_Status'
       '')
-    Left = 32
-    Top = 328
+    Left = 40
+    Top = 410
     ParamData = <
       item
         Name = 'sales_order'
@@ -1274,8 +1276,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from Operator'
       'where Operator = :operator')
-    Left = 32
-    Top = 384
+    Left = 40
+    Top = 480
     ParamData = <
       item
         Name = 'operator'
@@ -1287,8 +1289,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from sales_order_picking'
       'where sales_order = :sales_order')
-    Left = 152
-    Top = 272
+    Left = 190
+    Top = 340
     ParamData = <
       item
         Name = 'sales_order'
@@ -1300,8 +1302,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from sales_invoice_line'
       'where sales_Order = :sales_order')
-    Left = 376
-    Top = 152
+    Left = 470
+    Top = 190
     ParamData = <
       item
         Name = 'sales_order'
@@ -1318,8 +1320,8 @@ object dtmdlOrders: TdtmdlOrders
       'Line = :Line and'
       'Proof_History.Proof_Status = Proof_Status.Proof_Status'
       'Order BY Proof_History desc')
-    Left = 288
-    Top = 280
+    Left = 360
+    Top = 350
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1334,8 +1336,8 @@ object dtmdlOrders: TdtmdlOrders
       'Update Sales_order'
       'set Sales_order_head_Status = 250'
       'where Sales_order = :Sales_Order')
-    Left = 152
-    Top = 328
+    Left = 190
+    Top = 410
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1450,8 +1452,8 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_OrderRep.Rep = Rep.Rep and'
       '  Sales_Order.Order_type = Order_Type.Order_Type'
       '')
-    Left = 584
-    Top = 104
+    Left = 730
+    Top = 130
     ParamData = <
       item
         Name = 'Records'
