@@ -3,8 +3,8 @@ object frmWTLUStore: TfrmWTLUStore
   Top = 160
   BorderStyle = bsDialog
   Caption = 'Stores'
-  ClientHeight = 371
-  ClientWidth = 400
+  ClientHeight = 370
+  ClientWidth = 396
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWTLUStore: TfrmWTLUStore
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 311
-    Height = 278
+    Width = 307
+    Height = 277
     Align = alClient
     DataSource = srcStore
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -47,8 +47,8 @@ object frmWTLUStore: TfrmWTLUStore
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 352
-    Width = 400
+    Top = 351
+    Width = 396
     Height = 19
     Panels = <
       item
@@ -57,16 +57,20 @@ object frmWTLUStore: TfrmWTLUStore
       item
         Width = 50
       end>
+    ExplicitTop = 352
+    ExplicitWidth = 400
   end
   object Panel1: TPanel
     Left = 0
-    Top = 278
-    Width = 400
+    Top = 277
+    Width = 396
     Height = 74
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 278
+    ExplicitWidth = 400
     DesignSize = (
-      400
+      396
       74)
     object Label4: TLabel
       Left = 8
@@ -116,64 +120,71 @@ object frmWTLUStore: TfrmWTLUStore
     end
   end
   object Panel2: TPanel
-    Left = 311
+    Left = 307
     Top = 0
     Width = 89
-    Height = 278
+    Height = 277
     Align = alRight
     TabOrder = 3
+    ExplicitLeft = 311
+    ExplicitHeight = 278
     DesignSize = (
       89
-      278)
+      277)
     object BitBtn1: TBitBtn
       Left = 8
-      Top = 88
+      Top = 87
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
+      ExplicitTop = 88
     end
     object btnEdit: TBitBtn
       Left = 6
-      Top = 128
+      Top = 127
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Edit'
       TabOrder = 1
       OnClick = btnEditClick
+      ExplicitTop = 128
     end
     object btnDelete: TBitBtn
       Left = 6
-      Top = 168
+      Top = 167
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Delete'
       TabOrder = 2
       OnClick = btnDeleteClick
+      ExplicitTop = 168
     end
     object btnExcel: TBitBtn
       Left = 6
-      Top = 208
+      Top = 207
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Excel'
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitTop = 208
     end
     object btnSelect: TBitBtn
       Left = 6
-      Top = 246
+      Top = 245
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Select'
       TabOrder = 4
       OnClick = btnSelectClick
+      ExplicitTop = 246
     end
   end
   object srcStore: TDataSource

@@ -38,6 +38,12 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
         Title.Caption = 'Stock System'
         Width = 176
         Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Stock_System'
+        Width = 172
+        Visible = True
       end>
   end
   object stsbrDetails: TStatusBar
@@ -52,6 +58,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       item
         Width = 50
       end>
+    ExplicitTop = 304
+    ExplicitWidth = 377
   end
   object Panel1: TPanel
     Left = 0
@@ -60,6 +68,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     Height = 81
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 223
+    ExplicitWidth = 377
     DesignSize = (
       381
       81)
@@ -115,7 +125,7 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     Top = 120
   end
   object qryStockSystem: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'

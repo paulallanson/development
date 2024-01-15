@@ -1,6 +1,6 @@
 object dtmdlPrices: TdtmdlPrices
-  Height = 361
-  Width = 794
+  Height = 367
+  Width = 792
   object qryAllPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
@@ -70,7 +70,7 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 43
+    Left = 51
     Top = 34
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
@@ -156,10 +156,10 @@ object dtmdlPrices: TdtmdlPrices
     object qryAllPricesStock_Item: TIntegerField
       FieldName = 'Stock_Item'
     end
-    object qryAllPricesStock_Code: TStringField
+    object qryAllPricesStock_Code: TWideStringField
       FieldName = 'Stock_Code'
     end
-    object qryAllPricesStock_Description: TStringField
+    object qryAllPricesStock_Description: TWideStringField
       FieldName = 'Stock_Description'
       Size = 50
     end
@@ -169,7 +169,7 @@ object dtmdlPrices: TdtmdlPrices
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 131
+    Left = 147
     Top = 34
   end
   object qryDummyCurrent: TFDQuery
@@ -264,8 +264,8 @@ object dtmdlPrices: TdtmdlPrices
         'm'
       'WHERE 1=1'
       '')
-    Left = 152
-    Top = 8
+    Left = 48
+    Top = 120
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -332,8 +332,8 @@ object dtmdlPrices: TdtmdlPrices
         '          ON Stock_item.Stock_item = Worktop_thickness.Stock_Ite' +
         'm'
       'WHERE 1=1')
-    Left = 240
-    Top = 8
+    Left = 168
+    Top = 120
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -342,18 +342,14 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 24
-    Top = 72
+    Left = 248
+    Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Effective_Date'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyCurrentOld: TFDQuery
@@ -434,8 +430,8 @@ object dtmdlPrices: TdtmdlPrices
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1'
       '')
-    Left = 376
-    Top = 16
+    Left = 288
+    Top = 120
   end
   object qryDummyFutureOld: TFDQuery
     SQL.Strings = (
@@ -492,7 +488,7 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 488
-    Top = 16
+    Left = 424
+    Top = 120
   end
 end

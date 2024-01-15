@@ -41,7 +41,8 @@ type
 var
   PBImagesFrm: TPBImagesFrm;
 
-implementation
+implementation
+
 
 uses
   FireDAC.Comp.Client;

@@ -1,17 +1,15 @@
 object PBImagesFrm: TPBImagesFrm
   Left = 200
   Top = 112
-  Width = 1220
-  Height = 400
   Caption = 'PBImagesFrm'
+  ClientHeight = 361
+  ClientWidth = 1204
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
-  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 24
@@ -4090,7 +4088,6 @@ object PBImagesFrm: TPBImagesFrm
     Width = 49
     Height = 25
     Caption = 'Off'
-    TabOrder = 0
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -4105,6 +4102,7 @@ object PBImagesFrm: TPBImagesFrm
       8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
       3333333773FFFF77333333333000003333333333377777333333}
     NumGlyphs = 2
+    TabOrder = 0
   end
   object OnBitBtn: TBitBtn
     Left = 312
@@ -4112,7 +4110,6 @@ object PBImagesFrm: TPBImagesFrm
     Width = 49
     Height = 25
     Caption = 'On'
-    TabOrder = 1
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -4127,5 +4124,6 @@ object PBImagesFrm: TPBImagesFrm
       8033373F773337733733330F8700078803333373FF77733F733333300FFF8800
       3333333773FFFF77333333333000003333333333377777333333}
     NumGlyphs = 2
+    TabOrder = 1
   end
 end

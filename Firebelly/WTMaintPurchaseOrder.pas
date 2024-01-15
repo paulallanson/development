@@ -942,13 +942,13 @@ var
   inx: integer;
 begin
   inx := sgEvents.row;
-  try
-    inx := POrder.Events.IndexOf(inx);
+  inx := POrder.Events.IndexOf(inx);
+  if inx >= 0 then
+  begin
     POEvent := POrder.Events[inx];
     memEventNotes.Text := POEvent.Narrative.DataInfo;
-  except
+  end else
     memEventNotes.Lines.Clear;
-  end;
 end;
 
 procedure TfrmWTMaintPurchaseOrder.sgEventsDblClick(Sender: TObject);
@@ -978,12 +978,7 @@ var
   frm: TfrmWTMaintPOEvents;
 begin
 //  inx := sgEvents.row;
-
-  try
-    inx := strtoint(sgEvents.cells[0,sgEvents.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgEvents.cells[0,sgEvents.row], 1);
 
   try
     frm := TfrmWTMaintPOEvents.Create(Self);

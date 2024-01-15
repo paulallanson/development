@@ -58,6 +58,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnCloseClick
+    ExplicitTop = 149
   end
   object SelectLst: TListBox
     Left = 248
@@ -79,6 +80,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnPrintClick
+    ExplicitTop = 149
   end
   object btnPreview: TBitBtn
     Left = 97
@@ -90,6 +92,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 149
   end
   object btnEmail: TBitBtn
     Left = 185
@@ -101,6 +104,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 149
   end
   object rdgrpType: TRadioGroup
     Left = 288
