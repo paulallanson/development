@@ -38,8 +38,11 @@ object dtmdlOrders: TdtmdlOrders
       '  Original_order,'
       '  Purchase_Orderline.Inactive,'
       '  Purchase_Orderline.Supp_Inv_Recd,'
-      '  Purchase_Order.Needs_Authorising,'
-      '  Purchase_OrderLine.Purchase_Order AS Order_Number'
+      '  Purchase_Order.Needs_Authorising,  '
+      '  Purchase_OrderLine.Purchase_Order AS Order_Number,'
+      '  0 as Authorised_By,'
+      '  0 as NCA_Live_lines,'
+      '  0 as NCA_Signed_Off  '
       'FROM Supplier'
       '      INNER JOIN (Purchase_Order'
       '      INNER JOIN ((Customer'
@@ -86,6 +89,10 @@ object dtmdlOrders: TdtmdlOrders
     Left = 16
     Top = 40
     ParamData = <
+      item
+        Name = 'RECORDS'
+        ParamType = ptInput
+      end
       item
         Name = 'Customer'
         DataType = ftInteger
@@ -270,6 +277,24 @@ object dtmdlOrders: TdtmdlOrders
     object qryOrdersOrder_Number: TFloatField
       FieldName = 'Order_Number'
       Origin = 'Order_Number'
+      Required = True
+    end
+    object qryOrdersAuthorised_By: TIntegerField
+      FieldName = 'Authorised_By'
+      Origin = 'Authorised_By'
+      ReadOnly = True
+      Required = True
+    end
+    object qryOrdersNCA_Live_lines: TIntegerField
+      FieldName = 'NCA_Live_lines'
+      Origin = 'NCA_Live_lines'
+      ReadOnly = True
+      Required = True
+    end
+    object qryOrdersNCA_Signed_Off: TIntegerField
+      FieldName = 'NCA_Signed_Off'
+      Origin = 'NCA_Signed_Off'
+      ReadOnly = True
       Required = True
     end
   end
@@ -799,7 +824,6 @@ object dtmdlOrders: TdtmdlOrders
   end
   object dtsCallOffs: TDataSource
     DataSet = qryCallOffs
-    OnDataChange = dtsCallOffsDataChange
     Left = 512
     Top = 40
   end
@@ -926,36 +950,6 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'cust_order_no'
       Required = True
       Size = 40
-    end
-    object qryCallOffsDescription: TWideStringField
-      FieldName = 'Description'
-      Origin = 'Description'
-      Size = 150
-    end
-    object qryCallOffsQuantity: TIntegerField
-      FieldName = 'Quantity'
-      Origin = 'Quantity'
-      Required = True
-    end
-    object qryCallOffsorder_price: TCurrencyField
-      FieldName = 'order_price'
-      Origin = 'order_price'
-      Required = True
-    end
-    object qryCallOffsorder_unit: TIntegerField
-      FieldName = 'order_unit'
-      Origin = 'order_unit'
-      Required = True
-    end
-    object qryCallOffsselling_price: TCurrencyField
-      FieldName = 'selling_price'
-      Origin = 'selling_price'
-      Required = True
-    end
-    object qryCallOffsselling_unit: TIntegerField
-      FieldName = 'selling_unit'
-      Origin = 'selling_unit'
-      Required = True
     end
     object qryCallOffsStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
@@ -1089,6 +1083,34 @@ object dtmdlOrders: TdtmdlOrders
       ReadOnly = True
       Required = True
       Size = 1
+    end
+    object qryCallOffsPart: TWideStringField
+      FieldName = 'Part'
+      Size = 25
+    end
+    object qryCallOffsDescription: TWideStringField
+      FieldName = 'Description'
+      Size = 100
+    end
+    object qryCallOffsQuantity: TIntegerField
+      FieldName = 'Quantity'
+    end
+    object qryCallOffsOrder_Price: TFloatField
+      FieldName = 'Order_Price'
+      DisplayFormat = '#,###,##0.000'
+    end
+    object qryCallOffsOrder_unit: TIntegerField
+      FieldName = 'Order_unit'
+    end
+    object qryCallOffsSelling_Price: TFloatField
+      FieldName = 'Selling_Price'
+      DisplayFormat = '#,###,##0.000'
+    end
+    object qryCallOffsSelling_Unit: TIntegerField
+      FieldName = 'Selling_Unit'
+    end
+    object qryCallOffsJob_Bag_no: TIntegerField
+      FieldName = 'Job_Bag_no'
     end
     object qryCallOffsAuthorised_By: TIntegerField
       FieldName = 'Authorised_By'

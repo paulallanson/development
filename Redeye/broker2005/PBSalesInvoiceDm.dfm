@@ -972,7 +972,7 @@ object dmSalesInvoice: TdmSalesInvoice
         ParamType = ptInput
         Value = Null
       end>
-    object qrySIHeaderGridInvoice_Date: TDateTimeField
+    object qrySIHeaderGridInvoice_Date: TSQLTimeStampField
       FieldName = 'Invoice_Date'
       Origin = 'Invoice_Date'
     end
@@ -1072,7 +1072,7 @@ object dmSalesInvoice: TdmSalesInvoice
       Origin = 'factoring_filename'
       Size = 30
     end
-    object qrySIHeaderGridfactoring_date: TDateTimeField
+    object qrySIHeaderGridfactoring_date: TSQLTimeStampField
       FieldName = 'factoring_date'
       Origin = 'factoring_date'
     end
@@ -3091,7 +3091,7 @@ object dmSalesInvoice: TdmSalesInvoice
         ParamType = ptInput
         Value = Null
       end>
-    object qrySCHeaderGridInvoice_Date: TDateTimeField
+    object qrySCHeaderGridInvoice_Date: TSQLTimeStampField
       FieldName = 'Invoice_Date'
       Origin = 'Invoice_Date'
     end
@@ -3201,7 +3201,7 @@ object dmSalesInvoice: TdmSalesInvoice
       Origin = 'factoring_filename'
       Size = 30
     end
-    object qrySCHeaderGridfactoring_date: TDateTimeField
+    object qrySCHeaderGridfactoring_date: TSQLTimeStampField
       FieldName = 'factoring_date'
       Origin = 'factoring_date'
     end

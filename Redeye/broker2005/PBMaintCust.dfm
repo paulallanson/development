@@ -26,9 +26,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1176
     Height = 642
-    ActivePage = tbDetails
+    ActivePage = tbInvoices
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 1172
+    ExplicitHeight = 641
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -1541,7 +1543,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 1
           Visible = False
-          ExplicitHeight = 135
           object lblGDPRSignedOperatorName: TLabel
             Left = 308
             Top = 50
@@ -1619,13 +1620,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object grpbxCredit: TGroupBox
           Left = 6
           Top = 2
-          Width = 433
+          Width = 425
           Height = 580
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
           DesignSize = (
-            433
+            425
             580)
           object Label5: TLabel
             Tag = 100
@@ -1729,7 +1730,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 223
-            Width = 434
+            Width = 426
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -1739,7 +1740,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 358
-            Width = 434
+            Width = 426
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -2095,7 +2096,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Convert Prospect to Customer'
           TabOrder = 1
           Visible = False
-          ExplicitTop = 596
         end
       end
     end
@@ -2187,7 +2187,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         Caption = 'Ecommerce'
         TabOrder = 1
-        ExplicitHeight = 623
         object GroupBox1: TGroupBox
           Left = 16
           Top = 101
@@ -2554,11 +2553,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1174
         object Panel13: TPanel
           Left = 1
           Top = 232
-          Width = 1172
+          Width = 1166
           Height = 40
           Align = alBottom
           ParentBackground = False
@@ -2593,22 +2591,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object CoolBar8: TCoolBar
           Left = 1
           Top = 1
-          Width = 1172
+          Width = 1166
           Height = 45
           Bands = <
             item
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1170
+              Width = 1160
             end>
           object ToolBar9: TToolBar
             Left = 11
             Top = 0
-            Width = 1157
+            Width = 1151
             Height = 41
             ButtonHeight = 36
-            ButtonWidth = 56
+            ButtonWidth = 59
             Caption = 'ToolBar1'
             Images = imglstjobs
             ShowCaptions = True
@@ -2621,7 +2619,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnBranchAddClick
             end
             object btnBranchChange: TToolButton
-              Left = 56
+              Left = 59
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -2629,7 +2627,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnBranchChangeClick
             end
             object btnBranchDelete: TToolButton
-              Left = 112
+              Left = 118
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -2641,7 +2639,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object dbgBranchDetails: TDBGrid
           Left = 1
           Top = 46
-          Width = 1172
+          Width = 1166
           Height = 186
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2817,8 +2815,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 309
-          ExplicitWidth = 1172
           object Label58: TLabel
             Left = 8
             Top = 13
@@ -2863,7 +2859,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 1172
           object Label59: TLabel
             Left = 9
             Top = 4
@@ -2966,8 +2961,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 604
-        ExplicitWidth = 1174
       end
       object CoolBar6: TCoolBar
         Left = 0
@@ -2979,16 +2972,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1172
+            Width = 1162
           end>
-        ExplicitWidth = 1174
         object tbrQuotes: TToolBar
           Left = 11
           Top = 0
-          Width = 1159
+          Width = 1153
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 56
+          ButtonWidth = 59
           Caption = 'ToolBar1'
           HotImages = imglstButtons
           Images = imglstButtons
@@ -3002,7 +2994,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteAddClick
           end
           object btnQuoteChange: TToolButton
-            Left = 56
+            Left = 59
             Top = 0
             Caption = '  &Change  '
             Enabled = False
@@ -3010,7 +3002,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteChangeClick
           end
           object btnQuoteCopy: TToolButton
-            Left = 112
+            Left = 118
             Top = 0
             Caption = '&Copy'
             Enabled = False
@@ -3018,7 +3010,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteCopyClick
           end
           object btnQuoteReQuote: TToolButton
-            Left = 168
+            Left = 177
             Top = 0
             Caption = 'Re-Quote'
             Enabled = False
@@ -3026,7 +3018,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteReQuoteClick
           end
           object btnQuoteDelete: TToolButton
-            Left = 224
+            Left = 236
             Top = 0
             Caption = '&Delete'
             Enabled = False
@@ -3034,7 +3026,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteDeleteClick
           end
           object btnQuotePrint: TToolButton
-            Left = 280
+            Left = 295
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -3042,7 +3034,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuotePrintClick
           end
           object ToolButton5: TToolButton
-            Left = 336
+            Left = 354
             Top = 0
             Width = 8
             Caption = 'ToolButton1'
@@ -3050,7 +3042,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnQuoteConvert: TToolButton
-            Left = 344
+            Left = 362
             Top = 0
             Caption = 'Con&vert'
             Enabled = False
@@ -3199,7 +3191,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtQuoteNumberKeyPress
-          ExplicitLeft = 1056
         end
         object BitBtn11: TBitBtn
           Left = 296
@@ -3232,8 +3223,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 604
-        ExplicitWidth = 1174
       end
       object CoolBar1: TCoolBar
         Left = 0
@@ -3245,16 +3234,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1172
+            Width = 1162
           end>
-        ExplicitWidth = 1174
         object tbrEnquiries: TToolBar
           Left = 11
           Top = 0
-          Width = 1159
+          Width = 1153
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 56
+          ButtonWidth = 59
           Caption = 'Toolbar1'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -3277,7 +3265,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqQuickClick
           end
           object btnEnqAdd: TToolButton
-            Left = 56
+            Left = 59
             Top = 0
             Hint = 'Add Enquiry'
             Caption = '&Add'
@@ -3287,7 +3275,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqAddClick
           end
           object btnEnqChange: TToolButton
-            Left = 112
+            Left = 118
             Top = 0
             Hint = 'Change enquiry'
             Caption = '  &Change  '
@@ -3298,7 +3286,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqChangeClick
           end
           object btnEnqCopy: TToolButton
-            Left = 168
+            Left = 177
             Top = 0
             Caption = 'Cop&y'
             Enabled = False
@@ -3308,7 +3296,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqCopyClick
           end
           object btnEnqDecline: TToolButton
-            Left = 224
+            Left = 236
             Top = 0
             Caption = '&Decline'
             Enabled = False
@@ -3316,7 +3304,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqDeclineClick
           end
           object ToolButton4: TToolButton
-            Left = 280
+            Left = 295
             Top = 0
             Width = 8
             Caption = 'ToolButton4'
@@ -3324,7 +3312,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnEnqPrint: TToolButton
-            Left = 288
+            Left = 303
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -3334,7 +3322,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqPrintClick
           end
           object btnRepliesSpacer: TToolButton
-            Left = 344
+            Left = 362
             Top = 0
             Width = 8
             Caption = 'btnRepliesSpacer'
@@ -3342,7 +3330,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnEnqReplies: TToolButton
-            Left = 352
+            Left = 370
             Top = 0
             Caption = '&Replies'
             Enabled = False
@@ -3350,7 +3338,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqRepliesClick
           end
           object btnEnqPricing: TToolButton
-            Left = 408
+            Left = 429
             Top = 0
             Caption = 'Pri&cing'
             Enabled = False
@@ -3358,7 +3346,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqPricingClick
           end
           object btnEnqQuote: TToolButton
-            Left = 464
+            Left = 488
             Top = 0
             Caption = 'Quo&te'
             Enabled = False
@@ -3366,7 +3354,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqQuoteClick
           end
           object btnEnqConvert: TToolButton
-            Left = 520
+            Left = 547
             Top = 0
             Caption = 'Con&vert'
             Enabled = False
@@ -3508,7 +3496,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtEnqNumberKeyPress
-          ExplicitLeft = 1056
         end
         object btnSearch: TBitBtn
           Left = 296
@@ -3538,8 +3525,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 604
-        ExplicitWidth = 1174
+        ExplicitTop = 594
+        ExplicitWidth = 1164
       end
       object Panel3: TPanel
         Left = 0
@@ -3549,6 +3536,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 553
+        ExplicitWidth = 1164
         DesignSize = (
           1168
           41)
@@ -3560,7 +3549,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label49: TLabel
-          Left = 942
+          Left = 934
           Top = 16
           Width = 73
           Height = 13
@@ -3577,14 +3566,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtOrderSearchChange
         end
         object edtOrderNumber: TEdit
-          Left = 1020
+          Left = 1012
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtOrderNumberKeyPress
-          ExplicitLeft = 1042
+          ExplicitLeft = 1008
         end
         object chkbxShowUnauthorised: TCheckBox
           Left = 376
@@ -3615,8 +3604,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
+        ExplicitWidth = 1164
         object PageScroller1: TPageScroller
           Left = 11
           Top = 0
@@ -3627,9 +3617,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 41
-            ButtonHeight = 29
+            ButtonHeight = 44
             ButtonWidth = 65
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3637,6 +3627,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowCaptions = True
             ShowHint = True
             TabOrder = 0
+            ExplicitWidth = 1137
             object btnOrderAdd: TToolButton
               Left = 0
               Top = 0
@@ -3647,7 +3638,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnMouseDown = btnOrderAddMouseDown
             end
             object btnOrderChange: TToolButton
-              Left = 62
+              Left = 65
               Top = 0
               Hint = 'Change order details'
               Caption = '  &Change  '
@@ -3656,7 +3647,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderChangeClick
             end
             object btnOrderRepeat: TToolButton
-              Left = 124
+              Left = 130
               Top = 0
               Hint = 'Repeat Order'
               Caption = '&Repeat'
@@ -3665,7 +3656,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderRepeatClick
             end
             object btnOrderDelete: TToolButton
-              Left = 186
+              Left = 195
               Top = 0
               Caption = 'Delete'
               Enabled = False
@@ -3673,7 +3664,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderDeleteClick
             end
             object btnOrderPrint: TToolButton
-              Left = 248
+              Left = 260
               Top = 0
               Hint = 'Print'
               Caption = '&Print'
@@ -3682,7 +3673,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderPrintClick
             end
             object btnOrderRequote: TToolButton
-              Left = 310
+              Left = 325
               Top = 0
               Caption = 'Re-quote'
               Enabled = False
@@ -3690,7 +3681,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderRequoteClick
             end
             object btnOrderHistory: TToolButton
-              Left = 372
+              Left = 390
               Top = 0
               Hint = 'Show Order History'
               Caption = '&History'
@@ -3699,7 +3690,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderHistoryClick
             end
             object btnOrderSeparator1: TToolButton
-              Left = 434
+              Left = 455
               Top = 0
               Width = 8
               Caption = 'btnOrderSeparator1'
@@ -3708,7 +3699,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Visible = False
             end
             object btnOrderAllocatefnc: TToolButton
-              Left = 442
+              Left = 463
               Top = 0
               Caption = 'Al&locate'
               DropdownMenu = pmnOrderAllocate
@@ -3717,7 +3708,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsDropDown
             end
             object btnOrderPicking: TToolButton
-              Left = 519
+              Left = 545
               Top = 0
               Caption = 'Pic&king'
               DropdownMenu = pmnOrderPicking
@@ -3725,7 +3716,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object ToolButton3: TToolButton
-              Left = 581
+              Left = 610
               Top = 0
               Width = 8
               Caption = 'ToolButton3'
@@ -3733,7 +3724,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderProofs: TToolButton
-              Left = 589
+              Left = 618
               Top = 0
               Caption = 'Proo&fs'
               DropdownMenu = pmnOrderProofs
@@ -3741,7 +3732,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object btnOrderDeliveriesSpacer: TToolButton
-              Left = 651
+              Left = 683
               Top = 0
               Width = 8
               Caption = 'btnOrderDeliveriesSpacer'
@@ -3749,7 +3740,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderDeliveries: TToolButton
-              Left = 659
+              Left = 691
               Top = 0
               Hint = 'Deliveries'
               Caption = 'Deliver&y'
@@ -3758,7 +3749,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderDeliveriesClick
             end
             object btnOrderHold: TToolButton
-              Left = 721
+              Left = 756
               Top = 0
               Hint = 'On Hold'
               Caption = '&Hold'
@@ -3948,15 +3939,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1172
+            Width = 1162
           end>
         object tbrJobs: TToolBar
           Left = 11
           Top = 0
-          Width = 1159
+          Width = 1153
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 56
+          ButtonWidth = 59
           Caption = 'ToolBar1'
           Images = imglstjobs
           ShowCaptions = True
@@ -3969,7 +3960,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobAddClick
           end
           object btnJobChange: TToolButton
-            Left = 56
+            Left = 59
             Top = 0
             Caption = '  &Change  '
             Enabled = False
@@ -3977,7 +3968,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobChangeClick
           end
           object btnJobRepeat: TToolButton
-            Left = 112
+            Left = 118
             Top = 0
             Caption = '&Repeat'
             Enabled = False
@@ -3985,7 +3976,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobRepeatClick
           end
           object btnJobDelete: TToolButton
-            Left = 168
+            Left = 177
             Top = 0
             Caption = '&Delete'
             Enabled = False
@@ -3993,7 +3984,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobDeleteClick
           end
           object btnJobPrint: TToolButton
-            Left = 224
+            Left = 236
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -4001,7 +3992,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobPrintClick
           end
           object ToolButton2: TToolButton
-            Left = 280
+            Left = 295
             Top = 0
             Width = 8
             Caption = 'ToolButton2'
@@ -4009,7 +4000,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnJobDraft: TToolButton
-            Left = 288
+            Left = 303
             Top = 0
             Caption = 'Dra&ft'
             Enabled = False
@@ -4218,7 +4209,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4230,7 +4221,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1151
+              Width = 1139
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 68
@@ -4252,7 +4243,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnStockChangeClick
               end
               object btnStockLabels: TToolButton
-                Left = 66
+                Left = 68
                 Top = 0
                 Hint = 'Print labels'
                 Caption = 'Labels'
@@ -4263,7 +4254,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnStockLabelsClick
               end
               object ToolButton1: TToolButton
-                Left = 132
+                Left = 136
                 Top = 0
                 Width = 8
                 Caption = 'ToolButton1'
@@ -4271,7 +4262,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Style = tbsSeparator
               end
               object btnStockLevels: TToolButton
-                Left = 140
+                Left = 144
                 Top = 0
                 Hint = 'Maintain stock levels'
                 Caption = '&Levels'
@@ -4282,7 +4273,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnStockLevelsClick
               end
               object btnStockEnquiry: TToolButton
-                Left = 206
+                Left = 212
                 Top = 0
                 Caption = 'Enquiry'
                 DropdownMenu = pmnStockEnquiry
@@ -4488,8 +4479,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 565
-        ExplicitWidth = 1170
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4501,7 +4490,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1166
+            Width = 1162
           end>
         object PageScroller3: TPageScroller
           Left = 11
@@ -4514,7 +4503,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 53
@@ -4536,7 +4525,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnInvoiceChangeClick
             end
             object btnInvoiceReprint: TToolButton
-              Left = 51
+              Left = 53
               Top = 0
               Caption = '&Reprint'
               Enabled = False
@@ -4627,8 +4616,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 584
-        ExplicitWidth = 1170
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4645,7 +4632,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtInvoiceSearchChange
         end
         object Panel11: TPanel
-          Left = 890
+          Left = 884
           Top = 1
           Width = 283
           Height = 36
@@ -4653,7 +4640,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 886
           object Label54: TLabel
             Left = 88
             Top = 13
@@ -4691,8 +4677,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 582
-        ExplicitWidth = 1174
         object Label33: TLabel
           Left = 8
           Top = 16
@@ -4724,7 +4708,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Height = 573
         Align = alRight
         ButtonHeight = 36
-        ButtonWidth = 38
+        ButtonWidth = 40
         Caption = 'ToolBar1'
         HotImages = imgIcons
         Images = imgIcons
@@ -4732,8 +4716,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ShowCaptions = True
         ShowHint = True
         TabOrder = 1
-        ExplicitLeft = 1135
-        ExplicitHeight = 582
         object btnWord: TToolButton
           Left = 0
           Top = 0
@@ -4806,8 +4788,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnColumnClick = lstvwDocumentsColumnClick
         OnCompare = lstvwDocumentsCompare
         OnDblClick = lstvwDocumentsDblClick
-        ExplicitWidth = 1135
-        ExplicitHeight = 582
       end
     end
     object tbActivity: TTabSheet
@@ -4831,7 +4811,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1172
           object Label61: TLabel
             Left = 9
             Top = 4
@@ -4882,8 +4861,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 351
-          ExplicitHeight = 276
         end
       end
       object pnlActivityList: TPanel
@@ -4895,26 +4872,25 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Caption = 'pnlActivityList'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1174
         object CoolBar7: TCoolBar
           Left = 1
           Top = 1
-          Width = 1172
+          Width = 1166
           Height = 45
           Bands = <
             item
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1170
+              Width = 1160
             end>
           object ToolBar8: TToolBar
             Left = 11
             Top = 0
-            Width = 1157
+            Width = 1151
             Height = 41
             ButtonHeight = 36
-            ButtonWidth = 56
+            ButtonWidth = 59
             Caption = 'ToolBar1'
             Images = imglstjobs
             ShowCaptions = True
@@ -4927,7 +4903,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnActivityAddClick
             end
             object btnActivityChange: TToolButton
-              Left = 56
+              Left = 59
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -4935,7 +4911,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnActivityChangeClick
             end
             object btnActivityDelete: TToolButton
-              Left = 112
+              Left = 118
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -4947,7 +4923,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel16: TPanel
           Left = 1
           Top = 280
-          Width = 1172
+          Width = 1166
           Height = 40
           Align = alBottom
           ParentBackground = False
@@ -4970,7 +4946,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object dbgActivityDetails: TDBGrid
           Left = 1
           Top = 46
-          Width = 1172
+          Width = 1166
           Height = 234
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -5062,7 +5038,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1174
       end
       object Panel20: TPanel
         Left = 0
@@ -5107,7 +5082,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 381
           object Label64: TLabel
             Left = 8
             Top = 8
@@ -5154,7 +5128,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 3
-          ExplicitHeight = 380
           object Button1: TButton
             Left = 16
             Top = 16
@@ -5225,7 +5198,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 2
-        ExplicitHeight = 598
         object Label62: TLabel
           Left = 8
           Top = 22
@@ -5313,6 +5285,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
+    ExplicitTop = 723
+    ExplicitWidth = 1172
   end
   object pnlFooter: TPanel
     Left = 0
@@ -5322,11 +5296,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 682
+    ExplicitWidth = 1172
     DesignSize = (
       1176
       41)
     object DelLabel: TLabel
-      Left = 809
+      Left = 801
       Top = 16
       Width = 109
       Height = 13
@@ -5341,7 +5317,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ExplicitLeft = 819
     end
     object OKBitBtn: TBitBtn
-      Left = 955
+      Left = 947
       Top = 10
       Width = 75
       Height = 25
@@ -5415,9 +5391,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
+      ExplicitLeft = 943
     end
     object CancelBitBtn: TBitBtn
-      Left = 1035
+      Left = 1027
       Top = 10
       Width = 75
       Height = 25
@@ -5492,6 +5469,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 1023
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5587,6 +5565,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1172
     DesignSize = (
       1176
       41)
@@ -5606,7 +5585,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     object NameEdit: TEdit
       Left = 108
       Top = 8
-      Width = 539
+      Width = 531
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite
@@ -5615,6 +5594,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
+      ExplicitWidth = 527
     end
   end
   object FlashTimer: TTimer

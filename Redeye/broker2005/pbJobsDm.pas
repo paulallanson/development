@@ -35,7 +35,7 @@ type
     qryJobsJob_Bag: TIntegerField;
     qryJobsJob_Bag_Descr: TWideStringField;
     qryJobsCustomer_Name: TWideStringField;
-    qryJobsDate_Point: TDateTimeField;
+    qryJobsDate_Point: TSQLTimeStampField;
     qryJobsBranch_Name: TWideStringField;
     qryJobsCustomer: TIntegerField;
     qryJobsBranch_No: TIntegerField;
@@ -54,7 +54,7 @@ type
     qryJobsAccount_Manager: TWideStringField;
     qryJobsDescription_Reference: TWideStringField;
     qryJobsOn_Hold: TWideStringField;
-    qryJobsDate_Start: TDateTimeField;
+    qryJobsDate_Start: TSQLTimeStampField;
     qryJobsNCA_Live_Lines: TIntegerField;
     qryJobsNCA_Signed_Off: TIntegerField;
     procedure qryJobsStatus_TextGetText(Sender: TField; var Text: String;
