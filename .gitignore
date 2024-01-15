@@ -76,6 +76,9 @@ modules/
 # Access databases
 *.mdb
 
+#Log files
+*.log
+
 # Components
 Components/Quasidata/
 
