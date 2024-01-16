@@ -181,13 +181,10 @@ type
     qryJBAllLinesProcess: TIntegerField;
     qryJBAllLinesPrice_Unit: TIntegerField;
     qryJBAllLinesSelling_Price: TCurrencyField;
-    qryJBAllLinesSequence_no: TIntegerField;
     qryJBAllLinesReady_to_invoice: TWideStringField;
     qryJBAllLinesQty_Invoiced: TFloatField;
     qryJBAllLinesUnit_Cost: TCurrencyField;
     qryJBAllLinesUnit_SSP: TCurrencyField;
-    qryJBAllLinesInvoiced_By: TIntegerField;
-    qryJBAllLinesInvoiced_Date: TDateTimeField;
     qryJBAllLinesUnit_Cost_plus_OHD: TCurrencyField;
     qryJBAllLinesUnit_SSP_Original: TCurrencyField;
     qryJBAllLinesQuote: TFloatField;
@@ -205,61 +202,16 @@ type
     qryJBAllLinesVat_Description: TWideStringField;
     qryAllSalesInvoicesSales_Invoice: TIntegerField;
     qryAllSalesInvoicesSales_Invoice_No: TWideStringField;
-    qryAllSalesInvoicesInvoice_Date: TDateTimeField;
+    qryAllSalesInvoicesInvoice_Date: TSQLTimeStampField;
     qryAllSalesInvoicesInvoice_Description: TWideStringField;
     qryAllSalesInvoicesInvoice_or_Credit: TWideStringField;
     qryAllSalesInvoicesGoods_Value: TFloatField;
     qryAllSalesInvoicesVat_Value: TFloatField;
     qryAllSalesInvoicesTotal_Value: TFloatField;
-    qryJBRepeatLinesJob_Bag: TIntegerField;
-    qryJBRepeatLinesJob_Bag_Line: TIntegerField;
-    qryJBRepeatLinesJob_Bag_Line_Type: TWideStringField;
-    qryJBRepeatLinesPurchase_Order: TFloatField;
-    qryJBRepeatLinesLine: TIntegerField;
-    qryJBRepeatLinesSupplier: TIntegerField;
-    qryJBRepeatLinesBranch_No: TIntegerField;
-    qryJBRepeatLinesJob_Bag_Line_Descr: TWideStringField;
-    qryJBRepeatLinesJob_Bag_Line_Cost: TCurrencyField;
-    qryJBRepeatLinesJob_Bag_Line_Sell: TCurrencyField;
-    qryJBRepeatLinesJob_Bag_Line_Invoiced: TWideStringField;
-    qryJBRepeatLinesJob_Bag_Quantity: TIntegerField;
-    qryJBRepeatLinesVAT_Code: TIntegerField;
-    qryJBRepeatLinesCurrency_Code: TIntegerField;
-    qryJBRepeatLinessupp_inv_recd: TWideStringField;
-    qryJBRepeatLinesProduct_Type: TIntegerField;
-    qryJBRepeatLinesinactive: TWideStringField;
-    qryJBRepeatLinesOperator: TIntegerField;
-    qryJBRepeatLinesSales_Order: TIntegerField;
-    qryJBRepeatLinesSales_Order_Line_no: TIntegerField;
-    qryJBRepeatLinesJob_Bag_Line_Status: TIntegerField;
-    qryJBRepeatLinesworks_order: TIntegerField;
-    qryJBRepeatLinesProcess: TIntegerField;
-    qryJBRepeatLinesPrice_Unit: TIntegerField;
-    qryJBRepeatLinesSelling_Price: TCurrencyField;
-    qryJBRepeatLinesSequence_no: TIntegerField;
-    qryJBRepeatLinesReady_to_invoice: TWideStringField;
-    qryJBRepeatLinesQty_Invoiced: TFloatField;
-    qryJBRepeatLinesUnit_Cost: TCurrencyField;
-    qryJBRepeatLinesUnit_SSP: TCurrencyField;
-    qryJBRepeatLinesInvoiced_By: TIntegerField;
-    qryJBRepeatLinesInvoiced_Date: TDateTimeField;
-    qryJBRepeatLinesUnit_Cost_plus_OHD: TCurrencyField;
-    qryJBRepeatLinesUnit_SSP_Original: TCurrencyField;
-    qryJBRepeatLinesQuote: TFloatField;
-    qryJBRepeatLinesQuote_Line_no: TIntegerField;
-    qryJBRepeatLinesCost_Number: TIntegerField;
-    qryJBRepeatLinesCategory_Number: TIntegerField;
-    qryJBRepeatLinesSub_Category: TIntegerField;
-    qryJBRepeatLinesJob_Cost_Markup_Perc: TFloatField;
-    qryJBRepeatLinesLine_Is_Internal_Cost: TWideStringField;
-    qryJBRepeatLinesReseller_Price: TCurrencyField;
-    qryJBRepeatLinesJob_Bag_Line_Reseller: TCurrencyField;
-    qryJBRepeatLinesSupplierName: TWideStringField;
-    qryJBRepeatLinesBranchName: TWideStringField;
     qryAllPurchInvoicesSupplier_Name: TWideStringField;
     qryAllPurchInvoicesSupplier_Invoice: TIntegerField;
     qryAllPurchInvoicesSupplier_Invoice_no: TWideStringField;
-    qryAllPurchInvoicesInvoice_Date: TDateTimeField;
+    qryAllPurchInvoicesInvoice_Date: TSQLTimeStampField;
     qryAllPurchInvoicesSupp_Inv_Alt_Ref: TWideStringField;
     qryAllPurchInvoicesInvoice_or_Credit: TWideStringField;
     qryAllPurchInvoicesPurchase_order: TFloatField;
@@ -268,7 +220,7 @@ type
     qryAllPurchInvoicesVat_Value: TFloatField;
     qryAllPurchInvoicesTotal_Value: TFloatField;
     qryDataCollectJob_Bag_Time_Log: TIntegerField;
-    qryDataCollectDate_Point: TDateTimeField;
+    qryDataCollectDate_Point: TSQLTimeStampField;
     qryDataCollectWork_Centre_Operator: TIntegerField;
     qryDataCollectWC_Operator_Name: TWideStringField;
     qryDataCollectProcess_Group: TIntegerField;
@@ -284,8 +236,8 @@ type
     qryDataCollectNumber_Up: TIntegerField;
     qryDataCollectQuantity: TFloatField;
     qryDataCollectLaser_Format: TWideStringField;
-    qryDataCollectLabour_Time_From: TDateTimeField;
-    qryDataCollectLabour_Time_To: TDateTimeField;
+    qryDataCollectLabour_Time_From: TSQLTimeStampField;
+    qryDataCollectLabour_Time_To: TSQLTimeStampField;
     qryDataCollectLabour_Hours: TFloatField;
     qryDataCollectMachine_Hours: TFloatField;
     qryDataCollectLabour_Overtime_Hours: TFloatField;
@@ -1898,7 +1850,7 @@ type
 implementation
 
 uses
-  ComObj, ActiveX, PBNarrativeDM, pbDatabase;
+  ComObj, ActiveX, PBNarrativeDM, pbDatabase, Utils;
 
 {$R *.DFM}
 
@@ -3167,7 +3119,7 @@ begin
             Parambyname('Cash_Sales').asstring := 'N';
 
           ParamByName('Job_Bag_Status').Asinteger := JBStatus;
-          ParamByName('Date').AsDateTime := Date;
+          ParamByName('Date').AsDateTime := TUtils.CheckSmallDateTime(Date);
           ParamByName('Goods_Required').AsDateTime := GoodsRequired;
           ParamByName('Date_Start').AsDateTime := StartDate;
           ParamByName('Office_Contact').Asinteger := OfficeContact;

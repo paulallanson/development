@@ -820,7 +820,6 @@ object dmBroker: TdmBroker
     Params.Strings = (
       '='
       'ConnectionDef=Redeye')
-    Connected = True
     Left = 1290
     Top = 40
   end

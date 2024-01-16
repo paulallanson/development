@@ -408,7 +408,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Top = 1
       Width = 976
       Height = 447
-      ActivePage = tsNCA
+      ActivePage = tsGeneral
       Align = alClient
       TabOrder = 0
       OnChange = OrderLinePageChange
@@ -581,7 +581,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'Numbering'
         end
         object Label41: TLabel
-          Left = 386
+          Left = 391
           Top = 156
           Width = 41
           Height = 13
@@ -605,7 +605,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'Stock Ref.'
         end
         object Label55: TLabel
-          Left = 393
+          Left = 391
           Top = 28
           Width = 54
           Height = 13
@@ -642,8 +642,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label61: TLabel
           Left = 587
           Top = 21
-          Width = 49
-          Height = 39
+          Width = 77
+          Height = 29
           Caption = 'Expected Reorder date'
           WordWrap = True
         end
@@ -847,7 +847,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnChange = CustDescEditChange
           OnEnter = CustDescEditEnter
           OnExit = CustDescEditExit
-          ExplicitHeight = 43
         end
         object OnHoldChkBox: TCheckBox
           Left = 451
@@ -868,7 +867,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           ReadOnly = True
           TabOrder = 9
-          ExplicitTop = 175
         end
         object ProdTypeBtn: TButton
           Left = 339
@@ -885,7 +883,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ParentFont = False
           TabOrder = 10
           OnClick = ProdTypeBtnClick
-          ExplicitTop = 175
         end
         object DepthEdit: TEdit
           Tag = 3
@@ -897,7 +894,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 12
           OnChange = DepthEditChange
           OnExit = DepthEditExit
-          ExplicitTop = 225
         end
         object WidthEdit: TEdit
           Tag = 4
@@ -909,7 +905,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 14
           OnChange = WidthEditChange
           OnExit = WidthEditExit
-          ExplicitTop = 225
         end
         object Unit1: TEdit
           Tag = 5
@@ -922,7 +917,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ReadOnly = True
           TabOrder = 13
           Text = 'mm'
-          ExplicitTop = 225
         end
         object Unit2: TEdit
           Tag = 6
@@ -935,7 +929,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ReadOnly = True
           TabOrder = 15
           Text = 'mm'
-          ExplicitTop = 225
         end
         object UpDown1: TUpDown
           Left = 191
@@ -947,7 +940,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabStop = True
           OnChanging = UpDown1Changing
           OnExit = UpDown1Exit
-          ExplicitTop = 224
         end
         object UpDown2: TUpDown
           Left = 367
@@ -959,7 +951,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabStop = True
           OnChanging = UpDown2Changing
           OnExit = UpDown2Exit
-          ExplicitTop = 224
         end
         object ExpectedLifeSpinEdit: TSpinEdit
           Left = 926
@@ -991,7 +982,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ShowHint = True
           TabOrder = 16
           OnClick = defaultSizeBtnClick
-          ExplicitTop = 224
         end
         object FormsPerBoxEdit: TEdit
           Left = 87
@@ -1002,7 +992,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           TabOrder = 20
           OnExit = FormsPerBoxEditExit
-          ExplicitTop = 303
         end
         object SetsEdit: TEdit
           Left = 87
@@ -1012,7 +1001,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Anchors = [akLeft, akBottom]
           TabOrder = 18
           OnExit = SetsEditExit
-          ExplicitTop = 277
         end
         object NumberingEdit: TEdit
           Left = 87
@@ -1023,7 +1011,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 80
           TabOrder = 17
           OnExit = NumberingEditExit
-          ExplicitTop = 251
         end
         object ArtEdit: TMemo
           Left = 451
@@ -1035,7 +1022,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ScrollBars = ssVertical
           TabOrder = 30
           OnExit = ArtEditExit
-          ExplicitHeight = 67
         end
         object PlateChangeSpin: TSpinEdit
           Tag = 108
@@ -1049,7 +1035,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           TabOrder = 19
           Value = 0
           OnExit = PlateChangeSpinExit
-          ExplicitTop = 276
         end
         object ArtworkBtn: TButton
           Left = 736
@@ -1074,8 +1059,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 36
-          ExplicitTop = 332
-          ExplicitWidth = 964
           object Label42: TLabel
             Left = 5
             Top = 9
@@ -1426,7 +1409,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'Proofs'
           ParentBackground = False
           TabOrder = 32
-          ExplicitTop = 250
           object ProofByLabel: TLabel
             Left = 8
             Top = 22
@@ -1564,7 +1546,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           MaxLength = 40
           TabOrder = 8
           OnExit = edtDescReferenceExit
-          ExplicitTop = 151
         end
         object pnlFSCClaim: TPanel
           Left = 0
@@ -1575,7 +1556,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 11
-          ExplicitTop = 198
           object lblFSCClaim: TLabel
             Left = 8
             Top = 6
@@ -1686,7 +1666,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'File Copies Received'
           TabOrder = 37
           OnClick = chkbxFileCopiesClick
-          ExplicitTop = 230
         end
         object edtAltPurchaseOrder: TEdit
           Left = 670
@@ -1726,7 +1705,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             OnDrawCell = sgPartDetailsDrawCell
             OnEnter = sgPartDetailsEnter
             OnExit = sgPartDetailsExit
-            ExplicitWidth = 960
             ColWidths = (
               64
               102
@@ -1811,8 +1789,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 962
-          ExplicitHeight = 129
           object SameAsLbl: TLabel
             Left = 286
             Top = 52
@@ -1830,8 +1806,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             ScrollBars = ssVertical
             TabOrder = 0
             OnChange = AddNotesMemoChange
-            ExplicitWidth = 962
-            ExplicitHeight = 113
           end
           object Panel13: TPanel
             Left = 0
@@ -1844,7 +1818,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Caption = 'Notes'
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 962
           end
         end
         object pnlVersions: TPanel
@@ -1857,8 +1830,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'pnlVersions'
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 265
-          ExplicitWidth = 962
           object Panel12: TPanel
             Left = 0
             Top = 0
@@ -1870,7 +1841,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Caption = 'Versions'
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 962
           end
           object Panel14: TPanel
             Left = 877
@@ -1882,7 +1852,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 871
             object btnAddStockCode: TBitBtn
               Left = 8
               Top = 8
@@ -1929,7 +1898,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             TabOrder = 2
             OnDblClick = sgVersionsDblClick
             OnDrawCell = sgVersionsDrawCell
-            ExplicitWidth = 871
             ColWidths = (
               146
               164
@@ -2070,7 +2038,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnDblClick = ExtChgDetsStringGridDblClick
           OnDrawCell = ExtChgDetsStringGridDrawCell
           OnSelectCell = ExtChgDetsStringGridSelectCell
-          ExplicitWidth = 516
           ColWidths = (
             243
             59
@@ -2415,7 +2382,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnDblClick = DelivDetsStringGridDblClick
           OnDrawCell = DelivDetsStringGridDrawCell
           OnSelectCell = DelivDetsStringGridSelectCell
-          ExplicitWidth = 449
           ColWidths = (
             201
             67)
@@ -2515,7 +2481,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ReadOnly = True
           TabOrder = 5
           WantReturns = False
-          ExplicitLeft = 381
         end
         object Panel1: TPanel
           Left = 490
@@ -3028,7 +2993,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ListSource = PBPODM.dtsJobType
           TabOrder = 9
           OnClick = dblkpJobTypeClick
-          ExplicitLeft = 231
         end
         object btnClearJobType: TBitBtn
           Left = 383
@@ -3055,7 +3019,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           ShowHint = True
           TabOrder = 10
           OnClick = btnClearJobTypeClick
-          ExplicitLeft = 421
         end
       end
       object tsCalloffs: TTabSheet
@@ -3125,7 +3088,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           OnDblClick = sgCallOffDblClick
           OnDrawCell = sgCallOffDrawCell
           OnSelectCell = sgCallOffSelectCell
-          ExplicitWidth = 710
           ColWidths = (
             102
             77
@@ -3214,7 +3176,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Anchors = [akTop, akRight]
           TabOrder = 4
           OnChange = NoCallOffEditChange
-          ExplicitLeft = 851
         end
         object StockQtyMemo: TMemo
           Left = 805
@@ -3228,7 +3189,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Enabled = False
           ReadOnly = True
           TabOrder = 5
-          ExplicitLeft = 843
         end
         object SchedQtyMemo: TMemo
           Left = 805
@@ -3242,7 +3202,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Enabled = False
           ReadOnly = True
           TabOrder = 6
-          ExplicitLeft = 843
         end
         object DelivQtyMemo: TMemo
           Left = 805
@@ -3256,7 +3215,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Enabled = False
           ReadOnly = True
           TabOrder = 7
-          ExplicitLeft = 843
         end
         object InStockQtyMemo: TMemo
           Left = 805
@@ -3270,7 +3228,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Enabled = False
           ReadOnly = True
           TabOrder = 8
-          ExplicitLeft = 843
         end
       end
       object tsStockUsage: TTabSheet
@@ -3582,7 +3539,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C00000000000004600000000000000000000000070C90274EA47DA01
+              00000000C00000000000004600000000000000000000000030950963EB47DA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3758,7 +3715,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              0000000000000000000000000000000070C90274EA47DA0170C90274EA47DA01
+              0000000000000000000000000000000030950963EB47DA0130950963EB47DA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4234,7 +4191,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C00000000000004600000000000000000000000070C90274EA47DA01
+              00000000C00000000000004600000000000000000000000030950963EB47DA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4548,7 +4505,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
             TabOrder = 0
             OnDblClick = btbtnOpenClick
-            ExplicitWidth = 947
           end
           object btnEmail: TBitBtn
             Left = 351
@@ -4912,7 +4868,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             TabOrder = 0
             OnDblClick = strgrdSalesInvsDblClick
             OnDrawCell = InvsGridsDrawCell
-            ExplicitWidth = 956
           end
           object mmSInvQtyTot: TMemo
             Left = 240

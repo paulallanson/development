@@ -2701,7 +2701,7 @@ begin
       end;
 
     JobBag.CustOrderNo := edtCustOrderNo.Text;
-    JobBag.Quantity := strtoint(memQuantity.text);
+    JobBag.Quantity := StrToIntDef(memQuantity.text, 0);
     JobBag.Operator := frmPBMainMenu.iOperator;
     JobBag.ContactNo := dblkpCustomerContact.keyvalue;
 //    JobBag.Rep := dblkpRep.keyvalue;
@@ -3110,11 +3110,10 @@ begin
     QtyToDeliver := JobBag.Quantity;
     DatePoint := Date;
 
-    try
-      NoOfBoxes := JobBag.Quantity div strtoint(OrdLine.FormsPerBox);
-    except
+    var n := StrToIntDef(OrdLine.FormsPerBox, 0);
+    if n > 0 then
+      NoOfBoxes := JobBag.Quantity div n else
       NoOfBoxes := 1;
-    end;
 
     Customer := iCust;
     BranchNoZero := PurchaseOrder.BranchNo;
@@ -5761,7 +5760,7 @@ var
   myImage: TImage;
 begin
   if dmBroker.iAccCtrlMenu = 3 then exit;
-  iLine := strtoint(copy((Sender as TImage).name,4,3));
+  iLine := StrToIntDef(copy((Sender as TImage).name,4,3), 0);
 
   for iChecked := 0 to 2 do
     if iChecked <> (Sender as TImage).tag then
@@ -5867,7 +5866,7 @@ begin
         try
           myImage := (Components[icount] as TImage);
           (Components[icount] as TImage).Left := cellleft(sgLines,7);
-          iRow := strtoint(copy((Components[icount] as TImage).name,4,3));
+          iRow := StrToIntDef(copy((Components[icount] as TImage).name,4,3), 0);
           if iRow >= sgLines.TopRow then
             begin
               (Components[icount] as TImage).Top := celltop(sgLines,iRow);
@@ -8369,7 +8368,7 @@ end;
 procedure TPBMaintJobBagFrm.memQuantityChange(Sender: TObject);
 begin
   try
-    JobBag.Quantity := strtoint(memQuantity.text)
+    JobBag.Quantity := StrToIntDef(memQuantity.text, 0)
   except
     JobBag.Quantity := 0;
   end;

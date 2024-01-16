@@ -41,7 +41,7 @@ type
     qryJobsBranch_No: TIntegerField;
     qryJobsAccount_Code: TWideStringField;
     qryJobsCust_Order_no: TWideStringField;
-    qryJobsGoods_Required: TDateTimeField;
+    qryJobsGoods_Required: TSQLTimeStampField;
     qryJobsQuantity: TFloatField;
     qryJobsJob_Bag_Status_descr: TWideStringField;
     qryJobsJob_Bag_Status: TIntegerField;
@@ -55,8 +55,20 @@ type
     qryJobsDescription_Reference: TWideStringField;
     qryJobsOn_Hold: TWideStringField;
     qryJobsDate_Start: TSQLTimeStampField;
+    qryJobsCash_Lines: TIntegerField;
+    qryJobsProduction_Status: TWideStringField;
     qryJobsNCA_Live_Lines: TIntegerField;
     qryJobsNCA_Signed_Off: TIntegerField;
+    qryJobsPO_Lines: TIntegerField;
+    qryJobsProduction_Complete: TWideStringField;
+    qryJobsQuote: TFloatField;
+    qryJobsFile_Copies_Received_Date: TSQLTimeStampField;
+    qryJobsFile_Copies_Received_By_Name: TWideStringField;
+    qryJobsSub_Rep_Name: TWideStringField;
+    qryJobsInvoice_This_Week: TWideStringField;
+    qryJobsEnd_User_Name: TWideStringField;
+    qryJobsPack_Format_Description: TWideStringField;
+    qryJobsEnclosing_Type: TWideStringField;
     procedure qryJobsStatus_TextGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
   private
@@ -119,7 +131,8 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu;
+uses
+  pbDatabase, pbMainMenu, Utils;
 
 const
   JBReturnsSQL =
@@ -204,13 +217,14 @@ var
   { Local function }
   { Remember, SQL likes American date formats with hyphens in quotes }
   { But Access doesn't so we have to know what we're connected to }
-function qDate(const aDate : TDateTime) : string;
+  function qDate(const aDate : TDateTime) : string;
   begin
     if dmBroker.IsSQL then
       Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
     else
       Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
   end;
+
 { Local function }
 begin
   qryJobs.sql.clear;
@@ -239,7 +253,7 @@ begin
                    + ' WHERE JBPS.Job_Bag_Production_Status = Job_Bag.Job_Bag_Production_Status) LIKE ''%' + ProductionStatus + '%'')';
   if CustomerRef <> '' then
     sTemp := sTemp + ' AND (Job_Bag.Cust_Order_no LIKE ''' + CustomerRef + '%'')';
-  sTemp := sTemp + ' AND Job_Bag.Date_Point >= ' + qDate(JobDate);
+  sTemp := sTemp + ' AND Job_Bag.Date_Point >= ' + TUtils.CheckSmallDateTime(qDate(JobDate));
   if DateRequired <> 0 then
     sTemp := sTemp + ' AND Job_Bag.Goods_Required <= ' + qDate(DateRequired);
   sTemp := sTemp + ' AND ((Job_Bag.inactive is NULL) or (Job_Bag.inactive = ''N'') or '

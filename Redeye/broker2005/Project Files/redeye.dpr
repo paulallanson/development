@@ -418,7 +418,8 @@ uses
   STRPPODelivNote in '..\STRPPODelivNote.pas' {STRPPODelivNoteFrm},
   Printer.Enums in '..\..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\..\PrinterTools\Printer.Interfaces.pas',
-  Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas';
+  Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas',
+  Utils in '..\Utils.pas';
 
 {$R *.RES}
 

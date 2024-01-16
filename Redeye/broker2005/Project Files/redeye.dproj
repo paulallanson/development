@@ -1367,6 +1367,7 @@
         <DCCReference Include="..\..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Tools.pas"/>
+        <DCCReference Include="..\Utils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -1398,7 +1399,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\redeye.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\redeye.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>redeye.exe</RemoteName>
                         <Overwrite>true</Overwrite>

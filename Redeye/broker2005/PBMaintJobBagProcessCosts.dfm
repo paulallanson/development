@@ -25,6 +25,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 389
+    ExplicitWidth = 1228
     object OKBitBtn: TBitBtn
       Left = 536
       Top = 7
@@ -242,6 +244,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1228
   end
   object dblkpVAT: TDBLookupComboBox
     Left = 488
