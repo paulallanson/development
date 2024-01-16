@@ -1,6 +1,7 @@
 object dtmdlDeliveries: TdtmdlDeliveries
-  Height = 505
-  Width = 720
+  Height = 631
+  Width = 900
+  PixelsPerInch = 120
   object AdhocSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -12,8 +13,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '        Postcode'
       'from Ad_hoc_Address'
       'where Ad_hoc_Address = :Ad_hoc_Address')
-    Left = 25
-    Top = 32
+    Left = 31
+    Top = 40
     ParamData = <
       item
         Name = 'Ad_hoc_Address'
@@ -30,8 +31,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '        Postcode'
       'from Rep'
       'where Rep = :Rep')
-    Left = 98
-    Top = 32
+    Left = 123
+    Top = 40
     ParamData = <
       item
         Name = 'Rep'
@@ -51,8 +52,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       #9#9#9'Supplier_Branch.Branch_no = :Branch_no and'
       '        Supplier_Branch.Supplier = Supplier.Supplier'
       ' ')
-    Left = 171
-    Top = 32
+    Left = 214
+    Top = 40
     ParamData = <
       item
         Name = 'Supplier'
@@ -72,8 +73,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '        Postcode'
       'from Company'
       'where Company = 1')
-    Left = 245
-    Top = 32
+    Left = 306
+    Top = 40
   end
   object CustomerSQL: TFDQuery
     ConnectionName = 'PB'
@@ -88,8 +89,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'where ((Customer_Branch.Customer = :Customer) and'
       #9#9#9'(Branch_no = :Branch_no)) and'
       '        Customer_Branch.Customer = Customer.Customer')
-    Left = 318
-    Top = 32
+    Left = 398
+    Top = 40
     ParamData = <
       item
         Name = 'Customer'
@@ -199,8 +200,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         'rchase_Order = 0)'
       'ORDER BY Delivery_Detail.Date_Point desc'
       ' ')
-    Left = 24
-    Top = 96
+    Left = 30
+    Top = 120
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -404,8 +405,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
   end
   object dtsDetails: TDataSource
     DataSet = qryPODetails
-    Left = 95
-    Top = 96
+    Left = 119
+    Top = 120
   end
   object qrySODetails: TFDQuery
     OnCalcFields = qrySODetailsCalcFields
@@ -445,12 +446,14 @@ object dtmdlDeliveries: TdtmdlDeliveries
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 152
+    Left = 30
+    Top = 190
     ParamData = <
       item
         Name = 'Sales_order'
         DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
     object qrySODetailsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -458,15 +461,15 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsSales_order_delivery_no: TIntegerField
       FieldName = 'Sales_order_delivery_no'
     end
-    object qrySODetailsDelivery_Date: TDateTimeField
+    object qrySODetailsDelivery_Date: TSQLTimeStampField
       FieldName = 'Delivery_Date'
     end
-    object qrySODetailsDespatch_note_No: TStringField
+    object qrySODetailsDespatch_note_No: TWideStringField
       FieldName = 'Despatch_note_No'
       FixedChar = True
       Size = 40
     end
-    object qrySODetailsCust_Order_No: TStringField
+    object qrySODetailsCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -480,12 +483,12 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsAd_hoc_Address: TIntegerField
       FieldName = 'Ad_hoc_Address'
     end
-    object qrySODetailsReplenish_ID: TStringField
+    object qrySODetailsReplenish_ID: TWideStringField
       FieldName = 'Replenish_ID'
       FixedChar = True
       Size = 2
     end
-    object qrySODetailsReplenish_Source_Descr: TStringField
+    object qrySODetailsReplenish_Source_Descr: TWideStringField
       FieldName = 'Replenish_Source_Descr'
       FixedChar = True
       Size = 40
@@ -496,16 +499,16 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsBranch_no0: TIntegerField
       FieldName = 'Branch_no0'
     end
-    object qrySODetailsDeliveryName: TStringField
+    object qrySODetailsDeliveryName: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryName'
       Size = 50
       Calculated = True
     end
-    object qrySODetailsDate_Required: TDateTimeField
+    object qrySODetailsDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
     end
-    object qrySODetailsCustomer_Name: TStringField
+    object qrySODetailsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
@@ -516,14 +519,14 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsReplenish_Source: TIntegerField
       FieldName = 'Replenish_Source'
     end
-    object qrySODetailsDate_Ordered: TDateTimeField
+    object qrySODetailsDate_Ordered: TSQLTimeStampField
       FieldName = 'Date_Ordered'
     end
-    object qrySODetailsDelivery_Type: TStringField
+    object qrySODetailsDelivery_Type: TWideStringField
       FieldName = 'Delivery_Type'
       FixedChar = True
     end
-    object qrySODetailsDate_Picked: TDateTimeField
+    object qrySODetailsDate_Picked: TSQLTimeStampField
       FieldName = 'Date_Picked'
     end
     object qrySODetailsDelivery_Weight_kilos: TIntegerField
@@ -532,12 +535,12 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsNo_Of_Boxes: TIntegerField
       FieldName = 'No_Of_Boxes'
     end
-    object qrySODetailsDelivery_Instructions: TStringField
+    object qrySODetailsDelivery_Instructions: TWideStringField
       FieldName = 'Delivery_Instructions'
       FixedChar = True
       Size = 255
     end
-    object qrySODetailsConsignment_number: TStringField
+    object qrySODetailsConsignment_number: TWideStringField
       FieldName = 'Consignment_number'
       FixedChar = True
       Size = 40
@@ -548,7 +551,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsService_no: TIntegerField
       FieldName = 'Service_no'
     end
-    object qrySODetailsConfirm_Filename: TStringField
+    object qrySODetailsConfirm_Filename: TWideStringField
       FieldName = 'Confirm_Filename'
       FixedChar = True
       Size = 40
@@ -556,7 +559,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qrySODetailsConfirm_Filename_no: TIntegerField
       FieldName = 'Confirm_Filename_no'
     end
-    object qrySODetailsBranch_Name: TStringField
+    object qrySODetailsBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 100
@@ -573,8 +576,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '  (Purchase_Order = :Purchase_Order) and'
       '  (Line = :Line) and'
       '  (Delivery_No = :Delivery_No)')
-    Left = 320
-    Top = 88
+    Left = 400
+    Top = 110
     ParamData = <
       item
         Name = 'Date_Deliv_Actual'
@@ -602,8 +605,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '  (Purchase_Order = :Purchase_Order) and'
       '  (Line = :Line) and'
       '  (Delivery_No = :Delivery_No)')
-    Left = 320
-    Top = 144
+    Left = 400
+    Top = 180
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -621,8 +624,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'select * from Delivery_Detail'
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line')
-    Left = 408
-    Top = 32
+    Left = 510
+    Top = 40
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -640,8 +643,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'from Purchase_orderLine'
       'where Purchase_order = :Purchase_order and'
       'Line = :Line')
-    Left = 408
-    Top = 96
+    Left = 510
+    Top = 120
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -659,8 +662,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         'oice = :Ready_to_Invoice'
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line')
-    Left = 408
-    Top = 160
+    Left = 510
+    Top = 200
     ParamData = <
       item
         Name = 'Purch_Ord_Line_Status'
@@ -681,8 +684,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'select Purchase_Order, Line, Purch_Ord_line_Status'
       'from Purchase_OrderLine'
       'where Purchase_Order = :Purchase_order')
-    Left = 408
-    Top = 216
+    Left = 510
+    Top = 270
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -694,8 +697,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'Update Purchase_Order'
       'set Purch_Ord_Head_Status = :Purch_Ord_Head_Status'
       'where Purchase_Order = :Purchase_Order')
-    Left = 408
-    Top = 280
+    Left = 510
+    Top = 350
     ParamData = <
       item
         Name = 'Purch_Ord_Head_Status'
@@ -738,8 +741,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '  (Line = :Line) and'
       '  (Delivery_No = :Delivery_No)'
       ' ')
-    Left = 320
-    Top = 200
+    Left = 400
+    Top = 250
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'
@@ -850,8 +853,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '   :Description,'
       '   :Quantity,'
       '   0)')
-    Left = 320
-    Top = 256
+    Left = 400
+    Top = 320
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -882,8 +885,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'Line = :Line and'
       'Delivery_no = :Delivery_no and'
       'Location_no = :Location_no')
-    Left = 320
-    Top = 304
+    Left = 400
+    Top = 380
     ParamData = <
       item
         Name = 'Quantity'
@@ -912,8 +915,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'Calloff_Order = :Calloff_Order and'
       'Calloff_Line = :Calloff_Line and'
       'Calloff_Delivery = :Calloff_Delivery')
-    Left = 320
-    Top = 352
+    Left = 400
+    Top = 440
     ParamData = <
       item
         Name = 'Calloff_Order'
@@ -934,8 +937,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'Line = :Line and'
       'Delivery_no = :Delivery_no and'
       'Location_no = :Location_no')
-    Left = 248
-    Top = 88
+    Left = 310
+    Top = 110
     ParamData = <
       item
         Name = 'Quantity_Allocated'
@@ -976,8 +979,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       ' :Calloff_Line,'
       ' :Calloff_Delivery,'
       ' :Quantity_Picked)')
-    Left = 248
-    Top = 144
+    Left = 310
+    Top = 180
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1017,8 +1020,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'Line = :Line and'
       'Delivery_no = :Delivery_no and'
       'Location_no = :Location_no')
-    Left = 248
-    Top = 200
+    Left = 310
+    Top = 250
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1040,8 +1043,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'set Form_Reference = :Form_Reference'
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line')
-    Left = 408
-    Top = 336
+    Left = 510
+    Top = 420
     ParamData = <
       item
         Name = 'Form_Reference'
@@ -1068,8 +1071,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       '('
       '(Delivery_Detail.Date_Deliv_Actual is not null)'
       ')')
-    Left = 24
-    Top = 200
+    Left = 30
+    Top = 250
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1104,8 +1107,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       ''
       ' '
       ' ')
-    Left = 24
-    Top = 256
+    Left = 30
+    Top = 320
     ParamData = <
       item
         Name = 'Original_Order'
@@ -1124,8 +1127,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'set Qty_in_Stock = :Qty_in_Stock'
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line')
-    Left = 24
-    Top = 320
+    Left = 30
+    Top = 400
     ParamData = <
       item
         Name = 'Qty_in_Stock'
@@ -1139,8 +1142,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
   end
   object dtsSODetails: TDataSource
     DataSet = qrySODetails
-    Left = 96
-    Top = 152
+    Left = 120
+    Top = 190
   end
   object qryUpPOLineInvUpfront: TFDQuery
     ConnectionName = 'PB'
@@ -1149,8 +1152,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       'set Invoice_upfront = :Invoice_upfront'
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line')
-    Left = 408
-    Top = 384
+    Left = 510
+    Top = 480
     ParamData = <
       item
         Name = 'Invoice_upfront'

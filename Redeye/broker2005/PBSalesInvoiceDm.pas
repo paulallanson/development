@@ -950,7 +950,7 @@ var
 implementation
 
 uses
-  ComObj, ActiveX, pbMainMenu, PBAuditDM, PBNarrativeDM, PBDatabase;
+  ComObj, ActiveX, pbMainMenu, PBAuditDM, PBNarrativeDM, PBDatabase, Utils;
 
 const
 
@@ -2122,7 +2122,7 @@ begin
       with FDataModule.qrySIAddHeader do
         begin
           ParamByName('Sales_Invoice').AsInteger := DbKey;
-          ParambyName('Invoice_Date').asdatetime := SIDate;
+          ParambyName('Invoice_Date').asdatetime := TUtils.CheckSmallDateTime(SIDate);
           Parambyname('Date_Created').asDateTime := now;
           ParamByName('Branch_no').AsInteger := Branch;
           ParamByName('Customer').AsInteger := Customer;
@@ -2253,7 +2253,7 @@ begin
       with FDataModule.qrySIUpHeader do
         begin
           ParamByName('Sales_Invoice').AsInteger := DbKey;
-          ParambyName('Invoice_Date').asdatetime := SIDate;
+          ParambyName('Invoice_Date').asdatetime := TUtils.CheckSmallDateTime(SIDate);
           ParamByName('Branch_no').AsInteger := Branch;
           ParamByName('Customer').AsInteger := Customer;
           Parambyname('Cust_Order_No').AsString := CustOrderNo;
@@ -2885,7 +2885,7 @@ begin
       with FDataModule.qrySIAddHeader do
         begin
           ParamByName('Sales_Invoice').AsInteger := DbKey;
-          ParambyName('Invoice_Date').asdatetime := SIDate;
+          ParambyName('Invoice_Date').asdatetime := TUtils.CheckSmallDateTime(SIDate);
           Parambyname('Date_Created').asDateTime := now;
           ParamByName('Branch_no').AsInteger := Branch;
           ParamByName('Customer').AsInteger := Customer;
@@ -3012,7 +3012,7 @@ begin
       with FDataModule.qrySIUpHeader do
         begin
           ParamByName('Sales_Invoice').AsInteger := DbKey;
-          ParambyName('Invoice_Date').asdatetime := SIDate;
+          ParambyName('Invoice_Date').asdatetime := TUtils.CheckSmallDateTime(SIDate);
           ParamByName('Branch_no').AsInteger := Branch;
           ParamByName('Customer').AsInteger := Customer;
           ParamByName('Cust_Order_No').Asstring := CustOrderNo;
@@ -4738,7 +4738,7 @@ begin
     Parambyname('Rep_Name').asstring := '%'+trim(RepName)+'%';
     Parambyname('Sub_Rep_Name').asstring := '%'+trim(SubRepName)+'%';
     Parambyname('Status_Name').asstring := '%'+trim(Status)+'%';
-//    Parambyname('Invoice_Date').asdatetime := InvoiceDate;
+//    Parambyname('Invoice_Date').asdatetime := TUtils.CheckSmallDateTime(InvoiceDate);
 
     Parambyname('Customer').asinteger := CustomerCode;
 

@@ -1,6 +1,7 @@
 object dtmdlStock: TdtmdlStock
-  Height = 579
-  Width = 781
+  Height = 724
+  Width = 976
+  PixelsPerInch = 120
   object qryCustStock: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -110,8 +111,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 16
+    Left = 30
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -209,8 +210,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStock: TDataSource
     DataSet = qryCustStock
-    Left = 184
-    Top = 16
+    Left = 230
+    Top = 20
   end
   object qryPartMvmnts: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -243,8 +244,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 72
+    Left = 30
+    Top = 90
     ParamData = <
       item
         Name = 'part'
@@ -252,14 +253,16 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptInput
         Value = Null
       end>
-    object qryPartMvmntsDate_received: TDateTimeField
+    object qryPartMvmntsDate_received: TSQLTimeStampField
       FieldName = 'Date_received'
       Origin = 'Date_received'
     end
     object qryPartMvmntsPart_Store_Name: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Part_Store_Name'
       Origin = 'Part_Store_Name'
-      Required = True
+      ProviderFlags = []
+      ReadOnly = True
       Size = 30
     end
     object qryPartMvmntsPart_Movement_Bin: TWideStringField
@@ -272,8 +275,11 @@ object dtmdlStock: TdtmdlStock
       Origin = 'Part_Store_Lot'
     end
     object qryPartMvmntsPart_Move_Type_Descr: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Part_Move_Type_Descr'
       Origin = 'Part_Move_Type_Descr'
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartMvmntsPart_Movement_Reference: TWideStringField
       FieldName = 'Part_Movement_Reference'
@@ -309,8 +315,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartMvmnts: TDataSource
     DataSet = qryPartMvmnts
-    Left = 184
-    Top = 72
+    Left = 230
+    Top = 90
   end
   object qryPartStoreBins: TFDQuery
     ConnectionName = 'PB'
@@ -386,8 +392,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 128
+    Left = 30
+    Top = 160
     ParamData = <
       item
         Name = 'Part'
@@ -396,8 +402,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartStoreBins: TDataSource
     DataSet = qryPartStoreBins
-    Left = 184
-    Top = 128
+    Left = 230
+    Top = 160
   end
   object qryStoreStockNumberedItems: TFDQuery
     ConnectionName = 'PB'
@@ -481,8 +487,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 176
+    Left = 30
+    Top = 220
     ParamData = <
       item
         Name = 'part'
@@ -507,8 +513,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcStoreStockNumberedItems: TDataSource
     DataSet = qryStoreStockNumberedItems
-    Left = 184
-    Top = 176
+    Left = 230
+    Top = 220
   end
   object qryPartSales: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -557,8 +563,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 240
+    Left = 30
+    Top = 300
     ParamData = <
       item
         Name = 'part'
@@ -573,26 +579,34 @@ object dtmdlStock: TdtmdlStock
       Size = 25
     end
     object qryPartSalespart_description: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'part_description'
       Origin = 'part_description'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 150
     end
     object qryPartSalessales_order: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'sales_order'
       Origin = 'sales_order'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
+      ProviderFlags = [pfInKey]
+      ReadOnly = True
     end
     object qryPartSalesCustomer: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
+      Origin = 'Name'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 100
     end
-    object qryPartSalesdate_ordered: TDateTimeField
+    object qryPartSalesdate_ordered: TSQLTimeStampField
+      AutoGenerateValue = arDefault
       FieldName = 'date_ordered'
       Origin = 'date_ordered'
-      Required = True
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartSalesquantity_ordered: TIntegerField
       FieldName = 'quantity_ordered'
@@ -625,26 +639,32 @@ object dtmdlStock: TdtmdlStock
       Required = True
     end
     object qryPartSalesSales_Order_Status: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Sales_Order_Status'
-      Origin = 'Sales_Order_Status'
-      Required = True
+      Origin = 'Description'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 50
     end
     object qryPartSalesjob_bag: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'job_bag'
       Origin = 'job_bag'
+      ProviderFlags = []
       ReadOnly = True
     end
     object qryPartSalesjob_bag_Req: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'job_bag_Req'
       Origin = 'job_bag_Req'
+      ProviderFlags = []
       ReadOnly = True
     end
   end
   object dtsrcPartSales: TDataSource
     DataSet = qryPartSales
-    Left = 184
-    Top = 232
+    Left = 230
+    Top = 290
   end
   object qryPartProduction: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -721,8 +741,8 @@ object dtmdlStock: TdtmdlStock
       '       Order by Purchase_Order.Purchase_Order desc;'
       ' '
       ' ')
-    Left = 24
-    Top = 296
+    Left = 30
+    Top = 370
     ParamData = <
       item
         Name = 'Part'
@@ -735,58 +755,79 @@ object dtmdlStock: TdtmdlStock
       Origin = 'Form_Reference'
     end
     object qryPartProductionPart: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Part'
-      Origin = 'Part'
+      Origin = 'Stock_Reference'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 25
     end
     object qryPartProductionDescription: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Description'
-      Origin = 'Description'
+      Origin = 'Part_Description'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 150
     end
     object qryPartProductionPurchase_Order: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'Purchase_Order'
       Origin = 'Purchase_Order'
-      Required = True
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartProductionSupplier: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Supplier'
-      Origin = 'Supplier'
-      Required = True
+      Origin = 'Name'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 100
     end
-    object qryPartProductionOrder_Date: TDateTimeField
+    object qryPartProductionOrder_Date: TSQLTimeStampField
+      AutoGenerateValue = arDefault
       FieldName = 'Order_Date'
-      Origin = 'Order_Date'
-      Required = True
+      Origin = 'Date_Point'
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartProductionOrder_Status: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Order_Status'
-      Origin = 'Order_Status'
+      Origin = 'Description'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 40
     end
     object qryPartProductionQuantity_Ordered: TFloatField
       FieldName = 'Quantity_Ordered'
-      Origin = 'Quantity_Ordered'
+      Origin = 'Quantity'
     end
     object qryPartProductionDelivered_to_Stock: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'Delivered_to_Stock'
       Origin = 'Delivered_to_Stock'
+      ProviderFlags = []
       ReadOnly = True
     end
     object qryPartProductionDelivered: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'Delivered'
       Origin = 'Delivered'
+      ProviderFlags = []
       ReadOnly = True
     end
     object qryPartProductionAwaiting_Delivery: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'Awaiting_Delivery'
       Origin = 'Awaiting_Delivery'
+      ProviderFlags = []
       ReadOnly = True
     end
     object qryPartProductionPack_Size: TStringField
       FieldName = 'Pack_Size'
-      Origin = 'Pack_Size'
+      Origin = 'Forms_per_Box'
       Size = 40
     end
     object qryPartProductionSelling_Price: TCurrencyField
@@ -798,13 +839,17 @@ object dtmdlStock: TdtmdlStock
       Origin = 'Order_price'
     end
     object qryPartProductionsell_unit_factor: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'sell_unit_factor'
       Origin = 'sell_unit_factor'
+      ProviderFlags = []
       ReadOnly = True
     end
     object qryPartProductionord_unit_factor: TFloatField
+      AutoGenerateValue = arDefault
       FieldName = 'ord_unit_factor'
       Origin = 'ord_unit_factor'
+      ProviderFlags = []
       ReadOnly = True
     end
   end
@@ -835,8 +880,8 @@ object dtmdlStock: TdtmdlStock
       'where  (purch_ord_line.part = :Part)'
       'Order by purch_ord.Purch_Ord desc'
       ' ')
-    Left = 24
-    Top = 344
+    Left = 30
+    Top = 430
     ParamData = <
       item
         Name = 'Part'
@@ -851,29 +896,41 @@ object dtmdlStock: TdtmdlStock
       Size = 25
     end
     object qryPartPOsDescription: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Description'
-      Origin = 'Description'
+      Origin = 'Part_Description'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 150
     end
     object qryPartPOsPurchase_Order: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'Purchase_Order'
-      Origin = 'Purchase_Order'
-      Required = True
+      Origin = 'Purch_Ord'
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartPOsSupplier: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Supplier'
-      Origin = 'Supplier'
-      Required = True
+      Origin = 'Name'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 100
     end
-    object qryPartPOsOrder_Date: TDateTimeField
+    object qryPartPOsOrder_Date: TSQLTimeStampField
+      AutoGenerateValue = arDefault
       FieldName = 'Order_Date'
-      Origin = 'Order_Date'
-      Required = True
+      Origin = 'Purch_Ord_Date'
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryPartPOsOrder_Status: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Order_Status'
-      Origin = 'Order_Status'
+      Origin = 'Status_Descr'
+      ProviderFlags = []
+      ReadOnly = True
       Size = 12
     end
     object qryPartPOsQuantity_Ordered: TIntegerField
@@ -883,23 +940,23 @@ object dtmdlStock: TdtmdlStock
     end
     object qryPartPOsPack_Size: TIntegerField
       FieldName = 'Pack_Size'
-      Origin = 'Pack_Size'
+      Origin = 'Purch_Pack_Quantity'
     end
     object qryPartPOsCost: TCurrencyField
       FieldName = 'Cost'
-      Origin = 'Cost'
+      Origin = 'Purchase_Price'
       Required = True
     end
   end
   object dtsrcPartProduction: TDataSource
     DataSet = qryPartProduction
-    Left = 184
-    Top = 296
+    Left = 230
+    Top = 370
   end
   object dtsrcPartPOs: TDataSource
     DataSet = qryPartPOs
-    Left = 184
-    Top = 344
+    Left = 230
+    Top = 430
   end
   object qryStckDetsbyFormRef: TFDQuery
     ConnectionName = 'PB'
@@ -971,8 +1028,8 @@ object dtmdlStock: TdtmdlStock
       
         'where ((part_store_levels.part is not null) or (store_stock.part' +
         ' is not null))')
-    Left = 304
-    Top = 16
+    Left = 380
+    Top = 20
   end
   object qryPartNumbers: TFDQuery
     ConnectionName = 'PB'
@@ -1006,8 +1063,8 @@ object dtmdlStock: TdtmdlStock
       'order by Part,'
       '         Store_Stock_serial_item.serial_item_from'
       '')
-    Left = 304
-    Top = 72
+    Left = 380
+    Top = 90
     ParamData = <
       item
         Name = 'part'
@@ -1016,8 +1073,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartNumbers: TDataSource
     DataSet = qryPartNumbers
-    Left = 392
-    Top = 80
+    Left = 490
+    Top = 100
   end
   object qryStock: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -1174,8 +1231,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 104
-    Top = 16
+    Left = 130
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -1376,8 +1433,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 240
+    Left = 370
+    Top = 300
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1385,8 +1442,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsPartDeliveries: TDataSource
     DataSet = qryShowPartDeliveries
-    Left = 408
-    Top = 296
+    Left = 510
+    Top = 370
   end
   object qryShowPartDeliveries: TFDQuery
     ConnectionName = 'PB'
@@ -1491,8 +1548,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 296
+    Left = 370
+    Top = 370
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1526,8 +1583,8 @@ object dtmdlStock: TdtmdlStock
       '    Part_Store = :Part_Store AND'
       '    Part_Bin Like :Part_Bin + '#39'%'#39
       'ORDER BY Store_Stock.Part_Bin, Store_Stock.Part')
-    Left = 24
-    Top = 400
+    Left = 30
+    Top = 500
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1538,21 +1595,21 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStockLocations: TDataSource
     DataSet = qryStockLocations
-    Left = 176
-    Top = 400
+    Left = 220
+    Top = 500
   end
   object qryPartStore: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Part_Store'
       'order by Part_Store_Name')
-    Left = 304
-    Top = 136
+    Left = 380
+    Top = 170
   end
   object dtsPartStore: TDataSource
     DataSet = qryPartStore
-    Left = 392
-    Top = 136
+    Left = 490
+    Top = 170
   end
   object qryMoves: TFDQuery
     ConnectionName = 'pb'
@@ -1560,8 +1617,8 @@ object dtmdlStock: TdtmdlStock
       'select *'
       'from Part_Movement'
       'where Part = :Part')
-    Left = 296
-    Top = 352
+    Left = 370
+    Top = 440
     ParamData = <
       item
         Name = 'Part'
@@ -1674,8 +1731,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 408
+    Left = 370
+    Top = 510
     ParamData = <
       item
         Name = 'Customer'
@@ -1689,8 +1746,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsCustDeliveries: TDataSource
     DataSet = qryShowCustDeliveries
-    Left = 408
-    Top = 408
+    Left = 510
+    Top = 510
   end
   object qryCustDeliveries: TFDQuery
     ConnectionName = 'PB'
@@ -1795,8 +1852,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 408
-    Top = 352
+    Left = 510
+    Top = 440
     ParamData = <
       item
         Name = 'Customer'
@@ -1809,8 +1866,8 @@ object dtmdlStock: TdtmdlStock
       'from Part_Movement'
       'where Part = :Part and Part_Movement_Type = '#39'J'#39
       'Order By Part_Movement desc')
-    Left = 304
-    Top = 192
+    Left = 380
+    Top = 240
     ParamData = <
       item
         Name = 'Part'
@@ -1861,8 +1918,8 @@ object dtmdlStock: TdtmdlStock
       '        Customer.Name'
       'ORDER BY Part_Bin, Store_Stock.Part'
       '')
-    Left = 24
-    Top = 456
+    Left = 30
+    Top = 570
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1876,8 +1933,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStockUsage: TDataSource
     DataSet = qryStockUsage
-    Left = 176
-    Top = 456
+    Left = 220
+    Top = 570
   end
   object qryProductionLocation: TFDQuery
     ConnectionName = 'PB'
@@ -1886,13 +1943,13 @@ object dtmdlStock: TdtmdlStock
       'from Production_location'
       'where receive_forward_stock = '#39'Y'#39
       'Order by Production_Location_Name')
-    Left = 296
-    Top = 472
+    Left = 370
+    Top = 590
   end
   object dtsProductionLocation: TDataSource
     DataSet = qryProductionLocation
-    Left = 408
-    Top = 472
+    Left = 510
+    Top = 590
   end
   object qryGetProductionLocation: TFDQuery
     ConnectionName = 'PB'
@@ -1900,8 +1957,8 @@ object dtmdlStock: TdtmdlStock
       'select *'
       'from Production_Location'
       'where Production_Location = :Production_Location')
-    Left = 536
-    Top = 472
+    Left = 670
+    Top = 590
     ParamData = <
       item
         Name = 'Production_Location'
@@ -1916,8 +1973,8 @@ object dtmdlStock: TdtmdlStock
       'Part = :Part and '
       'Part_Bin = :Part_Bin and store_quantity > 0'
       'order by Store_Stock')
-    Left = 536
-    Top = 408
+    Left = 670
+    Top = 510
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1935,8 +1992,8 @@ object dtmdlStock: TdtmdlStock
       'select * '
       'from Part_Store_Allocation'
       'where Store_Stock = :Store_Stock')
-    Left = 648
-    Top = 408
+    Left = 810
+    Top = 510
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -1948,8 +2005,8 @@ object dtmdlStock: TdtmdlStock
       'select DISTINCT Job_Bag'
       'from Job_Bag_Stock_Request'
       'Where Sales_Order = :Sales_Order')
-    Left = 648
-    Top = 472
+    Left = 810
+    Top = 590
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1980,8 +2037,8 @@ object dtmdlStock: TdtmdlStock
       'WHERE (Part.Part Like :Description) or'
       '      (Part.Part_description Like :Description)'
       '')
-    Left = 552
-    Top = 88
+    Left = 690
+    Top = 110
     ParamData = <
       item
         Name = 'Description'
@@ -2014,8 +2071,8 @@ object dtmdlStock: TdtmdlStock
       #9'LEFT JOIN Customer ON Part.Customer = Customer.Customer'
       'WHERE ((Part.Part Like :Description) or'
       '      (Part.Part_description Like :Description))')
-    Left = 640
-    Top = 88
+    Left = 800
+    Top = 110
     ParamData = <
       item
         Name = 'Description'
@@ -2026,8 +2083,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsPallets: TDataSource
     DataSet = qryPallets
-    Left = 496
-    Top = 88
+    Left = 620
+    Top = 110
   end
   object qryGetPart: TFDQuery
     ConnectionName = 'PB'
@@ -2036,8 +2093,8 @@ object dtmdlStock: TdtmdlStock
       'From Part'
       'Where Part = :Part'
       ' ')
-    Left = 552
-    Top = 152
+    Left = 690
+    Top = 190
     ParamData = <
       item
         Name = 'Part'
@@ -2052,8 +2109,8 @@ object dtmdlStock: TdtmdlStock
       'Where (Customer.Customer = :Customer) and'
       '      (Customer_Branch.Customer = :Customer) and'
       '      (Customer_Branch.Branch_No = :Branch)')
-    Left = 552
-    Top = 213
+    Left = 690
+    Top = 266
     ParamData = <
       item
         Name = 'Customer'
@@ -2067,8 +2124,8 @@ object dtmdlStock: TdtmdlStock
   end
   object qryUpdMulti: TFDQuery
     ConnectionName = 'PB'
-    Left = 640
-    Top = 152
+    Left = 800
+    Top = 190
   end
   object qryUpdMultiPartInactive: TFDQuery
     ConnectionName = 'PB'
@@ -2079,8 +2136,8 @@ object dtmdlStock: TdtmdlStock
       
         '(SELECT ISNULL(SUM(Store_Quantity),0) FROM Store_Stock WHERE Sto' +
         're_Stock.Part = Part.Part) = 0')
-    Left = 648
-    Top = 224
+    Left = 810
+    Top = 280
     ParamData = <
       item
         Name = 'Not_In_Use'

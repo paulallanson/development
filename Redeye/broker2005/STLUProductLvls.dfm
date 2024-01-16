@@ -3,8 +3,8 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   Top = 134
   BorderStyle = bsDialog
   Caption = 'Product stock levels'
-  ClientHeight = 179
-  ClientWidth = 528
+  ClientHeight = 170
+  ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    528
-    179)
+    522
+    170)
   TextHeight = 13
   object Button1: TButton
-    Left = 172
-    Top = 136
+    Left = 173
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -29,8 +29,8 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     OnClick = Button1Click
   end
   object btnChange: TButton
-    Left = 260
-    Top = 136
+    Left = 254
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -40,8 +40,8 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     OnClick = btnChangeClick
   end
   object btnClose: TButton
-    Left = 445
-    Top = 136
+    Left = 439
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -52,7 +52,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   object dbgDetails: TDBGrid
     Left = 8
     Top = 8
-    Width = 513
+    Width = 506
     Height = 120
     DataSource = dtsStoreLevels
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -101,7 +101,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   end
   object qryStoreLevels: TFDQuery
     OnCalcFields = qryStoreLevelsCalcFields
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select part_Store_levels.*, Part_Store_type_Name'
       'from part_Store_levels, part_store_type'
@@ -115,36 +115,51 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
       item
         Name = 'Part'
         DataType = ftString
+        ParamType = ptInput
       end>
-    object qryStoreLevelsPart: TStringField
+    object qryStoreLevelsPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Origin = 'Part'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 25
     end
     object qryStoreLevelsPart_Store_Type: TIntegerField
       FieldName = 'Part_Store_Type'
+      Origin = 'Part_Store_Type'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qryStoreLevelsMinimum_Stock: TIntegerField
       FieldName = 'Minimum_Stock'
+      Origin = 'Minimum_Stock'
+      Required = True
     end
     object qryStoreLevelsMaximum_Stock: TIntegerField
       FieldName = 'Maximum_Stock'
+      Origin = 'Maximum_Stock'
+      Required = True
     end
-    object qryStoreLevelsPurchase_Or_Store: TStringField
+    object qryStoreLevelsPurchase_Or_Store: TWideStringField
       FieldName = 'Purchase_Or_Store'
-      FixedChar = True
-      Size = 2
+      Origin = 'Purchase_Or_Store'
+      Required = True
+      Size = 1
     end
     object qryStoreLevelsReplenish_Store: TIntegerField
       FieldName = 'Replenish_Store'
+      Origin = 'Replenish_Store'
     end
     object qryStoreLevelsReorder_Level: TIntegerField
       FieldName = 'Reorder_Level'
+      Origin = 'Reorder_Level'
     end
-    object qryStoreLevelsPart_Store_type_Name: TStringField
+    object qryStoreLevelsPart_Store_type_Name: TWideStringField
+      AutoGenerateValue = arDefault
       FieldName = 'Part_Store_type_Name'
-      FixedChar = True
-      Size = 40
+      Origin = 'Part_Store_type_Name'
+      ProviderFlags = []
+      ReadOnly = True
     end
     object qryStoreLevelsReplenish_type: TStringField
       FieldKind = fkCalculated

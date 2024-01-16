@@ -17,14 +17,14 @@ type
     dbgDetails: TDBGrid;
     qryStoreLevels: TFDQuery;
     dtsStoreLevels: TDataSource;
-    qryStoreLevelsPart: TStringField;
+    qryStoreLevelsPart: TWideStringField;
     qryStoreLevelsPart_Store_Type: TIntegerField;
     qryStoreLevelsMinimum_Stock: TIntegerField;
     qryStoreLevelsMaximum_Stock: TIntegerField;
-    qryStoreLevelsPurchase_Or_Store: TStringField;
+    qryStoreLevelsPurchase_Or_Store: TWideStringField;
     qryStoreLevelsReplenish_Store: TIntegerField;
     qryStoreLevelsReorder_Level: TIntegerField;
-    qryStoreLevelsPart_Store_type_Name: TStringField;
+    qryStoreLevelsPart_Store_type_Name: TWideStringField;
     qryStoreLevelsReplenish_type: TStringField;
     procedure qryStoreLevelsCalcFields(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);

@@ -26,19 +26,13 @@ type
     qrySelectedPO: TFDQuery;
     dtsCallOffs: TDataSource;
     qryCallOffs: TFDQuery;
-    qryCallOffsStatus_Text: TWideStringField;
     qryCust: TFDQuery;
     qrySOHeaders: TFDQuery;
     qrySelectedSO: TFDQuery;
     qryOperator: TFDQuery;
     qrySOPicking: TFDQuery;
     qryGetSInvoice: TFDQuery;
-    qryCallOffsPurch_Ord_No: TWideStringField;
     qryPOProofStatus: TFDQuery;
-    qryCallOffsSales_Order_Head_Status: TIntegerField;
-    qryCallOffsSales_Order_Type: TWideStringField;
-    qryCallOffsSales_Order_Type_Description: TWideStringField;
-    qryCallOffsDelivery_Location: TWideStringField;
     qrySetSOInvoice: TFDQuery;
     qrySOLines: TFDQuery;
     qryOrdersCustomer: TIntegerField;
@@ -78,41 +72,6 @@ type
     qryOrdersAuthorised_By: TIntegerField;
     qryOrdersNCA_Live_lines: TIntegerField;
     qryOrdersNCA_Signed_Off: TIntegerField;
-    qryCallOffscustomer: TIntegerField;
-    qryCallOffsName: TWideStringField;
-    qryCallOffssales_order: TIntegerField;
-    qryCallOffsLine: TIntegerField;
-    qryCallOffsOrder_date: TSQLTimeStampField;
-    qryCallOffscust_order_no: TWideStringField;
-    qryCallOffsDescription: TWideStringField;
-    qryCallOffsQuantity: TIntegerField;
-    qryCallOffsorder_price: TCurrencyField;
-    qryCallOffsorder_unit: TIntegerField;
-    qryCallOffsselling_price: TCurrencyField;
-    qryCallOffsselling_unit: TIntegerField;
-    qryCallOffsStock_Reference: TWideStringField;
-    qryCallOffsForm_Reference_id: TWideStringField;
-    qryCallOffsGoods_Required: TSQLTimeStampField;
-    qryCallOffsOrder_Type: TWideStringField;
-    qryCallOffsOrder_status: TIntegerField;
-    qryCallOffsStatus_Description: TWideStringField;
-    qryCallOffsBranch_Name: TWideStringField;
-    qryCallOffsAccount_Code: TWideStringField;
-    qryCallOffsOn_Hold: TStringField;
-    qryCallOffsProof_Revision: TStringField;
-    qryCallOffsSupplier: TIntegerField;
-    qryCallOffsSupplier_name: TWideStringField;
-    qryCallOffsjob_bag: TIntegerField;
-    qryCallOffsDescription_Reference: TStringField;
-    qryCallOffsRep: TIntegerField;
-    qryCallOffsRep_Name: TStringField;
-    qryCallOffsOperator: TIntegerField;
-    qryCallOffsOperator_Name: TStringField;
-    qryCallOffsoriginal_order: TIntegerField;
-    qryCallOffsInactive: TStringField;
-    qryCallOffsSupp_Inv_Recd: TStringField;
-    qryCallOffsNeeds_Authorising: TStringField;
-    qryCallOffsAuthorised_By: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
     procedure qryOrdersStatus_textGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
@@ -415,44 +374,36 @@ begin
 
   sTemp := sTemp + ' AND Sales_Order.Date_Ordered >= ' + qDate(OrderDate);
 
-  qryCallOffs.SQL.text := qryCallOffs.SQL.text + sTemp;
-
   if ShowOrderLines then
     begin
-      sTemp := 'ORDER BY sales_order.sales_order desc, sales_order_Line.sales_order_Line_no';
+      sTemp := sTemp + ' ORDER BY sales_order.sales_order desc, sales_order_Line.sales_order_Line_no';
 
       qryCallOffs.SQL.text := qryCallOffs.SQL.text + sTemp;
 
-      with qryCallOffs do
-        begin
-          Close;
-          {order date greater than 1/1/1990}
-          if OrderDate > 32874 then
-            parambyname('Records').asinteger := 100000000
-          else
-            parambyname('Records').asinteger := 2000;
-          parambyname('Description').asstring := '%' + Description + '%';
-          parambyname('Customer').asinteger := Customer;
-          Open;
-        end;
+      qryCallOffs.Close;
+      {order date greater than 1/1/1990}
+      if OrderDate > 32874 then
+        qryCallOffs.parambyname('Records').asinteger := 100000000
+      else
+        qryCallOffs.parambyname('Records').asinteger := 2000;
+      qryCallOffs.parambyname('Description').asstring := '%' + Description + '%';
+      qryCallOffs.parambyname('Customer').asinteger := Customer;
+      qryCallOffs.Open;
     end
   else
     begin
-      sTemp := 'ORDER BY sales_order.sales_order desc ';
+      sTemp := sTemp + ' ORDER BY sales_order.sales_order desc ';
 
       qryCallOffs.SQL.text := qryCallOffs.SQL.text + sTemp;
 
-      with qryCallOffs do
-        begin
-          Close;
-          {order date greater than 1/1/1990}
-          if OrderDate > 32874 then
-            parambyname('Records').asinteger := 100000000
-          else
-            parambyname('Records').asinteger := 2000;
-          parambyname('Customer').asinteger := Customer;
-          Open;
-        end;
+      qryCallOffs.Close;
+      {order date greater than 1/1/1990}
+      if OrderDate > 32874 then
+        qryCallOffs.parambyname('Records').asinteger := 100000000
+      else
+        qryCallOffs.parambyname('Records').asinteger := 2000;
+      qryCallOffs.parambyname('Customer').asinteger := Customer;
+      qryCallOffs.Open;
     end;
 end;
 
