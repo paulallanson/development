@@ -1170,12 +1170,7 @@ begin
         Mylabel.Font.Size := 8;
         MySpinEdit.Width := 80;
         MySpinEdit.Left := mylabel.Left + mylabel.Width + 5;
-        try
-          MySpinEdit.value := strtoint(Answer);
-        except
-          MySpinEdit.value := 0;
-        end;
-
+        MySpinEdit.value := StrToIntDef(Answer, 0);
         MySpinEdit.OnChange := QuestionChange;
         MyLabel.Height := 13;
         MySpinEdit.Height := 22;
@@ -1716,8 +1711,8 @@ begin
     //  WOrder.WODate := PBDateStr(edtDate.text);
   WOrder.DateRequired := PBDateStr(edtDateReq.text);
   WOrder.EstimatedStartDate := PBDateStr(edtDateStart.text);
-  WOrder.QuantityEst := strtoint(memActualQty.text);
-  WOrder.QuantityAct := strtoint(memActualQty.text);
+  WOrder.QuantityEst := StrToIntDef(memActualQty.text, 0);
+  WOrder.QuantityAct := StrToIntDef(memActualQty.text, 0);
 //  WOrder.OfficeContact := dblkpAccManager.KeyValue;
 
   {Go set the narrative for the different processes}
@@ -1817,7 +1812,7 @@ end;
 
 procedure TfrmPBMaintWorksOrders.edtVersionNoChange(Sender: TObject);
 begin
-  WOrder.VersionNo := strtoint((Sender as TEdit).Text);
+  WOrder.VersionNo := StrToIntDef((Sender as TEdit).Text, 0);
 end;
 
 procedure TfrmPBMaintWorksOrders.AddWOProcesses;
@@ -1897,7 +1892,7 @@ begin
       tempStaff := (findcomponent('memStaff'+inttostr(WOrder.Processes[icount].process)) as TMemo);
       WOrder.Processes[icount].TargetDate := pbDatestr(tempEdt.Text);
       WOrder.Processes[icount].CustPaperSize := tempCustom.Text;
-      WOrder.Processes[icount].Quantity := strtoint(tempmem.text);
+      WOrder.Processes[icount].Quantity := StrToIntDef(tempmem.text, 0);
       WOrder.Processes[icount].NumberUp := tempspn.Value;
       WOrder.Processes[icount].PaperSize := tempDBlkp.KeyValue;
       try
@@ -1906,23 +1901,15 @@ begin
         WOrder.Processes[icount].NoOfHours := 0;
       end;
 
-      try
-        WOrder.Processes[icount].TeamCount := strtoint(tempStaff.text);
-      except
-        WOrder.Processes[icount].TeamCount := 0;
-      end;
+      WOrder.Processes[icount].TeamCount := StrToIntDef(tempStaff.text, 0);
 
-      try
-        WOrder.Processes[icount].WorkCentreGroup := tempWCGroup.keyvalue;
-      except
+      if Assigned(tempWCGroup) then
+        WOrder.Processes[icount].WorkCentreGroup := tempWCGroup.keyvalue else
         WOrder.Processes[icount].WorkCentreGroup := 0;
-      end;
 
-      try
-        WOrder.Processes[icount].WorkCentre := tempWC.keyvalue;
-      except
+      if Assigned(tempWC) then
+        WOrder.Processes[icount].WorkCentre := tempWC.keyvalue else
         WOrder.Processes[icount].WorkCentre := 0;
-      end;
       
       case tempRadGrp.ItemIndex of
 
@@ -2029,13 +2016,13 @@ var
   inx: integer;
 begin
   inx := sgEvents.row;
-  try
-    inx := WOrder.Events.IndexOf(inx);
+  inx := WOrder.Events.IndexOf(inx);
+  if inx >= 0 then
+  begin
     WOEvent := WOrder.Events[inx];
     memEventNotes.Text := WOEvent.Narrative.DataInfo;
-  except
+  end else
     memEventNotes.Lines.Clear;
-  end;
 end;
 
 procedure TfrmPBMaintWorksOrders.sgEventsDblClick(Sender: TObject);
@@ -2222,7 +2209,7 @@ begin
   with WOrder.DataModule do
   begin
     sTemp:= trim((Sender as TComboBox).Name);
-    iQuestion := strtoint(copy(sTemp,4,3));
+    iQuestion := StrToIntDef(copy(sTemp,4,3), 0);
     qryGetQuestionList.Close;
     qryGetQuestionList.ParamByName('Process').AsInteger := SelectedProcess.Process;
     qryGetQuestionList.ParamByName('Question').AsInteger := iQuestion;
@@ -2259,11 +2246,7 @@ begin
 *)
   inx := ((Sender as TTabSheet).pageindex);
   tempTabSheet := pgProduction.Pages[inx];
-  try
-    iProcess := strtoint(copy(tempTabSheet.Name,6,10));
-  except
-    iProcess := 0;
-  end;
+  iProcess := StrToIntDef(copy(tempTabSheet.Name,6,10), 0);
 
   for inx := 0 to pred(WOrder.Processes.count) do
     begin
@@ -2626,7 +2609,7 @@ begin
 
   tempTabSheet := pgProduction.Pages[inx];
   try
-    iProcess := strtoint(copy(tempTabSheet.Name,6,10));
+    iProcess := StrToIntDef(copy(tempTabSheet.Name,6,10), 0);
   except
     begin
       messagedlg('You cannot delete this page, this page is not a process!', mtError,[mbOk], 0);
