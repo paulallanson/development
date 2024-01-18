@@ -49,7 +49,6 @@ object dtmdlStock: TdtmdlStock
       end>
   end
   object wtStkDatabase: TFDConnection
-    ConnectionDefName = 'GSmart'
     ConnectionName = 'STK'
     Params.Strings = (
       'User_Name=readonly'
