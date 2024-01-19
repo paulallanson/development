@@ -3,8 +3,8 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Maintain Slab Sizes'
-  ClientHeight = 318
-  ClientWidth = 476
+  ClientHeight = 317
+  ClientWidth = 472
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    476
-    318)
+    472
+    317)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -82,7 +82,7 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   end
   object btnOK: TBitBtn
     Left = 162
-    Top = 265
+    Top = 264
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -97,7 +97,7 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   end
   object BitBtn2: TBitBtn
     Left = 242
-    Top = 265
+    Top = 264
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

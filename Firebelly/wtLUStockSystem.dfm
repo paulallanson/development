@@ -3,8 +3,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Stock System'
-  ClientHeight = 324
-  ClientWidth = 381
+  ClientHeight = 323
+  ClientWidth = 377
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 381
-    Height = 224
+    Width = 377
+    Height = 223
     Align = alClient
     DataSource = srcStockSystem
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -48,8 +48,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 305
-    Width = 381
+    Top = 304
+    Width = 377
     Height = 19
     Panels = <
       item
@@ -58,20 +58,16 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       item
         Width = 50
       end>
-    ExplicitTop = 304
-    ExplicitWidth = 377
   end
   object Panel1: TPanel
     Left = 0
-    Top = 224
-    Width = 381
+    Top = 223
+    Width = 377
     Height = 81
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 223
-    ExplicitWidth = 377
     DesignSize = (
-      381
+      377
       81)
     object btnAdd: TBitBtn
       Left = 16

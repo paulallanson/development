@@ -3,8 +3,8 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
   Top = 252
   BorderStyle = bsDialog
   Caption = 'Worktop Thickness Stock Code'
-  ClientHeight = 144
-  ClientWidth = 345
+  ClientHeight = 143
+  ClientWidth = 341
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    345
-    144)
+    341
+    143)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -36,7 +36,7 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
   end
   object btnOK: TBitBtn
     Left = 108
-    Top = 103
+    Top = 102
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -51,7 +51,7 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
   end
   object BitBtn2: TBitBtn
     Left = 196
-    Top = 103
+    Top = 102
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

@@ -2,8 +2,8 @@ object frmWTMaintStore: TfrmWTMaintStore
   Left = 469
   Top = 71
   Caption = 'Maintain Store Details'
-  ClientHeight = 255
-  ClientWidth = 481
+  ClientHeight = 254
+  ClientWidth = 477
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmWTMaintStore: TfrmWTMaintStore
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    481
-    255)
+    477
+    254)
   TextHeight = 13
   object lblName: TLabel
     Left = 8
@@ -131,16 +131,17 @@ object frmWTMaintStore: TfrmWTMaintStore
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 220
+    Top = 219
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 6
+    ExplicitTop = 220
   end
   object btnOK: TBitBtn
     Left = 179
-    Top = 216
+    Top = 215
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -151,10 +152,11 @@ object frmWTMaintStore: TfrmWTMaintStore
     NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
+    ExplicitTop = 216
   end
   object BitBtn2: TBitBtn
     Left = 275
-    Top = 216
+    Top = 215
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -163,6 +165,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 8
+    ExplicitTop = 216
   end
   object qryGetLastNo: TFDQuery
     ConnectionName = 'wt'

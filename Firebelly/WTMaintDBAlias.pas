@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables;
+  StdCtrls, Buttons, DBCtrls, Data.DB,
+  FireDAC.Stan.Intf, FireDAC.Comp.Client;
 
 type
   TWTMaintDBAliasFrm = class(TForm)
@@ -57,16 +58,26 @@ begin
   end
   else
   begin
-    sgList := TStringList.Create;
-    try
-      session.GetAliasParams(sAlias,sgList);
-      edtAliasName.Text := sAlias;
-      edtDatabaseName.Text := sgList.Values['DATABASE NAME'];
-      edtServerName.Text := sgList.Values['SERVER NAME'];
-    finally
-      sgList.free;
+    var ConnectionName: string := 'Worktop';
+    var ConnDef: IFDStanConnectionDef;
+    var Params: TStrings;
+    ConnDef := FDManager.ConnectionDefs.ConnectionDefByName(ConnectionName);
+
+    if Assigned(ConnDef) then
+    begin
+      edtAliasName.Text := ConnDef.Name;
+      Params := ConnDef.Params;
+      for var i := 0 to Params.Count-1 do
+      begin
+        if Params.Names[i] = 'DATABASE NAME' then
+          edtDatabaseName.Text := Params.ValueFromIndex[i]
+        else
+        if Params.Names[i] = 'SERVER NAME' then
+          edtServerName.Text := Params.ValueFromIndex[i]
+      end;
     end;
   end;
+
   {Enable or disable the buttons}
   edtAliasName.Enabled := (sFuncmode = 'A');
   edtdatabaseName.Enabled := (sFuncmode <> 'D');
@@ -98,7 +109,7 @@ begin
       try
         sgList.Add('DATABASE NAME='+edtDatabaseName.text);
         sgList.Add('SERVER NAME='+edtServerName.text);
-        Session.AddAlias(edtAliasName.text, 'MSSQL', sgList);
+        FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
       finally
         sgList.Free;
       end;
@@ -111,7 +122,7 @@ begin
         sgList.Clear;
         sgList.Add('DATABASE NAME='+edtDatabaseName.text);
         sgList.Add('SERVER NAME='+edtServerName.text);
-        Session.ModifyAlias(edtAliasName.text,sgList);
+        FDManager.ModifyConnectionDef(edtAliasName.text,sgList);
       finally
         sgList.Free;
       end;
@@ -123,10 +134,10 @@ begin
       if MessageDlg('Really delete these details ?', mtConfirmation, [mbNo,
         mbYes], 0) = mrYes then
       begin
-        Session.DeleteAlias(edtAliasName.text);
+        FDManager.DeleteConnectionDef(edtAliasName.text);
       end;
     end;
-  Session.SaveConfigFile;
+  FDManager.SaveConnectionDefFile;
 
   sCode := edtAliasName.Text;
 end;

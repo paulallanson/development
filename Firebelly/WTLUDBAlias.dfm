@@ -1,10 +1,10 @@
-﻿object WTLUDBAliasFrm: TWTLUDBAliasFrm
+object WTLUDBAliasFrm: TWTLUDBAliasFrm
   Left = 147
   Top = 100
   BorderStyle = bsDialog
   Caption = 'Maintain Database Aliases'
-  ClientHeight = 270
-  ClientWidth = 345
+  ClientHeight = 269
+  ClientWidth = 341
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

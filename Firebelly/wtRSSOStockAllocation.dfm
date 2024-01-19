@@ -1,32 +1,32 @@
 object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   Left = 266
   Top = 44
-  Width = 943
-  Height = 639
   Caption = 'Stock Allocation'
+  ClientHeight = 601
+  ClientWidth = 931
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 548
-    Width = 935
+    Top = 541
+    Width = 931
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 540
+    ExplicitWidth = 927
     DesignSize = (
-      935
+      931
       41)
     object btnClose: TButton
       Left = 832
@@ -38,6 +38,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 828
     end
     object btnAllocate: TButton
       Left = 16
@@ -65,8 +66,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 589
-    Width = 935
+    Top = 582
+    Width = 931
     Height = 19
     Panels = <
       item
@@ -75,12 +76,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 581
+    ExplicitWidth = 927
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 233
-    Width = 935
-    Height = 315
+    Width = 931
+    Height = 308
     Align = alClient
     DataSource = dtsSalesOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -150,10 +153,11 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 935
+    Width = 931
     Height = 233
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 927
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8
@@ -177,7 +181,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       object Label4: TLabel
         Left = 8
         Top = 10
-        Width = 44
+        Width = 49
         Height = 13
         Caption = 'Customer'
       end
@@ -243,14 +247,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       object Label1: TLabel
         Left = 16
         Top = 20
-        Width = 26
+        Width = 29
         Height = 13
         Caption = 'From:'
       end
       object Label2: TLabel
         Left = 26
         Top = 48
-        Width = 16
+        Width = 15
         Height = 13
         Caption = 'To:'
       end
@@ -275,8 +279,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         Top = 14
         Width = 25
         Height = 25
-        TabOrder = 2
-        OnClick = btnDatefromClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -291,14 +293,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnDatefromClick
       end
       object btnDateTo: TBitBtn
         Left = 168
         Top = 42
         Width = 25
         Height = 25
-        TabOrder = 3
-        OnClick = btnDateToClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -313,6 +315,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = btnDateToClick
       end
     end
     object rdgrpCategory: TRadioGroup
@@ -396,7 +400,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     object lblProcessing: TLabel
       Left = 16
       Top = 12
-      Width = 52
+      Width = 55
       Height = 13
       Caption = 'Processing'
     end
@@ -506,49 +510,35 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
+        Name = 'Rep'
+        DataType = ftInteger
+      end
+      item
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -655,49 +645,35 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
+        Name = 'Rep'
+        DataType = ftInteger
+      end
+      item
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetGSMStock: TFDQuery
@@ -730,9 +706,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'StockCode'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStockCode: TFDQuery
@@ -752,33 +726,24 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
   object wtstkDatabase: TFDConnection
-    ConnectionDefName = 'GSmart'
     ConnectionName = 'STK'
-    LoginPrompt = False
     Params.Strings = (
       'User Name=readonly'
       'Password=R34donly4')
+    LoginPrompt = False
     Left = 808
     Top = 96
   end
@@ -794,24 +759,18 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Stock_Allocation_Start_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Stock_Allocation_End_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSO: TFDQuery
@@ -825,19 +784,15 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 104
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Stock_Allocation_Start_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
-        Name = 'Stock_Allocation_End_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Stock_Allocation_End_Date'
+        DataType = ftDateTime
+      end
+      item
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -904,9 +859,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStockSystem: TFDQuery
@@ -919,9 +872,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_System'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteStoreStock: TFDQuery
@@ -971,9 +922,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddStock: TFDQuery
@@ -990,9 +939,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1018,34 +965,23 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpdate: TFDQuery
@@ -1063,29 +999,20 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Slab_Size_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -1098,8 +1025,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1119,19 +1046,13 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Item'
-        ParamType = ptUnknown
       end>
   end
   object qryAddStoreStock: TFDQuery
@@ -1175,79 +1096,50 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_item'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_in_stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_stock_description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Lot_reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Serial_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetLastSS: TFDQuery
@@ -1274,9 +1166,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'StockCode'
-        ParamType = ptUnknown
       end>
   end
   object qryUpStoreStock: TFDQuery
@@ -1291,14 +1181,10 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderLine: TFDQuery
@@ -1385,19 +1271,13 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyOld: TFDQuery
@@ -1507,54 +1387,38 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
+        Name = 'Rep'
+        DataType = ftInteger
+      end
+      item
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAllocQuoteSlab: TFDQuery
@@ -1572,29 +1436,19 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 440
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
   object qryDeAllocQuoteSlab: TFDQuery
@@ -1612,29 +1466,19 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
 end

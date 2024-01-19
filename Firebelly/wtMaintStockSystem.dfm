@@ -3,8 +3,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   Top = 193
   BorderStyle = bsDialog
   Caption = 'Stock System Details'
-  ClientHeight = 347
-  ClientWidth = 428
+  ClientHeight = 346
+  ClientWidth = 424
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    428
-    347)
+    424
+    346)
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -34,7 +34,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   end
   object btnOK: TBitBtn
     Left = 132
-    Top = 309
+    Top = 308
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -45,10 +45,11 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
+    ExplicitTop = 309
   end
   object BitBtn2: TBitBtn
     Left = 220
-    Top = 309
+    Top = 308
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -57,6 +58,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 309
   end
   object edtStockSystemDescription: TEdit
     Left = 96

@@ -3,8 +3,8 @@ object frmWTLUStore: TfrmWTLUStore
   Top = 160
   BorderStyle = bsDialog
   Caption = 'Stores'
-  ClientHeight = 370
-  ClientWidth = 396
+  ClientHeight = 369
+  ClientWidth = 392
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWTLUStore: TfrmWTLUStore
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 307
-    Height = 277
+    Width = 303
+    Height = 276
     Align = alClient
     DataSource = srcStore
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -47,8 +47,8 @@ object frmWTLUStore: TfrmWTLUStore
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 351
-    Width = 396
+    Top = 350
+    Width = 392
     Height = 19
     Panels = <
       item
@@ -62,15 +62,15 @@ object frmWTLUStore: TfrmWTLUStore
   end
   object Panel1: TPanel
     Left = 0
-    Top = 277
-    Width = 396
+    Top = 276
+    Width = 392
     Height = 74
     Align = alBottom
     TabOrder = 2
     ExplicitTop = 278
     ExplicitWidth = 400
     DesignSize = (
-      396
+      392
       74)
     object Label4: TLabel
       Left = 8
@@ -120,20 +120,20 @@ object frmWTLUStore: TfrmWTLUStore
     end
   end
   object Panel2: TPanel
-    Left = 307
+    Left = 303
     Top = 0
     Width = 89
-    Height = 277
+    Height = 276
     Align = alRight
     TabOrder = 3
     ExplicitLeft = 311
     ExplicitHeight = 278
     DesignSize = (
       89
-      277)
+      276)
     object BitBtn1: TBitBtn
       Left = 8
-      Top = 87
+      Top = 86
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -144,7 +144,7 @@ object frmWTLUStore: TfrmWTLUStore
     end
     object btnEdit: TBitBtn
       Left = 6
-      Top = 127
+      Top = 126
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -155,7 +155,7 @@ object frmWTLUStore: TfrmWTLUStore
     end
     object btnDelete: TBitBtn
       Left = 6
-      Top = 167
+      Top = 166
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -166,7 +166,7 @@ object frmWTLUStore: TfrmWTLUStore
     end
     object btnExcel: TBitBtn
       Left = 6
-      Top = 207
+      Top = 206
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -177,7 +177,7 @@ object frmWTLUStore: TfrmWTLUStore
     end
     object btnSelect: TBitBtn
       Left = 6
-      Top = 245
+      Top = 244
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]

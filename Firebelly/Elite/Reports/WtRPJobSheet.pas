@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB StdCtrls,
   FireDAC.Comp.Client;
 
 type

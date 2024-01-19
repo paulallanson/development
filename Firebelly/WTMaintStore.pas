@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, QrCtrls, DBCtrls, ComCtrls,
+  Dialogs, StdCtrls, Buttons, Data.DB, QrCtrls, DBCtrls, ComCtrls,
   ExtCtrls, ToolWin, ImgList, SHELLAPI, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
   CRControls, System.ImageList, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,

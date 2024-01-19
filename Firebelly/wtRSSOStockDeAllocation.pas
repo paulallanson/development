@@ -5,7 +5,11 @@ interface
 uses FireDAC.Comp.Client, 
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
-  DBTables, Menus, Dateutils, IniFiles, Grids, DBGrids;
+   Menus, Dateutils, IniFiles, Grids, DBGrids, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+  FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Phys, FireDAC.VCLUI.Wait, FireDAC.Comp.DataSet;
 
 type
   TfrmWTRSSOStockDeAllocation = class(TForm)
@@ -31,7 +35,7 @@ type
     qryDummy: TFDQuery;
     qryGetGSmart: TFDQuery;
     qryGetStockCode: TFDQuery;
-    wtStkDatabase: TDatabase;
+    wtStkDatabase: TFDConnection;
     qryUpdSOLine: TFDQuery;
     qryUpdSO: TFDQuery;
     qryGetSalesOrder: TFDQuery;

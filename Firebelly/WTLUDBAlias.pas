@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, Data.DB, ExtCtrls, Buttons,
+  FireDAC.Comp.Client;
 
 type
   TWTLUDBAliasFrm = class(TForm)
@@ -92,7 +93,9 @@ begin
   lstbxAliasList.clear;
   sgList := TStringList.Create;
   try
-    Session.GetAliasNames(sgList);
+    for var i := 0 to FDManager.ConnectionDefs.Count-1 do
+      sgList.Add(FDManager.ConnectionDefs[i].Name);
+
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if ((pos('Worktop',sgList[iAliasList]) > 0) or (pos('worktop',sgList[iAliasList]) > 0) or

@@ -2,8 +2,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   Left = 461
   Top = 153
   Caption = 'Maintain Slabs'
-  ClientHeight = 287
-  ClientWidth = 562
+  ClientHeight = 286
+  ClientWidth = 558
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 268
-    Width = 562
+    Top = 267
+    Width = 558
     Height = 19
     Panels = <
       item
@@ -30,8 +30,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 195
-    Width = 562
+    Top = 194
+    Width = 558
     Height = 73
     Align = alBottom
     BevelOuter = bvNone
@@ -39,7 +39,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     ExplicitTop = 203
     ExplicitWidth = 570
     DesignSize = (
-      562
+      558
       73)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -82,7 +82,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 472
+      Left = 464
       Top = 40
       Width = 75
       Height = 25
@@ -92,6 +92,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
+      ExplicitLeft = 472
     end
     object BitBtn1: TBitBtn
       Left = 272
@@ -107,8 +108,8 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 562
-    Height = 195
+    Width = 558
+    Height = 194
     Align = alClient
     DataSource = dtsSlabs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

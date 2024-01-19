@@ -1,32 +1,32 @@
 object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   Left = 266
   Top = 44
-  Width = 943
-  Height = 568
   Caption = 'Stock Allocation'
+  ClientHeight = 530
+  ClientWidth = 931
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 477
-    Width = 935
+    Top = 470
+    Width = 931
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 469
+    ExplicitWidth = 927
     DesignSize = (
-      935
+      931
       41)
     object btnClose: TButton
       Left = 832
@@ -38,6 +38,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 828
     end
     object btnAllocate: TButton
       Left = 16
@@ -54,8 +55,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 518
-    Width = 935
+    Top = 511
+    Width = 931
     Height = 19
     Panels = <
       item
@@ -64,12 +65,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 510
+    ExplicitWidth = 927
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 935
-    Height = 364
+    Width = 931
+    Height = 357
     Align = alClient
     DataSource = dtsSalesOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -146,10 +149,11 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 935
+    Width = 931
     Height = 113
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 927
     object grpbxDateSelect: TGroupBox
       Left = 240
       Top = 16
@@ -161,14 +165,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       object Label1: TLabel
         Left = 16
         Top = 20
-        Width = 26
+        Width = 29
         Height = 13
         Caption = 'From:'
       end
       object Label2: TLabel
         Left = 26
         Top = 48
-        Width = 16
+        Width = 15
         Height = 13
         Caption = 'To:'
       end
@@ -193,8 +197,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         Top = 14
         Width = 25
         Height = 25
-        TabOrder = 2
-        OnClick = btnDatefromClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -209,14 +211,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnDatefromClick
       end
       object btnDateTo: TBitBtn
         Left = 168
         Top = 42
         Width = 25
         Height = 25
-        TabOrder = 3
-        OnClick = btnDateToClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -231,6 +233,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = btnDateToClick
       end
     end
     object GroupBox2: TGroupBox
@@ -243,14 +247,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       object Label5: TLabel
         Left = 16
         Top = 20
-        Width = 26
+        Width = 29
         Height = 13
         Caption = 'From:'
       end
       object Label6: TLabel
         Left = 26
         Top = 48
-        Width = 16
+        Width = 15
         Height = 13
         Caption = 'To:'
       end
@@ -275,8 +279,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         Top = 14
         Width = 25
         Height = 25
-        TabOrder = 2
-        OnClick = BitBtn1Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -291,14 +293,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = BitBtn1Click
       end
       object BitBtn2: TBitBtn
         Left = 168
         Top = 42
         Width = 25
         Height = 25
-        TabOrder = 3
-        OnClick = BitBtn2Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -313,6 +315,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = BitBtn2Click
       end
     end
   end
@@ -336,7 +340,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     object lblProcessing: TLabel
       Left = 16
       Top = 12
-      Width = 63
+      Width = 70
       Height = 13
       Caption = 'De-Allocating'
     end
@@ -484,14 +488,12 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date_Move_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Move_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end>
   end
   object qryDummy: TFDQuery
@@ -633,14 +635,10 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Move_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Move_To'
-        ParamType = ptUnknown
       end>
   end
   object qryGetGSmart: TFDQuery
@@ -672,9 +670,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'StockCode'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStockCode: TFDQuery
@@ -694,33 +690,24 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
   object wtstkDatabase: TFDConnection
-    ConnectionDefName = 'GSmart'
     ConnectionName = 'STK'
-    LoginPrompt = False
     Params.Strings = (
       'User Name=readonly'
       'Password=R34donly4')
+    LoginPrompt = False
     Left = 808
     Top = 96
   end
@@ -737,29 +724,21 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Stock_Allocation_Start_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Stock_Allocation_End_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSO: TFDQuery
@@ -773,19 +752,15 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 104
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Stock_Allocation_Start_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
-        Name = 'Stock_Allocation_End_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Stock_Allocation_End_Date'
+        DataType = ftDateTime
+      end
+      item
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -852,9 +827,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStockSystem: TFDQuery
@@ -867,9 +840,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_System'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyOld: TFDQuery
@@ -1009,14 +980,10 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Move_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Move_To'
-        ParamType = ptUnknown
       end>
   end
   object qryDeAllocQuoteSlab: TFDQuery
@@ -1034,29 +1001,19 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderLine: TFDQuery
@@ -1143,19 +1100,13 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Code'
-        ParamType = ptUnknown
       end>
   end
 end

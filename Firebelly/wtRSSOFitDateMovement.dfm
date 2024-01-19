@@ -3,8 +3,8 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   Top = 166
   BorderStyle = bsDialog
   Caption = 'Fit Date Movement Report'
-  ClientHeight = 406
-  ClientWidth = 475
+  ClientHeight = 405
+  ClientWidth = 471
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,22 +15,23 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    475
-    406)
+    471
+    405)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 367
+    Top = 366
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 367
   end
   object Button4: TButton
-    Left = 376
-    Top = 367
+    Left = 368
+    Top = 366
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -38,6 +39,8 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitLeft = 376
+    ExplicitTop = 367
   end
   object rdgrpReps: TRadioGroup
     Left = 8
@@ -225,7 +228,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 367
+    Top = 366
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -275,16 +278,18 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 367
   end
   object btnPreview: TButton
     Left = 96
-    Top = 367
+    Top = 366
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
+    ExplicitTop = 367
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
@@ -354,21 +359,23 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object chkbxShowOnlyScheduled: TCheckBox
     Left = 8
-    Top = 305
+    Top = 304
     Width = 217
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Only Show Scheduled Orders'
     TabOrder = 14
+    ExplicitTop = 305
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 329
+    Top = 328
     Width = 217
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 15
+    ExplicitTop = 329
   end
   object GroupBox2: TGroupBox
     Left = 8
