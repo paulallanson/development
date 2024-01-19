@@ -257,13 +257,6 @@ procedure TfrmpbLogin.FormCreate(Sender: TObject);
 begin
 	LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
-
-  (* GDK ToDo: remove after tests
-  if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
-  else
-    StrPCopy(AppIniFile,myRedeye_INIFILE);
-  *)
 end;
 
 procedure TfrmpbLogin.SetOperator_Email(const Value: string);
