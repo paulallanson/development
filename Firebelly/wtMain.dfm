@@ -31,7 +31,7 @@ object frmWTMain: TfrmWTMain
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1477
+        Width = 1481
       end>
     ExplicitWidth = 1479
     object ToolBar1: TToolBar

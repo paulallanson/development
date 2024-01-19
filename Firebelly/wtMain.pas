@@ -436,23 +436,9 @@ var
   TempUserSize : DWORD;
 begin
   LocalDrive := copy(GetWinSysDir,1,2);
-	LocalDir := ExtractFilePath(Application.ExeName);
-	
-  if pos('Application Data',LocalDir) > 0 then	
-    StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE)
-  else
-    StrPCopy(AppIniFile, myWorktops_INIFILE);    
-    
-{$IFDEF DEMO}
-//  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
-{$ELSE}
-(*  TempUserSize := SizeOf(TempUser);
-  GetUserName(Addr(TempUser), TempUserSize);
-  stsbrStatus.Panels[0].Text := TempUser;
-*)
-  ComputerName := GetUserFromWindows;
-  stsbrStatus.Panels[0].Text := ComputerName;
-{$ENDIF}
+  LocalDir := ExtractFilePath(Application.ExeName);
+  StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
+
   SWVersion := '23.1.';
   SWSubVersion := '24.01.01a';
 
