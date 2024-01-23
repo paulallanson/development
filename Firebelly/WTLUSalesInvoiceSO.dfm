@@ -136,7 +136,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 998
       DesignSize = (
         982
         53)
@@ -247,7 +246,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = 616
       object rdgrpRevenueCentre: TRadioGroup
         Left = 40
         Top = 3

@@ -58,12 +58,11 @@ begin
   LocalDir := extractfilepath(application.ExeName);
 
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
+    StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE)
   else
-    StrPCopy(AppIniFile,myRedeye_INIFILE);
+    StrPCopy(AppIniFile, myRedeye_INIFILE);
 
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray,
-    sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray, SizeOf(TempArray), AppIniFile);
 
   sgList := TStringList.Create;
   try

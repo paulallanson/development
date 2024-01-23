@@ -76,8 +76,7 @@ var
   iAliasList: integer;
   sgList: TStringList;
 begin
-  GetPrivateProfileString('Quaystone', 'LoginAlias', 'myWorktops', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+  GetPrivateProfileString('Quaystone', 'LoginAlias', 'myWorktops', TempArray, SizeOf(TempArray), TfrmWTMain.AppIniFile);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
@@ -88,8 +87,8 @@ begin
       if (pos('Worktop',sgList[iAliasList]) > 0) or (pos('worktop',sgList[iAliasList]) > 0) then
         cmbAliasList.Items.Add(sgList[iAliasList]) ;
 
-    cmbAliasList.Sorted := true;
-    cmbAliasList.ItemIndex := cmbAliasList.items.indexof(temparray);
+    cmbAliasList.Sorted := True;
+    cmbAliasList.ItemIndex := cmbAliasList.items.IndexOf(TempArray);
     if cmbAliasList.ItemIndex < 0 then
       cmbAliasList.ItemIndex := 0;
     cmbAliasList.visible := (cmbAliasList.Items.Count > 1);
@@ -101,8 +100,7 @@ begin
   Edit1.Text := TempArray;
   sDBase := ShortString(Copy(Edit1.Text, 1, 1));
   ShowDataBAse(Self);
-  GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+  GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray, SizeOf(TempArray), TfrmWTMain.AppIniFile);
   Edit1.Text := TempArray;
   FsFaxSystem := Edit1.Text;
   OK := False;
@@ -230,16 +228,14 @@ begin
     Edit1.Text := TempAlias;
     sDBase := AnsiString(Edit1.Text);
     ShowDataBase(Self);
-    WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias,
-      myWorktops_INIFILE);
+    WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias, TfrmWTMain.AppIniFile);
     case frmWTEnvSel.FaxSystemRadioGroup.ItemIndex of
       0: TempAlias := 'S';
       1: TempAlias := 'W';
     end;
     Edit1.Text := TempAlias;
     FsFaxSystem := Edit1.Text;
-    WritePrivateProfileString('Quaystone', 'Fax System', TempAlias,
-      myWorktops_INIFILE);
+    WritePrivateProfileString('Quaystone', 'Fax System', TempAlias, TfrmWTMain.AppIniFile);
   end;
   finally
     frmWTEnvSel.Free;

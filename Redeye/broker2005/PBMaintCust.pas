@@ -2985,7 +2985,7 @@ begin
   CCSCommon.SetDBGridCols('', 'CustomerJobLU Col Order', frmPBMainMenu.AppIniFile, self.dbgJobDetails);
   CCSCommon.SetDBGridCols('', 'CustomerStockLU Col Order', frmPBMainMenu.AppIniFile, self.dbgStockDetails);
   CCSCommon.SetDBGridCols('', 'CustomerInvoicesLU Col Order', frmPBMainMenu.AppIniFile, self.dbgInvoiceDetails);
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 procedure TPBMaintCustFrm.edtProdPrefixChange(Sender: TObject);

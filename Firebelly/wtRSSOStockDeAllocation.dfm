@@ -23,8 +23,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 469
-    ExplicitWidth = 927
     DesignSize = (
       931
       41)
@@ -38,7 +36,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 828
     end
     object btnAllocate: TButton
       Left = 16
@@ -65,8 +62,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 510
-    ExplicitWidth = 927
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -153,7 +148,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Height = 113
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 927
     object grpbxDateSelect: TGroupBox
       Left = 240
       Top = 16

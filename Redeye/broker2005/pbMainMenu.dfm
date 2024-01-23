@@ -30,7 +30,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         Control = MainMenuToolBar
         ImageIndex = -1
         MinHeight = 41
-        Width = 1466
+        Width = 1470
       end>
     ExplicitWidth = 1468
     object MainMenuToolBar: TToolBar

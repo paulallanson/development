@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
-   IniFiles, FireDAC.Comp.Client, FireDAC.Stan.Intf,
+  IniFiles, FireDAC.Comp.Client, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet;
@@ -80,7 +80,8 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPSOFitDateMovement;
+uses
+  wtMain, allCommon, WTSrchCustomer, DateSelV5, WTRPSOFitDateMovement;
 
 {$R *.dfm}
 
@@ -260,7 +261,7 @@ var
   DateFrom, DateTo, DateMoveFrom, DateMoveTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -407,7 +408,7 @@ procedure TfrmWTRSSOFitDateMovement.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
