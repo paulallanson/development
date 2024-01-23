@@ -357,7 +357,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
 *)
@@ -434,7 +434,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 *)
   MI.Bodyformat := olFormatHTML;
