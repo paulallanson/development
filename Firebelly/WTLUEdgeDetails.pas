@@ -95,7 +95,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, AllCommon,
   wtMaintEdgeDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
@@ -119,7 +119,7 @@ begin
           SQL.Text := sText;
         end;
 
-      parambyname('Material_Type').asinteger := dblkpMaterialType.KeyValue;
+      parambyname('Material_Type').asinteger := dblkpMaterialType.ListValue;
       parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
       parambyname('Description').asstring :=  '%' + edtName.Text + '%';
       if chkbxShowinactive.checked then
@@ -349,7 +349,7 @@ begin
   with qryDeleteEdgeThickness do
     begin
       close;
-      parambyname('Material_type').asinteger := dblkpMaterialType.keyvalue;
+      parambyname('Material_type').asinteger := dblkpMaterialType.ListValue;
       parambyname('Edge_Type').asinteger := dblkpedgetype.keyvalue;
       execsql;
     end;

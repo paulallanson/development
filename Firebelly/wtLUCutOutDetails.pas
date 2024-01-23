@@ -97,7 +97,7 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types,
+  System.UITypes, System.Types, AllCommon,
   wtMaintCutOutDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
@@ -112,23 +112,26 @@ begin
   dbgDetails.Columns[1].width := 150;
 
   with lkpCOutThickness do
-    begin
-      close;
-      if dtmdlWorktops.IsSQL then
-        begin
-          sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
-          SQL.Text := sText;
-        end;
-      parambyname('Material_Type').asinteger := dblkpMaterialType.keyvalue;
-      parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
-      parambyname('Description').asstring :=  '%' + edtName.Text + '%';
-      if chkbxShowinactive.checked then
-        parambyname('inactive').asstring := 'Y'
-      else
-        parambyname('inactive').asstring := 'N';
-      open;
-      stsbrDetails.panels[0].text := inttostr(recordcount) + ' records displayed';
-    end;
+  begin
+    close;
+    if dtmdlWorktops.IsSQL then
+     begin
+        sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+        SQL.Text := sText;
+     end;
+
+    parambyname('Material_Type').asinteger := dblkpMaterialType.ListValue;
+    parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
+    parambyname('Description').asstring :=  '%' + edtName.Text + '%';
+    if chkbxShowinactive.checked then
+      parambyname('inactive').asstring := 'Y'
+    else
+      parambyname('inactive').asstring := 'N';
+
+    open;
+
+    stsbrDetails.panels[0].text := inttostr(recordcount) + ' records displayed';
+  end;
 end;
 
 procedure TfrmWTLUCutOutDetails.CallMaintScreen(FuncMode: string);
@@ -288,9 +291,8 @@ end;
 
 procedure TfrmWTLUCutOutDetails.dblkpCopyMaterialClick(Sender: TObject);
 begin
-  refresh;
+  Refresh;
   btnGo.Enabled := (dblkpCopyMaterial.Text <> '');
-
 end;
 
 procedure TfrmWTLUCutOutDetails.btnGoClick(Sender: TObject);
