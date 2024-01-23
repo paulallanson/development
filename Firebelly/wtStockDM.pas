@@ -22,6 +22,7 @@ type
     qryProduct: TFDQuery;
     qryGSmart: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
+    procedure wtStkDatabaseBeforeConnect(Sender: TObject);
   private
     function GetHeaderCountAll: integer;
     { Private declarations }
@@ -43,7 +44,7 @@ var
 
 implementation
 
-uses wtDataModule;
+uses wtDataModule, AllCommon;
 
 {$R *.dfm}
 
@@ -74,6 +75,11 @@ begin
           open;
         end;
     end;
+end;
+
+procedure TdtmdlStock.wtStkDatabaseBeforeConnect(Sender: TObject);
+begin
+  SetConnectionMapRules(wtStkDatabase);
 end;
 
 function TdtmdlStock.CheckProductExists(tempCode: string): boolean;

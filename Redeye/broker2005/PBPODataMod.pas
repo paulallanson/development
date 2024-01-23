@@ -152,7 +152,7 @@ type
     qryCheckPI: TFDQuery;
     qryGetProdTypePriceUnit: TFDQuery;
     qryPartMvmnts: TFDQuery;
-    qryPartMvmntsDate_received: TSQLTimeStampField;
+    qryPartMvmntsDate_received: TDateTimeField;
     qryPartMvmntsPart_Store_Name: TWideStringField;
     qryPartMvmntsPart_Movement_Bin: TWideStringField;
     qryPartMvmntsPart_Store_Lot: TWideStringField;
@@ -173,7 +173,7 @@ type
     qryGetLastPOHistory: TFDQuery;
     qryGetPOPriceHist: TFDQuery;
     dtsGetPOPriceHist: TDataSource;
-    qryGetPOPriceHistDate_point: TSQLTimeStampField;
+    qryGetPOPriceHistDate_point: TDateTimeField;
     qryGetPOPriceHistOperator: TIntegerField;
     qryGetPOPriceHistOperator_Name: TStringField;
     qryGetPOPriceHistOrder_Price: TCurrencyField;
@@ -183,8 +183,8 @@ type
     qryGetPOPriceHistOrder_Unit_Description: TStringField;
     qryGetPOPriceHistSell_Unit: TIntegerField;
     qryGetPOPriceHistSell_Unit_Description: TStringField;
-    qryGetPOPriceHistGoods_Reqd_by_Customer: TSQLTimeStampField;
-    qryGetPOPriceHistGoods_Required: TSQLTimeStampField;
+    qryGetPOPriceHistGoods_Reqd_by_Customer: TDateTimeField;
+    qryGetPOPriceHistGoods_Required: TDateTimeField;
     qryGetPOPriceHistOn_Hold: TStringField;
     GetCompBrAddrSQL: TFDQuery;
     qryCompBranch: TFDQuery;

@@ -1,7 +1,6 @@
 object dtmdlStock: TdtmdlStock
-  Height = 724
-  Width = 976
-  PixelsPerInch = 120
+  Height = 579
+  Width = 781
   object qryCustStock: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -111,8 +110,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 30
-    Top = 20
+    Left = 24
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -210,8 +209,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStock: TDataSource
     DataSet = qryCustStock
-    Left = 230
-    Top = 20
+    Left = 184
+    Top = 16
   end
   object qryPartMvmnts: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -244,8 +243,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 30
-    Top = 90
+    Left = 24
+    Top = 72
     ParamData = <
       item
         Name = 'part'
@@ -253,7 +252,7 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptInput
         Value = Null
       end>
-    object qryPartMvmntsDate_received: TSQLTimeStampField
+    object qryPartMvmntsDate_received: TDateTimeField
       FieldName = 'Date_received'
       Origin = 'Date_received'
     end
@@ -315,8 +314,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartMvmnts: TDataSource
     DataSet = qryPartMvmnts
-    Left = 230
-    Top = 90
+    Left = 184
+    Top = 72
   end
   object qryPartStoreBins: TFDQuery
     ConnectionName = 'PB'
@@ -392,8 +391,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 30
-    Top = 160
+    Left = 24
+    Top = 128
     ParamData = <
       item
         Name = 'Part'
@@ -402,8 +401,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartStoreBins: TDataSource
     DataSet = qryPartStoreBins
-    Left = 230
-    Top = 160
+    Left = 184
+    Top = 128
   end
   object qryStoreStockNumberedItems: TFDQuery
     ConnectionName = 'PB'
@@ -487,8 +486,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 30
-    Top = 220
+    Left = 24
+    Top = 176
     ParamData = <
       item
         Name = 'part'
@@ -513,8 +512,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcStoreStockNumberedItems: TDataSource
     DataSet = qryStoreStockNumberedItems
-    Left = 230
-    Top = 220
+    Left = 184
+    Top = 176
   end
   object qryPartSales: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -563,8 +562,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 30
-    Top = 300
+    Left = 24
+    Top = 240
     ParamData = <
       item
         Name = 'part'
@@ -601,7 +600,7 @@ object dtmdlStock: TdtmdlStock
       ReadOnly = True
       Size = 100
     end
-    object qryPartSalesdate_ordered: TSQLTimeStampField
+    object qryPartSalesdate_ordered: TDateTimeField
       AutoGenerateValue = arDefault
       FieldName = 'date_ordered'
       Origin = 'date_ordered'
@@ -663,8 +662,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartSales: TDataSource
     DataSet = qryPartSales
-    Left = 230
-    Top = 290
+    Left = 184
+    Top = 232
   end
   object qryPartProduction: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -741,8 +740,8 @@ object dtmdlStock: TdtmdlStock
       '       Order by Purchase_Order.Purchase_Order desc;'
       ' '
       ' ')
-    Left = 30
-    Top = 370
+    Left = 24
+    Top = 296
     ParamData = <
       item
         Name = 'Part'
@@ -785,7 +784,7 @@ object dtmdlStock: TdtmdlStock
       ReadOnly = True
       Size = 100
     end
-    object qryPartProductionOrder_Date: TSQLTimeStampField
+    object qryPartProductionOrder_Date: TDateTimeField
       AutoGenerateValue = arDefault
       FieldName = 'Order_Date'
       Origin = 'Date_Point'
@@ -880,8 +879,8 @@ object dtmdlStock: TdtmdlStock
       'where  (purch_ord_line.part = :Part)'
       'Order by purch_ord.Purch_Ord desc'
       ' ')
-    Left = 30
-    Top = 430
+    Left = 24
+    Top = 344
     ParamData = <
       item
         Name = 'Part'
@@ -918,7 +917,7 @@ object dtmdlStock: TdtmdlStock
       ReadOnly = True
       Size = 100
     end
-    object qryPartPOsOrder_Date: TSQLTimeStampField
+    object qryPartPOsOrder_Date: TDateTimeField
       AutoGenerateValue = arDefault
       FieldName = 'Order_Date'
       Origin = 'Purch_Ord_Date'
@@ -950,13 +949,13 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartProduction: TDataSource
     DataSet = qryPartProduction
-    Left = 230
-    Top = 370
+    Left = 184
+    Top = 296
   end
   object dtsrcPartPOs: TDataSource
     DataSet = qryPartPOs
-    Left = 230
-    Top = 430
+    Left = 184
+    Top = 344
   end
   object qryStckDetsbyFormRef: TFDQuery
     ConnectionName = 'PB'
@@ -1028,8 +1027,8 @@ object dtmdlStock: TdtmdlStock
       
         'where ((part_store_levels.part is not null) or (store_stock.part' +
         ' is not null))')
-    Left = 380
-    Top = 20
+    Left = 304
+    Top = 16
   end
   object qryPartNumbers: TFDQuery
     ConnectionName = 'PB'
@@ -1063,8 +1062,8 @@ object dtmdlStock: TdtmdlStock
       'order by Part,'
       '         Store_Stock_serial_item.serial_item_from'
       '')
-    Left = 380
-    Top = 90
+    Left = 304
+    Top = 72
     ParamData = <
       item
         Name = 'part'
@@ -1073,8 +1072,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsrcPartNumbers: TDataSource
     DataSet = qryPartNumbers
-    Left = 490
-    Top = 100
+    Left = 392
+    Top = 80
   end
   object qryStock: TFDQuery
     Connection = dmBroker.PBLDatabase
@@ -1231,8 +1230,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 130
-    Top = 20
+    Left = 104
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -1433,8 +1432,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 370
-    Top = 300
+    Left = 296
+    Top = 240
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1442,8 +1441,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsPartDeliveries: TDataSource
     DataSet = qryShowPartDeliveries
-    Left = 510
-    Top = 370
+    Left = 408
+    Top = 296
   end
   object qryShowPartDeliveries: TFDQuery
     ConnectionName = 'PB'
@@ -1548,8 +1547,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 370
-    Top = 370
+    Left = 296
+    Top = 296
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1583,8 +1582,8 @@ object dtmdlStock: TdtmdlStock
       '    Part_Store = :Part_Store AND'
       '    Part_Bin Like :Part_Bin + '#39'%'#39
       'ORDER BY Store_Stock.Part_Bin, Store_Stock.Part')
-    Left = 30
-    Top = 500
+    Left = 24
+    Top = 400
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1595,21 +1594,21 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStockLocations: TDataSource
     DataSet = qryStockLocations
-    Left = 220
-    Top = 500
+    Left = 176
+    Top = 400
   end
   object qryPartStore: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Part_Store'
       'order by Part_Store_Name')
-    Left = 380
-    Top = 170
+    Left = 304
+    Top = 136
   end
   object dtsPartStore: TDataSource
     DataSet = qryPartStore
-    Left = 490
-    Top = 170
+    Left = 392
+    Top = 136
   end
   object qryMoves: TFDQuery
     ConnectionName = 'pb'
@@ -1617,8 +1616,8 @@ object dtmdlStock: TdtmdlStock
       'select *'
       'from Part_Movement'
       'where Part = :Part')
-    Left = 370
-    Top = 440
+    Left = 296
+    Top = 352
     ParamData = <
       item
         Name = 'Part'
@@ -1731,8 +1730,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 370
-    Top = 510
+    Left = 296
+    Top = 408
     ParamData = <
       item
         Name = 'Customer'
@@ -1746,8 +1745,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsCustDeliveries: TDataSource
     DataSet = qryShowCustDeliveries
-    Left = 510
-    Top = 510
+    Left = 408
+    Top = 408
   end
   object qryCustDeliveries: TFDQuery
     ConnectionName = 'PB'
@@ -1852,8 +1851,8 @@ object dtmdlStock: TdtmdlStock
       ' '
       ' '
       ' ')
-    Left = 510
-    Top = 440
+    Left = 408
+    Top = 352
     ParamData = <
       item
         Name = 'Customer'
@@ -1866,8 +1865,8 @@ object dtmdlStock: TdtmdlStock
       'from Part_Movement'
       'where Part = :Part and Part_Movement_Type = '#39'J'#39
       'Order By Part_Movement desc')
-    Left = 380
-    Top = 240
+    Left = 304
+    Top = 192
     ParamData = <
       item
         Name = 'Part'
@@ -1918,8 +1917,8 @@ object dtmdlStock: TdtmdlStock
       '        Customer.Name'
       'ORDER BY Part_Bin, Store_Stock.Part'
       '')
-    Left = 30
-    Top = 570
+    Left = 24
+    Top = 456
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1933,8 +1932,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsStockUsage: TDataSource
     DataSet = qryStockUsage
-    Left = 220
-    Top = 570
+    Left = 176
+    Top = 456
   end
   object qryProductionLocation: TFDQuery
     ConnectionName = 'PB'
@@ -1943,13 +1942,13 @@ object dtmdlStock: TdtmdlStock
       'from Production_location'
       'where receive_forward_stock = '#39'Y'#39
       'Order by Production_Location_Name')
-    Left = 370
-    Top = 590
+    Left = 296
+    Top = 472
   end
   object dtsProductionLocation: TDataSource
     DataSet = qryProductionLocation
-    Left = 510
-    Top = 590
+    Left = 408
+    Top = 472
   end
   object qryGetProductionLocation: TFDQuery
     ConnectionName = 'PB'
@@ -1957,8 +1956,8 @@ object dtmdlStock: TdtmdlStock
       'select *'
       'from Production_Location'
       'where Production_Location = :Production_Location')
-    Left = 670
-    Top = 590
+    Left = 536
+    Top = 472
     ParamData = <
       item
         Name = 'Production_Location'
@@ -1973,8 +1972,8 @@ object dtmdlStock: TdtmdlStock
       'Part = :Part and '
       'Part_Bin = :Part_Bin and store_quantity > 0'
       'order by Store_Stock')
-    Left = 670
-    Top = 510
+    Left = 536
+    Top = 408
     ParamData = <
       item
         Name = 'Part_Store'
@@ -1992,8 +1991,8 @@ object dtmdlStock: TdtmdlStock
       'select * '
       'from Part_Store_Allocation'
       'where Store_Stock = :Store_Stock')
-    Left = 810
-    Top = 510
+    Left = 648
+    Top = 408
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -2005,8 +2004,8 @@ object dtmdlStock: TdtmdlStock
       'select DISTINCT Job_Bag'
       'from Job_Bag_Stock_Request'
       'Where Sales_Order = :Sales_Order')
-    Left = 810
-    Top = 590
+    Left = 648
+    Top = 472
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2037,8 +2036,8 @@ object dtmdlStock: TdtmdlStock
       'WHERE (Part.Part Like :Description) or'
       '      (Part.Part_description Like :Description)'
       '')
-    Left = 690
-    Top = 110
+    Left = 552
+    Top = 88
     ParamData = <
       item
         Name = 'Description'
@@ -2071,8 +2070,8 @@ object dtmdlStock: TdtmdlStock
       #9'LEFT JOIN Customer ON Part.Customer = Customer.Customer'
       'WHERE ((Part.Part Like :Description) or'
       '      (Part.Part_description Like :Description))')
-    Left = 800
-    Top = 110
+    Left = 640
+    Top = 88
     ParamData = <
       item
         Name = 'Description'
@@ -2083,8 +2082,8 @@ object dtmdlStock: TdtmdlStock
   end
   object dtsPallets: TDataSource
     DataSet = qryPallets
-    Left = 620
-    Top = 110
+    Left = 496
+    Top = 88
   end
   object qryGetPart: TFDQuery
     ConnectionName = 'PB'
@@ -2093,8 +2092,8 @@ object dtmdlStock: TdtmdlStock
       'From Part'
       'Where Part = :Part'
       ' ')
-    Left = 690
-    Top = 190
+    Left = 552
+    Top = 152
     ParamData = <
       item
         Name = 'Part'
@@ -2109,8 +2108,8 @@ object dtmdlStock: TdtmdlStock
       'Where (Customer.Customer = :Customer) and'
       '      (Customer_Branch.Customer = :Customer) and'
       '      (Customer_Branch.Branch_No = :Branch)')
-    Left = 690
-    Top = 266
+    Left = 552
+    Top = 213
     ParamData = <
       item
         Name = 'Customer'
@@ -2124,8 +2123,8 @@ object dtmdlStock: TdtmdlStock
   end
   object qryUpdMulti: TFDQuery
     ConnectionName = 'PB'
-    Left = 800
-    Top = 190
+    Left = 640
+    Top = 152
   end
   object qryUpdMultiPartInactive: TFDQuery
     ConnectionName = 'PB'
@@ -2136,8 +2135,8 @@ object dtmdlStock: TdtmdlStock
       
         '(SELECT ISNULL(SUM(Store_Quantity),0) FROM Store_Stock WHERE Sto' +
         're_Stock.Part = Part.Part) = 0')
-    Left = 810
-    Top = 280
+    Left = 648
+    Top = 224
     ParamData = <
       item
         Name = 'Not_In_Use'

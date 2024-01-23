@@ -35,13 +35,13 @@ type
     qryJobsJob_Bag: TIntegerField;
     qryJobsJob_Bag_Descr: TWideStringField;
     qryJobsCustomer_Name: TWideStringField;
-    qryJobsDate_Point: TSQLTimeStampField;
+    qryJobsDate_Point: TDateTimeField;
     qryJobsBranch_Name: TWideStringField;
     qryJobsCustomer: TIntegerField;
     qryJobsBranch_No: TIntegerField;
     qryJobsAccount_Code: TWideStringField;
     qryJobsCust_Order_no: TWideStringField;
-    qryJobsGoods_Required: TSQLTimeStampField;
+    qryJobsGoods_Required: TDateTimeField;
     qryJobsQuantity: TFloatField;
     qryJobsJob_Bag_Status_descr: TWideStringField;
     qryJobsJob_Bag_Status: TIntegerField;
@@ -54,7 +54,7 @@ type
     qryJobsAccount_Manager: TWideStringField;
     qryJobsDescription_Reference: TWideStringField;
     qryJobsOn_Hold: TWideStringField;
-    qryJobsDate_Start: TSQLTimeStampField;
+    qryJobsDate_Start: TDateTimeField;
     qryJobsCash_Lines: TIntegerField;
     qryJobsProduction_Status: TWideStringField;
     qryJobsNCA_Live_Lines: TIntegerField;
@@ -62,7 +62,7 @@ type
     qryJobsPO_Lines: TIntegerField;
     qryJobsProduction_Complete: TWideStringField;
     qryJobsQuote: TFloatField;
-    qryJobsFile_Copies_Received_Date: TSQLTimeStampField;
+    qryJobsFile_Copies_Received_Date: TDateTimeField;
     qryJobsFile_Copies_Received_By_Name: TWideStringField;
     qryJobsSub_Rep_Name: TWideStringField;
     qryJobsInvoice_This_Week: TWideStringField;
