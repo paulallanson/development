@@ -30,13 +30,12 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 890
+        Width = 882
       end>
-    ExplicitWidth = 892
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 877
+      Width = 873
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 66
@@ -304,10 +303,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 215
-    ExplicitWidth = 892
     object Panel2: TPanel
-      Left = 620
+      Left = 616
       Top = 1
       Width = 271
       Height = 54
@@ -367,7 +364,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 83
       object rdgrpRevenueCentre: TRadioGroup
         Left = 7
         Top = 1
@@ -419,7 +415,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitHeight = 83
       DesignSize = (
         624
         54)
@@ -484,8 +479,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       item
         Width = 50
       end>
-    ExplicitTop = 271
-    ExplicitWidth = 892
   end
   object Panel3: TPanel
     Left = 0
@@ -498,7 +491,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 892
     DesignSize = (
       888
       30)

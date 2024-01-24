@@ -62,7 +62,8 @@ var
 
 implementation
 
-uses wtDataModule, AllCommon;
+uses
+  wtMain, wtDataModule, AllCommon;
 
 {$R *.dfm}
 
@@ -247,12 +248,12 @@ end;
 
 procedure TfrmWTMaintStore.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintStore.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 end.

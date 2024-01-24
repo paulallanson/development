@@ -33,6 +33,9 @@ implementation
 
 {$R *.DFM}
 
+uses
+  pbMainMenu;
+
 procedure TBrokerVersFrm.FormActivate(Sender: TObject);
 Var
 FiName, DiName: Array [0..255] of char ;
@@ -88,18 +91,18 @@ begin
 	CopyIfNewer('Broker2005.exe', 'Broker Program') ;
 
   {Create the INI file}
-  CreateINIfile(myRedeye_INIFILE);
+  CreateINIfile(TfrmpbMainMenu.AppIniFile);
 
   {Do the Broker ini file} ;
 	StatusNarr('Checking Broker INI File') ;
 	CopyIfNewerINI('Broker.ini', 'Broker.ini', 'Broker INI File') ;
-  AppendtoINIfile('Broker.ini',myRedeye_INIFILE);
+  AppendtoINIfile('Broker.ini',TfrmpbMainMenu.AppIniFile);
 
   {Do the Broker stock ini file} ;
   try
 	  StatusNarr('Checking Broker INI File') ;
 	  CopyIfNewerINI('Brokerst.ini', 'Brokerst.ini', 'Broker Stock INI File') ;
-    AppendtoINIfile('Brokerst.ini',myRedeye_INIFILE);
+    AppendtoINIfile('Brokerst.ini',TfrmpbMainMenu.AppIniFile);
   except
   end;
 
@@ -107,7 +110,7 @@ begin
   try
 	  StatusNarr('Checking Broker INI File') ;
 	  CopyIfNewerINI('myPrintMan.ini', 'myPrintMan.ini', 'Broker INI File') ;
-    AppendtoINIfile('myPrintMan.ini',myRedeye_INIFILE);
+    AppendtoINIfile('myPrintMan.ini',TfrmpbMainMenu.AppIniFile);
   except
   end;
 

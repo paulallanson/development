@@ -2388,7 +2388,7 @@ end;
 procedure TPBMaintContractFrm.FormCreate(Sender: TObject);
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 procedure TPBMaintContractFrm.AddToContract(iJobBag: integer);

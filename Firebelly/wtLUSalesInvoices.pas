@@ -694,7 +694,7 @@ begin
 
 
   Printers.Printer.PrinterIndex := -1;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', myWorktops_INIFILE, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);

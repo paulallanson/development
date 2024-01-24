@@ -4323,7 +4323,7 @@ begin
   PBEnqDataModFrm := TPBEnqDataModFrm.Create(Self);
   dmPBDocObjects := TdmPBDocObjects.Create(self);
   Enquiry := TEnquiry.Create;
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 procedure TPBEnquiryFrm.AddNotesMemoChange(Sender: TObject);

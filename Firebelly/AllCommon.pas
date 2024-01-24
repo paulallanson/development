@@ -5,10 +5,15 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry,
   Outlook_TLB, COMobj, ActiveX, Math, DBGrids, IniFiles, Forms, Variants,
-  qrprntr, Printers, DB, shFolder, wtDataModule,
+  qrprntr, Printers, DB, shFolder, wtDataModule, DBCtrls,
   FireDAC.Comp.Client;
 
 type
+  TDBLookupComboBoxHelper = class helper for TDBLookupComboBox
+  public
+    function ListValue: Variant;
+  end;
+
   TPrinterSettings = class
   private
     FFromPage: integer;
@@ -30,10 +35,8 @@ type
   end;
 
 {Quick Reports Printer settings}
-procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar:
-    Double);
-procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size:
-    TQRPaperSize; var Duplex: Boolean);
+procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
+procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size: TQRPaperSize; var Duplex: Boolean);
 function GetBinSelection: integer;
 
 {dbGrid Routines}
@@ -357,7 +360,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
 *)
@@ -434,7 +437,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 *)
   MI.Bodyformat := olFormatHTML;
@@ -2211,6 +2214,13 @@ end;
 procedure TPrinterSettings.SetToPage(const Value: integer);
 begin
   FToPage := Value;
+end;
+
+{ TDBLookupComboBoxHelper }
+
+function TDBLookupComboBoxHelper.ListValue: Variant;
+begin
+  Result := Self.ListSource.DataSet.FieldByName(Self.KeyField).Value;
 end;
 
 end.

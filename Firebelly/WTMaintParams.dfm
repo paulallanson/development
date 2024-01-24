@@ -903,11 +903,11 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = chkbxUseRemedialsAsOrdersClick
       end
       object grpbxStockSystem: TGroupBox
-        ParentBackground = False
         Left = 408
         Top = 216
         Width = 273
         Height = 57
+        ParentBackground = False
         TabOrder = 17
         object Label80: TLabel
           Left = 24

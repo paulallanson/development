@@ -76,7 +76,7 @@ type
     qryUpPOStock: TFDQuery;
     qrySODetailsSales_Order: TIntegerField;
     qrySODetailsSales_order_delivery_no: TIntegerField;
-    qrySODetailsDelivery_Date: TSQLTimeStampField;
+    qrySODetailsDelivery_Date: TDateTimeField;
     qrySODetailsDespatch_note_No: TWideStringField;
     qrySODetailsCust_Order_No: TWideStringField;
     qrySODetailsDelivery_Customer: TIntegerField;
@@ -88,11 +88,11 @@ type
     qrySODetailsBranch_no0: TIntegerField;
     qrySODetailsDeliveryName: TWideStringField;
     dtsSODetails: TDataSource;
-    qrySODetailsDate_Required: TSQLTimeStampField;
+    qrySODetailsDate_Required: TDateTimeField;
     qrySODetailsCustomer_Name: TWideStringField;
     qrySODetailsSales_Order_Head_Status: TIntegerField;
     qrySODetailsReplenish_Source: TIntegerField;
-    qrySODetailsDate_Ordered: TSQLTimeStampField;
+    qrySODetailsDate_Ordered: TDateTimeField;
     qryUpPOLineInvUpfront: TFDQuery;
     qryPODetailsGoods_reqd_by_customer: TDateTimeField;
     qryPODetailsInvoice_upfront: TStringField;
@@ -101,7 +101,7 @@ type
     qryPODetailsPrice_unit_description: TStringField;
     qryPODetailsPrice_Unit_Factor: TFloatField;
     qrySODetailsDelivery_Type: TWideStringField;
-    qrySODetailsDate_Picked: TSQLTimeStampField;
+    qrySODetailsDate_Picked: TDateTimeField;
     qrySODetailsDelivery_Weight_kilos: TIntegerField;
     qrySODetailsNo_Of_Boxes: TIntegerField;
     qrySODetailsDelivery_Instructions: TWideStringField;

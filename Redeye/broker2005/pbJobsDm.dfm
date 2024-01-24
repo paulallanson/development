@@ -1,7 +1,6 @@
 object dtmdlJobs: TdtmdlJobs
-  Height = 703
-  Width = 735
-  PixelsPerInch = 120
+  Height = 562
+  Width = 588
   object qryJobs: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -43,8 +42,8 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Rep = Rep.Rep) AND'
       '      (Job_Bag.Operator = Operator.Operator) and'
       '      (Job_Bag.Office_Contact = AM.Operator)')
-    Left = 40
-    Top = 50
+    Left = 32
+    Top = 40
     ParamData = <
       item
         Name = 'Customer'
@@ -74,7 +73,7 @@ object dtmdlJobs: TdtmdlJobs
       Required = True
       Size = 100
     end
-    object qryJobsDate_Point: TSQLTimeStampField
+    object qryJobsDate_Point: TDateTimeField
       FieldName = 'Date_Point'
       Origin = 'Date_Point'
       Required = True
@@ -106,7 +105,7 @@ object dtmdlJobs: TdtmdlJobs
       Origin = 'Cust_Order_no'
       Size = 40
     end
-    object qryJobsGoods_Required: TSQLTimeStampField
+    object qryJobsGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
       Origin = 'Goods_Required'
     end
@@ -176,7 +175,7 @@ object dtmdlJobs: TdtmdlJobs
       Size = 50
       Calculated = True
     end
-    object qryJobsDate_Start: TSQLTimeStampField
+    object qryJobsDate_Start: TDateTimeField
       FieldName = 'Date_Start'
       Origin = 'Date_Start'
     end
@@ -209,7 +208,7 @@ object dtmdlJobs: TdtmdlJobs
     object qryJobsQuote: TFloatField
       FieldName = 'Quote'
     end
-    object qryJobsFile_Copies_Received_Date: TSQLTimeStampField
+    object qryJobsFile_Copies_Received_Date: TDateTimeField
       FieldName = 'File_Copies_Received_Date'
     end
     object qryJobsFile_Copies_Received_By_Name: TWideStringField
@@ -238,8 +237,8 @@ object dtmdlJobs: TdtmdlJobs
   end
   object dtsJobs: TDataSource
     DataSet = qryJobs
-    Left = 130
-    Top = 50
+    Left = 104
+    Top = 40
   end
   object qryDummy: TFDQuery
     ConnectionName = 'PB'
@@ -343,8 +342,8 @@ object dtmdlJobs: TdtmdlJobs
       '        ON End_User.Customer = Job_Bag.End_User_Customer'
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)')
-    Left = 286
-    Top = 50
+    Left = 229
+    Top = 40
     ParamData = <
       item
         Name = 'RECORDS'
@@ -405,13 +404,13 @@ object dtmdlJobs: TdtmdlJobs
       '  Job_Bag_Return.Part,'
       '  Part.Part_Description'
       '')
-    Left = 40
-    Top = 130
+    Left = 32
+    Top = 104
   end
   object dtsJobReturns: TDataSource
     DataSet = qryJobReturns
-    Left = 130
-    Top = 130
+    Left = 104
+    Top = 104
   end
   object qryJBReturnLines: TFDQuery
     MasterSource = dtsJobReturns
@@ -423,8 +422,8 @@ object dtmdlJobs: TdtmdlJobs
       'from job_bag_return, part'
       'where job_bag_return.job_bag = :Job_Bag and'
       '  job_bag_return.part = part.part')
-    Left = 40
-    Top = 220
+    Left = 32
+    Top = 176
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -432,8 +431,8 @@ object dtmdlJobs: TdtmdlJobs
   end
   object dtsJBReturnLines: TDataSource
     DataSet = qryJBReturnLines
-    Left = 150
-    Top = 220
+    Left = 120
+    Top = 176
   end
   object qryJBPartQtys: TFDQuery
     ConnectionName = 'pb'
@@ -457,8 +456,8 @@ object dtmdlJobs: TdtmdlJobs
       ')'
       'GROUP BY Sales_Order_line.Part'
       '')
-    Left = 600
-    Top = 50
+    Left = 480
+    Top = 40
     ParamData = <
       item
         Name = 'Part'
@@ -535,8 +534,8 @@ object dtmdlJobs: TdtmdlJobs
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)'
       '')
-    Left = 40
-    Top = 300
+    Left = 32
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -553,8 +552,8 @@ object dtmdlJobs: TdtmdlJobs
   end
   object dtsJobsNCA: TDataSource
     DataSet = qryJobsNCA
-    Left = 150
-    Top = 300
+    Left = 120
+    Top = 240
   end
   object qryOldDummyNCA: TFDQuery
     ConnectionName = 'PB'
@@ -630,8 +629,8 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)'
       ''
       '')
-    Left = 260
-    Top = 300
+    Left = 208
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -755,8 +754,8 @@ object dtmdlJobs: TdtmdlJobs
         'derLine.Customers_Desc LIKE :Description) or ('#39'%%'#39' LIKE :Descrip' +
         'tion))'
       '')
-    Left = 410
-    Top = 300
+    Left = 328
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -861,8 +860,8 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Rep = Rep.Rep) AND'
       '      (Job_Bag.Operator = Operator.Operator) and'
       '      (Job_Bag.Office_Contact = AM.Operator)')
-    Left = 490
-    Top = 50
+    Left = 392
+    Top = 40
     ParamData = <
       item
         Name = 'Records'
@@ -879,8 +878,8 @@ object dtmdlJobs: TdtmdlJobs
   end
   object dtsContractJobs: TDataSource
     DataSet = qryContractJobs
-    Left = 150
-    Top = 380
+    Left = 120
+    Top = 304
   end
   object qryContractJobs: TFDQuery
     ConnectionName = 'PB'
@@ -898,8 +897,8 @@ object dtmdlJobs: TdtmdlJobs
         '      (Job_Bag.Job_Bag NOT IN (SELECT Job_Bag FROM Contract_Job_' +
         'Bag WHERE Contract_Job_Bag.Contract = :Contract))'
       'ORDER BY Job_Bag.Job_Bag DESC')
-    Left = 50
-    Top = 380
+    Left = 40
+    Top = 304
     ParamData = <
       item
         Name = 'Customer'
@@ -919,8 +918,8 @@ object dtmdlJobs: TdtmdlJobs
     SQL.Strings = (
       'INSERT INTO Contract_Job_Bag(Contract, Job_Bag)'
       'VALUES (:Contract, :Job_Bag)')
-    Left = 50
-    Top = 510
+    Left = 40
+    Top = 408
     ParamData = <
       item
         Name = 'Contract'
@@ -940,8 +939,8 @@ object dtmdlJobs: TdtmdlJobs
       '                              FROM Contract_Purchase_Order'
       '                              WHERE Contract = :Contract))'
       'ORDER BY Purchase_Order')
-    Left = 50
-    Top = 450
+    Left = 40
+    Top = 360
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -955,8 +954,8 @@ object dtmdlJobs: TdtmdlJobs
     SQL.Strings = (
       'INSERT INTO Contract_Purchase_Order(Contract, Purchase_Order)'
       'VALUES (:Contract, :Purchase_Order)')
-    Left = 50
-    Top = 580
+    Left = 40
+    Top = 464
     ParamData = <
       item
         Name = 'Contract'
@@ -971,8 +970,8 @@ object dtmdlJobs: TdtmdlJobs
       'SELECT Contract'
       'FROM Contract_Job_Bag'
       'WHERE Job_Bag = :Job_Bag')
-    Left = 290
-    Top = 130
+    Left = 232
+    Top = 104
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -986,8 +985,8 @@ object dtmdlJobs: TdtmdlJobs
       '    Invoice_This_Week_By = :Invoice_This_Week_By,'
       '    Invoice_This_Week_Date = :Invoice_This_Week_Date'
       'WHERE Job_Bag = :Job_Bag')
-    Left = 260
-    Top = 380
+    Left = 208
+    Top = 304
     ParamData = <
       item
         Name = 'Invoice_This_Week'
@@ -1098,8 +1097,8 @@ object dtmdlJobs: TdtmdlJobs
       #9#9'ON Sub_Rep.Rep = Job_Bag.Sub_Rep'
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)')
-    Left = 390
-    Top = 50
+    Left = 312
+    Top = 40
     ParamData = <
       item
         Name = 'Records'

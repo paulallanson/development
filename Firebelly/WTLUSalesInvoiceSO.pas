@@ -144,9 +144,9 @@ begin
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;
   dtmdlSalesInvoice.qrySOAll.AfterScroll := SetSalesOrderEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', myWorktops_INIFILE, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -348,7 +348,7 @@ procedure TfrmWTLUSalesInvoiceSO.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
@@ -365,7 +365,7 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', myWorktops_INIFILE, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 
 end;
 

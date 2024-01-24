@@ -24,7 +24,7 @@ type
     dtsPriceUnit: TDataSource;
     qryGetEnquiryLine: TFDQuery;
     qryUpdEnquiryLine: TFDQuery;
-    qryEnqsDate_Point: TSQLTimeStampField;
+    qryEnqsDate_Point: TDateTimeField;
     qryEnqsEnquiry_Status: TIntegerField;
     qryEnqsStatus_Description: TWideStringField;
     qryEnqsDescription: TWideStringField;

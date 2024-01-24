@@ -27,7 +27,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 367
   end
   object Button4: TButton
     Left = 368
@@ -39,8 +38,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitLeft = 376
-    ExplicitTop = 367
   end
   object rdgrpReps: TRadioGroup
     Left = 8
@@ -278,7 +275,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 367
   end
   object btnPreview: TButton
     Left = 96
@@ -289,7 +285,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
-    ExplicitTop = 367
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
@@ -365,7 +360,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     Anchors = [akLeft, akBottom]
     Caption = 'Only Show Scheduled Orders'
     TabOrder = 14
-    ExplicitTop = 305
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
@@ -375,7 +369,6 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     Anchors = [akLeft, akBottom]
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 15
-    ExplicitTop = 329
   end
   object GroupBox2: TGroupBox
     Left = 8

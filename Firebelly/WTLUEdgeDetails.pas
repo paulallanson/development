@@ -3,11 +3,10 @@ unit WTLUEdgeDetails;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, QrCtrls,
-  ExtCtrls, ComCtrls,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, ComCtrls,
+  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, QrCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -96,7 +95,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, AllCommon,
   wtMaintEdgeDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
@@ -120,7 +119,7 @@ begin
           SQL.Text := sText;
         end;
 
-      parambyname('Material_Type').asinteger := dblkpMaterialType.keyvalue;
+      parambyname('Material_Type').asinteger := dblkpMaterialType.ListValue;
       parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
       parambyname('Description').asstring :=  '%' + edtName.Text + '%';
       if chkbxShowinactive.checked then
@@ -350,7 +349,7 @@ begin
   with qryDeleteEdgeThickness do
     begin
       close;
-      parambyname('Material_type').asinteger := dblkpMaterialType.keyvalue;
+      parambyname('Material_type').asinteger := dblkpMaterialType.ListValue;
       parambyname('Edge_Type').asinteger := dblkpedgetype.keyvalue;
       execsql;
     end;

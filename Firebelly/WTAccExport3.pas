@@ -9,132 +9,132 @@ Comments
 VSS Info:
 $Header: /PBL D5/PBAccExport3.pas 33    2/04/:3 15:52 Paul $
 $History: PBAccExport3.pas $
- * 
+ *
  * *****************  Version 33  *****************
  * User: Paul         Date: 2/04/:3    Time: 15:52
  * Updated in $/PBL D5
  * Changed to export Vat only invoices
- * 
+ *
  * *****************  Version 32  *****************
  * User: Paul         Date: 10/03/:3   Time: 16:07
  * Updated in $/PBL D5
  * Changed to correct fault in supplier export, only picking up 6 ch's of
  * Account code
- * 
+ *
  * *****************  Version 31  *****************
  * User: Pahome       Date: 9/03/:3    Time: 20:52
  * Updated in $/PBL D5
  * added functionality to export supplier credits
- * 
+ *
  * *****************  Version 30  *****************
  * User: Paul         Date: 18/02/:3   Time: 17:04
  * Updated in $/PBL D5
  * Changed Purchase export to take any invoice differences into account.
  * Also corrected problem when exporting Sales Invoice not creating an INV
  * file.
- * 
+ *
  * *****************  Version 29  *****************
  * User: Paul         Date: 18/02/:3   Time: 10:54
  * Updated in $/PBL D5
  * Corrected to create the sale invoice export file correctly
- * 
+ *
  * *****************  Version 28  *****************
  * User: Pahome       Date: 16/02/:3   Time: 23:17
  * Updated in $/PBL D5
  * Changed to write Purchase invoices away to temporary invoice file
- * 
+ *
  * *****************  Version 27  *****************
  * User: Paul         Date: 14/02/:3   Time: 17:01
  * Updated in $/PBL D5
  * Changed sequence of Purchase Invoice export file, also had to re-do
  * changes related to sales and purchase invoice extra charges
- * 
+ *
  * *****************  Version 26  *****************
  * User: Pahome       Date: 21/01/:3   Time: 17:36
  * Updated in $/PBL D5
  * Changed to set the description.
- * 
+ *
  * *****************  Version 25  *****************
  * User: Paul         Date: 9/01/:3    Time: 14:50
  * Updated in $/PBL D5
  * Changed to correct Maximiser import
- * 
+ *
  * *****************  Version 24  *****************
  * User: Paul         Date: 8/01/:3    Time: 16:20
  * Updated in $/PBL D5
  * Added functionality to import Maximiser contacts
- * 
+ *
  * *****************  Version 21  *****************
  * User: Davidn       Date: 25/10/02   Time: 14:34
  * Updated in $/PBL D5
  * Allowed user to specify invoice export file names.
- * 
+ *
  * *****************  Version 20  *****************
  * User: Pahome       Date: 3/10/:2    Time: 11:07
  * Updated in $/PBL D5
  * Changed to export one record per invoice. If additional items exist
  * with a different VAT Code then multiple lines are exported.
- * 
+ *
  * *****************  Version 19  *****************
  * User: Paul         Date: 23/04/:2   Time: 10:37
  * Updated in $/PBL D5
  * Chnaged export routines to be non-SOP specific.
- * 
+ *
  * *****************  Version 18  *****************
  * User: Paul         Date: 19/03/:2   Time: 16:12
  * Updated in $/PBL D5
  * Changed the export to set column D to '1'
- * 
+ *
  * *****************  Version 17  *****************
  * User: Paul         Date: 13/03/:2   Time: 14:38
  * Updated in $/PBL D5
  * Corrected Sage export problems related to Additional charges and
  * Credits
- * 
+ *
  * *****************  Version 16  *****************
  * User: Paul         Date: 26/10/:1   Time: 17:01
  * Updated in $/PBL D5
  * Added import of Payment from Sage routine
- * 
+ *
  * *****************  Version 15  *****************
  * User: Paul         Date: 18/10/:1   Time: 12:38
  * Updated in $/PBL D5
  * Changes to improve the import and export of data to and from Sage Line
  * 50
- * 
+ *
  * *****************  Version 14  *****************
  * User: Paul         Date: 1/10/:1    Time: 17:02
  * Updated in $/PBL D5
  * changed so that the export to Sage includes the Supplier Invoice No or
  * the Sales Invoice No.
- * 
+ *
  * *****************  Version 13  *****************
  * User: Paul         Date: 8/06/:1    Time: 15:31
  * Updated in $/PBL D5
  * Changed to calculate the VAT Value on Additional charges correctly
- * 
+ *
  * *****************  Version 12  *****************
  * User: Paul         Date: 19/09/:0   Time: 16:27
  * Updated in $/PBL D5
  * Changes made to Sage sales and purchase export routines
- * 
+ *
  * *****************  Version 11  *****************
  * User: Paul         Date: 15/09/:0   Time: 17:03
  * Updated in $/PBL D5
  * Changed to correct the Sage Purchase/Sales transactions
- * 
+ *
  * *****************  Version 10  *****************
  * User: Paul         Date: 8/09/:0    Time: 16:43
  * Updated in $/PBL D5
  * Added functionality to import Sage Customer/Supplier/Currency
  * information
- * 
+ *
  * *****************  Version 9  *****************
  * User: Paul         Date: 19/07/:0   Time: 12:05
  * Updated in $/PBL D5
  * Changed to pick up all Supplier Invoices which are at status 25,
  * Pending Update
- * 
+ *
  * *****************  Version 8  *****************
  * User: Paul         Date: 17/07/:0   Time: 17:04
  * Updated in $/PBL D5
@@ -142,13 +142,13 @@ $History: PBAccExport3.pas $
  * invoice lines with a status of Passed for Posting, previously the
  * export was trying to pick up records which had a Ledger Posting pending
  * status.
- * 
+ *
  * *****************  Version 7  *****************
  * User: Paul         Date: 11/04/:0   Time: 16:18
  * Updated in $/PBL D5
  * Changed to position the Additional Charges in the correct place in the
  * export file
- * 
+ *
  * *****************  Version 6  *****************
  * User: Roddym       Date: 21/03/:0   Time: 15:05
  * Updated in $/PBL D5
@@ -157,15 +157,15 @@ $History: PBAccExport3.pas $
 *******************************************************************************)
 unit WTAccExport3;
 
+{$WARNINGS OFF}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, Grids, DBGrids, ComCtrls, Inifiles,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls,
-  Vcl.ExtCtrls;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, DB, Grids, DBGrids,
+  ComCtrls, Inifiles, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.DBCtrls, Vcl.ExtCtrls;
 
 type
   TfrmWTAccExport3 = class(TForm)
@@ -238,7 +238,7 @@ type
     procedure ImportSage50Payments;
     function Sage50Format(sFieldText: string; bNeedQuotes: boolean; bNeedComma: boolean): string; overload;
     function Sage50Format(sFieldText: ShortString; bNeedQuotes: boolean; bNeedComma: boolean): string; overload;
-    procedure LinkerSalesInvoices;
+    //procedure LinkerSalesInvoices;
     procedure LinkerPurchaseInvoices;
     procedure QBooksCustomers(CustomerDataSQL: TFDQuery);
     procedure QBooksSuppliers(SupplierDataSQL: TFDQuery);
@@ -256,11 +256,11 @@ type
     procedure XeroCreateExportHeader;
     procedure XeroCreateExportFile;
     procedure XeroGetSalesInvoices;
-    function NarrativeStrip(const Data : string) : string;
+    //function NarrativeStrip(const Data : string) : string;
     procedure EnableFinishBtn;
     procedure GetDataSource;
     procedure WriteDataSource;
-    procedure DeleteACCfile;
+    //procedure DeleteACCfile;
     function INVfileExists: boolean;
     procedure CreateQBooksHeader;
     function QBooksIIFFormat(sFieldText: string): string;
@@ -321,9 +321,11 @@ const
 
 {$R *.DFM}
 
-function SStrCopy(const Text: string; const Index, Count: Integer): ShortString;
+function SStrCopy(const Source: string; const Index, Size: Integer): ShortString;
+var
+  StrResult: string;
 begin
-  var StrResult := Copy(Text, Index, Count);
+  StrResult := Copy(Source, Index, Size);
   Result := ShortString(StrResult);
 end;
 
@@ -381,7 +383,7 @@ begin
           else
             iRevenueCentre := dblkpRevCentre.keyvalue;
           end;
-          
+
           CreateAccExportFile;
           CreateInvExportFile;
           {Change the status of Customer 'Prospects' to 'Invoice' Customers}
@@ -651,7 +653,7 @@ begin
       iInvoiceCode := fieldbyname('Supplier_invoice').asinteger;
 
       {Reference}
-      sReference := trim(Copy(FieldByName('Supplier_invoice_no').AsString + sfiller, 1, 15));
+      sReference := SStrCopy(trim(FieldByName('Supplier_invoice_no').AsString) + sfiller, 1, 20);
 
 //      if sReference <> sInvoiceNo then
       if iInvoiceCode <> iNewInvoiceCode then
@@ -1276,7 +1278,7 @@ begin
       inc(iCustomers);
 
       {Customer Name}
-      sCompany := stringreplace(FieldByName('Customer_Name').AsString,',',' ',[rfReplaceAll]);
+      sCompany := SStrCopy(stringreplace(FieldByName('Customer_Name').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sCompany,true,true));
 
       {Account Number}
@@ -1298,23 +1300,23 @@ begin
       sContact := SStrCopy(FieldByName('Contact_Name').AsString + sfiller, 1, 30);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sContact,true,true));
 
-      sAdd1 := stringreplace(FieldByName('Street').AsString,',',' ',[rfReplaceAll]);
+      sAdd1 := SStrCopy(stringreplace(FieldByName('Street').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sAdd1,true,true));
 
-      sAdd2 := stringreplace(FieldByName('Locale').AsString,',',' ',[rfReplaceAll]);
+      sAdd2 := SStrCopy(stringreplace(FieldByName('Locale').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sAdd2,true,true));
 
       sXeroText := trim(sXeroText) + trim(Sage50Format('',true,true));
 
       sXeroText := trim(sXeroText) + trim(Sage50Format('',true,true));
 
-      sAdd3 := stringreplace(FieldByName('Town_City').AsString,',',' ',[rfReplaceAll]);
+      sAdd3 := SStrCopy(stringreplace(FieldByName('Town_City').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sAdd3,true,true));
 
-      sAdd4 := stringreplace(FieldByName('County_State').AsString,',',' ',[rfReplaceAll]);
+      sAdd4 := SStrCopy(stringreplace(FieldByName('County_State').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sAdd4,true,true));
 
-      sAdd5 := stringreplace(FieldByName('Postcode').AsString,',',' ',[rfReplaceAll]);
+      sAdd5 := SStrCopy(stringreplace(FieldByName('Postcode').AsString,',',' ',[rfReplaceAll]), 1, 50);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sAdd5,true,true));
 
       {Country}
@@ -1326,10 +1328,10 @@ begin
           sXeroText := trim(sXeroText) + trim(Sage50Format('',true,true));
         end;
 
-      sPhone := stringreplace(FieldByName('Telephone_Number').AsString,',',' ',[rfReplaceAll]);
+      sPhone := SStrCopy(stringreplace(FieldByName('Telephone_Number').AsString,',',' ',[rfReplaceAll]), 1, 30);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sPhone,true,true));
 
-      sFax := stringreplace(FieldByName('Fax_Number').AsString,',',' ',[rfReplaceAll]);
+      sFax := SStrCopy(stringreplace(FieldByName('Fax_Number').AsString,',',' ',[rfReplaceAll]), 1, 30);
       sXeroText := trim(sXeroText) + trim(Sage50Format(sFax,true,true));
 
       {Mobile Number}
@@ -1354,7 +1356,7 @@ begin
 
       if trim(sWebAddress) <> '' then
         sWebAddress := 'http://' + sWebAddress;
-        
+
       sXeroText := trim(sXeroText) + trim(Sage50Format(sWebAddress,true,true));
 
       {Discount Rate}
@@ -1400,41 +1402,41 @@ begin
       sQBooksText:='CUST';
 
       {Name}
-      sCompany := trim(FieldByName('Customer_Name').AsString);
-      sQBooksText := sQBooksText + QBooksIIFFormat(sCompany);
+      sCompany := SStrCopy(trim(FieldByName('Customer_Name').AsString), 1, 50);
+      sQBooksText := sQBooksText + QBooksIIFFormat(string(sCompany));
 
       {Address line 1}
-      sAdd1 := trim(FieldByName('Street').AsString);
+      sAdd1 := SStrCopy(trim(FieldByName('Street').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd1);
 
       {Locale}
-      sAdd2 := trim(FieldByName('Locale').AsString);
+      sAdd2 := SStrCopy(trim(FieldByName('Locale').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd2);
 
       {Town/City}
-      sAdd3 := trim(FieldByName('Town').AsString);
+      sAdd3 := SStrCopy(trim(FieldByName('Town').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd3);
 
       {postcode}
-      sAdd4 := trim(FieldByName('Postcode').AsString);
+      sAdd4 := SStrCopy(trim(FieldByName('Postcode').AsString), 1, 50);
       sQBooksText := sQBooksText +  QBooksIIFFormat(sAdd4);
 
       {Phone Number}
-      sPhone := trim(FieldByName('Phone').AsString);
+      sPhone := SStrCopy(trim(FieldByName('Phone').AsString), 1, 30);
       sQBooksText := sQBooksText + QBooksIIFFormat(sPhone);
 
       {Phone 2}
       sQBooksText := trim(sQBooksText) + QBooksIIFFormat('');
 
       {Fax Number}
-      sFax := trim(FieldByName('Fax_Number').AsString);
+      sFax := SStrCopy(trim(FieldByName('Fax_Number').AsString), 1, 30);
       sQBooksText := sQBooksText + QBooksIIFFormat(sFax);
 
       {Account Code - Note field in Quickbooks}
       sQBooksText := sQBooksText + QBooksIIFFormat(sAcc_Code);
 
       {Contact Name}
-      sContact := trim(FieldByName('Contact_Name').AsString);
+      sContact := SStrCopy(trim(FieldByName('Contact_Name').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sContact);
 
       {Customer Type}
@@ -1442,7 +1444,7 @@ begin
       sQBooksText := sQBooksText + QBooksIIFFormat(sCType);
 
       {Rep}
-      sRep := trim(FieldByName('Rep_Name').AsString);
+      sRep := SStrCopy(trim(FieldByName('Rep_Name').AsString), 1, 30);
       sQBooksText := sQBooksText + QBooksIIFFormat(sRep);
 
       {Company Name}
@@ -1484,42 +1486,42 @@ begin
       inc(iSuppliers);
 
       {Name}
-      sCompany := trim(FieldByName('Supplier_Name').AsString);
+      sCompany := SStrCopy(trim(FieldByName('Supplier_Name').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sCompany);
 
       {Address line 1}
-      sAdd1 := trim(FieldByName('Building_no_name').AsString);
+      sAdd1 := SStrCopy(trim(FieldByName('Building_no_name').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd1);
 
       {Address line 2}
-      sAdd2 := trim(FieldByName('Street').AsString);
+      sAdd2 := SStrCopy(trim(FieldByName('Street').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd2);
 
       {Locale}
-      sAdd3 := trim(FieldByName('Locale').AsString);
+      sAdd3 := SStrCopy(trim(FieldByName('Locale').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd3);
 
       {Town/City}
-      sAdd4 := trim(FieldByName('Town').AsString);
+      sAdd4 := SStrCopy(trim(FieldByName('Town').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sAdd4);
 
       {postcode}
-      sAdd5 := trim(FieldByName('Postcode').AsString);
+      sAdd5 := SStrCopy(trim(FieldByName('Postcode').AsString), 1, 50);
       sQBooksText := sQBooksText +  QBooksIIFFormat(sAdd5);
 
       {Phone Number}
-      sPhone := trim(FieldByName('Phone').AsString);
+      sPhone := SStrCopy(trim(FieldByName('Phone').AsString), 1, 30);
       sQBooksText := sQBooksText + QBooksIIFFormat(sPhone);
 
       {Phone 2}
       sQBooksText := trim(sQBooksText) + QBooksIIFFormat('');
 
       {Fax Number}
-      sFax := trim(FieldByName('Fax_Number').AsString);
+      sFax := SStrCopy(trim(FieldByName('Fax_Number').AsString), 1, 30);
       sQBooksText := sQBooksText + QBooksIIFFormat(sFax);
 
       {Contact Name}
-      sContact := trim(FieldByName('Contact_Name').AsString);
+      sContact := SStrCopy(trim(FieldByName('Contact_Name').AsString), 1, 50);
       sQBooksText := sQBooksText + QBooksIIFFormat(sContact);
 
       {Company Name}
@@ -1616,7 +1618,7 @@ begin
 *)
 end;
 
-procedure TfrmWTAccExport3.LinkerSalesInvoices;
+(*procedure TfrmWTAccExport3.LinkerSalesInvoices;
 var
   sRef, sTempRef, sLongRef, sDesc, sInvType, sStockCode, sQty, sQtyStk, sUnitCost,
     sUnitSell, sValue,
@@ -1788,7 +1790,7 @@ begin
           sStockDesc := SStrCopy(sfiller, 1, 35);
           sLoc := '   ';
           sLocDesc := SStrCopy(sfiller, 1, 45);
-          
+
           Writeln(InvFile, sAcc_Code, sRef, sLongRef, sVersion, sDesc, ' ',
             sStockCode, '     ',
             sValue, sVat_Code, sNomCode, sInvType, sQty, sQtyStk, sUnitCost,
@@ -1884,9 +1886,9 @@ begin
     end;
     frmWTAccExport4.iRecordCounter := iSalesInv;
   end;
-end;
+end;*)
 
-function TfrmWTAccExport3.NarrativeStrip(const Data : string) : string;
+(*function TfrmWTAccExport3.NarrativeStrip(const Data : string) : string;
 var
   i : integer;
 begin
@@ -1895,7 +1897,7 @@ begin
   for i := 1 to Length(Data) do
     if Data[i] >= ' ' then
       Result := Result + Data[i];
-end;
+end;*)
 
 procedure TfrmWTAccExport3.Sage50GetSalesInvoices;
 var
@@ -1963,7 +1965,7 @@ begin
         sDescription := SStrCopy((dmAccExport.GetSOCustomerOrderNo(FieldByName('Reference').AsString)) + sfiller, 1, 30);
 
       if trim(sDescription) = '' then
-        sDescription := sOldDescription;
+        sDescription := SStrCopy(sOldDescription, 1, 30);
 
       sOldDescription := sDescription;
 
@@ -1987,7 +1989,7 @@ begin
       sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := trim(Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2));
+      sVat_Code := SStrCopy(trim(FieldByName('VAT_Code').AsString) + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
@@ -2030,12 +2032,12 @@ end;
 
 procedure TfrmWTAccExport3.XeroGetSalesInvoices;
 var
-  rValue, rVatValue, rVatRate: real;
+  rValue, rVatValue: real;
   sLineDescription, sOrderReference: string;
   sPrefix: string;
   rQuantity: real;
   sInvoiceNo: string;
-  iInvoiceCode: integer;
+//  iInvoiceCode: integer;
 begin
   {Delete existing Xero invoices}
   with dmAccExport.qryDelXeroInvs do
@@ -2060,7 +2062,7 @@ begin
       end;
 
       {Customer Name}
-      sCustomer_Name := fieldbyname('Customer_Name').asstring;
+      sCustomer_Name := SStrCopy(fieldbyname('Customer_Name').asstring, 1, 100);
 
       {Account Type - set to Sales Invoice}
       if fieldbyname('Invoice_or_credit').asstring = 'C' then
@@ -2072,7 +2074,7 @@ begin
           sPrefix := 'INV-';
         end;
 
-      iInvoiceCode := fieldbyname('Sales_Invoice').asinteger;
+//      iInvoiceCode := fieldbyname('Sales_Invoice').asinteger;
 
       sInvoiceNo := fieldbyname('Invoice_No').asstring;
 
@@ -2122,8 +2124,8 @@ begin
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
       sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
-      
-      sVat_Description := fieldbyname('Vat_Description').asstring;
+
+      sVat_Description := SStrCopy(fieldbyname('Vat_Description').asstring, 1, 50);
 
       {Write the details to the file}
       if (rValue <> 0) or (rVatValue <> 0) then
@@ -2190,7 +2192,7 @@ begin
       end;
 
       {Reference}
-      sReference := trim(Copy(FieldByName('Supplier_invoice_no').AsString + sfiller, 1, 8));
+      sReference := SStrCopy(trim(FieldByName('Supplier_invoice_no').AsString) + sfiller, 1, 8);
 
       if sReference <> sInvoiceNo then
         iInvoiceLine := 1;
@@ -2855,9 +2857,9 @@ procedure TfrmWTAccExport3.CreateAccExportFile;
 begin
   {Check for any \ on the end of the path}
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {Create the Accounts file name}
   sFilename := sPathEdit + 'New_accounts.txt';
@@ -2890,9 +2892,9 @@ procedure TfrmWTAccExport3.CreateInvExportFile;
 begin
   {Check for any \ on the end of the path}
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {Create the Invoices file name}
   sFilename := sPathEdit + 'New_Invoices.txt';
@@ -2946,7 +2948,7 @@ begin
   begin
     sNextAccFile := IntToStr(dmAccExport.CompanySQL.FieldByName('Last_file_No_Acc').AsInteger
       + 1);
-    sNewFilename := sPathEdit + sRevCentrePrefix + 'SACC' + sAccFileName + sPrefix;
+    sNewFilename := SStrCopy(sPathEdit + sRevCentrePrefix + 'SACC' + sAccFileName + sPrefix, 1, 255);
     //see if file with this name already exists
 
     StrPCopy(NewFilename, sNewFilename);
@@ -2957,7 +2959,7 @@ begin
   begin
     sNextAccFile := IntToStr(dmAccExport.CompanySQL.FieldByName('Last_file_No_Acc').AsInteger
       + 1);
-    sNewFilename := sPathEdit + sRevCentrePrefix + 'PACC' + sAccFileName + sPrefix;
+    sNewFilename := SStrCopy(sPathEdit + sRevCentrePrefix + 'PACC' + sAccFileName + sPrefix, 1, 255);
     //see if file with this name already exists
 
     StrPCopy(NewFilename, sNewFilename);
@@ -2996,7 +2998,7 @@ begin
   closefile(invfile);
   if (iSupplierInv > 0) and (frmWTAccExport1.ActionListBox.itemindex = 3) then
     begin
-      sNewFilename := sPathEdit + sRevCentrePrefix + 'PINV' + sNextInvFile + sPrefix;
+      sNewFilename := SStrCopy(sPathEdit + sRevCentrePrefix + 'PINV' + sNextInvFile + sPrefix, 1, 255);
       StrPCopy(NewFilename, sNewFilename);
       RenameFile(InvFilename, NewFilename);
       dmAccExport.UpdatePIFilename(sNewFilename);
@@ -3004,7 +3006,7 @@ begin
   else
   if (iSalesInv > 0) and (frmWTAccExport1.ActionListBox.itemindex = 2) then
     begin
-      sNewFilename := sPathEdit + sRevCentrePrefix + 'SINV' + sNextInvFile + sPrefix;
+      sNewFilename := SStrCopy(string(sPathEdit) + sRevCentrePrefix + 'SINV' + sNextInvFile + sPrefix, 1, 255);
       StrPCopy(NewFilename, sNewFilename);
       RenameFile(InvFilename, NewFilename);
       dmAccExport.UpdateSIFilename(sNewFilename);
@@ -3183,9 +3185,9 @@ var
 begin
   {Check for any \ on the end of the path}
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {Import Currency}
   sFilename := sPathEdit + 'currency.txt';
@@ -3193,7 +3195,7 @@ begin
 
   RenameFile(sFilename, sNewFilename);
 
-  assignfile(CurrFile, sNewFilename);
+  assignfile(CurrFile, string(sNewFilename));
   reset(Currfile);
   if IOresult <> 0 then
   begin
@@ -3242,9 +3244,9 @@ var
 begin
   {Check for any \ on the end of the path}
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {Import Stock Reference}
   sFilename := sPathEdit + 'Stock.txt';
@@ -3252,7 +3254,7 @@ begin
 
   RenameFile(sFilename, sNewFilename);
 
-  assignfile(StockFile, sNewFilename);
+  assignfile(StockFile, string(sNewFilename));
   reset(Stockfile);
   if IOresult <> 0 then
   begin
@@ -3317,9 +3319,9 @@ var
 begin
   {Check for any \ on the end of the path}
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {Import Accounts}
   sFilename := sPathEdit + 'Accounts.txt';
@@ -3327,7 +3329,7 @@ begin
 
   RenameFile(sFilename, sNewFilename);
 
-  assignfile(AccFile, sNewFilename);
+  assignfile(AccFile, string(sNewFilename));
   reset(Accfile);
   if IOresult <> 0 then
   begin
@@ -3529,23 +3531,23 @@ begin
 
   sAccountsPackage := dmAccExport.CompanySQl.fieldbyname('Accounts_Package').asstring;
   sRevCentrePrefix := '';
-  
+
   Progress.Position := 0;
 end;
 
 function TfrmWTAccExport3.INVfileExists: boolean;
 begin
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
-    sPathEdit := ExportPathEdit.Text
+    sPathEdit := SStrCopy(ExportPathEdit.Text, 1, 255)
   else
-    sPathEdit := ExportPathEdit.Text + '\';
+    sPathEdit := SStrCopy(ExportPathEdit.Text + '\', 1, 255);
 
   {build the full Accounts file name}
   if Pos('INV', FileNameEdit.Text) = 1 then
-    sFilename := sPathEdit + FileNameEdit.Text
+    sFilename := SStrCopy(string(sPathEdit) + FileNameEdit.Text, 1, 255)
   else
-    sFilename := sPathEdit + 'INV' + FileNameEdit.Text;
-    
+    sFilename := SStrCopy(string(sPathEdit) + 'INV' + FileNameEdit.Text, 1, 255);
+
   if sAccountsPackage = 'SAGE50' then
     sFilename := sFilename + '.csv'
   else
@@ -3564,7 +3566,7 @@ begin
 
   if Result = true then
   begin
-    if MessageDlg('File ' + sFilename + ' already exists. Do you want to overwrite it?', mtWarning, [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg('File ' + string(sFilename) + ' already exists. Do you want to overwrite it?', mtWarning, [mbYes, mbNo], 0) = mrYes then
     begin
       DeleteFile(sFilename);
       sFileName := SStrCopy(sFileName, (Pos('INV', sFileName)+3), 256);
@@ -3575,7 +3577,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.DeleteACCfile;
+(*procedure TfrmWTAccExport3.DeleteACCfile;
 begin
   if SStrCopy(ExportPathEdit.Text, Length(ExportPathEdit.Text), 1) = '\' then
     sPathEdit := ExportPathEdit.Text
@@ -3601,7 +3603,7 @@ begin
   except
 
   end;
-end;
+end;*)
 
 procedure TfrmWTAccExport3.ImportMaximiserContacts;
 begin
@@ -3648,7 +3650,7 @@ begin
       end;
 
       {Reference}
-      sReference := trim(Copy(FieldByName('Supplier_invoice_no').AsString + sfiller, 1, 20));
+      sReference := SStrCopy(trim(FieldByName('Supplier_invoice_no').AsString) + sfiller, 1, 20);
 
       iInvoiceCode := fieldbyname('Supplier_invoice').asinteger;
 
@@ -4067,8 +4069,8 @@ begin
 
     while (not EOF) do
     begin
-      sReference := fieldbyname('Reference').asstring;
-      if trim(sInvoiceNo) = trim(sReference) then
+      sReference := SStrCopy(fieldbyname('Reference').asstring, 1, 20);
+      if trim(sInvoiceNo) = trim(string(sReference)) then
         begin
           inc(icounter);
         end
@@ -4076,7 +4078,7 @@ begin
         begin
           if icounter > iNominalCounter then
             iNominalCounter := icounter;
-          sInvoiceNo := trim(sReference);
+          sInvoiceNo := trim(string(sReference));
           icounter := 1;
         end;
       Next;
@@ -4170,7 +4172,6 @@ begin
   CreateSageMMSHeader;
 
   sInvoiceNo := '';
-  iNewInvoiceCode := 0;
 
   bInvoiceSame := false;
 
@@ -4182,6 +4183,7 @@ begin
     First;
     icounter := 0;
     iNominalCounter := 1;
+    iInvoiceCode := 0;
 
     while (not EOF) do
     begin
@@ -4219,9 +4221,9 @@ begin
 //          sValue := SStrCopy(formatfloat('0.00', (FieldByName('Total_Goods_Value').AsFloat+FieldByName('Total_Vat_Value').AsFloat)) + sfiller, 1, 20);
           sValue := SStrCopy(formatfloat('0.00',
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
-          sGrossValue := sValue;
+          sGrossValue := string(sValue);
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
-            sValue := floattostr(StrToFloatDef(sValue, 0, FormatSettings) * -1);
+            sValue := SStrCopy(floattostr(StrToFloatDef(string(sValue), 0, FormatSettings) * -1), 1, 10);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Goods Gross Value in Base Currency}
@@ -4229,7 +4231,7 @@ begin
           sValue := SStrCopy(formatfloat('0.00',
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
-            sValue := floattostr(StrToFloatDef(sValue, 0, FormatSettings) * -1);
+            sValue := SStrCopy(floattostr(StrToFloatDef(string(sValue), 0, FormatSettings) * -1), 1, 10);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Accounts Currency Rate}
@@ -4282,7 +4284,7 @@ begin
 
           {Tax Value - VAT Amount}
 //          sVatValue := SStrCopy(formatfloat('0.00', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 18);
-          sVatValue := SStrCopy(formatfloat('0.00',
+          sVatValue := Copy(formatfloat('0.00',
             (dmAccExport.GetInvoiceVatTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
 //          sGoodsValue := floattostr(StrToFloatDef(sGrossValue) - StrToFloatDef(sVatValue), 0, FormatSettings);
           sGoodsValue := formatfloat('0.00',(StrToFloatDef(sGrossValue, 0, FormatSettings) - StrToFloatDef(sVatValue, 0, FormatSettings)));
@@ -4301,7 +4303,7 @@ begin
       {Nominal Nett Amount}
       sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Goods_Value').AsFloat,2)) + sfiller, 1, 18);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
-      sNomGoodsValue := sValue;
+      sNomGoodsValue := string(sValue);
 
       {Nominal Code}
       sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8);
@@ -4341,14 +4343,14 @@ begin
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTax_Discount_Value,false,true));
 
       {Tax Discount Perc}
-      sTax_Discount_Perc := SStrCopy(formatfloat('0.00', (0.00)) + sfiller, 1, 20);
+      sTax_Discount_Perc := SStrCopy(formatfloat('0.00', (0.00)) + sfiller, 1, 26);
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sTax_Discount_Perc,false,true));
 
       {Nett Goods Amount - after discount}
       if trim(sNomGoodsValue) = trim(sGoodsValue) then
-        sValue := trim(sVatValue)
+        sValue := SStrCopy(trim(sVatValue), 1, 10)
       else
-        sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Vat_Value').AsFloat,2)) + sfiller, 1, 18);
+        sValue := SStrCopy(formatfloat('0.00', roundfloat(FieldByName('Total_Vat_Value').AsFloat,2)) + sfiller, 1, 10);
 
       sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
@@ -4385,7 +4387,6 @@ end;
 
 procedure TfrmWTAccExport3.QBooksCreateExportFile;
 var
-  bInvoiceSame: boolean;
   sQBooksText: string;
   sInvoiceNo: string;
   iMultiplier: integer;
@@ -4396,7 +4397,7 @@ begin
   CreateQBooksHeader;
 
   sInvoiceNo := '';
-  bInvoiceSame := false;
+  iMultiplier := 1;
 
   with dmAccExport.qryGetSageImport do
   begin
@@ -4465,7 +4466,7 @@ begin
           sQBooksText := sQBooksText + QBooksIIFFormat(sField);
 
           {Invoice/Credit Note Number}
-          sReference := trim(fieldbyname('Reference').asstring);
+          sReference := SStrCopy(trim(fieldbyname('Reference').asstring), 1, 20);
           sField := trim(fieldbyname('Reference').asstring);
           sQBooksText := sQBooksText + QBooksIIFFormat(sField);
 
@@ -4540,7 +4541,7 @@ begin
         sField := 'BILL'
       else
       if (fieldbyname('Transaction_type').asstring = 'PC') then
-        sAcc_Type := 'BILL REFUND';
+        sField := 'BILL REFUND';
       sQBooksText := sQBooksText + QBooksIIFFormat(sField);
 
       {Transaction Date}
@@ -4624,7 +4625,7 @@ begin
       sInvoiceNo := trim(fieldbyname('Reference').asstring);
 
       {write the contents of the record away}
-      if sInvoiceNo <> trim(sReference) then
+      if sInvoiceNo <> trim(string(sReference)) then
         begin
           sQBooksText := 'ENDTRNS';
           for i := 1 to 21 do

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
-   Menus, Dateutils, IniFiles, Grids, DBGrids, ActiveX,
+  Menus, Dateutils, IniFiles, Grids, DBGrids, ActiveX,
   FireDAC.Comp.Client, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf,
@@ -138,7 +138,8 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, wtDataModule;
+uses
+  wtMain, AllCommon, WTSrchCustomer, DateSelV5, wtDataModule;
 
 {$R *.dfm}
 
@@ -268,7 +269,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -288,7 +289,7 @@ begin
   edtDateTo.Text := paDateStr(dateTo);
 
   StockSystem := dtmdlWorktops.StockSystemCode;
-  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTRSSOStockAllocation.Delete1Click(Sender: TObject);
@@ -320,7 +321,7 @@ procedure TfrmWTRSSOStockAllocation.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(myWorktops_INIFILE);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
@@ -334,7 +335,7 @@ begin
       else
         WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'N');
     end;
-  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTRSSOStockAllocation.FormActivate(Sender: TObject);

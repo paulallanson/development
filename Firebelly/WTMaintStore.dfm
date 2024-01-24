@@ -137,7 +137,6 @@ object frmWTMaintStore: TfrmWTMaintStore
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 6
-    ExplicitTop = 220
   end
   object btnOK: TBitBtn
     Left = 179
@@ -152,7 +151,6 @@ object frmWTMaintStore: TfrmWTMaintStore
     NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
-    ExplicitTop = 216
   end
   object BitBtn2: TBitBtn
     Left = 275
@@ -165,7 +163,6 @@ object frmWTMaintStore: TfrmWTMaintStore
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 8
-    ExplicitTop = 216
   end
   object qryGetLastNo: TFDQuery
     ConnectionName = 'wt'

@@ -30,7 +30,6 @@ type
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
@@ -39,8 +38,6 @@ type
     FOperator: Integer;
     FOperator_Name, FsFaxSystem: string;
     fRep: Integer;
-    LocalDir: string;
-    AppIniFile: Array [0..255] of char;
     FOperator_Email: string;
     procedure SetOK(const Value: Boolean);
     procedure SetOperator(const Value: Integer);
@@ -63,7 +60,7 @@ var
 implementation
 
 uses
-  PBDatabase, System.UITypes, CCSCommon;
+  pbMainMenu, PBDatabase, System.UITypes, CCSCommon;
 
 {$R *.DFM}
 
@@ -73,8 +70,7 @@ var
   iAliasList: integer;
   sgList: TStringList;
 begin
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray,
-    sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray, SizeOf(TempArray), TfrmpbMainMenu.AppIniFile);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
@@ -102,8 +98,7 @@ begin
     sgList.Free;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Fax System', 'S', TempArray,
-    sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Centrereed Broker', 'Fax System', 'S', TempArray, sizeof(TempArray), TfrmpbMainMenu.AppIniFile);
   Edit1.Text := TempArray;
   FsFaxSystem := Edit1.Text;
 
@@ -232,7 +227,7 @@ begin
   exit;
   {$ENDIF}
 
-  IniFile := TIniFile.Create(AppIniFile);
+  IniFile := TIniFile.Create(TfrmpbMainMenu.AppIniFile);
   try
     IniFile.WriteString('Centrereed Broker', 'LoginAlias', cmbAliasList.text);
   finally
@@ -251,12 +246,6 @@ end;
 procedure TfrmpbLogin.CancelBitBtnClick(Sender: TObject);
 begin
   close;
-end;
-
-procedure TfrmpbLogin.FormCreate(Sender: TObject);
-begin
-	LocalDir := ExtractFilePath(Application.ExeName);
-  StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
 end;
 
 procedure TfrmpbLogin.SetOperator_Email(const Value: string);

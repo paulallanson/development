@@ -1525,8 +1525,7 @@ begin
   pcDetails.ActivePage := tbCustomer;
   AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 
-  GetPrivateProfileString('Email', 'Application', '', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+  GetPrivateProfileString('Email', 'Application', '', TempArray, SizeOf(TempArray), TfrmWTMain.AppIniFile);
 
   EmailApplication := TempArray;
 end;
