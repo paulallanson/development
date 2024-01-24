@@ -21,6 +21,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Height = 248
     Align = alClient
     DataSource = dtsDetails
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

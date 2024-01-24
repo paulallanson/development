@@ -227,6 +227,7 @@ object frmwtLUJobs: TfrmwtLUJobs
     Height = 166
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

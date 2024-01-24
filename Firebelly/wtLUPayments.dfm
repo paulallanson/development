@@ -22,6 +22,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 165
     Align = alClient
     DataSource = srcPayments
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -361,6 +362,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 96
     Align = alBottom
     DataSource = srcCreditNotes
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET

@@ -77,6 +77,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Height = 373
     Align = alClient
     DataSource = dtsDetails
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnDetails
     TabOrder = 2

@@ -23,6 +23,7 @@ object frmWTLUFinish: TfrmWTLUFinish
     Height = 158
     Align = alClient
     DataSource = srcWorktopFinish
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

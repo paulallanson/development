@@ -22,6 +22,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     Height = 240
     Align = alClient
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

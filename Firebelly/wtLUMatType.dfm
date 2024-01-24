@@ -23,6 +23,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     Height = 308
     Align = alClient
     DataSource = srcMatType
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

@@ -22,6 +22,7 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
     Height = 167
     Align = alClient
     DataSource = srcDetails
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

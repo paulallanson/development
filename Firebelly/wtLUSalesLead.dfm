@@ -22,6 +22,7 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     Height = 217
     Align = alClient
     DataSource = srcSalesLead
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

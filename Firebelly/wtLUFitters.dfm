@@ -22,6 +22,7 @@ object frmWTLUFitters: TfrmWTLUFitters
     Height = 232
     Align = alClient
     DataSource = srcFitters
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

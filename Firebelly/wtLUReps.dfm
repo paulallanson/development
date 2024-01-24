@@ -22,6 +22,7 @@ object frmWTLUReps: TfrmWTLUReps
     Height = 255
     Align = alClient
     DataSource = srcReps
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

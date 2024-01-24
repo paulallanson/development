@@ -22,6 +22,7 @@ object frmwtLUEdges: TfrmwtLUEdges
     Height = 337
     Align = alClient
     DataSource = srcEdges
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

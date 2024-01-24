@@ -390,6 +390,7 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Height = 316
     Align = alClient
     DataSource = dtsrcCurrentContStatus
+    DrawingStyle = gdsGradient
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText

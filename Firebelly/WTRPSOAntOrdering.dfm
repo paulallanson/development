@@ -1538,26 +1538,24 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
         Top = 17
         Width = 73
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1828.270833333333000000
           44.979166666666670000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblStockCode'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
-      end      
+      end
     end
   end
   object qrySalesOrders: TFDQuery
@@ -1814,7 +1812,6 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
       end
       item
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStockCode: TFDQuery
@@ -1835,24 +1832,16 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end>
   end
 end

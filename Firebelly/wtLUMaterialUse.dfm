@@ -23,6 +23,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     Height = 208
     Align = alClient
     DataSource = srcMaterialUse
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

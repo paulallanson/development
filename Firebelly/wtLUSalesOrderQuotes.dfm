@@ -118,6 +118,7 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
     Width = 993
     Height = 355
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET

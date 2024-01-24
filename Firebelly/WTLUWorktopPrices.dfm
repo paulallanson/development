@@ -18,6 +18,7 @@ object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
     Height = 299
     Align = alClient
     DataSource = srcLUWorktops
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

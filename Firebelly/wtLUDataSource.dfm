@@ -22,6 +22,7 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     Height = 215
     Align = alClient
     DataSource = srcDataSource
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

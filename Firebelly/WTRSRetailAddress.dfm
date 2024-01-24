@@ -213,6 +213,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Height = 323
     Align = alClient
     DataSource = dtsrcCurrentContStatus
+    DrawingStyle = gdsGradient
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText

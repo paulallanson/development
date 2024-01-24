@@ -21,6 +21,7 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Height = 239
     Align = alClient
     DataSource = srcCustWTGroup
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

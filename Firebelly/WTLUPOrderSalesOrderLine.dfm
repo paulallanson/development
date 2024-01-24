@@ -153,6 +153,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     Height = 307
     Align = alClient
     DataSource = dtmdlPurchaseOrder.dtsGetSOLines
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

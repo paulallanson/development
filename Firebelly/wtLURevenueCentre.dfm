@@ -22,6 +22,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     Height = 292
     Align = alClient
     DataSource = srcRevenueCentre
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 1

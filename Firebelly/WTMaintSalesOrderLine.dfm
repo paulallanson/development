@@ -345,7 +345,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Top = 199
       Width = 81
       Height = 21
-      TabOrder = 11
+      TabOrder = 12
       WantReturns = False
       WordWrap = False
       OnChange = CheckOK

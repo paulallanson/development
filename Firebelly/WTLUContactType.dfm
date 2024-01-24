@@ -22,6 +22,7 @@ object frmWTLUContactType: TfrmWTLUContactType
     Height = 267
     Align = alClient
     DataSource = srcContactType
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

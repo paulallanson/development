@@ -22,6 +22,7 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     Height = 311
     Align = alClient
     DataSource = srclkpExtras
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

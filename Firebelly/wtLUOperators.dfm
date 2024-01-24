@@ -22,6 +22,7 @@ object frmWTLUOperators: TfrmWTLUOperators
     Height = 256
     Align = alClient
     DataSource = srcOperators
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 0

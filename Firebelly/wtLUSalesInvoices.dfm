@@ -140,6 +140,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Width = 888
     Height = 140
     Align = alClient
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

@@ -376,7 +376,6 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     TabOrder = 15
   end
   object rdgrpChargeType: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 152
     Width = 153
@@ -388,6 +387,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       'Invoice'
       'Application for Payment'
       'Retail')
+    ParentBackground = False
     TabOrder = 16
   end
   object qryReps: TFDQuery

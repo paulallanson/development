@@ -189,6 +189,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Height = 336
     Align = alClient
     DataSource = srcLUWorktops
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

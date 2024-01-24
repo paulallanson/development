@@ -207,6 +207,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     Width = 784
     Height = 327
     Align = alClient
+    DrawingStyle = gdsGradient
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

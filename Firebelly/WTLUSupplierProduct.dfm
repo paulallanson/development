@@ -62,6 +62,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     Height = 345
     Align = alClient
     DataSource = dtsDetails
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

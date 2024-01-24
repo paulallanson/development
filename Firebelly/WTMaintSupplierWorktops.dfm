@@ -202,6 +202,7 @@ object frmWTMaintSupplierWorktops: TfrmWTMaintSupplierWorktops
     Height = 419
     Align = alClient
     DataSource = dtmdlSuppliers.dtsWorktops
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

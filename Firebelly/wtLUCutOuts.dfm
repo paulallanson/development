@@ -132,6 +132,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     Height = 259
     Align = alClient
     DataSource = srcCutOuts
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 2

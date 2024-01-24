@@ -22,6 +22,7 @@ object frmWTLUReason: TfrmWTLUReason
     Height = 344
     Align = alClient
     DataSource = srcReason
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
     TabOrder = 1

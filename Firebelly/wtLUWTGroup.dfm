@@ -22,6 +22,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     Height = 166
     Align = alClient
     DataSource = srcWTGroup
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

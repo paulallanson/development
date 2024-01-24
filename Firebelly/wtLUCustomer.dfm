@@ -32,7 +32,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 702
+        Width = 698
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -141,6 +141,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     Height = 218
     Align = alClient
     DataSource = dtsCustomers
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -354,7 +355,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 700
+          Width = 696
         end>
       object Panel3: TPanel
         Left = 11

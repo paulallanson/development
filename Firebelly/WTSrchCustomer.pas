@@ -26,9 +26,9 @@ type
     edtSearch: TEdit;
     btnSelect: TBitBtn;
     BitBtn2: TBitBtn;
-    stsbrDetails: TStatusBar;
     btnSweep: TBitBtn;
     qryDelete: TFDQuery;
+    stbrDetails: TStatusBar;
     procedure tmrSearchTimer(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);
@@ -133,7 +133,7 @@ begin
         parambyname('Requires_App_For_Payment').asstring := 'N';
       open;
 
-      stsbrDetails.panels[0].text := inttostr(qrydetails.recordcount) + ' records displayed';
+      stbrDetails.panels[0].text := inttostr(qrydetails.recordcount) + ' records displayed';
       if not Locate('Customer', Variant(inttostr(CodeSelected)),[lopartialKey]) then
         first;
     end;

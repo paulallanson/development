@@ -88,6 +88,7 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
     Height = 222
     Align = alClient
     DataSource = dtmdlCustJobs.dtsJobs
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

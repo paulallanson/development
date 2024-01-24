@@ -1575,19 +1575,13 @@ object dtmdlContract: TdtmdlContract
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Discount_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
 end

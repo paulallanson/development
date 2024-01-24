@@ -46,6 +46,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Width = 385
     Height = 120
     DataSource = srclkpWTThickness
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

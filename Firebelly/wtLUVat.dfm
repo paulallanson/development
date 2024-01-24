@@ -22,6 +22,7 @@ object frmwtLUVat: TfrmwtLUVat
     Height = 183
     Align = alClient
     DataSource = srcVat
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

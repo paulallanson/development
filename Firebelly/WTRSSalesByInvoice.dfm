@@ -329,6 +329,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
       'Invoice'
       'Application for Payment'
       'Retail')
+    ParentBackground = False
     TabOrder = 14
   end
   object qryReps: TFDQuery

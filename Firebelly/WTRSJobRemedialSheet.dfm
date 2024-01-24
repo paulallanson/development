@@ -220,6 +220,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Height = 193
     Align = alClient
     DataSource = dtsReport
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

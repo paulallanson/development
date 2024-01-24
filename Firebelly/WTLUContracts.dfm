@@ -203,6 +203,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     Height = 223
     Align = alClient
     DataSource = dtmdlContract.dtsAllContracts
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -221,7 +222,6 @@ object frmWTLUContracts: TfrmWTLUContracts
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
-        Alignment = taLeftJustify
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Number'
