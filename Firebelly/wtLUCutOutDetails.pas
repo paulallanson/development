@@ -329,7 +329,7 @@ begin
       first;
 
 
-      while eof <> true do
+      while not eof do
         begin
           {Create new record based on data retrieved}
           rCost := fieldbyname('Unit_Cost').asfloat;
