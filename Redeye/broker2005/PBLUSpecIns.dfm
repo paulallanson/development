@@ -28,6 +28,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Width = 320
     Height = 209
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

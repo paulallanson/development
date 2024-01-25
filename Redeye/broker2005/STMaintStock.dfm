@@ -99,6 +99,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       Height = 380
       Align = alClient
       DataSource = dtsStockFrom
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
@@ -206,6 +207,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       Height = 380
       Align = alClient
       DataSource = dtsStockTo
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET

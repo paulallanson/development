@@ -194,6 +194,7 @@ object PBMaintCustStockPrefixFrm: TPBMaintCustStockPrefixFrm
     Top = 60
     Width = 353
     Height = 349
+    DrawingStyle = gdsGradient
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

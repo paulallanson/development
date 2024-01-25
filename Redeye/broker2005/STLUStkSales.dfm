@@ -28,6 +28,7 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
       Width = 638
       Height = 235
       Align = alClient
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       PopupMenu = pmnFunctions
       TabOrder = 0

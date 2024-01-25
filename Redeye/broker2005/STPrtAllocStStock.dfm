@@ -111,6 +111,7 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     Height = 239
     Align = alClient
     DataSource = srcStoreStock
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET

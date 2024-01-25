@@ -29,6 +29,7 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
       Width = 652
       Height = 178
       Align = alClient
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

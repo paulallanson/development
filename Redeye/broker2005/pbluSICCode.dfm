@@ -29,6 +29,7 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
     Width = 369
     Height = 297
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET

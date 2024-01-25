@@ -31,6 +31,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Height = 283
       Align = alClient
       DataSource = dtsrcSalesComm
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

@@ -28,6 +28,7 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
     Width = 320
     Height = 209
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

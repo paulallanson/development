@@ -107,6 +107,7 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
     Height = 249
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDataSource
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12

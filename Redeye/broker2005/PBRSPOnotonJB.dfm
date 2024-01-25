@@ -111,6 +111,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     Height = 302
     Align = alClient
     DataSource = dtsReport
+    DrawingStyle = gdsGradient
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText

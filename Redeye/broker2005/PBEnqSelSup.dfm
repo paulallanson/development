@@ -65,6 +65,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     Width = 393
     Height = 193
     DataSource = SuppsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = SelPopUpMenu
     TabOrder = 6
@@ -314,6 +315,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     Width = 393
     Height = 147
     DataSource = SelSupSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = DeSelPopUpMenu
     TabOrder = 7

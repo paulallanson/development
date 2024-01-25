@@ -88,6 +88,7 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     Height = 290
     Align = alClient
     DataSource = dmSalesInvoice.dsJBLines
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET

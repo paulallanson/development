@@ -223,6 +223,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     Height = 409
     Align = alClient
     DataSource = dtmdlStock.dtsStock
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 3

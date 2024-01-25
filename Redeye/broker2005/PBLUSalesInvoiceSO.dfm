@@ -22,6 +22,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     Width = 711
     Height = 311
     Align = alClient
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

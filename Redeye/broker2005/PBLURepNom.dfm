@@ -40,6 +40,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Width = 320
     Height = 193
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

@@ -395,9 +395,7 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery

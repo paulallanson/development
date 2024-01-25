@@ -130,6 +130,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
           Height = 195
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelCapsDS
+          DrawingStyle = gdsGradient
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
@@ -215,6 +216,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
           Height = 201
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelProdTypsDS
+          DrawingStyle = gdsGradient
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET

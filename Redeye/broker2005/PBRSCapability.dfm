@@ -127,6 +127,7 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
     Height = 332
     Align = alClient
     DataSource = dsCapability
+    DrawingStyle = gdsGradient
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText

@@ -23,6 +23,7 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
     Height = 301
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

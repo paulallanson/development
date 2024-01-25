@@ -332,6 +332,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     Width = 794
     Height = 260
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 4

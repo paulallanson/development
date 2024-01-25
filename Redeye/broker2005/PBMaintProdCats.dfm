@@ -87,6 +87,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       Height = 344
       Align = alClient
       DataSource = dtsrcNotInCat
+      DrawingStyle = gdsGradient
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
@@ -145,6 +146,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
         Height = 344
         Align = alClient
         DataSource = dtsrcInCat
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET

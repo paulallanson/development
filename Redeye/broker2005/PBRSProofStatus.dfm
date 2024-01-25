@@ -31,6 +31,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Height = 284
       Align = alClient
       DataSource = dtsrcCurrentProofStatus
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

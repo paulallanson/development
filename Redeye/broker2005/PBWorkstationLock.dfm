@@ -62,6 +62,7 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
     Height = 329
     Align = alClient
     DataSource = dtsWorkstationLock
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

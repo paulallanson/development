@@ -30,6 +30,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Height = 227
       Align = alClient
       DataSource = dtsrcPurchByInv
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

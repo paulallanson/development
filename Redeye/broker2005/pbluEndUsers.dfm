@@ -379,6 +379,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     Width = 1125
     Height = 201
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
     TabOrder = 4

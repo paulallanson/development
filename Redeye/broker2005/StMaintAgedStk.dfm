@@ -238,6 +238,7 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Height = 233
     Align = alClient
     DataSource = DataSource1
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = ppmnGrid
     TabOrder = 1

@@ -31,6 +31,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Height = 259
       Align = alClient
       DataSource = dtsrcCurrentSuppStatus
+      DrawingStyle = gdsGradient
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText

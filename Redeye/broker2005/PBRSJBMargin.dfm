@@ -483,6 +483,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Height = 292
     Align = alClient
     DataSource = dsReport
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

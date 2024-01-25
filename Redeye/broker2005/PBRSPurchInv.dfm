@@ -31,6 +31,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Height = 283
       Align = alClient
       DataSource = dtsrcPurchInv
+      DrawingStyle = gdsGradient
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText

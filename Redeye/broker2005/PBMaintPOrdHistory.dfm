@@ -45,6 +45,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Height = 373
     Align = alClient
     DataSource = PBPODM.dtsGetPOPriceHist
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

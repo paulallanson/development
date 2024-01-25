@@ -57,6 +57,7 @@ object PBLUCRepFrm: TPBLUCRepFrm
     Width = 320
     Height = 177
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

@@ -141,6 +141,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       Height = 213
       Align = alClient
       DataSource = DetsSRC
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

@@ -149,6 +149,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     Width = 465
     Height = 408
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

@@ -26,6 +26,7 @@ object frmpbluBranches: TfrmpbluBranches
     Height = 214
     Align = alClient
     DataSource = dtsBranch
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

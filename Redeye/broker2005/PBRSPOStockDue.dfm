@@ -398,6 +398,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     Width = 749
     Height = 235
     Align = alClient
+    DrawingStyle = gdsGradient
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET

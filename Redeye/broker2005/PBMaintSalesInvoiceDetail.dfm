@@ -105,6 +105,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     Height = 483
     Align = alClient
     DataSource = dtsSIAllDetails
+    DrawingStyle = gdsGradient
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

@@ -197,6 +197,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
     Height = 185
     Align = alClient
     DataSource = dtmdlSuppliers.dtsSuppliers
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 3

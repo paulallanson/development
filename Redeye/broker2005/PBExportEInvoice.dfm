@@ -359,6 +359,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         'required invoices'
       Align = alClient
       DataSource = dtsEInvoice
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       ParentShowHint = False
       ShowHint = True

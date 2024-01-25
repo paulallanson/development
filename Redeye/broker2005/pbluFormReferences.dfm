@@ -139,6 +139,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     Height = 229
     Align = alClient
     DataSource = dtmdlForms.dtsForms
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET

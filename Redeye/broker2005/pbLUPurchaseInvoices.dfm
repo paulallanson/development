@@ -200,6 +200,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     Height = 221
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     ParentShowHint = False
     ShowHint = True

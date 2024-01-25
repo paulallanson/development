@@ -30,6 +30,7 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
     Width = 297
     Height = 169
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

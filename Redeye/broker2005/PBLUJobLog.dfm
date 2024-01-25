@@ -21,6 +21,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Width = 854
     Height = 345
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

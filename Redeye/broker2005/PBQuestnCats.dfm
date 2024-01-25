@@ -39,6 +39,7 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Height = 402
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = QuestnsDS
+    DrawingStyle = gdsGradient
     Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

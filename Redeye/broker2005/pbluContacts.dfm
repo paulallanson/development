@@ -22,6 +22,7 @@ object frmpbluContacts: TfrmpbluContacts
     Height = 260
     Align = alClient
     DataSource = dtsContacts
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

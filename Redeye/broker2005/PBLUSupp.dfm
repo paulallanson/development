@@ -30,6 +30,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
     Top = 8
     Width = 337
     Height = 265
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

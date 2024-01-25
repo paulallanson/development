@@ -170,6 +170,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     Width = 870
     Height = 142
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
     TabOrder = 2

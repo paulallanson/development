@@ -31,6 +31,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       Height = 125
       Align = alClient
       DefaultDrawing = False
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       ReadOnly = True
       TabOrder = 0

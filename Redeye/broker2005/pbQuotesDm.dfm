@@ -306,17 +306,12 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enclosing_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pack_Format_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryQUpdHeader: TFDQuery
@@ -482,20 +477,14 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enclosing_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pack_Format_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
       end>
   end
@@ -1714,12 +1703,11 @@ object dtmdlQuotes: TdtmdlQuotes
       end
       item
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryJBHeader: TFDQuery
-    ConnectionName = 'PB'
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag.Job_Bag,'
       '      Job_Bag.Job_Bag_Descr,'
@@ -1828,14 +1816,12 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'jobbag'
-        ParamType = ptUnknown
       end>
   end
   object qryJBAllLines: TFDQuery
-    ConnectionName = 'PB'
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Job_Bag_Line_Dets.*, '
       #9#9'Vat_Code.Vat_Rate, '
@@ -1876,8 +1862,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 88
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -1897,9 +1883,7 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
 end

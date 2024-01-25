@@ -24,6 +24,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Height = 384
     Align = alClient
     DataSource = DetsDataSource
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnuAllocate
     TabOrder = 0

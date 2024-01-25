@@ -264,6 +264,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Width = 821
     Height = 334
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

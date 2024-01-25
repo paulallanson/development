@@ -163,6 +163,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       Height = 271
       Align = alClient
       DataSource = dsReport
+      DrawingStyle = gdsGradient
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET

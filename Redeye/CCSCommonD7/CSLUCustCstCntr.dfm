@@ -42,6 +42,7 @@ object CSLUCustCstCntrFrm: TCSLUCustCstCntrFrm
     Width = 393
     Height = 289
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

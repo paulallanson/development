@@ -41,6 +41,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Height = 185
       Align = alClient
       DataSource = dtsrcSalesByInv
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET

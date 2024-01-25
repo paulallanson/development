@@ -32,6 +32,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Height = 232
       Align = alClient
       DataSource = dtsrcCurrentCustStatus
+      DrawingStyle = gdsGradient
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText

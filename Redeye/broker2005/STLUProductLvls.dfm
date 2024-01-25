@@ -55,6 +55,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     Width = 506
     Height = 120
     DataSource = dtsStoreLevels
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

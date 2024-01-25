@@ -97,6 +97,7 @@ object frmPBluNCA: TfrmPBluNCA
     Width = 667
     Height = 217
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 1

@@ -626,6 +626,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           Height = 224
           Align = alClient
           DataSource = dmJobBag.dsJBAllLines
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           PopupMenu = pmnFunctions
           TabOrder = 0
@@ -685,7 +686,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             end
             item
               Expanded = False
-              FieldName = 'inactive'
+              FieldName = 'Inactive'
               Title.Caption = 'Status'
               Width = 153
               Visible = True

@@ -23,6 +23,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     Height = 320
     Align = alClient
     DataSource = dmSalesInvoice.dsJBAll
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

@@ -877,6 +877,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         Height = 533
         Align = alClient
         DataSource = dtsGetBOM
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET

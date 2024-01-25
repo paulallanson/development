@@ -29,6 +29,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       Width = 683
       Height = 239
       Align = alClient
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

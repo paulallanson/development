@@ -332,6 +332,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = PopupMenu1
     TabOrder = 2

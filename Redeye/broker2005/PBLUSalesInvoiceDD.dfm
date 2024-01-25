@@ -148,6 +148,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Height = 268
     Align = alClient
     DataSource = dtsSalesInv
+    DrawingStyle = gdsGradient
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

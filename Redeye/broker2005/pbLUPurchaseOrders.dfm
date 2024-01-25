@@ -161,6 +161,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     Height = 203
     Align = alClient
     DataSource = dtmdlPOrders.dtsPOHeaderGrid
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

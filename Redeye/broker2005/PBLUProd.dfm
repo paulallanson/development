@@ -35,6 +35,7 @@ object PBLUProdFrm: TPBLUProdFrm
     Height = 363
     Align = alClient
     DataSource = dtsrcParts
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
     TitleFont.Charset = ANSI_CHARSET

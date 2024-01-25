@@ -585,6 +585,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         Height = 460
         Align = alClient
         DataSource = dtmdlCustomers.dtsDocuments
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         PopupMenu = pmnuDocuments
         TabOrder = 0
@@ -735,6 +736,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         Width = 385
         Height = 209
         DataSource = dtmdlSuppliers.dtsCharges
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET

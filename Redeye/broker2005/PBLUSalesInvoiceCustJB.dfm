@@ -70,6 +70,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Width = 626
     Height = 256
     Align = alClient
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

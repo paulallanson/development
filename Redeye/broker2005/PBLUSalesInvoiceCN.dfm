@@ -33,6 +33,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       Height = 372
       Align = alClient
       DataSource = dmSalesInvoice.dsSIHeaderGrid
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

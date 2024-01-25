@@ -335,6 +335,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Width = 914
     Height = 138
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnfunctions
     TabOrder = 4

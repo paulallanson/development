@@ -109,7 +109,6 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = OKBitBtnClick
-    ExplicitTop = 408
   end
   object CancelBitBtn: TBitBtn
     Left = 405
@@ -120,13 +119,13 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 408
   end
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 8
     Width = 481
     Height = 167
+    ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 8
@@ -295,6 +294,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 8
     Width = 481
     Height = 185
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 8

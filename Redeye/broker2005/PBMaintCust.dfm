@@ -679,6 +679,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Height = 88
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
+          DrawingStyle = gdsGradient
           TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
@@ -850,6 +851,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Width = 477
             Height = 389
             Align = alClient
+            DrawingStyle = gdsGradient
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
@@ -2143,6 +2145,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Top = 132
           Width = 353
           Height = 301
+          DrawingStyle = gdsGradient
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
@@ -2640,6 +2643,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 186
           Align = alClient
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
@@ -2740,6 +2744,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1073
           Height = 275
           Align = alClient
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
@@ -3055,6 +3060,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
@@ -3367,6 +3373,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
@@ -3758,6 +3765,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Height = 510
         Align = alClient
         DataSource = dtmdlOrders.dtsOrders
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
@@ -4006,6 +4014,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
@@ -4281,6 +4290,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 508
           Align = alClient
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
@@ -4534,6 +4544,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 513
         Align = alClient
+        DrawingStyle = gdsGradient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
@@ -4945,6 +4956,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 234
           Align = alClient
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
@@ -5098,6 +5110,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 479
           Height = 371
           Align = alClient
+          DrawingStyle = gdsGradient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET

@@ -33,6 +33,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Height = 293
       Align = alClient
       DataSource = dtmdlForms.dtsHistory
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

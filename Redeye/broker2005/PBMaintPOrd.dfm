@@ -36,7 +36,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     BevelInner = bvRaised
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 972
     DesignSize = (
       978
       65)
@@ -231,7 +230,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ReadOnly = True
       TabOrder = 2
       OnChange = SupplierEditChange
-      ExplicitWidth = 334
     end
     object ContactEdit: TEdit
       Left = 214
@@ -243,7 +241,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       MaxLength = 40
       ReadOnly = True
       TabOrder = 4
-      ExplicitWidth = 304
     end
     object SelContactBtn: TButton
       Left = 532
@@ -260,7 +257,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 5
       OnClick = SelContactBtnClick
-      ExplicitLeft = 526
     end
     object SelSupBtn: TButton
       Left = 560
@@ -277,7 +273,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 3
       OnClick = SelSupBtnClick
-      ExplicitLeft = 554
     end
     object CurrDBLUCB: TDBLookupComboBox
       Left = 441
@@ -290,7 +285,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ListSource = PBPODM.CurrSRC
       TabOrder = 7
       Visible = False
-      ExplicitLeft = 435
     end
     object CurrClearBitBtn: TBitBtn
       Left = 471
@@ -318,7 +312,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 8
       Visible = False
       OnClick = CurrClearBitBtnClick
-      ExplicitLeft = 465
     end
     object ReqByDateEdit: TEdit
       Left = 802
@@ -330,7 +323,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       TabOrder = 9
       OnChange = ReqByDateEditChange
       OnExit = ReqByDateEditExit
-      ExplicitLeft = 796
     end
     object edtAccountTeam: TEdit
       Left = 667
@@ -342,7 +334,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 6
-      ExplicitLeft = 661
     end
     object edtAccountManager: TEdit
       Left = 667
@@ -354,7 +345,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 10
-      ExplicitLeft = 661
     end
     object btnAccountManager: TButton
       Left = 768
@@ -371,7 +361,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       ParentFont = False
       TabOrder = 11
       OnClick = btnAccountManagerClick
-      ExplicitLeft = 762
     end
   end
   object stsbrDetails: TStatusBar
@@ -389,8 +378,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       item
         Width = 250
       end>
-    ExplicitTop = 537
-    ExplicitWidth = 972
   end
   object Panel4: TPanel
     Left = 0
@@ -400,8 +387,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 972
-    ExplicitHeight = 440
     object OrderLinePage: TPageControl
       Tag = 180
       Left = 1
@@ -412,8 +397,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       Align = alClient
       TabOrder = 0
       OnChange = OrderLinePageChange
-      ExplicitWidth = 970
-      ExplicitHeight = 438
       object tsGeneral: TTabSheet
         Caption = 'General'
         DesignSize = (
@@ -642,8 +625,8 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
         object Label61: TLabel
           Left = 587
           Top = 21
-          Width = 77
-          Height = 29
+          Width = 67
+          Height = 26
           Caption = 'Expected Reorder date'
           WordWrap = True
         end
@@ -3294,6 +3277,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Width = 965
             Height = 140
             Anchors = [akLeft, akTop, akRight, akBottom]
+            DrawingStyle = gdsGradient
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
@@ -3407,6 +3391,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Width = 945
             Height = 156
             Anchors = [akLeft, akTop, akRight, akBottom]
+            DrawingStyle = gdsGradient
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
@@ -3539,7 +3524,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C00000000000004600000000000000000000000030950963EB47DA01
+              00000000C000000000000046000000000000000000000000C0B891607D4FDA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3715,7 +3700,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              0000000000000000000000000000000030950963EB47DA0130950963EB47DA01
+              00000000000000000000000000000000C0B891607D4FDA01C0B891607D4FDA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4191,7 +4176,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C00000000000004600000000000000000000000030950963EB47DA01
+              00000000C000000000000046000000000000000000000000C0B891607D4FDA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4761,8 +4746,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
           Caption = 'Panel25'
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 877
-          ExplicitHeight = 410
           object sgNCADetails: TStringGrid
             Left = 1
             Top = 1
@@ -4819,8 +4802,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               '')
             ReadOnly = True
             TabOrder = 2
-            ExplicitWidth = 875
-            ExplicitHeight = 272
           end
         end
       end
@@ -5073,8 +5054,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 505
-    ExplicitWidth = 972
     DesignSize = (
       978
       32)
@@ -5172,7 +5151,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 816
     end
     object OKBitBtn: TBitBtn
       Left = 740
@@ -5201,7 +5179,6 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = OKBitBtnClick
-      ExplicitLeft = 734
     end
     object OleContainer1: TOleContainer
       Left = 592

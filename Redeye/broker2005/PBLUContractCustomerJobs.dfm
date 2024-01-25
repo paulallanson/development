@@ -100,6 +100,7 @@ object PBLUContractCustomerJobsFrm: TPBLUContractCustomerJobsFrm
     Width = 817
     Height = 313
     Align = alClient
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11

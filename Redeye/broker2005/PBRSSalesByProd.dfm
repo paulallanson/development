@@ -379,6 +379,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     Height = 301
     Align = alClient
     DataSource = dtsSalesByProd
+    DrawingStyle = gdsGradient
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText

@@ -210,6 +210,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     Width = 788
     Height = 389
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 3

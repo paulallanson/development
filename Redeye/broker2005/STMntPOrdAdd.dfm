@@ -28,6 +28,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
     Width = 633
     Height = 273
     DataSource = PartsDataSource
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

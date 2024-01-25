@@ -206,6 +206,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     Width = 910
     Height = 308
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET

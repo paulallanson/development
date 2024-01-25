@@ -24,6 +24,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     Height = 329
     Align = alClient
     DataSource = DmLookupSOrd.DetsSRC
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

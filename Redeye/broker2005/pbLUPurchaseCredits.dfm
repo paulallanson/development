@@ -190,6 +190,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     Height = 229
     Align = alClient
     DataSource = dmSupplierInvoice.dsPCHeaderGrid
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentShowHint = False
     ShowHint = True

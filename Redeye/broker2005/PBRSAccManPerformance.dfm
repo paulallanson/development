@@ -159,6 +159,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 303
     Align = alClient
     DataSource = dtsReport
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET

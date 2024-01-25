@@ -382,6 +382,7 @@ object PBLUCustFrm: TPBLUCustFrm
     Top = 9
     Width = 329
     Height = 256
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

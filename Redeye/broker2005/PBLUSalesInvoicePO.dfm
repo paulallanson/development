@@ -215,6 +215,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Height = 341
       Align = alClient
       DataSource = dmSalesInvoice.dsPOLine
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11

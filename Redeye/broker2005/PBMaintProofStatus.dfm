@@ -303,12 +303,9 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
         Name = 'Proof_Approved'
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
       end>
   end

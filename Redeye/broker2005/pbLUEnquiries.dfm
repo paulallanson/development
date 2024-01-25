@@ -114,6 +114,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     Width = 871
     Height = 206
     Align = alClient
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
     TabOrder = 2

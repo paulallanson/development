@@ -158,6 +158,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     Height = 432
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

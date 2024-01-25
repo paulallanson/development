@@ -24,6 +24,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     Height = 168
     Align = alClient
     DataSource = DmLookupSOrd.dtsDetails
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET

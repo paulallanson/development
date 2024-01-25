@@ -23,6 +23,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
     Height = 167
     Align = alClient
     DataSource = srcDocumentLogo
+    DrawingStyle = gdsGradient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET

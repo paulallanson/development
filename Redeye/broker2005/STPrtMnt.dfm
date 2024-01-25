@@ -262,6 +262,7 @@ object STPrtMntFrm: TSTPrtMntFrm
       Height = 350
       Align = alClient
       DataSource = PartsDataSource
+      DrawingStyle = gdsGradient
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET

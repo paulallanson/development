@@ -165,6 +165,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Height = 274
       Align = alClient
       DataSource = dsReport
+      DrawingStyle = gdsGradient
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
