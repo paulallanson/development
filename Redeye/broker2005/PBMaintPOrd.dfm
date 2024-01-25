@@ -3278,13 +3278,19 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Height = 140
             Anchors = [akLeft, akTop, akRight, akBottom]
             DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ParentFont = False
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clBlack
             TitleFont.Height = -11
             TitleFont.Name = 'Segoe UI'
-            TitleFont.Style = []
+            TitleFont.Style = [fsBold]
             Columns = <
               item
                 Expanded = False
@@ -3392,13 +3398,19 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Height = 156
             Anchors = [akLeft, akTop, akRight, akBottom]
             DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ParentFont = False
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clBlack
             TitleFont.Height = -11
             TitleFont.Name = 'Segoe UI'
-            TitleFont.Style = []
+            TitleFont.Style = [fsBold]
             Columns = <
               item
                 Expanded = False
@@ -3524,7 +3536,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C000000000000046000000000000000000000000C0B891607D4FDA01
+              00000000C00000000000004600000000000000000000000000DAEAE6A54FDA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3700,7 +3712,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              00000000000000000000000000000000C0B891607D4FDA01C0B891607D4FDA01
+              0000000000000000000000000000000000DAEAE6A54FDA0100DAEAE6A54FDA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4176,7 +4188,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C000000000000046000000000000000000000000C0B891607D4FDA01
+              00000000C00000000000004600000000000000000000000000DAEAE6A54FDA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000

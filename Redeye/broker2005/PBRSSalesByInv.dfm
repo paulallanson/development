@@ -42,13 +42,19 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Align = alClient
       DataSource = dtsrcSalesByInv
       DrawingStyle = gdsGradient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnDrawColumnCell = dbgDetailsDrawColumnCell
       Columns = <
         item

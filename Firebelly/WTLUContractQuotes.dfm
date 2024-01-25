@@ -27,8 +27,6 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       item
         Width = 100
       end>
-    ExplicitTop = 393
-    ExplicitWidth = 726
   end
   object Panel2: TPanel
     Left = 0
@@ -37,8 +35,6 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
     Height = 51
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 342
-    ExplicitWidth = 726
     DesignSize = (
       732
       51)
@@ -69,7 +65,6 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
-      ExplicitLeft = 545
     end
     object edtNumber: TEdit
       Left = 436
@@ -79,7 +74,6 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 430
     end
     object edtCustomerName: TEdit
       Left = 64
@@ -100,7 +94,6 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 2
       TabOrder = 3
       OnClick = BitBtn1Click
-      ExplicitLeft = 633
     end
   end
   object dbgDetails: TDBGrid
@@ -109,13 +102,20 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
     Width = 732
     Height = 351
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item

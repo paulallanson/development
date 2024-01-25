@@ -112,13 +112,19 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     Align = alClient
     DataSource = srcStoreStock
     DrawingStyle = gdsGradient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -169,7 +175,6 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
         Expanded = False
         FieldName = 'invoice_upfront'
         Title.Caption = 'Invoiced'
-        Width = 48
         Visible = True
       end>
   end

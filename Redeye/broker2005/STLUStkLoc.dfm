@@ -31,7 +31,13 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       Align = alClient
       DefaultDrawing = False
       DrawingStyle = gdsGradient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
       PopupMenu = pmnStock
       ReadOnly = True
       TabOrder = 0
@@ -39,7 +45,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnDrawColumnCell = dbgrdLocationsDrawColumnCell
       OnDblClick = dbgrdLocationsDblClick
       Columns = <
