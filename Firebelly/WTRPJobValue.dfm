@@ -10,7 +10,7 @@ object frmWTRPJobValue: TfrmWTRPJobValue
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
@@ -1504,11 +1504,11 @@ object frmWTRPJobValue: TfrmWTRPJobValue
     object qryJobsCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryJobsContact_name: TStringField
+    object qryJobsContact_name: TWideStringField
       FieldName = 'Contact_name'
       Size = 50
     end
-    object qryJobsOrder_ref_no: TStringField
+    object qryJobsOrder_ref_no: TWideStringField
       FieldName = 'Order_ref_no'
       Size = 30
     end
@@ -1558,7 +1558,7 @@ object frmWTRPJobValue: TfrmWTRPJobValue
     object qryJobsInstallation_date_actual: TDateTimeField
       FieldName = 'Installation_date_actual'
     end
-    object qryJobsDescription: TStringField
+    object qryJobsDescription: TWideStringField
       FieldName = 'Description'
       Size = 255
     end
@@ -1574,7 +1574,7 @@ object frmWTRPJobValue: TfrmWTRPJobValue
     object qryJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
     end
-    object qryJobsReference: TStringField
+    object qryJobsReference: TWideStringField
       FieldName = 'Reference'
       Size = 50
     end
@@ -1582,7 +1582,7 @@ object frmWTRPJobValue: TfrmWTRPJobValue
       FieldName = 'Nett_Price'
       DisplayFormat = '#,##0.00'
     end
-    object qryJobsInactive: TStringField
+    object qryJobsInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
@@ -1599,7 +1599,7 @@ object frmWTRPJobValue: TfrmWTRPJobValue
       FieldName = 'Discount_Value'
       DisplayFormat = '#,##0.00'
     end
-    object qryJobsCustomer_Name: TStringField
+    object qryJobsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
@@ -1619,23 +1619,23 @@ object frmWTRPJobValue: TfrmWTRPJobValue
     object qryJobsFitter: TIntegerField
       FieldName = 'Fitter'
     end
-    object qryJobsInstall_Name: TStringField
+    object qryJobsInstall_Name: TWideStringField
       FieldName = 'Install_Name'
       Size = 30
     end
-    object qryJobsInstall_Phone: TStringField
+    object qryJobsInstall_Phone: TWideStringField
       FieldName = 'Install_Phone'
       Size = 30
     end
-    object qryJobsCustomer_Name_Actual: TStringField
+    object qryJobsCustomer_Name_Actual: TWideStringField
       FieldName = 'Customer_Name_Actual'
       Size = 50
     end
-    object qryJobstelephone_number: TStringField
+    object qryJobstelephone_number: TWideStringField
       FieldName = 'telephone_number'
       Size = 30
     end
-    object qryJobsJob_Status_Description: TStringField
+    object qryJobsJob_Status_Description: TWideStringField
       FieldName = 'Job_Status_Description'
       Size = 50
     end

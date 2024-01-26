@@ -141,6 +141,7 @@ type
     qryAllJobsOperator_Name: TWideStringField;
     qryAllJobsGross_Price: TCurrencyField;
     qryAllJobsSales_Order: TIntegerField;
+    qryAllJobsIs_Retail_Customer: TWideStringField;
   private
     function GetHeaderCount: integer;
     function GetHeaderCountAll: integer;
