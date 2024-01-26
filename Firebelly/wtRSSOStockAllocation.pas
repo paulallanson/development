@@ -138,7 +138,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   wtMain, AllCommon, WTSrchCustomer, DateSelV5, wtDataModule;
 
 {$R *.dfm}

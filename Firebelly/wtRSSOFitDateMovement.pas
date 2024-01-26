@@ -80,7 +80,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   wtMain, allCommon, WTSrchCustomer, DateSelV5, WTRPSOFitDateMovement;
 
 {$R *.dfm}
