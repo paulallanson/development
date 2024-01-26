@@ -1,26 +1,24 @@
-﻿object CSLUSuppFrm: TCSLUSuppFrm
+object CSLUSuppFrm: TCSLUSuppFrm
   Left = 175
   Top = 136
-  Width = 448
-  Height = 393
   Caption = 'Look-Up A Supplier'
+  ClientHeight = 354
+  ClientWidth = 432
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 13
   object CountLabel: TLabel
-    Left = 249
+    Left = 254
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -29,13 +27,20 @@
     Top = 8
     Width = 320
     Height = 209
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -58,7 +63,7 @@
       Left = 8
       Top = 16
       Width = 305
-      Height = 23
+      Height = 21
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -70,8 +75,6 @@
     Height = 26
     Caption = 'Select'
     Default = True
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -137,14 +140,17 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 349
     Top = 315
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GoToGrpBox: TGroupBox
     Left = 336
@@ -159,8 +165,6 @@
       Width = 83
       Height = 25
       Caption = 'Branches'
-      TabOrder = 0
-      OnClick = BranchesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -175,6 +179,8 @@
         3333333337FFFF7F333333333000000333333333377777733333333333077033
         33333333337FF7F3333333333300003333333333337777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BranchesBitBtnClick
     end
     object BitBtn1: TBitBtn
       Left = 6
@@ -182,8 +188,6 @@
       Width = 83
       Height = 25
       Caption = 'File Type'
-      TabOrder = 1
-      OnClick = BitBtn1Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -198,6 +202,8 @@
         3033377777733333373333033333333303333373FF33333F7333333003333300
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn1Click
     end
   end
   object FuncGrpBox: TGroupBox
@@ -213,8 +219,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -229,6 +233,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -236,8 +242,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -252,6 +256,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -259,8 +265,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -275,6 +279,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object ActiveOnlyCheckBox: TCheckBox
@@ -299,22 +305,22 @@
     object LabelName: TLabel
       Left = 24
       Top = 3
-      Width = 37
-      Height = 15
+      Width = 32
+      Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 24
       Top = 18
-      Width = 39
-      Height = 15
+      Width = 36
+      Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 24
       Top = 33
-      Width = 22
-      Height = 15
+      Width = 20
+      Height = 13
       Caption = 'Fax:'
     end
     object DBSupText: TDBText
@@ -326,8 +332,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -340,8 +346,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -354,8 +360,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -367,8 +373,6 @@
     Height = 25
     Caption = 'Branch'
     Default = True
-    TabOrder = 8
-    OnClick = SelBranchBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -434,6 +438,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 8
+    OnClick = SelBranchBitBtnClick
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -464,19 +470,13 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Active_Only'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer
@@ -520,9 +520,7 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object NullSRC: TDataSource
@@ -555,14 +553,11 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -35,7 +35,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     TitleFont.Color = clBlack
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnCellClick = dbgSOCellClick
     OnDblClick = dbgSODblClick
     Columns = <

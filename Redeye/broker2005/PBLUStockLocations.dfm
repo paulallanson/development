@@ -19,7 +19,6 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 724
     object Label1: TLabel
       Left = 16
       Top = 20
@@ -42,8 +41,6 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 334
-    ExplicitWidth = 724
     object Label2: TLabel
       Left = 16
       Top = 15
@@ -65,8 +62,6 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     Width = 730
     Height = 19
     Panels = <>
-    ExplicitTop = 375
-    ExplicitWidth = 724
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -74,11 +69,18 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     Width = 730
     Height = 294
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
   end
 end

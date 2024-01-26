@@ -493,30 +493,20 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
         FieldName = 'Job_Bag'
         Title.Caption = 'Job Bag'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Date_Point'
         Title.Caption = 'Date'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 81
         Visible = True
       end
@@ -524,11 +514,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 188
         Visible = True
       end
@@ -537,11 +522,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Expanded = False
         FieldName = 'Purchase_Order'
         Title.Caption = 'P.Order'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 76
         Visible = True
       end
@@ -549,11 +529,6 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Expanded = False
         FieldName = 'Job_Bag_Line_Descr'
         Title.Caption = 'Description'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 202
         Visible = True
       end
@@ -561,44 +536,24 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Expanded = False
         FieldName = 'Job_Bag_Line_Cost'
         Title.Caption = 'Cost'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Job_Bag_Line_Sell'
         Title.Caption = 'Sell'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Job_Bag_Quantity'
         Title.Caption = 'Quantity'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Supplier_Name'
         Title.Caption = 'Supplier'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 246
         Visible = True
       end>

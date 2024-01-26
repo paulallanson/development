@@ -110,26 +110,21 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Arial'
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
         FieldName = 'Date_Received'
         Title.Caption = 'Date'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -137,11 +132,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Part_Store_Name'
         Title.Caption = 'Store'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 120
         Visible = True
       end
@@ -149,11 +139,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Part_Movement_Bin'
         Title.Caption = 'Bin'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 79
         Visible = True
       end
@@ -161,11 +146,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Part_Store_Lot'
         Title.Caption = 'Lot'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 99
         Visible = True
       end
@@ -173,11 +153,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Part_Move_Type_Descr'
         Title.Caption = 'Move Type'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 98
         Visible = True
       end
@@ -185,11 +160,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Part_Movement_Reference'
         Title.Caption = 'Reference'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 157
         Visible = True
       end
@@ -197,11 +167,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Stock_Pack_Quantity'
         Title.Caption = 'Pack'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 34
         Visible = True
       end
@@ -210,11 +175,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         FieldName = 'Store_Quantity'
         Title.Alignment = taRightJustify
         Title.Caption = 'Quantity'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -222,11 +182,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
         Expanded = False
         FieldName = 'Store_Cost'
         Title.Caption = 'Value'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end>
   end

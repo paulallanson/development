@@ -1,4 +1,4 @@
-﻿object SFLUCustFrm: TSFLUCustFrm
+object SFLUCustFrm: TSFLUCustFrm
   Left = 208
   Top = 150
   BorderStyle = bsDialog
@@ -11,16 +11,14 @@
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 291
+    Left = 286
     Top = 272
-    Width = 54
+    Width = 59
     Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
@@ -64,9 +62,6 @@
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -132,6 +127,9 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 369
@@ -144,9 +142,6 @@
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = CloseBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -165,6 +160,9 @@
       333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
       0000}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = CloseBitBtnClick
   end
   object DispPanel: TPanel
     Left = 14
@@ -217,14 +215,14 @@
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 31
+      Width = 32
       Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 34
+      Width = 36
       Height = 13
       Caption = 'Phone:'
     end
@@ -261,13 +259,20 @@
     Top = 9
     Width = 329
     Height = 256
+    DrawingStyle = gdsGradient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnColEnter = dbgDetailsColEnter
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -329,19 +334,16 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Active_Only'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object tmrSearch: TTimer
@@ -402,9 +404,8 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object NullSRC: TDataSource

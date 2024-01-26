@@ -1,32 +1,30 @@
 object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
   Left = 352
   Top = 121
-  Width = 505
-  Height = 378
   Caption = 'Create Purchase Order from Sales Order'
+  ClientHeight = 339
+  ClientWidth = 489
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 303
-    Width = 497
+    Top = 298
+    Width = 489
     Height = 41
     Align = alBottom
     TabOrder = 0
     DesignSize = (
-      497
+      489
       41)
     object OKBitBtn: TBitBtn
-      Left = 331
+      Left = 323
       Top = 8
       Width = 75
       Height = 25
@@ -34,8 +32,6 @@ object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
       Caption = 'Create'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -54,15 +50,18 @@ object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 411
+      Left = 403
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object AllBitBtn: TBitBtn
       Left = 11
@@ -72,10 +71,6 @@ object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
       Hint = 'Select All'
       Anchors = [akLeft, akBottom]
       Caption = 'Select'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 2
-      OnClick = AllBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -90,22 +85,33 @@ object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
         05557F7F7F77777775550F0F0000000555557F7F7777777555550F0000000555
         55557F7777777555555500000005555555557777777555555555}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      OnClick = AllBitBtnClick
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 497
-    Height = 303
+    Width = 489
+    Height = 298
     Align = alClient
     DataSource = dtsDirectSO
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False

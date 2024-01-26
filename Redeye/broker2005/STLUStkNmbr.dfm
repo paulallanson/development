@@ -25,12 +25,11 @@ object STLUStkNmbrFrm: TSTLUStkNmbrFrm
     object pnlPart: TPanel
       Left = 1
       Top = 1
-      Width = 636
+      Width = 630
       Height = 32
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 630
       object lblPartDesc: TLabel
         Left = 184
         Top = 8
@@ -56,16 +55,23 @@ object STLUStkNmbrFrm: TSTLUStkNmbrFrm
     object dbgrdLocations: TDBGrid
       Left = 1
       Top = 33
-      Width = 636
-      Height = 329
+      Width = 630
+      Height = 320
       Align = alClient
+      DrawingStyle = gdsGradient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       Columns = <
         item
           Expanded = False
@@ -110,14 +116,13 @@ object STLUStkNmbrFrm: TSTLUStkNmbrFrm
     Align = alBottom
     TabOrder = 1
     object pnlButton: TPanel
-      Left = 533
+      Left = 527
       Top = 1
       Width = 104
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 527
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8

@@ -370,17 +370,12 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       Columns = <
         item
           Expanded = False
           FieldName = 'Stock_Reference'
           Title.Caption = 'Stock Reference'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 161
           Visible = True
         end
@@ -389,11 +384,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Expanded = False
           FieldName = 'POrder'
           Title.Caption = 'Order No'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 72
           Visible = True
         end
@@ -401,11 +391,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Expanded = False
           FieldName = 'Date_Point'
           Title.Caption = 'Schd Date'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 86
           Visible = True
         end
@@ -413,11 +398,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Expanded = False
           FieldName = 'Customer_Name'
           Title.Caption = 'Customer'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 206
           Visible = True
         end
@@ -425,11 +405,6 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Expanded = False
           FieldName = 'Cust_order_no'
           Title.Caption = 'Customer Ref'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 142
           Visible = True
         end
@@ -437,66 +412,36 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
           Expanded = False
           FieldName = 'Qty_to_Deliver'
           Title.Caption = 'Quantity'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Qty_In'
           Title.Caption = 'Quantity In'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Qty_Out'
           Title.Caption = 'Quantity Out'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'DeliveryName'
           Title.Caption = 'Delivery To'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Supplier_Name'
           Title.Caption = 'Supplier'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Date_Deliv_Actual'
           Title.Caption = 'Delivery Date'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 82
           Visible = True
         end>

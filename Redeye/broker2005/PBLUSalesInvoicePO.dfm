@@ -228,7 +228,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       TitleFont.Color = clBlack
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnCellClick = dbgPOCellClick
       OnDrawColumnCell = dbgPODrawColumnCell
       OnDblClick = dbgPODblClick

@@ -113,7 +113,7 @@ object PBLUContractCustomerJobsFrm: TPBLUContractCustomerJobsFrm
     TitleFont.Color = clBlack
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item

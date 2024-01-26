@@ -47,7 +47,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnDrawColumnCell = detsDBGridDrawColumnCell
       OnDblClick = detsDBGridDblClick
       Columns = <
@@ -56,11 +56,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'PONumber'
           Title.Caption = 'Order No'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 63
           Visible = True
         end
@@ -68,11 +63,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Date_Point'
           Title.Caption = 'Due Date'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 70
           Visible = True
         end
@@ -80,11 +70,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Cust_Order_No'
           Title.Caption = 'Customer Ref'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 124
           Visible = True
         end
@@ -93,11 +78,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Qty_To_Deliver'
           Title.Caption = 'Qty to Deliver'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 81
           Visible = True
         end
@@ -106,11 +86,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Qty_In'
           Title.Caption = 'Move In'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
@@ -118,22 +93,12 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Qty_Out'
           Title.Caption = 'Move Out'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Date_Deliv_Actual'
           Title.Caption = 'Delivery Date'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 79
           Visible = True
         end
@@ -141,11 +106,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'DeliveryName'
           Title.Caption = 'Deliver To'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 195
           Visible = True
         end
@@ -153,11 +113,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Supplier_Name'
           Title.Caption = 'Supplier'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 186
           Visible = True
         end
@@ -165,11 +120,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
           Expanded = False
           FieldName = 'Suppliers_Desc'
           Title.Caption = 'Job Description'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 189
           Visible = True
         end>

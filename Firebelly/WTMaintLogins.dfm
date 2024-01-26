@@ -22,8 +22,6 @@ object frmWTMaintLogins: TfrmWTMaintLogins
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 470
-    ExplicitWidth = 701
     DesignSize = (
       689
       41)
@@ -54,7 +52,6 @@ object frmWTMaintLogins: TfrmWTMaintLogins
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 613
     end
   end
   object dbgDetails: TDBGrid
@@ -64,13 +61,20 @@ object frmWTMaintLogins: TfrmWTMaintLogins
     Height = 461
     Align = alClient
     DataSource = dtsWorkstation
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item
@@ -121,8 +125,6 @@ object frmWTMaintLogins: TfrmWTMaintLogins
       item
         Width = 50
       end>
-    ExplicitTop = 511
-    ExplicitWidth = 701
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'WT'

@@ -237,7 +237,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       TitleFont.Color = clBlack
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnCellClick = dbgJBCellClick
       OnDblClick = dbgJBDblClick
       Columns = <

@@ -1,33 +1,36 @@
 object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
   Left = 46
   Top = 114
-  Width = 681
-  Height = 383
   Caption = 'Delivery details for order'
+  ClientHeight = 248
+  ClientWidth = 614
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 315
-    Width = 673
+    Top = 207
+    Width = 614
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 303
+    ExplicitWidth = 665
+    DesignSize = (
+      614
+      41)
     object btnDeliveryNotes: TButton
-      Left = 326
+      Left = 267
       Top = 8
       Width = 75
       Height = 25
@@ -35,9 +38,10 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
       Caption = '&Notes'
       TabOrder = 0
       OnClick = btnDeliveryNotesClick
+      ExplicitLeft = 318
     end
     object btnLabels: TButton
-      Left = 406
+      Left = 347
       Top = 8
       Width = 75
       Height = 25
@@ -45,9 +49,10 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
       Caption = '&Labels'
       TabOrder = 1
       OnClick = btnLabelsClick
+      ExplicitLeft = 398
     end
     object btnConfirm: TButton
-      Left = 486
+      Left = 427
       Top = 8
       Width = 75
       Height = 25
@@ -55,9 +60,10 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
       Caption = 'C&onfirm'
       TabOrder = 2
       OnClick = btnConfirmClick
+      ExplicitLeft = 478
     end
     object btnClose: TButton
-      Left = 590
+      Left = 531
       Top = 8
       Width = 75
       Height = 25
@@ -65,6 +71,7 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
       Caption = '&Close'
       TabOrder = 3
       OnClick = btnCloseClick
+      ExplicitLeft = 582
     end
   end
   object dbgDetails: TDBGrid
@@ -73,13 +80,20 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
     Width = 273
     Height = 201
     DataSource = dtmdlDeliveries.dtsDetails
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -136,13 +150,20 @@ object frmpbluCustOrderdeliv: TfrmpbluCustOrderdeliv
     Width = 320
     Height = 201
     DataSource = dtmdlDeliveries.dtsSODetails
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False

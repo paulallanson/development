@@ -289,7 +289,7 @@ object frmwtLUSales: TfrmwtLUSales
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -324,6 +324,7 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -426,12 +427,14 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
+        Width = 64
         Visible = True
       end
       item

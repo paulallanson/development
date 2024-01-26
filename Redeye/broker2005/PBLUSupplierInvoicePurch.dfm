@@ -227,7 +227,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       TitleFont.Color = clBlack
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnCellClick = dbgPurchCellClick
       OnDblClick = dbgPurchDblClick
       Columns = <

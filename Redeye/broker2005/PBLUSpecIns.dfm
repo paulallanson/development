@@ -41,16 +41,11 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
         FieldName = 'Description'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clBlack
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 303
         Visible = True
       end>

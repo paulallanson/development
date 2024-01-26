@@ -53,7 +53,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <

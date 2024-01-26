@@ -35,7 +35,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = DetsDBGridDblClick
     Columns = <
       item
@@ -45,7 +45,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
         Title.Font.Color = clBlack
         Title.Font.Height = -11
         Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
+        Title.Font.Style = [fsBold]
         Width = 336
         Visible = True
       end>
