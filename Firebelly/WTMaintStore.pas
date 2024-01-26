@@ -101,7 +101,7 @@ end;
 
 procedure TfrmWTMaintStore.btnOKClick(Sender: TObject);
 begin
-  if sFuncMode[1] in ['A'] then
+  if CharInSet(sFuncMode[1], ['A']) then
     begin
       if iCode = 0 then
         begin
@@ -150,7 +150,7 @@ begin
         end;
     end
   else
-  if sFuncMode[1] in ['C'] then
+  if CharInSet(sFuncMode[1], ['C']) then
     begin
       if iAddress = 0 then
         begin

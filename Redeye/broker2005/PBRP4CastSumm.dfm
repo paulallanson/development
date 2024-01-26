@@ -10,7 +10,7 @@ object PBRP4CastSummFrm: TPBRP4CastSummFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qckrp4CastSumm: TQuickRep
     Left = -8

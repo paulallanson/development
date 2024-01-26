@@ -11,7 +11,7 @@ object FmMain: TFmMain
   Font.Name = 'Arial'
   Font.Style = []
   OldCreateOrder = False
-  Scaled = False
+  
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 15

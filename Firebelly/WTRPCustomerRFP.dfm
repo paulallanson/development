@@ -12,7 +12,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 14
   object QRLabel6: TQRLabel
     Left = 448

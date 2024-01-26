@@ -144,7 +144,7 @@ object dtmdlQuote: TdtmdlQuote
       Origin = 'Importance'
       Size = 1
     end
-    object qryAllQuotesGross_Price: TFloatField
+    object qryAllQuotesGross_Price: TCurrencyField
       FieldName = 'Gross_Price'
       Origin = 'Gross_Price'
       ReadOnly = True
@@ -2540,12 +2540,12 @@ object dtmdlQuote: TdtmdlQuote
       Origin = 'Survey_price'
       Required = True
     end
-    object qryGetLinkedQuotesComplete_Price: TFloatField
+    object qryGetLinkedQuotesComplete_Price: TCurrencyField
       FieldName = 'Complete_Price'
       Origin = 'Complete_Price'
       ReadOnly = True
     end
-    object qryGetLinkedQuotesTotal_Price: TFloatField
+    object qryGetLinkedQuotesTotal_Price: TCurrencyField
       FieldName = 'Total_Price'
       Origin = 'Total_Price'
       ReadOnly = True

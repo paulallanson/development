@@ -2225,7 +2225,7 @@ begin
                 i := pos('\',sFullFile);
               end;
 
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
+            sFile := ExtractFileName(DocOpenDialog.Files.Strings[icount]);
 
             FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
           end;
@@ -3008,7 +3008,7 @@ begin
                 i := pos('\',sFullFile);
               end;
 
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
+            sFile := ExtractFileName(DocOpenDialog.Files.Strings[icount]);
 
             FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
           end;

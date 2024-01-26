@@ -2928,7 +2928,7 @@ begin
                 i := pos('\',sFullFile);
               end;
 
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
+            sFile := ExtractFileName(DocOpenDialog.Files.Strings[icount]);
 
             FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
           end;
@@ -5117,11 +5117,12 @@ var
 begin
   sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' ;
 
-  FEmailAttachment := TStringList.create;
-  FEmailAttachment.clear;
-
-  frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
+  FEmailAttachment := nil;
+  frmWTRPJobRemedialSheet := nil;
   try
+    FEmailAttachment := TStringList.create;
+    frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
+
     frmWTRPJobRemedialSheet.qrpJobSheet.ShowProgress := false;
     frmWTRPJobRemedialSheet.bPreview := false;
     frmWTRPJobRemedialSheet.Job := iJob;
@@ -5149,7 +5150,7 @@ begin
       frmWTRPJobRemedialSheet.qrpJobSheet.QRPrinter := nil;
       PDFFilter.Free;
     end;
-  finally
+
     {Now move the Remedial Sheet as PDF to the new Sales order folder}
     filecopy(sLocation + sFilename + '.pdf', sDest + sFilename + '.pdf');
 
@@ -5158,7 +5159,7 @@ begin
         StrPCopy(sAttachment, FEmailAttachment.strings[iCount]);
         deletefile(sAttachment);
       end;
-
+  finally
     FEmailAttachment.Free;
     frmWTRPJobRemedialSheet.free;
   end;

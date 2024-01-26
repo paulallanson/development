@@ -119,7 +119,7 @@ var
 
 implementation
 
-uses UITypes, wtMain, wtLUMaterialUse, wtDataModule;
+uses UITypes, wtMain, wtLUMaterialUse, wtDataModule, AllCommon;
 
 {$R *.dfm}
 
@@ -447,7 +447,7 @@ begin
               SQL.Text := sText;
             end;
 
-          parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
+          parambyName('worktop').asinteger := dblkpWorktop.ListValue;
           parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
           open;
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);

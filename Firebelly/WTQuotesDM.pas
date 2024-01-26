@@ -115,7 +115,7 @@ type
     qryAllQuotesContact_Name: TWideStringField;
     qryAllQuotesMaterial_Type: TIntegerField;
     qryAllQuotesImportance: TWideStringField;
-    qryAllQuotesGross_Price: TFloatField;
+    qryAllQuotesGross_Price: TCurrencyField;
     qryAllQuotesQuote_Number: TFloatField;
     qryAllQuotesOriginal_Quote: TIntegerField;
     qryAllQuotesExpiry_Date: TDateTimeField;
@@ -130,8 +130,8 @@ type
     qryGetLinkedQuotesInstallation_price: TCurrencyField;
     qryGetLinkedQuotesDelivery_Price: TCurrencyField;
     qryGetLinkedQuotesSurvey_price: TCurrencyField;
-    qryGetLinkedQuotesComplete_Price: TFloatField;
-    qryGetLinkedQuotesTotal_Price: TFloatField;
+    qryGetLinkedQuotesComplete_Price: TCurrencyField;
+    qryGetLinkedQuotesTotal_Price: TCurrencyField;
     qryGetLinkedQuotesQuote_status_description: TWideStringField;
     qryAllQuotesOperator_Name: TWideStringField;
     qryAllQuotesStatus_Text: TWideStringField;

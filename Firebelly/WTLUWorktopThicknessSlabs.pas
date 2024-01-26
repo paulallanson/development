@@ -72,7 +72,7 @@ var
 
 implementation
 
-uses WTMaintWorktopThicknessSlab, wtMain;
+uses UITypes, WTMaintWorktopThicknessSlab, wtMain;
 
 {$R *.dfm}
 
