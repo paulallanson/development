@@ -626,14 +626,21 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           Height = 224
           Align = alClient
           DataSource = dmJobBag.dsJBAllLines
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
           PopupMenu = pmnFunctions
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDblClick = dbgLinesDblClick
           Columns = <
             item
@@ -685,7 +692,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             end
             item
               Expanded = False
-              FieldName = 'inactive'
+              FieldName = 'Inactive'
               Title.Caption = 'Status'
               Width = 153
               Visible = True

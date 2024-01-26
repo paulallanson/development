@@ -35,8 +35,6 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Width = 50
       end>
-    ExplicitTop = 394
-    ExplicitWidth = 1392
   end
   object Panel1: TPanel
     Left = 0
@@ -46,8 +44,6 @@ object frmwtLUSales: TfrmwtLUSales
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 353
-    ExplicitWidth = 1392
     DesignSize = (
       1388
       41)
@@ -83,7 +79,6 @@ object frmwtLUSales: TfrmwtLUSales
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = 1275
     end
     object edtSearch: TEdit
       Left = 104
@@ -101,7 +96,6 @@ object frmwtLUSales: TfrmwtLUSales
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 1176
     end
     object btnSearch: TBitBtn
       Left = 288
@@ -123,16 +117,15 @@ object frmwtLUSales: TfrmwtLUSales
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1390
+        Width = 1382
       end>
-    ExplicitWidth = 1392
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1377
+      Width = 1373
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonWidth = 66
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -148,7 +141,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 66
         Top = 0
         Hint = 'change an existing sales order'
         Caption = '  &Change  '
@@ -159,7 +152,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 118
+        Left = 132
         Top = 0
         Caption = 'Copy'
         Enabled = False
@@ -167,7 +160,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnCopyClick
       end
       object btnDelete: TToolButton
-        Left = 177
+        Left = 198
         Top = 0
         Hint = 'delete a sales order'
         Caption = '&Delete'
@@ -178,7 +171,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnDeleteClick
       end
       object btnPayments: TToolButton
-        Left = 236
+        Left = 264
         Top = 0
         Caption = 'Payments'
         Enabled = False
@@ -186,7 +179,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnPaymentsClick
       end
       object ToolButton6: TToolButton
-        Left = 295
+        Left = 330
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -194,7 +187,7 @@ object frmwtLUSales: TfrmwtLUSales
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 303
+        Left = 338
         Top = 0
         Hint = 'print a sales order confirmation'
         Caption = '&Print'
@@ -205,7 +198,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnPrintClick
       end
       object btnTemplate: TToolButton
-        Left = 362
+        Left = 404
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Template'
@@ -214,7 +207,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnTemplateClick
       end
       object btnAllocate: TToolButton
-        Left = 442
+        Left = 470
         Top = 0
         Caption = 'Allocate'
         Enabled = False
@@ -222,7 +215,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnAllocateClick
       end
       object btnDeAllocate: TToolButton
-        Left = 504
+        Left = 536
         Top = 0
         Caption = 'De-Allocate'
         Enabled = False
@@ -230,7 +223,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnDeAllocateClick
       end
       object btnConvert: TToolButton
-        Left = 421
+        Left = 602
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Convert'
@@ -241,7 +234,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnConvertClick
       end
       object btnFittingEmail: TToolButton
-        Left = 480
+        Left = 668
         Top = 0
         Caption = 'Fit Email'
         Enabled = False
@@ -249,7 +242,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnFittingEmailClick
       end
       object btnProforma: TToolButton
-        Left = 539
+        Left = 734
         Top = 0
         Caption = 'Proforma'
         Enabled = False
@@ -257,7 +250,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnProformaClick
       end
       object ToolButton1: TToolButton
-        Left = 598
+        Left = 800
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -265,7 +258,7 @@ object frmwtLUSales: TfrmwtLUSales
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 606
+        Left = 808
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -283,6 +276,7 @@ object frmwtLUSales: TfrmwtLUSales
     Height = 275
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -295,7 +289,7 @@ object frmwtLUSales: TfrmwtLUSales
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -330,6 +324,7 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -432,12 +427,14 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
+        Width = 64
         Visible = True
       end
       item
@@ -458,13 +455,12 @@ object frmwtLUSales: TfrmwtLUSales
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1390
+        Width = 1382
       end>
-    ExplicitWidth = 1392
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1377
+      Width = 1373
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -503,7 +499,7 @@ object frmwtLUSales: TfrmwtLUSales
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1106
+        Left = 1102
         Top = 7
         Width = 78
         Height = 13
@@ -518,7 +514,7 @@ object frmwtLUSales: TfrmwtLUSales
         ExplicitLeft = 1148
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1186
+        Left = 1182
         Top = 3
         Width = 145
         Height = 21

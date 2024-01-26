@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ImgList, ComCtrls, ToolWin, Grids, DBGrids, ExtCtrls, QrCtrls;
+  ImgList, ComCtrls, ToolWin, Grids, DBGrids, ExtCtrls, QrCtrls, Data.DB, System.ImageList;
 
 type
   TfrmWTQuotes = class(TForm)

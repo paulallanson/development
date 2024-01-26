@@ -232,6 +232,7 @@ object frmWTLUPrices: TfrmWTLUPrices
     Height = 335
     Align = alClient
     DataSource = dtmdlPrices.dtsAllPrices
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -307,6 +308,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
+        Width = 64
         Visible = True
       end
       item

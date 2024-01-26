@@ -25,8 +25,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 550
-    ExplicitWidth = 624
     DesignSize = (
       620
       41)
@@ -120,7 +118,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 429
     end
     object CancelBitBtn: TBitBtn
       Left = 509
@@ -198,7 +195,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 517
     end
   end
   object pnlFormRef: TPanel
@@ -209,7 +205,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 624
     object POrderLbl: TLabel
       Left = 8
       Top = 4
@@ -306,15 +301,13 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 624
-    ExplicitHeight = 469
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
         Left = 0
         Top = 352
-        Width = 616
-        Height = 89
+        Width = 612
+        Height = 88
         Align = alClient
         ParentBackground = False
         TabOrder = 0
@@ -336,7 +329,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 616
+        Width = 612
         Height = 316
         Align = alTop
         Caption = 'Panel1'
@@ -904,7 +897,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object pnlCourierService: TPanel
         Left = 0
         Top = 316
-        Width = 616
+        Width = 612
         Height = 36
         Align = alTop
         ParentBackground = False
@@ -1168,8 +1161,6 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
-    ExplicitTop = 591
-    ExplicitWidth = 624
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup

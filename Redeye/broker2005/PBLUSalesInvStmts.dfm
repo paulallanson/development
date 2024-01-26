@@ -22,8 +22,6 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
     Height = 84
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 356
-    ExplicitWidth = 806
     DesignSize = (
       812
       84)
@@ -80,7 +78,6 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       Anchors = [akRight, akBottom]
       Enabled = False
       TabOrder = 2
-      ExplicitLeft = 559
       DesignSize = (
         233
         73)
@@ -219,8 +216,6 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
     Height = 320
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 806
-    ExplicitHeight = 311
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -228,13 +223,20 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       Height = 318
       Align = alClient
       DataSource = dmLookUpSInv.DetsSRC
+      DrawingStyle = gdsGradient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       Columns = <
         item
           Expanded = False
@@ -306,8 +308,6 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 440
-    ExplicitWidth = 806
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -321,7 +321,6 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         MinHeight = 41
         Width = 806
       end>
-    ExplicitWidth = 806
     object ToolBar1: TToolBar
       Left = 11
       Top = 0

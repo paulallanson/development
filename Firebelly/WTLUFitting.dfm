@@ -373,6 +373,7 @@ object frmWTLUFitting: TfrmWTLUFitting
     Height = 232
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -493,7 +494,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end
       item
         Expanded = False
-        FieldName = 'is_retail_customer'
+        FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
         Width = 50
         Visible = True

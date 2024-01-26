@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids;
+  StdCtrls, Grids, DBGrids, Data.DB;
 
 type
   TForm1 = class(TForm)

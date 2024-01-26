@@ -102,7 +102,7 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
   object Label11: TLabel
     Left = 18
     Top = 107
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Site Name'
   end
@@ -111,7 +111,7 @@ object frmWTSOrderSearch: TfrmWTSOrderSearch
     Top = 100
     Width = 209
     Height = 21
-    TabOrder = 2
+    TabOrder = 13
   end
   object btnSearch: TButton
     Left = 16

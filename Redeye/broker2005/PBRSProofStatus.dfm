@@ -31,6 +31,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Height = 284
       Align = alClient
       DataSource = dtsrcCurrentProofStatus
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -40,9 +41,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
-      TitleFont.Name = 'Arial'
-      TitleFont.Style = []
+      TitleFont.Height = -11
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = [fsBold]
     end
   end
   object pnlControls: TPanel

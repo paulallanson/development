@@ -158,6 +158,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     Height = 432
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -170,7 +171,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnCellClick = dbgSupplierInvoiceCellClick
     OnDblClick = dbgSupplierInvoiceDblClick
     Columns = <

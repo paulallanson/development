@@ -803,13 +803,20 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Width = 861
         Height = 174
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgJobDetailsDblClick
         Columns = <
           item
@@ -1036,13 +1043,20 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Width = 869
         Height = 186
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgPODetailsDblClick
         Columns = <
           item
@@ -1114,16 +1128,23 @@ object PBMaintContractFrm: TPBMaintContractFrm
       object dbgSalesInvoices: TDBGrid
         Left = 0
         Top = 0
-        Width = 865
-        Height = 166
+        Width = 861
+        Height = 165
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         Columns = <
           item
@@ -1168,10 +1189,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end>
       end
       object Panel8: TPanel
-        Left = 865
+        Left = 861
         Top = 0
         Width = 85
-        Height = 166
+        Height = 165
         Align = alRight
         ParentBackground = False
         TabOrder = 1
@@ -1199,8 +1220,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
       end
       object Panel19: TPanel
         Left = 0
-        Top = 166
-        Width = 950
+        Top = 165
+        Width = 946
         Height = 28
         Align = alBottom
         ParentBackground = False

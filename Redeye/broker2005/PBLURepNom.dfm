@@ -40,6 +40,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     Width = 320
     Height = 193
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
@@ -52,7 +53,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <

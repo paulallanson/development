@@ -149,7 +149,7 @@ object frmAllFaxStatus: TfrmAllFaxStatus
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgColumnResize, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       ParentFont = False
@@ -159,7 +159,7 @@ object frmAllFaxStatus: TfrmAllFaxStatus
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnColEnter = ShowFaxesDBGridColEnter
       OnDblClick = ShowFaxesDBGridColEnter
     end

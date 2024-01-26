@@ -29,7 +29,6 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     ModalResult = 1
     TabOrder = 1
     OnClick = OKBitBtnClick
-    ExplicitTop = 591
   end
   object CancelBitBtn: TBitBtn
     Left = 323
@@ -43,7 +42,6 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     NumGlyphs = 2
     TabOrder = 0
     OnClick = CancelBitBtnClick
-    ExplicitTop = 591
   end
   object chkbxInActive: TCheckBox
     Left = 16
@@ -181,12 +179,12 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         OnClick = Button3Click
       end
       object Panel1: TPanel
-        ParentBackground = False
         Left = 120
         Top = 136
         Width = 217
         Height = 135
         BorderStyle = bsSingle
+        ParentBackground = False
         TabOrder = 6
         object imgLogo: TImage
           Left = 1
@@ -251,11 +249,11 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       Caption = 'Invoicing'
       ImageIndex = 1
       object grpbxNumbers: TGroupBox
-        ParentBackground = False
         Left = 16
         Top = 24
         Width = 265
         Height = 121
+        ParentBackground = False
         TabOrder = 0
         object Label21: TLabel
           Left = 24

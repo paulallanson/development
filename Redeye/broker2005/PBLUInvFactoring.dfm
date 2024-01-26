@@ -21,18 +21,16 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
     Height = 32
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 349
-    ExplicitWidth = 950
     object Label2: TLabel
       Left = 8
-      Top = 10
+      Top = 8
       Width = 73
       Height = 13
       Caption = 'Factoring File:'
     end
     object cmbFactorFiles: TComboBox
-      Left = 80
-      Top = 6
+      Left = 87
+      Top = 5
       Width = 233
       Height = 21
       Style = csDropDownList
@@ -47,8 +45,6 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
     Height = 313
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 950
-    ExplicitHeight = 304
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -56,13 +52,20 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
       Height = 311
       Align = alClient
       DataSource = dtsrcGrid
+      DrawingStyle = gdsGradient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      ParentFont = False
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       Columns = <
         item
           Expanded = False
@@ -126,8 +129,6 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
       item
         Width = 50
       end>
-    ExplicitTop = 381
-    ExplicitWidth = 950
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -141,7 +142,6 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
         MinHeight = 41
         Width = 950
       end>
-    ExplicitWidth = 950
     object ToolBar1: TToolBar
       Left = 11
       Top = 0

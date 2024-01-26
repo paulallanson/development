@@ -27,8 +27,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       item
         Width = 200
       end>
-    ExplicitTop = 450
-    ExplicitWidth = 988
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -36,14 +34,21 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
     Width = 994
     Height = 382
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     PopupMenu = pmnFunctions
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -176,8 +181,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 409
-    ExplicitWidth = 988
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -210,7 +213,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 710
       DesignSize = (
         277
         39)
@@ -285,8 +287,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
     Height = 36
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 373
-    ExplicitWidth = 988
     DesignSize = (
       994
       36)
@@ -336,7 +336,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 912
     end
     object memOvertime: TMemo
       Left = 758
@@ -350,7 +349,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 1
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 752
     end
     object memLabour: TMemo
       Left = 598
@@ -364,7 +362,6 @@ object SFLUJobLogFrm: TSFLUJobLogFrm
       TabOrder = 2
       WantReturns = False
       WordWrap = False
-      ExplicitLeft = 592
     end
     object dtmDateFrom: TDateTimePicker
       Left = 72

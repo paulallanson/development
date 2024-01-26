@@ -149,6 +149,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     Height = 245
     Align = alClient
     DataSource = dtsSuppliers
+    DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

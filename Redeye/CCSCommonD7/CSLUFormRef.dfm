@@ -1,33 +1,34 @@
-﻿object CSLUFormRefFrm: TCSLUFormRefFrm
+object CSLUFormRefFrm: TCSLUFormRefFrm
   Left = 179
   Top = 133
-  Width = 411
-  Height = 381
   Caption = 'Look-Up Form Reference'
+  ClientHeight = 342
+  ClientWidth = 395
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  DesignSize = (
+    395
+    342)
+  TextHeight = 13
   object CustLabel: TLabel
     Left = 80
     Top = 6
-    Width = 57
-    Height = 15
+    Width = 50
+    Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 237
+    Left = 242
     Top = 225
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'CountLabel'
@@ -35,22 +36,22 @@
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 57
-    Height = 15
+    Width = 50
+    Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 42
-    Height = 15
+    Width = 38
+    Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 58
-    Height = 15
+    Width = 52
+    Height = 13
     Caption = 'Customer:'
   end
   object RefDBGrid: TDBGrid
@@ -60,13 +61,20 @@
     Height = 179
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = RefDBGridColEnter
     OnDblClick = RefDBGridDblClick
     Columns = <
@@ -86,11 +94,14 @@
     Anchors = [akLeft, akRight, akBottom]
     Caption = 'Type here to narrow the search'
     TabOrder = 1
+    DesignSize = (
+      293
+      49)
     object NameEdit: TEdit
       Left = 8
       Top = 16
       Width = 277
-      Height = 23
+      Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = NameEditChange
@@ -103,9 +114,10 @@
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 315
@@ -113,8 +125,9 @@
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
     Left = 307
@@ -162,6 +175,9 @@
     BevelWidth = 2
     BorderStyle = bsSingle
     TabOrder = 5
+    DesignSize = (
+      289
+      39)
     object DBContactText: TDBText
       Left = 75
       Top = 3
@@ -180,8 +196,8 @@
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 66
-      Height = 15
+      Width = 62
+      Height = 13
       Caption = 'Description:'
     end
   end
@@ -208,29 +224,22 @@
     Top = 92
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'stockRef'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'stockRef'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

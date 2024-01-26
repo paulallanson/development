@@ -40,12 +40,19 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Height = 433
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDS
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnTitleClick = DetsDBGridTitleClick
     Columns = <
       item
@@ -237,8 +244,6 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Anchors = [akRight, akBottom]
     Caption = 'Excel'
     Enabled = False
-    TabOrder = 6
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -282,6 +287,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 6
+    OnClick = btnExcelClick
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'

@@ -1,33 +1,31 @@
-﻿object CSLUSupBrchFrm: TCSLUSupBrchFrm
+object CSLUSupBrchFrm: TCSLUSupBrchFrm
   Left = 195
   Top = 104
-  Width = 454
-  Height = 397
   Caption = 'Look-Up A Branch'
+  ClientHeight = 358
+  ClientWidth = 438
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 13
   object SuppLabel: TLabel
     Left = 8
     Top = 6
-    Width = 60
-    Height = 15
+    Width = 54
+    Height = 13
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 265
+    Left = 270
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -37,13 +35,20 @@
     Width = 320
     Height = 193
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -66,7 +71,7 @@
       Left = 8
       Top = 16
       Width = 297
-      Height = 23
+      Height = 21
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -77,17 +82,19 @@
     Width = 75
     Height = 25
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 340
     Top = 304
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object ThisChkBox: TCheckBox
     Left = 16
@@ -111,8 +118,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -127,6 +132,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 4
@@ -134,8 +141,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -150,6 +155,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 4
@@ -157,8 +164,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -173,6 +178,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object GoToGrpBox: TGroupBox
@@ -188,8 +195,6 @@
       Width = 91
       Height = 25
       Caption = 'Contacts'
-      TabOrder = 0
-      OnClick = ContactsBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -204,6 +209,8 @@
         EE33337F333377F3337F33EEEEEE00EEEE33337F33337733337F33EEEEEEEEEE
         EE33337FFFFFFFFFFF7F33EEEEEEEEEEEE333377777777777773}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = ContactsBitBtnClick
     end
     object CapBitBtn: TBitBtn
       Left = 6
@@ -211,8 +218,6 @@
       Width = 91
       Height = 25
       Caption = 'Capabilities'
-      TabOrder = 1
-      OnClick = CapBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -227,6 +232,8 @@
         07557777777F55557F5555000005555707555577777FF5557F55553000075557
         0755557F7777FFF5755555335000005555555577577777555555}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CapBitBtnClick
     end
   end
   object DispPanel: TPanel
@@ -247,8 +254,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -261,8 +268,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -275,30 +282,30 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 37
-      Height = 15
+      Width = 32
+      Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 39
-      Height = 15
+      Width = 36
+      Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 22
-      Height = 15
+      Width = 20
+      Height = 13
       Caption = 'Fax:'
     end
   end
@@ -322,19 +329,13 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer
@@ -368,19 +369,14 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
 end

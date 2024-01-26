@@ -215,6 +215,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Height = 341
       Align = alClient
       DataSource = dmSalesInvoice.dsPOLine
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
@@ -227,7 +228,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       TitleFont.Color = clBlack
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnCellClick = dbgPOCellClick
       OnDrawColumnCell = dbgPODrawColumnCell
       OnDblClick = dbgPODblClick

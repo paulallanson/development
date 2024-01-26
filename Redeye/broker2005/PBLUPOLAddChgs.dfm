@@ -141,6 +141,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       Height = 213
       Align = alClient
       DataSource = DetsSRC
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -151,18 +152,13 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -13
+      TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       Columns = <
         item
           Expanded = False
           FieldName = 'Details'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 247
           Visible = True
         end
@@ -172,11 +168,6 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
           FieldName = 'Amount'
           Title.Alignment = taRightJustify
           Title.Caption = 'Cost'
-          Title.Font.Charset = ANSI_CHARSET
-          Title.Font.Color = clWindowText
-          Title.Font.Height = -11
-          Title.Font.Name = 'Segoe UI'
-          Title.Font.Style = []
           Width = 70
           Visible = True
         end>

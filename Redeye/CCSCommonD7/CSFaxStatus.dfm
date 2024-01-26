@@ -15,13 +15,13 @@ object frmCSFaxStatus: TfrmCSFaxStatus
   object Label4: TLabel
     Left = 200
     Top = 64
-    Width = 250
-    Height = 24
+    Width = 246
+    Height = 30
     Caption = 'Belling After Sales Division'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -21
-    Font.Name = 'Arial'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
@@ -146,10 +146,11 @@ object frmCSFaxStatus: TfrmCSFaxStatus
       Height = 298
       Align = alClient
       DataSource = GetFaxesDataSource
+      DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgColumnResize, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
       ParentFont = False
@@ -159,7 +160,7 @@ object frmCSFaxStatus: TfrmCSFaxStatus
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnColEnter = ShowFaxesDBGridColEnter
       OnDblClick = ShowFaxesDBGridColEnter
     end

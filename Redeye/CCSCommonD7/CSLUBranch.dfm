@@ -1,33 +1,31 @@
-﻿object CSLUBranchFrm: TCSLUBranchFrm
+object CSLUBranchFrm: TCSLUBranchFrm
   Left = 178
   Top = 104
-  Width = 438
-  Height = 388
   Caption = 'Look-Up A Branch'
+  ClientHeight = 349
+  ClientWidth = 422
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 13
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 57
-    Height = 15
+    Width = 50
+    Height = 13
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 265
+    Left = 270
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -37,13 +35,20 @@
     Width = 320
     Height = 193
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -66,7 +71,7 @@
       Left = 8
       Top = 16
       Width = 297
-      Height = 23
+      Height = 21
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -77,17 +82,19 @@
     Width = 75
     Height = 25
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 343
     Top = 293
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object ThisChkBox: TCheckBox
     Left = 16
@@ -129,9 +136,9 @@
       Width = 75
       Height = 25
       Caption = 'Add'
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = AddBitBtnClick
-      NumGlyphs = 2
     end
   end
   object GoToGrpBox: TGroupBox
@@ -223,22 +230,22 @@
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 37
-      Height = 15
+      Width = 32
+      Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 39
-      Height = 15
+      Width = 36
+      Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 22
-      Height = 15
+      Width = 20
+      Height = 13
       Caption = 'Fax:'
     end
   end
@@ -258,14 +265,12 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object SearchTimer: TTimer

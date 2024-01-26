@@ -4,7 +4,7 @@ object PBLUCustomerEnqsFrm: TPBLUCustomerEnqsFrm
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Enquiries'
   ClientHeight = 375
-  ClientWidth = 852
+  ClientWidth = 855
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,17 +20,24 @@ object PBLUCustomerEnqsFrm: TPBLUCustomerEnqsFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 852
+    Width = 855
     Height = 315
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqsJB
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -76,76 +83,71 @@ object PBLUCustomerEnqsFrm: TPBLUCustomerEnqsFrm
   object Panel1: TPanel
     Left = 0
     Top = 315
-    Width = 852
+    Width = 855
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 306
-    ExplicitWidth = 846
+    ExplicitWidth = 852
     DesignSize = (
-      852
+      855
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
+      Top = 13
       Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 515
-      Top = 16
+      Left = 508
+      Top = 13
       Width = 82
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'Enquiry number'
-      ExplicitLeft = 509
     end
     object btnClose: TButton
-      Left = 779
-      Top = 10
+      Left = 775
+      Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 773
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 110
+      Top = 10
       Width = 180
       Height = 21
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 593
-      Top = 12
+      Left = 596
+      Top = 10
       Width = 90
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 587
     end
     object btnSelect: TButton
-      Left = 691
-      Top = 10
+      Left = 694
+      Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 685
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 356
-    Width = 852
+    Width = 855
     Height = 19
     Panels = <
       item
@@ -154,8 +156,7 @@ object PBLUCustomerEnqsFrm: TPBLUCustomerEnqsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 347
-    ExplicitWidth = 846
+    ExplicitWidth = 852
   end
   object tmrSearch: TTimer
     Enabled = False

@@ -16,7 +16,6 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
