@@ -12,7 +12,7 @@ object STRPLabelsFrm: TSTRPLabelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 14
   object STLabelsQuickReport: TQuickRep
     Left = 24

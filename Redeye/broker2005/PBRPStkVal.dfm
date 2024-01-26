@@ -13,7 +13,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
   Scaled = False
   TextHeight = 13
   object QuickReport: TQuickRep
-    Left = 24
+    Left = 23
     Top = 11
     Width = 794
     Height = 1123
@@ -101,10 +101,10 @@ object PBRPStkValfrm: TPBRPStkValfrm
         Width = 46
         Height = 17
         Size.Values = (
-          44.979166666666700000
-          2616.729166666670000000
-          21.166666666666700000
-          121.708333333333000000)
+          44.979166666666670000
+          2616.729166666667000000
+          21.166666666666670000
+          121.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -124,10 +124,10 @@ object PBRPStkValfrm: TPBRPStkValfrm
         Width = 59
         Height = 17
         Size.Values = (
-          44.979166666666700000
-          2447.395833333330000000
-          21.166666666666700000
-          156.104166666667000000)
+          44.979166666666670000
+          2447.395833333333000000
+          21.166666666666670000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

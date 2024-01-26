@@ -10,7 +10,7 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrStkBal: TQuickRep
     Left = 64

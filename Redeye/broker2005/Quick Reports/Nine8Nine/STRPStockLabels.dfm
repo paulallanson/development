@@ -13,7 +13,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 14
   object qrpDetails: TQuickRep
     Left = 40

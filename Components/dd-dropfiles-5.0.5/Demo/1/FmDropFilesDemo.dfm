@@ -13,7 +13,7 @@ object DropFilesDemoForm: TDropFilesDemoForm
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
-  Scaled = False
+  
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 15

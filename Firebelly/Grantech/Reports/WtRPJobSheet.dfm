@@ -10,7 +10,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrpJobSheet: TQuickRep
     Left = 64

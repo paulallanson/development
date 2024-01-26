@@ -10,7 +10,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qckrptPOnotonJB: TQuickRep
     Left = 0

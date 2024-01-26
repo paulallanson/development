@@ -10,7 +10,7 @@ object STStkVarRepFrm: TSTStkVarRepFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object StkVarQuickReport: TQuickRep
     Left = 0

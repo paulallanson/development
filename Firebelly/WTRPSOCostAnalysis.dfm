@@ -10,7 +10,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
