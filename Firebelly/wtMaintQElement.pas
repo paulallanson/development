@@ -110,7 +110,7 @@ var
 
 implementation
 
-uses UITypes, wtLUworktops, wtMain, wtDataModule, wtLUMaterialUse;
+uses UITypes, wtLUworktops, wtMain, wtDataModule, wtLUMaterialUse, AllCommon;
 
 {$R *.dfm}
 
@@ -211,7 +211,7 @@ begin
           close;
           parambyname('Customer').AsInteger := QElement.Parent.Customer;
           parambyname('Material_Type').asinteger := Material;
-          parambyname('Worktop_Group').asinteger := dblkpWTGroup.keyvalue;
+          parambyname('Worktop_Group').asinteger := dblkpWTGroup.ListValue;
           parambyname('Worktop').asinteger := QElement.worktop;
           open;
         end;
@@ -330,26 +330,10 @@ var
   rUnitPrice, rTotal: real;
   idepth,iLength,iQuantity: integer;
 begin
-  try
-    iDepth := strtoint(edtDepth.text);
-  except
-    iDepth := 0
-  end;
-
-  try
-    iLength := strtoint(edtLength.text);
-  except
-    iLength := 0;
-  end;
-
-  try
-    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
-  except
-    rUnitPrice := 0.00;
-  end;
-
+  iDepth := strtointdef(edtDepth.text, 0);
+  iLength := strtointdef(edtLength.text, 0);
+  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0.00);
   iQuantity := spnQuantity.value;
-
   rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;
   edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)
@@ -441,8 +425,8 @@ begin
               SQL.Text := sText;
             end;
 
-          parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
-          parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
+          parambyName('worktop').asinteger := dblkpWorktop.ListValue;
+          parambyName('thickness').asinteger := dblkpWTThickness.ListValue;
           open;
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QElement.PriceUnit := fieldbyname('Price_unit').asinteger;
