@@ -3177,98 +3177,32 @@ end;
 
 procedure TPBMaintQuoteFrm.btnAttachClick(Sender: TObject);
 var
-  i, ipos, ilength, icount: integer;
-  sFile, sFullFile, docDir: string;
+  DocDir: string;
 begin
-  docDir := dmBroker.GetCompanyQuoteDirectory + '\' + floattostr(Quote.dbKey);
-  {Find a document} ;
+  DocDir := dmBroker.GetCompanyQuoteDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + floattostr(Quote.dbKey);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  DocOpenDialog.Files.Clear;
-  if DocOpenDialog.Execute then
-  begin
-    if DocOpenDialog.Files.Count > 0 then
-      begin
-        for icount := 0 to pred(DocOpenDialog.Files.Count) do
-          begin
-            sfullFile := DocOpenDialog.Files.Strings[icount];
-            iLength := length(sFullFile);
-
-            i := 1;
-
-            while i <> 0 do
-              begin
-                ipos := pos('\',sFullFile);
-
-                sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                i := pos('\',sFullFile);
-              end;
-
-            sFile := ExtractFileName(DocOpenDialog.Files.Strings[icount]);
-
-            FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sfile) ;
-          end;
-        ShowDocuments(Quote.dbkey);
-      end;
-  end;
+  {Find a document}
+  CopyDocuments(DocOpenDialog, DocDir,
+    procedure
+    begin
+      ShowDocuments(Quote.dbkey);
+    end);
 end;
 
 procedure TPBMaintQuoteFrm.pmnuPasteClick(Sender: TObject);
 var
-  f: THandle;
-  buffer: Array [0..MAX_PATH] of Char;
-  i, numFiles: Integer;
-  sFile, sFullFile, docdir: string;
-  iCount, iPos, iLength: integer;
+  DocDir: string;
 begin
-  docDir := dmBroker.GetCompanyQuoteDirectory + '\' + floattostr(Quote.dbkey);
-  {Find a document} ;
+  DocDir := dmBroker.GetCompanyQuoteDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + floattostr(Quote.dbkey);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  Clipboard.Open;
-  try
-    f := Clipboard.GetAsHandle(CF_HDROP);
-    if f <> 0 then
+  {Find a document}
+  CopyDocumentsFromClipboard(DocDir,
+    procedure
     begin
-      numFiles := DragQueryFile(f, $FFFFFFFF, nil, 0);
-//      memo1.Clear;
-      for i:= 0 to numfiles - 1 do
-      begin
-        buffer[0] := #0;
-        DragQueryFile( f, i, buffer, sizeof(buffer));
-
-        sfullFile := buffer;
-        iLength := length(sFullFile);
-
-        iCount := 1;
-
-        while iCount <> 0 do
-          begin
-            ipos := pos('\',sFullFile);
-
-            sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-            iCount := pos('\',sFullFile);
-          end;
-
-        sFile := copy(buffer, ipos+1, (iLength - ipos));
-
-        FileCopy(buffer, docDir + '\' + sfile) ;
-      end;
-    end;
-  finally
-    Clipboard.close;
-  end;
-  ShowDocuments(Quote.dbkey);
+      ShowDocuments(Quote.dbkey);
+    end);
 end;
 
 procedure TPBMaintQuoteFrm.pmnuDeleteClick(Sender: TObject);

@@ -129,11 +129,11 @@ end;
 
 procedure TfrmWTLUSalesInvoices.FormCreate(Sender: TObject);
 var
-  IniFile : TIniFile;
+  IniFile: TIniFile;
   iRevenueCentre: integer;
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
-  
+
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   if not pnlRevenueCentre.Visible then
     pnlFooter.Height := 70;
@@ -147,7 +147,6 @@ begin
 
   {Set the revenue centre details}
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-
   try
   with IniFile do
     begin
@@ -679,7 +678,6 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-
   try
     with IniFile do
     begin

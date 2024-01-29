@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry,
   COMobj, ActiveX, Math, strUtils, DBGrids, Grids, IniFiles, Forms, Variants,
-  qrprntr, Printers, DB, shFolder, Outlook_TLB,
+  qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs,
   FireDAC.Comp.Client;
 
 {Quick Reports Printer settings}
@@ -98,7 +98,7 @@ procedure FileCopy(const sourcefilename,targetfilename :string);
 function GetWinDir : string;
 function GetWinSysDir : string;
 function GetWinTempDir : string;
-procedure CreateDirectory(DirName: String);
+procedure CreateDirectory(DirName: string);
 function DirectoryExists(const Name: string): Boolean;
 function GetSpecialFolderPath(folder: integer): string;
 
@@ -121,9 +121,12 @@ procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 { FireDAC }
 procedure SetConnectionMapRules(const Connection: TFDConnection);
 
+{ TOpenDialog }
+procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
+procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
+
 type
-  TCCSRegistry =
-    class(TRegistry)
+  TCCSRegistry = class(TRegistry)
   public
     function ReadBoolEx(const Name: string; Default: boolean): Boolean;
     function ReadIntegerEx(const Name: string; Default: Integer): Integer;
@@ -192,8 +195,7 @@ const
 implementation
 
 uses
-  Dialogs, System.UITypes,
-  FireDAC.Stan.Intf;
+  System.UITypes, FireDAC.Stan.Intf, Vcl.Clipbrd;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -1316,12 +1318,72 @@ begin
   end;
 end;
 
+{ FireDAC }
 procedure SetConnectionMapRules(const Connection: TFDConnection);
 begin
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
   Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
+end;
+
+procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
+var
+  SourceFileName, DestFileName: string;
+begin
+  if not DirectoryExists(Folder) then
+   	CreateDirectory(Folder);
+
+  FilesDialog.Files.Clear;
+  if FilesDialog.Execute then
+  begin
+    for SourceFileName in FilesDialog.Files do
+    begin
+      DestFileName := Folder;
+      DestFileName := IncludeTrailingPathDelimiter(DestFileName) + ExtractFileName(SourceFileName);
+
+      FileCopy(SourceFileName, DestFileName);
+    end;
+
+    if FilesDialog.Files.Count > 0 then
+      ExecuteBlock;
+  end;
+end;
+
+procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
+var
+  Handle: THandle;
+  Buff: array [0..MAX_PATH] of Char;
+  Index, NumberOfFiles: Integer;
+  SourceFileName, DestFileName: string;
+begin
+  if not DirectoryExists(Folder) then
+    CreateDirectory(Folder);
+
+  Clipboard.Open;
+  try
+    Handle := Clipboard.GetAsHandle(CF_HDROP);
+    if Handle <> 0 then
+    begin
+      NumberOfFiles := DragQueryFile(Handle, $FFFFFFFF, nil, 0);
+      for Index := 0 to NumberOfFiles - 1 do
+      begin
+        Buff[0] := #0;
+        DragQueryFile(Handle, Index, Buff, SizeOf(Buff));
+
+        SourceFileName := Buff;
+
+        DestFileName := Folder;
+        DestFileName := IncludeTrailingPathDelimiter(DestFileName) + ExtractFileName(SourceFileName);
+
+        FileCopy(SourceFileName, DestFileName);
+      end;
+    end;
+  finally
+    Clipboard.Close;
+  end;
+
+  ExecuteBlock;
 end;
 
 { TDirDlg }
@@ -1823,31 +1885,9 @@ begin
    until PathLen <= BuffLen;
 end;
 
-procedure CreateDirectory(DirName: String);
-var
-	CheckName:string;
-  ipos: integer;
+procedure CreateDirectory(DirName: string);
 begin
-	ipos := 0;
-	CheckName := DirName;
-	{Find the First element of the Directory}
-  while ipos <= length(DirName) do
-  	begin
-			iPos := pos('\',DirName);
-        if ipos = 0 then break;
-        if ipos=3 then
-        	begin
-        	delete(DirName,3,1);
-           insert('~',Dirname,3);
-           end
-        else
-        	begin
-  				if not DirectoryExists(copy(CheckName,1,ipos)) then
-  					CreateDir(copy(CheckName,1,ipos));
-        		delete(DirName,ipos,1);
-        		insert('~',DirName,ipos);
-           end;
-     end;
+  SysUtils.ForceDirectories(DirName);
 end;
 
 function DirectoryExists(const Name: string): Boolean;

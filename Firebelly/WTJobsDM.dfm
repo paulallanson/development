@@ -12,6 +12,7 @@ object dtmdlJob: TdtmdlJob
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
       '      Job_Status.Job_Status_Description AS Status_Description,'
+      '      Customer.Is_Retail_Customer,'
       '      Operator.Operator_Name,'
       '      (Job.Nett_Price - Job.Discount_Value) as Gross_Price,'
       '      (select Sales_Order_Line.Sales_Order'
@@ -280,6 +281,10 @@ object dtmdlJob: TdtmdlJob
       FieldName = 'Sales_Order'
       Origin = 'Sales_Order'
       ReadOnly = True
+    end
+    object qryAllJobsIs_Retail_Customer: TWideStringField
+      FieldName = 'Is_Retail_Customer'
+      Size = 2
     end
   end
   object qrydummy: TFDQuery
