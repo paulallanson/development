@@ -1038,8 +1038,6 @@ begin
             UpdateDatabase;
         end;
       finally
-        if RunDBUpdate then
-          UpdateDatabase;
         frmWTLogin.Free;
       end;
       if not LoginFormOK then

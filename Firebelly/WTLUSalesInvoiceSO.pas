@@ -349,24 +349,26 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  try
+    with IniFile do
+      begin
+        WriteString('Raise Sales Invoice', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+  (*      if dblkpRevCentre.text <> '' then
+          WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dblkpRevCentre.keyvalue))
+        else
+          WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
+  *)
+        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
+      end;
 
-  with IniFile do
-    begin
-      WriteString('Raise Sales Invoice', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
-(*      if dblkpRevCentre.text <> '' then
-        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dblkpRevCentre.keyvalue))
-      else
-        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
-*)
-      WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
-    end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
-procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
-  var Action: TCloseAction);
+procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
-
 end;
 
 end.

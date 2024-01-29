@@ -2,7 +2,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   Left = 182
   Top = 105
   Caption = 'Sales Invoices'
-  ClientHeight = 399
+  ClientHeight = 432
   ClientWidth = 1247
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -32,7 +32,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         MinHeight = 40
         Width = 1241
       end>
-    ExplicitWidth = 888
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -139,7 +138,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Left = 0
     Top = 74
     Width = 1247
-    Height = 226
+    Height = 259
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -299,13 +298,13 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 300
+    Top = 333
     Width = 1247
     Height = 80
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 888
+    ExplicitTop = 300
     object Panel2: TPanel
       Left = 975
       Top = 1
@@ -315,8 +314,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 616
-      ExplicitHeight = 54
       DesignSize = (
         271
         78)
@@ -343,7 +340,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Caption = '&Close'
         TabOrder = 0
         OnClick = btnCloseClick
-        ExplicitTop = 12
       end
       object edtSalesInvNo: TEdit
         Left = 88
@@ -370,7 +366,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 54
       object rdgrpRevenueCentre: TRadioGroup
         Left = 7
         Top = 1
@@ -422,14 +417,12 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 2
-      ExplicitTop = -4
       DesignSize = (
         624
         78)
       object Label1: TLabel
         Left = 8
-        Top = 10
+        Top = 20
         Width = 86
         Height = 13
         Anchors = [akLeft, akBottom]
@@ -437,7 +430,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end
       object edtSearch: TEdit
         Left = 104
-        Top = 7
+        Top = 17
         Width = 153
         Height = 21
         Anchors = [akLeft, akBottom]
@@ -446,7 +439,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end
       object chkbxShowArchived: TCheckBox
         Left = 456
-        Top = 9
+        Top = 19
         Width = 97
         Height = 17
         Anchors = [akLeft, akBottom]
@@ -456,7 +449,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end
       object BitBtn1: TBitBtn
         Left = 360
-        Top = 5
+        Top = 15
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
@@ -466,7 +459,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end
       object btnSearch: TBitBtn
         Left = 272
-        Top = 5
+        Top = 15
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
@@ -478,7 +471,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 380
+    Top = 413
     Width = 1247
     Height = 19
     Panels = <
@@ -488,8 +481,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       item
         Width = 50
       end>
-    ExplicitTop = 270
-    ExplicitWidth = 888
+    ExplicitTop = 380
   end
   object Panel3: TPanel
     Left = 0
@@ -502,7 +494,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 888
     DesignSize = (
       1247
       30)
@@ -548,7 +539,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         'Trade'
         'Retail'
         'Commercial')
-      ExplicitLeft = 678
     end
   end
   object imglstFunctions: TImageList
