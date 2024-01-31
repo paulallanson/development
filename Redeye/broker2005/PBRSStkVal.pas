@@ -18,7 +18,7 @@ type
     qryReportOrder_Unit: TIntegerField;
     qryReportForm_Reference_Descr: TStringField;
     qryReportReorder_Level: TIntegerField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportForm_Reference_ID: TStringField;
     CustomerSQL: TFDQuery;
     rgCustomer: TRadioGroup;

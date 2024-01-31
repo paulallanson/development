@@ -65,7 +65,7 @@ type
     qryReportLine: TIntegerField;
     qryReportCustomer: TIntegerField;
     qryReportCustomers_Desc: TStringField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportFSC_Material_Claim: TIntegerField;
     qryReportClaim_Description: TStringField;
     qryReportClaim_Type: TStringField;

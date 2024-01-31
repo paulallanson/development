@@ -33,7 +33,7 @@ type
     qryReportDate_Point: TDateTimeField;
     qryReportForm_Reference_ID: TStringField;
     qryReportName: TStringField;
-    qryReportAccount_Code: TStringField;
+    qryReportAccount_code: TWideStringField;
     qryReportPOLine: TStringField;
     RunDateQRLabel: TQRLabel;
     QRLabel9: TQRLabel;
@@ -42,7 +42,7 @@ type
     qryReportDate_Deliv_Actual: TDateTimeField;
     RepQRGroup: TQRGroup;
     GrpByQRDBText: TQRDBText;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportRep: TIntegerField;
     QRSubDetail1: TQRSubDetail;
     QRDBText1: TQRDBText;

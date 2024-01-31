@@ -76,7 +76,7 @@ type
     GrpMargQRLbl: TQRLabel;
     RepMargQRLbl: TQRLabel;
     oldqrySalesByInvInvoiceRef: TStringField;
-    oldqrySalesByInvInvoice_or_Credit: TStringField;
+    oldqrySalesByInvInvoice_or_Credit: TWideStringField;
     QRDBText2: TQRDBText;
     QRLabel19: TQRLabel;
     qrySalesbyInv: TFDQuery;
@@ -99,7 +99,7 @@ type
     qrySalesbyInvVat_Value: TCurrencyField;
     qrySalesbyInvGoods_Total: TCurrencyField;
     qrySalesbyInvInvoice_Date: TDateTimeField;
-    qrySalesbyInvInvoice_or_Credit: TStringField;
+    qrySalesByInvInvoice_or_Credit: TWideStringField;
     qrySalesbyInvRep: TIntegerField;
     qrySalesbyInvSales_Invoice_type: TStringField;
     qrySalesbyInvInactive: TStringField;

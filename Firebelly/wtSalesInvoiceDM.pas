@@ -368,7 +368,7 @@ type
     property Parent : TSalesInvoice read FParent;
   end;
 
-  TSalesInvoice       = class
+  TSalesInvoice = class
   private
     FPaidAmount: currency;
     FOperator: integer;

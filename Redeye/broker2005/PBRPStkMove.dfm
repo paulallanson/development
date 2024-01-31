@@ -1885,7 +1885,7 @@ object PBRPStkMovefrm: TPBRPStkMovefrm
       FieldName = 'Supplier_Name'
       Size = 40
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 40
     end

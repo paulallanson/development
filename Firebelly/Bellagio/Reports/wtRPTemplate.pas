@@ -83,11 +83,11 @@ type
     qrySOLineInstallation_price: TFloatField;
     qrySOLineSurvey_price: TFloatField;
     qrySOLineDelivery_Price: TFloatField;
-    qrySOLineDescription: TStringField;
+    qrySOLineDescription: TWideStringField;
     qrySOLineProduct: TIntegerField;
     qrySOLineVat: TIntegerField;
     qrySOLineVat_Rate: TFloatField;
-    qrySOLineVAT_Description: TStringField;
+    qrySOLineVAT_Description: TWideStringField;
     qrySOLineQuote: TIntegerField;
     qrySOLineMarkup_Value: TFloatField;
     dtsSOLine: TDataSource;

@@ -2752,7 +2752,7 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
       Size = 10
       Calculated = True
     end
-    object oldqrySalesByInvInvoice_or_Credit: TStringField
+    object oldqrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
@@ -2918,7 +2918,7 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrySalesbyInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesbyInvInvoice_or_Credit: TStringField
+    object qrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2

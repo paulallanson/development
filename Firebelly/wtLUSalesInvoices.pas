@@ -729,7 +729,7 @@ begin
   try
     frmWTLUPayments.lblSalesOrder.caption := 'Sales Order: ' + inttostr(SOrder);
     frmWTLUPayments.lblSalesInvoice.caption := 'Sales Invoice: ' + dbgDetails.DataSource.dataset.fieldbyname('Invoice_No').asstring;
-    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Customer_Name').asstring;
+    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Original_Name').asstring;
     frmWTLUPayments.lblAccountCode.caption := 'Account Code: ' + dbgDetails.DataSource.dataset.fieldbyname('Account_Code').asstring;
     frmWTLUPayments.lblDescription.caption := 'Description:' + dbgDetails.DataSource.dataset.fieldbyname('Description').asstring;
     frmWTLUPayments.rDepositTerms := 0;

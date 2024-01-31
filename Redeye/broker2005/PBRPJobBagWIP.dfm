@@ -1461,7 +1461,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportAccount_Code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
@@ -1480,7 +1480,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportDate_Deliv_Actual: TDateTimeField
       FieldName = 'Date_Deliv_Actual'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

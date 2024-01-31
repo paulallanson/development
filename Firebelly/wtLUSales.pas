@@ -256,6 +256,7 @@ begin
     stsBrDetails.panels[0].text := inttostr(HeaderCountAll) + ' records displayed';
   end;
 end;
+
 procedure TfrmwtLUSales.btnChangeClick(Sender: TObject);
 begin
   CallMaintScreen(sopChange);

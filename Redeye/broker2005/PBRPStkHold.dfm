@@ -942,7 +942,7 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
         'ce)')
     Left = 32
     Top = 64
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 40

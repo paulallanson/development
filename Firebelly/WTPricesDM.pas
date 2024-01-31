@@ -51,8 +51,6 @@ type
     ShowCurrent: boolean;
     ShowLive: boolean;
     Thickness: string;
-    SortType: string;
-    SortOrder: string;
     property HeaderCountAll: integer read GetHeaderCountAll;
     function UsingSearch: boolean;
     procedure RefreshWorktopData;
@@ -136,11 +134,7 @@ begin
                                 '      order by Prices.effective_date desc) <= '  + qDate(EffectiveDate+1);
         end;
 
-      if SortOrder = '' then
-        sTemp := sTemp + ' ORDER BY Worktop_Description desc'
-      else
-        sTemp := sTemp + ' ORDER BY ' + SortOrder;
-
+      sTemp := sTemp + ' ORDER BY Material_Type.Description, Worktop.Description, Worktop_Thickness.Thickness';
       sql.text := sTemp;
 
       if dtmdlWorktops.IsSQL then

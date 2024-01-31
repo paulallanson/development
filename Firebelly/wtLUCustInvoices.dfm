@@ -153,15 +153,15 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       678
       41)
     object Label1: TLabel
-      Left = 8
-      Top = 16
+      Left = 11
+      Top = 11
       Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Button1: TButton
       Left = 597
-      Top = 8
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -170,7 +170,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 113
       Top = 8
       Width = 169
       Height = 21

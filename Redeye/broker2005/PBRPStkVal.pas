@@ -69,7 +69,7 @@ type
     qryReportOrder_Unit: TIntegerField;
     qryReportForm_Reference_Descr: TStringField;
     qryReportReorder_Level: TIntegerField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportForm_Reference_ID: TStringField;
     qryReportOrder_Unit_Factor: TFloatField;
     qryReportsell_unit_Factor: TFloatField;

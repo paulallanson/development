@@ -30,7 +30,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1241
+        Width = 1245
       end>
     object ToolBar1: TToolBar
       Left = 11

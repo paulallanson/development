@@ -579,7 +579,7 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
       FixedChar = True
       Size = 100
     end
-    object qryReportAccount_Code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end

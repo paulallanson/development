@@ -6,8 +6,8 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
   QrExport, qrprntr, printers, AllCommon,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -54,11 +54,11 @@ type
     qrySOLineInstallation_price: TFloatField;
     qrySOLineSurvey_price: TFloatField;
     qrySOLineDelivery_Price: TFloatField;
-    qrySOLineDescription: TStringField;
+    qrySOLineDescription: TWideStringField;
     qrySOLineProduct: TIntegerField;
     qrySOLineVat: TIntegerField;
     qrySOLineVat_Rate: TFloatField;
-    qrySOLineVAT_Description: TStringField;
+    qrySOLineVAT_Description: TWideStringField;
     QRBand1: TQRBand;
     qrlblUnitPrice: TQRLabel;
     qrlblTotalPrice: TQRLabel;
@@ -253,7 +253,7 @@ begin
 
   {Show Payemnt details}
   memPayment.Lines.clear;
-  
+
   if qryReport.FieldByName('Address').Asinteger <> 0 then
     BuildPaymentNotes(dtmdlWorktops.GetRetailPaymentNotes);
 
@@ -283,7 +283,7 @@ begin
   rSurveyTotal := 0.00;
   rDeliveryTotal := 0.00;
   rVatTotal := 0.00;
-  
+
   qrmAddress.Lines.Clear;
 
   if qryReport.FieldByName('Address').AsInteger <> 0 then
