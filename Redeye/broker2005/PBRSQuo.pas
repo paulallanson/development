@@ -85,7 +85,6 @@ type
     procedure LoadCombos;
     procedure GetSelection;
     procedure BuildRange(sFirst: string; sLast: string);
-    Function IncrementNo(StartStr: String): String ;
     procedure BuildSelection;
     Function GetNextIntSelCode(Sender: TObject): Integer;
     Procedure DelIntSelCode(iTempIntSelCode: Integer; bTempDelCode: ByteBool);
@@ -941,44 +940,9 @@ begin
       end;
 end;
 
-function TPBRSQuoFrm.IncrementNo(StartStr: String): String;
-Var StrLength, Count, Id: Integer ;
-    Alphas: String[27] ;
-    Numbers: String[11] ;
-    CurrChar: String[1] ;
-begin
-Alphas := 'ABCEDFGHIJKLMNOPQRSTUVWXYZA' ;
-Numbers := '01234567890' ;
-{Increment a string value by 1}
-StrLength := Length(StartStr) ;
-For Count := StrLength downto 1 do
-    begin
-    CurrChar := Copy(StartStr,Count,1) ;
-    Id := Pos(CurrChar,Numbers) ;
-    if Id > 0 then
-       begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-       IncrementNo := StartStr ;
-       if Id < 10 then exit ;
-       end
-    else
-        begin
-        Id := Pos(CurrChar,Alphas) ;
-        if Id > 0 then
-               begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-        IncrementNo := StartStr ;
-        if Id < 27 then exit ;
-               end ;
-        end ;
-       end ;
-end;
-
 procedure TPBRSQuoFrm.FormDeactivate(Sender: TObject);
 begin
-DelIntSelCode(iIntSelCode, True);
+  DelIntSelCode(iIntSelCode, True);
 end;
 
 procedure TPBRSQuoFrm.ClearEnqNoArray(Sender: TObject);

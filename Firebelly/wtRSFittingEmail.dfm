@@ -34,8 +34,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 347
-    ExplicitWidth = 509
     DesignSize = (
       499
       80)
@@ -99,8 +97,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 197
-    ExplicitWidth = 509
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
@@ -129,12 +125,10 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitWidth = 509
-    ExplicitHeight = 59
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 188
+      Width = 207
       Height = 13
       Caption = 'Include documents from selected folder:'
     end
@@ -159,7 +153,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Height = 138
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 509
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -170,8 +163,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 255
-        Height = 26
+        Width = 244
+        Height = 39
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'

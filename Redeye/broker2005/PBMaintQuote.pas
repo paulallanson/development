@@ -1530,6 +1530,7 @@ end;
 procedure TPBMaintQuoteFrm.btnOKClick(Sender: TObject);
 var
   i, inx: integer;
+  FileDate: TDateTime;
 begin
   if Mode = qDelete then
     begin
@@ -1544,7 +1545,8 @@ begin
       if trim(edtEstimateFile.Text) <> '' then
         begin
           try
-            if (FileDateToDateTime(FileAge(edtEstimateFile.text)) > Quote.LastEstimateDate) then
+            FileAge(edtEstimateFile.text, FileDate);
+            if (FileDate > Quote.LastEstimateDate) then
               begin
                 if messagedlg('The estimate could be different to the quote, do you want to delete all lines and recalculate the quote?',
                     mtConfirmation, [mbYes, mbNo], 0) = mrYes then

@@ -64,14 +64,14 @@ object PBRSEnqFrm: TPBRSEnqFrm
     object Label1: TLabel
       Left = 8
       Top = 15
-      Width = 63
+      Width = 66
       Height = 13
       Caption = 'Paper Layout'
     end
     object Label2: TLabel
       Left = 8
       Top = 42
-      Width = 62
+      Width = 66
       Height = 13
       Caption = 'Letter Layout'
     end
@@ -119,8 +119,6 @@ object PBRSEnqFrm: TPBRSEnqFrm
     Align = alBottom
     Anchors = [akLeft, akBottom]
     TabOrder = 3
-    ExplicitTop = 160
-    ExplicitWidth = 411
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 135
@@ -264,7 +262,7 @@ object PBRSEnqFrm: TPBRSEnqFrm
       object Label3: TLabel
         Left = 8
         Top = 71
-        Width = 232
+        Width = 222
         Height = 39
         Caption = 
           'Enter enquiry numbers and/or enquiry ranges separated by commas.' +

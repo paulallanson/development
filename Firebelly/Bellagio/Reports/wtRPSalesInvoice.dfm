@@ -12,7 +12,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
@@ -14647,7 +14647,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 113
     ParamData = <
       item
-        Name = 'Revenue_Centre'
+        Name = 'Sales_Invoice'
         DataType = ftInteger
       end
       item

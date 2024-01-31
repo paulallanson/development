@@ -2316,7 +2316,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       FieldName = 'Delivery_Price'
       DisplayFormat = '0.00'
     end
-    object qrySOLineDescription: TStringField
+    object qrySOLineDescription: TWideStringField
       FieldName = 'Description'
       Size = 50
     end
@@ -2330,7 +2330,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       FieldName = 'Vat_Rate'
       DisplayFormat = '0.00%'
     end
-    object qrySOLineVAT_Description: TStringField
+    object qrySOLineVAT_Description: TWideStringField
       FieldName = 'VAT_Description'
       Size = 40
     end
