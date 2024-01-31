@@ -815,7 +815,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
@@ -845,7 +845,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
     object qryReportOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

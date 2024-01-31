@@ -1549,7 +1549,7 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
     object qrySalesbyInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesbyInvInvoice_or_Credit: TStringField
+    object qrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2

@@ -1402,7 +1402,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportReorder_Level: TIntegerField
       FieldName = 'Reorder_Level'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80

@@ -39,7 +39,7 @@ type
     qryReportSel4: TFloatField;
     qryReportTag: TStringField;
     qryReportText100: TStringField;
-    qryReportAccount_Code: TStringField;
+    qryReportAccount_code: TWideStringField;
     qryReportMargPerc: TFloatField;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

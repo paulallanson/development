@@ -716,7 +716,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     object qryReportPurch_Pack_Quantity: TIntegerField
       FieldName = 'Purch_Pack_Quantity'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

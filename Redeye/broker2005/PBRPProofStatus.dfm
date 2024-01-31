@@ -816,7 +816,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
       FixedChar = True
       Size = 2
     end
-    object qryReportDescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
@@ -832,7 +832,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80

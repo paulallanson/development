@@ -142,7 +142,7 @@ type
     QRLabel7: TQRLabel;
     QrLblCst: TQRLabel;
     QRDBText6: TQRDBText;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportPart_Description: TStringField;
     qryReportPart_Cost: TCurrencyField;
     qryReportPart_Sales_Price: TCurrencyField;

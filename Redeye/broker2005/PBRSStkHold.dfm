@@ -186,7 +186,7 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
         'ce)')
     Left = 272
     Top = 64
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 40

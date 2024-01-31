@@ -24,7 +24,7 @@ type
     PrintBitBtn: TBitBtn;
     DummySQL: TFDQuery;
     chkbxExcludezero: TCheckBox;
-    qryReportdescription: TStringField;
+    qryReportDescription: TWideStringField;
     qryReportquantity: TIntegerField;
     qryReportquantity_allocated: TIntegerField;
     qryReportdelivery_to_Stock: TStringField;

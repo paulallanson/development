@@ -1363,7 +1363,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportQty_Outstanding: TIntegerField
       FieldName = 'Qty_Outstanding'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

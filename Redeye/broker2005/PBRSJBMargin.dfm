@@ -661,7 +661,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
@@ -696,7 +696,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
@@ -732,7 +732,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
     end
-    object qryReportInactive: TStringField
+    object qryReportInactive: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2

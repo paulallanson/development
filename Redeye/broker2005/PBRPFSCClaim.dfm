@@ -1477,7 +1477,7 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 92

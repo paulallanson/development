@@ -77,7 +77,7 @@ type
     qryReportQuantity_Delivered: TIntegerField;
     qryReportQty_Outstanding: TIntegerField;
     qryReportPurch_Pack_Quantity: TIntegerField;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportPart_Description: TStringField;
     qryReportPart_Cost: TCurrencyField;
     qryReportPart_Sales_Price: TCurrencyField;

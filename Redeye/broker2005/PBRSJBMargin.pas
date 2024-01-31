@@ -35,7 +35,7 @@ type
     qryReportJob_Bag: TIntegerField;
     qryReportJob_Bag_Line: TIntegerField;
     qryReportJob_Bag_Line_Descr: TStringField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportSupplier_Name: TStringField;
     qryReportJob_Bag_Line_Cost: TCurrencyField;
     qryReportJob_Bag_Line_Sell: TCurrencyField;
@@ -44,7 +44,7 @@ type
     qryReportJob_Bag_Line_Type: TStringField;
     qryReportCust_Order_No: TStringField;
     qryReportRep: TIntegerField;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportVat_Rate: TFloatField;
     qryReportDate_Point: TDateTimeField;
     qryReportCustomer: TIntegerField;
@@ -55,7 +55,7 @@ type
     qryReportSupplier_Branch_Name: TStringField;
     oldqryReport: TFDQuery;
     qryReportPurchase_Order: TFloatField;
-    qryReportInactive: TStringField;
+    qryReportInactive: TWideStringField;
     qryReportJob_Bag_Descr: TStringField;
     chkbxPageBreak: TCheckBox;
     RdGrpRepType: TRadioGroup;
