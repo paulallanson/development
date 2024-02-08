@@ -14,7 +14,6 @@ object frmWTLogin: TfrmWTLogin
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
-  OnShow = FormShow
   TextHeight = 13
   object Label1: TLabel
     Left = 32

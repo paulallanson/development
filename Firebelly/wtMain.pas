@@ -429,6 +429,10 @@ begin
   LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
 
+  TempUserSize := SizeOf(TempUser);
+  GetUserName(Addr(TempUser), TempUserSize);
+  stsbrStatus.Panels[0].Text := TempUser;
+
   SWVersion := '23.1.';
   SWSubVersion := '24.01.01a';
 
@@ -1010,7 +1014,6 @@ begin
         LoginFormOK := frmWTLogin.OK;
         if LoginFormOK then
         begin
-//          frmWTLogin.UserEdit.Text := stsbrStatus.Panels[0].Text;
           UserName := frmWTLogin.UserEdit.Text;
           Operator := frmWTLogin.Operator;
           OperatorName := frmWTLogin.Operator_name;
