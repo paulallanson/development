@@ -221,64 +221,64 @@ var
   PrinterSettings: TPrinterSettings;
   icount: integer;
 begin
-  frmWTRPContract := TfrmWTRPContract.create(self);
+  frmWTRPContract := nil;
+  PrinterSettings := nil;
   try
+    frmWTRPContract := TfrmWTRPContract.create(self);
     PrinterSettings := TPrinterSettings.Create;
-    try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
-        begin
-          if DefaultPrinter = Printer.printers[icount] then
-            Printer.PrinterIndex := icount;
-        end;
 
-      if DefaultPrinter <> '' then
-        begin
-          SetPrinterBin(DefaultBin);
-        end;
+    Printer.PrinterIndex := -1;
+    for icount := 0 to pred(Printer.Printers.count) do
+    begin
+      if DefaultPrinter = Printer.printers[icount] then
+        Printer.PrinterIndex := icount;
+    end;
+
+    if DefaultPrinter <> '' then
+    begin
+      SetPrinterBin(DefaultBin);
+    end;
 
 //    frmWTRPContract.ContractQuote := strtoint(memSelection.text);
-      frmWTRPContract.ContractQuote := Key;
-      frmWTRPContract.bPrintLogo := chkbxPrintLogo.checked;
-      frmWTRPContract.bIncludeTemplating := chkbxIncludeTemplating.checked;
-      frmWTRPContract.bValuebyUnits := chkbxValue.checked;
+    frmWTRPContract.ContractQuote := Key;
+    frmWTRPContract.bPrintLogo := chkbxPrintLogo.checked;
+    frmWTRPContract.bIncludeTemplating := chkbxIncludeTemplating.checked;
+    frmWTRPContract.bValuebyUnits := chkbxValue.checked;
 
     if (frmWTRPContract.GetDetails = 0) then
       MessageDlg('There are no quotes to print', mtError, [mbAbort], 0)
     else
+    begin
+      {Change to Landscape or Portrait depending on number of options}
+      if frmWTRPContract.GetOptionCount > 4 then
+        frmWTRPContract.qrpDetails.Page.Orientation := poLandscape
+      else
+        frmWTRPContract.qrpDetails.Page.Orientation := poPortrait;
+
+      if bPreview then
       begin
-        {Change to Landscape or Portrait depending on number of options}
-        if frmWTRPContract.GetOptionCount > 4 then
-          frmWTRPContract.qrpDetails.Page.Orientation := poLandscape
-        else
-          frmWTRPContract.qrpDetails.Page.Orientation := poPortrait;
+        frmWTRPContract.bPreview := true;
+        frmWTRPContract.qrpDetails.Preview;
+      end
+      else
+      begin
+        frmWTRPContract.bPreview := false;
+(*        frmWTRPContract.qrpDetails.PrinterSetup;
 
-        if bPreview then
-          begin
-              frmWTRPContract.bPreview := true;
-              frmWTRPContract.qrpDetails.Preview;
-          end
-        else
-          begin
-              frmWTRPContract.bPreview := false;
-(*              frmWTRPContract.qrpDetails.PrinterSetup;
-
-              if frmWTRPContract.qrpDetails.tag = 0 then
-                frmWTRPContract.qrpDetails.Print;
+        if frmWTRPContract.qrpDetails.tag = 0 then
+          frmWTRPContract.qrpDetails.Print;
 *)
-              if SetUpPrinter(PrinterSettings) then
-                begin
-                  frmWTRPContract.qrpDetails.Print;
-                end;
-              close;
-            end;
+        if SetUpPrinter(PrinterSettings) then
+        begin
+          frmWTRPContract.qrpDetails.Print;
         end;
-    finally
-      DefaultPrinter := printer.Printers[printer.printerindex];
-      DefaultBin := GetBinSelection;
-      PrinterSettings.Free;
+        close;
+      end;
     end;
   finally
+    DefaultPrinter := printer.Printers[printer.printerindex];
+    DefaultBin := GetBinSelection;
+    PrinterSettings.Free;
     frmWTRPContract.free;
   end;
 end;

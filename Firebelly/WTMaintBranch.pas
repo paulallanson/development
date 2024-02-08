@@ -65,6 +65,8 @@ type
     pmnuSelectAll: TMenuItem;
     DocOpenDialog: TOpenDialog;
     chkbxInactive: TCheckBox;
+    dtsSiteQS: TDataSource;
+    qrySiteQS: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -119,6 +121,13 @@ begin
       open;
     end;
     
+  with qrySiteQS do
+    begin
+      close;
+      parambyname('Customer').asinteger := iCustomer;
+      open;
+    end;
+
   if sFuncMode = 'A' then
     begin
       {Empty details};
