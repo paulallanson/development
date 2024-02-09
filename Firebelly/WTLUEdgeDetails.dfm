@@ -314,7 +314,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Anchors = [akTop, akRight]
       KeyField = 'Material_Type'
       ListField = 'Description'
-      ListSource = srclkpMatType
+      ListSource = srclkpCopyMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
     end
@@ -498,12 +498,12 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')')
-    Left = 208
-    Top = 168
+    Left = 192
+    Top = 128
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
-    Left = 280
+    Left = 192
     Top = 168
   end
   object lkpEdgeType: TFDQuery
@@ -614,5 +614,20 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     OnTimer = tmrRefreshTimer
     Left = 384
     Top = 232
+  end
+  object lkpCopyMatType: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'select * from Material_Type'
+      
+        'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
+        ')')
+    Left = 288
+    Top = 128
+  end
+  object srclkpCopyMatType: TDataSource
+    DataSet = lkpCopyMatType
+    Left = 288
+    Top = 168
   end
 end

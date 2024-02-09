@@ -768,7 +768,6 @@ begin
         LoginFormOK := frmPBLogin.OK;
         if LoginFormOK then
         begin
-//          frmPBLogin.UserEdit.Text := stsbrMainMenu.Panels[0].Text;
           iRep := frmPBLogin.Rep;
           UserName := frmPBLogin.UserEdit.Text;
           stsbrMainMenu.Panels[0].Text := UserName;

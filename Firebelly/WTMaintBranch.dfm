@@ -229,7 +229,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Height = 21
     KeyField = 'Contact_No'
     ListField = 'Contact_Name'
-    ListSource = dtsContacts
+    ListSource = dtsSiteQS
     TabOrder = 6
   end
   object dblkpInstallationContact: TDBLookupComboBox
@@ -269,7 +269,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 514
+        Width = 506
         Height = 17
         Align = alTop
         BevelOuter = bvNone
@@ -284,10 +284,10 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         end
       end
       object ToolBar1: TToolBar
-        Left = 481
+        Left = 473
         Top = 17
         Width = 33
-        Height = 186
+        Height = 185
         Align = alRight
         ButtonHeight = 30
         ButtonWidth = 30
@@ -299,7 +299,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         TabOrder = 1
         object btnAttach: TToolButton
           Left = 0
-          Top = 2
+          Top = 0
           Hint = 'Attach Documents'
           Caption = 'btnAttach'
           ImageIndex = 3
@@ -311,8 +311,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object lstvwDocuments: TListView
         Left = 0
         Top = 17
-        Width = 481
-        Height = 186
+        Width = 473
+        Height = 185
         Align = alClient
         Columns = <
           item
@@ -475,6 +475,10 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       end
       item
         Name = 'Address'
+      end
+      item
+        Name = 'Installation_Contact'
+        DataType = ftInteger
       end
       item
         Name = 'Site_QS_Contact'
@@ -978,5 +982,25 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Options = [ofHideReadOnly, ofNoChangeDir, ofAllowMultiSelect, ofEnableSizing]
     Left = 280
     Top = 16
+  end
+  object dtsSiteQS: TDataSource
+    DataSet = qrySiteQS
+    Left = 120
+    Top = 296
+  end
+  object qrySiteQS: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT Contact_no, Contact_name'
+      'FROM Customer_Contact'
+      'WHERE Customer = :Customer AND'
+      '      ((inactive IS NULL) or (inactive = '#39'N'#39'))'
+      'ORDER BY Contact_Name')
+    Left = 120
+    Top = 256
+    ParamData = <
+      item
+        Name = 'Customer'
+      end>
   end
 end

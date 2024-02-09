@@ -54,6 +54,8 @@ type
     lkpEdgeThicknessUnit_Price: TCurrencyField;
     lkpEdgeThicknessUnit_Cost: TCurrencyField;
     lkpEdgeThicknessPrice_Unit_Description: TWideStringField;
+    lkpCopyMatType: TFDQuery;
+    srclkpCopyMatType: TDataSource;
     procedure FormCreate(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
@@ -119,8 +121,8 @@ begin
           SQL.Text := sText;
         end;
 
-      parambyname('Material_Type').asinteger := dblkpMaterialType.ListValue;
-      parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
+      parambyname('Material_Type').asinteger := dblkpMaterialType.KeyValue;
+      parambyname('Edge_Type').asinteger := dblkpEdgeType.KeyValue;
       parambyname('Description').asstring :=  '%' + edtName.Text + '%';
       if chkbxShowinactive.checked then
         parambyname('inactive').asstring := 'Y'
@@ -137,6 +139,7 @@ begin
 
   lkpMatType.active := true;
   lkpEdgeType.active := true;
+  lkpCopyMatType.active := true;
 
   dblkpMaterialType.keyvalue := lkpMatType.fieldbyname('Material_type').asinteger;
   dblkpEdgetype.keyvalue := lkpEdgeType.fieldbyname('Edge_Type').asinteger;
@@ -217,7 +220,6 @@ end;
 procedure TfrmWTLUEdgeDetails.dblkpEdgeTypeClick(Sender: TObject);
 begin
   refresh;
-
 end;
 
 procedure TfrmWTLUEdgeDetails.FormClose(Sender: TObject; var Action: TCloseAction);
