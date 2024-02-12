@@ -454,13 +454,7 @@ end;
 procedure TfrmWTLUSalesCredits.SetSalesInvoiceEdit(Dataset: TDataset);
 begin
   if (Dataset.recordcount > 0) then
-    begin
-      try
-        edtSalesInvNo.Text := floatToStr(Dataset.FieldByName('Invoice_no').asfloat);
-      except
-        edtSalesInvNo.Text := '';
-      end;
-    end;
+    edtSalesInvNo.Text := Dataset.FieldByName('Invoice_no').AsString;
   with Dataset do
   begin
     btnPrint.enabled := not(fieldbyname('Sales_invoice_Status').asinteger >= 20);

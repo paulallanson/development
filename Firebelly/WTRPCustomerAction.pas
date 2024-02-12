@@ -51,15 +51,20 @@ type
     procedure qrsbDetailsAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
   private
-    exporting: boolean;
-    exportFile: textFile;
-    CustomerTotal, ReportTotal: real;
-    QuoteCount: integer;
+    FExporting: Boolean;
+    FExportFile: TextFile;
+    FCustomerTotal, FReportTotal: Real;
+    FQuoteCount: Integer;
+    FCode, FOperator: Integer;
+    FDateFrom, FDateTo: TDateTime;
   public
-    code, operator: integer;
-    DateFrom, DateTo: TDateTime;
     function GetDetails: integer;
     procedure ExporttoFile(filename: string);
+
+    property Code: Integer read FCode write FCode;
+    property &Operator: Integer read FOperator write FOperator;
+    property DateFrom: TDateTime read FDateFrom write FDateFrom;
+    property DateTo: TDateTime read FDateTo write FDateTo;
   end;
 
 var
@@ -74,28 +79,28 @@ uses wtDataModule, WTRSCustomerAction;
 procedure TfrmwtRPCustomerAction.qrpDetailsBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
 begin
-  QuoteCount := 0;
-  CustomerTotal := 0.00;
-  ReportTotal := 0.00;
+  FQuoteCount := 0;
+  FCustomerTotal := 0.00;
+  FReportTotal := 0.00;
 end;
 
 procedure TfrmwtRPCustomerAction.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  QuoteCount := QuoteCount + 1;
+  Inc(FQuoteCount, 1);
 end;
 
 procedure TfrmwtRPCustomerAction.qrbCustomerFooterAfterPrint(
   Sender: TQRCustomBand; BandPrinted: Boolean);
 begin
-  CustomerTotal := 0.00;
-  QuoteCount := 0;
+  FCustomerTotal := 0.00;
+  FQuoteCount := 0;
 end;
 
 procedure TfrmwtRPCustomerAction.qrbCustomerFooterBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
-  ReportTotal := ReportTotal + CustomerTotal;
+  FReportTotal := FReportTotal + FCustomerTotal;
 end;
 
 function TfrmwtRPCustomerAction.GetDetails: integer;
@@ -111,41 +116,44 @@ function qDate(const aDate : TDateTime) : string;
   end;
 begin
   qryReport.Close;
-  qryReport.parambyname('Operator').asinteger := operator;
-  qryReport.parambyname('Code').asinteger := Code;
-  qryReport.parambyname('Date_From').Asdatetime := Datefrom;
-  qryReport.parambyname('Date_To').Asdatetime := DateTo;
+  qryReport.parambyname('Operator').asinteger := FOperator;
+  qryReport.parambyname('Code').asinteger := FCode;
+  qryReport.parambyname('Date_From').Asdatetime := FDateFrom;
+  qryReport.parambyname('Date_To').Asdatetime := FDateTo;
   qryReport.Open;
+  Result := qryReport.RecordCount;
 end;
 
 procedure TfrmwtRPCustomerAction.QRBand2AfterPrint(Sender: TQRCustomBand;
   BandPrinted: Boolean);
 begin
-  ReportTotal := 0.00;
+  FReportTotal := 0.00;
 end;
 
 procedure TfrmwtRPCustomerAction.ExporttoFile(filename: string);
 var
-  TempName: string;
   tempStr: string;
 begin
-  self.exporting := true;
-  assignFile(self.exportFile, fileName);
-  rewrite(self.exportFile);
+  FExporting := True;
+  AssignFile(FExportFile, fileName);
+  try
+    rewrite(FExportFile);
 
-  tempStr := '"Customer"'
-    + ',"Type"'
-    + ',"Rep"'
-    + ',"Action"'
-    + ',"Contact"'
-    + ',"Action Date"'
-    + ',"by Whom"'
-    + ',"Telephone"';
+    tempStr := '"Customer"'
+      + ',"Type"'
+      + ',"Rep"'
+      + ',"Action"'
+      + ',"Contact"'
+      + ',"Action Date"'
+      + ',"by Whom"'
+      + ',"Telephone"';
 
+    WriteLn(FExportFile, tempStr);
 
-  writeLn(self.exportFile, tempStr);
-  qrpdetails.Prepare;
-  CloseFile(self.exportFile);
+    qrpdetails.Prepare;
+  finally
+    CloseFile(FExportFile);
+  end;
 end;
 
 procedure TfrmwtRPCustomerAction.qrsbDetailsAfterPrint(
@@ -153,7 +161,7 @@ procedure TfrmwtRPCustomerAction.qrsbDetailsAfterPrint(
 var
   tempstr: string;
 begin
-  if self.exporting then
+  if FExporting then
   begin
     //Customer Name
     tempStr := '"' + qryReport.fieldbyname('Customer_Name').asstring + '"';
@@ -179,8 +187,7 @@ begin
     //Telephone Number
     tempStr := tempStr + ',"' + qryReport.fieldbyname('Telephone_Number').asstring + '"';
 
-
-    writeln(self.exportFile, tempStr);
+    writeln(FExportFile, tempStr);
     frmWTRSCustomerAction.prgbrExport.StepIt;
   end;
 end;

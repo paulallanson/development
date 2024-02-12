@@ -608,7 +608,7 @@ begin
             end;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          var printFileName := 'OC' + sAttachmentType;
+          var printFileName := 'OC' + EmailArray[irow,1];
           TPrinterTools.New.PrintToattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           {Create the Terms and Conditions as an attachment}

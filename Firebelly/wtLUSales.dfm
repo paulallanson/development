@@ -117,7 +117,7 @@ object frmwtLUSales: TfrmwtLUSales
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1382
+        Width = 1386
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -324,7 +324,6 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Reference'
-        Width = 64
         Visible = True
       end
       item
@@ -427,14 +426,12 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
-        Width = 64
         Visible = True
       end
       item
@@ -455,7 +452,7 @@ object frmwtLUSales: TfrmwtLUSales
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1382
+        Width = 1386
       end>
     object Panel3: TPanel
       Left = 11

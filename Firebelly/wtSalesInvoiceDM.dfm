@@ -661,22 +661,17 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       item
         Name = 'Is_Retail_Customer'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
         DataType = ftString
-      end
-      item
-        Name = 'Is_Retail_Customer'
-        DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Revenue_Centre'
         DataType = ftInteger
-      end
-      item
-        Name = 'Revenue_Centre'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'

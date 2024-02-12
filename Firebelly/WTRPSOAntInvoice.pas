@@ -269,6 +269,7 @@ begin
   qrySalesOrders.parambyname('Date_From').Asdatetime := Datefrom + StrToTime('00:00:00');
   qrySalesOrders.parambyname('Date_To').Asdatetime := DateTo + StrToTime('23:59:59');
   qrySalesOrders.Open;
+  Result := qrySalesOrders.RecordCount;
 end;
 
 procedure TfrmwtRPSOAntInvoice.QRBand2BeforePrint(Sender: TQRCustomBand;

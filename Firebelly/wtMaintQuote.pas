@@ -3791,7 +3791,7 @@ procedure TfrmWTMaintQuote.btnWordClick(Sender: TObject);
 var
   compdir, docdir, jobBagDir, docExt, sPAth: string;
   sFullFile, sFileName: string;
-  iLength, ipos, i: integer;
+  iLength, ipos: integer;
   okToSave, userCancelled, docsaved: boolean;
 begin
 //  docDir := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey);
@@ -3868,14 +3868,6 @@ begin
       sfullFile := sPath;
 
       iLength := length(sFullFile);
-
-      while i <> 0 do
-        begin
-          ipos := pos('\',sFullFile);
-          sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-          i := pos('\',sFullFile);
-        end;
 
       sFileName := copy(sPath, ipos+1, (iLength - ipos));
 

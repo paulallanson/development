@@ -656,7 +656,7 @@ begin
   try
     frmWTRSTemplateSheet := TfrmWTRSTemplateSheet.Create( Application );
     Key := dtmdlTemplating.CurrentSOrder;
-    frmWTRSTemplateSheet.sOrderNumber := inttostr(Key);
+    frmWTRSTemplateSheet.OrderNumber := inttostr(Key);
 
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
