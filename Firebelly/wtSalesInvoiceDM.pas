@@ -2186,7 +2186,7 @@ begin
   with FParent.Datamodule.qrySOLine do
     begin
       close;
-      parambyname('Sales_Order').asinteger := tempCode;
+      parambyname('Sales_Order').asfloat := tempCode;
       parambyname('Sales_order_Line_no').asinteger := tempLine;
       open;
       result := fieldbyname('description').asstring;

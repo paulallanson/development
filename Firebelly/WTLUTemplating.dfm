@@ -30,7 +30,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1260
+        Width = 1264
       end>
     object Panel3: TPanel
       Left = 11
@@ -282,7 +282,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1260
+        Width = 1264
       end>
     object btnDocuments: TToolBar
       Left = 11

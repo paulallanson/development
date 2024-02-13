@@ -51,7 +51,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       Columns = <
         item
           Expanded = False
-          FieldName = 'Customer_Name'
+          FieldName = 'Original_Name'
           Title.Caption = 'Customer'
           Width = 164
           Visible = True

@@ -107,7 +107,7 @@ begin
   if (Dataset.recordcount > 0) then
     begin
       try
-        edtSalesInvNo.Text := floatToStr(Dataset.FieldByName('Sales_Invoice_no').asfloat);
+        edtSalesInvNo.Text := floatToStr(Dataset.FieldByName('Invoice_no').asfloat);
       except
         edtSalesInvNo.Text := '';
       end;

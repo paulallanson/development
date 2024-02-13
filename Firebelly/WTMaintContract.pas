@@ -1096,6 +1096,7 @@ var
 begin
   with sgDetails do
     begin
+      icolumn := col;
       irow := row;
       ContractLine := Contract.Lines[irow-1];
       ContractLine.DrawingNumber := cells[1,irow];

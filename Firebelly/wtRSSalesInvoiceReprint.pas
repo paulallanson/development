@@ -575,7 +575,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + sAttachmentType;
+                  printFileName := 'SI' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   if iInvoiceCount = 1 then
@@ -643,7 +643,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + sAttachmentType;
+                  printFileName := 'SI' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];

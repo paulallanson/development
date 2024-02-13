@@ -558,7 +558,7 @@ begin
           if frmwtRPJobFitting.GetDetails > 0 then
             begin
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'FS' + sAttachmentType;
+              printFileName := 'FS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printfilename, sAttachmentType);
             end;
 
@@ -588,7 +588,7 @@ begin
                         else
                           begin
                             frmWTRPJobRemedialSheet.bPreview := false;
-                            printFileName := 'FS' + sAttachmentType;
+                            printFileName := 'FS' + EmailArray[irow,1];
                             TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                           end;
                       finally
@@ -774,7 +774,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'FS' + sAttachmentType;
+                  printFileName := 'FS' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
                 end;
 
@@ -817,7 +817,7 @@ begin
                           else
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
-                              printFileName := 'FS' + sAttachmentType;
+                              printFileName := 'FS' + EmailArray[irow,1];
                               TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                             end;
                         finally
@@ -884,7 +884,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'FS' + sAttachmentType;
+                  printFileName := 'FS' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
                 end;
 

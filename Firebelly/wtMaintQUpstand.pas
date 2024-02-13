@@ -326,39 +326,17 @@ var
   rUnitPrice, rPolishPrice, rTotal: real;
   idepth,iLength,iQuantity, iNoLengths, iNoDepths: integer;
 begin
-  try
-    iDepth := strtoint(edtDepth.text);
-  except
-    iDepth := 0
-  end;
-
-  try
-    iLength := strtoint(edtLength.text);
-  except
-    iLength := 0;
-  end;
-
-  try
-    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
-  except
-    rUnitPrice := 0.00;
-  end;
-
-  try
-    rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
-  except
-    rPolishPrice := 0.00;
-  end;
-
+  iDepth := strtointdef(edtDepth.text, 0);
+  iLength := strtointdef(edtLength.text, 0);
+  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+  rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
   iQuantity := spnQuantity.value;
-
   iNoDepths := spnNoOfDepths.value;
-
   iNoLengths := spnNoOflengths.value;
-
   rTotal := (((idepth * iLength)/1000000)*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
                                                                +(((iDepth/1000)*iNoDepths)*rPolishPrice*iQuantity);
   edtTotalPrice.text := formatfloat('0.00',rTotal);
+
   enableOK(self)
 end;
 
@@ -448,7 +426,7 @@ begin
             end;
 
           parambyName('worktop').asinteger := dblkpWorktop.ListValue;
-          parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
+          parambyName('thickness').asinteger := dblkpWTThickness.ListValue;
           open;
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QUpstand.PriceUnit := fieldbyname('Price_unit').asinteger;
@@ -489,7 +467,7 @@ begin
   QUpstand.MaterialUseDescr := dblkpMaterialUse.text;
   QUpstand.Worktop := dblkpWorktop.KeyValue;
   QUpstand.worktopDesc := dblkpWorktop.Text;
-  QUpstand.thickness := dblkpWTThickness.keyvalue;
+  QUpstand.thickness := dblkpWTThickness.ListValue;
   QUpstand.thicknessDesc := dblkpWTThickness.Text;
   QUpstand.Depth := strtoint(edtDepth.text);
   QUpstand.Length := strtoint(edtLength.text);

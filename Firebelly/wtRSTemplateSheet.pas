@@ -94,6 +94,7 @@ type
     FEmailAttachment : TstringList;
     sAttachmentType: string;
     sSitePath: string;
+    FOrderNumber: string;
     procedure ListOrderDocuments(strPath: string; ListBox: TListBox);
     procedure GetOrderQuotes(ListBox: TListBox);
     procedure RunQuoteReport(const bPreview: boolean);
@@ -104,7 +105,7 @@ type
     property DefaultDocumentFolder: string read FDefaultDocumentFolder write SetDefaultDocumentFolder;
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
   public
-    sOrderNumber: string;
+    property OrderNumber: string read FOrderNumber write FOrderNumber;
     property SalesOrderCount: integer read FSalesOrderCount write SetSalesOrderCount;
   end;
 
@@ -179,7 +180,7 @@ begin
   with qryGetSOQuotes do
     begin
       close;
-      parambyname('Sales_Order').asinteger := strtoint(sOrderNumber);
+      parambyname('Sales_Order').asinteger := strtoint(FOrderNumber);
       open;
 
       first;
@@ -396,9 +397,9 @@ var
   i: integer;
 begin
   if cmbDocuments.text = '<All>' then
-    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\'
+    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\'
   else
-    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\' + cmbDocuments.text + '\';
+    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\' + cmbDocuments.text + '\';
 
   for i := 0 to pred(lstbxDocuments.items.count) do
     begin
@@ -553,7 +554,7 @@ var
   pFilename: Pchar;
 begin
   iRow := lstbxDocuments.itemindex;
-  sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
+  sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\';
 
   sFilename := lstbxDocuments.Items[iRow];
   pFileName := PChar(sPath+sFilename);
@@ -638,7 +639,7 @@ begin
     begin
       for irow := 1 to frmWTEmailList.EmailListGrid.Rowcount -1 do
       begin
-        if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
+        //if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
 
         sOrderNumber := EmailArray[irow,1];
         sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
@@ -660,7 +661,8 @@ begin
           sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          printFileName := 'TS' + sAttachmentType;
+          printFileName := 'TS' + EmailArray[irow,1];
+
           TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           if self.chkbxPrint.checked then
@@ -880,7 +882,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'TS' + sAttachmentType;
+              printFileName := 'TS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType);
 
               if iOrderCount = 1 then
@@ -1031,7 +1033,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'TS' + sAttachmentType;
+              printFileName := 'TS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
@@ -1427,13 +1429,13 @@ begin
     begin
       if cmbDocuments.itemindex = 0 then
         begin
-          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
+          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\';
           ListOrderDocuments(sPath,lstbxDocuments);
         end
       else
       if cmbDocuments.text <> '<None>' then
         begin
-          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\' + cmbDocuments.text + '\';
+          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\' + cmbDocuments.text + '\';
           ListOrderDocuments(sPath,lstbxDocuments);
         end
     end;

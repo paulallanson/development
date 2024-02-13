@@ -752,7 +752,7 @@ begin
   try
     frmWTRSTemplateSheet := TfrmWTRSTemplateSheet.Create( Application );
     Key := dtmdlAllSales.CurrentSOrder;
-    frmWTRSTemplateSheet.sOrderNumber := inttostr(Key);
+    frmWTRSTemplateSheet.OrderNumber := inttostr(Key);
 
 //    frmWTRSTemplateSheet.memSelection.text := inttostr(Key);
 
