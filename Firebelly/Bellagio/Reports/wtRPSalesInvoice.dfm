@@ -14647,7 +14647,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Top = 113
     ParamData = <
       item
-        Name = 'Revenue_Centre'
+        Name = 'Sales_Invoice'
         DataType = ftInteger
       end
       item

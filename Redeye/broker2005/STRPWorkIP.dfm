@@ -10,7 +10,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object QuickReport: TQuickRep
     Left = -8
@@ -1363,7 +1363,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportQty_Outstanding: TIntegerField
       FieldName = 'Qty_Outstanding'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

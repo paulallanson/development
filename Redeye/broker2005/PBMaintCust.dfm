@@ -29,8 +29,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1172
-    ExplicitHeight = 641
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -681,12 +679,19 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Height = 88
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           Visible = False
           Columns = <
             item
@@ -852,13 +857,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Width = 477
             Height = 389
             Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ParentFont = False
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clBlack
             TitleFont.Height = -11
             TitleFont.Name = 'Segoe UI'
-            TitleFont.Style = []
+            TitleFont.Style = [fsBold]
             OnDrawColumnCell = dbgContactDetailsDrawColumnCell
             OnDblClick = dbgHOContactDetailsDblClick
             Columns = <
@@ -2145,12 +2157,19 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Top = 132
           Width = 353
           Height = 301
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
         end
         object cmbCallOffDeliveryNote: TComboBox
           Left = 200
@@ -2598,7 +2617,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object ToolBar9: TToolBar
             Left = 11
@@ -2642,13 +2661,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 186
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgBranchDetailsDrawColumnCell
           OnDblClick = dbgBranchDetailsDblClick
           Columns = <
@@ -2742,13 +2768,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1073
           Height = 275
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgContactDetailsDrawColumnCell
           OnDblClick = dbgContactDetailsDblClick
           Columns = <
@@ -2972,7 +3005,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrQuotes: TToolBar
           Left = 11
@@ -3057,13 +3090,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgQuoteDetailsDrawColumnCell
         OnDblClick = dbgQuoteDetailsDblClick
         Columns = <
@@ -3234,7 +3274,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrEnquiries: TToolBar
           Left = 11
@@ -3369,13 +3409,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+        ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgEnquiryDetailsDrawColumnCell
         OnDblClick = dbgEnquiryDetailsDblClick
         Columns = <
@@ -3599,7 +3646,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3611,9 +3658,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1141
+            Width = 1153
             Height = 41
-            ButtonHeight = 44
+            ButtonHeight = 29
             ButtonWidth = 65
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3760,13 +3807,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Height = 510
         Align = alClient
         DataSource = dtmdlOrders.dtsOrders
+        DrawingStyle = gdsGradient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgOrderDetailsDrawColumnCell
         OnDblClick = dbgOrderDetailsDblClick
         Columns = <
@@ -3932,7 +3986,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrJobs: TToolBar
           Left = 11
@@ -4008,13 +4062,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 509
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgJobDetailsDrawColumnCell
         Columns = <
           item
@@ -4202,7 +4263,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4214,7 +4275,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1139
+              Width = 1151
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 68
@@ -4283,13 +4344,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 508
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgStockDetailsDrawColumnCell
           OnDblClick = dbgStockDetailsDblClick
           Columns = <
@@ -4485,9 +4553,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1162
+            Width = 1166
           end>
-        ExplicitWidth = 1164
         object PageScroller3: TPageScroller
           Left = 11
           Top = 0
@@ -4499,7 +4566,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1141
+            Width = 1153
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 53
@@ -4511,7 +4578,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowHint = True
             TabOrder = 0
             Wrapable = False
-            ExplicitWidth = 1137
             object btnInvoiceChange: TToolButton
               Left = 0
               Top = 0
@@ -4538,13 +4604,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Width = 1168
         Height = 513
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clBlack
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgInvoiceDetailsDrawColumnCell
         OnDblClick = dbgInvoiceDetailsDblClick
         Columns = <
@@ -4882,7 +4955,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object ToolBar8: TToolBar
             Left = 11
@@ -4949,13 +5022,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 1166
           Height = 234
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgActivityDetailsDrawColumnCell
           OnDblClick = dbgActivityDetailsDblClick
           OnTitleClick = dbgActivityDetailsTitleClick
@@ -5102,13 +5182,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Width = 479
           Height = 371
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgCategoryDetailsDrawColumnCell
           OnDblClick = dbgCategoryDetailsDblClick
           Columns = <
@@ -5285,8 +5372,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 723
-    ExplicitWidth = 1172
   end
   object pnlFooter: TPanel
     Left = 0
@@ -5296,8 +5381,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 682
-    ExplicitWidth = 1172
     DesignSize = (
       1176
       41)
@@ -5391,7 +5474,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
-      ExplicitLeft = 943
     end
     object CancelBitBtn: TBitBtn
       Left = 1027
@@ -5469,7 +5551,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 1023
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5565,7 +5646,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1172
     DesignSize = (
       1176
       41)
@@ -5594,7 +5674,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
-      ExplicitWidth = 527
     end
   end
   object FlashTimer: TTimer

@@ -2892,49 +2892,21 @@ end;
 
 procedure TfrmWTMaintSalesOrder.btnAttachClick(Sender: TObject);
 var
-  i, ipos, ilength, icount: integer;
-  sFile, sFullFile, docDir: string;
+  I: Integer;
+  SourceFileName, DestFileName, DocDir: string;
 begin
-//  docDir := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(Sorder.dbKey);
-  {Find a document} ;
-  if stvDocuments.TopItem.Text = stvDocuments.Selected.Text then
-    docDir := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(SOrder.dbKey) +'\'
-  else
-    docDir := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(SOrder.dbKey) +'\' + stvDocuments.Selected.Text +'\';
+  {Find a document}
+  DocDir := dtmdlWorktops.GetCompanySalesDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + IntToStr(SOrder.dbKey);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
+  if stvDocuments.TopItem.Text <> stvDocuments.Selected.Text then
+    DocDir := IncludeTrailingPathDelimiter(DocDir) + stvDocuments.Selected.Text;
 
-  DocOpenDialog.Files.Clear;
-  if DocOpenDialog.Execute then
-  begin
-    if DocOpenDialog.Files.Count > 0 then
-      begin
-        for icount := 0 to pred(DocOpenDialog.Files.Count) do
-          begin
-            sfullFile := DocOpenDialog.Files.Strings[icount];
-            iLength := length(sFullFile);
-
-            i := -1;
-            while i <> 0 do
-              begin
-                ipos := pos('\',sFullFile);
-
-                if ipos > 0 then
-                  sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                i := pos('\',sFullFile);
-              end;
-
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
-
-            FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
-          end;
-        ShowDocuments(Sorder.dbKey);
-      end;
-  end;
+  CopyDocuments(DocOpenDialog, DocDir,
+    procedure
+    begin
+      ShowDocuments(Sorder.dbKey);
+    end);
 end;
 
 procedure TfrmWTMaintSalesOrder.btnEmailClick(Sender: TObject);
@@ -3915,55 +3887,17 @@ end;
 
 procedure TfrmWTMaintSalesOrder.pmnuPasteClick(Sender: TObject);
 var
-  f: THandle;
-  buffer: Array [0..MAX_PATH] of Char;
-  i, numFiles: Integer;
-  sFile, sFullFile, docdir: string;
-  iCount, iPos, iLength: integer;
+  DocDir: string;
 begin
-  docDir := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(SOrder.dbKey);
-  {Find a document} ;
+  DocDir := dtmdlWorktops.GetCompanySalesDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + inttostr(SOrder.dbKey);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  Clipboard.Open;
-  try
-    f := Clipboard.GetAsHandle(CF_HDROP);
-    if f <> 0 then
+  {Find a document}
+  CopyDocumentsFromClipboard(DocDir,
+    procedure
     begin
-      numFiles := DragQueryFile(f, $FFFFFFFF, nil, 0);
-//      memo1.Clear;
-      for i:= 0 to numfiles - 1 do
-      begin
-        buffer[0] := #0;
-        DragQueryFile( f, i, buffer, sizeof(buffer));
-
-        sfullFile := buffer;
-        iLength := length(sFullFile);
-
-        iCount := 1;
-
-        while iCount <> 0 do
-          begin
-            ipos := pos('\',sFullFile);
-
-            sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-            iCount := pos('\',sFullFile);
-          end;
-
-        sFile := copy(buffer, ipos+1, (iLength - ipos));
-
-        FileCopy(buffer, docDir + '\' + sfile) ;
-      end;
-    end;
-  finally
-    Clipboard.close;
-  end;
-  ShowDocuments(Sorder.dbKey);
+      ShowDocuments(Sorder.dbKey);
+    end);
 end;
 
 procedure TfrmWTMaintSalesOrder.pmnuDeleteClick(Sender: TObject);
@@ -5117,11 +5051,12 @@ var
 begin
   sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' ;
 
-  FEmailAttachment := TStringList.create;
-  FEmailAttachment.clear;
-
-  frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
+  FEmailAttachment := nil;
+  frmWTRPJobRemedialSheet := nil;
   try
+    FEmailAttachment := TStringList.create;
+    frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
+
     frmWTRPJobRemedialSheet.qrpJobSheet.ShowProgress := false;
     frmWTRPJobRemedialSheet.bPreview := false;
     frmWTRPJobRemedialSheet.Job := iJob;
@@ -5149,7 +5084,7 @@ begin
       frmWTRPJobRemedialSheet.qrpJobSheet.QRPrinter := nil;
       PDFFilter.Free;
     end;
-  finally
+
     {Now move the Remedial Sheet as PDF to the new Sales order folder}
     filecopy(sLocation + sFilename + '.pdf', sDest + sFilename + '.pdf');
 
@@ -5158,7 +5093,7 @@ begin
         StrPCopy(sAttachment, FEmailAttachment.strings[iCount]);
         deletefile(sAttachment);
       end;
-
+  finally
     FEmailAttachment.Free;
     frmWTRPJobRemedialSheet.free;
   end;

@@ -5,8 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -31,7 +31,6 @@ type
     procedure FormDeactivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -39,7 +38,6 @@ type
     FOperator: Integer;
     FOperator_Name, FsFaxSystem: string;
     fRep: Integer;
-    LocalDir: string;
     AppIniFile: Array [0..255] of char;
     FOperator_Email: string;
     procedure SetOK(const Value: Boolean);
@@ -63,7 +61,7 @@ var
 implementation
 
 uses
-  PBDatabase, System.UITypes, CCSCommon;
+  pbMainMenu, PBDatabase, System.UITypes, CCSCommon;
 
 {$R *.DFM}
 
@@ -73,8 +71,7 @@ var
   iAliasList: integer;
   sgList: TStringList;
 begin
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray,
-    sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray, sizeof(TempArray), AppIniFile);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
@@ -240,14 +237,6 @@ begin
   end;
 end;
 
-procedure TfrmpbLogin.FormShow(Sender: TObject);
-begin
-  {$IF DEFINED(GDK) AND DEFINED(DEBUG)}
-  UserEdit.Text := 'sa';
-  PasswordEdit.Text := ' ';
-  {$ENDIF}
-end;
-
 procedure TfrmpbLogin.CancelBitBtnClick(Sender: TObject);
 begin
   close;
@@ -255,8 +244,7 @@ end;
 
 procedure TfrmpbLogin.FormCreate(Sender: TObject);
 begin
-	LocalDir := ExtractFilePath(Application.ExeName);
-  StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
+  StrPCopy(AppIniFile, TfrmpbMainMenu.AppIniFile);
 end;
 
 procedure TfrmpbLogin.SetOperator_Email(const Value: string);

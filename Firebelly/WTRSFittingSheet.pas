@@ -80,7 +80,6 @@ type
     procedure BuildRange(sFirst, sLast: string);
     procedure BuildSelection;
     procedure GetSelection;
-    function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
@@ -559,7 +558,7 @@ begin
           if frmwtRPJobFitting.GetDetails > 0 then
             begin
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'FS' + sAttachmentType;
+              printFileName := 'FS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printfilename, sAttachmentType);
             end;
 
@@ -589,7 +588,7 @@ begin
                         else
                           begin
                             frmWTRPJobRemedialSheet.bPreview := false;
-                            printFileName := 'FS' + sAttachmentType;
+                            printFileName := 'FS' + EmailArray[irow,1];
                             TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                           end;
                       finally
@@ -775,7 +774,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'FS' + sAttachmentType;
+                  printFileName := 'FS' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
                 end;
 
@@ -818,7 +817,7 @@ begin
                           else
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
-                              printFileName := 'FS' + sAttachmentType;
+                              printFileName := 'FS' + EmailArray[irow,1];
                               TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                             end;
                         finally
@@ -885,7 +884,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'FS' + sAttachmentType;
+                  printFileName := 'FS' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
                 end;
 
@@ -1198,41 +1197,6 @@ begin
   until sOrderNo > sLast;
 
 end;
-
-Function TfrmWTRSFittingSheet.IncrementNo(StartStr: String): String ;
-Var StrLength, Count, Id: Integer ;
-    Alphas: String[27] ;
-    Numbers: String[11] ;
-    CurrChar: String[1] ;
-begin
-Alphas := 'ABCEDFGHIJKLMNOPQRSTUVWXYZA' ;
-Numbers := '01234567890' ;
-{Increment a string value by 1}
-StrLength := Length(StartStr) ;
-For Count := StrLength downto 1 do
-    begin
-    CurrChar := Copy(StartStr,Count,1) ;
-    Id := Pos(CurrChar,Numbers) ;
-    if Id > 0 then
-       begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-       IncrementNo := StartStr ;
-       if Id < 10 then exit ;
-       end
-    else
-        begin
-        Id := Pos(CurrChar,Alphas) ;
-        if Id > 0 then
-               begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-        IncrementNo := StartStr ;
-        if Id < 27 then exit ;
-               end ;
-        end ;
-       end ;
-end ;
 
 procedure TfrmWTRSFittingSheet.FormActivate(Sender: TObject);
 var

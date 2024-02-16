@@ -117,6 +117,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 8
     Width = 489
     Height = 339
+    ParentBackground = False
     TabOrder = 5
     object Label2: TLabel
       Left = 8
@@ -411,6 +412,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Top = 8
     Width = 489
     Height = 145
+    ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 10

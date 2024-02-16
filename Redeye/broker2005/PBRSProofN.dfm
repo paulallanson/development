@@ -305,9 +305,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Status'
-        ParamType = ptUnknown
       end>
   end
   object ProofStatusSRC: TDataSource

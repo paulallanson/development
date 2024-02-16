@@ -173,13 +173,20 @@ object STMntPOrdFrm: TSTMntPOrdFrm
           Height = 211
           Align = alClient
           DataSource = dtsGetSInvoice
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clBlack
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDblClick = dbgInvoicesDblClick
           Columns = <
             item

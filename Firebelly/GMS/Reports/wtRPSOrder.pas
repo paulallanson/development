@@ -44,11 +44,11 @@ type
     qrySOLineInstallation_price: TFloatField;
     qrySOLineSurvey_price: TFloatField;
     qrySOLineDelivery_Price: TFloatField;
-    qrySOLineDescription: TStringField;
+    qrySOLineDescription: TWideStringField;
     qrySOLineProduct: TIntegerField;
     qrySOLineVat: TIntegerField;
     qrySOLineVat_Rate: TFloatField;
-    qrySOLineVAT_Description: TStringField;
+    qrySOLineVAT_Description: TWideStringField;
     QRBand1: TQRBand;
     qrlblUnitPrice: TQRLabel;
     qrlblTotalPrice: TQRLabel;

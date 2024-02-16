@@ -12,7 +12,7 @@ object PJExtFileFilterExtPEDlg: TPJExtFileFilterExtPEDlg
   Font.Name = 'Arial'
   Font.Style = []
   Position = poScreenCenter
-  Scaled = False
+  
   TextHeight = 14
   object edExtension: TEdit
     Left = 8

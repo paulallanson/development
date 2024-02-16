@@ -1,4 +1,4 @@
-﻿object CSLUCustFrm: TCSLUCustFrm
+object CSLUCustFrm: TCSLUCustFrm
   Left = 177
   Top = 121
   BorderStyle = bsDialog
@@ -8,20 +8,18 @@
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 13
   object CountLabel: TLabel
-    Left = 249
+    Left = 254
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -45,7 +43,7 @@
       Left = 8
       Top = 16
       Width = 297
-      Height = 23
+      Height = 21
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -57,8 +55,6 @@
     Height = 25
     Caption = 'Select'
     Default = True
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -124,14 +120,17 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 345
     Top = 335
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object GoToGrpBox: TGroupBox
     Left = 336
@@ -146,8 +145,6 @@
       Width = 83
       Height = 25
       Caption = 'Branches'
-      TabOrder = 0
-      OnClick = BranchesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -162,6 +159,8 @@
         3333333337FFFF7F333333333000000333333333377777733333333333077033
         33333333337FF7F3333333333300003333333333337777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BranchesBitBtnClick
     end
     object CstCntrBitBtn: TBitBtn
       Left = 8
@@ -169,8 +168,6 @@
       Width = 81
       Height = 25
       Caption = 'C/Centre'
-      TabOrder = 1
-      OnClick = CstCntrBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -185,6 +182,8 @@
         0333337F777777737F333308888888880333337F333333337F33330888888888
         03333373FFFFFFFF733333700000000073333337777777773333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CstCntrBitBtnClick
     end
     object DiscBitBtn: TBitBtn
       Left = 8
@@ -192,8 +191,6 @@
       Width = 81
       Height = 25
       Caption = 'Discount'
-      TabOrder = 2
-      OnClick = DiscBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -208,6 +205,8 @@
         003C377F333337777737330333333C3303333F7FFFFFF7FF7FFF770777777777
         7777777777777777777733333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DiscBitBtnClick
     end
   end
   object FuncGrpBox: TGroupBox
@@ -223,8 +222,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -239,6 +236,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 11
@@ -246,8 +245,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -262,6 +259,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 11
@@ -269,8 +268,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -285,6 +282,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object ActiveOnlyCheckBox: TCheckBox
@@ -352,22 +351,22 @@
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 37
-      Height = 15
+      Width = 32
+      Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 39
-      Height = 15
+      Width = 36
+      Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 22
-      Height = 15
+      Width = 20
+      Height = 13
       Caption = 'Fax:'
     end
   end
@@ -377,13 +376,20 @@
     Width = 313
     Height = 209
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -402,8 +408,6 @@
     Height = 25
     Caption = 'B&ranch'
     Default = True
-    TabOrder = 9
-    OnClick = SelBranchBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -469,6 +473,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = SelBranchBitBtnClick
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -498,19 +504,16 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Active_Only'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object SearchTimer: TTimer
@@ -567,9 +570,8 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object NullSRC: TDataSource

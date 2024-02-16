@@ -23,7 +23,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 852
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -48,8 +47,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     Height = 54
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 360
-    ExplicitWidth = 852
     DesignSize = (
       858
       54)
@@ -69,7 +66,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 768
     end
     object btnNone: TButton
       Left = 678
@@ -81,7 +77,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       ModalResult = 1
       TabOrder = 1
       OnClick = btnNoneClick
-      ExplicitLeft = 672
     end
     object btnSelect: TButton
       Left = 582
@@ -93,7 +88,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       Enabled = False
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 576
     end
     object edtSearch: TEdit
       Left = 96
@@ -110,13 +104,20 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     Width = 858
     Height = 320
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -214,8 +215,6 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       item
         Width = 50
       end>
-    ExplicitTop = 414
-    ExplicitWidth = 852
   end
   object tmrSearch: TTimer
     Interval = 500

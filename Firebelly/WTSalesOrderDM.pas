@@ -1506,7 +1506,7 @@ var
   tempStatus, iOrigStatus: integer;
 begin
   Result := self.Status;
-  
+
   with datamodule.qryGetSOLines do
     begin
       close;

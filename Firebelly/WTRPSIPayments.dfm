@@ -10,7 +10,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
@@ -1138,18 +1138,18 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
     object qryReportPayment_Method: TIntegerField
       FieldName = 'Payment_Method'
     end
-    object qryReportPayment_Method_Description: TStringField
+    object qryReportPayment_Method_Description: TWideStringField
       FieldName = 'Payment_Method_Description'
       Size = 30
     end
-    object qryReportPayment_Description: TStringField
+    object qryReportPayment_Description: TWideStringField
       FieldName = 'Payment_Description'
       Size = 255
     end
     object qryReportSales_Order: TIntegerField
       FieldName = 'Sales_Order'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
@@ -1159,18 +1159,18 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qryReportIs_Retail_Customer: TStringField
+    object qryReportIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 1
     end
-    object qryReportInvoice_no: TStringField
+    object qryReportInvoice_No: TWideStringField
       FieldName = 'Invoice_no'
     end
-    object qryReportAccount_Code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_Code'
     end
   end

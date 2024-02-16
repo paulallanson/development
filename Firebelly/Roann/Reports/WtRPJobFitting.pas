@@ -121,7 +121,7 @@ type
     gtQRDBText9: TQRDBText;
     gtQRLabel33: TQRLabel;
     gtQRDBText10: TQRDBText;
-    qrrchTextInstallAddress2: TQRRichText;
+    qrrchTextInstallAddress2: TQRMemo;
     gtQRLabel34: TQRLabel;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TQRLabel;

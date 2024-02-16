@@ -12,7 +12,7 @@ object frmPrintingPress: TfrmPrintingPress
   Font.Height = -16
   Font.Name = 'Times New Roman'
   Font.Style = [fsBold]
-  Scaled = False
+  
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 19

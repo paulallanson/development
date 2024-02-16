@@ -23,6 +23,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     Height = 320
     Align = alClient
     DataSource = dmSalesInvoice.dsJBAll
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
@@ -35,7 +36,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     TitleFont.Color = clBlack
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnCellClick = dbgJBCellClick
     OnDblClick = dbgJBDblClick
     Columns = <

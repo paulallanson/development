@@ -10,7 +10,7 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object QuickReport: TQuickRep
     Left = 16
@@ -942,7 +942,7 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
         'ce)')
     Left = 32
     Top = 64
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 40

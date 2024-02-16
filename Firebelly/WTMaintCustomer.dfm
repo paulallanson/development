@@ -2,7 +2,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Left = 322
   Top = 35
   Caption = 'Customer details'
-  ClientHeight = 542
+  ClientHeight = 585
   ClientWidth = 838
   Color = clBtnFace
   Constraints.MinHeight = 459
@@ -21,7 +21,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 481
+    Top = 524
     Width = 838
     Height = 42
     Align = alBottom
@@ -82,9 +82,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -99,14 +96,17 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = NotesBitBtnClick
     end
   end
   object pgDetails: TPageControl
     Left = 0
     Top = 0
     Width = 838
-    Height = 481
-    ActivePage = TabSheet1
+    Height = 524
+    ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
     object tsGeneral: TTabSheet
@@ -115,13 +115,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 830
-        Height = 453
+        Height = 496
         Align = alClient
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
           830
-          453)
+          496)
         object Label1: TLabel
           Left = 8
           Top = 12
@@ -464,12 +464,19 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
           DataSource = dtsGetAccountCodes
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 28
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
-          TitleFont.Name = 'MS Sans Serif'
-          TitleFont.Style = []
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = [fsBold]
           Visible = False
           Columns = <
             item
@@ -489,7 +496,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
         object chkbxRequiresAppForPay: TCheckBox
           Left = 384
-          Top = 278
+          Top = 442
           Width = 265
           Height = 17
           Caption = 'Requires Application for Payment'
@@ -767,7 +774,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 272
-        Height = 453
+        Height = 496
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
@@ -949,7 +956,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 272
         Top = 0
         Width = 558
-        Height = 453
+        Height = 496
         Align = alClient
         Caption = 'Panel13'
         ParentBackground = False
@@ -968,7 +975,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Left = 465
           Top = 42
           Width = 92
-          Height = 369
+          Height = 412
           Align = alRight
           ParentBackground = False
           TabOrder = 1
@@ -1004,15 +1011,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Left = 1
           Top = 42
           Width = 464
-          Height = 369
+          Height = 412
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
           TabOrder = 2
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnDrawColumnCell = dbgMaterialTypesDrawColumnCell
           OnDblClick = dbgMaterialTypesDblClick
           Columns = <
@@ -1033,7 +1047,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
         object pnlMaterialTypeFooter: TPanel
           Left = 1
-          Top = 411
+          Top = 454
           Width = 556
           Height = 41
           Align = alBottom
@@ -1058,15 +1072,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 313
-        Height = 453
+        Height = 496
         Align = alLeft
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgBranchesDblClick
         Columns = <
           item
@@ -1114,12 +1135,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 417
+        Height = 460
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 739
-        ExplicitHeight = 408
         object btnChangeQ: TBitBtn
           Left = 4
           Top = 40
@@ -1179,15 +1198,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 417
+        Height = 460
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgQuotesDblClick
         Columns = <
           item
@@ -1266,14 +1292,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel4: TPanel
         Left = 0
-        Top = 417
+        Top = 460
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 408
-        ExplicitWidth = 824
         object Label19: TLabel
           Left = 8
           Top = 12
@@ -1299,15 +1323,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 417
+        Height = 460
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgSOrdersDblClick
         Columns = <
           item
@@ -1376,12 +1407,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 417
+        Height = 460
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 739
-        ExplicitHeight = 408
         object btnChangeSO: TBitBtn
           Left = 4
           Top = 40
@@ -1412,14 +1441,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel6: TPanel
         Left = 0
-        Top = 417
+        Top = 460
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 408
-        ExplicitWidth = 824
         object Label20: TLabel
           Left = 8
           Top = 12
@@ -1445,12 +1472,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 417
+        Height = 460
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 739
-        ExplicitHeight = 408
         object btnChangeJob: TBitBtn
           Left = 4
           Top = 40
@@ -1481,14 +1506,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel8: TPanel
         Left = 0
-        Top = 417
+        Top = 460
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 408
-        ExplicitWidth = 824
         object Label21: TLabel
           Left = 8
           Top = 12
@@ -1509,15 +1532,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 417
+        Height = 460
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 2
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgJobsDblClick
         Columns = <
           item
@@ -1603,15 +1633,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 745
-        Height = 417
+        Height = 460
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgInvoicesDblClick
         Columns = <
           item
@@ -1673,12 +1710,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 745
         Top = 0
         Width = 85
-        Height = 417
+        Height = 460
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 739
-        ExplicitHeight = 408
         object btnPrintInv: TBitBtn
           Left = 4
           Top = 40
@@ -1700,14 +1735,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object Panel10: TPanel
         Left = 0
-        Top = 417
+        Top = 460
         Width = 830
         Height = 36
         Align = alBottom
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 408
-        ExplicitWidth = 824
         object Label22: TLabel
           Left = 8
           Top = 12
@@ -1732,12 +1765,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 737
         Top = 0
         Width = 93
-        Height = 320
+        Height = 363
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 731
-        ExplicitHeight = 311
         object btnChangeEv: TBitBtn
           Left = 9
           Top = 40
@@ -1770,15 +1801,22 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 737
-        Height = 320
+        Height = 363
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgEventsDblClick
         Columns = <
           item
@@ -1819,13 +1857,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object TPanel
         Left = 0
-        Top = 320
+        Top = 363
         Width = 830
         Height = 133
         Align = alBottom
         TabOrder = 2
-        ExplicitTop = 311
-        ExplicitWidth = 824
         object Label28: TLabel
           Left = 291
           Top = 29
@@ -2018,18 +2054,16 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 17
         Width = 830
-        Height = 436
+        Height = 479
         Align = alClient
         Caption = 'Panel11'
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 824
-        ExplicitHeight = 427
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
           Width = 799
-          Height = 434
+          Height = 477
           Align = alClient
           Columns = <
             item
@@ -2057,7 +2091,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Left = 800
           Top = 1
           Width = 29
-          Height = 434
+          Height = 477
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -2121,7 +2155,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 824
         object Label44: TLabel
           Left = 2
           Top = 4
@@ -2134,7 +2167,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 523
+    Top = 566
     Width = 838
     Height = 19
     Panels = <
@@ -2173,135 +2206,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 428
     Bitmap = {
       494C010107000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000FFFF0000000000000000000000
       000000000000000000000000000000FFFF000000000000000000000000000000
@@ -2559,12 +2464,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
-      000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000FF7EE00FFC0000009001E00FFC000000
+      2800000040000000200000000100010000000000000100000000000000000000
+      000000000000000000000000FFFFFF00FF7EE00FFC0000009001E00FFC000000
       C003E00F20000000E003E00F00000000E003E00F00000000E003E00F00000000
       E003E00F000000000001A00B000000008000C00700000000E007E00F00000000
       E00FE00FE0000000E00FC007F8000000E027C007F0000000C073C007E0010000
@@ -2868,14 +2769,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Name = 'Unit_Cost'
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery

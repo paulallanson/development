@@ -1446,7 +1446,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
 
       DisplayFormat = '0.00'
     end
-    object qrySOLineDescription: TStringField
+    object qrySOLineDescription: TWideStringField
       FieldName = 'Description'
 
       Size = 50
@@ -1464,7 +1464,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
 
       DisplayFormat = '0.00'
     end
-    object qrySOLineVAT_Description: TStringField
+    object qrySOLineVAT_Description: TWideStringField
       FieldName = 'VAT_Description'
 
       Size = 40

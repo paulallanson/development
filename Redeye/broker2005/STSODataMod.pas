@@ -90,7 +90,7 @@ type
     qryCallOffList: TFDQuery;
     qryGetFormRefDtls: TFDQuery;
     qryReport: TFDQuery;
-    qryReportdescription: TStringField;
+    qryReportDescription: TWideStringField;
     qryReportquantity: TIntegerField;
     qryReportquantity_allocated: TIntegerField;
     qryReportdelivery_to_Stock: TStringField;

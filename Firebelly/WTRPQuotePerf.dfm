@@ -2,15 +2,15 @@ object frmwtRPQuotePerf: TfrmwtRPQuotePerf
   Left = 49
   Top = 110
   Caption = 'Quote Report'
-  ClientHeight = 576
-  ClientWidth = 1147
+  ClientHeight = 529
+  ClientWidth = 738
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16

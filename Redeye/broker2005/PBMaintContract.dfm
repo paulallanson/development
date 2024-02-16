@@ -32,8 +32,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       item
         Width = 50
       end>
-    ExplicitTop = 603
-    ExplicitWidth = 958
   end
   object pnlTop: TPanel
     Left = 0
@@ -43,7 +41,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 958
     DesignSize = (
       954
       41)
@@ -150,7 +147,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 3
-      ExplicitLeft = 788
     end
     object btnAccountManager: TButton
       Left = 893
@@ -167,7 +163,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
       TabOrder = 4
       OnClick = btnAccountManagerClick
-      ExplicitLeft = 901
     end
     object edtEffectiveDate: TEdit
       Left = 562
@@ -208,8 +203,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 564
-    ExplicitWidth = 958
     object lblGDPRSignedStatement: TLabel
       Left = 11
       Top = 13
@@ -225,7 +218,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Visible = False
     end
     object pnlBottom: TPanel
-      Left = 581
+      Left = 577
       Top = 1
       Width = 376
       Height = 37
@@ -328,7 +321,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 958
     DesignSize = (
       954
       224)
@@ -491,7 +483,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
-      ExplicitWidth = 308
     end
     object btnCustomer: TBitBtn
       Left = 397
@@ -508,7 +499,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ParentFont = False
       TabOrder = 1
       OnClick = btnCustomerClick
-      ExplicitLeft = 405
     end
     object BitBtn4: TBitBtn
       Left = 324
@@ -546,7 +536,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnEnter = memQuantityEnter
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 788
     end
     object btnRep: TBitBtn
       Left = 324
@@ -621,7 +610,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnEnter = memQuantityEnter
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 788
     end
     object dblkpDurationType: TDBLookupComboBox
       Left = 850
@@ -633,7 +621,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 14
       OnClick = dblkpDurationTypeClick
-      ExplicitLeft = 858
     end
     object memNoticePeriod: TMemo
       Left = 780
@@ -645,7 +632,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memNoticePeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 788
     end
     object dblkpNoticeType: TDBLookupComboBox
       Left = 850
@@ -657,7 +643,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 18
       OnClick = dblkpNoticeTypeClick
-      ExplicitLeft = 858
     end
     object memTermPeriod: TMemo
       Left = 780
@@ -669,7 +654,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memTermPeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 788
     end
     object dblkpTermType: TDBLookupComboBox
       Left = 850
@@ -681,7 +665,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 20
       OnClick = dblkpTermTypeClick
-      ExplicitLeft = 858
     end
     object dblkpPaymentTerms: TDBLookupComboBox
       Left = 84
@@ -703,7 +686,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       OnChange = memReviewPeriodChange
       OnExit = memQuantityExit
       OnKeyPress = memQuantityKeyPress
-      ExplicitLeft = 788
     end
     object dblkpReviewType: TDBLookupComboBox
       Left = 850
@@ -715,7 +697,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 22
       OnClick = dblkpReviewTypeClick
-      ExplicitLeft = 858
     end
     object btnTerms: TBitBtn
       Tag = 100
@@ -779,7 +760,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       ListField = 'Period_Description'
       TabOrder = 16
       OnClick = dblkpFrequencyTypeClick
-      ExplicitLeft = 858
     end
     object spnDuration: TSpinEdit
       Left = 780
@@ -792,7 +772,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       TabOrder = 13
       Value = 1
       OnChange = spnDurationChange
-      ExplicitLeft = 788
     end
     object spnFrequency: TSpinEdit
       Left = 780
@@ -805,7 +784,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
       TabOrder = 15
       Value = 1
       OnChange = spnFrequencyChange
-      ExplicitLeft = 788
     end
   end
   object pgDetails: TPageControl
@@ -816,24 +794,29 @@ object PBMaintContractFrm: TPBMaintContractFrm
     ActivePage = TabSheet3
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 958
-    ExplicitHeight = 222
     object TabSheet3: TTabSheet
       Caption = 'Job Bags'
       ImageIndex = 2
       object dbgJobDetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 865
-        Height = 175
+        Width = 861
+        Height = 174
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgJobDetailsDblClick
         Columns = <
           item
@@ -900,10 +883,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end>
       end
       object Panel3: TPanel
-        Left = 865
+        Left = 861
         Top = 0
         Width = 85
-        Height = 175
+        Height = 174
         Align = alRight
         ParentBackground = False
         TabOrder = 1
@@ -975,8 +958,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
       end
       object stsBrJobDetails: TStatusBar
         Left = 0
-        Top = 175
-        Width = 950
+        Top = 174
+        Width = 946
         Height = 19
         Panels = <
           item
@@ -1060,13 +1043,20 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Width = 869
         Height = 186
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = dbgPODetailsDblClick
         Columns = <
           item
@@ -1138,16 +1128,23 @@ object PBMaintContractFrm: TPBMaintContractFrm
       object dbgSalesInvoices: TDBGrid
         Left = 0
         Top = 0
-        Width = 865
-        Height = 166
+        Width = 861
+        Height = 165
         Align = alClient
+        DrawingStyle = gdsGradient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         Columns = <
           item
@@ -1192,10 +1189,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end>
       end
       object Panel8: TPanel
-        Left = 865
+        Left = 861
         Top = 0
         Width = 85
-        Height = 166
+        Height = 165
         Align = alRight
         ParentBackground = False
         TabOrder = 1
@@ -1223,8 +1220,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
       end
       object Panel19: TPanel
         Left = 0
-        Top = 166
-        Width = 950
+        Top = 165
+        Width = 946
         Height = 28
         Align = alBottom
         ParentBackground = False
@@ -1387,8 +1384,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 487
-    ExplicitWidth = 958
     object btnNotes: TBitBtn
       Left = 8
       Top = 13

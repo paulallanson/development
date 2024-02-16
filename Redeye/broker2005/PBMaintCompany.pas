@@ -1880,7 +1880,7 @@ end;
 procedure TPBMaintCompanyFrm.FormCreate(Sender: TObject);
 begin
   StatusBar1.Top := Screen.Height - StatusBar1.Height;
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 procedure TPBMaintCompanyFrm.FormDestroy(Sender: TObject);

@@ -10,7 +10,7 @@ object PBRPStkMovefrm: TPBRPStkMovefrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   TextHeight = 13
   object QuickReport: TQuickRep
@@ -1885,7 +1885,7 @@ object PBRPStkMovefrm: TPBRPStkMovefrm
       FieldName = 'Supplier_Name'
       Size = 40
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 40
     end

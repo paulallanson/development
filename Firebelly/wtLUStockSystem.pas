@@ -45,7 +45,7 @@ var
 
 implementation
 
-uses wtMaintStockSystem;
+uses UITypes, wtMaintStockSystem;
 
 {$R *.dfm}
 

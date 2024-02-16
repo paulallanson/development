@@ -10,7 +10,7 @@ object PBRPSalesByInvFrm: TPBRPSalesByInvFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   TextHeight = 13
   object qckrpSalesByInv: TQuickRep
@@ -1926,7 +1926,7 @@ object PBRPSalesByInvFrm: TPBRPSalesByInvFrm
     object qrySalesbyInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesbyInvInvoice_or_Credit: TStringField
+    object qrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2

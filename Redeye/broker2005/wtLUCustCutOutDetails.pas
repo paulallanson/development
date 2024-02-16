@@ -98,21 +98,21 @@ var
 
 implementation
 
-uses wtMaintCutOutDetails, wtDataModule, wtMain;
+uses wtMaintCutOutDetails, wtDataModule, wtMain, AllCommon;
 
 {$R *.dfm}
 
 procedure TfrmWTLUCustCutOutDetails.Refresh;
 begin
-  dbgDetails.Columns[0].visible := (dblkpMaterialType.KeyValue = 0);
+  dbgDetails.Columns[0].visible := (dblkpMaterialType.ListValue = 0);
   dbgDetails.Columns[0].width := 150;
-  dbgDetails.Columns[1].visible := (dblkpEdgeType.KeyValue = 0);
+  dbgDetails.Columns[1].visible := (dblkpEdgeType.ListValue = 0);
   dbgDetails.Columns[1].width := 150;
 
 (*  with lkpCOutThickness do
     begin
       close;
-      parambyname('Material_Type').asinteger := dblkpMaterialType.keyvalue;
+      parambyname('Material_Type').asinteger := dblkpMaterialType.listvalue;
       parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
       parambyname('Description').asstring :=  '%' + edtName.Text + '%';
       if chkbxShowinactive.checked then

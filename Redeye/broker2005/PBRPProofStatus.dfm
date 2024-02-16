@@ -10,7 +10,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 15
   object qrpProofStatus: TQuickRep
     Left = -152
@@ -816,7 +816,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
       FixedChar = True
       Size = 2
     end
-    object qryReportDescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
@@ -832,7 +832,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80

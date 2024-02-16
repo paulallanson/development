@@ -10,7 +10,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep

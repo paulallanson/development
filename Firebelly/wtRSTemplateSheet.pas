@@ -76,7 +76,6 @@ type
     procedure BuildRange(sFirst, sLast: string);
     procedure BuildSelection;
     procedure GetSelection;
-    function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
     procedure RunPlanPrint;
@@ -95,6 +94,7 @@ type
     FEmailAttachment : TstringList;
     sAttachmentType: string;
     sSitePath: string;
+    FOrderNumber: string;
     procedure ListOrderDocuments(strPath: string; ListBox: TListBox);
     procedure GetOrderQuotes(ListBox: TListBox);
     procedure RunQuoteReport(const bPreview: boolean);
@@ -105,7 +105,7 @@ type
     property DefaultDocumentFolder: string read FDefaultDocumentFolder write SetDefaultDocumentFolder;
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
   public
-    sOrderNumber: string;
+    property OrderNumber: string read FOrderNumber write FOrderNumber;
     property SalesOrderCount: integer read FSalesOrderCount write SetSalesOrderCount;
   end;
 
@@ -180,7 +180,7 @@ begin
   with qryGetSOQuotes do
     begin
       close;
-      parambyname('Sales_Order').asinteger := strtoint(sOrderNumber);
+      parambyname('Sales_Order').asinteger := strtoint(FOrderNumber);
       open;
 
       first;
@@ -397,9 +397,9 @@ var
   i: integer;
 begin
   if cmbDocuments.text = '<All>' then
-    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\'
+    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\'
   else
-    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\' + cmbDocuments.text + '\';
+    sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\' + cmbDocuments.text + '\';
 
   for i := 0 to pred(lstbxDocuments.items.count) do
     begin
@@ -554,7 +554,7 @@ var
   pFilename: Pchar;
 begin
   iRow := lstbxDocuments.itemindex;
-  sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
+  sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\';
 
   sFilename := lstbxDocuments.Items[iRow];
   pFileName := PChar(sPath+sFilename);
@@ -639,7 +639,7 @@ begin
     begin
       for irow := 1 to frmWTEmailList.EmailListGrid.Rowcount -1 do
       begin
-        if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
+        //if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
 
         sOrderNumber := EmailArray[irow,1];
         sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
@@ -661,7 +661,8 @@ begin
           sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          printFileName := 'TS' + sAttachmentType;
+          printFileName := 'TS' + EmailArray[irow,1];
+
           TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           if self.chkbxPrint.checked then
@@ -881,7 +882,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'TS' + sAttachmentType;
+              printFileName := 'TS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType);
 
               if iOrderCount = 1 then
@@ -1032,7 +1033,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'TS' + sAttachmentType;
+              printFileName := 'TS' + EmailArray[irow,1];
               TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
@@ -1355,41 +1356,6 @@ begin
 
 end;
 
-Function TfrmWTRSTemplateSheet.IncrementNo(StartStr: String): String ;
-Var StrLength, Count, Id: Integer ;
-    Alphas: String[27] ;
-    Numbers: String[11] ;
-    CurrChar: String[1] ;
-begin
-Alphas := 'ABCEDFGHIJKLMNOPQRSTUVWXYZA' ;
-Numbers := '01234567890' ;
-{Increment a string value by 1}
-StrLength := Length(StartStr) ;
-For Count := StrLength downto 1 do
-    begin
-    CurrChar := Copy(StartStr,Count,1) ;
-    Id := Pos(CurrChar,Numbers) ;
-    if Id > 0 then
-       begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-       IncrementNo := StartStr ;
-       if Id < 10 then exit ;
-       end
-    else
-        begin
-        Id := Pos(CurrChar,Alphas) ;
-        if Id > 0 then
-               begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-        IncrementNo := StartStr ;
-        if Id < 27 then exit ;
-               end ;
-        end ;
-       end ;
-end ;
-
 procedure TfrmWTRSTemplateSheet.FormActivate(Sender: TObject);
 var
   sPath: string;
@@ -1463,13 +1429,13 @@ begin
     begin
       if cmbDocuments.itemindex = 0 then
         begin
-          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
+          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\';
           ListOrderDocuments(sPath,lstbxDocuments);
         end
       else
       if cmbDocuments.text <> '<None>' then
         begin
-          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\' + cmbDocuments.text + '\';
+          sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + FOrderNumber + '\' + cmbDocuments.text + '\';
           ListOrderDocuments(sPath,lstbxDocuments);
         end
     end;

@@ -12,7 +12,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Sales_Profit'
       'where Sales_invoice = :Sales_invoice')
     Left = 16
-    Top = 12
+    Top = 16
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -659,29 +659,19 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -754,7 +744,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object qrySIHeaderGridPaid_Amount: TFloatField
+    object qrySIHeaderGridPaid_Amount: TCurrencyField
       FieldName = 'Paid_Amount'
       DisplayFormat = '0.00'
     end
@@ -762,7 +752,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Paid_Status'
       Size = 1
     end
-    object qrySIHeaderGridDeposit_Amount: TFloatField
+    object qrySIHeaderGridDeposit_Amount: TCurrencyField
       FieldName = 'Deposit_Amount'
       Origin = 'Deposit_Amount'
     end
@@ -1647,7 +1637,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Purchase_Order = :Purchase_Order and'
       '           Purch_Ord_Line_Status <> :Purch_Ord_Line_Status')
     Left = 96
-    Top = 106
+    Top = 104
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1722,8 +1712,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 680
-    Top = 444
+    Left = 696
+    Top = 440
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1803,7 +1793,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' ')
     Left = 96
-    Top = 316
+    Top = 320
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2257,27 +2247,27 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object qrySCHeaderGridRep_Name: TStringField
+    object qrySCHeaderGridRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qrySCHeaderGridOperator_Name: TStringField
+    object qrySCHeaderGridOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object qrySCHeaderGridAccount_Manager_Name: TStringField
+    object qrySCHeaderGridAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qrySCHeaderGridOrder_Reference: TStringField
+    object qrySCHeaderGridOrder_Reference: TWideStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object qrySCHeaderGridBranch_Name: TStringField
+    object qrySCHeaderGridBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       Size = 100
     end
-    object qrySCHeaderGridRevenue_Centre_Descr: TStringField
+    object qrySCHeaderGridRevenue_Centre_Descr: TWideStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
@@ -2472,17 +2462,14 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
         Name = 'Date_Required'
@@ -2807,17 +2794,12 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qrySCHeaderBase: TFDQuery
@@ -2994,7 +2976,6 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qrySCHeaderBaseOlder: TFDQuery
@@ -3063,19 +3044,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qrySIHeaderBaseOld: TFDQuery
@@ -3159,19 +3134,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qrySCHeaderBaseOld: TFDQuery
@@ -3244,19 +3213,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
 end

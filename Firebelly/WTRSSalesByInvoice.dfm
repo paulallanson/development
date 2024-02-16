@@ -3,8 +3,8 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Sales by Invoice Report'
-  ClientHeight = 294
-  ClientWidth = 478
+  ClientHeight = 295
+  ClientWidth = 517
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,22 +14,23 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    478
-    294)
+    517
+    295)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 259
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 259
   end
   object Button4: TButton
     Left = 384
-    Top = 259
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,6 +38,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 259
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -206,23 +208,25 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
   end
   object btnPreview: TButton
     Left = 96
-    Top = 259
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 259
   end
   object btnExcel: TButton
     Left = 184
-    Top = 259
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 259
   end
   object OleContainer1: TOleContainer
     Left = 172
@@ -318,7 +322,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     end
   end
   object rdgrpChargeType: TRadioGroup
-    Left = 369
+    Left = 352
     Top = 160
     Width = 153
     Height = 90
@@ -329,6 +333,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
       'Invoice'
       'Application for Payment'
       'Retail')
+    ParentBackground = False
     TabOrder = 14
   end
   object qryReps: TFDQuery

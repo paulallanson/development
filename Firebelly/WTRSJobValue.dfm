@@ -4,7 +4,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
   BorderStyle = bsDialog
   Caption = 'Job Value Report'
   ClientHeight = 208
-  ClientWidth = 343
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    343
+    356
     208)
   TextHeight = 13
   object btnPrint: TButton
@@ -188,7 +188,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     TabOrder = 5
   end
   object btnExcel: TBitBtn
-    Left = 166
+    Left = 179
     Top = 177
     Width = 75
     Height = 25
@@ -239,6 +239,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
+    ExplicitLeft = 166
   end
   object OleContainer1: TOleContainer
     Left = 140

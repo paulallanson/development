@@ -28,6 +28,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     Width = 320
     Height = 209
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
@@ -40,16 +41,11 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
         FieldName = 'Description'
-        Title.Font.Charset = ANSI_CHARSET
-        Title.Font.Color = clBlack
-        Title.Font.Height = -11
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 303
         Visible = True
       end>

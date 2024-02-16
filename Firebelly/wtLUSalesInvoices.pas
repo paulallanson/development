@@ -129,11 +129,11 @@ end;
 
 procedure TfrmWTLUSalesInvoices.FormCreate(Sender: TObject);
 var
-  IniFile : TIniFile;
+  IniFile: TIniFile;
   iRevenueCentre: integer;
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
-  
+
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   if not pnlRevenueCentre.Visible then
     pnlFooter.Height := 70;
@@ -147,7 +147,6 @@ begin
 
   {Set the revenue centre details}
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-
   try
   with IniFile do
     begin
@@ -679,7 +678,6 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-
   try
     with IniFile do
     begin
@@ -694,7 +692,7 @@ begin
 
 
   Printers.Printer.PrinterIndex := -1;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', myWorktops_INIFILE, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);
@@ -731,7 +729,7 @@ begin
   try
     frmWTLUPayments.lblSalesOrder.caption := 'Sales Order: ' + inttostr(SOrder);
     frmWTLUPayments.lblSalesInvoice.caption := 'Sales Invoice: ' + dbgDetails.DataSource.dataset.fieldbyname('Invoice_No').asstring;
-    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Customer_Name').asstring;
+    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Original_Name').asstring;
     frmWTLUPayments.lblAccountCode.caption := 'Account Code: ' + dbgDetails.DataSource.dataset.fieldbyname('Account_Code').asstring;
     frmWTLUPayments.lblDescription.caption := 'Description:' + dbgDetails.DataSource.dataset.fieldbyname('Description').asstring;
     frmWTLUPayments.rDepositTerms := 0;

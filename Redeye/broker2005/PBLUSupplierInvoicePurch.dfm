@@ -214,6 +214,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       Width = 774
       Height = 392
       Align = alClient
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -11
@@ -226,7 +227,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       TitleFont.Color = clBlack
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnCellClick = dbgPurchCellClick
       OnDblClick = dbgPurchDblClick
       Columns = <

@@ -3,11 +3,9 @@ unit WTLogin;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLogin = class(TForm)
@@ -30,7 +28,6 @@ type
     procedure CompLogoImageDblClick(Sender: TObject);
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -65,8 +62,7 @@ var
 
 implementation
 
-uses
-  UITypes, wtDataModule, WTEnvSel, AllCommon, wtMain;
+uses UITypes, wtDataModule, WTEnvSel, wtMain;
 
 {$R *.DFM}
 
@@ -76,17 +72,16 @@ var
   iAliasList: integer;
   sgList: TStringList;
 begin
-  GetPrivateProfileString('Quaystone', 'LoginAlias', 'myWorktops', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+  GetPrivateProfileString('Quaystone', 'LoginAlias', 'myWorktops', TempArray, sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
   try
-    FDManager.GetConnectionDefNames(sgList);
+    FDManager.GetConnectionNames(sgList);
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if (pos('Worktop',sgList[iAliasList]) > 0) or (pos('worktop',sgList[iAliasList]) > 0) then
-        cmbAliasList.Items.Add(sgList[iAliasList]) ;
+        cmbAliasList.Items.Add(sgList[iAliasList]);
 
     cmbAliasList.Sorted := true;
     cmbAliasList.ItemIndex := cmbAliasList.items.indexof(temparray);
@@ -99,10 +94,9 @@ begin
   end;
 
   Edit1.Text := TempArray;
-  sDBase := ShortString(Copy(Edit1.Text, 1, 1));
+  sDBase := ShortString(Copy(Trim(Edit1.Text), 1, 1));
   ShowDataBAse(Self);
-  GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray,
-    sizeof(TempArray), myWorktops_INIFILE);
+  GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray, SizeOf(TempArray), TfrmWTMain.AppIniFile);
   Edit1.Text := TempArray;
   FsFaxSystem := Edit1.Text;
   OK := False;
@@ -113,10 +107,10 @@ end;
 procedure TfrmWTLogin.OKBitBtnClick(Sender: TObject);
 begin
 (*  if sDBase = 'L' then
-    dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'Worktop'
+    dtmdlWorktops.dtbsWorktops.AliasName := 'Worktop'
   else
   if sDBase = 'T' then
-    dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'Worktop';
+    dtmdlWorktops.dtbsWorktops.AliasName := 'Worktop';
 *)
   dtmdlWorktops.dtbsWorktops.Connected := false;
   if cmbAliasList.Text = '' then
@@ -157,7 +151,7 @@ begin
       Operator := FieldByName('Operator').AsInteger;
       Operator_Name := FieldByName('Operator_Name').AsString;
       Operator_Email := FieldByName('Email_Address').AsString;
-      
+
       try
         Operator_Revenue_Centre := FieldByName('Revenue_Centre').Asinteger;
       except
@@ -177,7 +171,9 @@ begin
       begin
         MessageDlg('The version of software you are using is incompatible ' +#13
           + 'with this program.  Contact your vendor for more information ' +#13
-          + 'on upgrading to the latest release(s).' + #13+#13 + 'Error detected was: ' + E.Message, mtError, [mbAbort], 0);
+          + 'on upgrading to the latest release(s).' + #13+#13
+          + 'Error detected was: ' + E.Message,
+          mtError, [mbAbort], 0);
         Close;
         Exit;
       end;
@@ -228,18 +224,16 @@ begin
       1: TempAlias := 'T';
     end;
     Edit1.Text := TempAlias;
-    sDBase := AnsiString(Edit1.Text);
+    sDBase := ShortString(Copy(Trim(Edit1.Text), 1, 1));
     ShowDataBase(Self);
-    WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias,
-      myWorktops_INIFILE);
+    WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias, TfrmWTMain.AppIniFile);
     case frmWTEnvSel.FaxSystemRadioGroup.ItemIndex of
       0: TempAlias := 'S';
       1: TempAlias := 'W';
     end;
     Edit1.Text := TempAlias;
     FsFaxSystem := Edit1.Text;
-    WritePrivateProfileString('Quaystone', 'Fax System', TempAlias,
-      myWorktops_INIFILE);
+    WritePrivateProfileString('Quaystone', 'Fax System', TempAlias, TfrmWTMain.AppIniFile);
   end;
   finally
     frmWTEnvSel.Free;
@@ -290,14 +284,6 @@ begin
   finally
     IniFile.Free;
   end;
-end;
-
-procedure TfrmWTLogin.FormShow(Sender: TObject);
-begin
-  {$IFDEF ADMINUSER}
-  UserEdit.Text := 'FIREBELLY';
-  PasswordEdit.Text := 'firebelly';
-  {$ENDIF}
 end;
 
 procedure TfrmWTLogin.SetEndUser(const Value: boolean);

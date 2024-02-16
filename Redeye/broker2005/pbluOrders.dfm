@@ -32,7 +32,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 915
+        Width = 911
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -45,7 +45,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 902
+        Width = 890
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -207,14 +207,21 @@ object frmpbLUOrders: TfrmpbLUOrders
     Width = 917
     Height = 265
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     PopupMenu = pmnFunctions
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -391,8 +398,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Alignment = taRightJustify
         Width = 50
       end>
-    ExplicitTop = 389
-    ExplicitWidth = 923
   end
   object Panel1: TPanel
     Left = 0
@@ -430,7 +435,6 @@ object frmpbLUOrders: TfrmpbLUOrders
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
-      ExplicitLeft = 820
     end
     object edtSearch: TEdit
       Left = 104
@@ -449,7 +453,6 @@ object frmpbLUOrders: TfrmpbLUOrders
       CharCase = ecUpperCase
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 714
     end
     object chkbxShowUnauthorised: TCheckBox
       Left = 376
@@ -481,7 +484,6 @@ object frmpbLUOrders: TfrmpbLUOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 923
     object Label3: TLabel
       Left = 8
       Top = 3

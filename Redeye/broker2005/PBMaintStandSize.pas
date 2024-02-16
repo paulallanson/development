@@ -40,7 +40,6 @@ type
     procedure NameEditChange(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure UnitFactorEditChange(Sender: TObject);
-    function IncrementNo(StartStr: string): string;
     procedure SaveValue(Sender: TObject);
     procedure ValidateQty(Sender: TObject);
     function FormatQty(TempQty: string): string;
@@ -165,42 +164,6 @@ end;
 procedure TPBMaintStandSizeFrm.UnitFactorEditChange(Sender: TObject);
 begin
   CheckOK(Self);
-end;
-
-function TPBMaintStandSizeFrm.IncrementNo(StartStr: string): string;
-var
-  StrLength, Count, Id: Integer;
-  Alphas: string[27];
-  Numbers: string[11];
-  CurrChar: string[1];
-begin
-  Alphas := 'ABCDEFGHIJKLMNOPQRSTUVWXYZA';
-  Numbers := '01234567890';
-  {Increment a string value by 1}
-  StrLength := Length(StartStr);
-  for Count := StrLength downto 1 do
-  begin
-    CurrChar := Copy(StartStr, Count, 1);
-    Id := Pos(CurrChar, Numbers);
-    if Id > 0 then
-    begin
-      StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-        Copy(StartStr, (Count + 1), (StrLength - Count));
-      IncrementNo := StartStr;
-      if Id < 10 then Exit;
-    end
-    else
-    begin
-      Id := Pos(CurrChar, Alphas);
-      if Id > 0 then
-      begin
-        StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-          Copy(StartStr, (Count + 1), (StrLength - Count));
-        IncrementNo := StartStr;
-        if Id < 27 then Exit;
-      end;
-    end;
-  end;
 end;
 
 procedure TPBMaintStandSizeFrm.SaveValue(Sender: TObject);

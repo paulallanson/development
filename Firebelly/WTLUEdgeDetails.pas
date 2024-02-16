@@ -3,11 +3,10 @@ unit WTLUEdgeDetails;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, QrCtrls,
-  ExtCtrls, ComCtrls,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, ComCtrls,
+  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, QrCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -55,6 +54,8 @@ type
     lkpEdgeThicknessUnit_Price: TCurrencyField;
     lkpEdgeThicknessUnit_Cost: TCurrencyField;
     lkpEdgeThicknessPrice_Unit_Description: TWideStringField;
+    lkpCopyMatType: TFDQuery;
+    srclkpCopyMatType: TDataSource;
     procedure FormCreate(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
@@ -96,7 +97,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, AllCommon,
   wtMaintEdgeDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
@@ -120,8 +121,8 @@ begin
           SQL.Text := sText;
         end;
 
-      parambyname('Material_Type').asinteger := dblkpMaterialType.keyvalue;
-      parambyname('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
+      parambyname('Material_Type').asinteger := dblkpMaterialType.KeyValue;
+      parambyname('Edge_Type').asinteger := dblkpEdgeType.KeyValue;
       parambyname('Description').asstring :=  '%' + edtName.Text + '%';
       if chkbxShowinactive.checked then
         parambyname('inactive').asstring := 'Y'
@@ -138,6 +139,7 @@ begin
 
   lkpMatType.active := true;
   lkpEdgeType.active := true;
+  lkpCopyMatType.active := true;
 
   dblkpMaterialType.keyvalue := lkpMatType.fieldbyname('Material_type').asinteger;
   dblkpEdgetype.keyvalue := lkpEdgeType.fieldbyname('Edge_Type').asinteger;
@@ -218,7 +220,6 @@ end;
 procedure TfrmWTLUEdgeDetails.dblkpEdgeTypeClick(Sender: TObject);
 begin
   refresh;
-
 end;
 
 procedure TfrmWTLUEdgeDetails.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -350,7 +351,7 @@ begin
   with qryDeleteEdgeThickness do
     begin
       close;
-      parambyname('Material_type').asinteger := dblkpMaterialType.keyvalue;
+      parambyname('Material_type').asinteger := dblkpMaterialType.ListValue;
       parambyname('Edge_Type').asinteger := dblkpedgetype.keyvalue;
       execsql;
     end;

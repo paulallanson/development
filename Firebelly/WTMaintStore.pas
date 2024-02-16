@@ -62,7 +62,8 @@ var
 
 implementation
 
-uses wtDataModule, AllCommon;
+uses
+  wtMain, wtDataModule, AllCommon;
 
 {$R *.dfm}
 
@@ -100,7 +101,7 @@ end;
 
 procedure TfrmWTMaintStore.btnOKClick(Sender: TObject);
 begin
-  if sFuncMode[1] in ['A'] then
+  if CharInSet(sFuncMode[1], ['A']) then
     begin
       if iCode = 0 then
         begin
@@ -149,7 +150,7 @@ begin
         end;
     end
   else
-  if sFuncMode[1] in ['C'] then
+  if CharInSet(sFuncMode[1], ['C']) then
     begin
       if iAddress = 0 then
         begin
@@ -247,12 +248,12 @@ end;
 
 procedure TfrmWTMaintStore.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout(myWorktops_INIFILE, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintStore.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout(myWorktops_INIFILE, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 end.

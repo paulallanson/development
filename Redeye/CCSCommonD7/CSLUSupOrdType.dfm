@@ -8,18 +8,18 @@ object CSLUSupOrdTypeFrm: TCSLUSupOrdTypeFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 15
+  TextHeight = 13
   object SuppLabel: TLabel
     Left = 8
     Top = 6
-    Width = 60
-    Height = 15
+    Width = 54
+    Height = 13
     Caption = 'SuppLabel'
   end
   object DetsDBGrid: TDBGrid
@@ -28,13 +28,20 @@ object CSLUSupOrdTypeFrm: TCSLUSupOrdTypeFrm
     Width = 320
     Height = 193
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnDblClick = DetsDBGridDblClick
     Columns = <
       item
@@ -147,8 +154,6 @@ object CSLUSupOrdTypeFrm: TCSLUSupOrdTypeFrm
       item
         Width = 30
       end>
-    ExplicitTop = 231
-    ExplicitWidth = 420
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

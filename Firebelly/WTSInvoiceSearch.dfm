@@ -82,7 +82,7 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
   object Label11: TLabel
     Left = 18
     Top = 110
-    Width = 49
+    Width = 51
     Height = 13
     Caption = 'Site Name'
   end
@@ -91,7 +91,7 @@ object frmWTSInvoiceSearch: TfrmWTSInvoiceSearch
     Top = 105
     Width = 209
     Height = 21
-    TabOrder = 2
+    TabOrder = 10
   end
   object btnSearch: TButton
     Left = 16

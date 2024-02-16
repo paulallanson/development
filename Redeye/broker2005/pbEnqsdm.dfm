@@ -69,7 +69,7 @@ object dtmdlEnqs: TdtmdlEnqs
         ParamType = ptInput
         Value = Null
       end>
-    object qryEnqsDate_Point: TSQLTimeStampField
+    object qryEnqsDate_Point: TDateTimeField
       FieldName = 'Date_Point'
       Origin = 'Date_Point'
       Required = True

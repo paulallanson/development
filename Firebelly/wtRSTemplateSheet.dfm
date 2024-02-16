@@ -35,8 +35,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 370
-    ExplicitWidth = 509
     DesignSize = (
       513
       80)
@@ -101,7 +99,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 509
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -131,7 +128,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 509
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -186,8 +182,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Caption = 'pnlDocumentDetails'
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 509
-    ExplicitHeight = 170
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
@@ -196,8 +190,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       ActivePage = TabSheet2
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 507
-      ExplicitHeight = 168
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox

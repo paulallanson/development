@@ -10,7 +10,7 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object QckRpRpsPrft: TQuickRep
     Left = 24

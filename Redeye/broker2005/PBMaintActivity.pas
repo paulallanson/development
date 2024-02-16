@@ -787,7 +787,7 @@ begin
 
   FEmailAttachment := TStringList.create;
   pgActivities.ActivePage := tbCurrent;
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 procedure TPBMaintActivityFrm.FormDestroy(Sender: TObject);

@@ -48,6 +48,8 @@ uses UITypes, wtLUCustomer, AllCommon, DateSelV5;
 {$R *.dfm}
 
 procedure TfrmWTCustomerSearch.btnSearchClick(Sender: TObject);
+var
+  SelectedDate: TDateTime;
 begin
   frmWTLUCustomer.Street := Trim(edtStreet.Text);
   frmWTLUCustomer.Town := Trim(edtTown.Text);
@@ -58,9 +60,9 @@ begin
   frmWTLUCustomer.CustomerType:= Trim(edtType.Text);
   frmWTLUCustomer.IncludeProspects:= chkbxIncludeProspects.checked;
 
-  var SelectedDate := StrToDate(edtDate.Text);
+  SelectedDate := StrToDateDef(edtDate.Text, 0);
 
-  if (edtDate.text = '') or (SelectedDate <= StrToDate('01/01/2000')) then
+  if (edtDate.Text = '') or (SelectedDate <= StrToDate('01/01/2000')) then
     frmWTLUCustomer.DateCreated := StrToDate('01/01/1800')
   else
     frmWTLUCustomer.DateCreated := SelectedDate;

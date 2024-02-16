@@ -60,7 +60,7 @@ type
     qryReportSupplier_1: TIntegerField;
     qryReportSupplier_Branch: TIntegerField;
     qryReportSupplier_Name: TStringField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportOrder_Status: TStringField;
     qryReportQty_In: TIntegerField;
     qryReportQty_Out: TIntegerField;

@@ -250,7 +250,7 @@ begin
 //  CurrText.Name := DefFontData.Name;
   CurrText.Name := Font;
   CurrText.Size := -MulDiv(DefFontData.Height, 72, Screen.PixelsPerInch);
-  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
+  CCSCommon.LoadFormLayout(TfrmpbMainMenu.AppIniFile, self);
 end;
 
 function EnumFontsProc(var LogFont: TLogFont; var TextMetric: TTextMetric;

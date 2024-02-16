@@ -54,7 +54,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
-    code, Operator: integer;
+    FCode, FOperator: Integer;
     procedure RunReport(const bPreview: Boolean);
     function InputDate(TempDate: TDateTime): TDateTime;
     procedure LoadSalesAction;
@@ -88,8 +88,8 @@ begin
   try
 
 //  Check if any records
-    frmWTRPCustomerAction.operator := operator;
-    frmWTRPCustomerAction.code := code;
+    frmWTRPCustomerAction.operator := FOperator;
+    frmWTRPCustomerAction.code := FCode;
     frmWTRPCustomerAction.datefrom := padatestr(edtDateFrom.Text);
     frmWTRPCustomerAction.dateto := padatestr(edtDateTo.Text);
     if frmWTRPCustomerAction.GetDetails = 0 then
@@ -199,7 +199,7 @@ procedure TfrmWTRSCustomerAction.rdgrpSalesActionClick(Sender: TObject);
 begin
   case rdgrpSalesAction.itemindex of
   0:  begin
-        Code := 0;
+        FCode := 0;
         cmbAction.clear;
         cmbAction.items.add('All Sources');
         cmbAction.itemindex := 0;
@@ -254,7 +254,7 @@ procedure TfrmWTRSCustomerAction.cmbActionClick(Sender: TObject);
 begin
   qryAction.First;
   qryAction.MoveBy(cmbAction.itemindex);
-  code := qryAction.fieldbyname('Prospect_Action').AsInteger;
+  FCode := qryAction.fieldbyname('Prospect_Action').AsInteger;
   enableok(self);
 end;
 
@@ -262,7 +262,7 @@ procedure TfrmWTRSCustomerAction.rdgrpOperatorsClick(Sender: TObject);
 begin
   case rdgrpOperators.itemindex of
   0:  begin
-        Operator := 0;
+        FOperator := 0;
         cmbOperators.clear;
         cmbOperators.items.add('All Operators');
         cmbOperators.itemindex := 0;
@@ -286,7 +286,7 @@ procedure TfrmWTRSCustomerAction.cmbOperatorsClick(Sender: TObject);
 begin
   qryOperators.First;
   qryOperators.MoveBy(cmbOperators.itemindex);
-  operator := qryOperators.fieldbyname('Operator').AsInteger;
+  FOperator := qryOperators.fieldbyname('Operator').AsInteger;
   enableok(self);
 end;
 
@@ -297,24 +297,23 @@ end;
 
 procedure TfrmWTRSCustomerAction.Button2Click(Sender: TObject);
 var
-  reccount: integer;
+  RecCount: Integer;
   tmpFileName: string;
 begin
   frmWTRPCustomerAction := TfrmWTRPCustomerAction.create(self);
   try
-
-    frmWTRPCustomerAction.operator := operator;
-    frmWTRPCustomerAction.code := code;
+    frmWTRPCustomerAction.operator := FOperator;
+    frmWTRPCustomerAction.code := FCode;
     frmWTRPCustomerAction.datefrom := padatestr(edtDateFrom.Text);
     frmWTRPCustomerAction.dateto := padatestr(edtDateTo.Text);
-    reccount := frmWTRPCustomerAction.GetDetails;
-    if reccount = 0 then
+    RecCount := frmWTRPCustomerAction.GetDetails;
+    if RecCount = 0 then
       begin
         MessageDlg('No records to print', mtInformation, [mbOk], 0);
         exit;
       end;
 
-    self.prgbrExport.Max := recCount;
+    self.prgbrExport.Max := RecCount;
     tmpFileName := getWinTempDir + self.caption + formatdatetime('yymmddhhmmss',now)+'.csv';
     self.pnlExportPrgrss.Visible := true;
     self.pnlExportPrgrss.Repaint;

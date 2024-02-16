@@ -31,7 +31,7 @@ type
     qrySalesByInvCustomer: TIntegerField;
     qrySalesByInvSales_Invoice: TIntegerField;
     qrySalesByInvGoods_Value: TCurrencyField;
-    qrySalesByInvInvoice_or_Credit: TStringField;
+    qrySalesByInvInvoice_or_Credit: TWideStringField;
     qrySalesByInvSales_Invoice_type: TStringField;
     qrySalesByInvReference: TStringField;
     PreviewReportBitBtn: TBitBtn;

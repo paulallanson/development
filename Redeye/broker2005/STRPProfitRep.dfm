@@ -12,7 +12,7 @@ object STRPProfitRepfrm: TSTRPProfitRepfrm
   Font.Name = 'Arial'
   Font.Style = []
   Position = poScreenCenter
-  Scaled = False
+  
   TextHeight = 15
   object qrProfitRep: TQuickRep
     Left = -328

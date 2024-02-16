@@ -256,6 +256,7 @@ begin
     stsBrDetails.panels[0].text := inttostr(HeaderCountAll) + ' records displayed';
   end;
 end;
+
 procedure TfrmwtLUSales.btnChangeClick(Sender: TObject);
 begin
   CallMaintScreen(sopChange);
@@ -751,7 +752,7 @@ begin
   try
     frmWTRSTemplateSheet := TfrmWTRSTemplateSheet.Create( Application );
     Key := dtmdlAllSales.CurrentSOrder;
-    frmWTRSTemplateSheet.sOrderNumber := inttostr(Key);
+    frmWTRSTemplateSheet.OrderNumber := inttostr(Key);
 
 //    frmWTRSTemplateSheet.memSelection.text := inttostr(Key);
 

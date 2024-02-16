@@ -24,7 +24,7 @@ type
     qryReportDate_Point: TDateTimeField;
     qryReportForm_Reference_ID: TStringField;
     qryReportName: TStringField;
-    qryReportAccount_Code: TStringField;
+    qryReportAccount_code: TWideStringField;
     qryReportPOLine: TStringField;
     pnlControl: TPanel;
     pnlSelections: TPanel;
@@ -38,7 +38,7 @@ type
     chkbxPageBreak: TCheckBox;
     qryReportOn_Hold: TStringField;
     qryReportQuantity: TFloatField;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportRep: TIntegerField;
     qryReportQty_to_Deliver: TFloatField;
     qryReportQty_Delivered: TFloatField;

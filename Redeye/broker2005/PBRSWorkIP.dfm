@@ -554,13 +554,20 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     Height = 200
     Align = alClient
     DataSource = dsReport
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     ReadOnly = True
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Alignment = taRightJustify
@@ -757,7 +764,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportAccount_Code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
@@ -784,7 +791,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportQuantity: TFloatField
       FieldName = 'Quantity'
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80

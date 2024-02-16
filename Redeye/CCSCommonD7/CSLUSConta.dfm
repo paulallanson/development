@@ -1,55 +1,53 @@
-﻿object CSLUSContaFrm: TCSLUSContaFrm
+object CSLUSContaFrm: TCSLUSContaFrm
   Left = 58
   Top = 113
-  Width = 440
-  Height = 415
   Caption = 'Look-Up Supplier/Branch Contacts'
+  ClientHeight = 376
+  ClientWidth = 424
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -11
+  Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 13
   object SuppLabel: TLabel
     Left = 80
     Top = 6
-    Width = 60
-    Height = 15
+    Width = 54
+    Height = 13
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 265
+    Left = 270
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 59
+    Height = 13
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 57
-    Height = 15
+    Width = 50
+    Height = 13
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 42
-    Height = 15
+    Width = 38
+    Height = 13
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 49
-    Height = 15
+    Width = 46
+    Height = 13
     Caption = 'Supplier:'
   end
   object DetsDBGrid: TDBGrid
@@ -58,13 +56,20 @@
     Width = 320
     Height = 177
     DataSource = DetsSRC
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
-    TitleFont.Style = []
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <
@@ -87,7 +92,7 @@
       Left = 8
       Top = 16
       Width = 305
-      Height = 23
+      Height = 21
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -109,17 +114,19 @@
     Width = 75
     Height = 25
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 340
     Top = 328
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
     Left = 336
@@ -174,8 +181,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBackground
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -188,8 +195,8 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBackground
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
@@ -202,30 +209,30 @@
       DataSource = DetsSRC
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBackground
-      Font.Height = -12
-      Font.Name = 'Arial'
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 37
-      Height = 15
+      Width = 32
+      Height = 13
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 39
-      Height = 15
+      Width = 36
+      Height = 13
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
       Width = 39
-      Height = 15
+      Height = 13
       Caption = 'Mobile:'
     end
   end
@@ -250,24 +257,16 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer
@@ -291,19 +290,13 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckEnqs: TFDQuery
@@ -320,19 +313,13 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact'
-        ParamType = ptUnknown
       end>
   end
 end

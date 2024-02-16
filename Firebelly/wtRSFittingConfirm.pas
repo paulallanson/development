@@ -66,7 +66,6 @@ type
     procedure BuildRange(sFirst, sLast: string);
     procedure BuildSelection;
     procedure GetSelection;
-    function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
@@ -609,7 +608,7 @@ begin
             end;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          var printFileName := 'OC' + sAttachmentType;
+          var printFileName := 'OC' + EmailArray[irow,1];
           TPrinterTools.New.PrintToattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           {Create the Terms and Conditions as an attachment}
@@ -941,41 +940,6 @@ begin
   until sOrderNo > sLast;
 
 end;
-
-Function TfrmWTRSFittingConfirm.IncrementNo(StartStr: String): String ;
-Var StrLength, Count, Id: Integer ;
-    Alphas: String[27] ;
-    Numbers: String[11] ;
-    CurrChar: String[1] ;
-begin
-Alphas := 'ABCEDFGHIJKLMNOPQRSTUVWXYZA' ;
-Numbers := '01234567890' ;
-{Increment a string value by 1}
-StrLength := Length(StartStr) ;
-For Count := StrLength downto 1 do
-    begin
-    CurrChar := Copy(StartStr,Count,1) ;
-    Id := Pos(CurrChar,Numbers) ;
-    if Id > 0 then
-       begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-       IncrementNo := StartStr ;
-       if Id < 10 then exit ;
-       end
-    else
-        begin
-        Id := Pos(CurrChar,Alphas) ;
-        if Id > 0 then
-               begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-        IncrementNo := StartStr ;
-        if Id < 27 then exit ;
-               end ;
-        end ;
-       end ;
-end ;
 
 procedure TfrmWTRSFittingConfirm.FormActivate(Sender: TObject);
 var

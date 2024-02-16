@@ -21,13 +21,20 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     Height = 334
     Align = alClient
     DataSource = dtsDetails
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -48,8 +55,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 312
-    ExplicitHeight = 335
     DesignSize = (
       98
       334)
@@ -92,7 +97,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
-      ExplicitTop = 297
     end
   end
   object pnlBottom: TPanel
@@ -104,8 +108,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 335
-    ExplicitWidth = 410
     DesignSize = (
       406
       89)
@@ -146,7 +148,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
-      ExplicitLeft = 329
     end
     object BitBtn2: TBitBtn
       Left = 321
@@ -157,7 +158,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
-      ExplicitLeft = 329
     end
   end
   object stbrDetails: TStatusBar
@@ -172,8 +172,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 424
-    ExplicitWidth = 410
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

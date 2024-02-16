@@ -36,7 +36,6 @@ type
     procedure PreviewBtnClick(Sender: TObject);
     procedure GetSelection;
     procedure BuildRange(sFirst: string; sLast: string);
-    Function IncrementNo(StartStr: String): String ;
     procedure memSelectionKeyPress(Sender: TObject; var Key: Char);
     procedure BuildSelection;
     procedure FormDeactivate(Sender: TObject);
@@ -327,41 +326,6 @@ begin
 
 end;
 
-Function TfrmWTRSSalesInvoiceReprint.IncrementNo(StartStr: String): String ;
-Var StrLength, Count, Id: Integer ;
-    Alphas: String[27] ;
-    Numbers: String[11] ;
-    CurrChar: String[1] ;
-begin
-Alphas := 'ABCEDFGHIJKLMNOPQRSTUVWXYZA' ;
-Numbers := '01234567890' ;
-{Increment a string value by 1}
-StrLength := Length(StartStr) ;
-For Count := StrLength downto 1 do
-    begin
-    CurrChar := PChar(Copy(StartStr, Count, 1));
-    Id := Pos(CurrChar,Numbers) ;
-    if Id > 0 then
-       begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Numbers), (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-       IncrementNo := StartStr ;
-       if Id < 10 then exit ;
-       end
-    else
-        begin
-        Id := Pos(CurrChar,Alphas) ;
-        if Id > 0 then
-               begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Alphas), (Id + 1), 1) +
-                   Copy(StartStr,(Count + 1), (StrLength - Count));
-        IncrementNo := StartStr ;
-        if Id < 27 then exit ;
-               end ;
-        end ;
-       end ;
-end ;
-
 procedure TfrmWTRSSalesInvoiceReprint.memSelectionKeyPress(Sender: TObject;
   var Key: Char);
 begin
@@ -611,7 +575,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + sAttachmentType;
+                  printFileName := 'SI' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   if iInvoiceCount = 1 then
@@ -679,7 +643,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + sAttachmentType;
+                  printFileName := 'SI' + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];

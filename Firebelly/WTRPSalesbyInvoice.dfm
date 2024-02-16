@@ -10,7 +10,7 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
@@ -1613,33 +1613,28 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       end
       item
         Name = 'Is_Retail_Customer'
-        
       end
       item
-        
         Name = 'Requires_App_For_Payment'
-        
       end
       item
-        
         Name = 'Requires_App_For_Payment'
-        
       end>
     object qryReportSales_invoice: TIntegerField
       FieldName = 'Sales_invoice'
     end
-    object qryReportInactive: TStringField
+    object qryReportInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportAccount_code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_code'
       Size = 10
     end
-    object qryReportInvoice_no: TStringField
+    object qryReportInvoice_No: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -1661,40 +1656,40 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     object qryReportSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
     end
-    object qryReportInvoice_or_Credit: TStringField
+    object qryReportInvoice_Or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       Size = 255
     end
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportReference: TStringField
+    object qryReportReference: TWideStringField
       FieldName = 'Reference'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
-    object qryReportInvoice_Status_description: TStringField
+    object qryReportInvoice_Status_Description: TWideStringField
       FieldName = 'Invoice_Status_description'
       Size = 30
     end
-    object qryReportCustomer_Type_Description: TStringField
+    object qryReportCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 40
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
     object qryReportAccount_Manager: TIntegerField
       FieldName = 'Account_Manager'
     end
-    object qryReportAccount_Manager_Name: TStringField
+    object qryReportAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
@@ -1702,19 +1697,19 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       FieldName = 'Total_Materials'
       DisplayFormat = '#,##0.00'
     end
-    object qryReportIs_Retail_Customer: TStringField
+    object qryReportIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 1
     end
-    object qryReportIs_Commercial_customer: TStringField
+    object qryReportIs_Commercial_customer: TWideStringField
       FieldName = 'Is_Commercial_customer'
       Size = 1
     end
-    object qryReportRevenue_Centre_Descr: TStringField
+    object qryReportRevenue_Centre_Descr: TWideStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
-    object qryReportRequires_App_For_Payment: TStringField
+    object qryReportRequires_App_For_Payment: TWideStringField
       FieldName = 'Requires_App_For_Payment'
       Size = 1
     end
@@ -1795,59 +1790,41 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requires_App_For_Payment'
-        ParamType = ptUnknown
       end>
     object IntegerField1: TIntegerField
       FieldName = 'Sales_invoice'

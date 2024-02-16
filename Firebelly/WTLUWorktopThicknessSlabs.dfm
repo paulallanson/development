@@ -25,8 +25,6 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       item
         Width = 50
       end>
-    ExplicitTop = 276
-    ExplicitWidth = 570
   end
   object Panel1: TPanel
     Left = 0
@@ -36,8 +34,6 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 203
-    ExplicitWidth = 570
     DesignSize = (
       558
       73)
@@ -92,7 +88,6 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      ExplicitLeft = 472
     end
     object BitBtn1: TBitBtn
       Left = 272
@@ -112,14 +107,21 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     Height = 194
     Align = alClient
     DataSource = dtsSlabs
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item

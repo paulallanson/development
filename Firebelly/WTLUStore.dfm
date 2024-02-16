@@ -22,13 +22,20 @@ object frmWTLUStore: TfrmWTLUStore
     Height = 276
     Align = alClient
     DataSource = srcStore
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -57,8 +64,6 @@ object frmWTLUStore: TfrmWTLUStore
       item
         Width = 50
       end>
-    ExplicitTop = 352
-    ExplicitWidth = 400
   end
   object Panel1: TPanel
     Left = 0
@@ -67,8 +72,6 @@ object frmWTLUStore: TfrmWTLUStore
     Height = 74
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 278
-    ExplicitWidth = 400
     DesignSize = (
       392
       74)
@@ -126,8 +129,6 @@ object frmWTLUStore: TfrmWTLUStore
     Height = 276
     Align = alRight
     TabOrder = 3
-    ExplicitLeft = 311
-    ExplicitHeight = 278
     DesignSize = (
       89
       276)
@@ -140,7 +141,6 @@ object frmWTLUStore: TfrmWTLUStore
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
-      ExplicitTop = 88
     end
     object btnEdit: TBitBtn
       Left = 6
@@ -151,7 +151,6 @@ object frmWTLUStore: TfrmWTLUStore
       Caption = '&Edit'
       TabOrder = 1
       OnClick = btnEditClick
-      ExplicitTop = 128
     end
     object btnDelete: TBitBtn
       Left = 6
@@ -162,7 +161,6 @@ object frmWTLUStore: TfrmWTLUStore
       Caption = '&Delete'
       TabOrder = 2
       OnClick = btnDeleteClick
-      ExplicitTop = 168
     end
     object btnExcel: TBitBtn
       Left = 6
@@ -173,7 +171,6 @@ object frmWTLUStore: TfrmWTLUStore
       Caption = '&Excel'
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitTop = 208
     end
     object btnSelect: TBitBtn
       Left = 6
@@ -184,7 +181,6 @@ object frmWTLUStore: TfrmWTLUStore
       Caption = '&Select'
       TabOrder = 4
       OnClick = btnSelectClick
-      ExplicitTop = 246
     end
   end
   object srcStore: TDataSource

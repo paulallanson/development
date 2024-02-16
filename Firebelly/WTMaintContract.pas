@@ -1096,6 +1096,7 @@ var
 begin
   with sgDetails do
     begin
+      icolumn := col;
       irow := row;
       ContractLine := Contract.Lines[irow-1];
       ContractLine.DrawingNumber := cells[1,irow];
@@ -2193,45 +2194,17 @@ end;
 
 procedure TfrmWTMaintContract.btnAttachClick(Sender: TObject);
 var
-  i, ipos, ilength, icount: integer;
-  sFile, sFullFile, docDir: string;
+  DocDir: string;
 begin
-//  docDir := dtmdlWorktops.GetCompanyContractDirectory + '\' + inttostr(Contract.dbKey);
-  docDir := dtmdlWorktops.GetCompanyContractDirectory + '\' + floattostr(Contract.QuoteNumber);
+  {Find a document}
+  DocDir := dtmdlWorktops.GetCompanyContractDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + FloatToStr(Contract.QuoteNumber);
 
-  {Find a document} ;
-
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  DocOpenDialog.Files.Clear;
-  if DocOpenDialog.Execute then
-  begin
-    if DocOpenDialog.Files.Count > 0 then
-      begin
-        for icount := 0 to pred(DocOpenDialog.Files.Count) do
-          begin
-            sfullFile := DocOpenDialog.Files.Strings[icount];
-            iLength := length(sFullFile);
-
-            while i <> 0 do
-              begin
-                ipos := pos('\',sFullFile);
-
-                sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                i := pos('\',sFullFile);
-              end;
-
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
-
-            FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
-          end;
-        ShowDocuments;
-      end;
-  end;
+  CopyDocuments(DocOpenDialog, DocDir,
+    procedure
+    begin
+      ShowDocuments;
+    end);
 end;
 
 procedure TfrmWTMaintContract.FormResize(Sender: TObject);
@@ -2971,50 +2944,23 @@ end;
 
 procedure TfrmWTMaintContract.btnLineAttachClick(Sender: TObject);
 var
-  i, ipos, ilength, icount: integer;
-  sFile, sFullFile, docDir: string;
+  DocDir: string;
 begin
-//  docDir := dtmdlWorktops.GetCompanyContractDirectory + '\' + inttostr(Contract.dbKey) + '\' + inttostr(ContractLine.Line);
-  docdir := dtmdlWorktops.GetCompanyContractDirectory;
+  DocDir := dtmdlWorktops.GetCompanyContractDirectory;
 
-  if trim(docdir) = '' then
-    exit
-  else
-    docDir := docdir + '\' + floattostr(Contract.QuoteNumber) + '\' + inttostr(ContractLine.Line);
+  if Trim(DocDir).IsEmpty then
+    Exit;
 
-  {Find a document} ;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + FloatToStr(Contract.QuoteNumber);
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + inttostr(ContractLine.Line);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
+  {Find a document};
 
-  DocOpenDialog.Files.Clear;
-  if DocOpenDialog.Execute then
-  begin
-    if DocOpenDialog.Files.Count > 0 then
-      begin
-        for icount := 0 to pred(DocOpenDialog.Files.Count) do
-          begin
-            sfullFile := DocOpenDialog.Files.Strings[icount];
-            iLength := length(sFullFile);
-
-            while i <> 0 do
-              begin
-                ipos := pos('\',sFullFile);
-
-                sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                i := pos('\',sFullFile);
-              end;
-
-            sFile := copy(DocOpenDialog.Files.Strings[icount], ipos+1, (iLength - ipos));
-
-            FileCopy(DocOpenDialog.Files.Strings[icount], docDir + '\' + sFile) ;
-          end;
-        ShowLineDocuments;
-      end;
-  end;
+  CopyDocuments(DocOpenDialog, DocDir,
+    procedure
+    begin
+      ShowLineDocuments;
+    end);
 end;
 
 procedure TfrmWTMaintContract.pmnuOpenLineDocumentClick(Sender: TObject);
@@ -3874,55 +3820,17 @@ end;
 
 procedure TfrmWTMaintContract.pmnuPasteClick(Sender: TObject);
 var
-  f: THandle;
-  buffer: Array [0..MAX_PATH] of Char;
-  i, numFiles: Integer;
-  sFile, sFullFile, docdir: string;
-  iCount, iPos, iLength: integer;
+  DocDir: string;
 begin
-  docDir := dtmdlWorktops.GetCompanyContractDirectory + '\' + floattostr(Contract.QuoteNumber);
-  {Find a document} ;
+  DocDir := dtmdlWorktops.GetCompanyContractDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + floattostr(Contract.QuoteNumber);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  Clipboard.Open;
-  try
-    f := Clipboard.GetAsHandle(CF_HDROP);
-    if f <> 0 then
+  {Find a document}
+  CopyDocumentsFromClipboard(DocDir,
+    procedure
     begin
-      numFiles := DragQueryFile(f, $FFFFFFFF, nil, 0);
-//      memo1.Clear;
-      for i:= 0 to numfiles - 1 do
-      begin
-        buffer[0] := #0;
-        DragQueryFile( f, i, buffer, sizeof(buffer));
-
-        sfullFile := buffer;
-        iLength := length(sFullFile);
-
-        iCount := 1;
-
-        while iCount <> 0 do
-          begin
-            ipos := pos('\',sFullFile);
-
-            sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-            iCount := pos('\',sFullFile);
-          end;
-
-        sFile := copy(buffer, ipos+1, (iLength - ipos));
-
-        FileCopy(buffer, docDir + '\' + sfile) ;
-      end;
-    end;
-  finally
-    Clipboard.close;
-  end;
-  ShowDocuments;
+      ShowDocuments;
+    end);
 end;
 
 procedure TfrmWTMaintContract.pmnuDeleteClick(Sender: TObject);
@@ -3968,55 +3876,18 @@ end;
 
 procedure TfrmWTMaintContract.Paste1Click(Sender: TObject);
 var
-  f: THandle;
-  buffer: Array [0..MAX_PATH] of Char;
-  i, numFiles: Integer;
-  sFile, sFullFile, docdir: string;
-  iCount, iPos, iLength: integer;
+  DocDir: string;
 begin
-  docDir := dtmdlWorktops.GetCompanyContractDirectory + '\' + floattostr(Contract.QuoteNumber) + '\' + inttostr(ContractLine.Line);
-  {Find a document} ;
+  DocDir := dtmdlWorktops.GetCompanyContractDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + floattostr(Contract.QuoteNumber);
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + inttostr(ContractLine.Line);
 
-  if not DirectoryExists(docDir) then
-  	begin
-     	CreateDirectory(docDir);
-  	end;
-
-  Clipboard.Open;
-  try
-    f := Clipboard.GetAsHandle(CF_HDROP);
-    if f <> 0 then
+  {Find a document}
+  CopyDocumentsFromClipboard(DocDir,
+    procedure
     begin
-      numFiles := DragQueryFile(f, $FFFFFFFF, nil, 0);
-//      memo1.Clear;
-      for i:= 0 to numfiles - 1 do
-      begin
-        buffer[0] := #0;
-        DragQueryFile( f, i, buffer, sizeof(buffer));
-
-        sfullFile := buffer;
-        iLength := length(sFullFile);
-
-        iCount := 1;
-
-        while iCount <> 0 do
-          begin
-            ipos := pos('\',sFullFile);
-
-            sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-            iCount := pos('\',sFullFile);
-          end;
-
-        sFile := copy(buffer, ipos+1, (iLength - ipos));
-
-        FileCopy(buffer, docDir + '\' + sfile) ;
-      end;
-    end;
-  finally
-    Clipboard.close;
-  end;
-  ShowLineDocuments;
+      ShowLineDocuments;
+    end);
 end;
 
 procedure TfrmWTMaintContract.SelectAll1Click(Sender: TObject);

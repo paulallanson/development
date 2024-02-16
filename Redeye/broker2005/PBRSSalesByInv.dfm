@@ -41,13 +41,20 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Height = 185
       Align = alClient
       DataSource = dtsrcSalesByInv
+      DrawingStyle = gdsGradient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      TitleFont.Style = [fsBold]
       OnDrawColumnCell = dbgDetailsDrawColumnCell
       Columns = <
         item
@@ -735,7 +742,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object qrySalesByInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesByInvInvoice_or_Credit: TStringField
+    object qrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2

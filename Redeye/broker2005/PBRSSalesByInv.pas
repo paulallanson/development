@@ -48,7 +48,7 @@ type
     qrySalesByInvVat_Value: TCurrencyField;
     qrySalesByInvGoods_Total: TCurrencyField;
     qrySalesByInvInvoice_Date: TDateTimeField;
-    qrySalesByInvInvoice_or_Credit: TStringField;
+    qrySalesByInvInvoice_or_Credit: TWideStringField;
     qrySalesByInvRep: TIntegerField;
     qrySalesByInvSales_Invoice_type: TStringField;
     qrySalesByInvInactive: TStringField;

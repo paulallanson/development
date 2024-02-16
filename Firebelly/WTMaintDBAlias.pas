@@ -34,6 +34,8 @@ var
 
 implementation
 
+uses UITypes;
+
 {$R *.DFM}
 
 procedure TWTMaintDBAliasFrm.FormActivate(Sender: TObject);

@@ -3,10 +3,9 @@ unit wtMain;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Menus, ImgList, ComCtrls, ToolWin, IniFiles, StdActns, ActnList,
-  ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions,
-  System.ImageList, Vcl.StdCtrls, FireDAC.Stan.Param;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Menus, ImgList, ComCtrls, ToolWin,
+  IniFiles, StdActns, ActnList, ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions, System.ImageList,
+  Vcl.StdCtrls, FireDAC.Stan.Param;
 
 type
   TfrmWTMain = class(TForm)
@@ -269,7 +268,7 @@ type
     procedure mnuAllocateDocumentstoOrdersClick(Sender: TObject);
     procedure StockSystems1Click(Sender: TObject);
     procedure Stores1Click(Sender: TObject);
-    procedure ManageDatabaseAliases1Click(Sender: TObject);    
+    procedure ManageDatabaseAliases1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
 {$IFDEF DEMO}
     procedure mnuDemoActivateClick(Sender: TObject);
@@ -353,28 +352,19 @@ var
 implementation
 
 uses
-  System.UITypes,
-  wtDatabase, WTLogin, WTMaintParams, WTLUQuotes,
-  wtLUMatType, wtLUThickness, wtLUworktops, wtLUCutOuts,
-  wtLUAddChgs, wtLUCustomer, WTAutoPriceChange,
-  wtAboutBox, wtLUEdges, wtLUCustType, wtLUVat,
-  wtLUPurchases, wtLUSales, wtLUSalesInvoices, wtLUJobs, wtUtilities,
-  wtLUOperators, WTUpdateDB, wtDataModule, wtLUWTGroup, WtLUWTGroupPrices,
-  wtLUEdgeTypes, wtMaintClient, wtLUStock, wtLUReps, WTLUProductGroups,
-  WTLUProducts, wtLUSalesCredits, wtLoginError, wtLicence, wtAccExport1,
-  wtLUFitters, wtLUSalesLead, WTLUDesigner, WTSendtoExcel, WTLUEdgeDetails,
-  wtLUCutOutDetails, WTLUManageMentRpts, WTMaintTrade, wtLUDataSource,
-  WTLUContactType, wtLUProspectAction, wtLUMaterialUse, wtLUWorktopDetails,
-  WTLUSupplier, WTLUPaymentTerms, wtLUReason, wtLUSpecialInstruction,
-  WTLUContracts, WTLUPrices, WTMaintLogins, wtLUSlabSizes, wtExpiryDate,
-  WTLUMaterialType, WTLUColourGroup, WTLUFinish, WTLUTextureGroup,
-  wtLUInstallArea, wtLUDiscounts, wtLUPromotions, WTUSSetExpiryDate,
-  wtLULevelofImportance, wtLUAppointmentType, wtLUAppointmentDateType,
-  wtLUOffer, WTMaintAppointmentLock, wtLUQuoteSQL, WTLUTemplating, WTLUFitting,
-  WTMaintLastNumbers, WTRunScripts, wtLURemedialType, wtLURemedialCategory,
-  wtLURemedialDept,wtLURevenueCentre, AllImages, wtCustomerPriceChange,
-  wtProductPriceChange, WTUSSetDocuments, wtLUStockSystem, WTLUDBAlias,
-  WTLUStore;
+  wtDatabase, WTLogin, WTMaintParams, WTLUQuotes, wtLUMatType, wtLUThickness, wtLUworktops, wtLUCutOuts, wtLUAddChgs,
+  wtLUCustomer, WTAutoPriceChange, wtAboutBox, wtLUEdges, wtLUCustType, wtLUVat, wtLUPurchases, wtLUSales,
+  wtLUSalesInvoices, wtLUJobs, wtUtilities, wtLUOperators, WTUpdateDB, wtDataModule, wtLUWTGroup, WtLUWTGroupPrices,
+  wtLUEdgeTypes, wtMaintClient, wtLUStock, wtLUReps, WTLUProductGroups, WTLUProducts, wtLUSalesCredits, wtLoginError,
+  wtLicence, wtAccExport1, wtLUFitters, wtLUSalesLead, WTLUDesigner, WTSendtoExcel, WTLUEdgeDetails, wtLUCutOutDetails,
+  WTLUManageMentRpts, WTMaintTrade, wtLUDataSource, WTLUContactType, wtLUProspectAction, wtLUMaterialUse,
+  wtLUWorktopDetails, WTLUSupplier, WTLUPaymentTerms, wtLUReason, wtLUSpecialInstruction, WTLUContracts, WTLUPrices,
+  WTMaintLogins, wtLUSlabSizes, wtExpiryDate, WTLUMaterialType, WTLUColourGroup, WTLUFinish, WTLUTextureGroup,
+  wtLUInstallArea, wtLUDiscounts, wtLUPromotions, WTUSSetExpiryDate, wtLULevelofImportance, wtLUAppointmentType,
+  wtLUAppointmentDateType, wtLUOffer, WTMaintAppointmentLock, wtLUQuoteSQL, WTLUTemplating, WTLUFitting,
+  WTMaintLastNumbers, WTRunScripts, wtLURemedialType, wtLURemedialCategory, wtLURemedialDept, wtLURevenueCentre,
+  AllImages, wtCustomerPriceChange, wtProductPriceChange, WTUSSetDocuments, wtLUStockSystem, WTLUDBAlias, WTLUStore,
+  System.UITypes;
 
 {$R *.DFM}
 
@@ -438,6 +428,10 @@ begin
   LocalDrive := copy(GetWinSysDir,1,2);
   LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
+
+  TempUserSize := SizeOf(TempUser);
+  GetUserName(Addr(TempUser), TempUserSize);
+  stsbrStatus.Panels[0].Text := TempUser;
 
   SWVersion := '23.1.';
   SWSubVersion := '24.01.01a';
@@ -1020,7 +1014,6 @@ begin
         LoginFormOK := frmWTLogin.OK;
         if LoginFormOK then
         begin
-//          frmWTLogin.UserEdit.Text := stsbrStatus.Panels[0].Text;
           UserName := frmWTLogin.UserEdit.Text;
           Operator := frmWTLogin.Operator;
           OperatorName := frmWTLogin.Operator_name;
@@ -1048,8 +1041,6 @@ begin
             UpdateDatabase;
         end;
       finally
-        if RunDBUpdate then
-          UpdateDatabase;
         frmWTLogin.Free;
       end;
       if not LoginFormOK then
@@ -1945,12 +1936,12 @@ end;
 
 procedure TfrmWTMain.mnuSalesCreditsClick(Sender: TObject);
 begin
-  mnuSalesCreditsClick(self);
+  btnSalesCreditsClick(self);
 end;
 
 procedure TfrmWTMain.mnuPricesClick(Sender: TObject);
 begin
-  mnuPricesClick(self);
+  btnPricesClick(self);
 end;
 
 procedure TfrmWTMain.mnuFittersClick(Sender: TObject);

@@ -39,7 +39,7 @@ type
     qryReportCustomer: TIntegerField;
     qryReportBranch_no: TIntegerField;
     qryReportBranch_Name: TStringField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportCust_Order_No: TStringField;
     qryReportCustomers_Desc: TStringField;
     qryReportQuantity: TFloatField;
@@ -47,7 +47,7 @@ type
     qryReportSelling_Price: TCurrencyField;
     qryReportSell_Unit: TIntegerField;
     qryReportOrder_Unit: TIntegerField;
-    qryReportRep_Name: TStringField;
+    qryReportRep_Name: TWideStringField;
     qryReportCost_Unit_Description: TStringField;
     qryReportCost_Factor: TFloatField;
     qryReportSell_Unit_Description: TStringField;

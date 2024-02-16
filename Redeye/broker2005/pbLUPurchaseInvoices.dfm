@@ -200,7 +200,14 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     Height = 221
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
@@ -208,7 +215,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnCellClick = dbgDetailsCellClick
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick

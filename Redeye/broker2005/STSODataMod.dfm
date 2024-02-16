@@ -2047,7 +2047,7 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' ')
     Left = 304
     Top = 496
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 40

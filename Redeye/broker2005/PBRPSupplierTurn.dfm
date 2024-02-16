@@ -10,7 +10,7 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 24
@@ -579,7 +579,7 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
       FixedChar = True
       Size = 100
     end
-    object qryReportAccount_Code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end

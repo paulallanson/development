@@ -10,7 +10,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16

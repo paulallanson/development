@@ -346,8 +346,8 @@ end;
 
 procedure TfrmWTSendFax.FormDestroy(Sender: TObject);
 begin
-{Destroy the fax finish event} ;
-FaxFinishedEvent.Destroy;
+  {Destroy the fax finish event} ;
+  FaxFinishedEvent.Free;
 end;
 
 procedure TfrmWTSendFax.ApdFaxDriverInterface1DocEnd(Sender: TObject);

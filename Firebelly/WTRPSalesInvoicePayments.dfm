@@ -1477,8 +1477,8 @@ object frmWTRPSalesInvoicePayments: TfrmWTRPSalesInvoicePayments
       '        (SELECT TOP 1 Sales_Order.Date_Required'
       '         FROM Sales_Order'
       
-        '         WHERE Sales_Order.Sales_Order = val(Sales_invoice.Refer' +
-        'ence)) AS Fitting_Date'
+        '         WHERE Sales_Order.Sales_Order = cast(Sales_invoice.Refer' +
+        'ence as int)) AS Fitting_Date'
       'FROM Operator'
       '      RIGHT JOIN (Sales_invoice_status'
       '      INNER JOIN (Rep'
@@ -1546,18 +1546,18 @@ object frmWTRPSalesInvoicePayments: TfrmWTRPSalesInvoicePayments
     object qryReportSales_invoice: TIntegerField
       FieldName = 'Sales_invoice'
     end
-    object qryReportInactive: TStringField
+    object qryReportInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportAccount_code: TStringField
+    object qryReportAccount_code: TWideStringField
       FieldName = 'Account_code'
       Size = 10
     end
-    object qryReportInvoice_no: TStringField
+    object qryReportInvoice_No: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -1579,44 +1579,44 @@ object frmWTRPSalesInvoicePayments: TfrmWTRPSalesInvoicePayments
     object qryReportSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
     end
-    object qryReportInvoice_or_Credit: TStringField
+    object qryReportInvoice_Or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object qryReportdescription: TStringField
+    object qryReportDescription: TWideStringField
       FieldName = 'description'
       Size = 255
     end
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportReference: TStringField
+    object qryReportReference: TWideStringField
       FieldName = 'Reference'
     end
-    object qryReportCustomer_Name: TStringField
+    object qryReportCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
-    object qryReportInvoice_Status_description: TStringField
+    object qryReportInvoice_Status_Description: TWideStringField
       FieldName = 'Invoice_Status_description'
       Size = 30
     end
-    object qryReportCustomer_Type_Description: TStringField
+    object qryReportCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 40
     end
-    object qryReportRep_Name: TStringField
+    object qryReportRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
     object qryReportAccount_Manager: TIntegerField
       FieldName = 'Account_Manager'
     end
-    object qryReportAccount_Manager_Name: TStringField
+    object qryReportAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qryReportIs_Retail_Customer: TStringField
+    object qryReportIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 1
     end
@@ -1627,7 +1627,7 @@ object frmWTRPSalesInvoicePayments: TfrmWTRPSalesInvoicePayments
     object qryReportFitting_Date: TDateTimeField
       FieldName = 'Fitting_Date'
     end
-    object qryReportIs_Commercial_Customer: TStringField
+    object qryReportIs_Commercial_customer: TWideStringField
       FieldName = 'Is_Commercial_Customer'
       Size = 1
     end

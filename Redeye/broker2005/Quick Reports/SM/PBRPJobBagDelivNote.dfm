@@ -14,7 +14,7 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
   Font.Name = 'Courier New'
   Font.Style = []
   OldCreateOrder = True
-  Scaled = False
+  
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 18

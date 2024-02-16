@@ -30,13 +30,12 @@ object frmPBLUJobs: TfrmPBLUJobs
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1190
+        Width = 1182
       end>
-    ExplicitWidth = 1192
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1177
+      Width = 1173
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -76,7 +75,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDeleteClick
       end
       object btnConvert: TToolButton
-        Left = 248
+        Left = 236
         Top = 0
         Caption = 'Requote'
         Enabled = False
@@ -84,7 +83,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnConvertClick
       end
       object btnPrint: TToolButton
-        Left = 236
+        Left = 295
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -92,7 +91,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 295
+        Left = 354
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -100,7 +99,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnDraft: TToolButton
-        Left = 303
+        Left = 362
         Top = 0
         Hint = 'Print a draft invoice'
         Caption = 'Dra&ft'
@@ -111,7 +110,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDraftClick
       end
       object btnInvoiceThisWeek: TToolButton
-        Left = 362
+        Left = 421
         Top = 0
         Caption = 'Inv Now'
         Enabled = False
@@ -119,7 +118,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnInvoiceThisWeekClick
       end
       object ToolButton1: TToolButton
-        Left = 421
+        Left = 480
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -127,7 +126,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 429
+        Left = 488
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -141,14 +140,21 @@ object frmPBLUJobs: TfrmPBLUJobs
     Width = 1188
     Height = 228
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     PopupMenu = pmnFunctions
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -315,8 +321,6 @@ object frmPBLUJobs: TfrmPBLUJobs
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 304
-    ExplicitWidth = 1192
     object Label1: TLabel
       Left = 8
       Top = 26
@@ -333,7 +337,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 918
+      Left = 914
       Top = 1
       Width = 273
       Height = 50
@@ -435,8 +439,6 @@ object frmPBLUJobs: TfrmPBLUJobs
       item
         Width = 50
       end>
-    ExplicitTop = 356
-    ExplicitWidth = 1192
   end
   object Panel3: TPanel
     Left = 0
@@ -449,7 +451,6 @@ object frmPBLUJobs: TfrmPBLUJobs
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1192
     object Label3: TLabel
       Left = 8
       Top = 3

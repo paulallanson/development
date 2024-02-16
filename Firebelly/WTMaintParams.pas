@@ -652,17 +652,17 @@ begin
       if dblkpAccountManager.KeyValue = 0 then
         parambyname('Account_Manager').clear
       else
-        parambyname('Account_Manager').asinteger := dblkpAccountManager.KeyValue;
+        parambyname('Account_Manager').asinteger := dblkpAccountManager.ListValue;
 
       if dblkpSalesLeadSource.KeyValue = 0 then
         parambyname('Sales_Lead_Source').clear
       else
-        parambyname('Sales_Lead_Source').asinteger := dblkpSalesLeadSource.KeyValue;
+        parambyname('Sales_Lead_Source').asinteger := dblkpSalesLeadSource.ListValue;
 
       if dblkpCustSalesLeadSource.KeyValue = 0 then
         parambyname('Customer_Sales_Lead_Source').clear
       else
-        parambyname('Customer_Sales_Lead_Source').asinteger := dblkpCustSalesLeadSource.KeyValue;
+        parambyname('Customer_Sales_Lead_Source').asinteger := dblkpCustSalesLeadSource.ListValue;
 
       parambyname('Website_Image_Directory').asstring := edtWebsiteImageDirectory.text;
 

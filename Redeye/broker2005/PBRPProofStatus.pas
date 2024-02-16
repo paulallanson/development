@@ -33,11 +33,11 @@ type
     qryReportLine: TIntegerField;
     qryReportProof_Date: TDateTimeField;
     qryReportProof_Status: TStringField;
-    qryReportDescription: TStringField;
+    qryReportDescription: TWideStringField;
     qryReportCustomers_Desc: TStringField;
     qryReportCustomer: TIntegerField;
     qryReportBranch_no: TIntegerField;
-    qryReportCustomer_Name: TStringField;
+    qryReportCustomer_Name: TWideStringField;
     qryReportGoods_Required: TDateTimeField;
     qryReportCust_Order_No: TStringField;
     qryReportPOLine: TStringField;

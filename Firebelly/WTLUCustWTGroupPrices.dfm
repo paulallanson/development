@@ -23,13 +23,20 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Height = 239
     Align = alClient
     DataSource = srclkpCustWTGroupPrices
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -80,8 +87,6 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       item
         Width = 50
       end>
-    ExplicitTop = 322
-    ExplicitWidth = 519
   end
   object Panel1: TPanel
     Left = 0
@@ -91,8 +96,6 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 271
-    ExplicitWidth = 519
     DesignSize = (
       525
       51)
@@ -135,7 +138,6 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 417
     end
     object btnExcel: TBitBtn
       Left = 341
@@ -147,7 +149,6 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       Enabled = False
       TabOrder = 4
       OnClick = btnExcelClick
-      ExplicitLeft = 335
     end
   end
   object Panel2: TPanel
@@ -157,7 +158,6 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Height = 41
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 519
     object Label3: TLabel
       Left = 8
       Top = 16

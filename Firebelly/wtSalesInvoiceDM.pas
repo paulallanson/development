@@ -88,11 +88,10 @@ type
     qrySIHeaderGridCustomer: TIntegerField;
     qrySIHeaderGridInactive: TWideStringField;
     qrySIHeaderGridInvoice_or_Credit: TWideStringField;
-    qrySIHeaderGridCustomer_Name: TWideStringField;
     qrySIHeaderGridStatus_Description: TWideStringField;
-    qrySIHeaderGridGoods_Value: TFloatField;
-    qrySIHeaderGridVat_Value: TFloatField;
-    qrySIHeaderGridTotal_Value: TFloatField;
+    qrySIHeaderGridGoods_Value: TCurrencyField;
+    qrySIHeaderGridVat_Value: TCurrencyField;
+    qrySIHeaderGridTotal_Value: TCurrencyField;
     qrySIHeaderGridInvoice_no: TWideStringField;
     qrySIHeaderGridSales_invoice_status: TIntegerField;
     qrySIHeaderGridSales_Invoice: TIntegerField;
@@ -112,7 +111,7 @@ type
     qrySCHeaderGridInvoice_no: TWideStringField;
     qrySCHeaderGridSales_invoice_status: TIntegerField;
     qrySCHeaderGridSales_Invoice: TIntegerField;
-    qrySCHeaderGridReference: TStringField;
+    qrySCHeaderGridReference: TWideStringField;
     qrySCHeaderGridDescription: TWideStringField;
     qrySCHeaderGridCustomer_Name: TWideStringField;
     qryGetSOQuote: TFDQuery;
@@ -146,8 +145,10 @@ type
     qrySCHeaderGridBranch_Name: TWideStringField;
     qrySIHeaderBaseOld: TFDQuery;
     qrySIHeaderGridRevenue_Centre_Descr: TWideStringField;
+    qrySIHeaderGridOriginal_Name: TWideStringField;
     qrySCHeaderBaseOld: TFDQuery;
     qrySCHeaderGridRevenue_Centre_Descr: TWideStringField;
+    qrySIHeaderBaseOlder: TFDQuery;
     procedure qrySIHeaderGridCalcFields(DataSet: TDataSet);
   private
     function GetCreditHeaderCount: integer;
@@ -367,7 +368,7 @@ type
     property Parent : TSalesInvoice read FParent;
   end;
 
-  TSalesInvoice       = class
+  TSalesInvoice = class
   private
     FPaidAmount: currency;
     FOperator: integer;
@@ -2185,7 +2186,7 @@ begin
   with FParent.Datamodule.qrySOLine do
     begin
       close;
-      parambyname('Sales_Order').asinteger := tempCode;
+      parambyname('Sales_Order').asfloat := tempCode;
       parambyname('Sales_order_Line_no').asinteger := tempLine;
       open;
       result := fieldbyname('description').asstring;

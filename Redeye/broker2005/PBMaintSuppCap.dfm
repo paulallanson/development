@@ -130,13 +130,20 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
           Height = 195
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelCapsDS
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnCellClick = UnSelCapsDBGridCellClick
           Columns = <
             item
@@ -215,13 +222,20 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
           Height = 201
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelProdTypsDS
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
           OnCellClick = UnSelProdTypsDBGridCellClick
           Columns = <
             item

@@ -10,7 +10,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   TextHeight = 13
   object clReport: TQuickRep
     Left = 8

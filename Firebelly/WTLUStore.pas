@@ -81,7 +81,7 @@ var
 
 implementation
 
-uses wtMain, WTMaintStore, wtDataModule;
+uses UITypes, wtMain, WTMaintStore, wtDataModule;
 
 {$R *.DFM}
 

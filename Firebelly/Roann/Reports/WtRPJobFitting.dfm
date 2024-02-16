@@ -10,7 +10,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   TextHeight = 13
   object qrpJobSheet: TQuickRep
@@ -3466,7 +3466,9 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrrchTextInstallAddress2: TQRMemo
@@ -3474,25 +3476,23 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Top = 208
         Width = 321
         Height = 97
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           256.645833333333300000
           42.333333333333330000
           550.333333333333300000
           849.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Lines.Strings = (
           'InstallAddress')
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
     end

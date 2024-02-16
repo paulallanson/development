@@ -483,7 +483,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object qrySalesByInvGoods_Value: TCurrencyField
       FieldName = 'Goods_Value'
     end
-    object qrySalesByInvInvoice_or_Credit: TStringField
+    object qrySalesByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2

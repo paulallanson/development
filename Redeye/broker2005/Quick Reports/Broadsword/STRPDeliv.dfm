@@ -10,7 +10,7 @@ object STRPDelivfrm: TSTRPDelivfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Scaled = False
+  
   OnCreate = FormCreate
   TextHeight = 13
   object PickSOListQuickReport: TQuickRep
@@ -703,7 +703,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     end
     object qrdetailSerialNos: TQRSubDetail
       Left = 25
-      Top = 479
+      Top = 502
       Width = 751
       Height = 21
       AlignToBottom = False
@@ -774,7 +774,9 @@ object STRPDelivfrm: TSTRPDelivfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -783,39 +785,33 @@ object STRPDelivfrm: TSTRPDelivfrm
       Top = 479
       Width = 751
       Height = 23
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = QRSubDetail1
       Size.Values = (
         60.854166666666670000
         1987.020833333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = QRSubDetail1
+      PrintOrder = cboAfterParent
       object gtlblFSCClaim: TQRLabel
         Left = 112
         Top = 3
         Width = 65
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           296.333333333333300000
           7.937500000000000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FSC Claim:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -825,7 +821,9 @@ object STRPDelivfrm: TSTRPDelivfrm
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1134,7 +1132,6 @@ object STRPDelivfrm: TSTRPDelivfrm
       end
       item
         Name = 'Sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFSCClaim: TFDQuery
@@ -1147,9 +1144,7 @@ object STRPDelivfrm: TSTRPDelivfrm
     Top = 198
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -100,6 +100,7 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
     Width = 817
     Height = 313
     Align = alClient
+    DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
@@ -112,7 +113,7 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
     TitleFont.Color = clBlack
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item

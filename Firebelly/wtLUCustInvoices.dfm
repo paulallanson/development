@@ -85,13 +85,20 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
     Width = 678
     Height = 310
     Align = alClient
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -146,15 +153,15 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       678
       41)
     object Label1: TLabel
-      Left = 8
-      Top = 16
+      Left = 11
+      Top = 11
       Width = 96
       Height = 13
       Caption = 'Description Search'
     end
     object Button1: TButton
       Left = 597
-      Top = 8
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -163,7 +170,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 113
       Top = 8
       Width = 169
       Height = 21

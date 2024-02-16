@@ -92,7 +92,7 @@ type
     qryCustStockReorder_Level: TIntegerField;
     qryCustStockNot_in_Use: TWideStringField;
     qryCustStockProduct_Class: TWideStringField;
-    qryPartMvmntsDate_received: TSQLTimeStampField;
+    qryPartMvmntsDate_received: TDateTimeField;
     qryPartMvmntsPart_Store_Name: TWideStringField;
     qryPartMvmntsPart_Movement_Bin: TWideStringField;
     qryPartMvmntsPart_Store_Lot: TWideStringField;
@@ -108,7 +108,7 @@ type
     qryPartSalespart_description: TWideStringField;
     qryPartSalessales_order: TIntegerField;
     qryPartSalesCustomer: TWideStringField;
-    qryPartSalesdate_ordered: TSQLTimeStampField;
+    qryPartSalesdate_ordered: TDateTimeField;
     qryPartSalesquantity_ordered: TIntegerField;
     qryPartSalesquantity_delivered: TIntegerField;
     qryPartSalesquantity_invoiced: TIntegerField;
@@ -123,7 +123,7 @@ type
     qryPartProductionDescription: TWideStringField;
     qryPartProductionPurchase_Order: TFloatField;
     qryPartProductionSupplier: TWideStringField;
-    qryPartProductionOrder_Date: TSQLTimeStampField;
+    qryPartProductionOrder_Date: TDateTimeField;
     qryPartProductionOrder_Status: TWideStringField;
     qryPartProductionQuantity_Ordered: TFloatField;
     qryPartProductionDelivered_to_Stock: TFloatField;
@@ -138,7 +138,7 @@ type
     qryPartPOsDescription: TWideStringField;
     qryPartPOsPurchase_Order: TIntegerField;
     qryPartPOsSupplier: TWideStringField;
-    qryPartPOsOrder_Date: TSQLTimeStampField;
+    qryPartPOsOrder_Date: TDateTimeField;
     qryPartPOsOrder_Status: TWideStringField;
     qryPartPOsQuantity_Ordered: TIntegerField;
     qryPartPOsPack_Size: TIntegerField;
