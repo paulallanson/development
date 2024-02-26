@@ -32,7 +32,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 911
+        Width = 915
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -45,7 +45,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 890
+        Width = 902
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59

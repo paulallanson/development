@@ -19,6 +19,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
@@ -55,7 +56,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 14
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnActivitiesClick
       end
       object btnCustomers: TToolButton
@@ -83,7 +83,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 8
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnProspectsClick
       end
       object btnSuppliers: TToolButton
@@ -101,7 +100,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 12
-        Visible = False
         OnClick = btnContractsClick
       end
       object btnFormReferences: TToolButton
@@ -152,7 +150,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 3
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnJobsClick
       end
       object btnWorksOrders: TToolButton
@@ -163,7 +160,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 10
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnWorksOrdersClick
       end
       object btnNCA: TToolButton
@@ -174,7 +170,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 13
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnNCAClick
       end
       object btnCallOffs: TToolButton
@@ -185,7 +180,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 7
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnCallOffsClick
       end
       object btnPurchases: TToolButton
@@ -196,7 +190,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 8
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnPurchasesClick
       end
       object btnStock: TToolButton
@@ -207,7 +200,6 @@ object frmpbMainMenu: TfrmpbMainMenu
         ImageIndex = 4
         ParentShowHint = False
         ShowHint = True
-        Visible = False
         OnClick = btnStockClick
       end
       object btnSalesInvoicing: TToolButton

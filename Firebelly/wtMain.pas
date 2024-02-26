@@ -317,6 +317,7 @@ type
     function RunDBUpdate: boolean;
     procedure PseudoFormActivate;
     procedure LicenceCheck;
+    procedure InitialiseToolButtons;
 {$IFDEF DEMO}
     procedure DemoCheck(TempWarn: ByteBool);
     { Private declarations }
@@ -419,6 +420,17 @@ begin
   stsbrStatus.SimpleText := Application.Hint;
 end;
 
+procedure TfrmWTMain.InitialiseToolButtons;
+begin
+  if FInitialiseButtons then
+  begin
+    btnContracts.Visible := False;
+    btnStock.Visible := False;
+    btnPurchasing.Visible := False;
+    FInitialiseButtons := False;
+  end;
+end;
+
 procedure TfrmWTMain.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
@@ -463,13 +475,7 @@ end;
 
 procedure TfrmWTMain.FormShow(Sender: TObject);
 begin
-  if FInitialiseButtons then
-  begin
-    btnContracts.Visible := False;
-    btnStock.Visible := False;
-    btnPurchasing.Visible := False;
-    FInitialiseButtons := False;
-  end;
+  InitialiseToolButtons;
 end;
 
 procedure TfrmWTMain.actnCloseAllExecute(Sender: TObject);

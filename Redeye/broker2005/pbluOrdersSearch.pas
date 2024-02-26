@@ -79,7 +79,7 @@ begin
   dtmdlSearchOrders.SupplierName := Trim(edtSupplier.Text);
   dtmdlSearchOrders.JobNumber := Trim(edtJobNumber.Text);
   dtmdlSearchOrders.Status := trim(edtStatus.text);
-  if edtDate.text = '' then
+  if Trim(edtDate.text).IsEmpty then
     dtmdlSearchOrders.OrderDate := pbDatestr('01/01/1990')
   else
     dtmdlSearchOrders.OrderDate := PBDateStr(edtDate.Text);

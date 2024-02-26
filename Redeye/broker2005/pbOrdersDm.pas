@@ -82,8 +82,10 @@ type
     procedure qryOrdersStatus_DescriptionGetText(Sender: TField;
       var Text: string; DisplayText: Boolean);
   private
+    FOrderDate: TDateTime;
     function GetHeaderCount: integer;
     function GetCalloffHeaderCount: integer;
+    procedure SetOrderDate(const OrderDate: TDateTime);
   public
     AccountMgr: string;
     AltPurchaseOrder: string;
@@ -97,10 +99,9 @@ type
     ExistingOrders: string;
     FormReference: string;
     JobNumber: string;
-    Operator: integer;
+    &Operator: integer;
     OperatorName: string;
     OrdQtyDesc: string;
-    OrderDate: TDateTime;
     PONumber: string;
     ProductCode: string;
     Rep: integer;
@@ -132,6 +133,7 @@ type
     procedure RefreshSOData;
     function SetSOInvoiceStatus(tempCode: integer): string;
     function SOInvoiced(SOrder: integer): boolean;
+    property OrderDate: TDateTime read FOrderDate write SetOrderDate;
     property HeaderCount: integer read GetHeaderCount;
     property CalloffHeaderCount: integer read GetCalloffHeaderCount;
   end;
@@ -226,7 +228,7 @@ begin
       if Operator <> 0 then
         sTemp := sTemp + ' AND (Sales_OrderRep.Operator = ' + inttostr(Operator) + ')';
 
-      sTemp := sTemp + ' AND Sales_Order.Date_Ordered >= ' + qDate(OrderDate);
+      sTemp := sTemp + ' AND Sales_Order.Date_Ordered >= ' + qDate(FOrderDate);
       qryOrders.SQL.text := qryOrders.SQL.text + sTemp;
       qryOrders.SQL.text := qryOrders.SQL.text + 'UNION ALL ';
     end;
@@ -271,7 +273,7 @@ begin
   if Operator <> 0 then
     sTemp := sTemp + ' AND (Purchase_Order.Operator = ' + inttostr(Operator) + ')';
     
-  sTemp := sTemp + ' AND Purchase_Order.Date_Point >= ' + qDate(OrderDate);
+  sTemp := sTemp + ' AND Purchase_Order.Date_Point >= ' + qDate(FOrderDate);
   qryOrders.SQL.text := qryOrders.SQL.text + sTemp;
 
   if stockinUse then
@@ -285,7 +287,7 @@ begin
   begin
     Close;
     {order date greater than 1/1/1990}
-    if OrderDate > 32874 then
+    if FOrderDate > 32874 then
       parambyname('Records').asinteger := 100000000
     else
       parambyname('Records').asinteger := 1000;
@@ -372,7 +374,7 @@ begin
                        + ' WHERE Form_Reference.stock_reference = sales_order_line.part) LIKE ''%' + FormReference + '%'')';
     end;
 
-  sTemp := sTemp + ' AND Sales_Order.Date_Ordered >= ' + qDate(OrderDate);
+  sTemp := sTemp + ' AND Sales_Order.Date_Ordered >= ' + qDate(FOrderDate);
 
   if ShowOrderLines then
     begin
@@ -382,7 +384,7 @@ begin
 
       qryCallOffs.Close;
       {order date greater than 1/1/1990}
-      if OrderDate > 32874 then
+      if FOrderDate > 32874 then
         qryCallOffs.parambyname('Records').asinteger := 100000000
       else
         qryCallOffs.parambyname('Records').asinteger := 2000;
@@ -398,7 +400,7 @@ begin
 
       qryCallOffs.Close;
       {order date greater than 1/1/1990}
-      if OrderDate > 32874 then
+      if FOrderDate > 32874 then
         qryCallOffs.parambyname('Records').asinteger := 100000000
       else
         qryCallOffs.parambyname('Records').asinteger := 2000;
@@ -487,7 +489,7 @@ begin
   if ShowOnlyUnAuthorised then
     sTemp := sTemp + ' AND (Purchase_Order.Needs_Authorising = ''Y'')';
 
-  sTemp := sTemp + ' AND Purchase_Order.Date_Point >= ' + qDate(OrderDate);
+  sTemp := sTemp + ' AND Purchase_Order.Date_Point >= ' + qDate(FOrderDate);
   qryOrders.SQL.text := qryOrders.SQL.text + sTemp;
 
   sTemp := 'ORDER BY Purchase_order.Purchase_Order desc, Sales_Order desc ';
@@ -498,7 +500,7 @@ begin
   begin
     Close;
     {order date greater than 1/1/1990}
-    if OrderDate > 32874 then
+    if FOrderDate > 32874 then
       parambyname('Records').asinteger := 100000000
     else
       parambyname('Records').asinteger := 2000;
@@ -851,6 +853,16 @@ begin
     result := true
   else
     result := false;
+end;
+
+procedure TdtmdlOrders.SetOrderDate(const OrderDate: TDateTime);
+var
+  Value: TDateTime;
+begin
+  Value := StrToDateTime('01-01-1900');
+  FOrderDate := OrderDate;
+  if FOrderDate < Value then
+    FOrderDate := Value;
 end;
 
 function TdtmdlOrders.SetSOInvoiceStatus(tempCode: integer): string;
