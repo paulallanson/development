@@ -749,7 +749,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 685
+              Width = 681
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
@@ -2617,7 +2617,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object ToolBar9: TToolBar
             Left = 11
@@ -3005,7 +3005,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrQuotes: TToolBar
           Left = 11
@@ -3274,7 +3274,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrEnquiries: TToolBar
           Left = 11
@@ -3646,7 +3646,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3658,9 +3658,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 41
-            ButtonHeight = 29
+            ButtonHeight = 44
             ButtonWidth = 65
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3748,7 +3748,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsDropDown
             end
             object btnOrderPicking: TToolButton
-              Left = 545
+              Left = 543
               Top = 0
               Caption = 'Pic&king'
               DropdownMenu = pmnOrderPicking
@@ -3756,7 +3756,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object ToolButton3: TToolButton
-              Left = 610
+              Left = 608
               Top = 0
               Width = 8
               Caption = 'ToolButton3'
@@ -3764,7 +3764,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderProofs: TToolButton
-              Left = 618
+              Left = 616
               Top = 0
               Caption = 'Proo&fs'
               DropdownMenu = pmnOrderProofs
@@ -3772,7 +3772,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object btnOrderDeliveriesSpacer: TToolButton
-              Left = 683
+              Left = 681
               Top = 0
               Width = 8
               Caption = 'btnOrderDeliveriesSpacer'
@@ -3780,7 +3780,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderDeliveries: TToolButton
-              Left = 691
+              Left = 689
               Top = 0
               Hint = 'Deliveries'
               Caption = 'Deliver&y'
@@ -3789,7 +3789,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderDeliveriesClick
             end
             object btnOrderHold: TToolButton
-              Left = 756
+              Left = 754
               Top = 0
               Hint = 'On Hold'
               Caption = '&Hold'
@@ -3984,7 +3984,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrJobs: TToolBar
           Left = 11
@@ -4261,7 +4261,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4273,7 +4273,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1151
+              Width = 1139
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 68
@@ -4538,8 +4538,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 556
-        ExplicitWidth = 1164
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4551,7 +4549,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1166
+            Width = 1162
           end>
         object PageScroller3: TPageScroller
           Left = 11
@@ -4564,7 +4562,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 53
@@ -4684,8 +4682,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 575
-        ExplicitWidth = 1164
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4710,7 +4706,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 880
           object Label54: TLabel
             Left = 88
             Top = 13
@@ -4953,7 +4948,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object ToolBar8: TToolBar
             Left = 11
@@ -8542,5 +8537,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
       E00FE0000000E00FE00FF8000023C007E027F0000063C007C073E00100C3C007
       9E79C4030107F83F7EFEEC0703FFF83F00000000000000000000000000000000
       000000000000}
+  end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFiles]
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pgCustomer
+    PassThrough = True
+    Left = 520
+    Top = 200
+  end
+  object PJExtFileFilter1: TPJExtFileFilter
+    Extensions = '.msg;.eml'
+    Left = 520
+    Top = 248
   end
 end

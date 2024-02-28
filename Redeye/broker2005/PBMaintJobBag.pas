@@ -8,7 +8,7 @@ uses
   DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects, Menus,
   PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX,
   OleCtrls, SHDocVw, pbSupplierInvoiceDM, ImgList, Clipbrd, ToolWin,
-  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param;
+  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -458,6 +458,8 @@ type
     pmnuRePrintSI: TMenuItem;
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
+    PJCtrlDropFiles1: TPJCtrlDropFiles;
+    PJExtFileFilter1: TPJExtFileFilter;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -632,6 +634,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
+    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -656,6 +659,8 @@ type
     FDefaultBin: integer;
     FDefaultPrinter: string;
     FSchedMode: TJBSchMode;
+    procedure ProcessDragAndDrop;
+    function GetFilesPath: string;
     procedure AddPurchaseOrder(const rPO: real; iLine : integer);
     procedure AddPurchaseOrderFromEnq(const rPO: real; iLine: integer);
     function AddNewOrderLine(const LineNo: Integer): PBPOObjects.TOrderLine;
@@ -2506,6 +2511,11 @@ procedure TPBMaintJobBagFrm.GetCustomerReps(tempno: integer);
 begin
 end;
 
+function TPBMaintJobBagFrm.GetFilesPath: string;
+begin
+  Result := sPath;
+end;
+
 procedure TPBMaintJobBagFrm.btnDateClick(Sender: TObject);
 var
   DateSelV5Form: TDateSelV5Form;
@@ -4223,6 +4233,18 @@ begin
   finally
     PBRSPOrdNFrm.Free;
   end;
+end;
+
+procedure TPBMaintJobBagFrm.ProcessDragAndDrop;
+var
+  Path: string;
+begin
+  Path := GetFilesPath;
+  MyWinControlSetData(PJCtrlDropFiles1, Path,
+    procedure
+    begin
+      ShowDocuments;
+    end);
 end;
 
 procedure TPBMaintJobBagFrm.CheckNotes(Sender: TObject);
@@ -6466,6 +6488,11 @@ begin
 { Trancate the body text and remove line-ends }
   ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
+end;
+
+procedure TPBMaintJobBagFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
+begin
+  ProcessDragAndDrop;
 end;
 
 function TPBMaintJobBagFrm.ParseDocumentFrom(tmpFrom: string): string;
