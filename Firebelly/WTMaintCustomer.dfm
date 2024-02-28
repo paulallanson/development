@@ -2871,4 +2871,20 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 408
     Top = 224
   end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFiles]
+    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pgDetails
+    PassThrough = True
+    Left = 736
+    Top = 40
+  end
+  object PJExtFileFilter1: TPJExtFileFilter
+    Extensions = '.msg;.eml'
+    Left = 736
+    Top = 88
+  end
 end

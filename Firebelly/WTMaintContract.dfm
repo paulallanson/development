@@ -907,7 +907,6 @@ object frmWTMaintContract: TfrmWTMaintContract
         OnColumnClick = lstvwDocumentsColumnClick
         OnCompare = lstvwDocumentsCompare
         OnDblClick = lstvwDocumentsDblClick
-        ExplicitWidth = 544
       end
       object Panel1: TPanel
         Left = 579
@@ -918,7 +917,6 @@ object frmWTMaintContract: TfrmWTMaintContract
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitLeft = 575
       end
       object ToolBar1: TToolBar
         Left = 548
@@ -934,7 +932,6 @@ object frmWTMaintContract: TfrmWTMaintContract
         ParentShowHint = False
         ShowHint = True
         TabOrder = 3
-        ExplicitLeft = 544
         object btnExcel: TToolButton
           Left = 0
           Top = 0
@@ -988,7 +985,6 @@ object frmWTMaintContract: TfrmWTMaintContract
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 4
-        ExplicitLeft = 591
         object memNotes: TMemo
           Left = 0
           Top = 0
@@ -1030,14 +1026,14 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Panel9: TPanel
         Left = 0
         Top = 0
-        Width = 976
+        Width = 980
         Height = 17
         Align = alTop
         ParentBackground = False
         TabOrder = 0
       end
       object pnlEventFunc: TPanel
-        Left = 514
+        Left = 518
         Top = 17
         Width = 93
         Height = 356
@@ -1075,7 +1071,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
       end
       object pnlEvents: TPanel
-        Left = 607
+        Left = 611
         Top = 17
         Width = 369
         Height = 356
@@ -1097,7 +1093,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       object sgEvents: TStringGrid
         Left = 0
         Top = 17
-        Width = 514
+        Width = 518
         Height = 356
         Align = alClient
         ColCount = 3
@@ -1557,5 +1553,21 @@ object frmWTMaintContract: TfrmWTMaintContract
       Caption = 'Select All'
       OnClick = pmnuSelectAllClick
     end
+  end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFiles]
+    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pcDetails
+    PassThrough = True
+    Left = 720
+    Top = 48
+  end
+  object PJExtFileFilter1: TPJExtFileFilter
+    Extensions = '.msg;.eml'
+    Left = 720
+    Top = 96
   end
 end

@@ -1003,4 +1003,20 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Name = 'Customer'
       end>
   end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFiles]
+    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pgDetails
+    PassThrough = True
+    Left = 416
+    Top = 208
+  end
+  object PJExtFileFilter1: TPJExtFileFilter
+    Extensions = '.msg;.eml'
+    Left = 416
+    Top = 256
+  end
 end

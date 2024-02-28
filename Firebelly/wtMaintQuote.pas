@@ -3,12 +3,10 @@ unit wtMaintQuote;
 interface
 
 uses                         
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ComCtrls, ExtCtrls, Buttons, Grids, DBCtrls, wtQuotesDm,
-  CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin,
-  ImgList, ShellAPI, Menus, Inifiles, DBGrids,
-  Activex, AxCtrls, Clipbrd, ComObj, taoMAPI,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
+  Grids, DBCtrls, wtQuotesDm, CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin, ImgList, ShellAPI, Menus,
+  Inifiles, DBGrids, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
+  PJDropFiles;
 
 type
   TfrmWTMaintQuote = class(TForm)
@@ -332,7 +330,7 @@ type
     Label59: TLabel;
     dblkpRevenueCentre: TDBLookupComboBox;
     SpeedButton1: TSpeedButton;
-    dfDocuments: TPJDropFiles;
+    PJCtrlDropFiles1: TPJCtrlDropFiles;
     PJExtFileFilter1: TPJExtFileFilter;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -453,7 +451,8 @@ type
     procedure tbDocumentsShow(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure dfDocumentsDropFiles(Sender: TObject);
+    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
+    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     FRetailCustomer: bytebool;
     FUseMarkup: bytebool;
@@ -516,10 +515,8 @@ type
     procedure SetContractQuote(const Value: boolean);
     procedure MoveOriginalQuoteDocuments;
     procedure SetOriginalQuoteFromReQuote(const Value: integer);
-    function FormatDateasDateTime(sDate: string): TDateTime;
-    function ParseDocumentFrom(tmpFrom: string): string;
-    procedure ParseMessage(const AFileName: string; var ATo, AFrom,
-      ASubject, ADate, ABody: string);
+    procedure ProcessDragAndDrop;
+    function GetFilesPath: string;
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -549,12 +546,11 @@ var
 
 implementation
 
-uses UITypes, 
-  wtCommon, WTSrchCustomer, wtMain, wtMaintQElement, wtMaintQCutOut, wtMaintQEdge,
-  wtMaintQExtra, wtNotesDM, wtDataModule, wtMaintQUpstand, WTMaintQEvents,
-  WTSrchCustContacts, wtLUMatType, WTMaintQElementM, WTMaintQUpstandM,
-  wtLUSalesLead, WTLUDesigner, WTMaintQSlab, WTMaintEmail, WTWordOLE, WTExcelOLE,
-  WTMaintContApp, wtLUReason, wtLUSpecialInstruction, DragAndDrop.Tools;
+uses
+  wtCommon, WTSrchCustomer, wtMain, wtMaintQElement, wtMaintQCutOut, wtMaintQEdge, wtMaintQExtra, wtNotesDM,
+  wtDataModule, wtMaintQUpstand, WTMaintQEvents, WTSrchCustContacts, wtLUMatType, WTMaintQElementM, WTMaintQUpstandM,
+  wtLUSalesLead, WTLUDesigner, WTMaintQSlab, WTMaintEmail, WTWordOLE, WTExcelOLE, WTMaintContApp, wtLUReason,
+  wtLUSpecialInstruction, UITypes;
 
 {$R *.DFM}
 
@@ -3794,13 +3790,8 @@ var
   iLength, ipos: integer;
   okToSave, userCancelled, docsaved: boolean;
 begin
-//  docDir := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey);
   compDir := dtmdlWorktops.GetCompanyQuoteDirectory;
-  if stvDocuments.TopItem.Text = stvDocuments.Selected.Text then
-    docDir := compDir + '\' + inttostr(Quote.dbKey) +'\'
-  else
-    docDir := compDir + '\' + inttostr(Quote.dbKey) +'\' + stvDocuments.Selected.Text +'\';
-
+  docDir := GetFilesPath;
 
   okToSave := false;
   userCancelled := false;
@@ -4180,6 +4171,17 @@ begin
   end;
 end;
 
+function TfrmWTMaintQuote.GetFilesPath: string;
+var
+  DocDir: string;
+begin
+  DocDir := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey) +'\';
+  if stvDocuments.TopItem.Text <> stvDocuments.Selected.Text then
+    DocDir := DocDir + stvDocuments.Selected.Text + '\';
+
+  Result := DocDir;
+end;
+
 procedure TfrmWTMaintQuote.GetNotes(iNarrative: Integer);
 var
   Narrative: TNotes;
@@ -4242,13 +4244,6 @@ begin
   edtGrossPrice.Text := formatfloat('0.00',(Quote.TotalGross+Quote.TotalVat));
 end;
 
-procedure TfrmWTMaintQuote.dfDocumentsDropFiles(Sender: TObject);
-begin
-  for var i := 0 to Pred(dfDocuments.Count) do
-    TDragAndDropTools.New.MakeACopy(dfDocuments.Files[i], Self.slvDocuments.RootFolder.PathName);
-  Self.slvDocuments.Refresh;
-end;
-
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);
 var
   tempDate: string;
@@ -4261,203 +4256,14 @@ begin
   edtExpiryDate.text := paDatestr(InputDate(paDateStr(tempdate)));
 end;
 
-procedure TfrmWTMaintQuote.ParseMessage(const AFileName: string; var ATo, AFrom,
-  ASubject, ADate, ABody: string);
-var
-  iLength: integer;
-  MyUnicode: Boolean;
-  MyFileStream: TFileStream;
-  MyFileSize: Integer;
-  MyDataHandle: HGlobal;
-  MyBuffer: Pointer;
-  MyLockBytes: ILockBytes;
-  MyStorage: IStorage;
-  MyHeader: string;
-  MyStrings: TStrings;
-
-  function MyGetProperty(const AStorage: IStorage; AProperty: Word): string;
-  const
-    MyTString: array[Boolean] of Word = (PT_STRING8, PT_UNICODE);
-  var
-    MyIStream: IStream;
-    MyStreamName: WideString;
-    MyOleStream: TOleStream;
-    MyStream: TMemoryStream;
-    MySucceeded: Boolean;
-  begin
-{ Construct the predefined stream name }
-    MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
-{ Read a stream, if present, within the storage. }
-    MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
-      STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
-    if not MySucceeded then begin
-{ Turn MyUnicode over }
-      MyUnicode := not MyUnicode;
-      MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
-      MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
-        STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
-    end;
-    if MySucceeded then begin
-      MyOleStream := TOleStream.Create(MyIStream);
-      try
-        MyStream := TMemoryStream.Create;
-        try
-          MyStream.CopyFrom(MyOleStream, 0);
-          if MyUnicode then
-            Result := PWideChar(MyStream.Memory)
-          else
-            Result := PChar(MyStream.Memory);
-          SetLength(Result, StrLen(PChar(Result))); //  Remove the final #0
-        finally
-          MyStream.Free;
-        end;
-      finally
-        MyOleStream.Free;
-      end;
-    end;
-  end;
-
+procedure TfrmWTMaintQuote.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
 begin
-{ Open the copy of the message stored in the project directory }
-  MyFileStream := TFileStream.Create(AFileName, fmOpenRead or fmShareDenyWrite);
-  try
-    MyFileSize := MyFileStream.Size;
-{ Open the file as a Structured Storage }
-    MyDataHandle := GlobalAlloc(GMEM_MOVEABLE, MyFileSize);
-    try
-      MyBuffer := GlobalLock(MyDataHandle);
-      try
-        MyFileStream.ReadBuffer(MyBuffer^, MyFileSize);
-      finally
-        GlobalUnlock(MyDataHandle);
-      end;
-
-      OleCheck(CreateILockBytesOnHGlobal(MyDataHandle, True, MyLockBytes));
-      OleCheck(StgOpenStorageOnILockBytes(MyLockBytes, nil, STGM_READWRITE or
-        STGM_SHARE_EXCLUSIVE, nil, 0, MyStorage));
-
-{ Outlook 97/2000 return ANSI strings, Outlook XP/2003 return Unicode strings.
- MyUnicode will be turned on/off in MyGetProperty automatically. }
-      MyUnicode := True;
-{ If the message came from the Internet, it has got a RFC-compliant header }
-      MyHeader := MyGetProperty(MyStorage, PR_TRANSPORT_MESSAGE_HEADERS);
-{ Otherwise, construct a simple substitute from internal properties. }
-      if MyHeader = '' then begin
-        MyHeader :=
-          'To: ' + MyGetProperty(MyStorage, PR_DISPLAY_TO) +
-          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_CC) +
-          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_BCC) + #13#10 +
-          'From: ' + MyGetProperty(MyStorage, PR_SENDER_NAME) +
-          ' ' + MyGetProperty(MyStorage, PR_SENDER_EMAIL_ADDRESS) + #13#10 +
-          'Subject: ' + MyGetProperty(MyStorage, PR_SUBJECT) + #13#10 +
-          'Date: ' + MyGetProperty(MyStorage, PR_LAST_MODIFICATION_TIME);
-      end;
-      ABody := MyGetProperty(MyStorage, PR_BODY);
-
-    finally
-      GlobalFree(MyDataHandle);
-    end;
-  finally
-    MyFileStream.Free;
-  end;
-
-  { Parse the header as an RFC-compliant header. Exploit INI-files support buil-in in TStrings }
-  MyHeader := StringReplace(MyHeader, 'To: ', 'To=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'From: ', 'From=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'Subject: ', 'Subject=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'Date: ', 'Date=', [rfReplaceAll, rfIgnoreCase]);
-  MyStrings := TStringList.Create;
-  try
-    MyStrings.Text := MyHeader;
-    ATo := MyStrings.Values['To'];
-    AFrom := MyStrings.Values['From'];
-    AFrom := ParseDocumentFrom(AFrom);
-    ASubject := MyStrings.Values['Subject'];
-    ADate := MyStrings.Values['Date'];
-  finally
-    MyStrings.Free;
-  end;
-{ Trancate the body text and remove line-ends }
-  ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
-  ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
+  ProcessDragAndDrop;
 end;
 
-function TfrmWTMaintQuote.ParseDocumentFrom(tmpFrom: string): string;
-var
-  icount: integer;
-  Alphas, Numbers: string;
+procedure TfrmWTMaintQuote.PJCtrlDropFiles1DropFiles(Sender: TObject);
 begin
-  Alphas := 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
-  Numbers := '01234567890.';
-
-  Result := '';
-
-  if pos('@',tmpFrom) = 0 then
-    begin
-      for icount := 1 to length(tmpFrom) do
-        begin
-          if pos(copy(tmpFrom,icount,1),Alphas) > 0 then
-            begin
-              Result := Result + copy(tmpFrom,icount,1);
-              continue;
-            end;
-          if pos(copy(tmpFrom,icount,1),Numbers) > 0 then
-            begin
-              Result := Result + copy(tmpFrom,icount,1);
-              continue;
-            end;
-        end;
-    end
-  else
-    result := trim(stringreplace(tmpFrom,'"', ' ',[rfReplaceAll]));
-end;
-
-function TfrmWTMaintQuote.FormatDateasDateTime(sDate: string): TDateTime;
-var
-  icount, iStart, iLength: integer;
-  tmpDate: string;
-  Months: array [1..2,1..12] of string;
-begin
-  iStart := pos(',',sDate)+1;
-  iLength := length(sDate);
-  tmpDate := copy(sDate,iStart,21);
-
-  Months[1,1] := '01';
-  Months[1,2] := '02';
-  Months[1,3] := '03';
-  Months[1,4] := '04';
-  Months[1,5] := '05';
-  Months[1,6] := '06';
-  Months[1,7] := '07';
-  Months[1,8] := '08';
-  Months[1,9] := '09';
-  Months[1,10] := '10';
-  Months[1,11] := '11';
-  Months[1,12] := '12';
-
-  Months[2,1] := 'Jan';
-  Months[2,2] := 'Feb';
-  Months[2,3] := 'Mar';
-  Months[2,4] := 'Apr';
-  Months[2,5] := 'May';
-  Months[2,6] := 'Jun';
-  Months[2,7] := 'Jul';
-  Months[2,8] := 'Aug';
-  Months[2,9] := 'Sep';
-  Months[2,10] := 'Oct';
-  Months[2,11] := 'Nov';
-  Months[2,12] := 'Dec';
-
-  for icount := 1 to 12 do
-    begin
-      if pos(' '+Months[2,icount]+' ',tmpDate) > 0 then
-        begin
-          tmpDate := stringreplace(tmpDate,' '+Months[2,icount]+' ','/'+Months[1,icount]+'/',[]);
-          break;
-        end;
-    end;
-  iLength := length(tmpDate);
-  result := padatestr(copy(trim(tmpDate),1,10));
+  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintQuote.pmnuDocumentsPopup(Sender: TObject);
@@ -4529,6 +4335,19 @@ begin
       Items.EndUpdate;
     end;
 *)
+end;
+
+procedure TfrmWTMaintQuote.ProcessDragAndDrop;
+var
+  Path: string;
+begin
+  Path := GetFilesPath;
+  MyWinControlSetData(PJCtrlDropFiles1, Path,
+    procedure
+    begin
+      ShowDocuments(Quote.dbKey);
+    end);
+
 end;
 
 procedure TfrmWTMaintQuote.lstvwDocumentsColumnClick(Sender: TObject;

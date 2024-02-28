@@ -1529,36 +1529,25 @@ object frmWTMaintJob: TfrmWTMaintJob
         OnDragDrop = stvDocumentsDragDrop
         OnDragOver = stvDocumentsDragOver
       end
-      object dfDocuments: TPJDropFiles
+      object slvDocuments: TShellListView
         Left = 161
         Top = 17
         Width = 832
         Height = 231
+        AutoRefresh = True
+        ObjectTypes = [otFolders, otNonFolders]
+        Root = 'C:\'
+        ShellTreeView = stvDocuments
+        Sorted = True
         Align = alClient
+        ReadOnly = False
+        HideSelection = False
+        MultiSelect = True
+        OnMouseMove = slvDocumentsMouseMove
         TabOrder = 3
-        Filter = PJExtFileFilter1
-        ForegroundOnDrop = False
-        Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
-        PassThrough = False
-        OnDropFiles = dfDocumentsDropFiles
-        object slvDocuments: TShellListView
-          Left = 0
-          Top = 0
-          Width = 832
-          Height = 231
-          AutoRefresh = True
-          ObjectTypes = [otFolders, otNonFolders]
-          Root = 'C:\'
-          ShellTreeView = stvDocuments
-          Sorted = True
-          Align = alClient
-          ReadOnly = False
-          HideSelection = False
-          MultiSelect = True
-          OnMouseMove = slvDocumentsMouseMove
-          TabOrder = 0
-          ViewStyle = vsReport
-        end
+        ViewStyle = vsReport
+        ExplicitLeft = 0
+        ExplicitTop = 0
       end
     end
     object tbNotes: TTabSheet
@@ -2508,9 +2497,20 @@ object frmWTMaintJob: TfrmWTMaintJob
       OnClick = pmnuSelectAllClick
     end
   end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFiles]
+    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pgDetails
+    PassThrough = True
+    Left = 624
+    Top = 216
+  end
   object PJExtFileFilter1: TPJExtFileFilter
-    Style = fsAll
-    Left = 757
-    Top = 274
+    Extensions = '.msg;.eml'
+    Left = 624
+    Top = 264
   end
 end

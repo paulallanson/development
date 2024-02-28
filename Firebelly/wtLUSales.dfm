@@ -117,7 +117,7 @@ object frmwtLUSales: TfrmwtLUSales
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1386
+        Width = 1382
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -452,7 +452,7 @@ object frmwtLUSales: TfrmwtLUSales
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1386
+        Width = 1382
       end>
     object Panel3: TPanel
       Left = 11
