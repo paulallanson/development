@@ -374,7 +374,6 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
@@ -3653,11 +3652,6 @@ end;
 procedure TfrmWTMaintSalesOrder.mnuPOReceiveClick(Sender: TObject);
 begin
   CallPOReceiptsScreen(popChange);
-end;
-
-procedure TfrmWTMaintSalesOrder.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintSalesOrder.PJCtrlDropFiles1DropFiles(Sender: TObject);

@@ -1865,8 +1865,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         OnMouseMove = slvDocumentsMouseMove
         TabOrder = 3
         ViewStyle = vsReport
-        ExplicitLeft = 0
-        ExplicitTop = 0
       end
     end
     object tbNotes: TTabSheet
@@ -3992,7 +3990,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Filter = PJExtFileFilter1
     ForegroundOnDrop = False
     Options = [dfoIncFiles]
-    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
     OnDropFiles = PJCtrlDropFiles1DropFiles
     ManagedControl = pcDetails
     PassThrough = True

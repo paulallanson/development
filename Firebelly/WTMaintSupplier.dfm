@@ -1626,7 +1626,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Filter = PJExtFileFilter1
     ForegroundOnDrop = False
     Options = [dfoIncFiles]
-    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
     OnDropFiles = PJCtrlDropFiles1DropFiles
     ManagedControl = pgDetails
     PassThrough = True

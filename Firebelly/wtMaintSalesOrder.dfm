@@ -2629,6 +2629,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
+            Width = 64
             Visible = True
           end>
       end
@@ -3105,7 +3106,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Filter = PJExtFileFilter1
     ForegroundOnDrop = False
     Options = [dfoIncFiles]
-    OnBeforeDrop = PJCtrlDropFiles1BeforeDrop
     OnDropFiles = PJCtrlDropFiles1DropFiles
     ManagedControl = pcDetails
     PassThrough = True

@@ -311,7 +311,6 @@ type
     procedure stvDocumentsDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure tbDocumentsShow(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
@@ -2874,11 +2873,6 @@ end;
 procedure TfrmWTMaintJob.edtProjectChange(Sender: TObject);
 begin
   Job.ProjectReference := edtProject.Text;
-end;
-
-procedure TfrmWTMaintJob.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintJob.PJCtrlDropFiles1DropFiles(Sender: TObject);

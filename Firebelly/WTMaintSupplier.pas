@@ -286,7 +286,6 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
@@ -1261,22 +1260,25 @@ begin
 end;
 
 procedure TfrmWTMaintSupplier.BitBtn6Click(Sender: TObject);
+var
+  BMark: TBookmark;
 begin
   with dbgDetails.DataSource.dataset do
-    begin
+  begin
+    BMark := Bookmark ;
+    DisableControls ;
+    try
       first ;
-      while EOF <> true do
+      while not Eof do
         begin
           dbgDetails.SelectedRows.CurrentRowSelected := true ;
           next ;
         end;
-     end;
-
-end;
-
-procedure TfrmWTMaintSupplier.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
+    finally
+      Bookmark := BMark ;
+      EnableControls ;
+    end;
+  end;
 end;
 
 procedure TfrmWTMaintSupplier.PJCtrlDropFiles1DropFiles(Sender: TObject);

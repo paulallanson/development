@@ -223,7 +223,6 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
@@ -3706,11 +3705,6 @@ begin
     begin
       ShowLineDocuments;
     end);
-end;
-
-procedure TfrmWTMaintContract.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintContract.PJCtrlDropFiles1DropFiles(Sender: TObject);

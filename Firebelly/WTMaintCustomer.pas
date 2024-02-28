@@ -298,7 +298,6 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
@@ -2204,11 +2203,6 @@ begin
   dtmdlOneCustomer.qryLevelofImportance.close;
   dtmdlOneCustomer.qryLevelofImportance.open;
 
-end;
-
-procedure TfrmWtMaintCustomer.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWtMaintCustomer.PJCtrlDropFiles1DropFiles(Sender: TObject);

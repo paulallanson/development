@@ -451,7 +451,6 @@ type
     procedure tbDocumentsShow(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     FRetailCustomer: bytebool;
@@ -4254,11 +4253,6 @@ begin
     tempdate := edtExpiryDate.text;
 
   edtExpiryDate.text := paDatestr(InputDate(paDateStr(tempdate)));
-end;
-
-procedure TfrmWTMaintQuote.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintQuote.PJCtrlDropFiles1DropFiles(Sender: TObject);

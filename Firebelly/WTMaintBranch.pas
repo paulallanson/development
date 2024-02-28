@@ -83,7 +83,6 @@ type
     procedure pmnuSelectAllClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
     procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
-    procedure PJCtrlDropFiles1BeforeDrop(Sender: TObject);
   private
     iInstallationNotes: integer;
     FCustomerName: string;
@@ -550,11 +549,6 @@ end;
 procedure TfrmWTMaintBranch.FormDestroy(Sender: TObject);
 begin
   AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
-end;
-
-procedure TfrmWTMaintBranch.PJCtrlDropFiles1BeforeDrop(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintBranch.PJCtrlDropFiles1DropFiles(Sender: TObject);
