@@ -94,8 +94,6 @@
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
         <DCC_Optimize>false</DCC_Optimize>
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
-        
-        
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -596,8 +594,6 @@
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
-        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas"/>
-        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Tools.pas"/>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
         <DCCReference Include="..\WTPricesDM.pas">
             <Form>dtmdlPrices</Form>

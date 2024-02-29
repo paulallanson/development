@@ -3,11 +3,9 @@ unit wtMaintSalesOrder;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtSalesOrderDM, Grids, ComCtrls, StdCtrls, DBCtrls, Buttons,
-  ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM,
-  ToolWin, IniFiles, DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB,
-  Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
+  StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
+  DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
   ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
 
 type
@@ -470,14 +468,12 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types, DragAndDrop.Tools,
-  taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
-  WTSrchCustContacts, wtNotesDM, wtDBMemo, WTLUSalesOrderQuotes, WTMaintSOEvents, wtLUReps, DateSelV5,
-  wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE,
-  WTExcelOLE, wtLUFitters, WTMaintCustomer, WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder,
-  WTMaintSalesOrderRaisePO, WTMaintSalesInvoice, WTRSSalesInvoiceReprint, WtMaintJob, WtRSJobSheet, WtMaintJobComplete,
-  WTMaintJRemedial, WTRSJobRemedialSheet, WtRPJobRemedialSheet,
-  WTLUCustomerSite, wtRPQuote, QRPDFFilt;
+  System.UITypes, System.Types, taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine,
+  WTSrchCustomer, WTSrchCustContacts, wtNotesDM, wtDBMemo, WTLUSalesOrderQuotes, WTMaintSOEvents, wtLUReps, DateSelV5,
+  wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE, WTExcelOLE, wtLUFitters, WTMaintCustomer,
+  WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder, WTMaintSalesOrderRaisePO, WTMaintSalesInvoice,
+  WTRSSalesInvoiceReprint, WtMaintJob, WtRSJobSheet, WtMaintJobComplete, WTMaintJRemedial, WTRSJobRemedialSheet,
+  WtRPJobRemedialSheet, WTLUCustomerSite, wtRPQuote, QRPDFFilt;
 
 {$R *.dfm}
 
@@ -565,7 +561,7 @@ begin
           end;
       end;
 
-    
+
     ShowDetails;
     ShowLineDetails;
     if Mode <> sopCopy then
@@ -898,7 +894,7 @@ begin
             end;
 
           btnCustomerBranch.Visible := SOrder.BranchExist;
-          
+
           SOrder.InstallAddress := 0;
 
           {This is the new installation address format}
@@ -991,7 +987,7 @@ begin
       chkbxDoNotInvoice.Checked := SOrder.DoNotInvoice;
       chkbxTemplateDocsReturned.checked := SOrder.TemplateDocsReturned;
       chkbxFittingDocsReturned.checked := SOrder.FittingDocsReturned;
-      
+
       chkbxinactive.Checked := (SOrder.inactive = 'Y');
 
       if (SOrder.SupplyOnly = 'Y') then
@@ -1069,7 +1065,7 @@ begin
 
   {Don't allow changing of subcontract customer if it's been invoiced or part invocied}
   pnlSubContract.Enabled := SOrder.Status < 90;
-  
+
   pnlTop.enabled := not(Mode = sopView) and not(Mode = sopDelete);
   pnlHeader.enabled := not(Mode = sopView) and not(Mode = sopDelete);
   pnlFooter.enabled := not(Mode = sopView) and not(Mode = sopDelete);
@@ -2213,7 +2209,7 @@ begin
 
     aQuote.QMode := qMode;
     aQuote.LoadFromDB;
-    
+
     if (aMode = solCopy) then
       begin
         SOLine := TSOLine.Create(SOrder);
@@ -3073,7 +3069,7 @@ begin
       end;
 
       ShowDocuments(Sorder.dbKey);
-      
+
       if docSaved then
       begin
 (*        lstvwDocuments.itemindex := -1;
@@ -3347,7 +3343,7 @@ begin
           Frm.Mode := aMode;
           if aMode = popAdd then
             aPOrder.Reference := inttostr(SOrder.dbkey);
-            
+
           Frm.POrder := aPOrder;
 
           Frm.ShowModal;
@@ -4430,7 +4426,7 @@ begin
         [mbAbort], 0);
       exit;
     end;
-  
+
   Key := dbgJobs.DataSource.DataSet.fieldbyname('Job').asinteger;
 
   try
@@ -5159,4 +5155,3 @@ begin
 end;
 
 end.
-
