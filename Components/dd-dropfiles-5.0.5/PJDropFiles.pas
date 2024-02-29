@@ -443,11 +443,9 @@ type
   protected
     function CreateAndInitHelper: TPJAbstractDropFilesHelper; virtual; abstract;
       {Creates and initializes helper object of appropriate type for component}
-    procedure Notification(AComponent: TComponent; Operation: TOperation);
-      override;
+    procedure Notification(AComponent: TComponent; Operation: TOperation); override;
       {Sets Filter property to nil when referenced component is destroyed}
-    property Helper: TPJAbstractDropFilesHelper
-      read fHelper write fHelper;
+    property Helper: TPJAbstractDropFilesHelper read fHelper write fHelper;
       {Helper class that undertakes most of drag drop handling}
   public
     constructor Create(AOwner: TComponent); override;
