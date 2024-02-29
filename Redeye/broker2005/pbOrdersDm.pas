@@ -39,8 +39,8 @@ type
     qryOrdersSales_order: TFloatField;
     qryOrdersLine: TIntegerField;
     qryOrdersOrder_date: TDateTimeField;
-    qryOrdersCust_Order_No: TStringField;
-    qryOrdersDescription: TStringField;
+    qryOrdersCust_Order_No: TWideStringField;
+    qryOrdersDescription: TWideStringField;
     qryOrdersQuantity: TFloatField;
     qryOrdersOrder_Price: TCurrencyField;
     qryOrdersOrder_unit: TFloatField;
@@ -49,7 +49,7 @@ type
     qryOrdersStock_Reference: TWideStringField;
     qryOrdersForm_Reference_ID: TWideStringField;
     qryOrdersGoods_Required: TDateTimeField;
-    qryOrdersOrder_type: TStringField;
+    qryOrdersOrder_type: TWideStringField;
     qryOrdersOrder_Status: TIntegerField;
     qryOrdersStatus_Description: TWideStringField;
     qryOrdersBranch_Name: TWideStringField;
@@ -855,13 +855,8 @@ begin
 end;
 
 procedure TdtmdlOrders.SetOrderDate(const OrderDate: TDateTime);
-var
-  Value: TDateTime;
 begin
-  Value := TUtils.CheckSmallDateTime(OrderDate);
-  FOrderDate := OrderDate;
-  if FOrderDate < Value then
-    FOrderDate := Value;
+  FOrderDate := TUtils.CheckSmallDateTime(OrderDate);
 end;
 
 function TdtmdlOrders.SetSOInvoiceStatus(tempCode: integer): string;
