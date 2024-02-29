@@ -3,8 +3,7 @@ unit pbOrdersDm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Db,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -143,7 +142,7 @@ var
 
 implementation
 
-uses pbDatabase;
+uses pbDatabase, Utils;
 
 {$R *.DFM}
 
@@ -859,7 +858,7 @@ procedure TdtmdlOrders.SetOrderDate(const OrderDate: TDateTime);
 var
   Value: TDateTime;
 begin
-  Value := StrToDateTime('01-01-1900');
+  Value := TUtils.CheckSmallDateTime(OrderDate);
   FOrderDate := OrderDate;
   if FOrderDate < Value then
     FOrderDate := Value;

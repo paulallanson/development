@@ -211,8 +211,8 @@ type
     pnlMaterialTypeFooter: TPanel;
     chkbxShowInactiveMaterialTypes: TCheckBox;
     chkbxRequiresAppForPay: TCheckBox;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
     PJExtFileFilter1: TPJExtFileFilter;
+    PJCtrlDropFiles1: TPJCtrlDropFiles;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -279,10 +279,8 @@ type
     procedure btnAddWorktopGroupClick(Sender: TObject);
     procedure btnClearGroupClick(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
-    procedure lstvwDocumentsColumnClick(Sender: TObject;
-      Column: TListColumn);
-    procedure lstvwDocumentsCompare(Sender: TObject; Item1,
-      Item2: TListItem; Data: Integer; var Compare: Integer);
+    procedure lstvwDocumentsColumnClick(Sender: TObject; Column: TListColumn);
+    procedure lstvwDocumentsCompare(Sender: TObject; Item1, Item2: TListItem; Data: Integer; var Compare: Integer);
     procedure pmnuDocumentsPopup(Sender: TObject);
     procedure pmnuPasteClick(Sender: TObject);
     procedure pmnuDeleteClick(Sender: TObject);

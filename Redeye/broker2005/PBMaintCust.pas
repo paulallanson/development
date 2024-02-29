@@ -2937,17 +2937,17 @@ begin
   btnRevenueCentre.Visible := lblRevenueCentre.Visible;
   btnRevenueCentreClear.Visible := lblRevenueCentre.Visible;
 
-  tbOptions.TabVisible := false;
-  tbBranches.TabVisible := false;
-  tbQuotes.TabVisible := false;
-  tbEnquiries.TabVisible := false;
-  tbOrders.TabVisible := false;
-  tbJobs.TabVisible := false;
-  tbStock.TabVisible := false;
-  tbInvoices.TabVisible := false;
-  tbDocuments.TabVisible := false;
-  tbActivity.TabVisible := false;
-  tbCrossSelling.TabVisible := false;
+  tbOptions.Visible := false;
+  tbBranches.Visible := false;
+  tbQuotes.Visible := false;
+  tbEnquiries.Visible := false;
+  tbOrders.Visible := false;
+  tbJobs.Visible := false;
+  tbStock.Visible := false;
+  tbInvoices.Visible := false;
+  tbDocuments.Visible := false;
+  tbActivity.Visible := false;
+  tbCrossSelling.Visible := false;
 
 (*  pgCustomer.Pages[1].TabVisible := false;
   pgCustomer.Pages[2].TabVisible := false;
@@ -3554,18 +3554,18 @@ begin
     begin
       sStatusDescr := 'Prospect ';
 
-      tbOptions.TabVisible := true;
-      tbBranches.TabVisible := true;
+      tbOptions.Visible := true;
+      tbBranches.Visible := true;
 
-      tbQuotes.TabVisible := false;
-      tbEnquiries.TabVisible := frmPBMainMenu.btnEnquiries.enabled;
-      tbOrders.TabVisible := false;
-      tbJobs.TabVisible := false;
-      tbStock.TabVisible := false;
-      tbInvoices.TabVisible := false;
-      tbDocuments.TabVisible := true;
-      tbActivity.TabVisible := frmPBMainMenu.UseCRMSystem;
-      tbCrossSelling.TabVisible := true;
+      tbQuotes.Visible := false;
+      tbEnquiries.Visible := frmPBMainMenu.btnEnquiries.enabled;
+      tbOrders.Visible := false;
+      tbJobs.Visible := false;
+      tbStock.Visible := false;
+      tbInvoices.Visible := false;
+      tbDocuments.Visible := true;
+      tbActivity.Visible := frmPBMainMenu.UseCRMSystem;
+      tbCrossSelling.Visible := true;
 
 (*      pgCustomer.Pages[1].TabVisible := true;
       pgCustomer.Pages[2].TabVisible := true;
@@ -3603,17 +3603,17 @@ begin
     begin
       sStatusDescr := 'Customer ';
 
-      tbOptions.TabVisible := true;
-      tbBranches.TabVisible := true;
-      tbQuotes.TabVisible := true;
-      tbEnquiries.TabVisible := frmPBMainMenu.btnEnquiries.enabled;
-      tbOrders.TabVisible := true;
-      tbJobs.TabVisible := true;
-      tbStock.TabVisible := true;
-      tbInvoices.TabVisible := true;
-      tbDocuments.TabVisible := true;
-      tbActivity.TabVisible := frmPBMainMenu.UseCRMSystem;
-      tbCrossSelling.TabVisible := true;
+      tbOptions.Visible := true;
+      tbBranches.Visible := true;
+      tbQuotes.Visible := true;
+      tbEnquiries.Visible := frmPBMainMenu.btnEnquiries.enabled;
+      tbOrders.Visible := true;
+      tbJobs.Visible := true;
+      tbStock.Visible := true;
+      tbInvoices.Visible := true;
+      tbDocuments.Visible := true;
+      tbActivity.Visible := frmPBMainMenu.UseCRMSystem;
+      tbCrossSelling.Visible := true;
 
 (*      pgCustomer.Pages[1].TabVisible := true;
       pgCustomer.Pages[2].TabVisible := true;

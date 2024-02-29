@@ -239,7 +239,7 @@ begin
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
   try
-    frmWTMaintCustomer := TfrmWTMaintCustomer.create(Application);
+    frmWTMaintCustomer := TfrmWTMaintCustomer.create(nil);
     if FuncMode <> 'A' then
       begin
         iCode := dbgDetails.datasource.dataset.fieldbyname('Customer').asinteger;

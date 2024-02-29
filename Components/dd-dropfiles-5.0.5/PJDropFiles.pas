@@ -76,8 +76,7 @@ type
   }
   TPJFileFilter = class(TComponent)
   public
-    function Accept(const FilePath: string; const IsFolder: Boolean): Boolean;
-      virtual; abstract;
+    function Accept(const FilePath: string; const IsFolder: Boolean): Boolean; virtual; abstract;
       {Returns true if the given file (or folder - per IsFolder) passes through
       the filter and false if not}
   end;

@@ -109,6 +109,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 3
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
@@ -2871,19 +2872,18 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 408
     Top = 224
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 736
-    Top = 40
-  end
   object PJExtFileFilter1: TPJExtFileFilter
     Extensions = '.msg;.eml'
     Left = 736
     Top = 88
+  end
+  object PJCtrlDropFiles1: TPJCtrlDropFiles
+    Filter = PJExtFileFilter1
+    ForegroundOnDrop = False
+    Options = [dfoIncFolders, dfoIncFiles]
+    OnDropFiles = PJCtrlDropFiles1DropFiles
+    ManagedControl = pgDetails
+    Left = 732
+    Top = 40
   end
 end

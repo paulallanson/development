@@ -2617,7 +2617,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object ToolBar9: TToolBar
             Left = 11
@@ -3005,7 +3005,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrQuotes: TToolBar
           Left = 11
@@ -3274,7 +3274,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrEnquiries: TToolBar
           Left = 11
@@ -3646,7 +3646,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3658,9 +3658,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1141
+            Width = 1153
             Height = 41
-            ButtonHeight = 44
+            ButtonHeight = 29
             ButtonWidth = 65
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3943,12 +3943,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
+            Width = 64
             Visible = True
           end>
       end
@@ -3984,7 +3986,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1162
+            Width = 1166
           end>
         object tbrJobs: TToolBar
           Left = 11
@@ -4261,7 +4263,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4273,7 +4275,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1139
+              Width = 1151
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 68
@@ -4549,7 +4551,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1162
+            Width = 1166
           end>
         object PageScroller3: TPageScroller
           Left = 11
@@ -4562,7 +4564,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1141
+            Width = 1153
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 53
@@ -4948,7 +4950,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1164
             end>
           object ToolBar8: TToolBar
             Left = 11
@@ -8541,10 +8543,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
   object PJCtrlDropFiles1: TPJCtrlDropFiles
     Filter = PJExtFileFilter1
     ForegroundOnDrop = False
-    Options = [dfoIncFiles]
+    Options = [dfoIncFolders, dfoIncFiles]
     OnDropFiles = PJCtrlDropFiles1DropFiles
     ManagedControl = pgCustomer
-    PassThrough = True
     Left = 520
     Top = 200
   end

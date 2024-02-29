@@ -33,6 +33,8 @@ type
     property OutputBin : TQRBin read FOutputBin write SetOutputBin;
   end;
 
+  TProcessDroppedFiles = reference to procedure(var FileName: string);
+
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
 procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size: TQRPaperSize; var Duplex: Boolean);
@@ -120,7 +122,8 @@ procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; co
 procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
 
 { WinControl WinControlSetData }
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc); overload;
+procedure MyWinControlSetData(const DropControl: TPJFormDropFiles; const Path: string; ShowDocuments: TProc); overload;
 
 { TCCSRegistry }
 type
@@ -1120,13 +1123,13 @@ function PosToNegQty(const Qty: variant): integer;
 begin
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := (StrToInt(Qty)*-1)
       else
         Result := (Qty*-1);
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid quantity', mtError, [mbOK], 0);
@@ -1138,13 +1141,13 @@ function PosToNegMoney(const Money: variant): double;
 begin
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := (StrToFloatDef(Money, 0, FormatSettings)*-1)
       else
         Result := (Money*-1);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1191,7 +1194,7 @@ end;
 
 function FormatQty(const Qty: variant): string;
 begin
-  if VarType(Qty) = VarString then
+  if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
   begin
     if Trim(Qty) = '' then
     begin
@@ -1201,7 +1204,7 @@ begin
   end;
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := FormatFloat('######0', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0', Qty);
@@ -1212,7 +1215,7 @@ begin
       end;
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid quantity', mtError, [mbOK], 0);
@@ -1222,7 +1225,7 @@ end;
 
 function FormatDoubleTo2DP(const Value: variant): string;
 begin
-  if VarType(Value) = VarString then
+  if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
   begin
     if Trim(Value) = '' then
     begin
@@ -1233,13 +1236,13 @@ begin
   end;
   try
     begin
-      if VarType(Value) = VarString then
+      if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Value, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Value);
     end;
   except
-    if VarType(Value) = VarString then
+    if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
       MessageDlg('Invalid entry - ' + Value, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry ', mtError, [mbOK], 0);
@@ -1249,7 +1252,7 @@ end;
 
 function FormatMoney(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -1259,13 +1262,13 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1694,7 +1697,35 @@ begin
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
 end;
 
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+procedure IterateFilesDropped(const DropControl: TPJCtrlDropFiles; Process: TProcessDroppedFiles); overload;
+var
+  I: Integer;
+  FileName: string;
+begin
+  for I := 0 to Pred(DropControl.Count) do
+  begin
+    if DropControl.IsFolder[I] then
+      Continue;
+    FileName := DropControl.Files[I];
+    Process(FileName);
+  end;
+end;
+
+procedure IterateFilesDropped(const DropControl: TPJFormDropFiles; Process: TProcessDroppedFiles); overload;
+var
+  I: Integer;
+  FileName: string;
+begin
+  for I := 0 to Pred(DropControl.Count) do
+  begin
+    if DropControl.IsFolder[I] then
+      Continue;
+    FileName := DropControl.Files[I];
+    Process(FileName);
+  end;
+end;
+
+procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
 const
   cExtensionOutlook = '.msg';
   cExtensionOutlookExpress = '.eml';
@@ -1714,64 +1745,77 @@ begin
   if not DirectoryExists(MyPath) then
     CreateDirectory(MyPath);
 
-  for i := 0 to Pred(DropControl.Count) do
+  MyFileName := ExtractFileName(FileName);
+  MyExtension := LowerCase(ExtractFileExt(MyFileName));
+  if MyExtension = cExtensionOutlook then
   begin
-    if DropControl.IsFolder[I] then
-      Continue;
+    { Store the contents as a file on the disk. }
+    MyFilePath := MyPath + MyFileName;
 
-    MyFileName := ExtractFileName(DropControl.Files[i]);
-    MyExtension := LowerCase(ExtractFileExt(MyFileName));
-    if MyExtension = cExtensionOutlook then
+    {If the file name already exists then increase the number}
+    icount := 0;
+    NewFilePath := MyFilePath;
+    while FileExists(NewFilePath) = true do
     begin
-      { Store the contents as a file on the disk. }
-      MyFilePath := MyPath + MyFileName;
-
-      {If the file name already exists then increase the number}
-      icount := 0;
-      NewFilePath := MyFilePath;
-      while FileExists(NewFilePath) = true do
-      begin
-        inc(icount);
-        NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-      end;
-
-      { GUI }
-      try
-        ParseMessage((MyPath + MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-        if trim(MyDate).IsEmpty then
-          myNewDate := date
-        else
-          myNewDate := FormatDateasDateTime(MyDate);
-      except
-        myNewDate := date
-      end;
-
-      //  This is where we add the data into the grid and to the document component
-      ShowDocuments;
-    end
-    else
-    begin
-      sFullFile := myFileName;
-      iLength := length(sFullFile);
-
-      iCount := 1;
-
-      while iCount <> 0 do
-      begin
-        ipos := pos('\',sFullFile);
-
-        sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-        iCount := pos('\',sFullFile);
-      end;
-
-      sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-      FileCopy(myFileName, myPath + sfile) ;
-      ShowDocuments;
+      inc(icount);
+      NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
     end;
+
+    { GUI }
+    try
+      ParseMessage((MyPath + MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
+      if trim(MyDate).IsEmpty then
+        myNewDate := date
+      else
+        myNewDate := FormatDateasDateTime(MyDate);
+    except
+      myNewDate := date
+    end;
+
+    //  This is where we add the data into the grid and to the document component
+    ShowDocuments;
+  end
+  else
+  begin
+    sFullFile := myFileName;
+    iLength := length(sFullFile);
+
+    iCount := 1;
+
+    while iCount <> 0 do
+    begin
+      ipos := pos('\',sFullFile);
+
+      sFullFile := stringreplace(sFullFile, '\', '!', []);
+
+      iCount := pos('\',sFullFile);
+    end;
+
+    sFile := copy(myFileName, ipos+1, (iLength - ipos));
+
+    FileCopy(myFileName, myPath + sfile) ;
+    ShowDocuments;
   end;
 end;
+
+procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+begin
+  IterateFilesDropped(DropControl,
+    procedure(var FileName: string)
+    begin
+      ProcessDroppedFile(FileName, Path, ShowDocuments);
+    end);
+end;
+
+procedure MyWinControlSetData(const DropControl: TPJFormDropFiles; const Path: string; ShowDocuments: TProc);
+begin
+  IterateFilesDropped(DropControl,
+    procedure(var FileName: string)
+    begin
+      ProcessDroppedFile(FileName, Path, ShowDocuments);
+    end);
+end;
+
 
 { TDirDlg }
 function ItemIDListToPath(PIDL: PItemIDList): string;
@@ -1986,7 +2030,7 @@ begin
       Result := DateToStr(vIn);
   end
   else
-    if (VarType(vIn) = VarUString) or (VarType(vIn) = VarString) then
+    if (VarType(vIn) = VarUString) or (VarType(vIn) = VarString) or (VarType(vIn) = VarUString) then
   begin
     if Trim(vIn) = '' then
       Result := 0

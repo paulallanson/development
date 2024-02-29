@@ -991,13 +991,13 @@ function PosToNegQty(const Qty: variant): integer;
 begin
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := (StrToInt(Qty)*-1)
       else
         Result := (Qty*-1);
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid quantity', mtError, [mbOK], 0);
@@ -1017,7 +1017,7 @@ end;
 
 function FormatQtyTo2DP(const Qty: variant): string;
 begin
-  if VarType(Qty) = VarString then
+  if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
   begin
     if Trim(Qty) = '' then
     begin
@@ -1028,13 +1028,13 @@ begin
   end;
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Qty);
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid entry - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry ', mtError, [mbOK], 0);
@@ -1044,7 +1044,7 @@ end;
 
 function FormatQtyTo3DP(const Qty: variant): string;
 begin
-  if VarType(Qty) = VarString then
+  if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
   begin
     if Trim(Qty) = '' then
     begin
@@ -1055,13 +1055,13 @@ begin
   end;
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := FormatFloat('######0.000', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0.000', Qty);
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid entry - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry ', mtError, [mbOK], 0);
@@ -1071,7 +1071,7 @@ end;
 
 function FormatQty(const Qty: variant): string;
 begin
-  if VarType(Qty) = VarString then
+  if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
   begin
     if Trim(Qty) = '' then
     begin
@@ -1082,7 +1082,7 @@ begin
   end;
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := FormatFloat('######0', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0', Qty);
@@ -1093,7 +1093,7 @@ begin
       end;
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid entry - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry', mtError, [mbOK], 0);
@@ -1103,7 +1103,7 @@ end;
 
 function FormatMoney(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -1113,13 +1113,13 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1129,7 +1129,7 @@ end;
 
 function FormatMoneyTo3DP(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -1139,13 +1139,13 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.000', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.000', Money);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1155,7 +1155,7 @@ end;
 
 function FormatMoneyTo4DP(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -1165,13 +1165,13 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.0000', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.0000', Money);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1889,7 +1889,7 @@ begin
       Result := DateToStr(vIn);
   end
   else
-    if VarType(vIn) = VarString then
+    if (VarType(vIn) = VarString) or (VarType(vIn) = VarUString) then
   begin
     if Trim(vIn) = '' then
       Result := 0
