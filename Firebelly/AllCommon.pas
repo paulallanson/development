@@ -1576,6 +1576,7 @@ end;
 
 procedure ParseMessage(const AFileName: string; var ATo, AFrom, ASubject, ADate, ABody: string);
 var
+  Lines: TArray<string>;
   iLength: integer;
   MyUnicode: Boolean;
   MyFileStream: TFileStream;
@@ -1631,6 +1632,14 @@ var
     end;
   end;
 
+  procedure FetchLines(Source: TArray<string>; Destination: TStrings);
+  var
+    Content: string;
+  begin
+    for Content in Source do
+      Destination.Add(Content);
+  end;
+
 begin
 { Open the copy of the message stored in the project directory }
   MyFileStream := TFileStream.Create(AFileName, fmOpenRead or fmShareDenyWrite);
@@ -1682,7 +1691,8 @@ begin
   MyHeader := StringReplace(MyHeader, 'Date: ', 'Date=', [rfReplaceAll, rfIgnoreCase]);
   MyStrings := TStringList.Create;
   try
-    MyStrings.Text := MyHeader;
+    Lines := MyHeader.Split([sLineBreak]);
+    FetchLines(Lines, MyStrings);
     ATo := MyStrings.Values['To'];
     AFrom := MyStrings.Values['From'];
     AFrom := ParseDocumentFrom(AFrom);
@@ -1690,6 +1700,7 @@ begin
     ADate := MyStrings.Values['Date'];
   finally
     MyStrings.Free;
+    Lines := nil;
   end;
 { Trancate the body text and remove line-ends }
   ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
