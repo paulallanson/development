@@ -67,6 +67,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_DcuOutput>..\Library\Alexandria\$(Platform)\$(Config)</DCC_DcuOutput>
         <SanitizedProjectName>DragDropD280</SanitizedProjectName>
+        <DCC_UnitSearchPath>..\Resources;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
