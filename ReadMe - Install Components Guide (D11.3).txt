@@ -12,19 +12,19 @@ E.g.: C:\dev\views\quaystone\Components
 2. Add the entries below to "Library path":
 
 ==>> Win32
-;$(QSLIB)\dd-dropfiles-5.0.5\D280\Win32\Release;$(QSLIB)\CRPackage\D280\Win32\Release;$(QSLIB)\Zorn Barcode\D280\Win32\Release;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Release;$(QSLIB)\Drag and Drop Tools
+;$(QSLIB)\drag-and-drop\Library\Alexandria\Win32\Release;$(QSLIB)\drag-and-drop\Resources;$(QSLIB)\CRPackage\D280\Win32\Release;$(QSLIB)\Zorn Barcode\D280\Win32\Release;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Release
 
 3. Add the entries below to "Browsing path":
 
-;$(QSLIB)\dd-dropfiles-5.0.5;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Turbo Async Pro\source
+;$(QSLIB)\drag-and-drop\Source;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Turbo Async Pro\source
 
 4. Add the entries below to "Debug DCU path":
 
-;$(QSLIB)\dd-dropfiles-5.0.5\D280\Win32\Debug;$(QSLIB)\CRPackage\D280\Win32\Debug;$(QSLIB)\Zorn Barcode\D280\Win32\Debug;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Debug
+;$(QSLIB)\drag-and-drop\Library\Alexandria\Win32\Debug;$(QSLIB)\CRPackage\D280\Win32\Debug;$(QSLIB)\Zorn Barcode\D280\Win32\Debug;$(QSLIB)\Turbo Async Pro\packages\Alexandria\Delphi\Win32\Debug
 
 5. Alternatively, you can just add the path below to "Library path":
 
-;$(QSLIB)\dd-dropfiles-5.0.5;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\source;$(QSLIB)\Drag and Drop Tools
+;$(QSLIB)\drag-and-drop\Source;$(QSLIB)\CRPackage;$(QSLIB)\Zorn Barcode;$(QSLIB)\Zorn Barcode\Resources;$(QSLIB)\Turbo Async Pro\source
 
 6. Install the group project below, compiling both Release and Debug for all the packages in the group.
 
