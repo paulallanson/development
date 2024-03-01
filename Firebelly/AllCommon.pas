@@ -1728,12 +1728,14 @@ begin
   if not DirectoryExists(MyPath) then
     CreateDirectory(MyPath);
 
-  MyFileName := ExtractFileName(FileName);
+  MyFileName := FileName;
+
   MyExtension := LowerCase(ExtractFileExt(MyFileName));
+
   if MyExtension = cExtensionOutlook then
   begin
     { Store the contents as a file on the disk. }
-    MyFilePath := MyPath + MyFileName;
+    MyFilePath := IncludeTrailingPathDelimiter(MyPath) + ExtractFileName(MyFileName);
 
     {If the file name already exists then increase the number}
     icount := 0;
@@ -1744,9 +1746,13 @@ begin
       NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
     end;
 
+    MyFilePath := NewFilePath;
+
+    FileCopy(FileName, MyFilePath);
+
     { GUI }
     try
-      ParseMessage((MyPath + MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
+      ParseMessage(MyFilePath, MyTo, MyFrom, MySubject, MyDate, MyBody);
       if trim(MyDate).IsEmpty then
         myNewDate := date
       else
@@ -1760,23 +1766,10 @@ begin
   end
   else
   begin
-    sFullFile := myFileName;
-    iLength := length(sFullFile);
+    sFile := IncludeTrailingPathDelimiter(MyPath) + ExtractFileName(MyFileName);
 
-    iCount := 1;
+    FileCopy(myFileName, sFile) ;
 
-    while iCount <> 0 do
-    begin
-      ipos := pos('\',sFullFile);
-
-      sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-      iCount := pos('\',sFullFile);
-    end;
-
-    sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-    FileCopy(myFileName, myPath + sfile) ;
     ShowDocuments;
   end;
 end;

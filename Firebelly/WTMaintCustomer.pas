@@ -295,6 +295,7 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -2555,6 +2556,12 @@ begin
     except
     end;
   end;
+end;
+
+procedure TfrmWtMaintCustomer.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TfrmWtMaintCustomer.edtAccountCodeEnter(Sender: TObject);
