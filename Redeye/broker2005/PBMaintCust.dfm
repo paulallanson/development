@@ -29,6 +29,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 43
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -2617,7 +2618,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object ToolBar9: TToolBar
             Left = 11
@@ -3005,7 +3006,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrQuotes: TToolBar
           Left = 11
@@ -3274,7 +3275,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrEnquiries: TToolBar
           Left = 11
@@ -3646,7 +3647,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3658,9 +3659,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 41
-            ButtonHeight = 29
+            ButtonHeight = 44
             ButtonWidth = 65
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3986,7 +3987,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1166
+            Width = 1162
           end>
         object tbrJobs: TToolBar
           Left = 11
@@ -4263,7 +4264,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4275,7 +4276,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1151
+              Width = 1139
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 68
@@ -4551,7 +4552,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1166
+            Width = 1162
           end>
         object PageScroller3: TPageScroller
           Left = 11
@@ -4564,7 +4565,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1153
+            Width = 1141
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 53
@@ -4950,7 +4951,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1164
+              Width = 1160
             end>
           object ToolBar8: TToolBar
             Left = 11
@@ -8540,18 +8541,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
       9E79C4030107F83F7EFEEC0703FFF83F00000000000000000000000000000000
       000000000000}
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFolders, dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgCustomer
-    Left = 520
-    Top = 200
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 520
-    Top = 248
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgCustomer
+    OptimizedMove = True
+    Left = 534
+    Top = 178
   end
 end

@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtJobsDm, CRControls, AllCommon, DB, Spin, wtSalesOrderDM, ImgList, ShellAPI, QrCtrls, Menus,
   ToolWin, Inifiles, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  PJDropFiles;
+  PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintJob = class(TForm)
@@ -216,8 +216,7 @@ type
     memNotes: TMemo;
     stvDocuments: TShellTreeView;
     slvDocuments: TShellListView;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -311,7 +310,7 @@ type
     procedure stvDocumentsDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure tbDocumentsShow(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -1397,6 +1396,12 @@ procedure TfrmWTMaintJob.dblkpMaterialClick(Sender: TObject);
 begin
   Job.Material := dblkpMaterial.KeyValue;
   EnableAddButtons;
+end;
+
+procedure TfrmWTMaintJob.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;
@@ -2875,11 +2880,6 @@ begin
   Job.ProjectReference := edtProject.Text;
 end;
 
-procedure TfrmWTMaintJob.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TfrmWTMaintJob.lstvwDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
@@ -2971,9 +2971,11 @@ end;
 procedure TfrmWTMaintJob.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;

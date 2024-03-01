@@ -199,7 +199,6 @@ type
     EnquiryLineGrid: TStringGrid;
     oldCapabilitySQL: TFDQuery;
     PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);

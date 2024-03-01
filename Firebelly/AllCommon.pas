@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, Outlook_TLB, COMobj, ActiveX,
   Math, DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, wtDataModule, DBCtrls, Dialogs,
-  FireDAC.Comp.Client, PJDropFiles;
+  DragDropFile, FireDAC.Comp.Client;
 
 type
   TDBLookupComboBoxHelper = class helper for TDBLookupComboBox
@@ -122,8 +122,7 @@ procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; co
 procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
 
 { WinControl WinControlSetData }
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc); overload;
-procedure MyWinControlSetData(const DropControl: TPJFormDropFiles; const Path: string; ShowDocuments: TProc); overload;
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc); overload;
 
 { TCCSRegistry }
 type
@@ -1697,30 +1696,14 @@ begin
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
 end;
 
-procedure IterateFilesDropped(const DropControl: TPJCtrlDropFiles; Process: TProcessDroppedFiles); overload;
+procedure IterateFilesDropped(const FilesList: TUnicodeStrings; Process: TProcessDroppedFiles); overload;
 var
   I: Integer;
   FileName: string;
 begin
-  for I := 0 to Pred(DropControl.Count) do
+  for I := 0 to Pred(FilesList.Count) do
   begin
-    if DropControl.IsFolder[I] then
-      Continue;
-    FileName := DropControl.Files[I];
-    Process(FileName);
-  end;
-end;
-
-procedure IterateFilesDropped(const DropControl: TPJFormDropFiles; Process: TProcessDroppedFiles); overload;
-var
-  I: Integer;
-  FileName: string;
-begin
-  for I := 0 to Pred(DropControl.Count) do
-  begin
-    if DropControl.IsFolder[I] then
-      Continue;
-    FileName := DropControl.Files[I];
+    FileName := FilesList[I];
     Process(FileName);
   end;
 end;
@@ -1798,24 +1781,14 @@ begin
   end;
 end;
 
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
 begin
-  IterateFilesDropped(DropControl,
+  IterateFilesDropped(FilesList,
     procedure(var FileName: string)
     begin
       ProcessDroppedFile(FileName, Path, ShowDocuments);
     end);
 end;
-
-procedure MyWinControlSetData(const DropControl: TPJFormDropFiles; const Path: string; ShowDocuments: TProc);
-begin
-  IterateFilesDropped(DropControl,
-    procedure(var FileName: string)
-    begin
-      ProcessDroppedFile(FileName, Path, ShowDocuments);
-    end);
-end;
-
 
 { TDirDlg }
 function ItemIDListToPath(PIDL: PItemIDList): string;

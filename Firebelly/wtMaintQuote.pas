@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtQuotesDm, CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin, ImgList, ShellAPI, Menus,
   Inifiles, DBGrids, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  PJDropFiles;
+  PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintQuote = class(TForm)
@@ -330,8 +330,7 @@ type
     Label59: TLabel;
     dblkpRevenueCentre: TDBLookupComboBox;
     SpeedButton1: TSpeedButton;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -451,7 +450,7 @@ type
     procedure tbDocumentsShow(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FRetailCustomer: bytebool;
     FUseMarkup: bytebool;
@@ -4243,6 +4242,12 @@ begin
   edtGrossPrice.Text := formatfloat('0.00',(Quote.TotalGross+Quote.TotalVat));
 end;
 
+procedure TfrmWTMaintQuote.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);
 var
   tempDate: string;
@@ -4253,11 +4258,6 @@ begin
     tempdate := edtExpiryDate.text;
 
   edtExpiryDate.text := paDatestr(InputDate(paDateStr(tempdate)));
-end;
-
-procedure TfrmWTMaintQuote.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintQuote.pmnuDocumentsPopup(Sender: TObject);
@@ -4334,9 +4334,11 @@ end;
 procedure TfrmWTMaintQuote.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments(Quote.dbKey);

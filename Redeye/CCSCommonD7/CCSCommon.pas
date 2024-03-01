@@ -4,8 +4,11 @@ interface
 
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
-  DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, PJDropFiles,
+  DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, DragDropFile,
   FireDAC.Comp.Client;
+
+type
+  TProcessDroppedFiles = reference to procedure(var FileName: string);
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar:
@@ -125,7 +128,7 @@ procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; co
 procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
 
 { WinControl WinControlSetData }
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
 
 type
   TCCSRegistry = class(TRegistry)
@@ -1586,7 +1589,7 @@ begin
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
 end;
 
-procedure MyWinControlSetData(const DropControl: TPJCtrlDropFiles; const Path: string; ShowDocuments: TProc);
+procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
 const
   cExtensionOutlook = '.msg';
   cExtensionOutlookExpress = '.eml';
@@ -1606,65 +1609,80 @@ begin
   if not DirectoryExists(MyPath) then
     CreateDirectory(MyPath);
 
-  for i := 0 to Pred(DropControl.Count) do
+  MyFileName := ExtractFileName(FileName);
+  MyExtension := LowerCase(ExtractFileExt(MyFileName));
+
+  if MyExtension = cExtensionOutlook then
   begin
-    if DropControl.IsFolder[I] then
-      Continue;
+    { Store the contents as a file on the disk. }
+    MyFilePath := MyPath + MyFileName;
 
-    MyFileName := ExtractFileName(DropControl.Files[i]);
-    MyExtension := LowerCase(ExtractFileExt(MyFileName));
-
-    if MyExtension = cExtensionOutlook then
+    {If the file name already exists then increase the number}
+    icount := 0;
+    NewFilePath := MyFilePath;
+    while FileExists(NewFilePath) = true do
     begin
-      { Store the contents as a file on the disk. }
-      MyFilePath := MyPath + MyFileName;
-
-      {If the file name already exists then increase the number}
-      icount := 0;
-      NewFilePath := MyFilePath;
-      while FileExists(NewFilePath) = true do
-      begin
-        inc(icount);
-        NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-      end;
-
-      MyFilePath := NewFilePath;
-
-      { GUI }
-      try
-        ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-        if trim(MyDate).IsEmpty then
-          myNewDate := date
-        else
-          myNewDate := FormatDateasDateTime(MyDate);
-      except
-        myNewdate := date
-      end;
-
-      ShowDocuments;
-    end
-    else
-    begin
-      sFullFile := myFileName;
-      iLength := length(sFullFile);
-
-      iCount := 1;
-
-      while iCount <> 0 do
-      begin
-        ipos := pos('\',sFullFile);
-
-        sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-        iCount := pos('\',sFullFile);
-      end;
-
-      sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-      FileCopy(myFileName, myPath + sfile) ;
-      ShowDocuments;
+      inc(icount);
+      NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
     end;
+
+    MyFilePath := NewFilePath;
+
+    { GUI }
+    try
+      ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
+      if trim(MyDate).IsEmpty then
+        myNewDate := date
+      else
+        myNewDate := FormatDateasDateTime(MyDate);
+    except
+      myNewdate := date
+    end;
+
+    ShowDocuments;
+  end
+  else
+  begin
+    sFullFile := myFileName;
+    iLength := length(sFullFile);
+
+    iCount := 1;
+
+    while iCount <> 0 do
+    begin
+      ipos := pos('\',sFullFile);
+
+      sFullFile := stringreplace(sFullFile, '\', '!', []);
+
+      iCount := pos('\',sFullFile);
+    end;
+
+    sFile := copy(myFileName, ipos+1, (iLength - ipos));
+
+    FileCopy(myFileName, myPath + sfile) ;
+    ShowDocuments;
   end;
+end;
+
+procedure IterateFilesDropped(const FilesList: TUnicodeStrings; Process: TProcessDroppedFiles); overload;
+var
+  I: Integer;
+  FileName: string;
+begin
+  for I := 0 to Pred(FilesList.Count) do
+  begin
+    FileName := FilesList[I];
+    Process(FileName);
+  end;
+end;
+
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
+begin
+  IterateFilesDropped(FilesList,
+    procedure(var FileName: string)
+    begin
+      ProcessDroppedFile(FileName, Path, ShowDocuments);
+    end);
 end;
 
 { TDirDlg }

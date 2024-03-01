@@ -5,10 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, DBCtrls, Mask,
   ComCtrls, Grids, DBGrids, DB, ExtCtrls, wtCustomerDM, Variants, WTQuotesDM, WTJobsDM, WTSalesOrderDM,
-  WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles, Activex, AxCtrls, Clipbrd, ComObj, Menus, taoMAPI,
+  WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles, Activex, AxCtrls, Clipbrd, ComObj, Menus,
   CRControls, System.ImageList, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, PJDropFiles;
+  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWtMaintCustomer = class(TForm)
@@ -211,8 +211,7 @@ type
     pnlMaterialTypeFooter: TPanel;
     chkbxShowInactiveMaterialTypes: TCheckBox;
     chkbxRequiresAppForPay: TCheckBox;
-    PJExtFileFilter1: TPJExtFileFilter;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
+    DropFileTarget1: TDropFileTarget;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -296,7 +295,6 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -2203,11 +2201,6 @@ begin
 
 end;
 
-procedure TfrmWtMaintCustomer.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TfrmWtMaintCustomer.lstvwDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
@@ -2309,9 +2302,11 @@ end;
 procedure TfrmWtMaintCustomer.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;
@@ -2561,7 +2556,6 @@ begin
     end;
   end;
 end;
-
 
 procedure TfrmWtMaintCustomer.edtAccountCodeEnter(Sender: TObject);
 begin

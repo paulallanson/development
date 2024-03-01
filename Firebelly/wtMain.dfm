@@ -31,13 +31,12 @@ object frmWTMain: TfrmWTMain
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1481
+        Width = 1479
       end>
-    ExplicitWidth = 1483
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1468
+      Width = 1466
       Height = 36
       AutoSize = True
       ButtonHeight = 36
@@ -167,8 +166,6 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
-    ExplicitTop = 668
-    ExplicitWidth = 1483
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

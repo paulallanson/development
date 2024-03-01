@@ -1756,19 +1756,12 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Left = 528
     Top = 360
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 456
-    Top = 64
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 456
-    Top = 112
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 552
+    Top = 65
   end
 end

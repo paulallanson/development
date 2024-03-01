@@ -87,7 +87,8 @@ uses
   Buttons, ExtCtrls, ComCtrls, DB, ShellAPI, ImgList, ToolWin, Grids, DBGrids, wtSupplierDM, Spin, Inifiles,
   DateSelV5, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus, CRControls, System.ImageList, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles, DragDrop, DropTarget,
+  DragDropFile;
 
 type
   TfrmWTMaintSupplier = class(TForm)
@@ -214,8 +215,7 @@ type
     qryDelete: TFDQuery;
     qryGetLast: TFDQuery;
     qryZero: TFDQuery;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure tblOneSupplierNewRecord(DataSet: TDataSet);
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
@@ -286,7 +286,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -1281,11 +1281,6 @@ begin
   end;
 end;
 
-procedure TfrmWTMaintSupplier.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TfrmWtMaintSupplier.ShowDocuments;
 var
   sPath: string;
@@ -1475,9 +1470,11 @@ end;
 procedure TfrmWTMaintSupplier.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;
@@ -1861,6 +1858,12 @@ begin
     except
     end;
   end;
+end;
+
+procedure TfrmWTMaintSupplier.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 end.

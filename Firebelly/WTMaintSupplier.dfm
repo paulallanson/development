@@ -1622,19 +1622,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Left = 864
     Top = 400
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 640
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 744
     Top = 32
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 640
-    Top = 88
   end
 end

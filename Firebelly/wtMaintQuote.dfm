@@ -3986,19 +3986,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       OnClick = pmnuSelectAllClick
     end
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pcDetails
-    PassThrough = True
-    Left = 616
-    Top = 56
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 616
-    Top = 104
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pcDetails
+    OptimizedMove = True
+    Left = 617
+    Top = 65
   end
 end

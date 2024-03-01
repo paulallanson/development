@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, ComCtrls,
   DBCtrls, ExtCtrls, Grids, WTContractsDM, ToolWin, ImgList, Menus, wtNotesDM, wtQuotesDM, ShellAPI, DateSelV5,
-  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, PJDropFiles;
+  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, PJDropFiles, DragDrop, DropTarget,
+  DragDropFile;
 
 type
   TfrmWTMaintContract = class(TForm)
@@ -139,8 +140,7 @@ type
     SpeedButton1: TSpeedButton;
     dblkpRevenueCentre: TDBLookupComboBox;
     chkbxOverridePrices: TCheckBox;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure btnCustomerClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -223,7 +223,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -3682,9 +3682,11 @@ end;
 procedure TfrmWTMaintContract.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;
@@ -3705,11 +3707,6 @@ begin
     begin
       ShowLineDocuments;
     end);
-end;
-
-procedure TfrmWTMaintContract.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintContract.SelectAll1Click(Sender: TObject);
@@ -4141,6 +4138,12 @@ end;
 procedure TfrmWTMaintContract.dblkpRevenueCentreClick(Sender: TObject);
 begin
   Contract.RevenueCentre := dblkpREvenueCentre.KeyValue;
+end;
+
+procedure TfrmWTMaintContract.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TfrmWTMaintContract.sgDetailsKeyPress(Sender: TObject;

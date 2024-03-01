@@ -9,7 +9,7 @@ uses
   CRControls, System.ImageList, taoMAPI,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintBranch = class(TForm)
@@ -67,8 +67,7 @@ type
     chkbxInactive: TCheckBox;
     dtsSiteQS: TDataSource;
     qrySiteQS: TFDQuery;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -82,7 +81,7 @@ type
     procedure pmnuDeleteClick(Sender: TObject);
     procedure pmnuSelectAllClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1DragOver(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     iInstallationNotes: integer;
     FCustomerName: string;
@@ -325,6 +324,12 @@ begin
   bOK := true;
 end;
 
+procedure TfrmWTMaintBranch.DropFileTarget1DragOver(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TfrmWTMaintBranch.EnableOK(Sender: TObject);
 begin
   btnOK.enabled := (edtName.Text <> '') and
@@ -551,11 +556,6 @@ begin
   AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
-procedure TfrmWTMaintBranch.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TfrmWTMaintBranch.pmnuPasteClick(Sender: TObject);
 var
   DocDir: string;
@@ -617,9 +617,11 @@ end;
 procedure TfrmWTMaintBranch.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;

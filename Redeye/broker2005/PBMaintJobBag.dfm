@@ -5095,19 +5095,12 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       OnClick = btnViewPIClick
     end
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 640
-    Top = 104
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 640
-    Top = 160
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 712
+    Top = 106
   end
 end

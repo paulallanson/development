@@ -8,7 +8,7 @@ uses
   DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm,
   PBPOObjects, Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus,
   DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
-  System.ImageList, FireDAC.Stan.Param, PJDropFiles;
+  System.ImageList, FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintContractFrm = class(TForm)
@@ -128,8 +128,7 @@ type
     Panel19: TPanel;
     Label42: TLabel;
     memTotalSI: TMemo;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnAccountManagerClick(Sender: TObject);
@@ -202,7 +201,7 @@ type
     procedure btnRePrintSIClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FDefaultBin: integer;
     FDefaultPrinter: string;
@@ -880,6 +879,12 @@ begin
 
 end;
 
+procedure TPBMaintContractFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TPBMaintContractFrm.dblkpReviewTypeClick(Sender: TObject);
 begin
   try
@@ -1432,11 +1437,6 @@ begin
   bNotesFlash := (not (bNotesFlash));
 end;
 
-procedure TPBMaintContractFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TPBMaintContractFrm.btnExcelClick(Sender: TObject);
 var
   compdir, docdir, ContractDir, docExt, sPAth: string;
@@ -1801,9 +1801,11 @@ end;
 procedure TPBMaintContractFrm.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments(Contract.ContractNumber);

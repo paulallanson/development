@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
   DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -254,8 +254,7 @@ type
     edtSiteName: TEdit;
     btnClearCustomerBranch: TSpeedButton;
     btnGenerateDocs: TButton;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
@@ -372,7 +371,7 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -3650,11 +3649,6 @@ begin
   CallPOReceiptsScreen(popChange);
 end;
 
-procedure TfrmWTMaintSalesOrder.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
-end;
-
 procedure TfrmWTMaintSalesOrder.lstvwDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
@@ -3748,9 +3742,11 @@ end;
 procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments(SOrder.dbKey);
@@ -5152,6 +5148,12 @@ begin
 
       iCount := FindNext(SearchRec);
     end;
+end;
+
+procedure TfrmWTMaintSalesOrder.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 end.

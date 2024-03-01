@@ -251,6 +251,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 8
+    ExplicitTop = 258
     object TabSheet1: TTabSheet
       Caption = 'Installation Notes'
       object memInstallationNotes: TMemo
@@ -1003,19 +1004,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Name = 'Customer'
       end>
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 416
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDragOver = DropFileTarget1DragOver
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 424
     Top = 208
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 416
-    Top = 256
   end
 end

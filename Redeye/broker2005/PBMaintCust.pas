@@ -10,7 +10,7 @@ uses
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
   pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList,
-  FireDAC.Stan.Param, PJDropFiles;
+  FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintCustFrm = class(TForm)
@@ -469,8 +469,7 @@ type
     chkbxOverrideCostCharges: TCheckBox;
     chkbxAcquiredCompany: TCheckBox;
     chkbxCTRLPCustomer: TCheckBox;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -706,7 +705,7 @@ type
     procedure edtdateGDPRSignedExit(Sender: TObject);
     procedure memQuoteCostMarkupExit(Sender: TObject);
     procedure chkbxOverrideCostChargesClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FActivatedEnqs: boolean;
     FActivatedInvoices: boolean;
@@ -2215,11 +2214,6 @@ begin
     PBAuditDataMod.WriteAudit(3000, 0, 0, 0, 0, NameEdit.Text) ;
   end;
   modalResult := mrok;
-end;
-
-procedure TPBMaintCustFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TPBMaintCustFrm.SettDaysMemoExit(Sender: TObject);
@@ -4082,6 +4076,12 @@ begin
             TDBLookupComboBox(Components[iCount]).enabled := false;
         end;
     end;
+end;
+
+procedure TPBMaintCustFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TPBMaintCustFrm.EnableCreditDetails;
@@ -6298,9 +6298,11 @@ end;
 procedure TPBMaintCustFrm.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;

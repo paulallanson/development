@@ -445,7 +445,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 80
         DesignSize = (
           801
           84)
@@ -606,11 +605,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 217
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 215
         object btnAddCharge: TBitBtn
           Left = 8
           Top = 8
@@ -659,21 +657,19 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1022
-        Height = 217
+        Height = 216
         Align = alClient
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 215
         object Panel4: TPanel
           Left = 1
-          Top = 180
+          Top = 179
           Width = 1020
           Height = 36
           Align = alBottom
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 178
           DesignSize = (
             1020
             36)
@@ -731,7 +727,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 1
           Top = 1
           Width = 1020
-          Height = 179
+          Height = 178
           Align = alClient
           ColCount = 9
           DefaultColWidth = 40
@@ -744,7 +740,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           OnMouseDown = sgLinesMouseDown
           OnMouseUp = sgLinesMouseUp
           OnRowMoved = sgLinesRowMoved
-          ExplicitHeight = 177
           ColWidths = (
             40
             137
@@ -765,7 +760,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1022
-        Height = 217
+        Height = 216
         Align = alClient
         ColCount = 7
         DefaultColWidth = 40
@@ -775,7 +770,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         TabOrder = 0
         OnDblClick = sgSupplyDblClick
         OnDrawCell = sgSupplyDrawCell
-        ExplicitHeight = 215
         ColWidths = (
           40
           239
@@ -789,11 +783,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 217
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 215
         object btnDeleteSupply: TBitBtn
           Left = 8
           Top = 104
@@ -844,22 +837,20 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1107
-        Height = 217
+        Height = 216
         Align = alClient
         Caption = 'Panel6'
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 215
         object Panel7: TPanel
           Left = 1
-          Top = 192
+          Top = 191
           Width = 1105
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 190
           object lblDocumentDir: TLabel
             Left = 8
             Top = 6
@@ -878,7 +869,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 1
           Top = 1
           Width = 1069
-          Height = 191
+          Height = 190
           Align = alClient
           Columns = <
             item
@@ -902,13 +893,12 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           OnColumnClick = lstvwDocumentsColumnClick
           OnCompare = lstvwDocumentsCompare
           OnDblClick = lstvwDocumentsDblClick
-          ExplicitHeight = 189
         end
         object ToolBar1: TToolBar
           Left = 1070
           Top = 1
           Width = 36
-          Height = 191
+          Height = 190
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -919,7 +909,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentShowHint = False
           ShowHint = True
           TabOrder = 2
-          ExplicitHeight = 189
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -973,11 +962,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 217
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 215
         object btnPrintSpec: TBitBtn
           Left = 8
           Top = 8
@@ -993,12 +981,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1022
-        Height = 217
+        Height = 216
         Align = alClient
         ScrollBars = ssBoth
         TabOrder = 1
         OnChange = memSpecChange
-        ExplicitHeight = 215
       end
     end
     object tsSpecification: TTabSheet
@@ -1008,11 +995,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 217
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 215
         object BitBtn3: TBitBtn
           Left = 8
           Top = 8
@@ -1035,7 +1021,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 476
     object Label10: TLabel
       Left = 112
       Top = 18
@@ -1519,7 +1504,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       item
         Width = 50
       end>
-    ExplicitTop = 660
   end
   object Panel2: TPanel
     Left = 0
@@ -1529,7 +1513,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 621
     object lblGDPRSignedStatement: TLabel
       Left = 11
       Top = 13
@@ -2037,19 +2020,12 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       OnClick = pmnuSelectAllClick
     end
   end
-  object PJCtrlDropFiles1: TPJCtrlDropFiles
-    Filter = PJExtFileFilter1
-    ForegroundOnDrop = False
-    Options = [dfoIncFiles]
-    OnDropFiles = PJCtrlDropFiles1DropFiles
-    ManagedControl = pgDetails
-    PassThrough = True
-    Left = 872
-    Top = 72
-  end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Extensions = '.msg;.eml'
-    Left = 872
-    Top = 120
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 881
+    Top = 128
   end
 end

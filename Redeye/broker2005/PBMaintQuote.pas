@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, pbQuotesDM, ComCtrls, Grids, StdCtrls, DBCtrls, Buttons,
   ExtCtrls, Spin, ShellAPI, IniFiles, DB, ADODB, ActiveX,
-  Menus, ImgList, Clipbrd, ToolWin, System.ImageList, PJDropFiles;
+  Menus, ImgList, Clipbrd, ToolWin, System.ImageList, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintQuoteFrm = class(TForm)
@@ -175,8 +175,7 @@ type
     dblkpPackFormat: TDBLookupComboBox;
     btnPackFormat: TBitBtn;
     rdgrpEnclosingType: TRadioGroup;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -253,7 +252,7 @@ type
     procedure btnPackFormatClick(Sender: TObject);
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -2540,6 +2539,12 @@ begin
   end;
 end;
 
+procedure TPBMaintQuoteFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TPBMaintQuoteFrm.ConnectToExcel;
 var
   strConn :  widestring;
@@ -2612,11 +2617,6 @@ begin
   finally
     PBLUQuoteReasonFrm.Free;
   end;
-end;
-
-procedure TPBMaintQuoteFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TPBMaintQuoteFrm.SetChargesProperties;
@@ -3080,9 +3080,11 @@ end;
 procedure TPBMaintQuoteFrm.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments(Quote.dbkey);

@@ -8,7 +8,7 @@ uses
   DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects, Menus,
   PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX,
   OleCtrls, SHDocVw, pbSupplierInvoiceDM, ImgList, Clipbrd, ToolWin,
-  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
+  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -458,8 +458,7 @@ type
     pmnuRePrintSI: TMenuItem;
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
-    PJExtFileFilter1: TPJExtFileFilter;
+    DropFileTarget1: TDropFileTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -634,7 +633,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -2954,6 +2953,12 @@ begin
   jobbagsched.NarrativeText := memScheduleNotes.Text;
 end;
 
+procedure TPBMaintJobBagFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
 var
   i : integer;
@@ -4238,9 +4243,11 @@ end;
 procedure TPBMaintJobBagFrm.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlSetData(PJCtrlDropFiles1, Path,
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments;
@@ -6488,11 +6495,6 @@ begin
 { Trancate the body text and remove line-ends }
   ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
-end;
-
-procedure TPBMaintJobBagFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 function TPBMaintJobBagFrm.ParseDocumentFrom(tmpFrom: string): string;
