@@ -9,7 +9,7 @@ uses
   INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBEnquiryFrm = class(TForm)
@@ -198,7 +198,7 @@ type
     DeleteLineBitBtn: TBitBtn;
     EnquiryLineGrid: TStringGrid;
     oldCapabilitySQL: TFDQuery;
-    PJCtrlDropFiles1: TPJCtrlDropFiles;
+    DropFileTarget1: TDropFileTarget;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -272,7 +272,7 @@ type
     procedure rdgTypeClick(Sender: TObject);
     procedure SupplierGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
-    procedure PJCtrlDropFiles1DropFiles(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     { Private declarations }
     DroppedEmailFile: string;
@@ -353,7 +353,7 @@ type
     function GetActiveCustomerContact(tempCust, tempBranch,
       tempCode: integer): integer;
     procedure ProcessDragAndDrop;
-    procedure MyWinControlProcessData(const DropControl: TPJCtrlDropFiles; const Path: string);
+    procedure MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
     function GetFilesPath: string;
   public
     { Public declarations }
@@ -1005,6 +1005,12 @@ begin
                 StrToInt(PBenqlinetmp.PartGrid.Cells[TSpinEdit(Components[icount]).tag - 100, iOrigPart - 1]);
           end;
   end;
+end;
+
+procedure TPBEnquiryFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TPBEnquiryFrm.UpdatePartDetails(iNewPart: Integer);
@@ -1807,9 +1813,11 @@ end;
 procedure TPBEnquiryFrm.ProcessDragAndDrop;
 var
   Path: string;
+  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  MyWinControlProcessData(PJCtrlDropFiles1, Path);
+  FilesList := DropFileTarget1.Files;
+  MyWinControlProcessData(FilesList, Path);
 end;
 
 function TPBEnquiryFrm.ProductTypeMinSuppliers(ProdType: integer): integer;
@@ -4104,7 +4112,8 @@ begin
       end;
     end;
 end;
-procedure TPBEnquiryFrm.MyWinControlProcessData(const DropControl: TPJCtrlDropFiles; const Path: string);
+
+procedure TPBEnquiryFrm.MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
 const
   cExtensionOutlook = '.msg';
   cExtensionOutlookExpress = '.eml';
@@ -4123,12 +4132,9 @@ begin
   if not DirectoryExists(MyPath) then
     CreateDirectory(MyPath);
 
-  for i := 0 to Pred(DropControl.Count) do
+  for i := 0 to Pred(FilesList.Count) do
   begin
-    if DropControl.IsFolder[I] then
-      Continue;
-
-    MyFileName := ExtractFileName(DropControl.Files[i]);
+    MyFileName := ExtractFileName(FilesList[i]);
     MyExtension := LowerCase(ExtractFileExt(MyFileName));
 
     if MyExtension = cExtensionOutlook then
@@ -4191,11 +4197,6 @@ begin
         PBPartDescDlg.Free;
       end;
     end;
-end;
-
-procedure TPBEnquiryFrm.PJCtrlDropFiles1DropFiles(Sender: TObject);
-begin
-  ProcessDragAndDrop;
 end;
 
 procedure TPBEnquiryFrm.EnquiryLineGridDblClick(Sender: TObject);

@@ -3,12 +3,10 @@ unit PBMaintContract;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, PBContractDM, ComCtrls, StdCtrls, DBCtrls, Buttons, ExtCtrls,
-  DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm,
-  PBPOObjects, Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus,
-  DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
-  System.ImageList, FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, PBContractDM, ComCtrls, StdCtrls,
+  DBCtrls, Buttons, ExtCtrls, DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm, PBPOObjects,
+  Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus, DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
+  System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintContractFrm = class(TForm)
@@ -724,7 +722,7 @@ var
   TempStr: string;
 begin
   if trim((Sender as TMemo).Text) = '' then exit;
-  
+
   {Validate a quantity on exit}
   TempStr := FormatQty((Sender as TMemo).Text);
   if TempStr = 'X' then
@@ -2192,4 +2190,3 @@ begin
 end;
 
 end.
-

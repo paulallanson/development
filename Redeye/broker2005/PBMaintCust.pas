@@ -10,7 +10,7 @@ uses
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
   pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList,
-  FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintCustFrm = class(TForm)

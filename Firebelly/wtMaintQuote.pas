@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtQuotesDm, CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin, ImgList, ShellAPI, Menus,
   Inifiles, DBGrids, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintQuote = class(TForm)

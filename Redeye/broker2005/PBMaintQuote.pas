@@ -3,10 +3,9 @@ unit PBMaintQuote;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, pbQuotesDM, ComCtrls, Grids, StdCtrls, DBCtrls, Buttons,
-  ExtCtrls, Spin, ShellAPI, IniFiles, DB, ADODB, ActiveX,
-  Menus, ImgList, Clipbrd, ToolWin, System.ImageList, PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, pbQuotesDM, ComCtrls, Grids,
+  StdCtrls, DBCtrls, Buttons, ExtCtrls, Spin, ShellAPI, IniFiles, DB, ADODB, ActiveX, Menus, ImgList, Clipbrd, ToolWin,
+  System.ImageList, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintQuoteFrm = class(TForm)
@@ -528,7 +527,7 @@ begin
 
       if (trim(Quote.AdhocName) <> '') or (Quote.ProspectQuote) then
         rdgType.Itemindex := 1;
-        
+
       if Quote.AcquiredCustomer then
         begin
           pnlEndUser.Visible := true;
@@ -2175,7 +2174,7 @@ begin
   {Find a document} ;
   with DocOpenDialog do
   begin
-    
+
     InitialDir := tempStr2;
     FileName := tempStr;
     ForceCurrentDirectory := false;

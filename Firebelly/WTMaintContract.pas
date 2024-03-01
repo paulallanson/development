@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, ComCtrls,
   DBCtrls, ExtCtrls, Grids, WTContractsDM, ToolWin, ImgList, Menus, wtNotesDM, wtQuotesDM, ShellAPI, DateSelV5,
-  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, PJDropFiles, DragDrop, DropTarget,
+  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, DragDrop, DropTarget,
   DragDropFile;
 
 type

@@ -3,13 +3,11 @@ unit WTMaintBranch;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBCtrls, ComCtrls,
-  ExtCtrls, ToolWin, ImgList, SHELLAPI, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls, System.ImageList, taoMAPI,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, DB, DBCtrls,
+  ComCtrls, ExtCtrls, ToolWin, ImgList, SHELLAPI, Activex, AxCtrls, Clipbrd, ComObj, Menus, CRControls,
+  System.ImageList, taoMAPI, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintBranch = class(TForm)
@@ -119,7 +117,7 @@ begin
       parambyname('Customer').asinteger := iCustomer;
       open;
     end;
-    
+
   with qrySiteQS do
     begin
       close;

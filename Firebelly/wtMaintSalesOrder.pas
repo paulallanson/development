@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
   DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles, DragDrop, DropTarget, DragDropFile;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
