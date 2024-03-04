@@ -66,8 +66,8 @@ begin
     try
       FDManager.GetConnectionDefParams(sAlias,sgList);
       edtAliasName.Text := sAlias;
-      edtDatabaseName.Text := sgList.Values['DATABASE NAME'];
-      edtServerName.Text := sgList.Values['SERVER NAME'];
+      edtDatabaseName.Text := sgList.Values['DATABASE'];
+      edtServerName.Text := sgList.Values['SERVER'];
     finally
       sgList.free;
     end;
@@ -102,8 +102,8 @@ begin
     begin
       sgList := TStringList.Create;
       try
-        sgList.Add('DATABASE NAME='+edtDatabaseName.text);
-        sgList.Add('SERVER NAME='+edtServerName.text);
+        sgList.Add('DATABASE='+edtDatabaseName.text);
+        sgList.Add('SERVER='+edtServerName.text);
         FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
       finally
         sgList.Free;
@@ -115,8 +115,8 @@ begin
       sgList := TStringList.Create;
       try
         sgList.Clear;
-        sgList.Add('DATABASE NAME='+edtDatabaseName.text);
-        sgList.Add('SERVER NAME='+edtServerName.text);
+        sgList.Add('DATABASE='+edtDatabaseName.text);
+        sgList.Add('SERVER='+edtServerName.text);
         FDManager.ModifyConnectionDef(edtAliasName.text,sgList);
       finally
         sgList.Free;

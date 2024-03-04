@@ -88,7 +88,7 @@ uses
 
 procedure TfrmAllFaxStatus.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(FaxDatabase);
+  ConfigureFDConnection(FaxDatabase);
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password:= 'rabbit';
 end;

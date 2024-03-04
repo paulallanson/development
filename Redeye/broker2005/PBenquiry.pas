@@ -3116,9 +3116,9 @@ begin
     rdgType.ItemIndex := 0;
 
   {Load all the Enquiry Header screen fields}
-  CustomerEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name').AsString;
+  CustomerEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Customer_Name').AsString;
   iCustomer := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Customer').AsInteger;
-  BranchEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name_1').AsString;
+  BranchEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Branch_Name').AsString;
   iBranch_no := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Branch_no').AsInteger;
   self.iContact := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Contact_no').AsInteger;
   sCustomerContact := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Cust_est_contact').AsString;
@@ -3142,7 +3142,7 @@ begin
   getcustreps;
   {	CustRepCombo.Text := PBEnqDataModFrm.EnqHeadSQL.fieldbyname('Name_2').asstring;
   } CustRepCombo.itemindex :=
-  custrepcombo.Items.indexof(PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name_2').AsString);
+  custrepcombo.Items.indexof(PBEnqDataModFrm.EnqHeadSQL.FieldByName('Rep_Name').AsString);
 
   {Load the date fields}
   if (sEnqFuncMode = 'c') or (sEnqFuncMode = 'x') then

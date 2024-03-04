@@ -170,9 +170,6 @@ uses
 {$R *.RES}
 
 begin
-  {$IFDEF DEBUG}
-  ReportMemoryLeaksOnShutdown := True;
-  {$ENDIF}
   Application.Initialize;
   frmWTSplash := TfrmWTSplash.Create( Application );
   frmWTSplash.Show;

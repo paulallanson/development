@@ -12,9 +12,6 @@ uses
 {$R *.RES}
 
 begin
-  {$IFDEF DEBUG}
-  ReportMemoryLeaksOnShutdown := True;
-  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Broker Loader';
   Application.MainFormOnTaskBar := True;

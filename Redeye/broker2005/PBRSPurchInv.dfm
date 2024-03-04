@@ -644,7 +644,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       FixedChar = True
       Size = 80
     end
-    object OldqryPurchInvSupplier_Invoice_no: TStringField
+    object OldqryPurchInvSupplier_Invoice_no: TWideStringField
       FieldName = 'Supplier_Invoice_no'
       FixedChar = True
       Size = 40
@@ -658,12 +658,12 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     object OldqryPurchInvPurchase_Price: TCurrencyField
       FieldName = 'Purchase_Price'
     end
-    object OldqryPurchInvRep_Name: TStringField
+    object OldqryPurchInvRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object OldqryPurchInvPOLine: TStringField
+    object OldqryPurchInvPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = OldqryPurchInvPOLineGetText

@@ -574,7 +574,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'FROM Vat'
       '      INNER JOIN Customer'
       '        ON Vat.Vat = Customer.Vat'
-      'WHERE (Customer.Customer = :Customer);'
+      'WHERE (Customer.Customer = :Customer)'
       '')
     Left = 304
     Top = 480

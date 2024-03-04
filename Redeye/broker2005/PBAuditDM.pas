@@ -286,29 +286,14 @@ begin
                                 Continue;
                         end;
                 {Write the audit trail record} ;
-                Try
-                        iTmpCde1 := SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_1_Field').AsString).AsInteger ;
-                Except
-                        iTmpCde1 := 0 ;
-                        end;
+                iTmpCde1 := StrToIntDef(SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_1_Field').AsString).AsString, 0) ;
                 {Write the audit trail record} ;
-                Try
-                        iTmpCde2 := SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_2_Field').AsString).AsInteger ;
-                Except
-                        iTmpCde2 := 0 ;
-                        end;
+                iTmpCde2 := StrToIntDef(SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_2_Field').AsString).AsString, 0) ;
                 {Write the audit trail record} ;
-                Try
-                        iTmpCde3 := SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_3_Field').AsString).AsInteger ;
-                Except
-                        iTmpCde3 := 0 ;
-                        end;
+                iTmpCde3 := StrToIntDef(SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_3_Field').AsString).AsString, 0) ;
                 {Write the audit trail record} ;
-                Try
-                        iTmpCde4 := SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_4_Field').AsString).AsInteger ;
-                Except
-                        iTmpCde4 := 0 ;
-                        end;
+                iTmpCde4 := StrToIntDef(SQLTo.ParamByName(GetFldChgTypSQL.FieldByName('Audit_Code_4_Field').AsString).AsString, 0) ;
+
                 WriteAudit(GetFldChgTypSQL.FieldByName('Audit_Type').AsInteger, iTmpCde1, iTmpCde2, iTmpCde3, iTmpCde4,
                                      sTempFrom + ' --> ' + sTempTo) ;
                 end;

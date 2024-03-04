@@ -2418,7 +2418,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnActivityTypeClick
-        ExplicitLeft = 421
       end
       object dblkpEActivityType: TDBLookupComboBox
         Left = 210
@@ -3210,7 +3209,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
-      'from commission_type;')
+      'from commission_type')
     Left = 548
     Top = 250
   end

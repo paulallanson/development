@@ -706,9 +706,6 @@ uses
 {$R *.RES}
 
 begin
-  {$IFDEF DEBUG}
-  ReportMemoryLeaksOnShutdown := True;
-  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Quaystone - Redeye Management Information';
   Application.MainFormOnTaskBar := True;

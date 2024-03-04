@@ -79,7 +79,7 @@ end;
 
 procedure TdtmdlStock.wtStkDatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(wtStkDatabase);
+  ConfigureFDConnection(wtStkDatabase);
 end;
 
 function TdtmdlStock.CheckProductExists(tempCode: string): boolean;

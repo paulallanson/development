@@ -87,7 +87,7 @@ uses CCSCommon;
 
 procedure TfrmCSFaxStatus.FaxDatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(FaxDatabase);
+  ConfigureFDConnection(FaxDatabase);
   {Get user and password from login screen};
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password := 'rabbit';

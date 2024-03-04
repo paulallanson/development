@@ -1802,7 +1802,7 @@ end;
 
 procedure TdmAccImport.Sage50DatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(Sage50Database);
+  ConfigureFDConnection(Sage50Database);
 end;
 
 procedure TdmAccImport.SetAccountRef(const Value: string);
@@ -3516,7 +3516,7 @@ end;
 
 procedure TdmAccImport.QuickbooksDBBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(QuickbooksDB);
+  ConfigureFDConnection(QuickbooksDB);
 end;
 
 function TdmAccImport.JBLineExists(tmpJB, tmpLine: integer): boolean;
@@ -3535,7 +3535,7 @@ end;
 
 procedure TdmAccImport.MaximiserDBBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(MaximiserDB);
+  ConfigureFDConnection(MaximiserDB);
 end;
 
 function TdmAccImport.UpdateOrder: boolean;

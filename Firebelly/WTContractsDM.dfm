@@ -29,7 +29,6 @@ object dtmdlContract: TdtmdlContract
       '        Contract_Quote.Account_Manager,'
       '        Account_Manager.Operator_Name as Account_Manager_Name,'
       '        Contract_Quote.inactive,'
-      '        Contract_Quote.inactive,'
       '        Contract_Quote.inactive_reason,'
       '        Contract_Quote.Original_Quote,'
       '        Contract_Quote.Quote_Number,'
@@ -59,6 +58,7 @@ object dtmdlContract: TdtmdlContract
     ParamData = <
       item
         Name = 'Contract_Quote'
+        ParamType = ptInput
       end>
   end
   object qryCQAddHeader: TFDQuery
@@ -359,7 +359,6 @@ object dtmdlContract: TdtmdlContract
       '        Operator.Operator_Name,'
       '        Contract_Quote.Account_Manager,'
       '        Account_Manager.Operator_Name as Account_Manager_Name,'
-      '        Contract_Quote.inactive,'
       '        Contract_Quote.inactive,'
       '        Contract_Quote.inactive_reason,'
       '        Inactive_reason.Inactive_reason_Descr,'
@@ -767,15 +766,26 @@ object dtmdlContract: TdtmdlContract
   object qryCQAllEvents: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select *, Operator.Operator_Name'
-      'from Contract_Quote_internal_Note, Operator'
-      'where Contract_Quote = :Contract_Quote and'
-      'Contract_Quote_internal_Note.Operator = Operator.Operator')
+      
+        'select c.Contract_Quote, c.Internal_Note, c.Date_Time_Entered, c' +
+        '.Narrative, o.Operator, o.Operator_Name,'
+      
+        '  o.Login_name, o.Operator_Can_Login, o.Telephone_number, o.Quot' +
+        'e_Follow_Up_Reminder, o.End_User,'
+      
+        '  o.Can_Update_Schedule, o.Email_Address, o.Job_Title, o.Mobile_' +
+        'Number, o.Login_Password, o.Revenue_Centre'
+      '  from Contract_Quote_internal_Note as c  '
+      '    join Operator as o on c.Operator = o.Operator'
+      ' where Contract_Quote = :Contract_Quote'
+      ''
+      '')
     Left = 416
     Top = 224
     ParamData = <
       item
         Name = 'Contract_Quote'
+        ParamType = ptInput
       end>
   end
   object qryCQAddEvent: TFDQuery

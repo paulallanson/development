@@ -643,12 +643,13 @@ object STPODM: TSTPODM
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * from Purch_Ord_Add_Charge '
-      'Where Purch_Ord = :Purch_Ord;')
+      'Where Purch_Ord = :Purch_Ord')
     Left = 360
     Top = 168
     ParamData = <
       item
         Name = 'Purch_Ord'
+        ParamType = ptInput
       end>
   end
   object qryGetVatRate: TFDQuery

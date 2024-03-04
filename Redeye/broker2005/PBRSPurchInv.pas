@@ -45,12 +45,12 @@ type
     OldqryPurchInvSales_Invoice_No: TStringField;
     OldqryPurchInvSales_Invoice_Date: TDateTimeField;
     OldqryPurchInvSupplier_Name: TStringField;
-    OldqryPurchInvSupplier_Invoice_no: TStringField;
+    OldqryPurchInvSupplier_Invoice_no: TWideStringField;
     OldqryPurchInvSupplier_Invoice_Date: TDateTimeField;
     OldqryPurchInvPurchase_Qty: TFloatField;
     OldqryPurchInvPurchase_Price: TCurrencyField;
-    OldqryPurchInvRep_Name: TStringField;
-    OldqryPurchInvPOLine: TStringField;
+    OldqryPurchInvRep_Name: TWideStringField;
+    OldqryPurchInvPOLine: TWideStringField;
     OldqryPurchInvTotal_sell: TFloatField;
     OldqryPurchInvTotal_Purch: TFloatField;
     OldqryPurchInvCost_Unit_Factor: TFloatField;

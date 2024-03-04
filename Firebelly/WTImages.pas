@@ -69,7 +69,7 @@ begin
   sgList := TStringList.Create;
   try
     FDManager.GetConnectionDefParams(TempArray,sgList);
-    sDatabase := sgList.Values['DATABASE NAME'];
+    sDatabase := sgList.Values['DATABASE'];
   finally
     sgList.free;
   end;

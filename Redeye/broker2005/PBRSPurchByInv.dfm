@@ -48,14 +48,14 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Columns = <
         item
           Expanded = False
-          FieldName = 'Name_1'
+          FieldName = 'Supplier_Name'
           Title.Caption = 'Supplier'
           Width = 200
           Visible = True
         end
         item
           Expanded = False
-          FieldName = 'Name'
+          FieldName = 'Branch_Name'
           Title.Caption = 'Branch'
           Width = 80
           Visible = True
@@ -521,15 +521,15 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Supplier_Invoice.Vat_Value as vat,'
+      '  Supplier_Invoice.Goods_Value as goods,'
       
-        '  Supplier_Invoice.Goods_Value as goods, (Supplier_Invoice.Goods' +
-        '_value + Supplier_Invoice.Vat_Value) as total_goods,'
-      
-        '  Supplier_Invoice.Invoice_Date, Supplier_Invoice.Supplier_Invoi' +
-        'ce_no,'
-      
-        '  Supplier_Invoice.Invoice_or_Credit, Supplier_Branch.Name, Supp' +
-        'lier.Name'
+        '  (Supplier_Invoice.Goods_value + Supplier_Invoice.Vat_Value) as' +
+        ' total_goods,'
+      '  Supplier_Invoice.Invoice_Date,'
+      '  Supplier_Invoice.Supplier_Invoice_no,'
+      '  Supplier_Invoice.Invoice_or_Credit,'
+      '  Supplier_Branch.Name as Branch_Name,'
+      '  Supplier.Name as Supplier_Name'
       
         'FROM Supplier INNER JOIN (Supplier_Branch INNER JOIN Supplier_In' +
         'voice ON'
@@ -557,30 +557,30 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     object qryPurchByInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qryPurchByInvSupplier_Invoice_no: TStringField
+    object qryPurchByInvSupplier_Invoice_no: TWideStringField
       FieldName = 'Supplier_Invoice_no'
       FixedChar = True
       Size = 40
     end
-    object qryPurchByInvInvoice_or_Credit: TStringField
+    object qryPurchByInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
     end
-    object qryPurchByInvName: TStringField
-      FieldName = 'Name'
+    object qryPurchByInvBranch_Name: TWideStringField
+      FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchByInvName_1: TStringField
-      FieldName = 'Name_1'
+    object qryPurchByInvSupplier_Name: TStringField
+      FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
   end
   object qryDetail: TFDQuery
     ConnectionName = 'pb'
-    Left = 424
+    Left = 400
     Top = 185
   end
 end

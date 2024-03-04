@@ -2640,29 +2640,34 @@ object dtmdlCustomers: TdtmdlCustomers
   object qryGetContactCats: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      
-        'SELECT  Customer_Contact_Category.*, Category.Category, Category' +
-        '.Description'
-      'FROM  Customer_Contact_Category, Category'
-      'WHERE'
-      '(Customer_Contact_Category.Category = Category.Category) AND'
-      '('
-      '(Customer_Contact_Category.Customer = :Customer) AND'
-      '(Customer_Contact_Category.Branch_no = :Branch_no) AND'
-      '(Customer_Contact_Category.Contact_no = :Contact_no)'
-      ')'
-      'ORDER BY Category.Description')
+      'SELECT'#9'ccc.Customer,'
+      #9'ccc.Branch_no,'
+      #9'ccc.Contact_no,'
+      #9'ccc.We_Supply_This_Category,'
+      #9'ccc.Narrative,'
+      #9'c.Category,'
+      #9'c.Description'
+      'FROM  Customer_Contact_Category as ccc'
+      '  join Category as c on c.Category = ccc.Category'
+      'WHERE (ccc.Customer = :Customer) AND'
+      '  (ccc.Branch_no = :Branch_no) AND'
+      '  (ccc.Contact_no = :Contact_no)'
+      'ORDER BY c.Description'
+      '')
     Left = 696
     Top = 592
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Branch_no'
+        ParamType = ptInput
       end
       item
         Name = 'Contact_no'
+        ParamType = ptInput
       end>
   end
   object dtsContactCats: TDataSource

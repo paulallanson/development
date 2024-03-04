@@ -7,9 +7,9 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
     ConnectionName = 'pb'
     SQL.Strings = (
       'select '#9'Enquiry.*,'
-      #9#9#9'Customer.Name,'
-      '        Customer_Branch.Name,'
-      '        Rep.Name,'
+      '        Customer.Name as Customer_Name,'
+      '        Customer_Branch.Name as Branch_Name,'
+      '        Rep.Name as Rep_Name,'
       '        Operator.Name as Office_Name'
       'from Enquiry, Customer, Customer_Branch, Rep, Operator'
       'where'
@@ -28,6 +28,7 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       item
         Name = 'enquiry'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object EnqLineSQL: TFDQuery

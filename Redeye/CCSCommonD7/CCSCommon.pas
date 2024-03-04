@@ -121,7 +121,7 @@ function GetRegKey(const TempPath, TempKey: string): string;
 procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
 { FireDAC }
-procedure SetConnectionMapRules(const Connection: TFDConnection);
+procedure ConfigureFDConnection(const Connection: TFDConnection);
 
 { TOpenDialog }
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
@@ -200,7 +200,7 @@ const
 implementation
 
 uses
-  System.UITypes, FireDAC.Stan.Intf, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
+  System.UITypes, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -1324,8 +1324,9 @@ begin
 end;
 
 { FireDAC }
-procedure SetConnectionMapRules(const Connection: TFDConnection);
+procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
+  Connection.FetchOptions.RecordCountMode := cmTotal;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
