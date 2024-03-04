@@ -1762,7 +1762,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1099
         object Label25: TLabel
           Left = 2
           Top = 0
@@ -1786,8 +1785,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
-        ExplicitLeft = 1058
-        ExplicitHeight = 249
         object btnExcel: TToolButton
           Left = 0
           Top = 0
@@ -1851,35 +1848,23 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         OnDragDrop = stvDocumentsDragDrop
         OnDragOver = stvDocumentsDragOver
       end
-      object dfDocuments: TPJDropFiles
+      object slvDocuments: TShellListView
         Left = 161
-        Top = 16
+        Top = 17
         Width = 901
         Height = 250
+        AutoRefresh = True
+        ObjectTypes = [otFolders, otNonFolders]
+        Root = 'C:\'
+        ShellTreeView = stvDocuments
+        Sorted = True
+        Align = alClient
+        ReadOnly = False
+        HideSelection = False
+        MultiSelect = True
+        OnMouseMove = slvDocumentsMouseMove
         TabOrder = 3
-        Filter = PJExtFileFilter1
-        ForegroundOnDrop = False
-        Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
-        PassThrough = False
-        OnDropFiles = dfDocumentsDropFiles
-        object slvDocuments: TShellListView
-          Left = 0
-          Top = 0
-          Width = 901
-          Height = 250
-          AutoRefresh = True
-          ObjectTypes = [otFolders, otNonFolders]
-          Root = 'C:\'
-          ShellTreeView = stvDocuments
-          Sorted = True
-          Align = alClient
-          ReadOnly = False
-          HideSelection = False
-          MultiSelect = True
-          OnMouseMove = slvDocumentsMouseMove
-          TabOrder = 0
-          ViewStyle = vsReport
-        end
+        ViewStyle = vsReport
       end
     end
     object tbNotes: TTabSheet
@@ -4001,9 +3986,12 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       OnClick = pmnuSelectAllClick
     end
   end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Style = fsAll
-    Left = 837
-    Top = 337
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pcDetails
+    OptimizedMove = True
+    Left = 617
+    Top = 65
   end
 end

@@ -10,7 +10,7 @@ uses
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
   pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList,
-  FireDAC.Stan.Param;
+  FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBMaintCustFrm = class(TForm)
@@ -469,6 +469,7 @@ type
     chkbxOverrideCostCharges: TCheckBox;
     chkbxAcquiredCompany: TCheckBox;
     chkbxCTRLPCustomer: TCheckBox;
+    DropFileTarget1: TDropFileTarget;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -704,6 +705,7 @@ type
     procedure edtdateGDPRSignedExit(Sender: TObject);
     procedure memQuoteCostMarkupExit(Sender: TObject);
     procedure chkbxOverrideCostChargesClick(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FActivatedEnqs: boolean;
     FActivatedInvoices: boolean;
@@ -758,6 +760,8 @@ type
     FProspect: boolean;
     FCreditCheck: boolean;
     SICCode: integer;
+    procedure ProcessDragAndDrop;
+    function GetFilesPath: string;
     procedure AddZero;
     procedure DeleteZero;
     function GetNextKey : integer;
@@ -777,10 +781,6 @@ type
     procedure DisableInvoicingDetails;
     procedure EnableCreditDetails;
     procedure EnableInvoicingDetails;
-    procedure ParseMessage(const AFileName: string; var ATo, AFrom,
-      ASubject, ADate, ABody: string);
-    function FormatDateasDateTime(sDate: string): TDateTime;
-    function ParseDocumentFrom(tmpFrom: string): string;
     procedure SetEnquiryButtonProperties(Sender: TObject);
     procedure SetJobButtonProperties(Sender: TObject);
     procedure SetOrderButtonProperties(Sender: TObject);
@@ -872,6 +872,16 @@ begin
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   TryStrToInt(TempArray, Result);
+end;
+
+function TPBMaintCustFrm.GetFilesPath: string;
+var
+  DocDir: string;
+begin
+  DocDir := dmBroker.GetCompanyCustomerDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + NameEdit.text;
+
+  Result := DocDir;
 end;
 
 procedure TPBMaintCustFrm.FormActivate(Sender: TObject);
@@ -2921,17 +2931,17 @@ begin
   btnRevenueCentre.Visible := lblRevenueCentre.Visible;
   btnRevenueCentreClear.Visible := lblRevenueCentre.Visible;
 
-  tbOptions.TabVisible := false;
-  tbBranches.TabVisible := false;
-  tbQuotes.TabVisible := false;
-  tbEnquiries.TabVisible := false;
-  tbOrders.TabVisible := false;
-  tbJobs.TabVisible := false;
-  tbStock.TabVisible := false;
-  tbInvoices.TabVisible := false;
-  tbDocuments.TabVisible := false;
-  tbActivity.TabVisible := false;
-  tbCrossSelling.TabVisible := false;
+  tbOptions.Visible := false;
+  tbBranches.Visible := false;
+  tbQuotes.Visible := false;
+  tbEnquiries.Visible := false;
+  tbOrders.Visible := false;
+  tbJobs.Visible := false;
+  tbStock.Visible := false;
+  tbInvoices.Visible := false;
+  tbDocuments.Visible := false;
+  tbActivity.Visible := false;
+  tbCrossSelling.Visible := false;
 
 (*  pgCustomer.Pages[1].TabVisible := false;
   pgCustomer.Pages[2].TabVisible := false;
@@ -3538,18 +3548,18 @@ begin
     begin
       sStatusDescr := 'Prospect ';
 
-      tbOptions.TabVisible := true;
-      tbBranches.TabVisible := true;
+      tbOptions.Visible := true;
+      tbBranches.Visible := true;
 
-      tbQuotes.TabVisible := false;
-      tbEnquiries.TabVisible := frmPBMainMenu.btnEnquiries.enabled;
-      tbOrders.TabVisible := false;
-      tbJobs.TabVisible := false;
-      tbStock.TabVisible := false;
-      tbInvoices.TabVisible := false;
-      tbDocuments.TabVisible := true;
-      tbActivity.TabVisible := frmPBMainMenu.UseCRMSystem;
-      tbCrossSelling.TabVisible := true;
+      tbQuotes.Visible := false;
+      tbEnquiries.Visible := frmPBMainMenu.btnEnquiries.enabled;
+      tbOrders.Visible := false;
+      tbJobs.Visible := false;
+      tbStock.Visible := false;
+      tbInvoices.Visible := false;
+      tbDocuments.Visible := true;
+      tbActivity.Visible := frmPBMainMenu.UseCRMSystem;
+      tbCrossSelling.Visible := true;
 
 (*      pgCustomer.Pages[1].TabVisible := true;
       pgCustomer.Pages[2].TabVisible := true;
@@ -3587,17 +3597,17 @@ begin
     begin
       sStatusDescr := 'Customer ';
 
-      tbOptions.TabVisible := true;
-      tbBranches.TabVisible := true;
-      tbQuotes.TabVisible := true;
-      tbEnquiries.TabVisible := frmPBMainMenu.btnEnquiries.enabled;
-      tbOrders.TabVisible := true;
-      tbJobs.TabVisible := true;
-      tbStock.TabVisible := true;
-      tbInvoices.TabVisible := true;
-      tbDocuments.TabVisible := true;
-      tbActivity.TabVisible := frmPBMainMenu.UseCRMSystem;
-      tbCrossSelling.TabVisible := true;
+      tbOptions.Visible := true;
+      tbBranches.Visible := true;
+      tbQuotes.Visible := true;
+      tbEnquiries.Visible := frmPBMainMenu.btnEnquiries.enabled;
+      tbOrders.Visible := true;
+      tbJobs.Visible := true;
+      tbStock.Visible := true;
+      tbInvoices.Visible := true;
+      tbDocuments.Visible := true;
+      tbActivity.Visible := frmPBMainMenu.UseCRMSystem;
+      tbCrossSelling.Visible := true;
 
 (*      pgCustomer.Pages[1].TabVisible := true;
       pgCustomer.Pages[2].TabVisible := true;
@@ -3972,8 +3982,7 @@ var
   i, ipos, ilength, icount: integer;
   sFile, sFullFile, DocDir: string;
 begin
-  DocDir := dmBroker.GetCompanyCustomerDirectory;
-  DocDir := IncludeTrailingPathDelimiter(DocDir) + NameEdit.text;
+  DocDir := GetFilesPath;
 
   {Find a document}
   CopyDocuments(DocOpenDialog, DocDir,
@@ -4069,6 +4078,12 @@ begin
     end;
 end;
 
+procedure TPBMaintCustFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TPBMaintCustFrm.EnableCreditDetails;
 var
   iCount: integer;
@@ -4137,205 +4152,6 @@ begin
             TDBLookupComboBox(Components[iCount]).enabled := true;
         end;
     end;
-end;
-
-procedure TPBMaintCustFrm.ParseMessage(const AFileName: string; var ATo, AFrom,
-  ASubject, ADate, ABody: string);
-var
-  iLength: integer;
-  MyUnicode: Boolean;
-  MyFileStream: TFileStream;
-  MyFileSize: Integer;
-  MyDataHandle: HGlobal;
-  MyBuffer: Pointer;
-  MyLockBytes: ILockBytes;
-  MyStorage: IStorage;
-  MyHeader: string;
-  MyStrings: TStrings;
-
-  function MyGetProperty(const AStorage: IStorage; AProperty: Word): string;
-  const
-    MyTString: array[Boolean] of Word = (PT_STRING8, PT_UNICODE);
-  var
-    MyIStream: IStream;
-    MyStreamName: WideString;
-    MyOleStream: TOleStream;
-    MyStream: TMemoryStream;
-    MySucceeded: Boolean;
-  begin
-{ Construct the predefined stream name }
-    MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
-{ Read a stream, if present, within the storage. }
-    MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
-      STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
-    if not MySucceeded then begin
-{ Turn MyUnicode over }
-      MyUnicode := not MyUnicode;
-      MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
-      MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
-        STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
-    end;
-    if MySucceeded then begin
-      MyOleStream := TOleStream.Create(MyIStream);
-      try
-        MyStream := TMemoryStream.Create;
-        try
-          MyStream.CopyFrom(MyOleStream, 0);
-          if MyUnicode then
-            Result := PWideChar(MyStream.Memory)
-          else
-            Result := PChar(MyStream.Memory);
-          SetLength(Result, StrLen(PChar(Result))); //  Remove the final #0
-        finally
-          MyStream.Free;
-        end;
-      finally
-        MyOleStream.Free;
-      end;
-    end;
-  end;
-
-begin
-{ Open the copy of the message stored in the project directory }
-  MyFileStream := TFileStream.Create(AFileName, fmOpenRead or fmShareDenyWrite);
-  try
-    MyFileSize := MyFileStream.Size;
-{ Open the file as a Structured Storage }
-    MyDataHandle := GlobalAlloc(GMEM_MOVEABLE, MyFileSize);
-    try
-      MyBuffer := GlobalLock(MyDataHandle);
-      try
-        MyFileStream.ReadBuffer(MyBuffer^, MyFileSize);
-      finally
-        GlobalUnlock(MyDataHandle);
-      end;
-
-      OleCheck(CreateILockBytesOnHGlobal(MyDataHandle, True, MyLockBytes));
-      OleCheck(StgOpenStorageOnILockBytes(MyLockBytes, nil, STGM_READWRITE or
-        STGM_SHARE_EXCLUSIVE, nil, 0, MyStorage));
-
-{ Outlook 97/2000 return ANSI strings, Outlook XP/2003 return Unicode strings.
- MyUnicode will be turned on/off in MyGetProperty automatically. }
-      MyUnicode := True;
-{ If the message came from the Internet, it has got a RFC-compliant header }
-      MyHeader := MyGetProperty(MyStorage, PR_TRANSPORT_MESSAGE_HEADERS);
-{ Otherwise, construct a simple substitute from internal properties. }
-      if MyHeader = '' then begin
-        MyHeader :=
-          'To: ' + MyGetProperty(MyStorage, PR_DISPLAY_TO) +
-          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_CC) +
-          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_BCC) + #13#10 +
-          'From: ' + MyGetProperty(MyStorage, PR_SENDER_NAME) +
-          ' ' + MyGetProperty(MyStorage, PR_SENDER_EMAIL_ADDRESS) + #13#10 +
-          'Subject: ' + MyGetProperty(MyStorage, PR_SUBJECT) + #13#10 +
-          'Date: ' + MyGetProperty(MyStorage, PR_LAST_MODIFICATION_TIME);
-      end;
-      ABody := MyGetProperty(MyStorage, PR_BODY);
-
-    finally
-      GlobalFree(MyDataHandle);
-    end;
-  finally
-    MyFileStream.Free;
-  end;
-
-  { Parse the header as an RFC-compliant header. Exploit INI-files support buil-in in TStrings }
-  MyHeader := StringReplace(MyHeader, 'To: ', 'To=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'From: ', 'From=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'Subject: ', 'Subject=', [rfReplaceAll, rfIgnoreCase]);
-  MyHeader := StringReplace(MyHeader, 'Date: ', 'Date=', [rfReplaceAll, rfIgnoreCase]);
-  MyStrings := TStringList.Create;
-  try
-    MyStrings.Text := MyHeader;
-    ATo := MyStrings.Values['To'];
-    AFrom := MyStrings.Values['From'];
-    AFrom := ParseDocumentFrom(AFrom);
-    ASubject := MyStrings.Values['Subject'];
-    ADate := MyStrings.Values['Date'];
-  finally
-    MyStrings.Free;
-  end;
-{ Trancate the body text and remove line-ends }
-  ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
-  ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
-end;
-
-function TPBMaintCustFrm.ParseDocumentFrom(tmpFrom: string): string;
-var
-  icount: integer;
-  Alphas, Numbers: string;
-begin
-  Alphas := 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
-  Numbers := '01234567890.';
-
-  Result := '';
-
-  if pos('@',tmpFrom) = 0 then
-    begin
-      for icount := 1 to length(tmpFrom) do
-        begin
-          if pos(copy(tmpFrom,icount,1),Alphas) > 0 then
-            begin
-              Result := Result + copy(tmpFrom,icount,1);
-              continue;
-            end;
-          if pos(copy(tmpFrom,icount,1),Numbers) > 0 then
-            begin
-              Result := Result + copy(tmpFrom,icount,1);
-              continue;
-            end;
-        end;
-    end
-  else
-    result := trim(stringreplace(tmpFrom,'"', ' ',[rfReplaceAll]));
-end;
-
-function TPBMaintCustFrm.FormatDateasDateTime(sDate: string): TDateTime;
-var
-  icount, iStart, iLength: integer;
-  tmpDate: string;
-  Months: array [1..2,1..12] of string;
-begin
-  iStart := pos(',',sDate)+1;
-  iLength := length(sDate);
-  tmpDate := copy(sDate,iStart,21);
-
-  Months[1,1] := '01';
-  Months[1,2] := '02';
-  Months[1,3] := '03';
-  Months[1,4] := '04';
-  Months[1,5] := '05';
-  Months[1,6] := '06';
-  Months[1,7] := '07';
-  Months[1,8] := '08';
-  Months[1,9] := '09';
-  Months[1,10] := '10';
-  Months[1,11] := '11';
-  Months[1,12] := '12';
-
-  Months[2,1] := 'Jan';
-  Months[2,2] := 'Feb';
-  Months[2,3] := 'Mar';
-  Months[2,4] := 'Apr';
-  Months[2,5] := 'May';
-  Months[2,6] := 'Jun';
-  Months[2,7] := 'Jul';
-  Months[2,8] := 'Aug';
-  Months[2,9] := 'Sep';
-  Months[2,10] := 'Oct';
-  Months[2,11] := 'Nov';
-  Months[2,12] := 'Dec';
-
-  for icount := 1 to 12 do
-    begin
-      if pos(' '+Months[2,icount]+' ',tmpDate) > 0 then
-        begin
-          tmpDate := stringreplace(tmpDate,' '+Months[2,icount]+' ','/'+Months[1,icount]+'/',[]);
-          break;
-        end;
-    end;
-  iLength := length(tmpDate);
-  result := pbdatestr(copy(trim(tmpDate),1,10));
 end;
 
 procedure TPBMaintCustFrm.pmnuPasteClick(Sender: TObject);
@@ -6477,6 +6293,20 @@ begin
   end;
   dtmdlCustStock.qryPartSales.close;
 
+end;
+
+procedure TPBMaintCustFrm.ProcessDragAndDrop;
+var
+  Path: string;
+  FilesList: TUnicodeStrings;
+begin
+  Path := GetFilesPath;
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
+    procedure
+    begin
+      ShowDocuments;
+    end);
 end;
 
 procedure TPBMaintCustFrm.ProductionOrders2Click(Sender: TObject);

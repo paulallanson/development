@@ -304,7 +304,7 @@ end;
 
 procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(PBLDatabase);
+  ConfigureFDConnection(PBLDatabase);
 {$IFDEF DEMO}
   UserName := 'admin';
   Password := '';
@@ -2807,7 +2807,7 @@ end;
 
 procedure TdmBroker.EmailDatabaseBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(EmailDatabase);
+  ConfigureFDConnection(EmailDatabase);
 
   EmailDatabase.Params.UserName := self.UserName;
   EmailDatabase.Params.Password := self.Password;

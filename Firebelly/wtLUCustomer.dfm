@@ -926,19 +926,18 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       
         '         ORDER BY Sales_Invoice.Sales_Invoice desc) as Last_Sale' +
         's_Invoice,'
-      '        Level_of_Importance.Level_of_Importance,'
-      '        Level_of_Importance.Importance_Description,'
-      '        Level_of_Importance.Color,'
-      '        Level_of_Importance.Font_Color'
+      '        lop.Importance_Description,'
+      '        lop.Color,'
+      '        lop.Font_Color'
       'FROM (Payment_Terms'
       '      RIGHT JOIN (Customer_Type'
       '      INNER JOIN Customer'
       '        ON Customer_Type.Customer_Type = Customer.Customer_type)'
       '        ON Payment_Terms.Payment_Terms = Customer.Payment_Terms)'
-      '      LEFT JOIN Level_of_Importance'
+      '      LEFT JOIN Level_of_Importance lop'
       
-        '        ON Customer.Level_of_Importance = Level_of_Importance.Le' +
-        'vel_of_Importance'
+        '        ON Customer.Level_of_Importance = lop.Level_of_Importanc' +
+        'e'
       'WHERE'
       '((Not_Active = :Not_Active) or (Not_Active = '#39'N'#39'))'
       ''
@@ -949,6 +948,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     ParamData = <
       item
         Name = 'Not_Active'
+        DataType = ftString
+        ParamType = ptInput
       end>
   end
 end

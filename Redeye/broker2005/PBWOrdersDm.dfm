@@ -12,7 +12,6 @@ object dtmdlWOrders: TdtmdlWOrders
       '        Production_type.Production_Type_Description,'
       '        Works_Order_Status.Works_Order_Status_Descr,'
       '        Operator.Name as Office_Contact_Name,'
-      '        Works_Order.Vat_Code,'
       '        Vat_Code.Vat_Rate,'
       '        Sales_Invoice_Method.Sales_Invoice_Method_Desc,'
       '        (select OP.Name'
@@ -54,6 +53,7 @@ object dtmdlWOrders: TdtmdlWOrders
     ParamData = <
       item
         Name = 'Works_Order'
+        ParamType = ptInput
       end>
   end
   object qryWOAddHeader: TFDQuery

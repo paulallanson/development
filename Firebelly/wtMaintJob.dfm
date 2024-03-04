@@ -1529,36 +1529,23 @@ object frmWTMaintJob: TfrmWTMaintJob
         OnDragDrop = stvDocumentsDragDrop
         OnDragOver = stvDocumentsDragOver
       end
-      object dfDocuments: TPJDropFiles
+      object slvDocuments: TShellListView
         Left = 161
         Top = 17
         Width = 832
         Height = 231
+        AutoRefresh = True
+        ObjectTypes = [otFolders, otNonFolders]
+        Root = 'C:\'
+        ShellTreeView = stvDocuments
+        Sorted = True
         Align = alClient
+        ReadOnly = False
+        HideSelection = False
+        MultiSelect = True
+        OnMouseMove = slvDocumentsMouseMove
         TabOrder = 3
-        Filter = PJExtFileFilter1
-        ForegroundOnDrop = False
-        Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
-        PassThrough = False
-        OnDropFiles = dfDocumentsDropFiles
-        object slvDocuments: TShellListView
-          Left = 0
-          Top = 0
-          Width = 832
-          Height = 231
-          AutoRefresh = True
-          ObjectTypes = [otFolders, otNonFolders]
-          Root = 'C:\'
-          ShellTreeView = stvDocuments
-          Sorted = True
-          Align = alClient
-          ReadOnly = False
-          HideSelection = False
-          MultiSelect = True
-          OnMouseMove = slvDocumentsMouseMove
-          TabOrder = 0
-          ViewStyle = vsReport
-        end
+        ViewStyle = vsReport
       end
     end
     object tbNotes: TTabSheet
@@ -2508,9 +2495,12 @@ object frmWTMaintJob: TfrmWTMaintJob
       OnClick = pmnuSelectAllClick
     end
   end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Style = fsAll
-    Left = 757
-    Top = 274
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 620
+    Top = 273
   end
 end

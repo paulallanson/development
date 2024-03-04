@@ -1962,7 +1962,6 @@ object dtmdlQuote: TdtmdlQuote
       '        Quote_Element.No_Of_polished_Depths,'
       '        Quote_Element.No_Of_polished_Lengths,'
       '        Quote_Element.Total_Upstand_Pieces,'
-      '        Quote_Element.Quantity,'
       '        Worktop.Worktop_Group,'
       '        Worktop_thickness.Price_pointer,'
       '        Worktop.Description AS Worktop_Description,'
@@ -2003,6 +2002,7 @@ object dtmdlQuote: TdtmdlQuote
     ParamData = <
       item
         Name = 'Quote'
+        ParamType = ptInput
       end>
   end
   object qryUpCompany: TFDQuery
@@ -2050,15 +2050,25 @@ object dtmdlQuote: TdtmdlQuote
   object qryQAllEvents: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select *, Operator.Operator_Name'
-      'from Quote_internal_Note, Operator'
-      'where Quote = :Quote and'
-      'Quote_internal_Note.Operator = Operator.Operator')
+      
+        'select q.Quote, q.Internal_Note, q.Date_Time_Entered, q.Narrativ' +
+        'e, o.Operator, o.Operator_Name, o.Login_name,'
+      
+        '  o.Operator_Can_Login, o.Telephone_number, o.Quote_Follow_Up_Re' +
+        'minder, o.End_User, o.Can_Update_Schedule,'
+      
+        '  o.Email_Address, o.Job_Title, o.Mobile_Number, o.Login_Passwor' +
+        'd, o.Revenue_Centre'
+      '  from Quote_internal_Note as q'
+      '    join Operator as o on q.Operator = o.Operator'
+      ' where Quote = :Quote'
+      '')
     Left = 416
     Top = 224
     ParamData = <
       item
         Name = 'Quote'
+        ParamType = ptInput
       end>
   end
   object qryQAddEvent: TFDQuery

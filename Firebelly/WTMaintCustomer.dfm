@@ -2871,4 +2871,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 408
     Top = 224
   end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 740
+    Top = 64
+  end
 end

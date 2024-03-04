@@ -780,7 +780,7 @@ end;
 
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(dtbsWorktops);
+  ConfigureFDConnection(dtbsWorktops);
 {$IFDEF DEMO}
   UserName := 'admin';
   Password := '';

@@ -28,7 +28,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 851
+        Width = 855
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -41,7 +41,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 830
+        Width = 842
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59

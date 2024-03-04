@@ -337,23 +337,83 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   object qrySOHeader: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'SELECT Sales_Order.*,'
-      '        Customer.Is_retail_customer,'
-      '        Customer.Customer_name,'
-      '        Customer.Street,'
-      '        Customer.Locale,'
-      '        Customer.Town_city,'
-      '        Customer.County_State,'
-      '        Customer.Postcode,'
-      '        Customer.Discount_Rate,'
-      '        Customer.Deposit_Terms,'
-      '        Customer.Customer_is_Speculative,'
-      '        Operator.Operator_Name,'
-      '        Operator.Telephone_number,'
+      'SELECT'
+      #9'Sales_Order.Sales_Order,'
+      #9'Sales_Order.Date_Raised,'
+      #9'Sales_Order.Date_Required,'
+      #9'Sales_Order.Customer,'
+      #9'Sales_Order.Reference,'
+      #9'Sales_Order.Extra_Notes,'
+      #9'Sales_Order.Operator,'
+      #9'Sales_Order.Contact_name,'
+      #9'Sales_Order.Order_ref_no,'
+      #9'Sales_Order.Sales_Order_Status,'
+      #9'Sales_Order.Deposit_amount,'
+      #9'Sales_Order.Deposit_Terms as Deposit_Terms_SO,'
+      #9'Sales_Order.Goods_Value,'
+      #9'Sales_Order.VAT_Value,'
+      #9'Sales_Order.Rep,'
+      #9'Sales_Order.Install_Address,'
+      #9'Sales_Order.Inactive,'
+      #9'Sales_Order.Customer_Name as Customer_Name_SO,'
+      #9'Sales_Order.Inactive_Reason,'
+      #9'Sales_Order.Address,'
+      #9'Sales_Order.Template_Date,'
+      #9'Sales_Order.Date_Type,'
+      #9'Sales_Order.Materials_Required,'
+      #9'Sales_Order.Materials_Reqd_Date,'
+      #9'Sales_Order.Materials_Recd_Date,'
+      #9'Sales_Order.Install_Name,'
+      #9'Sales_Order.Install_Phone,'
+      #9'Sales_Order.On_Hold,'
+      #9'Sales_Order.Email_Address,'
+      #9'Sales_Order.Account_Manager,'
+      #9'Sales_Order.Descriptive_Reference,'
+      #9'Sales_Order.Template_Duration,'
+      #9'Sales_Order.Fitting_Duration,'
+      #9'Sales_Order.Fitter,'
+      #9'Sales_Order.Is_In_Outlook,'
+      #9'Sales_Order.IsFittingInOutlook,'
+      #9'Sales_Order.IsTemplateInOutlook,'
+      #9'Sales_Order.Templater,'
+      #9'Sales_Order.Supply_Only,'
+      #9'Sales_Order.Project_Reference,'
+      #9'Sales_Order.Paid_Status,'
+      #9'Sales_Order.Contact_no,'
+      #9'Sales_Order.Appliance_Details,'
+      #9'Sales_Order.Location_Plan_Document,'
+      #9'Sales_Order.SSMA_TimeStamp,'
+      #9'Sales_Order.Collection_Only,'
+      #9'Installation_Address,'
+      #9'Sales_Order.Template_Docs_Returned,'
+      #9'Sales_Order.Fitting_Docs_Returned,'
+      #9'Sales_Order.Revenue_Centre,'
+      #9'Sales_Order.Remedial_Production,'
+      #9'Sales_Order.Remedial_No_Production,'
+      #9'Sales_Order.Sales_Order_Number,'
+      #9'Sales_Order.Original_Sales_Order,'
+      #9'Sales_Order.Remedial_ID,'
+      #9'Sales_Order.Inv_Customer,'
+      #9'Sales_Order.Branch_no,'
+      #9'Sales_Order.Do_not_invoice,'
+      #9'Sales_Order.Stock_Allocation_Start_Date,'
+      #9'Sales_Order.Stock_Allocation_End_Date,'
+      #9'Customer.Is_retail_customer,'
+      #9'Customer.Customer_name,'
+      #9'Customer.Street,'
+      #9'Customer.Locale,'
+      #9'Customer.Town_city,'
+      #9'Customer.County_State,'
+      #9'Customer.Postcode,'
+      #9'Customer.Discount_Rate,'
+      #9'Customer.Deposit_Terms,'
+      #9'Customer.Customer_is_Speculative,'
+      #9'Operator.Operator_Name,'
+      #9'Operator.Telephone_number,'
       
-        '        Sales_Order_Status.Sales_Order_Status_Desc AS Status_Des' +
-        'cription,'
-      '        Rep.Rep_Name'
+        #9'Sales_Order_Status.Sales_Order_Status_Desc AS Status_Descriptio' +
+        'n,'
+      #9'Rep.Rep_Name'
       'FROM Rep INNER JOIN'
       '    (Sales_Order_Status'
       '    INNER JOIN (Operator'
@@ -371,6 +431,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     ParamData = <
       item
         Name = 'Sales_Order'
+        ParamType = ptInput
       end>
   end
   object qrySOAllLines: TFDQuery
@@ -2049,15 +2110,32 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   object qrySOAllEvents: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'Select *, Operator.Operator_Name'
-      'from Sales_Order_internal_Note, Operator'
-      'where Sales_Order = :Sales_Order and'
-      'Sales_Order_internal_Note.Operator = Operator.Operator')
+      'Select'#9's.Sales_Order,'
+      #9's.Internal_Note,'
+      #9's.Date_Time_Entered,'
+      #9's.Narrative,'
+      #9'o.Operator,'
+      #9'o.Operator_Name,'
+      #9'o.Login_name,'
+      #9'o.Operator_Can_Login,'
+      #9'o.Telephone_number,'
+      #9'o.Quote_Follow_Up_Reminder,'
+      #9'o.End_User,'
+      #9'o.Can_Update_Schedule,'
+      #9'o.Email_Address,'
+      #9'o.Job_Title,'
+      #9'o.Mobile_Number,'
+      #9'o.Login_Password,'
+      #9'o.Revenue_Centre'
+      '  from Sales_Order_internal_Note as s'
+      '    join Operator as o on o.Operator = s.Operator'
+      ' where Sales_Order = :Sales_Order')
     Left = 288
     Top = 200
     ParamData = <
       item
         Name = 'Sales_Order'
+        ParamType = ptInput
       end>
   end
   object qryQAllEvents: TFDQuery
@@ -2615,7 +2693,6 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        Job.Operator,'
       '        Operator.Operator_Name,'
       '        Sales_Order_Line.Sales_Order,'
-      '        Sales_Order_Line.Job,'
       '        Job.Customer,'
       '        Customer.Is_retail_customer,'
       '        Job.Contact_name'
@@ -2635,6 +2712,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     ParamData = <
       item
         Name = 'Sales_Order'
+        ParamType = ptInput
       end>
   end
   object dtsJobs: TDataSource

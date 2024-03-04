@@ -319,6 +319,7 @@ type
     procedure mnuDocumentLogosClick(Sender: TObject);
     procedure mnuPackFormatsClick(Sender: TObject);
     procedure mnuContractsClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     dtmdlCustActivity: TdtmdlActivity;
     MaxUsers: Integer;
@@ -339,6 +340,7 @@ type
     FQuoteReminder: boolean;
     FOrderAckReminder: boolean;
     FDeliveryReminder: boolean;
+    FInitialiseButtons: Boolean;
     procedure SetOperator(iTempOp: Integer);
     procedure GetCompanyDetails;
     procedure GetEmailDetails;
@@ -370,6 +372,9 @@ type
     procedure SetProofReminder(const Value: boolean);
     procedure SetQuoteReminder(const Value: boolean);
     procedure SetReorderReminder(const Value: boolean);
+    procedure InitialiseToolButtons;
+  protected
+    procedure Loaded; override;
   public
     iOperator: Integer;
     iRep: Integer;
@@ -589,6 +594,11 @@ begin
     tmrCheckActivity.Interval := 60000*iActivityInterval;
 end;
 
+procedure TfrmpbMainMenu.FormShow(Sender: TObject);
+begin
+  InitialiseToolButtons;
+end;
+
 procedure TfrmpbMainMenu.CopyIfNewer(FName, FDesc: String);
 var
   ServDate,
@@ -697,6 +707,29 @@ begin
       Application.Terminate;
       Exit;
     end;
+end;
+
+procedure TfrmpbMainMenu.Loaded;
+begin
+  inherited;
+  FInitialiseButtons := True;
+end;
+
+procedure TfrmpbMainMenu.InitialiseToolButtons;
+begin
+  if FInitialiseButtons then
+  begin
+    btnActivities.Visible := False;
+    btnProspects.Visible := False;
+    btnContracts.Visible := False;
+    btnJobs.Visible := False;
+    btnWorksOrders.Visible := False;
+    btnNCA.Visible := False;
+    btnCallOffs.Visible := False;
+    btnPurchases.Visible := False;
+    btnStock.Visible := False;
+    FInitialiseButtons := False;
+  end;
 end;
 
 procedure TfrmpbMainMenu.FormActivate(Sender: TObject);

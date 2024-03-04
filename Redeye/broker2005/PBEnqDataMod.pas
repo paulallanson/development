@@ -77,8 +77,9 @@ var
 
 implementation
 
-uses Contnrs;
 {$R *.DFM}
+
+uses Contnrs;
 
 procedure TPBEnqDataModFrm.Load(var Enquiry: TEnquiry);
 var

@@ -3,9 +3,6 @@
         <ProjectGuid>{BCD842FA-9D78-41FC-B290-5EEFB217FCFF}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="dd-dropfiles-5.0.5\PJDropFile.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="CRPackage\CRPackage.dproj">
             <Dependencies/>
         </Projects>
@@ -18,6 +15,9 @@
         <Projects Include="ShellControls\ShellControls.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="drag-and-drop\Packages\DragDropD280.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -26,15 +26,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="PJDropFile">
-        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj"/>
-    </Target>
-    <Target Name="PJDropFile:Clean">
-        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="PJDropFile:Make">
-        <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj" Targets="Make"/>
-    </Target>
     <Target Name="CRPackage">
         <MSBuild Projects="CRPackage\CRPackage.dproj"/>
     </Target>
@@ -71,14 +62,23 @@
     <Target Name="ShellControls:Make">
         <MSBuild Projects="ShellControls\ShellControls.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DragDropD280">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj"/>
+    </Target>
+    <Target Name="DragDropD280:Clean">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DragDropD280:Make">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PJDropFile;CRPackage;MSAddIn;BarComp;ShellControls"/>
+        <CallTarget Targets="CRPackage;MSAddIn;BarComp;ShellControls;DragDropD280"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PJDropFile:Clean;CRPackage:Clean;MSAddIn:Clean;BarComp:Clean;ShellControls:Clean"/>
+        <CallTarget Targets="CRPackage:Clean;MSAddIn:Clean;BarComp:Clean;ShellControls:Clean;DragDropD280:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PJDropFile:Make;CRPackage:Make;MSAddIn:Make;BarComp:Make;ShellControls:Make"/>
+        <CallTarget Targets="CRPackage:Make;MSAddIn:Make;BarComp:Make;ShellControls:Make;DragDropD280:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

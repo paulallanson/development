@@ -9,7 +9,7 @@ uses
   INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
 
 type
   TPBEnquiryFrm = class(TForm)
@@ -198,6 +198,7 @@ type
     DeleteLineBitBtn: TBitBtn;
     EnquiryLineGrid: TStringGrid;
     oldCapabilitySQL: TFDQuery;
+    DropFileTarget1: TDropFileTarget;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -271,6 +272,7 @@ type
     procedure rdgTypeClick(Sender: TObject);
     procedure SupplierGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     { Private declarations }
     DroppedEmailFile: string;
@@ -350,6 +352,9 @@ type
     procedure AddDocumentToEnquiry;
     function GetActiveCustomerContact(tempCust, tempBranch,
       tempCode: integer): integer;
+    procedure ProcessDragAndDrop;
+    procedure MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
+    function GetFilesPath: string;
   public
     { Public declarations }
     sEnqFuncMode: string[1];
@@ -1002,6 +1007,12 @@ begin
   end;
 end;
 
+procedure TPBEnquiryFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
+end;
+
 procedure TPBEnquiryFrm.UpdatePartDetails(iNewPart: Integer);
 var
   icount: Integer;
@@ -1635,6 +1646,11 @@ begin
   end;
 end;
 
+function TPBEnquiryFrm.GetFilesPath: string;
+begin
+  Result := dmBroker.GetCompanyEnquiryDirectory + '\' + inttostr(iEnqNumber)+'\';
+end;
+
 procedure TPBEnquiryFrm.DeleteEnquiry;
 begin
   {Delete all the associated Enquiry records}
@@ -1792,6 +1808,16 @@ begin
     else
       UpEnqSuppliers(iline);
   end;
+end;
+
+procedure TPBEnquiryFrm.ProcessDragAndDrop;
+var
+  Path: string;
+  FilesList: TUnicodeStrings;
+begin
+  Path := GetFilesPath;
+  FilesList := DropFileTarget1.Files;
+  MyWinControlProcessData(FilesList, Path);
 end;
 
 function TPBEnquiryFrm.ProductTypeMinSuppliers(ProdType: integer): integer;
@@ -3090,9 +3116,9 @@ begin
     rdgType.ItemIndex := 0;
 
   {Load all the Enquiry Header screen fields}
-  CustomerEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name').AsString;
+  CustomerEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Customer_Name').AsString;
   iCustomer := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Customer').AsInteger;
-  BranchEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name_1').AsString;
+  BranchEdit.Text := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Branch_Name').AsString;
   iBranch_no := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Branch_no').AsInteger;
   self.iContact := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Contact_no').AsInteger;
   sCustomerContact := PBEnqDataModFrm.EnqHeadSQL.FieldByName('Cust_est_contact').AsString;
@@ -3116,7 +3142,7 @@ begin
   getcustreps;
   {	CustRepCombo.Text := PBEnqDataModFrm.EnqHeadSQL.fieldbyname('Name_2').asstring;
   } CustRepCombo.itemindex :=
-  custrepcombo.Items.indexof(PBEnqDataModFrm.EnqHeadSQL.FieldByName('Name_2').AsString);
+  custrepcombo.Items.indexof(PBEnqDataModFrm.EnqHeadSQL.FieldByName('Rep_Name').AsString);
 
   {Load the date fields}
   if (sEnqFuncMode = 'c') or (sEnqFuncMode = 'x') then
@@ -4086,6 +4112,69 @@ begin
       end;
     end;
 end;
+
+procedure TPBEnquiryFrm.MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
+const
+  cExtensionOutlook = '.msg';
+  cExtensionOutlookExpress = '.eml';
+  cNotOutlookWarning = 'The file comes not from MS Outlook.';
+  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
+var
+  i: Integer;
+  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
+  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
+  MyFileStream: TStream;
+  NewFilePath: string;
+  icount: integer;
+  Document: TDocument;
+begin
+  MyPath := Path;
+  if not DirectoryExists(MyPath) then
+    CreateDirectory(MyPath);
+
+  for i := 0 to Pred(FilesList.Count) do
+  begin
+    MyFileName := ExtractFileName(FilesList[i]);
+    MyExtension := LowerCase(ExtractFileExt(MyFileName));
+
+    if MyExtension = cExtensionOutlook then
+    begin
+      { Store the contents as a file on the disk. }
+      MyFilePath := MyPath + MyFileName;
+
+      {If the file name already exists then increase the number}
+      icount := 0;
+      NewFilePath := MyFilePath;
+      while FileExists(NewFilePath) = true do
+      begin
+        inc(icount);
+        NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
+      end;
+      MyFilePath := NewFilePath;
+
+      { GUI }
+      //  This is where we add the data into the grid and to the document component
+      //ListView1.Items.Add.Caption := MyFilePath;
+      Document := TDocument.Create;
+      Document.Title := Copy(MyFileName, 1, Length(MyFileName)-4);
+      Document.Path := Copy(MyFilePath, length(dmBroker.GetCompanyEnquiryDirectory)+1,255);
+
+      if Assigned(document) then
+      begin
+        Enquiry.Lines[EnquiryLineGrid.Row - 1].DocumentList.add(document);
+        self.DisplayDocumentList;
+      end;
+    end
+    else
+    begin
+      MyWarning := cNotOutlookWarning;
+      if MyExtension = cExtensionOutlookExpress then
+        MyWarning := MyWarning + cOutlookExpressWarning;
+      MessageDlg(MyWarning, mtWarning, [mbOK], 0);
+    end;
+  end;
+end;
+
 procedure TPBEnquiryFrm.PartListDblClick(Sender: TObject);
 var
   PBPartDescDlg: TPBPartDescDlg;

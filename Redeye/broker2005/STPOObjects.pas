@@ -234,7 +234,7 @@ const
 
 function FormatMoney(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -244,7 +244,7 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
@@ -255,7 +255,7 @@ begin
       end;
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);

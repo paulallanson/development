@@ -686,7 +686,7 @@ end;
 
 procedure TdmLetter.FDConnBeforeConnect(Sender: TObject);
 begin
-  SetConnectionMapRules(FDConn);
+  ConfigureFDConnection(FDConn);
 end;
 
 function TdmLetter.GetFaxDefaultLayout: string;

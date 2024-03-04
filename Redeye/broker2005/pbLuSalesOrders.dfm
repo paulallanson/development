@@ -31,7 +31,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 908
+        Width = 912
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -44,9 +44,9 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 887
+        Width = 899
         Height = 40
-        ButtonHeight = 44
+        ButtonHeight = 29
         ButtonWidth = 65
         Caption = 'ToolBar1'
         Images = imglstOrders

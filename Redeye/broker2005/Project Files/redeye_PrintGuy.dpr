@@ -455,9 +455,6 @@ uses
 {$R *.RES}
 
 begin
-  {$IFDEF DEBUG}
-  ReportMemoryLeaksOnShutdown := True;
-  {$ENDIF}
   Application.Initialize;
   Application.Title := 'PrintGuy - Redeye Print Management';
   Application.MainFormOnTaskBar := True;

@@ -608,8 +608,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         TabOrder = 0
         OnDblClick = sgRequestsDblClick
         OnDrawCell = sgRequestsDrawCell
-        ExplicitWidth = 961
-        ExplicitHeight = 173
         ColWidths = (
           40
           63
@@ -629,8 +627,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 961
-        ExplicitHeight = 173
         object btnAddRequest: TBitBtn
           Left = 8
           Top = 8
@@ -687,7 +683,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 192
         object Panel15: TPanel
           Left = 1
           Top = 1
@@ -885,7 +880,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 1
           Top = 133
           Width = 263
-          Height = 58
+          Height = 40
           Align = alClient
           TabOrder = 3
         end
@@ -927,7 +922,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           BorderStyle = bsNone
           Enabled = False
           TabOrder = 1
-          ExplicitHeight = 63
           object Label27: TLabel
             Left = 9
             Top = 12
@@ -1120,12 +1114,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 534
-        ExplicitHeight = 192
         object Panel16: TPanel
           Left = 1
           Top = 1
-          Width = 532
+          Width = 520
           Height = 20
           Align = alTop
           ParentBackground = False
@@ -1143,8 +1135,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object scrlDataServices: TScrollBox
           Left = 1
           Top = 21
-          Width = 532
-          Height = 170
+          Width = 520
+          Height = 152
           Align = alClient
           BevelInner = bvNone
           BevelOuter = bvNone
@@ -1773,7 +1765,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Left = 0
         Top = 0
         Width = 257
-        Height = 192
+        Height = 174
         Align = alLeft
         TabOrder = 0
         object Label32: TLabel
@@ -1900,8 +1892,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object Panel10: TPanel
         Left = 257
         Top = 0
-        Width = 805
-        Height = 192
+        Width = 793
+        Height = 174
         Align = alClient
         Caption = 'Panel10'
         ParentBackground = False
@@ -1909,7 +1901,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel13: TPanel
           Left = 1
           Top = 1
-          Width = 803
+          Width = 791
           Height = 18
           Align = alTop
           Alignment = taLeftJustify
@@ -1927,8 +1919,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgWorks: TStringGrid
           Left = 1
           Top = 19
-          Width = 718
-          Height = 172
+          Width = 706
+          Height = 154
           Align = alClient
           ColCount = 8
           DefaultColWidth = 40
@@ -1950,10 +1942,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             189)
         end
         object pnlWorks: TPanel
-          Left = 719
+          Left = 707
           Top = 19
           Width = 85
-          Height = 172
+          Height = 154
           Align = alRight
           ParentBackground = False
           TabOrder = 2
@@ -2051,16 +2043,16 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object Panel6: TPanel
         Left = 0
         Top = 0
-        Width = 1062
-        Height = 192
+        Width = 1050
+        Height = 174
         Align = alClient
         Caption = 'Panel6'
         ParentBackground = False
         TabOrder = 0
         object Panel7: TPanel
           Left = 1
-          Top = 167
-          Width = 1060
+          Top = 149
+          Width = 1048
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
@@ -2081,10 +2073,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
         end
         object tlbrDocuments: TToolBar
-          Left = 1027
+          Left = 1015
           Top = 1
           Width = 34
-          Height = 166
+          Height = 148
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -2153,8 +2145,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object lstvwDocuments: TListView
           Left = 225
           Top = 1
-          Width = 802
-          Height = 166
+          Width = 790
+          Height = 148
           Align = alClient
           Columns = <
             item
@@ -2183,7 +2175,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 1
           Top = 1
           Width = 176
-          Height = 166
+          Height = 148
           Align = alLeft
           TabOrder = 3
           OnChange = dirlstJobDocumentsChange
@@ -2192,7 +2184,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 177
           Top = 1
           Width = 48
-          Height = 166
+          Height = 148
           Align = alLeft
           ParentBackground = False
           TabOrder = 4
@@ -2303,8 +2295,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 977
-          ExplicitHeight = 31
           object btnViewSI: TBitBtn
             Left = 8
             Top = 8
@@ -2333,7 +2323,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 1062
           object Label36: TLabel
             Left = 13
             Top = 6
@@ -2468,7 +2457,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 976
           object btnViewPI: TBitBtn
             Left = 8
             Top = 8
@@ -2487,7 +2475,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 1060
           object Label37: TLabel
             Left = 13
             Top = 6
@@ -2534,10 +2521,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Caption = 'Pending Enquiries'
       ImageIndex = 7
       object Panel11: TPanel
-        Left = 977
+        Left = 965
         Top = 0
         Width = 85
-        Height = 192
+        Height = 174
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -2554,8 +2541,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object sgSupply: TStringGrid
         Left = 0
         Top = 0
-        Width = 977
-        Height = 192
+        Width = 965
+        Height = 174
         Align = alClient
         ColCount = 7
         DefaultColWidth = 40
@@ -2790,8 +2777,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 977
-        ExplicitHeight = 192
         object btnAddNCA: TBitBtn
           Left = 8
           Top = 8
@@ -2860,7 +2845,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           OnClick = sgNCADetailsClick
           OnDblClick = sgNCADetailsDblClick
           OnDrawCell = sgNCADetailsDrawCell
-          ExplicitWidth = 975
           ColWidths = (
             40
             87
@@ -2881,7 +2865,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 975
           object Label40: TLabel
             Left = 9
             Top = 6
@@ -2908,10 +2891,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Caption = 'Deliveries'
       ImageIndex = 10
       object pnlDeliveries: TPanel
-        Left = 977
+        Left = 965
         Top = 0
         Width = 85
-        Height = 192
+        Height = 174
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -2968,8 +2951,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object sgDeliveries: TStringGrid
         Left = 0
         Top = 0
-        Width = 977
-        Height = 192
+        Width = 965
+        Height = 174
         Align = alClient
         ColCount = 4
         DefaultColWidth = 40
@@ -3000,7 +2983,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object Panel23: TPanel
         Left = 0
         Top = 0
-        Width = 1062
+        Width = 1050
         Height = 22
         Align = alTop
         BevelOuter = bvNone
@@ -3051,8 +3034,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object Panel24: TPanel
         Left = 0
         Top = 108
-        Width = 1062
-        Height = 84
+        Width = 1050
+        Height = 66
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
@@ -3215,7 +3198,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object pnlDataAnalysis: TPanel
         Left = 0
         Top = 22
-        Width = 1062
+        Width = 1050
         Height = 86
         Align = alTop
         BevelOuter = bvNone
@@ -3224,7 +3207,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel28: TPanel
           Left = 0
           Top = 60
-          Width = 1062
+          Width = 1050
           Height = 26
           Align = alBottom
           BevelOuter = bvNone
@@ -3313,7 +3296,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgAnalysis: TStringGrid
           Left = 0
           Top = 0
-          Width = 1062
+          Width = 1050
           Height = 60
           Align = alClient
           ColCount = 8
@@ -3337,10 +3320,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Caption = 'Specification'
       ImageIndex = 11
       object Panel2: TPanel
-        Left = 977
+        Left = 965
         Top = 0
         Width = 85
-        Height = 192
+        Height = 174
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -5111,5 +5094,13 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Caption = 'View'
       OnClick = btnViewPIClick
     end
+  end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 712
+    Top = 106
   end
 end

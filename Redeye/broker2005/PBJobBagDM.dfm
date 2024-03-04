@@ -3731,11 +3731,37 @@ object dmJobBag: TdmJobBag
   object qryAllProcesses: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select Process.*, Process_Group.*'
-      'from Process, Process_Group'
-      'where Process.Process_Group = Process_Group.Process_Group and'
-      '((Process.Inactive is NULL) or (Process.Inactive = '#39'N'#39'))'
-      'order by Process_Group.Sequence_No')
+      'select'
+      'p.Process,'
+      'p.Process_Description,'
+      'p.Allow_multiple_elements,'
+      'p.Nominal,'
+      'p.Product_Type,'
+      'p.Price_Unit,'
+      'p.Email,'
+      'p.cc_Email,'
+      'p.Short_Desc,'
+      'p.Process_Group,'
+      'p.inactive,'
+      'p.Use_as_Default,'
+      'p.Prompt_for_laser_format,'
+      'p.Number_Type,'
+      'p.Prompt_for_Paper_Size,'
+      'p.Paper_Prompt_Narrative,'
+      'p.SFDC_Prompt_For_Laser_Format,'
+      'p.SFDC_Prompt_For_Paper_Size,'
+      'p.SFDC_Prompt_For_Number_Up,'
+      'p.Short_Description,'
+      'pg.Process_Group_Description,'
+      'pg.Sequence_no,'
+      'pg.Email as Email_PG,'
+      'pg.cc_Email as cc_Email_PG,'
+      'pg.Is_Work_Centre_Based,'
+      'pg.Hourly_Rate'
+      'from Process as p'
+      '  join Process_Group as pg on pg.Process_Group = p.Process_Group'
+      'where ((p.Inactive is NULL) or (p.Inactive = '#39'N'#39'))'
+      'order by pg.Sequence_No')
     Left = 32
     Top = 320
   end

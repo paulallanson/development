@@ -974,10 +974,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
       Caption = 'Buy Print Orders'
       ImageIndex = 3
       object Panel1: TPanel
-        Left = 869
+        Left = 861
         Top = 0
         Width = 85
-        Height = 186
+        Height = 174
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -1040,8 +1040,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
       object dbgPODetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 869
-        Height = 186
+        Width = 861
+        Height = 174
         Align = alClient
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
@@ -1110,8 +1110,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
       end
       object stsBrPODetails: TStatusBar
         Left = 0
-        Top = 186
-        Width = 954
+        Top = 174
+        Width = 946
         Height = 19
         Panels = <
           item
@@ -1196,8 +1196,6 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 869
-        ExplicitHeight = 177
         object btnViewSI: TBitBtn
           Left = 8
           Top = 8
@@ -1256,16 +1254,16 @@ object PBMaintContractFrm: TPBMaintContractFrm
       object Panel6: TPanel
         Left = 0
         Top = 0
-        Width = 954
-        Height = 205
+        Width = 946
+        Height = 193
         Align = alClient
         Caption = 'Panel6'
         ParentBackground = False
         TabOrder = 0
         object Panel7: TPanel
           Left = 1
-          Top = 180
-          Width = 952
+          Top = 168
+          Width = 944
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
@@ -1288,8 +1286,8 @@ object PBMaintContractFrm: TPBMaintContractFrm
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
-          Width = 916
-          Height = 179
+          Width = 908
+          Height = 167
           Align = alClient
           Columns = <
             item
@@ -1315,10 +1313,10 @@ object PBMaintContractFrm: TPBMaintContractFrm
           OnDblClick = lstvwDocumentsDblClick
         end
         object ToolBar1: TToolBar
-          Left = 917
+          Left = 909
           Top = 1
           Width = 36
-          Height = 179
+          Height = 167
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -1330,7 +1328,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
           TabOrder = 2
           object btnExcel: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Hint = 'Excel'
             Caption = 'btnExcel'
             ImageIndex = 0
@@ -1341,7 +1339,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end
           object btnWord: TToolButton
             Left = 0
-            Top = 32
+            Top = 30
             Hint = 'Word'
             Caption = 'btnWord'
             ImageIndex = 1
@@ -1352,7 +1350,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end
           object btnEmail: TToolButton
             Left = 0
-            Top = 62
+            Top = 60
             Hint = 'Email'
             Caption = 'btnEmail'
             ImageIndex = 2
@@ -1363,7 +1361,7 @@ object PBMaintContractFrm: TPBMaintContractFrm
           end
           object btnAttach: TToolButton
             Left = 0
-            Top = 92
+            Top = 90
             Hint = 'Attach Documents'
             Caption = 'btnAttach'
             ImageIndex = 3
@@ -1757,5 +1755,13 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Options = [ofHideReadOnly, ofNoChangeDir, ofAllowMultiSelect, ofEnableSizing]
     Left = 528
     Top = 360
+  end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 552
+    Top = 65
   end
 end

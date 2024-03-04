@@ -1657,15 +1657,33 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   object qryPOAllEvents: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'Select *, Operator.Operator_Name'
-      'from Purchase_Order_internal_Note, Operator'
-      'where Purchase_Order = :Purchase_Order and'
-      'Purchase_Order_internal_Note.Operator = Operator.Operator')
+      'select'#9'p.Purchase_Order,'
+      #9'p.Internal_Note,'
+      #9'p.Date_Time_Entered,'
+      #9'p.Narrative,'
+      #9'o.Operator,'
+      #9'o.Operator_Name,'
+      #9'o.Login_name,'
+      #9'o.Operator_Can_Login,'
+      #9'o.Telephone_number,'
+      #9'o.Quote_Follow_Up_Reminder,'
+      #9'o.End_User,'
+      #9'o.Can_Update_Schedule,'
+      #9'o.Email_Address,'
+      #9'o.Job_Title,'
+      #9'o.Mobile_Number,'
+      #9'o.Login_Password,'
+      #9'o.Revenue_Centre'
+      'from Purchase_Order_internal_Note as p'
+      '  join Operator as o on o.Operator = p.Operator'
+      'where p.Purchase_Order = :Purchase_Order'
+      '')
     Left = 208
     Top = 184
     ParamData = <
       item
         Name = 'Purchase_Order'
+        ParamType = ptInput
       end>
   end
   object qryPOEvent: TFDQuery

@@ -48,10 +48,8 @@ object dtmdlQuotes: TdtmdlQuotes
       '      Quote.Quote_status,'
       '      Quote_Status.Quote_Status_Description,'
       '      Quote.Pack_Format_ID,'
-      '      Quote.Price_Unit,'
       '      Price_Unit.Description as Price_Unit_Description,'
       '      Price_Unit.Price_Unit_Factor,'
-      '      Quote.Convert_Percentage,'
       '      Quote.Estimate_File,'
       '      Quote.Quote_Reason,'
       '      Quote.Original_Quote,'
@@ -97,6 +95,7 @@ object dtmdlQuotes: TdtmdlQuotes
     ParamData = <
       item
         Name = 'Quote'
+        ParamType = ptInput
       end>
   end
   object qryQAddHeader: TFDQuery

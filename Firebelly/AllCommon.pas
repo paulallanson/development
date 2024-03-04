@@ -3,10 +3,9 @@ unit AllCommon;
 interface
 
 uses
-  Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry,
-  Outlook_TLB, COMobj, ActiveX, Math, DBGrids, IniFiles, Forms, Variants,
-  qrprntr, Printers, DB, shFolder, wtDataModule, DBCtrls, Dialogs,
-  FireDAC.Comp.Client;
+  Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, Outlook_TLB, COMobj, ActiveX,
+  Math, DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, wtDataModule, DBCtrls, Dialogs,
+  DragDropFile, FireDAC.Comp.Client;
 
 type
   TDBLookupComboBoxHelper = class helper for TDBLookupComboBox
@@ -33,6 +32,8 @@ type
     property ToPage: integer read FToPage write SetToPage;
     property OutputBin : TQRBin read FOutputBin write SetOutputBin;
   end;
+
+  TProcessDroppedFiles = reference to procedure(var FileName: string);
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
@@ -114,12 +115,16 @@ function GetRegKey(const TempPath, TempKey: string): string;
 procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
 { FireDAC }
-procedure SetConnectionMapRules(const Connection: TFDConnection);
+procedure ConfigureFDConnection(const Connection: TFDConnection);
 
 { TOpenDialog }
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
 procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: TProc);
 
+{ WinControl WinControlSetData }
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc); overload;
+
+{ TCCSRegistry }
 type
   TCCSRegistry = class(TRegistry)
   public
@@ -130,7 +135,7 @@ type
   end;
 
 { Directory dialog, a wrapper for ShBrowseForFolder }
-
+type
   TDirDlgOption = (shbBrowseForComputer, shbBrowseForPrinter,
     shbDontGoBelowDomain, shbReturnFSAncestors,
     shbReturnOnlyFSDirs, shbStatusText);
@@ -186,7 +191,7 @@ const
 implementation
 
 uses
-  System.UITypes, FireDAC.Stan.Intf, Vcl.Clipbrd;
+  System.UITypes, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -1117,13 +1122,13 @@ function PosToNegQty(const Qty: variant): integer;
 begin
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := (StrToInt(Qty)*-1)
       else
         Result := (Qty*-1);
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid quantity', mtError, [mbOK], 0);
@@ -1135,13 +1140,13 @@ function PosToNegMoney(const Money: variant): double;
 begin
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := (StrToFloatDef(Money, 0, FormatSettings)*-1)
       else
         Result := (Money*-1);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1188,7 +1193,7 @@ end;
 
 function FormatQty(const Qty: variant): string;
 begin
-  if VarType(Qty) = VarString then
+  if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
   begin
     if Trim(Qty) = '' then
     begin
@@ -1198,7 +1203,7 @@ begin
   end;
   try
     begin
-      if VarType(Qty) = VarString then
+      if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
         Result := FormatFloat('######0', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0', Qty);
@@ -1209,7 +1214,7 @@ begin
       end;
     end;
   except
-    if VarType(Qty) = VarString then
+    if (VarType(Qty) = VarString) or (VarType(Qty) = VarUString) then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid quantity', mtError, [mbOK], 0);
@@ -1219,7 +1224,7 @@ end;
 
 function FormatDoubleTo2DP(const Value: variant): string;
 begin
-  if VarType(Value) = VarString then
+  if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
   begin
     if Trim(Value) = '' then
     begin
@@ -1230,13 +1235,13 @@ begin
   end;
   try
     begin
-      if VarType(Value) = VarString then
+      if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Value, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Value);
     end;
   except
-    if VarType(Value) = VarString then
+    if (VarType(Value) = VarString) or (VarType(Value) = VarUString) then
       MessageDlg('Invalid entry - ' + Value, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry ', mtError, [mbOK], 0);
@@ -1246,7 +1251,7 @@ end;
 
 function FormatMoney(const Money: variant): string;
 begin
-  if VarType(Money) = VarString then
+  if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
   begin
     if Trim(Money) = '' then
     begin
@@ -1256,13 +1261,13 @@ begin
   end;
   try
     begin
-      if VarType(Money) = VarString then
+      if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
         Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
     end;
   except
-    if VarType(Money) = VarString then
+    if (VarType(Money) = VarString) or (VarType(Money) = VarUString) then
       MessageDlg('Invalid financial value - ' + Money, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid financial value', mtError, [mbOK], 0);
@@ -1423,8 +1428,9 @@ begin
 end;
 
 { FireDAC }
-procedure SetConnectionMapRules(const Connection: TFDConnection);
+procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
+  Connection.FetchOptions.RecordCountMode := cmTotal;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
@@ -1488,6 +1494,305 @@ begin
   end;
 
   ExecuteBlock;
+end;
+
+{ WinControl WinControlSetData }
+function FormatDateasDateTime(sDate: string): TDateTime;
+var
+  icount, iStart, iLength: integer;
+  tmpDate: string;
+  Months: array [1..2,1..12] of string;
+begin
+  iStart := pos(',',sDate)+1;
+  iLength := length(sDate);
+  tmpDate := copy(sDate,iStart,21);
+
+  Months[1,1] := '01';
+  Months[1,2] := '02';
+  Months[1,3] := '03';
+  Months[1,4] := '04';
+  Months[1,5] := '05';
+  Months[1,6] := '06';
+  Months[1,7] := '07';
+  Months[1,8] := '08';
+  Months[1,9] := '09';
+  Months[1,10] := '10';
+  Months[1,11] := '11';
+  Months[1,12] := '12';
+
+  Months[2,1] := 'Jan';
+  Months[2,2] := 'Feb';
+  Months[2,3] := 'Mar';
+  Months[2,4] := 'Apr';
+  Months[2,5] := 'May';
+  Months[2,6] := 'Jun';
+  Months[2,7] := 'Jul';
+  Months[2,8] := 'Aug';
+  Months[2,9] := 'Sep';
+  Months[2,10] := 'Oct';
+  Months[2,11] := 'Nov';
+  Months[2,12] := 'Dec';
+
+  for icount := 1 to 12 do
+    begin
+      if pos(' '+Months[2,icount]+' ',tmpDate) > 0 then
+        begin
+          tmpDate := stringreplace(tmpDate,' '+Months[2,icount]+' ','/'+Months[1,icount]+'/',[]);
+          break;
+        end;
+    end;
+  iLength := length(tmpDate);
+  result := padatestr(copy(trim(tmpDate),1,10));
+end;
+
+function ParseDocumentFrom(tmpFrom: string): string;
+var
+  icount: integer;
+  Alphas, Numbers: string;
+begin
+  Alphas := 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
+  Numbers := '01234567890.';
+
+  Result := '';
+
+  if pos('@',tmpFrom) = 0 then
+    begin
+      for icount := 1 to length(tmpFrom) do
+        begin
+          if pos(copy(tmpFrom,icount,1),Alphas) > 0 then
+            begin
+              Result := Result + copy(tmpFrom,icount,1);
+              continue;
+            end;
+          if pos(copy(tmpFrom,icount,1),Numbers) > 0 then
+            begin
+              Result := Result + copy(tmpFrom,icount,1);
+              continue;
+            end;
+        end;
+    end
+  else
+    result := trim(stringreplace(tmpFrom,'"', ' ',[rfReplaceAll]));
+end;
+
+procedure ParseMessage(const AFileName: string; var ATo, AFrom, ASubject, ADate, ABody: string);
+var
+  Lines: TArray<string>;
+  iLength: integer;
+  MyUnicode: Boolean;
+  MyFileStream: TFileStream;
+  MyFileSize: Integer;
+  MyDataHandle: HGlobal;
+  MyBuffer: Pointer;
+  MyLockBytes: ILockBytes;
+  MyStorage: IStorage;
+  MyHeader: string;
+  MyStrings: TStrings;
+
+  function MyGetProperty(const AStorage: IStorage; AProperty: Word): string;
+  const
+    MyTString: array[Boolean] of Word = (PT_STRING8, PT_UNICODE);
+  var
+    MyIStream: IStream;
+    MyStreamName: WideString;
+    MyOleStream: TOleStream;
+    MyStream: TMemoryStream;
+    MySucceeded: Boolean;
+  begin
+    { Construct the predefined stream name }
+    MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
+    { Read a stream, if present, within the storage. }
+    MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
+      STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
+    if not MySucceeded then
+    begin
+      { Turn MyUnicode over }
+      MyUnicode := not MyUnicode;
+      MyStreamName := Format('__substg1.0_%.4x%.4x', [AProperty, MyTString[MyUnicode]]);
+      MySucceeded := Succeeded(AStorage.OpenStream(PWideChar(MyStreamName), nil,
+        STGM_READ or STGM_SHARE_EXCLUSIVE, 0, MyIStream));
+    end;
+    if MySucceeded then
+    begin
+      MyOleStream := TOleStream.Create(MyIStream);
+      try
+        MyStream := TMemoryStream.Create;
+        try
+          MyStream.CopyFrom(MyOleStream, 0);
+          if MyUnicode then
+            Result := PWideChar(MyStream.Memory)
+          else
+            Result := PChar(MyStream.Memory);
+          SetLength(Result, StrLen(PChar(Result))); //  Remove the final #0
+        finally
+          MyStream.Free;
+        end;
+      finally
+        MyOleStream.Free;
+      end;
+    end;
+  end;
+
+  procedure FetchLines(Source: TArray<string>; Destination: TStrings);
+  var
+    Content: string;
+  begin
+    for Content in Source do
+      Destination.Add(Content);
+  end;
+
+begin
+{ Open the copy of the message stored in the project directory }
+  MyFileStream := TFileStream.Create(AFileName, fmOpenRead or fmShareDenyWrite);
+  try
+    MyFileSize := MyFileStream.Size;
+{ Open the file as a Structured Storage }
+    MyDataHandle := GlobalAlloc(GMEM_MOVEABLE, MyFileSize);
+    try
+      MyBuffer := GlobalLock(MyDataHandle);
+      try
+        MyFileStream.ReadBuffer(MyBuffer^, MyFileSize);
+      finally
+        GlobalUnlock(MyDataHandle);
+      end;
+
+      OleCheck(CreateILockBytesOnHGlobal(MyDataHandle, True, MyLockBytes));
+      OleCheck(StgOpenStorageOnILockBytes(MyLockBytes, nil, STGM_READWRITE or
+        STGM_SHARE_EXCLUSIVE, nil, 0, MyStorage));
+
+{ Outlook 97/2000 return ANSI strings, Outlook XP/2003 return Unicode strings.
+ MyUnicode will be turned on/off in MyGetProperty automatically. }
+      MyUnicode := True;
+{ If the message came from the Internet, it has got a RFC-compliant header }
+      MyHeader := MyGetProperty(MyStorage, PR_TRANSPORT_MESSAGE_HEADERS);
+{ Otherwise, construct a simple substitute from internal properties. }
+      if MyHeader = '' then begin
+        MyHeader :=
+          'To: ' + MyGetProperty(MyStorage, PR_DISPLAY_TO) +
+          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_CC) +
+          ' ' + MyGetProperty(MyStorage, PR_DISPLAY_BCC) + #13#10 +
+          'From: ' + MyGetProperty(MyStorage, PR_SENDER_NAME) +
+          ' ' + MyGetProperty(MyStorage, PR_SENDER_EMAIL_ADDRESS) + #13#10 +
+          'Subject: ' + MyGetProperty(MyStorage, PR_SUBJECT) + #13#10 +
+          'Date: ' + MyGetProperty(MyStorage, PR_LAST_MODIFICATION_TIME);
+      end;
+      ABody := MyGetProperty(MyStorage, PR_BODY);
+
+    finally
+      GlobalFree(MyDataHandle);
+    end;
+  finally
+    MyFileStream.Free;
+  end;
+
+  { Parse the header as an RFC-compliant header. Exploit INI-files support buil-in in TStrings }
+  MyHeader := StringReplace(MyHeader, 'To: ', 'To=', [rfReplaceAll, rfIgnoreCase]);
+  MyHeader := StringReplace(MyHeader, 'From: ', 'From=', [rfReplaceAll, rfIgnoreCase]);
+  MyHeader := StringReplace(MyHeader, 'Subject: ', 'Subject=', [rfReplaceAll, rfIgnoreCase]);
+  MyHeader := StringReplace(MyHeader, 'Date: ', 'Date=', [rfReplaceAll, rfIgnoreCase]);
+  MyStrings := TStringList.Create;
+  try
+    Lines := MyHeader.Split([sLineBreak]);
+    FetchLines(Lines, MyStrings);
+    ATo := MyStrings.Values['To'];
+    AFrom := MyStrings.Values['From'];
+    AFrom := ParseDocumentFrom(AFrom);
+    ASubject := MyStrings.Values['Subject'];
+    ADate := MyStrings.Values['Date'];
+  finally
+    MyStrings.Free;
+    Lines := nil;
+  end;
+{ Trancate the body text and remove line-ends }
+  ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
+  ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
+end;
+
+procedure IterateFilesDropped(const FilesList: TUnicodeStrings; Process: TProcessDroppedFiles); overload;
+var
+  I: Integer;
+  FileName: string;
+begin
+  for I := 0 to Pred(FilesList.Count) do
+  begin
+    FileName := FilesList[I];
+    Process(FileName);
+  end;
+end;
+
+procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
+const
+  cExtensionOutlook = '.msg';
+  cExtensionOutlookExpress = '.eml';
+  cNotOutlookWarning = 'This file doesn''t come from Microsoft Outlook.';
+  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
+var
+  i: Integer;
+  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
+  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
+  myNewDate: TDateTime;
+  MyFileStream: TStream;
+  NewFilePath: string;
+  sFile, sFullFile: string;
+  iLength, iPos, icount: integer;
+begin
+  MyPath := Path;
+  if not DirectoryExists(MyPath) then
+    CreateDirectory(MyPath);
+
+  MyFileName := FileName;
+
+  MyExtension := LowerCase(ExtractFileExt(MyFileName));
+
+  if MyExtension = cExtensionOutlook then
+  begin
+    { Store the contents as a file on the disk. }
+    MyFilePath := IncludeTrailingPathDelimiter(MyPath) + ExtractFileName(MyFileName);
+
+    {If the file name already exists then increase the number}
+    icount := 0;
+    NewFilePath := MyFilePath;
+    while FileExists(NewFilePath) = true do
+    begin
+      inc(icount);
+      NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
+    end;
+
+    MyFilePath := NewFilePath;
+
+    FileCopy(FileName, MyFilePath);
+
+    { GUI }
+    try
+      ParseMessage(MyFilePath, MyTo, MyFrom, MySubject, MyDate, MyBody);
+      if trim(MyDate).IsEmpty then
+        myNewDate := date
+      else
+        myNewDate := FormatDateasDateTime(MyDate);
+    except
+      myNewDate := date
+    end;
+
+    //  This is where we add the data into the grid and to the document component
+    ShowDocuments;
+  end
+  else
+  begin
+    sFile := IncludeTrailingPathDelimiter(MyPath) + ExtractFileName(MyFileName);
+
+    FileCopy(myFileName, sFile) ;
+
+    ShowDocuments;
+  end;
+end;
+
+procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
+begin
+  IterateFilesDropped(FilesList,
+    procedure(var FileName: string)
+    begin
+      ProcessDroppedFile(FileName, Path, ShowDocuments);
+    end);
 end;
 
 { TDirDlg }
@@ -1703,7 +2008,7 @@ begin
       Result := DateToStr(vIn);
   end
   else
-    if (VarType(vIn) = VarUString) or (VarType(vIn) = VarString) then
+    if (VarType(vIn) = VarUString) or (VarType(vIn) = VarString) or (VarType(vIn) = VarUString) then
   begin
     if Trim(vIn) = '' then
       Result := 0

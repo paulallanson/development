@@ -29,6 +29,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 43
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -749,7 +750,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 681
+              Width = 685
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
@@ -3748,7 +3749,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsDropDown
             end
             object btnOrderPicking: TToolButton
-              Left = 545
+              Left = 543
               Top = 0
               Caption = 'Pic&king'
               DropdownMenu = pmnOrderPicking
@@ -3756,7 +3757,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object ToolButton3: TToolButton
-              Left = 610
+              Left = 608
               Top = 0
               Width = 8
               Caption = 'ToolButton3'
@@ -3764,7 +3765,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderProofs: TToolButton
-              Left = 618
+              Left = 616
               Top = 0
               Caption = 'Proo&fs'
               DropdownMenu = pmnOrderProofs
@@ -3772,7 +3773,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               ImageIndex = 7
             end
             object btnOrderDeliveriesSpacer: TToolButton
-              Left = 683
+              Left = 681
               Top = 0
               Width = 8
               Caption = 'btnOrderDeliveriesSpacer'
@@ -3780,7 +3781,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnOrderDeliveries: TToolButton
-              Left = 691
+              Left = 689
               Top = 0
               Hint = 'Deliveries'
               Caption = 'Deliver&y'
@@ -3789,7 +3790,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnOrderDeliveriesClick
             end
             object btnOrderHold: TToolButton
-              Left = 756
+              Left = 754
               Top = 0
               Hint = 'On Hold'
               Caption = '&Hold'
@@ -3943,14 +3944,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
-            Width = 64
             Visible = True
           end>
       end
@@ -4540,8 +4539,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 556
-        ExplicitWidth = 1164
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4686,8 +4683,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 575
-        ExplicitWidth = 1164
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4712,7 +4707,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 880
           object Label54: TLabel
             Left = 88
             Top = 13
@@ -8544,5 +8538,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
       E00FE0000000E00FE00FF8000023C007E027F0000063C007C073E00100C3C007
       9E79C4030107F83F7EFEEC0703FFF83F00000000000000000000000000000000
       000000000000}
+  end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgCustomer
+    OptimizedMove = True
+    Left = 534
+    Top = 178
   end
 end

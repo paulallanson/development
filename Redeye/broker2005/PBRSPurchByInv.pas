@@ -61,10 +61,10 @@ type
     qryPurchByInvgoods: TCurrencyField;
     qryPurchByInvtotal_goods: TCurrencyField;
     qryPurchByInvInvoice_Date: TDateTimeField;
-    qryPurchByInvSupplier_Invoice_no: TStringField;
-    qryPurchByInvInvoice_or_Credit: TStringField;
-    qryPurchByInvName: TStringField;
-    qryPurchByInvName_1: TStringField;
+    qryPurchByInvSupplier_Invoice_no: TWideStringField;
+    qryPurchByInvInvoice_or_Credit: TWideStringField;
+    qryPurchByInvBranch_Name: TWideStringField;
+    qryPurchByInvSupplier_Name: TStringField;
     rdgrpType: TRadioGroup;
     qryDetail: TFDQuery;
     chkbxPageBreak: TCheckBox;

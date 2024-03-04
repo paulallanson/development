@@ -1524,7 +1524,6 @@ object dtmdlJob: TdtmdlJob
       '        Job_Element.Quantity,'
       '        Job_Element.No_of_Polished_Depths,'
       '        Job_Element.No_of_Polished_Lengths,'
-      '        Job_Element.Quantity,'
       '        Job_Element.Total_Upstand_Pieces,'
       '        Worktop.Worktop_Group,'
       '        Worktop_thickness.Price_pointer,'
@@ -1557,6 +1556,7 @@ object dtmdlJob: TdtmdlJob
     ParamData = <
       item
         Name = 'Job'
+        ParamType = ptInput
       end>
   end
   object qryUpCompany: TFDQuery
@@ -2030,15 +2030,34 @@ object dtmdlJob: TdtmdlJob
   object qryJAllEvents: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select *, Operator.Operator_Name'
-      'from Job_internal_Note, Operator'
-      'where Job = :Job and'
-      'Job_internal_Note.Operator = Operator.Operator')
+      'select'#9'j.Job,'
+      #9'j.Internal_Note,'
+      #9'j.Date_Time_Entered,'
+      #9'j.Narrative,'
+      #9'j.SSMA_TimeStamp,'
+      #9'o.Operator,'
+      #9'o.Operator_Name,'
+      #9'o.Login_name,'
+      #9'o.Operator_Can_Login,'
+      #9'o.Telephone_number,'
+      #9'o.Quote_Follow_Up_Reminder,'
+      #9'o.End_User,'
+      #9'o.Can_Update_Schedule,'
+      #9'o.Email_Address,'
+      #9'o.Job_Title,'
+      #9'o.Mobile_Number,'
+      #9'o.Login_Password,'
+      #9'o.Revenue_Centre'
+      '  from Job_internal_Note as j'
+      '    join Operator as o on o.Operator = j.Operator'
+      'where j.Job = :Job'
+      '')
     Left = 416
     Top = 224
     ParamData = <
       item
         Name = 'Job'
+        ParamType = ptInput
       end>
   end
   object qryUpQuote: TFDQuery

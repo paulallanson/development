@@ -3,12 +3,11 @@ unit PBMaintJobBag;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DB, DBGrids, PBJobBagDM, ExtCtrls, ComCtrls,
-  DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects, Menus,
-  PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX,
-  OleCtrls, SHDocVw, pbSupplierInvoiceDM, ImgList, Clipbrd, ToolWin,
-  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, Grids, DB,
+  DBGrids, PBJobBagDM, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects,
+  Menus, PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX, OleCtrls, SHDocVw, pbSupplierInvoiceDM,
+  ImgList, Clipbrd, ToolWin, FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget,
+  DragDropFile;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -458,6 +457,7 @@ type
     pmnuRePrintSI: TMenuItem;
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
+    DropFileTarget1: TDropFileTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -632,6 +632,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
+    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -656,6 +657,8 @@ type
     FDefaultBin: integer;
     FDefaultPrinter: string;
     FSchedMode: TJBSchMode;
+    procedure ProcessDragAndDrop;
+    function GetFilesPath: string;
     procedure AddPurchaseOrder(const rPO: real; iLine : integer);
     procedure AddPurchaseOrderFromEnq(const rPO: real; iLine: integer);
     function AddNewOrderLine(const LineNo: Integer): PBPOObjects.TOrderLine;
@@ -2506,6 +2509,11 @@ procedure TPBMaintJobBagFrm.GetCustomerReps(tempno: integer);
 begin
 end;
 
+function TPBMaintJobBagFrm.GetFilesPath: string;
+begin
+  Result := sPath;
+end;
+
 procedure TPBMaintJobBagFrm.btnDateClick(Sender: TObject);
 var
   DateSelV5Form: TDateSelV5Form;
@@ -2942,6 +2950,12 @@ begin
   else
     jobbagsched.ApprovalType := '';
   jobbagsched.NarrativeText := memScheduleNotes.Text;
+end;
+
+procedure TPBMaintJobBagFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+  var Effect: Integer);
+begin
+  ProcessDragAndDrop;
 end;
 
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
@@ -4223,6 +4237,20 @@ begin
   finally
     PBRSPOrdNFrm.Free;
   end;
+end;
+
+procedure TPBMaintJobBagFrm.ProcessDragAndDrop;
+var
+  Path: string;
+  FilesList: TUnicodeStrings;
+begin
+  Path := GetFilesPath;
+  FilesList := DropFileTarget1.Files;
+  MyWinControlSetData(FilesList, Path,
+    procedure
+    begin
+      ShowDocuments;
+    end);
 end;
 
 procedure TPBMaintJobBagFrm.CheckNotes(Sender: TObject);

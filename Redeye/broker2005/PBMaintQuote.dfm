@@ -2,7 +2,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Left = 186
   Top = 18
   Caption = 'Maintain Quotes'
-  ClientHeight = 679
+  ClientHeight = 680
   ClientWidth = 1115
   Color = clBtnFace
   Constraints.MinHeight = 618
@@ -440,14 +440,14 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 78
         Width = 801
-        Height = 80
+        Height = 84
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
         DesignSize = (
           801
-          80)
+          84)
         object Label1: TLabel
           Left = 8
           Top = 66
@@ -544,9 +544,9 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
       object pnlEndUSer: TPanel
         Left = 0
-        Top = 158
+        Top = 162
         Width = 801
-        Height = 32
+        Height = 28
         Align = alBottom
         BevelOuter = bvNone
         Caption = 'pnlEndUSer'
@@ -555,17 +555,17 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Visible = False
         DesignSize = (
           801
-          32)
+          28)
         object Label14: TLabel
           Left = 8
-          Top = 12
+          Top = 9
           Width = 46
           Height = 13
           Caption = 'End User'
         end
         object edtEndUser: TEdit
           Left = 69
-          Top = 8
+          Top = 5
           Width = 554
           Height = 21
           Anchors = [akLeft, akTop, akRight]
@@ -574,7 +574,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
         object btnEndUser: TBitBtn
           Left = 630
-          Top = 6
+          Top = 4
           Width = 25
           Height = 25
           Anchors = [akTop, akRight]
@@ -595,7 +595,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Left = 0
     Top = 233
     Width = 1115
-    Height = 243
+    Height = 244
     ActivePage = tsGeneralSpec
     Align = alClient
     TabOrder = 2
@@ -605,12 +605,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 215
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 1042
-        ExplicitHeight = 235
         object btnAddCharge: TBitBtn
           Left = 8
           Top = 8
@@ -659,13 +657,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1022
-        Height = 215
+        Height = 216
         Align = alClient
         ParentBackground = False
         TabOrder = 1
         object Panel4: TPanel
           Left = 1
-          Top = 178
+          Top = 179
           Width = 1020
           Height = 36
           Align = alBottom
@@ -693,7 +691,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ReadOnly = True
             TabOrder = 0
             OnChange = edtEstimateFileChange
-            ExplicitWidth = 696
           end
           object btnOpen: TButton
             Left = 809
@@ -704,7 +701,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Caption = 'Estimate'
             TabOrder = 1
             OnClick = btnOpenClick
-            ExplicitLeft = 863
           end
           object btnImport: TButton
             Left = 890
@@ -715,7 +711,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Caption = 'Calculate'
             TabOrder = 2
             OnClick = btnImportClick
-            ExplicitLeft = 944
           end
           object btnBrowse: TButton
             Left = 730
@@ -726,14 +721,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Caption = 'Browse'
             TabOrder = 3
             OnClick = btnBrowseClick
-            ExplicitLeft = 784
           end
         end
         object sgLines: TStringGrid
           Left = 1
           Top = 1
           Width = 1020
-          Height = 177
+          Height = 178
           Align = alClient
           ColCount = 9
           DefaultColWidth = 40
@@ -746,8 +740,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           OnMouseDown = sgLinesMouseDown
           OnMouseUp = sgLinesMouseUp
           OnRowMoved = sgLinesRowMoved
-          ExplicitWidth = 1040
-          ExplicitHeight = 197
           ColWidths = (
             40
             137
@@ -767,8 +759,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       object sgSupply: TStringGrid
         Left = 0
         Top = 0
-        Width = 969
-        Height = 243
+        Width = 1022
+        Height = 216
         Align = alClient
         ColCount = 7
         DefaultColWidth = 40
@@ -788,10 +780,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           70)
       end
       object Panel18: TPanel
-        Left = 969
+        Left = 1022
         Top = 0
         Width = 85
-        Height = 243
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 1
@@ -844,16 +836,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       object Panel6: TPanel
         Left = 0
         Top = 0
-        Width = 1127
-        Height = 235
+        Width = 1107
+        Height = 216
         Align = alClient
         Caption = 'Panel6'
         ParentBackground = False
         TabOrder = 0
         object Panel7: TPanel
           Left = 1
-          Top = 210
-          Width = 1125
+          Top = 191
+          Width = 1105
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
@@ -876,8 +868,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
-          Width = 1089
-          Height = 209
+          Width = 1069
+          Height = 190
           Align = alClient
           Columns = <
             item
@@ -903,10 +895,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           OnDblClick = lstvwDocumentsDblClick
         end
         object ToolBar1: TToolBar
-          Left = 1090
+          Left = 1070
           Top = 1
           Width = 36
-          Height = 209
+          Height = 190
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -919,7 +911,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           TabOrder = 2
           object btnExcel: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Hint = 'Excel'
             Caption = 'btnExcel'
             ImageIndex = 0
@@ -930,7 +922,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           end
           object btnWord: TToolButton
             Left = 0
-            Top = 32
+            Top = 30
             Hint = 'Word'
             Caption = 'btnWord'
             ImageIndex = 1
@@ -941,7 +933,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           end
           object btnEmail: TToolButton
             Left = 0
-            Top = 62
+            Top = 60
             Hint = 'Email'
             Caption = 'btnEmail'
             ImageIndex = 2
@@ -952,7 +944,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           end
           object btnAttach: TToolButton
             Left = 0
-            Top = 92
+            Top = 90
             Hint = 'Attach Documents'
             Caption = 'btnAttach'
             ImageIndex = 3
@@ -970,7 +962,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 1022
         Top = 0
         Width = 85
-        Height = 215
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -989,7 +981,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 0
         Top = 0
         Width = 1022
-        Height = 215
+        Height = 216
         Align = alClient
         ScrollBars = ssBoth
         TabOrder = 1
@@ -1000,10 +992,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Specification'
       ImageIndex = 4
       object Panel15: TPanel
-        Left = 969
+        Left = 1022
         Top = 0
         Width = 85
-        Height = 243
+        Height = 216
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -1022,7 +1014,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 476
+    Top = 477
     Width = 1115
     Height = 145
     Align = alBottom
@@ -1499,7 +1491,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 660
+    Top = 661
     Width = 1115
     Height = 19
     Panels = <
@@ -1515,7 +1507,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 621
+    Top = 622
     Width = 1115
     Height = 39
     Align = alBottom
@@ -1712,8 +1704,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Top = 236
   end
   object imgIcons: TImageList
-    Left = 712
-    Top = 172
+    Left = 696
+    Top = 124
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -2027,5 +2019,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Select All'
       OnClick = pmnuSelectAllClick
     end
+  end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 881
+    Top = 128
   end
 end

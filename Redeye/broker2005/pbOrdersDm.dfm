@@ -129,12 +129,12 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Order_date'
       Required = True
     end
-    object qryOrdersCust_Order_No: TStringField
+    object qryOrdersCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       Origin = 'Cust_Order_No'
       Size = 50
     end
-    object qryOrdersDescription: TStringField
+    object qryOrdersDescription: TWideStringField
       FieldName = 'Description'
       Origin = 'Description'
       Size = 80
@@ -175,7 +175,7 @@ object dtmdlOrders: TdtmdlOrders
       FieldName = 'Goods_Required'
       Origin = 'Goods_Required'
     end
-    object qryOrdersOrder_type: TStringField
+    object qryOrdersOrder_type: TWideStringField
       FieldName = 'Order_type'
       Origin = 'Order_type'
       ReadOnly = True

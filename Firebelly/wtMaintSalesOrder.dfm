@@ -1676,36 +1676,23 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnDragDrop = stvDocumentsDragDrop
           OnDragOver = stvDocumentsDragOver
         end
-        object dfDocuments: TPJDropFiles
+        object slvDocuments: TShellListView
           Left = 185
           Top = 0
           Width = 932
           Height = 90
+          AutoRefresh = True
+          ObjectTypes = [otFolders, otNonFolders]
+          Root = 'C:\'
+          ShellTreeView = stvDocuments
+          Sorted = True
           Align = alClient
+          ReadOnly = False
+          HideSelection = False
+          MultiSelect = True
+          OnMouseMove = stvDocumentsMouseMove
           TabOrder = 2
-          Filter = PJExtFileFilter1
-          ForegroundOnDrop = False
-          Options = [dfoIncFolders, dfoIncFiles, dfoRecurseFolders]
-          PassThrough = False
-          OnDropFiles = dfDocumentsDropFiles
-          object slvDocuments: TShellListView
-            Left = 0
-            Top = 0
-            Width = 932
-            Height = 90
-            AutoRefresh = True
-            ObjectTypes = [otFolders, otNonFolders]
-            Root = 'C:\'
-            ShellTreeView = stvDocuments
-            Sorted = True
-            Align = alClient
-            ReadOnly = False
-            HideSelection = False
-            MultiSelect = True
-            OnMouseMove = stvDocumentsMouseMove
-            TabOrder = 0
-            ViewStyle = vsReport
-          end
+          ViewStyle = vsReport
         end
       end
     end
@@ -2642,7 +2629,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end>
       end
@@ -3115,9 +3101,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = btnRemedialOrderClick
     end
   end
-  object PJExtFileFilter1: TPJExtFileFilter
-    Style = fsAll
-    Left = 965
-    Top = 370
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pcDetails
+    OptimizedMove = True
+    Left = 656
+    Top = 84
   end
 end

@@ -71,10 +71,10 @@ begin
       Params := ConnDef.Params;
       for var i := 0 to Params.Count-1 do
       begin
-        if Params.Names[i] = 'DATABASE NAME' then
+        if Params.Names[i] = 'DATABASE' then
           edtDatabaseName.Text := Params.ValueFromIndex[i]
         else
-        if Params.Names[i] = 'SERVER NAME' then
+        if Params.Names[i] = 'SERVER' then
           edtServerName.Text := Params.ValueFromIndex[i]
       end;
     end;
@@ -109,8 +109,8 @@ begin
     begin
       sgList := TStringList.Create;
       try
-        sgList.Add('DATABASE NAME='+edtDatabaseName.text);
-        sgList.Add('SERVER NAME='+edtServerName.text);
+        sgList.Add('DATABASE='+edtDatabaseName.text);
+        sgList.Add('SERVER='+edtServerName.text);
         FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
       finally
         sgList.Free;
@@ -122,8 +122,8 @@ begin
       sgList := TStringList.Create;
       try
         sgList.Clear;
-        sgList.Add('DATABASE NAME='+edtDatabaseName.text);
-        sgList.Add('SERVER NAME='+edtServerName.text);
+        sgList.Add('DATABASE='+edtDatabaseName.text);
+        sgList.Add('SERVER='+edtServerName.text);
         FDManager.ModifyConnectionDef(edtAliasName.text,sgList);
       finally
         sgList.Free;

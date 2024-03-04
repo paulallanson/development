@@ -352,8 +352,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alRight
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 903
-        ExplicitHeight = 316
         object btnChange: TBitBtn
           Left = 10
           Top = 40
@@ -552,7 +550,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 4
-          ExplicitLeft = 892
         end
         object edtColour: TEdit
           Left = 200
@@ -649,7 +646,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Caption = 'S&weep'
           TabOrder = 9
           OnClick = btnSweepClick
-          ExplicitLeft = 888
         end
         object chkbxShowInactive: TCheckBox
           Left = 9
@@ -717,7 +713,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 3
-          ExplicitLeft = 892
         end
         object edtColour1: TEdit
           Left = 200
@@ -763,8 +758,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alRight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 903
-        ExplicitHeight = 316
         object btnChangeWorktop: TBitBtn
           Left = 10
           Top = 40
@@ -905,7 +898,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Caption = 'S&weep'
           TabOrder = 2
           OnClick = btnProdSweepClick
-          ExplicitLeft = 912
         end
         object chkbxShowInactiveProducts: TCheckBox
           Left = 9
@@ -991,8 +983,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Align = alRight
         ParentBackground = False
         TabOrder = 2
-        ExplicitLeft = 903
-        ExplicitHeight = 316
         object btnProdChange: TBitBtn
           Left = 10
           Top = 40
@@ -1028,7 +1018,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 996
+        Width = 1000
         Height = 17
         Align = alTop
         BevelOuter = bvNone
@@ -1045,8 +1035,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Panel11: TPanel
         Left = 0
         Top = 17
-        Width = 996
-        Height = 361
+        Width = 1000
+        Height = 362
         Align = alClient
         Caption = 'Panel11'
         ParentBackground = False
@@ -1054,8 +1044,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
-          Width = 965
-          Height = 359
+          Width = 969
+          Height = 360
           Align = alClient
           Columns = <
             item
@@ -1080,10 +1070,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnDblClick = lstvwDocumentsDblClick
         end
         object ToolBar1: TToolBar
-          Left = 966
+          Left = 970
           Top = 1
           Width = 29
-          Height = 359
+          Height = 360
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -1631,5 +1621,13 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     ConnectionName = 'WT'
     Left = 864
     Top = 400
+  end
+  object DropFileTarget1: TDropFileTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropFileTarget1Drop
+    Target = pgDetails
+    OptimizedMove = True
+    Left = 744
+    Top = 32
   end
 end

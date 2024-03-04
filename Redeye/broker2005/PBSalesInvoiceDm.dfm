@@ -4281,7 +4281,6 @@ object dmSalesInvoice: TdmSalesInvoice
       '  sales_order.delivery_branch,'
       '  sales_order.ad_hoc_address,'
       '  sales_order.customer,'
-      '  sales_order.delivery_customer,'
       '  part.part_description,'
       '  part.Part_Cost_Cat,'
       '  Customer.Name as Customer_Name,'
@@ -4338,6 +4337,7 @@ object dmSalesInvoice: TdmSalesInvoice
     ParamData = <
       item
         Name = 'Sales_Invoice'
+        ParamType = ptInput
       end>
   end
   object qrySOAllUninvoiced: TFDQuery

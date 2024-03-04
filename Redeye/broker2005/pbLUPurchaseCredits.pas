@@ -356,7 +356,7 @@ begin
   {Determine if we should display the Export to Excel menu option}
   frmPBMainMenu.miSendTo.Visible := (dmBroker.iAccCtrlMenu = 1);
 
-  dtmdlAllSuppCredits.refreshCreditdata;;
+  dtmdlAllSuppCredits.refreshCreditdata;
 end;
 
 procedure TfrmPBLUPurchaseCredits.pmnuFunctionsPopup(Sender: TObject);
