@@ -15,7 +15,7 @@ interface
 
 uses
   DragDrop, DropTarget,
-  Messages,
+  Messages,Types,
   ActiveX, Windows, Classes, Controls, Forms, StdCtrls, ComCtrls, ExtCtrls;
 
 const
@@ -89,7 +89,7 @@ begin
 
   Version := 0;
   // GetFileVersionInfo modifies the filename parameter data while parsing.
-  // Copy the string const into a local variable to create a writeable copy.
+  // Copy the string const into a local variable to create a writable copy.
   FileName := 'shell32.dll';
   InfoSize := GetFileVersionInfoSize(PChar(FileName), Wnd);
   if InfoSize <> 0 then
@@ -212,7 +212,7 @@ var
   i: integer;
   Stream: IStream;
   StatStg: TStatStg;
-  Size, Chunk: longInt;
+  Size, Chunk: {$if CompilerVersion < 29}Longint{$else}FixedUInt{$ifend};
   Buffer: pointer;
   Progress: integer;
 begin

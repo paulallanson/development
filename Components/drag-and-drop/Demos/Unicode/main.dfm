@@ -10,6 +10,8 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
   TextHeight = 13
   object PageControl1: TPageControl
     Left = 0
@@ -93,10 +95,14 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = 'Text'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object GroupBox4: TGroupBox
         Left = 0
         Top = 0
-        Width = 351
+        Width = 359
         Height = 57
         Align = alTop
         Caption = ' Drop source '
@@ -104,7 +110,7 @@ object Form1: TForm1
         object PanelTextSource: TPanel
           Left = 2
           Top = 15
-          Width = 347
+          Width = 355
           Height = 40
           Cursor = crHandPoint
           Align = alClient
@@ -118,7 +124,7 @@ object Form1: TForm1
       object GroupBox5: TGroupBox
         Left = 0
         Top = 57
-        Width = 351
+        Width = 359
         Height = 57
         Align = alTop
         Caption = ' Drop target '
@@ -126,7 +132,7 @@ object Form1: TForm1
         object PanelTextTarget: TPanel
           Left = 2
           Top = 15
-          Width = 347
+          Width = 355
           Height = 40
           Align = alClient
           BevelOuter = bvNone
@@ -138,16 +144,16 @@ object Form1: TForm1
       object GroupBox6: TGroupBox
         Left = 0
         Top = 114
-        Width = 351
-        Height = 291
+        Width = 359
+        Height = 296
         Align = alClient
         Caption = ' Text '
         TabOrder = 2
         object PaintBoxText: TPaintBox
           Left = 2
           Top = 15
-          Width = 347
-          Height = 274
+          Width = 355
+          Height = 279
           Align = alClient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -157,8 +163,6 @@ object Form1: TForm1
           ParentFont = False
           PopupMenu = PopupMenuTextTarget
           OnPaint = PaintBoxTextPaint
-          ExplicitWidth = 355
-          ExplicitHeight = 279
         end
       end
     end
@@ -167,6 +171,7 @@ object Form1: TForm1
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropFileTarget1Drop
     Target = PanelFileTarget
+    WinTarget = 0
     OptimizedMove = True
     Left = 60
     Top = 264
@@ -185,6 +190,7 @@ object Form1: TForm1
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropTextTarget1Drop
     Target = PanelTextTarget
+    WinTarget = 0
     Left = 172
     Top = 264
   end

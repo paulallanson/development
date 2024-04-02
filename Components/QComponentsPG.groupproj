@@ -15,7 +15,10 @@
         <Projects Include="ShellControls\ShellControls.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="drag-and-drop\Packages\DragDropD280.dproj">
+        <Projects Include="drag-and-drop\Packages\DragDropDR11A.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="drag-and-drop\Packages\dclDragDropDR11A.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -62,23 +65,32 @@
     <Target Name="ShellControls:Make">
         <MSBuild Projects="ShellControls\ShellControls.dproj" Targets="Make"/>
     </Target>
-    <Target Name="DragDropD280">
-        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj"/>
+    <Target Name="DragDropDR11A">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropDR11A.dproj"/>
     </Target>
-    <Target Name="DragDropD280:Clean">
-        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj" Targets="Clean"/>
+    <Target Name="DragDropDR11A:Clean">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropDR11A.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="DragDropD280:Make">
-        <MSBuild Projects="drag-and-drop\Packages\DragDropD280.dproj" Targets="Make"/>
+    <Target Name="DragDropDR11A:Make">
+        <MSBuild Projects="drag-and-drop\Packages\DragDropDR11A.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclDragDropDR11A">
+        <MSBuild Projects="drag-and-drop\Packages\dclDragDropDR11A.dproj"/>
+    </Target>
+    <Target Name="dclDragDropDR11A:Clean">
+        <MSBuild Projects="drag-and-drop\Packages\dclDragDropDR11A.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclDragDropDR11A:Make">
+        <MSBuild Projects="drag-and-drop\Packages\dclDragDropDR11A.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="CRPackage;MSAddIn;BarComp;ShellControls;DragDropD280"/>
+        <CallTarget Targets="CRPackage;MSAddIn;BarComp;ShellControls;DragDropDR11A;dclDragDropDR11A"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="CRPackage:Clean;MSAddIn:Clean;BarComp:Clean;ShellControls:Clean;DragDropD280:Clean"/>
+        <CallTarget Targets="CRPackage:Clean;MSAddIn:Clean;BarComp:Clean;ShellControls:Clean;DragDropDR11A:Clean;dclDragDropDR11A:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="CRPackage:Make;MSAddIn:Make;BarComp:Make;ShellControls:Make;DragDropD280:Make"/>
+        <CallTarget Targets="CRPackage:Make;MSAddIn:Make;BarComp:Make;ShellControls:Make;DragDropDR11A:Make;dclDragDropDR11A:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

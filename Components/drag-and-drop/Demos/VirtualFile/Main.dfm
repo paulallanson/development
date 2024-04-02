@@ -4,8 +4,8 @@ object FormMain: TFormMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Virtual File (File Contents) Demo'
-  ClientHeight = 230
-  ClientWidth = 373
+  ClientHeight = 253
+  ClientWidth = 494
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,6 +13,7 @@ object FormMain: TFormMain
   Font.Name = 'MS Shell Dlg 2'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -21,7 +22,6 @@ object FormMain: TFormMain
     Top = 8
     Width = 42
     Height = 13
-    Margins.Bottom = 0
     Caption = '&Filename'
     FocusControl = EditFilename
   end
@@ -30,7 +30,6 @@ object FormMain: TFormMain
     Top = 64
     Width = 39
     Height = 13
-    Margins.Bottom = 0
     Caption = '&Content'
     FocusControl = MemoContents
   end
@@ -57,8 +56,8 @@ object FormMain: TFormMain
   end
   object Panel2: TPanel
     Left = 0
-    Top = 167
-    Width = 373
+    Top = 190
+    Width = 494
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
@@ -68,9 +67,8 @@ object FormMain: TFormMain
     object Label3: TLabel
       Left = 61
       Top = 4
-      Width = 308
+      Width = 429
       Height = 55
-      Margins.Bottom = 0
       Align = alClient
       Caption = 
         'Drag to and from the icon on the left.'#13'You can drag to and from ' +
@@ -78,7 +76,7 @@ object FormMain: TFormMain
         ' Outlook and many others.'
       ShowAccelChar = False
       WordWrap = True
-      ExplicitWidth = 307
+      ExplicitWidth = 401
       ExplicitHeight = 39
     end
     object PanelDragDrop: TPanel
@@ -92,48 +90,13 @@ object FormMain: TFormMain
       BorderWidth = 4
       Caption = ' '
       TabOrder = 0
-      object Image1: TImage
-        Left = 5
-        Top = 5
-        Width = 47
-        Height = 45
-        Cursor = crHandPoint
-        Align = alClient
-        Center = True
-        Picture.Data = {
-          055449636F6E0000010001002020100000000000E80200001600000028000000
-          2000000040000000010004000000000080020000000000000000000000000000
-          0000000000000000000080000080000000808000800000008000800080800000
-          C0C0C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000
-          FFFFFF00000000000000000000000000000000000000000000008B8000000000
-          0000000000000000008BFF07BFB0000000000000000000000000000BFBFBF000
-          0000000000000000087FBFBFBFBFBFB000000000000000003BFBFBFBFBFBC47B
-          F000000000000003BFBFBFBFBFBC444FBFB0000000000033FBFBFBFBFBFC448B
-          FBFBF0000000003FBFBFBFBFBFBFC87FBFBFBF000000033BFBFBFBFBFBF7FBFB
-          FBFBFBF0000003BFBFBFBFBFBFC47FBFBFBFB000000033FBFBFBFBFBFC48FBFB
-          FBFB000000003FBFBFBFBFBFB447BFBFBFB0000000033373FBFBFBFBC447FBFB
-          FB000000000337373FBFBFBF4487BFBFBF000000003373730BFBFBFB447BFBFB
-          F0000000003737370FBFBFBC447FBFBFB0000000033370000000FBF4447BFBFB
-          000000000037066666660FBC487FBFBF00000000000066EEFFE660FCCCFBFBF0
-          0000000000006E66666E60BFC7BFBFB000000000000066600066E0FBFBFBFB00
-          00000000000066066E06E0BFBFBFBF0000000000000006066F060BFBFBFBF000
-          0000000000000006660000BFBFBFB000000000000000000000000000FBFB0000
-          00000000000000666660000000BF000000000000000006EEFFE6000000000000
-          0000000000000666666E00000000000000000000000006666666000000000000
-          0000000000000066666000000000000000000000000000000000000000000000
-          00000000FFF07FFFFFC01FFFFF8007FFFF0001FFFE00007FFC00001FFC000007
-          F8000003F8000001F0000000F0000000E0000007E000000FC000001FC000001F
-          8000003F8000003F0000007F0000007FC00000FFE00000FFE00001FFE00001FF
-          F00003FFF80003FFFC1C07FFF80F07FFF007CFFFF007FFFFF007FFFFF80FFFFF
-          FC1FFFFF}
-        PopupMenu = PopupMenu1
-        OnMouseDown = OnMouseDown
-      end
+      OnMouseDown = OnMouseDown
     end
   end
   object DropDummy1: TDropDummy
     DragTypes = []
     Target = Owner
+    WinTarget = 0
     Left = 60
     Top = 148
   end
@@ -144,7 +107,7 @@ object FormMain: TFormMain
     Left = 160
     Top = 52
     Bitmap = {
-      494C010101000400040020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010101000500040020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -690,6 +653,7 @@ object FormMain: TFormMain
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropFileTarget1Drop
     Target = PanelDragDrop
+    WinTarget = 0
     OptimizedMove = True
     Left = 60
     Top = 100

@@ -10,11 +10,11 @@ uses
   IdExplicitTLSClientServerBase, IdFTP,
   Messages, Dialogs,
   ActiveX, Windows, Classes, Controls, Forms, StdCtrls, ComCtrls, ExtCtrls,
-  Buttons, ImgList, ToolWin, ActnList;
+  Buttons, ImgList, ToolWin, ActnList, Actions, ImageList, Types;
 
 {$include DragDrop.inc}
 
-{$ifdef VER20_PLUS}
+{$IF CompilerVersion >= 12.0}
 // Work around for interface breaking changes between different Indy 10 releases... Pffft!
 type
   TIndyWorkCountInt = int64;
@@ -364,12 +364,12 @@ type
   TFifoStreamAdapter = class(TFixedStreamAdapter, IStream)
   private
   public
-    function Read(pv: Pointer; cb: Longint;
-      pcbRead: PLongint): HResult; override; stdcall;
+    function Read(pv: Pointer; cb: {$if CompilerVersion < 29}Longint{$else}FixedUInt{$ifend};
+      pcbRead: {$if CompilerVersion < 29}PLongint{$else}PFixedUInt{$ifend}): HResult; override; stdcall;
   end;
 
-function TFifoStreamAdapter.Read(pv: Pointer; cb: Integer;
-  pcbRead: PLongint): HResult;
+function TFifoStreamAdapter.Read(pv: Pointer; cb: {$if CompilerVersion < 29}Longint{$else}FixedUInt{$ifend};
+  pcbRead: {$if CompilerVersion < 29}PLongint{$else}PFixedUInt{$ifend}): HResult;
 begin
   Result := inherited Read(pv, cb, pcbRead);
   if (TFifoStream(Stream).Aborted) then
