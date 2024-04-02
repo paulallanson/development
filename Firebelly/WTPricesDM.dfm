@@ -3,6 +3,8 @@ object dtmdlPrices: TdtmdlPrices
   Width = 792
   object qryAllPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '    Worktop_thickness.Worktop,'

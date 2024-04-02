@@ -30,7 +30,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1245
+        Width = 1241
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -140,6 +140,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Width = 1247
     Height = 259
     Align = alClient
+    DataSource = dtmdlSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -279,6 +280,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Branch_Name'
         Title.Caption = 'Site Name'
+        Width = 64
         Visible = True
       end
       item
@@ -304,7 +306,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 300
     object Panel2: TPanel
       Left = 975
       Top = 1
@@ -481,7 +482,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       item
         Width = 50
       end>
-    ExplicitTop = 380
   end
   object Panel3: TPanel
     Left = 0

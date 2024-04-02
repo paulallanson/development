@@ -295,6 +295,8 @@ object dtmdlContract: TdtmdlContract
   end
   object qryAllContracts: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'

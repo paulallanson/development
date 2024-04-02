@@ -218,6 +218,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
     Width = 945
     Height = 174
     Align = alClient
+    DataSource = dtmdlPurchaseOrder.dtsAllPurchases
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

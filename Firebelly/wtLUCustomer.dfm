@@ -869,6 +869,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object qryCustomers: TFDQuery
     ConnectionName = 'wt'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Customer.*,'
       '        Customer_Type.Description,'

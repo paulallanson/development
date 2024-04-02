@@ -3,6 +3,8 @@ object dtmdlQuote: TdtmdlQuote
   Width = 1083
   object qryAllQuotes: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT TOP 3000'
       #9'Quote.Quote,        '

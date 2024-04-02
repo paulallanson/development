@@ -572,7 +572,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    ConnectionName = 'wt'
+    Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -2075,7 +2077,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    ConnectionName = 'wt'
+    Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,'
       '        Sales_Invoice.Customer,'

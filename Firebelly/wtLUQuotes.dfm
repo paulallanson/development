@@ -254,6 +254,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
     Width = 1303
     Height = 352
     Align = alClient
+    DataSource = dtmdlQuote.dtsAllQuotes
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

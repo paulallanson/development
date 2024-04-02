@@ -3,7 +3,9 @@ object dtmdlStock: TdtmdlStock
   Height = 467
   Width = 572
   object qryAllStock: TFDQuery
-    ConnectionName = 'wt'
+    Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select *, product_group.product_group_description'
       'from Product, product_group'
@@ -60,7 +62,7 @@ object dtmdlStock: TdtmdlStock
     Top = 16
   end
   object qryStockSystem: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT *'
       'FROM Stock_System'
@@ -73,7 +75,7 @@ object dtmdlStock: TdtmdlStock
       end>
   end
   object qryProduct: TFDQuery
-    ConnectionName = 'wt'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select Product.*,'
       ' (select top 1 Unit_price'
