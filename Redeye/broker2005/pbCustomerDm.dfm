@@ -3,6 +3,8 @@ object dtmdlCustomers: TdtmdlCustomers
   Width = 1095
   object qryCustomers: TFDQuery
     Connection = dmBroker.EmailDatabase
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -1803,6 +1805,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object qryProspects: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     Left = 24
     Top = 67
   end
@@ -2774,6 +2778,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object qryEndUsers: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     Left = 24
     Top = 131
   end

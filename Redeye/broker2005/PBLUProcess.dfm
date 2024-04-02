@@ -2,8 +2,8 @@ object PBLUProcessFrm: TPBLUProcessFrm
   Left = 215
   Top = 128
   Caption = 'Look-up A Process'
-  ClientHeight = 364
-  ClientWidth = 433
+  ClientHeight = 347
+  ClientWidth = 443
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -84,7 +84,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object SelectBitBtn: TBitBtn
     Left = 344
     Top = 268
-    Width = 75
+    Width = 85
     Height = 25
     Caption = 'Select'
     Default = True
@@ -159,7 +159,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object CloseBitBtn: TBitBtn
     Left = 344
     Top = 296
-    Width = 75
+    Width = 85
     Height = 25
     Kind = bkClose
     NumGlyphs = 2
@@ -168,7 +168,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object FuncGrpBox: TGroupBox
     Left = 336
     Top = 152
-    Width = 87
+    Width = 99
     Height = 105
     Caption = 'Function'
     ParentBackground = False
@@ -176,7 +176,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 16
-      Width = 75
+      Width = 87
       Height = 25
       Caption = 'Add'
       Glyph.Data = {
@@ -199,7 +199,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
     object ChgBitBtn: TBitBtn
       Left = 6
       Top = 44
-      Width = 75
+      Width = 87
       Height = 25
       Caption = 'Change'
       Glyph.Data = {
@@ -222,7 +222,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
     object DelBitBtn: TBitBtn
       Left = 6
       Top = 72
-      Width = 75
+      Width = 87
       Height = 25
       Caption = 'Delete'
       Glyph.Data = {
@@ -246,7 +246,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object QuestBitBtn: TBitBtn
     Left = 342
     Top = 12
-    Width = 80
+    Width = 90
     Height = 25
     Caption = 'Questions'
     Glyph.Data = {
@@ -269,7 +269,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object btnWCGroups: TBitBtn
     Left = 342
     Top = 44
-    Width = 80
+    Width = 90
     Height = 25
     Caption = 'Work Grps'
     Glyph.Data = {
@@ -292,7 +292,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object btnOps: TBitBtn
     Left = 342
     Top = 76
-    Width = 80
+    Width = 90
     Height = 25
     Caption = 'Operations'
     Glyph.Data = {
@@ -315,7 +315,7 @@ object PBLUProcessFrm: TPBLUProcessFrm
   object btnCosts: TBitBtn
     Left = 342
     Top = 108
-    Width = 80
+    Width = 90
     Height = 25
     Caption = 'Costs'
     Glyph.Data = {
@@ -342,6 +342,8 @@ object PBLUProcessFrm: TPBLUProcessFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Process.Process,'
       '        Process.Process_Description,'

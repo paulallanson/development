@@ -397,6 +397,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
   end
   object qryProductsFrom: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select *'
       'from Part'
@@ -426,6 +428,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
   end
   object qryProductsTo: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select *'
       'from Part'

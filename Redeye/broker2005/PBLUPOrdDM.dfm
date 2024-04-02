@@ -1,8 +1,5 @@
 object dmLookUpPOrd: TdmLookUpPOrd
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 57
-  Top = 130
   Height = 479
   Width = 741
   object DetsSRC: TDataSource
@@ -47,9 +44,7 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object GetContactSQL: TFDQuery
@@ -64,23 +59,19 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT TOP 500 Purchase_Order.Date_Point,'
       '        Purch_Ord_Line_Status.Description AS Status_Description,'
@@ -309,14 +300,10 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object OlderDummySQL: TFDQuery
@@ -394,14 +381,10 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
   object OldDummySQL: TFDQuery
@@ -574,14 +557,10 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpdSelectedLineSQL: TFDQuery
@@ -598,19 +577,13 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryFindCustBranch: TFDQuery
@@ -629,9 +602,7 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SearchCode'
-        ParamType = ptUnknown
       end>
   end
   object qryperiodEnd: TFDQuery
@@ -645,14 +616,10 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

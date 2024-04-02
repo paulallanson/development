@@ -97,6 +97,7 @@ object frmPBluNCA: TfrmPBluNCA
     Width = 667
     Height = 217
     Align = alClient
+    DataSource = dtmdlJobs.dtsJobsNCA
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

@@ -240,6 +240,8 @@ object STLUPrtGrpFrm: TSTLUPrtGrpFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select  Part_Group.Part_Group, Part_Group.Part_Group_Descr_Short' +

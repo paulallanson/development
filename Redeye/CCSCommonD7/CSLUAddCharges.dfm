@@ -285,6 +285,8 @@ object CSLUAddChrgFrm: TCSLUAddChrgFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  * from Additional_charge'
       'order by Details')

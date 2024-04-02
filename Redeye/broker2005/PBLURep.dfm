@@ -294,6 +294,8 @@ object PBLURepFrm: TPBLURepFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Rep.Rep,'
       '        Rep.Name,'

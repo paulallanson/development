@@ -438,6 +438,8 @@ object PBLUBranchFrm: TPBLUBranchFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select top 200 Customer_Branch.*,'
       '       (SELECT top 1 Rep.Name'

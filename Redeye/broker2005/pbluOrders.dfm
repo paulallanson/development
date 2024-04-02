@@ -32,7 +32,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 915
+        Width = 911
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -45,7 +45,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 902
+        Width = 890
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -207,6 +207,7 @@ object frmpbLUOrders: TfrmpbLUOrders
     Width = 917
     Height = 265
     Align = alClient
+    DataSource = dtmdlOrders.dtsOrders
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -254,28 +255,28 @@ object frmpbLUOrders: TfrmpbLUOrders
       end
       item
         Expanded = False
-        FieldName = 'order_price'
+        FieldName = 'Order_Price'
         Title.Caption = 'Cost Price'
         Width = 57
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'order_unit'
+        FieldName = 'Order_unit'
         Title.Caption = 'Cost Unit'
         Width = 56
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'selling_price'
+        FieldName = 'Selling_Price'
         Title.Caption = 'Sell Price'
         Width = 56
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'selling_unit'
+        FieldName = 'Selling_unit'
         Title.Caption = 'Sell Unit'
         Width = 51
         Visible = True
@@ -288,7 +289,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       end
       item
         Expanded = False
-        FieldName = 'cust_order_no'
+        FieldName = 'Cust_Order_No'
         Title.Caption = 'Customer Order No.'
         Width = 130
         Visible = True
@@ -315,7 +316,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       end
       item
         Expanded = False
-        FieldName = 'Form_Reference_id'
+        FieldName = 'Form_Reference_ID'
         Title.Caption = 'Form Reference'
         Width = 128
         Visible = True
@@ -344,6 +345,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
+        Width = 64
         Visible = True
       end
       item

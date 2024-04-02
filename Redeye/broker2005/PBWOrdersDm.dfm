@@ -413,6 +413,8 @@ object dtmdlWOrders: TdtmdlWOrders
   end
   object qryWOHeaderGrid: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT TOP 2000 Works_Order.*,'
       '        Customer_Branch.Name as Branch_Name,'

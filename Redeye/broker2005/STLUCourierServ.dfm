@@ -183,6 +183,8 @@ object STLUCourierServFrm: TSTLUCourierServFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From courier_service'

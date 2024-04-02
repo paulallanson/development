@@ -266,6 +266,8 @@ object STLUCourierSortFrm: TSTLUCourierSortFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Courier_Sort.*'
       'From Courier_Sort'

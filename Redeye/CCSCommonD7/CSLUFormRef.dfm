@@ -208,6 +208,8 @@ object CSLUFormRefFrm: TCSLUFormRefFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select * From Form_Reference'
       'Where (Form_Reference_ID Like :Code_From)'

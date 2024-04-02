@@ -243,6 +243,8 @@ object CSLUCContaFrm: TCSLUCContaFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select * From Customer_Contact'
       'Where (Name Like :Code_From) and '

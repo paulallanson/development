@@ -287,6 +287,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT * FROM Pack_Format'
       'WHERE'

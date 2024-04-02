@@ -273,6 +273,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object qryCustEdge: TFDQuery
     ConnectionName = 'WT'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '  Customer_Edge.Group_Id,'

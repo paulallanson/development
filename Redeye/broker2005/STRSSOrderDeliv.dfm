@@ -446,6 +446,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   end
   object qryExport: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     Left = 384
     Top = 160
   end

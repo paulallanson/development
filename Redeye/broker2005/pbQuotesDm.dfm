@@ -575,6 +575,8 @@ object dtmdlQuotes: TdtmdlQuotes
   object qryQHeaderGrid: TFDQuery
     FilterOptions = [foCaseInsensitive]
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT DISTINCT Quote.Quote,'
       '        Quote.Description,'

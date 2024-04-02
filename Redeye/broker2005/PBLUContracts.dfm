@@ -216,6 +216,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     Width = 848
     Height = 297
     Align = alClient
+    DataSource = dtmdlContract.dtsContractGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

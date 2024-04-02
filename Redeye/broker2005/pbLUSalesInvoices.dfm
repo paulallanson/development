@@ -200,6 +200,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Width = 1166
     Height = 238
     Align = alClient
+    DataSource = dmSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -315,14 +316,14 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end
       item
         Expanded = False
-        FieldName = 'Factoring_Date'
+        FieldName = 'factoring_date'
         Title.Caption = 'Factoring Date'
         Width = 82
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Factoring_Filename'
+        FieldName = 'factoring_filename'
         Title.Caption = 'Factoring File'
         Width = 160
         Visible = True

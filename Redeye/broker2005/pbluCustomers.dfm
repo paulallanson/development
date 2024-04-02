@@ -203,6 +203,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     Width = 1116
     Height = 217
     Align = alClient
+    DataSource = dtmdlCustomers.dtsCustomers
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

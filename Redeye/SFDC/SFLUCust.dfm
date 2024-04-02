@@ -298,6 +298,8 @@ object SFLUCustFrm: TSFLUCustFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name, Customer_Branch.Narrative,'

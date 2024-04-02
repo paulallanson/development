@@ -458,6 +458,8 @@ object frmwtLUPayments: TfrmwtLUPayments
   end
   object qryPayments: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Payment.Payment,'
       '        Payment.Payment_date,'
