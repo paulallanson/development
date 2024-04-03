@@ -779,7 +779,7 @@ begin
   MaxUsers := 9 ;
 {$ENDIF}
 
-{$IFDEF SOUTHERN MAIL}
+{$IFDEF SOUTHERNMAIL}
   MaxUsers := 9 ;
 {$ENDIF}
 
@@ -2551,7 +2551,7 @@ begin
   MaxUsers := 9 ;
 {$ENDIF}
 
-{$IFDEF SOUTHERN MAIL}
+{$IFDEF SOUTHERNMAIL}
   MaxUsers := 9 ;
 {$ENDIF}
 
