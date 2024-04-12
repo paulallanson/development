@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 297
-  ClientWidth = 888
+  ClientHeight = 373
+  ClientWidth = 1247
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,20 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 888
+    Width = 1247
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 882
+        Width = 1253
       end>
+    ExplicitWidth = 1255
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 873
+      Width = 1240
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,7 +44,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 861
+        Width = 1240
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -63,7 +64,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 59
+          Left = 62
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -72,7 +73,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 118
+          Left = 124
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -80,7 +81,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnDeleteClick
         end
         object ToolButton3: TToolButton
-          Left = 177
+          Left = 186
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -88,7 +89,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnPrint: TToolButton
-          Left = 185
+          Left = 194
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -96,7 +97,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 244
+          Left = 256
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -104,7 +105,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnReprintClick
         end
         object ToolButton6: TToolButton
-          Left = 303
+          Left = 318
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -112,7 +113,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 311
+          Left = 326
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
@@ -124,8 +125,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 888
-    Height = 148
+    Width = 1247
+    Height = 195
     Align = alClient
     DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
     DrawingStyle = gdsGradient
@@ -316,58 +317,46 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Visible = True
       end>
   end
-  object Panel1: TPanel
+  object pnlFooter: TPanel
     Left = 0
-    Top = 222
-    Width = 888
-    Height = 56
+    Top = 269
+    Width = 1247
+    Height = 85
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    object Label1: TLabel
-      Left = 8
-      Top = 16
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
-    end
-    object edtSearch: TEdit
-      Left = 104
-      Top = 12
-      Width = 153
-      Height = 21
-      TabOrder = 0
-      OnChange = edtSearchChange
-    end
+    ExplicitTop = 277
+    ExplicitWidth = 1255
     object Panel2: TPanel
-      Left = 604
+      Left = 976
       Top = 1
-      Width = 283
-      Height = 54
+      Width = 270
+      Height = 83
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 1
+      TabOrder = 0
+      ExplicitLeft = 984
       DesignSize = (
-        283
-        54)
+        270
+        83)
       object Label2: TLabel
-        Left = 16
+        Left = 0
         Top = 11
         Width = 75
         Height = 13
         Caption = 'Credit Number'
       end
       object Label3: TLabel
-        Left = 16
+        Left = 0
         Top = 36
         Width = 58
         Height = 13
         Caption = 'Credit Date'
       end
       object btnClose: TButton
-        Left = 200
-        Top = 12
+        Left = 187
+        Top = 41
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -376,7 +365,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         OnClick = btnCloseClick
       end
       object edtSalesInvNo: TEdit
-        Left = 104
+        Left = 88
         Top = 7
         Width = 81
         Height = 21
@@ -384,45 +373,117 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         OnKeyPress = edtSalesInvNoKeyPress
       end
       object edtInvoiceDate: TEdit
-        Left = 104
+        Left = 88
         Top = 32
         Width = 81
         Height = 21
         TabOrder = 2
       end
     end
-    object chkbxShowArchived: TCheckBox
-      Left = 464
-      Top = 14
-      Width = 113
-      Height = 17
-      Caption = 'Show archived'
+    object pnlSearch: TPanel
+      Left = 1
+      Top = 1
+      Width = 632
+      Height = 83
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 8
+        Top = 48
+        Width = 86
+        Height = 13
+        Caption = 'Customer Search'
+      end
+      object edtSearch: TEdit
+        Left = 104
+        Top = 44
+        Width = 153
+        Height = 21
+        TabOrder = 0
+        OnChange = edtSearchChange
+      end
+      object chkbxShowArchived: TCheckBox
+        Left = 464
+        Top = 46
+        Width = 94
+        Height = 17
+        Caption = 'Show archived'
+        TabOrder = 1
+        OnClick = chkbxShowArchivedClick
+      end
+      object BitBtn1: TBitBtn
+        Left = 368
+        Top = 42
+        Width = 75
+        Height = 25
+        Caption = 'S&weep'
+        TabOrder = 2
+        OnClick = BitBtn1Click
+      end
+      object btnSearch: TBitBtn
+        Left = 272
+        Top = 42
+        Width = 75
+        Height = 25
+        Caption = '&Search'
+        TabOrder = 3
+        OnClick = btnSearchClick
+      end
+    end
+    object pnlRevenueCentre: TPanel
+      Left = 633
+      Top = 1
+      Width = 344
+      Height = 83
+      Align = alLeft
+      BevelOuter = bvNone
       TabOrder = 2
-      OnClick = chkbxShowArchivedClick
-    end
-    object BitBtn1: TBitBtn
-      Left = 368
-      Top = 10
-      Width = 75
-      Height = 25
-      Caption = 'S&weep'
-      TabOrder = 3
-      OnClick = BitBtn1Click
-    end
-    object btnSearch: TBitBtn
-      Left = 272
-      Top = 10
-      Width = 75
-      Height = 25
-      Caption = '&Search'
-      TabOrder = 4
-      OnClick = btnSearchClick
+      object rdgrpRevenueCentre: TRadioGroup
+        Left = 7
+        Top = 1
+        Width = 121
+        Height = 73
+        Caption = 'Revenue Centre '
+        ItemIndex = 0
+        Items.Strings = (
+          'Default'
+          'All'
+          'Selected')
+        TabOrder = 0
+        OnClick = rdgrpRevenueCentreClick
+      end
+      object grpbxRevCentre: TGroupBox
+        Left = 133
+        Top = 1
+        Width = 203
+        Height = 73
+        TabOrder = 1
+        Visible = False
+        object Label6: TLabel
+          Left = 8
+          Top = 12
+          Width = 81
+          Height = 13
+          Caption = 'Revenue Centre'
+        end
+        object dblkpRevCentre: TDBLookupComboBox
+          Left = 8
+          Top = 32
+          Width = 185
+          Height = 21
+          KeyField = 'Revenue_Centre'
+          ListField = 'Revenue_Centre_Descr'
+          TabOrder = 0
+          OnClick = dblkpRevCentreClick
+        end
+      end
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 278
-    Width = 888
+    Top = 354
+    Width = 1247
     Height = 19
     Panels = <
       item
@@ -431,51 +492,52 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       item
         Width = 50
       end>
+    ExplicitTop = 362
+    ExplicitWidth = 1255
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 888
+    Width = 1247
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
-    ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1255
     DesignSize = (
-      888
+      1247
       30)
     object Label4: TLabel
       Left = 2
       Top = 3
-      Width = 107
-      Height = 25
+      Width = 109
+      Height = 24
       Caption = 'Sales Credits'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -19
-      Font.Name = 'Segoe UI'
+      Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 604
+      Left = 1023
       Top = 7
-      Width = 78
+      Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Customer Filter'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -11
-      Font.Name = 'Segoe UI'
+      Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 656
     end
     object cmbCustomerFilter: TComboBox
-      Left = 684
+      Left = 1103
       Top = 3
       Width = 145
       Height = 21

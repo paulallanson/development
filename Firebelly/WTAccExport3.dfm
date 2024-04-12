@@ -2,8 +2,8 @@ object frmWTAccExport3: TfrmWTAccExport3
   Left = 530
   Top = 147
   Caption = 'Export & Import Wizard'
-  ClientHeight = 288
-  ClientWidth = 343
+  ClientHeight = 289
+  ClientWidth = 355
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,15 @@ object frmWTAccExport3: TfrmWTAccExport3
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 247
-    Width = 343
+    Top = 248
+    Width = 355
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 256
+    ExplicitWidth = 363
     object BitBtn1: TBitBtn
       Left = 96
       Top = 8
@@ -53,65 +55,17 @@ object frmWTAccExport3: TfrmWTAccExport3
       OnClick = BitBtn3Click
     end
   end
-  object pnlRevenueCentre: TPanel
-    Left = 0
-    Top = 0
-    Width = 343
-    Height = 73
-    Align = alTop
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 1
-    object rdgrpRevenueCentre: TRadioGroup
-      Left = 8
-      Top = 3
-      Width = 121
-      Height = 62
-      Caption = 'Revenue Centre '
-      ItemIndex = 0
-      Items.Strings = (
-        'Default'
-        'Selected')
-      ParentBackground = False
-      TabOrder = 0
-      OnClick = rdgrpRevenueCentreClick
-    end
-    object grpbxRevCentre: TGroupBox
-      Left = 134
-      Top = 3
-      Width = 203
-      Height = 62
-      ParentBackground = False
-      TabOrder = 1
-      Visible = False
-      object Label3: TLabel
-        Left = 8
-        Top = 12
-        Width = 81
-        Height = 13
-        Caption = 'Revenue Centre'
-      end
-      object dblkpRevCentre: TDBLookupComboBox
-        Left = 8
-        Top = 32
-        Width = 185
-        Height = 21
-        KeyField = 'Revenue_Centre'
-        ListField = 'Revenue_Centre_Descr'
-        TabOrder = 0
-        OnClick = dblkpRevCentreClick
-      end
-    end
-  end
   object pnlDetails: TPanel
     Left = 0
-    Top = 73
-    Width = 343
-    Height = 174
+    Top = 0
+    Width = 355
+    Height = 248
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
+    ExplicitWidth = 363
+    ExplicitHeight = 256
     object Label2: TLabel
       Left = 8
       Top = 8

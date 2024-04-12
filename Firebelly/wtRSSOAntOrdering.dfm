@@ -3,20 +3,22 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Anticipated Material Ordering Report'
-  ClientHeight = 334
-  ClientWidth = 527
+  ClientHeight = 354
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    527
-    334)
+    531
+    354)
+  PixelsPerInch = 96
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -44,7 +46,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPrint: TButton
     Left = 8
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -54,7 +56,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object Button4: TButton
     Left = 416
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -88,14 +90,14 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 29
+      Width = 26
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 15
+      Width = 16
       Height = 13
       Caption = 'To:'
     end
@@ -122,6 +124,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
       Top = 14
       Width = 25
       Height = 25
+      TabOrder = 2
+      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -136,14 +140,14 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
-      TabOrder = 2
-      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
+      TabOrder = 3
+      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -158,8 +162,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
-      TabOrder = 3
-      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
@@ -173,7 +175,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 49
+      Width = 44
       Height = 13
       Caption = 'Customer'
     end
@@ -207,7 +209,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPreview: TButton
     Left = 96
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -217,7 +219,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnExcel: TButton
     Left = 184
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -246,7 +248,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
+      Width = 53
       Height = 13
       Caption = 'Exporting...'
     end
@@ -299,11 +301,19 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 256
+    Top = 248
     Width = 217
     Height = 17
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 14
+  end
+  object chkbxIncludeAllocated: TCheckBox
+    Left = 8
+    Top = 272
+    Width = 217
+    Height = 17
+    Caption = 'Include Allocated Order Lines'
+    TabOrder = 15
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup

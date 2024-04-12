@@ -610,10 +610,9 @@ begin
 end;
 
 procedure TfrmWTMaintSalesOrder.CheckIfSpeculative;
-(*var
+var
   OldCursor : TCursor;
   iCustomer: integer;
-*)
 begin
   if SOrder.Speculative then
     begin
@@ -1060,6 +1059,10 @@ begin
       grpDates.Enabled := (not SOrder.OnHold) and (SOrder.DateType <> 'T');
 
       stsbrDetails.Panels[0].Text := 'Created by: ' + SOrder.OperatorName;
+
+(*      if SOrder.StockAllocationStartDate <> 0 then
+        stsbrDetails.Panels[1].Text := 'Stock Allocated for fitting between ' + paDateStr(SOrder.StockAllocationStartDate) + ' and ' + paDateStr(SOrder.StockAllocationEndDate) ;
+*)
     end;
 
   {Don't allow changing of subcontract customer if it's been invoiced or part invocied}
@@ -1427,9 +1430,9 @@ begin
         cells[4,i+1] := SOrder.Purchases[i].SupplierName;
         cells[5,i+1] := SOrder.Purchases[i].LineDescription;
         cells[6,i+1] := inttostr(SOrder.Purchases[i].SlabLength) + ' x ' + inttostr(SOrder.Purchases[i].SlabDepth) + ' ' + SOrder.Purchases[i].SlabDescription;
-        cells[7,i+1] := formatfloat('?0.00',SOrder.Purchases[i].UnitCost);
+        cells[7,i+1] := formatfloat('�0.00',SOrder.Purchases[i].UnitCost);
         cells[8,i+1] := inttostr(SOrder.Purchases[i].Quantity);
-        cells[9,i+1] := formatfloat('?0.00',SOrder.Purchases[i].TotalCost);
+        cells[9,i+1] := formatfloat('�0.00',SOrder.Purchases[i].TotalCost);
         cells[10,i+1] := SOrder.Purchases[i].StatusDescription;
         cells[11,i+1] := SOrder.Purchases[i].GRNNumber;
         icount := icount + 1;
@@ -2496,12 +2499,8 @@ end;
 
 procedure TfrmWTMaintSalesOrder.edtDepositPaidChange(Sender: TObject);
 begin
-   try
-    SOrder.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
-   except
-    SOrder.DepositAmount := 0;
-   end;
-   CheckOK(self);
+  SOrder.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
+  CheckOK(self);
 end;
 
 procedure TfrmWTMaintSalesOrder.dbgLinesDblClick(Sender: TObject);
@@ -2514,7 +2513,6 @@ procedure TfrmWTMaintSalesOrder.edtContactChange(Sender: TObject);
 begin
   SOrder.ContactName := edtContact.Text;
   CheckOK(self);
-
 end;
 
 procedure TfrmWTMaintSalesOrder.mnDeleteLineClick(Sender: TObject);

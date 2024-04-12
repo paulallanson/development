@@ -33,6 +33,7 @@ type
     edtStockDescription: TEdit;
     Label8: TLabel;
     lblWorktopDescription: TLabel;
+    qryCheckStockItem: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure edtLengthChange(Sender: TObject);
@@ -50,6 +51,7 @@ type
     procedure SetMaterialType(const Value: integer);
     procedure AddZero;
     procedure DeleteZero;
+    function CheckStockItemExists(TempCode: string): integer;
     function GetNextKey: integer;
     procedure SetDescription(const Value: string);
     procedure SetSlabSize(const Value: integer);
@@ -117,7 +119,12 @@ begin
   if StockItem = 0 then
     begin
       if edtStockCode.Text <> '' then
-        StockItem := GetNextKey;
+        begin
+          {Check if stock code already exists}
+          StockItem := CheckStockItemExists(edtStockCode.Text);
+          if StockItem = 0 then
+            StockItem := GetNextKey;
+        end;
     end;
 
   with qryUpdStock do
@@ -257,6 +264,21 @@ procedure TfrmWTMaintWorktopThicknessSlab.edtStockCodeChange(
 begin
   if (Sender as TEdit).Text <> '' then
     edtStockDescription.Text := self.Description;
+end;
+
+function TfrmWTMaintWorktopThicknessSlab.CheckStockItemExists(TempCode: string): integer;
+begin
+  Result := 0;
+
+  with qryCheckStockItem do
+    begin
+      close;
+      parambyname('Stock_Code').asstring := TempCode;
+      open;
+
+      if recordcount > 0 then
+        Result := fieldbyname('Stock_Item').asinteger;
+    end;
 end;
 
 end.

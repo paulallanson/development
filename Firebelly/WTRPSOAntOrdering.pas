@@ -93,6 +93,8 @@ type
   public
     bShowOnlyScheduled: boolean;
     bIncludeInvoiced: boolean;
+    bIncludeAllocated: boolean;
+
     SortBy: integer;
     customer, rep: integer;
     customerList: TstringList;
@@ -370,7 +372,10 @@ begin
       ' Sales_Order_Line.Unit_Price');
 
   if dtmdlWorktops.IsSQL then
-    qrySalesOrders.SQL.Add('HAVING (SUM(Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_Allocated,0)) > 0) ');
+    begin
+      if not bIncludeAllocated then
+        qrySalesOrders.SQL.Add('HAVING (SUM(Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_Allocated,0)) > 0) ');
+    end;
 
   case sortby of
     0:begin

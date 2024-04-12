@@ -1,9 +1,9 @@
 object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   Left = 266
   Top = 44
-  Caption = 'Stock Allocation'
-  ClientHeight = 530
-  ClientWidth = 931
+  Caption = 'Stock De-Allocation'
+  ClientHeight = 529
+  ClientWidth = 927
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,14 +17,16 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 470
-    Width = 931
+    Top = 469
+    Width = 927
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 477
+    ExplicitWidth = 935
     DesignSize = (
-      931
+      927
       41)
     object btnClose: TButton
       Left = 832
@@ -52,8 +54,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 511
-    Width = 931
+    Top = 510
+    Width = 927
     Height = 19
     Panels = <
       item
@@ -62,12 +64,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 518
+    ExplicitWidth = 935
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 931
-    Height = 357
+    Width = 927
+    Height = 356
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
@@ -114,13 +118,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       end
       item
         Expanded = False
-        FieldName = 'Slab_Description'
-        Title.Caption = 'Worktop'
-        Width = 149
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'Stock_Code'
         Title.Caption = 'Stock Code'
         Width = 130
@@ -139,19 +136,12 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         Title.Caption = 'Fitting Date'
         Width = 80
         Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Change_Date'
-        Title.Caption = 'Move Date'
-        Width = 91
-        Visible = True
       end>
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 931
+    Width = 927
     Height = 113
     Align = alTop
     TabOrder = 3
@@ -497,11 +487,10 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         DataType = ftDateTime
       end>
   end
-  object qryDummy: TFDQuery
+  object qryDummyOld: TFDQuery
     ConnectionName = 'Wt'
     SQL.Strings = (
-      'SELECT'
-      #9#9'    Sales_order_Date_log.Change_Date,'
+      'SELECT DISTINCT'
       #9#9'    Sales_Order.Sales_Order,'
       '        Sales_Order_Line.Quote,'
       '        Sales_Order.Date_Raised,'
@@ -553,13 +542,9 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       
         '                Worktop_thickness_Slab_Size.Depth = Quote_Slab.D' +
         'epth) as Stock_Code,'
-      '        SUM(Quote_Slab.Quantity) as Slab_Quantity,'
-      
-        '        SUM(((((Quote_Slab.Length * Quote_Slab.Depth)/1000000.00' +
-        '0000) * Quote_Slab.Quantity) * Quote_Slab.Unit_Cost) + ((Quote_S' +
-        'lab.Adhesive_Unit_Cost * (Quote_Slab.Adhesive_Quantity/1)))) as ' +
-        'Total_Slab_Cost'
-      'FROM Material_Type '
+      '        Quote_Slab.Quantity as Slab_Quantity,'
+      '        Quote_Slab.Quantity_Allocated'
+      'FROM Material_Type'
       #9#9'INNER JOIN (Thickness '
       #9#9'INNER JOIN (Worktop '
       #9#9'INNER JOIN ((((Sales_Order_Status '
@@ -594,11 +579,10 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         '      ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
         ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
       
-        #9'    ((Sales_Order.Date_Raised < Sales_Order_line.Stock_Allocati' +
-        'on_Start_Date) OR (Sales_Order.Date_Raised > Sales_order_Line.St' +
-        'ock_Allocation_End_Date))'
+        #9'    ((Sales_Order.Date_Required < Sales_Order_line.Stock_Alloca' +
+        'tion_Start_Date) OR (Sales_Order.Date_Required > Sales_order_Lin' +
+        'e.Stock_Allocation_End_Date))'
       'GROUP BY'
-      '       Sales_order_Date_log.Change_Date,'
       '       Sales_Order.Sales_Order,'
       '       Sales_Order_Line.Quote,'
       '       Sales_Order.Date_Raised,'
@@ -625,14 +609,16 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       '       Sales_Order_Line.Unit_Price,'
       '       Sales_order_line.Sales_Order_line_no,'
       #9'     Sales_Order_Line.Stock_Allocation_Start_Date,'
-      '       Sales_Order_Line.Stock_Allocation_End_Date'
+      '       Sales_Order_Line.Stock_Allocation_End_Date,'
+      '       Quote_Slab.Quantity,'
+      '       Quote_Slab.Quantity_Allocated'
       
-        'HAVING (SUM(Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_All' +
-        'ocated,0)) = 0)'
+        'HAVING (Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_Allocat' +
+        'ed,0) = 0)'
       'ORDER BY'
       '       Sales_Order.Sales_Order'
       '')
-    Left = 200
+    Left = 264
     Top = 280
     ParamData = <
       item
@@ -677,7 +663,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   object qryGetStockCode: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      'SELECT Stock_item.Stock_code'
+      'SELECT TOP 1 Stock_item.Stock_code'
       'FROM Stock_item'
       '        RIGHT JOIN Worktop_Thickness_Slab_Size'
       
@@ -703,7 +689,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
         Name = 'Depth'
       end>
   end
-  object wtstkDatabase: TFDConnection
+  object wtStkDatabase: TFDConnection
     ConnectionName = 'STK'
     Params.Strings = (
       'User Name=readonly'
@@ -749,8 +735,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       'SET Stock_Allocation_Start_Date = :Stock_Allocation_Start_Date,'
       '    Stock_Allocation_End_Date = :Stock_Allocation_End_Date'
       'WHERE Sales_order = :Sales_Order')
-    Left = 872
-    Top = 104
+    Left = 880
+    Top = 64
     ParamData = <
       item
         Name = 'Stock_Allocation_Start_Date'
@@ -842,149 +828,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     ParamData = <
       item
         Name = 'Stock_System'
-      end>
-  end
-  object qryDummyOld: TFDQuery
-    ConnectionName = 'Wt'
-    SQL.Strings = (
-      'SELECT'
-      #9#9'    Sales_order_Date_log.Change_Date,'
-      #9#9'    Sales_Order.Sales_Order,'
-      '        Sales_Order_Line.Quote,'
-      '        Sales_Order.Date_Raised,'
-      '        Sales_Order.Sales_Order_Status,'
-      '        Sales_Order.Template_Date,'
-      '        Sales_Order.Date_Required,'
-      '        Sales_Order.Customer_Name,'
-      '        Sales_Order.Reference,'
-      '        Sales_Order.IsFittingInOutlook,'
-      '        Customer.Is_Retail_Customer,'
-      '        Customer.Is_Commercial_Customer,'
-      '        Sales_Order.Rep,'
-      '        Rep.Rep_Name,'
-      '        Worktop.Description as Worktop_Description,'
-      '        Material_Type.Description as Material_Description,'
-      '        Thickness.Thickness_mm,'
-      '        Quote_Slab.Worktop,'
-      '        Quote_Slab.Thickness,'
-      
-        '        (Thickness.Thickness_mm +   Worktop.Description +   Mate' +
-        'rial_Type.Description) as Slab_Description,'
-      '        Quote_Slab.Length as Slab_Length,'
-      '        Quote_Slab.Depth as Slab_Depth,'
-      '        Sales_Order_Status.Sales_Order_Status_Desc,'
-      '        Sales_Order.Goods_Value,'
-      '        Sales_Order.VAT_Value,'
-      
-        '        (Sales_Order.VAT_Value + Sales_Order.Goods_Value) as Tot' +
-        'al_Value,'
-      '        Sales_order_line.Unit_Price,'
-      '        Sales_order_line.Sales_Order_line_no,'
-      #9#9'    Sales_Order_Line.Stock_Allocation_Start_Date,'
-      #9#9'    Sales_Order_Line.Stock_Allocation_End_Date,'
-      '        ( SELECT TOP 1 Stock_item.Stock_code'
-      '          FROM Stock_item'
-      '              RIGHT JOIN Worktop_thickness_Slab_Size'
-      
-        '                ON Stock_item.Stock_item = Worktop_thickness_Sla' +
-        'b_Size.Stock_Item'
-      
-        '          WHERE Worktop_thickness_Slab_Size.Worktop = Quote_Slab' +
-        '.Worktop AND'
-      
-        '                Worktop_thickness_Slab_Size.Thickness = Quote_Sl' +
-        'ab.Thickness AND'
-      
-        '                Worktop_thickness_Slab_Size.Length = Quote_Slab.' +
-        'Length AND'
-      
-        '                Worktop_thickness_Slab_Size.Depth = Quote_Slab.D' +
-        'epth) as Stock_Code,'
-      '        SUM(Quote_Slab.Quantity) as Slab_Quantity,'
-      
-        '        SUM(((((Quote_Slab.Length * Quote_Slab.Depth)/1000000.00' +
-        '0000) * Quote_Slab.Quantity) * Quote_Slab.Unit_Cost) + ((Quote_S' +
-        'lab.Adhesive_Unit_Cost * (Quote_Slab.Adhesive_Quantity/1)))) as ' +
-        'Total_Slab_Cost'
-      'FROM Material_Type '
-      #9#9'INNER JOIN (Thickness '
-      #9#9'INNER JOIN (Worktop '
-      #9#9'INNER JOIN ((((Sales_Order_Status '
-      #9#9'INNER JOIN (Rep '
-      #9#9'INNER JOIN (Customer'
-      #9#9'INNER JOIN ((Sales_Order_Date_Log AS SODL '
-      #9#9'INNER JOIN Sales_Order_Date_Log '
-      
-        #9#9#9'ON (SODL.Change_Date = Sales_Order_Date_Log.Change_Date) AND ' +
-        '(SODL.Sales_Order = Sales_Order_Date_Log.Sales_Order)) '
-      #9#9'INNER JOIN Sales_Order '
-      #9#9#9'ON SODL.Sales_Order = Sales_Order.Sales_Order) '
-      #9#9#9'ON Customer.Customer = Sales_Order.Customer)'
-      #9#9#9'ON Rep.Rep = Sales_Order.Rep) '
-      
-        #9#9#9'ON Sales_Order_Status.Sales_Order_Status = Sales_Order.Sales_' +
-        'Order_Status) '
-      #9#9'INNER JOIN Sales_Order_Line '
-      #9#9#9'ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Order) '
-      #9#9'INNER JOIN Quote '
-      #9#9#9'ON Sales_Order_Line.Quote = Quote.Quote)'
-      #9#9'INNER JOIN Quote_Slab '
-      #9#9#9'ON Quote.Quote = Quote_Slab.Quote) '
-      #9#9#9'ON Worktop.Worktop = Quote_Slab.Worktop) '
-      #9#9#9'ON Thickness.Thickness = Quote_Slab.Thickness) '
-      #9#9#9'ON Material_Type.Material_Type = Worktop.Material_Type'
-      
-        'WHERE (Sales_Order_Date_Log.Change_Function =  '#39'O'#39') AND (SODL.Ch' +
-        'ange_Function = '#39'N'#39') AND'
-      #9'    (Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
-      #9'    (Sales_Order_line.Quantity_Allocated > 0) AND'
-      
-        '      ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
-        ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
-      
-        #9'    ((Sales_Order.Date_Raised < Sales_Order_line.Stock_Allocati' +
-        'on_Start_Date) OR (Sales_Order.Date_Raised > Sales_order_Line.St' +
-        'ock_Allocation_End_Date))'
-      'GROUP BY'
-      '       Sales_order_Date_log.Change_Date,'
-      '       Sales_Order.Sales_Order,'
-      '       Sales_Order_Line.Quote,'
-      '       Sales_Order.Date_Raised,'
-      '       Sales_Order.Sales_Order_Status,'
-      '       Sales_Order.Template_Date,'
-      '       Sales_Order.Date_Required,'
-      '       Sales_Order.Customer_Name,'
-      '       Sales_Order.Reference,'
-      '       Sales_Order.IsFittingInOutlook,'
-      '       Customer.Is_Retail_Customer, '
-      '       Customer.Is_Commercial_Customer, '
-      '       Sales_Order.Rep,'
-      '       Rep.Rep_Name, '
-      '       Worktop.Description, '
-      '       Material_Type.Description, '
-      '       Thickness.Thickness_mm, '
-      '       Quote_Slab.Worktop,'
-      '       Quote_Slab.Thickness, '
-      '       Quote_Slab.Length, '
-      '       Quote_Slab.Depth, '
-      '       Sales_Order_Status.Sales_Order_Status_Desc,'
-      '       Sales_Order.Goods_Value,'
-      '       Sales_Order.VAT_Value,'
-      '       Sales_Order_Line.Unit_Price,'
-      '       Sales_order_line.Sales_Order_line_no,'
-      #9'     Sales_Order_Line.Stock_Allocation_Start_Date,'
-      '       Sales_Order_Line.Stock_Allocation_End_Date'
-      'ORDER BY'
-      '       Sales_Order.Sales_Order'
-      '')
-    Left = 280
-    Top = 280
-    ParamData = <
-      item
-        Name = 'Date_Move_From'
-      end
-      item
-        Name = 'Date_Move_To'
       end>
   end
   object qryDeAllocQuoteSlab: TFDQuery
@@ -1108,6 +951,85 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       end
       item
         Name = 'Stock_Code'
+      end>
+  end
+  object qryDummy: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      #9'Sales_Order.Date_Required,'
+      #9'Sales_Order.Date_Raised,'
+      #9'Sales_Order.Customer_Name,'
+      #9'Sales_Order.Reference,'
+      #9'Sales_Order_Date_Log.Sales_Order,'
+      #9'Sales_Order_Line.Sales_order_Line_no,'
+      #9'Sales_Order_Line.Stock_Allocation_Start_Date, '
+      #9'Sales_Order_Line.Stock_Allocation_End_Date, '
+      #9'(SELECT TOP 1 Stock_item.Stock_code'
+      '          FROM Stock_item'
+      '              RIGHT JOIN Worktop_thickness_Slab_Size'
+      
+        '                ON Stock_item.Stock_item = Worktop_thickness_Sla' +
+        'b_Size.Stock_Item'
+      
+        '          WHERE Worktop_thickness_Slab_Size.Worktop = Quote_Slab' +
+        '.Worktop AND'
+      
+        '                Worktop_thickness_Slab_Size.Thickness = Quote_Sl' +
+        'ab.Thickness AND'
+      
+        '                Worktop_thickness_Slab_Size.Length = Quote_Slab.' +
+        'Length AND'
+      
+        '                Worktop_thickness_Slab_Size.Depth = Quote_Slab.D' +
+        'epth) AS Stock_Code, '
+      #9'Quote_Slab.Quote, '
+      '  Quote_Slab.Worktop,'
+      '  Quote_Slab.Thickness,'
+      '  Quote_Slab.Length as Slab_Length,'
+      '  Quote_Slab.Depth as Slab_Depth,'
+      #9'Quote_Slab.Slab_Number, '
+      #9'Quote_Slab.Quantity as Slab_Quantity, '
+      #9'Quote_Slab.Quantity_Allocated'
+      'FROM (((Sales_Order_Date_Log '
+      #9#9'INNER JOIN Sales_Order_Date_Log AS SODL '
+      
+        #9#9#9'ON (Sales_Order_Date_Log.Change_Date = SODL.Change_Date) AND ' +
+        '(Sales_Order_Date_Log.Sales_Order = SODL.Sales_Order)) '
+      #9#9'INNER JOIN Sales_Order_Line '
+      
+        #9#9#9'ON Sales_Order_Date_Log.Sales_Order = Sales_Order_Line.Sales_' +
+        'Order) '
+      #9#9'INNER JOIN Quote_Slab '
+      #9#9#9'ON Sales_Order_Line.Quote = Quote_Slab.Quote) '
+      #9#9'INNER JOIN Sales_Order '
+      #9#9#9'ON Sales_Order_Date_Log.Sales_Order = Sales_Order.Sales_Order'
+      
+        'WHERE'#9'((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
+        ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      
+        #9'    ((Sales_Order.Date_Required < Sales_Order_line.Stock_Alloca' +
+        'tion_Start_Date) OR (Sales_Order.Date_Required > Sales_order_Lin' +
+        'e.Stock_Allocation_End_Date)) AND'
+      #9'    (Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        #9#9'(Sales_Order_Date_Log.Change_Function =  '#39'O'#39') AND (SODL.Change' +
+        '_Function = '#39'N'#39') AND'
+      
+        #9#9'(Quote_Slab.Quantity - ISNULL(Quote_Slab.Quantity_Allocated,0)' +
+        ' = 0) AND'
+      #9#9'(Sales_Order.Fitting_Docs_Returned = '#39'N'#39')'
+      'ORDER BY Sales_Order_Date_Log.Sales_Order,'
+      #9#9#9'Sales_Order_Line.Sales_order_Line_no,'
+      #9#9#9'Quote_Slab.Slab_Number')
+    Left = 184
+    Top = 280
+    ParamData = <
+      item
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
       end>
   end
 end

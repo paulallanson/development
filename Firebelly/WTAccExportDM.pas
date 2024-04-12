@@ -52,7 +52,7 @@ type
     CompanySQL: TFDQuery;
     CustPendingSQL: TFDQuery;
     SuppPendingSQL: TFDQuery;
-    SalesPendingSQl: TFDQuery;
+    SalesPendingSQL: TFDQuery;
     PurchPendingSQL: TFDQuery;
     UpInvCustomerSQL: TFDQuery;
     customerSQL: TFDQuery;
@@ -63,6 +63,8 @@ type
     qryDelXeroInvs: TFDQuery;
     qryUpXeroInvs: TFDQuery;
     qryGetXeroImport: TFDQuery;
+    SalesPendingBaseSQL: TFDQuery;
+    UpSalesInvHeadBaseSQL: TFDQuery;
   private
     { Private declarations }
   public

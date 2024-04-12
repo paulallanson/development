@@ -5,8 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, wtSalesInvoiceDM,
-  Data.DB, System.ImageList, Vcl.Buttons,
-  QrCtrls, IniFiles, Vcl.DBCtrls;
+  Db, QrCtrls, IniFiles, Buttons, DBCtrls, System.ImageList;
 
 type
   TfrmWTLUSalesInvoices = class(TForm)
@@ -108,11 +107,9 @@ var
 
 implementation
 
-uses
-  System.UITypes, System.Types,
-  AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
+uses AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
-  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtMain, wtDataModule;
+  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtDataModule;
 
 {$R *.DFM}
 
@@ -129,11 +126,9 @@ end;
 
 procedure TfrmWTLUSalesInvoices.FormCreate(Sender: TObject);
 var
-  IniFile: TIniFile;
+  IniFile : TIniFile;
   iRevenueCentre: integer;
 begin
-  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
-
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   if not pnlRevenueCentre.Visible then
     pnlFooter.Height := 70;
@@ -146,7 +141,8 @@ begin
   dbgDetails.DataSource := dtmdlAllSInvoices.dsSIHeaderGrid;
 
   {Set the revenue centre details}
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  IniFile := TIniFile.Create('myWorktops.ini');
+
   try
   with IniFile do
     begin
@@ -181,14 +177,14 @@ begin
   end;
 
   if not dtmdlWorktops.UseRevenueCentres then
-    iRevenueCentre := -1;
+    iRevenueCentre := 0;
     
   dtmdlAllSInvoices.RevenueCentre := iRevenueCentre;
 
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSInvoices.dsSIHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', 'myworktops.ini', self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.SetButtons(Sender: TObject; Field: TField);
@@ -596,23 +592,23 @@ procedure TfrmWTLUSalesInvoices.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 VAR
+  TempRect: TRect;
+  Txt: array [0..255] of Char;
   sValue: string;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
+  TempRect := Rect;
   if (dbgDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'I') and
     (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Invoice No') and
@@ -622,26 +618,29 @@ begin
       (Column.Title.Caption <> 'Deposit Paid') and
       (Column.Title.Caption <> 'VAT') then
   	begin
-      if Assigned(Column.Field) then
-        Column.Alignment := taLeftJustify;
+  		StrPCopy(txt, Column.field.asstring);
+  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
+  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end
   else
   	begin
     		WITH Sender AS TDBGrid DO
       		BEGIN
-           	if (Column.Title.Caption <> 'Invoice No.') and
-               (Column.Title.Caption <> 'Goods') and
-               (Column.Title.Caption <> 'Total') and
-               (Column.Title.Caption <> 'Total Paid') and
-               (Column.Title.Caption <> 'Deposit Paid') and
+           	if  (Column.Title.Caption <> 'Invoice No.') and
+              (Column.Title.Caption <> 'Goods') and
+              (Column.Title.Caption <> 'Total') and
+              (Column.Title.Caption <> 'Total Paid') and
+              (Column.Title.Caption <> 'Deposit Paid') and
                (Column.Title.Caption <> 'VAT') then
-               begin
-          		   Canvas.Brush.Color := Color;
-        			   Canvas.Font.Color  := Font.Color;
-                 Canvas.Brush.Color := clMenuHighlight;
-        			   Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,Column.field.asstring);
-                 (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-               end;
+              	begin
+        			Canvas.Brush.Color := Color;
+        			Canvas.Font.Color  := Font.Color;
+        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
+          			Column.field.asstring);
+                 end;
       		END;
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Goods') or
@@ -649,13 +648,21 @@ begin
           (Column.Title.Caption = 'Total Paid') or
           (Column.Title.Caption = 'Deposit Paid') or
           (Column.Title.Caption = 'VAT') then
-        begin
-          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
-        end else
-          sValue := Column.field.asstring;
+        try
+            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+        except
+          sValue := ''
+        end
+      else
+        sValue := Column.field.asstring;
+  		StrPCopy(Txt, sValue);
 
-      Column.Alignment := taRightJustify;
-    end;
+  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
+  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+     end;
 end;
 
 procedure TfrmWTLUSalesInvoices.cmbCustomerFilterChange(Sender: TObject);
@@ -677,22 +684,19 @@ procedure TfrmWTLUSalesInvoices.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-  try
-    with IniFile do
+  IniFile := TIniFile.Create('myWorktops.ini');
+
+  with IniFile do
     begin
       WriteString('Sales Invoices', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
       WriteString('Sales Invoices', 'Invoice Printer',DefaultPrinter);
       WriteString('Sales Invoices', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
       WriteString('Sales Invoices', 'Revenue Centre', inttostr(dtmdlAllSInvoices.RevenueCentre));
+      Free;
     end;
-  finally
-    IniFile.Free;
-  end;
 
-
-  Printers.Printer.PrinterIndex := -1;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  printer.printerindex := -1;
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', 'myworktops.ini', self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);
@@ -729,7 +733,7 @@ begin
   try
     frmWTLUPayments.lblSalesOrder.caption := 'Sales Order: ' + inttostr(SOrder);
     frmWTLUPayments.lblSalesInvoice.caption := 'Sales Invoice: ' + dbgDetails.DataSource.dataset.fieldbyname('Invoice_No').asstring;
-    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Original_Name').asstring;
+    frmWTLUPayments.lblCustomer.caption := 'Customer: ' + dbgDetails.DataSource.dataset.fieldbyname('Customer_Name').asstring;
     frmWTLUPayments.lblAccountCode.caption := 'Account Code: ' + dbgDetails.DataSource.dataset.fieldbyname('Account_Code').asstring;
     frmWTLUPayments.lblDescription.caption := 'Description:' + dbgDetails.DataSource.dataset.fieldbyname('Description').asstring;
     frmWTLUPayments.rDepositTerms := 0;
@@ -820,7 +824,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsBold] then
+  if Column.Title.Font.style <> [fsbold] then
     SortType := ' ASC'
   else if dtmdlAllSInvoices.SortType = ' DESC' then
       SortType := ' ASC'
@@ -831,20 +835,20 @@ begin
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
     dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsbold];
 
   dtmdlAllSInvoices.SortOrder := SortField + SortType;
   dtmdlAllSInvoices.SortType := SortType;
 
   dtmdlAllSInvoices.refreshdata;
   with dbgDetails do
-  begin
-    try
-      if datasource.dataset.recordcount > 0 then
-        SelectedRows.CurrentRowSelected := true ;
-    except
+    begin
+      try
+        if datasource.dataset.recordcount > 0 then
+          SelectedRows.CurrentRowSelected := true ;
+      except
+      end;
     end;
-  end;
 end;
 
 procedure TfrmWTLUSalesInvoices.btnRequestforPaymentClick(Sender: TObject);
@@ -865,11 +869,12 @@ var
   TempArray: array[0..255] of Char;
 begin
   {Find the default printer in the list of printers }
-  Printers.Printer.PrinterIndex := -1;
+  Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
-      if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-        Printers.Printer.PrinterIndex := icount;
+//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+      if DefaultPrinter = Printer.printers[icount] then
+        Printer.PrinterIndex := icount;
     end;
 end;
 

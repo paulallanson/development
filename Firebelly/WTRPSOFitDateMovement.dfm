@@ -2,15 +2,15 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
   Left = 49
   Top = 110
   Caption = 'Fitting Date Movement Report'
-  ClientHeight = 577
-  ClientWidth = 1163
+  ClientHeight = 576
+  ClientWidth = 1159
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
@@ -59,9 +59,8 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
     PrinterSettings.MemoryLimit = 1000000
-    PrinterSettings.PrintQuality = 0
     PrinterSettings.Collate = 0
-    PrinterSettings.ColorOption = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Outstanding Quote Report'
     SnapToGrid = True
@@ -1445,7 +1444,412 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
       end
     end
   end
-  object qrySalesOrders: TFDQuery
+  object qrySalesOrdersOld: TFDQuery
+    ConnectionName = 'Wt'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      #9#9'Sales_Order_Date_Log.Sales_Order, '
+      #9#9'(SELECT (Sales_Order.Date_Raised) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Date_Raised,'
+      #9#9'(SELECT (Sales_Order.Date_Required) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Date_Required,'
+      #9#9'(SELECT (Sales_Order.Reference) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Reference,'
+      #9#9'(SELECT (Sales_Order.Order_ref_no) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Order_ref_no,'
+      #9#9'(SELECT (Sales_Order.Sales_Order_Status)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Sales_Order_Status,'
+      #9#9'(SELECT (Sales_Order.On_Hold)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as On_Hold,'
+      #9#9'(SELECT (Sales_Order_Status.Sales_Order_Status_Desc)'
+      #9#9' FROM Sales_Order, Sales_Order_Status'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der AND'
+      
+        #9#9#9#9'Sales_Order.sales_order_Status = Sales_Order_Status.sales_or' +
+        'der_Status) as Sales_Order_Status_Desc,'
+      #9#9'SODL.New_Date,'
+      #9#9'(SELECT (Sales_Order.Customer_Name)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Customer_Name,'
+      #9#9'(SELECT (Sales_Order.Deposit_amount * -1.00000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Deposit_Amount,'
+      #9#9'(SELECT (Sales_Order.Goods_Value * -1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Goods_Value,'
+      #9#9'(SELECT (Sales_Order.VAT_Value * -1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Vat_Value,'
+      
+        #9#9'(SELECT ((Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sa' +
+        'les_order.Deposit_amount) * -1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Total_Value,'
+      #9#9'(SELECT (Sales_Order.IsFittingInOutlook) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as IsFittingInOutlook,'
+      #9#9'(SELECT (Sales_Order.Rep) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Rep,'
+      #9#9'(SELECT (Rep.Rep_Name) '
+      #9#9' FROM Sales_Order, Rep'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der AND'
+      #9#9#9#9'Sales_Order.Rep = Rep.Rep) as Rep_Name,'
+      #9#9#39'OUT'#39' as Movement_Type'
+      'FROM (Sales_Order_Date_Log '
+      #9#9'INNER JOIN Sales_Order_Date_Log AS SODL '
+      
+        #9#9#9'ON (Sales_Order_Date_Log.Change_Date = SODL.Change_Date) AND ' +
+        '(Sales_Order_Date_Log.Sales_Order = SODL.Sales_Order))'
+      
+        'WHERE ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
+        ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      
+        '      ((Sales_Order_Date_Log.New_Date >= :Date_From) and (Sales_' +
+        'Order_Date_Log.New_Date <= :Date_To)) AND'
+      
+        '      ((SODL.New_Date < :Date_From) OR (SODL.New_Date > :Date_To' +
+        ')) AND'
+      #9#9'(Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        #9#9'(Sales_Order_Date_Log.Change_Function ='#39'O'#39') AND (SODL.Change_F' +
+        'unction ='#39'N'#39')'#9'AND'
+      '    (((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) = :IsFittingInOutlook) OR'
+      '    ((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) = '#39'Y'#39') OR'
+      '    ((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) IS NULL)) AND'
+      '     ((SELECT Sales_Order.Sales_Order_Status'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) < :Sales_Order_Status)'
+      'UNION'
+      'SELECT DISTINCT'
+      #9#9'Sales_Order_Date_Log.Sales_Order, '
+      #9#9'(SELECT (Sales_Order.Date_Raised) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Date_Raised,'
+      #9#9'(SELECT (Sales_Order.Date_Required) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Date_Required,'
+      #9#9'(SELECT (Sales_Order.Reference) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Reference,'
+      #9#9'(SELECT (Sales_Order.Order_ref_no) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Order_ref_no,'
+      #9#9'(SELECT (Sales_Order.Sales_Order_Status)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Sales_Order_Status,'
+      #9#9'(SELECT (Sales_Order.On_Hold)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as On_Hold,'
+      #9#9'(SELECT (Sales_Order_Status.Sales_Order_Status_Desc)'
+      #9#9' FROM Sales_Order, Sales_Order_Status'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der AND'
+      
+        #9#9#9#9'Sales_Order.sales_order_Status = Sales_Order_Status.sales_or' +
+        'der_Status) as Sales_Order_Status_Desc,'
+      #9#9'SODL.New_Date,'
+      #9#9'(SELECT (Sales_Order.Customer_Name)'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Customer_Name,'
+      #9#9'(SELECT (Sales_Order.Deposit_amount * 1.00000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Deposit_Amount,'
+      #9#9'(SELECT (Sales_Order.Goods_Value * 1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Goods_Value,'
+      #9#9'(SELECT (Sales_Order.VAT_Value * 1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Vat_Value,'
+      
+        #9#9'(SELECT ((Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sa' +
+        'les_order.Deposit_amount) * 1.0000) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Total_Value,'
+      #9#9'(SELECT (Sales_Order.IsFittingInOutlook) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as IsFittingInOutlook,'
+      #9#9'(SELECT (Sales_Order.Rep) '
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) as Rep,'
+      #9#9'(SELECT (Rep.Rep_Name) '
+      #9#9' FROM Sales_Order, Rep'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der AND'
+      #9#9#9#9'Sales_Order.Rep = Rep.Rep) as Rep_Name,'
+      #9#9#39'IN'#39' as Movement_Type'
+      'FROM (Sales_Order_Date_Log '
+      #9#9'INNER JOIN Sales_Order_Date_Log AS SODL '
+      
+        #9#9#9'ON (Sales_Order_Date_Log.Change_Date = SODL.Change_Date) AND ' +
+        '(Sales_Order_Date_Log.Sales_Order = SODL.Sales_Order))'
+      
+        'WHERE '#9'      ((Sales_Order_Date_Log.Change_Date >= :Date_Move_Fr' +
+        'om) and (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      
+        '      ((SODL.New_Date >= :Date_From) and (SODL.New_Date <= :Date' +
+        '_To)) AND'
+      
+        '      ((Sales_Order_Date_Log.New_Date < :Date_From) OR (Sales_Or' +
+        'der_Date_Log.New_Date > :Date_To)) AND'
+      #9#9'  (Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        #9'    (Sales_Order_Date_Log.Change_Function ='#39'O'#39') AND (SODL.Chang' +
+        'e_Function ='#39'N'#39')'#9'AND'
+      '    (((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) = :IsFittingInOutlook) OR'
+      '    ((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) = '#39'Y'#39') OR'
+      '    ((SELECT Sales_Order.IsFittingInOutlook'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) IS NULL)) AND'
+      '     ((SELECT Sales_Order.Sales_Order_Status'
+      #9#9' FROM Sales_Order'
+      
+        #9#9' WHERE Sales_Order.Sales_Order = Sales_Order_Date_Log.Sales_Or' +
+        'der) < :Sales_Order_Status)'
+      '')
+    Left = 400
+    Top = 184
+    ParamData = <
+      item
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'IsFittingInOutlook'
+      end
+      item
+        Name = 'Sales_Order_Status'
+      end
+      item
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'IsFittingInOutlook'
+      end
+      item
+        Name = 'Sales_Order_Status'
+      end>
+  end
+  object qryGetMovedOutDates: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT TOP 1'
+      '        Sales_Order_Date_Log.Change_Date,'
+      '        Sales_Order_Date_Log.New_Date AS Original_Date,'
+      #9#9#9#9'SODL.New_Date AS New_Date'
+      'FROM Sales_Order_Date_Log AS SODL '
+      #9#9#9'INNER JOIN Sales_Order_Date_Log '
+      
+        #9#9#9#9'ON (SODL.Change_Date = Sales_Order_Date_Log.Change_Date) AND' +
+        ' (SODL.Sales_Order = Sales_Order_Date_Log.Sales_Order)'
+      'WHERE '
+      #9'(Sales_Order_Date_Log.Sales_Order = :Sales_Order) AND'
+      #9'(Sales_Order_Date_Log.Change_Function = '#39'O'#39') AND'
+      #9'(SODL.Change_Function = '#39'N'#39') AND'
+      
+        '  ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and (Sa' +
+        'les_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      #9'(Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        '  ((Sales_Order_Date_Log.New_Date >= :Date_From) and (Sales_Orde' +
+        'r_Date_Log.New_Date <= :Date_To)) AND'
+      '  ((SODL.New_Date < :Date_From) OR (SODL.New_Date > :Date_To))'
+      'ORDER BY Sales_Order_Date_Log.Change_Date desc')
+    Left = 208
+    Top = 272
+    ParamData = <
+      item
+        Name = 'Sales_Order'
+      end
+      item
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end>
+  end
+  object qryGetMovedInDates: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT TOP 1'
+      '        Sales_Order_Date_Log.Change_Date,'
+      '        Sales_Order_Date_Log.New_Date AS Original_Date, '
+      #9#9#9#9'SODL.New_Date AS New_Date'
+      'FROM Sales_Order_Date_Log AS SODL '
+      #9#9#9'INNER JOIN Sales_Order_Date_Log '
+      
+        #9#9#9#9'ON (SODL.Change_Date = Sales_Order_Date_Log.Change_Date) AND' +
+        ' (SODL.Sales_Order = Sales_Order_Date_Log.Sales_Order)'
+      'WHERE '
+      #9'(Sales_Order_Date_Log.Sales_Order = :Sales_Order) AND'
+      #9'(Sales_Order_Date_Log.Change_Function = '#39'O'#39') AND'
+      #9'(SODL.Change_Function = '#39'N'#39') AND'
+      
+        '  ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and (Sa' +
+        'les_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      #9'(Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        '  ((SODL.New_Date >= :Date_From) and (SODL.New_Date <= :Date_To)' +
+        ') AND'
+      
+        '  ((Sales_Order_Date_Log.New_Date < :Date_From) OR (Sales_Order_' +
+        'Date_Log.New_Date > :Date_To))'
+      'ORDER BY Sales_Order_Date_Log.Change_Date desc')
+    Left = 208
+    Top = 336
+    ParamData = <
+      item
+        Name = 'Sales_Order'
+      end
+      item
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end>
+  end
+  object qrySalesOrderOlder: TFDQuery
     ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT'#9'DISTINCT'
@@ -1596,7 +2000,7 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
         '(:Is_Retail_Customer = '#39'A'#39'))'
       '')
-    Left = 208
+    Left = 496
     Top = 184
     ParamData = <
       item
@@ -1690,36 +2094,217 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
         Name = 'Is_Retail_Customer'
       end>
   end
-  object qryGetMovedOutDates: TFDQuery
-    ConnectionName = 'WT'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
-      'SELECT TOP 1'
-      '        Sales_Order_Date_Log.Change_Date,'
-      '        Sales_Order_Date_Log.New_Date AS Original_Date,'
-      #9#9#9#9'SODL.New_Date AS New_Date'
-      'FROM Sales_Order_Date_Log AS SODL '
-      #9#9#9'INNER JOIN Sales_Order_Date_Log '
+      'SELECT'#9'DISTINCT'
+      '        Sales_Order.Sales_Order,'
+      '        Sales_Order.Date_Raised,'
+      '        Sales_Order.Date_Required,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Sales_Order_Status,'
+      '        Sales_Order.On_Hold,'
+      #9#9'    (SELECT (Sales_Order_Status.Sales_Order_Status_Desc)'
+      #9#9'      FROM Sales_Order SO, Sales_Order_Status'
+      #9#9'      WHERE SO.Sales_Order = Sales_Order.Sales_Order AND'
       
-        #9#9#9#9'ON (SODL.Change_Date = Sales_Order_Date_Log.Change_Date) AND' +
-        ' (SODL.Sales_Order = Sales_Order_Date_Log.Sales_Order)'
-      'WHERE '
-      #9'(Sales_Order_Date_Log.Sales_Order = :Sales_Order) AND'
-      #9'(Sales_Order_Date_Log.Change_Function = '#39'O'#39') AND'
-      #9'(SODL.Change_Function = '#39'N'#39') AND'
+        #9#9#9#9'        SO.sales_order_Status = Sales_Order_Status.sales_ord' +
+        'er_Status) as Sales_Order_Status_Desc,'
       
-        '  ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and (Sa' +
-        'les_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
-      #9'(Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+        '        (Sales_Order.Deposit_amount * -1.00000) as Deposit_Amoun' +
+        't ,'
+      '        (Sales_Order.Goods_Value * -1.0000) as Goods_Value,'
+      '        (Sales_Order.VAT_Value * -1.0000) as VAT_Value,'
+      '        Sales_Order.IsFittingInOutlook,'
       
-        '  ((Sales_Order_Date_Log.New_Date >= :Date_From) and (Sales_Orde' +
-        'r_Date_Log.New_Date <= :Date_To)) AND'
-      '  ((SODL.New_Date < :Date_From) OR (SODL.New_Date > :Date_To))'
-      'ORDER BY Sales_Order_Date_Log.Change_Date desc')
+        '        ((Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sale' +
+        's_order.Deposit_amount) * -1.0000) as Total_Value,'
+      '        Sales_Order.Rep,'
+      #9#9'    (SELECT Rep.Rep_Name'
+      #9#9'      FROM Sales_Order SO, Rep'
+      #9#9'      WHERE SO.Sales_Order = Sales_Order.Sales_Order AND'
+      #9#9#9#9'        SO.Rep = Rep.Rep) as Rep_Name,'
+      '        Sales_Order.Inactive,'
+      '        Sales_Order.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Customer.Is_Commercial_Customer,'
+      '        '#39'OUT'#39' as Movement_Type'
+      'FROM Customer'
+      #9#9'INNER JOIN ((Sales_Order_Date_Log'
+      #9#9'INNER JOIN Sales_Order'
+      
+        #9#9#9'ON Sales_Order_Date_Log.Sales_Order = Sales_Order.Sales_Order' +
+        ')'
+      #9#9'INNER JOIN Sales_Order_Date_Log AS SODL'
+      
+        #9#9#9'ON (Sales_Order_Date_Log.Change_Date = SODL.Change_Date) AND ' +
+        '(Sales_Order_Date_Log.Sales_Order = SODL.Sales_Order))'
+      #9#9#9'ON Customer.Customer = Sales_Order.Customer'
+      
+        'WHERE ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
+        ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      
+        #9#9'  ((Sales_Order_Date_Log.New_Date >= :Date_From) and (Sales_Or' +
+        'der_Date_Log.New_Date <= :Date_To)) AND'
+      
+        #9#9'  ((SODL.New_Date < :Date_From) OR (SODL.New_Date > :Date_To))' +
+        ' AND'
+      #9#9'  (Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        #9#9'  (Sales_Order_Date_Log.Change_Function ='#39'O'#39') AND (SODL.Change' +
+        '_Function ='#39'N'#39') AND'
+      
+        '      ((Sales_Order.Customer = :Customer) or (0 = :Customer)) AN' +
+        'D'
+      '      ((Sales_Order.Rep = :Rep) or (:Rep = 0)) AND'
+      
+        '      ((Sales_Order.Sales_Order_Status >= 10) and (Sales_Order.S' +
+        'ales_Order_Status < :Sales_Order_Status)) AND'
+      
+        '      ((Sales_Order.inactive = '#39'N'#39') or (Sales_Order.inactive is ' +
+        'NULL) or (Sales_Order.inactive = '#39#39')) AND'
+      
+        '      ((Sales_order.Do_not_Invoice is NULL) OR (Sales_Order.Do_n' +
+        'ot_Invoice = '#39'N'#39')) AND'
+      
+        '      ((Sales_Order.IsFittingInOutlook = :IsFittingInOutlook) OR' +
+        ' (Sales_Order.IsFittingInOutlook = '#39'Y'#39') OR (Sales_Order.IsFittin' +
+        'gInOutlook IS NULL)) AND'
+      
+        '      (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND ' +
+        '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
+        '(:Is_Retail_Customer = '#39'A'#39'))'
+      'UNION ALL'
+      'SELECT'#9'DISTINCT'
+      '        Sales_Order.Sales_Order,'
+      '        Sales_Order.Date_Raised,'
+      '        Sales_Order.Date_Required,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Sales_Order_Status,'
+      '        Sales_Order.On_Hold,'
+      #9#9'    (SELECT (Sales_Order_Status.Sales_Order_Status_Desc)'
+      #9#9'      FROM Sales_Order SO, Sales_Order_Status'
+      #9#9'      WHERE SO.Sales_Order = Sales_Order.Sales_Order AND'
+      
+        #9#9#9#9'        SO.sales_order_Status = Sales_Order_Status.sales_ord' +
+        'er_Status) as Sales_Order_Status_Desc,'
+      '        (Sales_Order.Deposit_amount) as Deposit_Amount ,'
+      '        (Sales_Order.Goods_Value) as Goods_Value,'
+      '        (Sales_Order.VAT_Value) as VAT_Value,'
+      '        Sales_Order.IsFittingInOutlook,'
+      
+        '        ((Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sale' +
+        's_order.Deposit_amount)) as Total_Value,'
+      '        Sales_Order.Rep,'
+      #9#9'    (SELECT Rep.Rep_Name'
+      #9#9'      FROM Sales_Order SO, Rep'
+      #9#9'      WHERE SO.Sales_Order = Sales_Order.Sales_Order AND'
+      #9#9#9#9'        SO.Rep = Rep.Rep) as Rep_Name,'
+      '        Sales_Order.Inactive,'
+      '        Sales_Order.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Customer.Is_Commercial_Customer,'
+      '        '#39'IN'#39' as Movement_Type'
+      'FROM Customer'
+      #9#9'INNER JOIN ((Sales_Order_Date_Log'
+      #9#9'INNER JOIN Sales_Order'
+      
+        #9#9#9'ON Sales_Order_Date_Log.Sales_Order = Sales_Order.Sales_Order' +
+        ')'
+      #9#9'INNER JOIN Sales_Order_Date_Log AS SODL'
+      
+        #9#9#9'ON (Sales_Order_Date_Log.Change_Date = SODL.Change_Date) AND ' +
+        '(Sales_Order_Date_Log.Sales_Order = SODL.Sales_Order))'
+      #9#9#9'ON Customer.Customer = Sales_Order.Customer'
+      'WHERE'
+      
+        '      ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and' +
+        ' (Sales_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
+      
+        '      ((Sales_Order_Date_Log.New_Date < :Date_From) OR (Sales_Or' +
+        'der_Date_Log.New_Date > :Date_To)) AND'
+      
+        '      ((SODL.New_Date >= :Date_From) and (SODL.New_Date <= :Date' +
+        '_To)) AND'
+      #9#9'  (Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
+      
+        #9#9'  (Sales_Order_Date_Log.Change_Function ='#39'O'#39') AND (SODL.Change' +
+        '_Function ='#39'N'#39') AND'
+      
+        '      ((Sales_Order.Customer = :Customer) or (0 = :Customer)) AN' +
+        'D'
+      '      ((Sales_Order.Rep = :Rep) or (:Rep = 0)) AND'
+      
+        '      ((Sales_Order.Sales_Order_Status >= 10) and (Sales_Order.S' +
+        'ales_Order_Status < :Sales_Order_Status)) AND'
+      
+        '      ((Sales_Order.inactive = '#39'N'#39') or (Sales_Order.inactive is ' +
+        'NULL) or (Sales_Order.inactive = '#39#39')) AND'
+      
+        '      ((Sales_order.Do_not_Invoice is NULL) OR (Sales_Order.Do_n' +
+        'ot_Invoice = '#39'N'#39')) AND'
+      
+        '      ((Sales_Order.IsFittingInOutlook = :IsFittingInOutlook) OR' +
+        ' (Sales_Order.IsFittingInOutlook = '#39'Y'#39') OR (Sales_Order.IsFittin' +
+        'gInOutlook IS NULL)) AND'
+      
+        '      (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND ' +
+        '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
+        '(:Is_Retail_Customer = '#39'A'#39'))'
+      '')
     Left = 208
-    Top = 272
+    Top = 184
     ParamData = <
       item
-        Name = 'Sales_Order'
+        Name = 'Date_Move_From'
+      end
+      item
+        Name = 'Date_Move_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Date_From'
+      end
+      item
+        Name = 'Date_To'
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Rep'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Rep'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Sales_Order_Status'
+      end
+      item
+        Name = 'IsFittingInOutlook'
+      end
+      item
+        Name = 'Is_Retail_Customer'
+      end
+      item
+        Name = 'Is_Commercial_Customer'
+      end
+      item
+        Name = 'Is_Retail_Customer'
       end
       item
         Name = 'Date_Move_From'
@@ -1738,58 +2323,37 @@ object frmwtRPSOFitDateMovement: TfrmwtRPSOFitDateMovement
       end
       item
         Name = 'Date_To'
-      end>
-  end
-  object qryGetMovedInDates: TFDQuery
-    ConnectionName = 'WT'
-    SQL.Strings = (
-      'SELECT TOP 1'
-      '        Sales_Order_Date_Log.Change_Date,'
-      '        Sales_Order_Date_Log.New_Date AS Original_Date, '
-      #9#9#9#9'SODL.New_Date AS New_Date'
-      'FROM Sales_Order_Date_Log AS SODL '
-      #9#9#9'INNER JOIN Sales_Order_Date_Log '
-      
-        #9#9#9#9'ON (SODL.Change_Date = Sales_Order_Date_Log.Change_Date) AND' +
-        ' (SODL.Sales_Order = Sales_Order_Date_Log.Sales_Order)'
-      'WHERE '
-      #9'(Sales_Order_Date_Log.Sales_Order = :Sales_Order) AND'
-      #9'(Sales_Order_Date_Log.Change_Function = '#39'O'#39') AND'
-      #9'(SODL.Change_Function = '#39'N'#39') AND'
-      
-        '  ((Sales_Order_Date_Log.Change_Date >= :Date_Move_From) and (Sa' +
-        'les_Order_Date_Log.Change_Date <= :Date_Move_To)) AND'
-      #9'(Sales_Order_Date_Log.New_Date <> SODL.New_Date) AND'
-      
-        '  ((SODL.New_Date >= :Date_From) and (SODL.New_Date <= :Date_To)' +
-        ') AND'
-      
-        '  ((Sales_Order_Date_Log.New_Date < :Date_From) OR (Sales_Order_' +
-        'Date_Log.New_Date > :Date_To))'
-      'ORDER BY Sales_Order_Date_Log.Change_Date desc')
-    Left = 208
-    Top = 336
-    ParamData = <
-      item
-        Name = 'Sales_Order'
       end
       item
-        Name = 'Date_Move_From'
+        Name = 'Customer'
+        DataType = ftInteger
       end
       item
-        Name = 'Date_Move_To'
+        Name = 'Customer'
+        DataType = ftInteger
       end
       item
-        Name = 'Date_From'
+        Name = 'Rep'
+        DataType = ftInteger
       end
       item
-        Name = 'Date_To'
+        Name = 'Rep'
+        DataType = ftInteger
       end
       item
-        Name = 'Date_From'
+        Name = 'Sales_Order_Status'
       end
       item
-        Name = 'Date_To'
+        Name = 'IsFittingInOutlook'
+      end
+      item
+        Name = 'Is_Retail_Customer'
+      end
+      item
+        Name = 'Is_Commercial_Customer'
+      end
+      item
+        Name = 'Is_Retail_Customer'
       end>
   end
 end
