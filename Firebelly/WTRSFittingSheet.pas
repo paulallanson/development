@@ -1410,13 +1410,13 @@ procedure TfrmWTRSFittingSheet.PrintRemedialToAttachment(frmWTRPJobRemedialSheet
 var
   i: integer;
   sLocation, sFileName: string;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
+  AFilters: TQRFilters;
+  RTFFilter: TQRRTFFilter;
+  HTMLFilter: TQRHTMLFilter;
+  PDFFilter: TQRPDFFilter;
+  BMPFilter: TQRBMPFilter;
+  GIFFilter: TQRGIFFilter;
+  JPEGFilter: TQRJPEGFilter;
 begin
 //  FEmailAttachment.clear;
 
@@ -1424,12 +1424,12 @@ begin
 
   sFileName := 'RS' + tmpOrder + '-J'+tempCode;
 
-  AFilters := TgtQRFilters.Create(self);
+  AFilters := TQRFilters.Create(self);
 
   if sAttachmentType = 'RTF' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.rtf');
-      RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      RTFFilter := TQRRTFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
         frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(RTFFilter);
@@ -1443,7 +1443,7 @@ begin
   if sAttachmentType = 'HTML' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.htm');
-      HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      HTMLFilter := TQRHTMLFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
         frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(HTMLFilter);
@@ -1462,7 +1462,7 @@ begin
   if sAttachmentType = 'PDF' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.pdf');
-      PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      PDFFilter := TQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
         frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(PDFFilter);
@@ -1476,7 +1476,7 @@ begin
   if sAttachmentType = 'GIF' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.gif');
-      GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      GIFFilter := TQRGIFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
         frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(GIFFilter);
@@ -1495,7 +1495,7 @@ begin
   if sAttachmentType = 'JPEG' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.jpg');
-      JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      JPEGFilter := TQRJPEGFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
         frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(JPEGFilter);
@@ -1514,7 +1514,7 @@ begin
   if sAttachmentType = 'BMP' then
     begin
       FEmailAttachment.add(sLocation + sFilename + '.bmp');
-      BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+      BMPFilter := TQRBMPFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
       try
         frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
  //       ExportToRTF(frmWTRPJobRemedialSheet.qrpJobSheet.qrpDetails, sLocation + sFilename + '.bmp');

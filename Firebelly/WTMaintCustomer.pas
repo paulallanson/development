@@ -8,7 +8,7 @@ uses
   WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles, Activex, AxCtrls, Clipbrd, ComObj, Menus,
   CRControls, System.ImageList, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWtMaintCustomer = class(TForm)
@@ -211,7 +211,7 @@ type
     pnlMaterialTypeFooter: TPanel;
     chkbxShowInactiveMaterialTypes: TCheckBox;
     chkbxRequiresAppForPay: TCheckBox;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -295,7 +295,7 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -309,7 +309,7 @@ type
     FGroupDescription: string;
     FMaterialType: integer;
     FGroupInactive: boolean;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetFunctionMode(const Value: string);
     procedure ShowDetails;
@@ -2300,13 +2300,11 @@ begin
     end;
 end;
 
-procedure TfrmWtMaintCustomer.ProcessDragAndDrop;
+procedure TfrmWtMaintCustomer.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin
@@ -2558,10 +2556,13 @@ begin
   end;
 end;
 
-procedure TfrmWtMaintCustomer.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWtMaintCustomer.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TfrmWtMaintCustomer.edtAccountCodeEnter(Sender: TObject);

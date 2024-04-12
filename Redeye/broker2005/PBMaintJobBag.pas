@@ -7,7 +7,7 @@ uses
   DBGrids, PBJobBagDM, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects,
   Menus, PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX, OleCtrls, SHDocVw, pbSupplierInvoiceDM,
   ImgList, Clipbrd, ToolWin, FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget,
-  DragDropFile;
+  DragDropFile, DropComboTarget;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -457,7 +457,7 @@ type
     pmnuRePrintSI: TMenuItem;
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -632,7 +632,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -657,7 +657,7 @@ type
     FDefaultBin: integer;
     FDefaultPrinter: string;
     FSchedMode: TJBSchMode;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure AddPurchaseOrder(const rPO: real; iLine : integer);
     procedure AddPurchaseOrderFromEnq(const rPO: real; iLine: integer);
@@ -2952,10 +2952,13 @@ begin
   jobbagsched.NarrativeText := memScheduleNotes.Text;
 end;
 
-procedure TPBMaintJobBagFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBMaintJobBagFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
@@ -4239,13 +4242,11 @@ begin
   end;
 end;
 
-procedure TPBMaintJobBagFrm.ProcessDragAndDrop;
+procedure TPBMaintJobBagFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin

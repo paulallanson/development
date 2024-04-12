@@ -4,18 +4,30 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons;
+  StdCtrls, Buttons, QrCtrls, DBCtrls, IniFiles, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTAccExport1 = class(TForm)
+    pnlFooter: TPanel;
     NextBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    ActionListBox: TListBox;
-    Label1: TLabel;
-    GroupBox1: TGroupBox;
-    DescriptionLbl: TLabel;
     UpdateBitBtn: TBitBtn;
     ResetBitBtn: TBitBtn;
+    pnlMain: TPanel;
+    Label1: TLabel;
+    ActionListBox: TListBox;
+    GroupBox1: TGroupBox;
+    DescriptionLbl: TLabel;
+    pnlRevenueCentre: TPanel;
+    rdgrpRevenueCentre: TRadioGroup;
+    grpbxRevCentre: TGroupBox;
+    Label3: TLabel;
+    dblkpRevCentre: TDBLookupComboBox;
+    qryRevenueCentre: TFDQuery;
+    dtsRevenueCentre: TDataSource;
     procedure NextBitBtnClick(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure ActionListBoxClick(Sender: TObject);
@@ -23,6 +35,9 @@ type
     procedure UpdateBitBtnClick(Sender: TObject);
     procedure ResetBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure rdgrpRevenueCentreClick(Sender: TObject);
+    procedure dblkpRevCentreClick(Sender: TObject);
   private
     { Private declarations }
     function UpdatesPending: boolean;
@@ -30,7 +45,8 @@ type
     procedure RunFactorInvEport;
     procedure RunFileImport;
   public
-    { Public declarations }
+    bUseRevenueCentre: boolean;
+    iRevenueCentre: integer;
   end;
 
 var
@@ -38,8 +54,8 @@ var
 
 implementation
 
-uses UITypes, WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
-  WTAccImportDM, WTFileImport;
+uses WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
+  WTAccImportDM, WTFileImport, wtDataModule;
 
 var
   iRecordcounter: integer;
@@ -61,6 +77,12 @@ begin
     RunFactorInvEport;
     frmWTAccExport1.show;
     exit;
+  end;
+
+  if ActionListBox.ItemIndex = 2 then
+  begin
+    if bUseRevenueCentre and (rdgrpRevenueCentre.itemindex = 1) then
+      dblkpRevCentreClick(self);
   end;
 
   {Check for pending update and display form accordingly}
@@ -109,6 +131,14 @@ begin
           with dmAccExport.SalesPendingSQL do
             begin
               close;
+              sql.Text := dmAccExport.SalesPendingBaseSQL.SQL.Text ;
+              if bUseRevenueCentre then
+                begin
+                  if iRevenueCentre = 0 then
+                    sql.Text := sql.Text + ' AND Sales_invoice.Revenue_Centre is NULL '
+                  else
+                    sql.Text := sql.Text + ' AND Sales_invoice.Revenue_Centre = ' + inttostr(iRevenueCentre);
+                end;
               open;
               irecords := recordcount;
             end;
@@ -227,7 +257,18 @@ begin
 end;
 
 procedure TfrmWTAccExport1.FormDestroy(Sender: TObject);
+var
+  IniFile : TIniFile;
 begin
+  IniFile := TIniFile.Create('myWorktops.ini');
+
+  with IniFile do
+    begin
+      WriteString('Sales Invoice Export', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+      WriteString('Sales Invoice Export', 'Revenue Centre', inttostr(iRevenueCentre));
+      Free;
+    end;
+
   frmWTAccExport2.free;
   frmWTAccExport3.free;
   frmWTAccExport4.free;
@@ -332,6 +373,8 @@ begin
 end;
 
 procedure TfrmWTAccExport1.FormCreate(Sender: TObject);
+var
+  IniFile : TIniFile;
 begin
   frmWTAccExport2 := TfrmWTAccExport2.create(self);
   frmWTAccExport3 := TfrmWTAccExport3.create(self);
@@ -349,6 +392,28 @@ begin
 
   frmWTAccExport3.AccSystemEdit.Text := dmAccExport.CompanySQL.fieldbyname('Accounts_Package_Description').asstring;
   frmWTAccExport3.ExportPathEdit.Text := dmAccExport.CompanySQL.fieldbyname('Data_Export_Directory').asstring;
+  bUseRevenueCentre := false;
+
+  {Set the revenue centre details}
+  IniFile := TIniFile.Create('myWorktops.ini');
+  try
+    with IniFile do
+      begin
+        try
+          rdgrpRevenueCentre.ItemIndex := strtoint(ReadString('Sales Invoice Export', 'Revenue Centre Option', '0'));
+        except
+          rdgrpRevenueCentre.ItemIndex := 0;
+        end;
+
+        try
+          iRevenueCentre := strtoint(ReadString('Sales Invoice Export', 'Revenue Centre', '-1'));
+        except
+          iRevenueCentre := -1;
+        end;
+      end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTAccExport1.RunFactorInvEport;
@@ -374,6 +439,60 @@ begin
   finally
     frmWTFileImport.Free;
   end;
+end;
+
+procedure TfrmWTAccExport1.FormActivate(Sender: TObject);
+begin
+  pnlRevenueCentre.Visible := false;
+  bUseRevenueCentre := dtmdlWorktops.UseRevenueCentres;
+
+  pnlRevenueCentre.Visible := bUseRevenueCentre;
+
+  if bUseRevenueCentre then
+    begin
+      dblkpRevCentre.ListSource := dtsRevenueCentre;
+
+      with qryRevenueCentre do
+        begin
+          close;
+          open;
+        end;
+
+//      rdgrpRevenueCentre.ItemIndex := iRevCentreOption;
+
+      if iRevenueCentre > 0 then
+        dblkpRevCentre.KeyValue := iRevenueCentre;
+    end;
+end;
+
+procedure TfrmWTAccExport1.rdgrpRevenueCentreClick(Sender: TObject);
+begin
+  grpbxRevCentre.Visible := false;
+  case (Sender as TRadioGroup).ItemIndex of
+      0:  begin
+            dblkpRevCentre.keyvalue := -1;
+            frmWTAccExport3.sAccountsPackage := dmAccExport.CompanySQl.fieldbyname('Accounts_Package').asstring;
+            frmWTAccExport3.sRevCentrePrefix := '';
+
+            iRevenueCentre := 0;
+            ActionListBoxClick(self);
+          end;
+  else
+    begin
+      grpbxRevCentre.Visible := true;
+    end;
+  end;
+
+end;
+
+procedure TfrmWTAccExport1.dblkpRevCentreClick(Sender: TObject);
+begin
+  iRevenueCentre := dblkpRevCentre.KeyValue;
+//  frmWTAccExport3.iRevenueCentre := dblkpRevCentre.KeyValue;
+  frmWTAccExport3.sAccountsPackage := qryRevenueCentre.fieldbyname('Accounts_Package').asstring;
+  frmWTAccExport3.AccSystemEdit.Text := qryRevenueCentre.fieldbyname('Accounts_Package_Description').asstring;
+  frmWTAccExport3.sRevCentrePrefix := qryRevenueCentre.fieldbyname('Prefix_Value').asstring;
+  ActionListBoxClick(self);
 end;
 
 end.

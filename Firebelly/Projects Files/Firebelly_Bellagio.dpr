@@ -1,6 +1,6 @@
 program Firebelly_Bellagio;
 
-
+{%File 'FirebellyScheduler.dll'}
 
 uses
   Forms,
@@ -247,6 +247,10 @@ uses
   wtCustomerPriceChange in '..\wtCustomerPriceChange.pas' {frmwtCustomerPriceChange},
   wtProductPriceChange in '..\wtProductPriceChange.pas' {frmWTProductPriceChange},
   WTMaintCustMaterialType in '..\WTMaintCustMaterialType.pas' {frmWTMaintCustMaterialType},
+  wtRSFittingSheet in '..\WTRSFittingSheet.pas' {frmWTRSFittingSheet},
+  WTRPSOAntOrdering in '..\WTRPSOAntOrdering.pas' {frmWTRPSOAntOrdering},
+  wtRSSOAntOrdering in '..\wtRSSOAntOrdering.pas' {frmWTRSSOAntOrdering},
+  wtRSSOStockDeAllocation in '..\wtRSSOStockDeAllocation.pas' {frmWTRSSOStockDeAllocation},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',

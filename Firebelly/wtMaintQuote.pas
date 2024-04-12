@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtQuotesDm, CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin, ImgList, ShellAPI, Menus,
   Inifiles, DBGrids, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  DragDrop, DropTarget, DragDropFile;
+  DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintQuote = class(TForm)
@@ -330,7 +330,7 @@ type
     Label59: TLabel;
     dblkpRevenueCentre: TDBLookupComboBox;
     SpeedButton1: TSpeedButton;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -450,7 +450,7 @@ type
     procedure tbDocumentsShow(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FRetailCustomer: bytebool;
     FUseMarkup: bytebool;
@@ -513,7 +513,7 @@ type
     procedure SetContractQuote(const Value: boolean);
     procedure MoveOriginalQuoteDocuments;
     procedure SetOriginalQuoteFromReQuote(const Value: integer);
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   private
     Descending: Boolean;
@@ -4242,10 +4242,13 @@ begin
   edtGrossPrice.Text := formatfloat('0.00',(Quote.TotalGross+Quote.TotalVat));
 end;
 
-procedure TfrmWTMaintQuote.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintQuote.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);
@@ -4331,19 +4334,16 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintQuote.ProcessDragAndDrop;
+procedure TfrmWTMaintQuote.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin
       ShowDocuments(Quote.dbKey);
     end);
-
 end;
 
 procedure TfrmWTMaintQuote.lstvwDocumentsColumnClick(Sender: TObject;

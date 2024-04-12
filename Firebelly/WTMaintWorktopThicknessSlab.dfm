@@ -3,19 +3,21 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Maintain Slab Sizes'
-  ClientHeight = 317
-  ClientWidth = 472
+  ClientHeight = 319
+  ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    472
-    317)
+    480
+    319)
+  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -82,7 +84,7 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
   end
   object btnOK: TBitBtn
     Left = 162
-    Top = 264
+    Top = 266
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,23 +92,21 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Default = True
     Enabled = False
     ModalResult = 1
-    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    ExplicitTop = 266
+    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 242
-    Top = 264
+    Top = 266
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    NumGlyphs = 2
     TabOrder = 1
-    ExplicitTop = 266
+    NumGlyphs = 2
   end
   object edtLength: TCREditInt
     Left = 104
@@ -168,20 +168,29 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 80
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Slab_Size_Description'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Length'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Depth'
+        ParamType = ptUnknown
       end
       item
-        Name = 'Stock_Item'
         DataType = ftInteger
+        Name = 'Stock_Item'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Slab_Size_ID'
+        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -207,23 +216,34 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 24
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Slab_Size_Description'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Length'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Depth'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Worktop'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Thickness'
+        ParamType = ptUnknown
       end
       item
-        Name = 'Stock_Item'
         DataType = ftInteger
+        Name = 'Stock_Item'
+        ParamType = ptUnknown
       end>
   end
   object qryAddStock: TFDQuery
@@ -240,7 +260,9 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'GUID'
+        ParamType = ptUnknown
       end>
   end
   object qryUpdStock: TFDQuery
@@ -254,13 +276,19 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
+        DataType = ftUnknown
         Name = 'Stock_Code'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Stock_Description'
+        ParamType = ptUnknown
       end
       item
+        DataType = ftUnknown
         Name = 'Stock_Item'
+        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -273,8 +301,8 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     Top = 184
     ParamData = <
       item
-        Name = 'GUID'
         DataType = ftString
+        Name = 'GUID'
         ParamType = ptInput
       end>
   end
@@ -282,5 +310,20 @@ object frmWTMaintWorktopThicknessSlab: TfrmWTMaintWorktopThicknessSlab
     ConnectionName = 'WT'
     Left = 288
     Top = 184
+  end
+  object qryCheckStockItem: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT TOP 1 Stock_Item.Stock_Item'
+      'FROM Stock_Item'
+      'WHERE Stock_Item.Stock_Code = :Stock_Code')
+    Left = 344
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Stock_Code'
+        ParamType = ptUnknown
+      end>
   end
 end

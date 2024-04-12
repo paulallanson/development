@@ -254,7 +254,7 @@ object dmAccExport: TdmAccExport
       'set Sales_Invoice_Status = :Status_To'
       'where (Sales_Invoice.Sales_Invoice_Status = :Status_From) and'
       '(Inactive is null)')
-    Left = 312
+    Left = 232
     Top = 272
     ParamData = <
       item
@@ -908,14 +908,14 @@ object dmAccExport: TdmAccExport
     Left = 224
     Top = 64
   end
-  object SalesPendingSQl: TFDQuery
+  object SalesPendingSQL: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice'
       'from Sales_invoice'
       'where Sales_invoice_Status = 25')
-    Left = 224
-    Top = 120
+    Left = 232
+    Top = 384
   end
   object PurchPendingSQL: TFDQuery
     ConnectionName = 'wt'
@@ -1077,8 +1077,7 @@ object dmAccExport: TdmAccExport
         'der'
       'WHERE (((Sales_Invoice.Sales_Invoice_Status)=25) AND'
       '((Sales_Invoice.Inactive) Is Null))'
-      'ORDER BY Sales_Invoice_Line.Sales_Invoice,'
-      '                    Sales_Invoice_Line.Invoice_Line_No')
+      '')
     Left = 24
     Top = 280
   end
@@ -1200,6 +1199,32 @@ object dmAccExport: TdmAccExport
     ParamData = <
       item
         Name = 'Operator'
+      end>
+  end
+  object SalesPendingBaseSQL: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'select Sales_invoice'
+      'from Sales_invoice'
+      'where Sales_invoice_Status = 25')
+    Left = 232
+    Top = 440
+  end
+  object UpSalesInvHeadBaseSQL: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'update Sales_Invoice'
+      'set Sales_Invoice_Status = :Status_To'
+      'where (Sales_Invoice.Sales_Invoice_Status = :Status_From) and'
+      '(Inactive is null)')
+    Left = 232
+    Top = 320
+    ParamData = <
+      item
+        Name = 'Status_To'
+      end
+      item
+        Name = 'Status_From'
       end>
   end
 end

@@ -36,6 +36,7 @@ type
     rdgrpSortBy: TRadioGroup;
     chkbxShowOnlyScheduled: TCheckBox;
     chkbxIncludeInvoiced: TCheckBox;
+    chkbxIncludeAllocated: TCheckBox;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
@@ -105,6 +106,7 @@ begin
 
     frmWTRPSOAntOrdering.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmWTRPSOAntOrdering.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;
+    frmWTRPSOAntOrdering.bIncludeAllocated := chkbxIncludeAllocated.Checked;
 
     frmWTRPSOAntOrdering.CustomerCategory := rdgrpCategory.itemindex;
 
@@ -253,13 +255,14 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  IniFile := TIniFile.Create('myWorktops.ini');
 
   try
   with IniFile do
     begin
       chkbxShowOnlyScheduled.Checked := (ReadString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'N') = 'Y');
       chkbxIncludeInvoiced.Checked := (ReadString('Sales Order Anticipated Ordering Report', 'Include Invoiced Orders', 'N') = 'Y');
+      chkbxIncludeAllocated.Checked := (ReadString('Sales Order Anticipated Ordering Report', 'Include Allocated Orders', 'N') = 'Y');
     end;
   finally
     IniFile.Free;
@@ -304,6 +307,7 @@ begin
     frmWTRPSOAntOrdering.Sortby := rdgrpSortBy.itemindex;
     frmWTRPSOAntOrdering.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmWTRPSOAntOrdering.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;
+    frmWTRPSOAntOrdering.bIncludeAllocated := chkbxIncludeAllocated.Checked;
 
     frmWTRPSOAntOrdering.CustomerCategory := rdgrpCategory.itemindex;
 
@@ -362,23 +366,26 @@ procedure TfrmWTRSSOAntOrdering.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-  try
-    with IniFile do
+  IniFile := TIniFile.Create('myWorktops.ini');
+
+  with IniFile do
     begin
+      if chkbxShowOnlyScheduled.checked then
+        WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'Y')
+      else
+        WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'N');
+
       if chkbxIncludeInvoiced.Checked then
         WriteString('Sales Order Anticipated Ordering Report', 'Include Invoiced Orders', 'Y')
       else
         WriteString('Sales Order Anticipated Ordering Report', 'Include Invoiced Orders', 'N');
 
-      if chkbxShowOnlyScheduled.checked then
-        WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'Y')
+      if chkbxIncludeAllocated.Checked then
+        WriteString('Sales Order Anticipated Ordering Report', 'Include Allocated Orders', 'Y')
       else
-        WriteString('Sales Order Anticipated Ordering Report', 'Only Show Scheduled', 'N');
+        WriteString('Sales Order Anticipated Ordering Report', 'Include Allocated Orders', 'N');
+
     end;
-  finally
-    IniFile.Free;
-  end;
 end;
 
 end.

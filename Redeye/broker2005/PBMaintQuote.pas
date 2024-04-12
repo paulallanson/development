@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, pbQuotesDM, ComCtrls, Grids,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Spin, ShellAPI, IniFiles, DB, ADODB, ActiveX, Menus, ImgList, Clipbrd, ToolWin,
-  System.ImageList, DragDrop, DropTarget, DragDropFile;
+  System.ImageList, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TPBMaintQuoteFrm = class(TForm)
@@ -174,7 +174,7 @@ type
     dblkpPackFormat: TDBLookupComboBox;
     btnPackFormat: TBitBtn;
     rdgrpEnclosingType: TRadioGroup;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -251,7 +251,7 @@ type
     procedure btnPackFormatClick(Sender: TObject);
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -264,7 +264,7 @@ type
     FQuote: TQuote;
     sOldValue: string;
     FOriginalQuoteFromReQuote: real;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetLineHeaders;
     procedure SetMode(const Value: TQMode);
@@ -2538,10 +2538,13 @@ begin
   end;
 end;
 
-procedure TPBMaintQuoteFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBMaintQuoteFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TPBMaintQuoteFrm.ConnectToExcel;
@@ -3076,13 +3079,11 @@ begin
   end;
 end;
 
-procedure TPBMaintQuoteFrm.ProcessDragAndDrop;
+procedure TPBMaintQuoteFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin

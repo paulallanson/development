@@ -841,6 +841,18 @@
         <DCCReference Include="..\WTMaintCustMaterialType.pas">
             <Form>frmWTMaintCustMaterialType</Form>
         </DCCReference>
+        <DCCReference Include="..\WTRSFittingSheet.pas">
+            <Form>frmWTRSFittingSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOAntOrdering.pas">
+            <Form>frmWTRPSOAntOrdering</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOAntOrdering.pas">
+            <Form>frmWTRSSOAntOrdering</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOStockDeAllocation.pas">
+            <Form>frmWTRSSOStockDeAllocation</Form>
+        </DCCReference>
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>

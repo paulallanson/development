@@ -3,24 +3,24 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   Top = 166
   BorderStyle = bsDialog
   Caption = 'Fit Date Movement Report'
-  ClientHeight = 405
-  ClientWidth = 471
+  ClientHeight = 406
+  ClientWidth = 475
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    471
-    405)
+    475
+    406)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 366
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -29,8 +29,8 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     OnClick = btnPrintClick
   end
   object Button4: TButton
-    Left = 368
-    Top = 366
+    Left = 376
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -75,14 +75,14 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end
@@ -159,7 +159,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 44
+      Width = 49
       Height = 13
       Caption = 'Customer'
     end
@@ -210,7 +210,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
+      Width = 59
       Height = 13
       Caption = 'Exporting...'
     end
@@ -225,7 +225,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 366
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -278,7 +278,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object btnPreview: TButton
     Left = 96
-    Top = 366
+    Top = 367
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -338,7 +338,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     ItemIndex = 0
     Items.Strings = (
       'Sales Order'
-      'Order Date'
+      'Fitting Date'
       'Customer'
       'Status'
       'Rep')
@@ -354,7 +354,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object chkbxShowOnlyScheduled: TCheckBox
     Left = 8
-    Top = 304
+    Top = 305
     Width = 217
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -363,7 +363,7 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 328
+    Top = 329
     Width = 217
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -380,14 +380,14 @@ object frmWTRSSOFitDateMovement: TfrmWTRSSOFitDateMovement
     object Label5: TLabel
       Left = 16
       Top = 20
-      Width = 26
+      Width = 29
       Height = 13
       Caption = 'From:'
     end
     object Label6: TLabel
       Left = 26
       Top = 48
-      Width = 16
+      Width = 15
       Height = 13
       Caption = 'To:'
     end

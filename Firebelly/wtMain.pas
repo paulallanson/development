@@ -198,6 +198,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure btnSalesClick(Sender: TObject);
     procedure btnJobsClick(Sender: TObject);
+    procedure mnuScriptsClick(Sender: TObject);
     procedure mnuCheckPricesClick(Sender: TObject);
     procedure mnuOperatorsClick(Sender: TObject);
     procedure WorktopPrices1Click(Sender: TObject);
@@ -274,7 +275,6 @@ type
 {$ENDIF}
 {$IFDEF ENDUSER}
     procedure mnuEndUserActivateClick(Sender: TObject);
-    procedure mnuScriptsClick(Sender: TObject);
 {$ENDIF}
   private
     FActivated: Boolean;
@@ -1045,6 +1045,8 @@ begin
             UpdateDatabase;
         end;
       finally
+        if RunDBUpdate then
+          UpdateDatabase;
         frmWTLogin.Free;
       end;
       if not LoginFormOK then
@@ -1486,7 +1488,6 @@ begin
 
 end;
 
-{$IFDEF ENDUSER}
 procedure TfrmWTMain.mnuScriptsClick(Sender: TObject);
 begin
   frmWTRunScripts := TfrmWTRunScripts.create(application);
@@ -1496,7 +1497,6 @@ begin
     frmWTRunScripts.free;
   end;
 end;
-{$ENDIF}
 
 procedure TfrmWTMain.mnuManageAppointmentLocksClick(Sender: TObject);
 begin
@@ -2379,16 +2379,7 @@ begin
     end;
   end;
 
-  if sRet <> '' then
-  begin
-    try
-      dDate := StrToFloatDef(sRet, 0, FormatSettings);
-    except
-      dDate := 0;
-    end;
-  end
-  else
-    dDate := 0;
+  dDate := strtofloatdef(sRet, 0, FormatSettings);
 
   iExpires := Trunc(dDate - Date + 91);
   if (iExpires <= 0) or (iExpires > 91) or (dDate <> iComp) then
@@ -2434,7 +2425,6 @@ end;
 {$ENDIF}
 
 {$IFDEF ENDUSER}
-
 procedure TfrmWTMain.EndUserCheck(TempWarn: ByteBool);
 var
   aSubKey, aKeyVal, aKeyType  : array[0..255] of Char;
@@ -2493,16 +2483,7 @@ begin
     end;
   end;
 
-  if sRet <> '' then
-  begin
-    try
-      dDate := StrToFloatDef(sRet, 0, FormatSettings);
-    except
-      dDate := 0;
-    end;
-  end
-  else
-    dDate := 0;
+  dDate := strtofloatdef(sRet, 0, FormatSettings);
 
   iExpires := Trunc(dDate - Date + 91);
   if (iExpires <= 0) or (iExpires > 91) or (dDate <> iComp) then

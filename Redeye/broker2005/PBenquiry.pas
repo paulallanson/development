@@ -9,7 +9,7 @@ uses
   INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TPBEnquiryFrm = class(TForm)
@@ -198,7 +198,7 @@ type
     DeleteLineBitBtn: TBitBtn;
     EnquiryLineGrid: TStringGrid;
     oldCapabilitySQL: TFDQuery;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -272,7 +272,7 @@ type
     procedure rdgTypeClick(Sender: TObject);
     procedure SupplierGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     { Private declarations }
     DroppedEmailFile: string;
@@ -352,7 +352,7 @@ type
     procedure AddDocumentToEnquiry;
     function GetActiveCustomerContact(tempCust, tempBranch,
       tempCode: integer): integer;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     procedure MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
     function GetFilesPath: string;
   public
@@ -1007,10 +1007,13 @@ begin
   end;
 end;
 
-procedure TPBEnquiryFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBEnquiryFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TPBEnquiryFrm.UpdatePartDetails(iNewPart: Integer);
@@ -1810,13 +1813,11 @@ begin
   end;
 end;
 
-procedure TPBEnquiryFrm.ProcessDragAndDrop;
+procedure TPBEnquiryFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlProcessData(FilesList, Path);
 end;
 

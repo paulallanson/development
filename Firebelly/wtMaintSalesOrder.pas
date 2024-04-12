@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
   DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -254,7 +254,7 @@ type
     edtSiteName: TEdit;
     btnClearCustomerBranch: TSpeedButton;
     btnGenerateDocs: TButton;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
@@ -371,7 +371,7 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -447,7 +447,7 @@ type
     procedure MoveSiteDocuments(iSOrder: integer);
     procedure DeleteQuoteDocuments;
     procedure UpdateQuoteDocuments;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   public
     bOK: boolean;
@@ -610,10 +610,9 @@ begin
 end;
 
 procedure TfrmWTMaintSalesOrder.CheckIfSpeculative;
-(*var
+var
   OldCursor : TCursor;
   iCustomer: integer;
-*)
 begin
   if SOrder.Speculative then
     begin
@@ -1060,6 +1059,10 @@ begin
       grpDates.Enabled := (not SOrder.OnHold) and (SOrder.DateType <> 'T');
 
       stsbrDetails.Panels[0].Text := 'Created by: ' + SOrder.OperatorName;
+
+(*      if SOrder.StockAllocationStartDate <> 0 then
+        stsbrDetails.Panels[1].Text := 'Stock Allocated for fitting between ' + paDateStr(SOrder.StockAllocationStartDate) + ' and ' + paDateStr(SOrder.StockAllocationEndDate) ;
+*)
     end;
 
   {Don't allow changing of subcontract customer if it's been invoiced or part invocied}
@@ -1427,9 +1430,9 @@ begin
         cells[4,i+1] := SOrder.Purchases[i].SupplierName;
         cells[5,i+1] := SOrder.Purchases[i].LineDescription;
         cells[6,i+1] := inttostr(SOrder.Purchases[i].SlabLength) + ' x ' + inttostr(SOrder.Purchases[i].SlabDepth) + ' ' + SOrder.Purchases[i].SlabDescription;
-        cells[7,i+1] := formatfloat('?0.00',SOrder.Purchases[i].UnitCost);
+        cells[7,i+1] := formatfloat('�0.00',SOrder.Purchases[i].UnitCost);
         cells[8,i+1] := inttostr(SOrder.Purchases[i].Quantity);
-        cells[9,i+1] := formatfloat('?0.00',SOrder.Purchases[i].TotalCost);
+        cells[9,i+1] := formatfloat('�0.00',SOrder.Purchases[i].TotalCost);
         cells[10,i+1] := SOrder.Purchases[i].StatusDescription;
         cells[11,i+1] := SOrder.Purchases[i].GRNNumber;
         icount := icount + 1;
@@ -2496,12 +2499,8 @@ end;
 
 procedure TfrmWTMaintSalesOrder.edtDepositPaidChange(Sender: TObject);
 begin
-   try
-    SOrder.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
-   except
-    SOrder.DepositAmount := 0;
-   end;
-   CheckOK(self);
+  SOrder.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
+  CheckOK(self);
 end;
 
 procedure TfrmWTMaintSalesOrder.dbgLinesDblClick(Sender: TObject);
@@ -2514,7 +2513,6 @@ procedure TfrmWTMaintSalesOrder.edtContactChange(Sender: TObject);
 begin
   SOrder.ContactName := edtContact.Text;
   CheckOK(self);
-
 end;
 
 procedure TfrmWTMaintSalesOrder.mnDeleteLineClick(Sender: TObject);
@@ -3739,13 +3737,11 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop;
+procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin
@@ -5150,10 +5146,13 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintSalesOrder.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintSalesOrder.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 end.

@@ -4,11 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB,
-  IniFiles, FireDAC.Comp.Client, FireDAC.Stan.Intf,
-  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, QrCtrls, DB, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSOFitDateMovement = class(TForm)
@@ -276,8 +275,8 @@ begin
   customer := 0;
   rep := 0;
 
-  DateMoveFrom := Date;
-  DateMoveTo := Date + 1;
+  DateMoveFrom := Date - 1;
+  DateMoveTo := Date;
   edtMovedateFrom.Text := paDateStr(dateMovefrom);
   edtMoveDateTo.Text := paDateStr(dateMoveto);
 

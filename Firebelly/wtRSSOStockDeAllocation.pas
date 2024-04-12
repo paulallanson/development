@@ -3,11 +3,13 @@ unit wtRSSOStockDeAllocation;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, ComCtrls, OleCtnrs, DB, Menus, Dateutils, IniFiles, Grids, DBGrids,
-  FireDAC.Comp.Client, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf,
-  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait, FireDAC.Comp.DataSet;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, Buttons, QrCtrls, ComCtrls, OleCtnrs, DB, Menus,
+  Dateutils, IniFiles, Grids, DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TfrmWTRSSOStockDeAllocation = class(TForm)
@@ -30,7 +32,7 @@ type
     btnAllocate: TButton;
     dtsSalesOrders: TDataSource;
     qrySalesOrders: TFDQuery;
-    qryDummy: TFDQuery;
+    qryDummyOld: TFDQuery;
     qryGetGSmart: TFDQuery;
     qryGetStockCode: TFDQuery;
     wtStkDatabase: TFDConnection;
@@ -45,9 +47,9 @@ type
     edtMoveDateTo: TEdit;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    qryDummyOld: TFDQuery;
     qryDeAllocQuoteSlab: TFDQuery;
     qryGetSalesOrderLine: TFDQuery;
+    qryDummy: TFDQuery;
     procedure btnCloseClick(Sender: TObject);
     procedure btnDatefromClick(Sender: TObject);
     procedure enableOK(Sender: TObject);
@@ -81,9 +83,9 @@ type
     procedure CreateExportFile;
     procedure CreateGSmartExportHeader;
     procedure CreateGSmartOrderFile(tmpOrder: integer);
-    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine: integer; tmpStockCode: string);
+    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
     procedure CreateStockOrderFile(tempSO: integer);
-    procedure CreateStockOrderLineFile(tempSO, tempLine: integer; tempStockCode: string);
+    procedure CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
     procedure DeAllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer);
     procedure DeAllocateStock;
     procedure DeAllocateStockOrder(tempSO, tempLine: integer; dtFrom, dtTo: TDateTime);
@@ -197,7 +199,7 @@ begin
     IniFile.Free;
   end;
 
-  DateMoveFrom := Date;
+  DateMoveFrom := Date - 1;
   DateMoveTo := Date;
   edtMovedateFrom.Text := paDateStr(dateMovefrom);
   edtMoveDateTo.Text := paDateStr(dateMoveto);
@@ -362,7 +364,7 @@ end;
 
 procedure TfrmWTRSSOStockDeAllocation.DeAllocateStock;
 var
-  iOrigOrder, icount, iMax: integer;
+  iOrigOrder, icount, iMax, iSlabLine: integer;
   bAllocateStock: boolean;
 begin
   self.pnlExportPrgrss.Visible := true;
@@ -377,19 +379,23 @@ begin
   with qrySalesOrders do
     begin
       iOrigOrder := 0;
+      iSlabLine := 1;
+
       first;
       while eof <> true do
         begin
-(*          if (iOrigOrder <> fieldbyname('Sales_Order').asinteger) and (iOrigOrder <> 0) then
-            CreateStockOrderFile(iOrigOrder);
-*)
+          if (iOrigOrder <> fieldbyname('Sales_Order').asinteger) and (iOrigOrder <> 0) then
+            begin
+              iSlabLine := 1;
+            end;
+
           DeAllocateStockOrder(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, DateFrom, DateTo);
 
           sStockCode := GetWorktopStockCode(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
 
           DeAllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
 
-          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, sStockCode);
+          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sStockCode);
 
           iOrigOrder := fieldbyname('Sales_Order').asinteger;
 
@@ -397,6 +403,7 @@ begin
           prgbrRecords.Position := Round( icount / iMax * 100);
           Application.ProcessMessages;
 
+          inc(iSlabLine);
           next;
         end;
 
@@ -517,11 +524,11 @@ begin
   CloseExportFile(tempSO);
 end;
 
-procedure TfrmWTRSSOStockDeAllocation.CreateStockOrderLineFile(tempSO, tempLine: integer; tempStockCode: string);
+procedure TfrmWTRSSOStockDeAllocation.CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
 begin
   CreateExportFile;
   CreateGSmartExportHeader;
-  CreateGSmartOrderLineFile(tempSO, tempLine, tempStockCode);
+  CreateGSmartOrderLineFile(tempSO, tempLine, tempSlabLine, tempStockCode);
   CloseExportOrderLineFile(tempSO, tempLine, tempStockCode);
 end;
 
@@ -638,7 +645,7 @@ begin
   end;
 end;
 
-procedure TfrmWTRSSOStockDeAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine: integer; tmpStockCode: string);
+procedure TfrmWTRSSOStockDeAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
 var
   tempstr: string;
   iCount: integer;
@@ -659,7 +666,7 @@ begin
       iCount := icount + 1;
 
       //Order
-      tempStr := '' + fieldbyname('Sales_Order').asstring + '';
+      tempStr := '' + fieldbyname('Sales_Order').asstring + '_' + inttostr(tmpSlabLine) + '';
 
       //Customer Account Code
       tempStr := tempStr + ',' + fieldbyname('Account_Code').asstring + '';
@@ -688,7 +695,7 @@ begin
       tempStr := tempStr + ',' + fieldbyname('Date_Required').asstring + '';
 
       //Line
-      tempStr := tempStr + ',' + inttostr(icount) + '';
+      tempStr := tempStr + ',' + inttostr(tmpSlabLine) + '';
 
       writeln(OrderFile, tempStr);
       next;
