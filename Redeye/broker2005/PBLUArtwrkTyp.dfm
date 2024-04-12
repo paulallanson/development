@@ -238,6 +238,8 @@ object PBLUArtwrkTypFrm: TPBLUArtwrkTypFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Artwork_Type.Artwork_Type,'
       '        Artwork_Type.Artwork_Instructions'

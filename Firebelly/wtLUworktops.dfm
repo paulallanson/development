@@ -277,6 +277,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'WT'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description,'

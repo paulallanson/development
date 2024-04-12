@@ -31,7 +31,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 912
+        Width = 908
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -44,9 +44,9 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 899
+        Width = 887
         Height = 40
-        ButtonHeight = 29
+        ButtonHeight = 44
         ButtonWidth = 65
         Caption = 'ToolBar1'
         Images = imglstOrders
@@ -335,6 +335,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Width = 914
     Height = 138
     Align = alClient
+    DataSource = dtmdlOrders.dtsCallOffs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

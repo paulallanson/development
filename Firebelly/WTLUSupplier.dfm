@@ -743,6 +743,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object qrySuppliers: TFDQuery
     ConnectionName = 'wt'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select Supplier.*'
       'from Supplier'

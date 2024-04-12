@@ -240,6 +240,8 @@ object PBLUPreProductionFrm: TPBLUPreProductionFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Pre_Production_Process.Pre_Production_Process,'
       '        Pre_Production_Process.Pre_Production_Process_Desc'

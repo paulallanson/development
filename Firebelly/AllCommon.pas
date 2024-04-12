@@ -1430,7 +1430,6 @@ end;
 { FireDAC }
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
-  Connection.FetchOptions.RecordCountMode := cmTotal;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);

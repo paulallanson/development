@@ -3,8 +3,8 @@ object FormMain: TFormMain
   Top = 103
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Virtual File Stream (File Contents) Demo'
-  ClientHeight = 223
-  ClientWidth = 373
+  ClientHeight = 382
+  ClientWidth = 505
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object FormMain: TFormMain
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 373
-    Height = 164
+    Width = 505
+    Height = 323
     Align = alClient
     BevelOuter = bvNone
     BorderWidth = 4
@@ -29,8 +29,8 @@ object FormMain: TFormMain
     object ListView1: TListView
       Left = 4
       Top = 4
-      Width = 365
-      Height = 156
+      Width = 497
+      Height = 315
       Align = alClient
       Columns = <
         item
@@ -52,8 +52,8 @@ object FormMain: TFormMain
   end
   object Panel2: TPanel
     Left = 0
-    Top = 164
-    Width = 373
+    Top = 323
+    Width = 505
     Height = 59
     Align = alBottom
     BevelOuter = bvNone
@@ -63,9 +63,8 @@ object FormMain: TFormMain
     object Label1: TLabel
       Left = 4
       Top = 4
-      Width = 365
-      Height = 51
-      Margins.Bottom = 0
+      Width = 473
+      Height = 26
       Align = alClient
       Caption = 
         'Drag between the above list and any application which supports t' +
@@ -73,13 +72,12 @@ object FormMain: TFormMain
         'irefox, Explorer or Outlook).'
       ShowAccelChar = False
       WordWrap = True
-      ExplicitWidth = 364
-      ExplicitHeight = 39
     end
   end
   object DropDummy1: TDropDummy
     DragTypes = []
     Target = Owner
+    WinTarget = 0
     Left = 120
     Top = 160
   end
@@ -94,6 +92,7 @@ object FormMain: TFormMain
     OnEnter = DropEmptyTarget1Enter
     OnDrop = DropEmptyTarget1Drop
     Target = ListView1
+    WinTarget = 0
     Left = 120
     Top = 68
   end

@@ -448,6 +448,8 @@ object CSLUSuppFrm: TCSLUSuppFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Supplier.Supplier,'
       '        Supplier.Name, Supplier_Branch.Narrative,'

@@ -379,6 +379,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     Width = 1125
     Height = 201
     Align = alClient
+    DataSource = dtmdlCustomers.dtsEndUsers
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

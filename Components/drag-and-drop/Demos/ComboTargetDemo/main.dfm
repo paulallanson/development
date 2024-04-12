@@ -2,8 +2,8 @@ object FormMain: TFormMain
   Left = 250
   Top = 194
   Caption = 'ComboTarget Demo'
-  ClientHeight = 356
-  ClientWidth = 521
+  ClientHeight = 371
+  ClientWidth = 489
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object FormMain: TFormMain
   object PageControl1: TPageControl
     Left = 0
     Top = 129
-    Width = 521
-    Height = 227
+    Width = 489
+    Height = 242
     ActivePage = TabSheetData
     Align = alClient
     MultiLine = True
@@ -27,11 +27,15 @@ object FormMain: TFormMain
       Caption = 'Text'
       Enabled = False
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object MemoText: TMemo
         Left = 0
         Top = 0
-        Width = 513
-        Height = 217
+        Width = 481
+        Height = 232
         Align = alClient
         TabOrder = 0
       end
@@ -40,30 +44,32 @@ object FormMain: TFormMain
       Caption = 'Files'
       ImageIndex = 1
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Splitter1: TSplitter
         Left = 0
-        Top = 151
-        Width = 513
+        Top = 166
+        Width = 481
         Height = 3
         Cursor = crVSplit
         Align = alBottom
         ResizeStyle = rsUpdate
-        ExplicitTop = 166
-        ExplicitWidth = 481
       end
       object ListBoxFiles: TListBox
         Left = 0
         Top = 0
-        Width = 513
-        Height = 151
+        Width = 481
+        Height = 166
         Align = alClient
         ItemHeight = 13
         TabOrder = 0
       end
       object ListBoxMaps: TListBox
         Left = 0
-        Top = 154
-        Width = 513
+        Top = 169
+        Width = 481
         Height = 63
         Align = alBottom
         ItemHeight = 13
@@ -74,11 +80,15 @@ object FormMain: TFormMain
       Caption = 'Bitmap'
       ImageIndex = 2
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object ScrollBox2: TScrollBox
         Left = 0
         Top = 0
-        Width = 513
-        Height = 217
+        Width = 481
+        Height = 232
         Align = alClient
         BorderStyle = bsNone
         TabOrder = 0
@@ -95,6 +105,10 @@ object FormMain: TFormMain
       Caption = 'URL'
       ImageIndex = 3
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label1: TLabel
         Left = 12
         Top = 20
@@ -135,8 +149,8 @@ object FormMain: TFormMain
       object ListViewData: TListView
         Left = 0
         Top = 0
-        Width = 513
-        Height = 217
+        Width = 481
+        Height = 232
         Align = alClient
         Columns = <
           item
@@ -158,11 +172,15 @@ object FormMain: TFormMain
       Caption = 'MetaFile'
       ImageIndex = 5
       TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object ScrollBox1: TScrollBox
         Left = 0
         Top = 0
-        Width = 513
-        Height = 217
+        Width = 481
+        Height = 232
         Align = alClient
         BorderStyle = bsNone
         TabOrder = 0
@@ -179,7 +197,7 @@ object FormMain: TFormMain
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 521
+    Width = 489
     Height = 129
     Align = alTop
     BevelOuter = bvNone
@@ -189,7 +207,7 @@ object FormMain: TFormMain
     object PanelDropZone: TPanel
       Left = 181
       Top = 4
-      Width = 336
+      Width = 304
       Height = 121
       Align = alClient
       BevelOuter = bvNone
@@ -199,7 +217,7 @@ object FormMain: TFormMain
       object Label3: TLabel
         Left = 4
         Top = 4
-        Width = 328
+        Width = 296
         Height = 113
         Margins.Bottom = 0
         Align = alClient
@@ -209,7 +227,7 @@ object FormMain: TFormMain
           't multiple unrelated data formats.  Drop data anywhere in this w' +
           'indow to have it displayed in the pane below.'
         WordWrap = True
-        ExplicitHeight = 52
+        ExplicitHeight = 65
       end
     end
     object Panel1: TPanel
@@ -302,6 +320,7 @@ object FormMain: TFormMain
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropComboTarget1Drop
     Target = Owner
+    WinTarget = 0
     Left = 196
     Top = 80
   end

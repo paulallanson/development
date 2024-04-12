@@ -273,6 +273,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   end
   object qryCustCutOut: TFDQuery
     ConnectionName = 'WT'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '  Customer_Cutout.Group_Id,'

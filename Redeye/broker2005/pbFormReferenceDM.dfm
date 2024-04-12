@@ -3,6 +3,8 @@ object dtmdlForms: TdtmdlForms
   Width = 459
   object qryForms: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT DISTINCT Form_Reference.Form_Reference_ID,'
       '      Form_Reference.Form_Reference_Descr,'

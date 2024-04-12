@@ -173,6 +173,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   end
   object lkpExtras: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select Extra_Charge.*,'
       ' (select top 1 Unit_price'

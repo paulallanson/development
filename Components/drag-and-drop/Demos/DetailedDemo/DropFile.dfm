@@ -5,7 +5,7 @@ object FormFile: TFormFile
   BorderStyle = bsDialog
   Caption = 'Drag '#39'n'#39' Drop Demo - Files'
   ClientHeight = 373
-  ClientWidth = 372
+  ClientWidth = 516
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,6 +18,9 @@ object FormFile: TFormFile
   ShowHint = True
   OnClose = FormClose
   OnCreate = FormCreate
+  DesignSize = (
+    516
+    373)
   PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo
@@ -39,7 +42,7 @@ object FormFile: TFormFile
   object btnClose: TButton
     Left = 12
     Top = 316
-    Width = 350
+    Width = 494
     Height = 30
     Anchors = [akLeft, akRight, akBottom]
     Cancel = True
@@ -56,7 +59,7 @@ object FormFile: TFormFile
   object StatusBar1: TStatusBar
     Left = 0
     Top = 354
-    Width = 372
+    Width = 516
     Height = 19
     Panels = <>
     SimplePanel = True
@@ -94,7 +97,7 @@ object FormFile: TFormFile
   object ListView1: TListView
     Left = 197
     Top = 50
-    Width = 163
+    Width = 300
     Height = 255
     Columns = <>
     HideSelection = False
@@ -122,8 +125,8 @@ object FormFile: TFormFile
     OnPaste = DropSource1Paste
     Images = ImageListMultiFile
     ShowImage = True
-    Left = 328
-    Top = 88
+    Left = 320
+    Top = 112
   end
   object ImageListMultiFile: TImageList
     BkColor = clWhite
@@ -132,7 +135,7 @@ object FormFile: TFormFile
     Left = 328
     Top = 56
     Bitmap = {
-      494C010101000400040020002000FFFFFF00FF10FFFFFFFFFFFFFFFF424D3600
+      494C010101000500040020002000FFFFFF00FF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       000000000000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -670,13 +673,13 @@ object FormFile: TFormFile
   object DropDummy1: TDropDummy
     DragTypes = []
     Target = Owner
-    Left = 328
-    Top = 120
+    Left = 256
+    Top = 128
   end
   object PopupMenu1: TPopupMenu
     OnPopup = PopupMenu1Popup
-    Left = 328
-    Top = 160
+    Left = 376
+    Top = 152
     object MenuCopy: TMenuItem
       Caption = 'Copy'
       Enabled = False

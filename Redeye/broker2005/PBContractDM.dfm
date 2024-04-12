@@ -330,6 +330,8 @@ object dtmdlContract: TdtmdlContract
   end
   object qryContractGrid: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       '')
     Left = 32

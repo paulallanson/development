@@ -206,6 +206,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     Width = 910
     Height = 308
     Align = alClient
+    DataSource = dtmdlActivity.dtsActivityGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

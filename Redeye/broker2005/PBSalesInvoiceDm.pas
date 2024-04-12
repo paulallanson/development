@@ -944,6 +944,7 @@ type
     property Contact_no: integer read FContact_no write SetContact_no;
     property Contact_Name: string read FContact_Name write SetContact_Name;
   end;
+
 var
   dmSalesInvoice: TdmSalesInvoice;
 

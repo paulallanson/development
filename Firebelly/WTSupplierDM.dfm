@@ -167,6 +167,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object qryWorktopPrices: TFDQuery
     ConnectionName = 'WT'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '    Supplier_Worktop_Thickness.Worktop,'
@@ -554,6 +556,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   end
   object qryProductPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -768,7 +772,9 @@ object dtmdlSuppliers: TdtmdlSuppliers
       end>
   end
   object qrySupplierWorktops: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Worktop.Description AS Worktop_Description,'
       '        Worktop.Material_Type,'

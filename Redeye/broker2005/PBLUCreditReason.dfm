@@ -240,6 +240,8 @@ object PBLUCreditReasonFrm: TPBLUCreditReasonFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Credit_Note_Reason.Credit_Note_Reason,'
       '        Credit_Note_Reason_descr'

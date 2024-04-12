@@ -456,6 +456,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object GetSuppsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select SB1.Supplier, SB1.Branch_No, SB1.Name as Branch_Name, S1.' +
@@ -755,6 +757,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SelSupSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select Supplier.Name as Supp_Name, Supplier_Branch.Name as Branc' +

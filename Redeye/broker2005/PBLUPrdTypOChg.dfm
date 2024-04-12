@@ -253,6 +253,8 @@ object PBLUPrdTypOChgFrm: TPBLUPrdTypOChgFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Product_TypeOChg.Optional_Charge,'
       '        Product_TypeOChg.Description'

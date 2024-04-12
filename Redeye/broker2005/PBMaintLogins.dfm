@@ -129,6 +129,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'#9'Workstation_Redeye.Workstation,'
       #9#9'Workstation_Redeye.Workstation_Name, '

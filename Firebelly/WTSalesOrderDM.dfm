@@ -3,6 +3,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   Width = 1279
   object qryAllSales: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select sales_order.*,'
       '  Customer.Customer_name as original_customer_name,'

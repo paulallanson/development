@@ -157,6 +157,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     Width = 1142
     Height = 219
     Align = alClient
+    DataSource = dmSalesInvoice.dsSCHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -248,7 +249,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       end
       item
         Expanded = False
-        FieldName = 'Vat_Credit'
+        FieldName = 'VAT_Credit'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11

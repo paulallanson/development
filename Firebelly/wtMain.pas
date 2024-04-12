@@ -198,7 +198,6 @@ type
     procedure FormActivate(Sender: TObject);
     procedure btnSalesClick(Sender: TObject);
     procedure btnJobsClick(Sender: TObject);
-    procedure mnuScriptsClick(Sender: TObject);
     procedure mnuCheckPricesClick(Sender: TObject);
     procedure mnuOperatorsClick(Sender: TObject);
     procedure WorktopPrices1Click(Sender: TObject);
@@ -291,7 +290,7 @@ type
     FSWSubVersion: string;
     FUserName: string;
     FDBVersion: string;
-    ServDir, LocalDir, LocalDrive: string;
+    LocalDir, LocalDrive: string;
     FInitialiseButtons: Boolean;
     procedure CheckContractQuoting;
     procedure CheckPurchaseOrdering;
@@ -954,10 +953,9 @@ end;
 
 procedure TfrmWTMain.FormActivate(Sender: TObject);
 var
-  LoginFormOK                 : ByteBool;
-  UserName                                    : string;
-  TempLogin, TempComputer                     : array[0..255] of Char;
-  TempLoginSize, TempComputerSize             : DWORD;
+  LoginFormOK             : ByteBool;
+  UserName                : string;
+  TempLogin               : array[0..255] of Char;
 begin
   bEndUSer := false;
   MaxUsers := 100;
@@ -1153,8 +1151,6 @@ procedure TfrmWTMain.PseudoFormActivate;
 var
   UserName                                    : string;
   LoginFormOK                 : ByteBool;
-  TempLogin                   : array[0..255] of Char;
-  TempLoginSize               : DWORD;
 begin
   MaxUsers := 100;
 {$IFDEF FREE}
@@ -1490,6 +1486,7 @@ begin
 
 end;
 
+{$IFDEF ENDUSER}
 procedure TfrmWTMain.mnuScriptsClick(Sender: TObject);
 begin
   frmWTRunScripts := TfrmWTRunScripts.create(application);
@@ -1499,6 +1496,7 @@ begin
     frmWTRunScripts.free;
   end;
 end;
+{$ENDIF}
 
 procedure TfrmWTMain.mnuManageAppointmentLocksClick(Sender: TObject);
 begin
@@ -1523,7 +1521,6 @@ end;
 procedure TfrmWTMain.ResetClientSettings1Click(Sender: TObject);
 var
   IniFile : TIniFile;
-  iCount: integer;
 begin
   if messagedlg('Reset your Firebelly screen settings?',
     mtConfirmation, [mbYes, mbNo], 0) = mrYes then

@@ -237,6 +237,8 @@ object dtmdlActivity: TdtmdlActivity
   end
   object qryActivityGrid: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'

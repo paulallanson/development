@@ -170,6 +170,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     Width = 870
     Height = 142
     Align = alClient
+    DataSource = dtmdlWOrders.dtsWOHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

@@ -3,6 +3,8 @@ object dtmdlEnqs: TdtmdlEnqs
   Width = 544
   object qryEnqs: TFDQuery
     Connection = dmBroker.PBLDatabase
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  TOP 100'
       '        Enquiry.Date_Point,'

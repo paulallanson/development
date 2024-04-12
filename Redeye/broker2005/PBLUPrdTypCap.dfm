@@ -265,6 +265,8 @@ object PBLUPrdTypCapFrm: TPBLUPrdTypCapFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Product_TypeCapability.Capability,'
       '        Product_TypeCapability.Description,'

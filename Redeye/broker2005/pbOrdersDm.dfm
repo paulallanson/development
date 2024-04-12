@@ -4,6 +4,8 @@ object dtmdlOrders: TdtmdlOrders
   Width = 696
   object qryOrders: TFDQuery
     Connection = dmBroker.PBLDatabase
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT TOP (:Records)'
       '  Purchase_OrderLine.Customer,'
@@ -828,6 +830,8 @@ object dtmdlOrders: TdtmdlOrders
   end
   object qryCallOffs: TFDQuery
     Connection = dmBroker.PBLDatabase
+    FetchOptions.AssignedValues = [evRecordCountMode]
+    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'sales_order.customer,'
       '        Customer.Name,'

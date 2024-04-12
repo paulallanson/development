@@ -97,14 +97,21 @@ begin
 end;
 
 procedure TfrmWorktopsVers.CopyIfNewer(FName, FDesc: String);
+var
+  SourceFileAge: TDateTime;
+  TargetFileAge: TDateTime;
 begin
-{Check if server version of file is older or same. If it is don't copy it} ;
-if FileAge(ServDir + '\' + FName) <= FileAge(LocalDir + '\' + FName) then exit ;
-{If the local directory does not exist, create it} ;
-If DirectoryExists(LocalDir) = False then
-          CreateDir(LocalDir) ;
-StatusNarr('Upgrading ' + FDesc + ' - Please wait...') ;
-FileCopy(ServDir + '\' + FName, LocalDir + '\' + FName) ;
+  FileAge(ServDir + '\' + FName, SourceFileAge);
+  FileAge(LocalDir + '\' + FName, TargetFileAge);
+  {Check if server version of file is older or same. If it is don't copy it} ;
+  if SourceFileAge > SourceFileAge then
+  begin
+    {If the local directory does not exist, create it} ;
+    if not DirectoryExists(LocalDir) then
+      SysUtils.ForceDirectories(LocalDir) ;
+    StatusNarr('Upgrading ' + FDesc + ' - Please wait...') ;
+    FileCopy(ServDir + '\' + FName, LocalDir + '\' + FName) ;
+  end;
 end;
 
 procedure TfrmWorktopsVers.filecopy(const sourcefilename,targetfilename :string);
