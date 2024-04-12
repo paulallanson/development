@@ -10,7 +10,7 @@ uses
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
   pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList,
-  FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TPBMaintCustFrm = class(TForm)
@@ -469,7 +469,7 @@ type
     chkbxOverrideCostCharges: TCheckBox;
     chkbxAcquiredCompany: TCheckBox;
     chkbxCTRLPCustomer: TCheckBox;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -705,7 +705,7 @@ type
     procedure edtdateGDPRSignedExit(Sender: TObject);
     procedure memQuoteCostMarkupExit(Sender: TObject);
     procedure chkbxOverrideCostChargesClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FActivatedEnqs: boolean;
     FActivatedInvoices: boolean;
@@ -760,7 +760,7 @@ type
     FProspect: boolean;
     FCreditCheck: boolean;
     SICCode: integer;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure AddZero;
     procedure DeleteZero;
@@ -4078,10 +4078,13 @@ begin
     end;
 end;
 
-procedure TPBMaintCustFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBMaintCustFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TPBMaintCustFrm.EnableCreditDetails;
@@ -6295,13 +6298,11 @@ begin
 
 end;
 
-procedure TPBMaintCustFrm.ProcessDragAndDrop;
+procedure TPBMaintCustFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin

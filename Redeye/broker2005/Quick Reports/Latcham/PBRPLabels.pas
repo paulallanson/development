@@ -341,13 +341,13 @@ function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
-  AFilters: TGtQRFilters;
-  RTFFilter: TGtQRRTFFilter;
-  HTMLFilter: TGtQRHTMLFilter;
-  PDFFilter: TGtQRPDFFilter;
-  BMPFilter: TGtQRBMPFilter;
-  GIFFilter: TGtQRGIFFilter;
-  JPEGFilter: TGtQRJPEGFilter;
+  AFilters: TQRFilters;
+  RTFFilter: TQRRTFFilter;
+  HTMLFilter: TQRHTMLFilter;
+  PDFFilter: TQRPDFFilter;
+  BMPFilter: TQRBMPFilter;
+  GIFFilter: TQRGIFFilter;
+  JPEGFilter: TQRJPEGFilter;
   icount: integer;
 begin
   iIntSel := dmBroker.GetNextIntSelCode(self);
@@ -386,11 +386,11 @@ begin
     fileLocation := GetWinTempDir;
     fileName := fileLocation + 'LABEL' + FloatToStr(PONo)+ '_' + IntToStr(DelLine) + '.' + attachmentType;
 
-    AFilters := TGtQRFilters.Create(self);
+    AFilters := TQRFilters.Create(self);
     try
       if AnsiLowerCase(attachmentType) = 'pdf' then
       begin
-        PDFFilter := TGtQRPDFFilter.Create(fileName);
+        PDFFilter := TQRPDFFilter.Create(fileName);
         try
           PBLabelsQuickReport.ExportToFilter(PDFFilter);
           Result.add(fileName);
@@ -402,7 +402,7 @@ begin
       end
       else if AnsiLowerCase(attachmentType) = 'rtf' then
       begin
-        RTFFilter := TGtQRRTFFilter.Create(fileName);
+        RTFFilter := TQRRTFFilter.Create(fileName);
         try
           PBLabelsQuickReport.ExportToFilter(RTFFilter);
           Result.add(fileName);
@@ -414,7 +414,7 @@ begin
       end
       else if AnsiLowerCase(attachmentType) = 'gif' then
       begin
-        GIFFilter := TGtQRGIFFilter.Create(fileName);
+        GIFFilter := TQRGIFFilter.Create(fileName);
         try
           PBLabelsQuickReport.Prepare;
           PBLabelsQuickReport.ExportToFilter(GIFFilter);
@@ -430,7 +430,7 @@ begin
       end
       else if AnsiLowerCase(attachmentType) = 'bmp' then
       begin
-        BMPFilter := TGtQRBMPFilter.Create(fileName);
+        BMPFilter := TQRBMPFilter.Create(fileName);
         try
           PBLabelsQuickReport.Prepare;
           PBLabelsQuickReport.ExportToFilter(BMPFilter);
@@ -446,7 +446,7 @@ begin
       end
       else if AnsiLowerCase(attachmentType) = 'html' then
       begin
-        HTMLFilter := TGtQRHTMLFilter.Create(fileName);
+        HTMLFilter := TQRHTMLFilter.Create(fileName);
         try
           PBLabelsQuickReport.Prepare;
           PBLabelsQuickReport.ExportToFilter(HTMLFilter);
@@ -462,7 +462,7 @@ begin
       end
       else if AnsiLowerCase(attachmentType) = 'jpeg' then
       begin
-        JPEGFilter := TGtQRJPEGFilter.Create(fileName);
+        JPEGFilter := TQRJPEGFilter.Create(fileName);
         try
           PBLabelsQuickReport.Prepare;
           PBLabelsQuickReport.ExportToFilter(JPEGFilter);

@@ -2020,12 +2020,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       OnClick = pmnuSelectAllClick
     end
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
-    Left = 881
+    Left = 833
     Top = 128
   end
 end
