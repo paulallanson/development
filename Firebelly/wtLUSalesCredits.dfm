@@ -30,13 +30,12 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1253
+        Width = 1241
       end>
-    ExplicitWidth = 1255
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1240
+      Width = 1232
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1240
+        Width = 1220
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -64,7 +63,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 59
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -73,7 +72,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 124
+          Left = 118
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -81,7 +80,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnDeleteClick
         end
         object ToolButton3: TToolButton
-          Left = 186
+          Left = 177
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -89,7 +88,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnPrint: TToolButton
-          Left = 194
+          Left = 185
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -97,7 +96,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 256
+          Left = 244
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -105,7 +104,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           OnClick = btnReprintClick
         end
         object ToolButton6: TToolButton
-          Left = 318
+          Left = 303
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -113,7 +112,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 326
+          Left = 311
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
@@ -325,8 +324,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 277
-    ExplicitWidth = 1255
     object Panel2: TPanel
       Left = 976
       Top = 1
@@ -336,7 +333,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 984
       DesignSize = (
         270
         83)
@@ -387,6 +383,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       Height = 83
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
         Left = 8
@@ -438,6 +435,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       Height = 83
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object rdgrpRevenueCentre: TRadioGroup
         Left = 7
@@ -450,6 +448,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
           'Default'
           'All'
           'Selected')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpRevenueCentreClick
       end
@@ -458,6 +457,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Top = 1
         Width = 203
         Height = 73
+        ParentBackground = False
         TabOrder = 1
         Visible = False
         object Label6: TLabel
@@ -492,8 +492,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       item
         Width = 50
       end>
-    ExplicitTop = 362
-    ExplicitWidth = 1255
   end
   object Panel3: TPanel
     Left = 0
@@ -504,8 +502,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1255
     DesignSize = (
       1247
       30)

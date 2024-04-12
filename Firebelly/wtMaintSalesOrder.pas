@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
   DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -254,7 +254,7 @@ type
     edtSiteName: TEdit;
     btnClearCustomerBranch: TSpeedButton;
     btnGenerateDocs: TButton;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
@@ -371,7 +371,7 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -447,7 +447,7 @@ type
     procedure MoveSiteDocuments(iSOrder: integer);
     procedure DeleteQuoteDocuments;
     procedure UpdateQuoteDocuments;
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   public
     bOK: boolean;
@@ -3737,13 +3737,11 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop;
+procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin
@@ -5148,10 +5146,13 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintSalesOrder.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintSalesOrder.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 end.

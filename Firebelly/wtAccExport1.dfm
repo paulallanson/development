@@ -22,6 +22,7 @@ object frmWTAccExport1: TfrmWTAccExport1
     Width = 346
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object NextBitBtn: TBitBtn
       Left = 176
@@ -66,6 +67,7 @@ object frmWTAccExport1: TfrmWTAccExport1
     Width = 346
     Height = 358
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 16
@@ -105,6 +107,7 @@ object frmWTAccExport1: TfrmWTAccExport1
       Width = 313
       Height = 89
       Caption = 'Description'
+      ParentBackground = False
       TabOrder = 1
       object DescriptionLbl: TLabel
         Left = 8
@@ -126,6 +129,7 @@ object frmWTAccExport1: TfrmWTAccExport1
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object rdgrpRevenueCentre: TRadioGroup
       Left = 8
@@ -137,6 +141,7 @@ object frmWTAccExport1: TfrmWTAccExport1
       Items.Strings = (
         'Default'
         'Selected')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpRevenueCentreClick
     end
@@ -145,6 +150,7 @@ object frmWTAccExport1: TfrmWTAccExport1
       Top = 3
       Width = 203
       Height = 62
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object Label3: TLabel

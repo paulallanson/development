@@ -2629,7 +2629,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end>
       end
@@ -3102,12 +3101,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = btnRemedialOrderClick
     end
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pcDetails
-    OptimizedMove = True
-    Left = 656
-    Top = 84
+    Left = 611
+    Top = 85
   end
 end

@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtJobsDm, CRControls, AllCommon, DB, Spin, wtSalesOrderDM, ImgList, ShellAPI, QrCtrls, Menus,
   ToolWin, Inifiles, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  DragDrop, DropTarget, DragDropFile;
+  DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintJob = class(TForm)
@@ -216,7 +216,7 @@ type
     memNotes: TMemo;
     stvDocuments: TShellTreeView;
     slvDocuments: TShellListView;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -310,7 +310,7 @@ type
     procedure stvDocumentsDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure tbDocumentsShow(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -363,7 +363,7 @@ type
     procedure MoveSalesDocument;
     procedure SendAndSaveEmail(sTo, sSubject: string);
     procedure SetUseMarkup(const Value: bytebool);
-    procedure ProcessDragAndDrop;
+    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetMode(const Value: TjMode);
   public
@@ -1398,10 +1398,13 @@ begin
   EnableAddButtons;
 end;
 
-procedure TfrmWTMaintJob.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintJob.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
+var
+  FilesList: TUnicodeStrings;
 begin
-  ProcessDragAndDrop;
+  FilesList := DropComboTarget1.Files;
+  ProcessDragAndDrop(FilesList);
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;
@@ -2968,13 +2971,11 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintJob.ProcessDragAndDrop;
+procedure TfrmWTMaintJob.ProcessDragAndDrop(FilesList: TUnicodeStrings);
 var
   Path: string;
-  FilesList: TUnicodeStrings;
 begin
   Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
   MyWinControlSetData(FilesList, Path,
     procedure
     begin

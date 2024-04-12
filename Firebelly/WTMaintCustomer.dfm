@@ -786,91 +786,91 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         object Label31: TLabel
           Left = 24
           Top = 67
-          Width = 92
+          Width = 102
           Height = 13
           Caption = 'Cut Out Discount %'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label32: TLabel
           Left = 24
           Top = 99
-          Width = 81
+          Width = 87
           Height = 13
           Caption = 'Edge Discount %'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object lblTemplatingDiscount: TLabel
           Left = 24
           Top = 193
-          Width = 79
+          Width = 84
           Height = 13
           Caption = 'Templating Price'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object lblFittingDiscount: TLabel
           Left = 24
           Top = 227
-          Width = 55
+          Width = 61
           Height = 13
           Caption = 'Fitting Price'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label33: TLabel
           Left = 24
           Top = 259
-          Width = 65
+          Width = 67
           Height = 13
           Caption = 'Delivery Price'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label34: TLabel
           Left = 24
           Top = 131
-          Width = 97
+          Width = 107
           Height = 13
           Caption = 'Worktop Discount %'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label38: TLabel
           Left = 24
           Top = 355
-          Width = 43
+          Width = 48
           Height = 13
           Caption = 'Unit Cost'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
@@ -2876,12 +2876,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 320
     Top = 224
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
     Left = 740
-    Top = 64
+    Top = 32
   end
 end

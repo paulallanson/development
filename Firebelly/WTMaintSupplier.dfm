@@ -1622,12 +1622,11 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Left = 864
     Top = 400
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
-    Left = 744
-    Top = 32
+    Left = 736
+    Top = 72
   end
 end

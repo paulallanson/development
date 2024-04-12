@@ -23,8 +23,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 548
-    ExplicitWidth = 935
     DesignSize = (
       927
       41)
@@ -75,8 +73,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 589
-    ExplicitWidth = 935
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -86,13 +82,19 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -157,7 +159,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Height = 233
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 935
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8

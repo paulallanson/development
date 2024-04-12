@@ -22,9 +22,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 477
-    ExplicitWidth = 935
     DesignSize = (
       927
       41)
@@ -64,8 +63,6 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 518
-    ExplicitWidth = 935
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -144,6 +141,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Width = 927
     Height = 113
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object grpbxDateSelect: TGroupBox
       Left = 240
@@ -151,6 +149,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       Width = 209
       Height = 73
       Caption = 'Fitting Date'
+      ParentBackground = False
       TabOrder = 0
       Visible = False
       object Label1: TLabel
@@ -234,6 +233,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       Width = 209
       Height = 73
       Caption = 'Movement Date'
+      ParentBackground = False
       TabOrder = 1
       object Label5: TLabel
         Left = 16
@@ -326,6 +326,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Top = 236
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblProcessing: TLabel
