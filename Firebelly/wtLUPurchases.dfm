@@ -2,8 +2,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Left = 137
   Top = 109
   Caption = 'Purchase details'
-  ClientHeight = 311
-  ClientWidth = 945
+  ClientHeight = 293
+  ClientWidth = 933
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 292
-    Width = 945
+    Top = 274
+    Width = 933
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   end
   object Panel1: TPanel
     Left = 0
-    Top = 251
-    Width = 945
+    Top = 233
+    Width = 933
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      945
+      933
       41)
     object Label1: TLabel
       Left = 8
@@ -55,7 +55,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 649
+      Left = 625
       Top = 13
       Width = 79
       Height = 13
@@ -65,7 +65,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       ExplicitLeft = 697
     end
     object Button1: TButton
-      Left = 830
+      Left = 806
       Top = 7
       Width = 75
       Height = 25
@@ -83,7 +83,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 734
+      Left = 710
       Top = 9
       Width = 73
       Height = 21
@@ -104,19 +104,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 945
+    Width = 933
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 939
+        Width = 927
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 930
+      Width = 918
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -215,8 +215,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 945
-    Height = 174
+    Width = 933
+    Height = 156
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -240,6 +240,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Purchase_Order'
         Title.Caption = 'PO Number'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -247,6 +252,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Date_Raised'
         Title.Caption = 'Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -254,6 +264,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Supplier_Name'
         Title.Caption = 'Supplier'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 233
         Visible = True
       end
@@ -261,6 +276,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Descriptive_Reference'
         Title.Caption = 'Description'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 222
         Visible = True
       end
@@ -268,6 +288,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Date_Required'
         Title.Caption = 'Required'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 95
         Visible = True
       end
@@ -275,6 +300,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Status_Description'
         Title.Caption = 'Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 128
         Visible = True
       end
@@ -282,6 +312,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Office_Contact_Name'
         Title.Caption = 'Office Contact'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 101
         Visible = True
       end
@@ -289,11 +324,21 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Reference'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 95
         Visible = True
       end
@@ -301,6 +346,11 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Expanded = False
         FieldName = 'Goods_Value'
         Title.Caption = 'Order Value'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 92
         Visible = True
       end>
@@ -308,34 +358,34 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 945
+    Width = 933
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 28
-        Width = 939
+        MinHeight = 30
+        Width = 927
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 930
-      Height = 28
+      Width = 918
+      Height = 30
       Align = alLeft
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 94
+        Width = 86
         Height = 25
         Caption = 'Purchasing'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -19
+        Font.Color = clNavy
+        Font.Height = -18
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False

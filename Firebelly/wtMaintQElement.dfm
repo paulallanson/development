@@ -60,6 +60,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 532
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -511,8 +512,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '        Customer_Worktop_Group.Group_Number,'
       '        Customer_Worktop.Worktop,'
       '        Worktop.Description,'
-      '        Customer_Worktop_Group.Material_Type,'
-      '        Material_Type.Description'
+      '        Customer_Worktop_Group.Material_Type'
       'FROM Material_Type'
       '        INNER JOIN (Worktop'
       '        INNER JOIN (Customer_Worktop_Group'
@@ -542,18 +542,19 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Worktop_Group'
-      end
-      item
-        Name = 'Worktop_Group'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryCustomerPrice: TFDQuery

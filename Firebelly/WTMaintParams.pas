@@ -262,6 +262,8 @@ type
     dblkpStockSystem: TDBLookupComboBox;
     qryStockSystem: TFDQuery;
     dtsStockSystem: TDataSource;
+    Label81: TLabel;
+    edtCompanyNumber: TEdit;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
@@ -418,6 +420,7 @@ begin
       edtFaxNumber.Text := fieldbyname('Fax_Number').asstring;
       edtWebAddress.Text := fieldbyname('Web_Address').asstring;
       edtemailAddress.Text := fieldbyname('Email_Address').asstring;
+      edtCompanyNumber.Text := fieldbyname('Company_Reg_Number').asstring;
       edtVatNumber.Text := fieldbyname('Vat_Number').asstring;
       edtUniqueTaxReference.Text := fieldbyname('Unique_Tax_Reference').asstring;
 
@@ -581,6 +584,7 @@ begin
       parambyname('Fax_Number').asstring := edtFaxNumber.Text;
       parambyname('Web_Address').asstring := edtWebAddress.Text;
       parambyname('Email_Address').asstring := edtemailAddress.Text;
+      parambyname('Company_Reg_Number').asstring := edtCompanyNumber.Text;
       parambyname('Vat_Number').asstring := edtVatNumber.Text;
       parambyname('Unique_Tax_Reference').asstring := edtUniqueTaxReference.Text;
 

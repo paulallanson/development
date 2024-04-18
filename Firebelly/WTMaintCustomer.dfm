@@ -27,6 +27,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 515
+    ExplicitWidth = 832
     object lblDelete: TLabel
       Left = 397
       Top = 14
@@ -109,6 +111,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 832
+    ExplicitHeight = 515
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
@@ -119,6 +123,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Align = alClient
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 824
+        ExplicitHeight = 487
         DesignSize = (
           830
           496)
@@ -455,45 +461,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Height = 13
           Caption = 'Value'
         end
-        object dbgAccountCodes: TDBGrid
-          Tag = 200
-          Left = 383
-          Top = 213
-          Width = 442
-          Height = 111
-          TabStop = False
-          Anchors = [akLeft, akTop, akRight]
-          DataSource = dtsGetAccountCodes
-          DrawingStyle = gdsGradient
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 28
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -11
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
-          Visible = False
-          Columns = <
-            item
-              Expanded = False
-              FieldName = 'Account_Code'
-              Title.Caption = 'Account Code'
-              Width = 93
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Customer_Name'
-              Title.Caption = 'Customer'
-              Width = 261
-              Visible = True
-            end>
-        end
         object chkbxRequiresAppForPay: TCheckBox
           Left = 384
           Top = 442
@@ -764,6 +731,45 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             'None'
             'End User Markup'
             'Retail Multiplier')
+        end
+        object dbgAccountCodes: TDBGrid
+          Tag = 200
+          Left = 383
+          Top = 213
+          Width = 436
+          Height = 111
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          DataSource = dtsGetAccountCodes
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 28
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = [fsBold]
+          Visible = False
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Account_Code'
+              Title.Caption = 'Account Code'
+              Width = 93
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Customer_Name'
+              Title.Caption = 'Customer'
+              Width = 261
+              Visible = True
+            end>
         end
       end
     end
@@ -2177,6 +2183,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 557
+    ExplicitWidth = 832
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer

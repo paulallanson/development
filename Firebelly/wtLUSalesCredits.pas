@@ -39,8 +39,6 @@ type
     chkbxShowArchived: TCheckBox;
     Label3: TLabel;
     edtInvoiceDate: TEdit;
-    Panel3: TPanel;
-    Label4: TLabel;
     PageScroller1: TPageScroller;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -51,10 +49,13 @@ type
     btnReprint: TToolButton;
     ToolButton6: TToolButton;
     btnReports: TToolButton;
-    Label5: TLabel;
-    cmbCustomerFilter: TComboBox;
     BitBtn1: TBitBtn;
     btnSearch: TBitBtn;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

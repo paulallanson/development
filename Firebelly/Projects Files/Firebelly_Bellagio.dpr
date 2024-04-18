@@ -250,7 +250,8 @@ uses
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
-  CRControls in '..\..\Components\CRPackage\CRControls.pas';
+  CRControls in '..\..\Components\CRPackage\CRControls.pas',
+  wtLUCustomerNew in '..\wtLUCustomerNew.pas' {frmWTLUCustomerNew};
 
 {$R *.RES}
 

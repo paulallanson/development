@@ -4,7 +4,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   BorderStyle = bsDialog
   Caption = 'Worktop Groups'
   ClientHeight = 297
-  ClientWidth = 420
+  ClientWidth = 435
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 420
+    Width = 435
     Height = 166
     Align = alClient
     DataSource = srcWTGroup
@@ -55,7 +55,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 278
-    Width = 420
+    Width = 435
     Height = 19
     Panels = <
       item
@@ -64,16 +64,20 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       item
         Width = 50
       end>
+    ExplicitTop = 269
+    ExplicitWidth = 414
   end
   object Panel1: TPanel
     Left = 0
     Top = 223
-    Width = 420
+    Width = 435
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 214
+    ExplicitWidth = 414
     object BitBtn1: TBitBtn
       Left = 8
       Top = 25
@@ -136,12 +140,13 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 420
+    Width = 435
     Height = 57
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 414
     object Label1: TLabel
       Left = 8
       Top = 8

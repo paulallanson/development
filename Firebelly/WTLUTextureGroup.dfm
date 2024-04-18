@@ -4,7 +4,7 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
   BorderStyle = bsDialog
   Caption = 'Texture Group'
   ClientHeight = 260
-  ClientWidth = 408
+  ClientWidth = 429
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 408
+    Width = 429
     Height = 176
     Align = alClient
     DataSource = srcTextureGroup
@@ -61,7 +61,7 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 241
-    Width = 408
+    Width = 429
     Height = 19
     Panels = <
       item
@@ -70,17 +70,21 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
       item
         Width = 50
       end>
+    ExplicitTop = 232
+    ExplicitWidth = 402
   end
   object Panel1: TPanel
     Left = 0
     Top = 176
-    Width = 408
+    Width = 429
     Height = 65
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 167
+    ExplicitWidth = 402
     DesignSize = (
-      408
+      429
       65)
     object chkbxShowInactive: TCheckBox
       Left = 8

@@ -4,7 +4,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   BorderStyle = bsDialog
   Caption = 'Maintain Cutouts'
   ClientHeight = 244
-  ClientWidth = 497
+  ClientWidth = 499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    497
+    499
     244)
   TextHeight = 13
   object lblDelete: TLabel
@@ -44,6 +44,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 196
   end
   object BitBtn2: TBitBtn
     Left = 255
@@ -56,16 +57,18 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 196
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 497
+    Width = 499
     Height = 193
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 491
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -289,7 +292,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
         '(CutOut.inactive = '#39'N'#39' or CutOut.inactive is NULL or CutOut.CutO' +
         'ut = :CutOut)'
       'order by cutout.description')
-    Left = 320
+    Left = 264
     ParamData = <
       item
         Name = 'Edge_Type'
@@ -348,7 +351,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   end
   object dtsCOThickness: TDataSource
     DataSet = qryCOThickness
-    Left = 408
+    Left = 334
   end
   object qryContractCutOut: TFDQuery
     ConnectionName = 'wt'
@@ -359,12 +362,12 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       '        Customer_Cutout_Edge_Group.Material_Type,'
       '        Customer_Cutout_Edge_Group.Effective_Date,'
       '        Customer_Cutout_Edge_Group.Ineffective_Date,'
-      '        Customer_Cutout_Edge_Group.inactive,'
+      '        Customer_Cutout_Edge_Group.inactive as Group_Inactive,'
       '        Customer_Cutout_Edge_Group.Use_For_General_Quoting,'
       '        Customer_Cutout.CutOut,'
       '        Customer_Cutout.Edge_Type,'
       '        Customer_Cutout.Price_Pointer,'
-      '        cutout.inactive'
+      '        cutout.inactive as CutOut_Inactive'
       'FROM cutout'
       '        INNER JOIN (Customer_Cutout_Edge_Group'
       '        INNER JOIN Customer_Cutout'
@@ -387,16 +390,20 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Edge_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'CutOut'
+        ParamType = ptInput
       end>
   end
   object qryOneCustomerPrice: TFDQuery

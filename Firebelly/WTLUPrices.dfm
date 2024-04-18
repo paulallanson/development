@@ -2,8 +2,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   Left = 13
   Top = 157
   Caption = 'Prices'
-  ClientHeight = 493
-  ClientWidth = 1434
+  ClientHeight = 475
+  ClientWidth = 1422
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 474
-    Width = 1434
+    Top = 456
+    Width = 1422
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 412
-    Width = 1434
+    Top = 394
+    Width = 1422
     Height = 62
     Align = alBottom
     ParentBackground = False
@@ -88,7 +88,7 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnChange = edtMaterialChange
     end
     object Panel2: TPanel
-      Left = 1330
+      Left = 1318
       Top = 1
       Width = 103
       Height = 60
@@ -228,8 +228,8 @@ object frmWTLUPrices: TfrmWTLUPrices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1434
-    Height = 335
+    Width = 1422
+    Height = 317
     Align = alClient
     DataSource = dtmdlPrices.dtsAllPrices
     DrawingStyle = gdsGradient
@@ -253,6 +253,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Worktop_Description'
         Title.Caption = 'Colour'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 158
         Visible = True
       end
@@ -260,6 +265,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Thickness_mm'
         Title.Caption = 'Thickness (mm)'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 82
         Visible = True
       end
@@ -267,6 +277,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Material_Type_Description'
         Title.Caption = 'Material'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 116
         Visible = True
       end
@@ -274,12 +289,22 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Worktop_Group_Description'
         Title.Caption = 'Price Group'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Effective_Date'
         Title.Caption = 'Effective Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -287,6 +312,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Unit_Price'
         Title.Caption = 'Unit Price'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 82
         Visible = True
       end
@@ -294,6 +324,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Unit_Cost'
         Title.Caption = 'Unit Cost'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 80
         Visible = True
       end
@@ -301,6 +336,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Date_Changed'
         Title.Caption = 'Date Changed'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 104
         Visible = True
       end
@@ -308,6 +348,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 64
         Visible = True
       end
@@ -315,6 +360,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Stock_Code'
         Title.Caption = 'Stock Code'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 159
         Visible = True
       end
@@ -322,6 +372,11 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Slab_Count'
         Title.Caption = 'Slab Count'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 78
         Visible = True
       end>
@@ -329,37 +384,37 @@ object frmWTLUPrices: TfrmWTLUPrices
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1434
+    Width = 1422
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 28
-        Width = 1428
+        MinHeight = 30
+        Width = 1416
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1419
-      Height = 28
+      Width = 1407
+      Height = 30
       Align = alLeft
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1419
-        28)
+        1407
+        30)
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 50
+        Width = 45
         Height = 25
         Caption = 'Prices'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -19
+        Font.Color = clNavy
+        Font.Height = -18
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -380,23 +435,23 @@ object frmWTLUPrices: TfrmWTLUPrices
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1206
-        Top = 7
-        Width = 29
-        Height = 13
+        Left = 1154
+        Top = 5
+        Width = 31
+        Height = 15
         Anchors = [akTop, akRight]
         Caption = 'Prices'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
+        Font.Color = clNavy
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1238
+        ExplicitLeft = 1160
       end
       object cmbPriceTypeFilter: TComboBox
-        Left = 1246
-        Top = 3
+        Left = 1194
+        Top = 2
         Width = 145
         Height = 21
         Style = csDropDownList
@@ -414,19 +469,19 @@ object frmWTLUPrices: TfrmWTLUPrices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1434
+    Width = 1422
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1428
+        Width = 1416
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1419
+      Width = 1407
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58

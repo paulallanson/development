@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 489
-  ClientWidth = 1303
+  ClientHeight = 471
+  ClientWidth = 1291
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 470
-    Width = 1303
+    Top = 452
+    Width = 1291
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 429
-    Width = 1303
+    Top = 411
+    Width = 1291
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -60,7 +60,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1012
+      Left = 1000
       Top = 1
       Width = 290
       Height = 39
@@ -123,19 +123,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1303
+    Width = 1291
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1297
+        Width = 1285
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1288
+      Width = 1276
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58
@@ -251,8 +251,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1303
-    Height = 352
+    Width = 1291
+    Height = 334
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -275,6 +275,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       item
         Expanded = False
         FieldName = 'Quote'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 73
         Visible = True
       end
@@ -282,6 +287,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Date_Raised'
         Title.Caption = 'Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -289,18 +299,33 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Customer_name'
         Title.Caption = 'Customer'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 136
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 139
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Reference'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 99
         Visible = True
       end
@@ -308,6 +333,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Gross_Price'
         Title.Caption = 'Supply Price'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -315,6 +345,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Installation_price'
         Title.Caption = 'Install Price'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 79
         Visible = True
       end
@@ -322,6 +357,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Survey_price'
         Title.Caption = 'Survey Price'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 83
         Visible = True
       end
@@ -329,6 +369,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Delivery_Price'
         Title.Caption = 'Delivery Price'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -336,6 +381,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Date_Required'
         Title.Caption = 'Date Required'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 115
         Visible = True
       end
@@ -343,6 +393,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Material_Description'
         Title.Caption = 'Material'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 74
         Visible = True
       end
@@ -350,6 +405,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Contact_Name'
         Title.Caption = 'Contact'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 136
         Visible = True
       end
@@ -357,12 +417,22 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Status_Text'
         Title.Caption = 'Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 37
         Visible = True
       end
@@ -370,6 +440,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Reference'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -377,6 +452,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Original_Quote'
         Title.Caption = 'Original Quote'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 94
         Visible = True
       end
@@ -384,6 +464,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Project_Reference'
         Title.Caption = 'Project'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 120
         Visible = True
       end
@@ -391,6 +476,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Expanded = False
         FieldName = 'Expiry_Date'
         Title.Caption = 'Expiry Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 135
         Visible = True
       end>
@@ -398,37 +488,37 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1303
+    Width = 1291
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 28
-        Width = 1297
+        MinHeight = 30
+        Width = 1285
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1288
-      Height = 28
+      Width = 1276
+      Height = 30
       Align = alLeft
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1288
-        28)
+        1276
+        30)
       object Label2: TLabel
         Left = 0
         Top = 1
-        Width = 60
+        Width = 58
         Height = 25
         Caption = 'Quotes'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -19
+        Font.Color = clNavy
+        Font.Height = -18
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -449,22 +539,22 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1014
-        Top = 7
-        Width = 78
-        Height = 13
+        Left = 1026
+        Top = 6
+        Width = 81
+        Height = 15
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
+        Font.Color = clNavy
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1026
+        ExplicitLeft = 1032
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1094
+        Left = 1113
         Top = 3
         Width = 145
         Height = 21

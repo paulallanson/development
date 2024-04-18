@@ -3,8 +3,8 @@ object frmWTUtilities: TfrmWTUtilities
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Database Utilities'
-  ClientHeight = 139
-  ClientWidth = 246
+  ClientHeight = 159
+  ClientWidth = 266
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

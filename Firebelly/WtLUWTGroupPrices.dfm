@@ -4,7 +4,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   BorderStyle = bsDialog
   Caption = 'Worktop Group Prices'
   ClientHeight = 324
-  ClientWidth = 602
+  ClientWidth = 630
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 602
+    Width = 630
     Height = 197
     Align = alClient
     DataSource = srclkpWTGPrices
@@ -74,7 +74,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 305
-    Width = 602
+    Width = 630
     Height = 19
     Panels = <
       item
@@ -83,16 +83,20 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       item
         Width = 50
       end>
+    ExplicitTop = 296
+    ExplicitWidth = 596
   end
   object Panel1: TPanel
     Left = 0
     Top = 254
-    Width = 602
+    Width = 630
     Height = 51
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 245
+    ExplicitWidth = 596
     object BitBtn1: TBitBtn
       Left = 8
       Top = 17
@@ -146,11 +150,12 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 602
+    Width = 630
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 596
     object Label1: TLabel
       Left = 8
       Top = 8

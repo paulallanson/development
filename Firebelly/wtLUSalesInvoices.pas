@@ -30,11 +30,7 @@ type
     edtInvoiceDate: TEdit;
     btnReports: TToolButton;
     ToolButton6: TToolButton;
-    Panel3: TPanel;
-    Label4: TLabel;
     btnReprint: TToolButton;
-    Label5: TLabel;
-    cmbCustomerFilter: TComboBox;
     btnPayments: TToolButton;
     ToolButton1: TToolButton;
     btnRequestforPayment: TToolButton;
@@ -49,6 +45,11 @@ type
     chkbxShowArchived: TCheckBox;
     BitBtn1: TBitBtn;
     btnSearch: TBitBtn;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -831,7 +832,7 @@ begin
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
     dbgDetails.Columns[icolumn].Title.Font.Style := [];
-  Column.Title.Font.Style := [fsBold];
+  Column.Title.Font.Style := [fsbold];
 
   dtmdlAllSInvoices.SortOrder := SortField + SortType;
   dtmdlAllSInvoices.SortType := SortType;

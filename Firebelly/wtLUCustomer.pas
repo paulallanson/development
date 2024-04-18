@@ -98,6 +98,7 @@ type
     procedure LUCustomersInvoicesClosed(var Message: TMessage); message luCustomers_InvoicesClosed;
   private
     FChildLeft, FChildTop: integer;
+    bActivated: boolean;
     CustomerName: string;
     ShowInactive: boolean;
     SortType: string;
@@ -332,7 +333,6 @@ begin
         parambyname('Not_Active').asstring := 'N';
       open;
     end;
-
 end;
 
 procedure TfrmWTLUCustomer.btnChangeClick(Sender: TObject);
@@ -357,6 +357,7 @@ procedure TfrmWTLUCustomer.FormShow(Sender: TObject);
 begin
   ShowInactive := false;
   edtSearch.setfocus;
+  bActivated := true;
   FormActivate(Sender);
 end;
 
@@ -492,9 +493,13 @@ end;
 
 procedure TfrmWTLUCustomer.FormActivate(Sender: TObject);
 begin
-  TradeRetail := cmbCustomerFilter.itemindex;
-  refreshdata;
-  dbgDetails.datasource.DataSet.locate('customer', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
+  if bActivated then
+    begin
+      TradeRetail := cmbCustomerFilter.itemindex;
+      refreshdata;
+      dbgDetails.datasource.DataSet.locate('customer', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
+      bActivated := false;
+    end
 end;
 
 procedure TfrmWTLUCustomer.FormDeactivate(Sender: TObject);
@@ -504,7 +509,7 @@ begin
   except
     Activecode := 0
   end;
-
+  bActivated := true;
 end;
 
 procedure TfrmWTLUCustomer.dbgDetailsDrawColumnCell(Sender: TObject;
@@ -642,8 +647,8 @@ begin
   SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsbold];
 
   SortOrder := SortField + SortType;
   SortType := SortType;

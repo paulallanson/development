@@ -3,8 +3,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
   Top = 165
   BorderStyle = bsDialog
   Caption = 'Colour Groups'
-  ClientHeight = 251
-  ClientWidth = 402
+  ClientHeight = 277
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 402
-    Height = 167
+    Width = 433
+    Height = 193
     Align = alClient
     DataSource = srcColourGroup
     DrawingStyle = gdsGradient
@@ -55,8 +55,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 232
-    Width = 402
+    Top = 258
+    Width = 433
     Height = 19
     Panels = <
       item
@@ -65,17 +65,21 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
       item
         Width = 50
       end>
+    ExplicitTop = 223
+    ExplicitWidth = 396
   end
   object Panel1: TPanel
     Left = 0
-    Top = 167
-    Width = 402
+    Top = 193
+    Width = 433
     Height = 65
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 158
+    ExplicitWidth = 396
     DesignSize = (
-      402
+      433
       65)
     object chkbxShowInactive: TCheckBox
       Left = 8
