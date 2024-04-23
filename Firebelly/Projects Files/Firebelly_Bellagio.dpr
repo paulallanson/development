@@ -255,7 +255,7 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
-  Common.DragDrop in '..\Common.DragDrop.pas';
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
 
 {$R *.RES}
 

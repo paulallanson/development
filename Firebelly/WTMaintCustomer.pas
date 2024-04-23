@@ -371,7 +371,7 @@ uses
   wtMaintCustomerConts, WTSrchCustContacts, WTDBMemo, WTMaintContApp, WtMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WTMaintEmail, WTWordOLE, WTExcelOLE, WTLUPaymentTerms, AllImages,
   WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType,
-  Common.DragDrop;
+  Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
