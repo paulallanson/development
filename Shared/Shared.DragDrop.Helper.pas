@@ -28,8 +28,12 @@ type
 implementation
 
 uses
-  System.IOUtils,
-  AllCommon;
+  {$IFDEF REDEYE}
+    CCSCommon,
+  {$ELSE}
+    AllCommon,
+  {$ENDIF}
+  System.IOUtils;
 
 { TDropComboTargetHelper }
 

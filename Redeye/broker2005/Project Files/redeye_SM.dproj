@@ -2219,6 +2219,7 @@
         <DCCReference Include="..\..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Tools.pas"/>
         <DCCReference Include="..\Utils.pas"/>
+        <DCCReference Include="..\..\..\Shared\Shared.DragDrop.Helper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

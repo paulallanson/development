@@ -129,6 +129,7 @@ procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: T
 
 { WinControl WinControlSetData }
 procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
+procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
 
 type
   TCCSRegistry = class(TRegistry)
