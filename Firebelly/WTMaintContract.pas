@@ -233,7 +233,6 @@ type
     FMode: TcqMode;
     FContractLine: TContractLine;
     sOldValue: string;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetContract(const Value: TContract);
     procedure SetMode(const Value: TcqMode);
@@ -290,7 +289,7 @@ uses
   WTSrchCustomer, wtMain, wtDataModule, AllCommon, WTMaintContractOption, WtMaintQuote, WTMaintContractConvertOrder,
   WTSalesOrderDM, wtMaintSalesOrder, WTWordOLE, WTExcelOLE, WTMaintEmail, WTLUSpecialInstruction, WTLUContractQuotes,
   WTSrchCustContacts, WTMaintContractEvents, WTMaintContractAddress,
-  WTMaintContractLines, WTMaintContractMarkup, WTLUCustomerSite;
+  WTMaintContractLines, WTMaintContractMarkup, WTLUCustomerSite, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -3679,18 +3678,6 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintContract.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWTMaintContract.Paste1Click(Sender: TObject);
 var
   DocDir: string;
@@ -4140,11 +4127,9 @@ end;
 
 procedure TfrmWTMaintContract.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintContract.sgDetailsKeyPress(Sender: TObject;

@@ -450,7 +450,8 @@ uses
   PBRPCusSupLabs in '..\Quick Reports\Solutions23\PBRPCusSupLabs.pas' {PBRPCusSupLabsFrm},
   Printer.Enums in '..\..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\..\PrinterTools\Printer.Interfaces.pas',
-  Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas';
+  Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas',
+  Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas';
 
 {$R *.RES}
 

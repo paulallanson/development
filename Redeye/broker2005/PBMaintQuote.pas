@@ -264,7 +264,6 @@ type
     FQuote: TQuote;
     sOldValue: string;
     FOriginalQuoteFromReQuote: real;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetLineHeaders;
     procedure SetMode(const Value: TQMode);
@@ -318,7 +317,7 @@ uses UITypes, FireDAC.Stan.Param, pbDatabase, pbMainMenu, CCSCommon, PBImages, D
   PBLUCConta, PBLUCRep, PBLUOps, PBDBMemo, PBMaintQuoteLines, PBWordOLE,
   PBExcelOLE, PBDocObjects, PBMaintEmail, PBMaintQuoteDoc, PBLUQuoteEnqsQty,
   PBLUQuoteReason, ComObj, AxCtrls, taoMapi, PBLUAdHoc, PBLURep, PBMaintQuoteSupply,
-  PBSendtoExcel, PBLUPackFormat;
+  PBSendtoExcel, PBLUPackFormat, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -2540,11 +2539,13 @@ end;
 
 procedure TPBMaintQuoteFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath,
+    procedure
+    begin
+      ShowDocuments(Quote.dbkey);
+    end);
 end;
 
 procedure TPBMaintQuoteFrm.ConnectToExcel;
@@ -3077,18 +3078,6 @@ begin
       Items.EndUpdate;
     end;
   end;
-end;
-
-procedure TPBMaintQuoteFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments(Quote.dbkey);
-    end);
 end;
 
 procedure TPBMaintQuoteFrm.lstvwDocumentsCompare(Sender: TObject; Item1,

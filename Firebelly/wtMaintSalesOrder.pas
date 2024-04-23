@@ -447,7 +447,6 @@ type
     procedure MoveSiteDocuments(iSOrder: integer);
     procedure DeleteQuoteDocuments;
     procedure UpdateQuoteDocuments;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   public
     bOK: boolean;
@@ -472,7 +471,7 @@ uses
   wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE, WTExcelOLE, wtLUFitters, WTMaintCustomer,
   WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder, WTMaintSalesOrderRaisePO, WTMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WtMaintJob, WtRSJobSheet, WtMaintJobComplete, WTMaintJRemedial, WTRSJobRemedialSheet,
-  WtRPJobRemedialSheet, WTLUCustomerSite, wtRPQuote, QRPDFFilt;
+  WtRPJobRemedialSheet, WTLUCustomerSite, wtRPQuote, QRPDFFilt, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -3737,18 +3736,6 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintSalesOrder.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments(SOrder.dbKey);
-    end);
-end;
-
 procedure TfrmWTMaintSalesOrder.chkbxonHoldClick(Sender: TObject);
 begin
   rdgrpDateType.Enabled := not (Sender as TCheckbox).checked;
@@ -5148,11 +5135,13 @@ end;
 
 procedure TfrmWTMaintSalesOrder.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath,
+    procedure
+    begin
+      ShowDocuments(SOrder.dbKey);
+    end);
 end;
 
 end.

@@ -760,7 +760,6 @@ type
     FProspect: boolean;
     FCreditCheck: boolean;
     SICCode: integer;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure AddZero;
     procedure DeleteZero;
@@ -850,7 +849,7 @@ uses
   STPrtAllocSales, PBMaintQuote, PBRSQuote, PBMaintBranch, PBMaintCConta,
   PBMaintContactMulti, PBMaintContactOnline, PBMaintActivity,
   PBMaintActivityReminder, pbLuQuotesSearch, pbLuEnqsSearch, pbLuOrdersSearch, pbLuJobsSearch,
-  PBEnqCancelLine;
+  PBEnqCancelLine, Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -4083,8 +4082,8 @@ procedure TPBMaintCustFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShi
 var
   FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TPBMaintCustFrm.EnableCreditDetails;
@@ -6296,18 +6295,6 @@ begin
   end;
   dtmdlCustStock.qryPartSales.close;
 
-end;
-
-procedure TPBMaintCustFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TPBMaintCustFrm.ProductionOrders2Click(Sender: TObject);

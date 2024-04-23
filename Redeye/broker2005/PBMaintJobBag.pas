@@ -657,7 +657,6 @@ type
     FDefaultBin: integer;
     FDefaultPrinter: string;
     FSchedMode: TJBSchMode;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure AddPurchaseOrder(const rPO: real; iLine : integer);
     procedure AddPurchaseOrderFromEnq(const rPO: real; iLine: integer);
@@ -791,7 +790,7 @@ uses
   PBLUBranchCstCntr, pbLUCustQuotesJB, PBMaintJobBagNonConfDoc, PBMaintSuppInvoice,
   PBRSNonConform, CCSPrint, PBMaintJobBagProcessCosts, PBMaintJobBagDelivery,
   PBRSJobBagDelivNote, PBRSJobBagBoxLabels, PBSendtoExcel,
-  PBRSWorksOrderISO, PBMaintEmailSupplier, pbluCustDeliv, PBLUPackFormat;
+  PBRSWorksOrderISO, PBMaintEmailSupplier, pbluCustDeliv, PBLUPackFormat, Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -2954,11 +2953,9 @@ end;
 
 procedure TPBMaintJobBagFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
@@ -4240,18 +4237,6 @@ begin
   finally
     PBRSPOrdNFrm.Free;
   end;
-end;
-
-procedure TPBMaintJobBagFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TPBMaintJobBagFrm.CheckNotes(Sender: TObject);
