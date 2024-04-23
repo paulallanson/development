@@ -264,8 +264,6 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT Proof_History.Proof_History,'
       '      Proof_History.Proof_Status,'
@@ -296,8 +294,6 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
   end
   object GetHeadDtlsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'SELECT Customer.Name as Cust_name, Supplier.Name as Supp_Name, P' +

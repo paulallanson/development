@@ -274,8 +274,6 @@ object PBLUAccountTeamfrm: TPBLUAccountTeamfrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Account_Team.*'
       'From Account_Team'

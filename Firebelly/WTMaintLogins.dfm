@@ -128,8 +128,6 @@ object frmWTMaintLogins: TfrmWTMaintLogins
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'WT'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'#9'Workstation.Workstation,'
       #9#9'Workstation.Workstation_Name, '

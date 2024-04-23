@@ -236,8 +236,6 @@ object CSLUPriceUnitFrm: TCSLUPriceUnitFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Price_Unit.Price_Unit,'
       '        Price_Unit.Description,'

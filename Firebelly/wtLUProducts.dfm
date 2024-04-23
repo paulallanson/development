@@ -212,8 +212,6 @@ object frmWTLUProducts: TfrmWTLUProducts
   end
   object lkpProducts: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select Product.*,'
       ' (select top 1 Unit_price'

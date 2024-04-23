@@ -259,8 +259,6 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select Customer_CostCentre.*'
       'From Customer_CostCentre'

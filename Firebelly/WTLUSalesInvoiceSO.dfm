@@ -29,8 +29,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       item
         Width = 100
       end>
-    ExplicitTop = 415
-    ExplicitWidth = 984
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -118,8 +116,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 277
-    ExplicitWidth = 984
     object chkbxShow: TCheckBox
       Left = 8
       Top = 41
@@ -147,7 +143,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 982
       DesignSize = (
         972
         53)
@@ -226,7 +221,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         Anchors = [akRight, akBottom]
         TabOrder = 2
         OnKeyPress = edtSONumberKeyPress
-        ExplicitLeft = 716
       end
       object btnSelect: TBitBtn
         Left = 805
@@ -238,7 +232,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         ModalResult = 1
         TabOrder = 3
         OnClick = btnSelectClick
-        ExplicitLeft = 815
       end
       object btnClose: TBitBtn
         Left = 886
@@ -250,7 +243,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         ModalResult = 2
         TabOrder = 4
         OnClick = btnCloseClick
-        ExplicitLeft = 896
       end
     end
     object pnlRevenueCentre: TPanel
@@ -262,7 +254,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = 600
       object rdgrpRevenueCentre: TRadioGroup
         Left = 40
         Top = 3

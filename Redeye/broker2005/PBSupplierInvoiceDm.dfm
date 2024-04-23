@@ -4,8 +4,6 @@ object dmSupplierInvoice: TdmSupplierInvoice
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
     ConnectionName = 'pb'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select TOP 2000'
       '        Supplier_invoice.*,'
@@ -1520,8 +1518,6 @@ object dmSupplierInvoice: TdmSupplierInvoice
   object qryPCHeaderGrid: TFDQuery
     OnCalcFields = qryPCHeaderGridCalcFields
     ConnectionName = 'pb'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select Supplier_invoice.*,'
       '          Supplier.Name as Supplier_Name,'

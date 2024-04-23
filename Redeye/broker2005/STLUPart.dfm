@@ -291,8 +291,6 @@ object STPrtMntFrm: TSTPrtMntFrm
   end
   object GetPartsQuery: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     Left = 360
     Top = 136
   end

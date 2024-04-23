@@ -252,8 +252,6 @@ object PBLUQAOperatorFrm: TPBLUQAOperatorFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From QA_Operator'

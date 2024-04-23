@@ -151,8 +151,6 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object GetWeightSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From Paper_Weight'
@@ -169,8 +167,6 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object GetBrandSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From Paper_Brand'
@@ -180,8 +176,6 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object GetMaterialSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From Paper_Material'
@@ -191,8 +185,6 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object GetColourSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From Paper_Colour'

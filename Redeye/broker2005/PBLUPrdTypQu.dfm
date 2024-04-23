@@ -229,8 +229,6 @@ object PBLUPrdTypQuFrm: TPBLUPrdTypQuFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Product_TypeQuestion.Question,'
       '        Product_TypeQuestion.Question_Text, '

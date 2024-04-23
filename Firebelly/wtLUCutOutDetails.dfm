@@ -333,8 +333,6 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
   end
   object lkpCOutThickness: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '    Cutout_thickness.Cutout,'

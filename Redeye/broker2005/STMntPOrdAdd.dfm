@@ -191,8 +191,6 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   end
   object GetPartsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       ''
       ' ')

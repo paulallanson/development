@@ -3,8 +3,6 @@ object dtmdlJobs: TdtmdlJobs
   Width = 588
   object qryJobs: TFDQuery
     Connection = dmBroker.PBLDatabase
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'SELECT DISTINCT TOP 2000 Job_Bag.Job_Bag, Job_Bag.Job_Bag_Descr,' +
@@ -467,8 +465,6 @@ object dtmdlJobs: TdtmdlJobs
   end
   object qryJobsNCA: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'

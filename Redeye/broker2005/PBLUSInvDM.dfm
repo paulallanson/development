@@ -8,8 +8,6 @@ object dmLookUpSInv: TdmLookUpSInv
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Sales_Invoice_No,'

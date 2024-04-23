@@ -344,8 +344,6 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   end
   object lkpEdgeThickness: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '  Edge_thickness.Edge_profile,'

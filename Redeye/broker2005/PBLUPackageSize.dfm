@@ -251,8 +251,6 @@ object PBLUPackageSizeFrm: TPBLUPackageSizeFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Package_Size.*'
       'From Package_Size'

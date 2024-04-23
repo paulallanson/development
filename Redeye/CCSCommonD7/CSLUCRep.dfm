@@ -163,8 +163,6 @@ object CSLUCRepFrm: TCSLUCRepFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select Reps_Branches.Rep, Reps_Branches.Percentage, Rep.Name'
       'From Reps_Branches, Rep'

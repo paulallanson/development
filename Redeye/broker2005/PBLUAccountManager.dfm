@@ -271,8 +271,6 @@ object PBLUAccountManagerFrm: TPBLUAccountManagerFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select User_Group_Operator.User_Group_Operator,'
       '        Operator.Operator,'

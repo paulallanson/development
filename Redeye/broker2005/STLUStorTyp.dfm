@@ -239,8 +239,6 @@ object STLUStorTypFrm: TSTLUStorTypFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select  Part_Store_Type, Part_Store_Type_Name, Part_Store_Is_Van' +
