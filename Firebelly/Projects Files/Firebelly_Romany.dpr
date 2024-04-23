@@ -163,7 +163,8 @@ uses
   wtRPQuoteTrade in '..\Romany\Reports\wtRPQuoteTrade.pas' {frmwtRPQuoteTrade},
   wtRPSalesInvoice in '..\Romany\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
   wtRPSOrder in '..\Romany\Reports\wtRPSOrder.pas' {frmwtRPSOrder},
-  CRControls in '..\..\Components\CRPackage\CRControls.pas';
+  CRControls in '..\..\Components\CRPackage\CRControls.pas',
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
 
 {$R *.RES}
 

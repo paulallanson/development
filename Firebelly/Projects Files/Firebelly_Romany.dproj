@@ -593,6 +593,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
+        <DCCReference Include="..\..\Shared\Shared.DragDrop.Helper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
