@@ -857,6 +857,7 @@
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
+        <DCCReference Include="..\Common.DragDrop.pas"/>
         <None Include="FirebellyScheduler.dll">
             <ContainerId>File</ContainerId>
         </None>
