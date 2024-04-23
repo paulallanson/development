@@ -4,8 +4,6 @@ object dtmdlStock: TdtmdlStock
   Width = 572
   object qryAllStock: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select *, product_group.product_group_description'
       'from Product, product_group'

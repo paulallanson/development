@@ -25,8 +25,6 @@ object frmWTAccExport3: TfrmWTAccExport3
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 256
-    ExplicitWidth = 363
     object BitBtn1: TBitBtn
       Left = 96
       Top = 8
@@ -64,8 +62,6 @@ object frmWTAccExport3: TfrmWTAccExport3
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 363
-    ExplicitHeight = 256
     object Label2: TLabel
       Left = 8
       Top = 8

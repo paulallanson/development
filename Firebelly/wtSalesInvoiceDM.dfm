@@ -2062,8 +2062,6 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
     ConnectionName = 'wt'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,'
       '        Sales_Invoice.Customer,'

@@ -30,7 +30,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1245
+        Width = 1241
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -280,7 +280,6 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Branch_Name'
         Title.Caption = 'Site Name'
-        Width = 64
         Visible = True
       end
       item
