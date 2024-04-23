@@ -419,12 +419,12 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     object qryReportDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
     end
-    object qryReportConsignment_number: TStringField
+    object qryReportConsignment_number: TWideStringField
       FieldName = 'Consignment_number'
       FixedChar = True
       Size = 40
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -432,7 +432,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80

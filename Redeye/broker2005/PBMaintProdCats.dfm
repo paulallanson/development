@@ -256,7 +256,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     object qryProdCatsTrueproduct_type: TIntegerField
       FieldName = 'product_type'
     end
-    object qryProdCatsTruedescription: TStringField
+    object qryProdCatsTruedescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 80
@@ -264,7 +264,7 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     object qryProdCatsTruecategory: TIntegerField
       FieldName = 'category'
     end
-    object qryProdCatsTruedescription_1: TStringField
+    object qryProdCatsTruedescription_1: TWideStringField
       FieldName = 'description_1'
       FixedChar = True
       Size = 80

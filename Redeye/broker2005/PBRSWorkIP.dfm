@@ -730,7 +730,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -741,12 +741,12 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object qryReportProof_Required: TStringField
+    object qryReportProof_Required: TWideStringField
       FieldName = 'Proof_Required'
       FixedChar = True
       Size = 2
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -754,12 +754,12 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 16
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -768,7 +768,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qryReportPOLine: TStringField
+    object qryReportPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryReportPOLineGetText
@@ -783,7 +783,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportDate_Deliv_Actual: TDateTimeField
       FieldName = 'Date_Deliv_Actual'
     end
-    object qryReportOn_Hold: TStringField
+    object qryReportOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       FixedChar = True
       Size = 2
@@ -811,14 +811,14 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object qryReportPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qryReportProduct_Type_Description: TStringField
+    object qryReportProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
       Size = 50
     end
-    object qryReportProduct_Type_Short_Desc: TStringField
+    object qryReportProduct_Type_Short_Desc: TWideStringField
       FieldName = 'Product_Type_Short_Desc'
     end
-    object qryReportProduct_Type_Sales_Nominal: TStringField
+    object qryReportProduct_Type_Sales_Nominal: TWideStringField
       FieldName = 'Product_Type_Sales_Nominal'
     end
   end

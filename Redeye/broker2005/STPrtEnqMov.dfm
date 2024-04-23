@@ -301,26 +301,26 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
     object GetDetsSQLDate_Received: TDateTimeField
       FieldName = 'Date_Received'
     end
-    object GetDetsSQLPart_Move_Type_Descr: TStringField
+    object GetDetsSQLPart_Move_Type_Descr: TWideStringField
       FieldName = 'Part_Move_Type_Descr'
       FixedChar = True
       Size = 40
     end
-    object GetDetsSQLPart_Store_Name: TStringField
+    object GetDetsSQLPart_Store_Name: TWideStringField
       FieldName = 'Part_Store_Name'
       FixedChar = True
       Size = 60
     end
-    object GetDetsSQLPart_Movement_Bin: TStringField
+    object GetDetsSQLPart_Movement_Bin: TWideStringField
       FieldName = 'Part_Movement_Bin'
       FixedChar = True
     end
-    object GetDetsSQLPart_Store_Lot: TStringField
+    object GetDetsSQLPart_Store_Lot: TWideStringField
       FieldName = 'Part_Store_Lot'
       FixedChar = True
       Size = 40
     end
-    object GetDetsSQLPart_Movement_Reference: TStringField
+    object GetDetsSQLPart_Movement_Reference: TWideStringField
       FieldName = 'Part_Movement_Reference'
       FixedChar = True
       Size = 60

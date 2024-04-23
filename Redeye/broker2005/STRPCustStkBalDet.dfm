@@ -996,12 +996,12 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
         Name = 'Not_in_Use'
         DataType = ftString
       end>
-    object qryReportPart: TStringField
+    object qryReportPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
     end
-    object qryReportPart_Description: TStringField
+    object qryReportPart_Description: TWideStringField
       FieldName = 'Part_Description'
       FixedChar = True
       Size = 120
@@ -1009,17 +1009,17 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qryReportNot_In_Use: TStringField
+    object qryReportNot_In_Use: TWideStringField
       FieldName = 'Not_In_Use'
       FixedChar = True
       Size = 2
     end
-    object qryReportProduct_Class: TStringField
+    object qryReportProduct_Class: TWideStringField
       FieldName = 'Product_Class'
       FixedChar = True
       Size = 10
@@ -1049,12 +1049,12 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
         Name = 'part'
         DataType = ftString
       end>
-    object GetSerNosSQLSerial_item_from: TStringField
+    object GetSerNosSQLSerial_item_from: TWideStringField
       FieldName = 'Serial_item_from'
       FixedChar = True
       Size = 60
     end
-    object GetSerNosSQLSerial_item_to: TStringField
+    object GetSerNosSQLSerial_item_to: TWideStringField
       FieldName = 'Serial_item_to'
       FixedChar = True
       Size = 60
@@ -1173,7 +1173,7 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
         ParamType = ptInput
         Value = Null
       end>
-    object qryOrdersCust_Order_No: TStringField
+    object qryOrdersCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       Origin = 'Cust_Order_No'
       Size = 50
@@ -1190,7 +1190,7 @@ object STRPCustStkBalDetfrm: TSTRPCustStkBalDetfrm
       FieldName = 'Quantity'
       Origin = 'Quantity'
     end
-    object qryOrdersForms_per_Box: TStringField
+    object qryOrdersForms_per_Box: TWideStringField
       FieldName = 'Forms_per_Box'
       Origin = 'Forms_per_Box'
       Size = 40

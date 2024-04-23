@@ -296,7 +296,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
       '')
     Left = 64
     Top = 144
-    object GetDetsSQLAudit_Text: TStringField
+    object GetDetsSQLAudit_Text: TWideStringField
       FieldName = 'Audit_Text'
       OnGetText = GetDetsSQLAudit_TextGetText
       FixedChar = True
@@ -326,21 +326,21 @@ object PBAuditViewFrm: TPBAuditViewFrm
     object GetDetsSQLAudit_Code_4: TIntegerField
       FieldName = 'Audit_Code_4'
     end
-    object GetDetsSQLName: TStringField
+    object GetDetsSQLName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLAudit_Type_Descr: TStringField
+    object GetDetsSQLAudit_Type_Descr: TWideStringField
       FieldName = 'Audit_Type_Descr'
       OnGetText = GetDetsSQLAudit_Type_DescrGetText
       FixedChar = True
       Size = 15
     end
-    object GetDetsSQLAudit_Table_Name: TStringField
+    object GetDetsSQLAudit_Table_Name: TWideStringField
       FieldName = 'Audit_Table_Name'
     end
-    object GetDetsSQLAudit_Code_1_Field: TStringField
+    object GetDetsSQLAudit_Code_1_Field: TWideStringField
       FieldName = 'Audit_Code_1_Field'
     end
   end
@@ -388,7 +388,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
       item
         Name = 'Date_To'
       end>
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Audit_Text'
       OnGetText = GetDetsSQLAudit_TextGetText
       FixedChar = True
@@ -418,20 +418,20 @@ object PBAuditViewFrm: TPBAuditViewFrm
     object IntegerField14: TIntegerField
       FieldName = 'Audit_Code_4'
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Audit_Type_Descr'
       FixedChar = True
       Size = 15
     end
-    object GetDetsSqlSQLAudit_Table_Name: TStringField
+    object GetDetsSqlSQLAudit_Table_Name: TWideStringField
       FieldName = 'Audit_Table_Name'
     end
-    object GetDetsSqlSQLAudit_Code_1_Field: TStringField
+    object GetDetsSqlSQLAudit_Code_1_Field: TWideStringField
       FieldName = 'Audit_Code_1_Field'
     end
   end

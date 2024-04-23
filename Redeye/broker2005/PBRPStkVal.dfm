@@ -1394,7 +1394,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryReportForm_Reference_Descr: TStringField
+    object qryReportForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
@@ -1407,7 +1407,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
@@ -1421,12 +1421,12 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -1434,7 +1434,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -1442,7 +1442,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportStock_Reference: TStringField
+    object qryReportStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
       FixedChar = True
       Size = 30
@@ -1450,7 +1450,7 @@ object PBRPStkValfrm: TPBRPStkValfrm
     object qryReportPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object qryReportInvoice_Upfront: TStringField
+    object qryReportInvoice_Upfront: TWideStringField
       FieldName = 'Invoice_Upfront'
       FixedChar = True
       Size = 2

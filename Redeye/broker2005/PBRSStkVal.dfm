@@ -281,7 +281,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     object qryReportOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryReportForm_Reference_Descr: TStringField
+    object qryReportForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
@@ -294,7 +294,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
       FixedChar = True
       Size = 80
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100

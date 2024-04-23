@@ -657,18 +657,18 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportDeliver_via_Company: TStringField
+    object qryReportDeliver_via_Company: TWideStringField
       FieldName = 'Deliver_via_Company'
       Size = 1
     end
     object qryReportDate_Deliv_Actual: TDateTimeField
       FieldName = 'Date_Deliv_Actual'
     end
-    object qryReportDelivery_to_Stock: TStringField
+    object qryReportDelivery_to_Stock: TWideStringField
       FieldName = 'Delivery_to_Stock'
       Size = 1
     end
-    object qryReportDelivery_note_printed: TStringField
+    object qryReportDelivery_note_printed: TWideStringField
       FieldName = 'Delivery_note_printed'
       Size = 1
     end
@@ -678,7 +678,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object qryReportCustomer_Branch: TIntegerField
       FieldName = 'Customer_Branch'
     end
-    object qryReportCust_order_no: TStringField
+    object qryReportCust_order_no: TWideStringField
       FieldName = 'Cust_order_no'
       Size = 40
     end
@@ -691,7 +691,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object qryReportSupplier_Branch: TIntegerField
       FieldName = 'Supplier_Branch'
     end
-    object qryReportSupplier_Name: TStringField
+    object qryReportSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       Size = 40
     end
@@ -699,7 +699,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       FieldName = 'Customer_Name'
       Size = 40
     end
-    object qryReportOrder_Status: TStringField
+    object qryReportOrder_Status: TWideStringField
       FieldName = 'Order_Status'
       Size = 40
     end
@@ -715,21 +715,21 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
       OnGetText = qryReportQty_OutGetText
       Calculated = True
     end
-    object qryReportDeliveryName: TStringField
+    object qryReportDeliveryName: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryName'
       Size = 50
       Calculated = True
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       Size = 80
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       Size = 50
     end
-    object qryReportPOrder: TStringField
+    object qryReportPOrder: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POrder'
       OnGetText = qryReportPOrderGetText
@@ -741,7 +741,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object qryReportSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
     end
-    object qryReportSell_Unit_Descr: TStringField
+    object qryReportSell_Unit_Descr: TWideStringField
       FieldName = 'Sell_Unit_Descr'
       FixedChar = True
       Size = 80
@@ -749,7 +749,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     object qryReportPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qryReportStock_Reference: TStringField
+    object qryReportStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
       FixedChar = True
       Size = 30

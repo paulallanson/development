@@ -2575,7 +2575,7 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportlinesQuote_Line_no: TIntegerField
       FieldName = 'Quote_Line_no'
     end
-    object qryReportlinesQuote_Line_description: TStringField
+    object qryReportlinesQuote_Line_description: TWideStringField
       FieldName = 'Quote_Line_description'
       FixedChar = True
       Size = 255
@@ -2597,7 +2597,7 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportlinesProduct_Type: TIntegerField
       FieldName = 'Product_Type'
     end
-    object qryReportlinesLine_Converted: TStringField
+    object qryReportlinesLine_Converted: TWideStringField
       FieldName = 'Line_Converted'
       FixedChar = True
       Size = 2
@@ -2632,7 +2632,7 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportlinesProcess: TIntegerField
       FieldName = 'Process'
     end
-    object qryReportlinesCosting_Tool_Flag: TStringField
+    object qryReportlinesCosting_Tool_Flag: TWideStringField
       FieldName = 'Costing_Tool_Flag'
       FixedChar = True
       Size = 2
@@ -2649,12 +2649,12 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportlinesPrice_Unit_factor: TFloatField
       FieldName = 'Price_Unit_factor'
     end
-    object qryReportlinesPrice_unit_Description: TStringField
+    object qryReportlinesPrice_unit_Description: TWideStringField
       FieldName = 'Price_unit_Description'
       FixedChar = True
       Size = 80
     end
-    object qryReportlinesProduct_Type_Description: TStringField
+    object qryReportlinesProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
       FixedChar = True
       Size = 80
@@ -2738,7 +2738,7 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportSupplyLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryReportSupplyLine_Converted: TStringField
+    object qryReportSupplyLine_Converted: TWideStringField
       FieldName = 'Line_Converted'
       FixedChar = True
       Size = 2
@@ -2746,7 +2746,7 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportSupplyQuantity: TFloatField
       FieldName = 'Quantity'
     end
-    object qryReportSupplyQuote_Supply_Description: TStringField
+    object qryReportSupplyQuote_Supply_Description: TWideStringField
       FieldName = 'Quote_Supply_Description'
       FixedChar = True
       Size = 255
@@ -2764,12 +2764,12 @@ object frmPBRPQuote: TfrmPBRPQuote
     object qryReportSupplyPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qryReportSupplyPrice_Unit_Description: TStringField
+    object qryReportSupplyPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
       FixedChar = True
       Size = 80
     end
-    object qryReportSupplyForm_Description: TStringField
+    object qryReportSupplyForm_Description: TWideStringField
       FieldName = 'Form_Description'
       FixedChar = True
       Size = 160

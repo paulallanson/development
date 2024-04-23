@@ -1627,17 +1627,17 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     object qry4CastInvsdate_point: TDateTimeField
       FieldName = 'date_point'
     end
-    object qry4CastInvsdelivery_to_stock: TStringField
+    object qry4CastInvsdelivery_to_stock: TWideStringField
       FieldName = 'delivery_to_stock'
       FixedChar = True
       Size = 2
     end
-    object qry4CastInvsinvoice_upfront: TStringField
+    object qry4CastInvsinvoice_upfront: TWideStringField
       FieldName = 'invoice_upfront'
       FixedChar = True
       Size = 2
     end
-    object qry4CastInvsinactive: TStringField
+    object qry4CastInvsinactive: TWideStringField
       FieldName = 'inactive'
       FixedChar = True
       Size = 2
@@ -1648,12 +1648,12 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     object qry4CastInvsselling_price: TCurrencyField
       FieldName = 'selling_price'
     end
-    object qry4CastInvscust_order_no: TStringField
+    object qry4CastInvscust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       FixedChar = True
       Size = 50
     end
-    object qry4CastInvscustomers_desc: TStringField
+    object qry4CastInvscustomers_desc: TWideStringField
       FieldName = 'customers_desc'
       FixedChar = True
       Size = 80
@@ -1667,7 +1667,7 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     object qry4CastInvsorder_unit_factor: TFloatField
       FieldName = 'order_unit_factor'
     end
-    object qry4CastInvscust_name: TStringField
+    object qry4CastInvscust_name: TWideStringField
       FieldName = 'cust_name'
       FixedChar = True
       Size = 80
@@ -1675,12 +1675,12 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     object qry4CastInvsrep: TIntegerField
       FieldName = 'rep'
     end
-    object qry4CastInvsrep_name: TStringField
+    object qry4CastInvsrep_name: TWideStringField
       FieldName = 'rep_name'
       FixedChar = True
       Size = 80
     end
-    object qry4CastInvsform_reference_descr: TStringField
+    object qry4CastInvsform_reference_descr: TWideStringField
       FieldName = 'form_reference_descr'
       FixedChar = True
       Size = 100
@@ -1688,12 +1688,12 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     object qry4CastInvsdate_deliv_actual: TDateTimeField
       FieldName = 'date_deliv_actual'
     end
-    object qry4CastInvsform_reference_id: TStringField
+    object qry4CastInvsform_reference_id: TWideStringField
       FieldName = 'form_reference_id'
       FixedChar = True
       Size = 100
     end
-    object qry4CastInvsstock_reference: TStringField
+    object qry4CastInvsstock_reference: TWideStringField
       FieldName = 'stock_reference'
       FixedChar = True
       Size = 30

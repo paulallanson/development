@@ -274,46 +274,46 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     object qryCurrentSuppStatusBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qryCurrentSuppStatusName: TStringField
+    object qryCurrentSuppStatusName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentSuppStatusBuilding_No_name: TStringField
+    object qryCurrentSuppStatusBuilding_No_name: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentSuppStatusStreet: TStringField
+    object qryCurrentSuppStatusStreet: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentSuppStatusLocale: TStringField
+    object qryCurrentSuppStatusLocale: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentSuppStatusTown: TStringField
+    object qryCurrentSuppStatusTown: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentSuppStatusPostcode: TStringField
+    object qryCurrentSuppStatusPostcode: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object qryCurrentSuppStatusPhone: TStringField
+    object qryCurrentSuppStatusPhone: TWideStringField
       FieldName = 'Phone'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentSuppStatusFax_Number: TStringField
+    object qryCurrentSuppStatusFax_Number: TWideStringField
       FieldName = 'Fax_Number'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentSuppStatusEmail: TStringField
+    object qryCurrentSuppStatusEmail: TWideStringField
       FieldName = 'Email'
       FixedChar = True
       Size = 80
@@ -321,21 +321,21 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     object qryCurrentSuppStatusNarrative: TIntegerField
       FieldName = 'Narrative'
     end
-    object qryCurrentSuppStatusAccount_Code: TStringField
+    object qryCurrentSuppStatusAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qryCurrentSuppStatusAccount_Code_On_Ledger: TStringField
+    object qryCurrentSuppStatusAccount_Code_On_Ledger: TWideStringField
       FieldName = 'Account_Code_On_Ledger'
       FixedChar = True
       Size = 2
     end
-    object qryCurrentSuppStatusSupp_name: TStringField
+    object qryCurrentSuppStatusSupp_name: TWideStringField
       FieldName = 'Supp_name'
       FixedChar = True
       Size = 162
     end
-    object qryCurrentSuppStatusName_1: TStringField
+    object qryCurrentSuppStatusName_1: TWideStringField
       FieldName = 'Name_1'
       FixedChar = True
       Size = 80

@@ -55,7 +55,7 @@ type
     qryDummynot_paid_for: TIntegerField;
     qryDummyNot_in_Use: TWideStringField;
     qryDummyProduct_Class: TWideStringField;
-    qryDummyProduct_Class_Description: TStringField;
+    qryDummyProduct_Class_Description: TWideStringField;
     procedure edtSearchChange(Sender: TObject);
     procedure btnSelectClick(Sender: TObject);
     procedure btbtnCloseClick(Sender: TObject);

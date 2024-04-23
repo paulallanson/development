@@ -1118,16 +1118,16 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object IntegerField2: TIntegerField
       FieldName = 'Branch_no'
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -1144,46 +1144,46 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object DateTimeField1: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'Phone'
       FixedChar = True
       Size = 40
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'Fax_Number'
       FixedChar = True
       Size = 40
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -1191,12 +1191,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object IntegerField3: TIntegerField
       FieldName = 'Form_Reference'
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
@@ -1222,12 +1222,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object FloatField3: TFloatField
       FieldName = 'Sel1'
     end
-    object StringField15: TStringField
+    object StringField15: TWideStringField
       FieldName = 'Text100'
       FixedChar = True
       Size = 100
     end
-    object StringField16: TStringField
+    object StringField16: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Order'
       Calculated = True
@@ -1244,27 +1244,27 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object IntegerField11: TIntegerField
       FieldName = 'Job_Bag_Line'
     end
-    object StringField17: TStringField
+    object StringField17: TWideStringField
       FieldName = 'SOCustRef'
       FixedChar = True
       Size = 80
     end
-    object StringField18: TStringField
+    object StringField18: TWideStringField
       FieldName = 'JBCustRef'
       FixedChar = True
       Size = 80
     end
-    object StringField19: TStringField
+    object StringField19: TWideStringField
       FieldName = 'Job_Bag_Descr'
       FixedChar = True
       Size = 80
     end
-    object StringField20: TStringField
+    object StringField20: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustRef'
       Calculated = True
     end
-    object StringField21: TStringField
+    object StringField21: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustDesc'
       Calculated = True

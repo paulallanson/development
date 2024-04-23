@@ -252,12 +252,12 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsNo_Of_Boxes: TIntegerField
       FieldName = 'No_Of_Boxes'
     end
-    object qryPODetailsDelivery_Instructions: TStringField
+    object qryPODetailsDelivery_Instructions: TWideStringField
       FieldName = 'Delivery_Instructions'
       FixedChar = True
       Size = 255
     end
-    object qryPODetailsDeliver_via_Company: TStringField
+    object qryPODetailsDeliver_via_Company: TWideStringField
       FieldName = 'Deliver_via_Company'
       FixedChar = True
       Size = 1
@@ -265,17 +265,17 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsDate_Deliv_Actual: TDateTimeField
       FieldName = 'Date_Deliv_Actual'
     end
-    object qryPODetailsDelivery_to_Stock: TStringField
+    object qryPODetailsDelivery_to_Stock: TWideStringField
       FieldName = 'Delivery_to_Stock'
       FixedChar = True
       Size = 2
     end
-    object qryPODetailsDelivery_note_printed: TStringField
+    object qryPODetailsDelivery_note_printed: TWideStringField
       FieldName = 'Delivery_note_printed'
       FixedChar = True
       Size = 2
     end
-    object qryPODetailsSuppliers_Desc: TStringField
+    object qryPODetailsSuppliers_Desc: TWideStringField
       FieldName = 'Suppliers_Desc'
       FixedChar = True
       Size = 80
@@ -286,16 +286,16 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsCustomer_Branch: TIntegerField
       FieldName = 'Customer_Branch'
     end
-    object qryPODetailsForms_Per_Box: TStringField
+    object qryPODetailsForms_Per_Box: TWideStringField
       FieldName = 'Forms_Per_Box'
       FixedChar = True
       Size = 40
     end
-    object qryPODetailsNo_of_Sets: TStringField
+    object qryPODetailsNo_of_Sets: TWideStringField
       FieldName = 'No_of_Sets'
       FixedChar = True
     end
-    object qryPODetailsCust_order_no: TStringField
+    object qryPODetailsCust_order_no: TWideStringField
       FieldName = 'Cust_order_no'
       FixedChar = True
       Size = 50
@@ -312,17 +312,17 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsSupplier_Branch: TIntegerField
       FieldName = 'Supplier_Branch'
     end
-    object qryPODetailsSupplier_Name: TStringField
+    object qryPODetailsSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPODetailsCustomer_Name: TStringField
+    object qryPODetailsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPODetailsOrder_Status: TStringField
+    object qryPODetailsOrder_Status: TWideStringField
       FieldName = 'Order_Status'
       FixedChar = True
       Size = 80
@@ -336,12 +336,12 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsOriginal_OrderLine: TFloatField
       FieldName = 'Original_OrderLine'
     end
-    object qryPODetailsNumber_Instructions: TStringField
+    object qryPODetailsNumber_Instructions: TWideStringField
       FieldName = 'Number_Instructions'
       FixedChar = True
       Size = 80
     end
-    object qryPODetailsDeliveryName: TStringField
+    object qryPODetailsDeliveryName: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryName'
       Size = 50
@@ -350,7 +350,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsGoods_reqd_by_customer: TDateTimeField
       FieldName = 'Goods_reqd_by_customer'
     end
-    object qryPODetailsInvoice_upfront: TStringField
+    object qryPODetailsInvoice_upfront: TWideStringField
       FieldName = 'Invoice_upfront'
       FixedChar = True
       Size = 2
@@ -361,7 +361,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryPODetailsPrice_unit_description: TStringField
+    object qryPODetailsPrice_unit_description: TWideStringField
       FieldName = 'Price_unit_description'
       FixedChar = True
       Size = 80
@@ -369,17 +369,17 @@ object dtmdlDeliveries: TdtmdlDeliveries
     object qryPODetailsPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qryPODetailsContact_Name: TStringField
+    object qryPODetailsContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       FixedChar = True
       Size = 60
     end
-    object qryPODetailsorder_contact_name: TStringField
+    object qryPODetailsorder_contact_name: TWideStringField
       FieldName = 'order_contact_name'
       FixedChar = True
       Size = 80
     end
-    object qryPODetailsReady_to_Invoice: TStringField
+    object qryPODetailsReady_to_Invoice: TWideStringField
       FieldName = 'Ready_to_Invoice'
       Size = 1
     end

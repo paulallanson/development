@@ -72,7 +72,7 @@ type
     qryStocknot_paid_for: TIntegerField;
     qryStockNot_in_Use: TWideStringField;
     qryStockProduct_Class: TWideStringField;
-    qryStockProduct_Class_Description: TStringField;
+    qryStockProduct_Class_Description: TWideStringField;
     qryStockMinimum_Stock: TIntegerField;
     qryStockMaximum_Stock: TIntegerField;
     qryStockReorder_Level: TIntegerField;
@@ -129,7 +129,7 @@ type
     qryPartProductionDelivered_to_Stock: TFloatField;
     qryPartProductionDelivered: TFloatField;
     qryPartProductionAwaiting_Delivery: TFloatField;
-    qryPartProductionPack_Size: TStringField;
+    qryPartProductionPack_Size: TWideStringField;
     qryPartProductionSelling_Price: TCurrencyField;
     qryPartProductionOrder_price: TCurrencyField;
     qryPartProductionsell_unit_factor: TFloatField;

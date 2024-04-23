@@ -31,7 +31,7 @@ type
     qryMaterialUseUse_Description: TWideStringField;
     qryMaterialUseInactive: TWideStringField;
     qryMaterialUseUse_Type: TIntegerField;
-    qryMaterialUseUse_Type_Description: TStringField;
+    qryMaterialUseUse_Type_Description: TWideStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

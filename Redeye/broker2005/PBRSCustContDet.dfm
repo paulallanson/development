@@ -795,27 +795,27 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       item
         Name = 'Year3'
       end>
-    object qryCurrentContStatusContact_Name: TStringField
+    object qryCurrentContStatusContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusEmail: TStringField
+    object qryCurrentContStatusEmail: TWideStringField
       FieldName = 'Email'
       FixedChar = True
       Size = 200
     end
-    object qryCurrentContStatusContact_Phone: TStringField
+    object qryCurrentContStatusContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentContStatusMobile_No: TStringField
+    object qryCurrentContStatusMobile_No: TWideStringField
       FieldName = 'Mobile_No'
       FixedChar = True
       Size = 30
     end
-    object qryCurrentContStatusContact_Fax: TStringField
+    object qryCurrentContStatusContact_Fax: TWideStringField
       FieldName = 'Contact_Fax'
       FixedChar = True
       Size = 40
@@ -829,51 +829,51 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object qryCurrentContStatusContact_Status: TIntegerField
       FieldName = 'Contact_Status'
     end
-    object qryCurrentContStatusContact_Status_Descr: TStringField
+    object qryCurrentContStatusContact_Status_Descr: TWideStringField
       FieldName = 'Contact_Status_Descr'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentContStatusBuilding_No_name: TStringField
+    object qryCurrentContStatusBuilding_No_name: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusStreet: TStringField
+    object qryCurrentContStatusStreet: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusLocale: TStringField
+    object qryCurrentContStatusLocale: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusTown: TStringField
+    object qryCurrentContStatusTown: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusPostcode: TStringField
+    object qryCurrentContStatusPostcode: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object qryCurrentContStatusCustomer_Phone: TStringField
+    object qryCurrentContStatusCustomer_Phone: TWideStringField
       FieldName = 'Customer_Phone'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentContStatusCustomer_Fax: TStringField
+    object qryCurrentContStatusCustomer_Fax: TWideStringField
       FieldName = 'Customer_Fax'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentContStatusCustomer_Name: TStringField
+    object qryCurrentContStatusCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusRep_Name: TStringField
+    object qryCurrentContStatusRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
@@ -887,45 +887,45 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object qryCurrentContStatusDef_Markup_Perc: TFloatField
       FieldName = 'Def_Markup_Perc'
     end
-    object qryCurrentContStatusAcc_Active: TStringField
+    object qryCurrentContStatusAcc_Active: TWideStringField
       FieldName = 'inactive'
       FixedChar = True
       Size = 2
     end
-    object qryCurrentContStatusPhone: TStringField
+    object qryCurrentContStatusPhone: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Phone'
       OnGetText = qryCurrentContStatusPhoneGetText
       Size = 30
       Calculated = True
     end
-    object qryCurrentContStatusContact_Level_Description: TStringField
+    object qryCurrentContStatusContact_Level_Description: TWideStringField
       FieldName = 'Contact_Level_Description'
       FixedChar = True
       Size = 100
     end
-    object qryCurrentContStatusContact_Type_Description: TStringField
+    object qryCurrentContStatusContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentContStatusSalutation: TStringField
+    object qryCurrentContStatusSalutation: TWideStringField
       FieldName = 'Salutation'
       FixedChar = True
       Size = 40
     end
-    object qryCurrentContStatusCustomer_Type_Description: TStringField
+    object qryCurrentContStatusCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
     end
-    object qryCurrentContStatusAccount_Manager_Name: TStringField
+    object qryCurrentContStatusAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qryCurrentContStatusCustomer_Status_Descr: TStringField
+    object qryCurrentContStatusCustomer_Status_Descr: TWideStringField
       FieldName = 'Customer_Status_Descr'
       Size = 30
     end
-    object qryCurrentContStatusSub_Rep_Name: TStringField
+    object qryCurrentContStatusSub_Rep_Name: TWideStringField
       FieldName = 'Sub_Rep_Name'
       Size = 50
     end
@@ -947,7 +947,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ' ')
     Left = 72
     Top = 12
-    object qryContStatusContact_Status_descr: TStringField
+    object qryContStatusContact_Status_descr: TWideStringField
       FieldName = 'Contact_Status_descr'
       FixedChar = True
       Size = 40
@@ -960,7 +960,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       'order by Description')
     Left = 218
     Top = 12
-    object QryContTypeDescription: TStringField
+    object QryContTypeDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
@@ -974,7 +974,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       'Order by Name')
     Left = 370
     Top = 12
-    object QryRepName: TStringField
+    object QryRepName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -1153,7 +1153,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       'Order by Description')
     Left = 522
     Top = 36
-    object qryCustTypeDescription: TStringField
+    object qryCustTypeDescription: TWideStringField
       FieldName = 'Description'
     end
   end
@@ -1386,27 +1386,27 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       item
         Name = 'Year3'
       end>
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'Contact_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Email'
       FixedChar = True
       Size = 200
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Contact_Phone'
       FixedChar = True
       Size = 40
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Mobile_No'
       FixedChar = True
       Size = 30
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Contact_Fax'
       FixedChar = True
       Size = 40
@@ -1420,51 +1420,51 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object IntegerField3: TIntegerField
       FieldName = 'Contact_Status'
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Contact_Status_Descr'
       FixedChar = True
       Size = 40
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'Customer_Phone'
       FixedChar = True
       Size = 40
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'Customer_Fax'
       FixedChar = True
       Size = 40
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField15: TStringField
+    object StringField15: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
@@ -1478,41 +1478,41 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object FloatField1: TFloatField
       FieldName = 'Def_Markup_Perc'
     end
-    object StringField16: TStringField
+    object StringField16: TWideStringField
       FieldName = 'inactive'
       FixedChar = True
       Size = 2
     end
-    object StringField17: TStringField
+    object StringField17: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Phone'
       OnGetText = qryCurrentContStatusPhoneGetText
       Size = 30
       Calculated = True
     end
-    object StringField18: TStringField
+    object StringField18: TWideStringField
       FieldName = 'Contact_Level_Description'
       FixedChar = True
       Size = 100
     end
-    object StringField19: TStringField
+    object StringField19: TWideStringField
       FieldName = 'Contact_Type_Description'
       FixedChar = True
       Size = 80
     end
-    object StringField20: TStringField
+    object StringField20: TWideStringField
       FieldName = 'Salutation'
       FixedChar = True
       Size = 40
     end
-    object StringField21: TStringField
+    object StringField21: TWideStringField
       FieldName = 'Customer_Type_Description'
     end
-    object StringField22: TStringField
+    object StringField22: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object StringField23: TStringField
+    object StringField23: TWideStringField
       FieldName = 'Customer_Status_Descr'
       Size = 30
     end

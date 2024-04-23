@@ -1046,12 +1046,12 @@ object STRPProductListFrm: TSTRPProductListFrm
     object IntegerField2: TIntegerField
       FieldName = 'Customer'
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 92
@@ -1059,12 +1059,12 @@ object STRPProductListFrm: TSTRPProductListFrm
     object IntegerField3: TIntegerField
       FieldName = 'FSC_Material_Claim'
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Claim_Description'
       FixedChar = True
       Size = 100
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Claim_Type'
       FixedChar = True
       Size = 10
@@ -1072,7 +1072,7 @@ object STRPProductListFrm: TSTRPProductListFrm
     object IntegerField4: TIntegerField
       FieldName = 'Product_Type'
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Product_Type_Description'
       FixedChar = True
       Size = 80

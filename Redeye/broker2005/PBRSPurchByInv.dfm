@@ -572,7 +572,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       FixedChar = True
       Size = 80
     end
-    object qryPurchByInvSupplier_Name: TStringField
+    object qryPurchByInvSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80

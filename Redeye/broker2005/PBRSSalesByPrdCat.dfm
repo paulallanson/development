@@ -647,19 +647,19 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       ' ')
     Left = 216
     Top = 216
-    object qrySalesByPrdCatInvoice_Description: TStringField
+    object qrySalesByPrdCatInvoice_Description: TWideStringField
       FieldName = 'Invoice_Description'
       FixedChar = True
       Size = 160
     end
-    object qrySalesByPrdCatSupplier_Desc: TStringField
+    object qrySalesByPrdCatSupplier_Desc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Supplier_Desc'
       OnGetText = qrySalesByPrdCatSupplier_DescGetText
       Size = 30
       Calculated = True
     end
-    object qrySalesByPrdCatOrderDesc: TStringField
+    object qrySalesByPrdCatOrderDesc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'OrderDesc'
       Size = 12
@@ -674,16 +674,16 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     object qrySalesByPrdCatSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object qrySalesByPrdCatAccount_Code: TStringField
+    object qrySalesByPrdCatAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qrySalesByPrdCatName: TStringField
+    object qrySalesByPrdCatName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesByPrdCatSales_Invoice_No: TStringField
+    object qrySalesByPrdCatSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -700,7 +700,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     object qrySalesByPrdCatInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesByPrdCatInvoice_or_Credit: TStringField
+    object qrySalesByPrdCatInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
@@ -708,37 +708,37 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     object qrySalesByPrdCatRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qrySalesByPrdCatSales_invoice_type: TStringField
+    object qrySalesByPrdCatSales_invoice_type: TWideStringField
       FieldName = 'Sales_invoice_type'
       FixedChar = True
       Size = 2
     end
-    object qrySalesByPrdCatInactive: TStringField
+    object qrySalesByPrdCatInactive: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2
     end
-    object qrySalesByPrdCatReference: TStringField
+    object qrySalesByPrdCatReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
     end
-    object qrySalesByPrdCatSupplier_Name: TStringField
+    object qrySalesByPrdCatSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesByPrdCatRep_Name: TStringField
+    object qrySalesByPrdCatRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesByPrdCatDescription: TStringField
+    object qrySalesByPrdCatDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object qrySalesByPrdCatName_1: TStringField
+    object qrySalesByPrdCatName_1: TWideStringField
       FieldName = 'Name_1'
       FixedChar = True
       Size = 80

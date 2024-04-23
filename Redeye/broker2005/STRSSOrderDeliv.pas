@@ -36,10 +36,10 @@ type
     qryReportSales_Order: TIntegerField;
     qryReportSales_order_delivery_no: TIntegerField;
     qryReportDelivery_Date: TDateTimeField;
-    qryReportConsignment_number: TStringField;
-    qryReportCust_Order_No: TStringField;
+    qryReportConsignment_number: TWideStringField;
+    qryReportCust_Order_No: TWideStringField;
     qryReportCustomer: TIntegerField;
-    qryReportName: TStringField;
+    qryReportName: TWideStringField;
     qryExport: TFDQuery;
     qryCompany: TFDQuery;
     qryCustomer: TFDQuery;

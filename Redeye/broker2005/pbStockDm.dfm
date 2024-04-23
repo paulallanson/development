@@ -824,7 +824,7 @@ object dtmdlStock: TdtmdlStock
       ProviderFlags = []
       ReadOnly = True
     end
-    object qryPartProductionPack_Size: TStringField
+    object qryPartProductionPack_Size: TWideStringField
       FieldName = 'Pack_Size'
       Origin = 'Forms_per_Box'
       Size = 40
@@ -1316,7 +1316,7 @@ object dtmdlStock: TdtmdlStock
       FieldName = 'Product_Class'
       Size = 5
     end
-    object qryStockProduct_Class_Description: TStringField
+    object qryStockProduct_Class_Description: TWideStringField
       FieldName = 'Product_Class_Description'
       ReadOnly = True
       Size = 15

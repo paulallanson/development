@@ -31,12 +31,12 @@ type
     Label8: TLabel;
     tblWorktops: TFDTable;
     tblWorktopsWorktop: TIntegerField;
-    tblWorktopsDescription: TStringField;
-    tblWorktopsNot_used_for_quoting: TStringField;
+    tblWorktopsDescription: TWideStringField;
+    tblWorktopsNot_used_for_quoting: TWideStringField;
     tblWorktopsMaterial_Type: TIntegerField;
     tblWorktopsWorktop_Group: TIntegerField;
-    tblWorktopsWorktop_Group_Desc: TStringField;
-    tblWorktopsinactive: TStringField;
+    tblWorktopsWorktop_Group_Desc: TWideStringField;
+    tblWorktopsinactive: TWideStringField;
     qryNewWorktops: TFDQuery;
     lkpGroup: TFDQuery;
     lkpMatType: TFDQuery;

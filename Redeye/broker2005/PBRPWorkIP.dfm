@@ -1381,7 +1381,7 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -1392,13 +1392,13 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object qryReportProof_Required: TStringField
+    object qryReportProof_Required: TWideStringField
       FieldName = 'Proof_Required'
       OnGetText = qryReportProof_RequiredGetText
       FixedChar = True
       Size = 2
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -1406,12 +1406,12 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 16
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -1420,7 +1420,7 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qryReportPOLine: TStringField
+    object qryReportPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryReportPOLineGetText
@@ -1443,7 +1443,7 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportOn_Hold: TStringField
+    object qryReportOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       FixedChar = True
       Size = 2
@@ -1469,7 +1469,7 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportOffice_Contact: TIntegerField
       FieldName = 'Office_Contact'
     end
-    object qryReportAccount_Manager: TStringField
+    object qryReportAccount_Manager: TWideStringField
       FieldName = 'Account_Manager'
       FixedChar = True
       Size = 80
@@ -1480,7 +1480,7 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportCost_Unit_Factor: TFloatField
       FieldName = 'Cost_Unit_Factor'
     end
-    object qryReportStatus_Description: TStringField
+    object qryReportStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       Size = 50
     end
@@ -1490,14 +1490,14 @@ object PBRPWorkIPfrm: TPBRPWorkIPfrm
     object qryReportExtra_Costs: TFloatField
       FieldName = 'Extra_Costs'
     end
-    object qryReportProduct_Type_Description: TStringField
+    object qryReportProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
       Size = 50
     end
-    object qryReportProduct_Type_Short_Desc: TStringField
+    object qryReportProduct_Type_Short_Desc: TWideStringField
       FieldName = 'Product_Type_Short_Desc'
     end
-    object qryReportProduct_Type_Sales_Nominal: TStringField
+    object qryReportProduct_Type_Sales_Nominal: TWideStringField
       FieldName = 'Product_Type_Sales_Nominal'
     end
   end

@@ -64,7 +64,7 @@ type
     qryPurchByInvSupplier_Invoice_no: TWideStringField;
     qryPurchByInvInvoice_or_Credit: TWideStringField;
     qryPurchByInvBranch_Name: TWideStringField;
-    qryPurchByInvSupplier_Name: TStringField;
+    qryPurchByInvSupplier_Name: TWideStringField;
     rdgrpType: TRadioGroup;
     qryDetail: TFDQuery;
     chkbxPageBreak: TCheckBox;

@@ -27,11 +27,11 @@ type
     qrlblGPMUp1: TQRLabel;
     qrlblGPMUp2: TQRLabel;
     QryCustTurn: TFDQuery;
-    QryCustTurnName: TStringField;
+    QryCustTurnName: TWideStringField;
     QryCustTurnSel1: TFloatField;
     QryCustTurnSel3: TFloatField;
     QryCustTurnSel4: TFloatField;
-    QryCustTurnAccount_Code: TStringField;
+    QryCustTurnAccount_Code: TWideStringField;
     QRLblTitle: TQRLabel;
     lblDescription: TQRLabel;
     qrdbtxtAccCode: TQRDBText;
@@ -49,7 +49,7 @@ type
     QRLabel5: TQRLabel;
     qrshpTotalLine: TQRShape;
     qrshpTitleLine: TQRShape;
-    QryCustTurnCustomer_Type_Name: TStringField;
+    QryCustTurnCustomer_Type_Name: TWideStringField;
     procedure qckrpSalesByInvBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;

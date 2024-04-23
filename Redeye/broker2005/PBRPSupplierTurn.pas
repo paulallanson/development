@@ -32,13 +32,13 @@ type
     QRLabel5: TQRLabel;
     qrshpTotalLine: TQRShape;
     qryReport: TFDQuery;
-    qryReportName: TStringField;
+    qryReportName: TWideStringField;
     qryReportSel1: TFloatField;
     qryReportSel2: TFloatField;
     qryReportSel3: TFloatField;
     qryReportSel4: TFloatField;
-    qryReportTag: TStringField;
-    qryReportText100: TStringField;
+    qryReportTag: TWideStringField;
+    qryReportText100: TWideStringField;
     qryReportAccount_code: TWideStringField;
     qryReportMargPerc: TFloatField;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;

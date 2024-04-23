@@ -216,7 +216,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       FieldName = 'Use_Type'
       Origin = 'Use_Type'
     end
-    object qryMaterialUseUse_Type_Description: TStringField
+    object qryMaterialUseUse_Type_Description: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Use_Type_Description'
       Calculated = True

@@ -271,7 +271,7 @@ begin
 
   if Operator <> 0 then
     sTemp := sTemp + ' AND (Purchase_Order.Operator = ' + inttostr(Operator) + ')';
-    
+
   sTemp := sTemp + ' AND Purchase_Order.Date_Point >= ' + qDate(FOrderDate);
   qryOrders.SQL.text := qryOrders.SQL.text + sTemp;
 
@@ -560,7 +560,7 @@ begin
 
   if ExistingOrders <> '' then
     sTemp := sTemp + ' AND (Purchase_OrderLine.Purchase_Order NOT IN (' + ExistingOrders + '))';
-    
+
   qryOrders.SQL.text := qryOrders.SQL.text + sTemp;
 
   sTemp := 'ORDER BY Purchase_order.date_point desc ';

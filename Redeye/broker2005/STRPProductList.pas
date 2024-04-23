@@ -43,13 +43,13 @@ type
     FloatField1: TFloatField;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
-    StringField1: TStringField;
-    StringField2: TStringField;
+    StringField1: TWideStringField;
+    StringField2: TWideStringField;
     IntegerField3: TIntegerField;
-    StringField3: TStringField;
-    StringField4: TStringField;
+    StringField3: TWideStringField;
+    StringField4: TWideStringField;
     IntegerField4: TIntegerField;
-    StringField5: TStringField;
+    StringField5: TWideStringField;
     IntegerField5: TIntegerField;
     DateTimeField1: TDateTimeField;
     FloatField2: TFloatField;

@@ -26,9 +26,9 @@ type
     DelBitBtn: TBitBtn;
     chkbxActiveOnly: TCheckBox;
     DummySRC: TDataSource;
-    GetDetsSQLinactive: TStringField;
+    GetDetsSQLinactive: TWideStringField;
     GetDetsSQLLevel_of_Importance: TIntegerField;
-    GetDetsSQLImportance_Description: TStringField;
+    GetDetsSQLImportance_Description: TWideStringField;
     GetDetsSQLColor: TIntegerField;
     GetDetsSQLFont_Color: TIntegerField;
     procedure FormActivate(Sender: TObject);

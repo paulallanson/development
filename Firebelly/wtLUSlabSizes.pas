@@ -27,8 +27,8 @@ type
     tblSlabSizeSlab_Size: TIntegerField;
     tblSlabSizeLength: TIntegerField;
     tblSlabSizeDepth: TIntegerField;
-    tblSlabSizeInactive: TStringField;
-    tblSlabSizeSlab_Size_Description: TStringField;
+    tblSlabSizeInactive: TWideStringField;
+    tblSlabSizeSlab_Size_Description: TWideStringField;
     procedure tblSlabSizeNewRecord(DataSet: TDataSet);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

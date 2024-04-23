@@ -44,7 +44,7 @@ object dmLookUpSInv: TdmLookUpSInv
     object GetDetsSQLSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object GetDetsSQLSales_Invoice_No: TStringField
+    object GetDetsSQLSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -61,12 +61,12 @@ object dmLookUpSInv: TdmLookUpSInv
     object GetDetsSQLInv_to_Customer: TIntegerField
       FieldName = 'Inv_to_Customer'
     end
-    object GetDetsSQLInvoice_Description: TStringField
+    object GetDetsSQLInvoice_Description: TWideStringField
       FieldName = 'Invoice_Description'
       FixedChar = True
       Size = 160
     end
-    object GetDetsSQLReference: TStringField
+    object GetDetsSQLReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
@@ -74,7 +74,7 @@ object dmLookUpSInv: TdmLookUpSInv
     object GetDetsSQLInv_to_Branch: TIntegerField
       FieldName = 'Inv_to_Branch'
     end
-    object GetDetsSQLInvoice_or_Credit: TStringField
+    object GetDetsSQLInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
@@ -82,7 +82,7 @@ object dmLookUpSInv: TdmLookUpSInv
     object GetDetsSQLSales_Invoice_Status: TIntegerField
       FieldName = 'Sales_Invoice_Status'
     end
-    object GetDetsSQLName: TStringField
+    object GetDetsSQLName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -90,11 +90,11 @@ object dmLookUpSInv: TdmLookUpSInv
     object GetDetsSQLBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object GetDetsSQLAccount_Code: TStringField
+    object GetDetsSQLAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object GetDetsSQLstatement_reference: TStringField
+    object GetDetsSQLstatement_reference: TWideStringField
       FieldName = 'statement_reference'
       FixedChar = True
       Size = 30

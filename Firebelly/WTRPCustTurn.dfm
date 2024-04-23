@@ -900,7 +900,7 @@ object WTRPCustTurnFrm: TWTRPCustTurnFrm
         ParamType = ptInput
         Value = 1
       end>
-    object QryCustTurnName: TStringField
+    object QryCustTurnName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -914,7 +914,7 @@ object WTRPCustTurnFrm: TWTRPCustTurnFrm
     object QryCustTurnSel4: TFloatField
       FieldName = 'Sel4'
     end
-    object QryCustTurnAccount_Code: TStringField
+    object QryCustTurnAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
@@ -923,7 +923,7 @@ object WTRPCustTurnFrm: TWTRPCustTurnFrm
       FieldName = 'MargPerc'
       Calculated = True
     end
-    object QryCustTurnCustomer_Type_Name: TStringField
+    object QryCustTurnCustomer_Type_Name: TWideStringField
       FieldName = 'Customer_Type_Name'
       Size = 50
     end

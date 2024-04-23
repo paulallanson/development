@@ -32,9 +32,9 @@ type
     Splitter1: TSplitter;
     qryUpdProdType: TFDQuery;
     qryProdCatsTrueproduct_type: TIntegerField;
-    qryProdCatsTruedescription: TStringField;
+    qryProdCatsTruedescription: TWideStringField;
     qryProdCatsTruecategory: TIntegerField;
-    qryProdCatsTruedescription_1: TStringField;
+    qryProdCatsTruedescription_1: TWideStringField;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure dblucmbbxCategoriesCloseUp(Sender: TObject);

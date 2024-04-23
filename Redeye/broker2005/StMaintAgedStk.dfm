@@ -477,12 +477,12 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
         DataType = ftInteger
         ParamType = ptInput
       end>
-    object qrySelUnPaidAgedStkPart: TStringField
+    object qrySelUnPaidAgedStkPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
     end
-    object qrySelUnPaidAgedStkDescription: TStringField
+    object qrySelUnPaidAgedStkDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 120
@@ -493,31 +493,31 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     object qrySelUnPaidAgedStkSell_Pack_Size: TIntegerField
       FieldName = 'Sell_Pack_Size'
     end
-    object qrySelUnPaidAgedStkPart_Store_Name: TStringField
+    object qrySelUnPaidAgedStkPart_Store_Name: TWideStringField
       FieldName = 'Part_Store_Name'
       FixedChar = True
       Size = 60
     end
-    object qrySelUnPaidAgedStkNot_In_Use: TStringField
+    object qrySelUnPaidAgedStkNot_In_Use: TWideStringField
       FieldName = 'Not_In_Use'
       FixedChar = True
       Size = 2
     end
-    object qrySelUnPaidAgedStkCustName: TStringField
+    object qrySelUnPaidAgedStkCustName: TWideStringField
       FieldName = 'CustName'
       FixedChar = True
       Size = 80
     end
-    object qrySelUnPaidAgedStkBin: TStringField
+    object qrySelUnPaidAgedStkBin: TWideStringField
       FieldName = 'Bin'
       FixedChar = True
     end
-    object qrySelUnPaidAgedStkLot: TStringField
+    object qrySelUnPaidAgedStkLot: TWideStringField
       FieldName = 'Lot'
       FixedChar = True
       Size = 40
     end
-    object qrySelUnPaidAgedStkStock_Ref: TStringField
+    object qrySelUnPaidAgedStkStock_Ref: TWideStringField
       FieldName = 'Stock_Ref'
       FixedChar = True
       Size = 60

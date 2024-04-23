@@ -17,7 +17,7 @@ object dmPage: TdmPage
         Name = 'Name'
         ParamType = ptInput
       end>
-    object qryPagef_PageLayoutName: TStringField
+    object qryPagef_PageLayoutName: TWideStringField
       FieldName = 'f_PageLayoutName'
 
       FixedChar = True
@@ -39,19 +39,19 @@ object dmPage: TdmPage
       FieldName = 'f_RightMargin'
 
     end
-    object qryPagef_Preprinted: TStringField
+    object qryPagef_Preprinted: TWideStringField
       FieldName = 'f_Preprinted'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintLogo: TStringField
+    object qryPagef_PrintLogo: TWideStringField
       FieldName = 'f_PrintLogo'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintAddress: TStringField
+    object qryPagef_PrintAddress: TWideStringField
       FieldName = 'f_PrintAddress'
 
       FixedChar = True
@@ -89,18 +89,18 @@ object dmPage: TdmPage
       FieldName = 'f_AddressHeight'
 
     end
-    object qryPagef_PaperSize: TStringField
+    object qryPagef_PaperSize: TWideStringField
       FieldName = 'f_PaperSize'
 
       FixedChar = True
     end
-    object qryPagef_Portrait: TStringField
+    object qryPagef_Portrait: TWideStringField
       FieldName = 'f_Portrait'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_Units: TStringField
+    object qryPagef_Units: TWideStringField
       FieldName = 'f_Units'
 
       FixedChar = True
@@ -121,25 +121,25 @@ object dmPage: TdmPage
       FieldName = 'f_PPHeight'
 
     end
-    object qryPagef_LogoFile: TStringField
+    object qryPagef_LogoFile: TWideStringField
       FieldName = 'f_LogoFile'
 
       FixedChar = True
       Size = 255
     end
-    object qryPagef_FaxDefault: TStringField
+    object qryPagef_FaxDefault: TWideStringField
       FieldName = 'f_FaxDefault'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintDefault: TStringField
+    object qryPagef_PrintDefault: TWideStringField
       FieldName = 'f_PrintDefault'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_AddressFontName: TStringField
+    object qryPagef_AddressFontName: TWideStringField
       FieldName = 'f_AddressFontName'
 
       FixedChar = True
@@ -153,37 +153,37 @@ object dmPage: TdmPage
       FieldName = 'f_AddressFontStyle'
 
     end
-    object qryPagef_AddressAlignment: TStringField
+    object qryPagef_AddressAlignment: TWideStringField
       FieldName = 'f_AddressAlignment'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_AddressPrintByLine: TStringField
+    object qryPagef_AddressPrintByLine: TWideStringField
       FieldName = 'f_AddressPrintByLine'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintLogo1: TStringField
+    object qryPagef_PrintLogo1: TWideStringField
       FieldName = 'f_PrintLogo1'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintLogo2: TStringField
+    object qryPagef_PrintLogo2: TWideStringField
       FieldName = 'f_PrintLogo2'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintLogo3: TStringField
+    object qryPagef_PrintLogo3: TWideStringField
       FieldName = 'f_PrintLogo3'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_PrintRegAddress: TStringField
+    object qryPagef_PrintRegAddress: TWideStringField
       FieldName = 'f_PrintRegAddress'
 
       FixedChar = True
@@ -237,19 +237,19 @@ object dmPage: TdmPage
       FieldName = 'f_Logo3Height'
 
     end
-    object qryPagef_LogoFile1: TStringField
+    object qryPagef_LogoFile1: TWideStringField
       FieldName = 'f_LogoFile1'
 
       FixedChar = True
       Size = 255
     end
-    object qryPagef_LogoFile2: TStringField
+    object qryPagef_LogoFile2: TWideStringField
       FieldName = 'f_LogoFile2'
 
       FixedChar = True
       Size = 255
     end
-    object qryPagef_LogoFile3: TStringField
+    object qryPagef_LogoFile3: TWideStringField
       FieldName = 'f_LogoFile3'
 
       FixedChar = True
@@ -271,7 +271,7 @@ object dmPage: TdmPage
       FieldName = 'f_RegAddressHeight'
 
     end
-    object qryPagef_RegAddressFontName: TStringField
+    object qryPagef_RegAddressFontName: TWideStringField
       FieldName = 'f_RegAddressFontName'
 
       FixedChar = True
@@ -285,13 +285,13 @@ object dmPage: TdmPage
       FieldName = 'f_RegAddressFontStyle'
 
     end
-    object qryPagef_RegAddressAlignment: TStringField
+    object qryPagef_RegAddressAlignment: TWideStringField
       FieldName = 'f_RegAddressAlignment'
 
       FixedChar = True
       Size = 1
     end
-    object qryPagef_RegAddressPrintByLine: TStringField
+    object qryPagef_RegAddressPrintByLine: TWideStringField
       FieldName = 'f_RegAddressPrintByLine'
 
       FixedChar = True

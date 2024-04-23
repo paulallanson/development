@@ -38,10 +38,10 @@ type
     qryReportpurchase_order: TFloatField;
     qryReportLine: TIntegerField;
     qryReportDelivery_no: TIntegerField;
-    qryReportmoveInRef: TStringField;
-    qryReportpart: TStringField;
-    qryReportrepName: TStringField;
-    qryReportcustName: TStringField;
+    qryReportmoveInRef: TWideStringField;
+    qryReportpart: TWideStringField;
+    qryReportrepName: TWideStringField;
+    qryReportcustName: TWideStringField;
     QRSubDetail1: TQRSubDetail;
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
@@ -49,10 +49,10 @@ type
     QRDBText4: TQRDBText;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
-    qryReportPart_Description: TStringField;
+    qryReportPart_Description: TWideStringField;
     QRDBText7: TQRDBText;
     qryReportorder_price: TCurrencyField;
-    qryReportorder_unit: TStringField;
+    qryReportorder_unit: TWideStringField;
     qryReportTotalQty: TIntegerField;
     qrlblTCost: TQRLabel;
     qrlblInvQty: TQRLabel;

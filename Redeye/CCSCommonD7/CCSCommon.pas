@@ -1332,6 +1332,7 @@ begin
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
   Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
+  Connection.FormatOptions.MapRules.Add(dtAnsiString, dtWideString);
 end;
 
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);

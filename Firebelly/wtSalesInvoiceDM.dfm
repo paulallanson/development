@@ -685,19 +685,19 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySIHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qrySIHeaderGridInactive: TStringField
+    object qrySIHeaderGridInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
-    object qrySIHeaderGridInvoice_or_Credit: TStringField
+    object qrySIHeaderGridInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object qrySIHeaderGridCustomer_Name: TStringField
+    object qrySIHeaderGridCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
-    object qrySIHeaderGridStatus_Description: TStringField
+    object qrySIHeaderGridStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       Size = 30
     end
@@ -713,7 +713,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Total_Value'
       DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridInvoice_no: TStringField
+    object qrySIHeaderGridInvoice_no: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -723,14 +723,14 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySIHeaderGridSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object qrySIHeaderGridReference: TStringField
+    object qrySIHeaderGridReference: TWideStringField
       FieldName = 'Reference'
     end
-    object qrySIHeaderGridDescription: TStringField
+    object qrySIHeaderGridDescription: TWideStringField
       FieldName = 'Description'
       Size = 50
     end
-    object qrySIHeaderGridIs_Retail_Customer: TStringField
+    object qrySIHeaderGridIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
@@ -738,40 +738,40 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Paid_Amount'
       DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridPaid_Status: TStringField
+    object qrySIHeaderGridPaid_Status: TWideStringField
       FieldName = 'Paid_Status'
       Size = 1
     end
     object qrySIHeaderGridDeposit_Amount: TFloatField
       FieldName = 'Deposit_Amount'
     end
-    object qrySIHeaderGridRep_Name: TStringField
+    object qrySIHeaderGridRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qrySIHeaderGridOperator_Name: TStringField
+    object qrySIHeaderGridOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object qrySIHeaderGridAccount_Manager_Name: TStringField
+    object qrySIHeaderGridAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qrySIHeaderGridOrder_Reference: TStringField
+    object qrySIHeaderGridOrder_Reference: TWideStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object qrySIHeaderGridAccount_Code: TStringField
+    object qrySIHeaderGridAccount_Code: TWideStringField
       FieldName = 'Account_Code'
     end
-    object qrySIHeaderGridBranch_Name: TStringField
+    object qrySIHeaderGridBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       Size = 50
     end
     object qrySIHeaderGridDate_Required: TDateTimeField
       FieldName = 'Date_Required'
     end
-    object qrySIHeaderGridRevenue_Centre_Descr: TStringField
+    object qrySIHeaderGridRevenue_Centre_Descr: TWideStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
@@ -2186,19 +2186,19 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySCHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qrySCHeaderGridInactive: TStringField
+    object qrySCHeaderGridInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
-    object qrySCHeaderGridInvoice_or_Credit: TStringField
+    object qrySCHeaderGridInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object qrySCHeaderGridOriginal_Name: TStringField
+    object qrySCHeaderGridOriginal_Name: TWideStringField
       FieldName = 'Original_Name'
       Size = 50
     end
-    object qrySCHeaderGridStatus_Description: TStringField
+    object qrySCHeaderGridStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       Size = 30
     end
@@ -2214,7 +2214,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySCHeaderGridVAT_Credit: TFloatField
       FieldName = 'VAT_Credit'
     end
-    object qrySCHeaderGridInvoice_no: TStringField
+    object qrySCHeaderGridInvoice_no: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -2224,45 +2224,45 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySCHeaderGridSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object qrySCHeaderGridReference: TStringField
+    object qrySCHeaderGridReference: TWideStringField
       FieldName = 'Reference'
     end
-    object qrySCHeaderGridDescription: TStringField
+    object qrySCHeaderGridDescription: TWideStringField
       FieldName = 'Description'
       Size = 50
     end
-    object qrySCHeaderGridCustomer_Name: TStringField
+    object qrySCHeaderGridCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
     object qrySCHeaderGridTotal_Credit: TFloatField
       FieldName = 'Total_Credit'
     end
-    object qrySCHeaderGridIs_Retail_Customer: TStringField
+    object qrySCHeaderGridIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object qrySCHeaderGridRep_Name: TStringField
+    object qrySCHeaderGridRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qrySCHeaderGridOperator_Name: TStringField
+    object qrySCHeaderGridOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object qrySCHeaderGridAccount_Manager_Name: TStringField
+    object qrySCHeaderGridAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qrySCHeaderGridOrder_Reference: TStringField
+    object qrySCHeaderGridOrder_Reference: TWideStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object qrySCHeaderGridBranch_Name: TStringField
+    object qrySCHeaderGridBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       Size = 100
     end
-    object qrySCHeaderGridRevenue_Centre_Descr: TStringField
+    object qrySCHeaderGridRevenue_Centre_Descr: TWideStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
@@ -3324,19 +3324,19 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object IntegerField1: TIntegerField
       FieldName = 'Customer'
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Original_Name'
       Size = 50
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Status_Description'
       Size = 30
     end
@@ -3352,7 +3352,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object FloatField4: TFloatField
       FieldName = 'VAT_Credit'
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -3362,45 +3362,45 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object IntegerField3: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Reference'
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'Description'
       Size = 50
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
     object FloatField5: TFloatField
       FieldName = 'Total_Credit'
     end
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'Branch_Name'
       Size = 100
     end
-    object StringField15: TStringField
+    object StringField15: TWideStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end

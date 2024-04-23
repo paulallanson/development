@@ -321,7 +321,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
     object GetDetsSQLNarrative: TIntegerField
       FieldName = 'Narrative'
     end
-    object GetDetsSQLName: TStringField
+    object GetDetsSQLName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80

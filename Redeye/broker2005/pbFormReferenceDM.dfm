@@ -200,17 +200,17 @@ object dtmdlForms: TdtmdlForms
     object qryLocationsForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
     end
-    object qryLocationsForm_Reference_ID: TStringField
+    object qryLocationsForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
     end
-    object qryLocationsForm_Reference_Descr: TStringField
+    object qryLocationsForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
     end
-    object qryLocationsStocked_Item: TStringField
+    object qryLocationsStocked_Item: TWideStringField
       FieldName = 'Stocked_Item'
       FixedChar = True
       Size = 1
@@ -221,17 +221,17 @@ object dtmdlForms: TdtmdlForms
     object qryLocationsLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryLocationsForms_Per_Box: TStringField
+    object qryLocationsForms_Per_Box: TWideStringField
       FieldName = 'Forms_Per_Box'
       FixedChar = True
       Size = 40
     end
-    object qryLocationsStock_Location_Desc: TStringField
+    object qryLocationsStock_Location_Desc: TWideStringField
       FieldName = 'Stock_Location_Desc'
       FixedChar = True
       Size = 80
     end
-    object qryLocationsDelivery_to_Stock: TStringField
+    object qryLocationsDelivery_to_Stock: TWideStringField
       FieldName = 'Delivery_to_Stock'
       FixedChar = True
       Size = 2
@@ -239,7 +239,7 @@ object dtmdlForms: TdtmdlForms
     object qryLocationsLocation_no: TIntegerField
       FieldName = 'Location_no'
     end
-    object qryLocationsDescription: TStringField
+    object qryLocationsDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 40
@@ -558,12 +558,12 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryNo_Of_Boxes: TIntegerField
       FieldName = 'No_Of_Boxes'
     end
-    object qryHistoryDelivery_Instructions: TStringField
+    object qryHistoryDelivery_Instructions: TWideStringField
       FieldName = 'Delivery_Instructions'
       FixedChar = True
       Size = 255
     end
-    object qryHistoryDeliver_via_Company: TStringField
+    object qryHistoryDeliver_via_Company: TWideStringField
       FieldName = 'Deliver_via_Company'
       FixedChar = True
       Size = 1
@@ -571,17 +571,17 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryDate_Deliv_Actual: TDateTimeField
       FieldName = 'Date_Deliv_Actual'
     end
-    object qryHistoryDelivery_to_Stock: TStringField
+    object qryHistoryDelivery_to_Stock: TWideStringField
       FieldName = 'Delivery_to_Stock'
       FixedChar = True
       Size = 2
     end
-    object qryHistoryDelivery_note_printed: TStringField
+    object qryHistoryDelivery_note_printed: TWideStringField
       FieldName = 'Delivery_note_printed'
       FixedChar = True
       Size = 2
     end
-    object qryHistorySuppliers_Desc: TStringField
+    object qryHistorySuppliers_Desc: TWideStringField
       FieldName = 'Suppliers_Desc'
       FixedChar = True
       Size = 80
@@ -592,16 +592,16 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryCustomer_Branch: TIntegerField
       FieldName = 'Customer_Branch'
     end
-    object qryHistoryForms_Per_Box: TStringField
+    object qryHistoryForms_Per_Box: TWideStringField
       FieldName = 'Forms_Per_Box'
       FixedChar = True
       Size = 40
     end
-    object qryHistoryNo_of_sets: TStringField
+    object qryHistoryNo_of_sets: TWideStringField
       FieldName = 'No_of_sets'
       FixedChar = True
     end
-    object qryHistoryCust_Order_No: TStringField
+    object qryHistoryCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -615,17 +615,17 @@ object dtmdlForms: TdtmdlForms
     object qryHistorySupplier_Branch: TIntegerField
       FieldName = 'Supplier_Branch'
     end
-    object qryHistorySupplier_Name: TStringField
+    object qryHistorySupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qryHistoryCustomer_Name: TStringField
+    object qryHistoryCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qryHistoryOrder_Status: TStringField
+    object qryHistoryOrder_Status: TWideStringField
       FieldName = 'Order_Status'
       FixedChar = True
       Size = 80
@@ -642,17 +642,17 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
     end
-    object qryHistoryForm_Reference_Descr: TStringField
+    object qryHistoryForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
     end
-    object qryHistoryForm_Reference_ID: TStringField
+    object qryHistoryForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
     end
-    object qryHistoryDeliveryName: TStringField
+    object qryHistoryDeliveryName: TWideStringField
       DisplayWidth = 50
       FieldKind = fkCalculated
       FieldName = 'DeliveryName'
@@ -671,14 +671,14 @@ object dtmdlForms: TdtmdlForms
       OnGetText = qryHistoryQty_outGetText
       Calculated = True
     end
-    object qryHistoryPONumber: TStringField
+    object qryHistoryPONumber: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'PONumber'
       OnGetText = qryHistoryPONumberGetText
       Size = 0
       Calculated = True
     end
-    object qryHistoryInactive: TStringField
+    object qryHistoryInactive: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2
@@ -686,7 +686,7 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryGoods_reqd_by_Customer: TDateTimeField
       FieldName = 'Goods_reqd_by_Customer'
     end
-    object qryHistoryInvoice_upfront: TStringField
+    object qryHistoryInvoice_upfront: TWideStringField
       FieldName = 'Invoice_upfront'
       FixedChar = True
       Size = 2
@@ -697,7 +697,7 @@ object dtmdlForms: TdtmdlForms
     object qryHistoryOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryHistoryPrice_unit_description: TStringField
+    object qryHistoryPrice_unit_description: TWideStringField
       FieldName = 'Price_unit_description'
       FixedChar = True
       Size = 80

@@ -1426,7 +1426,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -1437,13 +1437,13 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object qryReportProof_Required: TStringField
+    object qryReportProof_Required: TWideStringField
       FieldName = 'Proof_Required'
       OnGetText = qryReportProof_RequiredGetText
       FixedChar = True
       Size = 2
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -1451,12 +1451,12 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 16
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -1465,7 +1465,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qryReportPOLine: TStringField
+    object qryReportPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryReportPOLineGetText
@@ -1488,7 +1488,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qryReportOn_Hold: TStringField
+    object qryReportOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       FixedChar = True
       Size = 2
@@ -1514,7 +1514,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportOffice_Contact: TIntegerField
       FieldName = 'Office_Contact'
     end
-    object qryReportAccount_Manager: TStringField
+    object qryReportAccount_Manager: TWideStringField
       FieldName = 'Account_Manager'
       FixedChar = True
       Size = 80
@@ -1525,7 +1525,7 @@ object PBRPJobBagWIPfrm: TPBRPJobBagWIPfrm
     object qryReportCost_Unit_Factor: TFloatField
       FieldName = 'Cost_Unit_Factor'
     end
-    object qryReportStatus_Description: TStringField
+    object qryReportStatus_Description: TWideStringField
       FieldName = 'Status_Description'
     end
     object qryReportExtra_Costs: TFloatField

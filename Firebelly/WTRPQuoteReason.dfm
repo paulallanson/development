@@ -1293,7 +1293,7 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
     object qryQuotesCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryQuotesDescription: TStringField
+    object qryQuotesDescription: TWideStringField
       FieldName = 'Description'
       Size = 255
     end
@@ -1321,7 +1321,7 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
     object qryQuotesPayment_terms: TIntegerField
       FieldName = 'Payment_terms'
     end
-    object qryQuotesReference: TStringField
+    object qryQuotesReference: TWideStringField
       FieldName = 'Reference'
       Size = 30
     end
@@ -1332,7 +1332,7 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
       FieldName = 'Nett_Price'
       DisplayFormat = '0.00'
     end
-    object qryQuotesInactive: TStringField
+    object qryQuotesInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
@@ -1345,7 +1345,7 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
     object qryQuotesAddress: TIntegerField
       FieldName = 'Address'
     end
-    object qryQuotesContact_Name: TStringField
+    object qryQuotesContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       Size = 50
     end
@@ -1359,7 +1359,7 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
       FieldName = 'Discount_Value'
       DisplayFormat = '0.00'
     end
-    object qryQuotesCustomer_Name: TStringField
+    object qryQuotesCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
@@ -1382,22 +1382,22 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
     object qryQuotesDate_Accepted: TDateTimeField
       FieldName = 'Date_Accepted'
     end
-    object qryQuotesCustomer_Name_Actual: TStringField
+    object qryQuotesCustomer_Name_Actual: TWideStringField
       FieldName = 'Customer_Name_Actual'
       Size = 50
     end
-    object qryQuotesQuote_Status_Description: TStringField
+    object qryQuotesQuote_Status_Description: TWideStringField
       FieldName = 'Quote_Status_Description'
       Size = 50
     end
     object qryQuotesVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
     end
-    object qryQuotestelephone_number: TStringField
+    object qryQuotestelephone_number: TWideStringField
       FieldName = 'telephone_number'
       Size = 30
     end
-    object qryQuotesSales_Lead_Source_Descr: TStringField
+    object qryQuotesSales_Lead_Source_Descr: TWideStringField
       FieldName = 'Sales_Lead_Source_Descr'
       Size = 100
     end

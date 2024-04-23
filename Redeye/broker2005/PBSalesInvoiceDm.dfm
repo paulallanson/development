@@ -3478,7 +3478,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object DateTimeField3: TDateTimeField
       FieldName = 'Date_Ordered'
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -3492,14 +3492,14 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField12: TIntegerField
       FieldName = 'Contact_no'
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'Cost_Centre'
       FixedChar = True
     end
     object IntegerField13: TIntegerField
       FieldName = 'Customer0'
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'Order_Type'
       FixedChar = True
       Size = 2
@@ -3525,7 +3525,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField19: TIntegerField
       FieldName = 'Ad_hoc_Address'
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'Delivery_Notes'
       FixedChar = True
       Size = 200
@@ -3539,17 +3539,17 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField22: TIntegerField
       FieldName = 'Branch_no0'
     end
-    object StringField15: TStringField
+    object StringField15: TWideStringField
       FieldName = 'Supp_order_type'
       FixedChar = True
       Size = 8
     end
-    object StringField16: TStringField
+    object StringField16: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField17: TStringField
+    object StringField17: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
@@ -4408,7 +4408,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object DateTimeField7: TDateTimeField
       FieldName = 'Date_Ordered'
     end
-    object StringField18: TStringField
+    object StringField18: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -4422,14 +4422,14 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField28: TIntegerField
       FieldName = 'Contact_no'
     end
-    object StringField19: TStringField
+    object StringField19: TWideStringField
       FieldName = 'Cost_Centre'
       FixedChar = True
     end
     object IntegerField29: TIntegerField
       FieldName = 'Customer0'
     end
-    object StringField20: TStringField
+    object StringField20: TWideStringField
       FieldName = 'Order_Type'
       FixedChar = True
       Size = 2
@@ -4455,7 +4455,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField35: TIntegerField
       FieldName = 'Ad_hoc_Address'
     end
-    object StringField21: TStringField
+    object StringField21: TWideStringField
       FieldName = 'Delivery_Notes'
       FixedChar = True
       Size = 200
@@ -4469,17 +4469,17 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField38: TIntegerField
       FieldName = 'Branch_no0'
     end
-    object StringField22: TStringField
+    object StringField22: TWideStringField
       FieldName = 'Supp_order_type'
       FixedChar = True
       Size = 8
     end
-    object StringField23: TStringField
+    object StringField23: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField24: TStringField
+    object StringField24: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
@@ -4777,27 +4777,27 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField40: TIntegerField
       FieldName = 'Branch_no'
     end
-    object StringField25: TStringField
+    object StringField25: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2
     end
-    object StringField26: TStringField
+    object StringField26: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
     end
-    object StringField27: TStringField
+    object StringField27: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField28: TStringField
+    object StringField28: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField29: TStringField
+    object StringField29: TWideStringField
       FieldName = 'Status_Description'
       FixedChar = True
       Size = 80
@@ -4814,7 +4814,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object CurrencyField5: TCurrencyField
       FieldName = 'Vat_Value'
     end
-    object StringField30: TStringField
+    object StringField30: TWideStringField
       FieldName = 'Sales_Invoice_no'
       FixedChar = True
       Size = 30
@@ -4825,7 +4825,7 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField44: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object StringField31: TStringField
+    object StringField31: TWideStringField
       DisplayWidth = 30
       FieldKind = fkCalculated
       FieldName = 'Invoice_Status'
@@ -4838,22 +4838,22 @@ object dmSalesInvoice: TdmSalesInvoice
       currency = False
       Calculated = True
     end
-    object StringField32: TStringField
+    object StringField32: TWideStringField
       FieldName = 'Sales_invoice_type'
       FixedChar = True
       Size = 2
     end
-    object StringField33: TStringField
+    object StringField33: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
     end
-    object StringField34: TStringField
+    object StringField34: TWideStringField
       FieldName = 'Invoice_Description'
       FixedChar = True
       Size = 160
     end
-    object StringField35: TStringField
+    object StringField35: TWideStringField
       FieldName = 'factoring_filename'
       FixedChar = True
       Size = 60
@@ -4861,17 +4861,17 @@ object dmSalesInvoice: TdmSalesInvoice
     object DateTimeField11: TDateTimeField
       FieldName = 'factoring_date'
     end
-    object StringField36: TStringField
+    object StringField36: TWideStringField
       FieldName = 'paid_status'
       FixedChar = True
       Size = 2
     end
-    object StringField37: TStringField
+    object StringField37: TWideStringField
       FieldName = 'cash_sales'
       FixedChar = True
       Size = 2
     end
-    object StringField38: TStringField
+    object StringField38: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Paid_status_Description'
       Calculated = True
@@ -4879,25 +4879,25 @@ object dmSalesInvoice: TdmSalesInvoice
     object IntegerField45: TIntegerField
       FieldName = 'rep'
     end
-    object StringField39: TStringField
+    object StringField39: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField40: TStringField
+    object StringField40: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Invoice_Format'
       Size = 10
       Calculated = True
     end
-    object StringField41: TStringField
+    object StringField41: TWideStringField
       FieldName = 'Electronic_Invoice'
       Size = 0
     end
-    object StringField42: TStringField
+    object StringField42: TWideStringField
       FieldName = 'Account_Code'
     end
-    object StringField43: TStringField
+    object StringField43: TWideStringField
       FieldName = 'Sub_Rep_Name'
       Size = 50
     end

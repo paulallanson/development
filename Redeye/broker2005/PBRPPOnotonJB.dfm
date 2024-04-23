@@ -810,7 +810,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qryReportBranch_Name: TStringField
+    object qryReportBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
@@ -820,12 +820,12 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -850,7 +850,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCost_Unit_Description: TStringField
+    object qryReportCost_Unit_Description: TWideStringField
       FieldName = 'Cost_Unit_Description'
       FixedChar = True
       Size = 80
@@ -858,7 +858,7 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
     object qryReportCost_Factor: TFloatField
       FieldName = 'Cost_Factor'
     end
-    object qryReportSell_Unit_Description: TStringField
+    object qryReportSell_Unit_Description: TWideStringField
       FieldName = 'Sell_Unit_Description'
       FixedChar = True
       Size = 80
@@ -869,12 +869,12 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportSupplier_branch_Name: TStringField
+    object qryReportSupplier_branch_Name: TWideStringField
       FieldName = 'Supplier_branch_Name'
       FixedChar = True
       Size = 80
     end
-    object qryReportSupplier_name: TStringField
+    object qryReportSupplier_name: TWideStringField
       FieldName = 'Supplier_name'
       FixedChar = True
       Size = 80

@@ -25,7 +25,7 @@ type
     qryStoreLevelsReplenish_Store: TIntegerField;
     qryStoreLevelsReorder_Level: TIntegerField;
     qryStoreLevelsPart_Store_type_Name: TWideStringField;
-    qryStoreLevelsReplenish_type: TStringField;
+    qryStoreLevelsReplenish_type: TWideStringField;
     procedure qryStoreLevelsCalcFields(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);

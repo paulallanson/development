@@ -22,10 +22,10 @@ type
     lkpCOutThicknessEdge_Type: TIntegerField;
     lkpCOutThicknessMaterial_Type: TIntegerField;
     lkpCOutThicknessPrice_pointer: TIntegerField;
-    lkpCOutThicknessDescription: TStringField;
+    lkpCOutThicknessDescription: TWideStringField;
     lkpCOutThicknessUnit_Price: TFloatField;
     lkpCOutThicknessUnit_Cost: TFloatField;
-    lkpCOutThicknessPrice_Unit_Description: TStringField;
+    lkpCOutThicknessPrice_Unit_Description: TWideStringField;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure dblkpThicknessClick(Sender: TObject);

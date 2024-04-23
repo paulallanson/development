@@ -297,19 +297,19 @@ object PBLURevenueLocFrm: TPBLURevenueLocFrm
     object GetDetsSQLInvoice_Location: TIntegerField
       FieldName = 'Invoice_Location'
     end
-    object GetDetsSQLInvoice_Location_Descr: TStringField
+    object GetDetsSQLInvoice_Location_Descr: TWideStringField
       FieldName = 'Invoice_Location_Descr'
     end
-    object GetDetsSQLDefault_PM_Revenue_Centre: TStringField
+    object GetDetsSQLDefault_PM_Revenue_Centre: TWideStringField
       FieldName = 'Default_PM_Revenue_Centre'
     end
-    object GetDetsSQLDefault_Description: TStringField
+    object GetDetsSQLDefault_Description: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Default_Description'
       OnGetText = GetDetsSQLDefault_DescriptionGetText
       Calculated = True
     end
-    object GetDetsSQLinactive: TStringField
+    object GetDetsSQLinactive: TWideStringField
       FieldName = 'inactive'
     end
     object GetDetsSQLColor: TIntegerField
@@ -318,11 +318,11 @@ object PBLURevenueLocFrm: TPBLURevenueLocFrm
     object GetDetsSQLFont_Color: TIntegerField
       FieldName = 'Font_Color'
     end
-    object GetDetsSQLLogo_Path: TStringField
+    object GetDetsSQLLogo_Path: TWideStringField
       FieldName = 'Logo_Path'
       Size = 300
     end
-    object GetDetsSQLRegistered_Address: TStringField
+    object GetDetsSQLRegistered_Address: TWideStringField
       FieldName = 'Registered_Address'
       Size = 300
     end

@@ -1061,7 +1061,7 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
         Name = 'DateTo'
         DataType = ftDateTime
       end>
-    object GetEnquiriesSQLCustName: TStringField
+    object GetEnquiriesSQLCustName: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustName'
       Calculated = True
@@ -1072,22 +1072,22 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
     object GetEnquiriesSQLLine: TIntegerField
       FieldName = 'Line'
     end
-    object GetEnquiriesSQLForm_Description: TStringField
+    object GetEnquiriesSQLForm_Description: TWideStringField
       FieldName = 'Form_Description'
       FixedChar = True
       Size = 160
     end
-    object GetEnquiriesSQLName: TStringField
+    object GetEnquiriesSQLName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object GetEnquiriesSQLBranch_Name: TStringField
+    object GetEnquiriesSQLBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object GetEnquiriesSQLName_1: TStringField
+    object GetEnquiriesSQLName_1: TWideStringField
       FieldName = 'Name_1'
       FixedChar = True
       Size = 80
@@ -1098,17 +1098,17 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
     object GetEnquiriesSQLQuote_Required_By: TDateTimeField
       FieldName = 'Quote_Required_By'
     end
-    object GetEnquiriesSQLName_2: TStringField
+    object GetEnquiriesSQLName_2: TWideStringField
       FieldName = 'Name_2'
       FixedChar = True
       Size = 80
     end
-    object GetEnquiriesSQLDescription: TStringField
+    object GetEnquiriesSQLDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object GetEnquiriesSQLEnq_InActive: TStringField
+    object GetEnquiriesSQLEnq_InActive: TWideStringField
       FieldName = 'Enq_InActive'
       FixedChar = True
       Size = 2
@@ -1257,7 +1257,7 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
         Name = 'DateTo'
         DataType = ftDateTime
       end>
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustName'
       Calculated = True
@@ -1268,22 +1268,22 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
     object IntegerField2: TIntegerField
       FieldName = 'Line'
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Form_Description'
       FixedChar = True
       Size = 160
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'Name_1'
       FixedChar = True
       Size = 80
@@ -1294,17 +1294,17 @@ object PBRPEnqLstFrm: TPBRPEnqLstFrm
     object DateTimeField2: TDateTimeField
       FieldName = 'Quote_Required_By'
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Name_2'
       FixedChar = True
       Size = 80
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'Enq_InActive'
       FixedChar = True
       Size = 2

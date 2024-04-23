@@ -461,7 +461,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       FieldName = 'Line'
       Visible = False
     end
-    object qryCurrentProofStatusPOLine: TStringField
+    object qryCurrentProofStatusPOLine: TWideStringField
       DisplayWidth = 10
       FieldKind = fkCalculated
       FieldName = 'POLine'
@@ -473,14 +473,14 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       DisplayWidth = 10
       FieldName = 'Proof_Date'
     end
-    object qryCurrentProofStatusProof_Status: TStringField
+    object qryCurrentProofStatusProof_Status: TWideStringField
       DisplayLabel = 'Status'
       FieldName = 'Proof_Status'
       Visible = False
       FixedChar = True
       Size = 2
     end
-    object qryCurrentProofStatusCustomers_Desc: TStringField
+    object qryCurrentProofStatusCustomers_Desc: TWideStringField
       DisplayLabel = 'Customers Desc.'
       DisplayWidth = 25
       FieldName = 'Customers_Desc'
@@ -497,7 +497,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       FieldName = 'Branch_no'
       Visible = False
     end
-    object qryCurrentProofStatusCustomer_Name: TStringField
+    object qryCurrentProofStatusCustomer_Name: TWideStringField
       DisplayLabel = 'Customer'
       DisplayWidth = 25
       FieldName = 'Customer_Name'
@@ -518,14 +518,14 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       FieldName = 'Branch_No_1'
       Visible = False
     end
-    object qryCurrentProofStatusSupplier_Name: TStringField
+    object qryCurrentProofStatusSupplier_Name: TWideStringField
       DisplayLabel = 'Supplier Name'
       DisplayWidth = 25
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qryCurrentProofStatusCust_Order_No: TStringField
+    object qryCurrentProofStatusCust_Order_No: TWideStringField
       DisplayLabel = 'Customer Ref.'
       DisplayWidth = 20
       FieldName = 'Cust_Order_No'
@@ -536,7 +536,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       FieldName = 'Purch_Ord_Line_Status'
       Visible = False
     end
-    object qryCurrentProofStatusDescription: TStringField
+    object qryCurrentProofStatusDescription: TWideStringField
       DisplayLabel = 'Status Desc.'
       DisplayWidth = 15
       FieldName = 'Description'

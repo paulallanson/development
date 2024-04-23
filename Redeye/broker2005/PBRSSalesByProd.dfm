@@ -595,7 +595,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object qrySalesbyProdJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
     end
-    object qrySalesbyProdCredit_type: TStringField
+    object qrySalesbyProdCredit_type: TWideStringField
       FieldName = 'Credit_type'
       FixedChar = True
       Size = 2
@@ -603,7 +603,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object qrySalesbyProdInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesbyProdSales_Invoice_No: TStringField
+    object qrySalesbyProdSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -614,12 +614,12 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object qrySalesbyProdBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qrySalesbyProdCustomer_Name: TStringField
+    object qrySalesbyProdCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyProdBranch_Name: TStringField
+    object qrySalesbyProdBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
@@ -627,12 +627,12 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     object qrySalesbyProdPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qrySalesbyProdDescription: TStringField
+    object qrySalesbyProdDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 160
     end
-    object qrySalesbyProdOrder: TStringField
+    object qrySalesbyProdOrder: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Order'
       OnGetText = qrySalesbyProdOrderGetText

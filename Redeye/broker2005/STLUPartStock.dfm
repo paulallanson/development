@@ -664,7 +664,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       Origin = 'Product_Class'
       Size = 5
     end
-    object qryDummyProduct_Class_Description: TStringField
+    object qryDummyProduct_Class_Description: TWideStringField
       FieldName = 'Product_Class_Description'
       Origin = 'Product_Class_Description'
       ReadOnly = True

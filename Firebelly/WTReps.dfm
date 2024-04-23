@@ -3050,19 +3050,19 @@
       'order by Worktop.Description')
     Left = 24
     Top = 81
-    object WorktopSQLworktop: TStringField
+    object WorktopSQLworktop: TWideStringField
       FieldName = 'worktop'
       Size = 8
     end
-    object WorktopSQLDescription: TStringField
+    object WorktopSQLDescription: TWideStringField
       FieldName = 'Description'
       Size = 40
     end
-    object WorktopSQLStocked: TStringField
+    object WorktopSQLStocked: TWideStringField
       FieldName = 'Stocked'
       Size = 1
     end
-    object WorktopSQLUse_For_Estimating: TStringField
+    object WorktopSQLUse_For_Estimating: TWideStringField
       FieldName = 'Use_For_Estimating'
       Size = 1
     end
@@ -3121,7 +3121,7 @@
     object MaterialSQLMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
     end
-    object MaterialSQLDescription: TStringField
+    object MaterialSQLDescription: TWideStringField
       FieldName = 'Description'
     end
   end

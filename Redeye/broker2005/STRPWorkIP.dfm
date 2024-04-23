@@ -1275,7 +1275,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportDate_Ordered: TDateTimeField
       FieldName = 'Date_Ordered'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -1289,14 +1289,14 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportContact_no: TIntegerField
       FieldName = 'Contact_no'
     end
-    object qryReportCost_Centre: TStringField
+    object qryReportCost_Centre: TWideStringField
       FieldName = 'Cost_Centre'
       FixedChar = True
     end
     object qryReportCustomer0: TIntegerField
       FieldName = 'Customer0'
     end
-    object qryReportOrder_Type: TStringField
+    object qryReportOrder_Type: TWideStringField
       FieldName = 'Order_Type'
       FixedChar = True
       Size = 2
@@ -1322,7 +1322,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportAd_hoc_Address: TIntegerField
       FieldName = 'Ad_hoc_Address'
     end
-    object qryReportDelivery_Notes: TStringField
+    object qryReportDelivery_Notes: TWideStringField
       FieldName = 'Delivery_Notes'
       FixedChar = True
       Size = 200
@@ -1336,17 +1336,17 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
     object qryReportBranch_no0: TIntegerField
       FieldName = 'Branch_no0'
     end
-    object qryReportSupp_order_type: TStringField
+    object qryReportSupp_order_type: TWideStringField
       FieldName = 'Supp_order_type'
       FixedChar = True
       Size = 8
     end
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qryReportPart: TStringField
+    object qryReportPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
@@ -1368,7 +1368,7 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportPart_Description: TStringField
+    object qryReportPart_Description: TWideStringField
       FieldName = 'Part_Description'
       FixedChar = True
       Size = 100

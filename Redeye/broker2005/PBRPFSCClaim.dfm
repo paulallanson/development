@@ -1472,7 +1472,7 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -1485,12 +1485,12 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     object qryReportFSC_Material_Claim: TIntegerField
       FieldName = 'FSC_Material_Claim'
     end
-    object qryReportClaim_Description: TStringField
+    object qryReportClaim_Description: TWideStringField
       FieldName = 'Claim_Description'
       FixedChar = True
       Size = 100
     end
-    object qryReportClaim_Type: TStringField
+    object qryReportClaim_Type: TWideStringField
       FieldName = 'Claim_Type'
       FixedChar = True
       Size = 10
@@ -1498,7 +1498,7 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
     object qryReportProduct_Type: TIntegerField
       FieldName = 'Product_Type'
     end
-    object qryReportProduct_Type_Description: TStringField
+    object qryReportProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
       FixedChar = True
       Size = 80

@@ -268,33 +268,33 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
       item
         Name = 'Inactive'
       end>
-    object GetDetsSQLProof_Status: TStringField
+    object GetDetsSQLProof_Status: TWideStringField
       FieldName = 'Proof_Status'
       FixedChar = True
       Size = 2
     end
-    object GetDetsSQLDescription: TStringField
+    object GetDetsSQLDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLProof_Approval_Status: TStringField
+    object GetDetsSQLProof_Approval_Status: TWideStringField
       FieldName = 'Proof_Approval_Status'
       FixedChar = True
       Size = 2
     end
-    object GetDetsSQLProof_Description: TStringField
+    object GetDetsSQLProof_Description: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Proof_Description'
       OnGetText = GetDetsSQLProof_DescriptionGetText
       Size = 30
       Calculated = True
     end
-    object GetDetsSQLProof_Approved: TStringField
+    object GetDetsSQLProof_Approved: TWideStringField
       FieldName = 'Proof_Approved'
       Size = 3
     end
-    object GetDetsSQLinactive: TStringField
+    object GetDetsSQLinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end

@@ -56,8 +56,8 @@ type
     QRSubDtlSerNos: TQRSubDetail;
     lblSerialNos: TQRLabel;
     lblSerialNoRange: TQRLabel;
-    GetSerNosSQLSerial_item_from: TStringField;
-    GetSerNosSQLSerial_item_to: TStringField;
+    GetSerNosSQLSerial_item_from: TWideStringField;
+    GetSerNosSQLSerial_item_to: TWideStringField;
     ChildBand1: TQRChildBand;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;

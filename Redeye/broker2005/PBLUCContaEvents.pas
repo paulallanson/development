@@ -159,7 +159,7 @@ type
     GetDetsSQLContact_no: TIntegerField;
     GetDetsSQLDate_Time_Entered: TDateTimeField;
     GetDetsSQLNarrative: TIntegerField;
-    GetDetsSQLName: TStringField;
+    GetDetsSQLName: TWideStringField;
     GetDetsSQLEventDate: TDateField;
     AppBitBtn: TBitBtn;
     procedure FormActivate(Sender: TObject);

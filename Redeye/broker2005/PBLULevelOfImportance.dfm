@@ -273,11 +273,11 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     object GetDetsSQLLevel_of_Importance: TIntegerField
       FieldName = 'Level_of_Importance'
     end
-    object GetDetsSQLImportance_Description: TStringField
+    object GetDetsSQLImportance_Description: TWideStringField
       FieldName = 'Importance_Description'
       Size = 100
     end
-    object GetDetsSQLinactive: TStringField
+    object GetDetsSQLinactive: TWideStringField
       FieldName = 'inactive'
     end
     object GetDetsSQLColor: TIntegerField

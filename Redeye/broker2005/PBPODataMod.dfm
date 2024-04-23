@@ -4241,7 +4241,7 @@ object PBPODM: TPBPODM
     object qryGetPOPriceHistOperator: TIntegerField
       FieldName = 'Operator'
     end
-    object qryGetPOPriceHistOperator_Name: TStringField
+    object qryGetPOPriceHistOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       FixedChar = True
       Size = 80
@@ -4260,7 +4260,7 @@ object PBPODM: TPBPODM
     object qryGetPOPriceHistOrder_Unit: TIntegerField
       FieldName = 'Order_Unit'
     end
-    object qryGetPOPriceHistOrder_Unit_Description: TStringField
+    object qryGetPOPriceHistOrder_Unit_Description: TWideStringField
       FieldName = 'Order_Unit_Description'
       FixedChar = True
       Size = 80
@@ -4268,7 +4268,7 @@ object PBPODM: TPBPODM
     object qryGetPOPriceHistSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
     end
-    object qryGetPOPriceHistSell_Unit_Description: TStringField
+    object qryGetPOPriceHistSell_Unit_Description: TWideStringField
       FieldName = 'Sell_Unit_Description'
       FixedChar = True
       Size = 80
@@ -4279,12 +4279,12 @@ object PBPODM: TPBPODM
     object qryGetPOPriceHistGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
     end
-    object qryGetPOPriceHistOn_Hold: TStringField
+    object qryGetPOPriceHistOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       FixedChar = True
       Size = 2
     end
-    object qryGetPOPriceHistInvoice_Upfront: TStringField
+    object qryGetPOPriceHistInvoice_Upfront: TWideStringField
       FieldName = 'Invoice_Upfront'
       Size = 1
     end

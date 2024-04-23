@@ -48,11 +48,11 @@ type
     QRLabel4: TQRLabel;
     QRDBText7: TQRDBText;
     QRDBText9: TQRDBText;
-    qryOrdersCust_Order_No: TStringField;
+    qryOrdersCust_Order_No: TWideStringField;
     qryOrdersPurchase_Order: TFloatField;
     qryOrdersQty_in_Stock: TFloatField;
     qryOrdersQuantity: TFloatField;
-    qryOrdersForms_per_Box: TStringField;
+    qryOrdersForms_per_Box: TWideStringField;
     qryOrdersLast_Delivery: TDateTimeField;
     qryLastDetails: TFDQuery;
     lblCustOrderNo: TQRLabel;
@@ -69,7 +69,7 @@ type
     qryReportCustomer_Name: TWideStringField;
     qryReportCustomer: TIntegerField;
     qryReportBranch_no: TIntegerField;
-    qryReportStocked_Item: TStringField;
+    qryReportStocked_Item: TWideStringField;
     qryReportQuantity_on_order: TFloatField;
     qryReportTotal_on_order: TFloatField;
     qryReportQuantity_in_stock: TFloatField;
