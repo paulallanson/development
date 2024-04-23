@@ -65,6 +65,7 @@ type
     DPhoneQRLabel: TQRLabel;
     DFaxQRLabel: TQRLabel;
     qrlDelNumber: TQRLabel;
+    QRSubDetail1: TQRSubDetail;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

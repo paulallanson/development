@@ -359,6 +359,8 @@ type
     CountyEdit: TEdit;
     lblAltPurchaseOrder: TLabel;
     edtAltPurchaseOrder: TEdit;
+    ocWord: TOleContainer;
+    ocExcel: TOleContainer;
     procedure ValidateQty(Sender: TObject);
     procedure ValidateMoney(Sender: TObject);
     procedure SaveValue(Sender: TObject);

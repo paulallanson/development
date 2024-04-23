@@ -49,6 +49,7 @@ type
     QRLblvarqty: TQRLabel;
     QRShape1: TQRShape;
     QRShape2: TQRShape;
+    QRSubDetail1: TQRSubDetail;
     qrlblCountCost: TQRLabel;
     qrlblVarianceCost: TQRLabel;
     qrlblTotalCost: TQRLabel;

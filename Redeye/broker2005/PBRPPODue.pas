@@ -67,6 +67,8 @@ type
     gtQRDBText2: TQRDBText;
     gtQRDBText3: TQRDBText;
     gtQRDBText4: TQRDBText;
+    SuppQRGroup: TQRGroup;
+    SuppBranchQRGroup: TQRGroup;
     procedure PrintPOsDueEnqQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;

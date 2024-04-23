@@ -300,6 +300,16 @@ type
     memEmailOrdersDue: TMemo;
     Label72: TLabel;
     memEmailProformaInvoice: TMemo;
+    dtsActivityTypeQuotRem: TDataSource;
+    qryActivityTypeQuotRem: TFDQuery;
+    qryActivityTypeProofStActiv: TFDQuery;
+    dtsActivityTypeProofStActiv: TDataSource;
+    dtsActivityTypeReorderAct: TDataSource;
+    qryActivityTypeReorderAct: TFDQuery;
+    dtsActivityTypeOrdAct: TDataSource;
+    qryActivityTypeOrdAct: TFDQuery;
+    qryActivityTypeDelivAct: TFDQuery;
+    dtsActivityTypeDelivAct: TDataSource;
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure UpdateCompany;
@@ -365,6 +375,7 @@ type
     function UpdateEmailQuote: Integer;
     procedure GetActivityTypes;
     procedure CallMaintScreen(Module: integer);
+    procedure ReopenDatasets(Dataset: TDataSet);
   private
     { Private declarations }
     bDelivNotesFlash, bPaymentNotesFlash, bSupplierTermsFlash, bCreditTermsFlash: ByteBool;
@@ -1854,6 +1865,12 @@ begin
 
 end;
 
+procedure TPBMaintCompanyFrm.ReopenDatasets(Dataset: TDataSet);
+begin
+  Dataset.Close;
+  Dataset.Open
+end;
+
 procedure TPBMaintCompanyFrm.btnActivityTypeClick(Sender: TObject);
 begin
   PBLUActivityTypeFrm := TPBLUActivityTypeFrm.Create(Self);
@@ -1870,11 +1887,12 @@ end;
 
 procedure TPBMaintCompanyFrm.GetActivityTypes;
 begin
-  with qryActivityType do
-    begin
-      close;
-      open;
-    end;
+  ReopenDatasets(qryActivityType);
+  ReopenDatasets(qryActivityTypeQuotRem);
+  ReopenDatasets(qryActivityTypeProofStActiv);
+  ReopenDatasets(qryActivityTypeReorderAct);
+  ReopenDatasets(qryActivityTypeOrdAct);
+  ReopenDatasets(qryActivityTypeDelivAct);
 end;
 
 procedure TPBMaintCompanyFrm.FormCreate(Sender: TObject);
