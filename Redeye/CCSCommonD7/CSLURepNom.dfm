@@ -258,8 +258,6 @@ object CSLURepNomFrm: TCSLURepNomFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select * From Rep_Nominal'
       'Where (Rep_Nominal.Rep = :Code_From) '

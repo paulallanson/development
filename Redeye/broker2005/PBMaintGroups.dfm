@@ -230,8 +230,6 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
   end
   object GetCustTypesSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select Customer_Type.Customer_Type, Customer_Type.Description, C' +
@@ -250,8 +248,6 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
   end
   object GetPTCatsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select Category.Category, Category.Description, Category.Commiss' +
@@ -291,8 +287,6 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
   end
   object GetContTypesSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select *'
       'From Contact_Type'
@@ -303,8 +297,6 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
   end
   object GetContLevelsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT *'
       'FROM Contact_Level'

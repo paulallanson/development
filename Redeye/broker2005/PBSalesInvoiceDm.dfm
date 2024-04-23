@@ -784,8 +784,6 @@ object dmSalesInvoice: TdmSalesInvoice
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select TOP 2000'
       #9#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
@@ -2962,8 +2960,6 @@ object dmSalesInvoice: TdmSalesInvoice
   object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySCHeaderGridCalcFields
     Connection = dmBroker.PBLDatabase
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'

@@ -227,8 +227,6 @@ object CSLUVATCodeFrm: TCSLUVATCodeFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  *'
       'From VAT_Code'

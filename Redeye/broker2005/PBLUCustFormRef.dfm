@@ -259,8 +259,6 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'#9'Form_Reference.Customer,'
       #9#9'Form_Reference.Branch_No,'

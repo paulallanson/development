@@ -70,8 +70,6 @@ object dmLookUpPOrd: TdmLookUpPOrd
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT TOP 500 Purchase_Order.Date_Point,'
       '        Purch_Ord_Line_Status.Description AS Status_Description,'

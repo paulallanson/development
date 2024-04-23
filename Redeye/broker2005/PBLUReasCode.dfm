@@ -236,8 +236,6 @@ object PBLUReasCodeFrm: TPBLUReasCodeFrm
   end
   object qryGetEnqReason: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select Enq_InActive_Reason.Enq_InActive_Reason, Enq_InActive_Rea' +
@@ -252,8 +250,6 @@ object PBLUReasCodeFrm: TPBLUReasCodeFrm
   end
   object qryGetPOReason: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'Select InActive_Reason.InActive_Reason, InActive_Reason.Descript' +

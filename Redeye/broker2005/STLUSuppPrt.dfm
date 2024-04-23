@@ -252,8 +252,6 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Part_Supplier.*,'
       '        Part.Part_Description,'

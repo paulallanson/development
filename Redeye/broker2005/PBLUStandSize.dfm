@@ -240,8 +240,6 @@ object PBLUStandSizeFrm: TPBLUStandSizeFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Paper_Size.Paper_Size,'
       '        Paper_Size.Description,'

@@ -3,8 +3,6 @@ object dtmdlPOrders: TdtmdlPOrders
   Width = 676
   object qryPOHeaderGrid: TFDQuery
     ConnectionName = 'pb'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select '#9'purch_ord,'
       #9'purch_ord_no,'

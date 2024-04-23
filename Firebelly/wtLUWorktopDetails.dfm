@@ -269,8 +269,6 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'WT'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT'
       '    Worktop_thickness.Worktop,'

@@ -297,8 +297,6 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select * From Supplier_Branch'
       'Where '
@@ -330,8 +328,6 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object GetODueEnqDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       
         'SELECT  distinct Supplier_Branch.Name, Supplier_Branch.Branch_No' +

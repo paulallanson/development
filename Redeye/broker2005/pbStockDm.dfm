@@ -3,8 +3,6 @@ object dtmdlStock: TdtmdlStock
   Width = 781
   object qryCustStock: TFDQuery
     Connection = dmBroker.PBLDatabase
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'

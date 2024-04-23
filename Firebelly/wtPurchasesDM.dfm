@@ -3,8 +3,6 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
   Width = 1024
   object qryAllPurchases: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'SELECT  Purchase_Order.Purchase_Order,'
       '        Purchase_Order.Supplier,'

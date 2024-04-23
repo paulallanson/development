@@ -264,8 +264,6 @@ object PBLUProductionTypeFrm: TPBLUProductionTypeFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select  Production_Type.Production_Type,'
       '        Production_Type.Production_Type_Description'

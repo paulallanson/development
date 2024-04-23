@@ -222,8 +222,6 @@ object PBLUProcessOpsFrm: TPBLUProcessOpsFrm
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
-    FetchOptions.AssignedValues = [evRecordCountMode]
-    FetchOptions.RecordCountMode = cmTotal
     SQL.Strings = (
       'Select Process_Operation.*'
       'From Process_Operation'
