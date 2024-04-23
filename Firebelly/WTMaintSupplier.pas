@@ -315,7 +315,6 @@ type
     procedure DeleteZero;
     function GetNextKey: integer;
     procedure SaveToDB;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   public
     procedure GetRecord(Key: integer);
@@ -332,7 +331,7 @@ implementation
 uses
   AllCommon, WTMaintSupplierWorktops, wtLUMatType, WTMaintSupplierWorktopCost, WTMaintSupplierWTThicknessCost,
   wtDataModule, wtMain, wtLUworktops, WTMaintSupplierProduct, WTMaintSupplierWorktop, WTWordOLE, WTExcelOLE,
-  WTMaintEmail, System.UITypes;
+  WTMaintEmail, System.UITypes, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -1467,18 +1466,6 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintSupplier.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWTMaintSupplier.lstvwDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
@@ -1860,11 +1847,9 @@ end;
 
 procedure TfrmWTMaintSupplier.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 end.

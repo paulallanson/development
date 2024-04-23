@@ -83,7 +83,6 @@ type
   private
     iInstallationNotes: integer;
     FCustomerName: string;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure GetAddress(iAddress: integer);
     function GetNotes(TempNotes: integer): string;
@@ -105,7 +104,7 @@ var
 
 implementation
 
-uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon, wtMain;
+uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon, wtMain, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -324,11 +323,9 @@ end;
 
 procedure TfrmWTMaintBranch.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintBranch.EnableOK(Sender: TObject);
@@ -613,18 +610,6 @@ begin
         end;
       Items.EndUpdate;
     end;
-end;
-
-procedure TfrmWTMaintBranch.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TfrmWTMaintBranch.btnAttachClick(Sender: TObject);
