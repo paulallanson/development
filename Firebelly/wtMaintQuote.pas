@@ -513,7 +513,6 @@ type
     procedure SetContractQuote(const Value: boolean);
     procedure MoveOriginalQuoteDocuments;
     procedure SetOriginalQuoteFromReQuote(const Value: integer);
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
   private
     Descending: Boolean;
@@ -548,7 +547,7 @@ uses
   wtCommon, WTSrchCustomer, wtMain, wtMaintQElement, wtMaintQCutOut, wtMaintQEdge, wtMaintQExtra, wtNotesDM,
   wtDataModule, wtMaintQUpstand, WTMaintQEvents, WTSrchCustContacts, wtLUMatType, WTMaintQElementM, WTMaintQUpstandM,
   wtLUSalesLead, WTLUDesigner, WTMaintQSlab, WTMaintEmail, WTWordOLE, WTExcelOLE, WTMaintContApp, wtLUReason,
-  wtLUSpecialInstruction, UITypes;
+  wtLUSpecialInstruction, UITypes, Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -4244,11 +4243,13 @@ end;
 
 procedure TfrmWTMaintQuote.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath,
+    procedure
+    begin
+      ShowDocuments(Quote.dbKey);
+    end);
 end;
 
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);
@@ -4332,18 +4333,6 @@ begin
       Items.EndUpdate;
     end;
 *)
-end;
-
-procedure TfrmWTMaintQuote.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments(Quote.dbKey);
-    end);
 end;
 
 procedure TfrmWTMaintQuote.lstvwDocumentsColumnClick(Sender: TObject;

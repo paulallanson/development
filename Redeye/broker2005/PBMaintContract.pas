@@ -220,7 +220,6 @@ type
     FMode: TConMode;
     FContract: TContract;
     sOldValue: string;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetMode(const Value: TConMode);
     procedure SetContract(const Value: TContract);
@@ -256,7 +255,7 @@ uses
   PBLUOps, pbMainMenu, PBLUCust, CCSCommon, PBDBMemo, PBLUCConta, PBDocObjects,
   PBLUCRep, pbDatabase, DateSelV5, PBLUPaymentTerms, PBMaintJobBag,
   PBLUContractCustomerJobs, PBImages, PBWordOLE, PBExcelOLE, PBMaintEmail,
-  PBMaintPOrd, PBMaintPOrdInactive, PBSendtoExcel, PBMaintSalesInvoice, PBSalesInvrPrint;
+  PBMaintPOrd, PBMaintPOrdInactive, PBSendtoExcel, PBMaintSalesInvoice, PBSalesInvrPrint, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -879,11 +878,13 @@ end;
 
 procedure TPBMaintContractFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath,
+    procedure
+    begin
+      ShowDocuments(Contract.ContractNumber);
+    end);
 end;
 
 procedure TPBMaintContractFrm.dblkpReviewTypeClick(Sender: TObject);
@@ -1797,18 +1798,6 @@ begin
       Items.EndUpdate;
     end;
   end;
-end;
-
-procedure TPBMaintContractFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments(Contract.ContractNumber);
-    end);
 end;
 
 procedure TPBMaintContractFrm.ShowPurchaseOrders;

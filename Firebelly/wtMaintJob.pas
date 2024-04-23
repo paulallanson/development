@@ -363,7 +363,6 @@ type
     procedure MoveSalesDocument;
     procedure SendAndSaveEmail(sTo, sSubject: string);
     procedure SetUseMarkup(const Value: bytebool);
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetMode(const Value: TjMode);
   public
@@ -384,7 +383,8 @@ implementation
 uses
   wtCommon, WTSrchCustomer, wtMain, wtNotesDM, wtDataModule, WTSrchCustContacts, wtMaintJElement, WTExcelOLE,
   wtMaintJUpstand, wtMaintJEdge, wtMaintJExtra, wtMaintJCutOut, wtMaintJEvents, DateSelV5, wtLUMatType, wtLUReason,
-  wtMaintJElementM, WTMaintJRemedial, wtLUFitters, WTLUDesigner, WTMaintEmail, WTWordOLE, System.UITypes;
+  wtMaintJElementM, WTMaintJRemedial, wtLUFitters, WTLUDesigner, WTMaintEmail, WTWordOLE, System.UITypes,
+  Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -1400,11 +1400,9 @@ end;
 
 procedure TfrmWTMaintJob.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;
@@ -2969,18 +2967,6 @@ begin
       Items.EndUpdate;
     end;
 *)
-end;
-
-procedure TfrmWTMaintJob.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TfrmWTMaintJob.btnReasonClick(Sender: TObject);

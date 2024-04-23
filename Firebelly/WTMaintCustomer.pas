@@ -309,7 +309,6 @@ type
     FGroupDescription: string;
     FMaterialType: integer;
     FGroupInactive: boolean;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
     function GetFilesPath: string;
     procedure SetFunctionMode(const Value: string);
     procedure ShowDetails;
@@ -371,7 +370,8 @@ uses
   WTEventsDM, WtMaintQuote, WtMaintSalesOrder, WtMaintJob, wtRSQuote, DateSelV5, wtLUProspectAction,
   wtMaintCustomerConts, WTSrchCustContacts, WTDBMemo, WTMaintContApp, WtMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WTMaintEmail, WTWordOLE, WTExcelOLE, WTLUPaymentTerms, AllImages,
-  WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType;
+  WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType,
+  Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -2300,18 +2300,6 @@ begin
     end;
 end;
 
-procedure TfrmWtMaintCustomer.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWtMaintCustomer.SaveToDB;
 var
   iPathLength, iFileLength: integer;
@@ -2558,11 +2546,9 @@ end;
 
 procedure TfrmWtMaintCustomer.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWtMaintCustomer.edtAccountCodeEnter(Sender: TObject);
