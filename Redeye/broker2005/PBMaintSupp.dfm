@@ -587,7 +587,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         DataSource = dtmdlCustomers.dtsDocuments
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -596,7 +596,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         PopupMenu = pmnuDocuments
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
@@ -744,7 +744,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         DataSource = dtmdlSuppliers.dtsCharges
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -752,7 +752,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         ParentFont = False
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
