@@ -221,6 +221,7 @@ object PBLUCRepFrm: TPBLUCRepFrm
       '      ((Rep.Rep_Is_Sub_Rep = :Rep_Is_Sub_Rep))'
       'Order By Rep.Name')
     Left = 80
+    Top = 104
     ParamData = <
       item
         Name = 'Code_From'

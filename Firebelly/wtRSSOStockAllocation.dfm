@@ -2,8 +2,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   Left = 266
   Top = 44
   Caption = 'Stock Allocation'
-  ClientHeight = 601
-  ClientWidth = 931
+  ClientHeight = 600
+  ClientWidth = 927
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,14 +17,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 541
-    Width = 931
+    Top = 540
+    Width = 927
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
     DesignSize = (
-      931
+      927
       41)
     object btnClose: TButton
       Left = 832
@@ -63,8 +63,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 582
-    Width = 931
+    Top = 581
+    Width = 927
     Height = 19
     Panels = <
       item
@@ -77,8 +77,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object dbgDetails: TDBGrid
     Left = 0
     Top = 233
-    Width = 931
-    Height = 308
+    Width = 927
+    Height = 307
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
@@ -155,7 +155,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 931
+    Width = 927
     Height = 233
     Align = alTop
     TabOrder = 3
@@ -576,7 +576,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         'al_Value,'
       '        Sales_order_line.Unit_Price,'
       '        Sales_order_line.Sales_Order_line_no,'
-      '        ( SELECT Stock_item.Stock_code'
+      '        (SELECT TOP 1 Stock_item.Stock_code'
       '          FROM Stock_item'
       '              RIGHT JOIN Worktop_thickness_Slab_Size'
       
@@ -713,7 +713,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object qryGetStockCode: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      'SELECT Stock_item.Stock_code'
+      'SELECT TOP 1 Stock_item.Stock_code'
       'FROM Stock_item'
       '        RIGHT JOIN Worktop_Thickness_Slab_Size'
       
@@ -739,7 +739,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         Name = 'Depth'
       end>
   end
-  object wtstkDatabase: TFDConnection
+  object wtStkDatabase: TFDConnection
     ConnectionName = 'STK'
     Params.Strings = (
       'User Name=readonly'
@@ -1154,7 +1154,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object qryGetStock: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      'SELECT  Store_Stock.Store_Stock,'
+      'SELECT TOP 1'
+      '        Store_Stock.Store_Stock,'
       '        Stock_Item.Stock_Code,'
       '        Stock_Item.Stock_Description,'
       '        Quantity_in_Stock as Total_Quantity,'

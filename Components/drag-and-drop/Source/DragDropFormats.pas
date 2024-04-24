@@ -1,32 +1,40 @@
 unit DragDropFormats;
 // -----------------------------------------------------------------------------
-// Project:         Drag and Drop Component Suite.
-// Module:          DragDropFormats
-// Description:     Implements commonly used clipboard formats and base classes.
-// Version:         5.2
-// Date:            17-AUG-2010
-// Target:          Win32, Delphi 5-2010
+// Project:         New Drag and Drop Component Suite
+// Module:          DragDrop
+// Description:     Implements base classes and utility functions.
+// Version:         5.7
+// Date:            28-FEB-2015
+// Target:          Win32, Win64, Delphi 6-XE7
 // Authors:         Anders Melander, anders@melander.dk, http://melander.dk
+// Latest Version   https://github.com/landrix/The-new-Drag-and-Drop-Component-Suite-for-Delphi
 // Copyright        © 1997-1999 Angus Johnson & Anders Melander
 //                  © 2000-2010 Anders Melander
+//                  © 2011-2015 Sven Harazim
 // -----------------------------------------------------------------------------
 
 interface
 
-uses
-  DragDrop,
-  Windows,
-  Classes,
-  ActiveX;
+{$include DragDrop.inc}
 
-{$I DragDrop.inc}
+uses
+  {$IF CompilerVersion >= 23.0}
+  System.SysUtils,System.Classes,System.Win.ComObj,
+  WinApi.Windows,WinApi.ActiveX,WinApi.ShlObj,
+  Vcl.AxCtrls,
+  {$ELSE}
+  SysUtils,Classes,ComObj,
+  Windows,ActiveX,ShlObj,
+  AxCtrls,
+  {$ifend}
+  DragDrop;
+//uses
+//  DropSource,
+//  DropTarget,
+//  ;
 
 type
-  {$IFDEF VER35_PLUS}
-  PLargeUInt = ^LargeUInt;
-  {$ELSE}
-  PLargeInt = ^LargeInt;
-  {$ENDIF}
+  PLargeint = ^Largeint;
 
 type
 ////////////////////////////////////////////////////////////////////////////////
@@ -122,17 +130,15 @@ type
   private
     FHasSeeked: boolean;
   public
-    {$IFDEF VER35_PLUS}
-    function Stat(out statstg: TStatStg; grfStatFlag: DWORD): HResult; override; stdcall;
-    function Seek(dlibMove: Largeint; dwOrigin: DWORD; out libNewPosition: LargeUInt): HResult; override; stdcall;
-    function Read(pv: Pointer; cb: FixedUInt; pcbRead: PFixedUInt): HResult; override; stdcall;
-    function CopyTo(stm: IStream; cb: LargeUInt; out cbRead: LargeUInt; out cbWritten: LargeUInt): HResult; override; stdcall;
-    {$ELSE}
-    function Stat(out statstg: TStatStg; grfStatFlag: Longint): HResult; override; stdcall;
-    function Seek(dlibMove: Largeint; dwOrigin: Longint; out libNewPosition: Largeint): HResult; override; stdcall;
-    function Read(pv: Pointer; cb: Longint; pcbRead: PLongint): HResult; override; stdcall;
-    function CopyTo(stm: IStream; cb: Largeint; out cbRead: Largeint; out cbWritten: Largeint): HResult; override; stdcall;
-    {$ENDIF}
+    function Stat(out statstg: TStatStg;
+      grfStatFlag: {$if CompilerVersion < 29}Longint{$else}DWORD{$ifend}): HResult; override; stdcall;
+    function Seek(dlibMove: Largeint; dwOrigin: {$if CompilerVersion < 29}Longint{$else}DWORD{$ifend};
+      out libNewPosition: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend}): HResult; override; stdcall;
+    function Read(pv: Pointer; cb: {$if CompilerVersion < 29}Longint{$else}FixedUInt{$ifend};
+      pcbRead: {$if CompilerVersion < 29}PLongint{$else}PFixedUInt{$ifend}): HResult; override; stdcall;
+    function CopyTo(stm: IStream; cb: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend};
+      out cbRead: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend};
+      out cbWritten: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend}): HResult; override; stdcall;
   end;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -513,7 +519,7 @@ type
 
 // CreateIStreamFromIStorage stores a copy of an IStorage object on an IStream
 // object and returns the IStream object.
-// It is the callers resposibility to dispose of the IStream. Any modifications
+// It is the callers responsibility to dispose of the IStream. Any modifications
 // made to the IStream does not affect the original IStorage object.
 //
 // CreateIStreamFromIStorage and the work to integrate it into
@@ -533,13 +539,13 @@ function GetMediumDataSize(Medium: TStgMedium): integer;
 ////////////////////////////////////////////////////////////////////////////////
 implementation
 
-uses
-  DropSource,
-  DropTarget,
-  ComObj,
-  ShlObj,
-  AxCtrls,
-  SysUtils;
+//uses
+//  DropSource,
+//  DropTarget,
+//  ComObj,
+//  ShlObj,
+//  AxCtrls,
+//  SysUtils;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -902,54 +908,39 @@ end;
 //              TFixedStreamAdapter
 //
 ////////////////////////////////////////////////////////////////////////////////
-{$IFDEF VER35_PLUS}
-function TFixedStreamAdapter.Seek(dlibMove: Largeint; dwOrigin: DWORD; out libNewPosition: LargeUInt): HResult;
-{$ELSE}
-function TFixedStreamAdapter.Seek(dlibMove: Largeint; dwOrigin: Integer; out libNewPosition: Largeint): HResult;
-{$ENDIF}
+function TFixedStreamAdapter.Seek(dlibMove: Largeint; dwOrigin: {$if CompilerVersion < 29}Longint{$else}DWORD{$ifend};
+  out libNewPosition: {$if CompilerVersion < 29}LargeInt{$else}LargeUInt{$ifend}): HResult;
 begin
   Result := inherited Seek(dlibMove, dwOrigin, libNewPosition);
   FHasSeeked := True;
 end;
 
-{$IFDEF VER35_PLUS}
-function TFixedStreamAdapter.Stat(out statstg: TStatStg; grfStatFlag: DWORD): HResult;
-{$ELSE}
-function TFixedStreamAdapter.Stat(out statstg: TStatStg; grfStatFlag: Integer): HResult;
-{$ENDIF}
+function TFixedStreamAdapter.Stat(out statstg: TStatStg;
+  grfStatFlag: {$if CompilerVersion < 29}Longint{$else}DWORD{$ifend}): HResult;
 begin
   Result := inherited Stat(statstg, grfStatFlag);
   statstg.pwcsName := nil;
 end;
 
-{$IFDEF VER35_PLUS}
-function TFixedStreamAdapter.Read(pv: Pointer; cb: FixedUInt; pcbRead: PFixedUInt): HResult;
-{$ELSE}
-function TFixedStreamAdapter.Read(pv: Pointer; cb: Integer; pcbRead: PLongint): HResult;
-{$ENDIF}
+function TFixedStreamAdapter.Read(pv: Pointer; cb: {$if CompilerVersion < 29}Longint{$else}FixedUInt{$ifend};
+  pcbRead: {$if CompilerVersion < 29}PLongint{$else}PFixedUInt{$ifend}): HResult;
 begin
   if (not FHasSeeked) then
-    Seek(0, STREAM_SEEK_SET, PLargeUInt(nil)^);
+    Seek(0, STREAM_SEEK_SET, {$if CompilerVersion < 29}PLargeint{$else}PLargeUInt{$ifend}(nil)^);
   Result := inherited Read(pv, cb, pcbRead);
 end;
 
-{$IFDEF VER35_PLUS}
-function TFixedStreamAdapter.CopyTo(stm: IStream; cb: LargeUInt; out cbRead: LargeUInt;
-  out cbWritten: LargeUInt): HResult;
-{$ELSE}
-function TFixedStreamAdapter.CopyTo(stm: IStream; cb: Largeint; out cbRead: Largeint;
-  out cbWritten: Largeint): HResult;
-{$ENDIF}
+function TFixedStreamAdapter.CopyTo(stm: IStream; cb: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend};
+  out cbRead: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend};
+  out cbWritten: {$if CompilerVersion < 29}Largeint{$else}LargeUInt{$ifend}): HResult;
 const
   MaxBufSize = 1024 * 1024;  // 1mb
 var
   Buffer: Pointer;
   BufSize, BurstReadSize, BurstWriteSize: Integer;
-  {$IFDEF VER35_PLUS}
-  BytesRead, BytesWritten, BurstWritten: FixedUInt;
-  {$ELSE}
-  BytesRead, BytesWritten, BurstWritten: LongInt;
-  {$ENDIF}
+  BytesRead    : LongInt;
+  BytesWritten : LongInt;
+  BurstWritten : {$if CompilerVersion < 29}LongInt{$else}FixedUInt{$ifend};
 begin
   Result := S_OK;
   BytesRead := 0;
@@ -1056,7 +1047,7 @@ begin
     Size := StatStg.cbSize;
     Medium.tymed := TYMED_ISTREAM;
     Medium.unkForRelease := nil;
-    Medium.stm := pointer(Stream);
+    Medium.stm := Pointer(Stream);
     if (Result) and (Size > 0) then
       // Read the given amount of data.
       Result := DoGetDataSized(ADataObject, Medium, Size);
@@ -1069,12 +1060,8 @@ function TCustomSimpleClipboardFormat.DoGetDataSized(const ADataObject: IDataObj
 var
   Buffer: pointer;
   Stream: IStream;
-  Remaining: LongInt;
-  {$IFDEF VER35_PLUS}
-  Chunk: FixedUInt;
-  {$ELSE}
-  Chunk: LongInt;
-  {$ENDIF}
+  Remaining: longInt;
+  Chunk: {$if CompilerVersion < 29}LongInt{$else}FixedUInt{$ifend};
   pChunk: PByte;
   HGlob: HGLOBAL;
   ChunkBuffer: pointer;
@@ -1105,11 +1092,7 @@ begin
         Stream := IStream(AMedium.stm);
         if (Stream <> nil) then
         begin
-          {$IFDEF VER35_PLUS}
-          Stream.Seek(0, STREAM_SEEK_SET, PLargeUInt(nil)^);
-          {$ELSE}
-          Stream.Seek(0, STREAM_SEEK_SET, PLargeInt(nil)^);
-          {$ENDIF}
+          Stream.Seek(0, STREAM_SEEK_SET, {$if CompilerVersion < 29}PLargeInt{$else}PUInt64{$ifend}(nil)^);
           Result := True;
           Remaining := Size;
           pChunk := Buffer;
@@ -1179,11 +1162,7 @@ var
   Stream: IStream;
   p: pointer;
   Remaining: longInt;
-  {$IFDEF VER35_PLUS}
-  Chunk: FixedUInt;
-  {$ELSE}
-  Chunk: LongInt;
-  {$ENDIF}
+  Chunk: {$if CompilerVersion < 29}LongInt{$else}FixedUInt{$ifend};
 begin
   Result := (Buffer <> nil) and (Size > 0);
   if (Result) then
@@ -1206,11 +1185,7 @@ begin
       Stream := IStream(AMedium.stm);
       if (Stream <> nil) then
       begin
-        {$IFDEF VER35_PLUS}
-        Stream.Seek(0, STREAM_SEEK_SET, PLargeUInt(nil)^);
-        {$ELSE}
-        Stream.Seek(0, STREAM_SEEK_SET, PLargeint(nil)^);
-        {$ENDIF}
+        Stream.Seek(0, STREAM_SEEK_SET, {$if CompilerVersion < 29}PLargeInt{$else}PUInt64{$ifend}(nil)^);
         Remaining := Size;
         while (Result) and (Remaining > 0) do
         begin
@@ -1249,7 +1224,7 @@ begin
 
   // (FormatEtcIn.tymed <> -1) is a work around for drop targets that specify
   // the tymed incorrectly. E.g. the Nero Express CD burner does this and thus
-  // asks for more than it can handle. 
+  // asks for more than it can handle.
   if (FormatEtcIn.tymed <> -1) and
     (FormatEtc.tymed and FormatEtcIn.tymed and TYMED_ISTREAM <> 0) then
   begin
@@ -1297,11 +1272,7 @@ begin
         exit;
       end;
 
-      {$IFDEF VER35_PLUS}
-      Stream.Seek(0, STREAM_SEEK_END, PLargeUInt(nil)^);
-      {$ELSE}
-      Stream.Seek(0, STREAM_SEEK_END, PLargeInt(nil)^);
-      {$ENDIF}
+      Stream.Seek(0, STREAM_SEEK_END, {$if CompilerVersion < 29}PLargeInt{$else}PUInt64{$ifend}(nil)^);
 
       (*
       ** The following is a bit weird...
@@ -1318,12 +1289,18 @@ begin
       ** below which deals with TOLEStream and TFixedStreamAdapter and insert
       ** the following instead:
       **
-      **   Stream.Seek(0, STREAM_SEEK_SET, LargeInt(nil^));
+      **   Stream.Seek(0, STREAM_SEEK_SET, {$if CompilerVersion < 29}PLargeInt{$else}PUInt64{$ifend}(nil)^);
       *)
-      OleStream := TOLEStream.Create(Stream);
-      Stream := TFixedStreamAdapter.Create(OleStream, soOwned) as IStream;
 
-      IStream(AMedium.stm) := Stream;
+      OleStream := TOLEStream.Create(Stream);
+
+      //this following code rises a memory leak in madexcept
+      //to prevent this info, add
+      //uses madexcept
+      //HideLeak(TFixedStreamAdapter,1);
+      //HideLeak('GlobalAlloc');
+
+      IStream(AMedium.stm) := TFixedStreamAdapter.Create(OleStream, soOwned);
     except
       Result := False;
     end;
@@ -1609,7 +1586,7 @@ end;
 var
   CF_PREFERREDDROPEFFECT: TClipFormat = 0;
 
-// GetClassClipboardFormat is used by TCustomDropTarget.GetPreferredDropEffect 
+// GetClassClipboardFormat is used by TCustomDropTarget.GetPreferredDropEffect
 class function TPreferredDropEffectClipboardFormat.GetClassClipboardFormat: TClipFormat;
 begin
   if (CF_PREFERREDDROPEFFECT = 0) then

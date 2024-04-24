@@ -181,6 +181,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     Width = 1213
     Height = 217
     Align = alClient
+    DataSource = dtmdlCustomers.dtsProspects
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

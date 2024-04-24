@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, PBContractDM, ComCtrls, StdCtrls,
   DBCtrls, Buttons, ExtCtrls, DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm, PBPOObjects,
   Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus, DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
-  System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile;
+  System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TPBMaintContractFrm = class(TForm)
@@ -126,7 +126,7 @@ type
     Panel19: TPanel;
     Label42: TLabel;
     memTotalSI: TMemo;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnAccountManagerClick(Sender: TObject);
@@ -199,7 +199,7 @@ type
     procedure btnRePrintSIClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     FDefaultBin: integer;
     FDefaultPrinter: string;
@@ -220,7 +220,6 @@ type
     FMode: TConMode;
     FContract: TContract;
     sOldValue: string;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure SetMode(const Value: TConMode);
     procedure SetContract(const Value: TContract);
@@ -256,7 +255,7 @@ uses
   PBLUOps, pbMainMenu, PBLUCust, CCSCommon, PBDBMemo, PBLUCConta, PBDocObjects,
   PBLUCRep, pbDatabase, DateSelV5, PBLUPaymentTerms, PBMaintJobBag,
   PBLUContractCustomerJobs, PBImages, PBWordOLE, PBExcelOLE, PBMaintEmail,
-  PBMaintPOrd, PBMaintPOrdInactive, PBSendtoExcel, PBMaintSalesInvoice, PBSalesInvrPrint;
+  PBMaintPOrd, PBMaintPOrdInactive, PBSendtoExcel, PBMaintSalesInvoice, PBSalesInvrPrint, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -877,10 +876,15 @@ begin
 
 end;
 
-procedure TPBMaintContractFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBMaintContractFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath,
+    procedure
+    begin
+      ShowDocuments(Contract.ContractNumber);
+    end);
 end;
 
 procedure TPBMaintContractFrm.dblkpReviewTypeClick(Sender: TObject);
@@ -1794,20 +1798,6 @@ begin
       Items.EndUpdate;
     end;
   end;
-end;
-
-procedure TPBMaintContractFrm.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments(Contract.ContractNumber);
-    end);
 end;
 
 procedure TPBMaintContractFrm.ShowPurchaseOrders;

@@ -3,8 +3,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Anticipated Material Ordering Report'
-  ClientHeight = 334
-  ClientWidth = 527
+  ClientHeight = 354
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    527
-    334)
+    531
+    354)
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -44,7 +44,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPrint: TButton
     Left = 8
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -54,7 +54,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object Button4: TButton
     Left = 416
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -207,7 +207,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPreview: TButton
     Left = 96
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -217,7 +217,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnExcel: TButton
     Left = 184
-    Top = 297
+    Top = 317
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -299,11 +299,19 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 256
+    Top = 248
     Width = 217
     Height = 17
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 14
+  end
+  object chkbxIncludeAllocated: TCheckBox
+    Left = 8
+    Top = 272
+    Width = 217
+    Height = 17
+    Caption = 'Include Allocated Order Lines'
+    TabOrder = 15
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup

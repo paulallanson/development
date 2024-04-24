@@ -77,7 +77,6 @@ var
   Stream: TStream;
   i: integer;
   Name: string;
-  TempStr : String;
 begin
   // Clear all formats.
   EditURLURL.Text := '';
@@ -112,7 +111,7 @@ begin
   // Copy the rest of the dropped formats.
   ListBoxFiles.Items.Assign(DropComboTarget1.Files);
   ListBoxMaps.Items.Assign(DropComboTarget1.FileMaps);
-  EditURLURL.Text := DropComboTarget1.URL;
+  EditURLURL.Text := String(DropComboTarget1.URL);
   EditURLTitle.Text := DropComboTarget1.Title;
   ImageBitmap.Picture.Assign(DropComboTarget1.Bitmap);
   ImageMetaFile.Picture.Assign(DropComboTarget1.MetaFile);
@@ -120,11 +119,6 @@ begin
 
   // Determine which formats were dropped.
   TabSheetFiles.TabVisible := (ListBoxFiles.Items.Count > 0);
-
-  if (DropCombotarget1.Files.Count > 0) then
-    TempStr := DropCombotarget1.Files[0];
-
-
   TabSheetURL.TabVisible := (EditURLURL.Text <> '') or (EditURLTitle.Text <> '');
   TabSheetBitmap.TabVisible := (ImageBitmap.Picture.Graphic <> nil) and
     (not ImageBitmap.Picture.Graphic.Empty);

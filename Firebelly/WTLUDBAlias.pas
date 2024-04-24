@@ -64,7 +64,7 @@ var
 begin
   WTMaintDBAliasFrm := TWTMaintDBAliasFrm.Create(Self);
   try
-    WTMaintDBAliasFrm.sFuncMode := sTempFuncMode;
+    WTMaintDBAliasFrm.sFuncMode := ShortString(Copy(sTempFuncMode, 1, 1));
     if lstbxAliasList.Items.Count > 0 then
       WTMaintDBAliasFrm.sAlias := lstbxAliasList.Items[lstbxAliasList.itemindex];
 

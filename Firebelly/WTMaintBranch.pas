@@ -7,7 +7,7 @@ uses
   ComCtrls, ExtCtrls, ToolWin, ImgList, SHELLAPI, Activex, AxCtrls, Clipbrd, ComObj, Menus, CRControls,
   System.ImageList, taoMAPI, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintBranch = class(TForm)
@@ -65,7 +65,7 @@ type
     chkbxInactive: TCheckBox;
     dtsSiteQS: TDataSource;
     qrySiteQS: TFDQuery;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -79,11 +79,10 @@ type
     procedure pmnuDeleteClick(Sender: TObject);
     procedure pmnuSelectAllClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure DropFileTarget1DragOver(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     iInstallationNotes: integer;
     FCustomerName: string;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure GetAddress(iAddress: integer);
     function GetNotes(TempNotes: integer): string;
@@ -105,7 +104,7 @@ var
 
 implementation
 
-uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon, wtMain;
+uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon, wtMain, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -322,10 +321,11 @@ begin
   bOK := true;
 end;
 
-procedure TfrmWTMaintBranch.DropFileTarget1DragOver(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintBranch.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintBranch.EnableOK(Sender: TObject);
@@ -610,20 +610,6 @@ begin
         end;
       Items.EndUpdate;
     end;
-end;
-
-procedure TfrmWTMaintBranch.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TfrmWTMaintBranch.btnAttachClick(Sender: TObject);

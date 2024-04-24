@@ -169,6 +169,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     Width = 848
     Height = 297
     Align = alClient
+    DataSource = dtmdlQuotes.dsQHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

@@ -270,8 +270,8 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
       ') '
       'Order By Part_Supplier.Supplier_Preference_Order'
       ' ')
-    Left = 24
-    Top = 24
+    Left = 56
+    Top = 32
     ParamData = <
       item
         Name = 'Part'

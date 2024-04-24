@@ -768,7 +768,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
       end>
   end
   object qrySupplierWorktops: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT  Worktop.Description AS Worktop_Description,'
       '        Worktop.Material_Type,'

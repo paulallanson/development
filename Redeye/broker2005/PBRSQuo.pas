@@ -672,13 +672,16 @@ begin
 end;
 
 procedure TPBRSQuoFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress; EnqNumber: integer);
+var
+  sFileName: string;
 begin
-  var fileName := 'QTE' + EnqNumber.ToString;
   {$IFDEF PMS}
   sFileName := 'EST' + EnqNumber.ToString;
+  {$ELSE}
+  sFileName := 'QTE' + EnqNumber.ToString;
   {$ENDIF}
 
-  TPrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, sFileName, sAttachmentType);
 end;
 
 procedure TPBRSQuoFrm.LoadCombos;

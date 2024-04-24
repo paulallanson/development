@@ -140,6 +140,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     Width = 1188
     Height = 228
     Align = alClient
+    DataSource = dtmdlJobs.dtsJobs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -163,7 +164,6 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Job_Bag'
         Title.Caption = 'Job bag No.'
-        Width = 68
         Visible = True
       end
       item
@@ -258,12 +258,14 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Production_Status'
         Title.Caption = 'Production Status'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Account_Code'
         Title.Caption = 'Account Code'
+        Width = 64
         Visible = True
       end
       item
@@ -276,12 +278,14 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'File_Copies_Received_Date'
         Title.Caption = 'File Copies Received'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'File_Copies_Received_by_Name'
+        FieldName = 'File_Copies_Received_By_Name'
         Title.Caption = 'File Copies Received By'
+        Width = 64
         Visible = True
       end
       item

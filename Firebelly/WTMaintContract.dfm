@@ -1595,12 +1595,11 @@ object frmWTMaintContract: TfrmWTMaintContract
       OnClick = pmnuSelectAllClick
     end
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pcDetails
-    OptimizedMove = True
-    Left = 800
-    Top = 44
+    Left = 744
+    Top = 52
   end
 end

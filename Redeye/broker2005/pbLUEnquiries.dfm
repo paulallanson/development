@@ -114,6 +114,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     Width = 871
     Height = 206
     Align = alClient
+    DataSource = dtmdlEnqs.dtsEnqs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

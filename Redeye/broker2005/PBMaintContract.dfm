@@ -1756,12 +1756,11 @@ object PBMaintContractFrm: TPBMaintContractFrm
     Left = 528
     Top = 360
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
-    Left = 552
+    Left = 472
     Top = 65
   end
 end

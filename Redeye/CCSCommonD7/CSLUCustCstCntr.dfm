@@ -53,8 +53,8 @@ object CSLUCustCstCntrFrm: TCSLUCustCstCntrFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
-    TitleFont.Name = 'Arial'
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = [fsBold]
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick

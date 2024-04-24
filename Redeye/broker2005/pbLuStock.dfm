@@ -249,6 +249,7 @@ object frmPBLUStock: TfrmPBLUStock
     Width = 1214
     Height = 196
     Align = alClient
+    DataSource = dtmdlStock.dtsStock
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -372,7 +373,7 @@ object frmPBLUStock: TfrmPBLUStock
       end
       item
         Expanded = False
-        FieldName = 'Qty_Free'
+        FieldName = 'qty_free'
         Title.Caption = 'Free Stock'
         Visible = True
       end

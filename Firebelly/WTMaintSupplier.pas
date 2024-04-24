@@ -87,7 +87,8 @@ uses
   Buttons, ExtCtrls, ComCtrls, DB, ShellAPI, ImgList, ToolWin, Grids, DBGrids, wtSupplierDM, Spin, Inifiles,
   DateSelV5, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus, CRControls, System.ImageList, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DragDropFile, DropTarget,
+  DropComboTarget;
 
 type
   TfrmWTMaintSupplier = class(TForm)
@@ -214,7 +215,7 @@ type
     qryDelete: TFDQuery;
     qryGetLast: TFDQuery;
     qryZero: TFDQuery;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure tblOneSupplierNewRecord(DataSet: TDataSet);
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
@@ -285,7 +286,7 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -314,7 +315,6 @@ type
     procedure DeleteZero;
     function GetNextKey: integer;
     procedure SaveToDB;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
   public
     procedure GetRecord(Key: integer);
@@ -331,7 +331,7 @@ implementation
 uses
   AllCommon, WTMaintSupplierWorktops, wtLUMatType, WTMaintSupplierWorktopCost, WTMaintSupplierWTThicknessCost,
   wtDataModule, wtMain, wtLUworktops, WTMaintSupplierProduct, WTMaintSupplierWorktop, WTWordOLE, WTExcelOLE,
-  WTMaintEmail, System.UITypes;
+  WTMaintEmail, System.UITypes, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -1466,20 +1466,6 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintSupplier.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWTMaintSupplier.lstvwDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
@@ -1859,10 +1845,11 @@ begin
   end;
 end;
 
-procedure TfrmWTMaintSupplier.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintSupplier.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 end.

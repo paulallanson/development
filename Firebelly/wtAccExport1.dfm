@@ -1,106 +1,198 @@
 object frmWTAccExport1: TfrmWTAccExport1
-  Left = 177
-  Top = 122
+  Left = 529
+  Top = 120
   BorderStyle = bsSingle
   Caption = 'Import and Export Wizard'
-  ClientHeight = 385
+  ClientHeight = 472
   ClientWidth = 346
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
+  OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
-  object Label1: TLabel
-    Left = 16
-    Top = 8
-    Width = 151
-    Height = 13
-    Caption = 'Choose an action to perform:'
-  end
-  object NextBitBtn: TBitBtn
-    Left = 176
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Next'
-    TabOrder = 0
-    OnClick = NextBitBtnClick
-  end
-  object CancelBitBtn: TBitBtn
-    Left = 256
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Cancel'
-    TabOrder = 1
-    OnClick = CancelBitBtnClick
-  end
-  object ActionListBox: TListBox
-    Left = 16
-    Top = 24
-    Width = 313
-    Height = 225
-    ItemHeight = 13
-    Items.Strings = (
-      'Export Customer details'
-      'Export Supplier details'
-      'Export Sales Invoices'
-      'Export Purchase Invoices'
-      'Export New Order Customer Accounts'
-      'Import Currency Rates'
-      'Import Stock References'
-      'Import Credit Limits'
-      'Import Sage Line 50 Customer details'
-      'Import Sage Line 50 Supplier details'
-      'Import Sage Payments'
-      'Import Quickbooks Customer/Supplier details'
-      'Import CSV Customer/Supplier/Worktops/Edges/CutOuts details'
-      'Import Maximiser Contacts'
-      'Export Factoring Invoices')
-    TabOrder = 2
-    OnClick = ActionListBoxClick
-  end
-  object GroupBox1: TGroupBox
-    Left = 16
-    Top = 256
-    Width = 313
-    Height = 89
-    Caption = 'Description'
+  object pnlFooter: TPanel
+    Left = 0
+    Top = 431
+    Width = 346
+    Height = 41
+    Align = alBottom
     ParentBackground = False
-    TabOrder = 3
-    object DescriptionLbl: TLabel
-      Left = 8
-      Top = 17
-      Width = 289
-      Height = 64
-      AutoSize = False
-      Caption = 
-        'Once upon a time there were three little bears who all lived hap' +
-        'pily in the woods.'
-      WordWrap = True
+    TabOrder = 0
+    object NextBitBtn: TBitBtn
+      Left = 176
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Next'
+      TabOrder = 0
+      OnClick = NextBitBtnClick
+    end
+    object CancelBitBtn: TBitBtn
+      Left = 256
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Cancel'
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
+    end
+    object UpdateBitBtn: TBitBtn
+      Left = 16
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Update'
+      TabOrder = 2
+      OnClick = UpdateBitBtnClick
+    end
+    object ResetBitBtn: TBitBtn
+      Left = 96
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Reset'
+      TabOrder = 3
+      OnClick = ResetBitBtnClick
     end
   end
-  object UpdateBitBtn: TBitBtn
-    Left = 16
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Update'
-    TabOrder = 4
-    OnClick = UpdateBitBtnClick
+  object pnlMain: TPanel
+    Left = 0
+    Top = 73
+    Width = 346
+    Height = 358
+    Align = alClient
+    ParentBackground = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 16
+      Top = 8
+      Width = 136
+      Height = 13
+      Caption = 'Choose an action to perform:'
+    end
+    object ActionListBox: TListBox
+      Left = 16
+      Top = 24
+      Width = 313
+      Height = 225
+      ItemHeight = 13
+      Items.Strings = (
+        'Export Customer details'
+        'Export Supplier details'
+        'Export Sales Invoices'
+        'Export Purchase Invoices'
+        'Export New Order Customer Accounts'
+        'Import Currency Rates'
+        'Import Stock References'
+        'Import Credit Limits'
+        'Import Sage Line 50 Customer details'
+        'Import Sage Line 50 Supplier details'
+        'Import Sage Payments'
+        'Import Quickbooks Customer/Supplier details'
+        'Import CSV Customer/Supplier/Worktops/Edges/CutOuts details'
+        'Import Maximiser Contacts'
+        'Export Factoring Invoices')
+      TabOrder = 0
+      OnClick = ActionListBoxClick
+    end
+    object GroupBox1: TGroupBox
+      Left = 16
+      Top = 256
+      Width = 313
+      Height = 89
+      Caption = 'Description'
+      ParentBackground = False
+      TabOrder = 1
+      object DescriptionLbl: TLabel
+        Left = 8
+        Top = 17
+        Width = 289
+        Height = 64
+        AutoSize = False
+        Caption = 
+          'Once upon a time there were three little bears who all lived hap' +
+          'pily in the woods.'
+        WordWrap = True
+      end
+    end
   end
-  object ResetBitBtn: TBitBtn
-    Left = 96
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Reset'
-    TabOrder = 5
-    OnClick = ResetBitBtnClick
+  object pnlRevenueCentre: TPanel
+    Left = 0
+    Top = 0
+    Width = 346
+    Height = 73
+    Align = alTop
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 2
+    object rdgrpRevenueCentre: TRadioGroup
+      Left = 8
+      Top = 3
+      Width = 121
+      Height = 62
+      Caption = 'Revenue Centre '
+      ItemIndex = 0
+      Items.Strings = (
+        'Default'
+        'Selected')
+      ParentBackground = False
+      TabOrder = 0
+      OnClick = rdgrpRevenueCentreClick
+    end
+    object grpbxRevCentre: TGroupBox
+      Left = 134
+      Top = 3
+      Width = 203
+      Height = 62
+      ParentBackground = False
+      TabOrder = 1
+      Visible = False
+      object Label3: TLabel
+        Left = 8
+        Top = 12
+        Width = 78
+        Height = 13
+        Caption = 'Revenue Centre'
+      end
+      object dblkpRevCentre: TDBLookupComboBox
+        Left = 8
+        Top = 32
+        Width = 185
+        Height = 21
+        KeyField = 'Revenue_Centre'
+        ListField = 'Revenue_Centre_Descr'
+        TabOrder = 0
+        OnClick = dblkpRevCentreClick
+      end
+    end
+  end
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Revenue_Centre.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr,'
+      '        Revenue_Centre.Inactive,'
+      '        Revenue_Centre.Prefix_Value,'
+      '        Revenue_Centre.Accounts_Package,'
+      '        Accounts_Package.Accounts_Package_Description'
+      'FROM Accounts_Package'
+      '        RIGHT JOIN Revenue_Centre'
+      
+        '          ON Accounts_Package.Accounts_Package = Revenue_Centre.' +
+        'Accounts_Package'
+      'ORDER BY Revenue_Centre_Descr')
+    Left = 208
+    Top = 8
+  end
+  object dtsRevenueCentre: TDataSource
+    DataSet = qryRevenueCentre
+    Left = 296
+    Top = 8
   end
 end

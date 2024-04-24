@@ -275,7 +275,6 @@ type
 {$ENDIF}
 {$IFDEF ENDUSER}
     procedure mnuEndUserActivateClick(Sender: TObject);
-    procedure mnuScriptsClick(Sender: TObject);
 {$ENDIF}
   private
     FActivated: Boolean;
@@ -291,7 +290,7 @@ type
     FSWSubVersion: string;
     FUserName: string;
     FDBVersion: string;
-    ServDir, LocalDir, LocalDrive: string;
+    LocalDir, LocalDrive: string;
     FInitialiseButtons: Boolean;
     procedure CheckContractQuoting;
     procedure CheckPurchaseOrdering;
@@ -954,10 +953,9 @@ end;
 
 procedure TfrmWTMain.FormActivate(Sender: TObject);
 var
-  LoginFormOK                 : ByteBool;
-  UserName                                    : string;
-  TempLogin, TempComputer                     : array[0..255] of Char;
-  TempLoginSize, TempComputerSize             : DWORD;
+  LoginFormOK             : ByteBool;
+  UserName                : string;
+  TempLogin               : array[0..255] of Char;
 begin
   bEndUSer := false;
   MaxUsers := 100;
@@ -1047,6 +1045,8 @@ begin
             UpdateDatabase;
         end;
       finally
+        if RunDBUpdate then
+          UpdateDatabase;
         frmWTLogin.Free;
       end;
       if not LoginFormOK then
@@ -1153,8 +1153,6 @@ procedure TfrmWTMain.PseudoFormActivate;
 var
   UserName                                    : string;
   LoginFormOK                 : ByteBool;
-  TempLogin                   : array[0..255] of Char;
-  TempLoginSize               : DWORD;
 begin
   MaxUsers := 100;
 {$IFDEF FREE}
@@ -1523,7 +1521,6 @@ end;
 procedure TfrmWTMain.ResetClientSettings1Click(Sender: TObject);
 var
   IniFile : TIniFile;
-  iCount: integer;
 begin
   if messagedlg('Reset your Firebelly screen settings?',
     mtConfirmation, [mbYes, mbNo], 0) = mrYes then
@@ -2382,16 +2379,7 @@ begin
     end;
   end;
 
-  if sRet <> '' then
-  begin
-    try
-      dDate := StrToFloatDef(sRet, 0, FormatSettings);
-    except
-      dDate := 0;
-    end;
-  end
-  else
-    dDate := 0;
+  dDate := strtofloatdef(sRet, 0, FormatSettings);
 
   iExpires := Trunc(dDate - Date + 91);
   if (iExpires <= 0) or (iExpires > 91) or (dDate <> iComp) then
@@ -2437,7 +2425,6 @@ end;
 {$ENDIF}
 
 {$IFDEF ENDUSER}
-
 procedure TfrmWTMain.EndUserCheck(TempWarn: ByteBool);
 var
   aSubKey, aKeyVal, aKeyType  : array[0..255] of Char;
@@ -2496,16 +2483,7 @@ begin
     end;
   end;
 
-  if sRet <> '' then
-  begin
-    try
-      dDate := StrToFloatDef(sRet, 0, FormatSettings);
-    except
-      dDate := 0;
-    end;
-  end
-  else
-    dDate := 0;
+  dDate := strtofloatdef(sRet, 0, FormatSettings);
 
   iExpires := Trunc(dDate - Date + 91);
   if (iExpires <= 0) or (iExpires > 91) or (dDate <> iComp) then

@@ -5,8 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Buttons, ComCtrls,
   DBCtrls, ExtCtrls, Grids, WTContractsDM, ToolWin, ImgList, Menus, wtNotesDM, wtQuotesDM, ShellAPI, DateSelV5,
-  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, DragDrop, DropTarget,
-  DragDropFile;
+  Inifiles, Activex, AxCtrls, Clipbrd, ComObj, taoMAPI, CRControls, System.ImageList, DropComboTarget, DragDrop,
+  DropTarget, DragDropFile;
 
 type
   TfrmWTMaintContract = class(TForm)
@@ -140,7 +140,7 @@ type
     SpeedButton1: TSpeedButton;
     dblkpRevenueCentre: TDBLookupComboBox;
     chkbxOverridePrices: TCheckBox;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnCustomerClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -223,7 +223,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -233,7 +233,6 @@ type
     FMode: TcqMode;
     FContractLine: TContractLine;
     sOldValue: string;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure SetContract(const Value: TContract);
     procedure SetMode(const Value: TcqMode);
@@ -290,7 +289,7 @@ uses
   WTSrchCustomer, wtMain, wtDataModule, AllCommon, WTMaintContractOption, WtMaintQuote, WTMaintContractConvertOrder,
   WTSalesOrderDM, wtMaintSalesOrder, WTWordOLE, WTExcelOLE, WTMaintEmail, WTLUSpecialInstruction, WTLUContractQuotes,
   WTSrchCustContacts, WTMaintContractEvents, WTMaintContractAddress,
-  WTMaintContractLines, WTMaintContractMarkup, WTLUCustomerSite;
+  WTMaintContractLines, WTMaintContractMarkup, WTLUCustomerSite, Shared.DragDrop.Helper;
 
 {$R *.dfm}
 
@@ -3679,20 +3678,6 @@ begin
     end;
 end;
 
-procedure TfrmWTMaintContract.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWTMaintContract.Paste1Click(Sender: TObject);
 var
   DocDir: string;
@@ -4140,10 +4125,11 @@ begin
   Contract.RevenueCentre := dblkpREvenueCentre.KeyValue;
 end;
 
-procedure TfrmWTMaintContract.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintContract.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintContract.sgDetailsKeyPress(Sender: TObject;

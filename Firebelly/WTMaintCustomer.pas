@@ -8,7 +8,7 @@ uses
   WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles, Activex, AxCtrls, Clipbrd, ComObj, Menus,
   CRControls, System.ImageList, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile;
+  FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWtMaintCustomer = class(TForm)
@@ -211,7 +211,7 @@ type
     pnlMaterialTypeFooter: TPanel;
     chkbxShowInactiveMaterialTypes: TCheckBox;
     chkbxRequiresAppForPay: TCheckBox;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -295,7 +295,7 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -309,7 +309,6 @@ type
     FGroupDescription: string;
     FMaterialType: integer;
     FGroupInactive: boolean;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure SetFunctionMode(const Value: string);
     procedure ShowDetails;
@@ -371,7 +370,8 @@ uses
   WTEventsDM, WtMaintQuote, WtMaintSalesOrder, WtMaintJob, wtRSQuote, DateSelV5, wtLUProspectAction,
   wtMaintCustomerConts, WTSrchCustContacts, WTDBMemo, WTMaintContApp, WtMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WTMaintEmail, WTWordOLE, WTExcelOLE, WTLUPaymentTerms, AllImages,
-  WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType;
+  WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType,
+  Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -2300,20 +2300,6 @@ begin
     end;
 end;
 
-procedure TfrmWtMaintCustomer.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
-end;
-
 procedure TfrmWtMaintCustomer.SaveToDB;
 var
   iPathLength, iFileLength: integer;
@@ -2558,10 +2544,11 @@ begin
   end;
 end;
 
-procedure TfrmWtMaintCustomer.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWtMaintCustomer.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWtMaintCustomer.edtAccountCodeEnter(Sender: TObject);

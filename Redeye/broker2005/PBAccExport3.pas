@@ -2681,7 +2681,7 @@ begin
   else
   if (iSalesInv > 0) and (PBAccExport1Frm.ActionListBox.itemindex = 2) then
     begin
-      sNewFilename := sPathEdit + 'SINV' + sNextInvFile + sPrefix;
+      sNewFilename := ShortString(Copy(string(sPathEdit) + 'SINV' + sNextInvFile + sPrefix, 1, 255));
       StrPCopy(NewFilename, sNewFilename);
       RenameFile(InvFilename, NewFilename);
       dmAccExport.UpdateSIFilename(sNewFilename);
@@ -2945,7 +2945,7 @@ begin
 
   RenameFile(sFilename, sNewFilename);
 
-  assignfile(StockFile, sNewFilename);
+  assignfile(StockFile, string(sNewFilename));
   reset(Stockfile);
   if IOresult <> 0 then
   begin
@@ -3020,7 +3020,7 @@ begin
 
   RenameFile(sFilename, sNewFilename);
 
-  assignfile(AccFile, sNewFilename);
+  assignfile(AccFile, string(sNewFilename));
   reset(Accfile);
   if IOresult <> 0 then
   begin

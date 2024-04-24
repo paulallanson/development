@@ -239,7 +239,6 @@ object frmWTRSJobValue: TfrmWTRSJobValue
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
-    ExplicitLeft = 166
   end
   object OleContainer1: TOleContainer
     Left = 140

@@ -129,6 +129,7 @@ procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: T
 
 { WinControl WinControlSetData }
 procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
+procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
 
 type
   TCCSRegistry = class(TRegistry)
@@ -1326,7 +1327,7 @@ end;
 { FireDAC }
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
-  Connection.FetchOptions.RecordCountMode := cmTotal;
+  Connection.FetchOptions.Mode := fmAll;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);

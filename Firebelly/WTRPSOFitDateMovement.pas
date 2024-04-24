@@ -14,7 +14,7 @@ type
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
-    qrySalesOrders: TFDQuery;
+    qrySalesOrdersOld: TFDQuery;
     qrsbDetails: TQRSubDetail;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
@@ -65,6 +65,8 @@ type
     qrlblNewDate: TQRLabel;
     qryGetMovedInDates: TFDQuery;
     qrlblMovementDate: TQRLabel;
+    qrySalesOrderOlder: TFDQuery;
+    qrySalesOrders: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
@@ -188,7 +190,7 @@ begin
         qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Sales_Order');
       end;
     1:begin
-        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Template_Date, Sales_Order.Sales_Order');
+        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Date_Required, Sales_Order.Sales_Order');
       end;
     2:begin
         qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Customer_Name, Sales_Order.Sales_Order');
@@ -512,8 +514,8 @@ end;
 procedure TfrmwtRPSOFitDateMovement.qrbGroupFooterBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
-  qrlblCustGoods.caption := formatfloat('0.00',CustomerGoods);
-  qrlblCustVAT.caption := formatfloat('0.00',CustomerVAT);
+  qrlblCustGoods.caption := formatfloat('#,##0.00',CustomerGoods);
+  qrlblCustVAT.caption := formatfloat('#,##0.00',CustomerVAT);
   qrlblCustDeposit.caption := formatfloat('#,##0.00',CustomerDeposit);
   qrlblCustTotal.caption := formatfloat('#,##0.00',(CustomerGoods + CustomerVAT - CustomerDeposit));
   qrlblReportTotal.caption := formatfloat('#,##0.00',(rGoods + rVAT - rDeposit));

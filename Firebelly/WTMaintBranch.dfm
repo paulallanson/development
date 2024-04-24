@@ -251,7 +251,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 8
-    ExplicitTop = 258
     object TabSheet1: TTabSheet
       Caption = 'Installation Notes'
       object memInstallationNotes: TMemo
@@ -1004,12 +1003,11 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Name = 'Customer'
       end>
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDragOver = DropFileTarget1DragOver
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
-    Left = 424
+    Left = 440
     Top = 208
   end
 end

@@ -7,7 +7,7 @@ uses
   DBGrids, PBJobBagDM, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects,
   Menus, PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX, OleCtrls, SHDocVw, pbSupplierInvoiceDM,
   ImgList, Clipbrd, ToolWin, FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget,
-  DragDropFile;
+  DragDropFile, DropComboTarget;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -457,7 +457,7 @@ type
     pmnuRePrintSI: TMenuItem;
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -632,7 +632,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -657,7 +657,6 @@ type
     FDefaultBin: integer;
     FDefaultPrinter: string;
     FSchedMode: TJBSchMode;
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure AddPurchaseOrder(const rPO: real; iLine : integer);
     procedure AddPurchaseOrderFromEnq(const rPO: real; iLine: integer);
@@ -791,7 +790,7 @@ uses
   PBLUBranchCstCntr, pbLUCustQuotesJB, PBMaintJobBagNonConfDoc, PBMaintSuppInvoice,
   PBRSNonConform, CCSPrint, PBMaintJobBagProcessCosts, PBMaintJobBagDelivery,
   PBRSJobBagDelivNote, PBRSJobBagBoxLabels, PBSendtoExcel,
-  PBRSWorksOrderISO, PBMaintEmailSupplier, pbluCustDeliv, PBLUPackFormat;
+  PBRSWorksOrderISO, PBMaintEmailSupplier, pbluCustDeliv, PBLUPackFormat, Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -2952,10 +2951,11 @@ begin
   jobbagsched.NarrativeText := memScheduleNotes.Text;
 end;
 
-procedure TPBMaintJobBagFrm.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TPBMaintJobBagFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
@@ -4237,20 +4237,6 @@ begin
   finally
     PBRSPOrdNFrm.Free;
   end;
-end;
-
-procedure TPBMaintJobBagFrm.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TPBMaintJobBagFrm.CheckNotes(Sender: TObject);

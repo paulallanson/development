@@ -686,6 +686,9 @@ type
     property UnitSell : currency read GetUnitSell;
   end;
 
+var
+  dtmdlQuotes: TdtmdlQuotes;
+
 implementation
 
 uses

@@ -784,8 +784,8 @@ begin
 {$IFDEF DEMO}
   UserName := 'admin';
   Password := '';
-  AParams.UserName := Username;
-  AParams.Password := Password;
+  dtbsWorktops.Params.UserName := Username;
+  dtbsWorktops.Params.Password := Password;
 {$ELSE}
   UserName := frmWTLogin.UserEdit.Text;
   Password := Trim(frmWTLogin.PasswordEdit.Text);

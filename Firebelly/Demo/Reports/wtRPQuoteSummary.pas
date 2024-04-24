@@ -95,7 +95,7 @@ type
     qryEndUser: TFDQuery;
     QRLabel11: TQRLabel;
     QRShape11: TQRShape;
-    gtQRFilters1: TgtQRFilters;
+    gtQRFilters1: TQRFilters;
     lblWorktopTotal: TQRLabel;
     lblCutOutTotal: TQRLabel;
     lblEdgeTotal: TQRLabel;
@@ -619,13 +619,13 @@ end;
 function TfrmwtRPQuoteSummary.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
-  AFilters: TGtQRFilters;
-  RTFFilter: TGtQRRTFFilter;
-  HTMLFilter: TGtQRHTMLFilter;
-  PDFFilter: TGtQRPDFFilter;
-  BMPFilter: TGtQRBMPFilter;
-  GIFFilter: TGtQRGIFFilter;
-  JPEGFilter: TGtQRJPEGFilter;
+  AFilters: TQRFilters;
+  RTFFilter: TQRRTFFilter;
+  HTMLFilter: TQRHTMLFilter;
+  PDFFilter: TQRPDFFilter;
+  BMPFilter: TQRBMPFilter;
+  GIFFilter: TQRGIFFilter;
+  JPEGFilter: TQRJPEGFilter;
   i: integer;
 begin
   Result := TStringList.Create;
@@ -639,10 +639,10 @@ begin
   fileLocation := GetWinTempDir;
   fileName := fileLocation + 'Q' + FloatToStr(QuoteNo) + '.' + attachmentType;
 
-  AFilters := TGtQRFilters.Create(self);
+  AFilters := TQRFilters.Create(self);
   if AnsiLowerCase(attachmentType) = 'pdf' then
   begin
-    PDFFilter := TGtQRPDFFilter.Create(fileName);
+    PDFFilter := TQRPDFFilter.Create(fileName);
     try
       qrpDetails.ExportToFilter(PDFFilter);
       Result.add(fileName);
@@ -654,7 +654,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'rtf' then
   begin
-    RTFFilter := TGtQRRTFFilter.Create(fileName);
+    RTFFilter := TQRRTFFilter.Create(fileName);
     try
       qrpDetails.ExportToFilter(RTFFilter);
       Result.add(fileName);
@@ -666,7 +666,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'gif' then
   begin
-    GIFFilter := TGtQRGIFFilter.Create(fileName);
+    GIFFilter := TQRGIFFilter.Create(fileName);
     try
       qrpDetails.Prepare;
       qrpDetails.ExportToFilter(GIFFilter);
@@ -682,7 +682,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'bmp' then
   begin
-    BMPFilter := TGtQRBMPFilter.Create(fileName);
+    BMPFilter := TQRBMPFilter.Create(fileName);
     try
       qrpDetails.Prepare;
       qrpDetails.ExportToFilter(BMPFilter);
@@ -698,7 +698,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'html' then
   begin
-    HTMLFilter := TGtQRHTMLFilter.Create(fileName);
+    HTMLFilter := TQRHTMLFilter.Create(fileName);
     try
       qrpDetails.Prepare;
       qrpDetails.ExportToFilter(HTMLFilter);
@@ -714,7 +714,7 @@ begin
   end
   else if AnsiLowerCase(attachmentType) = 'jpeg' then
   begin
-    JPEGFilter := TGtQRJPEGFilter.Create(fileName);
+    JPEGFilter := TQRJPEGFilter.Create(fileName);
     try
       qrpDetails.Prepare;
       qrpDetails.ExportToFilter(JPEGFilter);

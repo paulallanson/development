@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, wtSalesInvoiceDM, AllCommon, ExtCtrls, Grids,
-  DBGrids, ComCtrls, DB, QrCtrls, Vcl.DBCtrls;
+  DBGrids, ComCtrls, DB, QrCtrls, DBCtrls, Inifiles;
 
 type
   TfrmWTLUSalesInvoiceSO = class(TForm)
@@ -65,9 +65,7 @@ var
 
 implementation
 
-uses
-  System.UITypes,
-  WTMaintSalesInvoice, wtMain, wtDataModule, System.IniFiles;
+uses WTMaintSalesInvoice, wtMain, wtDataModule;
 
 {$R *.dfm}
 
@@ -144,9 +142,9 @@ begin
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;
   dtmdlSalesInvoice.qrySOAll.AfterScroll := SetSalesOrderEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
 
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  IniFile := TIniFile.Create('myWorktops.ini');
 
   try
     with IniFile do
@@ -167,7 +165,10 @@ begin
   end;
 
   {Set the revenue centre details}
-  dtmdlSalesInvoice.RevenueCentre := iRevenueCentre
+  if dtmdlWorktops.UseRevenueCentres then
+    dtmdlSalesInvoice.RevenueCentre := iRevenueCentre
+  else
+    dtmdlSalesInvoice.RevenueCentre := -1;
 
 end;
 
@@ -334,7 +335,7 @@ begin
       open;
     end;
 
-  if dtmdlSalesInvoice.RevenueCentre > 1 then
+  if dtmdlSalesInvoice.RevenueCentre > 0 then
     dblkpRevCentre.KeyValue := dtmdlSalesInvoice.RevenueCentre;
 end;
 
@@ -348,27 +349,25 @@ procedure TfrmWTLUSalesInvoiceSO.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
-  try
-    with IniFile do
-      begin
-        WriteString('Raise Sales Invoice', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
-  (*      if dblkpRevCentre.text <> '' then
-          WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dblkpRevCentre.keyvalue))
-        else
-          WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
-  *)
-        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
-      end;
+  IniFile := TIniFile.Create('myWorktops.ini');
 
-  finally
-    IniFile.Free;
-  end;
+  with IniFile do
+    begin
+      WriteString('Raise Sales Invoice', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+(*      if dblkpRevCentre.text <> '' then
+        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dblkpRevCentre.keyvalue))
+      else
+        WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
+*)
+      WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
+    end;
 end;
 
-procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
+  var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+
 end;
 
 end.

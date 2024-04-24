@@ -1,6 +1,6 @@
 object dtmdlSalesInvoice: TdtmdlSalesInvoice
-  Height = 541
-  Width = 1035
+  Height = 587
+  Width = 1058
   object dsDummy: TDataSource
     Left = 416
     Top = 336
@@ -12,7 +12,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Sales_Profit'
       'where Sales_invoice = :Sales_invoice')
     Left = 16
-    Top = 16
+    Top = 12
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -578,6 +578,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '        Sales_Invoice.Inactive,'
       '        Sales_Invoice.Invoice_or_Credit,'
       '        Customer.Customer_Name as Original_Name,'
+      '        Customer.Account_Code,'
       
         '        Sales_Invoice_Status.Invoice_Status_Description as Statu' +
         's_Description,'
@@ -661,17 +662,22 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       item
         Name = 'Is_Retail_Customer'
         DataType = ftString
-        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
         DataType = ftString
-        ParamType = ptInput
+      end
+      item
+        Name = 'Is_Retail_Customer'
+        DataType = ftString
       end
       item
         Name = 'Revenue_Centre'
         DataType = ftInteger
-        ParamType = ptInput
+      end
+      item
+        Name = 'Revenue_Centre'
+        DataType = ftInteger
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -679,110 +685,93 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     object qrySIHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qrySIHeaderGridInactive: TWideStringField
+    object qrySIHeaderGridInactive: TStringField
       FieldName = 'Inactive'
-      Origin = 'Inactive'
       Size = 1
     end
-    object qrySIHeaderGridInvoice_or_Credit: TWideStringField
+    object qrySIHeaderGridInvoice_or_Credit: TStringField
       FieldName = 'Invoice_or_Credit'
-      Origin = 'Invoice_or_Credit'
       Size = 1
     end
-    object qrySIHeaderGridOriginal_Name: TWideStringField
-      FieldName = 'Original_Name'
-      Origin = 'Original_Name'
-      Required = True
-      Size = 100
+    object qrySIHeaderGridCustomer_Name: TStringField
+      FieldName = 'Customer_Name'
+      Size = 50
     end
-    object qrySIHeaderGridStatus_Description: TWideStringField
+    object qrySIHeaderGridStatus_Description: TStringField
       FieldName = 'Status_Description'
-      Origin = 'Status_Description'
-      Required = True
       Size = 30
     end
-    object qrySIHeaderGridGoods_Value: TCurrencyField
+    object qrySIHeaderGridGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      Origin = 'Goods_Value'
-      Required = True
+      DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridVat_Value: TCurrencyField
+    object qrySIHeaderGridVat_Value: TFloatField
       FieldName = 'Vat_Value'
-      Origin = 'Vat_Value'
-      Required = True
+      DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridTotal_Value: TCurrencyField
+    object qrySIHeaderGridTotal_Value: TFloatField
       FieldName = 'Total_Value'
-      Origin = 'Total_Value'
-      ReadOnly = True
+      DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridInvoice_no: TWideStringField
+    object qrySIHeaderGridInvoice_no: TStringField
       FieldName = 'Invoice_no'
-      Origin = 'Invoice_no'
       Size = 10
     end
     object qrySIHeaderGridSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
-      Origin = 'Sales_invoice_status'
-      Required = True
     end
     object qrySIHeaderGridSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
-      Origin = 'Sales_Invoice'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
     end
-    object qrySIHeaderGridReference: TWideStringField
+    object qrySIHeaderGridReference: TStringField
       FieldName = 'Reference'
-      Origin = 'Reference'
     end
-    object qrySIHeaderGridDescription: TWideStringField
+    object qrySIHeaderGridDescription: TStringField
       FieldName = 'Description'
       Size = 50
     end
-    object qrySIHeaderGridIs_Retail_Customer: TWideStringField
+    object qrySIHeaderGridIs_Retail_Customer: TStringField
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object qrySIHeaderGridPaid_Amount: TCurrencyField
+    object qrySIHeaderGridPaid_Amount: TFloatField
       FieldName = 'Paid_Amount'
       DisplayFormat = '0.00'
     end
-    object qrySIHeaderGridPaid_Status: TWideStringField
+    object qrySIHeaderGridPaid_Status: TStringField
       FieldName = 'Paid_Status'
       Size = 1
     end
-    object qrySIHeaderGridDeposit_Amount: TCurrencyField
+    object qrySIHeaderGridDeposit_Amount: TFloatField
       FieldName = 'Deposit_Amount'
-      Origin = 'Deposit_Amount'
     end
-    object qrySIHeaderGridRep_Name: TWideStringField
+    object qrySIHeaderGridRep_Name: TStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qrySIHeaderGridOperator_Name: TWideStringField
+    object qrySIHeaderGridOperator_Name: TStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object qrySIHeaderGridAccount_Manager_Name: TWideStringField
+    object qrySIHeaderGridAccount_Manager_Name: TStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qrySIHeaderGridOrder_Reference: TWideStringField
+    object qrySIHeaderGridOrder_Reference: TStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object qrySIHeaderGridAccount_Code: TWideStringField
+    object qrySIHeaderGridAccount_Code: TStringField
       FieldName = 'Account_Code'
     end
-    object qrySIHeaderGridBranch_Name: TWideStringField
+    object qrySIHeaderGridBranch_Name: TStringField
       FieldName = 'Branch_Name'
       Size = 50
     end
     object qrySIHeaderGridDate_Required: TDateTimeField
       FieldName = 'Date_Required'
     end
-    object qrySIHeaderGridRevenue_Centre_Descr: TWideStringField
+    object qrySIHeaderGridRevenue_Centre_Descr: TStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
@@ -1511,9 +1500,6 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     ParamData = <
       item
         Name = 'Sales_order'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end>
   end
   object qryJBHeader: TFDQuery
@@ -1637,7 +1623,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Purchase_Order = :Purchase_Order and'
       '           Purch_Ord_Line_Status <> :Purch_Ord_Line_Status')
     Left = 96
-    Top = 104
+    Top = 106
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1712,8 +1698,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 696
-    Top = 440
+    Left = 680
+    Top = 444
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1793,7 +1779,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' ')
     Left = 96
-    Top = 320
+    Top = 316
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2099,10 +2085,32 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '        Sales_invoice.Description,'
       '        Sales_invoice.Customer_Name,'
       '        Customer.Is_Retail_Customer'
-      'from Sales_Invoice,'
-      '     Customer,'
-      '     Sales_Invoice_Status'
-      'where'
+      '        Sales_invoice.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
+      '        RIGHT JOIN (Sales_invoice_status'
+      '        INNER JOIN (Rep'
+      '        INNER JOIN (Operator AS Account_Manager'
+      '        RIGHT JOIN (Customer'
+      '        INNER JOIN (Customer_Branch'
+      '        RIGHT JOIN (Operator'
+      '        INNER JOIN Sales_Invoice'
+      '          ON Operator.Operator = Sales_Invoice.Operator)'
+      
+        '          ON (Customer_Branch.Customer = Sales_Invoice.Customer)' +
+        ' AND (Customer_Branch.Branch_No = Sales_Invoice.Branch_No))'
+      '          ON Customer.Customer = Sales_Invoice.Customer)'
+      
+        '          ON Account_Manager.Operator = Sales_Invoice.Account_Ma' +
+        'nager)'
+      '          ON Rep.Rep = Sales_Invoice.Rep)'
+      
+        '          ON Sales_invoice_status.Sales_invoice_status = Sales_I' +
+        'nvoice.Sales_invoice_status)'
+      
+        '          ON Revenue_Centre.Revenue_Centre = Sales_Invoice.Reven' +
+        'ue_Centre'
+      'WHERE'
       '(Sales_Invoice.invoice_or_credit = '#39'C'#39') and'
       '('
       '(Sales_Invoice.Customer_Name Like :Code_From) or'
@@ -2116,15 +2124,14 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '((:Inactive = '#39'N'#39')  and (Sales_Invoice.Inactive is null )) or'
       '(:Inactive = '#39'Y'#39')'
       ') and'
-      '(Sales_invoice.Customer = Customer.Customer) and'
-      
-        '(Sales_invoice.Sales_invoice_Status = Sales_invoice_status.Sales' +
-        '_invoice_Status) and'
       
         '((Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custome' +
         'r.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Reta' +
-        'il_Customer = '#39'A'#39'))'
-      'order by Sales_Invoice.Sales_Invoice desc'
+        'il_Customer = '#39'A'#39')) AND'
+      
+        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
+        'ue_Centre))'
+      'ORDER BY Sales_Invoice.Sales_Invoice DESC'
       '')
     Left = 24
     Top = 424
@@ -2132,142 +2139,130 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       item
         Name = 'Code_From'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
       end
       item
         Name = 'Status'
         DataType = ftInteger
-        ParamType = ptInput
+      end
+      item
+        Name = 'Status'
+        DataType = ftInteger
       end
       item
         Name = 'Inactive'
         DataType = ftString
-        ParamType = ptInput
+      end
+      item
+        Name = 'Inactive'
+        DataType = ftString
       end
       item
         Name = 'Is_Retail_Customer'
         DataType = ftString
-        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
+      end
+      item
+        Name = 'Is_Retail_Customer'
+        DataType = ftString
+      end
+      item
+        Name = 'Revenue_Centre'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Revenue_Centre'
+        DataType = ftInteger
       end>
     object qrySCHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
-      Origin = 'Invoice_Date'
-      Required = True
     end
     object qrySCHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
     end
-    object qrySCHeaderGridInactive: TWideStringField
+    object qrySCHeaderGridInactive: TStringField
       FieldName = 'Inactive'
-      Origin = 'Inactive'
       Size = 1
     end
-    object qrySCHeaderGridInvoice_or_Credit: TWideStringField
+    object qrySCHeaderGridInvoice_or_Credit: TStringField
       FieldName = 'Invoice_or_Credit'
-      Origin = 'Invoice_or_Credit'
       Size = 1
     end
-    object qrySCHeaderGridOriginal_Name: TWideStringField
+    object qrySCHeaderGridOriginal_Name: TStringField
       FieldName = 'Original_Name'
-      Origin = 'Original_Name'
-      Required = True
-      Size = 100
+      Size = 50
     end
-    object qrySCHeaderGridStatus_Description: TWideStringField
+    object qrySCHeaderGridStatus_Description: TStringField
       FieldName = 'Status_Description'
-      Origin = 'Status_Description'
-      Required = True
       Size = 30
     end
-    object qrySCHeaderGridGoods_Value: TCurrencyField
+    object qrySCHeaderGridGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      Origin = 'Goods_Value'
-      Required = True
     end
-    object qrySCHeaderGridVat_Value: TCurrencyField
+    object qrySCHeaderGridVat_Value: TFloatField
       FieldName = 'Vat_Value'
-      Origin = 'Vat_Value'
-      Required = True
     end
-    object qrySCHeaderGridTotal_Credit: TCurrencyField
-      FieldName = 'Total_Credit'
-      Origin = 'Total_Credit'
-      ReadOnly = True
-    end
-    object qrySCHeaderGridGoods_Credit: TCurrencyField
+    object qrySCHeaderGridGoods_Credit: TFloatField
       FieldName = 'Goods_Credit'
-      Origin = 'Goods_Credit'
-      ReadOnly = True
     end
-    object qrySCHeaderGridVAT_Credit: TCurrencyField
+    object qrySCHeaderGridVAT_Credit: TFloatField
       FieldName = 'VAT_Credit'
-      Origin = 'VAT_Credit'
-      ReadOnly = True
     end
-    object qrySCHeaderGridInvoice_no: TWideStringField
+    object qrySCHeaderGridInvoice_no: TStringField
       FieldName = 'Invoice_no'
-      Origin = 'Invoice_no'
       Size = 10
     end
     object qrySCHeaderGridSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
-      Origin = 'Sales_invoice_status'
-      Required = True
     end
     object qrySCHeaderGridSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
-      Origin = 'Sales_Invoice'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
     end
-    object qrySCHeaderGridReference: TWideStringField
+    object qrySCHeaderGridReference: TStringField
       FieldName = 'Reference'
-      Origin = 'Reference'
     end
-    object qrySCHeaderGridDescription: TWideStringField
+    object qrySCHeaderGridDescription: TStringField
       FieldName = 'Description'
-      Origin = 'Description'
-      Size = 255
-    end
-    object qrySCHeaderGridCustomer_Name: TWideStringField
-      FieldName = 'Customer_Name'
-      Origin = 'Customer_Name'
       Size = 50
     end
-    object qrySCHeaderGridIs_Retail_Customer: TWideStringField
+    object qrySCHeaderGridCustomer_Name: TStringField
+      FieldName = 'Customer_Name'
+      Size = 50
+    end
+    object qrySCHeaderGridTotal_Credit: TFloatField
+      FieldName = 'Total_Credit'
+    end
+    object qrySCHeaderGridIs_Retail_Customer: TStringField
       FieldName = 'Is_Retail_Customer'
       Size = 3
     end
-    object qrySCHeaderGridRep_Name: TWideStringField
+    object qrySCHeaderGridRep_Name: TStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
-    object qrySCHeaderGridOperator_Name: TWideStringField
+    object qrySCHeaderGridOperator_Name: TStringField
       FieldName = 'Operator_Name'
       Size = 50
     end
-    object qrySCHeaderGridAccount_Manager_Name: TWideStringField
+    object qrySCHeaderGridAccount_Manager_Name: TStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
-    object qrySCHeaderGridOrder_Reference: TWideStringField
+    object qrySCHeaderGridOrder_Reference: TStringField
       FieldName = 'Order_Reference'
       Size = 50
     end
-    object qrySCHeaderGridBranch_Name: TWideStringField
+    object qrySCHeaderGridBranch_Name: TStringField
       FieldName = 'Branch_Name'
       Size = 100
     end
-    object qrySCHeaderGridRevenue_Centre_Descr: TWideStringField
+    object qrySCHeaderGridRevenue_Centre_Descr: TStringField
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
@@ -2871,7 +2866,10 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
         'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
         'ail_Customer = '#39'A'#39')'
-      ')'
+      ') AND'
+      
+        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
+        'ue_Centre))'
       ''
       '')
     Left = 160
@@ -2885,6 +2883,12 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       end
       item
         Name = 'Is_Retail_Customer'
+      end
+      item
+        Name = 'Revenue_Centre'
+      end
+      item
+        Name = 'Revenue_Centre'
       end>
   end
   object qryRevenueCentre: TFDQuery
@@ -2978,7 +2982,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         Name = 'Is_Retail_Customer'
       end>
   end
-  object qrySCHeaderBaseOlder: TFDQuery
+  object qrySCHeaderBaseOlderStill: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3143,7 +3147,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         Name = 'Is_Retail_Customer'
       end>
   end
-  object qrySCHeaderBaseOld: TFDQuery
+  object qrySCHeaderBaseOlder: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3221,5 +3225,184 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       item
         Name = 'Is_Retail_Customer'
       end>
+  end
+  object qrySCHeaderOld: TFDQuery
+    OnCalcFields = qrySIHeaderGridCalcFields
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'select '#9'Sales_Invoice.Invoice_Date,'
+      '        Sales_Invoice.Customer,'
+      '        Sales_Invoice.Inactive,'
+      '        Sales_Invoice.Invoice_or_Credit,'
+      '        Customer.Customer_Name as Original_Name,'
+      
+        '        Sales_Invoice_Status.Invoice_Status_Description as Statu' +
+        's_Description,'
+      '        Sales_invoice.Goods_Value,'
+      '        Sales_invoice.Vat_Value,'
+      
+        '        ((Sales_Invoice.Goods_Value + Sales_Invoice.Vat_Value) *' +
+        ' -1) as Total_Credit,'
+      '        Sales_invoice.Goods_Value * -1 as Goods_Credit,'
+      '        Sales_invoice.Vat_Value * -1 as VAT_Credit,'
+      '        Sales_Invoice.Invoice_no,'
+      '        Sales_Invoice.Sales_invoice_status,'
+      '        Sales_Invoice.Sales_Invoice,'
+      '        Sales_invoice.Reference,'
+      '        Sales_invoice.Description,'
+      '        Sales_invoice.Customer_Name,'
+      '        Customer.Is_Retail_Customer'
+      'from Sales_Invoice,'
+      '     Customer,'
+      '     Sales_Invoice_Status'
+      'where'
+      '(Sales_Invoice.invoice_or_credit = '#39'C'#39') and'
+      '('
+      '(Sales_Invoice.Customer_Name Like :Code_From) or'
+      '(Customer.Account_code Like :Code_From)'
+      ') AND'
+      '('
+      '(Sales_invoice.Sales_invoice_status < :Status) or'
+      '(:Status = 0)'
+      ') and'
+      '('
+      '((:Inactive = '#39'N'#39')  and (Sales_Invoice.Inactive is null )) or'
+      '(:Inactive = '#39'Y'#39')'
+      ') and'
+      '(Sales_invoice.Customer = Customer.Customer) and'
+      
+        '(Sales_invoice.Sales_invoice_Status = Sales_invoice_status.Sales' +
+        '_invoice_Status) and'
+      
+        '((Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custome' +
+        'r.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Reta' +
+        'il_Customer = '#39'A'#39'))'
+      'order by Sales_Invoice.Sales_Invoice desc'
+      '')
+    Left = 944
+    Top = 464
+    ParamData = <
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Status'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Status'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Inactive'
+        DataType = ftString
+      end
+      item
+        Name = 'Inactive'
+        DataType = ftString
+      end
+      item
+        Name = 'Is_Retail_Customer'
+        DataType = ftString
+      end
+      item
+        Name = 'Is_Commercial_Customer'
+        DataType = ftString
+      end
+      item
+        Name = 'Is_Retail_Customer'
+        DataType = ftString
+      end>
+    object DateTimeField1: TDateTimeField
+      FieldName = 'Invoice_Date'
+    end
+    object IntegerField1: TIntegerField
+      FieldName = 'Customer'
+    end
+    object StringField1: TStringField
+      FieldName = 'Inactive'
+      Size = 1
+    end
+    object StringField2: TStringField
+      FieldName = 'Invoice_or_Credit'
+      Size = 1
+    end
+    object StringField3: TStringField
+      FieldName = 'Original_Name'
+      Size = 50
+    end
+    object StringField4: TStringField
+      FieldName = 'Status_Description'
+      Size = 30
+    end
+    object FloatField1: TFloatField
+      FieldName = 'Goods_Value'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'Vat_Value'
+    end
+    object FloatField3: TFloatField
+      FieldName = 'Goods_Credit'
+    end
+    object FloatField4: TFloatField
+      FieldName = 'VAT_Credit'
+    end
+    object StringField5: TStringField
+      FieldName = 'Invoice_no'
+      Size = 10
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'Sales_invoice_status'
+    end
+    object IntegerField3: TIntegerField
+      FieldName = 'Sales_Invoice'
+    end
+    object StringField6: TStringField
+      FieldName = 'Reference'
+    end
+    object StringField7: TStringField
+      FieldName = 'Description'
+      Size = 50
+    end
+    object StringField8: TStringField
+      FieldName = 'Customer_Name'
+      Size = 50
+    end
+    object FloatField5: TFloatField
+      FieldName = 'Total_Credit'
+    end
+    object StringField9: TStringField
+      FieldName = 'Is_Retail_Customer'
+      Size = 3
+    end
+    object StringField10: TStringField
+      FieldName = 'Rep_Name'
+      Size = 50
+    end
+    object StringField11: TStringField
+      FieldName = 'Operator_Name'
+      Size = 50
+    end
+    object StringField12: TStringField
+      FieldName = 'Account_Manager_Name'
+      Size = 50
+    end
+    object StringField13: TStringField
+      FieldName = 'Order_Reference'
+      Size = 50
+    end
+    object StringField14: TStringField
+      FieldName = 'Branch_Name'
+      Size = 100
+    end
+    object StringField15: TStringField
+      FieldName = 'Revenue_Centre_Descr'
+      Size = 50
+    end
   end
 end

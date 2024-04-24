@@ -114,7 +114,7 @@ type
     qryEndUser: TFDQuery;
     QRLabel11: TQRLabel;
     QRShape11: TQRShape;
-    gtQRFilters1: TgtQRFilters;
+    gtQRFilters1: TQRFilters;
     memAddress: TQRRichText;
     qriHeadLogo: TQRImage;
     qrlblEdgeDescription: TQRLabel;

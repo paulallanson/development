@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtJobsDm, CRControls, AllCommon, DB, Spin, wtSalesOrderDM, ImgList, ShellAPI, QrCtrls, Menus,
   ToolWin, Inifiles, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  DragDrop, DropTarget, DragDropFile;
+  DragDrop, DropTarget, DragDropFile, DropComboTarget;
 
 type
   TfrmWTMaintJob = class(TForm)
@@ -216,7 +216,7 @@ type
     memNotes: TMemo;
     stvDocuments: TShellTreeView;
     slvDocuments: TShellListView;
-    DropFileTarget1: TDropFileTarget;
+    DropComboTarget1: TDropComboTarget;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -310,7 +310,7 @@ type
     procedure stvDocumentsDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure tbDocumentsShow(Sender: TObject);
-    procedure DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -363,7 +363,6 @@ type
     procedure MoveSalesDocument;
     procedure SendAndSaveEmail(sTo, sSubject: string);
     procedure SetUseMarkup(const Value: bytebool);
-    procedure ProcessDragAndDrop;
     function GetFilesPath: string;
     procedure SetMode(const Value: TjMode);
   public
@@ -384,7 +383,8 @@ implementation
 uses
   wtCommon, WTSrchCustomer, wtMain, wtNotesDM, wtDataModule, WTSrchCustContacts, wtMaintJElement, WTExcelOLE,
   wtMaintJUpstand, wtMaintJEdge, wtMaintJExtra, wtMaintJCutOut, wtMaintJEvents, DateSelV5, wtLUMatType, wtLUReason,
-  wtMaintJElementM, WTMaintJRemedial, wtLUFitters, WTLUDesigner, WTMaintEmail, WTWordOLE, System.UITypes;
+  wtMaintJElementM, WTMaintJRemedial, wtLUFitters, WTLUDesigner, WTMaintEmail, WTWordOLE, System.UITypes,
+  Shared.DragDrop.Helper;
 
 {$R *.DFM}
 
@@ -1398,10 +1398,11 @@ begin
   EnableAddButtons;
 end;
 
-procedure TfrmWTMaintJob.DropFileTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
+procedure TfrmWTMaintJob.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  ProcessDragAndDrop;
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;
@@ -2966,20 +2967,6 @@ begin
       Items.EndUpdate;
     end;
 *)
-end;
-
-procedure TfrmWTMaintJob.ProcessDragAndDrop;
-var
-  Path: string;
-  FilesList: TUnicodeStrings;
-begin
-  Path := GetFilesPath;
-  FilesList := DropFileTarget1.Files;
-  MyWinControlSetData(FilesList, Path,
-    procedure
-    begin
-      ShowDocuments;
-    end);
 end;
 
 procedure TfrmWTMaintJob.btnReasonClick(Sender: TObject);
