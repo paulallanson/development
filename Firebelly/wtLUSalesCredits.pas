@@ -5,13 +5,15 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, wtSalesInvoiceDM,
-  Db, QrCtrls, IniFiles, Buttons, DBCtrls, System.ImageList;
+  Data.DB, System.ImageList, Vcl.Buttons, IniFiles;
 
 type
   TfrmWTLUSalesCredits = class(TForm)
     CoolBar1: TCoolBar;
     dbgDetails: TDBGrid;
-    pnlFooter: TPanel;
+    Panel1: TPanel;
+    Label1: TLabel;
+    edtSearch: TEdit;
     stsbrDetails: TStatusBar;
     imglstFunctions: TImageList;
     pmnFunctions: TPopupMenu;
@@ -34,10 +36,9 @@ type
     btnClose: TButton;
     edtSalesInvNo: TEdit;
     Label2: TLabel;
+    chkbxShowArchived: TCheckBox;
     Label3: TLabel;
     edtInvoiceDate: TEdit;
-    Panel3: TPanel;
-    Label4: TLabel;
     PageScroller1: TPageScroller;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -48,19 +49,13 @@ type
     btnReprint: TToolButton;
     ToolButton6: TToolButton;
     btnReports: TToolButton;
-    Label5: TLabel;
-    cmbCustomerFilter: TComboBox;
-    pnlSearch: TPanel;
-    Label1: TLabel;
-    edtSearch: TEdit;
-    chkbxShowArchived: TCheckBox;
     BitBtn1: TBitBtn;
     btnSearch: TBitBtn;
-    pnlRevenueCentre: TPanel;
-    rdgrpRevenueCentre: TRadioGroup;
-    grpbxRevCentre: TGroupBox;
-    Label6: TLabel;
-    dblkpRevCentre: TDBLookupComboBox;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -85,8 +80,6 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure dbgDetailsTitleClick(Column: TColumn);
-    procedure rdgrpRevenueCentreClick(Sender: TObject);
-    procedure dblkpRevCentreClick(Sender: TObject);
   private
     Activecode: integer;
     FDisableNameChangeEvent: boolean;
@@ -98,7 +91,6 @@ type
     procedure SetDefaultBin(const Value: integer);
     procedure SetDefaultPrinter(const Value: string);
     function GetBinSelection: integer;
-    procedure GetDefaultPrinter;
   private
     dLastPEDate: TDateTime;
     DontSaveLayout: Boolean;
@@ -117,15 +109,18 @@ var
 
 implementation
 
-uses AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice,
+uses
+  System.UITypes,
+  AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice,
   WTLUSalesInvoiceCN, wtRSSalesInvoiceReprint, WTSInvoiceSearch,
-  wtDataModule;
+  wtMain;
 
 {$R *.DFM}
 
 procedure TfrmWTLUSalesCredits.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  allCommon.SaveDBGridCols('', 'SalesCreditsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -137,20 +132,10 @@ end;
 procedure TfrmWTLUSalesCredits.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
-  iRevenueCentre: integer;
 begin
-  pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
-  if not pnlRevenueCentre.Visible then
-    pnlFooter.Height := 70;
+  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
-  windowstate := wsMaximized;
-
-  dtmdlAllSCredits := TdtmdlSalesInvoice.create(self);
-
-  dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;
-  dbgDetails.DataSource := dtmdlAllSCredits.dsSCHeaderGrid;
-
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -166,33 +151,20 @@ begin
       else
       if (ReadString('Sales Credits', 'Customer Filter', '3') = '3') then
         cmbCustomerFilter.itemindex := 3;
-
-      try
-        rdgrpRevenueCentre.itemindex := strtoint(ReadString('Sales Credits', 'Revenue Centre Option', '0'));
-      except
-        rdgrpRevenueCentre.itemindex := 0;
-      end;
-
-      try
-        iRevenueCentre := strtoint(ReadString('Sales Credits', 'Revenue Centre', '-1'));
-      except
-        iRevenueCentre := -1;
-      end;
-
     end;
   finally
     IniFile.Free;
   end;
 
-  if not dtmdlWorktops.UseRevenueCentres then
-    iRevenueCentre := 0;
-    
-  dtmdlAllSCredits.RevenueCentre := iRevenueCentre;
+  dtmdlAllSCredits := TdtmdlSalesInvoice.create(self);
+
+  dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;
+  dbgDetails.DataSource := dtmdlAllSCredits.dsSCHeaderGrid;
 
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSCredits.dsSCHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
+  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesCredits.SetButtons(Sender: TObject; Field: TField);
@@ -367,23 +339,16 @@ end;
 
 procedure TfrmWTLUSalesCredits.btnPrintClick(Sender: TObject);
 var
-  OldCursor : TCursor;
   Key : Integer ;
   frm : TfrmwtRSSalesInvoice;
 begin
-  OldCursor := Screen.Cursor;
-  Screen.Cursor := crHourglass;
+  Key := dbgDetails.Datasource.Dataset.FieldByName('Sales_Invoice').AsInteger;
 
 //  dbgDetails.DataSource.DataSet.Close;
-
-  GetDefaultPrinter;
-  
   try
     Frm := TfrmwtRSSalesInvoice.Create(Self);
-    Key := dbgDetails.Datasource.Dataset.FieldByName('Sales_Invoice').AsInteger;
     try
       Frm.icode := Key;
-      Frm.RevenueCentre := dtmdlAllSCredits.RevenueCentre;
       Frm.InvoicePrint := false;
       Frm.ShowModal;
     finally
@@ -456,10 +421,10 @@ procedure TfrmWTLUSalesCredits.btnReprintClick(Sender: TObject);
 var
   iCount: integer;
   key: integer;
-  SINumber: string;
+  SINumber: integer;
   frm : TfrmwtRSSalesInvoiceReprint;
 begin
-  SINumber := dbgDetails.Datasource.Dataset.FieldByName('Invoice_no').AsString;
+  SINumber := dbgDetails.Datasource.Dataset.FieldByName('Invoice_no').AsInteger;
   Key := dbgDetails.Datasource.Dataset.FieldByName('sales_invoice').AsInteger;
   try
     Frm := TfrmWTRSSalesInvoiceReprint.Create(Self);
@@ -490,13 +455,7 @@ end;
 procedure TfrmWTLUSalesCredits.SetSalesInvoiceEdit(Dataset: TDataset);
 begin
   if (Dataset.recordcount > 0) then
-    begin
-      try
-        edtSalesInvNo.Text := floatToStr(Dataset.FieldByName('Invoice_no').asfloat);
-      except
-        edtSalesInvNo.Text := '';
-      end;
-    end;
+    edtSalesInvNo.Text := Dataset.FieldByName('Invoice_no').AsString;
   with Dataset do
   begin
     btnPrint.enabled := not(fieldbyname('Sales_invoice_Status').asinteger >= 20);
@@ -532,23 +491,23 @@ procedure TfrmWTLUSalesCredits.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 VAR
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
   sValue: string;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
-  TempRect := Rect;
   if (dbgDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'C') and
     (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
   if  (Column.Title.Caption <> 'Credit Note No.') and
@@ -556,46 +515,33 @@ begin
       (Column.Title.Caption <> 'Goods') and
       (Column.Title.Caption <> 'VAT') then
   	begin
-  		StrPCopy(txt, Column.field.asstring);
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
     		WITH Sender AS TDBGrid DO
       		BEGIN
-           	if  (Column.Title.Caption <> 'Credit Note No.') and
-              (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
+           	if (Column.Title.Caption <> 'Credit Note No.') and
+               (Column.Title.Caption <> 'Goods') and
+               (Column.Title.Caption <> 'Total') and
                (Column.Title.Caption <> 'VAT') then
               	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
+                  Canvas.Brush.Color := Color;
+                  Canvas.Font.Color  := Font.Color;
+                  Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+                  (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+                end;
       		END;
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Goods') or
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'VAT') then
-        try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
-  		StrPCopy(Txt, sValue);
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      Column.Alignment := taRightJustify;
      end;
 end;
 
@@ -642,17 +588,6 @@ end;
 
 procedure TfrmWTLUSalesCredits.FormActivate(Sender: TObject);
 begin
-  dblkpRevCentre.ListSource := dtmdlAllSCredits.dtsRevenueCentre;
-
-  with dtmdlAllSCredits.qryRevenueCentre do
-    begin
-      close;
-      open;
-    end;
-
-  if dtmdlAllSCredits.RevenueCentre > 0 then
-    dblkpRevCentre.KeyValue := dtmdlAllSCredits.RevenueCentre;
-
   dtmdlAllSCredits.TradeRetail := cmbCustomerFilter.itemindex;
   dtmdlAllSCredits.refreshcreditdata;
   dbgDetails.datasource.DataSet.locate('sales_invoice', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
@@ -695,17 +630,13 @@ procedure TfrmWTLUSalesCredits.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
-  with IniFile do
-    begin
-      WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
-      WriteString('Sales Credits', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
-      WriteString('Sales Credits', 'Revenue Centre', inttostr(dtmdlAllSCredits.RevenueCentre));
-      Free;
-    end;
-
-  allCommon.SaveDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
+  try
+    IniFile.WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTLUSalesCredits.BitBtn1Click(Sender: TObject);
@@ -768,60 +699,14 @@ begin
 
   dtmdlAllSCredits.refreshCreditdata;
   with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
-    end;
-
-end;
-
-procedure TfrmWTLUSalesCredits.rdgrpRevenueCentreClick(Sender: TObject);
-begin
-  grpbxRevCentre.Visible := false;
-  case (Sender as TRadioGroup).ItemIndex of
-      0:  begin
-            dtmdlAllSCredits.RevenueCentre := -1;
-            dtmdlAllSCredits.refreshCreditdata;
-          end;
-      1:  begin
-            dtmdlAllSCredits.RevenueCentre := 0;
-            dtmdlAllSCredits.refreshCreditdata;
-          end;
-  else
-    begin
-      grpbxRevCentre.Visible := true;
-      if dblkpRevCentre.text <> '' then
-        begin
-          dtmdlAllSCredits.RevenueCentre := dblkpRevCentre.keyvalue;
-          dtmdlAllSCredits.refreshCreditdata;
-        end;
+  begin
+    try
+      if datasource.dataset.recordcount > 0 then
+        SelectedRows.CurrentRowSelected := true ;
+    except
     end;
   end;
-end;
 
-procedure TfrmWTLUSalesCredits.dblkpRevCentreClick(Sender: TObject);
-begin
-  dtmdlAllSCredits.RevenueCentre := dblkpRevCentre.KeyValue;
-  dtmdlAllSCredits.refreshCreditdata;
-end;
-
-procedure TfrmWTLUSalesCredits.GetDefaultPrinter;
-var
-  sBin: string;
-  icount: integer;
-  TempArray: array[0..255] of Char;
-begin
-  {Find the default printer in the list of printers }
-  Printer.PrinterIndex := -1;
-  for icount := 0 to pred(Printer.Printers.count) do
-    begin
-//          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-      if DefaultPrinter = Printer.printers[icount] then
-        Printer.PrinterIndex := icount;
-    end;
 end;
 
 end.

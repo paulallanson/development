@@ -3,8 +3,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Stock System'
-  ClientHeight = 323
-  ClientWidth = 377
+  ClientHeight = 208
+  ClientWidth = 393
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 377
-    Height = 223
+    Width = 393
+    Height = 148
     Align = alClient
     DataSource = srcStockSystem
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -28,7 +28,7 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -48,8 +48,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 304
-    Width = 377
+    Top = 189
+    Width = 393
     Height = 19
     Panels = <
       item
@@ -58,20 +58,25 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       item
         Width = 50
       end>
+    ExplicitLeft = -8
+    ExplicitTop = 302
   end
   object Panel1: TPanel
     Left = 0
-    Top = 223
-    Width = 377
-    Height = 81
+    Top = 148
+    Width = 393
+    Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitLeft = 160
+    ExplicitTop = 216
+    ExplicitWidth = 185
     DesignSize = (
-      377
-      81)
+      393
+      41)
     object btnAdd: TBitBtn
       Left = 16
-      Top = 48
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -81,7 +86,7 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     end
     object btnEdit: TBitBtn
       Left = 106
-      Top = 48
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -92,7 +97,7 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     end
     object btnDelete: TBitBtn
       Left = 197
-      Top = 48
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -103,7 +108,7 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
     end
     object BitBtn4: TBitBtn
       Left = 288
-      Top = 48
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]

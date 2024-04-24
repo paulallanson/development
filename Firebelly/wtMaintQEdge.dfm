@@ -2,8 +2,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Left = 381
   Top = 145
   Caption = 'Maintain Edges'
-  ClientHeight = 257
-  ClientWidth = 512
+  ClientHeight = 277
+  ClientWidth = 508
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,12 +13,12 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    512
-    257)
+    508
+    277)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 40
-    Top = 249
+    Top = 245
     Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -32,7 +32,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object btnOK: TBitBtn
     Left = 182
-    Top = 243
+    Top = 239
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -46,7 +46,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object BitBtn2: TBitBtn
     Left = 270
-    Top = 243
+    Top = 239
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -59,12 +59,13 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 512
+    Width = 508
     Height = 233
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 506
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -285,8 +286,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
         '(Edge_Profile.inactive = '#39'N'#39' or Edge_Profile.inactive is NULL or' +
         ' Edge_Profile.Edge_Profile = :Edge_Profile)'
       'order by Edge_profile.description')
-    Left = 360
-    Top = 64
+    Left = 50
+    Top = 96
     ParamData = <
       item
         Name = 'edge_type'
@@ -301,8 +302,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object dtsEdgeThickness: TDataSource
     DataSet = qryEdgeThickness
-    Left = 440
-    Top = 64
+    Left = 126
+    Top = 96
   end
   object qryOneEdgeThickness: TFDQuery
     ConnectionName = 'wt'
@@ -351,12 +352,12 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       '        Customer_Cutout_Edge_Group.Material_Type,'
       '        Customer_Cutout_Edge_Group.Effective_Date,'
       '        Customer_Cutout_Edge_Group.Ineffective_Date,'
-      '        Customer_Cutout_Edge_Group.inactive,'
+      '        Customer_Cutout_Edge_Group.inactive as Group_Inactive,'
       '        Customer_Cutout_Edge_Group.Use_For_General_Quoting,'
       '        Customer_Edge.Edge_Profile,'
       '        Customer_Edge.Edge_Type,'
       '        Customer_Edge.Price_Pointer,'
-      '        Edge_Profile.inactive'
+      '        Edge_Profile.inactive as Edge_Inactive'
       'FROM Edge_Profile'
       '        INNER JOIN (Customer_Cutout_Edge_Group'
       '        INNER JOIN Customer_Edge'
@@ -381,16 +382,20 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Edge_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Edge_Profile'
+        ParamType = ptInput
       end>
   end
   object qryOneCustomerPrice: TFDQuery

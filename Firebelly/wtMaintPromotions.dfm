@@ -2,8 +2,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   Left = 344
   Top = 48
   Caption = 'Promotions'
-  ClientHeight = 464
-  ClientWidth = 577
+  ClientHeight = 497
+  ClientWidth = 614
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,15 +16,15 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 577
+    Width = 614
     Height = 73
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 587
+    ExplicitWidth = 577
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 56
+      Width = 62
       Height = 13
       Caption = 'Description:'
       Font.Charset = DEFAULT_CHARSET
@@ -37,7 +37,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     object Label2: TLabel
       Left = 8
       Top = 45
-      Width = 79
+      Width = 87
       Height = 13
       Caption = 'Maximum Entires'
       Font.Charset = DEFAULT_CHARSET
@@ -70,30 +70,30 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   object Panel3: TPanel
     Left = 0
     Top = 73
-    Width = 577
-    Height = 350
+    Width = 614
+    Height = 383
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 587
-    ExplicitHeight = 366
+    ExplicitWidth = 577
+    ExplicitHeight = 350
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 124
+      Width = 136
       Height = 13
       Caption = 'Currently Selected Colours'
     end
     object Label4: TLabel
       Left = 344
       Top = 8
-      Width = 97
+      Width = 105
       Height = 13
       Caption = 'Un-Selected Colours'
     end
     object Label5: TLabel
       Left = 344
       Top = 36
-      Width = 67
+      Width = 71
       Height = 13
       Caption = 'Material Type:'
     end
@@ -215,13 +215,13 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   end
   object Panel2: TPanel
     Left = 0
-    Top = 423
-    Width = 577
+    Top = 456
+    Width = 614
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 439
-    ExplicitWidth = 587
+    ExplicitTop = 423
+    ExplicitWidth = 577
     object btnOK: TBitBtn
       Left = 212
       Top = 8

@@ -3,8 +3,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   Top = 206
   BorderStyle = bsDialog
   Caption = 'Global change elements'
-  ClientHeight = 243
-  ClientWidth = 536
+  ClientHeight = 245
+  ClientWidth = 541
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,12 +18,13 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 541
     Height = 201
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 530
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -383,9 +384,9 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
       '        Customer_Worktop.Worktop,'
-      '        Worktop.Description,'
+      '        Worktop.Description as Worktop_Description,'
       '        Customer_Worktop_Group.Material_Type,'
-      '        Material_Type.Description'
+      '        Material_Type.Description as Material_Type_Description'
       'FROM Material_Type'
       '        INNER JOIN (Worktop'
       '        INNER JOIN (Customer_Worktop_Group'
@@ -409,12 +410,15 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Group_Number'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryContractPrice: TFDQuery
@@ -468,9 +472,9 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
       '        Customer_Worktop.Worktop,'
-      '        Worktop.Description,'
+      '        Worktop.Description as Worktop_Description,'
       '        Customer_Worktop_Group.Material_Type,'
-      '        Material_Type.Description'
+      '        Material_Type.Description as Material_type_Description'
       'FROM Material_Type'
       '        INNER JOIN (Worktop'
       '        INNER JOIN (Customer_Worktop_Group'
@@ -500,18 +504,19 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Worktop_Group'
-      end
-      item
-        Name = 'Worktop_Group'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryCustomerPrice: TFDQuery

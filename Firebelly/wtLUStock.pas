@@ -12,14 +12,6 @@ uses
 
 type
   TfrmWTLUStock = class(TForm)
-    CoolBar1: TCoolBar;
-    ToolBar1: TToolBar;
-    btnAdd: TToolButton;
-    btnChange: TToolButton;
-    btnCopy: TToolButton;
-    btnDelete: TToolButton;
-    ToolButton6: TToolButton;
-    btnPrint: TToolButton;
     CoolBar2: TCoolBar;
     Panel3: TPanel;
     Label2: TLabel;
@@ -31,6 +23,14 @@ type
     stsBrDetails: TStatusBar;
     imgLstHot: TImageList;
     tmrSearch: TTimer;
+    CoolBar1: TCoolBar;
+    ToolBar1: TToolBar;
+    btnAdd: TToolButton;
+    btnChange: TToolButton;
+    btnCopy: TToolButton;
+    btnDelete: TToolButton;
+    ToolButton6: TToolButton;
+    btnPrint: TToolButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

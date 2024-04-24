@@ -2,8 +2,8 @@ object frmWTLUStock: TfrmWTLUStock
   Left = 147
   Top = 140
   Caption = 'Products'
-  ClientHeight = 387
-  ClientWidth = 708
+  ClientHeight = 369
+  ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,22 +18,196 @@ object frmWTLUStock: TfrmWTLUStock
   OnDestroy = FormDestroy
   OnShow = FormShow
   TextHeight = 13
-  object CoolBar1: TCoolBar
+  object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 708
+    Width = 696
+    Height = 32
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 30
+        Width = 690
+      end>
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 681
+      Height = 30
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
+      TabOrder = 0
+      object Label2: TLabel
+        Left = 0
+        Top = 1
+        Width = 43
+        Height = 25
+        Caption = 'Stock'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object dbgDetails: TDBGrid
+    Left = 0
+    Top = 77
+    Width = 696
+    Height = 232
+    Align = alClient
+    DataSource = dtmdlStock.dtsAllStock
+    DrawingStyle = gdsGradient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+    ParentFont = False
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = [fsBold]
+    OnDblClick = dbgDetailsDblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Stock_Code'
+        Title.Caption = 'Stock Code'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
+        Width = 171
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Stock_Description'
+        Title.Caption = 'Description'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
+        Width = 161
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Total_Quantity'
+        Title.Caption = 'Total Quantity'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
+        Width = 88
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Allocated_Quantity'
+        Title.Caption = 'Allocated Quantity'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
+        Width = 95
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PO_Quantity'
+        Title.Caption = 'On Purchase Order'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
+        Width = 112
+        Visible = True
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 309
+    Width = 696
+    Height = 41
+    Align = alBottom
+    ParentBackground = False
+    TabOrder = 2
+    DesignSize = (
+      696
+      41)
+    object Label1: TLabel
+      Left = 56
+      Top = 12
+      Width = 58
+      Height = 13
+      Caption = 'Stock Code'
+    end
+    object Button1: TButton
+      Left = 587
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = '&Close'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object edtSearch: TEdit
+      Left = 104
+      Top = 8
+      Width = 169
+      Height = 21
+      TabOrder = 1
+      OnChange = edtSearchChange
+    end
+  end
+  object stsBrDetails: TStatusBar
+    Left = 0
+    Top = 350
+    Width = 696
+    Height = 19
+    Panels = <
+      item
+        Width = 150
+      end
+      item
+        Width = 100
+      end
+      item
+        Width = 50
+      end>
+  end
+  object CoolBar1: TCoolBar
+    Left = 0
+    Top = 32
+    Width = 696
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 702
+        Width = 690
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 693
+      Width = 681
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 47
@@ -86,155 +260,6 @@ object frmWTLUStock: TfrmWTLUStock
         ImageIndex = 7
       end
     end
-  end
-  object CoolBar2: TCoolBar
-    Left = 0
-    Top = 45
-    Width = 708
-    Height = 32
-    Bands = <
-      item
-        Control = Panel3
-        ImageIndex = -1
-        MinHeight = 28
-        Width = 702
-      end>
-    object Panel3: TPanel
-      Left = 11
-      Top = 0
-      Width = 693
-      Height = 28
-      Align = alLeft
-      BevelOuter = bvNone
-      Color = clSilver
-      ParentBackground = False
-      TabOrder = 0
-      object Label2: TLabel
-        Left = 0
-        Top = 1
-        Width = 44
-        Height = 25
-        Caption = 'Stock'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-    end
-  end
-  object dbgDetails: TDBGrid
-    Left = 0
-    Top = 77
-    Width = 708
-    Height = 250
-    Align = alClient
-    DataSource = dtmdlStock.dtsAllStock
-    DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
-    ParentFont = False
-    TabOrder = 2
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
-    OnDblClick = dbgDetailsDblClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Stock_Code'
-        Title.Caption = 'Stock Code'
-        Width = 171
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Stock_Description'
-        Title.Caption = 'Description'
-        Width = 161
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Total_Quantity'
-        Title.Caption = 'Total Quantity'
-        Width = 88
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Allocated_Quantity'
-        Title.Caption = 'Allocated Quantity'
-        Width = 95
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'PO_Quantity'
-        Title.Caption = 'On Purchase Order'
-        Width = 112
-        Visible = True
-      end>
-  end
-  object Panel1: TPanel
-    Left = 0
-    Top = 327
-    Width = 708
-    Height = 41
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 3
-    DesignSize = (
-      708
-      41)
-    object Label1: TLabel
-      Left = 56
-      Top = 12
-      Width = 58
-      Height = 13
-      Caption = 'Stock Code'
-    end
-    object Button1: TButton
-      Left = 611
-      Top = 8
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = '&Close'
-      TabOrder = 0
-      OnClick = Button1Click
-    end
-    object edtSearch: TEdit
-      Left = 104
-      Top = 8
-      Width = 169
-      Height = 21
-      TabOrder = 1
-      OnChange = edtSearchChange
-    end
-  end
-  object stsBrDetails: TStatusBar
-    Left = 0
-    Top = 368
-    Width = 708
-    Height = 19
-    Panels = <
-      item
-        Width = 150
-      end
-      item
-        Width = 100
-      end
-      item
-        Width = 50
-      end>
   end
   object imgLstHot: TImageList
     Left = 176

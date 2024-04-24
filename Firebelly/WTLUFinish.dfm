@@ -4,7 +4,7 @@ object frmWTLUFinish: TfrmWTLUFinish
   BorderStyle = bsDialog
   Caption = 'Worktop Finish'
   ClientHeight = 242
-  ClientWidth = 396
+  ClientWidth = 432
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object frmWTLUFinish: TfrmWTLUFinish
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 396
+    Width = 432
     Height = 158
     Align = alClient
     DataSource = srcWorktopFinish
@@ -56,7 +56,7 @@ object frmWTLUFinish: TfrmWTLUFinish
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 223
-    Width = 396
+    Width = 432
     Height = 19
     Panels = <
       item
@@ -65,17 +65,21 @@ object frmWTLUFinish: TfrmWTLUFinish
       item
         Width = 50
       end>
+    ExplicitTop = 214
+    ExplicitWidth = 390
   end
   object Panel1: TPanel
     Left = 0
     Top = 158
-    Width = 396
+    Width = 432
     Height = 65
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 149
+    ExplicitWidth = 390
     DesignSize = (
-      396
+      432
       65)
     object chkbxShowInactive: TCheckBox
       Left = 8

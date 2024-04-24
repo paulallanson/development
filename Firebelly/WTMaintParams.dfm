@@ -92,7 +92,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Label28: TLabel
         Left = 16
-        Top = 320
+        Top = 341
         Width = 85
         Height = 13
         Caption = 'VAT Reg Number'
@@ -104,20 +104,27 @@ object frmWTMaintParams: TfrmWTMaintParams
         Height = 13
         Caption = 'Unique Tax Ref'
       end
+      object Label81: TLabel
+        Left = 16
+        Top = 314
+        Width = 92
+        Height = 13
+        Caption = 'Company Reg No.'
+      end
       object chkbxTradeDetails: TCheckBox
         Left = 16
         Top = 408
         Width = 233
         Height = 17
         Caption = 'Use separate details for trade customers'
-        TabOrder = 0
+        TabOrder = 12
       end
       object edtStreet: TEdit
         Left = 112
         Top = 16
         Width = 249
         Height = 21
-        TabOrder = 1
+        TabOrder = 0
         Text = 'edtStreet'
       end
       object edtLocale: TEdit
@@ -125,7 +132,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 48
         Width = 249
         Height = 21
-        TabOrder = 2
+        TabOrder = 1
         Text = 'edtLocale'
       end
       object edtTownCity: TEdit
@@ -133,7 +140,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 77
         Width = 169
         Height = 21
-        TabOrder = 3
+        TabOrder = 2
         Text = 'edtTownCity'
       end
       object edtPostcode: TEdit
@@ -141,7 +148,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 108
         Width = 121
         Height = 21
-        TabOrder = 4
+        TabOrder = 3
         Text = 'edtPostcode'
       end
       object edtCountyState: TEdit
@@ -149,7 +156,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 139
         Width = 169
         Height = 21
-        TabOrder = 5
+        TabOrder = 4
         Text = 'edtCountyState'
       end
       object edtTelephoneNumber: TEdit
@@ -157,7 +164,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 170
         Width = 241
         Height = 21
-        TabOrder = 6
+        TabOrder = 5
         Text = 'edtTelephoneNumber'
       end
       object edtFaxNumber: TEdit
@@ -165,7 +172,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 200
         Width = 241
         Height = 21
-        TabOrder = 7
+        TabOrder = 6
         Text = 'edtFaxNumber'
       end
       object edtWebAddress: TEdit
@@ -173,7 +180,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 231
         Width = 297
         Height = 21
-        TabOrder = 8
+        TabOrder = 7
         Text = 'edtWebAddress'
       end
       object edtEmailAddress: TEdit
@@ -181,12 +188,12 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 260
         Width = 297
         Height = 21
-        TabOrder = 9
+        TabOrder = 8
         Text = 'edtEmailAddress'
       end
       object edtVatNumber: TEdit
         Left = 112
-        Top = 316
+        Top = 337
         Width = 169
         Height = 21
         TabOrder = 10
@@ -199,6 +206,14 @@ object frmWTMaintParams: TfrmWTMaintParams
         Height = 21
         TabOrder = 11
         Text = 'edtUniqueTaxReference'
+      end
+      object edtCompanyNumber: TEdit
+        Left = 112
+        Top = 310
+        Width = 169
+        Height = 21
+        TabOrder = 9
+        Text = 'edtCompanyNumber'
       end
     end
     object tsCharges: TTabSheet
@@ -1914,6 +1929,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 659
+    ExplicitWidth = 742
     object btnOK: TBitBtn
       Left = 283
       Top = 4
@@ -2174,6 +2191,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       '  Fax_Number = :Fax_Number,'
       '  Web_Address = :Web_Address,'
       '  Email_Address = :Email_Address,'
+      '  Company_Reg_Number = :Company_Reg_Number,'
       '  Vat_Number = :Vat_Number,'
       '  Unique_Tax_Reference = :Unique_Tax_Reference,'
       '  Install_Rate = :Install_Rate,'
@@ -2262,296 +2280,390 @@ object frmWTMaintParams: TfrmWTMaintParams
     ParamData = <
       item
         Name = 'Company_Name'
+        ParamType = ptInput
       end
       item
         Name = 'Street'
+        ParamType = ptInput
       end
       item
         Name = 'Locale'
+        ParamType = ptInput
       end
       item
         Name = 'Town_City'
+        ParamType = ptInput
       end
       item
         Name = 'Postcode'
+        ParamType = ptInput
       end
       item
         Name = 'County_State'
+        ParamType = ptInput
       end
       item
         Name = 'Telephone_Number'
+        ParamType = ptInput
       end
       item
         Name = 'Fax_Number'
+        ParamType = ptInput
       end
       item
         Name = 'Web_Address'
+        ParamType = ptInput
       end
       item
         Name = 'Email_Address'
+        ParamType = ptInput
+      end
+      item
+        Name = 'COMPANY_REG_NUMBER'
+        ParamType = ptInput
       end
       item
         Name = 'Vat_Number'
+        ParamType = ptInput
       end
       item
         Name = 'Unique_Tax_Reference'
+        ParamType = ptInput
       end
       item
         Name = 'Install_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Survey_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Delivery_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Discount_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Deposit_Terms'
+        ParamType = ptInput
       end
       item
         Name = 'Underslip_Thickness'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Upstand_Polish_Price'
+        ParamType = ptInput
       end
       item
         Name = 'Upstand_Polish_Cost'
+        ParamType = ptInput
       end
       item
         Name = 'Quote_Prefix'
+        ParamType = ptInput
       end
       item
         Name = 'Job_Prefix'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Vat'
+        ParamType = ptInput
       end
       item
         Name = 'Nominal_Level'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Sales_Nominal'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Purchase_Nominal'
+        ParamType = ptInput
       end
       item
         Name = 'Accounts_Package'
+        ParamType = ptInput
       end
       item
         Name = 'Data_Export_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Last_File_No_Inv'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Email'
+        ParamType = ptInput
       end
       item
         Name = 'Production_Email'
+        ParamType = ptInput
       end
       item
         Name = 'Customer_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Supplier_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Quote_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Job_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Contract_Document_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Mileage_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Labour_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Handling_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Waste_Cost_Multiplier'
+        ParamType = ptInput
       end
       item
         Name = 'Schedule_Package'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Shared_Folder'
+        ParamType = ptInput
       end
       item
         Name = 'Template_Conditions_File'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Order_Terms_File'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Availability_File'
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Account_Manager'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Lead_Source'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Customer_Sales_Lead_Source'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Website_Image_Directory'
+        ParamType = ptInput
       end
       item
         Name = 'Terms'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Retail_Payment_Terms'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Availability'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_Payment_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Retail_Payment_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Factored_Payment_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Retail_Quote_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Quotation_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Invoice_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Sales_Confirm_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Fitting_Confirm_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Retail_SO_Confirm_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Email_Purchase_Order_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Order_Confirmation_Notes'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Use_Purchase_Ordering'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Contract_Quoting'
+        ParamType = ptInput
       end
       item
         Name = 'Contract_Quote_By_Slab'
+        ParamType = ptInput
       end
       item
         Name = 'Prices_Are_Trade'
+        ParamType = ptInput
       end
       item
         Name = 'Balance_Required_Before_Fit'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Onstop'
+        ParamType = ptInput
       end
       item
         Name = 'Mandatory_Temp_Fit_Dates'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Trade_Layout'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Costing_System'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Revenue_Centres'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Quote_Valid_days'
+        ParamType = ptInput
       end
       item
         Name = 'Default_Quote_Follow_Up_days'
+        ParamType = ptInput
       end
       item
         Name = 'Contract_Drawing_Folder_Name'
+        ParamType = ptInput
       end
       item
         Name = 'Contract_Inactive_Reason'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Def_Remedial_Product_Code'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Template_Docs_Out'
+        ParamType = ptInput
       end
       item
         Name = 'Template_Docs_In'
+        ParamType = ptInput
       end
       item
         Name = 'Fitting_Docs_Out'
+        ParamType = ptInput
       end
       item
         Name = 'Fitting_Docs_In'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Document_Transfer'
+        ParamType = ptInput
       end
       item
         Name = 'Quotation_Document_Folder'
+        ParamType = ptInput
       end
       item
         Name = 'Safety_Document_Folder'
+        ParamType = ptInput
       end
       item
         Name = 'Remedial_Document_Folder'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Remedials_As_Orders'
+        ParamType = ptInput
       end
       item
         Name = 'Stock_System'
         DataType = ftString
+        ParamType = ptInput
       end>
   end
   object qryCustSalesSource: TFDQuery

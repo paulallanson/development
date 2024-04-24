@@ -1,9 +1,9 @@
 object frmWTLUContracts: TfrmWTLUContracts
-  Left = 239
-  Top = 111
+  Left = 242
+  Top = 115
   Caption = 'Contract Quotes'
-  ClientHeight = 360
-  ClientWidth = 912
+  ClientHeight = 385
+  ClientWidth = 939
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,7 @@ object frmWTLUContracts: TfrmWTLUContracts
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
-  Position = poDefault
+  Position = poDesigned
   Visible = True
   OnActivate = FormActivate
   OnClose = FormClose
@@ -23,44 +23,44 @@ object frmWTLUContracts: TfrmWTLUContracts
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 912
+    Width = 939
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 28
-        Width = 906
+        MinHeight = 30
+        Width = 933
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 897
-      Height = 28
+      Width = 924
+      Height = 30
       Align = alLeft
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        897
-        28)
+        924
+        30)
       object Label2: TLabel
         Left = 0
-        Top = 1
-        Width = 137
+        Top = 0
+        Width = 130
         Height = 25
         Caption = 'Contract Quotes'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -19
+        Font.Color = clNavy
+        Font.Height = -18
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object lblWorkinProgress: TLabel
         Left = 144
-        Top = 3
+        Top = 2
         Width = 196
         Height = 21
         Caption = '-  displaying only live orders'
@@ -74,22 +74,23 @@ object frmWTLUContracts: TfrmWTLUContracts
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 659
-        Top = 7
-        Width = 78
-        Height = 13
+        Left = 677
+        Top = 9
+        Width = 81
+        Height = 15
         Anchors = [akTop, akRight]
         Caption = 'Customer Filter'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
+        Font.Color = clNavy
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 683
       end
       object cmbCustomerFilter: TComboBox
-        Left = 739
-        Top = 3
+        Left = 766
+        Top = 6
         Width = 145
         Height = 21
         Style = csDropDownList
@@ -107,19 +108,19 @@ object frmWTLUContracts: TfrmWTLUContracts
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 912
+    Width = 939
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 906
+        Width = 933
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 897
+      Width = 924
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58
@@ -199,8 +200,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 912
-    Height = 223
+    Width = 939
+    Height = 248
     Align = alClient
     DataSource = dtmdlContract.dtsAllContracts
     DrawingStyle = gdsGradient
@@ -225,6 +226,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Number'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 101
         Visible = True
       end
@@ -232,6 +238,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Contract_Date'
         Title.Caption = 'Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -239,6 +250,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 136
         Visible = True
       end
@@ -246,6 +262,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Contract_Description'
         Title.Caption = 'Description'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 139
         Visible = True
       end
@@ -253,12 +274,22 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Customer_is_Speculative'
         Title.Caption = 'Speculative'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 71
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Developer'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 202
         Visible = True
       end
@@ -266,6 +297,11 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Site_Location'
         Title.Caption = 'Site Location'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 244
         Visible = True
       end
@@ -273,14 +309,19 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Expiry_Date'
         Title.Caption = 'Expiry Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 83
         Visible = True
       end>
   end
   object Panel1: TPanel
     Left = 0
-    Top = 300
-    Width = 912
+    Top = 325
+    Width = 939
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -301,7 +342,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 621
+      Left = 648
       Top = 1
       Width = 290
       Height = 39
@@ -354,8 +395,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 341
-    Width = 912
+    Top = 366
+    Width = 939
     Height = 19
     Panels = <
       item

@@ -810,8 +810,8 @@ begin
     SortField := Column.FieldName;
 
   for icolumn := 0 to pred(dbgDetails.columns.count) do
-    dbgDetails.Columns[icolumn].Title.Font.Style := [fsBold];
-  Column.Title.Font.Style := [fsUnderline, fsBold];
+    dbgDetails.Columns[icolumn].Title.Font.Style := [];
+  Column.Title.Font.Style := [fsbold];
 
   dtmdlAllJobs.SortOrder := SortField + SortType;
   dtmdlAllJobs.SortType := SortType;

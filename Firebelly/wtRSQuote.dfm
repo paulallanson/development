@@ -28,6 +28,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
+    ExplicitTop = 308
   end
   object Button4: TButton
     Left = 374
@@ -38,6 +39,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
+    ExplicitTop = 308
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -76,6 +78,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
+    ExplicitTop = 308
   end
   object btnEmail: TButton
     Left = 184
@@ -87,6 +90,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
+    ExplicitTop = 308
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
@@ -335,9 +339,7 @@ object frmWTRSQuote: TfrmWTRSQuote
       '        Account_Manager.Operator_Name AS Account_Manager_Name,'
       '        Account_Manager.Telephone_number AS AM_Telephone_Number,'
       '        Vat.Vat_rate,'
-      '        Sales_Lead_Source.Sales_Lead_Source,'
       '        Sales_Lead_Source.Sales_Lead_Source_Descr,'
-      '        Material_Type.Material_Type,'
       '        Material_Type.Description AS Material_Description,'
       '        Customer.Customer_is_Speculative'
       'FROM Customer'
@@ -363,6 +365,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     ParamData = <
       item
         Name = 'Int_Sel'
+        ParamType = ptInput
       end>
   end
 end

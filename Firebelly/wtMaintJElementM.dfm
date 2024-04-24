@@ -4,7 +4,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   BorderStyle = bsDialog
   Caption = 'Global change elements'
   ClientHeight = 187
-  ClientWidth = 536
+  ClientWidth = 520
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,12 +18,13 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 520
     Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 530
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -218,8 +219,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 432
-    Top = 32
+    Left = 444
+    Top = 16
     ParamData = <
       item
         Name = 'Worktop'
@@ -230,8 +231,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 424
-    Top = 72
+    Left = 418
+    Top = 90
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
@@ -241,8 +242,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
       'Order by Description')
-    Left = 384
-    Top = 72
+    Left = 368
+    Top = 90
     ParamData = <
       item
         Name = 'material_type'

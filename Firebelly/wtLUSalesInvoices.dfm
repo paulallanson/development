@@ -2,8 +2,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   Left = 182
   Top = 105
   Caption = 'Sales Invoices'
-  ClientHeight = 432
-  ClientWidth = 1247
+  ClientHeight = 414
+  ClientWidth = 1235
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1247
+    Width = 1235
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1241
+        Width = 1229
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1232
+      Width = 1220
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 66
@@ -137,10 +137,9 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1247
-    Height = 259
+    Width = 1235
+    Height = 241
     Align = alClient
-    DataSource = dtmdlSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -163,6 +162,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Invoice_no'
         Title.Caption = 'Invoice No.'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 63
         Visible = True
       end
@@ -170,6 +174,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Invoice_Date'
         Title.Caption = 'Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 65
         Visible = True
       end
@@ -177,12 +186,22 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 150
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 134
         Visible = True
       end
@@ -190,6 +209,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Reference'
         Title.Caption = 'Order No.'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 61
         Visible = True
       end
@@ -197,6 +221,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Goods_Value'
         Title.Caption = 'Goods'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 51
         Visible = True
       end
@@ -204,6 +233,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Vat_Value'
         Title.Caption = 'VAT'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 50
         Visible = True
       end
@@ -211,6 +245,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 70
         Visible = True
       end
@@ -218,6 +257,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Status_Description'
         Title.Caption = 'Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 111
         Visible = True
       end
@@ -225,6 +269,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Paid_Amount'
         Title.Caption = 'Total Paid'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 86
         Visible = True
       end
@@ -232,6 +281,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 48
         Visible = True
       end
@@ -239,6 +293,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Paid_Status'
         Title.Caption = 'Paid Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 78
         Visible = True
       end
@@ -246,6 +305,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Deposit_Amount'
         Title.Caption = 'Deposit Paid'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 85
         Visible = True
       end
@@ -253,6 +317,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Rep_Name'
         Title.Caption = 'Rep'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 95
         Visible = True
       end
@@ -260,6 +329,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Account_Manager_Name'
         Title.Caption = 'Office Contact'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 110
         Visible = True
       end
@@ -267,6 +341,11 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Created By'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -274,18 +353,33 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Order_Reference'
         Title.Caption = 'Order Reference'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Branch_Name'
         Title.Caption = 'Site Name'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Date_Required'
         Title.Caption = 'Fitting Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 80
         Visible = True
       end
@@ -293,20 +387,25 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Expanded = False
         FieldName = 'Revenue_Centre_Descr'
         Title.Caption = 'Revenue Centre'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 96
         Visible = True
       end>
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 333
-    Width = 1247
+    Top = 315
+    Width = 1235
     Height = 80
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     object Panel2: TPanel
-      Left = 975
+      Left = 963
       Top = 1
       Width = 271
       Height = 78
@@ -471,8 +570,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 413
-    Width = 1247
+    Top = 395
+    Width = 1235
     Height = 19
     Panels = <
       item
@@ -482,62 +581,75 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
         Width = 50
       end>
   end
-  object Panel3: TPanel
+  object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1247
+    Width = 1235
     Height = 30
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvNone
-    Color = clSilver
-    ParentBackground = False
-    TabOrder = 4
-    DesignSize = (
-      1247
-      30)
-    object Label4: TLabel
-      Left = 0
-      Top = 1
-      Width = 116
-      Height = 25
-      Caption = 'Sales Invoices'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -19
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label5: TLabel
-      Left = 957
-      Top = 7
-      Width = 78
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Customer Filter'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ExplicitLeft = 654
-    end
-    object cmbCustomerFilter: TComboBox
-      Left = 1037
-      Top = 3
-      Width = 145
-      Height = 21
-      Style = csDropDownList
-      Anchors = [akTop, akRight]
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 30
+        Width = 1229
+      end>
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 1220
+      Height = 30
+      Align = alClient
+      BevelInner = bvLowered
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
       TabOrder = 0
-      OnChange = cmbCustomerFilterChange
-      Items.Strings = (
-        'All'
-        'Trade'
-        'Retail'
-        'Commercial')
+      DesignSize = (
+        1220
+        30)
+      object Label4: TLabel
+        Left = 0
+        Top = 0
+        Width = 109
+        Height = 25
+        Caption = 'Sales Invoices'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 972
+        Top = 8
+        Width = 81
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Customer Filter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 978
+      end
+      object cmbCustomerFilter: TComboBox
+        Left = 1059
+        Top = 5
+        Width = 145
+        Height = 21
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+        OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
+      end
     end
   end
   object imglstFunctions: TImageList

@@ -33,11 +33,13 @@ object frmWTMain: TfrmWTMain
         MinHeight = 36
         Width = 1475
       end>
+    ExplicitWidth = 1475
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
       Width = 1466
       Height = 36
+      Align = alClient
       AutoSize = True
       ButtonHeight = 36
       ButtonWidth = 64
@@ -166,6 +168,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
+    ExplicitTop = 626
+    ExplicitWidth = 1475
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected
