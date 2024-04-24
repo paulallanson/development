@@ -2,8 +2,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Left = 297
   Top = 42
   Caption = 'Remedial details'
-  ClientHeight = 676
-  ClientWidth = 898
+  ClientHeight = 681
+  ClientWidth = 907
   Color = clBtnFace
   Constraints.MinHeight = 660
   Font.Charset = DEFAULT_CHARSET
@@ -37,12 +37,14 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   end
   object pnlbottom: TPanel
     Left = 0
-    Top = 600
-    Width = 898
+    Top = 605
+    Width = 907
     Height = 57
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 591
+    ExplicitWidth = 892
     object lblDelete: TLabel
       Left = 245
       Top = 22
@@ -129,13 +131,14 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 898
+    Width = 907
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 892
     DesignSize = (
-      898
+      907
       81)
     object Label6: TLabel
       Left = 8
@@ -151,12 +154,13 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 734
+      Left = 737
       Top = 16
       Width = 24
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date'
+      ExplicitLeft = 734
     end
     object Label15: TLabel
       Left = 288
@@ -173,12 +177,13 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Caption = 'Reported by'
     end
     object Label17: TLabel
-      Left = 649
+      Left = 652
       Top = 48
       Width = 53
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Caused by'
+      ExplicitLeft = 649
     end
     object dblkpOperator: TDBLookupComboBox
       Left = 77
@@ -191,16 +196,17 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       TabOrder = 0
     end
     object edtDateRaised: TEdit
-      Left = 771
+      Left = 774
       Top = 12
       Width = 89
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 1
       OnExit = edtDateRaisedExit
+      ExplicitLeft = 759
     end
     object btnDateRequired: TBitBtn
-      Left = 871
+      Left = 874
       Top = 10
       Width = 25
       Height = 25
@@ -221,6 +227,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnDateRequiredClick
+      ExplicitLeft = 859
     end
     object dblkpRemedialType: TDBLookupComboBox
       Left = 368
@@ -243,7 +250,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       TabOrder = 4
     end
     object dblkpRemedialDept: TDBLookupComboBox
-      Left = 707
+      Left = 710
       Top = 44
       Width = 153
       Height = 21
@@ -252,6 +259,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       ListField = 'Remedial_Dept_Descr'
       ListSource = dtsRemedailDept
       TabOrder = 5
+      ExplicitLeft = 695
     end
     object BitBtn1: TBitBtn
       Left = 584
@@ -288,7 +296,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       OnClick = BitBtn3Click
     end
     object BitBtn4: TBitBtn
-      Left = 872
+      Left = 875
       Top = 43
       Width = 22
       Height = 22
@@ -304,38 +312,41 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       ParentFont = False
       TabOrder = 8
       OnClick = BitBtn4Click
+      ExplicitLeft = 860
     end
   end
   object pnlfooter: TPanel
     Left = 0
-    Top = 495
-    Width = 898
-    Height = 105
+    Top = 509
+    Width = 907
+    Height = 96
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 504
+    ExplicitWidth = 898
     DesignSize = (
-      898
-      105)
+      907
+      96)
     object Label3: TLabel
-      Left = 677
-      Top = 49
+      Left = 672
+      Top = 46
       Width = 89
       Height = 13
       Caption = 'Proposed fit date'
     end
     object Label4: TLabel
       Left = 607
-      Top = 81
+      Top = 75
       Width = 77
       Height = 13
       Caption = 'Remedial Fitter'
     end
     object Label5: TLabel
       Left = 731
-      Top = 17
+      Top = 13
       Width = 23
-      Height = 13
+      Height = 15
       Anchors = [akTop, akRight]
       Caption = 'Cost'
       Font.Charset = DEFAULT_CHARSET
@@ -347,28 +358,28 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object Label18: TLabel
       Left = 8
-      Top = 17
+      Top = 15
       Width = 95
-      Height = 13
+      Height = 15
       Caption = 'Original Templater'
     end
     object Label19: TLabel
       Left = 8
-      Top = 49
+      Top = 46
       Width = 72
       Height = 13
       Caption = 'Original Fitter'
     end
     object Label20: TLabel
       Left = 8
-      Top = 81
+      Top = 75
       Width = 77
       Height = 13
       Caption = 'Sub-contractor'
     end
     object SpeedButton6: TSpeedButton
-      Left = 330
-      Top = 75
+      Left = 324
+      Top = 68
       Width = 25
       Height = 25
       Hint = 'Clear Default Upstand Size'
@@ -396,7 +407,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object dblkpFitters: TDBLookupComboBox
       Left = 685
-      Top = 77
+      Top = 71
       Width = 171
       Height = 21
       KeyField = 'Fitter'
@@ -407,9 +418,9 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object edtPrice: TCREditMoney
       Left = 766
-      Top = 13
+      Top = 9
       Width = 89
-      Height = 21
+      Height = 23
       Anchors = [akTop, akRight]
       TabOrder = 1
       Text = 'edtPrice'
@@ -417,7 +428,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object edtInstallDate: TEdit
       Left = 766
-      Top = 45
+      Top = 42
       Width = 89
       Height = 21
       TabOrder = 2
@@ -425,7 +436,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object btnInstallDate: TBitBtn
       Left = 869
-      Top = 43
+      Top = 40
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -447,7 +458,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object BitBtn5: TBitBtn
       Left = 869
-      Top = 75
+      Top = 69
       Width = 25
       Height = 25
       Hint = 'Search for Customer'
@@ -464,7 +475,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object dblkpOriginalTemplater: TDBLookupComboBox
       Left = 110
-      Top = 13
+      Top = 10
       Width = 171
       Height = 21
       KeyField = 'Fitter'
@@ -475,7 +486,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object dblkpOriginalFitter: TDBLookupComboBox
       Left = 110
-      Top = 45
+      Top = 42
       Width = 171
       Height = 21
       KeyField = 'Fitter'
@@ -486,7 +497,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object edtCustomer: TEdit
       Left = 110
-      Top = 77
+      Top = 71
       Width = 171
       Height = 21
       ReadOnly = True
@@ -495,7 +506,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object btnCustomer: TButton
       Left = 293
-      Top = 75
+      Top = 69
       Width = 25
       Height = 25
       Caption = '...'
@@ -510,9 +521,9 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object BitBtn6: TBitBtn
       Left = 293
-      Top = 11
+      Top = 7
       Width = 25
-      Height = 25
+      Height = 27
       Hint = 'Search for Customer'
       Caption = '...'
       Font.Charset = ANSI_CHARSET
@@ -529,20 +540,23 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   object Panel2: TPanel
     Left = 0
     Top = 81
-    Width = 898
-    Height = 414
+    Width = 907
+    Height = 428
     Align = alClient
     Caption = 'Panel2'
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 898
+    ExplicitHeight = 414
     object pnlLeft: TPanel
       Left = 1
       Top = 1
       Width = 448
-      Height = 412
+      Height = 426
       Align = alLeft
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 403
       object Label8: TLabel
         Left = 8
         Top = 112
@@ -582,6 +596,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Top = 128
         Width = 430
         Height = 80
+        MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = EnableOK
@@ -591,6 +606,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Top = 232
         Width = 430
         Height = 80
+        MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 2
         OnChange = EnableOK
@@ -617,11 +633,13 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object pnlRight: TPanel
       Left = 449
       Top = 1
-      Width = 448
-      Height = 412
+      Width = 457
+      Height = 426
       Align = alClient
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 442
+      ExplicitHeight = 403
       object Label9: TLabel
         Left = 10
         Top = 112
@@ -661,6 +679,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Top = 128
         Width = 430
         Height = 80
+        MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 1
         OnChange = EnableOK
@@ -670,6 +689,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Top = 232
         Width = 430
         Height = 80
+        MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 2
         OnChange = EnableOK
@@ -688,6 +708,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Top = 24
         Width = 430
         Height = 80
+        MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 0
         OnChange = EnableOK
@@ -696,10 +717,12 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 657
-    Width = 898
+    Top = 662
+    Width = 907
     Height = 19
     Panels = <>
+    ExplicitTop = 648
+    ExplicitWidth = 892
   end
   object qryFitter: TFDQuery
     ConnectionName = 'wt'

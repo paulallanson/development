@@ -60,6 +60,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 485
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -187,13 +188,13 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     SQL.Strings = (
       'select *'
       'from Edge_Type')
-    Left = 16
-    Top = 136
+    Left = 20
+    Top = 98
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 56
-    Top = 136
+    Left = 70
+    Top = 98
   end
   object qryCOThickness: TFDQuery
     ConnectionName = 'wt'
@@ -241,8 +242,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'cutout = :cutout')
-    Left = 320
-    Top = 136
+    Left = 368
+    Top = 98
     ParamData = <
       item
         Name = 'Material_type'

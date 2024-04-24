@@ -2,8 +2,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
   Left = 267
   Top = 198
   Caption = 'Other charges'
-  ClientHeight = 187
-  ClientWidth = 367
+  ClientHeight = 212
+  ClientWidth = 375
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -124,13 +124,13 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Price_basis')
-    Left = 296
-    Top = 16
+    Left = 34
+    Top = 28
   end
   object dtsPriceBasis: TDataSource
     DataSet = lkpPriceBasis
-    Left = 336
-    Top = 16
+    Left = 84
+    Top = 28
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -143,8 +143,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
       '  Allow_Bespoke_Detail = :Allow_Bespoke_Detail'
       'WHERE'
       '  Extra_Charge = :Extra_Charge')
-    Left = 144
-    Top = 104
+    Left = 148
+    Top = 50
     ParamData = <
       item
         Name = 'Description'
@@ -173,8 +173,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
       'Select Max(Extra_Charge)+1, :GUID, :Price_Pointer, '#39'N'#39
       'From Extra_Charge'
       ' ')
-    Left = 200
-    Top = 104
+    Left = 218
+    Top = 50
     ParamData = <
       item
         Name = 'GUID'
@@ -191,8 +191,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
       'Select Extra_Charge'
       'From Extra_Charge'
       'Where Description = :GUID')
-    Left = 256
-    Top = 104
+    Left = 288
+    Top = 50
     ParamData = <
       item
         Name = 'GUID'
@@ -205,7 +205,7 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     SQL.Strings = (
       ''
       '')
-    Left = 328
-    Top = 104
+    Left = 74
+    Top = 138
   end
 end

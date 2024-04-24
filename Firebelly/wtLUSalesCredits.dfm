@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 373
-  ClientWidth = 1247
+  ClientHeight = 270
+  ClientWidth = 870
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1247
+    Width = 870
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1241
+        Width = 864
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1232
+      Width = 855
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1220
+        Width = 855
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -54,6 +54,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         ShowHint = True
         TabOrder = 0
         Wrapable = False
+        ExplicitWidth = 843
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -124,8 +125,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1247
-    Height = 195
+    Width = 870
+    Height = 121
     Align = alClient
     DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
     DrawingStyle = gdsGradient
@@ -155,6 +156,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 78
         Visible = True
       end
@@ -167,6 +173,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Date'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 65
         Visible = True
       end
@@ -179,6 +190,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Customer'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 150
         Visible = True
       end
@@ -190,6 +206,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 161
         Visible = True
       end
@@ -202,6 +223,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Invoice No.'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 61
         Visible = True
       end
@@ -214,6 +240,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Goods'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 51
         Visible = True
       end
@@ -226,6 +257,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'VAT'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 50
         Visible = True
       end
@@ -238,6 +274,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Total'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 70
         Visible = True
       end
@@ -250,6 +291,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 83
         Visible = True
       end
@@ -262,6 +308,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Rep'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 139
         Visible = True
       end
@@ -274,6 +325,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Office Contact'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 158
         Visible = True
       end
@@ -286,6 +342,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Created By'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 137
         Visible = True
       end
@@ -298,6 +359,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Order Reference'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 149
         Visible = True
       end
@@ -305,6 +371,11 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Expanded = False
         FieldName = 'Branch_Name'
         Title.Caption = 'Site Name'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -312,47 +383,67 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Expanded = False
         FieldName = 'Revenue_Centre_Descr'
         Title.Caption = 'Revenue Centre'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 102
         Visible = True
       end>
   end
-  object pnlFooter: TPanel
+  object Panel1: TPanel
     Left = 0
-    Top = 269
-    Width = 1247
-    Height = 85
+    Top = 195
+    Width = 870
+    Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    object Label1: TLabel
+      Left = 8
+      Top = 16
+      Width = 86
+      Height = 13
+      Caption = 'Customer Search'
+    end
+    object edtSearch: TEdit
+      Left = 104
+      Top = 12
+      Width = 153
+      Height = 21
+      TabOrder = 0
+      OnChange = edtSearchChange
+    end
     object Panel2: TPanel
-      Left = 976
+      Left = 586
       Top = 1
-      Width = 270
-      Height = 83
+      Width = 283
+      Height = 54
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 0
+      TabOrder = 1
       DesignSize = (
-        270
-        83)
+        283
+        54)
       object Label2: TLabel
-        Left = 0
+        Left = 16
         Top = 11
         Width = 75
         Height = 13
         Caption = 'Credit Number'
       end
       object Label3: TLabel
-        Left = 0
+        Left = 16
         Top = 36
         Width = 58
         Height = 13
         Caption = 'Credit Date'
       end
       object btnClose: TButton
-        Left = 187
-        Top = 41
+        Left = 200
+        Top = 12
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -361,7 +452,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         OnClick = btnCloseClick
       end
       object edtSalesInvNo: TEdit
-        Left = 88
+        Left = 104
         Top = 7
         Width = 81
         Height = 21
@@ -369,121 +460,45 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         OnKeyPress = edtSalesInvNoKeyPress
       end
       object edtInvoiceDate: TEdit
-        Left = 88
+        Left = 104
         Top = 32
         Width = 81
         Height = 21
         TabOrder = 2
       end
     end
-    object pnlSearch: TPanel
-      Left = 1
-      Top = 1
-      Width = 632
-      Height = 83
-      Align = alLeft
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 1
-      object Label1: TLabel
-        Left = 8
-        Top = 48
-        Width = 86
-        Height = 13
-        Caption = 'Customer Search'
-      end
-      object edtSearch: TEdit
-        Left = 104
-        Top = 44
-        Width = 153
-        Height = 21
-        TabOrder = 0
-        OnChange = edtSearchChange
-      end
-      object chkbxShowArchived: TCheckBox
-        Left = 464
-        Top = 46
-        Width = 94
-        Height = 17
-        Caption = 'Show archived'
-        TabOrder = 1
-        OnClick = chkbxShowArchivedClick
-      end
-      object BitBtn1: TBitBtn
-        Left = 368
-        Top = 42
-        Width = 75
-        Height = 25
-        Caption = 'S&weep'
-        TabOrder = 2
-        OnClick = BitBtn1Click
-      end
-      object btnSearch: TBitBtn
-        Left = 272
-        Top = 42
-        Width = 75
-        Height = 25
-        Caption = '&Search'
-        TabOrder = 3
-        OnClick = btnSearchClick
-      end
-    end
-    object pnlRevenueCentre: TPanel
-      Left = 633
-      Top = 1
-      Width = 344
-      Height = 83
-      Align = alLeft
-      BevelOuter = bvNone
-      ParentBackground = False
+    object chkbxShowArchived: TCheckBox
+      Left = 464
+      Top = 14
+      Width = 113
+      Height = 17
+      Caption = 'Show archived'
       TabOrder = 2
-      object rdgrpRevenueCentre: TRadioGroup
-        Left = 7
-        Top = 1
-        Width = 121
-        Height = 73
-        Caption = 'Revenue Centre '
-        ItemIndex = 0
-        Items.Strings = (
-          'Default'
-          'All'
-          'Selected')
-        ParentBackground = False
-        TabOrder = 0
-        OnClick = rdgrpRevenueCentreClick
-      end
-      object grpbxRevCentre: TGroupBox
-        Left = 133
-        Top = 1
-        Width = 203
-        Height = 73
-        ParentBackground = False
-        TabOrder = 1
-        Visible = False
-        object Label6: TLabel
-          Left = 8
-          Top = 12
-          Width = 81
-          Height = 13
-          Caption = 'Revenue Centre'
-        end
-        object dblkpRevCentre: TDBLookupComboBox
-          Left = 8
-          Top = 32
-          Width = 185
-          Height = 21
-          KeyField = 'Revenue_Centre'
-          ListField = 'Revenue_Centre_Descr'
-          TabOrder = 0
-          OnClick = dblkpRevCentreClick
-        end
-      end
+      OnClick = chkbxShowArchivedClick
+    end
+    object BitBtn1: TBitBtn
+      Left = 368
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'S&weep'
+      TabOrder = 3
+      OnClick = BitBtn1Click
+    end
+    object btnSearch: TBitBtn
+      Left = 272
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = '&Search'
+      TabOrder = 4
+      OnClick = btnSearchClick
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 354
-    Width = 1247
+    Top = 251
+    Width = 870
     Height = 19
     Panels = <
       item
@@ -493,61 +508,75 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Width = 50
       end>
   end
-  object Panel3: TPanel
+  object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1247
+    Width = 870
     Height = 30
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvNone
-    Color = clSilver
-    ParentBackground = False
-    TabOrder = 4
-    DesignSize = (
-      1247
-      30)
-    object Label4: TLabel
-      Left = 2
-      Top = 3
-      Width = 109
-      Height = 24
-      Caption = 'Sales Credits'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -19
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label5: TLabel
-      Left = 1023
-      Top = 7
-      Width = 69
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Customer Filter'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
-    object cmbCustomerFilter: TComboBox
-      Left = 1103
-      Top = 3
-      Width = 145
-      Height = 21
-      Style = csDropDownList
-      Anchors = [akTop, akRight]
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 30
+        Width = 864
+      end>
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 855
+      Height = 30
+      Align = alTop
+      BevelInner = bvLowered
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
       TabOrder = 0
-      OnChange = cmbCustomerFilterChange
-      Items.Strings = (
-        'All'
-        'Trade'
-        'Retail'
-        'Commercial')
+      DesignSize = (
+        855
+        30)
+      object Label4: TLabel
+        Left = 2
+        Top = 0
+        Width = 107
+        Height = 25
+        Caption = 'Sales Credits'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -19
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 580
+        Top = 7
+        Width = 78
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Customer Filter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 656
+      end
+      object cmbCustomerFilter: TComboBox
+        Left = 660
+        Top = 3
+        Width = 145
+        Height = 21
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+        OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
+      end
     end
   end
   object imglstFunctions: TImageList

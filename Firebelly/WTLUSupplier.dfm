@@ -2,8 +2,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 378
-  ClientWidth = 897
+  ClientHeight = 360
+  ClientWidth = 885
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 897
+    Width = 885
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -33,34 +33,34 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 895
+      Width = 883
       Height = 75
       Bands = <
         item
           Control = Panel3
           ImageIndex = -1
-          MinHeight = 28
-          Width = 889
+          MinHeight = 30
+          Width = 877
         end>
       object Panel3: TPanel
         Left = 11
         Top = 0
-        Width = 880
-        Height = 28
+        Width = 868
+        Height = 30
         Align = alLeft
         BevelOuter = bvNone
-        Color = clSilver
+        Color = 16642529
         ParentBackground = False
         TabOrder = 0
         object Label2: TLabel
           Left = 0
           Top = 1
-          Width = 78
+          Width = 73
           Height = 25
           Caption = 'Suppliers'
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlue
-          Font.Height = -19
+          Font.Color = clNavy
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -71,19 +71,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 897
+    Width = 885
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 891
+        Width = 879
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 882
+      Width = 870
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 58
@@ -145,8 +145,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 897
-    Height = 245
+    Width = 885
+    Height = 227
     Align = alClient
     DataSource = dtsSuppliers
     DrawingStyle = gdsGradient
@@ -171,6 +171,11 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'Supplier_name'
         Title.Caption = 'Supplier'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 202
         Visible = True
       end
@@ -178,6 +183,11 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'Telephone_number'
         Title.Caption = 'Phone'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 94
         Visible = True
       end
@@ -185,6 +195,11 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'Fax_Number'
         Title.Caption = 'Fax'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 104
         Visible = True
       end
@@ -192,6 +207,11 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'Town_City'
         Title.Caption = 'Town'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 127
         Visible = True
       end
@@ -199,6 +219,11 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'PostCode'
         Title.Caption = 'Postcode'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 116
         Visible = True
       end
@@ -206,17 +231,32 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'Account_Code'
         Title.Caption = 'Account Code'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Street'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 181
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Locale'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 87
         Visible = True
       end
@@ -224,14 +264,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Expanded = False
         FieldName = 'County_State'
         Title.Caption = 'County'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -12
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 100
         Visible = True
       end>
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 359
-    Width = 897
+    Top = 341
+    Width = 885
     Height = 19
     Panels = <
       item
@@ -243,8 +288,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object Panel2: TPanel
     Left = 0
-    Top = 318
-    Width = 897
+    Top = 300
+    Width = 885
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -283,7 +328,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
-      Left = 711
+      Left = 699
       Top = 1
       Width = 185
       Height = 39

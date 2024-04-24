@@ -255,6 +255,7 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
+  wtLUCustomerNew in '..\wtLUCustomerNew.pas' {frmWTLUCustomerNew},
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
 
 {$R *.RES}
