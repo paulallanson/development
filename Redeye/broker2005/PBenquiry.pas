@@ -3,13 +3,12 @@ unit PBenquiry;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, ComCtrls, Grids, Spin, DB, PBPOObjects,
-  OleCtnrs, PBEnqObjects, PBMaintEnquiryDoc, ShellAPI, PBMaintPOEmail,
-  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget, DragDropFile, DropComboTarget;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, ExtCtrls, StdCtrls, Buttons,
+  ComCtrls, Grids, Spin, DB, PBPOObjects, OleCtnrs, PBEnqObjects, PBMaintEnquiryDoc, ShellAPI, PBMaintPOEmail,
+  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DragDrop, DropTarget,
+  DragDropFile, DropComboTarget;
 
 type
   TPBEnquiryFrm = class(TForm)
@@ -352,8 +351,6 @@ type
     procedure AddDocumentToEnquiry;
     function GetActiveCustomerContact(tempCust, tempBranch,
       tempCode: integer): integer;
-    procedure ProcessDragAndDrop(FilesList: TUnicodeStrings);
-    procedure MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
     function GetFilesPath: string;
   public
     { Public declarations }
@@ -385,12 +382,11 @@ var
 
 implementation
 
-uses Contnrs, 
-  System.UITypes,
-  PBEnqLineDtls, PBenqline, PBLUCust, PBEnqAddDtls, pbDatabase,
+uses
+  Contnrs, System.UITypes, PBEnqLineDtls, PBenqline, PBLUCust, PBEnqAddDtls, pbDatabase,
   PBEnqDataMod, PBPODataMod, PBPOToEnq, DateSelV5, pbMainMenu, PBNarrativeDM,
   PBLUBranch, PBEnqSelSup, PBLUCConta, PBLUCRep, PBMaintPaper, PBLUSConta, PBPartDescDg,
-  PBWordOLE, PBExcelOLE, TaoMapi, AxCtrls, ComObj;
+  PBWordOLE, PBExcelOLE, TaoMapi, AxCtrls, ComObj, Shared.DragDrop.Helper;
 
 var
   ipart: Integer;
@@ -1009,11 +1005,9 @@ end;
 
 procedure TPBEnquiryFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
-var
-  FilesList: TUnicodeStrings;
 begin
-  FilesList := DropComboTarget1.Files;
-  ProcessDragAndDrop(FilesList);
+  var TargetPath := GetFilesPath;
+  DropComboTarget1.SaveDroppedFiles(TargetPath, nil);
 end;
 
 procedure TPBEnquiryFrm.UpdatePartDetails(iNewPart: Integer);
@@ -1811,14 +1805,6 @@ begin
     else
       UpEnqSuppliers(iline);
   end;
-end;
-
-procedure TPBEnquiryFrm.ProcessDragAndDrop(FilesList: TUnicodeStrings);
-var
-  Path: string;
-begin
-  Path := GetFilesPath;
-  MyWinControlProcessData(FilesList, Path);
 end;
 
 function TPBEnquiryFrm.ProductTypeMinSuppliers(ProdType: integer): integer;
@@ -4112,68 +4098,6 @@ begin
         ExecSQL;
       end;
     end;
-end;
-
-procedure TPBEnquiryFrm.MyWinControlProcessData(const FilesList: TUnicodeStrings; const Path: string);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'The file comes not from MS Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  icount: integer;
-  Document: TDocument;
-begin
-  MyPath := Path;
-  if not DirectoryExists(MyPath) then
-    CreateDirectory(MyPath);
-
-  for i := 0 to Pred(FilesList.Count) do
-  begin
-    MyFileName := ExtractFileName(FilesList[i]);
-    MyExtension := LowerCase(ExtractFileExt(MyFileName));
-
-    if MyExtension = cExtensionOutlook then
-    begin
-      { Store the contents as a file on the disk. }
-      MyFilePath := MyPath + MyFileName;
-
-      {If the file name already exists then increase the number}
-      icount := 0;
-      NewFilePath := MyFilePath;
-      while FileExists(NewFilePath) = true do
-      begin
-        inc(icount);
-        NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-      end;
-      MyFilePath := NewFilePath;
-
-      { GUI }
-      //  This is where we add the data into the grid and to the document component
-      //ListView1.Items.Add.Caption := MyFilePath;
-      Document := TDocument.Create;
-      Document.Title := Copy(MyFileName, 1, Length(MyFileName)-4);
-      Document.Path := Copy(MyFilePath, length(dmBroker.GetCompanyEnquiryDirectory)+1,255);
-
-      if Assigned(document) then
-      begin
-        Enquiry.Lines[EnquiryLineGrid.Row - 1].DocumentList.add(document);
-        self.DisplayDocumentList;
-      end;
-    end
-    else
-    begin
-      MyWarning := cNotOutlookWarning;
-      if MyExtension = cExtensionOutlookExpress then
-        MyWarning := MyWarning + cOutlookExpressWarning;
-      MessageDlg(MyWarning, mtWarning, [mbOK], 0);
-    end;
-  end;
 end;
 
 procedure TPBEnquiryFrm.PartListDblClick(Sender: TObject);

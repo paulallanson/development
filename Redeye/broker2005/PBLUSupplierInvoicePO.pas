@@ -34,8 +34,6 @@ type
     edtJBNumber: TEdit;
     btnPO: TBitBtn;
     procedure FormShow(Sender: TObject);
-    procedure DrawField(const Value: string; const Rect: TRect;
-      vCanvas: TCanvas; vFont: TFont; vAlignment: TAlignment);
     procedure edtSupplierNameChange(Sender: TObject);
     procedure SearchTimerTimer(Sender: TObject);
     procedure dbgdetailsDblClick(Sender: TObject);
@@ -101,37 +99,6 @@ begin
 //  edtSupplierName.Text := sSupplierName;
   dmSupplierInvoice.SupplierName := edtSupplierName.text;
   dmSupplierInvoice.refreshPOdata;
-end;
-
-procedure TPBLUSupplierInvoicePOFrm.DrawField(const Value: string; const Rect: TRect;
-  vCanvas: TCanvas; vFont: TFont; vAlignment: TAlignment);
-var
-  X: Integer;
-begin
-  X := 0;
-  vCanvas.Font := vFont;
-  vCanvas.Brush.Color := clhighlight;
-  vCanvas.Font.Color := clwhite;
-  vCanvas.Font.Style := vCanvas.Font.Style;
-  case vAlignment of
-    taRightJustify:
-      begin
-        SetTextAlign(vCanvas.Handle, TA_RIGHT);
-        X := Rect.Right - 2;
-      end;
-    taLeftJustify:
-      begin
-        SetTextAlign(vCanvas.Handle, TA_LEFT);
-        X := Rect.Left + 2;
-      end;
-    taCenter:
-      begin
-        SetTextAlign(vCanvas.Handle, TA_CENTER);
-        X := (Rect.Right + Rect.Left) div 2;
-      end;
-  end;
-  vCanvas.TextRect(Rect, X, Rect.Top + 2, Value);
-  SetTextAlign(vCanvas.Handle, TA_LEFT);
 end;
 
 procedure TPBLUSupplierInvoicePOFrm.edtSupplierNameChange(Sender: TObject);

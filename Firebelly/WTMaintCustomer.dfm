@@ -27,8 +27,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 515
-    ExplicitWidth = 832
     object lblDelete: TLabel
       Left = 397
       Top = 14
@@ -111,8 +109,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 832
-    ExplicitHeight = 515
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
@@ -123,8 +119,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Align = alClient
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 824
-        ExplicitHeight = 487
         DesignSize = (
           830
           496)
@@ -2183,8 +2177,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 557
-    ExplicitWidth = 832
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer
@@ -2879,11 +2871,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 408
     Top = 224
   end
-  object DropFileTarget1: TDropFileTarget
+  object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]
-    OnDrop = DropFileTarget1Drop
+    OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    OptimizedMove = True
     Left = 740
     Top = 64
   end

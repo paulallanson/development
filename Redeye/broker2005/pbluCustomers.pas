@@ -1654,13 +1654,7 @@ begin
         end;
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TfrmpbluCustomers.LUCustomersQuotesClosed(var Message: TMessage);

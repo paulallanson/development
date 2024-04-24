@@ -3104,7 +3104,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
-        OnDrawColumnCell = dbgQuoteDetailsDrawColumnCell
         OnDblClick = dbgQuoteDetailsDblClick
         Columns = <
           item
@@ -3943,14 +3942,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
-            Width = 64
             Visible = True
           end>
       end
