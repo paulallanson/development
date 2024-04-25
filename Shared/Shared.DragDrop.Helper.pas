@@ -7,7 +7,8 @@ uses
   System.Classes,
   System.SysUtils,
   DragDropFormats,
-  DragDropFile;
+  DragDropFile,
+  System.Generics.Collections;
 
 type
   TDropComboTargetHelper = class helper for TDropComboTarget
@@ -20,13 +21,17 @@ type
     FFiles: TUnicodeStrings;
     FOnAfterSave: TProc;
     FTargetPath: string;
+    FProcessedFilesList: TList<string>;
+
+    procedure ProcessFilesFromList;
+    procedure ProcessFilesFromData;
 
     function SaveStreamToTempFile(const Index: Integer): string;
     function GetFile(const Index: Integer): string;
   public
     constructor Create(const TargetPath: string; const OnAfterSave: TProc);
-    procedure Save(const Streams: TStreamList); overload;
-    procedure Save(const Files: TUnicodeStrings); overload;
+    destructor Destroy; override;
+    procedure Save(const Files: TUnicodeStrings; const Streams: TStreamList);
   end;
 
 implementation
@@ -45,8 +50,7 @@ procedure TDropComboTargetHelper.SaveDroppedFiles(const TargetPath: string; cons
 begin
   var Saver := TDropComboStreamSaver.Create(TargetPath, OnAfterSave);
   try
-    Saver.Save(Data);
-    Saver.Save(Files);
+    Saver.Save(Files, Data);
   finally
     Saver.Free;
   end;
@@ -59,21 +63,30 @@ begin
   inherited Create;
   FTargetPath := TargetPath;
   FOnAfterSave := OnAfterSave;
+  FProcessedFilesList := TList<string>.Create;
 end;
 
-procedure TDropComboStreamSaver.Save(const Streams: TStreamList);
+procedure TDropComboStreamSaver.Save(const Files: TUnicodeStrings; const Streams: TStreamList);
 begin
+  FFiles := Files;
   FStreams := Streams;
-  var HasFilesDropped := (FStreams.Count > 0);
+  FProcessedFilesList.Clear;
 
-  if not HasFilesDropped then
-    Exit;
+  var HasFilesFromList := (FFiles.Count > 0);
+  var HasFilesFromData := (FStreams.Count > 0);
 
-  for var i := 0 to Pred(FStreams.Count) do
-  begin
-    var FilePath := SaveStreamToTempFile(i);
-    ProcessDroppedFile(FilePath, FTargetPath, FOnAfterSave);
-  end;
+  if HasFilesFromList then
+    ProcessFilesFromList;
+
+  if HasFilesFromData then
+    ProcessFilesFromData;
+
+end;
+
+destructor TDropComboStreamSaver.Destroy;
+begin
+  FProcessedFilesList.Free;
+  inherited;
 end;
 
 function TDropComboStreamSaver.GetFile(const Index: Integer): string;
@@ -81,20 +94,34 @@ begin
   Result := FFiles[Index];
 end;
 
-procedure TDropComboStreamSaver.Save(const Files: TUnicodeStrings);
+procedure TDropComboStreamSaver.ProcessFilesFromData;
 begin
-  FFiles := Files;
-  var HasFilesDropped := (FFiles.Count > 0);
+  var FilePath: string;
+  var FileName: string;
 
-  if not HasFilesDropped then
-    Exit;
+  for var i := 0 to Pred(FStreams.Count) do
+  begin
+    FilePath := SaveStreamToTempFile(i);
+    FileName := TPath.GetFileName(FilePath);
+
+    if not FProcessedFilesList.Contains(FileName) then
+      ProcessDroppedFile(FilePath, FTargetPath, FOnAfterSave);
+  end;
+end;
+
+procedure TDropComboStreamSaver.ProcessFilesFromList;
+begin
+  var FilePath: string;
+  var FileName: string;
 
   for var i := 0 to Pred(FFiles.Count) do
   begin
-    var FilePath := GetFile(i);
-    ProcessDroppedFile(FilePath, FTargetPath, FOnAfterSave);
-  end;
+    FilePath := GetFile(i);
+    FileName := TPath.GetFileName(FilePath);
 
+    ProcessDroppedFile(FilePath, FTargetPath, FOnAfterSave);
+    FProcessedFilesList.Add(FileName);
+  end;
 end;
 
 function TDropComboStreamSaver.SaveStreamToTempFile(const Index: Integer): string;
