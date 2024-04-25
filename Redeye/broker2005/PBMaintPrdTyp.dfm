@@ -579,17 +579,12 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       '        Nominal,'
       '        Purchase_Nominal,'
       '        Category)'
-      'Select Max(Product_Type)+1, :GUID, :GUID, '#39' '#39', '#39' '#39',:Category'
+      'Select Max(Product_Type)+1, :GUID, '#39' '#39', '#39' '#39', '#39' '#39',:Category'
       'From Product_Type'
       ' ')
     Left = 368
     Top = 128
     ParamData = <
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
       item
         Name = 'GUID'
         DataType = ftString
