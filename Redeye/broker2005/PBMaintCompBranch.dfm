@@ -3,8 +3,8 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   Top = 155
   BorderStyle = bsDialog
   Caption = 'Maintain company branches'
-  ClientHeight = 241
-  ClientWidth = 442
+  ClientHeight = 256
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -394,28 +394,13 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       '   Narrative,'
       '   Delivery_Narrative)'
       'SELECT 1, Max(Branch_no)+1, :GUID, NULL, :GUID, NULL,'
-      '  :GUID, :GUID, NULL, NULL FROM Company_Branch WHERE Company = 1'
+      '  :GUID, NULL, NULL, NULL FROM Company_Branch WHERE Company = 1'
       ''
       ''
       ''
       ' ')
     Left = 72
     ParamData = <
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
       item
         Name = 'GUID'
         DataType = ftString
@@ -514,7 +499,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       '   Narrative,'
       '   Delivery_Narrative)'
       'SELECT 1, Max(Branch_no)+1, :GUID, NULL, :GUID, NULL,'
-      '  :GUID, :GUID, NULL, NULL FROM Company_Branch'
+      '  :GUID, NULL, NULL, NULL FROM Company_Branch'
       ''
       ''
       ''
@@ -522,21 +507,6 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     Left = 48
     Top = 168
     ParamData = <
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
       item
         Name = 'GUID'
         DataType = ftString
