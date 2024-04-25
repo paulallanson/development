@@ -1676,27 +1676,27 @@ object STRPUnpaidStockFrm: TSTRPUnpaidStockFrm
     object qryReportDelivery_no: TIntegerField
       FieldName = 'Delivery_no'
     end
-    object qryReportmoveInRef: TStringField
+    object qryReportmoveInRef: TWideStringField
       FieldName = 'moveInRef'
       FixedChar = True
       Size = 60
     end
-    object qryReportpart: TStringField
+    object qryReportpart: TWideStringField
       FieldName = 'part'
       FixedChar = True
       Size = 30
     end
-    object qryReportrepName: TStringField
+    object qryReportrepName: TWideStringField
       FieldName = 'repName'
       FixedChar = True
       Size = 80
     end
-    object qryReportcustName: TStringField
+    object qryReportcustName: TWideStringField
       FieldName = 'custName'
       FixedChar = True
       Size = 80
     end
-    object qryReportPart_Description: TStringField
+    object qryReportPart_Description: TWideStringField
       FieldName = 'Part_Description'
       FixedChar = True
       Size = 120
@@ -1704,7 +1704,7 @@ object STRPUnpaidStockFrm: TSTRPUnpaidStockFrm
     object qryReportorder_price: TCurrencyField
       FieldName = 'order_price'
     end
-    object qryReportorder_unit: TStringField
+    object qryReportorder_unit: TWideStringField
       FieldName = 'order_unit'
       FixedChar = True
       Size = 100

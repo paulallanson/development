@@ -150,22 +150,22 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object GetDetsSQLStatus_Description: TStringField
+    object GetDetsSQLStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLSupp_Name: TStringField
+    object GetDetsSQLSupp_Name: TWideStringField
       FieldName = 'Supp_Name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLSuppliers_Desc: TStringField
+    object GetDetsSQLSuppliers_Desc: TWideStringField
       FieldName = 'Suppliers_Desc'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLCustomers_Desc: TStringField
+    object GetDetsSQLCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -176,7 +176,7 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLLine0: TIntegerField
       FieldName = 'Line0'
     end
-    object GetDetsSQLCust_Name: TStringField
+    object GetDetsSQLCust_Name: TWideStringField
       FieldName = 'Cust_Name'
       FixedChar = True
       Size = 80
@@ -187,12 +187,12 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLLine: TIntegerField
       FieldName = 'Line'
     end
-    object GetDetsSQLForm_Reference_ID: TStringField
+    object GetDetsSQLForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
     end
-    object GetDetsSQLCust_Order_No: TStringField
+    object GetDetsSQLCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -200,11 +200,11 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLQuantity: TFloatField
       FieldName = 'Quantity'
     end
-    object GetDetsSQLCustomer_Account_Code: TStringField
+    object GetDetsSQLCustomer_Account_Code: TWideStringField
       FieldName = 'Customer_Account_Code'
       FixedChar = True
     end
-    object GetDetsSQLSupplier_Account_Code: TStringField
+    object GetDetsSQLSupplier_Account_Code: TWideStringField
       FieldName = 'Supplier_Account_Code'
       FixedChar = True
     end
@@ -214,12 +214,12 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLOrder_Price: TCurrencyField
       FieldName = 'Order_Price'
     end
-    object GetDetsSQLOrdering_unit: TStringField
+    object GetDetsSQLOrdering_unit: TWideStringField
       FieldName = 'Ordering_unit'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLSelling_Unit: TStringField
+    object GetDetsSQLSelling_Unit: TWideStringField
       FieldName = 'Selling_Unit'
       FixedChar = True
       Size = 80
@@ -227,19 +227,19 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object GetDetsSQLStatus_Descr: TStringField
+    object GetDetsSQLStatus_Descr: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Status_Descr'
       OnGetText = GetDetsSQLStatus_DescrGetText
       Size = 50
       Calculated = True
     end
-    object GetDetsSQLProof_Revision: TStringField
+    object GetDetsSQLProof_Revision: TWideStringField
       FieldName = 'Proof_Revision'
       FixedChar = True
       Size = 40
     end
-    object GetDetsSQLOn_Hold: TStringField
+    object GetDetsSQLOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       FixedChar = True
       Size = 2
@@ -247,7 +247,7 @@ object dmLookUpPOrd: TdmLookUpPOrd
     object GetDetsSQLGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
     end
-    object GetDetsSQLBranch_Name: TStringField
+    object GetDetsSQLBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80

@@ -375,35 +375,35 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
         'ct_Type ')
     Left = 160
     Top = 120
-    object qryCurrentContStatusContact_Phone: TStringField
+    object qryCurrentContStatusContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
       Size = 30
     end
-    object qryCurrentContStatusSupplier_Phone: TStringField
+    object qryCurrentContStatusSupplier_Phone: TWideStringField
       FieldName = 'Supplier_Phone'
       Size = 30
     end
-    object qryCurrentContStatusContact_Name: TStringField
+    object qryCurrentContStatusContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       Size = 50
     end
-    object qryCurrentContStatusSupplier_Name: TStringField
+    object qryCurrentContStatusSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       Size = 50
     end
-    object qryCurrentContStatusEmail: TStringField
+    object qryCurrentContStatusEmail: TWideStringField
       FieldName = 'Email'
       Size = 150
     end
-    object qryCurrentContStatusContact_Type_Description: TStringField
+    object qryCurrentContStatusContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       Size = 50
     end
-    object qryCurrentContStatusinactive: TStringField
+    object qryCurrentContStatusinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end
-    object qryCurrentContStatusPhone: TStringField
+    object qryCurrentContStatusPhone: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Phone'
       OnGetText = qryCurrentContStatusPhoneGetText
@@ -423,7 +423,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       'order by Description')
     Left = 218
     Top = 12
-    object QryContTypeDescription: TStringField
+    object QryContTypeDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80

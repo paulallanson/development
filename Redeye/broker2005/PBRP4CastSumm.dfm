@@ -1677,12 +1677,12 @@ object PBRP4CastSummFrm: TPBRP4CastSummFrm
     object qrySalesCommRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qrySalesCommName: TStringField
+    object qrySalesCommName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesCommInactive: TStringField
+    object qrySalesCommInactive: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2

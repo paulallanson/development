@@ -1001,42 +1001,42 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
     object qryPurchbyInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qryPurchbyInvSupplier_Invoice_no: TStringField
+    object qryPurchbyInvSupplier_Invoice_no: TWideStringField
       FieldName = 'Supplier_Invoice_no'
       FixedChar = True
       Size = 40
     end
-    object qryPurchbyInvInvoice_or_Credit: TStringField
+    object qryPurchbyInvInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
     end
-    object qryPurchbyInvName: TStringField
+    object qryPurchbyInvName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchbyInvName_1: TStringField
+    object qryPurchbyInvName_1: TWideStringField
       FieldName = 'Name_1'
       FixedChar = True
       Size = 80
     end
-    object qryPurchbyInvInvoiceRef: TStringField
+    object qryPurchbyInvInvoiceRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'InvoiceRef'
       OnGetText = qryPurchbyInvInvoiceRefGetText
       Calculated = True
     end
-    object qryPurchbyInvsupplierName: TStringField
+    object qryPurchbyInvsupplierName: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'supplierName'
       OnGetText = qryPurchbyInvsupplierNameGetText
       Calculated = True
     end
-    object qryPurchbyInvAccount_Code: TStringField
+    object qryPurchbyInvAccount_Code: TWideStringField
       FieldName = 'Account_Code'
     end
-    object qryPurchbyInvSupp_Inv_Alt_Ref: TStringField
+    object qryPurchbyInvSupp_Inv_Alt_Ref: TWideStringField
       FieldName = 'Supp_Inv_Alt_Ref'
       Size = 30
     end

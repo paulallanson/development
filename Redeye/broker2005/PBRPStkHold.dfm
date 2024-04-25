@@ -953,7 +953,7 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
     object qryReportquantity_allocated: TIntegerField
       FieldName = 'quantity_allocated'
     end
-    object qryReportdelivery_to_Stock: TStringField
+    object qryReportdelivery_to_Stock: TWideStringField
       FieldName = 'delivery_to_Stock'
       FixedChar = True
       Size = 2
@@ -961,12 +961,12 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
     object qryReportForm_reference: TIntegerField
       FieldName = 'Form_reference'
     end
-    object qryReportform_reference_id: TStringField
+    object qryReportform_reference_id: TWideStringField
       FieldName = 'form_reference_id'
       FixedChar = True
       Size = 100
     end
-    object qryReportform_reference_descr: TStringField
+    object qryReportform_reference_descr: TWideStringField
       FieldName = 'form_reference_descr'
       FixedChar = True
       Size = 100
@@ -974,17 +974,17 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
     object qryReportPurchase_order: TFloatField
       FieldName = 'Purchase_order'
     end
-    object qryReportstock_location_desc: TStringField
+    object qryReportstock_location_desc: TWideStringField
       FieldName = 'stock_location_desc'
       FixedChar = True
       Size = 80
     end
-    object qryReportForms_per_box: TStringField
+    object qryReportForms_per_box: TWideStringField
       FieldName = 'Forms_per_box'
       FixedChar = True
       Size = 40
     end
-    object qryReportCust_Order_no: TStringField
+    object qryReportCust_Order_no: TWideStringField
       FieldName = 'Cust_Order_no'
       FixedChar = True
       Size = 50
@@ -998,7 +998,7 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
     object qryReportQty_in_stock: TIntegerField
       FieldName = 'Qty_in_stock'
     end
-    object qryReportStock_Reference: TStringField
+    object qryReportStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
       FixedChar = True
       Size = 30

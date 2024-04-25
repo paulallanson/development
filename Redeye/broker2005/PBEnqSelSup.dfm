@@ -67,7 +67,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     DataSource = SuppsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -76,7 +76,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     PopupMenu = SelPopUpMenu
     TabOrder = 6
     TitleFont.Charset = ANSI_CHARSET
-    TitleFont.Color = clBlack
+    TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = [fsBold]
@@ -323,7 +323,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     DataSource = SelSupSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -332,7 +332,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     PopupMenu = DeSelPopUpMenu
     TabOrder = 7
     TitleFont.Charset = ANSI_CHARSET
-    TitleFont.Color = clBlack
+    TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = [fsBold]

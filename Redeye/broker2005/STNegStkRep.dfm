@@ -1017,12 +1017,12 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     object GetDetsQueryDate_Received: TDateTimeField
       FieldName = 'Date_Received'
     end
-    object GetDetsQueryPart: TStringField
+    object GetDetsQueryPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
     end
-    object GetDetsQueryPart_Store_Lot: TStringField
+    object GetDetsQueryPart_Store_Lot: TWideStringField
       FieldName = 'Part_Store_Lot'
       FixedChar = True
       Size = 40
@@ -1030,14 +1030,14 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     object GetDetsQueryPart_Store: TIntegerField
       FieldName = 'Part_Store'
     end
-    object GetDetsQueryPart_Bin: TStringField
+    object GetDetsQueryPart_Bin: TWideStringField
       FieldName = 'Part_Bin'
       FixedChar = True
     end
     object GetDetsQueryStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
     end
-    object GetDetsQueryPart_Description: TStringField
+    object GetDetsQueryPart_Description: TWideStringField
       FieldName = 'Part_Description'
       FixedChar = True
       Size = 60
@@ -1048,7 +1048,7 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     object GetDetsQueryPart_Purchase_Price: TCurrencyField
       FieldName = 'Part_Purchase_Price'
     end
-    object GetDetsQueryPart_Store_Name: TStringField
+    object GetDetsQueryPart_Store_Name: TWideStringField
       FieldName = 'Part_Store_Name'
       FixedChar = True
       Size = 60
@@ -1060,7 +1060,7 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     object GetDetsQueryStore_Cost_Pos: TCurrencyField
       FieldName = 'Store_Cost_Pos'
     end
-    object GetDetsQueryNot_In_Use: TStringField
+    object GetDetsQueryNot_In_Use: TWideStringField
       FieldName = 'Not_In_Use'
       FixedChar = True
       Size = 2

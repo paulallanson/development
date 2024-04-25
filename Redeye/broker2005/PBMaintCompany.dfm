@@ -2400,11 +2400,11 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
-        ListSource = dtsActivityType
+        ListSource = dtsActivityTypeQuotRem
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 403
+        Left = 416
         Top = 19
         Width = 22
         Height = 22
@@ -2438,7 +2438,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
-        ListSource = dtsActivityType
+        ListSource = dtsActivityTypeProofStActiv
         TabOrder = 3
       end
       object dblkpReorderActivity: TDBLookupComboBox
@@ -2449,7 +2449,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
-        ListSource = dtsActivityType
+        ListSource = dtsActivityTypeReorderAct
         TabOrder = 4
       end
       object dblkpOrderAckActivity: TDBLookupComboBox
@@ -2460,7 +2460,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
-        ListSource = dtsActivityType
+        ListSource = dtsActivityTypeOrdAct
         TabOrder = 5
       end
       object dblkpOrderDelActivity: TDBLookupComboBox
@@ -2471,7 +2471,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
-        ListSource = dtsActivityType
+        ListSource = dtsActivityTypeDelivAct
         TabOrder = 6
       end
     end
@@ -3286,13 +3286,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     Top = 352
   end
   object opndlgTerms: TOpenDialog
-    Left = 244
-    Top = 184
+    Left = 460
+    Top = 136
   end
   object FlashTermsTimer: TTimer
     Enabled = False
     OnTimer = FlashTermsTimerTimer
-    Left = 472
+    Left = 528
     Top = 80
   end
   object qryPayTerms: TFDQuery
@@ -3321,13 +3321,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 480
-    Top = 216
+    Left = 136
+    Top = 56
   end
   object dtsActivityType: TDataSource
     DataSet = qryActivityType
-    Left = 532
-    Top = 216
+    Left = 172
+    Top = 56
   end
   object qryProcessGroup: TFDQuery
     ConnectionName = 'pb'
@@ -3351,7 +3351,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'from Process'
       'where process_group = :process_group AND (inactive = '#39'N'#39')'
       'order by Process_Description')
-    Left = 400
+    Left = 456
     Top = 80
     ParamData = <
       item
@@ -3360,7 +3360,77 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtsProcess: TDataSource
     DataSet = qryProcess
-    Left = 440
+    Left = 496
     Top = 80
+  end
+  object dtsActivityTypeQuotRem: TDataSource
+    DataSet = qryActivityTypeQuotRem
+    Left = 172
+    Top = 88
+  end
+  object qryActivityTypeQuotRem: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select *'
+      'from Activity_Type'
+      'Order By Activity_Type_Description')
+    Left = 136
+    Top = 88
+  end
+  object qryActivityTypeProofStActiv: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select *'
+      'from Activity_Type'
+      'Order By Activity_Type_Description')
+    Left = 136
+    Top = 128
+  end
+  object dtsActivityTypeProofStActiv: TDataSource
+    DataSet = qryActivityTypeProofStActiv
+    Left = 172
+    Top = 128
+  end
+  object dtsActivityTypeReorderAct: TDataSource
+    DataSet = qryActivityTypeReorderAct
+    Left = 172
+    Top = 160
+  end
+  object qryActivityTypeReorderAct: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select *'
+      'from Activity_Type'
+      'Order By Activity_Type_Description')
+    Left = 136
+    Top = 160
+  end
+  object dtsActivityTypeOrdAct: TDataSource
+    DataSet = qryActivityTypeOrdAct
+    Left = 172
+    Top = 192
+  end
+  object qryActivityTypeOrdAct: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select *'
+      'from Activity_Type'
+      'Order By Activity_Type_Description')
+    Left = 136
+    Top = 192
+  end
+  object qryActivityTypeDelivAct: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select *'
+      'from Activity_Type'
+      'Order By Activity_Type_Description')
+    Left = 136
+    Top = 224
+  end
+  object dtsActivityTypeDelivAct: TDataSource
+    DataSet = qryActivityTypeDelivAct
+    Left = 172
+    Top = 224
   end
 end

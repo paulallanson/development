@@ -1631,12 +1631,12 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
         Name = 'part'
         DataType = ftString
       end>
-    object GetSerNosSQLSerial_item_from: TStringField
+    object GetSerNosSQLSerial_item_from: TWideStringField
       FieldName = 'Serial_item_from'
       FixedChar = True
       Size = 60
     end
-    object GetSerNosSQLSerial_item_to: TStringField
+    object GetSerNosSQLSerial_item_to: TWideStringField
       FieldName = 'Serial_item_to'
       FixedChar = True
       Size = 60

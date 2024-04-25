@@ -673,9 +673,6 @@ type
     procedure dbgActivityDetailsDrawColumnCell(Sender: TObject;
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
-    procedure dbgQuoteDetailsDrawColumnCell(Sender: TObject;
-      const Rect: TRect; DataCol: Integer; Column: TColumn;
-      State: TGridDrawState);
     procedure BitBtn11Click(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure BitBtn9Click(Sender: TObject);
@@ -6035,14 +6032,6 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
-
   if  (Column.Title.Caption <> 'Invoice No') and
       (Column.Title.Caption <> 'Total') and
       (Column.Title.Caption <> 'Goods') and
@@ -6392,13 +6381,6 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
 
   if  (Column.Title.Caption <> 'In Stock') and
       (Column.Title.Caption <> 'Allocated') and
@@ -6458,13 +6440,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.tbJobsExit(Sender: TObject);
@@ -6782,13 +6758,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 
   if  (Column.Title.Caption <> 'Order') and
       (Column.Title.Caption <> 'Job Bag') and
@@ -6900,13 +6870,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.SetQuoteButtons(Sender: TObject; Field: TField);
@@ -7333,13 +7297,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.tbBranchesExit(Sender: TObject);
@@ -7539,13 +7497,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.btnContactMoveClick(Sender: TObject);
@@ -7869,26 +7821,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
-end;
-
-procedure TPBMaintCustFrm.dbgQuoteDetailsDrawColumnCell(Sender: TObject;
-  const Rect: TRect; DataCol: Integer; Column: TColumn;
-  State: TGridDrawState);
-begin
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.BitBtn11Click(Sender: TObject);
@@ -8011,13 +7944,7 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
-  if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
-    end;
+  
 end;
 
 procedure TPBMaintCustFrm.Button1Click(Sender: TObject);

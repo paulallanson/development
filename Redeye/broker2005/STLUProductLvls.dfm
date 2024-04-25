@@ -168,7 +168,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
       ProviderFlags = []
       ReadOnly = True
     end
-    object qryStoreLevelsReplenish_type: TStringField
+    object qryStoreLevelsReplenish_type: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Replenish_type'
       Calculated = True

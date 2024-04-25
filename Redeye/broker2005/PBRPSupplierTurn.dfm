@@ -552,7 +552,7 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
         ParamType = ptInput
         Value = 1
       end>
-    object qryReportName: TStringField
+    object qryReportName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
@@ -569,12 +569,12 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
     object qryReportSel4: TFloatField
       FieldName = 'Sel4'
     end
-    object qryReportTag: TStringField
+    object qryReportTag: TWideStringField
       FieldName = 'Tag'
       FixedChar = True
       Size = 1
     end
-    object qryReportText100: TStringField
+    object qryReportText100: TWideStringField
       FieldName = 'Text100'
       FixedChar = True
       Size = 100

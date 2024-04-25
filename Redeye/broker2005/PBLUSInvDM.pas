@@ -21,20 +21,20 @@ type
     SetStatementSQL: TFDQuery;
     oldDummySQL: TFDQuery;
     GetDetsSQLSales_Invoice: TIntegerField;
-    GetDetsSQLSales_Invoice_No: TStringField;
+    GetDetsSQLSales_Invoice_No: TWideStringField;
     GetDetsSQLInvoice_Date: TDateTimeField;
     GetDetsSQLGoods_Value: TCurrencyField;
     GetDetsSQLVat_Value: TCurrencyField;
     GetDetsSQLInv_to_Customer: TIntegerField;
-    GetDetsSQLInvoice_Description: TStringField;
-    GetDetsSQLReference: TStringField;
+    GetDetsSQLInvoice_Description: TWideStringField;
+    GetDetsSQLReference: TWideStringField;
     GetDetsSQLInv_to_Branch: TIntegerField;
-    GetDetsSQLInvoice_or_Credit: TStringField;
+    GetDetsSQLInvoice_or_Credit: TWideStringField;
     GetDetsSQLSales_Invoice_Status: TIntegerField;
-    GetDetsSQLName: TStringField;
+    GetDetsSQLName: TWideStringField;
     GetDetsSQLBranch_no: TIntegerField;
-    GetDetsSQLAccount_Code: TStringField;
-    GetDetsSQLstatement_reference: TStringField;
+    GetDetsSQLAccount_Code: TWideStringField;
+    GetDetsSQLstatement_reference: TWideStringField;
     GetDetsSQLstatement_date: TDateTimeField;
   private
     FCustomer: string;

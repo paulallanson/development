@@ -2329,21 +2329,21 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
     object qrySalesCommSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object qrySalesCommAccount_Code: TStringField
+    object qrySalesCommAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qrySalesCommName: TStringField
+    object qrySalesCommName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesCommRep_Name: TStringField
+    object qrySalesCommRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesCommSales_Invoice_No: TStringField
+    object qrySalesCommSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -2360,7 +2360,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
     object qrySalesCommInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesCommInvoice_or_Credit: TStringField
+    object qrySalesCommInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
       FixedChar = True
       Size = 2
@@ -2371,7 +2371,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
     object qrySalesCommPaid_Amount: TCurrencyField
       FieldName = 'Paid_Amount'
     end
-    object qrySalesCommPaid_Status: TStringField
+    object qrySalesCommPaid_Status: TWideStringField
       FieldName = 'Paid_Status'
       FixedChar = True
       Size = 2
@@ -2379,23 +2379,23 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
     object qrySalesCommCommission_Rate: TFloatField
       FieldName = 'Commission_Rate'
     end
-    object qrySalesCommReference: TStringField
+    object qrySalesCommReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
     end
-    object qrySalesCommInvoice_Description: TStringField
+    object qrySalesCommInvoice_Description: TWideStringField
       FieldName = 'Invoice_Description'
       FixedChar = True
       Size = 160
     end
-    object qrySalesCommInvoiceRef: TStringField
+    object qrySalesCommInvoiceRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'InvoiceRef'
       OnGetText = qrySalesCommInvoiceRefGetText
       Calculated = True
     end
-    object qrySalesCommSales_Invoice_type: TStringField
+    object qrySalesCommSales_Invoice_type: TWideStringField
       FieldName = 'Sales_Invoice_type'
       FixedChar = True
       Size = 2

@@ -438,7 +438,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     object lkpCOutThicknessPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
     end
-    object lkpCOutThicknessDescription: TStringField
+    object lkpCOutThicknessDescription: TWideStringField
       FieldName = 'Description'
       Size = 40
     end
@@ -452,18 +452,18 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       DisplayFormat = '0.00'
       currency = True
     end
-    object lkpCOutThicknessPrice_Unit_Description: TStringField
+    object lkpCOutThicknessPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
     end
-    object lkpCOutThicknessinactive: TStringField
+    object lkpCOutThicknessinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end
-    object lkpCOutThicknessMaterial_Description: TStringField
+    object lkpCOutThicknessMaterial_Description: TWideStringField
       FieldName = 'Material_Description'
       Size = 50
     end
-    object lkpCOutThicknessEdge_Type_Description: TStringField
+    object lkpCOutThicknessEdge_Type_Description: TWideStringField
       FieldName = 'Edge_Type_Description'
       Size = 50
     end

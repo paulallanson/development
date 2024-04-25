@@ -31,7 +31,7 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -39,7 +39,7 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     ParentFont = False
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
-    TitleFont.Color = clBlack
+    TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = [fsBold]
@@ -273,11 +273,11 @@ object PBLULevelofImportanceFrm: TPBLULevelofImportanceFrm
     object GetDetsSQLLevel_of_Importance: TIntegerField
       FieldName = 'Level_of_Importance'
     end
-    object GetDetsSQLImportance_Description: TStringField
+    object GetDetsSQLImportance_Description: TWideStringField
       FieldName = 'Importance_Description'
       Size = 100
     end
-    object GetDetsSQLinactive: TStringField
+    object GetDetsSQLinactive: TWideStringField
       FieldName = 'inactive'
     end
     object GetDetsSQLColor: TIntegerField

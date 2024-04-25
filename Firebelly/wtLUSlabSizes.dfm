@@ -163,7 +163,7 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
     object tblSlabSizeSlab_Size: TIntegerField
       FieldName = 'Slab_Size'
     end
-    object tblSlabSizeSlab_Size_Description: TStringField
+    object tblSlabSizeSlab_Size_Description: TWideStringField
       FieldName = 'Slab_Size_Description'
       Size = 100
     end
@@ -173,7 +173,7 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
     object tblSlabSizeDepth: TIntegerField
       FieldName = 'Depth'
     end
-    object tblSlabSizeInactive: TStringField
+    object tblSlabSizeInactive: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end

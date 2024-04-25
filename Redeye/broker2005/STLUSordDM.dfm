@@ -66,18 +66,18 @@ object DmLookupSOrd: TDmLookupSOrd
       item
         Name = 'del_to'
       end>
-    object GetDetsSQLDescription: TStringField
+    object GetDetsSQLDescription: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Description'
       OnGetText = GetDetsSQLDescriptionGetText
       Calculated = True
     end
-    object GetDetsSQLCust_Name: TStringField
+    object GetDetsSQLCust_Name: TWideStringField
       FieldName = 'Cust_Name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLBranch_Name: TStringField
+    object GetDetsSQLBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
@@ -91,7 +91,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object GetDetsSQLDate_Ordered: TDateTimeField
       FieldName = 'Date_Ordered'
     end
-    object GetDetsSQLCust_Order_No: TStringField
+    object GetDetsSQLCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -108,11 +108,11 @@ object DmLookupSOrd: TDmLookupSOrd
     object GetDetsSQLSupplier: TIntegerField
       FieldName = 'Supplier'
     end
-    object GetDetsSQLPurch_Ord_no: TStringField
+    object GetDetsSQLPurch_Ord_no: TWideStringField
       FieldName = 'Purch_Ord_no'
       FixedChar = True
     end
-    object GetDetsSQLStatus_Description: TStringField
+    object GetDetsSQLStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       FixedChar = True
       Size = 100
@@ -126,12 +126,12 @@ object DmLookupSOrd: TDmLookupSOrd
     object GetDetsSQLDelivery_Customer: TIntegerField
       FieldName = 'Delivery_Customer'
     end
-    object GetDetsSQLDel_name: TStringField
+    object GetDetsSQLDel_name: TWideStringField
       FieldName = 'Del_name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsSQLDel_To_Add: TStringField
+    object GetDetsSQLDel_To_Add: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Del_To_Add'
       OnGetText = GetDetsSQLDel_To_AddGetText
@@ -430,7 +430,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qrySalesHistorySales_Order_line_no: TIntegerField
       FieldName = 'Sales_Order_line_no'
     end
-    object qrySalesHistoryPart: TStringField
+    object qrySalesHistoryPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
@@ -468,7 +468,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qrySalesHistoryQuantity_Invoiced: TIntegerField
       FieldName = 'Quantity_Invoiced'
     end
-    object qrySalesHistoryLine_Complete: TStringField
+    object qrySalesHistoryLine_Complete: TWideStringField
       FieldName = 'Line_Complete'
       FixedChar = True
       Size = 2
@@ -476,7 +476,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qrySalesHistoryvat_code: TIntegerField
       FieldName = 'vat_code'
     end
-    object qrySalesHistoryDiscount_Type: TStringField
+    object qrySalesHistoryDiscount_Type: TWideStringField
       FieldName = 'Discount_Type'
       FixedChar = True
       Size = 2
@@ -490,7 +490,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qrySalesHistoryOriginal_Sell_Price: TCurrencyField
       FieldName = 'Original_Sell_Price'
     end
-    object qrySalesHistorydescription: TStringField
+    object qrySalesHistorydescription: TWideStringField
       FieldName = 'description'
       FixedChar = True
       Size = 100
@@ -498,18 +498,18 @@ object DmLookupSOrd: TDmLookupSOrd
     object qrySalesHistorydate_ordered: TDateTimeField
       FieldName = 'date_ordered'
     end
-    object qrySalesHistorypart_description: TStringField
+    object qrySalesHistorypart_description: TWideStringField
       FieldName = 'part_description'
       FixedChar = True
       Size = 100
     end
-    object qrySalesHistoryDeliveryBranchName: TStringField
+    object qrySalesHistoryDeliveryBranchName: TWideStringField
       FieldName = 'DeliveryBranchName'
     end
     object qrySalesHistoryAd_Hoc_Address: TIntegerField
       FieldName = 'Ad_Hoc_Address'
     end
-    object qrySalesHistorycust_order_no: TStringField
+    object qrySalesHistorycust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       Size = 30
     end
@@ -517,7 +517,7 @@ object DmLookupSOrd: TDmLookupSOrd
       FieldName = 'Sales_Value'
       DisplayFormat = '##0.000'
     end
-    object qrySalesHistoryDelivery_Location: TStringField
+    object qrySalesHistoryDelivery_Location: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Delivery_Location'
       Size = 50
@@ -628,7 +628,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProductSalesbyCustsales_order: TIntegerField
       FieldName = 'sales_order'
     end
-    object qryProductSalesbyCustpart: TStringField
+    object qryProductSalesbyCustpart: TWideStringField
       FieldName = 'part'
       FixedChar = True
       Size = 30
@@ -639,12 +639,12 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProductSalesbyCustsell_pack_quantity: TIntegerField
       FieldName = 'sell_pack_quantity'
     end
-    object qryProductSalesbyCustcust_order_no: TStringField
+    object qryProductSalesbyCustcust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       FixedChar = True
       Size = 80
     end
-    object qryProductSalesbyCustpart_description: TStringField
+    object qryProductSalesbyCustpart_description: TWideStringField
       FieldName = 'part_description'
       FixedChar = True
       Size = 100
@@ -655,7 +655,7 @@ object DmLookupSOrd: TDmLookupSOrd
       currency = True
       Calculated = True
     end
-    object qryProductSalesbyCustProduct: TStringField
+    object qryProductSalesbyCustProduct: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Product'
       Size = 100
@@ -688,23 +688,23 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProductSalesbyCustsales_order_line_no: TIntegerField
       FieldName = 'sales_order_line_no'
     end
-    object qryProductSalesbyCustDeliveryLocation: TStringField
+    object qryProductSalesbyCustDeliveryLocation: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryLocation'
       Size = 50
       Calculated = True
     end
-    object qryProductSalesbyCustDeliveryCustName: TStringField
+    object qryProductSalesbyCustDeliveryCustName: TWideStringField
       FieldName = 'DeliveryCustName'
       FixedChar = True
       Size = 80
     end
-    object qryProductSalesbyCustDeliveryBranchName: TStringField
+    object qryProductSalesbyCustDeliveryBranchName: TWideStringField
       FieldName = 'DeliveryBranchName'
       FixedChar = True
       Size = 80
     end
-    object qryProductSalesbyCustOrderedBy: TStringField
+    object qryProductSalesbyCustOrderedBy: TWideStringField
       FieldName = 'OrderedBy'
       FixedChar = True
       Size = 162
@@ -1169,7 +1169,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProdSalesbyCustsales_order: TIntegerField
       FieldName = 'sales_order'
     end
-    object qryProdSalesbyCustpart: TStringField
+    object qryProdSalesbyCustpart: TWideStringField
       FieldName = 'part'
       FixedChar = True
       Size = 30
@@ -1180,12 +1180,12 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProdSalesbyCustsell_pack_quantity: TIntegerField
       FieldName = 'sell_pack_quantity'
     end
-    object qryProdSalesbyCustcust_order_no: TStringField
+    object qryProdSalesbyCustcust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       FixedChar = True
       Size = 80
     end
-    object qryProdSalesbyCustpart_description: TStringField
+    object qryProdSalesbyCustpart_description: TWideStringField
       FieldName = 'part_description'
       FixedChar = True
       Size = 100
@@ -1196,7 +1196,7 @@ object DmLookupSOrd: TDmLookupSOrd
       currency = True
       Calculated = True
     end
-    object qryProdSalesbyCustProduct: TStringField
+    object qryProdSalesbyCustProduct: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Product'
       Size = 100
@@ -1229,23 +1229,23 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProdSalesbyCustsales_order_line_no: TIntegerField
       FieldName = 'sales_order_line_no'
     end
-    object qryProdSalesbyCustDeliveryLocation: TStringField
+    object qryProdSalesbyCustDeliveryLocation: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryLocation'
       Size = 50
       Calculated = True
     end
-    object qryProdSalesbyCustDeliveryCustName: TStringField
+    object qryProdSalesbyCustDeliveryCustName: TWideStringField
       FieldName = 'DeliveryCustName'
       FixedChar = True
       Size = 80
     end
-    object qryProdSalesbyCustDeliveryBranchName: TStringField
+    object qryProdSalesbyCustDeliveryBranchName: TWideStringField
       FieldName = 'DeliveryBranchName'
       FixedChar = True
       Size = 80
     end
-    object qryProdSalesbyCustOrderedBy: TStringField
+    object qryProdSalesbyCustOrderedBy: TWideStringField
       FieldName = 'OrderedBy'
       FixedChar = True
       Size = 162
@@ -1253,7 +1253,7 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProdSalesbyCustrep: TIntegerField
       FieldName = 'rep'
     end
-    object qryProdSalesbyCustrepName: TStringField
+    object qryProdSalesbyCustrepName: TWideStringField
       FieldName = 'repName'
       FixedChar = True
       Size = 80
@@ -1261,19 +1261,19 @@ object DmLookupSOrd: TDmLookupSOrd
     object qryProdSalesbyCustcustomer: TIntegerField
       FieldName = 'customer'
     end
-    object qryProdSalesbyCustCost_Centre: TStringField
+    object qryProdSalesbyCustCost_Centre: TWideStringField
       FieldName = 'Cost_Centre'
       Size = 10
     end
-    object qryProdSalesbyCustCustomer_Name: TStringField
+    object qryProdSalesbyCustCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
-    object qryProdSalesbyCustBranch_name: TStringField
+    object qryProdSalesbyCustBranch_name: TWideStringField
       FieldName = 'Branch_name'
       Size = 50
     end
-    object qryProdSalesbyCustShort_Code: TStringField
+    object qryProdSalesbyCustShort_Code: TWideStringField
       FieldName = 'Short_Code'
       Size = 10
     end

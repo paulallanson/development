@@ -33,8 +33,8 @@ type
     qrlblSelection: TQRLabel;
     QRDBText3: TQRDBText;
     GetSerNosSQL: TFDQuery;
-    GetSerNosSQLSerial_item_from: TStringField;
-    GetSerNosSQLSerial_item_to: TStringField;
+    GetSerNosSQLSerial_item_from: TWideStringField;
+    GetSerNosSQLSerial_item_to: TWideStringField;
     QRBand2: TQRBand;
     qrsdtlNumbers: TQRSubDetail;
     lblSerialNos: TQRLabel;

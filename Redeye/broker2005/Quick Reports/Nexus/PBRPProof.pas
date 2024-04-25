@@ -167,6 +167,16 @@ type
     QRLabel18: TQRLabel;
     GetPOSQL: TFDQuery;
     QRLabel20: TQRLabel;
+    QRShape9: TQRShape;
+    QRShape10: TQRShape;
+    QRLabel25: TQRLabel;
+    QRLabel26: TQRLabel;
+    QRLabel27: TQRLabel;
+    QRLabel28: TQRLabel;
+    QRLabel29: TQRLabel;
+    QRLabel30: TQRLabel;
+    QRLabel31: TQRLabel;
+    QRLabel32: TQRLabel;
     LabQuantity: TQRLabel;
     LabJobTitle: TQRLabel;
     LabDepth: TQRLabel;
@@ -186,6 +196,8 @@ type
     gtQRLabel1: TQRLabel;
     gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TFDQuery;
+    QRDBText2: TQRDBText;
+    QRLabel19: TQRLabel;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
     procedure DetailQRBandBeforePrint(Sender: TQRCustomBand; var PrintBand:

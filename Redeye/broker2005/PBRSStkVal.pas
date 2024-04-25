@@ -16,10 +16,10 @@ type
     qryReportOrder_price: TCurrencyField;
     qryReportQty_In_Stock: TFloatField;
     qryReportOrder_Unit: TIntegerField;
-    qryReportForm_Reference_Descr: TStringField;
+    qryReportForm_Reference_Descr: TWideStringField;
     qryReportReorder_Level: TIntegerField;
     qryReportCustomer_Name: TWideStringField;
-    qryReportForm_Reference_ID: TStringField;
+    qryReportForm_Reference_ID: TWideStringField;
     CustomerSQL: TFDQuery;
     rgCustomer: TRadioGroup;
     CustomerPanel: TPanel;

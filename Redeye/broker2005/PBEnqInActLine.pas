@@ -69,7 +69,7 @@ type
     DetsSRC: TDataSource;
     DescDBText: TDBText;
     GDetsSQLEnquiry: TIntegerField;
-    GDetsSQLDescription: TStringField;
+    GDetsSQLDescription: TWideStringField;
     UpdInActiveSQL: TFDQuery;
     ReasMntBitBtn: TBitBtn;
     procedure FormActivate(Sender: TObject);

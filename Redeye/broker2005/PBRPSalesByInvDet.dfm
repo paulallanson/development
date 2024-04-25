@@ -2693,21 +2693,21 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object oldqrySalesByInvSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object oldqrySalesByInvAccount_Code: TStringField
+    object oldqrySalesByInvAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object oldqrySalesByInvName: TStringField
+    object oldqrySalesByInvName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object oldqrySalesByInvCustomers_Desc: TStringField
+    object oldqrySalesByInvCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
     end
-    object oldqrySalesByInvSales_Invoice_no: TStringField
+    object oldqrySalesByInvSales_Invoice_no: TWideStringField
       FieldName = 'Sales_Invoice_no'
       FixedChar = True
       Size = 30
@@ -2724,28 +2724,28 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object oldqrySalesByInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object oldqrySalesByInvSupplier_Name: TStringField
+    object oldqrySalesByInvSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object oldqrySalesByInvRep_Name: TStringField
+    object oldqrySalesByInvRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object oldqrySalesByInvSupplier_Job_Ref: TStringField
+    object oldqrySalesByInvSupplier_Job_Ref: TWideStringField
       FieldName = 'Supplier_Job_Ref'
       FixedChar = True
       Size = 40
     end
-    object oldqrySalesByInvPOLine: TStringField
+    object oldqrySalesByInvPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = oldqrySalesByInvPOLineGetText
       Calculated = True
     end
-    object oldqrySalesByInvInvoiceRef: TStringField
+    object oldqrySalesByInvInvoiceRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'InvoiceRef'
       OnGetText = oldqrySalesByInvInvoiceRefGetText
@@ -2892,16 +2892,16 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrySalesbyInvSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
     end
-    object qrySalesbyInvAccount_Code: TStringField
+    object qrySalesbyInvAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object qrySalesbyInvName: TStringField
+    object qrySalesbyInvName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyInvSales_Invoice_No: TStringField
+    object qrySalesbyInvSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -2926,65 +2926,65 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrySalesbyInvRep: TIntegerField
       FieldName = 'Rep'
     end
-    object qrySalesbyInvSales_Invoice_type: TStringField
+    object qrySalesbyInvSales_Invoice_type: TWideStringField
       FieldName = 'Sales_Invoice_type'
       FixedChar = True
       Size = 2
     end
-    object qrySalesbyInvInactive: TStringField
+    object qrySalesbyInvInactive: TWideStringField
       FieldName = 'Inactive'
       FixedChar = True
       Size = 2
     end
-    object qrySalesbyInvReference: TStringField
+    object qrySalesbyInvReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
     end
-    object qrySalesbyInvSupplier_Name: TStringField
+    object qrySalesbyInvSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyInvRep_Name: TStringField
+    object qrySalesbyInvRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyInvInvoiceRef: TStringField
+    object qrySalesbyInvInvoiceRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'InvoiceRef'
       OnGetText = qrySalesbyInvInvoiceRefGetText
       Size = 10
       Calculated = True
     end
-    object qrySalesbyInvInvoice_Description: TStringField
+    object qrySalesbyInvInvoice_Description: TWideStringField
       FieldName = 'Invoice_Description'
       FixedChar = True
       Size = 160
     end
-    object qrySalesbyInvSupplier_Desc: TStringField
+    object qrySalesbyInvSupplier_Desc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Supplier_Desc'
       OnGetText = qrySalesbyInvSupplier_DescGetText
       Size = 30
       Calculated = True
     end
-    object qrySalesbyInvOrderDesc: TStringField
+    object qrySalesbyInvOrderDesc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'OrderDesc'
       Size = 15
       Calculated = True
     end
-    object qrySalesbyInvBranch_Name: TStringField
+    object qrySalesbyInvBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       Size = 100
     end
-    object qrySalesbyInvCustomer_Type_Description: TStringField
+    object qrySalesbyInvCustomer_Type_Description: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 60
     end
-    object qrySalesbyInvAccount_Manager_Name: TStringField
+    object qrySalesbyInvAccount_Manager_Name: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 60
     end
@@ -3258,7 +3258,7 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrygetinvlinePrice_Unit: TIntegerField
       FieldName = 'Price_Unit'
     end
-    object qrygetinvlineNominal: TStringField
+    object qrygetinvlineNominal: TWideStringField
       FieldName = 'Nominal'
       FixedChar = True
       Size = 32
@@ -3272,7 +3272,7 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrygetinvlineNarrative: TIntegerField
       FieldName = 'Narrative'
     end
-    object qrygetinvlineReference: TStringField
+    object qrygetinvlineReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 60
@@ -3286,12 +3286,12 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrygetinvlineSales_Order_line_no: TIntegerField
       FieldName = 'Sales_Order_line_no'
     end
-    object qrygetinvlineCredit_type: TStringField
+    object qrygetinvlineCredit_type: TWideStringField
       FieldName = 'Credit_type'
       FixedChar = True
       Size = 2
     end
-    object qrygetinvlineNot_Printed: TStringField
+    object qrygetinvlineNot_Printed: TWideStringField
       FieldName = 'Not_Printed'
       FixedChar = True
       Size = 2
@@ -3302,7 +3302,7 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrygetinvlinePrice_Unit_1: TIntegerField
       FieldName = 'Price_Unit_1'
     end
-    object qrygetinvlineSales_Unit_Desc: TStringField
+    object qrygetinvlineSales_Unit_Desc: TWideStringField
       FieldName = 'Sales_Unit_Desc'
       FixedChar = True
       Size = 80
@@ -3313,12 +3313,12 @@ object PBRPSalesByInvDetFrm: TPBRPSalesByInvDetFrm
     object qrygetinvlineVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
     end
-    object qrygetinvlineDescription: TStringField
+    object qrygetinvlineDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
     end
-    object qrygetinvlineVAT_Ref: TStringField
+    object qrygetinvlineVAT_Ref: TWideStringField
       FieldName = 'VAT_Ref'
       FixedChar = True
       Size = 2

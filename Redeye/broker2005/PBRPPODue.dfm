@@ -1448,7 +1448,8 @@ object PBRPPODueFrm: TPBRPPODueFrm
         Transparent = False
         YIncrement = 50
         Lines.Strings = (
-          'memSupplierNotes')
+          'memSupplierNot'
+          'es')
       end
     end
   end

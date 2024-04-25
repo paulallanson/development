@@ -656,7 +656,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
     end
-    object qryReportJob_Bag_Line_Descr: TStringField
+    object qryReportJob_Bag_Line_Descr: TWideStringField
       FieldName = 'Job_Bag_Line_Descr'
       FixedChar = True
       Size = 80
@@ -666,7 +666,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportSupplier_Name: TStringField
+    object qryReportSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
@@ -683,12 +683,12 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportVAT_Code: TIntegerField
       FieldName = 'VAT_Code'
     end
-    object qryReportJob_Bag_Line_Type: TStringField
+    object qryReportJob_Bag_Line_Type: TWideStringField
       FieldName = 'Job_Bag_Line_Type'
       FixedChar = True
       Size = 2
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 80
@@ -713,7 +713,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object qryReportCustomer_Branch_Name: TStringField
+    object qryReportCustomer_Branch_Name: TWideStringField
       FieldName = 'Customer_Branch_Name'
       FixedChar = True
       Size = 80
@@ -724,7 +724,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object qryReportSupplier_Branch_no: TIntegerField
       FieldName = 'Supplier_Branch_no'
     end
-    object qryReportSupplier_Branch_Name: TStringField
+    object qryReportSupplier_Branch_Name: TWideStringField
       FieldName = 'Supplier_Branch_Name'
       FixedChar = True
       Size = 80
@@ -737,15 +737,15 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       FixedChar = True
       Size = 2
     end
-    object qryReportJob_Bag_Descr: TStringField
+    object qryReportJob_Bag_Descr: TWideStringField
       FieldName = 'Job_Bag_Descr'
       FixedChar = True
       Size = 160
     end
-    object qryReportAnalysis_Code_1: TStringField
+    object qryReportAnalysis_Code_1: TWideStringField
       FieldName = 'Analysis_Code_1'
     end
-    object qryReportAnalysis_Code_2: TStringField
+    object qryReportAnalysis_Code_2: TWideStringField
       FieldName = 'Analysis_Code_2'
     end
   end

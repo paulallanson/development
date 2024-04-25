@@ -681,14 +681,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akLeft, akTop, akRight]
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -859,7 +859,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
+            Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Segoe UI'
             Font.Style = []
@@ -867,7 +867,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ParentFont = False
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
-            TitleFont.Color = clBlack
+            TitleFont.Color = clWindowText
             TitleFont.Height = -11
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = [fsBold]
@@ -2159,14 +2159,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Height = 301
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -2663,7 +2663,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -2671,7 +2671,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -2770,7 +2770,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -2778,7 +2778,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -3092,7 +3092,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -3100,11 +3100,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
-        OnDrawColumnCell = dbgQuoteDetailsDrawColumnCell
         OnDblClick = dbgQuoteDetailsDblClick
         Columns = <
           item
@@ -3411,7 +3410,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -3419,7 +3418,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
@@ -3809,7 +3808,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         DataSource = dtmdlOrders.dtsOrders
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -3817,7 +3816,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentFont = False
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
@@ -3943,14 +3942,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
-            Width = 64
             Visible = True
           end>
       end
@@ -4064,7 +4061,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -4072,7 +4069,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
@@ -4346,7 +4343,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -4354,7 +4351,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -4604,7 +4601,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
+        Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -4612,7 +4609,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentFont = False
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clBlack
+        TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
@@ -5019,7 +5016,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -5027,7 +5024,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
@@ -5179,7 +5176,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -5187,7 +5184,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clBlack
+          TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]

@@ -243,6 +243,15 @@ type
     qryDataCollectLabour_Overtime_Hours: TFloatField;
     qryDataCollectTeam_Count: TIntegerField;
     qryDataCollectHourly_Rate: TFloatField;
+    qryJBAllLinesMargin: TCurrencyField;
+    qryJBAllLinesTypeDesc: TWideStringField;
+    qryJBAllLinesOrderNumber: TWideStringField;
+    qryAllSalesInvoicesTotal_Goods: TFloatField;
+    qryAllSalesInvoicesTotal_Vat: TFloatField;
+    qryAllSalesInvoicesTotal_Invoice: TFloatField;
+    qryAllPurchInvoicesTotal_Goods: TCurrencyField;
+    qryAllPurchInvoicesTotal_Vat: TFloatField;
+    qryAllPurchInvoicesTotal_Invoice: TFloatField;
     procedure qryJBAllLinesMarginGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
     procedure qryJBAllLinesInactiveGetText(Sender: TField;

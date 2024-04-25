@@ -958,32 +958,32 @@ object PBRPSuppContDetFrm: TPBRPSuppContDetFrm
       ' ')
     Left = 208
     Top = 64
-    object GetDetsQryContact_Name: TStringField
+    object GetDetsQryContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQrySalutation: TStringField
+    object GetDetsQrySalutation: TWideStringField
       FieldName = 'Salutation'
       FixedChar = True
       Size = 40
     end
-    object GetDetsQryEmail: TStringField
+    object GetDetsQryEmail: TWideStringField
       FieldName = 'Email'
       FixedChar = True
       Size = 200
     end
-    object GetDetsQryContact_Phone: TStringField
+    object GetDetsQryContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
       FixedChar = True
       Size = 40
     end
-    object GetDetsQryMobile_No: TStringField
+    object GetDetsQryMobile_No: TWideStringField
       FieldName = 'Mobile_No'
       FixedChar = True
       Size = 30
     end
-    object GetDetsQryContact_Fax: TStringField
+    object GetDetsQryContact_Fax: TWideStringField
       FieldName = 'Contact_Fax'
       FixedChar = True
       Size = 40
@@ -991,46 +991,46 @@ object PBRPSuppContDetFrm: TPBRPSuppContDetFrm
     object GetDetsQryContact_Type: TIntegerField
       FieldName = 'Contact_Type'
     end
-    object GetDetsQryContact_Type_Description: TStringField
+    object GetDetsQryContact_Type_Description: TWideStringField
       FieldName = 'Contact_Type_Description'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQryBuilding_No_name: TStringField
+    object GetDetsQryBuilding_No_name: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQryStreet: TStringField
+    object GetDetsQryStreet: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQryLocale: TStringField
+    object GetDetsQryLocale: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQryTown: TStringField
+    object GetDetsQryTown: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object GetDetsQryPostcode: TStringField
+    object GetDetsQryPostcode: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object GetDetsQrySupplier_Phone: TStringField
+    object GetDetsQrySupplier_Phone: TWideStringField
       FieldName = 'Supplier_Phone'
       FixedChar = True
       Size = 40
     end
-    object GetDetsQrySupplier_Fax: TStringField
+    object GetDetsQrySupplier_Fax: TWideStringField
       FieldName = 'Supplier_Fax'
       FixedChar = True
       Size = 40
     end
-    object GetDetsQrySupplier_Name: TStringField
+    object GetDetsQrySupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
@@ -1041,12 +1041,12 @@ object PBRPSuppContDetFrm: TPBRPSuppContDetFrm
     object GetDetsQryBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object GetDetsQryinactive: TStringField
+    object GetDetsQryinactive: TWideStringField
       FieldName = 'inactive'
       FixedChar = True
       Size = 2
     end
-    object GetDetsQryPhone: TStringField
+    object GetDetsQryPhone: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Phone'
       OnGetText = GetDetsQryPhoneGetText

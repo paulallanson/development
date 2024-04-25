@@ -1712,12 +1712,12 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
     object qryPurchInvLine: TIntegerField
       FieldName = 'Line'
     end
-    object qryPurchInvCustomer_Name: TStringField
+    object qryPurchInvCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchInvCustomers_Desc: TStringField
+    object qryPurchInvCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -1728,7 +1728,7 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
     object qryPurchInvSell_Price: TCurrencyField
       FieldName = 'Sell_Price'
     end
-    object qryPurchInvSales_Invoice_No: TStringField
+    object qryPurchInvSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -1736,12 +1736,12 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
     object qryPurchInvSales_Invoice_Date: TDateTimeField
       FieldName = 'Sales_Invoice_Date'
     end
-    object qryPurchInvSupplier_Name: TStringField
+    object qryPurchInvSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchInvSupplier_Invoice_no: TStringField
+    object qryPurchInvSupplier_Invoice_no: TWideStringField
       FieldName = 'Supplier_Invoice_no'
       FixedChar = True
       Size = 40
@@ -1755,12 +1755,12 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
     object qryPurchInvPurchase_Price: TCurrencyField
       FieldName = 'Purchase_Price'
     end
-    object qryPurchInvRep_Name: TStringField
+    object qryPurchInvRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchInvPOLine: TStringField
+    object qryPurchInvPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryPurchInvPOLineGetText

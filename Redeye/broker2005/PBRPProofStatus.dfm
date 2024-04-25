@@ -811,7 +811,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
     object qryReportProof_Date: TDateTimeField
       FieldName = 'Proof_Date'
     end
-    object qryReportProof_Status: TStringField
+    object qryReportProof_Status: TWideStringField
       FieldName = 'Proof_Status'
       FixedChar = True
       Size = 2
@@ -821,7 +821,7 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
       FixedChar = True
       Size = 80
     end
-    object qryReportCustomers_Desc: TStringField
+    object qryReportCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
@@ -840,23 +840,23 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
     object qryReportGoods_Required: TDateTimeField
       FieldName = 'Goods_Required'
     end
-    object qryReportCust_Order_No: TStringField
+    object qryReportCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
     end
-    object qryReportPOLine: TStringField
+    object qryReportPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryReportPOLineGetText
       Calculated = True
     end
-    object qryReportSupplier_Name: TStringField
+    object qryReportSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end
-    object qryReportSupplier_job_ref: TStringField
+    object qryReportSupplier_job_ref: TWideStringField
       FieldName = 'Supplier_job_ref'
       FixedChar = True
       Size = 40

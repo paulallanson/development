@@ -193,11 +193,11 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     object tblWorktopsWorktop: TIntegerField
       FieldName = 'Worktop'
     end
-    object tblWorktopsDescription: TStringField
+    object tblWorktopsDescription: TWideStringField
       FieldName = 'Description'
       Size = 40
     end
-    object tblWorktopsNot_used_for_quoting: TStringField
+    object tblWorktopsNot_used_for_quoting: TWideStringField
       FieldName = 'Not_used_for_quoting'
       Size = 1
     end
@@ -207,7 +207,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     object tblWorktopsWorktop_Group: TIntegerField
       FieldName = 'Worktop_Group'
     end
-    object tblWorktopsWorktop_Group_Desc: TStringField
+    object tblWorktopsWorktop_Group_Desc: TWideStringField
       FieldKind = fkLookup
       FieldName = 'Worktop_Group_Desc'
       LookupKeyFields = 'Worktop_Group'
@@ -216,7 +216,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
       Size = 30
       Lookup = True
     end
-    object tblWorktopsinactive: TStringField
+    object tblWorktopsinactive: TWideStringField
       FieldName = 'inactive'
       Size = 1
     end

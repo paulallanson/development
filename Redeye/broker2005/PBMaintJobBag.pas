@@ -4846,24 +4846,7 @@ begin
         except
           Canvas.Font.Color := Font.Color;
         end;
-//  code used to highlight the selected row
-(*        if iSelected = vrow then
-          begin
-//            for icol := 1 to pred(colcount) do
-              begin
-                Canvas.Brush.Color := clhighlight;
-                Canvas.Font.color := color;
-                Canvas.polyline([point(rect.left+1,rect.top+1),
-                    point(rect.right-2,rect.top+1),
-                    point(rect.right-2,rect.bottom-2),
-                    point(rect.left+1,rect.bottom-2),
-                    point(rect.left+1,rect.top+1)]);
 
-                Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[vcol, vRow]);
-              end;
-          end
-        else
-*)
         Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
       end;
 

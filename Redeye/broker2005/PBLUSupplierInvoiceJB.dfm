@@ -226,7 +226,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       Align = alClient
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
+      Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -234,7 +234,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
-      TitleFont.Color = clBlack
+      TitleFont.Color = clWindowText
       TitleFont.Height = -11
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = [fsBold]

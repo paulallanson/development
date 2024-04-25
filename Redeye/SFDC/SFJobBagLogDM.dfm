@@ -390,7 +390,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
     end
-    object qryJobLogGridJob_Bag_Description: TStringField
+    object qryJobLogGridJob_Bag_Description: TWideStringField
       FieldName = 'Job_Bag_Description'
       FixedChar = True
       Size = 160
@@ -401,7 +401,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridBranch_No: TIntegerField
       FieldName = 'Branch_No'
     end
-    object qryJobLogGridCustomer_Name: TStringField
+    object qryJobLogGridCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 92
@@ -412,7 +412,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridProcess_Group: TIntegerField
       FieldName = 'Process_Group'
     end
-    object qryJobLogGridProcess_Group_Description: TStringField
+    object qryJobLogGridProcess_Group_Description: TWideStringField
       FieldName = 'Process_Group_Description'
       FixedChar = True
       Size = 100
@@ -420,7 +420,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridProcess: TIntegerField
       FieldName = 'Process'
     end
-    object qryJobLogGridProcess_Description: TStringField
+    object qryJobLogGridProcess_Description: TWideStringField
       FieldName = 'Process_Description'
       FixedChar = True
       Size = 100
@@ -428,7 +428,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridWork_Centre: TIntegerField
       FieldName = 'Work_Centre'
     end
-    object qryJobLogGridWork_Centre_Name: TStringField
+    object qryJobLogGridWork_Centre_Name: TWideStringField
       FieldName = 'Work_Centre_Name'
       FixedChar = True
       Size = 100
@@ -436,12 +436,12 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridPaper_Size: TIntegerField
       FieldName = 'Paper_Size'
     end
-    object qryJobLogGridPaper_Size_Description: TStringField
+    object qryJobLogGridPaper_Size_Description: TWideStringField
       FieldName = 'Paper_Size_Description'
       FixedChar = True
       Size = 30
     end
-    object qryJobLogGridCustom_Paper_Size: TStringField
+    object qryJobLogGridCustom_Paper_Size: TWideStringField
       FieldName = 'Custom_Paper_Size'
       FixedChar = True
       Size = 100
@@ -449,7 +449,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridNumber_Up: TIntegerField
       FieldName = 'Number_Up'
     end
-    object qryJobLogGridLaser_Format: TStringField
+    object qryJobLogGridLaser_Format: TWideStringField
       FieldName = 'Laser_Format'
       FixedChar = True
       Size = 2
@@ -460,12 +460,12 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridOperator: TIntegerField
       FieldName = 'Operator'
     end
-    object qryJobLogGridOperator_Name: TStringField
+    object qryJobLogGridOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       FixedChar = True
       Size = 80
     end
-    object qryJobLogGridAudit_Workstation: TStringField
+    object qryJobLogGridAudit_Workstation: TWideStringField
       FieldName = 'Audit_Workstation'
       FixedChar = True
       Size = 30
@@ -487,11 +487,11 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     object qryJobLogGridTeam_Count: TIntegerField
       FieldName = 'Team_Count'
     end
-    object qryJobLogGridWork_Centre_Operator: TStringField
+    object qryJobLogGridWork_Centre_Operator: TWideStringField
       FieldName = 'Work_Centre_Operator'
       Size = 50
     end
-    object qryJobLogGridOperation_Description: TStringField
+    object qryJobLogGridOperation_Description: TWideStringField
       FieldName = 'Operation_Description'
       Size = 50
     end
@@ -499,7 +499,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
       FieldName = 'Labour_Overtime_Hours'
       DisplayFormat = '##0.00'
     end
-    object qryJobLogGridActivity: TStringField
+    object qryJobLogGridActivity: TWideStringField
       FieldName = 'Activity'
     end
   end

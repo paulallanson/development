@@ -531,7 +531,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveline: TIntegerField
       FieldName = 'line'
     end
-    object qryLivecust_order_no: TStringField
+    object qryLivecust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       FixedChar = True
       Size = 50
@@ -542,7 +542,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLivebranch_no: TIntegerField
       FieldName = 'branch_no'
     end
-    object qryLivecustomers_desc: TStringField
+    object qryLivecustomers_desc: TWideStringField
       FieldName = 'customers_desc'
       FixedChar = True
       Size = 80
@@ -553,7 +553,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveselling_price: TCurrencyField
       FieldName = 'selling_price'
     end
-    object qryLivesell_unit: TStringField
+    object qryLivesell_unit: TWideStringField
       FieldName = 'sell_unit'
       FixedChar = True
       Size = 80
@@ -561,7 +561,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveorder_price: TCurrencyField
       FieldName = 'order_price'
     end
-    object qryLiveorder_unit: TStringField
+    object qryLiveorder_unit: TWideStringField
       FieldName = 'order_unit'
       FixedChar = True
       Size = 80
@@ -569,12 +569,12 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveoriginal_order: TFloatField
       FieldName = 'original_order'
     end
-    object qryLiverepName: TStringField
+    object qryLiverepName: TWideStringField
       FieldName = 'repName'
       FixedChar = True
       Size = 80
     end
-    object qryLiveCustName: TStringField
+    object qryLiveCustName: TWideStringField
       FieldName = 'CustName'
       FixedChar = True
       Size = 80
@@ -585,12 +585,12 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveexpLife: TDateTimeField
       FieldName = 'expLife'
     end
-    object qryLiveForm_Reference_ID: TStringField
+    object qryLiveForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
     end
-    object qryLiveForm_Reference_Descr: TStringField
+    object qryLiveForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
@@ -601,7 +601,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     object qryLiveOrder_Status: TIntegerField
       FieldName = 'Order_Status'
     end
-    object qryLiveStatus_Description: TStringField
+    object qryLiveStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       FixedChar = True
       Size = 80

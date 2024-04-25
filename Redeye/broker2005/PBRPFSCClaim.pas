@@ -64,13 +64,13 @@ type
     qryReportPurchase_Order: TFloatField;
     qryReportLine: TIntegerField;
     qryReportCustomer: TIntegerField;
-    qryReportCustomers_Desc: TStringField;
+    qryReportCustomers_Desc: TWideStringField;
     qryReportCustomer_Name: TWideStringField;
     qryReportFSC_Material_Claim: TIntegerField;
-    qryReportClaim_Description: TStringField;
-    qryReportClaim_Type: TStringField;
+    qryReportClaim_Description: TWideStringField;
+    qryReportClaim_Type: TWideStringField;
     qryReportProduct_Type: TIntegerField;
-    qryReportProduct_Type_Description: TStringField;
+    qryReportProduct_Type_Description: TWideStringField;
     qryReportFSC_Product_Type_Code: TIntegerField;
     qryReportDate_Deliv_Actual: TDateTimeField;
     qryReportQty_To_Deliver: TFloatField;

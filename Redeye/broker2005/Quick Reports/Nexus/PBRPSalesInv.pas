@@ -110,6 +110,7 @@ type
     qrlblVatRegNo: TQRLabel;
     qrshpPaymentNotes: TQRShape;
     memPayment: TQRMemo;
+    InvoiceHeader: TQRSubDetail;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:

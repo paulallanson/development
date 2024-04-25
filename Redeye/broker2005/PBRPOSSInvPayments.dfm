@@ -1112,7 +1112,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
     object qrySalesInvOutPayCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object qrySalesInvOutPayCustomer_Name: TStringField
+    object qrySalesInvOutPayCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
@@ -1120,7 +1120,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
     object qrySalesInvOutPaySales_invoice: TIntegerField
       FieldName = 'Sales_invoice'
     end
-    object qrySalesInvOutPaySales_invoice_no: TStringField
+    object qrySalesInvOutPaySales_invoice_no: TWideStringField
       FieldName = 'Sales_invoice_no'
       FixedChar = True
       Size = 30
@@ -1137,7 +1137,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
     object qrySalesInvOutPayTotal_Value: TCurrencyField
       FieldName = 'Total_Value'
     end
-    object qrySalesInvOutPayPaid_Status: TStringField
+    object qrySalesInvOutPayPaid_Status: TWideStringField
       FieldName = 'Paid_Status'
       FixedChar = True
       Size = 2
@@ -1145,27 +1145,27 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
     object qrySalesInvOutPayPaid_Amount: TCurrencyField
       FieldName = 'Paid_Amount'
     end
-    object qrySalesInvOutPayAccount_Number: TStringField
+    object qrySalesInvOutPayAccount_Number: TWideStringField
       FieldName = 'Account_Number'
       FixedChar = True
       Size = 60
     end
-    object qrySalesInvOutPayContact_Name: TStringField
+    object qrySalesInvOutPayContact_Name: TWideStringField
       FieldName = 'Contact_Name'
       FixedChar = True
       Size = 100
     end
-    object qrySalesInvOutPayReference: TStringField
+    object qrySalesInvOutPayReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
     end
-    object qrySalesInvOutPayExpiry_date: TStringField
+    object qrySalesInvOutPayExpiry_date: TWideStringField
       FieldName = 'Expiry_date'
       FixedChar = True
       Size = 14
     end
-    object qrySalesInvOutPayPayment_Method_Desc: TStringField
+    object qrySalesInvOutPayPayment_Method_Desc: TWideStringField
       FieldName = 'Payment_Method_Desc'
     end
   end

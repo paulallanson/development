@@ -24,7 +24,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []

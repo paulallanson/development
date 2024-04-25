@@ -1765,41 +1765,41 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Name = 'Purch_Ord_No'
         ParamType = ptUnknown
       end>
-    object GetDelFromSuppQuerySuppNam: TStringField
+    object GetDelFromSuppQuerySuppNam: TWideStringField
       FieldName = 'SuppNam'
       Size = 40
     end
-    object GetDelFromSuppQueryName: TStringField
+    object GetDelFromSuppQueryName: TWideStringField
       FieldName = 'Name'
       Size = 40
     end
-    object GetDelFromSuppQueryBuilding_No_Name: TStringField
+    object GetDelFromSuppQueryBuilding_No_Name: TWideStringField
       FieldName = 'Building_No_Name'
       Size = 40
     end
-    object GetDelFromSuppQueryStreet: TStringField
+    object GetDelFromSuppQueryStreet: TWideStringField
       FieldName = 'Street'
       Size = 40
     end
-    object GetDelFromSuppQueryLocale: TStringField
+    object GetDelFromSuppQueryLocale: TWideStringField
       FieldName = 'Locale'
       Size = 40
     end
-    object GetDelFromSuppQueryTown: TStringField
+    object GetDelFromSuppQueryTown: TWideStringField
       FieldName = 'Town'
       Size = 40
     end
-    object GetDelFromSuppQueryPostCode: TStringField
+    object GetDelFromSuppQueryPostCode: TWideStringField
       FieldName = 'PostCode'
       Size = 10
     end
-    object GetDelFromSuppQueryPhone: TStringField
+    object GetDelFromSuppQueryPhone: TWideStringField
       FieldName = 'Phone'
     end
-    object GetDelFromSuppQueryFax_Number: TStringField
+    object GetDelFromSuppQueryFax_Number: TWideStringField
       FieldName = 'Fax_Number'
     end
-    object GetDelFromSuppQueryemail: TStringField
+    object GetDelFromSuppQueryemail: TWideStringField
       FieldName = 'email'
       Size = 40
     end

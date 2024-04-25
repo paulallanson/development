@@ -686,7 +686,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
     end
-    object qryReportStock_Location_Desc: TStringField
+    object qryReportStock_Location_Desc: TWideStringField
       FieldName = 'Stock_Location_Desc'
       FixedChar = True
       Size = 80
@@ -694,17 +694,17 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     object qryReportForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
     end
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
     end
-    object qryReportForm_Reference_Descr: TStringField
+    object qryReportForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
     end
-    object qryReportDelivery_to_Stock: TStringField
+    object qryReportDelivery_to_Stock: TWideStringField
       FieldName = 'Delivery_to_Stock'
       FixedChar = True
       Size = 2
@@ -718,7 +718,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     object qryReportBin_Count: TIntegerField
       FieldName = 'Bin_Count'
     end
-    object qryReportStock_Reference: TStringField
+    object qryReportStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
       FixedChar = True
       Size = 30

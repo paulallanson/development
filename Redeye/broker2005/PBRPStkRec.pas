@@ -39,11 +39,11 @@ type
     qryReportLine: TIntegerField;
     qryReportDelivery_no: TIntegerField;
     qryReportDate_Point: TDateTimeField;
-    qryReportStock_Location_Desc: TStringField;
+    qryReportStock_Location_Desc: TWideStringField;
     qryReportForm_Reference: TIntegerField;
-    qryReportForm_Reference_ID: TStringField;
-    qryReportForm_Reference_Descr: TStringField;
-    qryReportDelivery_to_Stock: TStringField;
+    qryReportForm_Reference_ID: TWideStringField;
+    qryReportForm_Reference_Descr: TWideStringField;
+    qryReportDelivery_to_Stock: TWideStringField;
     qryReportDate_Deliv_Actual: TDateTimeField;
     qryReportQty_Delivered: TFloatField;
     qryReportBin_Count: TIntegerField;
@@ -51,7 +51,7 @@ type
     QRDBText2: TQRDBText;
     QRLabel2: TQRLabel;
     QRDBText6: TQRDBText;
-    qryReportStock_Reference: TStringField;
+    qryReportStock_Reference: TWideStringField;
     procedure QuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FooterQRBandBeforePrint(Sender: TQRCustomBand;

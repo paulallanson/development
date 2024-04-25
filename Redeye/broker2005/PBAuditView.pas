@@ -15,7 +15,7 @@ type
     GetDetsSQL: TFDQuery;
     DetsDS: TDataSource;
     DetsDBGrid: TDBGrid;
-    GetDetsSQLAudit_Text: TStringField;
+    GetDetsSQLAudit_Text: TWideStringField;
     GetDetsSQLAudit_Trail: TIntegerField;
     GetDetsSQLOperator: TIntegerField;
     GetDetsSQLDate_Time_Entered: TDateTimeField;
@@ -24,8 +24,8 @@ type
     GetDetsSQLAudit_Code_2: TIntegerField;
     GetDetsSQLAudit_Code_3: TIntegerField;
     GetDetsSQLAudit_Code_4: TIntegerField;
-    GetDetsSQLName: TStringField;
-    GetDetsSQLAudit_Type_Descr: TStringField;
+    GetDetsSQLName: TWideStringField;
+    GetDetsSQLAudit_Type_Descr: TWideStringField;
     GroupBox1: TGroupBox;
     ProgMoveCheckBox: TCheckBox;
     FieldChangeCheckBox: TCheckBox;
@@ -37,7 +37,7 @@ type
     OperatorsDS: TDataSource;
     UserDBLookupComboBox: TDBLookupComboBox;
     GetDetsSqlSQL: TFDQuery;
-    StringField4: TStringField;
+    StringField4: TWideStringField;
     IntegerField8: TIntegerField;
     IntegerField9: TIntegerField;
     DateTimeField2: TDateTimeField;
@@ -46,8 +46,8 @@ type
     IntegerField12: TIntegerField;
     IntegerField13: TIntegerField;
     IntegerField14: TIntegerField;
-    StringField5: TStringField;
-    StringField6: TStringField;
+    StringField5: TWideStringField;
+    StringField6: TWideStringField;
     CountLabel: TLabel;
     GroupBox3: TGroupBox;
     DateFromDateTimePicker: TDateTimePicker;
@@ -57,10 +57,10 @@ type
     DateToCheckBox: TCheckBox;
     CloseBitBtn: TBitBtn;
     SequenceLabel: TLabel;
-    GetDetsSqlSQLAudit_Table_Name: TStringField;
-    GetDetsSQLAudit_Table_Name: TStringField;
-    GetDetsSQLAudit_Code_1_Field: TStringField;
-    GetDetsSqlSQLAudit_Code_1_Field: TStringField;
+    GetDetsSqlSQLAudit_Table_Name: TWideStringField;
+    GetDetsSQLAudit_Table_Name: TWideStringField;
+    GetDetsSQLAudit_Code_1_Field: TWideStringField;
+    GetDetsSqlSQLAudit_Code_1_Field: TWideStringField;
     btnExcel: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure GetDetsSQLAudit_TextGetText(Sender: TField; var Text: String;

@@ -991,16 +991,16 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object SalesInvSQLBranch_no: TIntegerField
       FieldName = 'Branch_no'
     end
-    object SalesInvSQLAccount_Code: TStringField
+    object SalesInvSQLAccount_Code: TWideStringField
       FieldName = 'Account_Code'
       FixedChar = True
     end
-    object SalesInvSQLCustomers_Desc: TStringField
+    object SalesInvSQLCustomers_Desc: TWideStringField
       FieldName = 'Customers_Desc'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLSales_Invoice_No: TStringField
+    object SalesInvSQLSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -1017,46 +1017,46 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object SalesInvSQLInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object SalesInvSQLName: TStringField
+    object SalesInvSQLName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLBuilding_No_name: TStringField
+    object SalesInvSQLBuilding_No_name: TWideStringField
       FieldName = 'Building_No_name'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLStreet: TStringField
+    object SalesInvSQLStreet: TWideStringField
       FieldName = 'Street'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLLocale: TStringField
+    object SalesInvSQLLocale: TWideStringField
       FieldName = 'Locale'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLTown: TStringField
+    object SalesInvSQLTown: TWideStringField
       FieldName = 'Town'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLPostcode: TStringField
+    object SalesInvSQLPostcode: TWideStringField
       FieldName = 'Postcode'
       FixedChar = True
     end
-    object SalesInvSQLPhone: TStringField
+    object SalesInvSQLPhone: TWideStringField
       FieldName = 'Phone'
       FixedChar = True
       Size = 40
     end
-    object SalesInvSQLFax_Number: TStringField
+    object SalesInvSQLFax_Number: TWideStringField
       FieldName = 'Fax_Number'
       FixedChar = True
       Size = 40
     end
-    object SalesInvSQLCust_Order_No: TStringField
+    object SalesInvSQLCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -1064,12 +1064,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object SalesInvSQLForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
     end
-    object SalesInvSQLForm_Reference_Descr: TStringField
+    object SalesInvSQLForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
       FixedChar = True
       Size = 100
     end
-    object SalesInvSQLForm_Reference_ID: TStringField
+    object SalesInvSQLForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
       FixedChar = True
       Size = 100
@@ -1095,12 +1095,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object SalesInvSQLSel1: TFloatField
       FieldName = 'Sel1'
     end
-    object SalesInvSQLText100: TStringField
+    object SalesInvSQLText100: TWideStringField
       FieldName = 'Text100'
       FixedChar = True
       Size = 100
     end
-    object SalesInvSQLOrder: TStringField
+    object SalesInvSQLOrder: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Order'
       OnGetText = SalesInvSQLOrderGetText
@@ -1118,28 +1118,28 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     object SalesInvSQLJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
     end
-    object SalesInvSQLSOCustRef: TStringField
+    object SalesInvSQLSOCustRef: TWideStringField
       FieldName = 'SOCustRef'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLJBCustRef: TStringField
+    object SalesInvSQLJBCustRef: TWideStringField
       FieldName = 'JBCustRef'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLJob_Bag_Descr: TStringField
+    object SalesInvSQLJob_Bag_Descr: TWideStringField
       FieldName = 'Job_Bag_Descr'
       FixedChar = True
       Size = 80
     end
-    object SalesInvSQLCustRef: TStringField
+    object SalesInvSQLCustRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustRef'
       OnGetText = SalesInvSQLCustRefGetText
       Calculated = True
     end
-    object SalesInvSQLCustDesc: TStringField
+    object SalesInvSQLCustDesc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'CustDesc'
       OnGetText = SalesInvSQLCustDescGetText

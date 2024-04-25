@@ -501,12 +501,12 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       FixedChar = True
       Size = 2
     end
-    object qrySalesByInvSales_Invoice_type: TStringField
+    object qrySalesByInvSales_Invoice_type: TWideStringField
       FieldName = 'Sales_Invoice_type'
       FixedChar = True
       Size = 2
     end
-    object qrySalesByInvReference: TStringField
+    object qrySalesByInvReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120

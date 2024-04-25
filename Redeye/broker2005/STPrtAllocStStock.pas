@@ -24,13 +24,13 @@ type
     qryStoreStockStore_Quantity: TIntegerField;
     qryStoreStockStore_Cost: TCurrencyField;
     qryStoreStockDate_Received: TDateTimeField;
-    qryStoreStockPart: TStringField;
-    qryStoreStockPart_Store_Lot: TStringField;
+    qryStoreStockPart: TWideStringField;
+    qryStoreStockPart_Store_Lot: TWideStringField;
     qryStoreStockPart_Store: TIntegerField;
-    qryStoreStockPart_Bin: TStringField;
+    qryStoreStockPart_Bin: TWideStringField;
     qryStoreStockStock_Pack_Quantity: TIntegerField;
-    qryStoreStockStore_Stock_Description: TStringField;
-    qryStoreStockinvoice_upfront: TStringField;
+    qryStoreStockStore_Stock_Description: TWideStringField;
+    qryStoreStockinvoice_upfront: TWideStringField;
     qryStoreStockFree_Stock: TIntegerField;
     BitBtn1: TBitBtn;
     Label1: TLabel;

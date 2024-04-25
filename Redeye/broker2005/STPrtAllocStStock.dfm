@@ -216,12 +216,12 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     object qryStoreStockDate_Received: TDateTimeField
       FieldName = 'Date_Received'
     end
-    object qryStoreStockPart: TStringField
+    object qryStoreStockPart: TWideStringField
       FieldName = 'Part'
       FixedChar = True
       Size = 30
     end
-    object qryStoreStockPart_Store_Lot: TStringField
+    object qryStoreStockPart_Store_Lot: TWideStringField
       FieldName = 'Part_Store_Lot'
       FixedChar = True
       Size = 40
@@ -229,19 +229,19 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     object qryStoreStockPart_Store: TIntegerField
       FieldName = 'Part_Store'
     end
-    object qryStoreStockPart_Bin: TStringField
+    object qryStoreStockPart_Bin: TWideStringField
       FieldName = 'Part_Bin'
       FixedChar = True
     end
     object qryStoreStockStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
     end
-    object qryStoreStockStore_Stock_Description: TStringField
+    object qryStoreStockStore_Stock_Description: TWideStringField
       FieldName = 'Store_Stock_Description'
       FixedChar = True
       Size = 60
     end
-    object qryStoreStockinvoice_upfront: TStringField
+    object qryStoreStockinvoice_upfront: TWideStringField
       FieldName = 'invoice_upfront'
       FixedChar = True
       Size = 2

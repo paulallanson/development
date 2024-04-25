@@ -302,7 +302,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     object qrySIAllDetailssales_order_line_no: TIntegerField
       FieldName = 'sales_order_line_no'
     end
-    object qrySIAllDetailspart: TStringField
+    object qrySIAllDetailspart: TWideStringField
       FieldName = 'part'
       FixedChar = True
       Size = 50
@@ -328,7 +328,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     object qrySIAllDetailsdate_ordered: TDateTimeField
       FieldName = 'date_ordered'
     end
-    object qrySIAllDetailscust_order_no: TStringField
+    object qrySIAllDetailscust_order_no: TWideStringField
       FieldName = 'cust_order_no'
       FixedChar = True
       Size = 80
@@ -348,7 +348,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     object qrySIAllDetailsdelivery_customer_1: TIntegerField
       FieldName = 'delivery_customer_1'
     end
-    object qrySIAllDetailspart_description: TStringField
+    object qrySIAllDetailspart_description: TWideStringField
       FieldName = 'part_description'
       FixedChar = True
       Size = 120
@@ -356,31 +356,31 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     object qrySIAllDetailsPart_Cost_Cat: TCurrencyField
       FieldName = 'Part_Cost_Cat'
     end
-    object qrySIAllDetailsCustomer_Name: TStringField
+    object qrySIAllDetailsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 92
     end
-    object qrySIAllDetailsBranch_Name: TStringField
+    object qrySIAllDetailsBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 100
     end
-    object qrySIAllDetailsShort_Code: TStringField
+    object qrySIAllDetailsShort_Code: TWideStringField
       FieldName = 'Short_Code'
       FixedChar = True
     end
-    object qrySIAllDetailsOrderedBy: TStringField
+    object qrySIAllDetailsOrderedBy: TWideStringField
       FieldName = 'OrderedBy'
       FixedChar = True
       Size = 194
     end
-    object qrySIAllDetailsDeliveryCustName: TStringField
+    object qrySIAllDetailsDeliveryCustName: TWideStringField
       FieldName = 'DeliveryCustName'
       FixedChar = True
       Size = 92
     end
-    object qrySIAllDetailsDeliveryBranchName: TStringField
+    object qrySIAllDetailsDeliveryBranchName: TWideStringField
       FieldName = 'DeliveryBranchName'
       FixedChar = True
       Size = 100
@@ -391,14 +391,14 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     object qrySIAllDetailsDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
     end
-    object qrySIAllDetailscost_centre: TStringField
+    object qrySIAllDetailscost_centre: TWideStringField
       FieldName = 'cost_centre'
       FixedChar = True
     end
     object qrySIAllDetailsVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
     end
-    object qrySIAllDetailsDeliveryLocation: TStringField
+    object qrySIAllDetailsDeliveryLocation: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'DeliveryLocation'
       Size = 50

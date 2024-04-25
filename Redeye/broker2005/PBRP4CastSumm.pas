@@ -54,8 +54,8 @@ type
     qrySalesCommPrice_Unit_Factor: TFloatField;
     qrySalesCommPrice_Unit_Factor_1: TFloatField;
     qrySalesCommRep: TIntegerField;
-    qrySalesCommName: TStringField;
-    qrySalesCommInactive: TStringField;
+    qrySalesCommName: TWideStringField;
+    qrySalesCommInactive: TWideStringField;
     qrySalesCommPurchase_Order: TFloatField;
     QRLblM14Cst: TQRLabel;
     QRLblM13Cst: TQRLabel;

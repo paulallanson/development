@@ -69,8 +69,8 @@ type
     qryJobsEnd_User_Name: TWideStringField;
     qryJobsPack_Format_Description: TWideStringField;
     qryJobsEnclosing_Type: TWideStringField;
-    procedure qryJobsStatus_TextGetText(Sender: TField; var Text: String;
-      DisplayText: Boolean);
+    qryJobsStatus_Text: TWideStringField;
+    procedure qryJobsStatus_TextGetText(Sender: TField; var Text: String; DisplayText: Boolean);
   private
     function GetHeaderCount: integer;
     function GetReturnCount: integer;

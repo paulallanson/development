@@ -139,7 +139,7 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     object lkpCOutThicknessPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
     end
-    object lkpCOutThicknessDescription: TStringField
+    object lkpCOutThicknessDescription: TWideStringField
       FieldName = 'Description'
       Size = 40
     end
@@ -153,7 +153,7 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
       DisplayFormat = '0.00'
       currency = True
     end
-    object lkpCOutThicknessPrice_Unit_Description: TStringField
+    object lkpCOutThicknessPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
     end
   end

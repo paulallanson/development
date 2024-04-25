@@ -29,11 +29,11 @@ type
     lotEdit: TEdit;
     CloseBitBtn: TBitBtn;
     GetDetsSQLDate_Received: TDateTimeField;
-    GetDetsSQLPart_Move_Type_Descr: TStringField;
-    GetDetsSQLPart_Store_Name: TStringField;
-    GetDetsSQLPart_Movement_Bin: TStringField;
-    GetDetsSQLPart_Store_Lot: TStringField;
-    GetDetsSQLPart_Movement_Reference: TStringField;
+    GetDetsSQLPart_Move_Type_Descr: TWideStringField;
+    GetDetsSQLPart_Store_Name: TWideStringField;
+    GetDetsSQLPart_Movement_Bin: TWideStringField;
+    GetDetsSQLPart_Store_Lot: TWideStringField;
+    GetDetsSQLPart_Movement_Reference: TWideStringField;
     GetDetsSQLStore_Cost: TCurrencyField;
     GetDetsSQLStore_Quantity: TIntegerField;
     GetDetsSQLStock_Pack_Quantity: TIntegerField;

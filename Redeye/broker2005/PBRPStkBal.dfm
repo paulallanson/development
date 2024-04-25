@@ -1328,7 +1328,7 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       Origin = 'Branch_no'
       Required = True
     end
-    object qryReportStocked_Item: TStringField
+    object qryReportStocked_Item: TWideStringField
       FieldName = 'Stocked_Item'
       Origin = 'Stocked_Item'
       Size = 1
@@ -1413,7 +1413,7 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
         Name = 'Form_Reference'
         DataType = ftInteger
       end>
-    object qryOrdersCust_Order_No: TStringField
+    object qryOrdersCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       FixedChar = True
       Size = 50
@@ -1431,7 +1431,7 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       OnGetText = qryOrdersQty_in_StockGetText
       DisplayFormat = '#,##0'
     end
-    object qryOrdersForms_per_Box: TStringField
+    object qryOrdersForms_per_Box: TWideStringField
       FieldName = 'Forms_per_Box'
       FixedChar = True
       Size = 40

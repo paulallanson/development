@@ -2309,12 +2309,12 @@ object dmSupplierInvoice: TdmSupplierInvoice
       FixedChar = True
       Size = 80
     end
-    object qryPOsDelivBranch_Name: TStringField
+    object qryPOsDelivBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPOsDelivStatus_Description: TStringField
+    object qryPOsDelivStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       FixedChar = True
       Size = 80
@@ -2328,7 +2328,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     object qryPOsDelivCurrency_Code: TIntegerField
       FieldName = 'Currency_Code'
     end
-    object qryPOsDelivPrice_Unit_Description: TStringField
+    object qryPOsDelivPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
       FixedChar = True
       Size = 80
@@ -2336,22 +2336,22 @@ object dmSupplierInvoice: TdmSupplierInvoice
     object qryPOsDelivPrice_Unit_Factor: TFloatField
       FieldName = 'Price_Unit_Factor'
     end
-    object qryPOsDelivCustomer_Name: TStringField
+    object qryPOsDelivCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 92
     end
-    object qryPOsDelivPOLine: TStringField
+    object qryPOsDelivPOLine: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'POLine'
       OnGetText = qryPOsDelivPOLineGetText
       Calculated = True
     end
-    object qryPOsDelivNeeds_Authorising: TStringField
+    object qryPOsDelivNeeds_Authorising: TWideStringField
       FieldName = 'Needs_Authorising'
       Size = 1
     end
-    object qryPOsDelivOn_Hold: TStringField
+    object qryPOsDelivOn_Hold: TWideStringField
       FieldName = 'On_Hold'
       Size = 1
     end
@@ -2361,7 +2361,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     object qryPOsDelivJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
     end
-    object qryPOsDelivSales_Invoice_no: TStringField
+    object qryPOsDelivSales_Invoice_no: TWideStringField
       FieldName = 'Sales_Invoice_no'
     end
     object qryPOsDelivInvoice_Date: TDateTimeField
@@ -2370,7 +2370,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     object qryPOsDelivPurch_Ord_Line_Status: TIntegerField
       FieldName = 'Purch_Ord_Line_Status'
     end
-    object qryPOsDelivCust_Order_No: TStringField
+    object qryPOsDelivCust_Order_No: TWideStringField
       FieldName = 'Cust_Order_No'
       Size = 30
     end

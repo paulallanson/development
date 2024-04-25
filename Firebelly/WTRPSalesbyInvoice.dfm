@@ -1829,18 +1829,18 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     object IntegerField1: TIntegerField
       FieldName = 'Sales_invoice'
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'Inactive'
       Size = 1
     end
     object IntegerField2: TIntegerField
       FieldName = 'Customer'
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'Account_code'
       Size = 10
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'Invoice_no'
       Size = 10
     end
@@ -1862,40 +1862,40 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     object IntegerField3: TIntegerField
       FieldName = 'Sales_invoice_status'
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'Invoice_or_Credit'
       Size = 1
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'description'
       Size = 255
     end
     object IntegerField4: TIntegerField
       FieldName = 'Rep'
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'Reference'
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'Customer_Name'
       Size = 50
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'Invoice_Status_description'
       Size = 30
     end
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'Customer_Type_Description'
       Size = 40
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'Rep_Name'
       Size = 50
     end
     object IntegerField5: TIntegerField
       FieldName = 'Account_Manager'
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'Account_Manager_Name'
       Size = 50
     end
@@ -1903,11 +1903,11 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       FieldName = 'Total_Materials'
       DisplayFormat = '#,##0.00'
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'Is_Retail_Customer'
       Size = 1
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'Is_Commercial_customer'
       Size = 1
     end

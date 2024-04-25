@@ -172,7 +172,7 @@ type
     pmnSalesInvoicing: TPopupMenu;
     btnSalesInvoicing1: TMenuItem;
     btnSalesCredits1: TMenuItem;
-    MainMenuToolBar: TToolBar;
+    ToolBar1: TToolBar;
     btnActivities: TToolButton;
     btnCustomers: TToolButton;
     btnProspects: TToolButton;
@@ -951,12 +951,6 @@ begin
     CheckActivityReminder;
 //    tmrCheckActivity.Enabled := true;
 
-  for var i := 0 to MainMenuToolbar.ButtonCount-1 do
-  begin
-    MainMenuToolbar.Buttons[i].Hint := MainMenuToolbar.Buttons[i].Name;
-    MainMenuToolbar.Buttons[i].ShowHint := True;
-  end;
-
 end;
 
 procedure TfrmpbMainMenu.miExitClick(Sender: TObject);
@@ -1212,24 +1206,24 @@ begin
   end;
   {Set buttons according to file}
   try
-    with dmBroker.qryGetButtons do
+    with dmBroker do
     begin
-      Close;
-      ParamByName('Operator').AsInteger := iTempOp;
-      Open;
-      First;
-      while not EOF do
+      qryGetButtons.Close;
+      qryGetButtons.ParamByName('Operator').AsInteger := iTempOp;
+      qryGetButtons.Open;
+      qryGetButtons.First;
+      while not qryGetButtons.EOF do
       begin
         cTempComp :=
-          frmPBMainMenu.FindComponent(stringreplace((FieldByName('Button_Name').AsString),'mnu','btn',[rfReplaceAll,rfIgnoreCase]));
+          frmPBMainMenu.FindComponent(stringreplace((qryGetButtons.FieldByName('Button_Name').AsString),'mnu','btn',[rfReplaceAll,rfIgnoreCase]));
         if Assigned(cTempComp) then
           if cTempComp is TToolButton then
             try
-            (cTempComp as TToolButton).enabled := (FieldByName('Button_Status').AsString <> 'B');
-            if ((cTempComp as TToolButton).Name = 'btnCustomers') and (FieldByName('Button_Status').AsString = 'B') then
+            (cTempComp as TToolButton).enabled := (qryGetButtons.FieldByName('Button_Status').AsString <> 'B');
+            if ((cTempComp as TToolButton).Name = 'btnCustomers') and (qryGetButtons.FieldByName('Button_Status').AsString = 'B') then
               ShowCustomers := false;
 
-            Case Pos(FieldByName('Button_Status').AsString, 'FBNEROAS')  of
+            Case Pos(qryGetButtons.FieldByName('Button_Status').AsString, 'FBNEROAS')  of
                 0,1: (cTempComp as TToolButton).hint := (cTempComp as TToolButton).caption;
                 3:   (cTempComp as TToolButton).hint := (cTempComp as TToolButton).caption + ' (Notes Only Access)';
                 4:   (cTempComp as TToolButton).hint := (cTempComp as TToolButton).caption + ' (Read Only Access)';
@@ -1244,12 +1238,12 @@ begin
 
 // Now do the MainMenu items
         cTempComp :=
-          frmPBMainMenu.FindComponent((FieldByName('Button_Name').AsString));
+          frmPBMainMenu.FindComponent((qryGetButtons.FieldByName('Button_Name').AsString));
         if Assigned(cTempComp) then
           if cTempComp is TMenuItem then
             try
-              (cTempComp as TMenuItem).Enabled := (FieldByName('Button_Status').AsString <> 'B');
-              Case Pos(FieldByName('Button_Status').AsString, 'FBNERO')  of
+              (cTempComp as TMenuItem).Enabled := (qryGetButtons.FieldByName('Button_Status').AsString <> 'B');
+              Case Pos(qryGetButtons.FieldByName('Button_Status').AsString, 'FBNERO')  of
                 0,1,2: (cTempComp as TMenuItem).caption := (cTempComp as TMenuItem).hint;
                 3:   (cTempComp as TMenuItem).caption := (cTempComp as TMenuItem).hint + ' (Notes Only Access)';
                 4:   (cTempComp as TMenuItem).caption := (cTempComp as TMenuItem).hint + ' (Read Only Access)';
@@ -1261,7 +1255,7 @@ begin
               (cTempComp as TMenuItem).caption := (cTempComp as TMenuItem).caption + ' ...';
             except
             end;
-        Next;
+        qryGetButtons.Next;
       end;
     end;
   except

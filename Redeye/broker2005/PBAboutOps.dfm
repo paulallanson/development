@@ -163,12 +163,12 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
     object qryOperatoroperator: TIntegerField
       FieldName = 'operator'
     end
-    object qryOperatorName: TStringField
+    object qryOperatorName: TWideStringField
       FieldName = 'Name'
       FixedChar = True
       Size = 80
     end
-    object qryOperatorcan_authorise_po: TStringField
+    object qryOperatorcan_authorise_po: TWideStringField
       FieldName = 'can_authorise_po'
       FixedChar = True
       Size = 2
@@ -180,27 +180,27 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
       FieldName = 'min_po_sales_Value'
       currency = False
     end
-    object qryOperatormin_po_sales_value_type: TStringField
+    object qryOperatormin_po_sales_value_type: TWideStringField
       FieldName = 'min_po_sales_value_type'
       FixedChar = True
       Size = 2
     end
-    object qryOperatordelete_po_from_job_bag: TStringField
+    object qryOperatordelete_po_from_job_bag: TWideStringField
       FieldName = 'delete_po_from_job_bag'
       FixedChar = True
       Size = 2
     end
-    object qryOperatoroverride_paid_stock: TStringField
+    object qryOperatoroverride_paid_stock: TWideStringField
       FieldName = 'override_paid_stock'
       FixedChar = True
       Size = 2
     end
-    object qryOperatorCan_Authorise_Desc: TStringField
+    object qryOperatorCan_Authorise_Desc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Can_Authorise_Desc'
       Calculated = True
     end
-    object qryOperatorSales_Value_Type_Desc: TStringField
+    object qryOperatorSales_Value_Type_Desc: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Sales_Value_Type_Desc'
       Calculated = True

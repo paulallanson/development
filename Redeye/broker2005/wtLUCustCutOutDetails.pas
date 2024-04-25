@@ -20,11 +20,11 @@ type
     lkpCOutThicknessEdge_Type: TIntegerField;
     lkpCOutThicknessMaterial_Type: TIntegerField;
     lkpCOutThicknessPrice_pointer: TIntegerField;
-    lkpCOutThicknessDescription: TStringField;
+    lkpCOutThicknessDescription: TWideStringField;
     lkpCOutThicknessUnit_Price: TFloatField;
     lkpCOutThicknessUnit_Cost: TFloatField;
-    lkpCOutThicknessPrice_Unit_Description: TStringField;
-    lkpCOutThicknessinactive: TStringField;
+    lkpCOutThicknessPrice_Unit_Description: TWideStringField;
+    lkpCOutThicknessinactive: TWideStringField;
     lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
     qryDelCOutThick: TFDQuery;
@@ -54,8 +54,8 @@ type
     btnExcel: TBitBtn;
     SpeedButton2: TSpeedButton;
     SpeedButton1: TSpeedButton;
-    lkpCOutThicknessMaterial_Description: TStringField;
-    lkpCOutThicknessEdge_Type_Description: TStringField;
+    lkpCOutThicknessMaterial_Description: TWideStringField;
+    lkpCOutThicknessEdge_Type_Description: TWideStringField;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);

@@ -26,10 +26,10 @@ type
     RetailLbl: TQRLabel;
     QRSysData1: TQRSysData;
     QRBand5: TQRBand;
-    WorktopSQLworktop: TStringField;
-    WorktopSQLDescription: TStringField;
-    WorktopSQLStocked: TStringField;
-    WorktopSQLUse_For_Estimating: TStringField;
+    WorktopSQLworktop: TWideStringField;
+    WorktopSQLDescription: TWideStringField;
+    WorktopSQLStocked: TWideStringField;
+    WorktopSQLUse_For_Estimating: TWideStringField;
     QRDBText6: TQRDBText;
     MaterialHeader: TQRBand;
     QRLabel7: TQRLabel;
@@ -37,7 +37,7 @@ type
     MaterialSQL: TFDQuery;
     MaterialSRC: TDataSource;
     MaterialSQLMaterial_Type: TIntegerField;
-    MaterialSQLDescription: TStringField;
+    MaterialSQLDescription: TWideStringField;
     QRDetailLink1: TQRSubDetail;
     QRDetailLink2: TQRSubDetail;
     QRDBText1: TQRDBText;

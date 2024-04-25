@@ -2109,7 +2109,7 @@ object PBRPSalesbyProdFrm: TPBRPSalesbyProdFrm
     object qrySalesbyProdJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
     end
-    object qrySalesbyProdCredit_type: TStringField
+    object qrySalesbyProdCredit_type: TWideStringField
       FieldName = 'Credit_type'
       FixedChar = True
       Size = 2
@@ -2117,7 +2117,7 @@ object PBRPSalesbyProdFrm: TPBRPSalesbyProdFrm
     object qrySalesbyProdInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
     end
-    object qrySalesbyProdSales_Invoice_No: TStringField
+    object qrySalesbyProdSales_Invoice_No: TWideStringField
       FieldName = 'Sales_Invoice_No'
       FixedChar = True
       Size = 30
@@ -2134,17 +2134,17 @@ object PBRPSalesbyProdFrm: TPBRPSalesbyProdFrm
     object qrySalesbyProdInv_to_Branch: TIntegerField
       FieldName = 'Inv_to_Branch'
     end
-    object qrySalesbyProdCustomer_Name: TStringField
+    object qrySalesbyProdCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyProdBranch_Name: TStringField
+    object qrySalesbyProdBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object qrySalesbyProdDescription: TStringField
+    object qrySalesbyProdDescription: TWideStringField
       FieldName = 'Description'
       FixedChar = True
       Size = 80
@@ -2164,29 +2164,29 @@ object PBRPSalesbyProdFrm: TPBRPSalesbyProdFrm
       OnGetText = qrySalesbyProdTotal_GoodsGetText
       Calculated = True
     end
-    object qrySalesbyProdInvoiceRef: TStringField
+    object qrySalesbyProdInvoiceRef: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'InvoiceRef'
       OnGetText = qrySalesbyProdInvoiceRefGetText
       Calculated = True
     end
-    object qrySalesbyProdOrder: TStringField
+    object qrySalesbyProdOrder: TWideStringField
       FieldKind = fkCalculated
       FieldName = 'Order'
       OnGetText = qrySalesbyProdOrderGetText
       Calculated = True
     end
-    object qrySalesbyProdInvoice_Or_Credit: TStringField
+    object qrySalesbyProdInvoice_Or_Credit: TWideStringField
       FieldName = 'Invoice_Or_Credit'
       FixedChar = True
       Size = 2
     end
-    object qrySalesbyProdSales_Invoice_Type: TStringField
+    object qrySalesbyProdSales_Invoice_Type: TWideStringField
       FieldName = 'Sales_Invoice_Type'
       FixedChar = True
       Size = 2
     end
-    object qrySalesbyProdReference: TStringField
+    object qrySalesbyProdReference: TWideStringField
       FieldName = 'Reference'
       FixedChar = True
       Size = 120
@@ -2204,7 +2204,7 @@ object PBRPSalesbyProdFrm: TPBRPSalesbyProdFrm
       'group by sales_invoice_add_charge.details')
     Left = 135
     Top = 22
-    object qryInvAddChrgsdetails: TStringField
+    object qryInvAddChrgsdetails: TWideStringField
       FieldName = 'details'
       FixedChar = True
       Size = 255

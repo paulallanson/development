@@ -218,7 +218,7 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       ReadOnly = True
       Required = True
     end
-    object GDetsSQLDescription: TStringField
+    object GDetsSQLDescription: TWideStringField
       FieldName = 'Description'
       ReadOnly = True
       Required = True
