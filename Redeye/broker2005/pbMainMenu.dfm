@@ -28,19 +28,19 @@ object frmpbMainMenu: TfrmpbMainMenu
     Height = 45
     Bands = <
       item
-        Control = MainMenuToolBar
+        Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1470
+        Width = 1466
       end>
-    object MainMenuToolBar: TToolBar
+    object ToolBar1: TToolBar
       Left = 11
       Top = 0
       Width = 1457
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 61
-      Caption = 'MainMenuToolBar'
+      Caption = 'ToolBar1'
       DragMode = dmAutomatic
       Images = imglstMainMenu
       ParentShowHint = False
