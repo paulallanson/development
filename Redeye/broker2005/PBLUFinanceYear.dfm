@@ -3,7 +3,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Look-Up Financial Years'
-  ClientHeight = 297
+  ClientHeight = 303
   ClientWidth = 320
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET

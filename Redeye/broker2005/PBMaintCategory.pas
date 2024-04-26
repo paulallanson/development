@@ -120,7 +120,7 @@ begin
       ChkBxHold.checked := (fieldByName('Cleared_Funds_Required').AsString = 'Y');
       PBDBMemoFrm.LoadMemoData(FieldByName('inv_Narrative').AsInteger);
       PBPayNotesFrm.LoadMemoData(FieldByName('Payment_Narrative').AsInteger);
-//      ChkBxActive.checked := not (fieldByName('InActive').AsString = 'Y');
+      ChkBxActive.checked := not (FieldByName('InActive').AsString = 'Y');
     end;
   end;
 
@@ -199,11 +199,12 @@ begin
       else
         ParamByName('Cleared_Funds_Required').AsString := 'N';
 
-(*      if ChkBxActive.checked then
+      if chkbxActive.checked then
         ParamByName('InActive').AsString := 'N'
       else
         ParamByName('InActive').AsString := 'Y';
-*)      ExecSQL;
+
+      ExecSQL;
     end;
 
     if ChkBxInvoiceNumber.checked then
@@ -247,7 +248,7 @@ begin
   {If replicating Category details then save details to Replicate_Entity table}
   if dmBroker.GetReplicateDBAlias <> '' then
     begin
-      dmBroker.AddReplicateEntity(6, iCode, 0, 0, sFuncMode);
+      dmBroker.AddReplicateEntity(6, iCode, 0, 0, string(sFuncMode));
     end;
 end;
 

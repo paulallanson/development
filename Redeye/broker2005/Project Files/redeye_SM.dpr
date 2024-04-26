@@ -702,7 +702,8 @@ uses
   Printer.Interfaces in '..\..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas',
   Utils in '..\Utils.pas',
-  Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas',
+  PBMaintCustBudgets in '..\PBMaintCustBudgets.pas';
 
 {$R *.RES}
 

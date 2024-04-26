@@ -29,8 +29,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 493
-    ExplicitWidth = 738
     object lblDelete: TLabel
       Left = 134
       Top = 13
@@ -90,7 +88,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Align = alTop
     TabOrder = 0
     OnEnter = pnlHeaderEnter
-    ExplicitWidth = 738
     object Label8: TLabel
       Left = 32
       Top = 20
@@ -228,7 +225,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     Align = alTop
     TabOrder = 1
     OnEnter = pnlHeaderEnter
-    ExplicitWidth = 738
     object Label3: TLabel
       Left = 275
       Top = 12
@@ -315,8 +311,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
     ActivePage = tbsWorkCentre
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 738
-    ExplicitHeight = 286
     object tbsWorkCentre: TTabSheet
       Caption = 'Work Centre Details'
       TabVisible = False
@@ -378,7 +372,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 730
         object lblPaperSize: TLabel
           Left = 29
           Top = 104
@@ -586,8 +579,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitWidth = 730
-        ExplicitHeight = 83
         object pnlUnassWCOperatorsList: TPanel
           Left = 386
           Top = 0
@@ -595,8 +586,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           Height = 92
           Align = alRight
           TabOrder = 0
-          ExplicitLeft = 380
-          ExplicitHeight = 83
           object pnlWCOperatorsTop: TPanel
             Left = 1
             Top = 1
@@ -613,7 +602,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             Height = 29
             Align = alBottom
             TabOrder = 1
-            ExplicitTop = 53
             object Label14: TLabel
               Left = 8
               Top = 8
@@ -653,7 +641,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             TabOrder = 2
             TabStop = False
             OnDblClick = dblkpWCOperatorsDblClick
-            ExplicitHeight = 17
           end
         end
         object pnlWCOperatorsCenter: TPanel
@@ -664,8 +651,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitWidth = 30
-          ExplicitHeight = 83
         end
         object pnlAssWCOperatorList: TPanel
           Left = 0
@@ -674,7 +659,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
           Height = 92
           Align = alLeft
           TabOrder = 2
-          ExplicitHeight = 83
           object Panel2: TPanel
             Left = 1
             Top = 1
@@ -693,7 +677,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
             ItemHeight = 13
             TabOrder = 1
             OnDblClick = lstbxWCAssistantsDblClick
-            ExplicitHeight = 57
           end
           object lstbxWCAssistantsCode: TListBox
             Left = 216
@@ -1251,8 +1234,6 @@ object SFMaintJobLogFrm: TSFMaintJobLogFrm
       item
         Width = 50
       end>
-    ExplicitTop = 529
-    ExplicitWidth = 738
   end
   object tmrSearch: TTimer
     Interval = 500

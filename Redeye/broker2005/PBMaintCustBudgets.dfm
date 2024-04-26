@@ -62,6 +62,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     TabOrder = 2
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
+    ExplicitTop = 50
     ColWidths = (
       250
       110
@@ -250,7 +251,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         '>= :Start_Period) and (Period <= :End_Period)) or (Period is NUL' +
         'L))'
       'ORDER BY Customer.Name')
-    Left = 472
+    Left = 480
     Top = 152
     ParamData = <
       item

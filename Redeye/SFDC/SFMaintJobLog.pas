@@ -109,7 +109,7 @@ type
     procedure edtSearchChange(Sender: TObject);
     procedure tmrSearchTimer(Sender: TObject);
     procedure dblkpWCOperatorsDblClick(Sender: TObject);
-    procedure sgManDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure sgManDetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure sgManDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure sgWCDetailsKeyPress(Sender: TObject; var Key: Char);
     procedure edtEmployeeNoExit(Sender: TObject);
@@ -1567,45 +1567,43 @@ begin
   ShowWCOperators;
 end;
 
-procedure TSFMaintJobLogFrm.sgManDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
+procedure TSFMaintJobLogFrm.sgManDetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
 begin
+begin
+  var IsSenderStringGrid := (Sender is TStringGrid);
+
+  if not IsSenderStringGrid then
+    Exit;
+
+  var Grid := (Sender as TStringGrid);
+  var CellContent: string;
+
   {Prevent the blue cell being displayed}
-  with Sender as TStringGrid do
+  if (ARow <> 0) and (ACol <> 0) then
   begin
-    if vRow <> 0 then
-    begin
-      Canvas.Brush.Color := Color;
-      Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
-    end;
+    Canvas.Brush.Color := Color;
+    Canvas.Font.Color := Font.Color;
+    Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Grid.Cells[ACol, ARow]);
   end;
 
   {If Heading Display Left justified in the cells}
-  with sgManDetails do
+  if ACol = 0 then
   begin
-    if vCol < 2 then
-    begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end
-    else
-    begin
-      {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
+    CellContent := Grid.Cells[ACol, ARow];
+    SetTextAlign(Canvas.Handle,
+      GetTextAlign(Canvas.Handle) and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
+    ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
+  end
+  else
+  begin
+    {Display the Columns Right justified in the cells}
+    CellContent := Grid.Cells[ACol, ARow];
+    SetTextAlign(Canvas.Handle,
+      GetTextAlign(Canvas.Handle) and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
+    ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
   end;
 end;
 

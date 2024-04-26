@@ -42,6 +42,7 @@ object PBLUSpecInsFrm: TPBLUSpecInsFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = [fsBold]
+    OnDblClick = DetsDBGridDblClick
     Columns = <
       item
         Expanded = False
