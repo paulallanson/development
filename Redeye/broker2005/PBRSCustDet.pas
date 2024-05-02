@@ -94,14 +94,13 @@ type
     qryCurrentCustStatusColor: TIntegerField;
     qryCurrentCustStatusFont_Color: TIntegerField;
     qryCurrentCustStatusRep: TIntegerField;
-    qryCurrentCustStatusName_1: TWideStringField;
     qryCurrentCustStatusCust_name: TWideStringField;
-    qryCurrentCustStatusName_2: TWideStringField;
     qryCurrentCustStatusAcc_Active: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_1: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_2: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_3: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_4: TWideStringField;
+    qryCurrentCustStatusRep_Name: TWideStringField;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxCustStatusChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -255,7 +254,7 @@ begin
           else
             begin
               PBRPCustDetFrm.QRCustGroup.Expression := 'GetDetsQry.Rep';
-              PBRPCustDetFrm.Sel1QRDBText.datafield :=  'Name_1';
+              PBRPCustDetFrm.Sel1QRDBText.datafield :=  'Rep_Name';
             end;
 
           PBRPCustDetFrm.CustStateQRLabel.Caption := 'Customer Status: ' + cmbbxCustStatus.text;
