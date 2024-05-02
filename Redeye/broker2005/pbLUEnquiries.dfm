@@ -147,7 +147,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       end
       item
         Expanded = False
-        FieldName = 'date_point'
+        FieldName = 'Date_Point'
         Title.Caption = 'Date'
         Width = 61
         Visible = True

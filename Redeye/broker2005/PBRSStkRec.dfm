@@ -11,6 +11,7 @@ object PBRSStkRecFrm: TPBRSStkRecFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   TextHeight = 13
   object rgReportType: TRadioGroup
     Left = 16

@@ -2232,6 +2232,12 @@
         <DCCReference Include="..\PBRSSalesInvCost.pas">
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\PBRSSuppDet.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBRSStkRec.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -2263,7 +2269,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\redeye_SM.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\redeye_SM.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>redeye_SM.exe</RemoteName>
                         <Overwrite>true</Overwrite>

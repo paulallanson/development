@@ -10,6 +10,7 @@ object PBEnqAddDtlsFrm: TPBEnqAddDtlsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnShow = FormShow
   TextHeight = 13
   object Label2: TLabel

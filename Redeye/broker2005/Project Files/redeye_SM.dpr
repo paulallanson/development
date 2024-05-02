@@ -706,7 +706,9 @@ uses
   PBMaintCustBudgets in '..\PBMaintCustBudgets.pas',
   PBAuditView in '..\PBAuditView.pas',
   PBMaintLogins in '..\PBMaintLogins.pas',
-  PBRSSalesInvCost in '..\PBRSSalesInvCost.pas';
+  PBRSSalesInvCost in '..\PBRSSalesInvCost.pas',
+  PBRSSuppDet in '..\PBRSSuppDet.pas',
+  PBRSStkRec in '..\PBRSStkRec.pas';
 
 {$R *.RES}
 
