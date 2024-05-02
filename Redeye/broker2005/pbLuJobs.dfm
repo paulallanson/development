@@ -147,7 +147,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
     ParentFont = False
     PopupMenu = pmnFunctions
     TabOrder = 1
@@ -170,6 +170,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Date_Point'
         Title.Caption = 'Date'
+        Width = 64
         Visible = True
       end
       item
@@ -187,7 +188,6 @@ object frmPBLUJobs: TfrmPBLUJobs
         Visible = True
       end
       item
-        Alignment = taRightJustify
         Expanded = False
         FieldName = 'Quantity'
         Visible = True

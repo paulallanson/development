@@ -3,8 +3,8 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Discounts'
-  ClientHeight = 326
-  ClientWidth = 312
+  ClientHeight = 329
+  ClientWidth = 321
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

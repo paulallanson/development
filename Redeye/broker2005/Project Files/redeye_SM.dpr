@@ -703,7 +703,10 @@ uses
   Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas',
   Utils in '..\Utils.pas',
   Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas',
-  PBMaintCustBudgets in '..\PBMaintCustBudgets.pas';
+  PBMaintCustBudgets in '..\PBMaintCustBudgets.pas',
+  PBAuditView in '..\PBAuditView.pas',
+  PBMaintLogins in '..\PBMaintLogins.pas',
+  PBRSSalesInvCost in '..\PBRSSalesInvCost.pas';
 
 {$R *.RES}
 

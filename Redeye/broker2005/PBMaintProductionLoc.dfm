@@ -439,28 +439,13 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       '   Town,'
       '   PostCode)'
       'SELECT Max(Production_Location)+1, :GUID, NULL, :GUID, NULL,'
-      '  :GUID, :GUID FROM Production_Location'
+      '  :GUID, '#39#39' FROM Production_Location'
       ''
       ''
       ''
       ' ')
     Left = 72
     ParamData = <
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
       item
         Name = 'GUID'
         DataType = ftString

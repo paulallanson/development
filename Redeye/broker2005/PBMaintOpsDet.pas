@@ -126,6 +126,7 @@ type
     procedure rdgrpMinPOClick(Sender: TObject);
     procedure btnRevenueCentreClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     iListCount, iProcLeft, iCatLeft: Integer;
@@ -979,6 +980,11 @@ procedure TPBMaintOpsDetFrm.FormClose(Sender: TObject;
 begin
 {Remove all the manually created components} ;
 DeleteComponets(Self);
+end;
+
+procedure TPBMaintOpsDetFrm.FormCreate(Sender: TObject);
+begin
+  PageControl1.ActivePage := tbshtAccess;
 end;
 
 procedure TPBMaintOpsDetFrm.ChgPassBitBtnClick(Sender: TObject);

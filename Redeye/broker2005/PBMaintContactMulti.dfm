@@ -2,7 +2,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   Left = 568
   Top = 140
   Caption = 'Move Customer Contacts'
-  ClientHeight = 133
+  ClientHeight = 131
   ClientWidth = 399
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,6 +10,7 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Label1: TLabel

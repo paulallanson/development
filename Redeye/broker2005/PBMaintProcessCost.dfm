@@ -298,7 +298,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       ListField = 'Description'
       ListSource = dtsPriceUnit
       TabOrder = 3
-      OnClick = CheckOK
+      OnCloseUp = dblkpPriceUnitCloseUp
     end
     object edtReference: TEdit
       Left = 403

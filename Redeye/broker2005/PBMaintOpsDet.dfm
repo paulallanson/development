@@ -14,6 +14,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   DesignSize = (
     525
     560)
@@ -246,7 +247,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Top = 215
     Width = 513
     Height = 306
-    ActivePage = tbshtQuoting
+    ActivePage = tbshtEnqs
     TabOrder = 10
     object tbshtAccess: TTabSheet
       Caption = 'Access Control'

@@ -3,7 +3,7 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
   Top = 104
   BorderStyle = bsDialog
   Caption = 'Period End'
-  ClientHeight = 212
+  ClientHeight = 226
   ClientWidth = 299
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET

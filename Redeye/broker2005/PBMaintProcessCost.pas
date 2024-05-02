@@ -45,6 +45,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
+    procedure dblkpPriceUnitCloseUp(Sender: TObject);
   private
     FOldValue : string;
     procedure DeleteFromDB;
@@ -124,6 +125,11 @@ begin
                       (memCostPrice.text <> '') and
                       (memSellPrice.text <> '') and
                       (dblkpPriceUnit.KeyValue <> 0);
+end;
+
+procedure TPBMaintProcessCostFrm.dblkpPriceUnitCloseUp(Sender: TObject);
+begin
+  CheckOK(Sender);
 end;
 
 procedure TPBMaintProcessCostFrm.SaveValue(Sender: TObject);

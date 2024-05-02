@@ -10,7 +10,7 @@ object PBRPPEndLocPerformfrm: TPBRPPEndLocPerformfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object quickreport: TQuickRep
@@ -7198,8 +7198,8 @@ object PBRPPEndLocPerformfrm: TPBRPPEndLocPerformfrm
         'ce_Location = 0))'
       'ORDER BY Invoice_Location.Invoice_Location_Descr'
       '')
-    Left = 43
-    Top = 14
+    Left = 44
+    Top = 15
     ParamData = <
       item
         Name = 'Start'

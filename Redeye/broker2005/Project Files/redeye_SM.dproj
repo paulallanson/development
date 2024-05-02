@@ -2223,6 +2223,15 @@
         <DCCReference Include="..\PBMaintCustBudgets.pas">
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\PBAuditView.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintLogins.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesInvCost.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
