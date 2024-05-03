@@ -708,7 +708,10 @@ uses
   PBMaintLogins in '..\PBMaintLogins.pas',
   PBRSSalesInvCost in '..\PBRSSalesInvCost.pas',
   PBRSSuppDet in '..\PBRSSuppDet.pas',
-  PBRSStkRec in '..\PBRSStkRec.pas';
+  PBRSStkRec in '..\PBRSStkRec.pas',
+  PBLUNCARpts in '..\PBLUNCARpts.pas',
+  PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
+  PBRSNCASource in '..\PBRSNCASource.pas';
 
 {$R *.RES}
 
@@ -724,3 +727,4 @@ begin
   Application.CreateForm(TPBAuditDataMod, PBAuditDataMod);
   Application.Run;
 end.
+

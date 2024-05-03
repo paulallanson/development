@@ -2238,6 +2238,15 @@
         <DCCReference Include="..\PBRSStkRec.pas">
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\PBLUNCARpts.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCACostGraph.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCASource.pas">
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

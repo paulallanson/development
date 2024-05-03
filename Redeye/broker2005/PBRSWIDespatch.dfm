@@ -435,9 +435,9 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 440
+    Left = 423
     Top = 231
-    Width = 150
+    Width = 164
     Height = 17
     Caption = 'Page break by first sort type'
     TabOrder = 14

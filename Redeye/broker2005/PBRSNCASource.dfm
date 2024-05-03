@@ -3,7 +3,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   Top = 156
   BorderStyle = bsDialog
   Caption = 'Non Conformance Source Allocation'
-  ClientHeight = 203
+  ClientHeight = 193
   ClientWidth = 467
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,11 +15,11 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   OnActivate = FormActivate
   DesignSize = (
     467
-    203)
+    193)
   TextHeight = 13
   object PreviewBitBtn: TBitBtn
-    Left = 378
-    Top = 166
+    Left = 374
+    Top = 156
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,20 +40,22 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 162
   end
   object CancelBitBtn: TBitBtn
-    Left = 24
-    Top = 166
+    Left = 20
+    Top = 156
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 162
   end
   object GroupBox1: TGroupBox
-    Left = 16
-    Top = 16
+    Left = 12
+    Top = 11
     Width = 217
     Height = 65
     Caption = 'Graph 1'
@@ -73,13 +75,13 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       Height = 21
       KeyField = 'Period'
       ListField = 'Description'
-      ListSource = dtsPeriods
+      ListSource = dsPeriods1
       TabOrder = 0
     end
   end
   object GroupBox2: TGroupBox
-    Left = 240
-    Top = 16
+    Left = 236
+    Top = 11
     Width = 217
     Height = 65
     Caption = 'Graph 2'
@@ -99,13 +101,13 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       Height = 21
       KeyField = 'Period'
       ListField = 'Description'
-      ListSource = dtsPeriods
+      ListSource = dsPeriods2
       TabOrder = 0
     end
   end
   object GroupBox3: TGroupBox
-    Left = 16
-    Top = 88
+    Left = 12
+    Top = 83
     Width = 217
     Height = 65
     Caption = 'Graph 3'
@@ -125,13 +127,13 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       Height = 21
       KeyField = 'Period'
       ListField = 'Description'
-      ListSource = dtsPeriods
+      ListSource = dsPeriods3
       TabOrder = 0
     end
   end
   object GroupBox4: TGroupBox
-    Left = 240
-    Top = 88
+    Left = 236
+    Top = 83
     Width = 217
     Height = 65
     Caption = 'Graph 4'
@@ -151,11 +153,11 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       Height = 21
       KeyField = 'Period'
       ListField = 'Description'
-      ListSource = dtsPeriods
+      ListSource = dsPeriods4
       TabOrder = 0
     end
   end
-  object qryPeriods: TFDQuery
+  object qryPeriods1: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select 99999 as Period,'
@@ -167,17 +169,17 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       'from period'
       'where period <= :Period'
       'order by period desc')
-    Left = 216
-    Top = 160
+    Left = 28
+    Top = 27
     ParamData = <
       item
         Name = 'Period'
       end>
   end
-  object dtsPeriods: TDataSource
-    DataSet = qryPeriods
-    Left = 280
-    Top = 160
+  object dsPeriods1: TDataSource
+    DataSet = qryPeriods1
+    Left = 28
+    Top = 35
   end
   object qryGetDates: TFDQuery
     ConnectionName = 'PB'
@@ -185,11 +187,83 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       'select *'
       'from period '
       'where period = :Period')
-    Left = 120
-    Top = 160
+    Left = 116
+    Top = 131
     ParamData = <
       item
         Name = 'Period'
       end>
+  end
+  object qryPeriods2: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select 99999 as Period,'
+      #39'Rolling 12 Month'#39' as Description'
+      'From Company'
+      'where 1=1'
+      'UNion'
+      'select top 12 Period, Description '
+      'from period'
+      'where period <= :Period'
+      'order by period desc')
+    Left = 244
+    Top = 27
+    ParamData = <
+      item
+        Name = 'Period'
+      end>
+  end
+  object dsPeriods2: TDataSource
+    DataSet = qryPeriods2
+    Left = 244
+    Top = 35
+  end
+  object qryPeriods3: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select 99999 as Period,'
+      #39'Rolling 12 Month'#39' as Description'
+      'From Company'
+      'where 1=1'
+      'UNion'
+      'select top 12 Period, Description '
+      'from period'
+      'where period <= :Period'
+      'order by period desc')
+    Left = 20
+    Top = 99
+    ParamData = <
+      item
+        Name = 'Period'
+      end>
+  end
+  object dsPeriods3: TDataSource
+    DataSet = qryPeriods3
+    Left = 20
+    Top = 107
+  end
+  object qryPeriods4: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select 99999 as Period,'
+      #39'Rolling 12 Month'#39' as Description'
+      'From Company'
+      'where 1=1'
+      'UNion'
+      'select top 12 Period, Description '
+      'from period'
+      'where period <= :Period'
+      'order by period desc')
+    Left = 244
+    Top = 99
+    ParamData = <
+      item
+        Name = 'Period'
+      end>
+  end
+  object dsPeriods4: TDataSource
+    DataSet = qryPeriods4
+    Left = 244
+    Top = 107
   end
 end

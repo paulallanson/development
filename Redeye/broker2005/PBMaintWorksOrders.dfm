@@ -45,22 +45,20 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Date Raised'
     end
     object Label3: TLabel
-      Left = 587
+      Left = 581
       Top = 12
       Width = 66
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Mailing Date'
-      ExplicitLeft = 591
     end
     object Label5: TLabel
-      Left = 380
+      Left = 388
       Top = 12
       Width = 51
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Start Date'
-      ExplicitLeft = 384
     end
     object edtOrderNumber: TEdit
       Left = 72
@@ -163,15 +161,15 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Despatch Details'
       ImageIndex = 4
       object Panel7: TPanel
-        Left = 701
+        Left = 697
         Top = 0
         Width = 86
-        Height = 243
+        Height = 234
         Align = alRight
         ParentBackground = False
         TabOrder = 0
         object btnAddDelivs: TBitBtn
-          Left = 8
+          Left = 5
           Top = 8
           Width = 75
           Height = 25
@@ -180,7 +178,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           OnClick = btnAddDelivsClick
         end
         object btnChangeDelivs: TBitBtn
-          Left = 8
+          Left = 5
           Top = 40
           Width = 75
           Height = 25
@@ -190,7 +188,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           OnClick = btnChangeDelivsClick
         end
         object btnDeleteDelivs: TBitBtn
-          Left = 8
+          Left = 5
           Top = 72
           Width = 75
           Height = 25
@@ -203,8 +201,8 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       object sgDelivs: TStringGrid
         Left = 0
         Top = 0
-        Width = 701
-        Height = 243
+        Width = 697
+        Height = 234
         Align = alClient
         ColCount = 7
         DefaultColWidth = 40
@@ -225,183 +223,194 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
     object tbReturnAddress: TTabSheet
       Caption = 'Return Address'
       ImageIndex = 3
-      object rdgrpAddressType: TRadioGroup
-        Left = 24
-        Top = 8
-        Width = 105
-        Height = 105
-        Caption = 'Address Type'
-        Items.Strings = (
-          'N/A'
-          'Company'
-          'Customer'
-          'Ad hoc')
+      object pnlReturnAddressTS: TPanel
+        Left = 0
+        Top = 0
+        Width = 783
+        Height = 234
+        Align = alClient
+        BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        OnClick = rdgrpAddressTypeClick
-      end
-      object AddrGrpBox: TGroupBox
-        Left = 160
-        Top = 8
-        Width = 393
-        Height = 209
-        Caption = 'Address Details'
-        ParentBackground = False
-        TabOrder = 1
-        object AddrTypeLabel: TLabel
-          Left = 8
-          Top = 19
-          Width = 51
-          Height = 13
-          Caption = 'Addr Type'
-        end
-        object BranchNameLabel: TLabel
-          Left = 8
-          Top = 42
-          Width = 35
-          Height = 13
-          Caption = 'Branch'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label9: TLabel
-          Left = 8
-          Top = 65
-          Width = 41
-          Height = 13
-          Caption = 'Address'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label10: TLabel
-          Left = 8
-          Top = 160
-          Width = 47
-          Height = 13
-          Caption = 'Postcode'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label19: TLabel
-          Left = 8
-          Top = 184
-          Width = 37
-          Height = 13
-          Caption = 'County'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object NameEdit: TEdit
-          Left = 85
-          Top = 15
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
+        ExplicitTop = -1
+        object AddrGrpBox: TGroupBox
+          Left = 160
+          Top = 8
+          Width = 393
+          Height = 209
+          Caption = 'Address Details'
+          ParentBackground = False
           TabOrder = 0
+          object AddrTypeLabel: TLabel
+            Left = 8
+            Top = 19
+            Width = 51
+            Height = 13
+            Caption = 'Addr Type'
+          end
+          object BranchNameLabel: TLabel
+            Left = 8
+            Top = 42
+            Width = 35
+            Height = 13
+            Caption = 'Branch'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label9: TLabel
+            Left = 8
+            Top = 65
+            Width = 41
+            Height = 13
+            Caption = 'Address'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label10: TLabel
+            Left = 8
+            Top = 160
+            Width = 47
+            Height = 13
+            Caption = 'Postcode'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label19: TLabel
+            Left = 8
+            Top = 184
+            Width = 37
+            Height = 13
+            Caption = 'County'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+          end
+          object NameEdit: TEdit
+            Left = 85
+            Top = 15
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 0
+          end
+          object BranchNameEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 38
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 1
+          end
+          object BuildingEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 61
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 2
+          end
+          object StreetEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 85
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 3
+          end
+          object LocaleEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 109
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 4
+          end
+          object TownEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 132
+            Width = 252
+            Height = 21
+            MaxLength = 40
+            ReadOnly = True
+            TabOrder = 5
+          end
+          object PostCodeEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 156
+            Width = 84
+            Height = 21
+            CharCase = ecUpperCase
+            MaxLength = 10
+            ReadOnly = True
+            TabOrder = 6
+          end
+          object CountyEdit: TEdit
+            Tag = 100
+            Left = 85
+            Top = 180
+            Width = 116
+            Height = 21
+            CharCase = ecUpperCase
+            MaxLength = 10
+            ReadOnly = True
+            TabOrder = 7
+          end
+          object SearchBtn: TButton
+            Left = 352
+            Top = 13
+            Width = 25
+            Height = 25
+            Caption = '...'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 8
+            OnClick = SearchBtnClick
+          end
         end
-        object BranchNameEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 38
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
+        object rdgrpAddressType: TRadioGroup
+          Left = 24
+          Top = 8
+          Width = 105
+          Height = 105
+          Caption = 'Address Type'
+          Items.Strings = (
+            'N/A'
+            'Company'
+            'Customer'
+            'Ad hoc')
+          ParentBackground = False
           TabOrder = 1
-        end
-        object BuildingEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 61
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
-          TabOrder = 2
-        end
-        object StreetEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 85
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
-          TabOrder = 3
-        end
-        object LocaleEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 109
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
-          TabOrder = 4
-        end
-        object TownEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 132
-          Width = 252
-          Height = 21
-          MaxLength = 40
-          ReadOnly = True
-          TabOrder = 5
-        end
-        object PostCodeEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 156
-          Width = 84
-          Height = 21
-          CharCase = ecUpperCase
-          MaxLength = 10
-          ReadOnly = True
-          TabOrder = 6
-        end
-        object CountyEdit: TEdit
-          Tag = 100
-          Left = 85
-          Top = 180
-          Width = 116
-          Height = 21
-          CharCase = ecUpperCase
-          MaxLength = 10
-          ReadOnly = True
-          TabOrder = 7
-        end
-        object SearchBtn: TButton
-          Left = 352
-          Top = 13
-          Width = 25
-          Height = 25
-          Caption = '...'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 8
-          OnClick = SearchBtnClick
+          OnClick = rdgrpAddressTypeClick
         end
       end
     end
@@ -412,7 +421,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         Left = 0
         Top = 17
         Width = 305
-        Height = 226
+        Height = 217
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
@@ -420,7 +429,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           Left = 1
           Top = 1
           Width = 303
-          Height = 224
+          Height = 215
           Align = alClient
           ColCount = 3
           DefaultColWidth = 40
@@ -436,10 +445,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         end
       end
       object Panel8: TPanel
-        Left = 422
+        Left = 418
         Top = 17
         Width = 365
-        Height = 226
+        Height = 217
         Align = alRight
         ParentBackground = False
         TabOrder = 1
@@ -447,7 +456,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           Left = 1
           Top = 1
           Width = 363
-          Height = 224
+          Height = 215
           Align = alClient
           Color = clBtnFace
           ReadOnly = True
@@ -457,7 +466,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       object Panel9: TPanel
         Left = 0
         Top = 0
-        Width = 787
+        Width = 783
         Height = 17
         Align = alTop
         ParentBackground = False
@@ -466,8 +475,8 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       object Panel18: TPanel
         Left = 305
         Top = 17
-        Width = 117
-        Height = 226
+        Width = 113
+        Height = 217
         Align = alClient
         ParentBackground = False
         TabOrder = 3

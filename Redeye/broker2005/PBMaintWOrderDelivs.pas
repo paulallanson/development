@@ -345,7 +345,7 @@ procedure TfrmPBMaintWOrderDelivs.btnDateRequiredClick(Sender: TObject);
 var
   NewDate: TDateTime;
 begin
-  NewDate := InputDate(StrToDate(edtdateReq.Text));
+  NewDate := InputDate(StrToDateDef(edtdateReq.Text, Now));
   edtDateReq.Text := PBDatestr(NewDate);
 
   if (NewDate-7) < date then

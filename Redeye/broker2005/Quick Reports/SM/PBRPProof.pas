@@ -177,6 +177,13 @@ type
     QRShape5: TQRShape;
     QRShape6: TQRShape;
     QRShape7: TQRShape;
+    QRShape9: TQRShape;
+    QRLabel25: TQRLabel;
+    QRLabel26: TQRLabel;
+    QRLabel27: TQRLabel;
+    QRLabel28: TQRLabel;
+    QRLabel30: TQRLabel;
+    QRLabel31: TQRLabel;
     QRShape8: TQRShape;
     QRBand1: TQRBand;
     QRLabel18: TQRLabel;
@@ -204,6 +211,7 @@ type
     QRLabel22: TQRLabel;
     QRLabel23: TQRLabel;
     lblOfficeContact: TQRLabel;
+    QRDBText2: TQRDBText;
     QRMemoCmpnyNm: TQRMemo;
     ReportImage: TQRImage;
     QRDBText1: TQRDBText;
