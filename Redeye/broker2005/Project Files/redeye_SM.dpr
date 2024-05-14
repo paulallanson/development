@@ -702,7 +702,16 @@ uses
   Printer.Interfaces in '..\..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\..\PrinterTools\Printer.Tools.pas',
   Utils in '..\Utils.pas',
-  Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas',
+  PBMaintCustBudgets in '..\PBMaintCustBudgets.pas',
+  PBAuditView in '..\PBAuditView.pas',
+  PBMaintLogins in '..\PBMaintLogins.pas',
+  PBRSSalesInvCost in '..\PBRSSalesInvCost.pas',
+  PBRSSuppDet in '..\PBRSSuppDet.pas',
+  PBRSStkRec in '..\PBRSStkRec.pas',
+  PBLUNCARpts in '..\PBLUNCARpts.pas',
+  PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
+  PBRSNCASource in '..\PBRSNCASource.pas';
 
 {$R *.RES}
 
@@ -718,3 +727,4 @@ begin
   Application.CreateForm(TPBAuditDataMod, PBAuditDataMod);
   Application.Run;
 end.
+

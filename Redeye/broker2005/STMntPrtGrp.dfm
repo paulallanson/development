@@ -2,8 +2,8 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
   Left = 91
   Top = 141
   Caption = 'Maintain Product Groups'
-  ClientHeight = 166
-  ClientWidth = 422
+  ClientHeight = 150
+  ClientWidth = 412
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

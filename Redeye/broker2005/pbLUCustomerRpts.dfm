@@ -11,6 +11,7 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel

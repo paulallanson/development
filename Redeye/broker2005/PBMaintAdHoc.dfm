@@ -385,28 +385,13 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       '   Narrative,'
       '   Delivery_Narrative)'
       'SELECT Max(Ad_Hoc_Address)+1, :GUID, NULL, :GUID, NULL,'
-      '  :GUID, :GUID, NULL, NULL FROM Ad_Hoc_Address'
+      '  :GUID, '#39#39', NULL, NULL FROM Ad_Hoc_Address'
       ''
       ''
       ''
       ' ')
     Left = 72
     ParamData = <
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'GUID'
-        DataType = ftString
-        ParamType = ptInput
-      end
       item
         Name = 'GUID'
         DataType = ftString

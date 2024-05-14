@@ -86,7 +86,7 @@ type
     qryCompCat: TFDQuery;
     qryUniqueInv: TFDQuery;
     qryCategory: TFDQuery;
-    
+    InvoiceHeader: TQRSubDetail;
     imgReport: TQRImage;
     gtNotesShape: TQRShape;
     RichmemoNotes: TQRRichText;

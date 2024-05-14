@@ -368,7 +368,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
     ParentFont = False
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
@@ -435,7 +435,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Title.Font.Height = -12
         Title.Font.Name = 'Segoe UI'
         Title.Font.Style = []
-        Width = 64
         Visible = True
       end
       item

@@ -18,7 +18,7 @@ type
     Label1: TLabel;
     GroupBox3: TGroupBox;
     GroupBox4: TGroupBox;
-    qryPeriods: TFDQuery;
+    qryPeriods1: TFDQuery;
     dblkpGraph1: TDBLookupComboBox;
     dblkpGraph2: TDBLookupComboBox;
     Label3: TLabel;
@@ -26,8 +26,14 @@ type
     Label2: TLabel;
     dblkpGraph4: TDBLookupComboBox;
     Label4: TLabel;
-    dtsPeriods: TDataSource;
+    dsPeriods1: TDataSource;
     qryGetDates: TFDQuery;
+    qryPeriods2: TFDQuery;
+    dsPeriods2: TDataSource;
+    qryPeriods3: TFDQuery;
+    dsPeriods3: TDataSource;
+    qryPeriods4: TFDQuery;
+    dsPeriods4: TDataSource;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
   private
@@ -95,12 +101,31 @@ end;
 
 procedure TPBRSNCASourceFrm.FormActivate(Sender: TObject);
 begin
-  with qryPeriods do
+  with qryPeriods1 do
     begin
       close;
       parambyname('Period').asinteger := dmbroker.getCurrentPeriod;
       open;
     end;
+  with qryPeriods2 do
+    begin
+      close;
+      parambyname('Period').asinteger := dmbroker.getCurrentPeriod;
+      open;
+    end;
+  with qryPeriods3 do
+    begin
+      close;
+      parambyname('Period').asinteger := dmbroker.getCurrentPeriod;
+      open;
+    end;
+  with qryPeriods4 do
+    begin
+      close;
+      parambyname('Period').asinteger := dmbroker.getCurrentPeriod;
+      open;
+    end;
+
 end;
 
 function TPBRSNCASourceFrm.GetPeriodDates(iPeriod: integer; var DateFrom, DateTo: TDateTime):boolean;

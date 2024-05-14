@@ -10,6 +10,7 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Label1: TLabel

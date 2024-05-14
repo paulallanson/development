@@ -11,6 +11,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate

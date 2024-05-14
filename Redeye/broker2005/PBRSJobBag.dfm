@@ -3,8 +3,8 @@ object frmPBRSJobBag: TfrmPBRSJobBag
   Top = 188
   BorderStyle = bsDialog
   Caption = 'Print Job Bag Details'
-  ClientHeight = 207
-  ClientWidth = 412
+  ClientHeight = 217
+  ClientWidth = 416
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,11 +17,13 @@ object frmPBRSJobBag: TfrmPBRSJobBag
   object pnlButtons: TPanel
     Left = 0
     Top = 0
-    Width = 412
-    Height = 207
+    Width = 416
+    Height = 217
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 412
+    ExplicitHeight = 207
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 183
@@ -152,9 +154,10 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     end
     object GroupBox1: TGroupBox
       Left = 8
-      Top = 5
-      Width = 393
+      Top = 6
+      Width = 397
       Height = 172
+      ParentBackground = False
       TabOrder = 5
       object EstNumLabel: TLabel
         Left = 8
@@ -261,9 +264,9 @@ object frmPBRSJobBag: TfrmPBRSJobBag
         WordWrap = False
       end
       object rdgReportType: TRadioGroup
-        Left = 248
+        Left = 241
         Top = 96
-        Width = 137
+        Width = 144
         Height = 67
         Caption = 'Report Type'
         ItemIndex = 0

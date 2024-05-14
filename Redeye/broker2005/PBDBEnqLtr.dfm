@@ -60,7 +60,9 @@ inherited dbEnqLtr: TdbEnqLtr
       '       Operator.Name as Contact_Name,'
       '       EnquiryLine.Narrative, EnquiryLine.Form_Reference,'
       '       Supplier_Enquiry.Contact_no,'
-      '       EnquiryLine.Run_On_Quantity'
+      '       EnquiryLine.Run_On_Quantity,'
+      '       Enquiry.Operator,'
+      '       Enquiry.Office_Contact'
       'From Enquiry, EnquiryLine, Supplier_Branch, Supplier_Enquiry,'
       '         Supplier, Rep, Operator, Int_Sel'
       
@@ -102,34 +104,37 @@ inherited dbEnqLtr: TdbEnqLtr
     ParamData = <
       item
         Name = 'iintselcode'
+        ParamType = ptInput
       end
       item
         Name = 'Enquiry'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Supplier'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'BySupplier'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Branch_No'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'ByBranch'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
         DataType = ftInteger
-      end
-      item
-        Name = 'Operator'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object UpdStatusSQL: TFDQuery
@@ -420,47 +425,39 @@ inherited dbEnqLtr: TdbEnqLtr
       
         'Order By EnquiryLine.Enquiry , EnquiryLine.Line, Supplier_Enquir' +
         'y.Supplier'
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ' ')
+      '')
     Left = 133
-    Top = 67
+    Top = 68
     ParamData = <
       item
         Name = 'Enquiry'
         DataType = ftInteger
-      end
-      item
-        Name = 'Enquiry'
-        DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Supplier'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'BySupplier'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Branch_No'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'ByBranch'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
         DataType = ftInteger
-      end
-      item
-        Name = 'Operator'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object GetOptionsSQL: TFDQuery

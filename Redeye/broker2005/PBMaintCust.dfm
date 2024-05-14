@@ -26,7 +26,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1176
     Height = 642
-    ActivePage = tbDetails
+    ActivePage = tbActivity
     Align = alClient
     TabOrder = 1
     object tbDetails: TTabSheet
@@ -5020,7 +5020,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
-          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
           ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET

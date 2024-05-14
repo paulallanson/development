@@ -4839,7 +4839,7 @@ begin
               end
             else
             if ARow = iSelected then
-              Canvas.Font.Color := color
+              Canvas.Font.Color := clBlack
             else
               Canvas.Font.Color := Font.Color;
           end;
@@ -7879,7 +7879,7 @@ begin
             end
           else
           if ARow = iSelected then
-            Canvas.Font.Color := color
+            Canvas.Font.Color := clBlack
           else
             Canvas.Font.Color := Font.Color;
           end;

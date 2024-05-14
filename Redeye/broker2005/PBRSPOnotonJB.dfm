@@ -10,6 +10,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnCreate = FormCreate
   TextHeight = 13
   object stsDetails: TStatusBar

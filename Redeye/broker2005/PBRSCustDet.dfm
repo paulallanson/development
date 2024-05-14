@@ -450,10 +450,10 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     SQL.Strings = (
       
         'SELECT Customer_Branch.*, Customer_Status.*, Customer_Type.*, Re' +
-        'p.Rep, Rep.Name,'
+        'p.Rep, Rep.Name as Rep_Name,'
       
         'Customer.Name+'#39'/'#39'+Customer_Branch.name as Cust_name, Customer.Na' +
-        'me, Customer.Acc_Active, '
+        'me as Customer_Name, Customer.Acc_Active, '
       
         'Customer.Analysis_Code_1, Customer.Analysis_Code_2, Customer.Ana' +
         'lysis_Code_3, Customer.Analysis_Code_4'
@@ -489,7 +489,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ' '
       ' '
       ' ')
-    Left = 28
+    Left = 52
     Top = 244
     object qryCurrentCustStatusCustomer: TIntegerField
       FieldName = 'Customer'
@@ -665,9 +665,9 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Origin = 'Rep'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object qryCurrentCustStatusName_1: TWideStringField
-      FieldName = 'Name_1'
-      Origin = 'Name'
+    object qryCurrentCustStatusRep_Name: TWideStringField
+      FieldName = 'Rep_Name'
+      Origin = 'Rep_Name'
       Size = 40
     end
     object qryCurrentCustStatusCust_name: TWideStringField
@@ -675,12 +675,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Origin = 'Cust_name'
       ReadOnly = True
       Size = 151
-    end
-    object qryCurrentCustStatusName_2: TWideStringField
-      FieldName = 'Name_2'
-      Origin = 'Name'
-      Required = True
-      Size = 100
     end
     object qryCurrentCustStatusAcc_Active: TWideStringField
       FieldName = 'Acc_Active'
@@ -721,7 +715,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ' '
       ' '
       ' ')
-    Left = 132
+    Left = 140
     Top = 149
     object qryCustStatusCustomer_Status_descr: TWideStringField
       FieldName = 'Customer_Status_descr'
@@ -737,7 +731,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       'order by Customer_Type'
       ' '
       ' ')
-    Left = 32
+    Left = 48
     Top = 149
     object QryCustTypeDescription: TWideStringField
       FieldName = 'Description'

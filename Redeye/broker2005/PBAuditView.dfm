@@ -2,42 +2,45 @@ object PBAuditViewFrm: TPBAuditViewFrm
   Left = 19
   Top = 20
   Caption = 'View Audit Trail - Test'
-  ClientHeight = 522
-  ClientWidth = 687
+  ClientHeight = 521
+  ClientWidth = 681
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    687
-    522)
+    681
+    521)
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 606
-    Top = 440
+    Left = 595
+    Top = 421
     Width = 71
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
+    ExplicitLeft = 601
   end
   object SequenceLabel: TLabel
-    Left = 606
-    Top = 456
+    Left = 595
+    Top = 437
     Width = 71
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
+    ExplicitLeft = 601
   end
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 0
-    Width = 673
-    Height = 433
+    Width = 664
+    Height = 412
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDS
     DrawingStyle = gdsGradient
@@ -86,7 +89,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 440
+    Top = 424
     Width = 129
     Height = 89
     Anchors = [akLeft, akBottom]
@@ -134,7 +137,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object GroupBox2: TGroupBox
     Left = 144
-    Top = 440
+    Top = 424
     Width = 225
     Height = 89
     Anchors = [akLeft, akBottom]
@@ -170,7 +173,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object GroupBox3: TGroupBox
     Left = 376
-    Top = 440
+    Top = 424
     Width = 153
     Height = 41
     Anchors = [akLeft, akBottom]
@@ -199,7 +202,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object GroupBox4: TGroupBox
     Left = 376
-    Top = 488
+    Top = 472
     Width = 153
     Height = 41
     Anchors = [akLeft, akBottom]
@@ -227,8 +230,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 608
-    Top = 480
+    Left = 597
+    Top = 458
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -237,8 +240,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
     TabOrder = 5
   end
   object btnExcel: TBitBtn
-    Left = 600
-    Top = 513
+    Left = 597
+    Top = 488
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]

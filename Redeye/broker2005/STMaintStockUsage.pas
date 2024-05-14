@@ -284,7 +284,7 @@ end;
 procedure TSTMaintStockUsageFrm.sgdetailsDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
+  Content: string;
 begin
 
   {Prevent the blue cell being displayed}
@@ -304,22 +304,22 @@ begin
   begin
     if vCol < 2 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      Content := Cells[vCol, vRow];
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
       ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      Content := Cells[vCol, vRow];
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
       ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
     end;
   end;
 

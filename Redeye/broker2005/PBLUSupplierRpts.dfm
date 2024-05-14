@@ -11,6 +11,7 @@ object frmPBLUSupplierRpts: TfrmPBLUSupplierRpts
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
     Left = 0

@@ -15,8 +15,8 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
   OnCreate = FormCreate
   TextHeight = 13
   object btnExcel: TBitBtn
-    Left = 187
-    Top = 207
+    Left = 184
+    Top = 203
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -150,8 +150,8 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     end
   end
   object PreviewBitBtn: TBitBtn
-    Left = 274
-    Top = 207
+    Left = 271
+    Top = 203
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -173,8 +173,8 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 362
-    Top = 207
+    Left = 359
+    Top = 203
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -196,8 +196,8 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     OnClick = PrintBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 16
-    Top = 208
+    Left = 13
+    Top = 204
     Width = 75
     Height = 25
     Kind = bkCancel

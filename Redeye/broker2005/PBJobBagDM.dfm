@@ -1139,8 +1139,9 @@ object dmJobBag: TdmJobBag
       end
       item
         Name = 'Purchase_Order'
-        DataType = ftInteger
+        DataType = ftFloat
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Line'
@@ -1195,76 +1196,98 @@ object dmJobBag: TdmJobBag
       item
         Name = 'Product_Type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Order'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Order_Line_No'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'works_order'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Price_Unit'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Process'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Reseller_Price'
+        ParamType = ptInput
       end
       item
         Name = 'Selling_Price'
+        ParamType = ptInput
       end
       item
         Name = 'Job_Bag_Line_Status'
+        ParamType = ptInput
       end
       item
         Name = 'Sequence_No'
+        ParamType = ptInput
       end
       item
         Name = 'Qty_Invoiced'
+        ParamType = ptInput
       end
       item
         Name = 'Ready_To_Invoice'
+        ParamType = ptInput
       end
       item
         Name = 'Unit_Cost'
+        ParamType = ptInput
       end
       item
         Name = 'Unit_SSP'
+        ParamType = ptInput
       end
       item
         Name = 'Unit_Cost_plus_OHD'
+        ParamType = ptInput
       end
       item
         Name = 'Unit_SSP_Original'
+        ParamType = ptInput
       end
       item
         Name = 'Inactive'
+        ParamType = ptInput
       end
       item
         Name = 'Quote'
         DataType = ftFloat
+        ParamType = ptInput
       end
       item
         Name = 'Quote_Line_No'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Job_Cost_Markup_Perc'
+        ParamType = ptInput
       end
       item
         Name = 'Line_Is_Internal_Cost'
+        ParamType = ptInput
       end
       item
         Name = 'Job_Bag_Line_Reseller'
+        ParamType = ptInput
       end
       item
         Name = 'Job_Bag'

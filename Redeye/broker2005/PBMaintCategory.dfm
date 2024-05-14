@@ -413,7 +413,10 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       '        Use_Separate_Invoice_Seq = :Use_Separate_Invoice_Seq,'
       '        Inv_Narrative = :Inv_Narrative,'
       '        Payment_Narrative = :Payment_Narrative,'
-      '        Multiple_Category_Invoices = :Multiple_Category_Invoices'
+      
+        '        Multiple_Category_Invoices = :Multiple_Category_Invoices' +
+        ','
+      '        InActive = :InActive'
       'Where'
       '(Category = :Category) '
       ''
@@ -423,35 +426,49 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     ParamData = <
       item
         Name = 'Description'
+        ParamType = ptInput
       end
       item
         Name = 'Analysis_Code'
+        ParamType = ptInput
       end
       item
         Name = 'Commission_Rate'
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_Immediately'
+        ParamType = ptInput
       end
       item
         Name = 'Cleared_Funds_Required'
+        ParamType = ptInput
       end
       item
         Name = 'Use_Separate_Invoice_Seq'
+        ParamType = ptInput
       end
       item
         Name = 'Inv_Narrative'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Payment_Narrative'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Multiple_Category_Invoices'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INACTIVE'
+        ParamType = ptInput
       end
       item
         Name = 'Category'
+        ParamType = ptInput
       end>
   end
   object DelSQL: TFDQuery

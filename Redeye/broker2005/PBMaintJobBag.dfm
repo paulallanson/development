@@ -565,6 +565,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnMouseUp = sgLinesMouseUp
         OnRowMoved = sgLinesRowMoved
         OnTopLeftChanged = sgLinesTopLeftChanged
+        ExplicitLeft = -2
+        ExplicitTop = -2
         ColWidths = (
           40
           96

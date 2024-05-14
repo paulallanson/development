@@ -2,7 +2,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   Left = 16
   Top = 41
   Caption = 'Work In Progress Report - Purchase Orders in Job Bags'
-  ClientHeight = 477
+  ClientHeight = 482
   ClientWidth = 752
   Color = clBtnFace
   Constraints.MinHeight = 500
@@ -17,13 +17,14 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 436
+    Top = 441
     Width = 752
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 436
     DesignSize = (
       752
       41)
@@ -152,16 +153,17 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     Left = 0
     Top = 177
     Width = 752
-    Height = 259
+    Height = 264
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitHeight = 259
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
       Width = 752
-      Height = 259
+      Height = 264
       Align = alClient
       DataSource = dsReport
       DrawingStyle = gdsGradient
@@ -533,7 +535,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       ParentBackground = False
       TabOrder = 7
       object chkbxPageBreak: TCheckBox
-        Left = 33
+        Left = 36
         Top = 120
         Width = 145
         Height = 17
@@ -559,12 +561,21 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         OnClick = TotByRadioGroupClick
       end
       object chkbxShowCosts: TCheckBox
-        Left = 33
+        Left = 36
         Top = 157
         Width = 145
         Height = 16
         Caption = 'Hide cost/margin values'
         TabOrder = 2
+      end
+      object chkbxShowSales: TCheckBox
+        Left = 36
+        Top = 138
+        Width = 143
+        Height = 17
+        Caption = 'Hide sales value'
+        TabOrder = 3
+        OnClick = chkbxShowSalesClick
       end
     end
     object DateFromEdit: TEdit
@@ -594,15 +605,6 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       TabOrder = 10
       OnClick = ExcOnHoldCheckBoxClick
     end
-    object chkbxShowSales: TCheckBox
-      Left = 615
-      Top = 138
-      Width = 145
-      Height = 17
-      Caption = 'Hide sales value'
-      TabOrder = 11
-      OnClick = chkbxShowSalesClick
-    end
     object chkbxincludezero: TCheckBox
       Left = 465
       Top = 156
@@ -612,7 +614,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       Caption = 'Include zero sales values'
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 12
+      TabOrder = 11
       OnClick = ExcOnHoldCheckBoxClick
     end
   end

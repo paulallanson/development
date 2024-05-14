@@ -375,10 +375,6 @@ type
     procedure LineAddBitBtnClick(Sender: TObject);
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; Col,
-      Row: Longint; Rect: TRect; State: TGridDrawState);
     procedure ShowDelivGrid(Sender: TObject);
     procedure DelivAddBitBtnClick(Sender: TObject);
     procedure DelivChgBitBtnClick(Sender: TObject);
@@ -2486,48 +2482,6 @@ begin
   except
     Result := 0
   end;
-end;
-
-procedure TPBMaintPOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
-begin
-(*  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
-  SelectionChanged;
-*)end;
-
-procedure TPBMaintPOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; Col,
-  Row: Longint; Rect: TRect; State: TGridDrawState);
-//var
-//  Txt: array[0..255] of Char;
-begin
-(*  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (Col < 1) or (Col > 2) then
-  begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    if ((Col > 2) and (Row > 0) and (LineDetsStringGrid.Cells[3, Row] <>
-      LineDetsStringGrid.Cells[4, Row])) then
-    begin
-      LineDetsStringGrid.Canvas.Font.Color := clRed;
-      bDelivsBalance := False;
-    end;
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
-*)
 end;
 
 procedure TPBMaintPOrdFrm.SetLineDetails;

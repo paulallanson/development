@@ -50,8 +50,6 @@ type
     procedure btnChangeClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
-    procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
-      DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure dbgDetailsTitleClick(Column: TColumn);
     procedure FormDeactivate(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
@@ -311,13 +309,6 @@ end;
 procedure TfrmPBLUContracts.dbgDetailsDblClick(Sender: TObject);
 begin
   btnChangeClick(self);
-end;
-
-procedure TfrmPBLUContracts.dbgDetailsDrawColumnCell(Sender: TObject;
-  const Rect: TRect; DataCol: Integer; Column: TColumn;
-  State: TGridDrawState);
-begin
-  
 end;
 
 procedure TfrmPBLUContracts.dbgDetailsTitleClick(Column: TColumn);

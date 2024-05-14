@@ -18,28 +18,30 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 475
+    Top = 473
     Width = 781
-    Height = 41
+    Height = 43
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
       781
-      41)
+      43)
     object pnlRightControl: TPanel
       Left = 450
       Top = 0
       Width = 331
-      Height = 41
+      Height = 43
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = -1
+      ExplicitHeight = 40
       object PreviewBitBtn: TBitBtn
         Left = 144
-        Top = 8
+        Top = 5
         Width = 75
         Height = 25
         Caption = 'Pre&view'
@@ -62,7 +64,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       end
       object PrintBitBtn: TBitBtn
         Left = 232
-        Top = 8
+        Top = 5
         Width = 75
         Height = 25
         Caption = '&Print'
@@ -86,7 +88,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     end
     object CancelBitBtn: TBitBtn
       Left = 8
-      Top = 8
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -94,10 +96,11 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitTop = 4
     end
     object btnExcel: TBitBtn
       Left = 514
-      Top = 8
+      Top = 5
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -151,18 +154,20 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
   end
   object pnlDetail: TPanel
     Left = 0
-    Top = 201
+    Top = 213
     Width = 781
-    Height = 274
+    Height = 260
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 201
+    ExplicitHeight = 274
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
       Width = 781
-      Height = 274
+      Height = 260
       Align = alClient
       DataSource = dsReport
       DrawingStyle = gdsGradient
@@ -270,31 +275,31 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     Left = 0
     Top = 0
     Width = 781
-    Height = 201
+    Height = 213
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
       781
-      201)
+      213)
     object Label3: TLabel
       Left = 8
-      Top = 155
+      Top = 168
       Width = 59
       Height = 13
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
-      Top = 155
+      Top = 168
       Width = 62
       Height = 13
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
-      Top = 155
+      Top = 168
       Width = 92
       Height = 13
       Caption = 'and finally sort by'
@@ -419,7 +424,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 171
+      Top = 186
       Width = 145
       Height = 21
       Style = csDropDownList
@@ -436,7 +441,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 171
+      Top = 186
       Width = 145
       Height = 21
       Style = csDropDownList
@@ -453,7 +458,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     end
     object cbSort3: TComboBox
       Left = 312
-      Top = 171
+      Top = 186
       Width = 145
       Height = 21
       Style = csDropDownList
@@ -472,13 +477,14 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Left = 557
       Top = 0
       Width = 224
-      Height = 201
+      Height = 213
       Align = alRight
       BevelOuter = bvNone
       Constraints.MinHeight = 201
       Constraints.MinWidth = 224
       ParentBackground = False
       TabOrder = 5
+      ExplicitHeight = 201
       object TotByRadioGroup: TRadioGroup
         Left = 1
         Top = 4
@@ -508,15 +514,6 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
           'Detail')
         ParentBackground = False
         TabOrder = 1
-      end
-      object chkbxComplete: TCheckBox
-        Left = 56
-        Top = 176
-        Width = 161
-        Height = 17
-        Caption = 'Show Jobs Fully Despatched'
-        TabOrder = 2
-        OnClick = chkbxCompleteClick
       end
     end
     object DateFromEdit: TEdit
@@ -603,7 +600,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object chkbxShowAllLines: TCheckBox
       Left = 463
       Top = 175
-      Width = 144
+      Width = 155
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Show all outstanding lines'
@@ -631,6 +628,15 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       State = cbChecked
       TabOrder = 13
       OnClick = chkbxExcludeOnHoldClick
+    end
+    object chkbxComplete: TCheckBox
+      Left = 463
+      Top = 193
+      Width = 161
+      Height = 17
+      Caption = 'Show Jobs Fully Despatched'
+      TabOrder = 14
+      OnClick = chkbxCompleteClick
     end
   end
   object qryReport: TFDQuery

@@ -207,7 +207,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
     ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -290,7 +290,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end
       item
         Expanded = False
-        FieldName = 'Cash_Sales'
+        FieldName = 'cash_sales'
         Title.Caption = 'Cash Sale'
         Visible = True
       end

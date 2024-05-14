@@ -100,6 +100,7 @@ type
     procedure CallMaintScreen(sTempFuncMode: string);
     procedure DelBitBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
+    procedure DetsDBGridDblClick(Sender: TObject);
   public
     iCode, iNarr, SelCode: Integer;
     Selname: string;
@@ -211,6 +212,11 @@ end;
 procedure TPBLUSpecInsFrm.DelBitBtnClick(Sender: TObject);
 begin
   CallMaintScreen('D');
+end;
+
+procedure TPBLUSpecInsFrm.DetsDBGridDblClick(Sender: TObject);
+begin
+  ChgBitBtnClick(Sender);
 end;
 
 procedure TPBLUSpecInsFrm.SelectBitBtnClick(Sender: TObject);

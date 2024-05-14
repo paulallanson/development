@@ -3,8 +3,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre Operator'
-  ClientHeight = 270
-  ClientWidth = 352
+  ClientHeight = 280
+  ClientWidth = 353
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

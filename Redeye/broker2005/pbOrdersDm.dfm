@@ -218,6 +218,13 @@ object dtmdlOrders: TdtmdlOrders
       Required = True
       Size = 100
     end
+    object qryOrdersStatus_Text: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Status_Text'
+      OnGetText = qryOrdersStatus_textGetText
+      Size = 50
+      Calculated = True
+    end
     object qryOrdersjob_bag: TIntegerField
       FieldName = 'job_bag'
       Origin = 'job_bag'
@@ -917,6 +924,134 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptInput
         Value = Null
       end>
+    object qryCallOffscustomer: TIntegerField
+      FieldName = 'customer'
+    end
+    object qryCallOffsName: TWideStringField
+      FieldName = 'Name'
+      FixedChar = True
+      Size = 80
+    end
+    object qryCallOffssales_order: TIntegerField
+      FieldName = 'sales_order'
+    end
+    object qryCallOffsOrder_date: TDateTimeField
+      FieldName = 'Order_date'
+    end
+    object qryCallOffscust_order_no: TWideStringField
+      FieldName = 'cust_order_no'
+      FixedChar = True
+      Size = 80
+    end
+    object qryCallOffsGoods_Required: TDateTimeField
+      FieldName = 'Goods_Required'
+    end
+    object qryCallOffsOrder_Type: TWideStringField
+      FieldName = 'Order_Type'
+      FixedChar = True
+      Size = 2
+    end
+    object qryCallOffsOrder_status: TIntegerField
+      FieldName = 'Order_status'
+    end
+    object qryCallOffsStatus_Description: TWideStringField
+      FieldName = 'Status_Description'
+      FixedChar = True
+      Size = 100
+    end
+    object qryCallOffsBranch_Name: TWideStringField
+      FieldName = 'Branch_Name'
+      FixedChar = True
+      Size = 100
+    end
+    object qryCallOffsOn_Hold: TWideStringField
+      FieldName = 'On_Hold'
+      FixedChar = True
+      Size = 1
+    end
+    object qryCallOffsSupplier: TIntegerField
+      FieldName = 'Supplier'
+    end
+    object qryCallOffsStatus_Text: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Status_Text'
+      OnGetText = qryCallOffsStatus_TextGetText
+      Size = 50
+      Calculated = True
+    end
+    object qryCallOffsRep: TIntegerField
+      FieldName = 'Rep'
+    end
+    object qryCallOffsRep_Name: TWideStringField
+      FieldName = 'Rep_Name'
+      FixedChar = True
+      Size = 1
+    end
+    object qryCallOffsOperator: TIntegerField
+      FieldName = 'Operator'
+    end
+    object qryCallOffsOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      FixedChar = True
+      Size = 1
+    end
+    object qryCallOffsPurch_Ord_No: TWideStringField
+      FieldName = 'Purch_Ord_No'
+    end
+    object qryCallOffsSales_Order_Head_Status: TIntegerField
+      FieldName = 'Sales_Order_Head_Status'
+    end
+    object qryCallOffsSales_Order_Type: TWideStringField
+      FieldName = 'Sales_Order_Type'
+      Size = 1
+    end
+    object qryCallOffsSales_Order_Type_Description: TWideStringField
+      FieldName = 'Sales_Order_Type_Description'
+      Size = 30
+    end
+    object qryCallOffsDelivery_Location: TWideStringField
+      FieldName = 'Delivery_Location'
+      Size = 60
+    end
+    object qryCallOffsAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+    end
+    object qryCallOffsinactive: TWideStringField
+      FieldName = 'inactive'
+      Size = 1
+    end
+    object qryCallOffsPart: TWideStringField
+      FieldName = 'Part'
+      Size = 25
+    end
+    object qryCallOffsDescription: TWideStringField
+      FieldName = 'Description'
+      Size = 100
+    end
+    object qryCallOffsQuantity: TIntegerField
+      FieldName = 'Quantity'
+    end
+    object qryCallOffsOrder_Price: TFloatField
+      FieldName = 'Order_Price'
+      DisplayFormat = '#,###,##0.000'
+    end
+    object qryCallOffsOrder_unit: TIntegerField
+      FieldName = 'Order_unit'
+    end
+    object qryCallOffsSelling_Price: TFloatField
+      FieldName = 'Selling_Price'
+      DisplayFormat = '#,###,##0.000'
+    end
+    object qryCallOffsSelling_Unit: TIntegerField
+      FieldName = 'Selling_Unit'
+    end
+    object qryCallOffsJob_Bag_no: TIntegerField
+      FieldName = 'Job_Bag_no'
+    end
+    object qryCallOffsOffice_Contact_Name: TWideStringField
+      FieldName = 'Office_Contact_Name'
+      Size = 50
+    end
   end
   object qryCust: TFDQuery
     ConnectionName = 'PB'
@@ -1252,7 +1387,7 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_Order.Order_type = Order_Type.Order_Type'
       '')
     Left = 584
-    Top = 104
+    Top = 105
     ParamData = <
       item
         Name = 'Records'
