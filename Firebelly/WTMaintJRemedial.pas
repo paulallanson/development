@@ -12,8 +12,8 @@ uses
 
 type
   TfrmWTMaintJRemedial = class(TForm)
-    qryFitter: TFDQuery;
-    srcFitter: TDataSource;
+    qryFitter1: TFDQuery;
+    srcFitter1: TDataSource;
     SpeedButton1: TSpeedButton;
     qryOperator: TFDQuery;
     srcOperator: TDataSource;
@@ -85,6 +85,10 @@ type
     SpeedButton6: TSpeedButton;
     btnInternalNotes: TBitBtn;
     IntFlashTimer: TTimer;
+    srcFitter2: TDataSource;
+    qryFitter2: TFDQuery;
+    qryFitter3: TFDQuery;
+    srcFitter3: TDataSource;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -169,7 +173,19 @@ procedure TfrmWTMaintJRemedial.RefreshFitters;
 var
   icode: integer;
 begin
-  with qryFitter do
+  with qryFitter1 do
+    begin
+      close;
+      parambyname('Fitter').asinteger := jRemedial.fitter;
+      open;
+    end;
+  with qryFitter2 do
+    begin
+      close;
+      parambyname('Fitter').asinteger := jRemedial.fitter;
+      open;
+    end;
+  with qryFitter3 do
     begin
       close;
       parambyname('Fitter').asinteger := jRemedial.fitter;

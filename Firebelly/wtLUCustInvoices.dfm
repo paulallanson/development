@@ -91,9 +91,9 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
     Font.Height = -11
     Font.Name = 'Segoe UI'
     Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -148,7 +148,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
     Height = 41
     Align = alBottom
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
     DesignSize = (
       678
       41)

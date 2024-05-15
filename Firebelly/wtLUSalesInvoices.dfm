@@ -148,7 +148,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -403,7 +403,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Height = 80
     Align = alBottom
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
     object Panel2: TPanel
       Left = 963
       Top = 1

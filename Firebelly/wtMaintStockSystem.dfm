@@ -45,7 +45,6 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 309
   end
   object BitBtn2: TBitBtn
     Left = 220
@@ -58,7 +57,6 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitTop = 309
   end
   object edtStockSystemDescription: TEdit
     Left = 96
@@ -85,49 +83,49 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     Height = 185
     TabOrder = 3
     object Label3: TLabel
-      Left = 24
+      Left = 19
       Top = 24
       Width = 75
       Height = 13
       Caption = 'Database Alias'
     end
     object Label4: TLabel
-      Left = 24
+      Left = 19
       Top = 48
       Width = 51
       Height = 13
       Caption = 'Username'
     end
     object Label5: TLabel
-      Left = 24
+      Left = 19
       Top = 72
       Width = 49
       Height = 13
       Caption = 'Password'
     end
     object Label6: TLabel
-      Left = 24
+      Left = 19
       Top = 130
       Width = 116
       Height = 13
       Caption = 'Order Import Directory'
     end
     object Label7: TLabel
-      Left = 24
-      Top = 101
+      Left = 19
+      Top = 100
       Width = 129
       Height = 13
       Caption = 'Order Processing Interval'
     end
     object Label8: TLabel
-      Left = 192
-      Top = 101
+      Left = 200
+      Top = 100
       Width = 24
       Height = 13
       Caption = 'secs.'
     end
     object edtDatabaseAlias: TEdit
-      Left = 152
+      Left = 153
       Top = 20
       Width = 121
       Height = 21
@@ -135,7 +133,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       Text = 'edtDatabaseAlias'
     end
     object edtUsername: TEdit
-      Left = 152
+      Left = 153
       Top = 44
       Width = 121
       Height = 21
@@ -143,7 +141,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       Text = 'edtUsername'
     end
     object edtPassword: TEdit
-      Left = 152
+      Left = 153
       Top = 68
       Width = 121
       Height = 21
@@ -151,7 +149,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       Text = 'edtPassword'
     end
     object edtOrderImportDirectory: TEdit
-      Left = 24
+      Left = 19
       Top = 149
       Width = 297
       Height = 21
@@ -159,7 +157,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       Text = 'edtOrderImportDirectory'
     end
     object Button3: TButton
-      Left = 326
+      Left = 323
       Top = 147
       Width = 75
       Height = 25
@@ -168,8 +166,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       OnClick = Button3Click
     end
     object spnInterval: TSpinEdit
-      Left = 152
-      Top = 96
+      Left = 153
+      Top = 95
       Width = 41
       Height = 22
       MaxValue = 0

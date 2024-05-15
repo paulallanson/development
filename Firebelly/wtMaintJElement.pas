@@ -97,7 +97,8 @@ var
 
 implementation
 
-uses wtLUworktops, wtDataModule, wtLUMaterialUse;
+uses
+  wtLUworktops, wtDataModule, wtLUMaterialUse, AllCommon;
 
 {$R *.dfm}
 
@@ -260,7 +261,7 @@ procedure TfrmWTMaintJElement.dblkpWorktopClick(Sender: TObject);
 begin
   RefreshThickness;
   GetUnitPrice;
-  enableOK(self);
+  EnableOK(self);
 end;
 
 procedure TfrmWTMaintJElement.dblkpWTThicknessClick(Sender: TObject);
@@ -283,7 +284,7 @@ begin
         end;
 
       parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
-      parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
+      parambyName('thickness').asinteger := dblkpWTThickness.ListValue;
       open;
       edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
       JElement.PriceUnit := fieldbyname('Price_unit').asinteger;

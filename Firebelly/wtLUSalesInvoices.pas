@@ -108,9 +108,10 @@ var
 
 implementation
 
-uses AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
+uses
+  AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
-  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtDataModule;
+  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtDataModule, WTMain;
 
 {$R *.DFM}
 
@@ -142,7 +143,7 @@ begin
   dbgDetails.DataSource := dtmdlAllSInvoices.dsSIHeaderGrid;
 
   {Set the revenue centre details}
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -185,7 +186,7 @@ begin
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSInvoices.dsSIHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', 'myworktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.SetButtons(Sender: TObject; Field: TField);
@@ -663,7 +664,8 @@ begin
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
   		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
     			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+
+    end;
 end;
 
 procedure TfrmWTLUSalesInvoices.cmbCustomerFilterChange(Sender: TObject);
@@ -685,7 +687,7 @@ procedure TfrmWTLUSalesInvoices.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
@@ -697,7 +699,7 @@ begin
     end;
 
   printer.printerindex := -1;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', 'myworktops.ini', self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);

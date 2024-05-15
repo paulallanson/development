@@ -694,7 +694,10 @@ begin
                             // decide which address to show on quote
                             frmwtRPQuote.bEndUser := false;
                             frmWTRPQuote.bPreview := false;
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString, EmailArray[irow,1]);
+                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
+                              FEmailAttachment,
+                              printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString,
+                              frmWTEmailList.EmailListGrid.Cells[5, irow]);
                           end;
                       finally
                         frmWTRPQuote.Free;

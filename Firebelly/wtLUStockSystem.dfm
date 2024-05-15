@@ -3,8 +3,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Stock System'
-  ClientHeight = 208
-  ClientWidth = 393
+  ClientHeight = 233
+  ClientWidth = 389
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 393
-    Height = 148
+    Width = 389
+    Height = 173
     Align = alClient
     DataSource = srcStockSystem
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -46,37 +46,19 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
         Visible = True
       end>
   end
-  object stsbrDetails: TStatusBar
-    Left = 0
-    Top = 189
-    Width = 393
-    Height = 19
-    Panels = <
-      item
-        Width = 250
-      end
-      item
-        Width = 50
-      end>
-    ExplicitLeft = -8
-    ExplicitTop = 302
-  end
   object Panel1: TPanel
     Left = 0
-    Top = 148
-    Width = 393
+    Top = 173
+    Width = 389
     Height = 41
     Align = alBottom
-    TabOrder = 2
-    ExplicitLeft = 160
-    ExplicitTop = 216
-    ExplicitWidth = 185
+    TabOrder = 1
     DesignSize = (
-      393
+      389
       41)
     object btnAdd: TBitBtn
-      Left = 16
-      Top = 9
+      Left = 18
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -85,8 +67,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       OnClick = btnAddClick
     end
     object btnEdit: TBitBtn
-      Left = 106
-      Top = 9
+      Left = 108
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -96,8 +78,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
-      Left = 197
-      Top = 9
+      Left = 199
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -107,8 +89,8 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 288
-      Top = 9
+      Left = 290
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -118,6 +100,19 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       TabOrder = 3
       OnClick = BitBtn4Click
     end
+  end
+  object stsbrDetails: TStatusBar
+    Left = 0
+    Top = 214
+    Width = 389
+    Height = 19
+    Panels = <
+      item
+        Width = 250
+      end
+      item
+        Width = 50
+      end>
   end
   object srcStockSystem: TDataSource
     DataSet = qryStockSystem
