@@ -500,19 +500,19 @@ object dtmdlContract: TdtmdlContract
     Left = 588
     Top = 144
   end
-  object qryPeriodType: TFDQuery
+  object qryPeriodType1: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Period_Type'
       'ORDER BY ID')
-    Left = 520
-    Top = 200
+    Left = 744
+    Top = 32
   end
-  object dtsPeriodType: TDataSource
-    DataSet = qryPeriodType
-    Left = 592
-    Top = 200
+  object dtsPeriodType1: TDataSource
+    DataSet = qryPeriodType1
+    Left = 816
+    Top = 32
   end
   object qryPaymentTerms: TFDQuery
     ConnectionName = 'PB'
@@ -1093,5 +1093,61 @@ object dtmdlContract: TdtmdlContract
       item
         Name = 'Sales_Invoice'
       end>
+  end
+  object qryPeriodType2: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Period_Type'
+      'ORDER BY ID')
+    Left = 744
+    Top = 96
+  end
+  object dtsPeriodType2: TDataSource
+    DataSet = qryPeriodType2
+    Left = 816
+    Top = 96
+  end
+  object qryPeriodType3: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Period_Type'
+      'ORDER BY ID')
+    Left = 744
+    Top = 136
+  end
+  object dtsPeriodType3: TDataSource
+    DataSet = qryPeriodType3
+    Left = 816
+    Top = 136
+  end
+  object qryPeriodType4: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Period_Type'
+      'ORDER BY ID')
+    Left = 744
+    Top = 176
+  end
+  object dtsPeriodType4: TDataSource
+    DataSet = qryPeriodType4
+    Left = 816
+    Top = 176
+  end
+  object qryPeriodType5: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Period_Type'
+      'ORDER BY ID')
+    Left = 744
+    Top = 216
+  end
+  object dtsPeriodType5: TDataSource
+    DataSet = qryPeriodType5
+    Left = 816
+    Top = 216
   end
 end

@@ -58,9 +58,9 @@ begin
   LocalDir := extractfilepath(application.ExeName);
 
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE)
+    StrPCopy(AppIniFile, LocalDir + GetAppIniFile)
   else
-    StrPCopy(AppIniFile, myRedeye_INIFILE);
+    StrPCopy(AppIniFile, GetAppIniFile);
 
   GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray, SizeOf(TempArray), AppIniFile);
 

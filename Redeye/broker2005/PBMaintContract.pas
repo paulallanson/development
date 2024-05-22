@@ -287,7 +287,27 @@ begin
 
     lblDocumentDir.Caption := lblDocumentDir.Caption + ' ' + dmBroker.GetCompanyContractDirectory;
 
-    with Contract.DataModule.qryPeriodType do
+    with Contract.DataModule.qryPeriodType1 do
+      begin
+        close;
+        open;
+      end;
+    with Contract.DataModule.qryPeriodType2 do
+      begin
+        close;
+        open;
+      end;
+    with Contract.DataModule.qryPeriodType3 do
+      begin
+        close;
+        open;
+      end;
+    with Contract.DataModule.qryPeriodType4 do
+      begin
+        close;
+        open;
+      end;
+    with Contract.DataModule.qryPeriodType5 do
       begin
         close;
         open;
@@ -300,11 +320,11 @@ begin
       end;
 
     dblkpContact.listsource := Contract.DataModule.dtsContacts;
-    dblkpFrequencyType.listsource := Contract.DataModule.dtsPeriodType;
-    dblkpDurationType.listsource := Contract.DataModule.dtsPeriodType;
-    dblkpNoticeType.listsource := Contract.DataModule.dtsPeriodType;
-    dblkpTermType.listsource := Contract.DataModule.dtsPeriodType;
-    dblkpReviewType.listsource := Contract.DataModule.dtsPeriodType;
+    dblkpFrequencyType.listsource := Contract.DataModule.dtsPeriodType1;
+    dblkpDurationType.listsource := Contract.DataModule.dtsPeriodType2;
+    dblkpNoticeType.listsource := Contract.DataModule.dtsPeriodType3;
+    dblkpTermType.listsource := Contract.DataModule.dtsPeriodType4;
+    dblkpReviewType.listsource := Contract.DataModule.dtsPeriodType5;
     dblkpPaymentTerms.listsource := Contract.DataModule.dtsPaymentTerms;
 
     Contract.Datamodule.dtsJobBags.OnDataChange := SetJobButtons;

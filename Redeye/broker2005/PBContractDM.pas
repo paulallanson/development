@@ -22,8 +22,16 @@ type
     qryContractBase: TFDQuery;
     qryContacts: TFDQuery;
     dtsContacts: TDataSource;
-    qryPeriodType: TFDQuery;
-    dtsPeriodType: TDataSource;
+    qryPeriodType1: TFDQuery;
+    dtsPeriodType1: TDataSource;
+    qryPeriodType2: TFDQuery;
+    dtsPeriodType2: TDataSource;
+    qryPeriodType3: TFDQuery;
+    dtsPeriodType3: TDataSource;
+    qryPeriodType4: TFDQuery;
+    dtsPeriodType4: TDataSource;
+    qryPeriodType5: TFDQuery;
+    dtsPeriodType5: TDataSource;
     qryPaymentTerms: TFDQuery;
     dtsPaymentTerms: TDataSource;
     qryAddContract: TFDQuery;

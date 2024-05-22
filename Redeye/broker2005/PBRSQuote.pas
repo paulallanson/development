@@ -56,8 +56,7 @@ type
     procedure BuildEmailDetails;
     procedure ClearEmailArray(Sender: TObject);
     procedure LoadAndEmailReport;
-    procedure PrintToAttachment(frmPBRQuote: TfrmPBRPQuote;
-      tempCode: string; EndUser: boolean);
+    procedure PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean; AttachmentType: string);
     { Private declarations }
   public
     bProspect: boolean;
@@ -630,12 +629,12 @@ begin
 
               FEmailAttachment.clear;
 
-              Printtoattachment(frmPBRPQuote, EmailArray[irow,1], false);
+              Printtoattachment(frmPBRPQuote, EmailArray[irow,1], false, sAttachmentType);
 
               if chkbxEndUser.checked then
                 begin
                   frmPBRPQuote.EndUserVersion := true;
-                  Printtoattachment(frmPBRPQuote, EmailArray[irow,1], true);
+                  Printtoattachment(frmPBRPQuote, EmailArray[irow,1], true, sAttachmentType);
                 end;
 
               sTo := Trim(PBEmailListFrm.EmailListGrid.Cells[3, irow]);
@@ -701,14 +700,14 @@ begin
   end;
 end;
 
-procedure TfrmPBRSQuote.PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean);
+procedure TfrmPBRSQuote.PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean; AttachmentType: string);
 var
   fileName: string;
 begin
   if EndUser then
     fileName := 'RSP' + tempcode else
     fileName := 'QUOTE' + tempcode;
-  TPrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, AttachmentType);
 end;
 
 end.

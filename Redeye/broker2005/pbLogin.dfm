@@ -1,6 +1,7 @@
 object frmpbLogin: TfrmpbLogin
   Left = 267
   Top = 201
+  ActiveControl = PasswordEdit
   BorderStyle = bsDialog
   Caption = 'Logon'
   ClientHeight = 183

@@ -529,7 +529,7 @@ begin
 
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := ExtractFilePath(Application.ExeName);
-  StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
+  StrPCopy(AppIniFile, LocalDir + GetAppIniFile);
 {$IFDEF FORMPRO} {Setup the directories}
 	ServDir := '\\FPSERVER1\MIS\Centrereed\Broker' ;
   CopyifNewer('BrokerLoad05.exe', 'Broker Load Program');
