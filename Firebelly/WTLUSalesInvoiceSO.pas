@@ -49,7 +49,6 @@ type
   private
     FDisableNameChangeEvent: boolean;
     FInvoiceDate: string;
-    rRevenueCentre: integer;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure SetInvoiceDate(const Value: string);
@@ -65,7 +64,8 @@ var
 
 implementation
 
-uses WTMaintSalesInvoice, wtMain, wtDataModule;
+uses
+  UITypes, WTMaintSalesInvoice, wtMain, wtDataModule;
 
 {$R *.dfm}
 
@@ -121,14 +121,9 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.FormShow(Sender: TObject);
 begin
   dtmdlSalesInvoice.refreshSOdata;
-  with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
-    end;
+  if Assigned(dbgDetails.datasource.dataset) and not dbgDetails.datasource.dataset.IsEmpty then
+    dbgDetails.SelectedRows.CurrentRowSelected := True;
+
   edtSONumber.setfocus;
 end;
 

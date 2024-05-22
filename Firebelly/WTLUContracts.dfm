@@ -217,7 +217,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -226,11 +226,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Quote_Number'
         Title.Caption = 'Quote Number'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 101
         Visible = True
       end
@@ -238,11 +233,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Contract_Date'
         Title.Caption = 'Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -250,11 +240,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 136
         Visible = True
       end
@@ -262,11 +247,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Contract_Description'
         Title.Caption = 'Description'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 139
         Visible = True
       end
@@ -274,22 +254,12 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Customer_is_Speculative'
         Title.Caption = 'Speculative'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 71
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Developer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 202
         Visible = True
       end
@@ -297,11 +267,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Site_Location'
         Title.Caption = 'Site Location'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 244
         Visible = True
       end
@@ -309,11 +274,6 @@ object frmWTLUContracts: TfrmWTLUContracts
         Expanded = False
         FieldName = 'Expiry_Date'
         Title.Caption = 'Expiry Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 83
         Visible = True
       end>

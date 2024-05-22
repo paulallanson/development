@@ -375,7 +375,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -384,11 +384,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Sales_Order'
         Title.Caption = 'SO Number'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 73
         Visible = True
       end
@@ -396,11 +391,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Date_Raised'
         Title.Caption = 'Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -408,11 +398,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 136
         Visible = True
       end
@@ -420,32 +405,17 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Date_Required'
         Title.Caption = 'Date Required'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Reference'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Order_ref_no'
         Title.Caption = 'Customer Order No'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -453,11 +423,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Goods_Value'
         Title.Caption = 'Order Value'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 85
         Visible = True
       end
@@ -465,11 +430,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'VAT_Value'
         Title.Caption = 'VAT'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 52
         Visible = True
       end
@@ -477,22 +437,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'sales_order_status_desc'
         Title.Caption = 'Status'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 134
         Visible = True
       end
@@ -500,11 +450,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Descriptive_Reference'
         Title.Caption = 'Description'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 367
         Visible = True
       end
@@ -512,11 +457,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Deposit_amount'
         Title.Caption = 'Deposit Paid'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 109
         Visible = True
       end
@@ -524,11 +464,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Template_Date'
         Title.Caption = 'Template Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 123
         Visible = True
       end
@@ -536,11 +471,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Office_Contact_Name'
         Title.Caption = 'Office Contact'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 183
         Visible = True
       end
@@ -548,11 +478,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Operator_name'
         Title.Caption = 'Operator'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 205
         Visible = True
       end
@@ -560,11 +485,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 50
         Visible = True
       end
@@ -572,11 +492,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Project_Reference'
         Title.Caption = 'Project'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 151
         Visible = True
       end
@@ -584,22 +499,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Deposit_Required'
         Title.Caption = 'Deposit Required'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 113
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Quote'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 74
         Visible = True
       end
@@ -607,11 +512,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Templater_Name'
         Title.Caption = 'Templater'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 123
         Visible = True
       end
@@ -619,11 +519,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Fitter_Name'
         Title.Caption = 'Fitting Team'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 115
         Visible = True
       end
@@ -631,11 +526,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 95
         Visible = True
       end>

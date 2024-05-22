@@ -2559,42 +2559,41 @@ procedure TdtmdlSalesInvoice.RefreshSOData;
   { Remember, SQL likes American date formats with hyphens in quotes }
   { But Access doesn't so we have to know what we're connected to }
 function qDate(const aDate : TDateTime) : string;
-  begin
-    if dtmdlWorktops.IsSQL then
-      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
-    else
-      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
-  end;
+begin
+  if dtmdlWorktops.IsSQL then
+    Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
+  else
+    Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
+end;
 var
   endDate: TDateTime;
 begin
-  with qrySOAll do
-    begin
-      Close;
-      ParamByName('Code_From').Asstring := CustomerName + '%';
-      if DisplayUnfitted then
-        ParamByName('Status').Asinteger := 20
-      else
-        ParamByName('Status').Asinteger := 55;
-      if DisplayFuture then
-        begin
-          endDate := date + 365;
-          Parambyname('Date_Required').asdatetime := endDate;
-        end
-      else
-        begin
-          endDate := date;
-          Parambyname('Date_Required').asdatetime := endDate;
-        end;
-      case Revenuecentre of
-        -1: parambyname('Revenue_Centre').clear;
-      else
-        parambyname('Revenue_Centre').asinteger := RevenueCentre
-      end;
+  qrySOAll.Close;
+  qrySOAll.ParamByName('Code_From').Asstring := CustomerName + '%';
 
-      Open;
-//      First;
-    end;
+  if DisplayUnfitted then
+    qrySOAll.ParamByName('Status').Asinteger := 20
+  else
+    qrySOAll.ParamByName('Status').Asinteger := 55;
+
+  if DisplayFuture then
+  begin
+    endDate := date + 365;
+    qrySOAll.Parambyname('Date_Required').asdatetime := endDate;
+  end
+  else
+  begin
+    endDate := date;
+    qrySOAll.Parambyname('Date_Required').asdatetime := endDate;
+  end;
+
+  case Revenuecentre of
+    -1: qrySOAll.parambyname('Revenue_Centre').asinteger := 0;
+    else
+      qrySOAll.parambyname('Revenue_Centre').asinteger := RevenueCentre;
+  end;
+
+  qrySOAll.Open;
 end;
 
 procedure TdtmdlSalesInvoice.RefreshJBData;

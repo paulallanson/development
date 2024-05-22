@@ -253,11 +253,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Worktop_Description'
         Title.Caption = 'Colour'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 158
         Visible = True
       end
@@ -265,11 +260,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Thickness_mm'
         Title.Caption = 'Thickness (mm)'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 82
         Visible = True
       end
@@ -277,11 +267,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Material_Type_Description'
         Title.Caption = 'Material'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 116
         Visible = True
       end
@@ -289,22 +274,12 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Worktop_Group_Description'
         Title.Caption = 'Price Group'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Effective_Date'
         Title.Caption = 'Effective Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -312,11 +287,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Unit_Price'
         Title.Caption = 'Unit Price'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 82
         Visible = True
       end
@@ -324,11 +294,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Unit_Cost'
         Title.Caption = 'Unit Cost'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 80
         Visible = True
       end
@@ -336,11 +301,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Date_Changed'
         Title.Caption = 'Date Changed'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 104
         Visible = True
       end
@@ -348,11 +308,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 64
         Visible = True
       end
@@ -360,11 +315,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Stock_Code'
         Title.Caption = 'Stock Code'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 159
         Visible = True
       end
@@ -372,11 +322,6 @@ object frmWTLUPrices: TfrmWTLUPrices
         Expanded = False
         FieldName = 'Slab_Count'
         Title.Caption = 'Slab Count'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 78
         Visible = True
       end>

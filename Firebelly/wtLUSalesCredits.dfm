@@ -43,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 855
+        Width = 843
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -54,7 +54,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         ShowHint = True
         TabOrder = 0
         Wrapable = False
-        ExplicitWidth = 843
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -142,7 +141,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -156,11 +155,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 78
         Visible = True
       end
@@ -173,11 +167,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 65
         Visible = True
       end
@@ -190,11 +179,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Customer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 150
         Visible = True
       end
@@ -206,11 +190,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 161
         Visible = True
       end
@@ -223,11 +202,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Invoice No.'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 61
         Visible = True
       end
@@ -240,11 +214,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Goods'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 51
         Visible = True
       end
@@ -257,11 +226,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'VAT'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 50
         Visible = True
       end
@@ -274,11 +238,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Total'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 70
         Visible = True
       end
@@ -291,11 +250,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Status'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 83
         Visible = True
       end
@@ -308,11 +262,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Rep'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 139
         Visible = True
       end
@@ -325,11 +274,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Office Contact'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 158
         Visible = True
       end
@@ -342,11 +286,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Created By'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 137
         Visible = True
       end
@@ -359,11 +298,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Order Reference'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 149
         Visible = True
       end
@@ -371,11 +305,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Expanded = False
         FieldName = 'Branch_Name'
         Title.Caption = 'Site Name'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -383,11 +312,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Expanded = False
         FieldName = 'Revenue_Centre_Descr'
         Title.Caption = 'Revenue Centre'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 102
         Visible = True
       end>

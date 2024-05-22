@@ -82,11 +82,6 @@ object frmWTLUStock: TfrmWTLUStock
         Expanded = False
         FieldName = 'Stock_Code'
         Title.Caption = 'Stock Code'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 171
         Visible = True
       end
@@ -94,11 +89,6 @@ object frmWTLUStock: TfrmWTLUStock
         Expanded = False
         FieldName = 'Stock_Description'
         Title.Caption = 'Description'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 161
         Visible = True
       end
@@ -106,11 +96,6 @@ object frmWTLUStock: TfrmWTLUStock
         Expanded = False
         FieldName = 'Total_Quantity'
         Title.Caption = 'Total Quantity'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 88
         Visible = True
       end
@@ -118,11 +103,6 @@ object frmWTLUStock: TfrmWTLUStock
         Expanded = False
         FieldName = 'Allocated_Quantity'
         Title.Caption = 'Allocated Quantity'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 95
         Visible = True
       end
@@ -130,11 +110,6 @@ object frmWTLUStock: TfrmWTLUStock
         Expanded = False
         FieldName = 'PO_Quantity'
         Title.Caption = 'On Purchase Order'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 112
         Visible = True
       end>

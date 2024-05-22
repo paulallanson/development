@@ -84,6 +84,7 @@ type
     FDisableNameChangeEvent: boolean;
     FDefaultBin: integer;
     FDefaultPrinter: string;
+    dtmdlAllSInvoices: TdtmdlSalesInvoice;
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure CallMaintScreen(aMode: TsiMode);
     procedure CallReport(const bPreview: Boolean);
@@ -91,9 +92,6 @@ type
     procedure SetDefaultPrinter(const Value: string);
     function GetBinSelection: integer;
     procedure GetDefaultPrinter;
-  private
-    DontSaveLayout: Boolean;
-    dtmdlAllSInvoices: TdtmdlSalesInvoice;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetSalesInvoiceEdit(Dataset: TDataset);
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
@@ -109,7 +107,7 @@ var
 implementation
 
 uses
-  AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
+  UITypes, Types, AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
   wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtDataModule, WTMain;
 
@@ -372,39 +370,42 @@ var
   Key : Integer ;
   frm : TfrmwtRSSalesInvoice;
 begin
+  Key := 0;
   OldCursor := Screen.Cursor;
-  Screen.Cursor := crHourglass;
-
-//  dbgDetails.DataSource.DataSet.Close;
-
-  GetDefaultPrinter;
-  
   try
-    Frm := TfrmwtRSSalesInvoice.Create(Self);
-    Key := dbgDetails.Datasource.Dataset.FieldByName('Sales_Invoice').AsInteger;
+    Screen.Cursor := crHourglass;
+
+    GetDefaultPrinter;
+
     try
-      Frm.icode := Key;
-      Frm.RevenueCentre := dtmdlAllSInvoices.RevenueCentre;
-      Frm.InvoicePrint := true;
-      Frm.ShowModal;
+      Frm := TfrmwtRSSalesInvoice.Create(Self);
+      Key := dbgDetails.Datasource.Dataset.FieldByName('Sales_Invoice').AsInteger;
+      try
+        Frm.icode := Key;
+        Frm.RevenueCentre := dtmdlAllSInvoices.RevenueCentre;
+        Frm.InvoicePrint := true;
+        Frm.ShowModal;
+      finally
+        Frm.Free;
+      end;
     finally
-      Frm.Free;
+      DefaultPrinter := Printer.Printers[Printer.Printerindex];
+      DefaultBin := GetBinSelection;
+      dbgDetails.DataSource.DataSet.Close;
+      dbgDetails.DataSource.DataSet.Open;
+      dbgDetails.DataSource.DataSet.Locate('Sales_Invoice', Variant(inttostr(Key)),[lopartialKey]) ;
+
+      with dbgDetails do
+        begin
+          try
+            if datasource.dataset.recordcount > 0 then
+              SelectedRows.CurrentRowSelected := true ;
+          except
+          end;
+        end;
     end;
   finally
-    DefaultPrinter := Printer.Printers[Printer.Printerindex];
-    DefaultBin := GetBinSelection;
-    dbgDetails.DataSource.DataSet.Close;
-    dbgDetails.DataSource.DataSet.Open;
-    dbgDetails.DataSource.DataSet.Locate('Sales_Invoice', Variant(inttostr(Key)),[lopartialKey]) ;
-
-    with dbgDetails do
-      begin
-        try
-          if datasource.dataset.recordcount > 0 then
-            SelectedRows.CurrentRowSelected := true ;
-        except
-        end;
-      end;
+    Screen.Cursor := OldCursor;
   end;
 end;
 
@@ -593,9 +594,9 @@ end;
 procedure TfrmWTLUSalesInvoices.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-VAR
+var
   TempRect: TRect;
-  Txt: array [0..255] of Char;
+  Txt: string;
   sValue: string;
 begin
 	{The following is code extracted from the Delphi Info Base}
@@ -603,15 +604,17 @@ begin
   TempRect := Rect;
   if (dbgDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'I') and
     (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
-    begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
-    end;
+  begin
+    (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+  end;
 
   if(gdFocused in State) or (gdSelected in State) then
-    begin
-      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
-      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
-    end;
+  begin
+    (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+    (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+    (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
+    (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+  end;
 
   if  (Column.Title.Caption <> 'Invoice No') and
       (Column.Title.Caption <> 'Total') and
@@ -619,53 +622,54 @@ begin
       (Column.Title.Caption <> 'Total Paid') and
       (Column.Title.Caption <> 'Deposit Paid') and
       (Column.Title.Caption <> 'VAT') then
-  	begin
-  		StrPCopy(txt, Column.field.asstring);
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
+  begin
+  	Txt := Column.field.asstring;
+
+  	SetTextAlign((Sender as TDBGrid).Canvas.Handle, GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
+  	ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+    	ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, Length(Txt), nil);
+  end
   else
-  	begin
-    		WITH Sender AS TDBGrid DO
-      		BEGIN
-           	if  (Column.Title.Caption <> 'Invoice No.') and
-              (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
-              (Column.Title.Caption <> 'Total Paid') and
-              (Column.Title.Caption <> 'Deposit Paid') and
-               (Column.Title.Caption <> 'VAT') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
-      		END;
-			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Goods') or
-          (Column.Title.Caption = 'Total') or
-          (Column.Title.Caption = 'Total Paid') or
-          (Column.Title.Caption = 'Deposit Paid') or
-          (Column.Title.Caption = 'VAT') then
-        try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
+  begin
+    with Sender as TDBGrid do
+    begin
+      if  (Column.Title.Caption <> 'Invoice No.') and
+          (Column.Title.Caption <> 'Goods') and
+          (Column.Title.Caption <> 'Total') and
+          (Column.Title.Caption <> 'Total Paid') and
+          (Column.Title.Caption <> 'Deposit Paid') and
+          (Column.Title.Caption <> 'VAT') then
+      begin
+        Canvas.Brush.Color := Color;
+        Canvas.Font.Color  := Font.Color;
+        Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+      end;
     end;
+
+		{Display the Columns Right justified in the cells}
+    if  (Column.Title.Caption = 'Goods') or
+        (Column.Title.Caption = 'Total') or
+        (Column.Title.Caption = 'Total Paid') or
+        (Column.Title.Caption = 'Deposit Paid') or
+        (Column.Title.Caption = 'VAT') then
+    begin
+      try
+        sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring));
+      except
+        sValue := EmptyStr;
+      end
+    end
+    else
+      sValue := Column.field.asstring;
+
+  	Txt := sValue;
+
+  	SetTextAlign((Sender as TDBGrid).Canvas.Handle, GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+ 		  and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
+  	ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+    	ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, Length(Txt), nil);
+  end;
 end;
 
 procedure TfrmWTLUSalesInvoices.cmbCustomerFilterChange(Sender: TObject);
@@ -718,7 +722,7 @@ end;
 procedure TfrmWTLUSalesInvoices.btnPaymentsClick(Sender: TObject);
 var
   OldCursor : TCursor;
-  Key, SOrder, tmpStatus: integer;
+  Key, SOrder: integer;
 begin
   key := dbgDetails.DataSource.dataset.fieldbyname('Sales_Invoice').asinteger;
 
@@ -727,8 +731,6 @@ begin
   except
     SOrder := 0;
   end;
-
-  tmpStatus := dbgDetails.DataSource.dataset.fieldbyname('Sales_Invoice_Status').asinteger;
 
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
@@ -867,9 +869,7 @@ end;
 
 procedure TfrmWTLUSalesInvoices.GetDefaultPrinter;
 var
-  sBin: string;
   icount: integer;
-  TempArray: array[0..255] of Char;
 begin
   {Find the default printer in the list of printers }
   Printer.PrinterIndex := -1;

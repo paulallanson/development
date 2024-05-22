@@ -74,7 +74,7 @@ object frmWTMaintLogins: TfrmWTMaintLogins
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
       item

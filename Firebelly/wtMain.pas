@@ -955,7 +955,6 @@ procedure TfrmWTMain.FormActivate(Sender: TObject);
 var
   LoginFormOK             : ByteBool;
   UserName                : string;
-  TempLogin               : array[0..255] of Char;
 begin
   bEndUSer := false;
   MaxUsers := 100;
