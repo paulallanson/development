@@ -174,6 +174,7 @@ type
     StringField13: TWideStringField;
     StringField14: TWideStringField;
     StringField15: TWideStringField;
+    qrySIHeaderGridOriginal_Name: TWideStringField;
     procedure qrySIHeaderGridCalcFields(DataSet: TDataSet);
   private
     function GetCreditHeaderCount: integer;
@@ -2493,7 +2494,7 @@ begin
     end;
     
     case Revenuecentre of
-        -1: parambyname('Revenue_Centre').clear;
+        -1: parambyname('Revenue_Centre').AsInteger := 0;
     else
         parambyname('Revenue_Centre').asinteger := RevenueCentre
     end;
@@ -2620,10 +2621,9 @@ end;
 
 function TdtmdlSalesInvoice.GetCurrentSInvoice: integer;
 begin
-  if qrySIHeaderGrid.RecordCount > 0 then
-    Result := qrySIHeaderGrid.FieldByName('Sales_invoice').AsInteger
-  else
-    Result := 0;
+  Result := 0;
+  if not qrySIHeaderGrid.IsEmpty then
+    Result := qrySIHeaderGrid.FieldByName('Sales_invoice').AsInteger;
 end;
 
 procedure TdtmdlSalesInvoice.ListAllLines(const aKey: integer);

@@ -50,6 +50,7 @@ type
     procedure SetInvoicePrint(const Value: boolean);
     procedure RunReport(const bPreview: Boolean);
     procedure EmailReport;
+    function GetAttachmentPrefix: string;
     function BuildQueryString: string;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
@@ -104,7 +105,7 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      frmWTRPSalesInvoice.bInvoice := InvoicePrint;
+      frmWTRPSalesInvoice.bInvoice := FInvoicePrint;
       frmWTRPSalesInvoice.bReprint := true;
       {Extract the relevant data}
 
@@ -122,7 +123,7 @@ begin
       GetSelection;
 
       InvRPrintSQL.Close;
-      if InvoicePrint then
+      if FInvoicePrint then
         InvRPrintSQL.SQL := qryInvPrint.SQL
       else
         InvRPrintSQL.SQL := qryCreditPrint.SQL;
@@ -274,6 +275,14 @@ begin
      end;
 end;
 
+function TfrmWTRSSalesInvoiceReprint.GetAttachmentPrefix: string;
+begin
+  if FInvoicePrint then
+    Result := 'SI'
+  else
+    Result := 'SC';
+end;
+
 procedure TfrmWTRSSalesInvoiceReprint.GetSelection;
 var
 	icount: integer;
@@ -359,7 +368,7 @@ end;
 procedure TfrmWTRSSalesInvoiceReprint.SetInvoicePrint(const Value: boolean);
 begin
   FInvoicePrint := Value;
-  if InvoicePrint then
+  if FInvoicePrint then
     begin
       caption := 'Invoice Re-print selection';
       selectionGrp.caption := 'Invoice Number Selection';
@@ -420,7 +429,7 @@ begin
   with qryGetCustomers do
   begin
     Close;
-    if InvoicePrint then
+    if FInvoicePrint then
       SQL := GetInvCustSQL.SQL
     else
       SQL := GetCreditCustSQL.SQL;
@@ -544,7 +553,7 @@ begin
 
             frmWTRPSalesInvoice := TfrmWTRPSalesInvoice.Create(Self);
             try
-              frmWTRPSalesInvoice.bInvoice := InvoicePrint;
+              frmWTRPSalesInvoice.bInvoice := FInvoicePrint;
               frmWTRPSalesInvoice.bUpdate := False;
               frmWTRPSalesInvoice.bReprint := true;
 //              frmWTRPSalesInvoice.bAll := False;
@@ -558,7 +567,7 @@ begin
               frmWTRPSalesInvoice.InvoiceReport.ShowProgress := false;
 
               InvRPrintSQL.Close;
-              if InvoicePrint then
+              if FInvoicePrint then
                 InvRPrintSQL.SQL := qryInvEmail.SQL
               else
                 InvRPrintSQL.SQL := qryCreditEmail.SQL;
@@ -575,14 +584,14 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + EmailArray[irow,1];
+                  printFileName := GetAttachmentPrefix + EmailArray[irow,1];
                   TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   if iInvoiceCount = 1 then
                     begin
                       sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
 
-                      if InvoicePrint then
+                      if FInvoicePrint then
                         sSubject := 'Invoice: ' + EmailArray[irow,1]
                       else
                         sSubject := 'Credit Note:' + EmailArray[irow,1];
@@ -612,7 +621,7 @@ begin
 
             frmWTRPSalesInvoice := TfrmWTRPSalesInvoice.Create(Self);
             try
-              frmWTRPSalesInvoice.bInvoice := InvoicePrint;
+              frmWTRPSalesInvoice.bInvoice := FInvoicePrint;
               frmWTRPSalesInvoice.bUpdate := False;
               frmWTRPSalesInvoice.bReprint := true;
 //              frmWTRPSalesInvoice.bAll := False;
@@ -626,7 +635,7 @@ begin
               frmWTRPSalesInvoice.InvoiceReport.ShowProgress := false;
 
               InvRPrintSQL.Close;
-              if InvoicePrint then
+              if FInvoicePrint then
                 InvRPrintSQL.SQL := qryInvEmail.SQL
               else
                 InvRPrintSQL.SQL := qryCreditEmail.SQL;
@@ -643,12 +652,12 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  printFileName := 'SI' + EmailArray[irow,1];
+                  printFileName := GetAttachmentPrefix + EmailArray[irow,1];
                   TPrinterTools.New.PrintToattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];
 
-                  if InvoicePrint then
+                  if FInvoicePrint then
                     sBodytext := 'Please find attached your invoices.'#13#10#13#10
                               +  'If you have any queries please do not hesitate to contact us.'#13#10#13#10
                               +  'Kind Regards,'#13#10#13#10

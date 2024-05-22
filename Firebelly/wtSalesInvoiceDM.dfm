@@ -775,6 +775,10 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Revenue_Centre_Descr'
       Size = 50
     end
+    object qrySIHeaderGridOriginal_Name: TWideStringField
+      FieldName = 'Original_Name'
+      Size = 200
+    end
   end
   object qryOperator: TFDQuery
     ConnectionName = 'wt'
