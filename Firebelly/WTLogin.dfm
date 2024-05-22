@@ -1,6 +1,7 @@
 object frmWTLogin: TfrmWTLogin
   Left = 204
   Top = 180
+  ActiveControl = PasswordEdit
   BorderStyle = bsDialog
   Caption = 'Logon'
   ClientHeight = 175
@@ -112,7 +113,7 @@ object frmWTLogin: TfrmWTLogin
     SQL.Strings = (
       'Select * From Operator'
       'Where Login_Name = :Login_Name')
-    Left = 330
+    Left = 329
     Top = 114
     ParamData = <
       item

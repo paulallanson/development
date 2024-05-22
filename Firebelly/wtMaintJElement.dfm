@@ -3,7 +3,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
-  ClientHeight = 247
+  ClientHeight = 254
   ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   TextHeight = 13
   object lblDelete: TLabel
     Left = 24
-    Top = 232
+    Top = 229
     Width = 154
     Height = 13
     Caption = 'Delete these element details ?'

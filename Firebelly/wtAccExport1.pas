@@ -54,11 +54,13 @@ var
 
 implementation
 
-uses WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
-  WTAccImportDM, WTFileImport, wtDataModule;
+uses
+  WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
+  WTAccImportDM, WTFileImport, wtDataModule, WTMain;
 
 var
   iRecordcounter: integer;
+
 {$R *.DFM}
 
 procedure TfrmWTAccExport1.NextBitBtnClick(Sender: TObject);
@@ -260,7 +262,7 @@ procedure TfrmWTAccExport1.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
@@ -395,7 +397,7 @@ begin
   bUseRevenueCentre := false;
 
   {Set the revenue centre details}
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     with IniFile do
       begin

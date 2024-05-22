@@ -255,7 +255,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -366,7 +366,7 @@ procedure TfrmWTRSSOAntOrdering.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin

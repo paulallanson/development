@@ -43,8 +43,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 591
-    ExplicitWidth = 892
     object lblDelete: TLabel
       Left = 245
       Top = 22
@@ -136,7 +134,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 892
     DesignSize = (
       907
       81)
@@ -203,7 +200,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Anchors = [akTop, akRight]
       TabOrder = 1
       OnExit = edtDateRaisedExit
-      ExplicitLeft = 759
     end
     object btnDateRequired: TBitBtn
       Left = 874
@@ -227,7 +223,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnDateRequiredClick
-      ExplicitLeft = 859
     end
     object dblkpRemedialType: TDBLookupComboBox
       Left = 368
@@ -259,7 +254,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       ListField = 'Remedial_Dept_Descr'
       ListSource = dtsRemedailDept
       TabOrder = 5
-      ExplicitLeft = 695
     end
     object BitBtn1: TBitBtn
       Left = 584
@@ -312,7 +306,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       ParentFont = False
       TabOrder = 8
       OnClick = BitBtn4Click
-      ExplicitLeft = 860
     end
   end
   object pnlfooter: TPanel
@@ -323,8 +316,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 504
-    ExplicitWidth = 898
     DesignSize = (
       907
       96)
@@ -346,7 +337,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Left = 731
       Top = 13
       Width = 23
-      Height = 15
+      Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Cost'
       Font.Charset = DEFAULT_CHARSET
@@ -360,7 +351,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Left = 8
       Top = 15
       Width = 95
-      Height = 15
+      Height = 13
       Caption = 'Original Templater'
     end
     object Label19: TLabel
@@ -412,7 +403,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Height = 21
       KeyField = 'Fitter'
       ListField = 'Fitter_Name'
-      ListSource = srcFitter
+      ListSource = srcFitter3
       TabOrder = 0
       OnClick = EnableOK
     end
@@ -420,7 +411,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Left = 766
       Top = 9
       Width = 89
-      Height = 23
+      Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 1
       Text = 'edtPrice'
@@ -480,7 +471,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Height = 21
       KeyField = 'Fitter'
       ListField = 'Fitter_Name'
-      ListSource = srcFitter
+      ListSource = srcFitter1
       TabOrder = 5
       OnClick = EnableOK
     end
@@ -491,7 +482,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Height = 21
       KeyField = 'Fitter'
       ListField = 'Fitter_Name'
-      ListSource = srcFitter
+      ListSource = srcFitter2
       TabOrder = 6
       OnClick = EnableOK
     end
@@ -546,8 +537,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Caption = 'Panel2'
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 898
-    ExplicitHeight = 414
     object pnlLeft: TPanel
       Left = 1
       Top = 1
@@ -556,7 +545,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alLeft
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 403
       object Label8: TLabel
         Left = 8
         Top = 112
@@ -638,8 +626,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alClient
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 442
-      ExplicitHeight = 403
       object Label9: TLabel
         Left = 10
         Top = 112
@@ -721,10 +707,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Width = 907
     Height = 19
     Panels = <>
-    ExplicitTop = 648
-    ExplicitWidth = 892
   end
-  object qryFitter: TFDQuery
+  object qryFitter1: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT * '
@@ -738,8 +722,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Name = 'Fitter'
       end>
   end
-  object srcFitter: TDataSource
-    DataSet = qryFitter
+  object srcFitter1: TDataSource
+    DataSet = qryFitter1
     Left = 352
     Top = 224
   end
@@ -802,5 +786,43 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     OnTimer = IntFlashTimerTimer
     Left = 760
     Top = 632
+  end
+  object srcFitter2: TDataSource
+    DataSet = qryFitter2
+    Left = 360
+    Top = 280
+  end
+  object qryFitter2: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'SELECT * '
+      'FROM Fitter'
+      'WHERE (inactive = '#39'N'#39') or (Fitter = :Fitter)'
+      'ORDER BY Fitter.Fitter_Name')
+    Left = 320
+    Top = 304
+    ParamData = <
+      item
+        Name = 'Fitter'
+      end>
+  end
+  object qryFitter3: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'SELECT * '
+      'FROM Fitter'
+      'WHERE (inactive = '#39'N'#39') or (Fitter = :Fitter)'
+      'ORDER BY Fitter.Fitter_Name')
+    Left = 320
+    Top = 360
+    ParamData = <
+      item
+        Name = 'Fitter'
+      end>
+  end
+  object srcFitter3: TDataSource
+    DataSet = qryFitter3
+    Left = 368
+    Top = 336
   end
 end

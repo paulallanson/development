@@ -49,7 +49,6 @@ type
   private
     FDisableNameChangeEvent: boolean;
     FInvoiceDate: string;
-    rRevenueCentre: integer;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure SetInvoiceDate(const Value: string);
@@ -65,7 +64,8 @@ var
 
 implementation
 
-uses WTMaintSalesInvoice, wtMain, wtDataModule;
+uses
+  UITypes, WTMaintSalesInvoice, wtMain, wtDataModule;
 
 {$R *.dfm}
 
@@ -121,20 +121,16 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.FormShow(Sender: TObject);
 begin
   dtmdlSalesInvoice.refreshSOdata;
-  with dbgDetails do
-    begin
-      try
-        if datasource.dataset.recordcount > 0 then
-          SelectedRows.CurrentRowSelected := true ;
-      except
-      end;
-    end;
+  if Assigned(dbgDetails.datasource.dataset) and not dbgDetails.datasource.dataset.IsEmpty then
+    dbgDetails.SelectedRows.CurrentRowSelected := True;
+
   edtSONumber.setfocus;
 end;
 
 procedure TfrmWTLUSalesInvoiceSO.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
+  IniFileName: string;
   iRevenueCentre: integer;
 begin
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
@@ -142,9 +138,10 @@ begin
   dtmdlSalesInvoice.dsSOAll.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlSalesInvoice.dsSOAll;
   dtmdlSalesInvoice.qrySOAll.AfterScroll := SetSalesOrderEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+  IniFileName := TfrmWTMain.AppIniFile;
+  AllCommon.SetDBGridCols('', 'SalesInvoicesSO Col Order', IniFileName, self.dbgDetails);
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(IniFileName);
 
   try
     with IniFile do
@@ -349,7 +346,7 @@ procedure TfrmWTLUSalesInvoiceSO.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
@@ -366,7 +363,7 @@ end;
 procedure TfrmWTLUSalesInvoiceSO.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', 'myworktops.ini', self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesSO Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 
 end;
 

@@ -156,7 +156,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -165,11 +165,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Customer_name'
         Title.Caption = 'Customer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 202
         Visible = True
       end
@@ -177,11 +172,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Telephone_number'
         Title.Caption = 'Phone'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 94
         Visible = True
       end
@@ -189,11 +179,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Fax_Number'
         Title.Caption = 'Fax'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 104
         Visible = True
       end
@@ -201,11 +186,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Town_City'
         Title.Caption = 'Town'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 127
         Visible = True
       end
@@ -213,11 +193,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'PostCode'
         Title.Caption = 'Postcode'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 116
         Visible = True
       end
@@ -225,44 +200,24 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Account_Code'
         Title.Caption = 'Account Code'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description'
         Title.Caption = 'Type'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 87
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Street'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 181
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Locale'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 87
         Visible = True
       end
@@ -270,11 +225,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'County_State'
         Title.Caption = 'County'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 100
         Visible = True
       end
@@ -282,11 +232,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Last_Sales_Invoice'
         Title.Caption = 'Last Invoice Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 96
         Visible = True
       end
@@ -294,11 +239,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Date_Created'
         Title.Caption = 'Date Created'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 75
         Visible = True
       end
@@ -306,11 +246,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Payment_Terms_Description'
         Title.Caption = 'Payment Terms'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 139
         Visible = True
       end
@@ -318,11 +253,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Email_Address'
         Title.Caption = 'Email'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 165
         Visible = True
       end
@@ -330,11 +260,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Is_Retail_Customer'
         Title.Caption = 'Retail'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 46
         Visible = True
       end
@@ -342,11 +267,6 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Expanded = False
         FieldName = 'Importance_Description'
         Title.Caption = 'Level of Importance'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 130
         Visible = True
       end>

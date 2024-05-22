@@ -240,7 +240,7 @@ object frmwtLUJobs: TfrmwtLUJobs
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -248,11 +248,6 @@ object frmwtLUJobs: TfrmwtLUJobs
       item
         Expanded = False
         FieldName = 'Job'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 73
         Visible = True
       end
@@ -260,11 +255,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Date_Raised'
         Title.Caption = 'Date'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 69
         Visible = True
       end
@@ -272,33 +262,18 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Customer_Name'
         Title.Caption = 'Customer'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 136
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 139
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Reference'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 99
         Visible = True
       end
@@ -306,11 +281,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Gross_Price'
         Title.Caption = 'Supply Price'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -318,11 +288,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Installation_price'
         Title.Caption = 'Install Price'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 74
         Visible = True
       end
@@ -330,11 +295,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Survey_price'
         Title.Caption = 'Survey Price'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 84
         Visible = True
       end
@@ -342,11 +302,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Delivery_Price'
         Title.Caption = 'Delivery Price'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 88
         Visible = True
       end
@@ -354,11 +309,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Date_Required'
         Title.Caption = 'Date Required'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 115
         Visible = True
       end
@@ -366,11 +316,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Material_Description'
         Title.Caption = 'Material'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 74
         Visible = True
       end
@@ -378,11 +323,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Contact_name'
         Title.Caption = 'Contact'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 136
         Visible = True
       end
@@ -390,44 +330,24 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Status_Description'
         Title.Caption = 'Status'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Quote'
         Title.Caption = 'Quote No.'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order'
         Title.Caption = 'Sales Order'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Order_ref_no'
         Title.Caption = 'Customer Ref Number'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 148
         Visible = True
       end
@@ -435,11 +355,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Gross_Price_Incl_Vat'
         Title.Caption = 'Total Price incl VAT'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 109
         Visible = True
       end
@@ -447,11 +362,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Project_Reference'
         Title.Caption = 'Project'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 358
         Visible = True
       end
@@ -459,11 +369,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 81
         Visible = True
       end>

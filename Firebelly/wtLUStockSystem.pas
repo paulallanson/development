@@ -16,12 +16,12 @@ type
     srcStockSystem: TDataSource;
     qryStockSystem: TFDQuery;
     qryDelete: TFDQuery;
-    stsbrDetails: TStatusBar;
     Panel1: TPanel;
     btnAdd: TBitBtn;
     btnEdit: TBitBtn;
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
+    stsbrDetails: TStatusBar;
     procedure BitBtn4Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
@@ -119,7 +119,6 @@ end;
 procedure TfrmWTLUStockSystem.btnAddClick(Sender: TObject);
 begin
   CallMaintScreen('A');
-
 end;
 
 procedure TfrmWTLUStockSystem.btnEditClick(Sender: TObject);
