@@ -30,7 +30,6 @@ type
     dtsPriceUnit: TDataSource;
     dtsVat: TDataSource;
     qryGetPUnit: TFDQuery;
-    edtDescription: TRichEdit;
     qryGetProductType: TFDQuery;
     qryWOProcess: TFDQuery;
     dtsWOProcess: TDataSource;
@@ -50,6 +49,7 @@ type
     Label8: TLabel;
     edtProductType: TEdit;
     Label1: TLabel;
+    edtDescription: TRichEdit;
     btnProducts: TButton;
     btnProdType: TButton;
     procedure btnProdTypeClick(Sender: TObject);
@@ -82,7 +82,6 @@ type
     function CalculateSellPrice(tempQty, tempUnit: integer;
       tempValue: real): real;
     function GetProductTypeCat(tempCode: integer): integer;
-    procedure GetProcessDetails(tempcode: integer);
     procedure SetInternalCostLine(const Value: boolean);
     { Private declarations }
   public
@@ -181,7 +180,6 @@ end;
 procedure TPBMaintJobBagLinesFrm.FormActivate(Sender: TObject);
 var
   sJobBag : string;
-  icount: integer;
 begin
   if not FActivated then
   begin
@@ -296,9 +294,9 @@ begin
   JobBagLine.Process := 0;
   JobBagLine.JBLineDescr := Trim(edtDescription.Text);
   JobBagLine.JBQuantity := strtoint(memQuantity.text);
-  JobBagLine.CostPrice := StrToFloatDef(memCostPrice.text, 0, FormatSettings);
-  JobBagLine.SellPrice := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
-  JobBagLine.ReSellerPrice := StrToFloatDef(memResellerPrice.text, 0, FormatSettings);
+  JobBagLine.CostPrice := strtofloat(memCostPrice.text);
+  JobBagLine.SellPrice := strtofloat(memSellPrice.text);
+  JobBagLine.ReSellerPrice := strtofloat(memResellerPrice.text);
   JobBagLine.PriceUnit := dblkpPriceUnit.KeyValue;
 //  JobBagLine.JBLineCost := 0.00;
   JobBagLine.JBLineCost := CalculateSellPrice(JobBagLine.JBQuantity, JobBagLine.PriceUnit, JobBagLine.CostPrice);
@@ -306,7 +304,7 @@ begin
   JobBagLine.JBLineReseller := CalculateSellPrice(JobBagLine.JBQuantity, JobBagLine.PriceUnit, JobBagLine.ResellerPrice);
   JobBagLine.JBLineType := 'A';
 
-  JobBagLine.InternalCostMarkupPercentage := StrToFloatDef(memMarkupPerc.text, 0, FormatSettings);
+  JobBagLine.InternalCostMarkupPercentage := strtofloat(memMarkupPerc.text);
   JobBagLine.JBLineInactive := chkbxInactive.checked;
 
   if (Mode <> jblRestrict) and (Mode <> jblView) then
@@ -450,21 +448,6 @@ end;
 procedure TPBMaintJobBagLinesFrm.memSellPriceChange(Sender: TObject);
 begin
   CheckOK(self);
-end;
-
-procedure TPBMaintJobBagLinesFrm.GetProcessDetails(tempcode: integer);
-begin
-  with qryGetProcess do
-    begin
-      close;
-      parambyname('Process').asinteger := tempCode;
-      open;
-
-      ProductType := fieldbyname('Product_Type').asinteger;
-      dblkpProductCat.keyvalue := fieldbyname('Category').asinteger;
-      edtProductType.Text := fieldbyname('Product_Type_Description').asstring;
-      dblkpPriceUnit.KeyValue := fieldbyname('Price_unit').asinteger;
-    end;
 end;
 
 procedure TPBMaintJobBagLinesFrm.CheckKeyIsNumber(Sender: TObject; var Key: Char);

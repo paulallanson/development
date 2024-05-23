@@ -746,9 +746,9 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgContactsDblClick
         Columns = <
           item
@@ -834,9 +834,9 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgCostCentresDblClick
         Columns = <
           item

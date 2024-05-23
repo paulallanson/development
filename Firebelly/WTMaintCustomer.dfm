@@ -745,9 +745,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           TabOrder = 28
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           Visible = False
           Columns = <
             item
@@ -1024,9 +1024,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           TabOrder = 2
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgMaterialTypesDrawColumnCell
           OnDblClick = dbgMaterialTypesDblClick
           Columns = <
@@ -1085,9 +1085,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgBranchesDblClick
         Columns = <
           item
@@ -1211,9 +1211,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgQuotesDblClick
         Columns = <
           item
@@ -1336,9 +1336,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgSOrdersDblClick
         Columns = <
           item
@@ -1545,9 +1545,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 2
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgJobsDblClick
         Columns = <
           item
@@ -1646,9 +1646,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgInvoicesDblClick
         Columns = <
           item
@@ -1814,9 +1814,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgEventsDblClick
         Columns = <
           item

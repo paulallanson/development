@@ -213,9 +213,9 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnCellClick = dbgDetailsCellClick
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
@@ -312,7 +312,6 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
         Expanded = False
         FieldName = 'New_Date'
         Title.Caption = 'Date Created'
-        Width = 64
         Visible = True
       end>
   end

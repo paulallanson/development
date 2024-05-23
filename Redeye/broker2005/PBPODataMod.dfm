@@ -1903,7 +1903,7 @@ object PBPODM: TPBPODM
     Left = 624
     Top = 292
   end
-  object GetPriceUnitSQL: TFDQuery
+  object GetPriceUnitSQL1: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Price_unit, Description, Price_unit_Factor'
@@ -1912,8 +1912,8 @@ object PBPODM: TPBPODM
     Left = 712
     Top = 316
   end
-  object PriceUnitSRC: TDataSource
-    DataSet = GetPriceUnitSQL
+  object PriceUnitSRC1: TDataSource
+    DataSet = GetPriceUnitSQL1
     Left = 712
     Top = 364
   end
@@ -3772,7 +3772,7 @@ object PBPODM: TPBPODM
         Name = 'Operator'
       end>
   end
-  object GetOrigPriceUnitSQL: TFDQuery
+  object GetOrigPriceUnitSQL1: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Price_unit, Description, Price_unit_Factor'
@@ -3799,7 +3799,7 @@ object PBPODM: TPBPODM
         Name = 'Line'
       end>
   end
-  object qryGetProdTypePriceUnit: TFDQuery
+  object qryGetProdTypePriceUnit1: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       
@@ -5116,6 +5116,46 @@ object PBPODM: TPBPODM
       end
       item
         Name = 'Job_Bag_Line_Reseller'
+      end>
+  end
+  object PriceUnitSRC2: TDataSource
+    DataSet = GetPriceUnitSQL2
+    Left = 744
+    Top = 364
+  end
+  object GetPriceUnitSQL2: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select Price_unit, Description, Price_unit_Factor'
+      'From Price_Unit'
+      'Order By Description')
+    Left = 744
+    Top = 316
+  end
+  object GetOrigPriceUnitSQL2: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select Price_unit, Description, Price_unit_Factor'
+      'From Price_Unit'
+      'Order By Description')
+    Left = 856
+    Top = 316
+  end
+  object qryGetProdTypePriceUnit2: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      
+        'select Product_TypePrice_Unit.*, Price_Unit.Description, Price_U' +
+        'nit_Factor'
+      'from Product_TypePrice_Unit, Price_Unit'
+      'where Product_Type = :Product_Type and'
+      'Product_TypePrice_Unit.Price_Unit = Price_Unit.Price_Unit'
+      'order by Price_Unit.Description')
+    Left = 848
+    Top = 376
+    ParamData = <
+      item
+        Name = 'Product_Type'
       end>
   end
 end

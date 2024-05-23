@@ -689,9 +689,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           Visible = False
           Columns = <
             item
@@ -868,9 +868,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -11
+            TitleFont.Height = -12
             TitleFont.Name = 'Segoe UI'
-            TitleFont.Style = [fsBold]
+            TitleFont.Style = []
             OnDrawColumnCell = dbgContactDetailsDrawColumnCell
             OnDblClick = dbgHOContactDetailsDblClick
             Columns = <
@@ -2167,9 +2167,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
         end
         object cmbCallOffDeliveryNote: TComboBox
           Left = 200
@@ -2672,9 +2672,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgBranchDetailsDrawColumnCell
           OnDblClick = dbgBranchDetailsDblClick
           Columns = <
@@ -2779,9 +2779,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgContactDetailsDrawColumnCell
           OnDblClick = dbgContactDetailsDblClick
           Columns = <
@@ -3101,9 +3101,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgQuoteDetailsDblClick
         Columns = <
           item
@@ -3419,9 +3419,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgEnquiryDetailsDrawColumnCell
         OnDblClick = dbgEnquiryDetailsDblClick
         Columns = <
@@ -3817,9 +3817,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 3
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgOrderDetailsDrawColumnCell
         OnDblClick = dbgOrderDetailsDblClick
         Columns = <
@@ -4070,9 +4070,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgJobDetailsDrawColumnCell
         Columns = <
           item
@@ -4352,9 +4352,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgStockDetailsDrawColumnCell
           OnDblClick = dbgStockDetailsDblClick
           Columns = <
@@ -4610,9 +4610,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 2
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgInvoiceDetailsDrawColumnCell
         OnDblClick = dbgInvoiceDetailsDblClick
         Columns = <
@@ -5015,7 +5015,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Height = 234
           Align = alClient
           DrawingStyle = gdsGradient
-          Font.Charset = ANSI_CHARSET
+          Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Segoe UI'
@@ -5023,11 +5023,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
           ParentFont = False
           TabOrder = 2
-          TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgActivityDetailsDrawColumnCell
           OnDblClick = dbgActivityDetailsDblClick
           OnTitleClick = dbgActivityDetailsTitleClick
@@ -5185,9 +5185,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgCategoryDetailsDrawColumnCell
           OnDblClick = dbgCategoryDetailsDblClick
           Columns = <

@@ -54,7 +54,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   WTAccExport2, WTAccExport3, WTAccExport4, WTAccExportDM, WTAccExportFactInvs,
   WTAccImportDM, WTFileImport, wtDataModule, WTMain;
 

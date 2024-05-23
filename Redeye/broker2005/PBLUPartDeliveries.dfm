@@ -109,9 +109,9 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     Columns = <
       item
         Expanded = False

@@ -42,9 +42,9 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -11
+      TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = [fsBold]
+      TitleFont.Style = []
     end
     object pnlPrintControl: TPanel
       Left = 1
@@ -423,8 +423,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     end
   end
   object OleContainer1: TOleContainer
-    Left = 376
-    Top = 120
+    Left = 372
+    Top = 148
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -492,212 +492,120 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Left = 52
     Top = 244
     object qryCurrentCustStatusCustomer: TIntegerField
+      DisplayWidth = 6
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
+      Visible = False
     end
     object qryCurrentCustStatusBranch_no: TIntegerField
+      DisplayLabel = 'Branch'
+      DisplayWidth = 4
       FieldName = 'Branch_no'
-      Origin = 'Branch_no'
-      Required = True
+      Visible = False
     end
-    object qryCurrentCustStatusName: TWideStringField
-      FieldName = 'Name'
-      Origin = 'Name'
-      Size = 50
+    object qryCurrentCustStatusCust_name: TWideStringField
+      DisplayLabel = 'Name'
+      DisplayWidth = 30
+      FieldName = 'Cust_name'
+      FixedChar = True
+      Size = 162
+    end
+    object qryCurrentCustStatusAccount_Code: TWideStringField
+      DisplayLabel = 'Account'
+      DisplayWidth = 8
+      FieldName = 'Account_Code'
+      FixedChar = True
+    end
+    object qryCurrentCustStatusCustomer_Status_Descr: TWideStringField
+      DisplayLabel = 'Status'
+      DisplayWidth = 10
+      FieldName = 'Customer_Status_Descr'
+      FixedChar = True
+      Size = 24
+    end
+    object qryCurrentCustStatusDescription: TWideStringField
+      DisplayLabel = 'Type'
+      DisplayWidth = 10
+      FieldName = 'Description'
+      FixedChar = True
+      Size = 80
+    end
+    object qryCurrentCustStatusName_1: TWideStringField
+      DisplayLabel = 'Rep'
+      DisplayWidth = 20
+      FieldName = 'Rep_Name'
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusBuilding_No_name: TWideStringField
+      DisplayLabel = 'House'
+      DisplayWidth = 30
       FieldName = 'Building_No_name'
-      Origin = 'Building_No_name'
-      Size = 50
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusStreet: TWideStringField
+      DisplayWidth = 30
       FieldName = 'Street'
-      Origin = 'Street'
-      Size = 50
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusLocale: TWideStringField
+      DisplayWidth = 30
       FieldName = 'Locale'
-      Origin = 'Locale'
-      Size = 50
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusTown: TWideStringField
+      DisplayWidth = 30
       FieldName = 'Town'
-      Origin = 'Town'
-      Size = 50
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusPostcode: TWideStringField
       FieldName = 'Postcode'
-      Origin = 'Postcode'
-      Required = True
-      Size = 10
+      FixedChar = True
     end
     object qryCurrentCustStatusPhone: TWideStringField
+      DisplayWidth = 15
       FieldName = 'Phone'
-      Origin = 'Phone'
-      Required = True
+      FixedChar = True
+      Size = 40
     end
     object qryCurrentCustStatusFax_Number: TWideStringField
+      DisplayLabel = 'Fax'
+      DisplayWidth = 15
       FieldName = 'Fax_Number'
-      Origin = 'Fax_Number'
+      FixedChar = True
+      Size = 40
     end
     object qryCurrentCustStatusEmail: TWideStringField
       FieldName = 'Email'
-      Origin = 'Email'
-      Size = 40
-    end
-    object qryCurrentCustStatusCustomer0: TIntegerField
-      FieldName = 'Customer0'
-      Origin = 'Customer0'
-    end
-    object qryCurrentCustStatusBranch_no0: TIntegerField
-      FieldName = 'Branch_no0'
-      Origin = 'Branch_no0'
-    end
-    object qryCurrentCustStatusMainRep: TIntegerField
-      FieldName = 'MainRep'
-      Origin = 'MainRep'
-    end
-    object qryCurrentCustStatusNarrative: TIntegerField
-      FieldName = 'Narrative'
-      Origin = 'Narrative'
-    end
-    object qryCurrentCustStatusAccount_Code: TWideStringField
-      FieldName = 'Account_Code'
-      Origin = 'Account_Code'
-      Size = 10
-    end
-    object qryCurrentCustStatusInv_To_Customer: TIntegerField
-      FieldName = 'Inv_To_Customer'
-      Origin = 'Inv_To_Customer'
-    end
-    object qryCurrentCustStatusInv_To_Branch: TIntegerField
-      FieldName = 'Inv_To_Branch'
-      Origin = 'Inv_To_Branch'
-    end
-    object qryCurrentCustStatusAccount_Code_On_Ledger: TWideStringField
-      FieldName = 'Account_Code_On_Ledger'
-      Origin = 'Account_Code_On_Ledger'
-      Size = 1
-    end
-    object qryCurrentCustStatusDelivery_Narrative: TIntegerField
-      FieldName = 'Delivery_Narrative'
-      Origin = 'Delivery_Narrative'
-    end
-    object qryCurrentCustStatusLast_Statement_ref: TWideStringField
-      FieldName = 'Last_Statement_ref'
-      Origin = 'Last_Statement_ref'
-      Size = 15
-    end
-    object qryCurrentCustStatusUse_Branch_Name: TWideStringField
-      FieldName = 'Use_Branch_Name'
-      Origin = 'Use_Branch_Name'
-      Size = 1
-    end
-    object qryCurrentCustStatusShort_Code: TWideStringField
-      FieldName = 'Short_Code'
-      Origin = 'Short_Code'
-      Size = 10
-    end
-    object qryCurrentCustStatusHO_Department: TIntegerField
-      FieldName = 'HO_Department'
-      Origin = 'HO_Department'
-    end
-    object qryCurrentCustStatusUse_HO_Delivery_Notes: TWideStringField
-      FieldName = 'Use_HO_Delivery_Notes'
-      Origin = 'Use_HO_Delivery_Notes'
-      Size = 1
-    end
-    object qryCurrentCustStatusCounty: TWideStringField
-      FieldName = 'County'
-      Origin = 'County'
-      Size = 30
-    end
-    object qryCurrentCustStatusConsumer_Code: TWideStringField
-      FieldName = 'Consumer_Code'
-      Origin = 'Consumer_Code'
-    end
-    object qryCurrentCustStatusInactive: TWideStringField
-      FieldName = 'Inactive'
-      Origin = 'Inactive'
-      Size = 1
-    end
-    object qryCurrentCustStatusOnline_Ordering_Email: TWideStringField
-      FieldName = 'Online_Ordering_Email'
-      Origin = 'Online_Ordering_Email'
-      Size = 100
-    end
-    object qryCurrentCustStatusInv_To_Contact: TIntegerField
-      FieldName = 'Inv_To_Contact'
-      Origin = 'Inv_To_Contact'
-    end
-    object qryCurrentCustStatusCustomer_Status: TIntegerField
-      FieldName = 'Customer_Status'
-      Origin = 'Customer_Status'
-      Required = True
-    end
-    object qryCurrentCustStatusCustomer_Status_Descr: TWideStringField
-      FieldName = 'Customer_Status_Descr'
-      Origin = 'Customer_Status_Descr'
-      Required = True
-      Size = 12
-    end
-    object qryCurrentCustStatusCustomer_Type: TIntegerField
-      FieldName = 'Customer_Type'
-      Origin = 'Customer_Type'
-      Required = True
-    end
-    object qryCurrentCustStatusDescription: TWideStringField
-      FieldName = 'Description'
-      Origin = 'Description'
-      Size = 40
-    end
-    object qryCurrentCustStatusColor: TIntegerField
-      FieldName = 'Color'
-      Origin = 'Color'
-    end
-    object qryCurrentCustStatusFont_Color: TIntegerField
-      FieldName = 'Font_Color'
-      Origin = 'Font_Color'
-    end
-    object qryCurrentCustStatusRep: TIntegerField
-      FieldName = 'Rep'
-      Origin = 'Rep'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
-    object qryCurrentCustStatusRep_Name: TWideStringField
-      FieldName = 'Rep_Name'
-      Origin = 'Rep_Name'
-      Size = 40
-    end
-    object qryCurrentCustStatusCust_name: TWideStringField
-      FieldName = 'Cust_name'
-      Origin = 'Cust_name'
-      ReadOnly = True
-      Size = 151
-    end
-    object qryCurrentCustStatusAcc_Active: TWideStringField
-      FieldName = 'Acc_Active'
-      Origin = 'Acc_Active'
-      Size = 1
+      FixedChar = True
+      Size = 80
     end
     object qryCurrentCustStatusAnalysis_Code_1: TWideStringField
       FieldName = 'Analysis_Code_1'
-      Origin = 'Analysis_Code_1'
     end
     object qryCurrentCustStatusAnalysis_Code_2: TWideStringField
       FieldName = 'Analysis_Code_2'
-      Origin = 'Analysis_Code_2'
     end
     object qryCurrentCustStatusAnalysis_Code_3: TWideStringField
       FieldName = 'Analysis_Code_3'
-      Origin = 'Analysis_Code_3'
-      Size = 50
+      Size = 30
     end
     object qryCurrentCustStatusAnalysis_Code_4: TWideStringField
       FieldName = 'Analysis_Code_4'
-      Origin = 'Analysis_Code_4'
+      Size = 30
+    end
+    object qryCurrentCustStatusImportance_Description: TWideStringField
+      DisplayLabel = 'Level of Importance'
+      FieldName = 'Importance_Description'
       Size = 50
+    end
+    object qryCurrentCustStatusRep_Type: TWideStringField
+      DisplayLabel = 'Rep Type'
+      FieldName = 'Rep_Type'
+      Size = 10
     end
   end
   object dtsrcCurrentCustStatus: TDataSource

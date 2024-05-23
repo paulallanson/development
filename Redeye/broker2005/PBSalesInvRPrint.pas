@@ -90,7 +90,7 @@ type
     FEmailAttachment : TstringList;
     FEmailSent: boolean;
     sAttachmentType: string;
-    procedure PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+    procedure PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string; AttachmentType: string);
   public
     { Public declarations }
     iIntSelCode: Integer;
@@ -590,7 +590,7 @@ begin
               PBRPSalesInvFrm.InvHeadSRC.dataset := InvRPrintSQL;
 
               sAttachmentType := PBEmailListFrm.EmailListGrid.Cells[5, irow];
-              Printtoattachment(PBRPSalesInvFrm, sAttachmentType);
+              Printtoattachment(PBRPSalesInvFrm, EmailArray[irow,1], sAttachmentType);
 
               if PBRPSalesInvFrm.bCustomerisReseller then
                 ExportInvoice(PBRPSalesInvFrm, EmailArray[irow,1])
@@ -764,14 +764,14 @@ begin
   Result := sTemp
 end;
 
-procedure TPBSalesInvRPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+procedure TPBSalesInvRPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string; AttachmentType: string);
 var
   fileName: string;
 begin
   if self.CreditNotePrint then
     fileName := 'SC' + tempcode else
     fileName := 'SI' + tempcode;
-  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, AttachmentType);
 end;
 
 procedure TPBSalesInvRPrintFrm.FormDestroy(Sender: TObject);

@@ -110,9 +110,9 @@ object STMaintStockFrm: TSTMaintStockFrm
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -11
+      TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = [fsBold]
+      TitleFont.Style = []
       OnDblClick = dbgDetailsFromDblClick
       Columns = <
         item
@@ -224,9 +224,9 @@ object STMaintStockFrm: TSTMaintStockFrm
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -11
+      TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = [fsBold]
+      TitleFont.Style = []
       OnDblClick = dbgDetailsToDblClick
       Columns = <
         item

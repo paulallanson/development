@@ -71,123 +71,104 @@ object dtmdlEnqs: TdtmdlEnqs
       end>
     object qryEnqsDate_Point: TDateTimeField
       FieldName = 'Date_Point'
-      Origin = 'Date_Point'
-      Required = True
     end
     object qryEnqsEnquiry_Status: TIntegerField
       FieldName = 'Enquiry_Status'
-      Origin = 'Enquiry_Status'
-      Required = True
     end
     object qryEnqsStatus_Description: TWideStringField
       FieldName = 'Status_Description'
-      Origin = 'Status_Description'
-      Required = True
-      Size = 40
+      FixedChar = True
+      Size = 80
     end
     object qryEnqsDescription: TWideStringField
       FieldName = 'Description'
-      Origin = 'Description'
-      Required = True
-      Size = 80
+      FixedChar = True
+      Size = 160
     end
     object qryEnqsRep: TIntegerField
       FieldName = 'Rep'
-      Origin = 'Rep'
     end
     object qryEnqsrep_Name: TWideStringField
       FieldName = 'rep_Name'
-      Origin = 'rep_Name'
-      Required = True
-      Size = 40
+      FixedChar = True
+      Size = 80
     end
     object qryEnqsOperator: TIntegerField
       FieldName = 'Operator'
-      Origin = 'Operator'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
     end
     object qryEnqsOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
-      Origin = 'Operator_Name'
-      Required = True
-      Size = 40
+      FixedChar = True
+      Size = 80
     end
     object qryEnqsOffice_Contact: TIntegerField
       FieldName = 'Office_Contact'
-      Origin = 'Office_Contact'
     end
     object qryEnqsOffice_Contact_Name: TWideStringField
       FieldName = 'Office_Contact_Name'
-      Origin = 'Office_Contact_Name'
-      Required = True
-      Size = 40
+      FixedChar = True
+      Size = 80
     end
     object qryEnqsCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
     end
     object qryEnqsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
-      Origin = 'Customer_Name'
-      Required = True
-      Size = 100
+      FixedChar = True
+      Size = 92
     end
     object qryEnqsBranch_no: TIntegerField
       FieldName = 'Branch_no'
-      Origin = 'Branch_no'
-      Required = True
     end
     object qryEnqsBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
-      Origin = 'Branch_Name'
-      Size = 50
+      FixedChar = True
+      Size = 100
     end
     object qryEnqsAccount_Code: TWideStringField
       FieldName = 'Account_Code'
-      Origin = 'Account_Code'
-      Size = 10
+      FixedChar = True
     end
     object qryEnqsEnquiry: TIntegerField
       FieldName = 'Enquiry'
-      Origin = 'Enquiry'
-      Required = True
     end
     object qryEnqsLine: TIntegerField
       FieldName = 'Line'
-      Origin = 'Line'
-      Required = True
     end
     object qryEnqsForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
-      Origin = 'Form_Reference'
     end
     object qryEnqsForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
-      Origin = 'Form_Reference_ID'
-      Size = 50
+      FixedChar = True
+      Size = 100
     end
     object qryEnqsForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
-      Origin = 'Form_Reference_Descr'
-      Size = 50
+      FixedChar = True
+      Size = 100
     end
     object qryEnqsStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
-      Origin = 'Stock_Reference'
-      Size = 25
+      FixedChar = True
+      Size = 50
     end
     object qryEnqsEnq_Inactive: TWideStringField
       FieldName = 'Enq_Inactive'
-      Origin = 'Enq_Inactive'
-      Size = 1
+      FixedChar = True
+      Size = 2
     end
     object qryEnqsProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
-      Origin = 'Product_Type_Description'
-      Required = True
-      Size = 40
+      FixedChar = True
+      Size = 80
+    end
+    object qryEnqsStatus_Text: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Status_Text'
+      OnGetText = qryEnqsStatus_TextGetText
+      Size = 50
+      Calculated = True
     end
   end
   object dtsEnqs: TDataSource

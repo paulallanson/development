@@ -204,8 +204,10 @@ begin
 
   with PBPODM do
   begin
-    GetPriceUnitSQL.Active := False;
-    GetPriceUnitSQL.Active := True;
+    GetPriceUnitSQL1.Active := False;
+    GetPriceUnitSQL1.Active := True;
+    GetPriceUnitSQL2.Active := False;
+    GetPriceUnitSQL2.Active := True;
   end;
 
   GetCustContacts;

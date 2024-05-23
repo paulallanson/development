@@ -62,8 +62,7 @@ type
     procedure BuildEmailDetails;
     procedure GetSelection;
     procedure BuildSelection;
-    procedure PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm;
-      tempCode: string);
+    procedure PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string; AttachmentType: string);
     function HasInvoiceBeenPrinted(tmpInvoice: integer): string;
     procedure SetCreditNotePrint(const Value: boolean);
     procedure ExportInvoice(PBRPSalesInvFrm: TPBRPSalesInvFrm;
@@ -375,7 +374,7 @@ begin
               FCustomerName := PBEmailListFrm.EmailListGrid.Cells[1, irow];
 
               sAttachmentType := PBEmailListFrm.EmailListGrid.Cells[5, irow];
-              Printtoattachment(PBRPSalesInvFrm, EmailArray[irow,1]);
+              Printtoattachment(PBRPSalesInvFrm, EmailArray[irow,1], sAttachmentType);
 
               sInvoiceNo := PBRPSalesInvFrm.InvoiceNumberlbl.caption;
 
@@ -581,7 +580,7 @@ begin
     end;
 end;
 
-procedure TPBSalesInvPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+procedure TPBSalesInvPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string; AttachmentType: string);
 var
   fileName,
   sPrefix: string;
@@ -590,7 +589,7 @@ begin
     sPrefix := 'SC' else
     sPrefix := 'SI';
   fileName := sPrefix + PBRPSalesInvFrm.InvoiceNumberlbl.Caption;
-  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, AttachmentType);
 end;
 
 procedure TPBSalesInvPrintFrm.SetCreditNotePrint(const Value: boolean);

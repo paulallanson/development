@@ -2,7 +2,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 272
+  ClientHeight = 364
   ClientWidth = 914
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -186,12 +186,13 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 212
+    Top = 304
     Width = 914
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 212
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -278,7 +279,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 253
+    Top = 345
     Width = 914
     Height = 19
     Panels = <
@@ -288,6 +289,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       item
         Width = 50
       end>
+    ExplicitTop = 253
   end
   object Panel3: TPanel
     Left = 0
@@ -333,7 +335,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Left = 0
     Top = 74
     Width = 914
-    Height = 138
+    Height = 230
     Align = alClient
     DataSource = dtmdlOrders.dtsCallOffs
     DrawingStyle = gdsGradient
@@ -348,9 +350,9 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -398,7 +400,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       end
       item
         Expanded = False
-        FieldName = 'Status_text'
+        FieldName = 'Status_Text'
         Title.Caption = 'Status'
         Width = 97
         Visible = True
@@ -413,19 +415,21 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Job_Bag_No'
+        FieldName = 'Job_Bag_no'
         Title.Caption = 'Job Bag'
         Width = 85
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Purch_Ord_no'
+        FieldName = 'Purch_Ord_No'
         Title.Caption = 'Purchase Order'
+        Width = 64
         Visible = True
       end
       item
@@ -476,7 +480,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       end
       item
         Expanded = False
-        FieldName = 'Order_Unit'
+        FieldName = 'Order_unit'
         Title.Caption = 'Cost Pack'
         Visible = True
       end

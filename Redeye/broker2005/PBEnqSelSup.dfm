@@ -78,9 +78,9 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TabOrder = 6
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnCellClick = SuppsDBGridCellClick
     OnDblClick = SuppsDBGridDblClick
     Columns = <
@@ -334,9 +334,9 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TabOrder = 7
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDblClick = SupSelDBGridDblClick
     Columns = <
       item

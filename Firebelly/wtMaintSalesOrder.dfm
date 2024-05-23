@@ -2038,9 +2038,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgJobsDblClick
         Columns = <
           item
@@ -2164,9 +2164,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgRemedialsDblClick
         Columns = <
           item
@@ -2317,9 +2317,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgPurchasesDblClick
         Columns = <
           item
@@ -2452,9 +2452,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         OnDblClick = dbgSalesInvoicesDblClick
         Columns = <
@@ -2584,9 +2584,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         Columns = <
           item
             Expanded = False

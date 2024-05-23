@@ -127,9 +127,9 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -244,7 +244,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 844
+        Width = 856
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 62
@@ -252,6 +252,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         Images = imglstMaint
         ShowCaptions = True
         TabOrder = 0
+        ExplicitWidth = 844
         object btnQuick: TToolButton
           Left = 0
           Top = 0
@@ -810,7 +811,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   end
   object pmnFunctions: TPopupMenu
     OnPopup = pmnFunctionsPopup
-    Left = 392
+    Left = 393
     Top = 136
     object mnuQuick: TMenuItem
       Caption = 'Quick'

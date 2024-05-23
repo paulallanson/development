@@ -5,16 +5,11 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
   DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, DragDropFile,
-  FireDAC.Comp.Client;
-
-type
-  TProcessDroppedFiles = reference to procedure(var FileName: string);
+  FireDAC.Comp.Client, DBCtrls;
 
 {Quick Reports Printer settings}
-procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar:
-    Double);
-procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size:
-    TQRPaperSize; var Duplex: Boolean);
+procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
+procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size: TQRPaperSize; var Duplex: Boolean);
 function GetBinSelection: integer;
 
 {dbGrid Routines}
@@ -131,6 +126,8 @@ procedure CopyDocumentsFromClipboard(const Folder: string; const ExecuteBlock: T
 procedure MyWinControlSetData(const FilesList: TUnicodeStrings; const Path: string; ShowDocuments: TProc);
 procedure ProcessDroppedFile(const FileName, Path: string; ShowDocuments: TProc);
 
+function GetAppIniFile: string;
+
 type
   TCCSRegistry = class(TRegistry)
   public
@@ -147,8 +144,9 @@ type
     shbReturnOnlyFSDirs, shbStatusText);
   TDirDlgOptions = set of TDirDlgOption;
 
-
   TSelChangeEvent = procedure(Sender: TObject; NewFolder: string; IsDisplayName: boolean) of object;
+
+  TProcessDroppedFiles = reference to procedure(var FileName: string);
 
   TDirDlg = class(TComponent)
   private
@@ -184,6 +182,10 @@ type
     property OnSelChange: TSelChangeEvent read fOnSelChange write fOnSelChange;
   end;
 
+  TDBLookupComboBoxHelper = class helper for TDBLookupComboBox
+  public
+    function ListValue: Variant;
+  end;
 
 resourcestring
   SOFTWARE_KEY = 'Software\'; { where we put our entries  }
@@ -195,9 +197,6 @@ resourcestring
 
   BDE_KEY = 'Software\Borland\Database Engine'; { path to BDE settings }
 
-const
-  myRedeye_INIFILE = 'Redeye.ini';
-
 implementation
 
 uses
@@ -207,6 +206,8 @@ type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
 
 const
+  myRedeye_INIFILE = 'Redeye.ini';
+
   KEY_PREFIX = '\StringFileInfo\040904E4\';
   KEYS: array[TVerInfo] of string =
     ('FileVersion',
@@ -1669,6 +1670,11 @@ begin
   end;
 end;
 
+function GetAppIniFile: string;
+begin
+  Result := myRedeye_INIFILE;
+end;
+
 procedure IterateFilesDropped(const FilesList: TUnicodeStrings; Process: TProcessDroppedFiles); overload;
 var
   I: Integer;
@@ -2849,6 +2855,13 @@ begin
 
       FreeLibrary(dll_Handle);
     end;
+end;
+
+{ TDBLookupComboBoxHelper }
+
+function TDBLookupComboBoxHelper.ListValue: Variant;
+begin
+  Result := Self.ListSource.DataSet.FieldByName(Self.KeyField).Value;
 end;
 
 end.

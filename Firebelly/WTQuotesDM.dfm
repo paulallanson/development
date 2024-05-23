@@ -161,6 +161,12 @@ object dtmdlQuote: TdtmdlQuote
       FieldName = 'Expiry_Date'
       Origin = 'Expiry_Date'
     end
+    object qryAllQuotesExpiry_Date_New: TDateTimeField
+      FieldKind = fkCalculated
+      FieldName = 'Expiry_Date_New'
+      OnGetText = qryAllQuotesExpiry_Date_NewGetText
+      Calculated = True
+    end
     object qryAllQuotesOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       Origin = 'Operator_Name'
@@ -171,6 +177,7 @@ object dtmdlQuote: TdtmdlQuote
       FieldName = 'Status_Text'
       Origin = 'Status_Text'
       Required = True
+      OnGetText = qryAllQuotesStatus_TextGetText
       Size = 50
     end
     object qryAllQuotesMaterial_Description: TWideStringField

@@ -1,6 +1,6 @@
 object dtmdlQuotes: TdtmdlQuotes
   OnCreate = DataModuleCreate
-  Height = 690
+  Height = 671
   Width = 1033
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -608,7 +608,7 @@ object dtmdlQuotes: TdtmdlQuotes
       'order by Quote.Quote desc'
       ' '
       ' ')
-    Left = 336
+    Left = 328
     Top = 16
     ParamData = <
       item
@@ -624,7 +624,7 @@ object dtmdlQuotes: TdtmdlQuotes
   object dsQHeaderGrid: TDataSource
     AutoEdit = False
     DataSet = qryQHeaderGrid
-    Left = 416
+    Left = 424
     Top = 16
   end
   object qryGetCustomerRep: TFDQuery
@@ -1255,6 +1255,7 @@ object dtmdlQuotes: TdtmdlQuotes
       '       Quote.Date_Last_Estimated,'
       '       Quote.Prospect_Quote,'
       '       Quote.Enclosing_Type,'
+      '       Quote.Pack_Format_ID,'
       '       Pack_Format.Pack_Format_Description,'
       '       (select top 1 Job_Bag.Job_Bag'
       '       from Job_Bag'
@@ -1289,15 +1290,15 @@ object dtmdlQuotes: TdtmdlQuotes
     ParamData = <
       item
         Name = 'Records'
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
-      end
-      item
-        Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Description'
+        ParamType = ptInput
       end>
   end
   object qryGetWorkCentrebyName: TFDQuery

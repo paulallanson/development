@@ -2242,9 +2242,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
           OnDblClick = dbgSalesInvoicesDblClick
           Columns = <
@@ -2392,9 +2392,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TabOrder = 0
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = [fsBold]
+          TitleFont.Style = []
           OnDrawColumnCell = dbgPurchaseInvoicesDrawColumnCell
           OnDblClick = dbgPurchaseInvoicesDblClick
           Columns = <
@@ -2612,9 +2612,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         TabOrder = 1
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         Columns = <
           item
             Expanded = False
