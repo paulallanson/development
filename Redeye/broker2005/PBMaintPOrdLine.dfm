@@ -745,7 +745,7 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
         Height = 21
         KeyField = 'Price_Unit'
         ListField = 'Description'
-        ListSource = PBPODM.PriceUnitSRC
+        ListSource = PBPODM.PriceUnitSRC2
         TabOrder = 4
         OnClick = CheckOK
       end
@@ -756,7 +756,7 @@ object PBMaintPOrdLineFrm: TPBMaintPOrdLineFrm
         Height = 21
         KeyField = 'Price_Unit'
         ListField = 'Description'
-        ListSource = PBPODM.PriceUnitSRC
+        ListSource = PBPODM.PriceUnitSRC1
         TabOrder = 2
         OnClick = CheckOK
       end

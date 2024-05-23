@@ -451,8 +451,11 @@ begin
   else
   if (dbgDetails.datasource.dataset.fieldByName('Production_Complete').Asstring = 'Y') and (dbgDetails.datasource.dataset.fieldByName('Job_bag_Status').Asinteger < 30) then
     begin
-      (Sender as TDBGrid).Canvas.font.color := clWhite;
-      (Sender as TDBGrid).Canvas.Brush.color := clgreen;
+      if(gdFocused in State) or (gdSelected in State) then
+        (Sender as TDBGrid).Canvas.font.color := clYellow
+      else
+        (Sender as TDBGrid).Canvas.font.color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.color := clGreen;
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else

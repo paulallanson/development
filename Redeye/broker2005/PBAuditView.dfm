@@ -38,7 +38,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 0
+    Top = 3
     Width = 664
     Height = 412
     Anchors = [akLeft, akTop, akRight, akBottom]
@@ -53,9 +53,9 @@ object PBAuditViewFrm: TPBAuditViewFrm
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnTitleClick = DetsDBGridTitleClick
     Columns = <
       item

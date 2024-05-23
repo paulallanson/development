@@ -57,8 +57,8 @@ type
     DelPOAdditionalsSQL: TFDQuery;
     GetSupplierSQL: TFDQuery;
     VATSRC: TDataSource;
-    GetPriceUnitSQL: TFDQuery;
-    PriceUnitSRC: TDataSource;
+    GetPriceUnitSQL1: TFDQuery;
+    PriceUnitSRC1: TDataSource;
     GetProofStatSQL: TFDQuery;
     ProofStatSRC: TDataSource;
     GetJobBagDetsSQL: TFDQuery;
@@ -148,9 +148,9 @@ type
     qryGetProdType: TFDQuery;
     qryGetAccountTeam: TFDQuery;
     qryGetOperator: TFDQuery;
-    GetOrigPriceUnitSQL: TFDQuery;
+    GetOrigPriceUnitSQL1: TFDQuery;
     qryCheckPI: TFDQuery;
-    qryGetProdTypePriceUnit: TFDQuery;
+    qryGetProdTypePriceUnit1: TFDQuery;
     qryPartMvmnts: TFDQuery;
     qryPartMvmntsDate_received: TDateTimeField;
     qryPartMvmntsPart_Store_Name: TWideStringField;
@@ -216,6 +216,10 @@ type
     qryProofStatus: TFDQuery;
     qryGetCustomerSubRep: TFDQuery;
     qryJBAddLine: TFDQuery;
+    PriceUnitSRC2: TDataSource;
+    GetPriceUnitSQL2: TFDQuery;
+    GetOrigPriceUnitSQL2: TFDQuery;
+    qryGetProdTypePriceUnit2: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -2734,7 +2738,14 @@ end;
 
 function TPBPODM.GetProdTypePUnits(TempProdType: integer): boolean;
 begin
-  with qryGetProdTypePriceUnit do
+  with qryGetProdTypePriceUnit1 do
+  begin
+    Close;
+    ParamByName('Product_Type').AsInteger := TempProdType;
+    Open;
+    result := (recordcount > 0);
+  end;
+  with qryGetProdTypePriceUnit2 do
   begin
     Close;
     ParamByName('Product_Type').AsInteger := TempProdType;

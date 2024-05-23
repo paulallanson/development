@@ -814,9 +814,9 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgJobDetailsDblClick
         Columns = <
           item
@@ -1054,9 +1054,9 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDblClick = dbgPODetailsDblClick
         Columns = <
           item
@@ -1142,9 +1142,9 @@ object PBMaintContractFrm: TPBMaintContractFrm
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -11
+        TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = [fsBold]
+        TitleFont.Style = []
         OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
         Columns = <
           item

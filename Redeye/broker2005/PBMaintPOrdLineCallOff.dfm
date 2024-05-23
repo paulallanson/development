@@ -31,7 +31,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     Left = 2
     Top = 215
     Width = 727
-    Height = 317
+    Height = 319
     Caption = 'Delivery to'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -355,7 +355,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 2
       Top = 224
       Width = 723
-      Height = 91
+      Height = 93
       Align = alBottom
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
@@ -365,6 +365,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
+      ExplicitTop = 225
       object Label18: TLabel
         Left = 337
         Top = 2
@@ -383,34 +384,34 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 2
         Top = 2
         Width = 329
-        Height = 65
+        Height = 67
         Caption = 'Prices'
         ParentBackground = False
         TabOrder = 1
         object Label15: TLabel
           Left = 8
-          Top = 46
+          Top = 43
           Width = 18
           Height = 13
           Caption = 'Sell'
         end
         object Label19: TLabel
           Left = 8
-          Top = 22
+          Top = 19
           Width = 23
           Height = 13
           Caption = 'Cost'
         end
         object Label21: TLabel
           Left = 136
-          Top = 46
+          Top = 43
           Width = 43
           Height = 13
           Caption = 'Sell Unit'
         end
         object Label22: TLabel
           Left = 136
-          Top = 22
+          Top = 19
           Width = 48
           Height = 13
           Caption = 'Cost Unit'
@@ -441,22 +442,22 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         end
         object PriceUnitDBcmbo: TDBLookupComboBox
           Left = 192
-          Top = 38
+          Top = 40
           Width = 129
           Height = 21
           KeyField = 'Price_Unit'
           ListField = 'Description'
-          ListSource = PBPODM.PriceUnitSRC
+          ListSource = PBPODM.PriceUnitSRC2
           TabOrder = 3
         end
         object CostUnitDBcmbo: TDBLookupComboBox
           Left = 192
-          Top = 14
+          Top = 16
           Width = 129
           Height = 21
           KeyField = 'Price_Unit'
           ListField = 'Description'
-          ListSource = PBPODM.PriceUnitSRC
+          ListSource = PBPODM.PriceUnitSRC1
           TabOrder = 1
         end
       end

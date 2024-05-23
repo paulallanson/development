@@ -931,7 +931,8 @@ begin
                             // decide which address to show on quote
                             frmwtRPQuote.bEndUser := false ;
                             frmWTRPQuote.bPreview := false;
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
+                            sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
+                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString, sAttachmentType);
                           end;
                       finally
                         frmWTRPQuote.Free;
@@ -1077,7 +1078,8 @@ begin
                             // decide which address to show on quote
                             frmwtRPQuote.bEndUser := false ;
                             frmWTRPQuote.bPreview := false;
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString, EmailArray[irow,1]);
+                            sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
+                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString, sAttachmentType);
                           end;
                       finally
                         frmWTRPQuote.Free;

@@ -46,9 +46,9 @@ object PBLUProdFrm: TPBLUProdFrm
     TabOrder = 1
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDblClick = DetsDBGridDblClick
     Columns = <
       item

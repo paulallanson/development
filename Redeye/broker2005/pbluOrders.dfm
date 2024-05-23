@@ -26,36 +26,32 @@ object frmpbLUOrders: TfrmpbLUOrders
     Left = 0
     Top = 30
     Width = 917
-    Height = 44
+    Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
-        MinHeight = 40
+        MinHeight = 41
         Width = 911
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
       Width = 902
-      Height = 40
-      Align = alClient
+      Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 890
-        Height = 40
+        Width = 902
+        Height = 41
         ButtonHeight = 36
         ButtonWidth = 59
         Caption = 'ToolBar1'
         Images = imglstOrders
-        ParentShowHint = False
         ShowCaptions = True
-        ShowHint = True
         TabOrder = 0
-        Wrapable = False
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -203,9 +199,9 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 74
+    Top = 75
     Width = 917
-    Height = 265
+    Height = 264
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     DrawingStyle = gdsGradient
@@ -220,9 +216,9 @@ object frmpbLUOrders: TfrmpbLUOrders
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -330,7 +326,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       end
       item
         Expanded = False
-        FieldName = 'Status_text'
+        FieldName = 'Status_Text'
         Title.Caption = 'Status'
         Width = 97
         Visible = True
@@ -345,7 +341,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
-        Width = 64
         Visible = True
       end
       item
@@ -1063,7 +1058,7 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object pmnAdd: TPopupMenu
     Left = 56
-    Top = 104
+    Top = 105
     object btnFromPO: TMenuItem
       Caption = '... production order'
       OnClick = btnFromPOClick

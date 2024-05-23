@@ -824,10 +824,10 @@ begin
     (Trim(OrdPriceMemo.text) <> '') and
     (Trim(SellPriceMemo.Text) <> '') and
     (Trim(dblkpVatRate.Text) <> '') and
-    (edtAccountManager.text <> '') and
-    ((OrderUnitDBLCB.keyvalue <> 0) and (OrderUnitDBLCB.Text <> '')) and
-    ((SellUnitDBLCB.keyvalue <> 0) and (SellUnitDBLCB.text <> '')) and
-    ((FormRefEdit.text <> '') or (PBPODM.GetCompanySQl.fieldbyname('Form_Reference_Mandatory').asString <> 'Y'));
+    (Trim(edtAccountManager.text) <> '') and
+    ((OrderUnitDBLCB.ListValue <> 0) and (OrderUnitDBLCB.Text.Trim <> '')) and
+    ((SellUnitDBLCB.ListValue <> 0) and (SellUnitDBLCB.text.Trim <> '')) and
+    ((Trim(FormRefEdit.text) <> '') or (PBPODM.GetCompanySQl.fieldbyname('Form_Reference_Mandatory').asString <> 'Y'));
 end;
 
 procedure TPBMaintPOrdFrm.CancelBitBtnClick(Sender: TObject);
@@ -2495,19 +2495,28 @@ begin
   begin
     if (FFuncMode = poRestrict) or (FFuncMode = poInvoiced) then
       begin
-        PriceUnitSRC.DataSet := GetOrigPriceUnitSQL;
-        GetOrigPriceUnitSQL.Active := False;
-        GetOrigPriceUnitSQL.Active := True;
+        PriceUnitSRC1.DataSet := GetOrigPriceUnitSQL1;
+        PriceUnitSRC2.DataSet := GetOrigPriceUnitSQL2;
+        GetOrigPriceUnitSQL1.Active := False;
+        GetOrigPriceUnitSQL1.Active := True;
+        GetOrigPriceUnitSQL2.Active := False;
+        GetOrigPriceUnitSQL2.Active := True;
       end
     else
       begin
         if GetProdTypePUnits(Orderline.ProductType) then
-          PriceUnitSRC.DataSet := qryGetProdTypePriceUnit
+        begin
+          PriceUnitSRC1.DataSet := qryGetProdTypePriceUnit1;
+          PriceUnitSRC2.DataSet := qryGetProdTypePriceUnit2;
+        end
         else
           begin
-            PriceUnitSRC.DataSet := GetPriceUnitSQL;
-            GetPriceUnitSQL.Active := False;
-            GetPriceUnitSQL.Active := True;
+            PriceUnitSRC1.DataSet := GetPriceUnitSQL1;
+            PriceUnitSRC2.DataSet := GetPriceUnitSQL2;
+            GetPriceUnitSQL1.Active := False;
+            GetPriceUnitSQL1.Active := True;
+            GetPriceUnitSQL2.Active := False;
+            GetPriceUnitSQL2.Active := True;
           end;
       end;
 
@@ -2548,8 +2557,10 @@ begin
   PurchaseOrder.OrderLines.Add(OrderLine);
   with PBPODM do
   begin
-    GetPriceUnitSQL.Active := False;
-    GetPriceUnitSQL.Active := True;
+    GetPriceUnitSQL1.Active := False;
+    GetPriceUnitSQL1.Active := True;
+    GetPriceUnitSQL2.Active := False;
+    GetPriceUnitSQL2.Active := True;
 
     qryFSCClaim.active := False;
     qryFSCClaim.active := true;
@@ -3668,8 +3679,8 @@ begin
     OperatorSQL.Close;
     OperatorSQL.Open;
 
-    OrderUnitDBLCB.ListSource := PriceUnitSRC;
-    SellUnitDBLCB.ListSource := PriceUnitSRC;
+    OrderUnitDBLCB.ListSource := PriceUnitSRC1;
+    SellUnitDBLCB.ListSource := PriceUnitSRC2;
   end;
   JobBagNo := 0;
 
@@ -5755,12 +5766,18 @@ begin
           SetQuestions;
         end;
       if PBPODM.GetProdTypePUnits(SelectedLine.producttype) then
-        PBPODM.PriceUnitSRC.dataset := PBPODM.qryGetProdTypePriceUnit
+      begin
+        PBPODM.PriceUnitSRC1.dataset := PBPODM.qryGetProdTypePriceUnit1;
+        PBPODM.PriceUnitSRC2.dataset := PBPODM.qryGetProdTypePriceUnit2;
+      end
       else
         begin
-          PBPODM.PriceUnitSRC.DataSet := PBPODM.GetPriceUnitSQL;
-          PBPODM.GetPriceUnitSQL.Active := False;
-          PBPODM.GetPriceUnitSQL.Active := True;
+          PBPODM.PriceUnitSRC1.DataSet := PBPODM.GetPriceUnitSQL1;
+          PBPODM.PriceUnitSRC2.DataSet := PBPODM.GetPriceUnitSQL2;
+          PBPODM.GetPriceUnitSQL1.Active := False;
+          PBPODM.GetPriceUnitSQL1.Active := True;
+          PBPODM.GetPriceUnitSQL2.Active := False;
+          PBPODM.GetPriceUnitSQL2.Active := True;
         end;
 
       CheckProductTypeInvoicing(SelectedLine.producttype);

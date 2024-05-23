@@ -38,9 +38,9 @@ object CSLUSuppFrm: TCSLUSuppFrm
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -11
+    TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = [fsBold]
+    TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
     OnDblClick = DetsDBGridDblClick
     Columns = <

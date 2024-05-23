@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
   DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, DragDropFile,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, DBCtrls;
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
@@ -182,6 +182,10 @@ type
     property OnSelChange: TSelChangeEvent read fOnSelChange write fOnSelChange;
   end;
 
+  TDBLookupComboBoxHelper = class helper for TDBLookupComboBox
+  public
+    function ListValue: Variant;
+  end;
 
 resourcestring
   SOFTWARE_KEY = 'Software\'; { where we put our entries  }
@@ -2851,6 +2855,13 @@ begin
 
       FreeLibrary(dll_Handle);
     end;
+end;
+
+{ TDBLookupComboBoxHelper }
+
+function TDBLookupComboBoxHelper.ListValue: Variant;
+begin
+  Result := Self.ListSource.DataSet.FieldByName(Self.KeyField).Value;
 end;
 
 end.

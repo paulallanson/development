@@ -116,7 +116,7 @@ var
 
 implementation
 
-uses WTAccExport1, WTAccExport4, WTAccExport2, WTAccExportDM, AllCommon,
+uses UITypes, WTAccExport1, WTAccExport4, WTAccExport2, WTAccExportDM, AllCommon,
   WtAccImportDM, WTMain, wtDataModule;
 
 var
