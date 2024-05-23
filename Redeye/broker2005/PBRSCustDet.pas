@@ -75,6 +75,9 @@ type
     qryCurrentCustStatusAnalysis_Code_2: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_3: TWideStringField;
     qryCurrentCustStatusAnalysis_Code_4: TWideStringField;
+    qryCurrentCustStatusName_1: TWideStringField;
+    qryCurrentCustStatusImportance_Description: TWideStringField;
+    qryCurrentCustStatusRep_Type: TWideStringField;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxCustStatusChange(Sender: TObject);
     procedure FormShow(Sender: TObject);

@@ -119,6 +119,7 @@ type
     qryAllQuotesQuote_Number: TFloatField;
     qryAllQuotesOriginal_Quote: TIntegerField;
     qryAllQuotesExpiry_Date: TDateTimeField;
+    qryAllQuotesExpiry_Date_New: TDateTimeField;
     qryGetLinkedQuotesOperator_Name: TWideStringField;
     qryGetLinkedQuotesAccount_Manager_Name: TWideStringField;
     qryGetLinkedQuotesQuote: TIntegerField;

@@ -405,36 +405,43 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       FieldName = 'store_qty'
       Origin = 'store_qty'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockqty_alloc: TIntegerField
       FieldName = 'qty_alloc'
       Origin = 'qty_alloc'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockqty_free: TIntegerField
       FieldName = 'qty_free'
       Origin = 'qty_free'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockpurch_ord_qty: TIntegerField
       FieldName = 'purch_ord_qty'
       Origin = 'purch_ord_qty'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockprod_ord_qty: TFloatField
       FieldName = 'prod_ord_qty'
       Origin = 'prod_ord_qty'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockpaid_for: TIntegerField
       FieldName = 'paid_for'
       Origin = 'paid_for'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStocknot_paid_for: TIntegerField
       FieldName = 'not_paid_for'
       Origin = 'not_paid_for'
       ReadOnly = True
+      OnGetText = IntegerField2GetText
     end
     object qryStockNot_in_Use: TWideStringField
       FieldName = 'Not_in_Use'

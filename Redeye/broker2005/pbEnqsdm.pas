@@ -47,6 +47,7 @@ type
     qryEnqsStock_Reference: TWideStringField;
     qryEnqsEnq_Inactive: TWideStringField;
     qryEnqsProduct_Type_Description: TWideStringField;
+    qryEnqsStatus_Text: TWideStringField;
     procedure qryEnqsStatus_TextGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
   private

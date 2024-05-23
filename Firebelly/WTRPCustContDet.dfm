@@ -1100,6 +1100,7 @@ object frmWTRPCustContDet: TfrmWTRPCustContDet
     end
     object GetDetsQryContact_Phone: TWideStringField
       FieldName = 'Contact_Phone'
+      OnGetText = GetDetsQryPhoneGetText
       Size = 30
     end
     object GetDetsQryMobile_Number: TWideStringField

@@ -118,6 +118,7 @@ object dtmdlOrders: TdtmdlOrders
       FieldName = 'Sales_order'
       Origin = 'Sales_order'
       Required = True
+      OnGetText = qryOrdersSales_orderGetText
     end
     object qryOrdersLine: TIntegerField
       FieldName = 'Line'
@@ -190,6 +191,7 @@ object dtmdlOrders: TdtmdlOrders
     object qryOrdersStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       Origin = 'Status_Description'
+      OnGetText = qryOrdersStatus_DescriptionGetText
       Size = 40
     end
     object qryOrdersBranch_Name: TWideStringField
@@ -985,7 +987,7 @@ object dtmdlOrders: TdtmdlOrders
     object qryCallOffsRep_Name: TWideStringField
       FieldName = 'Rep_Name'
       FixedChar = True
-      Size = 1
+      Size = 80
     end
     object qryCallOffsOperator: TIntegerField
       FieldName = 'Operator'
@@ -993,7 +995,7 @@ object dtmdlOrders: TdtmdlOrders
     object qryCallOffsOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
       FixedChar = True
-      Size = 1
+      Size = 80
     end
     object qryCallOffsPurch_Ord_No: TWideStringField
       FieldName = 'Purch_Ord_No'
