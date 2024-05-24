@@ -22,7 +22,7 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     Height = 40
     Align = alBottom
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 0
     TabStop = True
     DesignSize = (
       758
@@ -93,234 +93,250 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       TabOrder = 1
     end
   end
-  object pnlDetails: TPanel
-    Left = 0
-    Top = 25
-    Width = 758
-    Height = 142
-    Align = alClient
-    ParentBackground = False
-    TabOrder = 1
-    object Label1: TLabel
-      Left = 18
-      Top = 13
-      Width = 70
-      Height = 13
-      Caption = 'Product Code'
-    end
-    object Label2: TLabel
-      Left = 18
-      Top = 45
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-    end
-    object btnLUProducts: TSpeedButton
-      Left = 562
-      Top = 8
-      Width = 23
-      Height = 23
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      OnClick = btnLUProductsClick
-    end
-    object OrdqtyLbl: TLabel
-      Left = 18
-      Top = 104
-      Width = 95
-      Height = 13
-      Caption = 'Order Qty (singles)'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object lblQtyDelivered: TLabel
-      Left = 202
-      Top = 104
-      Width = 93
-      Height = 13
-      Caption = 'Delivered (singles)'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      Visible = False
-    end
-    object lblQtyInvoiced: TLabel
-      Left = 423
-      Top = 104
-      Width = 88
-      Height = 13
-      Caption = 'Invoiced (singles)'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      Visible = False
-    end
-    object Label12: TLabel
-      Left = 18
-      Top = 74
-      Width = 48
-      Height = 13
-      Caption = 'Unit Cost'
-    end
-    object Label3: TLabel
-      Left = 202
-      Top = 74
-      Width = 93
-      Height = 13
-      Caption = 'Cost Unit (singles)'
-    end
-    object Label13: TLabel
-      Left = 442
-      Top = 74
-      Width = 58
-      Height = 13
-      Caption = 'Discount %'
-    end
-    object edtOrderQty: TMemo
-      Left = 112
-      Top = 100
-      Width = 80
-      Height = 21
-      TabOrder = 5
-      WantReturns = False
-      WordWrap = False
-      OnChange = CheckOK
-      OnEnter = edtOrderQtyEnter
-      OnExit = edtOrderQtyExit
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object edtDeliveredQty: TMemo
-      Left = 296
-      Top = 100
-      Width = 80
-      Height = 21
-      TabOrder = 6
-      Visible = False
-      WantReturns = False
-      WordWrap = False
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object edtInvoicedQty: TMemo
-      Left = 512
-      Top = 100
-      Width = 80
-      Height = 21
-      TabOrder = 7
-      Visible = False
-      WantReturns = False
-      WordWrap = False
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object edtUnitCost: TCREditMoney
-      Left = 112
-      Top = 70
-      Width = 80
-      Height = 21
-      TabOrder = 2
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object edtCostUnit: TMemo
-      Left = 296
-      Top = 70
-      Width = 80
-      Height = 21
-      TabOrder = 3
-      WantReturns = False
-      WordWrap = False
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object edtDiscount: TCREditMoney
-      Left = 512
-      Top = 70
-      Width = 80
-      Height = 21
-      TabOrder = 4
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-    object cmbProducts: TComboBox
-      Left = 112
-      Top = 9
-      Width = 433
-      Height = 21
-      TabOrder = 0
-      Text = 'cmbProducts'
-      OnEnter = cmbProductsEnter
-      OnExit = cmbProductsExit
-      OnKeyPress = cmbProductsKeyPress
-    end
-    object edtDescription: TMemo
-      Left = 112
-      Top = 41
-      Width = 625
-      Height = 21
-      Lines.Strings = (
-        'edtDescription')
-      TabOrder = 1
-      WantReturns = False
-      WordWrap = False
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
-    end
-  end
-  object pnlTop: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
     Width = 758
-    Height = 25
-    Align = alTop
+    Height = 250
+    Align = alClient
+    BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 0
-  end
-  object pnlNotes: TPanel
-    Left = 0
-    Top = 167
-    Width = 758
-    Height = 83
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 2
-    DesignSize = (
-      758
-      83)
-    object Label7: TLabel
-      Left = 18
-      Top = 13
-      Width = 30
-      Height = 13
-      Caption = 'Notes'
-    end
-    object memNotes: TMemo
-      Left = 112
-      Top = 8
-      Width = 473
-      Height = 66
-      Anchors = [akLeft, akTop, akBottom]
-      Lines.Strings = (
-        'memNotes')
-      ScrollBars = ssVertical
+    TabOrder = 1
+    ExplicitLeft = 296
+    ExplicitTop = 144
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlTop: TPanel
+      Left = 0
+      Top = 0
+      Width = 758
+      Height = 25
+      Align = alTop
+      ParentBackground = False
       TabOrder = 0
-      OnChange = CheckOK
-      OnKeyPress = edtDescriptionKeyPress
+    end
+    object pnlDetails: TPanel
+      Left = 0
+      Top = 25
+      Width = 758
+      Height = 142
+      Align = alClient
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitTop = 0
+      ExplicitHeight = 167
+      object Label1: TLabel
+        Left = 18
+        Top = 13
+        Width = 70
+        Height = 13
+        Caption = 'Product Code'
+      end
+      object Label2: TLabel
+        Left = 18
+        Top = 45
+        Width = 59
+        Height = 13
+        Caption = 'Description'
+      end
+      object btnLUProducts: TSpeedButton
+        Left = 562
+        Top = 8
+        Width = 23
+        Height = 23
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnLUProductsClick
+      end
+      object OrdqtyLbl: TLabel
+        Left = 18
+        Top = 104
+        Width = 95
+        Height = 13
+        Caption = 'Order Qty (singles)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblQtyDelivered: TLabel
+        Left = 202
+        Top = 104
+        Width = 93
+        Height = 13
+        Caption = 'Delivered (singles)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Visible = False
+      end
+      object lblQtyInvoiced: TLabel
+        Left = 423
+        Top = 104
+        Width = 88
+        Height = 13
+        Caption = 'Invoiced (singles)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Visible = False
+      end
+      object Label12: TLabel
+        Left = 18
+        Top = 74
+        Width = 48
+        Height = 13
+        Caption = 'Unit Cost'
+      end
+      object Label3: TLabel
+        Left = 202
+        Top = 74
+        Width = 93
+        Height = 13
+        Caption = 'Cost Unit (singles)'
+      end
+      object Label13: TLabel
+        Left = 442
+        Top = 74
+        Width = 58
+        Height = 13
+        Caption = 'Discount %'
+      end
+      object edtOrderQty: TMemo
+        Left = 112
+        Top = 100
+        Width = 80
+        Height = 21
+        TabOrder = 5
+        WantReturns = False
+        WordWrap = False
+        OnChange = CheckOK
+        OnEnter = edtOrderQtyEnter
+        OnExit = edtOrderQtyExit
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object edtDeliveredQty: TMemo
+        Left = 296
+        Top = 100
+        Width = 80
+        Height = 21
+        TabOrder = 6
+        Visible = False
+        WantReturns = False
+        WordWrap = False
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object edtInvoicedQty: TMemo
+        Left = 512
+        Top = 100
+        Width = 80
+        Height = 21
+        TabOrder = 7
+        Visible = False
+        WantReturns = False
+        WordWrap = False
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object edtUnitCost: TCREditMoney
+        Left = 112
+        Top = 70
+        Width = 80
+        Height = 21
+        TabOrder = 2
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object edtCostUnit: TMemo
+        Left = 296
+        Top = 70
+        Width = 80
+        Height = 21
+        TabOrder = 3
+        WantReturns = False
+        WordWrap = False
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object edtDiscount: TCREditMoney
+        Left = 512
+        Top = 70
+        Width = 80
+        Height = 21
+        TabOrder = 4
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+      object cmbProducts: TComboBox
+        Left = 112
+        Top = 9
+        Width = 433
+        Height = 21
+        TabOrder = 0
+        Text = 'cmbProducts'
+        OnEnter = cmbProductsEnter
+        OnExit = cmbProductsExit
+        OnKeyPress = cmbProductsKeyPress
+      end
+      object edtDescription: TMemo
+        Left = 112
+        Top = 41
+        Width = 625
+        Height = 21
+        Lines.Strings = (
+          'edtDescription')
+        TabOrder = 1
+        WantReturns = False
+        WordWrap = False
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
+    end
+    object pnlNotes: TPanel
+      Left = 0
+      Top = 167
+      Width = 758
+      Height = 83
+      Align = alBottom
+      ParentBackground = False
+      TabOrder = 2
+      DesignSize = (
+        758
+        83)
+      object Label7: TLabel
+        Left = 18
+        Top = 13
+        Width = 30
+        Height = 13
+        Caption = 'Notes'
+      end
+      object memNotes: TMemo
+        Left = 112
+        Top = 8
+        Width = 473
+        Height = 66
+        Anchors = [akLeft, akTop, akBottom]
+        Lines.Strings = (
+          'memNotes')
+        ScrollBars = ssVertical
+        TabOrder = 0
+        OnChange = CheckOK
+        OnKeyPress = edtDescriptionKeyPress
+      end
     end
   end
 end

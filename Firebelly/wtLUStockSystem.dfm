@@ -14,93 +14,6 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
   Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
-  object dbgDetails: TDBGrid
-    Left = 0
-    Top = 0
-    Width = 389
-    Height = 173
-    Align = alClient
-    DataSource = srcStockSystem
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-    ReadOnly = True
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
-    OnDblClick = dbgDetailsDblClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Stock_System_Description'
-        Title.Caption = 'Stock System'
-        Width = 176
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Stock_System'
-        Width = 172
-        Visible = True
-      end>
-  end
-  object Panel1: TPanel
-    Left = 0
-    Top = 173
-    Width = 389
-    Height = 41
-    Align = alBottom
-    TabOrder = 1
-    DesignSize = (
-      389
-      41)
-    object btnAdd: TBitBtn
-      Left = 18
-      Top = 7
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Add'
-      TabOrder = 0
-      OnClick = btnAddClick
-    end
-    object btnEdit: TBitBtn
-      Left = 108
-      Top = 7
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Edit'
-      Enabled = False
-      TabOrder = 1
-      OnClick = btnEditClick
-    end
-    object btnDelete: TBitBtn
-      Left = 199
-      Top = 7
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Delete'
-      Enabled = False
-      TabOrder = 2
-      OnClick = btnDeleteClick
-    end
-    object BitBtn4: TBitBtn
-      Left = 290
-      Top = 7
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Close'
-      ModalResult = 2
-      NumGlyphs = 2
-      TabOrder = 3
-      OnClick = BitBtn4Click
-    end
-  end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 214
@@ -113,6 +26,102 @@ object frmWTLUStockSystem: TfrmWTLUStockSystem
       item
         Width = 50
       end>
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Top = 0
+    Width = 389
+    Height = 214
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+    object pnlControls: TPanel
+      Left = 0
+      Top = 173
+      Width = 389
+      Height = 41
+      Align = alBottom
+      TabOrder = 0
+      DesignSize = (
+        389
+        41)
+      object btnAdd: TBitBtn
+        Left = 18
+        Top = 7
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Add'
+        TabOrder = 0
+        OnClick = btnAddClick
+      end
+      object btnEdit: TBitBtn
+        Left = 108
+        Top = 7
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Edit'
+        Enabled = False
+        TabOrder = 1
+        OnClick = btnEditClick
+      end
+      object btnDelete: TBitBtn
+        Left = 199
+        Top = 7
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Delete'
+        Enabled = False
+        TabOrder = 2
+        OnClick = btnDeleteClick
+      end
+      object BitBtn4: TBitBtn
+        Left = 290
+        Top = 7
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Close'
+        ModalResult = 2
+        NumGlyphs = 2
+        TabOrder = 3
+        OnClick = BitBtn4Click
+      end
+    end
+    object dbgDetails: TDBGrid
+      Left = 0
+      Top = 0
+      Width = 389
+      Height = 173
+      Align = alClient
+      DataSource = srcStockSystem
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      ReadOnly = True
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      OnDrawColumnCell = dbgDetailsDrawColumnCell
+      OnDblClick = dbgDetailsDblClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Stock_System_Description'
+          Title.Caption = 'Stock System'
+          Width = 176
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Stock_System'
+          Width = 172
+          Visible = True
+        end>
+    end
   end
   object srcStockSystem: TDataSource
     DataSet = qryStockSystem

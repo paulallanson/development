@@ -217,6 +217,7 @@ type
     stvDocuments: TShellTreeView;
     slvDocuments: TShellListView;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);

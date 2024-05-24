@@ -16,12 +16,13 @@ type
     srcStockSystem: TDataSource;
     qryStockSystem: TFDQuery;
     qryDelete: TFDQuery;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     btnAdd: TBitBtn;
     btnEdit: TBitBtn;
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     stsbrDetails: TStatusBar;
+    pnlBody: TPanel;
     procedure BitBtn4Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);

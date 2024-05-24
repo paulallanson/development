@@ -89,6 +89,7 @@ type
     qryFitter2: TFDQuery;
     qryFitter3: TFDQuery;
     srcFitter3: TDataSource;
+    pnlBody: TPanel;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

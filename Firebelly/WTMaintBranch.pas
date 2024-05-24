@@ -66,6 +66,8 @@ type
     dtsSiteQS: TDataSource;
     qrySiteQS: TFDQuery;
     DropComboTarget1: TDropComboTarget;
+    pnlTop: TPanel;
+    pnlBody: TPanel;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

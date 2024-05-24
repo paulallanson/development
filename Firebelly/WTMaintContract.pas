@@ -141,6 +141,7 @@ type
     dblkpRevenueCentre: TDBLookupComboBox;
     chkbxOverridePrices: TCheckBox;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure btnCustomerClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

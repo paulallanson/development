@@ -11,7 +11,7 @@ type
   TfrmWTLUSalesInvoiceSO = class(TForm)
     stbrDetails: TStatusBar;
     dbgDetails: TDBGrid;
-    Panel2: TPanel;
+    pnlControls: TPanel;
     tmrSearch: TTimer;
     chkbxShow: TCheckBox;
     chkbxShowFutureOrders: TCheckBox;
@@ -30,6 +30,7 @@ type
     grpbxRevCentre: TGroupBox;
     Label3: TLabel;
     dblkpRevCentre: TDBLookupComboBox;
+    pnlBody: TPanel;
     procedure btnSelectClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);

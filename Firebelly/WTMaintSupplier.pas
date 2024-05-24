@@ -93,7 +93,7 @@ uses
 type
   TfrmWTMaintSupplier = class(TForm)
     stsbrDetails: TStatusBar;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     lblDelete: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
@@ -216,6 +216,7 @@ type
     qryGetLast: TFDQuery;
     qryZero: TFDQuery;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure tblOneSupplierNewRecord(DataSet: TDataSet);
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
