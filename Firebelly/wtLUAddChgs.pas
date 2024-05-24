@@ -266,7 +266,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsUnderline, fsBold] then
+  if Column.Title.Font.Style <> [fsBold] then
     SortType := ' ASC'
   else if SortType = ' DESC' then
       SortType := ' ASC'
