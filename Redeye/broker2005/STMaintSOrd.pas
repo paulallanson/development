@@ -80,6 +80,7 @@ type
     N1: TMenuItem;
     LineSerialNos: TMenuItem;
     btnAddService: TMenuItem;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

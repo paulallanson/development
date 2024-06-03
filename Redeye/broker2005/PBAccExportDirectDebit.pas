@@ -45,6 +45,7 @@ type
     edtDateTo: TEdit;
     btnDateFrom: TSpeedButton;
     btnDateTo: TSpeedButton;
+    pnlBody: TPanel;
     procedure btnDateFromClick(Sender: TObject);
     procedure btnDateToClick(Sender: TObject);
     procedure edtDateFromExit(Sender: TObject);

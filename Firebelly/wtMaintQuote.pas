@@ -55,8 +55,6 @@ type
     edtContact: TEdit;
     btnContactSearch: TBitBtn;
     pnlTelephone: TPanel;
-    Label21: TLabel;
-    Label22: TLabel;
     edtTelephone: TEdit;
     edtEmail: TEdit;
     Telephone: TLabel;
@@ -331,6 +329,7 @@ type
     dblkpRevenueCentre: TDBLookupComboBox;
     SpeedButton1: TSpeedButton;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -102,6 +102,7 @@ type
     btnEndUser: TBitBtn;
     lblAltInvoiceNumber: TLabel;
     edtAltInvoiceNumber: TEdit;
+    pnlBody: TPanel;
     procedure CheckOK(Sender : TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnInvDateClick(Sender: TObject);

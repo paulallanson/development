@@ -46,6 +46,7 @@ type
     AddWorkSQL: TFDQuery;
     GetLastIntSelSQL: TFDQuery;
     qryUpdInvs: TFDQuery;
+    pnlBody: TPanel;
     procedure btnDateFromClick(Sender: TObject);
     procedure btnDateToClick(Sender: TObject);
     procedure edtDateFromExit(Sender: TObject);

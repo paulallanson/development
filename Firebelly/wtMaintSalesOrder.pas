@@ -255,6 +255,7 @@ type
     btnClearCustomerBranch: TSpeedButton;
     btnGenerateDocs: TButton;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);

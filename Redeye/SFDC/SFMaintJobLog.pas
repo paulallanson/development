@@ -94,6 +94,7 @@ type
     Panel2: TPanel;
     lstbxWCAssistants: TListBox;
     lstbxWCAssistantsCode: TListBox;
+    pnlBody: TPanel;
     procedure EnableOK(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);

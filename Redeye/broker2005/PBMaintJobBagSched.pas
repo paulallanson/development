@@ -12,7 +12,7 @@ uses
 type
   TPBMaintJobBagSchedFrm = class(TForm)
     Panel1: TPanel;
-    Panel2: TPanel;
+    pnlControls: TPanel;
     pnlArtwork: TPanel;
     Panel15: TPanel;
     chkbxArtRequired: TCheckBox;
@@ -71,6 +71,7 @@ type
     edtPDFProofReqDate: TEdit;
     edtPDFProofAppDate: TEdit;
     edtPDFProofArtDate: TEdit;
+    pnlBody: TPanel;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cmbRevisionClick(Sender: TObject);

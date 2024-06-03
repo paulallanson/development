@@ -96,6 +96,7 @@ type
     btnProducts: TBitBtn;
     Products1: TMenuItem;
     btnInsert: TBitBtn;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure mnChangeLineClick(Sender: TObject);

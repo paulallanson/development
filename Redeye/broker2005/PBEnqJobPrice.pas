@@ -34,7 +34,7 @@ type
     SupplierMemo: TMemo;
     AddCostsMemo: TMemo;
     mnuSelectAll: TMenuItem;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     SaveBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     Panel2: TPanel;
@@ -77,6 +77,7 @@ type
     qryGetPriceUnit: TFDQuery;
     qryPTPriceUnit: TFDQuery;
     qryProdType: TFDQuery;
+    pnlBody: TPanel;
     procedure EnquiryEditKeyPress(Sender: TObject; var Key: Char);
     procedure EnquiryLineListBoxClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

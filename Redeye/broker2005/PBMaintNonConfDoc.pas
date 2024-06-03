@@ -110,6 +110,7 @@ type
     BitBtn5: TBitBtn;
     qryCategory: TFDQuery;
     dtsCategory: TDataSource;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

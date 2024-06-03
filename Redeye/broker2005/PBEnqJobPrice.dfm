@@ -38,7 +38,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
     Height = 49
     Caption = 'GroupBox1'
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 3
     Visible = False
     object Label10: TLabel
       Left = 8
@@ -123,7 +123,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       TabOrder = 3
     end
   end
-  object Panel1: TPanel
+  object pnlControls: TPanel
     Left = 0
     Top = 535
     Width = 734
@@ -131,7 +131,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
     DesignSize = (
       734
       35)
@@ -281,358 +281,369 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       OnClick = PrintBitBtnClick
     end
   end
-  object Panel2: TPanel
+  object pnlBody: TPanel
     Left = 0
-    Top = 406
+    Top = 0
     Width = 734
-    Height = 129
-    Align = alBottom
+    Height = 535
+    Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 3
-    object Panel9: TPanel
+    TabOrder = 2
+    object Panel2: TPanel
       Left = 0
-      Top = 0
+      Top = 406
       Width = 734
       Height = 129
-      Align = alClient
+      Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      object GroupBox2: TGroupBox
+      object Panel9: TPanel
         Left = 0
         Top = 0
-        Width = 615
+        Width = 734
         Height = 129
         Align = alClient
-        TabOrder = 0
-        object PUnitCombo: TComboBox
-          Left = 260
-          Top = 80
-          Width = 77
-          Height = 21
-          Style = csDropDownList
-          TabOrder = 0
-          Visible = False
-          OnChange = PUnitComboChange
-          OnDropDown = PUnitComboDropDown
-          OnEnter = PUnitComboEnter
-          OnExit = PUnitComboExit
-        end
-        object Panel10: TPanel
-          Left = 2
-          Top = 15
-          Width = 611
-          Height = 112
-          Align = alClient
-          ParentBackground = False
-          TabOrder = 1
-          object SelectedPricesGrid: TStringGrid
-            Left = 1
-            Top = 1
-            Width = 609
-            Height = 110
-            Align = alClient
-            ColCount = 2
-            DefaultColWidth = 195
-            DefaultRowHeight = 20
-            Enabled = False
-            Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goTabs]
-            PopupMenu = PricesPopUp
-            TabOrder = 0
-            OnClick = SelectedPricesGridClick
-            OnDrawCell = SelectedPricesGridDrawCell
-            OnExit = SelectedPricesGridExit
-            OnKeyPress = SelectedPricesGridKeyPress
-            OnKeyUp = SelectedPricesGridKeyUp
-            OnMouseUp = SelectedPricesGridMouseUp
-            OnSelectCell = SelectedPricesGridSelectCell
-            OnTopLeftChanged = SelectedPricesGridTopLeftChanged
-            ColWidths = (
-              195
-              84)
-            RowHeights = (
-              20
-              20
-              20
-              20
-              20)
-          end
-        end
-      end
-      object Panel8: TPanel
-        Left = 615
-        Top = 0
-        Width = 119
-        Height = 129
-        Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
-        TabOrder = 1
-        object grpBxSelectedRunOn: TGroupBox
+        TabOrder = 0
+        object GroupBox2: TGroupBox
           Left = 0
           Top = 0
-          Width = 119
+          Width = 615
           Height = 129
           Align = alClient
           TabOrder = 0
-          object Panel12: TPanel
+          object PUnitCombo: TComboBox
+            Left = 260
+            Top = 80
+            Width = 77
+            Height = 21
+            Style = csDropDownList
+            TabOrder = 0
+            Visible = False
+            OnChange = PUnitComboChange
+            OnDropDown = PUnitComboDropDown
+            OnEnter = PUnitComboEnter
+            OnExit = PUnitComboExit
+          end
+          object Panel10: TPanel
             Left = 2
             Top = 15
-            Width = 115
+            Width = 611
             Height = 112
             Align = alClient
             ParentBackground = False
-            TabOrder = 0
-            object SelectedROPricesGrid: TStringGrid
+            TabOrder = 1
+            object SelectedPricesGrid: TStringGrid
               Left = 1
               Top = 1
-              Width = 113
+              Width = 609
               Height = 110
               Align = alClient
-              ColCount = 1
-              DefaultColWidth = 80
+              ColCount = 2
+              DefaultColWidth = 195
               DefaultRowHeight = 20
-              FixedCols = 0
-              RowCount = 4
+              Enabled = False
+              Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goTabs]
+              PopupMenu = PricesPopUp
               TabOrder = 0
-              OnDrawCell = SelectedROPricesGridDrawCell
-              OnExit = SelectedROPricesGridExit
-              OnKeyPress = SelectedROPricesGridKeyPress
-              OnKeyUp = SelectedROPricesGridKeyUp
-              OnSelectCell = SelectedROPricesGridSelectCell
+              OnClick = SelectedPricesGridClick
+              OnDrawCell = SelectedPricesGridDrawCell
+              OnExit = SelectedPricesGridExit
+              OnKeyPress = SelectedPricesGridKeyPress
+              OnKeyUp = SelectedPricesGridKeyUp
+              OnMouseUp = SelectedPricesGridMouseUp
+              OnSelectCell = SelectedPricesGridSelectCell
+              OnTopLeftChanged = SelectedPricesGridTopLeftChanged
+              ColWidths = (
+                195
+                84)
+              RowHeights = (
+                20
+                20
+                20
+                20
+                20)
+            end
+          end
+        end
+        object Panel8: TPanel
+          Left = 615
+          Top = 0
+          Width = 119
+          Height = 129
+          Align = alRight
+          BevelOuter = bvNone
+          ParentBackground = False
+          TabOrder = 1
+          object grpBxSelectedRunOn: TGroupBox
+            Left = 0
+            Top = 0
+            Width = 119
+            Height = 129
+            Align = alClient
+            TabOrder = 0
+            object Panel12: TPanel
+              Left = 2
+              Top = 15
+              Width = 115
+              Height = 112
+              Align = alClient
+              ParentBackground = False
+              TabOrder = 0
+              object SelectedROPricesGrid: TStringGrid
+                Left = 1
+                Top = 1
+                Width = 113
+                Height = 110
+                Align = alClient
+                ColCount = 1
+                DefaultColWidth = 80
+                DefaultRowHeight = 20
+                FixedCols = 0
+                RowCount = 4
+                TabOrder = 0
+                OnDrawCell = SelectedROPricesGridDrawCell
+                OnExit = SelectedROPricesGridExit
+                OnKeyPress = SelectedROPricesGridKeyPress
+                OnKeyUp = SelectedROPricesGridKeyUp
+                OnSelectCell = SelectedROPricesGridSelectCell
+              end
             end
           end
         end
       end
     end
-  end
-  object Panel3: TPanel
-    Left = 0
-    Top = 0
-    Width = 734
-    Height = 123
-    Align = alTop
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 4
-    DesignSize = (
-      734
-      123)
-    object GroupBox4: TGroupBox
-      Left = 8
-      Top = -8
-      Width = 685
-      Height = 122
-      Anchors = [akLeft, akTop, akRight]
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        685
-        122)
-      object Label1: TLabel
-        Left = 8
-        Top = 16
-        Width = 39
-        Height = 13
-        Caption = 'Enquiry'
-      end
-      object Label2: TLabel
-        Left = 144
-        Top = 16
-        Width = 49
-        Height = 13
-        Caption = 'Customer'
-      end
-      object Label5: TLabel
-        Left = 8
-        Top = 41
-        Width = 26
-        Height = 13
-        Caption = 'Lines'
-      end
-      object Label6: TLabel
-        Left = 571
-        Top = 72
-        Width = 54
-        Height = 13
-        Anchors = [akTop, akRight]
-        Caption = 'Price Units'
-      end
-      object Label3: TLabel
-        Left = 520
-        Top = 16
-        Width = 40
-        Height = 13
-        Caption = 'Contact'
-      end
-      object EnquiryEdit: TEdit
-        Left = 56
-        Top = 12
-        Width = 73
-        Height = 21
-        Hint = 'Enter an enquiry number and press return'
-        Color = clBtnFace
-        ReadOnly = True
-        TabOrder = 0
-        OnKeyPress = EnquiryEditKeyPress
-      end
-      object CustNameEdit: TEdit
-        Left = 208
-        Top = 12
-        Width = 273
-        Height = 21
-        TabStop = False
-        Color = clBtnFace
-        ReadOnly = True
-        TabOrder = 1
-      end
-      object EnquiryLineGrid: TStringGrid
-        Left = 56
-        Top = 41
-        Width = 471
-        Height = 74
-        Anchors = [akLeft, akTop, akRight]
-        ColCount = 2
-        DefaultColWidth = 40
-        DefaultRowHeight = 20
-        RowCount = 2
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
-        TabOrder = 2
-        OnClick = EnquiryLineGridClick
-        ColWidths = (
-          40
-          285)
-        RowHeights = (
-          20
-          20)
-      end
-      object JobUnitcombo: TComboBox
-        Left = 571
-        Top = 92
-        Width = 105
-        Height = 21
-        Style = csDropDownList
-        Anchors = [akTop, akRight]
-        TabOrder = 3
-        OnClick = JobUnitcomboClick
-        OnDropDown = JobUnitcomboDropDown
-      end
-      object edtContact: TEdit
-        Left = 568
-        Top = 12
-        Width = 145
-        Height = 21
-        TabStop = False
-        Color = clBtnFace
-        ReadOnly = True
-        TabOrder = 4
-      end
-    end
-  end
-  object Panel4: TPanel
-    Left = 0
-    Top = 123
-    Width = 734
-    Height = 283
-    Align = alClient
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 5
-    object Panel5: TPanel
-      Left = 615
+    object Panel3: TPanel
+      Left = 0
       Top = 0
-      Width = 119
-      Height = 283
-      Align = alRight
+      Width = 734
+      Height = 123
+      Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 0
-      object grpBxSupplierRunOn: TGroupBox
-        Left = 0
+      TabOrder = 1
+      DesignSize = (
+        734
+        123)
+      object GroupBox4: TGroupBox
+        Left = 5
         Top = 0
-        Width = 119
-        Height = 283
-        Align = alClient
-        Caption = 'Run On Quantity'
+        Width = 723
+        Height = 122
+        Anchors = [akLeft, akTop, akRight]
+        ParentBackground = False
         TabOrder = 0
-        object Panel11: TPanel
-          Left = 2
-          Top = 15
-          Width = 115
-          Height = 266
-          Align = alClient
-          ParentBackground = False
+        DesignSize = (
+          723
+          122)
+        object Label1: TLabel
+          Left = 8
+          Top = 16
+          Width = 39
+          Height = 13
+          Caption = 'Enquiry'
+        end
+        object Label2: TLabel
+          Left = 144
+          Top = 16
+          Width = 49
+          Height = 13
+          Caption = 'Customer'
+        end
+        object Label5: TLabel
+          Left = 8
+          Top = 41
+          Width = 26
+          Height = 13
+          Caption = 'Lines'
+        end
+        object Label6: TLabel
+          Left = 609
+          Top = 72
+          Width = 54
+          Height = 13
+          Anchors = [akTop, akRight]
+          Caption = 'Price Units'
+          ExplicitLeft = 571
+        end
+        object Label3: TLabel
+          Left = 520
+          Top = 16
+          Width = 40
+          Height = 13
+          Caption = 'Contact'
+        end
+        object EnquiryEdit: TEdit
+          Left = 56
+          Top = 12
+          Width = 73
+          Height = 21
+          Hint = 'Enter an enquiry number and press return'
+          Color = clBtnFace
+          ReadOnly = True
           TabOrder = 0
-          object SupplierROPricesGrid: TStringGrid
-            Left = 1
-            Top = 1
-            Width = 113
-            Height = 264
-            Align = alClient
-            ColCount = 1
-            DefaultColWidth = 80
-            DefaultRowHeight = 20
-            FixedCols = 0
-            RowCount = 2
-            TabOrder = 0
-            OnDrawCell = SupplierROPricesGridDrawCell
-          end
+          OnKeyPress = EnquiryEditKeyPress
+        end
+        object CustNameEdit: TEdit
+          Left = 208
+          Top = 12
+          Width = 273
+          Height = 21
+          TabStop = False
+          Color = clBtnFace
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EnquiryLineGrid: TStringGrid
+          Left = 56
+          Top = 41
+          Width = 509
+          Height = 74
+          Anchors = [akLeft, akTop, akRight]
+          ColCount = 2
+          DefaultColWidth = 40
+          DefaultRowHeight = 20
+          RowCount = 2
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+          TabOrder = 2
+          OnClick = EnquiryLineGridClick
+          ColWidths = (
+            40
+            285)
+          RowHeights = (
+            20
+            20)
+        end
+        object JobUnitcombo: TComboBox
+          Left = 609
+          Top = 92
+          Width = 105
+          Height = 21
+          Style = csDropDownList
+          Anchors = [akTop, akRight]
+          TabOrder = 3
+          OnClick = JobUnitcomboClick
+          OnDropDown = JobUnitcomboDropDown
+        end
+        object edtContact: TEdit
+          Left = 568
+          Top = 12
+          Width = 145
+          Height = 21
+          TabStop = False
+          Color = clBtnFace
+          ReadOnly = True
+          TabOrder = 4
         end
       end
     end
-    object Panel6: TPanel
+    object Panel4: TPanel
       Left = 0
-      Top = 0
-      Width = 615
+      Top = 123
+      Width = 734
       Height = 283
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 1
-      object GroupBox3: TGroupBox
+      TabOrder = 2
+      object Panel5: TPanel
+        Left = 615
+        Top = 0
+        Width = 119
+        Height = 283
+        Align = alRight
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 0
+        object grpBxSupplierRunOn: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 119
+          Height = 283
+          Align = alClient
+          Caption = 'Run On Quantity'
+          TabOrder = 0
+          object Panel11: TPanel
+            Left = 2
+            Top = 15
+            Width = 115
+            Height = 266
+            Align = alClient
+            ParentBackground = False
+            TabOrder = 0
+            object SupplierROPricesGrid: TStringGrid
+              Left = 1
+              Top = 1
+              Width = 113
+              Height = 264
+              Align = alClient
+              ColCount = 1
+              DefaultColWidth = 80
+              DefaultRowHeight = 20
+              FixedCols = 0
+              RowCount = 2
+              TabOrder = 0
+              OnDrawCell = SupplierROPricesGridDrawCell
+            end
+          end
+        end
+      end
+      object Panel6: TPanel
         Left = 0
         Top = 0
         Width = 615
         Height = 283
         Align = alClient
-        Caption = 'Supplier Price Responses'
-        TabOrder = 0
-        object Panel7: TPanel
-          Left = 2
-          Top = 15
-          Width = 611
-          Height = 266
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 1
+        object GroupBox3: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 615
+          Height = 283
           Align = alClient
-          ParentBackground = False
+          Caption = 'Supplier Price Responses'
           TabOrder = 0
-          object SupplierPricesGrid: TStringGrid
-            Left = 1
-            Top = 1
-            Width = 609
-            Height = 264
+          object Panel7: TPanel
+            Left = 2
+            Top = 15
+            Width = 611
+            Height = 266
             Align = alClient
-            ColCount = 2
-            DefaultColWidth = 195
-            DefaultRowHeight = 20
-            DefaultDrawing = False
-            Enabled = False
-            RowCount = 2
-            Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goThumbTracking]
-            ParentShowHint = False
-            PopupMenu = SelectPopUpMenu
-            ShowHint = True
+            ParentBackground = False
             TabOrder = 0
-            OnClick = SupplierPricesGridClick
-            OnDblClick = SupplierPricesGridDblClick
-            OnDrawCell = SupplierPricesGridDrawCell
-            OnMouseDown = SupplierPricesGridMouseDown
-            OnMouseUp = SupplierPricesGridMouseUp
-            OnSelectCell = SupplierPricesGridSelectCell
-            OnTopLeftChanged = SupplierPricesGridTopLeftChanged
-            ColWidths = (
-              195
-              84)
+            object SupplierPricesGrid: TStringGrid
+              Left = 1
+              Top = 1
+              Width = 609
+              Height = 264
+              Align = alClient
+              ColCount = 2
+              DefaultColWidth = 195
+              DefaultRowHeight = 20
+              DefaultDrawing = False
+              Enabled = False
+              RowCount = 2
+              Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goThumbTracking]
+              ParentShowHint = False
+              PopupMenu = SelectPopUpMenu
+              ShowHint = True
+              TabOrder = 0
+              OnClick = SupplierPricesGridClick
+              OnDblClick = SupplierPricesGridDblClick
+              OnDrawCell = SupplierPricesGridDrawCell
+              OnMouseDown = SupplierPricesGridMouseDown
+              OnMouseUp = SupplierPricesGridMouseUp
+              OnSelectCell = SupplierPricesGridSelectCell
+              OnTopLeftChanged = SupplierPricesGridTopLeftChanged
+              ColWidths = (
+                195
+                84)
+            end
           end
         end
       end

@@ -32,114 +32,34 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Width = 50
       end>
   end
-  object Panel1: TPanel
-    Left = 0
-    Top = 456
-    Width = 1008
-    Height = 42
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 2
-    DesignSize = (
-      1008
-      42)
-    object lblDelete: TLabel
-      Left = 639
-      Top = 15
-      Width = 142
-      Height = 13
-      Anchors = [akRight, akBottom]
-      Caption = 'Delete the selected record ?'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 641
-    end
-    object btnOK: TBitBtn
-      Left = 818
-      Top = 9
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = 'OK'
-      Default = True
-      ModalResult = 1
-      NumGlyphs = 2
-      TabOrder = 1
-      OnClick = btnOKClick
-    end
-    object BitBtn2: TBitBtn
-      Left = 904
-      Top = 9
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Cancel = True
-      Caption = 'Cancel'
-      NumGlyphs = 2
-      TabOrder = 2
-      OnClick = BitBtn2Click
-    end
-    object chkbxInactive: TCheckBox
-      Left = 13
-      Top = 13
-      Width = 244
-      Height = 17
-      Caption = 'Make this supplier inactive'
-      TabOrder = 0
-    end
-  end
-  object pnlDetails: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
     Width = 1008
-    Height = 49
-    Align = alTop
+    Height = 498
+    Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 24
-      Top = 20
-      Width = 31
-      Height = 13
-      Caption = 'Name'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object edtSupplierName: TEdit
-      Left = 88
-      Top = 16
-      Width = 233
-      Height = 21
-      TabOrder = 0
-      Text = 'edtSupplierName'
-      OnChange = EnableOK
-    end
-  end
-  object pgDetails: TPageControl
-    Left = 0
-    Top = 49
-    Width = 1008
-    Height = 407
-    ActivePage = tsDetails
-    Align = alClient
     TabOrder = 1
-    object tsDetails: TTabSheet
-      Caption = 'Details'
-      object Label2: TLabel
+    ExplicitLeft = 472
+    ExplicitTop = 111
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlDetails: TPanel
+      Left = 0
+      Top = 0
+      Width = 1008
+      Height = 49
+      Align = alTop
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 0
+      object Label1: TLabel
         Left = 24
-        Top = 19
-        Width = 30
+        Top = 20
+        Width = 31
         Height = 13
-        Caption = 'Street'
+        Caption = 'Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -147,984 +67,1080 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label4: TLabel
-        Left = 24
-        Top = 67
-        Width = 28
-        Height = 13
-        Caption = 'Town'
+      object edtSupplierName: TEdit
+        Left = 88
+        Top = 16
+        Width = 233
+        Height = 21
+        TabOrder = 0
+        Text = 'edtSupplierName'
+        OnChange = EnableOK
       end
-      object Label6: TLabel
-        Left = 24
-        Top = 91
-        Width = 48
-        Height = 13
-        Caption = 'Postcode'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object Label5: TLabel
-        Left = 24
-        Top = 115
-        Width = 37
-        Height = 13
-        Caption = 'County'
-      end
-      object Label7: TLabel
-        Left = 24
-        Top = 148
-        Width = 34
-        Height = 13
-        Caption = 'Phone'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object Label8: TLabel
-        Left = 24
-        Top = 172
-        Width = 17
-        Height = 13
-        Caption = 'Fax'
-      end
-      object Label9: TLabel
-        Left = 24
-        Top = 200
-        Width = 68
-        Height = 13
-        Caption = 'Web Address'
-      end
-      object Label14: TLabel
-        Left = 24
-        Top = 324
-        Width = 72
-        Height = 13
-        Caption = 'Account Code'
-      end
-      object Label15: TLabel
-        Left = 23
-        Top = 293
-        Width = 46
-        Height = 13
-        Caption = 'Leadtime'
-      end
-      object Label16: TLabel
-        Left = 175
-        Top = 293
-        Width = 23
-        Height = 13
-        Caption = 'days'
-      end
-      object Label17: TLabel
-        Left = 24
-        Top = 227
-        Width = 71
-        Height = 13
-        Caption = 'Email Address'
-      end
-      object Label18: TLabel
-        Left = 23
-        Top = 258
-        Width = 58
-        Height = 13
-        Caption = 'Discount %'
-      end
-      object SpinEdit1: TSpinEdit
-        Left = 104
-        Top = 288
-        Width = 65
-        Height = 22
-        MaxValue = 0
-        MinValue = 0
-        TabOrder = 10
-        Value = 0
-      end
-      object edtStreet: TEdit
-        Left = 104
+    end
+    object pnlControls: TPanel
+      Left = 0
+      Top = 456
+      Width = 1008
+      Height = 42
+      Align = alBottom
+      ParentBackground = False
+      TabOrder = 1
+      DesignSize = (
+        1008
+        42)
+      object lblDelete: TLabel
+        Left = 639
         Top = 15
-        Width = 233
-        Height = 21
-        TabOrder = 0
-        Text = 'edtStreet'
-        OnChange = EnableOK
-      end
-      object edtLocale: TEdit
-        Left = 104
-        Top = 39
-        Width = 233
-        Height = 21
-        TabOrder = 1
-        Text = 'edtLocale'
-      end
-      object edtTownCity: TEdit
-        Left = 104
-        Top = 63
-        Width = 233
-        Height = 21
-        TabOrder = 2
-        Text = 'edtTownCity'
-      end
-      object edtPostcode: TEdit
-        Left = 104
-        Top = 87
-        Width = 121
-        Height = 21
-        CharCase = ecUpperCase
-        TabOrder = 3
-        Text = 'EDTPOSTCODE'
-        OnChange = EnableOK
-      end
-      object edtCountyState: TEdit
-        Left = 104
-        Top = 111
-        Width = 233
-        Height = 21
-        TabOrder = 4
-        Text = 'edtCountyState'
-      end
-      object edtTelephoneNumber: TEdit
-        Left = 104
-        Top = 144
-        Width = 169
-        Height = 21
-        TabOrder = 5
-        Text = 'edtTelephoneNumber'
-        OnChange = EnableOK
-      end
-      object edtFaxNumber: TEdit
-        Left = 104
-        Top = 168
-        Width = 169
-        Height = 21
-        TabOrder = 6
-        Text = 'edtFaxNumber'
-      end
-      object edtWebAddress: TEdit
-        Left = 104
-        Top = 196
-        Width = 265
-        Height = 21
-        TabOrder = 7
-        Text = 'edtWebAddress'
-      end
-      object edtEmailAddress: TEdit
-        Left = 104
-        Top = 223
-        Width = 265
-        Height = 21
-        TabOrder = 8
-        Text = 'edtEmailAddress'
-      end
-      object edtDiscountPercentage: TCREditFloat
-        Left = 104
-        Top = 254
-        Width = 65
-        Height = 21
-        TabOrder = 9
-        Text = 'edtDiscountPercentage'
-      end
-      object edtAccountCode: TEdit
-        Left = 104
-        Top = 320
-        Width = 81
-        Height = 21
-        TabOrder = 11
-        Text = 'edtAccountCode'
-        OnChange = EnableOK
-      end
-    end
-    object tsMaterials: TTabSheet
-      Caption = 'Material Cost Details'
-      ImageIndex = 2
-      OnShow = tsMaterialsShow
-      object Panel3: TPanel
-        Left = 907
-        Top = 0
-        Width = 93
-        Height = 317
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 0
-        object btnChange: TBitBtn
-          Left = 10
-          Top = 40
-          Width = 75
-          Height = 25
-          Caption = '&Change'
-          TabOrder = 1
-          OnClick = btnChangeClick
-        end
-        object btnDelete: TBitBtn
-          Left = 10
-          Top = 72
-          Width = 75
-          Height = 25
-          Caption = '&Delete'
-          TabOrder = 2
-          OnClick = btnDeleteClick
-        end
-        object btnAdd: TBitBtn
-          Left = 10
-          Top = 8
-          Width = 75
-          Height = 25
-          Caption = '&Add'
-          TabOrder = 0
-          OnClick = btnAddClick
-        end
-        object btnMaterials: TBitBtn
-          Left = 10
-          Top = 144
-          Width = 75
-          Height = 25
-          Caption = '&Materials'
-          TabOrder = 4
-          OnClick = btnMaterialsClick
-        end
-        object btnCosts: TBitBtn
-          Left = 10
-          Top = 109
-          Width = 75
-          Height = 25
-          Caption = '&Costs'
-          TabOrder = 3
-          OnClick = btnCostsClick
-        end
-        object btnWorktops: TBitBtn
-          Left = 10
-          Top = 178
-          Width = 75
-          Height = 25
-          Caption = '&Worktops'
-          TabOrder = 5
-          OnClick = btnWorktopsClick
-        end
-      end
-      object dbgDetails: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 907
-        Height = 317
-        Align = alClient
-        DrawingStyle = gdsGradient
+        Width = 142
+        Height = 13
+        Anchors = [akRight, akBottom]
+        Caption = 'Delete the selected record ?'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+        Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgDetailsDrawColumnCell
-        OnDblClick = dbgDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Material_Type_Description'
-            Title.Caption = 'Material'
-            Width = 125
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Worktop_Group_Description'
-            Title.Caption = 'Group'
-            Width = 81
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Worktop_Description'
-            Title.Caption = 'Colour'
-            Width = 211
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Thickness_mm'
-            Title.Caption = 'Thickness (mm)'
-            Width = 82
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Unit_Cost'
-            Title.Caption = 'Unit Cost (sq m)'
-            Width = 80
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Effective_Date'
-            Title.Caption = 'Effective Date'
-            Width = 84
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Changed'
-            Title.Caption = 'Date Changed'
-            Width = 104
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Visible = True
-          end>
+        ExplicitLeft = 641
       end
-      object pnlMaterialsFooter: TPanel
-        Left = 0
-        Top = 317
-        Width = 1000
-        Height = 62
-        Align = alBottom
-        ParentBackground = False
+      object btnOK: TBitBtn
+        Left = 818
+        Top = 9
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = 'OK'
+        Default = True
+        ModalResult = 1
+        NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnOKClick
+      end
+      object BitBtn2: TBitBtn
+        Left = 904
+        Top = 9
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Cancel = True
+        Caption = 'Cancel'
+        NumGlyphs = 2
         TabOrder = 2
-        DesignSize = (
-          1000
-          62)
-        object Label3: TLabel
-          Left = 8
-          Top = 12
-          Width = 42
-          Height = 13
-          Caption = 'Material'
-        end
-        object Label10: TLabel
-          Left = 160
-          Top = 12
-          Width = 35
-          Height = 13
-          Caption = 'Colour'
-        end
-        object Label11: TLabel
-          Left = 304
-          Top = 12
-          Width = 50
-          Height = 13
-          Caption = 'Thickness'
-        end
-        object Label12: TLabel
-          Left = 448
-          Top = 12
-          Width = 33
-          Height = 13
-          Caption = 'Group'
-        end
-        object Label13: TLabel
-          Left = 592
-          Top = 12
-          Width = 70
-          Height = 13
-          Caption = 'Effective Date'
-        end
-        object edtMaterial: TEdit
-          Left = 56
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 0
-          OnChange = edtMaterialChange
-        end
-        object Panel4: TPanel
-          Left = 896
-          Top = 1
-          Width = 103
-          Height = 60
-          Align = alRight
-          Alignment = taRightJustify
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 4
-        end
-        object edtColour: TEdit
-          Left = 200
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 1
-          OnChange = edtColourChange
-        end
-        object edtThickness: TEdit
-          Left = 360
-          Top = 8
-          Width = 73
-          Height = 21
-          TabOrder = 2
-          OnChange = edtThicknessChange
-        end
-        object edtGroup: TEdit
-          Left = 488
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 3
-          OnChange = edtGroupChange
-        end
-        object btnClear: TBitBtn
-          Left = 832
-          Top = 6
-          Width = 75
-          Height = 25
-          Caption = 'Cl&ear'
-          TabOrder = 5
-          OnClick = btnClearClick
-        end
-        object edtEffectiveDate: TEdit
-          Left = 669
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 6
-          OnExit = edtEffectiveDateExit
-          OnKeyPress = edtEffectiveDateKeyPress
-        end
-        object btnEffectiveDate: TBitBtn
-          Left = 757
-          Top = 6
-          Width = 25
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000130B0000130B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-            333337FFFFFFFF77333330000000000333333777777777733333}
-          NumGlyphs = 2
-          TabOrder = 7
-          OnClick = btnEffectiveDateClick
-        end
-        object BitBtn5: TBitBtn
-          Left = 789
-          Top = 6
-          Width = 25
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000120B0000120B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
-            555557777F777555F55500000000555055557777777755F75555005500055055
-            555577F5777F57555555005550055555555577FF577F5FF55555500550050055
-            5555577FF77577FF555555005050110555555577F757777FF555555505099910
-            555555FF75777777FF555005550999910555577F5F77777775F5500505509990
-            3055577F75F77777575F55005055090B030555775755777575755555555550B0
-            B03055555F555757575755550555550B0B335555755555757555555555555550
-            BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
-            50BB555555555555575F555555555555550B5555555555555575}
-          NumGlyphs = 2
-          TabOrder = 8
-          OnClick = BitBtn5Click
-        end
-        object btnSweep: TBitBtn
-          Left = 896
-          Top = 6
-          Width = 75
-          Height = 25
-          Anchors = [akTop, akRight]
-          Caption = 'S&weep'
-          TabOrder = 9
-          OnClick = btnSweepClick
-        end
-        object chkbxShowInactive: TCheckBox
-          Left = 9
-          Top = 37
-          Width = 160
-          Height = 17
-          Anchors = [akLeft, akBottom]
-          Caption = 'Show inactive materials'
-          TabOrder = 10
-          OnClick = chkbxShowInactiveClick
-        end
+        OnClick = BitBtn2Click
+      end
+      object chkbxInactive: TCheckBox
+        Left = 13
+        Top = 13
+        Width = 244
+        Height = 17
+        Caption = 'Make this supplier inactive'
+        TabOrder = 0
       end
     end
-    object tsWorktops: TTabSheet
-      Caption = 'Material Summary'
-      ImageIndex = 4
-      OnShow = tsWorktopsShow
-      object Panel2: TPanel
-        Left = 0
-        Top = 317
-        Width = 1000
-        Height = 62
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 0
-        DesignSize = (
-          1000
-          62)
-        object Label20: TLabel
-          Left = 8
-          Top = 12
-          Width = 42
+    object pgDetails: TPageControl
+      Left = 0
+      Top = 49
+      Width = 1008
+      Height = 407
+      ActivePage = tsDetails
+      Align = alClient
+      TabOrder = 2
+      ExplicitTop = 0
+      ExplicitHeight = 498
+      object tsDetails: TTabSheet
+        Caption = 'Details'
+        object Label2: TLabel
+          Left = 24
+          Top = 19
+          Width = 30
           Height = 13
-          Caption = 'Material'
+          Caption = 'Street'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
-        object Label21: TLabel
-          Left = 160
-          Top = 12
-          Width = 35
+        object Label4: TLabel
+          Left = 24
+          Top = 67
+          Width = 28
           Height = 13
-          Caption = 'Colour'
+          Caption = 'Town'
         end
-        object Label23: TLabel
-          Left = 304
-          Top = 12
-          Width = 33
+        object Label6: TLabel
+          Left = 24
+          Top = 91
+          Width = 48
           Height = 13
-          Caption = 'Group'
+          Caption = 'Postcode'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
-        object edtMaterial1: TEdit
-          Left = 56
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 0
-          OnChange = edtMaterial1Change
+        object Label5: TLabel
+          Left = 24
+          Top = 115
+          Width = 37
+          Height = 13
+          Caption = 'County'
         end
-        object Panel5: TPanel
-          Left = 896
-          Top = 1
-          Width = 103
-          Height = 60
-          Align = alRight
-          Alignment = taRightJustify
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 3
-        end
-        object edtColour1: TEdit
-          Left = 200
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 1
-          OnChange = edtColour1Change
-        end
-        object edtGroup1: TEdit
-          Left = 344
-          Top = 8
-          Width = 85
-          Height = 21
-          TabOrder = 2
-          OnChange = edtGroup1Change
-        end
-        object BitBtn1: TBitBtn
-          Left = 832
-          Top = 6
-          Width = 75
-          Height = 25
-          Caption = 'Cl&ear'
-          TabOrder = 4
-          OnClick = BitBtn1Click
-        end
-        object CheckBox1: TCheckBox
-          Left = 9
-          Top = 37
-          Width = 160
-          Height = 17
-          Anchors = [akLeft, akBottom]
-          Caption = 'Show inactive materials'
-          TabOrder = 5
-          OnClick = CheckBox1Click
-        end
-      end
-      object Panel7: TPanel
-        Left = 907
-        Top = 0
-        Width = 93
-        Height = 317
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 1
-        object btnChangeWorktop: TBitBtn
-          Left = 10
-          Top = 40
-          Width = 75
-          Height = 25
-          Caption = '&Change'
-          TabOrder = 1
-          OnClick = btnChangeWorktopClick
-        end
-        object btnDeleteWorktop: TBitBtn
-          Left = 10
-          Top = 72
-          Width = 75
-          Height = 25
-          Caption = '&Delete'
-          TabOrder = 2
-          OnClick = btnDeleteClick
-        end
-        object BitBtn9: TBitBtn
-          Left = 10
-          Top = 8
-          Width = 75
-          Height = 25
-          Caption = '&Add'
-          TabOrder = 0
-          OnClick = btnAddClick
-        end
-        object BitBtn10: TBitBtn
-          Left = 10
-          Top = 144
-          Width = 75
-          Height = 25
-          Caption = '&Materials'
-          TabOrder = 3
-          OnClick = btnMaterialsClick
-        end
-        object BitBtn12: TBitBtn
-          Left = 10
-          Top = 178
-          Width = 75
-          Height = 25
-          Caption = '&Worktops'
-          TabOrder = 4
-          OnClick = btnWorktopsClick
-        end
-      end
-      object dbgWorktopDetails: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 907
-        Height = 317
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
-        ParentFont = False
-        TabOrder = 2
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgWorktopDetailsDrawColumnCell
-        OnDblClick = dbgWorktopDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Material_Type_Description'
-            Title.Caption = 'Material'
-            Width = 149
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Worktop_Group_Description'
-            Title.Caption = 'Group'
-            Width = 107
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Worktop_Description'
-            Title.Caption = 'Colour'
-            Width = 232
-            Visible = True
-          end>
-      end
-    end
-    object tsProducts: TTabSheet
-      Caption = 'Products'
-      ImageIndex = 3
-      OnShow = tsProductsShow
-      object pnlProductsFooter: TPanel
-        Left = 0
-        Top = 317
-        Width = 1000
-        Height = 62
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 0
-        DesignSize = (
-          1000
-          62)
-        object Label19: TLabel
-          Left = 8
-          Top = 12
+        object Label7: TLabel
+          Left = 24
+          Top = 148
           Width = 34
           Height = 13
-          Caption = 'Search'
+          Caption = 'Phone'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
-        object edtSearch: TEdit
-          Left = 56
-          Top = 8
-          Width = 137
-          Height = 21
-          TabOrder = 0
-          OnChange = edtSearchChange
+        object Label8: TLabel
+          Left = 24
+          Top = 172
+          Width = 17
+          Height = 13
+          Caption = 'Fax'
         end
-        object btnProdClear: TBitBtn
-          Left = 224
-          Top = 6
-          Width = 75
-          Height = 25
-          Caption = 'Cl&ear'
-          TabOrder = 1
-          OnClick = btnProdClearClick
+        object Label9: TLabel
+          Left = 24
+          Top = 200
+          Width = 68
+          Height = 13
+          Caption = 'Web Address'
         end
-        object btnProdSweep: TBitBtn
-          Left = 920
-          Top = 6
-          Width = 75
-          Height = 25
-          Anchors = [akTop, akRight]
-          Caption = 'S&weep'
-          TabOrder = 2
-          OnClick = btnProdSweepClick
+        object Label14: TLabel
+          Left = 24
+          Top = 324
+          Width = 72
+          Height = 13
+          Caption = 'Account Code'
         end
-        object chkbxShowInactiveProducts: TCheckBox
-          Left = 9
-          Top = 37
-          Width = 160
-          Height = 17
-          Anchors = [akLeft, akBottom]
-          Caption = 'Show inactive products'
-          TabOrder = 3
-          OnClick = chkbxShowInactiveProductsClick
+        object Label15: TLabel
+          Left = 23
+          Top = 293
+          Width = 46
+          Height = 13
+          Caption = 'Leadtime'
         end
-      end
-      object dbgProductDetails: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 907
-        Height = 317
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
-        ParentFont = False
-        TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgProductDetailsDrawColumnCell
-        OnDblClick = dbgProductDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Supplier_Product_Code'
-            Title.Caption = 'Product Code'
-            Width = 179
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description'
-            Width = 219
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Unit_Cost'
-            Title.Caption = 'Unit Cost'
-            Width = 79
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Effective_Date'
-            Title.Caption = 'Effective Date'
-            Width = 99
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Changed'
-            Title.Caption = 'Date Changed'
-            Width = 102
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Width = 155
-            Visible = True
-          end>
-      end
-      object Panel6: TPanel
-        Left = 907
-        Top = 0
-        Width = 93
-        Height = 317
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 2
-        object btnProdChange: TBitBtn
-          Left = 10
-          Top = 40
-          Width = 75
-          Height = 25
-          Caption = '&Change'
-          TabOrder = 1
-          OnClick = btnProdChangeClick
+        object Label16: TLabel
+          Left = 175
+          Top = 293
+          Width = 23
+          Height = 13
+          Caption = 'days'
         end
-        object btnProdDelete: TBitBtn
-          Left = 10
-          Top = 72
-          Width = 75
-          Height = 25
-          Caption = '&Delete'
-          TabOrder = 2
-          OnClick = btnProdDeleteClick
+        object Label17: TLabel
+          Left = 24
+          Top = 227
+          Width = 71
+          Height = 13
+          Caption = 'Email Address'
         end
-        object btnProdAdd: TBitBtn
-          Left = 10
-          Top = 8
-          Width = 75
-          Height = 25
-          Caption = '&Add'
-          TabOrder = 0
-          OnClick = btnProdAddClick
-        end
-      end
-    end
-    object tsDocuments: TTabSheet
-      Caption = 'Documents'
-      ImageIndex = 3
-      object Panel12: TPanel
-        Left = 0
-        Top = 0
-        Width = 1000
-        Height = 17
-        Align = alTop
-        BevelOuter = bvNone
-        ParentBackground = False
-        TabOrder = 0
-        object Label44: TLabel
-          Left = 2
-          Top = 4
+        object Label18: TLabel
+          Left = 23
+          Top = 258
           Width = 58
           Height = 13
-          Caption = 'Documents'
+          Caption = 'Discount %'
+        end
+        object SpinEdit1: TSpinEdit
+          Left = 104
+          Top = 288
+          Width = 65
+          Height = 22
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 10
+          Value = 0
+        end
+        object edtStreet: TEdit
+          Left = 104
+          Top = 15
+          Width = 233
+          Height = 21
+          TabOrder = 0
+          Text = 'edtStreet'
+          OnChange = EnableOK
+        end
+        object edtLocale: TEdit
+          Left = 104
+          Top = 39
+          Width = 233
+          Height = 21
+          TabOrder = 1
+          Text = 'edtLocale'
+        end
+        object edtTownCity: TEdit
+          Left = 104
+          Top = 63
+          Width = 233
+          Height = 21
+          TabOrder = 2
+          Text = 'edtTownCity'
+        end
+        object edtPostcode: TEdit
+          Left = 104
+          Top = 87
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          TabOrder = 3
+          Text = 'EDTPOSTCODE'
+          OnChange = EnableOK
+        end
+        object edtCountyState: TEdit
+          Left = 104
+          Top = 111
+          Width = 233
+          Height = 21
+          TabOrder = 4
+          Text = 'edtCountyState'
+        end
+        object edtTelephoneNumber: TEdit
+          Left = 104
+          Top = 144
+          Width = 169
+          Height = 21
+          TabOrder = 5
+          Text = 'edtTelephoneNumber'
+          OnChange = EnableOK
+        end
+        object edtFaxNumber: TEdit
+          Left = 104
+          Top = 168
+          Width = 169
+          Height = 21
+          TabOrder = 6
+          Text = 'edtFaxNumber'
+        end
+        object edtWebAddress: TEdit
+          Left = 104
+          Top = 196
+          Width = 265
+          Height = 21
+          TabOrder = 7
+          Text = 'edtWebAddress'
+        end
+        object edtEmailAddress: TEdit
+          Left = 104
+          Top = 223
+          Width = 265
+          Height = 21
+          TabOrder = 8
+          Text = 'edtEmailAddress'
+        end
+        object edtDiscountPercentage: TCREditFloat
+          Left = 104
+          Top = 254
+          Width = 65
+          Height = 21
+          TabOrder = 9
+          Text = 'edtDiscountPercentage'
+        end
+        object edtAccountCode: TEdit
+          Left = 104
+          Top = 320
+          Width = 81
+          Height = 21
+          TabOrder = 11
+          Text = 'edtAccountCode'
+          OnChange = EnableOK
         end
       end
-      object Panel11: TPanel
-        Left = 0
-        Top = 17
-        Width = 1000
-        Height = 362
-        Align = alClient
-        Caption = 'Panel11'
-        ParentBackground = False
-        TabOrder = 1
-        object lstvwDocuments: TListView
-          Left = 1
-          Top = 1
-          Width = 969
-          Height = 360
+      object tsMaterials: TTabSheet
+        Caption = 'Material Cost Details'
+        ImageIndex = 2
+        OnShow = tsMaterialsShow
+        object Panel3: TPanel
+          Left = 907
+          Top = 0
+          Width = 93
+          Height = 317
+          Align = alRight
+          ParentBackground = False
+          TabOrder = 0
+          object btnChange: TBitBtn
+            Left = 10
+            Top = 40
+            Width = 75
+            Height = 25
+            Caption = '&Change'
+            TabOrder = 1
+            OnClick = btnChangeClick
+          end
+          object btnDelete: TBitBtn
+            Left = 10
+            Top = 72
+            Width = 75
+            Height = 25
+            Caption = '&Delete'
+            TabOrder = 2
+            OnClick = btnDeleteClick
+          end
+          object btnAdd: TBitBtn
+            Left = 10
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = btnAddClick
+          end
+          object btnMaterials: TBitBtn
+            Left = 10
+            Top = 144
+            Width = 75
+            Height = 25
+            Caption = '&Materials'
+            TabOrder = 4
+            OnClick = btnMaterialsClick
+          end
+          object btnCosts: TBitBtn
+            Left = 10
+            Top = 109
+            Width = 75
+            Height = 25
+            Caption = '&Costs'
+            TabOrder = 3
+            OnClick = btnCostsClick
+          end
+          object btnWorktops: TBitBtn
+            Left = 10
+            Top = 178
+            Width = 75
+            Height = 25
+            Caption = '&Worktops'
+            TabOrder = 5
+            OnClick = btnWorktopsClick
+          end
+        end
+        object dbgDetails: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 907
+          Height = 317
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDrawColumnCell = dbgDetailsDrawColumnCell
+          OnDblClick = dbgDetailsDblClick
           Columns = <
             item
-              Caption = 'Name'
-              Width = 200
+              Expanded = False
+              FieldName = 'Material_Type_Description'
+              Title.Caption = 'Material'
+              Width = 125
+              Visible = True
             end
             item
-              Caption = 'Type'
-              Width = 200
+              Expanded = False
+              FieldName = 'Worktop_Group_Description'
+              Title.Caption = 'Group'
+              Width = 81
+              Visible = True
             end
             item
-              Caption = 'Date modified'
-              Width = 200
+              Expanded = False
+              FieldName = 'Worktop_Description'
+              Title.Caption = 'Colour'
+              Width = 211
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Thickness_mm'
+              Title.Caption = 'Thickness (mm)'
+              Width = 82
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Unit_Cost'
+              Title.Caption = 'Unit Cost (sq m)'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Effective_Date'
+              Title.Caption = 'Effective Date'
+              Width = 84
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Changed'
+              Title.Caption = 'Date Changed'
+              Width = 104
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Operator_Name'
+              Title.Caption = 'Operator'
+              Visible = True
             end>
-          LargeImages = imgDocuments
-          RowSelect = True
-          PopupMenu = pmnuDocuments
-          SmallImages = imgDocuments
-          TabOrder = 0
-          OnColumnClick = lstvwDocumentsColumnClick
-          OnCompare = lstvwDocumentsCompare
-          OnDblClick = lstvwDocumentsDblClick
         end
-        object ToolBar1: TToolBar
-          Left = 970
-          Top = 1
-          Width = 29
-          Height = 360
+        object pnlMaterialsFooter: TPanel
+          Left = 0
+          Top = 317
+          Width = 1000
+          Height = 62
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 2
+          DesignSize = (
+            1000
+            62)
+          object Label3: TLabel
+            Left = 8
+            Top = 12
+            Width = 42
+            Height = 13
+            Caption = 'Material'
+          end
+          object Label10: TLabel
+            Left = 160
+            Top = 12
+            Width = 35
+            Height = 13
+            Caption = 'Colour'
+          end
+          object Label11: TLabel
+            Left = 304
+            Top = 12
+            Width = 50
+            Height = 13
+            Caption = 'Thickness'
+          end
+          object Label12: TLabel
+            Left = 448
+            Top = 12
+            Width = 33
+            Height = 13
+            Caption = 'Group'
+          end
+          object Label13: TLabel
+            Left = 592
+            Top = 12
+            Width = 70
+            Height = 13
+            Caption = 'Effective Date'
+          end
+          object edtMaterial: TEdit
+            Left = 56
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 0
+            OnChange = edtMaterialChange
+          end
+          object Panel4: TPanel
+            Left = 896
+            Top = 1
+            Width = 103
+            Height = 60
+            Align = alRight
+            Alignment = taRightJustify
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 4
+          end
+          object edtColour: TEdit
+            Left = 200
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 1
+            OnChange = edtColourChange
+          end
+          object edtThickness: TEdit
+            Left = 360
+            Top = 8
+            Width = 73
+            Height = 21
+            TabOrder = 2
+            OnChange = edtThicknessChange
+          end
+          object edtGroup: TEdit
+            Left = 488
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 3
+            OnChange = edtGroupChange
+          end
+          object btnClear: TBitBtn
+            Left = 832
+            Top = 6
+            Width = 75
+            Height = 25
+            Caption = 'Cl&ear'
+            TabOrder = 5
+            OnClick = btnClearClick
+          end
+          object edtEffectiveDate: TEdit
+            Left = 669
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 6
+            OnExit = edtEffectiveDateExit
+            OnKeyPress = edtEffectiveDateKeyPress
+          end
+          object btnEffectiveDate: TBitBtn
+            Left = 757
+            Top = 6
+            Width = 25
+            Height = 25
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+              333337FFFFFFFF77333330000000000333333777777777733333}
+            NumGlyphs = 2
+            TabOrder = 7
+            OnClick = btnEffectiveDateClick
+          end
+          object BitBtn5: TBitBtn
+            Left = 789
+            Top = 6
+            Width = 25
+            Height = 25
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
+              555557777F777555F55500000000555055557777777755F75555005500055055
+              555577F5777F57555555005550055555555577FF577F5FF55555500550050055
+              5555577FF77577FF555555005050110555555577F757777FF555555505099910
+              555555FF75777777FF555005550999910555577F5F77777775F5500505509990
+              3055577F75F77777575F55005055090B030555775755777575755555555550B0
+              B03055555F555757575755550555550B0B335555755555757555555555555550
+              BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
+              50BB555555555555575F555555555555550B5555555555555575}
+            NumGlyphs = 2
+            TabOrder = 8
+            OnClick = BitBtn5Click
+          end
+          object btnSweep: TBitBtn
+            Left = 896
+            Top = 6
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'S&weep'
+            TabOrder = 9
+            OnClick = btnSweepClick
+          end
+          object chkbxShowInactive: TCheckBox
+            Left = 9
+            Top = 37
+            Width = 160
+            Height = 17
+            Anchors = [akLeft, akBottom]
+            Caption = 'Show inactive materials'
+            TabOrder = 10
+            OnClick = chkbxShowInactiveClick
+          end
+        end
+      end
+      object tsWorktops: TTabSheet
+        Caption = 'Material Summary'
+        ImageIndex = 4
+        OnShow = tsWorktopsShow
+        object Panel2: TPanel
+          Left = 0
+          Top = 317
+          Width = 1000
+          Height = 62
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 0
+          DesignSize = (
+            1000
+            62)
+          object Label20: TLabel
+            Left = 8
+            Top = 12
+            Width = 42
+            Height = 13
+            Caption = 'Material'
+          end
+          object Label21: TLabel
+            Left = 160
+            Top = 12
+            Width = 35
+            Height = 13
+            Caption = 'Colour'
+          end
+          object Label23: TLabel
+            Left = 304
+            Top = 12
+            Width = 33
+            Height = 13
+            Caption = 'Group'
+          end
+          object edtMaterial1: TEdit
+            Left = 56
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 0
+            OnChange = edtMaterial1Change
+          end
+          object Panel5: TPanel
+            Left = 896
+            Top = 1
+            Width = 103
+            Height = 60
+            Align = alRight
+            Alignment = taRightJustify
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 3
+          end
+          object edtColour1: TEdit
+            Left = 200
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 1
+            OnChange = edtColour1Change
+          end
+          object edtGroup1: TEdit
+            Left = 344
+            Top = 8
+            Width = 85
+            Height = 21
+            TabOrder = 2
+            OnChange = edtGroup1Change
+          end
+          object BitBtn1: TBitBtn
+            Left = 832
+            Top = 6
+            Width = 75
+            Height = 25
+            Caption = 'Cl&ear'
+            TabOrder = 4
+            OnClick = BitBtn1Click
+          end
+          object CheckBox1: TCheckBox
+            Left = 9
+            Top = 37
+            Width = 160
+            Height = 17
+            Anchors = [akLeft, akBottom]
+            Caption = 'Show inactive materials'
+            TabOrder = 5
+            OnClick = CheckBox1Click
+          end
+        end
+        object Panel7: TPanel
+          Left = 907
+          Top = 0
+          Width = 93
+          Height = 317
           Align = alRight
-          ButtonHeight = 30
-          ButtonWidth = 30
-          Caption = 'ToolBar1'
-          HotImages = imgIcons
-          Images = imgIcons
-          ParentShowHint = False
-          ShowHint = True
+          ParentBackground = False
           TabOrder = 1
-          object btnExcel: TToolButton
-            Left = 0
-            Top = 0
-            Hint = 'Excel'
-            Caption = 'btnExcel'
-            ImageIndex = 0
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnExcelClick
+          object btnChangeWorktop: TBitBtn
+            Left = 10
+            Top = 40
+            Width = 75
+            Height = 25
+            Caption = '&Change'
+            TabOrder = 1
+            OnClick = btnChangeWorktopClick
           end
-          object btnWord: TToolButton
-            Left = 0
-            Top = 30
-            Hint = 'Word'
-            Caption = 'btnWord'
-            ImageIndex = 1
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnExcelClick
+          object btnDeleteWorktop: TBitBtn
+            Left = 10
+            Top = 72
+            Width = 75
+            Height = 25
+            Caption = '&Delete'
+            TabOrder = 2
+            OnClick = btnDeleteClick
           end
-          object btnEmail: TToolButton
-            Left = 0
-            Top = 60
-            Hint = 'Email'
-            Caption = 'btnEmail'
-            ImageIndex = 2
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnEmailClick
+          object BitBtn9: TBitBtn
+            Left = 10
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = btnAddClick
           end
-          object btnAttach: TToolButton
-            Left = 0
-            Top = 90
-            Hint = 'Attach Documents'
-            Caption = 'btnAttach'
-            ImageIndex = 3
+          object BitBtn10: TBitBtn
+            Left = 10
+            Top = 144
+            Width = 75
+            Height = 25
+            Caption = '&Materials'
+            TabOrder = 3
+            OnClick = btnMaterialsClick
+          end
+          object BitBtn12: TBitBtn
+            Left = 10
+            Top = 178
+            Width = 75
+            Height = 25
+            Caption = '&Worktops'
+            TabOrder = 4
+            OnClick = btnWorktopsClick
+          end
+        end
+        object dbgWorktopDetails: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 907
+          Height = 317
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          TabOrder = 2
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDrawColumnCell = dbgWorktopDetailsDrawColumnCell
+          OnDblClick = dbgWorktopDetailsDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Material_Type_Description'
+              Title.Caption = 'Material'
+              Width = 149
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Worktop_Group_Description'
+              Title.Caption = 'Group'
+              Width = 107
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Worktop_Description'
+              Title.Caption = 'Colour'
+              Width = 232
+              Visible = True
+            end>
+        end
+      end
+      object tsProducts: TTabSheet
+        Caption = 'Products'
+        ImageIndex = 3
+        OnShow = tsProductsShow
+        object pnlProductsFooter: TPanel
+          Left = 0
+          Top = 317
+          Width = 1000
+          Height = 62
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 0
+          DesignSize = (
+            1000
+            62)
+          object Label19: TLabel
+            Left = 8
+            Top = 12
+            Width = 34
+            Height = 13
+            Caption = 'Search'
+          end
+          object edtSearch: TEdit
+            Left = 56
+            Top = 8
+            Width = 137
+            Height = 21
+            TabOrder = 0
+            OnChange = edtSearchChange
+          end
+          object btnProdClear: TBitBtn
+            Left = 224
+            Top = 6
+            Width = 75
+            Height = 25
+            Caption = 'Cl&ear'
+            TabOrder = 1
+            OnClick = btnProdClearClick
+          end
+          object btnProdSweep: TBitBtn
+            Left = 920
+            Top = 6
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'S&weep'
+            TabOrder = 2
+            OnClick = btnProdSweepClick
+          end
+          object chkbxShowInactiveProducts: TCheckBox
+            Left = 9
+            Top = 37
+            Width = 160
+            Height = 17
+            Anchors = [akLeft, akBottom]
+            Caption = 'Show inactive products'
+            TabOrder = 3
+            OnClick = chkbxShowInactiveProductsClick
+          end
+        end
+        object dbgProductDetails: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 907
+          Height = 317
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          ParentFont = False
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDrawColumnCell = dbgProductDetailsDrawColumnCell
+          OnDblClick = dbgProductDetailsDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Supplier_Product_Code'
+              Title.Caption = 'Product Code'
+              Width = 179
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Description'
+              Width = 219
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Unit_Cost'
+              Title.Caption = 'Unit Cost'
+              Width = 79
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Effective_Date'
+              Title.Caption = 'Effective Date'
+              Width = 99
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Changed'
+              Title.Caption = 'Date Changed'
+              Width = 102
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Operator_Name'
+              Title.Caption = 'Operator'
+              Width = 155
+              Visible = True
+            end>
+        end
+        object Panel6: TPanel
+          Left = 907
+          Top = 0
+          Width = 93
+          Height = 317
+          Align = alRight
+          ParentBackground = False
+          TabOrder = 2
+          object btnProdChange: TBitBtn
+            Left = 10
+            Top = 40
+            Width = 75
+            Height = 25
+            Caption = '&Change'
+            TabOrder = 1
+            OnClick = btnProdChangeClick
+          end
+          object btnProdDelete: TBitBtn
+            Left = 10
+            Top = 72
+            Width = 75
+            Height = 25
+            Caption = '&Delete'
+            TabOrder = 2
+            OnClick = btnProdDeleteClick
+          end
+          object btnProdAdd: TBitBtn
+            Left = 10
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = btnProdAddClick
+          end
+        end
+      end
+      object tsDocuments: TTabSheet
+        Caption = 'Documents'
+        ImageIndex = 3
+        object Panel12: TPanel
+          Left = 0
+          Top = 0
+          Width = 1000
+          Height = 17
+          Align = alTop
+          BevelOuter = bvNone
+          ParentBackground = False
+          TabOrder = 0
+          object Label44: TLabel
+            Left = 2
+            Top = 4
+            Width = 58
+            Height = 13
+            Caption = 'Documents'
+          end
+        end
+        object Panel11: TPanel
+          Left = 0
+          Top = 17
+          Width = 1000
+          Height = 362
+          Align = alClient
+          Caption = 'Panel11'
+          ParentBackground = False
+          TabOrder = 1
+          object lstvwDocuments: TListView
+            Left = 1
+            Top = 1
+            Width = 969
+            Height = 360
+            Align = alClient
+            Columns = <
+              item
+                Caption = 'Name'
+                Width = 200
+              end
+              item
+                Caption = 'Type'
+                Width = 200
+              end
+              item
+                Caption = 'Date modified'
+                Width = 200
+              end>
+            LargeImages = imgDocuments
+            RowSelect = True
+            PopupMenu = pmnuDocuments
+            SmallImages = imgDocuments
+            TabOrder = 0
+            OnColumnClick = lstvwDocumentsColumnClick
+            OnCompare = lstvwDocumentsCompare
+            OnDblClick = lstvwDocumentsDblClick
+          end
+          object ToolBar1: TToolBar
+            Left = 970
+            Top = 1
+            Width = 29
+            Height = 360
+            Align = alRight
+            ButtonHeight = 30
+            ButtonWidth = 30
+            Caption = 'ToolBar1'
+            HotImages = imgIcons
+            Images = imgIcons
             ParentShowHint = False
             ShowHint = True
-            OnClick = btnAttachClick
+            TabOrder = 1
+            object btnExcel: TToolButton
+              Left = 0
+              Top = 0
+              Hint = 'Excel'
+              Caption = 'btnExcel'
+              ImageIndex = 0
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnExcelClick
+            end
+            object btnWord: TToolButton
+              Left = 0
+              Top = 30
+              Hint = 'Word'
+              Caption = 'btnWord'
+              ImageIndex = 1
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnExcelClick
+            end
+            object btnEmail: TToolButton
+              Left = 0
+              Top = 60
+              Hint = 'Email'
+              Caption = 'btnEmail'
+              ImageIndex = 2
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnEmailClick
+            end
+            object btnAttach: TToolButton
+              Left = 0
+              Top = 90
+              Hint = 'Attach Documents'
+              Caption = 'btnAttach'
+              ImageIndex = 3
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnAttachClick
+            end
           end
         end
       end

@@ -71,6 +71,7 @@ type
     DeliveryToStockChk: TCheckBox;
     Label3: TLabel;
     CountyEdit: TEdit;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

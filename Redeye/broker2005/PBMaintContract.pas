@@ -127,6 +127,7 @@ type
     Label42: TLabel;
     memTotalSI: TMemo;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnAccountManagerClick(Sender: TObject);

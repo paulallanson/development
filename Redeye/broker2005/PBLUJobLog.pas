@@ -12,7 +12,7 @@ uses
 type
   TPBLUJobLogFrm = class(TForm)
     dbgDetails: TDBGrid;
-    Panel3: TPanel;
+    pnlFilters: TPanel;
     Label1: TLabel;
     Label4: TLabel;
     Label5: TLabel;
@@ -21,7 +21,7 @@ type
     memOvertime: TMemo;
     memLabour: TMemo;
     dtmDateFrom: TDateTimePicker;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     lblSearch: TLabel;
     edtSearch: TEdit;
     btnSearch: TBitBtn;
@@ -31,6 +31,7 @@ type
     stsbrDetails: TStatusBar;
     tmrSearch: TTimer;
     Query1: TFDQuery;
+    pnlBody: TPanel;
     procedure btnExcelClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -29,7 +29,7 @@ type
     dblkpWorktop: TDBLookupComboBox;
     dblkpMaterial: TDBLookupComboBox;
     dblkpSlabSize: TDBLookupComboBox;
-    Panel1: TPanel;
+    pnlCostDetails: TPanel;
     OrdqtyLbl: TLabel;
     lblQtyDelivered: TLabel;
     lblQtyInvoiced: TLabel;
@@ -55,6 +55,7 @@ type
     Label2: TLabel;
     edtSalesOrder: TCREditInt;
     SpeedButton2: TSpeedButton;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);

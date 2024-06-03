@@ -16,7 +16,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   OnDestroy = FormDestroy
   OnShow = FormShow
   TextHeight = 13
-  object Panel1: TPanel
+  object pnlBottom: TPanel
     Left = 0
     Top = 254
     Width = 522
@@ -88,128 +88,144 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       TabOrder = 5
     end
   end
-  object Panel2: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
     Width = 522
-    Height = 49
-    Align = alTop
-    ParentBackground = False
-    TabOrder = 1
-    DesignSize = (
-      522
-      49)
-    object Label1: TLabel
-      Left = 8
-      Top = 8
-      Width = 39
-      Height = 13
-      Caption = 'Job No.'
-    end
-    object Label2: TLabel
-      Left = 342
-      Top = 8
-      Width = 80
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Sales Order No.'
-      ExplicitLeft = 332
-    end
-    object memSelection: TMemo
-      Left = 8
-      Top = 24
-      Width = 130
-      Height = 21
-      ReadOnly = True
-      TabOrder = 0
-      OnChange = EnableRun
-    end
-    object memSOrderNumber: TMemo
-      Left = 342
-      Top = 24
-      Width = 130
-      Height = 21
-      Anchors = [akTop, akRight]
-      ReadOnly = True
-      TabOrder = 1
-      OnChange = EnableRun
-    end
-  end
-  object pnlDocuments: TPanel
-    Left = 0
-    Top = 49
-    Width = 522
-    Height = 55
+    Height = 254
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 2
-    object Label3: TLabel
-      Left = 8
-      Top = 5
-      Width = 207
-      Height = 13
-      Caption = 'Include documents from selected folder:'
-    end
-    object cmbDocuments: TComboBox
-      Left = 8
-      Top = 26
-      Width = 273
-      Height = 22
-      Style = csOwnerDrawFixed
-      ItemIndex = 0
+    TabOrder = 1
+    ExplicitLeft = 176
+    ExplicitTop = 168
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 522
+      Height = 49
+      Align = alTop
+      ParentBackground = False
       TabOrder = 0
-      Text = '<All>'
-      OnChange = cmbDocumentsChange
-      Items.Strings = (
-        '<All>')
+      DesignSize = (
+        522
+        49)
+      object Label1: TLabel
+        Left = 8
+        Top = 8
+        Width = 39
+        Height = 13
+        Caption = 'Job No.'
+      end
+      object Label2: TLabel
+        Left = 342
+        Top = 8
+        Width = 80
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Sales Order No.'
+        ExplicitLeft = 332
+      end
+      object memSelection: TMemo
+        Left = 8
+        Top = 24
+        Width = 130
+        Height = 21
+        ReadOnly = True
+        TabOrder = 0
+        OnChange = EnableRun
+      end
+      object memSOrderNumber: TMemo
+        Left = 342
+        Top = 24
+        Width = 130
+        Height = 21
+        Anchors = [akTop, akRight]
+        ReadOnly = True
+        TabOrder = 1
+        OnChange = EnableRun
+      end
     end
-  end
-  object Panel3: TPanel
-    Left = 0
-    Top = 104
-    Width = 522
-    Height = 150
-    Align = alBottom
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 3
-    object lstbxDocuments: TListBox
-      Left = 8
-      Top = 14
-      Width = 273
-      Height = 129
-      ItemHeight = 13
-      MultiSelect = True
-      TabOrder = 0
-      OnDblClick = lstbxDocumentsDblClick
-    end
-    object chkbxIncludeVoucher: TCheckBox
-      Left = 314
-      Top = 38
-      Width = 97
-      Height = 17
-      Caption = 'Include Voucher'
+    object Panel3: TPanel
+      Left = 0
+      Top = 104
+      Width = 522
+      Height = 150
+      Align = alBottom
+      BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
-      Visible = False
+      object lstbxDocuments: TListBox
+        Left = 8
+        Top = 14
+        Width = 273
+        Height = 129
+        ItemHeight = 13
+        MultiSelect = True
+        TabOrder = 0
+        OnDblClick = lstbxDocumentsDblClick
+      end
+      object chkbxIncludeVoucher: TCheckBox
+        Left = 314
+        Top = 38
+        Width = 97
+        Height = 17
+        Caption = 'Include Voucher'
+        TabOrder = 1
+        Visible = False
+      end
+      object chkbxAllDocuments: TCheckBox
+        Left = 314
+        Top = 15
+        Width = 201
+        Height = 17
+        Caption = 'Select ALL additional order documents'
+        TabOrder = 2
+        OnClick = chkbxAllDocumentsClick
+      end
+      object chkbxPrint: TCheckBox
+        Left = 314
+        Top = 64
+        Width = 209
+        Height = 17
+        Caption = 'Print/Email Remedial Sheet'
+        TabOrder = 3
+        Visible = False
+      end
     end
-    object chkbxAllDocuments: TCheckBox
-      Left = 314
-      Top = 15
-      Width = 201
-      Height = 17
-      Caption = 'Select ALL additional order documents'
+    object pnlDocuments: TPanel
+      Left = 0
+      Top = 49
+      Width = 522
+      Height = 55
+      Align = alClient
+      BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
-      OnClick = chkbxAllDocumentsClick
-    end
-    object chkbxPrint: TCheckBox
-      Left = 314
-      Top = 64
-      Width = 209
-      Height = 17
-      Caption = 'Print/Email Remedial Sheet'
-      TabOrder = 3
-      Visible = False
+      ExplicitTop = 0
+      ExplicitHeight = 254
+      object Label3: TLabel
+        Left = 8
+        Top = 5
+        Width = 207
+        Height = 13
+        Caption = 'Include documents from selected folder:'
+      end
+      object cmbDocuments: TComboBox
+        Left = 8
+        Top = 26
+        Width = 273
+        Height = 22
+        Style = csOwnerDrawFixed
+        ItemIndex = 0
+        TabOrder = 0
+        Text = '<All>'
+        OnChange = cmbDocumentsChange
+        Items.Strings = (
+          '<All>')
+      end
     end
   end
   object qryDocumentStructure: TFDQuery

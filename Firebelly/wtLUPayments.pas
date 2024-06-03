@@ -13,16 +13,17 @@ uses
 type
   TfrmwtLUPayments = class(TForm)
     dbgDetails: TDBGrid;
+    pnlBody: TPanel;
     srcPayments: TDataSource;
     stsbrDetails: TStatusBar;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     btnAdd: TBitBtn;
     btnEdit: TBitBtn;
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     btnExcel: TBitBtn;
     qryDelete: TFDQuery;
-    Panel2: TPanel;
+    pnlBottom: TPanel;
     Label1: TLabel;
     lblTotalPayments: TLabel;
     qryPayments: TFDQuery;

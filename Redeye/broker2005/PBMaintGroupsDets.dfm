@@ -110,7 +110,6 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       Top = 40
       Width = 397
       Height = 34
-      Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
