@@ -30,6 +30,7 @@ type
     edtName: TEdit;
     tmrRefresh: TTimer;
     BitBtn2: TBitBtn;
+    pnlBody: TPanel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

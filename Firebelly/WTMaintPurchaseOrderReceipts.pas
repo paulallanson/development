@@ -28,6 +28,7 @@ type
     edtNumber: TEdit;
     Label7: TLabel;
     edtReference: TEdit;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);

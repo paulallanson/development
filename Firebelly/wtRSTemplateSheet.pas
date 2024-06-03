@@ -640,7 +640,6 @@ begin
       for irow := 1 to frmWTEmailList.EmailListGrid.Rowcount -1 do
       begin
         //if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
-
         sOrderNumber := EmailArray[irow,1];
         sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
         FEmailAttachment.clear;
