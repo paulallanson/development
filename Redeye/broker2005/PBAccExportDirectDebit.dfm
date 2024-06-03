@@ -4,7 +4,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   BorderStyle = bsSingle
   Caption = 'Export Invoice Direct Debit details'
   ClientHeight = 403
-  ClientWidth = 529
+  ClientWidth = 533
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -17,11 +17,12 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   object pnlButtons: TPanel
     Left = 0
     Top = 362
-    Width = 529
+    Width = 533
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 529
     object btnExport: TButton
       Left = 352
       Top = 8
@@ -41,213 +42,229 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       OnClick = btnCancelClick
     end
   end
-  object pnlRight: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 529
-    Height = 318
+    Width = 533
+    Height = 362
     Align = alClient
     BevelOuter = bvNone
-    ParentBackground = False
     TabOrder = 1
-    object pnlNumberRange: TPanel
-      Left = 153
+    ExplicitLeft = 184
+    ExplicitTop = 200
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlExpFile: TPanel
+      Left = 0
+      Top = 318
+      Width = 533
+      Height = 44
+      Align = alBottom
+      ParentBackground = False
+      TabOrder = 0
+      object lblExpTo: TLabel
+        Left = 8
+        Top = 16
+        Width = 51
+        Height = 13
+        Caption = 'Export To:'
+      end
+      object edtExpFile: TEdit
+        Left = 64
+        Top = 12
+        Width = 377
+        Height = 21
+        TabOrder = 0
+      end
+      object btnBrowse: TButton
+        Left = 448
+        Top = 10
+        Width = 75
+        Height = 25
+        Caption = 'Browse'
+        TabOrder = 1
+        OnClick = btnBrowseClick
+      end
+    end
+    object pnlRight: TPanel
+      Left = 0
       Top = 0
-      Width = 376
+      Width = 533
       Height = 318
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 0
-      object lblInvNumber: TLabel
-        Left = 24
-        Top = 6
-        Width = 91
-        Height = 13
-        Caption = 'Invoice Number(s)'
-      end
-      object Label1: TLabel
-        Left = 24
-        Top = 68
-        Width = 244
-        Height = 39
-        Caption = 
-          'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
-          ' For example, 1234, 1236, 1240-1245'
-        WordWrap = True
-      end
-      object edtInvNo: TEdit
-        Left = 64
-        Top = 26
-        Width = 41
-        Height = 21
-        TabOrder = 0
-      end
-      object SelectionMemo: TMemo
-        Left = 24
-        Top = 24
-        Width = 265
-        Height = 41
-        TabOrder = 1
-      end
-      object SelectLst: TListBox
-        Left = 200
-        Top = 8
-        Width = 25
-        Height = 33
-        ItemHeight = 13
-        Sorted = True
-        TabOrder = 2
-        Visible = False
-      end
-    end
-    object pnlDateRange: TPanel
-      Left = 409
-      Top = -8
-      Width = 380
-      Height = 319
-      BevelOuter = bvNone
-      ParentBackground = False
       TabOrder = 1
-      object GroupBox2: TGroupBox
-        Left = 152
-        Top = 8
-        Width = 217
-        Height = 76
-        Caption = 'Selection '
+      ExplicitHeight = 362
+      object pnlNumberRange: TPanel
+        Left = 153
+        Top = 0
+        Width = 380
+        Height = 318
+        Align = alClient
+        BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        object lblDateFrom: TLabel
-          Left = 9
-          Top = 20
-          Width = 56
+        ExplicitHeight = 362
+        object lblInvNumber: TLabel
+          Left = 16
+          Top = 6
+          Width = 91
           Height = 13
-          Caption = 'Date From:'
+          Caption = 'Invoice Number(s)'
         end
-        object lblDateTo: TLabel
-          Left = 9
-          Top = 49
-          Width = 42
-          Height = 13
-          Caption = 'Date To:'
+        object Label1: TLabel
+          Left = 16
+          Top = 68
+          Width = 244
+          Height = 39
+          Caption = 
+            'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
+            ' For example, 1234, 1236, 1240-1245'
+          WordWrap = True
         end
-        object btnDateFrom: TSpeedButton
-          Left = 184
-          Top = 15
-          Width = 25
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000130B0000130B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-            333337FFFFFFFF77333330000000000333333777777777733333}
-          NumGlyphs = 2
-          OnClick = btnDateFromClick
-        end
-        object btnDateTo: TSpeedButton
-          Left = 184
-          Top = 44
-          Width = 25
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000130B0000130B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-            333337FFFFFFFF77333330000000000333333777777777733333}
-          NumGlyphs = 2
-          OnClick = btnDateToClick
-        end
-        object edtDateFrom: TEdit
-          Left = 79
-          Top = 16
-          Width = 98
+        object edtInvNo: TEdit
+          Left = 56
+          Top = 26
+          Width = 41
           Height = 21
-          MaxLength = 10
           TabOrder = 0
-          OnExit = edtDateFromExit
         end
-        object edtDateTo: TEdit
-          Left = 79
-          Top = 45
-          Width = 98
-          Height = 21
-          MaxLength = 10
+        object SelectionMemo: TMemo
+          Left = 16
+          Top = 24
+          Width = 255
+          Height = 41
           TabOrder = 1
-          OnExit = edtDateToExit
+        end
+        object SelectLst: TListBox
+          Left = 192
+          Top = 8
+          Width = 25
+          Height = 33
+          ItemHeight = 13
+          Sorted = True
+          TabOrder = 2
+          Visible = False
         end
       end
-    end
-    object pnleft: TPanel
-      Left = 0
-      Top = 0
-      Width = 153
-      Height = 318
-      Align = alLeft
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 2
-      object rdgrpExportBy: TRadioGroup
-        Left = 8
-        Top = 8
-        Width = 137
-        Height = 76
-        Caption = 'Export By'
-        ItemIndex = 0
-        Items.Strings = (
-          'Date Range'
-          'Invoice Number')
+      object pnlDateRange: TPanel
+        Left = 428
+        Top = -8
+        Width = 363
+        Height = 319
+        BevelOuter = bvNone
         ParentBackground = False
-        TabOrder = 0
-        OnClick = rdgrpExportByClick
+        TabOrder = 1
+        object GroupBox2: TGroupBox
+          Left = 152
+          Top = 8
+          Width = 217
+          Height = 76
+          Caption = 'Selection '
+          ParentBackground = False
+          TabOrder = 0
+          object lblDateFrom: TLabel
+            Left = 9
+            Top = 20
+            Width = 56
+            Height = 13
+            Caption = 'Date From:'
+          end
+          object lblDateTo: TLabel
+            Left = 9
+            Top = 49
+            Width = 42
+            Height = 13
+            Caption = 'Date To:'
+          end
+          object btnDateFrom: TSpeedButton
+            Left = 184
+            Top = 15
+            Width = 25
+            Height = 25
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+              333337FFFFFFFF77333330000000000333333777777777733333}
+            NumGlyphs = 2
+            OnClick = btnDateFromClick
+          end
+          object btnDateTo: TSpeedButton
+            Left = 184
+            Top = 44
+            Width = 25
+            Height = 25
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000130B0000130B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+              333337FFFFFFFF77333330000000000333333777777777733333}
+            NumGlyphs = 2
+            OnClick = btnDateToClick
+          end
+          object edtDateFrom: TEdit
+            Left = 79
+            Top = 16
+            Width = 98
+            Height = 21
+            MaxLength = 10
+            TabOrder = 0
+            OnExit = edtDateFromExit
+          end
+          object edtDateTo: TEdit
+            Left = 79
+            Top = 45
+            Width = 98
+            Height = 21
+            MaxLength = 10
+            TabOrder = 1
+            OnExit = edtDateToExit
+          end
+        end
       end
-    end
-  end
-  object pnlExpFile: TPanel
-    Left = 0
-    Top = 318
-    Width = 529
-    Height = 44
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 2
-    object lblExpTo: TLabel
-      Left = 8
-      Top = 16
-      Width = 51
-      Height = 13
-      Caption = 'Export To:'
-    end
-    object edtExpFile: TEdit
-      Left = 64
-      Top = 12
-      Width = 377
-      Height = 21
-      TabOrder = 0
-    end
-    object btnBrowse: TButton
-      Left = 448
-      Top = 10
-      Width = 75
-      Height = 25
-      Caption = 'Browse'
-      TabOrder = 1
-      OnClick = btnBrowseClick
+      object pnleft: TPanel
+        Left = 0
+        Top = 0
+        Width = 153
+        Height = 318
+        Align = alLeft
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 2
+        ExplicitHeight = 362
+        object rdgrpExportBy: TRadioGroup
+          Left = 8
+          Top = 8
+          Width = 137
+          Height = 76
+          Caption = 'Export By'
+          ItemIndex = 0
+          Items.Strings = (
+            'Date Range'
+            'Invoice Number')
+          ParentBackground = False
+          TabOrder = 0
+          OnClick = rdgrpExportByClick
+        end
+      end
     end
   end
   object qrySalesInvByDate: TFDQuery

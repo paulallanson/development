@@ -20,755 +20,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   OnKeyPress = FormKeyPress
   OnResize = FormResize
   TextHeight = 13
-  object Panel2: TPanel
-    Left = 0
-    Top = 624
-    Width = 812
-    Height = 39
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 5
-    object Panel4: TPanel
-      Left = 478
-      Top = 1
-      Width = 333
-      Height = 37
-      Align = alRight
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        333
-        37)
-      object DelLabel: TLabel
-        Left = 19
-        Top = 10
-        Width = 123
-        Height = 15
-        Anchors = [akRight, akBottom]
-        Caption = 'Delete this NCA Note?'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = -12
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object btnOK: TBitBtn
-        Left = 154
-        Top = 6
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Caption = 'OK'
-        Enabled = False
-        Glyph.Data = {
-          DE010000424DDE01000000000000760000002800000024000000120000000100
-          0400000000006801000000000000000000001000000000000000000000000000
-          80000080000000808000800000008000800080800000C0C0C000808080000000
-          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-          3333333333333333333333330000333333333333333333333333F33333333333
-          00003333344333333333333333388F3333333333000033334224333333333333
-          338338F3333333330000333422224333333333333833338F3333333300003342
-          222224333333333383333338F3333333000034222A22224333333338F338F333
-          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
-          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
-          0000333333333A222433333333333338F338F33300003333333333A222433333
-          333333338F338F33000033333333333A222433333333333338F338F300003333
-          33333333A222433333333333338F338F00003333333333333A22433333333333
-          3338F38F000033333333333333A223333333333333338F830000333333333333
-          333A333333333333333338330000333333333333333333333333333333333333
-          0000}
-        NumGlyphs = 2
-        TabOrder = 0
-        OnClick = btnOKClick
-      end
-      object btnCancel: TBitBtn
-        Left = 242
-        Top = 6
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Kind = bkCancel
-        NumGlyphs = 2
-        TabOrder = 1
-      end
-    end
-  end
-  object pnlJobBag: TPanel
-    Left = 0
-    Top = 97
-    Width = 812
-    Height = 97
-    Align = alTop
-    ParentBackground = False
-    TabOrder = 1
-    DesignSize = (
-      812
-      97)
-    object labJobBagInfo: TLabel
-      Left = 9
-      Top = 15
-      Width = 61
-      Height = 13
-      Caption = 'Job Bag No.'
-    end
-    object Label25: TLabel
-      Left = 456
-      Top = 15
-      Width = 51
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Start Date'
-      ExplicitLeft = 462
-    end
-    object Label3: TLabel
-      Left = 645
-      Top = 15
-      Width = 74
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Date Required'
-      ExplicitLeft = 651
-    end
-    object Label2: TLabel
-      Left = 9
-      Top = 42
-      Width = 49
-      Height = 13
-      Caption = 'Customer'
-    end
-    object Label1: TLabel
-      Left = 660
-      Top = 42
-      Width = 20
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Rep'
-      ExplicitLeft = 666
-    end
-    object Label5: TLabel
-      Left = 598
-      Top = 72
-      Width = 91
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Account Manager'
-      ExplicitLeft = 604
-    end
-    object Label4: TLabel
-      Left = 9
-      Top = 72
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-    end
-    object edtJobBag: TEdit
-      Left = 80
-      Top = 11
-      Width = 81
-      Height = 21
-      TabOrder = 0
-      OnChange = CheckOK
-      OnExit = edtJobBagExit
-      OnKeyPress = edtJobBagKeyPress
-    end
-    object edtStartDate: TEdit
-      Left = 512
-      Top = 11
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
-      TabOrder = 1
-    end
-    object edtDateReq: TEdit
-      Left = 727
-      Top = 11
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
-      TabOrder = 2
-      OnChange = CheckOK
-    end
-    object edtCustomer: TEdit
-      Left = 80
-      Top = 38
-      Width = 285
-      Height = 21
-      Anchors = [akLeft, akTop, akRight]
-      Enabled = False
-      ReadOnly = True
-      TabOrder = 3
-    end
-    object edtRep: TEdit
-      Left = 693
-      Top = 38
-      Width = 115
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
-      TabOrder = 4
-    end
-    object edtAccountManager: TEdit
-      Left = 693
-      Top = 68
-      Width = 115
-      Height = 21
-      TabStop = False
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
-      TabOrder = 5
-    end
-    object edtDescription: TEdit
-      Left = 80
-      Top = 68
-      Width = 441
-      Height = 21
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ReadOnly = True
-      TabOrder = 6
-      OnChange = CheckOK
-    end
-  end
-  object pnlNotes: TPanel
-    Left = 0
-    Top = 266
-    Width = 812
-    Height = 277
-    Align = alClient
-    ParentBackground = False
-    TabOrder = 3
-    object pnlNCADetails: TPanel
-      Left = 1
-      Top = 1
-      Width = 810
-      Height = 85
-      Align = alTop
-      Caption = 'pnlNCADetails'
-      ParentBackground = False
-      TabOrder = 0
-      object Panel5: TPanel
-        Left = 1
-        Top = 1
-        Width = 808
-        Height = 20
-        Align = alTop
-        Alignment = taLeftJustify
-        Caption = 'Non Conformance Details'
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object memDetails: TMemo
-        Left = 1
-        Top = 21
-        Width = 808
-        Height = 63
-        Align = alClient
-        ScrollBars = ssVertical
-        TabOrder = 1
-        OnChange = memDetailsChange
-      end
-    end
-    object pnlResponse: TPanel
-      Left = 1
-      Top = 86
-      Width = 810
-      Height = 20
-      Align = alClient
-      Caption = 'pnlResponse'
-      ParentBackground = False
-      TabOrder = 1
-      object Panel6: TPanel
-        Left = 1
-        Top = 1
-        Width = 808
-        Height = 20
-        Align = alTop
-        Alignment = taLeftJustify
-        Caption = 'Response Details'
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object memResponse: TMemo
-        Left = 1
-        Top = 21
-        Width = 808
-        Height = 11
-        Align = alClient
-        ScrollBars = ssVertical
-        TabOrder = 1
-      end
-    end
-    object pnlAction: TPanel
-      Left = 1
-      Top = 106
-      Width = 810
-      Height = 85
-      Align = alBottom
-      Caption = 'pnlAction'
-      ParentBackground = False
-      TabOrder = 2
-      object pnlActionLabel: TPanel
-        Left = 1
-        Top = 1
-        Width = 808
-        Height = 20
-        Align = alTop
-        Alignment = taLeftJustify
-        Caption = 'Corrective Action'
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object memAction: TRichEdit
-        Left = 1
-        Top = 21
-        Width = 808
-        Height = 63
-        Align = alClient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-      end
-    end
-    object pnlPrevent: TPanel
-      Left = 1
-      Top = 191
-      Width = 810
-      Height = 85
-      Align = alBottom
-      Caption = 'pnlPrevent'
-      ParentBackground = False
-      TabOrder = 3
-      object Panel3: TPanel
-        Left = 1
-        Top = 1
-        Width = 808
-        Height = 20
-        Align = alTop
-        Alignment = taLeftJustify
-        Caption = 'Preventative Action'
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object memPrevent: TRichEdit
-        Left = 1
-        Top = 21
-        Width = 808
-        Height = 63
-        Align = alClient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-      end
-    end
-  end
-  object pnlQASignOff: TPanel
-    Left = 0
-    Top = 543
-    Width = 812
-    Height = 81
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 4
-    DesignSize = (
-      812
-      81)
-    object Label14: TLabel
-      Left = 635
-      Top = 40
-      Width = 88
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Cost to Company'
-      ExplicitLeft = 641
-    end
-    object Label6: TLabel
-      Left = 651
-      Top = 8
-      Width = 70
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Cost to Client'
-      ExplicitLeft = 657
-    end
-    object Label12: TLabel
-      Left = 336
-      Top = 10
-      Width = 90
-      Height = 13
-      Caption = 'QA Signed off by:'
-    end
-    object Label13: TLabel
-      Left = 392
-      Top = 42
-      Width = 30
-      Height = 13
-      Caption = ' Date:'
-    end
-    object memTotalCost: TMemo
-      Left = 723
-      Top = 36
-      Width = 72
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 1
-      WantReturns = False
-      WordWrap = False
-      OnEnter = SaveValue
-      OnExit = ValidateMoney3DP
-      OnKeyPress = CheckKeyIsFloat
-    end
-    object memCosttoClient: TMemo
-      Left = 723
-      Top = 4
-      Width = 73
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 0
-      WantReturns = False
-      WordWrap = False
-      OnEnter = SaveValue
-      OnExit = ValidateMoney3DP
-      OnKeyPress = CheckKeyIsFloat
-    end
-    object rdgrpJobRePrinted: TRadioGroup
-      Left = 8
-      Top = 3
-      Width = 145
-      Height = 73
-      Caption = 'Has job been reprinted?'
-      Items.Strings = (
-        'Yes'
-        'No'
-        'N/A')
-      ParentBackground = False
-      TabOrder = 2
-    end
-    object rdgrpSamples: TRadioGroup
-      Left = 168
-      Top = 3
-      Width = 145
-      Height = 73
-      Caption = 'Are samples available?'
-      Items.Strings = (
-        'Yes'
-        'No'
-        'N/A')
-      ParentBackground = False
-      TabOrder = 3
-    end
-    object dblkpQAOperator: TDBLookupComboBox
-      Left = 424
-      Top = 6
-      Width = 113
-      Height = 21
-      KeyField = 'QA_Operator'
-      ListField = 'QA_Operator_Name'
-      ListSource = dtsQAOperator
-      TabOrder = 4
-      OnClick = dblkpQAOperatorClick
-    end
-    object BitBtn4: TBitBtn
-      Left = 542
-      Top = 4
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 5
-      OnClick = BitBtn1Click
-    end
-    object btnClear: TBitBtn
-      Left = 576
-      Top = 4
-      Width = 27
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
-        555557777F777555F55500000000555055557777777755F75555005500055055
-        555577F5777F57555555005550055555555577FF577F5FF55555500550050055
-        5555577FF77577FF555555005050110555555577F757777FF555555505099910
-        555555FF75777777FF555005550999910555577F5F77777775F5500505509990
-        3055577F75F77777575F55005055090B030555775755777575755555555550B0
-        B03055555F555757575755550555550B0B335555755555757555555555555550
-        BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
-        50BB555555555555575F555555555555550B5555555555555575}
-      NumGlyphs = 2
-      TabOrder = 6
-      OnClick = btnClearClick
-    end
-    object edtQASignOff: TEdit
-      Left = 424
-      Top = 38
-      Width = 81
-      Height = 21
-      TabOrder = 7
-      OnExit = edtQASignOffExit
-    end
-    object btnDate: TBitBtn
-      Left = 510
-      Top = 36
-      Width = 25
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000130B0000130B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-        333337FFFFFFFF77333330000000000333333777777777733333}
-      NumGlyphs = 2
-      TabOrder = 8
-      OnClick = btnDateClick
-    end
-  end
-  object pnlNCAHead: TPanel
-    Left = 0
-    Top = 194
-    Width = 812
-    Height = 72
-    Align = alTop
-    ParentBackground = False
-    TabOrder = 2
-    DesignSize = (
-      812
-      72)
-    object Label7: TLabel
-      Left = 8
-      Top = 16
-      Width = 61
-      Height = 13
-      Caption = 'Date Raised'
-    end
-    object Label8: TLabel
-      Left = 595
-      Top = 16
-      Width = 49
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Raised by'
-      ExplicitLeft = 601
-    end
-    object Label9: TLabel
-      Left = 301
-      Top = 48
-      Width = 66
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Raising Dept'
-      ExplicitLeft = 307
-    end
-    object Label10: TLabel
-      Left = 582
-      Top = 48
-      Width = 63
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Source Dept'
-      ExplicitLeft = 588
-    end
-    object Label11: TLabel
-      Left = 298
-      Top = 16
-      Width = 64
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Reason Type'
-      ExplicitLeft = 304
-    end
-    object Label22: TLabel
-      Left = 8
-      Top = 48
-      Width = 46
-      Height = 13
-      Caption = 'Category'
-    end
-    object edtRaisedBy: TEdit
-      Left = 650
-      Top = 12
-      Width = 115
-      Height = 21
-      TabStop = False
-      Anchors = [akTop, akRight]
-      Color = clBtnFace
-      ReadOnly = True
-      TabOrder = 0
-    end
-    object BitBtn2: TBitBtn
-      Left = 777
-      Top = 10
-      Width = 25
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 4
-      OnClick = BitBtn2Click
-    end
-    object dblkpRaisedByDept: TDBLookupComboBox
-      Left = 370
-      Top = 44
-      Width = 153
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'Non_Conform_Dept'
-      ListField = 'Non_Conform_Dept_Descr'
-      ListSource = dtsRaisingDept
-      TabOrder = 7
-      OnClick = CheckOK
-    end
-    object dblkpSourceDept: TDBLookupComboBox
-      Left = 651
-      Top = 44
-      Width = 155
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'Non_Conform_Dept'
-      ListField = 'Non_Conform_Dept_Descr'
-      ListSource = dtsSourceDept
-      TabOrder = 9
-      OnClick = CheckOK
-    end
-    object dblkpNCType: TDBLookupComboBox
-      Left = 370
-      Top = 12
-      Width = 153
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'Non_Conform_Type'
-      ListField = 'Non_Conform_Type_Descr'
-      ListSource = dtsNCType
-      TabOrder = 2
-      OnClick = CheckOK
-    end
-    object BitBtn1: TBitBtn
-      Left = 528
-      Top = 10
-      Width = 25
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 3
-      OnClick = BitBtn1Click
-    end
-    object BitBtn3: TBitBtn
-      Left = 529
-      Top = 42
-      Width = 25
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 8
-      OnClick = BitBtn3Click
-    end
-    object edtDateRaised: TEdit
-      Left = 80
-      Top = 12
-      Width = 81
-      Height = 21
-      TabOrder = 10
-      OnExit = edtDateRaisedExit
-    end
-    object btnDateRaised: TBitBtn
-      Left = 168
-      Top = 10
-      Width = 25
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000130B0000130B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-        333337FFFFFFFF77333330000000000333333777777777733333}
-      NumGlyphs = 2
-      TabOrder = 1
-      OnClick = btnDateRaisedClick
-    end
-    object dblkpCategory: TDBLookupComboBox
-      Left = 80
-      Top = 43
-      Width = 155
-      Height = 21
-      KeyField = 'Non_Conform_Category'
-      ListField = 'Non_Conform_Category_Descr'
-      ListSource = dtsCategory
-      TabOrder = 5
-      OnClick = CheckOK
-    end
-    object BitBtn5: TBitBtn
-      Left = 239
-      Top = 39
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 6
-      OnClick = BitBtn5Click
-    end
-  end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 663
@@ -785,151 +36,920 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Width = 50
       end>
   end
-  object pnlPO: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
     Width = 812
-    Height = 97
-    Align = alTop
+    Height = 663
+    Align = alClient
+    BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 0
-    DesignSize = (
-      812
-      97)
-    object Label15: TLabel
-      Left = 9
-      Top = 15
-      Width = 79
-      Height = 13
-      Caption = 'Purchase Order'
-    end
-    object Label16: TLabel
-      Left = 456
-      Top = 15
-      Width = 51
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Start Date'
-      ExplicitLeft = 462
-    end
-    object Label17: TLabel
-      Left = 645
-      Top = 15
-      Width = 74
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Date Required'
-      ExplicitLeft = 651
-    end
-    object Label18: TLabel
-      Left = 9
-      Top = 42
-      Width = 49
-      Height = 13
-      Caption = 'Customer'
-    end
-    object Label19: TLabel
-      Left = 660
-      Top = 42
-      Width = 20
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Rep'
-      ExplicitLeft = 666
-    end
-    object Label20: TLabel
-      Left = 598
-      Top = 72
-      Width = 91
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Account Manager'
-      ExplicitLeft = 604
-    end
-    object Label21: TLabel
-      Left = 9
-      Top = 72
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-    end
-    object edtPurchaseOrder: TEdit
-      Left = 96
-      Top = 11
-      Width = 81
-      Height = 21
+    TabOrder = 1
+    ExplicitTop = 266
+    ExplicitHeight = 277
+    object Panel2: TPanel
+      Left = 0
+      Top = 624
+      Width = 812
+      Height = 39
+      Align = alBottom
+      ParentBackground = False
       TabOrder = 0
-      OnChange = CheckOK
-      OnExit = edtPurchaseOrderExit
-      OnKeyPress = edtJobBagKeyPress
+      object Panel4: TPanel
+        Left = 478
+        Top = 1
+        Width = 333
+        Height = 37
+        Align = alRight
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 0
+        DesignSize = (
+          333
+          37)
+        object DelLabel: TLabel
+          Left = 19
+          Top = 10
+          Width = 123
+          Height = 15
+          Anchors = [akRight, akBottom]
+          Caption = 'Delete this NCA Note?'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object btnOK: TBitBtn
+          Left = 154
+          Top = 6
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = 'OK'
+          Enabled = False
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000000000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
+          NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnOKClick
+        end
+        object btnCancel: TBitBtn
+          Left = 242
+          Top = 6
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Kind = bkCancel
+          NumGlyphs = 2
+          TabOrder = 1
+        end
+      end
     end
-    object edtPOStartDate: TEdit
-      Left = 512
-      Top = 11
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
+    object pnlJobBag: TPanel
+      Left = 0
+      Top = 97
+      Width = 812
+      Height = 97
+      Align = alTop
+      ParentBackground = False
       TabOrder = 1
+      DesignSize = (
+        812
+        97)
+      object labJobBagInfo: TLabel
+        Left = 9
+        Top = 15
+        Width = 61
+        Height = 13
+        Caption = 'Job Bag No.'
+      end
+      object Label25: TLabel
+        Left = 456
+        Top = 15
+        Width = 51
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Start Date'
+        ExplicitLeft = 462
+      end
+      object Label3: TLabel
+        Left = 645
+        Top = 15
+        Width = 74
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Date Required'
+        ExplicitLeft = 651
+      end
+      object Label2: TLabel
+        Left = 9
+        Top = 42
+        Width = 49
+        Height = 13
+        Caption = 'Customer'
+      end
+      object Label1: TLabel
+        Left = 660
+        Top = 42
+        Width = 20
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Rep'
+        ExplicitLeft = 666
+      end
+      object Label5: TLabel
+        Left = 598
+        Top = 72
+        Width = 91
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Account Manager'
+        ExplicitLeft = 604
+      end
+      object Label4: TLabel
+        Left = 9
+        Top = 72
+        Width = 59
+        Height = 13
+        Caption = 'Description'
+      end
+      object edtJobBag: TEdit
+        Left = 80
+        Top = 11
+        Width = 81
+        Height = 21
+        TabOrder = 0
+        OnChange = CheckOK
+        OnExit = edtJobBagExit
+        OnKeyPress = edtJobBagKeyPress
+      end
+      object edtStartDate: TEdit
+        Left = 512
+        Top = 11
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object edtDateReq: TEdit
+        Left = 727
+        Top = 11
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 2
+        OnChange = CheckOK
+      end
+      object edtCustomer: TEdit
+        Left = 80
+        Top = 38
+        Width = 285
+        Height = 21
+        Anchors = [akLeft, akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object edtRep: TEdit
+        Left = 693
+        Top = 38
+        Width = 115
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object edtAccountManager: TEdit
+        Left = 693
+        Top = 68
+        Width = 115
+        Height = 21
+        TabStop = False
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 5
+      end
+      object edtDescription: TEdit
+        Left = 80
+        Top = 68
+        Width = 441
+        Height = 21
+        Enabled = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 6
+        OnChange = CheckOK
+      end
     end
-    object edtPODateReq: TEdit
-      Left = 727
-      Top = 11
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
+    object pnlNCAHead: TPanel
+      Left = 0
+      Top = 194
+      Width = 812
+      Height = 72
+      Align = alTop
+      ParentBackground = False
       TabOrder = 2
-      OnChange = CheckOK
+      ExplicitTop = 97
+      DesignSize = (
+        812
+        72)
+      object Label7: TLabel
+        Left = 8
+        Top = 16
+        Width = 61
+        Height = 13
+        Caption = 'Date Raised'
+      end
+      object Label8: TLabel
+        Left = 595
+        Top = 16
+        Width = 49
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Raised by'
+        ExplicitLeft = 601
+      end
+      object Label9: TLabel
+        Left = 301
+        Top = 48
+        Width = 66
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Raising Dept'
+        ExplicitLeft = 307
+      end
+      object Label10: TLabel
+        Left = 582
+        Top = 48
+        Width = 63
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Source Dept'
+        ExplicitLeft = 588
+      end
+      object Label11: TLabel
+        Left = 298
+        Top = 16
+        Width = 64
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Reason Type'
+        ExplicitLeft = 304
+      end
+      object Label22: TLabel
+        Left = 8
+        Top = 48
+        Width = 46
+        Height = 13
+        Caption = 'Category'
+      end
+      object edtRaisedBy: TEdit
+        Left = 650
+        Top = 12
+        Width = 115
+        Height = 21
+        TabStop = False
+        Anchors = [akTop, akRight]
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object BitBtn2: TBitBtn
+        Left = 777
+        Top = 10
+        Width = 25
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+        OnClick = BitBtn2Click
+      end
+      object dblkpRaisedByDept: TDBLookupComboBox
+        Left = 370
+        Top = 44
+        Width = 153
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'Non_Conform_Dept'
+        ListField = 'Non_Conform_Dept_Descr'
+        ListSource = dtsRaisingDept
+        TabOrder = 7
+        OnClick = CheckOK
+      end
+      object dblkpSourceDept: TDBLookupComboBox
+        Left = 651
+        Top = 44
+        Width = 155
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'Non_Conform_Dept'
+        ListField = 'Non_Conform_Dept_Descr'
+        ListSource = dtsSourceDept
+        TabOrder = 9
+        OnClick = CheckOK
+      end
+      object dblkpNCType: TDBLookupComboBox
+        Left = 370
+        Top = 12
+        Width = 153
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'Non_Conform_Type'
+        ListField = 'Non_Conform_Type_Descr'
+        ListSource = dtsNCType
+        TabOrder = 2
+        OnClick = CheckOK
+      end
+      object BitBtn1: TBitBtn
+        Left = 528
+        Top = 10
+        Width = 25
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 3
+        OnClick = BitBtn1Click
+      end
+      object BitBtn3: TBitBtn
+        Left = 529
+        Top = 42
+        Width = 25
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 8
+        OnClick = BitBtn3Click
+      end
+      object edtDateRaised: TEdit
+        Left = 80
+        Top = 12
+        Width = 81
+        Height = 21
+        TabOrder = 10
+        OnExit = edtDateRaisedExit
+      end
+      object btnDateRaised: TBitBtn
+        Left = 168
+        Top = 10
+        Width = 25
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+          F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+          F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+          F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+          F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+          F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+          F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+          333337FFFFFFFF77333330000000000333333777777777733333}
+        NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnDateRaisedClick
+      end
+      object dblkpCategory: TDBLookupComboBox
+        Left = 80
+        Top = 43
+        Width = 155
+        Height = 21
+        KeyField = 'Non_Conform_Category'
+        ListField = 'Non_Conform_Category_Descr'
+        ListSource = dtsCategory
+        TabOrder = 5
+        OnClick = CheckOK
+      end
+      object BitBtn5: TBitBtn
+        Left = 239
+        Top = 39
+        Width = 25
+        Height = 25
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 6
+        OnClick = BitBtn5Click
+      end
     end
-    object edtPOCustomer: TEdit
-      Left = 96
-      Top = 38
-      Width = 285
-      Height = 21
-      Anchors = [akLeft, akTop, akRight]
-      Enabled = False
-      ReadOnly = True
+    object pnlNotes: TPanel
+      Left = 0
+      Top = 266
+      Width = 812
+      Height = 277
+      Align = alClient
+      ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 97
+      ExplicitHeight = 485
+      object pnlNCADetails: TPanel
+        Left = 1
+        Top = 1
+        Width = 810
+        Height = 85
+        Align = alTop
+        Caption = 'pnlNCADetails'
+        ParentBackground = False
+        TabOrder = 0
+        object Panel5: TPanel
+          Left = 1
+          Top = 1
+          Width = 808
+          Height = 20
+          Align = alTop
+          Alignment = taLeftJustify
+          Caption = 'Non Conformance Details'
+          ParentBackground = False
+          TabOrder = 0
+        end
+        object memDetails: TMemo
+          Left = 1
+          Top = 21
+          Width = 808
+          Height = 63
+          Align = alClient
+          ScrollBars = ssVertical
+          TabOrder = 1
+          OnChange = memDetailsChange
+        end
+      end
+      object pnlResponse: TPanel
+        Left = 1
+        Top = 86
+        Width = 810
+        Height = 20
+        Align = alClient
+        Caption = 'pnlResponse'
+        ParentBackground = False
+        TabOrder = 1
+        ExplicitHeight = 228
+        object Panel6: TPanel
+          Left = 1
+          Top = 1
+          Width = 808
+          Height = 20
+          Align = alTop
+          Alignment = taLeftJustify
+          Caption = 'Response Details'
+          ParentBackground = False
+          TabOrder = 0
+        end
+        object memResponse: TMemo
+          Left = 1
+          Top = 21
+          Width = 808
+          Height = 79
+          Align = alClient
+          ScrollBars = ssVertical
+          TabOrder = 1
+          ExplicitHeight = 206
+        end
+      end
+      object pnlAction: TPanel
+        Left = 1
+        Top = 106
+        Width = 810
+        Height = 85
+        Align = alBottom
+        Caption = 'pnlAction'
+        ParentBackground = False
+        TabOrder = 2
+        ExplicitTop = 314
+        object pnlActionLabel: TPanel
+          Left = 1
+          Top = 1
+          Width = 808
+          Height = 20
+          Align = alTop
+          Alignment = taLeftJustify
+          Caption = 'Corrective Action'
+          ParentBackground = False
+          TabOrder = 0
+        end
+        object memAction: TRichEdit
+          Left = 1
+          Top = 21
+          Width = 808
+          Height = 63
+          Align = alClient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+      object pnlPrevent: TPanel
+        Left = 1
+        Top = 191
+        Width = 810
+        Height = 85
+        Align = alBottom
+        Caption = 'pnlPrevent'
+        ParentBackground = False
+        TabOrder = 3
+        ExplicitTop = 399
+        object Panel3: TPanel
+          Left = 1
+          Top = 1
+          Width = 808
+          Height = 20
+          Align = alTop
+          Alignment = taLeftJustify
+          Caption = 'Preventative Action'
+          ParentBackground = False
+          TabOrder = 0
+        end
+        object memPrevent: TRichEdit
+          Left = 1
+          Top = 21
+          Width = 808
+          Height = 63
+          Align = alClient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
     end
-    object edtPORep: TEdit
-      Left = 693
-      Top = 38
-      Width = 115
-      Height = 21
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
+    object pnlPO: TPanel
+      Left = 0
+      Top = 0
+      Width = 812
+      Height = 97
+      Align = alTop
+      ParentBackground = False
       TabOrder = 4
+      DesignSize = (
+        812
+        97)
+      object Label15: TLabel
+        Left = 9
+        Top = 15
+        Width = 79
+        Height = 13
+        Caption = 'Purchase Order'
+      end
+      object Label16: TLabel
+        Left = 456
+        Top = 15
+        Width = 51
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Start Date'
+        ExplicitLeft = 462
+      end
+      object Label17: TLabel
+        Left = 645
+        Top = 15
+        Width = 74
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Date Required'
+        ExplicitLeft = 651
+      end
+      object Label18: TLabel
+        Left = 9
+        Top = 42
+        Width = 49
+        Height = 13
+        Caption = 'Customer'
+      end
+      object Label19: TLabel
+        Left = 660
+        Top = 42
+        Width = 20
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Rep'
+        ExplicitLeft = 666
+      end
+      object Label20: TLabel
+        Left = 598
+        Top = 72
+        Width = 91
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Account Manager'
+        ExplicitLeft = 604
+      end
+      object Label21: TLabel
+        Left = 9
+        Top = 72
+        Width = 59
+        Height = 13
+        Caption = 'Description'
+      end
+      object edtPurchaseOrder: TEdit
+        Left = 96
+        Top = 11
+        Width = 81
+        Height = 21
+        TabOrder = 0
+        OnChange = CheckOK
+        OnExit = edtPurchaseOrderExit
+        OnKeyPress = edtJobBagKeyPress
+      end
+      object edtPOStartDate: TEdit
+        Left = 512
+        Top = 11
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object edtPODateReq: TEdit
+        Left = 727
+        Top = 11
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 2
+        OnChange = CheckOK
+      end
+      object edtPOCustomer: TEdit
+        Left = 96
+        Top = 38
+        Width = 285
+        Height = 21
+        Anchors = [akLeft, akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object edtPORep: TEdit
+        Left = 693
+        Top = 38
+        Width = 115
+        Height = 21
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object edtPOAccountManager: TEdit
+        Left = 693
+        Top = 68
+        Width = 115
+        Height = 21
+        TabStop = False
+        Anchors = [akTop, akRight]
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 5
+      end
+      object edtPODescription: TEdit
+        Left = 96
+        Top = 68
+        Width = 441
+        Height = 21
+        Enabled = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 6
+        OnChange = CheckOK
+      end
     end
-    object edtPOAccountManager: TEdit
-      Left = 693
-      Top = 68
-      Width = 115
-      Height = 21
-      TabStop = False
-      Anchors = [akTop, akRight]
-      Enabled = False
-      ReadOnly = True
+    object pnlQASignOff: TPanel
+      Left = 0
+      Top = 543
+      Width = 812
+      Height = 81
+      Align = alBottom
+      ParentBackground = False
       TabOrder = 5
-    end
-    object edtPODescription: TEdit
-      Left = 96
-      Top = 68
-      Width = 441
-      Height = 21
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ReadOnly = True
-      TabOrder = 6
-      OnChange = CheckOK
+      ExplicitTop = 582
+      DesignSize = (
+        812
+        81)
+      object Label14: TLabel
+        Left = 635
+        Top = 40
+        Width = 88
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Cost to Company'
+        ExplicitLeft = 641
+      end
+      object Label6: TLabel
+        Left = 651
+        Top = 8
+        Width = 70
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Cost to Client'
+        ExplicitLeft = 657
+      end
+      object Label12: TLabel
+        Left = 336
+        Top = 10
+        Width = 90
+        Height = 13
+        Caption = 'QA Signed off by:'
+      end
+      object Label13: TLabel
+        Left = 392
+        Top = 42
+        Width = 30
+        Height = 13
+        Caption = ' Date:'
+      end
+      object memTotalCost: TMemo
+        Left = 723
+        Top = 36
+        Width = 72
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 1
+        WantReturns = False
+        WordWrap = False
+        OnEnter = SaveValue
+        OnExit = ValidateMoney3DP
+        OnKeyPress = CheckKeyIsFloat
+      end
+      object memCosttoClient: TMemo
+        Left = 723
+        Top = 4
+        Width = 73
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+        WantReturns = False
+        WordWrap = False
+        OnEnter = SaveValue
+        OnExit = ValidateMoney3DP
+        OnKeyPress = CheckKeyIsFloat
+      end
+      object rdgrpJobRePrinted: TRadioGroup
+        Left = 8
+        Top = 3
+        Width = 145
+        Height = 73
+        Caption = 'Has job been reprinted?'
+        Items.Strings = (
+          'Yes'
+          'No'
+          'N/A')
+        ParentBackground = False
+        TabOrder = 2
+      end
+      object rdgrpSamples: TRadioGroup
+        Left = 168
+        Top = 3
+        Width = 145
+        Height = 73
+        Caption = 'Are samples available?'
+        Items.Strings = (
+          'Yes'
+          'No'
+          'N/A')
+        ParentBackground = False
+        TabOrder = 3
+      end
+      object dblkpQAOperator: TDBLookupComboBox
+        Left = 424
+        Top = 6
+        Width = 113
+        Height = 21
+        KeyField = 'QA_Operator'
+        ListField = 'QA_Operator_Name'
+        ListSource = dtsQAOperator
+        TabOrder = 4
+        OnClick = dblkpQAOperatorClick
+      end
+      object BitBtn4: TBitBtn
+        Left = 542
+        Top = 4
+        Width = 25
+        Height = 25
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 5
+        OnClick = BitBtn1Click
+      end
+      object btnClear: TBitBtn
+        Left = 576
+        Top = 4
+        Width = 27
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
+          555557777F777555F55500000000555055557777777755F75555005500055055
+          555577F5777F57555555005550055555555577FF577F5FF55555500550050055
+          5555577FF77577FF555555005050110555555577F757777FF555555505099910
+          555555FF75777777FF555005550999910555577F5F77777775F5500505509990
+          3055577F75F77777575F55005055090B030555775755777575755555555550B0
+          B03055555F555757575755550555550B0B335555755555757555555555555550
+          BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
+          50BB555555555555575F555555555555550B5555555555555575}
+        NumGlyphs = 2
+        TabOrder = 6
+        OnClick = btnClearClick
+      end
+      object edtQASignOff: TEdit
+        Left = 424
+        Top = 38
+        Width = 81
+        Height = 21
+        TabOrder = 7
+        OnExit = edtQASignOffExit
+      end
+      object btnDate: TBitBtn
+        Left = 510
+        Top = 36
+        Width = 25
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+          F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+          F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+          F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+          F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+          F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+          F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+          333337FFFFFFFF77333330000000000333333777777777733333}
+        NumGlyphs = 2
+        TabOrder = 8
+        OnClick = btnDateClick
+      end
     end
   end
   object qryNCType: TFDQuery

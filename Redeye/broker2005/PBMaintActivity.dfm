@@ -17,902 +17,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 502
-    Width = 888
-    Height = 41
-    Align = alBottom
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 1
-    DesignSize = (
-      888
-      41)
-    object lblDeletePrompt: TLabel
-      Left = 510
-      Top = 14
-      Width = 133
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Delete the above details ?'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 512
-    end
-    object btnOK: TBitBtn
-      Left = 686
-      Top = 8
-      Width = 75
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = 'OK'
-      Default = True
-      Enabled = False
-      Glyph.Data = {
-        CE070000424DCE07000000000000360000002800000024000000120000000100
-        1800000000009807000000000000000000000000000000000000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F7F00007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F7F0000007F00007F007F0000007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F0000007F00007F00007F0000
-        7F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F000000
-        7F00007F00007F00007F00007F00007F007F0000007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F7F0000007F00007F00007F0000FF00007F00007F00007F00007F00
-        7F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFF
-        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F00007F00007F0000FF00007F7F
-        00FF00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F7F7F7FFFFFFF007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00
-        007F0000FF00007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F00
-        7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F00FF
-        00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F
-        7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF0000
-        7F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F
-        7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00
-        007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFF
-        FFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F00FF00007F00007F007F0000007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F
-        7F7FFFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00007F
-        00007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F}
-      NumGlyphs = 2
-      TabOrder = 0
-      OnClick = btnOKClick
-    end
-    object btnCancel: TBitBtn
-      Left = 774
-      Top = 8
-      Width = 75
-      Height = 25
-      Anchors = [akTop, akRight]
-      Cancel = True
-      Caption = 'Cancel'
-      Glyph.Data = {
-        CE070000424DCE07000000000000360000002800000024000000120000000100
-        1800000000009807000000000000000000000000000000000000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
-        7F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F0000FF7F7F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF007F7F
-        007F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F00
-        00FF00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        FFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7FFFFFFF7F7F7F7F7F7FFFFF
-        FF007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00
-        007F7F7F7F007F7F0000FF00007F00007F00007F00007F7F7F7F007F7F007F7F
-        007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7FFFFF
-        FF7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F00
-        7F7F0000FF00007F00007F00007F00007F7F7F7F00007F00007F00007F00007F
-        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F
-        7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF00
-        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00007F
-        00007F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F00
-        7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        0000FF00007F00007F00007F00007F00007F00007F7F7F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F00
-        7F7F007F7F007F7F007F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F00007F00007F00007F00007F00007F7F7F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
-        7F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
-        7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F0000FF00007F00007F00007F00007F00007F7F7F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F7F7F7F00007F00
-        007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00
-        007F7F7F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F7F7F7FFFFF
-        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F0000FF00007F00007F7F7F7F007F7F007F7F007F7F0000FF00007F00007F
-        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F007F7F007F7F007F7F
-        007F7F007F7F0000FF00007F00007F00007F007F7F007F7F007F7F007F7F007F
-        7F007F7F7F7F7FFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F7F7F7FFFFFFF00
-        7F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F0000FF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F00
-        7F7F007F7F007F7F7F7F7FFFFFFFFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F7F7F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F}
-      ModalResult = 2
-      NumGlyphs = 2
-      TabOrder = 1
-    end
-  end
-  object Panel2: TPanel
-    Left = 0
-    Top = 0
-    Width = 888
-    Height = 502
-    Align = alClient
-    ParentBackground = False
-    TabOrder = 0
-    object pgActivities: TPageControl
-      Left = 1
-      Top = 161
-      Width = 886
-      Height = 340
-      ActivePage = tbCurrent
-      Align = alClient
-      TabOrder = 0
-      object tbCurrent: TTabSheet
-        Caption = 'Current Activity'
-        DesignSize = (
-          878
-          312)
-        object Label7: TLabel
-          Left = 8
-          Top = 10
-          Width = 23
-          Height = 13
-          Caption = 'Type'
-        end
-        object Label8: TLabel
-          Left = 8
-          Top = 43
-          Width = 38
-          Height = 13
-          Caption = 'Subject'
-        end
-        object Label4: TLabel
-          Left = 8
-          Top = 76
-          Width = 35
-          Height = 13
-          Caption = 'Details'
-        end
-        object Label10: TLabel
-          Left = 597
-          Top = 236
-          Width = 36
-          Height = 13
-          Anchors = [akRight, akBottom]
-          Caption = 'Priority'
-          ExplicitLeft = 599
-        end
-        object Label11: TLabel
-          Left = 8
-          Top = 236
-          Width = 32
-          Height = 13
-          Anchors = [akLeft, akBottom]
-          Caption = 'Status'
-        end
-        object memDetails: TMemo
-          Left = 80
-          Top = 73
-          Width = 761
-          Height = 143
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          ScrollBars = ssVertical
-          TabOrder = 0
-          OnChange = memDetailsChange
-        end
-        object dblkpType: TDBLookupComboBox
-          Left = 80
-          Top = 6
-          Width = 225
-          Height = 21
-          Anchors = [akLeft, akTop, akRight]
-          KeyField = 'Activity_Type'
-          ListField = 'Activity_Type_Description'
-          TabOrder = 1
-          OnClick = dblkpTypeClick
-        end
-        object btnActivityType: TButton
-          Left = 315
-          Top = 5
-          Width = 22
-          Height = 22
-          Anchors = [akTop, akRight]
-          Caption = '...'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 2
-          OnClick = btnActivityTypeClick
-        end
-        object edtSubject: TEdit
-          Left = 80
-          Top = 39
-          Width = 761
-          Height = 21
-          Anchors = [akLeft, akTop, akRight]
-          TabOrder = 3
-          Text = 'edtSubject'
-          OnChange = edtSubjectChange
-        end
-        object dblkpPriority: TDBLookupComboBox
-          Left = 637
-          Top = 232
-          Width = 167
-          Height = 21
-          Anchors = [akRight, akBottom]
-          KeyField = 'Activity_Priority'
-          ListField = 'Activity_Priority_Description'
-          TabOrder = 4
-          OnClick = dblkpPriorityClick
-        end
-        object dblkpStatus: TDBLookupComboBox
-          Left = 80
-          Top = 232
-          Width = 225
-          Height = 21
-          Anchors = [akLeft, akBottom]
-          KeyField = 'Activity_Status'
-          ListField = 'Activity_Status_Description'
-          TabOrder = 5
-          OnClick = dblkpStatusClick
-        end
-        object pnlReminder: TPanel
-          Left = 0
-          Top = 276
-          Width = 878
-          Height = 36
-          Align = alBottom
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 6
-          DesignSize = (
-            878
-            36)
-          object Label3: TLabel
-            Left = 207
-            Top = 8
-            Width = 24
-            Height = 13
-            Caption = 'Time'
-          end
-          object Label9: TLabel
-            Left = 509
-            Top = 8
-            Width = 65
-            Height = 13
-            Anchors = [akRight, akBottom]
-            Caption = 'Assigned To:'
-            ExplicitLeft = 511
-          end
-          object Label2: TLabel
-            Left = 8
-            Top = 8
-            Width = 48
-            Height = 13
-            Caption = 'Due Date'
-          end
-          object dtPickerDueDate: TDateTimePicker
-            Left = 79
-            Top = 4
-            Width = 97
-            Height = 21
-            Date = 37453.000000000000000000
-            Time = 37453.000000000000000000
-            TabOrder = 0
-          end
-          object cmbTime: TComboBox
-            Left = 240
-            Top = 4
-            Width = 105
-            Height = 21
-            ItemIndex = 0
-            TabOrder = 1
-            Text = '00:00'
-            Items.Strings = (
-              '00:00'
-              '00:30'
-              '01:00'
-              '01:30'
-              '02:00'
-              '02:30'
-              '03:00'
-              '03:30'
-              '04:00'
-              '04:30'
-              '05:00'
-              '05:30'
-              '06:00'
-              '06:30'
-              '07:00'
-              '07:30'
-              '08:00'
-              '08:30'
-              '09:00'
-              '09:30'
-              '10:00'
-              '10:30'
-              '11:00'
-              '11:30'
-              '12:00'
-              '12:30'
-              '13:00'
-              '13:30'
-              '14:00'
-              '14:30'
-              '15:00'
-              '15:30'
-              '16:00'
-              '16:30'
-              '17:00'
-              '17:30'
-              '18:00'
-              '18:30'
-              '19:00'
-              '19:30'
-              '20:00'
-              '20:30'
-              '21:00'
-              '21:30'
-              '22:00'
-              '22:30'
-              '23:00'
-              '23:30')
-          end
-          object dblkpAssignedTo: TDBLookupComboBox
-            Left = 581
-            Top = 4
-            Width = 224
-            Height = 21
-            Anchors = [akRight, akBottom]
-            KeyField = 'Operator'
-            ListField = 'Name'
-            TabOrder = 2
-            OnClick = dblkpAssignedToClick
-          end
-          object Button4: TButton
-            Left = 820
-            Top = 3
-            Width = 22
-            Height = 22
-            Anchors = [akRight, akBottom]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -13
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            TabOrder = 3
-          end
-        end
-      end
-      object tbLinked: TTabSheet
-        Caption = 'Linked Activities'
-        ImageIndex = 1
-        object Panel3: TPanel
-          Left = 0
-          Top = 149
-          Width = 878
-          Height = 163
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 0
-          object Panel17: TPanel
-            Left = 1
-            Top = 1
-            Width = 876
-            Height = 24
-            Align = alTop
-            ParentBackground = False
-            TabOrder = 0
-            ExplicitWidth = 880
-            object Label61: TLabel
-              Left = 4
-              Top = 4
-              Width = 35
-              Height = 13
-              Caption = 'Details'
-              Font.Charset = ANSI_CHARSET
-              Font.Color = clBlack
-              Font.Height = -11
-              Font.Name = 'Segoe UI'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-          end
-          object memNarrative: TMemo
-            Left = 1
-            Top = 25
-            Width = 876
-            Height = 137
-            Align = alClient
-            Color = clBtnFace
-            Enabled = False
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            Lines.Strings = (
-              'Memo1')
-            ParentFont = False
-            TabOrder = 1
-          end
-        end
-        object dbgDetails: TDBGrid
-          Left = 0
-          Top = 0
-          Width = 878
-          Height = 149
-          Align = alClient
-          DrawingStyle = gdsGradient
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-          ParentFont = False
-          TabOrder = 1
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -12
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
-          Columns = <
-            item
-              Expanded = False
-              FieldName = 'Due_Date_Time'
-              Title.Caption = 'Due Date'
-              Width = 94
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Priority_description'
-              Title.Caption = 'Priority'
-              Width = 123
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Subject'
-              Title.Caption = 'Subject'
-              Width = 128
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Contact_Name'
-              Title.Caption = 'Contact'
-              Width = 172
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Type_Description'
-              Title.Caption = 'Type'
-              Width = 115
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Status_Description'
-              Title.Caption = 'Status'
-              Width = 134
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Assigned_To_Name'
-              Title.Caption = 'Assigned To'
-              Width = 101
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Operator_Name'
-              Title.Caption = 'Created by'
-              Width = 108
-              Visible = True
-            end>
-        end
-      end
-      object TabSheet1: TTabSheet
-        Caption = 'Documents'
-        ImageIndex = 2
-        object Panel6: TPanel
-          Left = 0
-          Top = 0
-          Width = 882
-          Height = 323
-          Align = alClient
-          ParentBackground = False
-          TabOrder = 0
-          object Panel7: TPanel
-            Left = 1
-            Top = 298
-            Width = 880
-            Height = 24
-            Align = alBottom
-            BevelOuter = bvNone
-            ParentBackground = False
-            TabOrder = 0
-            object lblDocumentDir: TLabel
-              Left = 8
-              Top = 6
-              Width = 150
-              Height = 13
-              Caption = 'Primary Document Directory:'
-              Font.Charset = ANSI_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -11
-              Font.Name = 'Segoe UI'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-          end
-          object lstvwDocuments: TListView
-            Left = 1
-            Top = 1
-            Width = 880
-            Height = 297
-            Align = alClient
-            Columns = <
-              item
-                Caption = 'Name'
-                Width = 200
-              end
-              item
-                Caption = 'Type'
-                Width = 200
-              end
-              item
-                Caption = 'Date modified'
-                Width = 200
-              end>
-            LargeImages = imgDocuments
-            MultiSelect = True
-            RowSelect = True
-            SmallImages = imgDocuments
-            TabOrder = 1
-            OnColumnClick = lstvwDocumentsColumnClick
-            OnCompare = lstvwDocumentsCompare
-            OnDblClick = lstvwDocumentsDblClick
-          end
-        end
-      end
-    end
-    object pnlTop: TPanel
-      Left = 1
-      Top = 1
-      Width = 886
-      Height = 160
-      Align = alTop
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 1
-      DesignSize = (
-        886
-        160)
-      object Label1: TLabel
-        Left = 8
-        Top = 76
-        Width = 40
-        Height = 13
-        Caption = 'Contact'
-      end
-      object Label5: TLabel
-        Left = 8
-        Top = 16
-        Width = 49
-        Height = 13
-        Caption = 'Customer'
-      end
-      object Label6: TLabel
-        Left = 8
-        Top = 46
-        Width = 35
-        Height = 13
-        Caption = 'Branch'
-      end
-      object Label12: TLabel
-        Left = 8
-        Top = 131
-        Width = 40
-        Height = 13
-        Caption = 'Module'
-      end
-      object LabelPhone: TLabel
-        Left = 377
-        Top = 78
-        Width = 36
-        Height = 13
-        Anchors = [akTop, akRight]
-        Caption = 'Phone:'
-        ExplicitLeft = 379
-      end
-      object LabelFax: TLabel
-        Left = 595
-        Top = 78
-        Width = 39
-        Height = 13
-        Anchors = [akTop, akRight]
-        Caption = 'Mobile:'
-        ExplicitLeft = 597
-      end
-      object DBCPhoneText: TDBText
-        Left = 422
-        Top = 78
-        Width = 170
-        Height = 13
-        Anchors = [akTop, akRight]
-        DataField = 'Phone'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 446
-      end
-      object DBCEmailText: TDBText
-        Left = 422
-        Top = 102
-        Width = 214
-        Height = 13
-        Anchors = [akTop, akRight]
-        DataField = 'Email'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 446
-      end
-      object DBCMobileText: TDBText
-        Left = 638
-        Top = 78
-        Width = 202
-        Height = 13
-        Anchors = [akTop, akRight]
-        DataField = 'Mobile_No'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 662
-      end
-      object edtCustomer: TEdit
-        Left = 80
-        Top = 12
-        Width = 433
-        Height = 21
-        Anchors = [akLeft, akTop, akRight]
-        Color = clWhite
-        ReadOnly = True
-        TabOrder = 0
-        Text = 'edtCustomer'
-      end
-      object dblkpBranch: TDBLookupComboBox
-        Left = 80
-        Top = 42
-        Width = 433
-        Height = 21
-        Anchors = [akLeft, akTop, akRight]
-        KeyField = 'Branch_no'
-        ListField = 'Name'
-        TabOrder = 1
-        OnClick = dblkpBranchClick
-      end
-      object btnBranch: TButton
-        Left = 523
-        Top = 41
-        Width = 22
-        Height = 22
-        Anchors = [akTop, akRight]
-        Caption = '...'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 2
-        OnClick = btnBranchClick
-      end
-      object pnlModule: TPanel
-        Left = 272
-        Top = 120
-        Width = 597
-        Height = 33
-        Anchors = [akLeft, akTop, akRight]
-        BevelOuter = bvNone
-        ParentBackground = False
-        TabOrder = 3
-        DesignSize = (
-          597
-          33)
-        object Label13: TLabel
-          Left = 24
-          Top = 11
-          Width = 51
-          Height = 13
-          Caption = 'Reference'
-        end
-        object edtReference: TEdit
-          Left = 80
-          Top = 7
-          Width = 81
-          Height = 21
-          ReadOnly = True
-          TabOrder = 0
-          Text = 'edtReference'
-        end
-        object edtDescription: TEdit
-          Left = 202
-          Top = 7
-          Width = 382
-          Height = 21
-          Anchors = [akLeft, akTop, akRight]
-          ReadOnly = True
-          TabOrder = 2
-          Text = 'edtDescription'
-        end
-        object btnModuleLU: TButton
-          Left = 172
-          Top = 6
-          Width = 22
-          Height = 22
-          Caption = '...'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 1
-          OnClick = btnModuleLUClick
-        end
-      end
-      object Button1: TButton
-        Left = 315
-        Top = 73
-        Width = 22
-        Height = 22
-        Anchors = [akTop, akRight]
-        Caption = '...'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 4
-        OnClick = Button1Click
-      end
-      object dblkpContact: TDBLookupComboBox
-        Left = 80
-        Top = 72
-        Width = 225
-        Height = 21
-        Anchors = [akLeft, akTop, akRight]
-        KeyField = 'Contact_no'
-        ListField = 'Name'
-        TabOrder = 5
-        OnClick = dblkpContactClick
-      end
-      object dblkpModule: TDBLookupComboBox
-        Left = 80
-        Top = 127
-        Width = 193
-        Height = 21
-        KeyField = 'Activity_Module'
-        ListField = 'Activity_Module_description'
-        TabOrder = 6
-        OnClick = dblkpModuleClick
-      end
-      object btnCustomer: TButton
-        Left = 523
-        Top = 11
-        Width = 22
-        Height = 22
-        Anchors = [akTop, akRight]
-        Caption = '...'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 7
-        OnClick = btnCustomerClick
-      end
-      object Button2: TButton
-        Left = 365
-        Top = 98
-        Width = 50
-        Height = 20
-        Anchors = [akTop, akRight]
-        Caption = 'Email:'
-        TabOrder = 8
-        OnClick = Button2Click
-      end
-    end
-  end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 543
@@ -925,6 +29,921 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       item
         Width = 250
       end>
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Top = 0
+    Width = 888
+    Height = 543
+    Align = alClient
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 360
+    ExplicitTop = 280
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Panel1: TPanel
+      Left = 0
+      Top = 502
+      Width = 888
+      Height = 41
+      Align = alBottom
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 0
+      DesignSize = (
+        888
+        41)
+      object lblDeletePrompt: TLabel
+        Left = 510
+        Top = 14
+        Width = 133
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Delete the above details ?'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 512
+      end
+      object btnOK: TBitBtn
+        Left = 686
+        Top = 8
+        Width = 75
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = 'OK'
+        Default = True
+        Enabled = False
+        Glyph.Data = {
+          CE070000424DCE07000000000000360000002800000024000000120000000100
+          1800000000009807000000000000000000000000000000000000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F7F00007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F7F0000007F00007F007F0000007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F0000007F00007F00007F0000
+          7F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F000000
+          7F00007F00007F00007F00007F00007F007F0000007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F7F0000007F00007F00007F0000FF00007F00007F00007F00007F00
+          7F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFF
+          FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F00007F00007F0000FF00007F7F
+          00FF00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F7F7F7FFFFFFF007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00
+          007F0000FF00007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F00
+          7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F00FF
+          00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F
+          7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF0000
+          7F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F
+          7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00
+          007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFF
+          FFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F00FF00007F00007F007F0000007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F
+          7F7FFFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00007F
+          00007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F}
+        NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
+      end
+      object btnCancel: TBitBtn
+        Left = 774
+        Top = 8
+        Width = 75
+        Height = 25
+        Anchors = [akTop, akRight]
+        Cancel = True
+        Caption = 'Cancel'
+        Glyph.Data = {
+          CE070000424DCE07000000000000360000002800000024000000120000000100
+          1800000000009807000000000000000000000000000000000000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+          7F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F0000FF7F7F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF007F7F
+          007F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F00
+          00FF00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          FFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7FFFFFFF7F7F7F7F7F7FFFFF
+          FF007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00
+          007F7F7F7F007F7F0000FF00007F00007F00007F00007F7F7F7F007F7F007F7F
+          007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7FFFFF
+          FF7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F00
+          7F7F0000FF00007F00007F00007F00007F7F7F7F00007F00007F00007F00007F
+          00007F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F
+          7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+          7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00007F
+          00007F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F00
+          7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          0000FF00007F00007F00007F00007F00007F00007F7F7F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F00
+          7F7F007F7F007F7F007F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F00007F00007F00007F00007F00007F7F7F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+          7F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+          7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F0000FF00007F00007F00007F00007F00007F7F7F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F7F7F7F00007F00
+          007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00
+          007F7F7F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F7F7F7FFFFF
+          FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F0000FF00007F00007F7F7F7F007F7F007F7F007F7F0000FF00007F00007F
+          00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F007F7F007F7F007F7F
+          007F7F007F7F0000FF00007F00007F00007F007F7F007F7F007F7F007F7F007F
+          7F007F7F7F7F7FFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+          7F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F0000FF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F00
+          7F7F007F7F007F7F7F7F7FFFFFFFFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F7F7F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F}
+        ModalResult = 2
+        NumGlyphs = 2
+        TabOrder = 1
+      end
+    end
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 888
+      Height = 502
+      Align = alClient
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitHeight = 543
+      object pgActivities: TPageControl
+        Left = 1
+        Top = 161
+        Width = 886
+        Height = 340
+        ActivePage = tbCurrent
+        Align = alClient
+        TabOrder = 0
+        ExplicitHeight = 381
+        object tbCurrent: TTabSheet
+          Caption = 'Current Activity'
+          DesignSize = (
+            878
+            312)
+          object Label7: TLabel
+            Left = 8
+            Top = 10
+            Width = 23
+            Height = 13
+            Caption = 'Type'
+          end
+          object Label8: TLabel
+            Left = 8
+            Top = 43
+            Width = 38
+            Height = 13
+            Caption = 'Subject'
+          end
+          object Label4: TLabel
+            Left = 8
+            Top = 76
+            Width = 35
+            Height = 13
+            Caption = 'Details'
+          end
+          object Label10: TLabel
+            Left = 597
+            Top = 236
+            Width = 36
+            Height = 13
+            Anchors = [akRight, akBottom]
+            Caption = 'Priority'
+            ExplicitLeft = 599
+          end
+          object Label11: TLabel
+            Left = 8
+            Top = 236
+            Width = 32
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Status'
+          end
+          object memDetails: TMemo
+            Left = 80
+            Top = 73
+            Width = 761
+            Height = 143
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            ScrollBars = ssVertical
+            TabOrder = 0
+            OnChange = memDetailsChange
+            ExplicitHeight = 184
+          end
+          object dblkpType: TDBLookupComboBox
+            Left = 80
+            Top = 6
+            Width = 225
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            KeyField = 'Activity_Type'
+            ListField = 'Activity_Type_Description'
+            TabOrder = 1
+            OnClick = dblkpTypeClick
+          end
+          object btnActivityType: TButton
+            Left = 315
+            Top = 5
+            Width = 22
+            Height = 22
+            Anchors = [akTop, akRight]
+            Caption = '...'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 2
+            OnClick = btnActivityTypeClick
+          end
+          object edtSubject: TEdit
+            Left = 80
+            Top = 39
+            Width = 761
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 3
+            Text = 'edtSubject'
+            OnChange = edtSubjectChange
+          end
+          object dblkpPriority: TDBLookupComboBox
+            Left = 637
+            Top = 232
+            Width = 167
+            Height = 21
+            Anchors = [akRight, akBottom]
+            KeyField = 'Activity_Priority'
+            ListField = 'Activity_Priority_Description'
+            TabOrder = 4
+            OnClick = dblkpPriorityClick
+            ExplicitTop = 273
+          end
+          object dblkpStatus: TDBLookupComboBox
+            Left = 80
+            Top = 232
+            Width = 225
+            Height = 21
+            Anchors = [akLeft, akBottom]
+            KeyField = 'Activity_Status'
+            ListField = 'Activity_Status_Description'
+            TabOrder = 5
+            OnClick = dblkpStatusClick
+            ExplicitTop = 273
+          end
+          object pnlReminder: TPanel
+            Left = 0
+            Top = 276
+            Width = 878
+            Height = 36
+            Align = alBottom
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 6
+            ExplicitTop = 317
+            DesignSize = (
+              878
+              36)
+            object Label3: TLabel
+              Left = 207
+              Top = 8
+              Width = 24
+              Height = 13
+              Caption = 'Time'
+            end
+            object Label9: TLabel
+              Left = 509
+              Top = 8
+              Width = 65
+              Height = 13
+              Anchors = [akRight, akBottom]
+              Caption = 'Assigned To:'
+              ExplicitLeft = 511
+            end
+            object Label2: TLabel
+              Left = 8
+              Top = 8
+              Width = 48
+              Height = 13
+              Caption = 'Due Date'
+            end
+            object dtPickerDueDate: TDateTimePicker
+              Left = 79
+              Top = 4
+              Width = 97
+              Height = 21
+              Date = 37453.000000000000000000
+              Time = 37453.000000000000000000
+              TabOrder = 0
+            end
+            object cmbTime: TComboBox
+              Left = 240
+              Top = 4
+              Width = 105
+              Height = 21
+              ItemIndex = 0
+              TabOrder = 1
+              Text = '00:00'
+              Items.Strings = (
+                '00:00'
+                '00:30'
+                '01:00'
+                '01:30'
+                '02:00'
+                '02:30'
+                '03:00'
+                '03:30'
+                '04:00'
+                '04:30'
+                '05:00'
+                '05:30'
+                '06:00'
+                '06:30'
+                '07:00'
+                '07:30'
+                '08:00'
+                '08:30'
+                '09:00'
+                '09:30'
+                '10:00'
+                '10:30'
+                '11:00'
+                '11:30'
+                '12:00'
+                '12:30'
+                '13:00'
+                '13:30'
+                '14:00'
+                '14:30'
+                '15:00'
+                '15:30'
+                '16:00'
+                '16:30'
+                '17:00'
+                '17:30'
+                '18:00'
+                '18:30'
+                '19:00'
+                '19:30'
+                '20:00'
+                '20:30'
+                '21:00'
+                '21:30'
+                '22:00'
+                '22:30'
+                '23:00'
+                '23:30')
+            end
+            object dblkpAssignedTo: TDBLookupComboBox
+              Left = 581
+              Top = 4
+              Width = 224
+              Height = 21
+              Anchors = [akRight, akBottom]
+              KeyField = 'Operator'
+              ListField = 'Name'
+              TabOrder = 2
+              OnClick = dblkpAssignedToClick
+            end
+            object Button4: TButton
+              Left = 820
+              Top = 3
+              Width = 22
+              Height = 22
+              Anchors = [akRight, akBottom]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -13
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              TabOrder = 3
+            end
+          end
+        end
+        object tbLinked: TTabSheet
+          Caption = 'Linked Activities'
+          ImageIndex = 1
+          object Panel3: TPanel
+            Left = 0
+            Top = 149
+            Width = 878
+            Height = 163
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 0
+            object Panel17: TPanel
+              Left = 1
+              Top = 1
+              Width = 876
+              Height = 24
+              Align = alTop
+              ParentBackground = False
+              TabOrder = 0
+              object Label61: TLabel
+                Left = 4
+                Top = 4
+                Width = 35
+                Height = 13
+                Caption = 'Details'
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Segoe UI'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+            end
+            object memNarrative: TMemo
+              Left = 1
+              Top = 25
+              Width = 876
+              Height = 137
+              Align = alClient
+              Color = clBtnFace
+              Enabled = False
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Lines.Strings = (
+                'Memo1')
+              ParentFont = False
+              TabOrder = 1
+            end
+          end
+          object dbgDetails: TDBGrid
+            Left = 0
+            Top = 0
+            Width = 878
+            Height = 149
+            Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ParentFont = False
+            TabOrder = 1
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Due_Date_Time'
+                Title.Caption = 'Due Date'
+                Width = 94
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Priority_description'
+                Title.Caption = 'Priority'
+                Width = 123
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Subject'
+                Title.Caption = 'Subject'
+                Width = 128
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Contact_Name'
+                Title.Caption = 'Contact'
+                Width = 172
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Type_Description'
+                Title.Caption = 'Type'
+                Width = 115
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Status_Description'
+                Title.Caption = 'Status'
+                Width = 134
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Assigned_To_Name'
+                Title.Caption = 'Assigned To'
+                Width = 101
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Operator_Name'
+                Title.Caption = 'Created by'
+                Width = 108
+                Visible = True
+              end>
+          end
+        end
+        object TabSheet1: TTabSheet
+          Caption = 'Documents'
+          ImageIndex = 2
+          object Panel6: TPanel
+            Left = 0
+            Top = 0
+            Width = 878
+            Height = 312
+            Align = alClient
+            ParentBackground = False
+            TabOrder = 0
+            object Panel7: TPanel
+              Left = 1
+              Top = 287
+              Width = 876
+              Height = 24
+              Align = alBottom
+              BevelOuter = bvNone
+              ParentBackground = False
+              TabOrder = 0
+              object lblDocumentDir: TLabel
+                Left = 8
+                Top = 6
+                Width = 150
+                Height = 13
+                Caption = 'Primary Document Directory:'
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Segoe UI'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+            end
+            object lstvwDocuments: TListView
+              Left = 1
+              Top = 1
+              Width = 876
+              Height = 286
+              Align = alClient
+              Columns = <
+                item
+                  Caption = 'Name'
+                  Width = 200
+                end
+                item
+                  Caption = 'Type'
+                  Width = 200
+                end
+                item
+                  Caption = 'Date modified'
+                  Width = 200
+                end>
+              LargeImages = imgDocuments
+              MultiSelect = True
+              RowSelect = True
+              SmallImages = imgDocuments
+              TabOrder = 1
+              OnColumnClick = lstvwDocumentsColumnClick
+              OnCompare = lstvwDocumentsCompare
+              OnDblClick = lstvwDocumentsDblClick
+            end
+          end
+        end
+      end
+      object pnlTop: TPanel
+        Left = 1
+        Top = 1
+        Width = 886
+        Height = 160
+        Align = alTop
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 1
+        DesignSize = (
+          886
+          160)
+        object Label1: TLabel
+          Left = 8
+          Top = 76
+          Width = 40
+          Height = 13
+          Caption = 'Contact'
+        end
+        object Label5: TLabel
+          Left = 8
+          Top = 16
+          Width = 49
+          Height = 13
+          Caption = 'Customer'
+        end
+        object Label6: TLabel
+          Left = 8
+          Top = 46
+          Width = 35
+          Height = 13
+          Caption = 'Branch'
+        end
+        object Label12: TLabel
+          Left = 8
+          Top = 131
+          Width = 40
+          Height = 13
+          Caption = 'Module'
+        end
+        object LabelPhone: TLabel
+          Left = 377
+          Top = 78
+          Width = 36
+          Height = 13
+          Anchors = [akTop, akRight]
+          Caption = 'Phone:'
+          ExplicitLeft = 379
+        end
+        object LabelFax: TLabel
+          Left = 595
+          Top = 78
+          Width = 39
+          Height = 13
+          Anchors = [akTop, akRight]
+          Caption = 'Mobile:'
+          ExplicitLeft = 597
+        end
+        object DBCPhoneText: TDBText
+          Left = 422
+          Top = 78
+          Width = 170
+          Height = 13
+          Anchors = [akTop, akRight]
+          DataField = 'Phone'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ExplicitLeft = 446
+        end
+        object DBCEmailText: TDBText
+          Left = 422
+          Top = 102
+          Width = 214
+          Height = 13
+          Anchors = [akTop, akRight]
+          DataField = 'Email'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ExplicitLeft = 446
+        end
+        object DBCMobileText: TDBText
+          Left = 638
+          Top = 78
+          Width = 202
+          Height = 13
+          Anchors = [akTop, akRight]
+          DataField = 'Mobile_No'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ExplicitLeft = 662
+        end
+        object edtCustomer: TEdit
+          Left = 80
+          Top = 12
+          Width = 433
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          Color = clWhite
+          ReadOnly = True
+          TabOrder = 0
+          Text = 'edtCustomer'
+        end
+        object dblkpBranch: TDBLookupComboBox
+          Left = 80
+          Top = 42
+          Width = 433
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          KeyField = 'Branch_no'
+          ListField = 'Name'
+          TabOrder = 1
+          OnClick = dblkpBranchClick
+        end
+        object btnBranch: TButton
+          Left = 523
+          Top = 41
+          Width = 22
+          Height = 22
+          Anchors = [akTop, akRight]
+          Caption = '...'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 2
+          OnClick = btnBranchClick
+        end
+        object pnlModule: TPanel
+          Left = 272
+          Top = 120
+          Width = 597
+          Height = 33
+          Anchors = [akLeft, akTop, akRight]
+          BevelOuter = bvNone
+          ParentBackground = False
+          TabOrder = 3
+          DesignSize = (
+            597
+            33)
+          object Label13: TLabel
+            Left = 24
+            Top = 11
+            Width = 51
+            Height = 13
+            Caption = 'Reference'
+          end
+          object edtReference: TEdit
+            Left = 80
+            Top = 7
+            Width = 81
+            Height = 21
+            ReadOnly = True
+            TabOrder = 0
+            Text = 'edtReference'
+          end
+          object edtDescription: TEdit
+            Left = 202
+            Top = 7
+            Width = 382
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            ReadOnly = True
+            TabOrder = 2
+            Text = 'edtDescription'
+          end
+          object btnModuleLU: TButton
+            Left = 172
+            Top = 6
+            Width = 22
+            Height = 22
+            Caption = '...'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            OnClick = btnModuleLUClick
+          end
+        end
+        object Button1: TButton
+          Left = 315
+          Top = 73
+          Width = 22
+          Height = 22
+          Anchors = [akTop, akRight]
+          Caption = '...'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 4
+          OnClick = Button1Click
+        end
+        object dblkpContact: TDBLookupComboBox
+          Left = 80
+          Top = 72
+          Width = 225
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          KeyField = 'Contact_no'
+          ListField = 'Name'
+          TabOrder = 5
+          OnClick = dblkpContactClick
+        end
+        object dblkpModule: TDBLookupComboBox
+          Left = 80
+          Top = 127
+          Width = 193
+          Height = 21
+          KeyField = 'Activity_Module'
+          ListField = 'Activity_Module_description'
+          TabOrder = 6
+          OnClick = dblkpModuleClick
+        end
+        object btnCustomer: TButton
+          Left = 523
+          Top = 11
+          Width = 22
+          Height = 22
+          Anchors = [akTop, akRight]
+          Caption = '...'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 7
+          OnClick = btnCustomerClick
+        end
+        object Button2: TButton
+          Left = 365
+          Top = 98
+          Width = 50
+          Height = 20
+          Anchors = [akTop, akRight]
+          Caption = 'Email:'
+          TabOrder = 8
+          OnClick = Button2Click
+        end
+      end
+    end
   end
   object imgIcons: TImageList
     Left = 32

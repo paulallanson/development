@@ -11,7 +11,7 @@ type
   TSFLUJobLogFrm = class(TForm)
     stsbrDetails: TStatusBar;
     dbgDetails: TDBGrid;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     lblSearch: TLabel;
     edtSearch: TEdit;
     btnSearch: TBitBtn;
@@ -21,7 +21,7 @@ type
     pmnFunctions: TPopupMenu;
     Change1: TMenuItem;
     Delete1: TMenuItem;
-    Panel3: TPanel;
+    pnlFilters: TPanel;
     tmrSearch: TTimer;
     Label1: TLabel;
     memMachine: TMemo;
@@ -32,6 +32,7 @@ type
     lblDateFrom: TLabel;
     dtmDateFrom: TDateTimePicker;
     Add1: TMenuItem;
+    pnlBody: TPanel;
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

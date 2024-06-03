@@ -361,6 +361,7 @@ type
     edtAltPurchaseOrder: TEdit;
     ocWord: TOleContainer;
     ocExcel: TOleContainer;
+    pnlBody: TPanel;
     procedure ValidateQty(Sender: TObject);
     procedure ValidateMoney(Sender: TObject);
     procedure SaveValue(Sender: TObject);

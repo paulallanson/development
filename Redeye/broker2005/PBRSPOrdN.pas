@@ -46,6 +46,7 @@ type
     FormRefClrBitBtn: TBitBtn;
     qryLogos: TFDQuery;
     dtsLogos: TDataSource;
+    pnlBody: TPanel;
     procedure CanPrint(Sender: TObject);
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);

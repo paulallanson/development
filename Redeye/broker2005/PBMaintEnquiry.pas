@@ -31,7 +31,7 @@ type
     pnlOkCancelBtns: TPanel;
     btbtnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    PageControl1: TPageControl;
+    pcDetails: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
@@ -134,6 +134,7 @@ type
     EnterSupplierPrices1: TMenuItem;
     btbtnAddQuantity: TBitBtn;
     cmbbxPriceUnit: TDBLookupComboBox;
+    pnlBody: TPanel;
     procedure FormShow(Sender: TObject);
     procedure strgrdPartsClick(Sender: TObject);
     procedure ColourComboBoxEnter(Sender: TObject);
@@ -459,7 +460,7 @@ begin
   end;
 
   Enquiry.DetailsModified := False;
-  PageControl1.ActivePageIndex := 0;
+  pcDetails.ActivePageIndex := 0;
   btbtnOK.Enabled := OKtoSave();
   edtDescription.SetFocus;
 end;

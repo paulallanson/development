@@ -58,6 +58,7 @@ type
     lblOrderValue: TLabel;
     LblTotInvVal: TLabel;
     mnAddfromPO: TMenuItem;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnSupplierClick(Sender: TObject);

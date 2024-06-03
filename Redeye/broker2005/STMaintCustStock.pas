@@ -46,6 +46,7 @@ type
     lblRecordsFrom: TLabel;
     lblRecordsTo: TLabel;
     tmrSearch: TTimer;
+    pnlBody: TPanel;
     procedure btnLUCustomerFromClick(Sender: TObject);
     procedure btnLUCustomerToClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
