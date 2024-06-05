@@ -167,16 +167,16 @@ var
 begin
   if FMode = 'C' then
     begin
-      AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
-      self.Caption := 'Convert to Order';
+//       AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
+     self.Caption := 'Convert to Order';
       dbgDetails.visible := false;
-      self.Height := 532;
+      self.Height := 660;
       self.Width := 620;
       self.BorderStyle := bsDialog;
     end
   else
     begin
-      AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
+//      AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
       self.Caption := 'Add to Order';
       dbgDetails.visible := true;
       pnlReference.Visible := false;
@@ -378,11 +378,13 @@ end;
 procedure TfrmWTMaintContractConvertOrder.FormCreate(Sender: TObject);
 begin
   self.Caption := 'Convert to Order';
-  dbgDetails.visible := false;
+(*  dbgDetails.visible := false;
   self.Height := 175;
   self.Width := 560;
   self.BorderStyle := bsDialog;
   Customer := 0;
+*)
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintContractConvertOrder.FormDestroy(Sender: TObject);

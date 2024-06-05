@@ -1538,7 +1538,7 @@ begin
   if lblAccountteam.Visible then
     pnlTop.Height := 66
   else
-    pnlTop.Height := 40;
+    pnlTop.Height := 50;
 
   pnlSubReps.Visible := dmBroker.UseSubReps;
 

@@ -193,8 +193,8 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     ParentFont = False
     TabOrder = 0
     object Label2: TLabel
-      Left = 12
-      Top = 20
+      Left = 18
+      Top = 64
       Width = 60
       Height = 13
       Caption = 'Short Name'
@@ -206,8 +206,8 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 12
-      Top = 43
+      Left = 18
+      Top = 27
       Width = 29
       Height = 13
       Caption = 'Name'
@@ -219,21 +219,21 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
       ParentFont = False
     end
     object ShortNameEdit: TEdit
-      Left = 109
-      Top = 16
+      Left = 115
+      Top = 60
       Width = 140
       Height = 21
       MaxLength = 12
-      TabOrder = 0
+      TabOrder = 1
       OnChange = ShortNameEditChange
     end
     object NameEdit: TEdit
-      Left = 109
-      Top = 41
+      Left = 115
+      Top = 33
       Width = 275
       Height = 21
       MaxLength = 40
-      TabOrder = 1
+      TabOrder = 0
       OnChange = NameEditChange
     end
   end

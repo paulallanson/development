@@ -11,6 +11,7 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
@@ -22,6 +23,8 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 399
+    ExplicitHeight = 221
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -71,6 +74,8 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 221
+    ExplicitWidth = 399
     DesignSize = (
       405
       41)
@@ -84,7 +89,7 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 328
+      Left = 322
       Top = 8
       Width = 75
       Height = 25
@@ -92,6 +97,7 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 316
     end
   end
 end

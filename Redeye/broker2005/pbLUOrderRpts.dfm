@@ -3,7 +3,7 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
   Top = 107
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Order Reports'
-  ClientHeight = 283
+  ClientHeight = 305
   ClientWidth = 413
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,22 +11,25 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 413
-    Height = 242
+    Height = 264
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 407
+    ExplicitHeight = 233
     object lstvwReports: TListView
       Left = 0
       Top = 0
       Width = 413
-      Height = 242
+      Height = 264
       Align = alClient
       Columns = <
         item
@@ -95,13 +98,15 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
   end
   object Panel2: TPanel
     Left = 0
-    Top = 242
+    Top = 264
     Width = 413
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 233
+    ExplicitWidth = 407
     DesignSize = (
       413
       41)
@@ -115,7 +120,7 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 324
+      Left = 318
       Top = 8
       Width = 75
       Height = 25
@@ -123,6 +128,7 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 312
     end
   end
 end

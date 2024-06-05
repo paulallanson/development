@@ -43,6 +43,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
+    OnDrawColumnCell = DetsDBGridDrawColumnCell
     OnDblClick = DetsDBGridDblClick
     Columns = <
       item

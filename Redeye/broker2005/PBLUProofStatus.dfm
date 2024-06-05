@@ -3,14 +3,15 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
   Top = 85
   BorderStyle = bsSingle
   Caption = 'Look-Up A Proof Status'
-  ClientHeight = 306
-  ClientWidth = 435
+  ClientHeight = 333
+  ClientWidth = 438
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   TextHeight = 13
@@ -57,7 +58,7 @@ object PBLUProofStatusFrm: TPBLUProofStatusFrm
     Left = 8
     Top = 248
     Width = 321
-    Height = 49
+    Height = 65
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1

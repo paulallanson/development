@@ -2,8 +2,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   Left = 205
   Top = 107
   Caption = 'Contracts'
-  ClientHeight = 432
-  ClientWidth = 848
+  ClientHeight = 423
+  ClientWidth = 842
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 413
-    Width = 848
+    Top = 404
+    Width = 842
     Height = 19
     Panels = <
       item
@@ -39,23 +39,23 @@ object frmPBLUContracts: TfrmPBLUContracts
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 848
+    Width = 842
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 66
-      Height = 21
+      Width = 73
+      Height = 23
       Caption = 'Contracts'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -79,19 +79,19 @@ object frmPBLUContracts: TfrmPBLUContracts
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 848
+    Width = 842
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 842
+        Width = 836
       end>
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 833
+      Width = 827
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -140,8 +140,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 372
-    Width = 848
+    Top = 363
+    Width = 842
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -171,7 +171,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 574
+      Left = 568
       Top = 1
       Width = 273
       Height = 39
@@ -213,8 +213,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 848
-    Height = 297
+    Width = 842
+    Height = 288
     Align = alClient
     DataSource = dtmdlContract.dtsContractGrid
     DrawingStyle = gdsGradient

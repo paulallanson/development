@@ -21,6 +21,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 528
     object Label2: TLabel
       Left = 16
       Top = 13
@@ -44,6 +45,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 237
+    ExplicitWidth = 528
     object DelLabel: TLabel
       Left = 93
       Top = 14
@@ -218,6 +221,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 528
+    ExplicitHeight = 196
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -254,8 +259,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       Caption = 'Price Reference'
     end
     object memDescription: TMemo
-      Left = 80
-      Top = 8
+      Left = 81
+      Top = 6
       Width = 425
       Height = 89
       Lines.Strings = (

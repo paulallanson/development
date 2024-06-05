@@ -4,8 +4,8 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Quote Reports'
-  ClientHeight = 184
-  ClientWidth = 412
+  ClientHeight = 245
+  ClientWidth = 403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,17 +17,19 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 412
-    Height = 143
+    Width = 403
+    Height = 204
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 406
+    ExplicitHeight = 134
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 412
-      Height = 143
+      Width = 403
+      Height = 204
       Align = alClient
       Columns = <
         item
@@ -73,19 +75,23 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
       ViewStyle = vsReport
       OnClick = enableSelect
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 412
+      ExplicitHeight = 143
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 143
-    Width = 412
+    Top = 204
+    Width = 403
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 134
+    ExplicitWidth = 406
     DesignSize = (
-      412
+      403
       41)
     object btnselect: TButton
       Left = 16
@@ -98,7 +104,7 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
       OnClick = btnselectClick
     end
     object Button2: TButton
-      Left = 327
+      Left = 312
       Top = 8
       Width = 75
       Height = 25
@@ -106,6 +112,7 @@ object frmWTLUQuoteRpts: TfrmWTLUQuoteRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 315
     end
   end
 end

@@ -2,8 +2,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   Left = 26
   Top = 123
   Caption = 'Form References'
-  ClientHeight = 364
-  ClientWidth = 704
+  ClientHeight = 355
+  ClientWidth = 698
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,23 +23,23 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 704
+    Width = 698
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 117
-      Height = 21
+      Width = 126
+      Height = 23
       Caption = 'Form References'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -48,19 +48,19 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 704
+    Width = 698
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 698
+        Width = 692
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 689
+      Width = 683
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 66
@@ -135,8 +135,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 704
-    Height = 229
+    Width = 698
+    Height = 220
     Align = alClient
     DataSource = dtmdlForms.dtsForms
     DrawingStyle = gdsGradient
@@ -209,8 +209,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object Panel1: TPanel
     Left = 0
-    Top = 304
-    Width = 704
+    Top = 295
+    Width = 698
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -231,7 +231,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 430
+      Left = 424
       Top = 1
       Width = 273
       Height = 39
@@ -263,8 +263,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 345
-    Width = 704
+    Top = 336
+    Width = 698
     Height = 19
     Panels = <
       item

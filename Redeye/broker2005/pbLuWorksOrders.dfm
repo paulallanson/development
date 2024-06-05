@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 277
-  ClientWidth = 870
+  ClientHeight = 243
+  ClientWidth = 864
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,23 +24,23 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 870
+    Width = 864
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 129
-      Height = 21
+      Width = 140
+      Height = 23
       Caption = 'Works Instructions'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -64,19 +64,19 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 870
+    Width = 864
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 864
+        Width = 858
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 855
+      Width = 849
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -167,8 +167,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 870
-    Height = 142
+    Width = 864
+    Height = 108
     Align = alClient
     DataSource = dtmdlWOrders.dtsWOHeaderGrid
     DrawingStyle = gdsGradient
@@ -275,8 +275,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 217
-    Width = 870
+    Top = 183
+    Width = 864
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -297,7 +297,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 584
+      Left = 578
       Top = 1
       Width = 285
       Height = 39
@@ -356,8 +356,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 258
-    Width = 870
+    Top = 224
+    Width = 864
     Height = 19
     Panels = <
       item

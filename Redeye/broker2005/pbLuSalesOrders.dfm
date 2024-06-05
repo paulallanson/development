@@ -2,8 +2,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 364
-  ClientWidth = 914
+  ClientHeight = 330
+  ClientWidth = 908
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,19 +24,19 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 914
+    Width = 908
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 908
+        Width = 902
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 899
+      Width = 893
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +44,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 887
+        Width = 881
         Height = 40
         ButtonHeight = 44
         ButtonWidth = 65
@@ -133,7 +133,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnAllocatefncClick
         end
         object btnPrintPickNote: TToolButton
-          Left = 543
+          Left = 547
           Top = 0
           Hint = 'Print Picking Note'
           Caption = 'Pic&king'
@@ -142,7 +142,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPrintPickNoteClick
         end
         object btnPickConfirm: TToolButton
-          Left = 608
+          Left = 612
           Top = 0
           Caption = 'Con&firm'
           Enabled = False
@@ -150,7 +150,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnPickConfirmClick
         end
         object ToolButton3: TToolButton
-          Left = 673
+          Left = 677
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -158,7 +158,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 681
+          Left = 685
           Top = 0
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
@@ -167,7 +167,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           OnClick = btnDeliveriesClick
         end
         object ToolButton2: TToolButton
-          Left = 746
+          Left = 750
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -175,7 +175,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
           Style = tbsSeparator
         end
         object ToolButton1: TToolButton
-          Left = 754
+          Left = 758
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4
@@ -186,13 +186,12 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 304
-    Width = 914
+    Top = 270
+    Width = 908
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 212
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -209,7 +208,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 647
+      Left = 641
       Top = 1
       Width = 266
       Height = 39
@@ -279,8 +278,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 345
-    Width = 914
+    Top = 311
+    Width = 908
     Height = 19
     Panels = <
       item
@@ -289,28 +288,27 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       item
         Width = 50
       end>
-    ExplicitTop = 253
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 914
+    Width = 908
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 104
-      Height = 21
+      Width = 112
+      Height = 23
       Caption = 'Call Off Orders'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -334,8 +332,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 914
-    Height = 230
+    Width = 908
+    Height = 196
     Align = alClient
     DataSource = dtmdlOrders.dtsCallOffs
     DrawingStyle = gdsGradient
@@ -415,7 +413,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Width = 64
         Visible = True
       end
       item
@@ -429,7 +426,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Expanded = False
         FieldName = 'Purch_Ord_No'
         Title.Caption = 'Purchase Order'
-        Width = 64
         Visible = True
       end
       item

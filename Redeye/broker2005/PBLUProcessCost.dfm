@@ -4,7 +4,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   BorderStyle = bsDialog
   Caption = 'Maintain Process Operation Costs'
   ClientHeight = 429
-  ClientWidth = 754
+  ClientWidth = 777
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,14 +18,16 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   object Panel1: TPanel
     Left = 0
     Top = 369
-    Width = 754
+    Width = 777
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 360
+    ExplicitWidth = 748
     DesignSize = (
-      754
+      777
       41)
     object btnOK: TBitBtn
       Left = 291
@@ -49,7 +51,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       TabOrder = 1
     end
     object btnClose: TBitBtn
-      Left = 645
+      Left = 662
       Top = 8
       Width = 75
       Height = 25
@@ -57,23 +59,27 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 633
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
     Top = 410
-    Width = 754
+    Width = 777
     Height = 19
     Panels = <>
+    ExplicitTop = 401
+    ExplicitWidth = 748
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 754
+    Width = 777
     Height = 113
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 748
     object Label2: TLabel
       Left = 8
       Top = 14
@@ -204,12 +210,14 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   object Panel3: TPanel
     Left = 0
     Top = 113
-    Width = 754
+    Width = 777
     Height = 256
     Align = alClient
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 748
+    ExplicitHeight = 247
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -374,8 +382,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object pmnSubCategory: TPopupMenu
     OnPopup = pmnSubCategoryPopup
-    Left = 648
-    Top = 73
+    Left = 90
+    Top = 43
     object MenuItem4: TMenuItem
       Caption = 'Add'
       OnClick = MenuItem4Click
@@ -471,8 +479,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       'Category_Number = :Category_Number and'
       '(Process_Cost_Category_Sub.Price_unit = Price_unit.Price_Unit)'
       'order by Cost_Description')
-    Left = 648
-    Top = 129
+    Left = 90
+    Top = 113
     ParamData = <
       item
         Name = 'process'
@@ -494,8 +502,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object dtsProcessCostSub: TDataSource
     DataSet = qryProcessCostSub
-    Left = 648
-    Top = 185
+    Left = 90
+    Top = 183
   end
   object qryAddProcessCost: TFDQuery
     ConnectionName = 'PB'
@@ -656,8 +664,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         'ocess = :Process and Cost_Number = :Cost_Number and Category_Num' +
         'ber = :Category_Number'
       '')
-    Left = 656
-    Top = 256
+    Left = 100
+    Top = 272
     ParamData = <
       item
         Name = 'Customer'

@@ -2,8 +2,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   Left = 30
   Top = 92
   Caption = 'Sales Credits'
-  ClientHeight = 368
-  ClientWidth = 1142
+  ClientHeight = 350
+  ClientWidth = 1130
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1142
+    Width = 1130
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1136
+        Width = 1124
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1127
+      Width = 1115
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,7 +43,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1115
+        Width = 1103
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -154,8 +154,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1142
-    Height = 219
+    Width = 1130
+    Height = 201
     Align = alClient
     DataSource = dmSalesInvoice.dsSCHeaderGrid
     DrawingStyle = gdsGradient
@@ -285,7 +285,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       end
       item
         Expanded = False
-        FieldName = 'Cash_Sales'
+        FieldName = 'cash_sales'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
@@ -381,8 +381,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 293
-    Width = 1142
+    Top = 275
+    Width = 1130
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -403,7 +403,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 846
+      Left = 834
       Top = 1
       Width = 295
       Height = 54
@@ -493,8 +493,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 349
-    Width = 1142
+    Top = 331
+    Width = 1130
     Height = 19
     Panels = <
       item
@@ -507,23 +507,29 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1142
+    Width = 1130
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 3
-      Width = 89
-      Height = 21
+      Width = 96
+      Height = 23
       Caption = 'Sales Credits'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False

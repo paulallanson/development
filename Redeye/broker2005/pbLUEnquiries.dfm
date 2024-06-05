@@ -2,8 +2,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   Left = 59
   Top = 161
   Caption = 'Enquiries'
-  ClientHeight = 341
-  ClientWidth = 871
+  ClientHeight = 332
+  ClientWidth = 865
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 322
-    Width = 871
+    Top = 313
+    Width = 865
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   end
   object Panel1: TPanel
     Left = 0
-    Top = 281
-    Width = 871
+    Top = 272
+    Width = 865
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -60,7 +60,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 597
+      Left = 591
       Top = 1
       Width = 273
       Height = 39
@@ -111,8 +111,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 871
-    Height = 206
+    Width = 865
+    Height = 197
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqs
     DrawingStyle = gdsGradient
@@ -225,26 +225,26 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 871
+    Width = 865
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 865
+        Width = 859
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 856
+      Width = 850
       Height = 41
       Control = Toolbar1
       TabOrder = 0
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 856
+        Width = 838
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 62
@@ -252,7 +252,6 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         Images = imglstMaint
         ShowCaptions = True
         TabOrder = 0
-        ExplicitWidth = 844
         object btnQuick: TToolButton
           Left = 0
           Top = 0
@@ -380,23 +379,23 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 871
+    Width = 865
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 64
-      Height = 21
+      Width = 69
+      Height = 23
       Caption = 'Enquiries'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
