@@ -458,6 +458,7 @@ type
     pmnuPI: TPopupMenu;
     pmnuViewPI: TMenuItem;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

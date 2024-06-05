@@ -12,8 +12,8 @@ uses
 
 type
   TfrmWTMaintContractConvertOrder = class(TForm)
-    qryWorktops: TFDQuery;
-    dtsWorktops: TDataSource;
+    qryWorktops1: TFDQuery;
+    dtsWorktops1: TDataSource;
     qryGetQElement: TFDQuery;
     qryGetWTThickness: TFDQuery;
     qryThickness: TFDQuery;
@@ -64,6 +64,8 @@ type
     edtSiteName: TEdit;
     btnCustomerBranch: TBitBtn;
     btnClearCustomerBranch: TSpeedButton;
+    qryWorktops2: TFDQuery;
+    dtsWorktops2: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -186,7 +188,7 @@ begin
       ShowSalesOrders;
     end;
 
-  with qryWorktops do
+  with qryWorktops1 do
     begin
       close;
       parambyname('Customer').asinteger := self.Customer;
@@ -197,12 +199,27 @@ begin
       if recordcount = 1 then
         begin
           dblkpWorktops.KeyValue := fieldbyname('Worktop').asinteger;
-          dblkpUpstand.KeyValue := fieldbyname('Worktop').asinteger;
         end;
 
       Supplier := fieldbyname('Supplier').asinteger;
       Material := fieldbyname('Material_Type').asinteger;
     end;
+
+  with qryWorktops2 do
+    begin
+      close;
+      parambyname('Customer').asinteger := self.Customer;
+      parambyname('Group_Number').asinteger := GroupNumber;
+      open;
+      first;
+
+      if recordcount = 1 then
+        begin
+          dblkpUpstand.KeyValue := fieldbyname('Worktop').asinteger;
+        end;
+
+    end;
+
 
   with qryThickness do
     begin

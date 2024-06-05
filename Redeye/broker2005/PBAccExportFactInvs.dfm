@@ -46,7 +46,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 0
     Width = 509
     Height = 110
-    Align = alClient
+    Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
@@ -233,7 +233,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 110
     Width = 509
     Height = 45
-    Align = alBottom
+    Align = alClient
     ParentBackground = False
     TabOrder = 2
     object lblExpTo: TLabel

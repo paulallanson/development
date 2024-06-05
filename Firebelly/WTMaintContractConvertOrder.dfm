@@ -212,7 +212,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
-      ListSource = dtsWorktops
+      ListSource = dtsWorktops1
       TabOrder = 0
       OnClick = rktopsClick
     end
@@ -244,7 +244,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
-      ListSource = dtsWorktops
+      ListSource = dtsWorktops2
       TabOrder = 3
       OnClick = EnableOK
     end
@@ -566,7 +566,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       end
     end
   end
-  object qryWorktops: TFDQuery
+  object qryWorktops1: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
@@ -591,8 +591,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       'WHERE Customer_Worktop_Group.Customer = :Customer AND'
       '      Customer_Worktop_Group.Group_Number = :Group_Number'
       'ORDER BY Worktop.Description')
-    Left = 360
-    Top = 120
+    Left = 352
+    Top = 112
     ParamData = <
       item
         Name = 'Customer'
@@ -601,8 +601,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         Name = 'Group_Number'
       end>
   end
-  object dtsWorktops: TDataSource
-    DataSet = qryWorktops
+  object dtsWorktops1: TDataSource
+    DataSet = qryWorktops1
     Left = 408
     Top = 112
   end
@@ -729,5 +729,45 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       item
         Name = 'Quote'
       end>
+  end
+  object qryWorktops2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Worktop_Group.Customer,'
+      '        Customer_Worktop_Group.Group_Number,'
+      '        Customer_Worktop_Group.Supplier,'
+      '        Customer_Worktop.Worktop,'
+      '        Worktop.Description,'
+      '        Customer_Worktop_Group.Material_Type,'
+      '        Material_Type.Description'
+      'FROM Material_Type'
+      '        INNER JOIN (Worktop'
+      '        INNER JOIN (Customer_Worktop_Group'
+      '        INNER JOIN Customer_Worktop'
+      
+        '          ON (Customer_Worktop_Group.Group_Number = Customer_Wor' +
+        'ktop.Group_Number) AND (Customer_Worktop_Group.Customer = Custom' +
+        'er_Worktop.Customer))'
+      '          ON Worktop.Worktop = Customer_Worktop.Worktop)'
+      
+        '          ON Material_Type.Material_Type = Customer_Worktop_Grou' +
+        'p.Material_Type'
+      'WHERE Customer_Worktop_Group.Customer = :Customer AND'
+      '      Customer_Worktop_Group.Group_Number = :Group_Number'
+      'ORDER BY Worktop.Description')
+    Left = 352
+    Top = 144
+    ParamData = <
+      item
+        Name = 'Customer'
+      end
+      item
+        Name = 'Group_Number'
+      end>
+  end
+  object dtsWorktops2: TDataSource
+    DataSet = qryWorktops2
+    Left = 408
+    Top = 144
   end
 end

@@ -129,6 +129,7 @@ type
     CountyEdit: TEdit;
     SearchBtn: TButton;
     pnlReturnAddressTS: TPanel;
+    pnlBody: TPanel;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckKeyIsNumber(Sender: TObject; var Key: Char);
     procedure FormActivate(Sender: TObject);

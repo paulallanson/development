@@ -35,7 +35,7 @@ type
     btnInvToCustomer: TBitBtn;
     Label8: TLabel;
     memCustomer: TMemo;
-    Panel6: TPanel;
+    pnlBody: TPanel;
     sgLines: TStringGrid;
     btnCustomer: TBitBtn;
     pmnLines: TPopupMenu;

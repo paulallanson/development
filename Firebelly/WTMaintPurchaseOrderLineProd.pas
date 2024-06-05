@@ -35,6 +35,7 @@ type
     edtDiscount: TCREditMoney;
     cmbProducts: TComboBox;
     edtDescription: TMemo;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);

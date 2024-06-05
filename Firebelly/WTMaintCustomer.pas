@@ -14,7 +14,7 @@ type
   TfrmWtMaintCustomer = class(TForm)
     dtsOneCustomer: TDataSource;
     qryCompany: TFDQuery;
-    Panel1: TPanel;
+    pnlControls: TPanel;
     lblDelete: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
@@ -212,6 +212,7 @@ type
     chkbxShowInactiveMaterialTypes: TCheckBox;
     chkbxRequiresAppForPay: TCheckBox;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);

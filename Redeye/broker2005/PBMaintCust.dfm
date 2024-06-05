@@ -21,841 +21,2667 @@ object PBMaintCustFrm: TPBMaintCustFrm
   OnResize = FormResize
   OnShow = FormShow
   TextHeight = 13
-  object pgCustomer: TPageControl
+  object stsbrDetails: TStatusBar
     Left = 0
-    Top = 41
+    Top = 724
     Width = 1176
-    Height = 642
-    ActivePage = tbActivity
-    Align = alClient
-    TabOrder = 1
-    object tbDetails: TTabSheet
-      Caption = 'Details'
-      object lblCreatedOn: TLabel
-        Left = 7
-        Top = 572
-        Width = 72
-        Height = 13
-        Caption = 'Account Code'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Visible = False
+    Height = 19
+    Panels = <
+      item
+        Width = 350
       end
-      object pnlGeneralDetails: TPanel
-        Left = 0
-        Top = 0
-        Width = 481
-        Height = 614
-        Align = alLeft
-        ParentBackground = False
-        TabOrder = 0
-        DesignSize = (
-          481
-          614)
-        object grpbxAnalysis: TGroupBox
-          Left = 8
-          Top = 314
-          Width = 465
-          Height = 290
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Caption = 'Analysis  '
-          ParentBackground = False
-          TabOrder = 2
-          DesignSize = (
-            465
-            290)
-          object Label1: TLabel
-            Left = 9
-            Top = 20
-            Width = 78
-            Height = 13
-            Caption = 'Customer Type'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object lblRevenueCentre: TLabel
-            Left = 8
-            Top = 79
-            Width = 81
-            Height = 13
-            Caption = 'Revenue Centre'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblStatus: TLabel
-            Left = 9
-            Top = 223
-            Width = 32
-            Height = 13
-            Caption = 'Status'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            Visible = False
-          end
-          object Label45: TLabel
-            Left = 9
-            Top = 49
-            Width = 100
-            Height = 13
-            Caption = 'Level of Importance'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblAnalysis1: TLabel
-            Left = 8
-            Top = 108
-            Width = 80
-            Height = 13
-            Caption = 'Analysis Code 1'
-            Visible = False
-          end
-          object lblAnalysis2: TLabel
-            Left = 8
-            Top = 137
-            Width = 80
-            Height = 13
-            Caption = 'Analysis Code 2'
-            Visible = False
-          end
-          object lblAnalysis3: TLabel
-            Left = 8
-            Top = 166
-            Width = 80
-            Height = 13
-            Caption = 'Analysis Code 3'
-            Visible = False
-          end
-          object lblAnalysis4: TLabel
-            Left = 8
-            Top = 194
-            Width = 80
-            Height = 13
-            Caption = 'Analysis Code 4'
-            Visible = False
-          end
-          object TypeDBLUCB: TDBLookupComboBox
-            Left = 125
-            Top = 16
-            Width = 260
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Customer_Type'
-            ListField = 'Description'
-            TabOrder = 0
-            OnClick = TypeDBLUCBClick
-          end
-          object CustTypeMaintBitBtn: TBitBtn
-            Left = 398
-            Top = 15
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 1
-            OnClick = CustTypeMaintBitBtnClick
-          end
-          object btnRevenueCentre: TBitBtn
-            Left = 398
-            Top = 74
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 5
-            OnClick = btnRevenueCentreClick
-          end
-          object dblkpRevenueCentre: TDBLookupComboBox
-            Left = 125
-            Top = 75
-            Width = 260
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Invoice_Location'
-            ListField = 'Invoice_location_Descr'
-            TabOrder = 4
-          end
-          object dblkpCustStatus: TDBLookupComboBox
-            Left = 125
-            Top = 219
-            Width = 300
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Customer_Status'
-            ListField = 'Customer_Status_Descr'
-            TabOrder = 11
-            Visible = False
-            OnClick = dblkpCustStatusClick
-          end
-          object dblkpLevelOfImportance: TDBLookupComboBox
-            Left = 125
-            Top = 45
-            Width = 260
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Level_of_Importance'
-            ListField = 'Importance_Description'
-            TabOrder = 2
-            OnClick = dblkpCustStatusClick
-          end
-          object btnRevenueCentreClear: TBitBtn
-            Left = 431
-            Top = 74
-            Width = 25
-            Height = 23
-            Anchors = [akTop, akRight]
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000120B0000120B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-              55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-              305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-              005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-              B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-              B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-              B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-              B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-              05555777775555557F5555000555555505555577755555557555}
-            NumGlyphs = 2
-            TabOrder = 6
-            OnClick = btnRevenueCentreClearClick
-          end
-          object btnLevelOfImportance: TBitBtn
-            Left = 398
-            Top = 44
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 3
-            OnClick = btnLevelOfImportanceClick
-          end
-          object edtAnalysis1: TEdit
-            Left = 125
-            Top = 104
-            Width = 297
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            TabOrder = 7
-            Text = 'edtAnalysis1'
-            Visible = False
-          end
-          object edtAnalysis2: TEdit
-            Left = 125
-            Top = 133
-            Width = 297
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            TabOrder = 8
-            Text = 'edtAnalysis2'
-            Visible = False
-          end
-          object BitBtn7: TBitBtn
-            Left = 431
-            Top = 44
-            Width = 25
-            Height = 23
-            Anchors = [akTop, akRight]
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000120B0000120B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-              55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-              305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-              005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-              B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-              B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-              B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-              B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-              05555777775555557F5555000555555505555577755555557555}
-            NumGlyphs = 2
-            TabOrder = 12
-            OnClick = BitBtn7Click
-          end
-          object edtAnalysis3: TEdit
-            Left = 125
-            Top = 162
-            Width = 297
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            TabOrder = 9
-            Text = 'edtAnalysis3'
-            Visible = False
-          end
-          object edtAnalysis4: TEdit
-            Left = 125
-            Top = 190
-            Width = 297
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            TabOrder = 10
-            Text = 'edtAnalysis4'
-            Visible = False
-          end
-          object chkbxAcquiredCompany: TCheckBox
-            Left = 8
-            Top = 238
-            Width = 177
-            Height = 17
-            Anchors = [akLeft, akBottom]
-            Caption = 'This is a Reseller Customer'
-            TabOrder = 13
-          end
-          object chkbxCTRLPCustomer: TCheckBox
-            Left = 8
-            Top = 262
-            Width = 249
-            Height = 17
-            Anchors = [akLeft, akBottom]
-            Caption = 'This is a CTRL-P Master Customer'
-            TabOrder = 14
-          end
-        end
-        object grpbxDetails: TGroupBox
-          Left = 8
-          Top = 2
-          Width = 465
-          Height = 271
-          Anchors = [akLeft, akTop, akRight]
-          ParentBackground = False
-          TabOrder = 0
-          DesignSize = (
-            465
-            271)
-          object Label20: TLabel
-            Left = 7
-            Top = 20
-            Width = 42
-            Height = 13
-            Caption = 'Address'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label21: TLabel
-            Left = 7
-            Top = 133
-            Width = 48
-            Height = 13
-            Caption = 'Postcode'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label22: TLabel
-            Left = 7
-            Top = 186
-            Width = 34
-            Height = 13
-            Caption = 'Phone'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label23: TLabel
-            Left = 7
-            Top = 214
-            Width = 17
-            Height = 13
-            Caption = 'Fax'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label24: TLabel
-            Left = 7
-            Top = 252
-            Width = 27
-            Height = 13
-            Caption = 'Email'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label14: TLabel
-            Left = 7
-            Top = 105
-            Width = 53
-            Height = 13
-            Caption = 'Town/City'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label18: TLabel
-            Left = 223
-            Top = 133
-            Width = 37
-            Height = 13
-            Caption = 'County'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label27: TLabel
-            Left = 7
-            Top = 160
-            Width = 41
-            Height = 13
-            Caption = 'Country'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object TownEdit: TEdit
-            Left = 100
-            Top = 101
-            Width = 141
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 3
-            Text = 'TownEdit'
-            OnChange = CheckOK
-          end
-          object BuildingEdit: TEdit
-            Left = 100
-            Top = 16
-            Width = 348
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 0
-            Text = 'BuildingEdit'
-            OnChange = CheckOK
-          end
-          object StreetEdit: TEdit
-            Left = 100
-            Top = 44
-            Width = 348
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 1
-            Text = 'StreetEdit'
-          end
-          object LocaleEdit: TEdit
-            Left = 100
-            Top = 72
-            Width = 348
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 2
-            Text = 'LocaleEdit'
-          end
-          object PhoneEdit: TEdit
-            Left = 100
-            Top = 183
-            Width = 253
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 20
-            TabOrder = 9
-            Text = 'PhoneEdit'
-            OnChange = CheckOK
-          end
-          object FaxEdit: TEdit
-            Left = 100
-            Top = 211
-            Width = 253
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 20
-            TabOrder = 10
-            Text = 'FaxEdit'
-          end
-          object EMailEdit: TEdit
-            Left = 100
-            Top = 244
-            Width = 348
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 11
-            Text = 'EMailEdit'
-          end
-          object PostCodeEdit: TEdit
-            Left = 100
-            Top = 129
-            Width = 101
-            Height = 21
-            CharCase = ecUpperCase
-            MaxLength = 10
-            TabOrder = 4
-            Text = 'POSTCODEEDIT'
-            OnChange = CheckOK
-          end
-          object CountyEdit: TEdit
-            Left = 267
-            Top = 129
-            Width = 181
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 5
-            Text = 'CountyEdit'
-          end
-          object dblkpCountry: TDBLookupComboBox
-            Left = 100
-            Top = 156
-            Width = 253
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Country_Id'
-            ListField = 'Country_Id_Descr'
-            TabOrder = 6
-          end
-          object BitBtn2: TBitBtn
-            Left = 366
-            Top = 155
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 7
-            OnClick = BitBtn2Click
-          end
-          object btnCountryClear: TBitBtn
-            Left = 399
-            Top = 155
-            Width = 25
-            Height = 23
-            Anchors = [akTop, akRight]
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000120B0000120B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-              55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-              305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-              005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-              B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-              B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-              B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-              B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-              05555777775555557F5555000555555505555577755555557555}
-            NumGlyphs = 2
-            TabOrder = 8
-            OnClick = CountryClearBitBtnClick
-          end
-        end
-        object grpbxAccountCode: TGroupBox
-          Left = 8
-          Top = 273
-          Width = 465
-          Height = 38
-          Anchors = [akLeft, akTop, akRight]
-          ParentBackground = False
-          TabOrder = 1
-          object Label11: TLabel
-            Left = 7
-            Top = 14
-            Width = 72
-            Height = 13
-            Caption = 'Account Code'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object AccCodeEdit: TEdit
-            Left = 101
-            Top = 10
-            Width = 90
-            Height = 21
-            CharCase = ecUpperCase
-            MaxLength = 8
-            TabOrder = 0
-            Text = 'ACCCODEEDIT'
-            OnChange = AccCodeEditChange
-            OnEnter = AccCodeEditEnter
-            OnExit = AccCodeEditExit
-          end
-          object chkbxInvUpFrnt: TCheckBox
-            Tag = 200
-            Left = 280
-            Top = 12
-            Width = 169
-            Height = 17
-            Caption = 'All orders are invoiced upfront'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 1
-          end
-        end
-        object dbgAccountCodes: TDBGrid
-          Tag = 200
+      item
+        Width = 250
+      end>
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Top = 0
+    Width = 1176
+    Height = 724
+    Align = alClient
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 1
+    object pgCustomer: TPageControl
+      Left = 0
+      Top = 41
+      Width = 1176
+      Height = 642
+      ActivePage = tbDetails
+      Align = alClient
+      TabOrder = 0
+      object tbDetails: TTabSheet
+        Caption = 'Details'
+        object lblCreatedOn: TLabel
           Left = 7
-          Top = 306
-          Width = 466
-          Height = 88
-          TabStop = False
-          Anchors = [akLeft, akTop, akRight]
-          DrawingStyle = gdsGradient
+          Top = 572
+          Width = 72
+          Height = 13
+          Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
+          Font.Color = clBlack
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          TabOrder = 3
-          TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -12
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
           Visible = False
-          Columns = <
-            item
-              Expanded = False
-              FieldName = 'Account_Code'
-              Title.Caption = 'Account Code'
-              Width = 93
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Customer_Name'
-              Title.Caption = 'Customer'
-              Width = 261
-              Visible = True
-            end>
         end
-      end
-      object pnlHOContacts: TPanel
-        Left = 481
-        Top = 0
-        Width = 687
-        Height = 614
-        Align = alClient
-        Caption = 'pnlHOContacts'
-        ParentBackground = False
-        TabOrder = 1
-        object Panel26: TPanel
-          Left = 1
-          Top = 1
-          Width = 685
-          Height = 24
-          Align = alTop
-          BevelOuter = bvNone
-          Caption = 'Head Office Contacts'
+        object pnlGeneralDetails: TPanel
+          Left = 0
+          Top = 0
+          Width = 481
+          Height = 614
+          Align = alLeft
           ParentBackground = False
           TabOrder = 0
-        end
-        object Panel27: TPanel
-          Left = 677
-          Top = 57
-          Width = 9
-          Height = 556
-          Align = alRight
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 1
-        end
-        object CoolBar9: TCoolBar
-          Left = 1
-          Top = 25
-          Width = 685
-          Height = 32
-          Bands = <
-            item
-              Control = ToolBar2
-              ImageIndex = -1
-              Width = 681
-            end>
-          EdgeInner = esLowered
-          EdgeOuter = esNone
-          object ToolBar2: TToolBar
-            Left = 11
-            Top = 0
-            Width = 672
-            Height = 25
-            Align = alBottom
-            Caption = 'ToolBar2'
-            Images = imglstButtons
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 0
-            object btnHOContactAdd: TToolButton
-              Left = 0
-              Top = 0
-              Hint = 'New'
-              Caption = 'Add'
-              ImageIndex = 0
-              OnClick = btnHOContactAddClick
+          DesignSize = (
+            481
+            614)
+          object grpbxAnalysis: TGroupBox
+            Left = 8
+            Top = 314
+            Width = 465
+            Height = 290
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = 'Analysis  '
+            ParentBackground = False
+            TabOrder = 2
+            DesignSize = (
+              465
+              290)
+            object Label1: TLabel
+              Left = 9
+              Top = 20
+              Width = 78
+              Height = 13
+              Caption = 'Customer Type'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
             end
-            object btnHOContactChange: TToolButton
-              Left = 23
-              Top = 0
-              Hint = 'Change'
-              Caption = 'Chnage'
-              ImageIndex = 1
-              OnClick = btnHOContactChangeClick
+            object lblRevenueCentre: TLabel
+              Left = 8
+              Top = 79
+              Width = 81
+              Height = 13
+              Caption = 'Revenue Centre'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
             end
-            object btnHOContactDelete: TToolButton
-              Left = 46
-              Top = 0
-              Hint = 'Delete'
-              ImageIndex = 3
-              OnClick = btnHOContactDeleteClick
+            object lblStatus: TLabel
+              Left = 9
+              Top = 223
+              Width = 32
+              Height = 13
+              Caption = 'Status'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+              Visible = False
             end
-            object btnHOContactOnline: TToolButton
-              Left = 69
-              Top = 0
-              Hint = 'Online'
-              Caption = 'btnHOContactOnline'
-              ImageIndex = 9
+            object Label45: TLabel
+              Left = 9
+              Top = 49
+              Width = 100
+              Height = 13
+              Caption = 'Level of Importance'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
             end
-            object btnHOContactEmail: TToolButton
-              Left = 92
-              Top = 0
-              Hint = 'Email'
-              Caption = 'btnHOContactEmail'
-              ImageIndex = 10
+            object lblAnalysis1: TLabel
+              Left = 8
+              Top = 108
+              Width = 80
+              Height = 13
+              Caption = 'Analysis Code 1'
+              Visible = False
+            end
+            object lblAnalysis2: TLabel
+              Left = 8
+              Top = 137
+              Width = 80
+              Height = 13
+              Caption = 'Analysis Code 2'
+              Visible = False
+            end
+            object lblAnalysis3: TLabel
+              Left = 8
+              Top = 166
+              Width = 80
+              Height = 13
+              Caption = 'Analysis Code 3'
+              Visible = False
+            end
+            object lblAnalysis4: TLabel
+              Left = 8
+              Top = 194
+              Width = 80
+              Height = 13
+              Caption = 'Analysis Code 4'
+              Visible = False
+            end
+            object TypeDBLUCB: TDBLookupComboBox
+              Left = 125
+              Top = 16
+              Width = 260
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Customer_Type'
+              ListField = 'Description'
+              TabOrder = 0
+              OnClick = TypeDBLUCBClick
+            end
+            object CustTypeMaintBitBtn: TBitBtn
+              Left = 398
+              Top = 15
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 1
+              OnClick = CustTypeMaintBitBtnClick
+            end
+            object btnRevenueCentre: TBitBtn
+              Left = 398
+              Top = 74
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 5
+              OnClick = btnRevenueCentreClick
+            end
+            object dblkpRevenueCentre: TDBLookupComboBox
+              Left = 125
+              Top = 75
+              Width = 260
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Invoice_Location'
+              ListField = 'Invoice_location_Descr'
+              TabOrder = 4
+            end
+            object dblkpCustStatus: TDBLookupComboBox
+              Left = 125
+              Top = 219
+              Width = 300
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Customer_Status'
+              ListField = 'Customer_Status_Descr'
+              TabOrder = 11
+              Visible = False
+              OnClick = dblkpCustStatusClick
+            end
+            object dblkpLevelOfImportance: TDBLookupComboBox
+              Left = 125
+              Top = 45
+              Width = 260
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Level_of_Importance'
+              ListField = 'Importance_Description'
+              TabOrder = 2
+              OnClick = dblkpCustStatusClick
+            end
+            object btnRevenueCentreClear: TBitBtn
+              Left = 431
+              Top = 74
+              Width = 25
+              Height = 23
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+                305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+                005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+                B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+                B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+                B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+                B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+                05555777775555557F5555000555555505555577755555557555}
+              NumGlyphs = 2
+              TabOrder = 6
+              OnClick = btnRevenueCentreClearClick
+            end
+            object btnLevelOfImportance: TBitBtn
+              Left = 398
+              Top = 44
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 3
+              OnClick = btnLevelOfImportanceClick
+            end
+            object edtAnalysis1: TEdit
+              Left = 125
+              Top = 104
+              Width = 297
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              TabOrder = 7
+              Text = 'edtAnalysis1'
+              Visible = False
+            end
+            object edtAnalysis2: TEdit
+              Left = 125
+              Top = 133
+              Width = 297
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              TabOrder = 8
+              Text = 'edtAnalysis2'
+              Visible = False
+            end
+            object BitBtn7: TBitBtn
+              Left = 431
+              Top = 44
+              Width = 25
+              Height = 23
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+                305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+                005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+                B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+                B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+                B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+                B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+                05555777775555557F5555000555555505555577755555557555}
+              NumGlyphs = 2
+              TabOrder = 12
+              OnClick = BitBtn7Click
+            end
+            object edtAnalysis3: TEdit
+              Left = 125
+              Top = 162
+              Width = 297
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              TabOrder = 9
+              Text = 'edtAnalysis3'
+              Visible = False
+            end
+            object edtAnalysis4: TEdit
+              Left = 125
+              Top = 190
+              Width = 297
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              TabOrder = 10
+              Text = 'edtAnalysis4'
+              Visible = False
+            end
+            object chkbxAcquiredCompany: TCheckBox
+              Left = 8
+              Top = 238
+              Width = 177
+              Height = 17
+              Anchors = [akLeft, akBottom]
+              Caption = 'This is a Reseller Customer'
+              TabOrder = 13
+            end
+            object chkbxCTRLPCustomer: TCheckBox
+              Left = 8
+              Top = 262
+              Width = 249
+              Height = 17
+              Anchors = [akLeft, akBottom]
+              Caption = 'This is a CTRL-P Master Customer'
+              TabOrder = 14
             end
           end
+          object grpbxDetails: TGroupBox
+            Left = 8
+            Top = 2
+            Width = 465
+            Height = 271
+            Anchors = [akLeft, akTop, akRight]
+            ParentBackground = False
+            TabOrder = 0
+            DesignSize = (
+              465
+              271)
+            object Label20: TLabel
+              Left = 7
+              Top = 20
+              Width = 42
+              Height = 13
+              Caption = 'Address'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label21: TLabel
+              Left = 7
+              Top = 133
+              Width = 48
+              Height = 13
+              Caption = 'Postcode'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label22: TLabel
+              Left = 7
+              Top = 186
+              Width = 34
+              Height = 13
+              Caption = 'Phone'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label23: TLabel
+              Left = 7
+              Top = 214
+              Width = 17
+              Height = 13
+              Caption = 'Fax'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label24: TLabel
+              Left = 7
+              Top = 252
+              Width = 27
+              Height = 13
+              Caption = 'Email'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label14: TLabel
+              Left = 7
+              Top = 105
+              Width = 53
+              Height = 13
+              Caption = 'Town/City'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label18: TLabel
+              Left = 223
+              Top = 133
+              Width = 37
+              Height = 13
+              Caption = 'County'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label27: TLabel
+              Left = 7
+              Top = 160
+              Width = 41
+              Height = 13
+              Caption = 'Country'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object TownEdit: TEdit
+              Left = 100
+              Top = 101
+              Width = 141
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 3
+              Text = 'TownEdit'
+              OnChange = CheckOK
+            end
+            object BuildingEdit: TEdit
+              Left = 100
+              Top = 16
+              Width = 348
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 0
+              Text = 'BuildingEdit'
+              OnChange = CheckOK
+            end
+            object StreetEdit: TEdit
+              Left = 100
+              Top = 44
+              Width = 348
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 1
+              Text = 'StreetEdit'
+            end
+            object LocaleEdit: TEdit
+              Left = 100
+              Top = 72
+              Width = 348
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 2
+              Text = 'LocaleEdit'
+            end
+            object PhoneEdit: TEdit
+              Left = 100
+              Top = 183
+              Width = 253
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 20
+              TabOrder = 9
+              Text = 'PhoneEdit'
+              OnChange = CheckOK
+            end
+            object FaxEdit: TEdit
+              Left = 100
+              Top = 211
+              Width = 253
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 20
+              TabOrder = 10
+              Text = 'FaxEdit'
+            end
+            object EMailEdit: TEdit
+              Left = 100
+              Top = 244
+              Width = 348
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 11
+              Text = 'EMailEdit'
+            end
+            object PostCodeEdit: TEdit
+              Left = 100
+              Top = 129
+              Width = 101
+              Height = 21
+              CharCase = ecUpperCase
+              MaxLength = 10
+              TabOrder = 4
+              Text = 'POSTCODEEDIT'
+              OnChange = CheckOK
+            end
+            object CountyEdit: TEdit
+              Left = 267
+              Top = 129
+              Width = 181
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 5
+              Text = 'CountyEdit'
+            end
+            object dblkpCountry: TDBLookupComboBox
+              Left = 100
+              Top = 156
+              Width = 253
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Country_Id'
+              ListField = 'Country_Id_Descr'
+              TabOrder = 6
+            end
+            object BitBtn2: TBitBtn
+              Left = 366
+              Top = 155
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 7
+              OnClick = BitBtn2Click
+            end
+            object btnCountryClear: TBitBtn
+              Left = 399
+              Top = 155
+              Width = 25
+              Height = 23
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+                305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+                005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+                B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+                B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+                B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+                B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+                05555777775555557F5555000555555505555577755555557555}
+              NumGlyphs = 2
+              TabOrder = 8
+              OnClick = CountryClearBitBtnClick
+            end
+          end
+          object grpbxAccountCode: TGroupBox
+            Left = 8
+            Top = 273
+            Width = 465
+            Height = 38
+            Anchors = [akLeft, akTop, akRight]
+            ParentBackground = False
+            TabOrder = 1
+            object Label11: TLabel
+              Left = 7
+              Top = 14
+              Width = 72
+              Height = 13
+              Caption = 'Account Code'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object AccCodeEdit: TEdit
+              Left = 101
+              Top = 10
+              Width = 90
+              Height = 21
+              CharCase = ecUpperCase
+              MaxLength = 8
+              TabOrder = 0
+              Text = 'ACCCODEEDIT'
+              OnChange = AccCodeEditChange
+              OnEnter = AccCodeEditEnter
+              OnExit = AccCodeEditExit
+            end
+            object chkbxInvUpFrnt: TCheckBox
+              Tag = 200
+              Left = 280
+              Top = 12
+              Width = 169
+              Height = 17
+              Caption = 'All orders are invoiced upfront'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 1
+            end
+          end
+          object dbgAccountCodes: TDBGrid
+            Tag = 200
+            Left = 7
+            Top = 306
+            Width = 466
+            Height = 88
+            TabStop = False
+            Anchors = [akLeft, akTop, akRight]
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 3
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            Visible = False
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Account_Code'
+                Title.Caption = 'Account Code'
+                Width = 93
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Customer_Name'
+                Title.Caption = 'Customer'
+                Width = 261
+                Visible = True
+              end>
+          end
         end
-        object pnlContactDetails: TPanel
-          Left = 501
-          Top = 57
-          Width = 176
-          Height = 556
-          Align = alRight
+        object pnlHOContacts: TPanel
+          Left = 481
+          Top = 0
+          Width = 687
+          Height = 614
+          Align = alClient
+          Caption = 'pnlHOContacts'
           ParentBackground = False
-          TabOrder = 3
-          object Panel31: TPanel
+          TabOrder = 1
+          object Panel26: TPanel
             Left = 1
             Top = 1
-            Width = 174
+            Width = 685
             Height = 24
             Align = alTop
             BevelOuter = bvNone
-            Caption = 'Product Categories'
+            Caption = 'Head Office Contacts'
             ParentBackground = False
             TabOrder = 0
           end
-          object dblstContactCategories: TDBListBox
-            Left = 1
-            Top = 25
-            Width = 174
-            Height = 232
-            Align = alTop
-            DataField = 'Description'
-            ItemHeight = 13
+          object Panel27: TPanel
+            Left = 677
+            Top = 57
+            Width = 9
+            Height = 556
+            Align = alRight
+            BevelOuter = bvNone
+            ParentBackground = False
             TabOrder = 1
           end
+          object CoolBar9: TCoolBar
+            Left = 1
+            Top = 25
+            Width = 685
+            Height = 32
+            Bands = <
+              item
+                Control = ToolBar2
+                ImageIndex = -1
+                Width = 681
+              end>
+            EdgeInner = esLowered
+            EdgeOuter = esNone
+            object ToolBar2: TToolBar
+              Left = 11
+              Top = 0
+              Width = 672
+              Height = 25
+              Align = alBottom
+              Caption = 'ToolBar2'
+              Images = imglstButtons
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 0
+              object btnHOContactAdd: TToolButton
+                Left = 0
+                Top = 0
+                Hint = 'New'
+                Caption = 'Add'
+                ImageIndex = 0
+                OnClick = btnHOContactAddClick
+              end
+              object btnHOContactChange: TToolButton
+                Left = 23
+                Top = 0
+                Hint = 'Change'
+                Caption = 'Chnage'
+                ImageIndex = 1
+                OnClick = btnHOContactChangeClick
+              end
+              object btnHOContactDelete: TToolButton
+                Left = 46
+                Top = 0
+                Hint = 'Delete'
+                ImageIndex = 3
+                OnClick = btnHOContactDeleteClick
+              end
+              object btnHOContactOnline: TToolButton
+                Left = 69
+                Top = 0
+                Hint = 'Online'
+                Caption = 'btnHOContactOnline'
+                ImageIndex = 9
+              end
+              object btnHOContactEmail: TToolButton
+                Left = 92
+                Top = 0
+                Hint = 'Email'
+                Caption = 'btnHOContactEmail'
+                ImageIndex = 10
+              end
+            end
+          end
+          object pnlContactDetails: TPanel
+            Left = 501
+            Top = 57
+            Width = 176
+            Height = 556
+            Align = alRight
+            ParentBackground = False
+            TabOrder = 3
+            object Panel31: TPanel
+              Left = 1
+              Top = 1
+              Width = 174
+              Height = 24
+              Align = alTop
+              BevelOuter = bvNone
+              Caption = 'Product Categories'
+              ParentBackground = False
+              TabOrder = 0
+            end
+            object dblstContactCategories: TDBListBox
+              Left = 1
+              Top = 25
+              Width = 174
+              Height = 232
+              Align = alTop
+              DataField = 'Description'
+              ItemHeight = 13
+              TabOrder = 1
+            end
+          end
+          object Panel28: TPanel
+            Left = 480
+            Top = 57
+            Width = 21
+            Height = 556
+            Align = alRight
+            ParentBackground = False
+            TabOrder = 4
+          end
+          object Panel29: TPanel
+            Left = 1
+            Top = 57
+            Width = 479
+            Height = 556
+            Align = alClient
+            Caption = 'Panel29'
+            ParentBackground = False
+            TabOrder = 5
+            object dbgHOContactDetails: TDBGrid
+              Left = 1
+              Top = 1
+              Width = 477
+              Height = 389
+              Align = alClient
+              DrawingStyle = gdsGradient
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+              ParentFont = False
+              TabOrder = 0
+              TitleFont.Charset = ANSI_CHARSET
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -12
+              TitleFont.Name = 'Segoe UI'
+              TitleFont.Style = []
+              OnDrawColumnCell = dbgContactDetailsDrawColumnCell
+              OnDblClick = dbgHOContactDetailsDblClick
+              Columns = <
+                item
+                  Expanded = False
+                  FieldName = 'Name'
+                  Title.Caption = 'Full Name'
+                  Width = 151
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Contact_Type_Description'
+                  Title.Caption = 'Contact Type'
+                  Width = 139
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Phone'
+                  Width = 136
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Mobile_no'
+                  Title.Caption = 'Mobile Phone'
+                  Width = 150
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Email'
+                  Title.Caption = 'Email Address'
+                  Width = 130
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Contact_Level_description'
+                  Title.Caption = 'Contact Level'
+                  Width = 123
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Contact_Status_Description'
+                  Title.Caption = 'Status'
+                  Width = 138
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'Salutation'
+                  Width = 127
+                  Visible = True
+                end>
+            end
+            object Panel30: TPanel
+              Left = 1
+              Top = 390
+              Width = 477
+              Height = 165
+              Align = alBottom
+              BevelOuter = bvNone
+              ParentBackground = False
+              TabOrder = 1
+              object LabelName: TLabel
+                Left = 4
+                Top = 10
+                Width = 32
+                Height = 13
+                Caption = 'Name:'
+              end
+              object LabelPhone: TLabel
+                Left = 4
+                Top = 30
+                Width = 36
+                Height = 13
+                Caption = 'Phone:'
+              end
+              object LabelFax: TLabel
+                Left = 4
+                Top = 51
+                Width = 39
+                Height = 13
+                Caption = 'Mobile:'
+              end
+              object DBContactText: TDBText
+                Left = 47
+                Top = 8
+                Width = 214
+                Height = 17
+                DataField = 'Name'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Arial'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object DBCPhoneText: TDBText
+                Left = 47
+                Top = 30
+                Width = 214
+                Height = 13
+                DataField = 'Phone'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Arial'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object DBCMobileText: TDBText
+                Left = 47
+                Top = 50
+                Width = 214
+                Height = 15
+                DataField = 'Mobile_No'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Arial'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label67: TLabel
+                Left = 4
+                Top = 96
+                Width = 35
+                Height = 13
+                Caption = 'Status:'
+              end
+              object DBCStatusText: TDBText
+                Left = 47
+                Top = 94
+                Width = 214
+                Height = 16
+                DataField = 'Contact_Status_Description'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Arial'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label68: TLabel
+                Left = 4
+                Top = 74
+                Width = 30
+                Height = 13
+                Caption = 'Email:'
+              end
+              object DBCEmailText: TDBText
+                Left = 47
+                Top = 72
+                Width = 214
+                Height = 17
+                DataField = 'Email'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Arial'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+            end
+          end
         end
-        object Panel28: TPanel
-          Left = 480
-          Top = 57
-          Width = 21
-          Height = 556
-          Align = alRight
+      end
+      object tbFinancials: TTabSheet
+        Caption = 'Financials/Credit Details/GDPR'
+        ImageIndex = 12
+        object pnlInvoiceDetails: TPanel
+          Left = 0
+          Top = 0
+          Width = 673
+          Height = 614
+          Align = alLeft
           ParentBackground = False
-          TabOrder = 4
+          TabOrder = 0
+          DesignSize = (
+            673
+            614)
+          object grpbxInvoicing: TGroupBox
+            Left = 8
+            Top = 2
+            Width = 662
+            Height = 521
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = 'Invoice To'
+            Color = clBtnFace
+            ParentColor = False
+            TabOrder = 0
+            DesignSize = (
+              662
+              521)
+            object Label35: TLabel
+              Tag = 200
+              Left = 8
+              Top = 20
+              Width = 50
+              Height = 13
+              Caption = 'Customer'
+              Color = clBtnFace
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label36: TLabel
+              Tag = 200
+              Left = 8
+              Top = 52
+              Width = 36
+              Height = 13
+              Caption = 'Branch'
+              Color = clBtnFace
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label37: TLabel
+              Tag = 200
+              Left = 8
+              Top = 84
+              Width = 40
+              Height = 13
+              Caption = 'Contact'
+              Color = clBtnFace
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label10: TLabel
+              Tag = 200
+              Left = 7
+              Top = 290
+              Width = 73
+              Height = 13
+              Caption = 'Intrastat Code'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label29: TLabel
+              Tag = 200
+              Left = 7
+              Top = 321
+              Width = 72
+              Height = 13
+              Caption = 'VAT Reference'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label31: TLabel
+              Tag = 200
+              Left = 7
+              Top = 190
+              Width = 86
+              Height = 13
+              Caption = 'Default Currency'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label4: TLabel
+              Tag = 200
+              Left = 515
+              Top = 280
+              Width = 59
+              Height = 26
+              Anchors = [akTop, akRight]
+              Caption = 'Accounting Status'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              Visible = False
+              WordWrap = True
+            end
+            object Label2: TLabel
+              Tag = 200
+              Left = 8
+              Top = 156
+              Width = 60
+              Height = 13
+              Caption = 'Default VAT'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label8: TLabel
+              Tag = 200
+              Left = 7
+              Top = 220
+              Width = 66
+              Height = 13
+              Caption = 'Settle Disc %'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label7: TLabel
+              Tag = 200
+              Left = 501
+              Top = 220
+              Width = 57
+              Height = 13
+              Anchors = [akTop, akRight]
+              Caption = 'Settle Days'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label34: TLabel
+              Tag = 200
+              Left = 7
+              Top = 244
+              Width = 63
+              Height = 26
+              Caption = 'Pre-Payment Balance'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              WordWrap = True
+            end
+            object Label69: TLabel
+              Tag = 200
+              Left = 8
+              Top = 111
+              Width = 28
+              Height = 13
+              Caption = 'Email'
+              Color = clBtnFace
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+            end
+            object BitBtn5: TBitBtn
+              Tag = 200
+              Left = 629
+              Top = 79
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 5
+              OnClick = BitBtn5Click
+            end
+            object edtInvToContact: TEdit
+              Tag = 200
+              Left = 101
+              Top = 80
+              Width = 519
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              Color = clBtnFace
+              ReadOnly = True
+              TabOrder = 4
+              Text = 'edtInvToContact'
+            end
+            object IntrastatDBLookupComboBox: TDBLookupComboBox
+              Tag = 200
+              Left = 101
+              Top = 286
+              Width = 385
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Intrastat_Id'
+              ListField = 'Intrastat_Id_Descr'
+              TabOrder = 13
+              OnClick = TypeDBLUCBClick
+            end
+            object VATRefEdit: TEdit
+              Tag = 200
+              Left = 101
+              Top = 319
+              Width = 523
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              MaxLength = 40
+              TabOrder = 14
+              Text = 'VATRefEdit'
+            end
+            object DefCurrDBLookupComboBox: TDBLookupComboBox
+              Tag = 200
+              Left = 101
+              Top = 186
+              Width = 482
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Currency_Code'
+              ListField = 'Currency_Code_Descr'
+              TabOrder = 8
+            end
+            object rdgrpCostCentre: TRadioGroup
+              Tag = 200
+              Left = 7
+              Top = 352
+              Width = 441
+              Height = 81
+              Anchors = [akLeft, akTop, akRight]
+              Caption = 'Cost Centre Level '
+              ItemIndex = 0
+              Items.Strings = (
+                'None'
+                'by Customer'
+                'by Branch')
+              ParentBackground = False
+              TabOrder = 15
+            end
+            object ProspectComboBox: TComboBox
+              Left = 584
+              Top = 283
+              Width = 37
+              Height = 21
+              Style = csDropDownList
+              Anchors = [akTop, akRight]
+              TabOrder = 17
+              TabStop = False
+              Visible = False
+              Items.Strings = (
+                'Prospect'
+                'Put on Ledger')
+            end
+            object DefVATDBLookupComboBox: TDBLookupComboBox
+              Tag = 200
+              Left = 101
+              Top = 152
+              Width = 482
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              KeyField = 'Vat_Code'
+              ListField = 'Description'
+              TabOrder = 6
+              OnClick = DefVATDBLookupComboBoxClick
+            end
+            object VatMaintBitBtn: TBitBtn
+              Tag = 200
+              Left = 598
+              Top = 152
+              Width = 25
+              Height = 23
+              Hint = 'Vat Code Maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 7
+              OnClick = VatMaintBitBtnClick
+            end
+            object btnDefaultCurrencyClear: TBitBtn
+              Tag = 200
+              Left = 597
+              Top = 185
+              Width = 25
+              Height = 23
+              Anchors = [akTop, akRight]
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+                305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+                005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+                B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+                B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+                B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+                B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+                05555777775555557F5555000555555505555577755555557555}
+              NumGlyphs = 2
+              TabOrder = 9
+              OnClick = DefCurrClearBitBtnClick
+            end
+            object chkbxDisplayDiscounts: TCheckBox
+              Tag = 200
+              Left = 8
+              Top = 443
+              Width = 169
+              Height = 17
+              Caption = 'Display Discounts on Invoices'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 16
+            end
+            object SettDiscMemo: TMemo
+              Tag = 200
+              Left = 101
+              Top = 216
+              Width = 76
+              Height = 21
+              Alignment = taRightJustify
+              Lines.Strings = (
+                'Sett Disc')
+              TabOrder = 10
+              WantReturns = False
+              OnChange = CheckOK
+              OnExit = SettDiscMemoExit
+            end
+            object SettDaysMemo: TMemo
+              Tag = 200
+              Left = 579
+              Top = 216
+              Width = 43
+              Height = 21
+              Alignment = taRightJustify
+              Anchors = [akTop, akRight]
+              Lines.Strings = (
+                'Days')
+              TabOrder = 11
+              WantReturns = False
+              OnChange = CheckOK
+              OnExit = SettDaysMemoExit
+            end
+            object memPrepayBalance: TMemo
+              Tag = 200
+              Left = 101
+              Top = 249
+              Width = 76
+              Height = 21
+              Alignment = taRightJustify
+              Lines.Strings = (
+                'memPrepayB'
+                'al'
+                'an'
+                'ce')
+              TabOrder = 12
+              WantReturns = False
+              OnExit = memPrepayBalanceExit
+            end
+            object BitBtn3: TBitBtn
+              Tag = 200
+              Left = 629
+              Top = 47
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 3
+              OnClick = InvToBranchClick
+            end
+            object BitBtn6: TBitBtn
+              Tag = 200
+              Left = 629
+              Top = 15
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Anchors = [akTop, akRight]
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 1
+              OnClick = InvCustBtnClick
+            end
+            object edtInvToBranch: TEdit
+              Tag = 200
+              Left = 101
+              Top = 48
+              Width = 519
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              Color = clBtnFace
+              ReadOnly = True
+              TabOrder = 2
+              Text = 'edtInvToBranch'
+            end
+            object edtInvToCustomer: TEdit
+              Tag = 200
+              Left = 101
+              Top = 16
+              Width = 519
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              Color = clBtnFace
+              ReadOnly = True
+              TabOrder = 0
+              Text = 'edtInvToCustomer'
+            end
+            object edtInvToContactEmail: TEdit
+              Tag = 200
+              Left = 101
+              Top = 107
+              Width = 519
+              Height = 21
+              Anchors = [akLeft, akTop, akRight]
+              Color = clBtnFace
+              ReadOnly = True
+              TabOrder = 18
+              Text = 'edtInvToContact'
+            end
+          end
+          object grpbxGDPR: TGroupBox
+            Left = 8
+            Top = 478
+            Width = 662
+            Height = 126
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = 'GDPR '
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clRed
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentBackground = False
+            ParentFont = False
+            TabOrder = 1
+            Visible = False
+            object lblGDPRSignedOperatorName: TLabel
+              Left = 308
+              Top = 50
+              Width = 156
+              Height = 13
+              Caption = 'lblGDPRSignedOperatorName'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object chkbxGDPRLetterSent: TCheckBox
+              Left = 16
+              Top = 24
+              Width = 97
+              Height = 17
+              Caption = 'Letter Sent'
+              TabOrder = 0
+            end
+            object chkbxGDPRSigned: TCheckBox
+              Left = 16
+              Top = 48
+              Width = 145
+              Height = 17
+              Caption = 'Signed and Returned'
+              TabOrder = 1
+              OnClick = chkbxGDPRSignedClick
+            end
+            object edtdateGDPRSigned: TEdit
+              Left = 171
+              Top = 46
+              Width = 98
+              Height = 21
+              TabOrder = 2
+              OnChange = CheckOK
+              OnExit = edtdateGDPRSignedExit
+            end
+            object btnDateGDPRSigned: TBitBtn
+              Left = 277
+              Top = 44
+              Width = 25
+              Height = 25
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000130B0000130B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+                F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+                F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+                F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+                F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+                F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+                F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+                333337FFFFFFFF77333330000000000333333777777777733333}
+              NumGlyphs = 2
+              TabOrder = 3
+              OnClick = btnDateGDPRSignedClick
+            end
+          end
         end
-        object Panel29: TPanel
-          Left = 1
-          Top = 57
-          Width = 479
-          Height = 556
+        object pnlCreditDetails: TPanel
+          Left = 673
+          Top = 0
+          Width = 495
+          Height = 614
           Align = alClient
-          Caption = 'Panel29'
           ParentBackground = False
-          TabOrder = 5
-          object dbgHOContactDetails: TDBGrid
+          TabOrder = 1
+          DesignSize = (
+            495
+            614)
+          object grpbxCredit: TGroupBox
+            Left = 6
+            Top = 2
+            Width = 425
+            Height = 580
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = 'Credit Details'
+            TabOrder = 0
+            DesignSize = (
+              425
+              580)
+            object Label5: TLabel
+              Tag = 100
+              Left = 7
+              Top = 60
+              Width = 58
+              Height = 13
+              Caption = 'Credit Limit'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label30: TLabel
+              Tag = 100
+              Left = 7
+              Top = 91
+              Width = 80
+              Height = 13
+              Caption = 'Available Credit'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label3: TLabel
+              Tag = 100
+              Left = 7
+              Top = 124
+              Width = 62
+              Height = 13
+              Caption = 'Credit Score'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label38: TLabel
+              Tag = 100
+              Left = 7
+              Top = 394
+              Width = 74
+              Height = 13
+              Caption = 'Company Type'
+            end
+            object Label39: TLabel
+              Tag = 100
+              Left = 7
+              Top = 422
+              Width = 63
+              Height = 13
+              Caption = 'UK SIC Code'
+            end
+            object Label40: TLabel
+              Tag = 100
+              Left = 7
+              Top = 366
+              Width = 72
+              Height = 13
+              Caption = 'Issued Capital'
+            end
+            object Label41: TLabel
+              Tag = 100
+              Left = 7
+              Top = 239
+              Width = 108
+              Height = 13
+              Caption = 'Latest Annual Return'
+            end
+            object Label42: TLabel
+              Tag = 100
+              Left = 7
+              Top = 269
+              Width = 116
+              Height = 13
+              Caption = 'Date Accounts Lodged'
+            end
+            object Label43: TLabel
+              Tag = 100
+              Left = 7
+              Top = 300
+              Width = 135
+              Height = 13
+              Caption = 'Latest Filed Accounts Date'
+            end
+            object Label44: TLabel
+              Tag = 100
+              Left = 7
+              Top = 328
+              Width = 128
+              Height = 13
+              Caption = 'Accounts Reference Date'
+            end
+            object Bevel1: TBevel
+              Tag = 100
+              Left = 0
+              Top = 223
+              Width = 426
+              Height = 7
+              Anchors = [akLeft, akTop, akRight]
+              Shape = bsTopLine
+              ExplicitWidth = 492
+            end
+            object Bevel2: TBevel
+              Tag = 100
+              Left = 0
+              Top = 358
+              Width = 426
+              Height = 7
+              Anchors = [akLeft, akTop, akRight]
+              Shape = bsTopLine
+              ExplicitWidth = 492
+            end
+            object lblLastCreditCheck: TLabel
+              Tag = 100
+              Left = 7
+              Top = 456
+              Width = 88
+              Height = 13
+              Caption = 'Last Credit Check'
+            end
+            object Label25: TLabel
+              Tag = 100
+              Left = 7
+              Top = 161
+              Width = 75
+              Height = 13
+              Caption = 'Payment Terms'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object lblDirectDebit: TLabel
+              Tag = 100
+              Left = 7
+              Top = 192
+              Width = 91
+              Height = 13
+              Caption = 'Direct Debit Code'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              Visible = False
+            end
+            object Label9: TLabel
+              Tag = 100
+              Left = 7
+              Top = 28
+              Width = 66
+              Height = 13
+              Caption = 'Credit Status'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object CredAvailMemo: TMemo
+              Tag = 100
+              Left = 101
+              Top = 87
+              Width = 182
+              Height = 21
+              Alignment = taRightJustify
+              Enabled = False
+              Lines.Strings = (
+                'Cred Avail')
+              TabOrder = 0
+              WantReturns = False
+              OnExit = CredAvailMemoExit
+            end
+            object spnCreditScore: TSpinEdit
+              Tag = 100
+              Left = 101
+              Top = 119
+              Width = 152
+              Height = 22
+              MaxValue = 100
+              MinValue = 1
+              TabOrder = 1
+              Value = 100
+            end
+            object rdgrpCreditRating: TRadioGroup
+              Tag = 100
+              Left = 364
+              Top = 11
+              Width = 117
+              Height = 131
+              Caption = 'Credit Rating '
+              Items.Strings = (
+                'Not Rated'
+                'Good'
+                'Moderate'
+                'High Risk'
+                'Very High Risk')
+              ParentBackground = False
+              TabOrder = 2
+            end
+            object edtLastReturnDate: TEdit
+              Tag = 100
+              Left = 152
+              Top = 235
+              Width = 237
+              Height = 21
+              TabOrder = 7
+              OnChange = CheckOK
+              OnExit = edtLastReturnDateExit
+            end
+            object btnLastReturnDate: TBitBtn
+              Tag = 100
+              Left = 396
+              Top = 233
+              Width = 25
+              Height = 25
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000130B0000130B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+                F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+                F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+                F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+                F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+                F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+                F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+                333337FFFFFFFF77333330000000000333333777777777733333}
+              NumGlyphs = 2
+              TabOrder = 8
+              OnClick = btnLastReturnDateClick
+            end
+            object edtAccLodgedDate: TEdit
+              Tag = 100
+              Left = 152
+              Top = 265
+              Width = 237
+              Height = 21
+              TabOrder = 9
+              OnChange = CheckOK
+              OnExit = edtLastReturnDateExit
+            end
+            object btnAccLodgedDate: TBitBtn
+              Tag = 100
+              Left = 396
+              Top = 263
+              Width = 25
+              Height = 25
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000130B0000130B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+                F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+                F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+                F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+                F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+                F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+                F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+                333337FFFFFFFF77333330000000000333333777777777733333}
+              NumGlyphs = 2
+              TabOrder = 10
+              OnClick = btnAccLodgedDateClick
+            end
+            object edtAccountsFiledDate: TEdit
+              Tag = 100
+              Left = 152
+              Top = 296
+              Width = 237
+              Height = 21
+              TabOrder = 11
+              OnChange = CheckOK
+              OnExit = edtLastReturnDateExit
+            end
+            object btnAccountsFiledDate: TBitBtn
+              Tag = 100
+              Left = 396
+              Top = 294
+              Width = 25
+              Height = 25
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000130B0000130B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+                F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+                F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+                F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+                F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+                F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+                F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+                333337FFFFFFFF77333330000000000333333777777777733333}
+              NumGlyphs = 2
+              TabOrder = 12
+              OnClick = btnAccountsFiledDateClick
+            end
+            object edtAccRefDate: TEdit
+              Tag = 100
+              Left = 152
+              Top = 324
+              Width = 237
+              Height = 21
+              TabOrder = 13
+              OnChange = CheckOK
+            end
+            object memIssCapital: TMemo
+              Tag = 100
+              Left = 93
+              Top = 362
+              Width = 176
+              Height = 21
+              Alignment = taRightJustify
+              TabOrder = 14
+              WantReturns = False
+              OnChange = CheckOK
+              OnExit = CredLimMemoExit
+            end
+            object dblkpCompanyType: TDBLookupComboBox
+              Tag = 100
+              Left = 93
+              Top = 391
+              Width = 312
+              Height = 21
+              KeyField = 'Company_Type'
+              ListField = 'Company_Type_Description'
+              TabOrder = 15
+            end
+            object edtSICCode: TEdit
+              Tag = 100
+              Left = 93
+              Top = 419
+              Width = 360
+              Height = 21
+              ReadOnly = True
+              TabOrder = 16
+              OnChange = CheckOK
+            end
+            object BitBtn8: TBitBtn
+              Left = 460
+              Top = 418
+              Width = 25
+              Height = 23
+              Hint = 'Vat Code Maintenance'
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 17
+              OnClick = BitBtn8Click
+            end
+            object dblkpPaymentTerms: TDBLookupComboBox
+              Tag = 100
+              Left = 101
+              Top = 157
+              Width = 308
+              Height = 21
+              KeyField = 'Payment_terms'
+              ListField = 'Payment_terms_description'
+              TabOrder = 3
+              OnClick = dblkpPaymentTermsClick
+            end
+            object btnTerms: TBitBtn
+              Tag = 100
+              Left = 420
+              Top = 156
+              Width = 25
+              Height = 23
+              Hint = 'Customer Type maintenance'
+              Caption = '...'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 4
+              OnClick = btnTermsClick
+            end
+            object BitBtn4: TBitBtn
+              Tag = 100
+              Left = 451
+              Top = 156
+              Width = 25
+              Height = 23
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000120B0000120B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+                55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+                305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+                005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+                B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+                B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+                B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+                B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+                05555777775555557F5555000555555505555577755555557555}
+              NumGlyphs = 2
+              TabOrder = 5
+              OnClick = BitBtn4Click
+            end
+            object DDCodeEdit: TEdit
+              Tag = 100
+              Left = 101
+              Top = 188
+              Width = 182
+              Height = 21
+              CharCase = ecUpperCase
+              MaxLength = 10
+              TabOrder = 6
+              Text = 'DDCODEEDIT'
+              Visible = False
+            end
+            object CredStatDBLCB: TDBLookupComboBox
+              Tag = 100
+              Left = 101
+              Top = 24
+              Width = 244
+              Height = 21
+              KeyField = 'Credit_Status'
+              ListField = 'Credit_Status_Descr'
+              TabOrder = 18
+              OnClick = CheckOK
+            end
+            object CredLimMemo: TMemo
+              Tag = 100
+              Left = 101
+              Top = 56
+              Width = 182
+              Height = 21
+              Alignment = taRightJustify
+              Lines.Strings = (
+                'Cred Lim')
+              TabOrder = 19
+              WantReturns = False
+              OnChange = CheckOK
+              OnExit = CredLimMemoExit
+            end
+          end
+          object chkbxConverttoCustomer: TCheckBox
+            Left = 8
+            Top = 587
+            Width = 177
+            Height = 17
+            Anchors = [akLeft, akBottom]
+            Caption = 'Convert Prospect to Customer'
+            TabOrder = 1
+            Visible = False
+          end
+        end
+      end
+      object tbOptions: TTabSheet
+        Caption = 'Options'
+        ImageIndex = 2
+        object GroupBox2: TGroupBox
+          Left = 454
+          Top = 0
+          Width = 390
+          Height = 515
+          Caption = 'Stock Options'
+          ParentBackground = False
+          TabOrder = 0
+          object lblFormRefPref: TLabel
+            Left = 16
+            Top = 54
+            Width = 101
+            Height = 13
+            Caption = 'Product Code Prefix'
+          end
+          object Label12: TLabel
+            Left = 16
+            Top = 116
+            Width = 82
+            Height = 13
+            Caption = 'Existing Prefixes'
+          end
+          object Label13: TLabel
+            Left = 16
+            Top = 28
+            Width = 136
+            Height = 13
+            Caption = 'Call Off Delivery Note Type'
+          end
+          object edtProdPrefix: TEdit
+            Left = 200
+            Top = 50
+            Width = 121
+            Height = 21
+            CharCase = ecUpperCase
+            TabOrder = 0
+            OnChange = edtProdPrefixChange
+          end
+          object DBGrid1: TDBGrid
+            Left = 16
+            Top = 132
+            Width = 353
+            Height = 301
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 1
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+          end
+          object cmbCallOffDeliveryNote: TComboBox
+            Left = 200
+            Top = 24
+            Width = 145
+            Height = 21
+            Style = csDropDownList
+            TabOrder = 2
+            Items.Strings = (
+              'No Header')
+          end
+          object chkbxProductPrefix: TCheckBox
+            Left = 16
+            Top = 84
+            Width = 169
+            Height = 17
+            Caption = 'Product Prefix not required'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 441
+          Height = 614
+          Align = alLeft
+          Caption = 'Ecommerce'
+          TabOrder = 1
+          object GroupBox1: TGroupBox
+            Left = 16
+            Top = 101
+            Width = 409
+            Height = 113
+            Caption = 'Ordering'
+            ParentBackground = False
+            TabOrder = 0
+            object Label6: TLabel
+              Left = 23
+              Top = 84
+              Width = 78
+              Height = 13
+              Caption = 'Despatch Email'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label15: TLabel
+              Left = 23
+              Top = 28
+              Width = 82
+              Height = 13
+              Caption = 'Consumer Code'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label16: TLabel
+              Left = 23
+              Top = 56
+              Width = 67
+              Height = 13
+              Caption = 'Contract Ref:'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object EdtEmailOrder: TEdit
+              Left = 108
+              Top = 80
+              Width = 252
+              Height = 21
+              MaxLength = 40
+              TabOrder = 0
+            end
+            object edtConsumerCode: TEdit
+              Left = 108
+              Top = 24
+              Width = 252
+              Height = 21
+              MaxLength = 40
+              TabOrder = 1
+            end
+            object edtContractRef: TEdit
+              Left = 108
+              Top = 52
+              Width = 252
+              Height = 21
+              MaxLength = 40
+              TabOrder = 2
+            end
+          end
+          object grpbxEInvoicing: TGroupBox
+            Left = 16
+            Top = 224
+            Width = 409
+            Height = 201
+            Caption = 'Electronic Invoicing'
+            Enabled = False
+            TabOrder = 1
+            object Label17: TLabel
+              Left = 7
+              Top = 68
+              Width = 60
+              Height = 13
+              Caption = 'Client Code'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label26: TLabel
+              Left = 8
+              Top = 172
+              Width = 42
+              Height = 13
+              Caption = 'Site URL'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label28: TLabel
+              Left = 8
+              Top = 100
+              Width = 51
+              Height = 13
+              Caption = 'Username'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label32: TLabel
+              Left = 8
+              Top = 132
+              Width = 49
+              Height = 13
+              Caption = 'Password'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object lblSystem: TLabel
+              Left = 8
+              Top = 32
+              Width = 35
+              Height = 13
+              Caption = 'System'
+            end
+            object edtClientCode: TEdit
+              Left = 76
+              Top = 64
+              Width = 205
+              Height = 21
+              MaxLength = 40
+              TabOrder = 1
+            end
+            object rdgrpProtocol: TRadioGroup
+              Left = 296
+              Top = 56
+              Width = 105
+              Height = 97
+              Caption = 'Transfer Protocol'
+              ItemIndex = 3
+              Items.Strings = (
+                'EDI'
+                'FTP'
+                'HTTPS'
+                'None')
+              ParentBackground = False
+              TabOrder = 5
+            end
+            object edtSiteURL: TEdit
+              Left = 75
+              Top = 168
+              Width = 326
+              Height = 21
+              MaxLength = 20
+              TabOrder = 4
+              Text = 'edtSiteURL'
+            end
+            object edtUsername: TEdit
+              Left = 76
+              Top = 96
+              Width = 205
+              Height = 21
+              MaxLength = 20
+              TabOrder = 2
+              Text = 'edtUsername'
+            end
+            object edtPassword: TEdit
+              Left = 76
+              Top = 128
+              Width = 205
+              Height = 21
+              MaxLength = 20
+              TabOrder = 3
+              Text = 'edtPassword'
+            end
+            object dblkpSystem: TDBLookupComboBox
+              Left = 76
+              Top = 28
+              Width = 145
+              Height = 21
+              KeyField = 'e_Invoicing_System'
+              ListField = 'e_Invoicing_System_Name'
+              TabOrder = 0
+              OnClick = dblkpSystemClick
+            end
+            object BitBtn1: TBitBtn
+              Left = 231
+              Top = 28
+              Width = 49
+              Height = 20
+              Caption = 'Clear'
+              TabOrder = 6
+              OnClick = CountryClearBitBtnClick
+            end
+          end
+          object chkbxEInvoicing: TCheckBox
+            Left = 24
+            Top = 221
+            Width = 161
+            Height = 17
+            Caption = 'Require Electronic Invoices'
+            TabOrder = 2
+            OnClick = chkbxEInvoicingClick
+          end
+          object chkbxUsePrintEvolved: TCheckBox
+            Left = 16
+            Top = 454
+            Width = 201
+            Height = 17
+            Hint = 'Customer Orders on-line ?'
+            Caption = 'Use Print Evolved Online Ordering'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+          end
+          object chkbxUseKingfieldOpips: TCheckBox
+            Left = 16
+            Top = 430
+            Width = 209
+            Height = 17
+            Hint = 'Customer Orders on-line ?'
+            Caption = 'Use Kingfield Opips Ordering'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 4
+          end
+          object grpbxOnline: TGroupBox
+            Left = 16
+            Top = 23
+            Width = 409
+            Height = 73
+            Caption = 'grpbxOnline'
+            Enabled = False
+            ParentBackground = False
+            TabOrder = 5
+            object chkbxCreateBranchOnline: TCheckBox
+              Left = 24
+              Top = 24
+              Width = 177
+              Height = 17
+              Hint = 'Customer Orders on-line ?'
+              Caption = 'Can Create Branches Online'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 0
+            end
+            object chkbxShowAvailableStock: TCheckBox
+              Left = 24
+              Top = 49
+              Width = 177
+              Height = 17
+              Hint = 'Customer Orders on-line ?'
+              Caption = 'Show Available Stock'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+              TabOrder = 1
+            end
+          end
+          object ChkBxOnLnOrd: TCheckBox
+            Left = 24
+            Top = 22
+            Width = 127
+            Height = 17
+            Hint = 'Customer Orders on-line ?'
+            Caption = 'Use On-Line Ordering'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 6
+            OnClick = ChkBxOnLnOrdClick
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 857
+          Top = 0
+          Width = 240
+          Height = 137
+          Caption = 'Production'
+          ParentBackground = False
+          TabOrder = 2
+          object Label70: TLabel
+            Left = 16
+            Top = 56
+            Width = 52
+            Height = 13
+            Caption = 'Markup %'
+          end
+          object memQuoteCostMarkup: TMemo
+            Left = 87
+            Top = 51
+            Width = 90
+            Height = 23
+            Alignment = taRightJustify
+            Enabled = False
+            TabOrder = 0
+            WantReturns = False
+            WordWrap = False
+            OnExit = memQuoteCostMarkupExit
+          end
+          object chkbxOverrideCostCharges: TCheckBox
+            Left = 16
+            Top = 24
+            Width = 217
+            Height = 17
+            Caption = 'Override Default Cost Charges'
+            TabOrder = 1
+            OnClick = chkbxOverrideCostChargesClick
+          end
+        end
+      end
+      object tbBranches: TTabSheet
+        Caption = 'Branches'
+        ImageIndex = 10
+        OnExit = tbBranchesExit
+        OnShow = tbBranchesShow
+        object pnlBranchTop: TPanel
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 273
+          Align = alTop
+          ParentBackground = False
+          TabOrder = 0
+          object Panel13: TPanel
+            Left = 1
+            Top = 232
+            Width = 1166
+            Height = 40
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 0
+            object Label57: TLabel
+              Left = 8
+              Top = 13
+              Width = 34
+              Height = 13
+              Caption = 'Search'
+            end
+            object edtBranchName: TEdit
+              Left = 56
+              Top = 9
+              Width = 177
+              Height = 21
+              TabOrder = 0
+              OnChange = edtBranchNameChange
+            end
+            object chkbxActiveBranchOnly: TCheckBox
+              Left = 264
+              Top = 12
+              Width = 177
+              Height = 14
+              Caption = 'Only show active branches'
+              Checked = True
+              State = cbChecked
+              TabOrder = 1
+              OnClick = chkbxActiveBranchOnlyClick
+            end
+          end
+          object CoolBar8: TCoolBar
             Left = 1
             Top = 1
-            Width = 477
-            Height = 389
+            Width = 1166
+            Height = 45
+            Bands = <
+              item
+                Control = ToolBar9
+                ImageIndex = -1
+                MinHeight = 41
+                Width = 1164
+              end>
+            object ToolBar9: TToolBar
+              Left = 11
+              Top = 0
+              Width = 1151
+              Height = 41
+              ButtonHeight = 36
+              ButtonWidth = 59
+              Caption = 'ToolBar1'
+              Images = imglstjobs
+              ShowCaptions = True
+              TabOrder = 0
+              object btnBranchAdd: TToolButton
+                Left = 0
+                Top = 0
+                Caption = '&Add'
+                ImageIndex = 0
+                OnClick = btnBranchAddClick
+              end
+              object btnBranchChange: TToolButton
+                Left = 59
+                Top = 0
+                Caption = '  &Change  '
+                Enabled = False
+                ImageIndex = 1
+                OnClick = btnBranchChangeClick
+              end
+              object btnBranchDelete: TToolButton
+                Left = 118
+                Top = 0
+                Caption = '&Delete'
+                Enabled = False
+                ImageIndex = 3
+                OnClick = btnBranchDeleteClick
+              end
+            end
+          end
+          object dbgBranchDetails: TDBGrid
+            Left = 1
+            Top = 46
+            Width = 1166
+            Height = 186
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
@@ -865,6 +2691,113 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             ParentFont = False
+            TabOrder = 2
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            OnDrawColumnCell = dbgBranchDetailsDrawColumnCell
+            OnDblClick = dbgBranchDetailsDblClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Name'
+                Title.Caption = 'Branch Name'
+                Width = 149
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Account_Code'
+                Title.Caption = 'Account Code'
+                Width = 78
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Building_no_Name'
+                Title.Caption = 'Address 1'
+                Width = 154
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Street'
+                Title.Caption = 'Address 2'
+                Width = 165
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Locale'
+                Title.Caption = 'Address 3'
+                Width = 145
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Town'
+                Title.Caption = 'Town/City'
+                Width = 75
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'County'
+                Width = 89
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Postcode'
+                Width = 77
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Phone'
+                Width = 89
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Fax_Number'
+                Title.Caption = 'Fax'
+                Width = 89
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Email'
+                Width = 150
+                Visible = True
+              end>
+          end
+        end
+        object pnlContacts: TPanel
+          Left = 0
+          Top = 273
+          Width = 1168
+          Height = 341
+          Align = alClient
+          Caption = 'pnlContacts'
+          ParentBackground = False
+          TabOrder = 1
+          object dbgContactDetails: TDBGrid
+            Left = 1
+            Top = 25
+            Width = 1073
+            Height = 275
+            Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            ParentFont = False
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
@@ -872,7 +2805,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgContactDetailsDrawColumnCell
-            OnDblClick = dbgHOContactDetailsDblClick
+            OnDblClick = dbgContactDetailsDblClick
             Columns = <
               item
                 Expanded = False
@@ -929,1737 +2862,255 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Visible = True
               end>
           end
-          object Panel30: TPanel
+          object Panel14: TPanel
             Left = 1
-            Top = 390
-            Width = 477
-            Height = 165
-            Align = alBottom
-            BevelOuter = bvNone
-            ParentBackground = False
-            TabOrder = 1
-            object LabelName: TLabel
-              Left = 4
-              Top = 10
-              Width = 32
-              Height = 13
-              Caption = 'Name:'
-            end
-            object LabelPhone: TLabel
-              Left = 4
-              Top = 30
-              Width = 36
-              Height = 13
-              Caption = 'Phone:'
-            end
-            object LabelFax: TLabel
-              Left = 4
-              Top = 51
-              Width = 39
-              Height = 13
-              Caption = 'Mobile:'
-            end
-            object DBContactText: TDBText
-              Left = 47
-              Top = 8
-              Width = 214
-              Height = 17
-              DataField = 'Name'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -12
-              Font.Name = 'Arial'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object DBCPhoneText: TDBText
-              Left = 47
-              Top = 30
-              Width = 214
-              Height = 13
-              DataField = 'Phone'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -12
-              Font.Name = 'Arial'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object DBCMobileText: TDBText
-              Left = 47
-              Top = 50
-              Width = 214
-              Height = 15
-              DataField = 'Mobile_No'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -12
-              Font.Name = 'Arial'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label67: TLabel
-              Left = 4
-              Top = 96
-              Width = 35
-              Height = 13
-              Caption = 'Status:'
-            end
-            object DBCStatusText: TDBText
-              Left = 47
-              Top = 94
-              Width = 214
-              Height = 16
-              DataField = 'Contact_Status_Description'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -12
-              Font.Name = 'Arial'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label68: TLabel
-              Left = 4
-              Top = 74
-              Width = 30
-              Height = 13
-              Caption = 'Email:'
-            end
-            object DBCEmailText: TDBText
-              Left = 47
-              Top = 72
-              Width = 214
-              Height = 17
-              DataField = 'Email'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -12
-              Font.Name = 'Arial'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-          end
-        end
-      end
-    end
-    object tbFinancials: TTabSheet
-      Caption = 'Financials/Credit Details/GDPR'
-      ImageIndex = 12
-      object pnlInvoiceDetails: TPanel
-        Left = 0
-        Top = 0
-        Width = 673
-        Height = 614
-        Align = alLeft
-        ParentBackground = False
-        TabOrder = 0
-        DesignSize = (
-          673
-          614)
-        object grpbxInvoicing: TGroupBox
-          Left = 8
-          Top = 2
-          Width = 662
-          Height = 521
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Caption = 'Invoice To'
-          Color = clBtnFace
-          ParentColor = False
-          TabOrder = 0
-          DesignSize = (
-            662
-            521)
-          object Label35: TLabel
-            Tag = 200
-            Left = 8
-            Top = 20
-            Width = 50
-            Height = 13
-            Caption = 'Customer'
-            Color = clBtnFace
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentColor = False
-            ParentFont = False
-          end
-          object Label36: TLabel
-            Tag = 200
-            Left = 8
-            Top = 52
-            Width = 36
-            Height = 13
-            Caption = 'Branch'
-            Color = clBtnFace
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentColor = False
-            ParentFont = False
-          end
-          object Label37: TLabel
-            Tag = 200
-            Left = 8
-            Top = 84
-            Width = 40
-            Height = 13
-            Caption = 'Contact'
-            Color = clBtnFace
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentColor = False
-            ParentFont = False
-          end
-          object Label10: TLabel
-            Tag = 200
-            Left = 7
-            Top = 290
-            Width = 73
-            Height = 13
-            Caption = 'Intrastat Code'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label29: TLabel
-            Tag = 200
-            Left = 7
-            Top = 321
-            Width = 72
-            Height = 13
-            Caption = 'VAT Reference'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label31: TLabel
-            Tag = 200
-            Left = 7
-            Top = 190
-            Width = 86
-            Height = 13
-            Caption = 'Default Currency'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label4: TLabel
-            Tag = 200
-            Left = 515
-            Top = 280
-            Width = 59
-            Height = 26
-            Anchors = [akTop, akRight]
-            Caption = 'Accounting Status'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            Visible = False
-            WordWrap = True
-          end
-          object Label2: TLabel
-            Tag = 200
-            Left = 8
-            Top = 156
-            Width = 60
-            Height = 13
-            Caption = 'Default VAT'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label8: TLabel
-            Tag = 200
-            Left = 7
-            Top = 220
-            Width = 66
-            Height = 13
-            Caption = 'Settle Disc %'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label7: TLabel
-            Tag = 200
-            Left = 501
-            Top = 220
-            Width = 57
-            Height = 13
-            Anchors = [akTop, akRight]
-            Caption = 'Settle Days'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object Label34: TLabel
-            Tag = 200
-            Left = 7
-            Top = 244
-            Width = 63
-            Height = 26
-            Caption = 'Pre-Payment Balance'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            WordWrap = True
-          end
-          object Label69: TLabel
-            Tag = 200
-            Left = 8
-            Top = 111
-            Width = 28
-            Height = 13
-            Caption = 'Email'
-            Color = clBtnFace
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentColor = False
-            ParentFont = False
-          end
-          object BitBtn5: TBitBtn
-            Tag = 200
-            Left = 629
-            Top = 79
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 5
-            OnClick = BitBtn5Click
-          end
-          object edtInvToContact: TEdit
-            Tag = 200
-            Left = 101
-            Top = 80
-            Width = 519
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            Color = clBtnFace
-            ReadOnly = True
-            TabOrder = 4
-            Text = 'edtInvToContact'
-          end
-          object IntrastatDBLookupComboBox: TDBLookupComboBox
-            Tag = 200
-            Left = 101
-            Top = 286
-            Width = 385
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Intrastat_Id'
-            ListField = 'Intrastat_Id_Descr'
-            TabOrder = 13
-            OnClick = TypeDBLUCBClick
-          end
-          object VATRefEdit: TEdit
-            Tag = 200
-            Left = 101
-            Top = 319
-            Width = 523
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            MaxLength = 40
-            TabOrder = 14
-            Text = 'VATRefEdit'
-          end
-          object DefCurrDBLookupComboBox: TDBLookupComboBox
-            Tag = 200
-            Left = 101
-            Top = 186
-            Width = 482
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Currency_Code'
-            ListField = 'Currency_Code_Descr'
-            TabOrder = 8
-          end
-          object rdgrpCostCentre: TRadioGroup
-            Tag = 200
-            Left = 7
-            Top = 352
-            Width = 441
-            Height = 81
-            Anchors = [akLeft, akTop, akRight]
-            Caption = 'Cost Centre Level '
-            ItemIndex = 0
-            Items.Strings = (
-              'None'
-              'by Customer'
-              'by Branch')
-            ParentBackground = False
-            TabOrder = 15
-          end
-          object ProspectComboBox: TComboBox
-            Left = 584
-            Top = 283
-            Width = 37
-            Height = 21
-            Style = csDropDownList
-            Anchors = [akTop, akRight]
-            TabOrder = 17
-            TabStop = False
-            Visible = False
-            Items.Strings = (
-              'Prospect'
-              'Put on Ledger')
-          end
-          object DefVATDBLookupComboBox: TDBLookupComboBox
-            Tag = 200
-            Left = 101
-            Top = 152
-            Width = 482
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            KeyField = 'Vat_Code'
-            ListField = 'Description'
-            TabOrder = 6
-            OnClick = DefVATDBLookupComboBoxClick
-          end
-          object VatMaintBitBtn: TBitBtn
-            Tag = 200
-            Left = 598
-            Top = 152
-            Width = 25
-            Height = 23
-            Hint = 'Vat Code Maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 7
-            OnClick = VatMaintBitBtnClick
-          end
-          object btnDefaultCurrencyClear: TBitBtn
-            Tag = 200
-            Left = 597
-            Top = 185
-            Width = 25
-            Height = 23
-            Anchors = [akTop, akRight]
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000120B0000120B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-              55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-              305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-              005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-              B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-              B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-              B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-              B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-              05555777775555557F5555000555555505555577755555557555}
-            NumGlyphs = 2
-            TabOrder = 9
-            OnClick = DefCurrClearBitBtnClick
-          end
-          object chkbxDisplayDiscounts: TCheckBox
-            Tag = 200
-            Left = 8
-            Top = 443
-            Width = 169
-            Height = 17
-            Caption = 'Display Discounts on Invoices'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 16
-          end
-          object SettDiscMemo: TMemo
-            Tag = 200
-            Left = 101
-            Top = 216
-            Width = 76
-            Height = 21
-            Alignment = taRightJustify
-            Lines.Strings = (
-              'Sett Disc')
-            TabOrder = 10
-            WantReturns = False
-            OnChange = CheckOK
-            OnExit = SettDiscMemoExit
-          end
-          object SettDaysMemo: TMemo
-            Tag = 200
-            Left = 579
-            Top = 216
-            Width = 43
-            Height = 21
-            Alignment = taRightJustify
-            Anchors = [akTop, akRight]
-            Lines.Strings = (
-              'Days')
-            TabOrder = 11
-            WantReturns = False
-            OnChange = CheckOK
-            OnExit = SettDaysMemoExit
-          end
-          object memPrepayBalance: TMemo
-            Tag = 200
-            Left = 101
-            Top = 249
-            Width = 76
-            Height = 21
-            Alignment = taRightJustify
-            Lines.Strings = (
-              'memPrepayB'
-              'al'
-              'an'
-              'ce')
-            TabOrder = 12
-            WantReturns = False
-            OnExit = memPrepayBalanceExit
-          end
-          object BitBtn3: TBitBtn
-            Tag = 200
-            Left = 629
-            Top = 47
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 3
-            OnClick = InvToBranchClick
-          end
-          object BitBtn6: TBitBtn
-            Tag = 200
-            Left = 629
-            Top = 15
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Anchors = [akTop, akRight]
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 1
-            OnClick = InvCustBtnClick
-          end
-          object edtInvToBranch: TEdit
-            Tag = 200
-            Left = 101
-            Top = 48
-            Width = 519
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            Color = clBtnFace
-            ReadOnly = True
-            TabOrder = 2
-            Text = 'edtInvToBranch'
-          end
-          object edtInvToCustomer: TEdit
-            Tag = 200
-            Left = 101
-            Top = 16
-            Width = 519
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            Color = clBtnFace
-            ReadOnly = True
-            TabOrder = 0
-            Text = 'edtInvToCustomer'
-          end
-          object edtInvToContactEmail: TEdit
-            Tag = 200
-            Left = 101
-            Top = 107
-            Width = 519
-            Height = 21
-            Anchors = [akLeft, akTop, akRight]
-            Color = clBtnFace
-            ReadOnly = True
-            TabOrder = 18
-            Text = 'edtInvToContact'
-          end
-        end
-        object grpbxGDPR: TGroupBox
-          Left = 8
-          Top = 478
-          Width = 662
-          Height = 126
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Caption = 'GDPR '
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clRed
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentBackground = False
-          ParentFont = False
-          TabOrder = 1
-          Visible = False
-          object lblGDPRSignedOperatorName: TLabel
-            Left = 308
-            Top = 50
-            Width = 156
-            Height = 13
-            Caption = 'lblGDPRSignedOperatorName'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object chkbxGDPRLetterSent: TCheckBox
-            Left = 16
-            Top = 24
-            Width = 97
-            Height = 17
-            Caption = 'Letter Sent'
-            TabOrder = 0
-          end
-          object chkbxGDPRSigned: TCheckBox
-            Left = 16
-            Top = 48
-            Width = 145
-            Height = 17
-            Caption = 'Signed and Returned'
-            TabOrder = 1
-            OnClick = chkbxGDPRSignedClick
-          end
-          object edtdateGDPRSigned: TEdit
-            Left = 171
-            Top = 46
-            Width = 98
-            Height = 21
-            TabOrder = 2
-            OnChange = CheckOK
-            OnExit = edtdateGDPRSignedExit
-          end
-          object btnDateGDPRSigned: TBitBtn
-            Left = 277
-            Top = 44
-            Width = 25
-            Height = 25
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000130B0000130B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-              333337FFFFFFFF77333330000000000333333777777777733333}
-            NumGlyphs = 2
-            TabOrder = 3
-            OnClick = btnDateGDPRSignedClick
-          end
-        end
-      end
-      object pnlCreditDetails: TPanel
-        Left = 673
-        Top = 0
-        Width = 495
-        Height = 614
-        Align = alClient
-        ParentBackground = False
-        TabOrder = 1
-        DesignSize = (
-          495
-          614)
-        object grpbxCredit: TGroupBox
-          Left = 6
-          Top = 2
-          Width = 425
-          Height = 580
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Caption = 'Credit Details'
-          TabOrder = 0
-          DesignSize = (
-            425
-            580)
-          object Label5: TLabel
-            Tag = 100
-            Left = 7
-            Top = 60
-            Width = 58
-            Height = 13
-            Caption = 'Credit Limit'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label30: TLabel
-            Tag = 100
-            Left = 7
-            Top = 91
-            Width = 80
-            Height = 13
-            Caption = 'Available Credit'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label3: TLabel
-            Tag = 100
-            Left = 7
-            Top = 124
-            Width = 62
-            Height = 13
-            Caption = 'Credit Score'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label38: TLabel
-            Tag = 100
-            Left = 7
-            Top = 394
-            Width = 74
-            Height = 13
-            Caption = 'Company Type'
-          end
-          object Label39: TLabel
-            Tag = 100
-            Left = 7
-            Top = 422
-            Width = 63
-            Height = 13
-            Caption = 'UK SIC Code'
-          end
-          object Label40: TLabel
-            Tag = 100
-            Left = 7
-            Top = 366
-            Width = 72
-            Height = 13
-            Caption = 'Issued Capital'
-          end
-          object Label41: TLabel
-            Tag = 100
-            Left = 7
-            Top = 239
-            Width = 108
-            Height = 13
-            Caption = 'Latest Annual Return'
-          end
-          object Label42: TLabel
-            Tag = 100
-            Left = 7
-            Top = 269
-            Width = 116
-            Height = 13
-            Caption = 'Date Accounts Lodged'
-          end
-          object Label43: TLabel
-            Tag = 100
-            Left = 7
             Top = 300
-            Width = 135
-            Height = 13
-            Caption = 'Latest Filed Accounts Date'
-          end
-          object Label44: TLabel
-            Tag = 100
-            Left = 7
-            Top = 328
-            Width = 128
-            Height = 13
-            Caption = 'Accounts Reference Date'
-          end
-          object Bevel1: TBevel
-            Tag = 100
-            Left = 0
-            Top = 223
-            Width = 426
-            Height = 7
-            Anchors = [akLeft, akTop, akRight]
-            Shape = bsTopLine
-            ExplicitWidth = 492
-          end
-          object Bevel2: TBevel
-            Tag = 100
-            Left = 0
-            Top = 358
-            Width = 426
-            Height = 7
-            Anchors = [akLeft, akTop, akRight]
-            Shape = bsTopLine
-            ExplicitWidth = 492
-          end
-          object lblLastCreditCheck: TLabel
-            Tag = 100
-            Left = 7
-            Top = 456
-            Width = 88
-            Height = 13
-            Caption = 'Last Credit Check'
-          end
-          object Label25: TLabel
-            Tag = 100
-            Left = 7
-            Top = 161
-            Width = 75
-            Height = 13
-            Caption = 'Payment Terms'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblDirectDebit: TLabel
-            Tag = 100
-            Left = 7
-            Top = 192
-            Width = 91
-            Height = 13
-            Caption = 'Direct Debit Code'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            Visible = False
-          end
-          object Label9: TLabel
-            Tag = 100
-            Left = 7
-            Top = 28
-            Width = 66
-            Height = 13
-            Caption = 'Credit Status'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object CredAvailMemo: TMemo
-            Tag = 100
-            Left = 101
-            Top = 87
-            Width = 182
-            Height = 21
-            Alignment = taRightJustify
-            Enabled = False
-            Lines.Strings = (
-              'Cred Avail')
-            TabOrder = 0
-            WantReturns = False
-            OnExit = CredAvailMemoExit
-          end
-          object spnCreditScore: TSpinEdit
-            Tag = 100
-            Left = 101
-            Top = 119
-            Width = 152
-            Height = 22
-            MaxValue = 100
-            MinValue = 1
+            Width = 1166
+            Height = 40
+            Align = alBottom
+            ParentBackground = False
             TabOrder = 1
-            Value = 100
+            object Label58: TLabel
+              Left = 8
+              Top = 13
+              Width = 34
+              Height = 13
+              Caption = 'Search'
+            end
+            object edtContactName: TEdit
+              Left = 56
+              Top = 9
+              Width = 177
+              Height = 21
+              TabOrder = 0
+              OnChange = edtContactNameChange
+            end
+            object chkbxActiveContactOnly: TCheckBox
+              Left = 344
+              Top = 12
+              Width = 177
+              Height = 14
+              Caption = 'Only show active Contacts'
+              Checked = True
+              State = cbChecked
+              TabOrder = 1
+              OnClick = chkbxActiveContactOnlyClick
+            end
+            object Button2: TButton
+              Left = 250
+              Top = 7
+              Width = 75
+              Height = 25
+              Caption = 'S&weep'
+              TabOrder = 2
+              OnClick = Button2Click
+            end
           end
-          object rdgrpCreditRating: TRadioGroup
-            Tag = 100
-            Left = 364
-            Top = 11
-            Width = 117
-            Height = 131
-            Caption = 'Credit Rating '
-            Items.Strings = (
-              'Not Rated'
-              'Good'
-              'Moderate'
-              'High Risk'
-              'Very High Risk')
+          object Panel15: TPanel
+            Left = 1
+            Top = 1
+            Width = 1166
+            Height = 24
+            Align = alTop
             ParentBackground = False
             TabOrder = 2
+            object Label59: TLabel
+              Left = 9
+              Top = 4
+              Width = 45
+              Height = 13
+              Caption = 'Contacts'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
           end
-          object edtLastReturnDate: TEdit
-            Tag = 100
-            Left = 152
-            Top = 235
-            Width = 237
-            Height = 21
-            TabOrder = 7
-            OnChange = CheckOK
-            OnExit = edtLastReturnDateExit
-          end
-          object btnLastReturnDate: TBitBtn
-            Tag = 100
-            Left = 396
-            Top = 233
-            Width = 25
-            Height = 25
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000130B0000130B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-              333337FFFFFFFF77333330000000000333333777777777733333}
-            NumGlyphs = 2
-            TabOrder = 8
-            OnClick = btnLastReturnDateClick
-          end
-          object edtAccLodgedDate: TEdit
-            Tag = 100
-            Left = 152
-            Top = 265
-            Width = 237
-            Height = 21
-            TabOrder = 9
-            OnChange = CheckOK
-            OnExit = edtLastReturnDateExit
-          end
-          object btnAccLodgedDate: TBitBtn
-            Tag = 100
-            Left = 396
-            Top = 263
-            Width = 25
-            Height = 25
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000130B0000130B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-              333337FFFFFFFF77333330000000000333333777777777733333}
-            NumGlyphs = 2
-            TabOrder = 10
-            OnClick = btnAccLodgedDateClick
-          end
-          object edtAccountsFiledDate: TEdit
-            Tag = 100
-            Left = 152
-            Top = 296
-            Width = 237
-            Height = 21
-            TabOrder = 11
-            OnChange = CheckOK
-            OnExit = edtLastReturnDateExit
-          end
-          object btnAccountsFiledDate: TBitBtn
-            Tag = 100
-            Left = 396
-            Top = 294
-            Width = 25
-            Height = 25
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000130B0000130B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-              003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-              F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-              F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-              F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-              F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-              F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-              F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-              333337FFFFFFFF77333330000000000333333777777777733333}
-            NumGlyphs = 2
-            TabOrder = 12
-            OnClick = btnAccountsFiledDateClick
-          end
-          object edtAccRefDate: TEdit
-            Tag = 100
-            Left = 152
-            Top = 324
-            Width = 237
-            Height = 21
-            TabOrder = 13
-            OnChange = CheckOK
-          end
-          object memIssCapital: TMemo
-            Tag = 100
-            Left = 93
-            Top = 362
-            Width = 176
-            Height = 21
-            Alignment = taRightJustify
-            TabOrder = 14
-            WantReturns = False
-            OnChange = CheckOK
-            OnExit = CredLimMemoExit
-          end
-          object dblkpCompanyType: TDBLookupComboBox
-            Tag = 100
-            Left = 93
-            Top = 391
-            Width = 312
-            Height = 21
-            KeyField = 'Company_Type'
-            ListField = 'Company_Type_Description'
-            TabOrder = 15
-          end
-          object edtSICCode: TEdit
-            Tag = 100
-            Left = 93
-            Top = 419
-            Width = 360
-            Height = 21
-            ReadOnly = True
-            TabOrder = 16
-            OnChange = CheckOK
-          end
-          object BitBtn8: TBitBtn
-            Left = 460
-            Top = 418
-            Width = 25
-            Height = 23
-            Hint = 'Vat Code Maintenance'
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 17
-            OnClick = BitBtn8Click
-          end
-          object dblkpPaymentTerms: TDBLookupComboBox
-            Tag = 100
-            Left = 101
-            Top = 157
-            Width = 308
-            Height = 21
-            KeyField = 'Payment_terms'
-            ListField = 'Payment_terms_description'
-            TabOrder = 3
-            OnClick = dblkpPaymentTermsClick
-          end
-          object btnTerms: TBitBtn
-            Tag = 100
-            Left = 420
-            Top = 156
-            Width = 25
-            Height = 23
-            Hint = 'Customer Type maintenance'
-            Caption = '...'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Arial'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 4
-            OnClick = btnTermsClick
-          end
-          object BitBtn4: TBitBtn
-            Tag = 100
-            Left = 451
-            Top = 156
-            Width = 25
-            Height = 23
-            Glyph.Data = {
-              76010000424D7601000000000000760000002800000020000000100000000100
-              04000000000000010000120B0000120B00001000000000000000000000000000
-              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-              55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-              305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-              005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-              B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-              B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-              B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-              B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-              05555777775555557F5555000555555505555577755555557555}
-            NumGlyphs = 2
-            TabOrder = 5
-            OnClick = BitBtn4Click
-          end
-          object DDCodeEdit: TEdit
-            Tag = 100
-            Left = 101
-            Top = 188
-            Width = 182
-            Height = 21
-            CharCase = ecUpperCase
-            MaxLength = 10
-            TabOrder = 6
-            Text = 'DDCODEEDIT'
-            Visible = False
-          end
-          object CredStatDBLCB: TDBLookupComboBox
-            Tag = 100
-            Left = 101
-            Top = 24
-            Width = 244
-            Height = 21
-            KeyField = 'Credit_Status'
-            ListField = 'Credit_Status_Descr'
-            TabOrder = 18
-            OnClick = CheckOK
-          end
-          object CredLimMemo: TMemo
-            Tag = 100
-            Left = 101
-            Top = 56
-            Width = 182
-            Height = 21
-            Alignment = taRightJustify
-            Lines.Strings = (
-              'Cred Lim')
-            TabOrder = 19
-            WantReturns = False
-            OnChange = CheckOK
-            OnExit = CredLimMemoExit
-          end
-        end
-        object chkbxConverttoCustomer: TCheckBox
-          Left = 8
-          Top = 587
-          Width = 177
-          Height = 17
-          Anchors = [akLeft, akBottom]
-          Caption = 'Convert Prospect to Customer'
-          TabOrder = 1
-          Visible = False
-        end
-      end
-    end
-    object tbOptions: TTabSheet
-      Caption = 'Options'
-      ImageIndex = 2
-      object GroupBox2: TGroupBox
-        Left = 454
-        Top = 0
-        Width = 390
-        Height = 515
-        Caption = 'Stock Options'
-        ParentBackground = False
-        TabOrder = 0
-        object lblFormRefPref: TLabel
-          Left = 16
-          Top = 54
-          Width = 101
-          Height = 13
-          Caption = 'Product Code Prefix'
-        end
-        object Label12: TLabel
-          Left = 16
-          Top = 116
-          Width = 82
-          Height = 13
-          Caption = 'Existing Prefixes'
-        end
-        object Label13: TLabel
-          Left = 16
-          Top = 28
-          Width = 136
-          Height = 13
-          Caption = 'Call Off Delivery Note Type'
-        end
-        object edtProdPrefix: TEdit
-          Left = 200
-          Top = 50
-          Width = 121
-          Height = 21
-          CharCase = ecUpperCase
-          TabOrder = 0
-          OnChange = edtProdPrefixChange
-        end
-        object DBGrid1: TDBGrid
-          Left = 16
-          Top = 132
-          Width = 353
-          Height = 301
-          DrawingStyle = gdsGradient
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-          TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -12
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
-        end
-        object cmbCallOffDeliveryNote: TComboBox
-          Left = 200
-          Top = 24
-          Width = 145
-          Height = 21
-          Style = csDropDownList
-          TabOrder = 2
-          Items.Strings = (
-            'No Header')
-        end
-        object chkbxProductPrefix: TCheckBox
-          Left = 16
-          Top = 84
-          Width = 169
-          Height = 17
-          Caption = 'Product Prefix not required'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 3
-        end
-      end
-      object GroupBox3: TGroupBox
-        Left = 0
-        Top = 0
-        Width = 441
-        Height = 614
-        Align = alLeft
-        Caption = 'Ecommerce'
-        TabOrder = 1
-        object GroupBox1: TGroupBox
-          Left = 16
-          Top = 101
-          Width = 409
-          Height = 113
-          Caption = 'Ordering'
-          ParentBackground = False
-          TabOrder = 0
-          object Label6: TLabel
-            Left = 23
-            Top = 84
-            Width = 78
-            Height = 13
-            Caption = 'Despatch Email'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label15: TLabel
-            Left = 23
-            Top = 28
-            Width = 82
-            Height = 13
-            Caption = 'Consumer Code'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label16: TLabel
-            Left = 23
-            Top = 56
-            Width = 67
-            Height = 13
-            Caption = 'Contract Ref:'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object EdtEmailOrder: TEdit
-            Left = 108
-            Top = 80
-            Width = 252
-            Height = 21
-            MaxLength = 40
-            TabOrder = 0
-          end
-          object edtConsumerCode: TEdit
-            Left = 108
-            Top = 24
-            Width = 252
-            Height = 21
-            MaxLength = 40
-            TabOrder = 1
-          end
-          object edtContractRef: TEdit
-            Left = 108
-            Top = 52
-            Width = 252
-            Height = 21
-            MaxLength = 40
-            TabOrder = 2
-          end
-        end
-        object grpbxEInvoicing: TGroupBox
-          Left = 16
-          Top = 224
-          Width = 409
-          Height = 201
-          Caption = 'Electronic Invoicing'
-          Enabled = False
-          TabOrder = 1
-          object Label17: TLabel
-            Left = 7
-            Top = 68
-            Width = 60
-            Height = 13
-            Caption = 'Client Code'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label26: TLabel
-            Left = 8
-            Top = 172
-            Width = 42
-            Height = 13
-            Caption = 'Site URL'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label28: TLabel
-            Left = 8
-            Top = 100
-            Width = 51
-            Height = 13
-            Caption = 'Username'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Label32: TLabel
-            Left = 8
-            Top = 132
-            Width = 49
-            Height = 13
-            Caption = 'Password'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblSystem: TLabel
-            Left = 8
-            Top = 32
-            Width = 35
-            Height = 13
-            Caption = 'System'
-          end
-          object edtClientCode: TEdit
-            Left = 76
-            Top = 64
-            Width = 205
-            Height = 21
-            MaxLength = 40
-            TabOrder = 1
-          end
-          object rdgrpProtocol: TRadioGroup
-            Left = 296
-            Top = 56
-            Width = 105
-            Height = 97
-            Caption = 'Transfer Protocol'
-            ItemIndex = 3
-            Items.Strings = (
-              'EDI'
-              'FTP'
-              'HTTPS'
-              'None')
+          object pnlContactFunctions: TPanel
+            Left = 1074
+            Top = 25
+            Width = 93
+            Height = 275
+            Align = alRight
             ParentBackground = False
-            TabOrder = 5
-          end
-          object edtSiteURL: TEdit
-            Left = 75
-            Top = 168
-            Width = 326
-            Height = 21
-            MaxLength = 20
-            TabOrder = 4
-            Text = 'edtSiteURL'
-          end
-          object edtUsername: TEdit
-            Left = 76
-            Top = 96
-            Width = 205
-            Height = 21
-            MaxLength = 20
-            TabOrder = 2
-            Text = 'edtUsername'
-          end
-          object edtPassword: TEdit
-            Left = 76
-            Top = 128
-            Width = 205
-            Height = 21
-            MaxLength = 20
             TabOrder = 3
-            Text = 'edtPassword'
+            DesignSize = (
+              93
+              275)
+            object btnContactAdd: TBitBtn
+              Left = 9
+              Top = 8
+              Width = 75
+              Height = 25
+              Caption = 'Add'
+              NumGlyphs = 2
+              TabOrder = 0
+              OnClick = btnContactAddClick
+            end
+            object btnContactChange: TBitBtn
+              Left = 9
+              Top = 41
+              Width = 75
+              Height = 25
+              Caption = 'Change'
+              Enabled = False
+              NumGlyphs = 2
+              TabOrder = 1
+              OnClick = btnContactChangeClick
+            end
+            object btnContactDelete: TBitBtn
+              Left = 9
+              Top = 75
+              Width = 75
+              Height = 25
+              Caption = 'Delete'
+              Enabled = False
+              NumGlyphs = 2
+              TabOrder = 2
+              OnClick = btnContactDeleteClick
+            end
+            object btnContactOnline: TBitBtn
+              Left = 9
+              Top = 142
+              Width = 75
+              Height = 25
+              Anchors = [akTop, akRight]
+              Caption = 'Online'
+              Enabled = False
+              TabOrder = 3
+              OnClick = btnContactOnlineClick
+            end
+            object btnContactMove: TBitBtn
+              Left = 9
+              Top = 110
+              Width = 75
+              Height = 25
+              Anchors = [akTop, akRight]
+              Caption = 'Move'
+              Enabled = False
+              TabOrder = 4
+              OnClick = btnContactMoveClick
+            end
           end
-          object dblkpSystem: TDBLookupComboBox
-            Left = 76
-            Top = 28
-            Width = 145
-            Height = 21
-            KeyField = 'e_Invoicing_System'
-            ListField = 'e_Invoicing_System_Name'
-            TabOrder = 0
-            OnClick = dblkpSystemClick
-          end
-          object BitBtn1: TBitBtn
-            Left = 231
-            Top = 28
-            Width = 49
-            Height = 20
-            Caption = 'Clear'
-            TabOrder = 6
-            OnClick = CountryClearBitBtnClick
-          end
-        end
-        object chkbxEInvoicing: TCheckBox
-          Left = 24
-          Top = 221
-          Width = 161
-          Height = 17
-          Caption = 'Require Electronic Invoices'
-          TabOrder = 2
-          OnClick = chkbxEInvoicingClick
-        end
-        object chkbxUsePrintEvolved: TCheckBox
-          Left = 16
-          Top = 454
-          Width = 201
-          Height = 17
-          Hint = 'Customer Orders on-line ?'
-          Caption = 'Use Print Evolved Online Ordering'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 3
-        end
-        object chkbxUseKingfieldOpips: TCheckBox
-          Left = 16
-          Top = 430
-          Width = 209
-          Height = 17
-          Hint = 'Customer Orders on-line ?'
-          Caption = 'Use Kingfield Opips Ordering'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 4
-        end
-        object grpbxOnline: TGroupBox
-          Left = 16
-          Top = 23
-          Width = 409
-          Height = 73
-          Caption = 'grpbxOnline'
-          Enabled = False
-          ParentBackground = False
-          TabOrder = 5
-          object chkbxCreateBranchOnline: TCheckBox
-            Left = 24
-            Top = 24
-            Width = 177
-            Height = 17
-            Hint = 'Customer Orders on-line ?'
-            Caption = 'Can Create Branches Online'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 0
-          end
-          object chkbxShowAvailableStock: TCheckBox
-            Left = 24
-            Top = 49
-            Width = 177
-            Height = 17
-            Hint = 'Customer Orders on-line ?'
-            Caption = 'Show Available Stock'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 1
-          end
-        end
-        object ChkBxOnLnOrd: TCheckBox
-          Left = 24
-          Top = 22
-          Width = 127
-          Height = 17
-          Hint = 'Customer Orders on-line ?'
-          Caption = 'Use On-Line Ordering'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 6
-          OnClick = ChkBxOnLnOrdClick
         end
       end
-      object GroupBox4: TGroupBox
-        Left = 857
-        Top = 0
-        Width = 240
-        Height = 137
-        Caption = 'Production'
-        ParentBackground = False
-        TabOrder = 2
-        object Label70: TLabel
-          Left = 16
-          Top = 56
-          Width = 52
-          Height = 13
-          Caption = 'Markup %'
+      object tbQuotes: TTabSheet
+        Caption = 'Quotes'
+        ImageIndex = 4
+        OnExit = tbQuotesExit
+        OnShow = tbQuotesShow
+        object stsBrQuoteDetails: TStatusBar
+          Left = 0
+          Top = 595
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 150
+            end
+            item
+              Width = 150
+            end
+            item
+              Width = 50
+            end>
         end
-        object memQuoteCostMarkup: TMemo
-          Left = 87
-          Top = 51
-          Width = 90
-          Height = 23
-          Alignment = taRightJustify
-          Enabled = False
-          TabOrder = 0
-          WantReturns = False
-          WordWrap = False
-          OnExit = memQuoteCostMarkupExit
-        end
-        object chkbxOverrideCostCharges: TCheckBox
-          Left = 16
-          Top = 24
-          Width = 217
-          Height = 17
-          Caption = 'Override Default Cost Charges'
-          TabOrder = 1
-          OnClick = chkbxOverrideCostChargesClick
-        end
-      end
-    end
-    object tbBranches: TTabSheet
-      Caption = 'Branches'
-      ImageIndex = 10
-      OnExit = tbBranchesExit
-      OnShow = tbBranchesShow
-      object pnlBranchTop: TPanel
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 273
-        Align = alTop
-        ParentBackground = False
-        TabOrder = 0
-        object Panel13: TPanel
-          Left = 1
-          Top = 232
-          Width = 1166
-          Height = 40
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 0
-          object Label57: TLabel
-            Left = 8
-            Top = 13
-            Width = 34
-            Height = 13
-            Caption = 'Search'
-          end
-          object edtBranchName: TEdit
-            Left = 56
-            Top = 9
-            Width = 177
-            Height = 21
-            TabOrder = 0
-            OnChange = edtBranchNameChange
-          end
-          object chkbxActiveBranchOnly: TCheckBox
-            Left = 264
-            Top = 12
-            Width = 177
-            Height = 14
-            Caption = 'Only show active branches'
-            Checked = True
-            State = cbChecked
-            TabOrder = 1
-            OnClick = chkbxActiveBranchOnlyClick
-          end
-        end
-        object CoolBar8: TCoolBar
-          Left = 1
-          Top = 1
-          Width = 1166
+        object CoolBar6: TCoolBar
+          Left = 0
+          Top = 0
+          Width = 1168
           Height = 45
           Bands = <
             item
-              Control = ToolBar9
+              Control = tbrQuotes
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1166
             end>
-          object ToolBar9: TToolBar
+          object tbrQuotes: TToolBar
             Left = 11
             Top = 0
-            Width = 1151
+            Width = 1153
             Height = 41
             ButtonHeight = 36
             ButtonWidth = 59
             Caption = 'ToolBar1'
-            Images = imglstjobs
+            HotImages = imglstButtons
+            Images = imglstButtons
             ShowCaptions = True
             TabOrder = 0
-            object btnBranchAdd: TToolButton
+            object btnQuoteAdd: TToolButton
               Left = 0
               Top = 0
               Caption = '&Add'
               ImageIndex = 0
-              OnClick = btnBranchAddClick
+              OnClick = btnQuoteAddClick
             end
-            object btnBranchChange: TToolButton
+            object btnQuoteChange: TToolButton
               Left = 59
               Top = 0
               Caption = '  &Change  '
               Enabled = False
               ImageIndex = 1
-              OnClick = btnBranchChangeClick
+              OnClick = btnQuoteChangeClick
             end
-            object btnBranchDelete: TToolButton
+            object btnQuoteCopy: TToolButton
               Left = 118
+              Top = 0
+              Caption = '&Copy'
+              Enabled = False
+              ImageIndex = 2
+              OnClick = btnQuoteCopyClick
+            end
+            object btnQuoteReQuote: TToolButton
+              Left = 177
+              Top = 0
+              Caption = 'Re-Quote'
+              Enabled = False
+              ImageIndex = 5
+              OnClick = btnQuoteReQuoteClick
+            end
+            object btnQuoteDelete: TToolButton
+              Left = 236
               Top = 0
               Caption = '&Delete'
               Enabled = False
               ImageIndex = 3
-              OnClick = btnBranchDeleteClick
+              OnClick = btnQuoteDeleteClick
+            end
+            object btnQuotePrint: TToolButton
+              Left = 295
+              Top = 0
+              Caption = '&Print'
+              Enabled = False
+              ImageIndex = 4
+              OnClick = btnQuotePrintClick
+            end
+            object ToolButton5: TToolButton
+              Left = 354
+              Top = 0
+              Width = 8
+              Caption = 'ToolButton1'
+              ImageIndex = 5
+              Style = tbsSeparator
+            end
+            object btnQuoteConvert: TToolButton
+              Left = 362
+              Top = 0
+              Caption = 'Con&vert'
+              Enabled = False
+              ImageIndex = 7
+              OnClick = btnQuoteConvertClick
             end
           end
         end
-        object dbgBranchDetails: TDBGrid
-          Left = 1
-          Top = 46
-          Width = 1166
-          Height = 186
+        object dbgQuoteDetails: TDBGrid
+          Left = 0
+          Top = 45
+          Width = 1168
+          Height = 509
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
@@ -2675,98 +3126,309 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
-          OnDrawColumnCell = dbgBranchDetailsDrawColumnCell
-          OnDblClick = dbgBranchDetailsDblClick
+          OnDblClick = dbgQuoteDetailsDblClick
           Columns = <
             item
               Expanded = False
-              FieldName = 'Name'
-              Title.Caption = 'Branch Name'
-              Width = 149
+              FieldName = 'Quote'
+              Width = 68
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Account_Code'
-              Title.Caption = 'Account Code'
-              Width = 78
+              FieldName = 'Date_Point'
+              Title.Caption = 'Date'
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Building_no_Name'
-              Title.Caption = 'Address 1'
+              FieldName = 'Description'
+              Width = 181
+              Visible = True
+            end
+            item
+              Alignment = taRightJustify
+              Expanded = False
+              FieldName = 'Quantity'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Quote_Status_Description'
+              Title.Caption = 'Status'
+              Width = 133
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Start'
+              Title.Caption = 'Start Date'
+              Width = 81
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Required'
+              Title.Caption = 'Date Required'
+              Width = 87
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Rep_Name'
+              Title.Caption = 'Rep'
+              Width = 105
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Operator_Name'
+              Title.Caption = 'Operator'
               Width = 154
               Visible = True
             end
             item
+              Alignment = taRightJustify
               Expanded = False
-              FieldName = 'Street'
-              Title.Caption = 'Address 2'
-              Width = 165
+              FieldName = 'Total_Cost_Value'
+              Title.Caption = 'Total Cost Price'
+              Visible = True
+            end
+            item
+              Alignment = taRightJustify
+              Expanded = False
+              FieldName = 'Total_Sales_Value'
+              Title.Caption = 'Total Sales Price'
+              Width = 81
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Locale'
-              Title.Caption = 'Address 3'
-              Width = 145
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Town'
-              Title.Caption = 'Town/City'
-              Width = 75
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'County'
-              Width = 89
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Postcode'
-              Width = 77
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Phone'
-              Width = 89
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Fax_Number'
-              Title.Caption = 'Fax'
-              Width = 89
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Email'
-              Width = 150
+              FieldName = 'Job_Bag'
+              Title.Caption = 'Job Bag'
+              Width = 78
               Visible = True
             end>
         end
+        object Panel12: TPanel
+          Left = 0
+          Top = 554
+          Width = 1168
+          Height = 41
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 3
+          DesignSize = (
+            1168
+            41)
+          object Label55: TLabel
+            Left = 8
+            Top = 16
+            Width = 96
+            Height = 13
+            Caption = 'Description Search'
+          end
+          object Label56: TLabel
+            Left = 964
+            Top = 16
+            Width = 76
+            Height = 13
+            Anchors = [akRight, akBottom]
+            Caption = 'Quote Number'
+          end
+          object edtQuoteSearch: TEdit
+            Left = 107
+            Top = 12
+            Width = 180
+            Height = 21
+            TabOrder = 0
+            OnChange = edtQuoteSearchChange
+          end
+          object edtQuoteNumber: TEdit
+            Left = 1044
+            Top = 12
+            Width = 90
+            Height = 21
+            Anchors = [akRight, akBottom]
+            TabOrder = 1
+            OnKeyPress = edtQuoteNumberKeyPress
+          end
+          object BitBtn11: TBitBtn
+            Left = 296
+            Top = 10
+            Width = 75
+            Height = 25
+            Caption = '&Search'
+            TabOrder = 2
+            OnClick = BitBtn11Click
+          end
+        end
       end
-      object pnlContacts: TPanel
-        Left = 0
-        Top = 273
-        Width = 1168
-        Height = 341
-        Align = alClient
-        Caption = 'pnlContacts'
-        ParentBackground = False
-        TabOrder = 1
-        object dbgContactDetails: TDBGrid
-          Left = 1
-          Top = 25
-          Width = 1073
-          Height = 275
+      object tbEnquiries: TTabSheet
+        Caption = 'Enquiries'
+        ImageIndex = 5
+        OnExit = tbEnquiriesExit
+        OnShow = tbEnquiriesShow
+        object stsBrEnqDetails: TStatusBar
+          Left = 0
+          Top = 595
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 150
+            end
+            item
+              Width = 150
+            end
+            item
+              Width = 50
+            end>
+        end
+        object CoolBar1: TCoolBar
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 45
+          Bands = <
+            item
+              Control = tbrEnquiries
+              ImageIndex = -1
+              MinHeight = 41
+              Width = 1166
+            end>
+          object tbrEnquiries: TToolBar
+            Left = 11
+            Top = 0
+            Width = 1153
+            Height = 41
+            ButtonHeight = 36
+            ButtonWidth = 59
+            Caption = 'Toolbar1'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Images = imgEnquiries
+            ParentFont = False
+            ParentShowHint = False
+            ShowCaptions = True
+            ShowHint = True
+            TabOrder = 0
+            object btnEnqQuick: TToolButton
+              Left = 0
+              Top = 0
+              Caption = '&Quick'
+              ImageIndex = 5
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnEnqQuickClick
+            end
+            object btnEnqAdd: TToolButton
+              Left = 59
+              Top = 0
+              Hint = 'Add Enquiry'
+              Caption = '&Add'
+              ImageIndex = 0
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnEnqAddClick
+            end
+            object btnEnqChange: TToolButton
+              Left = 118
+              Top = 0
+              Hint = 'Change enquiry'
+              Caption = '  &Change  '
+              Enabled = False
+              ImageIndex = 1
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnEnqChangeClick
+            end
+            object btnEnqCopy: TToolButton
+              Left = 177
+              Top = 0
+              Caption = 'Cop&y'
+              Enabled = False
+              ImageIndex = 3
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnEnqCopyClick
+            end
+            object btnEnqDecline: TToolButton
+              Left = 236
+              Top = 0
+              Caption = '&Decline'
+              Enabled = False
+              ImageIndex = 2
+              OnClick = btnEnqDeclineClick
+            end
+            object ToolButton4: TToolButton
+              Left = 295
+              Top = 0
+              Width = 8
+              Caption = 'ToolButton4'
+              ImageIndex = 3
+              Style = tbsSeparator
+            end
+            object btnEnqPrint: TToolButton
+              Left = 303
+              Top = 0
+              Caption = '&Print'
+              Enabled = False
+              ImageIndex = 4
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnEnqPrintClick
+            end
+            object btnRepliesSpacer: TToolButton
+              Left = 362
+              Top = 0
+              Width = 8
+              Caption = 'btnRepliesSpacer'
+              ImageIndex = 5
+              Style = tbsSeparator
+            end
+            object btnEnqReplies: TToolButton
+              Left = 370
+              Top = 0
+              Caption = '&Replies'
+              Enabled = False
+              ImageIndex = 6
+              OnClick = btnEnqRepliesClick
+            end
+            object btnEnqPricing: TToolButton
+              Left = 429
+              Top = 0
+              Caption = 'Pri&cing'
+              Enabled = False
+              ImageIndex = 7
+              OnClick = btnEnqPricingClick
+            end
+            object btnEnqQuote: TToolButton
+              Left = 488
+              Top = 0
+              Caption = 'Quo&te'
+              Enabled = False
+              ImageIndex = 8
+              OnClick = btnEnqQuoteClick
+            end
+            object btnEnqConvert: TToolButton
+              Left = 547
+              Top = 0
+              Caption = 'Con&vert'
+              Enabled = False
+              ImageIndex = 9
+              OnClick = btnEnqConvertClick
+            end
+          end
+        end
+        object dbgEnquiryDetails: TDBGrid
+          Left = 0
+          Top = 45
+          Width = 1168
+          Height = 509
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
@@ -2776,1571 +3438,396 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           ParentFont = False
-          TabOrder = 0
+          TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
-          OnDrawColumnCell = dbgContactDetailsDrawColumnCell
-          OnDblClick = dbgContactDetailsDblClick
+          OnDrawColumnCell = dbgEnquiryDetailsDrawColumnCell
+          OnDblClick = dbgEnquiryDetailsDblClick
           Columns = <
             item
               Expanded = False
-              FieldName = 'Name'
-              Title.Caption = 'Full Name'
-              Width = 151
+              FieldName = 'Enquiry'
+              Width = 55
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Contact_Type_Description'
-              Title.Caption = 'Contact Type'
-              Width = 139
+              FieldName = 'Line'
+              Width = 26
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Phone'
-              Width = 136
+              FieldName = 'Date_Point'
+              Title.Caption = 'Date'
+              Width = 61
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Mobile_no'
-              Title.Caption = 'Mobile Phone'
-              Width = 150
+              FieldName = 'Description'
+              Width = 124
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Email'
-              Title.Caption = 'Email Address'
-              Width = 130
+              FieldName = 'Form_Reference_ID'
+              Title.Caption = 'Form Reference'
+              Width = 95
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Contact_Level_description'
-              Title.Caption = 'Contact Level'
-              Width = 123
+              FieldName = 'rep_Name'
+              Title.Caption = 'Rep'
+              Width = 89
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Contact_Status_Description'
+              FieldName = 'Office_Contact_Name'
+              Title.Caption = 'Office Contact'
+              Width = 89
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Operator_Name'
+              Title.Caption = 'Operator'
+              Width = 110
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Branch_Name'
+              Title.Caption = 'Branch'
+              Width = 98
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Product_Type_Description'
+              Title.Caption = 'Product Type'
+              Width = 76
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Status_Text'
               Title.Caption = 'Status'
-              Width = 138
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Salutation'
-              Width = 127
+              Width = 245
               Visible = True
             end>
         end
-        object Panel14: TPanel
-          Left = 1
-          Top = 300
-          Width = 1166
-          Height = 40
+        object Panel2: TPanel
+          Left = 0
+          Top = 554
+          Width = 1168
+          Height = 41
           Align = alBottom
           ParentBackground = False
-          TabOrder = 1
-          object Label58: TLabel
+          TabOrder = 3
+          DesignSize = (
+            1168
+            41)
+          object Label46: TLabel
             Left = 8
-            Top = 13
-            Width = 34
-            Height = 13
-            Caption = 'Search'
-          end
-          object edtContactName: TEdit
-            Left = 56
-            Top = 9
-            Width = 177
-            Height = 21
-            TabOrder = 0
-            OnChange = edtContactNameChange
-          end
-          object chkbxActiveContactOnly: TCheckBox
-            Left = 344
-            Top = 12
-            Width = 177
-            Height = 14
-            Caption = 'Only show active Contacts'
-            Checked = True
-            State = cbChecked
-            TabOrder = 1
-            OnClick = chkbxActiveContactOnlyClick
-          end
-          object Button2: TButton
-            Left = 250
-            Top = 7
-            Width = 75
-            Height = 25
-            Caption = 'S&weep'
-            TabOrder = 2
-            OnClick = Button2Click
-          end
-        end
-        object Panel15: TPanel
-          Left = 1
-          Top = 1
-          Width = 1166
-          Height = 24
-          Align = alTop
-          ParentBackground = False
-          TabOrder = 2
-          object Label59: TLabel
-            Left = 9
-            Top = 4
-            Width = 45
-            Height = 13
-            Caption = 'Contacts'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-        end
-        object pnlContactFunctions: TPanel
-          Left = 1074
-          Top = 25
-          Width = 93
-          Height = 275
-          Align = alRight
-          ParentBackground = False
-          TabOrder = 3
-          DesignSize = (
-            93
-            275)
-          object btnContactAdd: TBitBtn
-            Left = 9
-            Top = 8
-            Width = 75
-            Height = 25
-            Caption = 'Add'
-            NumGlyphs = 2
-            TabOrder = 0
-            OnClick = btnContactAddClick
-          end
-          object btnContactChange: TBitBtn
-            Left = 9
-            Top = 41
-            Width = 75
-            Height = 25
-            Caption = 'Change'
-            Enabled = False
-            NumGlyphs = 2
-            TabOrder = 1
-            OnClick = btnContactChangeClick
-          end
-          object btnContactDelete: TBitBtn
-            Left = 9
-            Top = 75
-            Width = 75
-            Height = 25
-            Caption = 'Delete'
-            Enabled = False
-            NumGlyphs = 2
-            TabOrder = 2
-            OnClick = btnContactDeleteClick
-          end
-          object btnContactOnline: TBitBtn
-            Left = 9
-            Top = 142
-            Width = 75
-            Height = 25
-            Anchors = [akTop, akRight]
-            Caption = 'Online'
-            Enabled = False
-            TabOrder = 3
-            OnClick = btnContactOnlineClick
-          end
-          object btnContactMove: TBitBtn
-            Left = 9
-            Top = 110
-            Width = 75
-            Height = 25
-            Anchors = [akTop, akRight]
-            Caption = 'Move'
-            Enabled = False
-            TabOrder = 4
-            OnClick = btnContactMoveClick
-          end
-        end
-      end
-    end
-    object tbQuotes: TTabSheet
-      Caption = 'Quotes'
-      ImageIndex = 4
-      OnExit = tbQuotesExit
-      OnShow = tbQuotesShow
-      object stsBrQuoteDetails: TStatusBar
-        Left = 0
-        Top = 595
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 150
-          end
-          item
-            Width = 150
-          end
-          item
-            Width = 50
-          end>
-      end
-      object CoolBar6: TCoolBar
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 45
-        Bands = <
-          item
-            Control = tbrQuotes
-            ImageIndex = -1
-            MinHeight = 41
-            Width = 1162
-          end>
-        object tbrQuotes: TToolBar
-          Left = 11
-          Top = 0
-          Width = 1153
-          Height = 41
-          ButtonHeight = 36
-          ButtonWidth = 59
-          Caption = 'ToolBar1'
-          HotImages = imglstButtons
-          Images = imglstButtons
-          ShowCaptions = True
-          TabOrder = 0
-          object btnQuoteAdd: TToolButton
-            Left = 0
-            Top = 0
-            Caption = '&Add'
-            ImageIndex = 0
-            OnClick = btnQuoteAddClick
-          end
-          object btnQuoteChange: TToolButton
-            Left = 59
-            Top = 0
-            Caption = '  &Change  '
-            Enabled = False
-            ImageIndex = 1
-            OnClick = btnQuoteChangeClick
-          end
-          object btnQuoteCopy: TToolButton
-            Left = 118
-            Top = 0
-            Caption = '&Copy'
-            Enabled = False
-            ImageIndex = 2
-            OnClick = btnQuoteCopyClick
-          end
-          object btnQuoteReQuote: TToolButton
-            Left = 177
-            Top = 0
-            Caption = 'Re-Quote'
-            Enabled = False
-            ImageIndex = 5
-            OnClick = btnQuoteReQuoteClick
-          end
-          object btnQuoteDelete: TToolButton
-            Left = 236
-            Top = 0
-            Caption = '&Delete'
-            Enabled = False
-            ImageIndex = 3
-            OnClick = btnQuoteDeleteClick
-          end
-          object btnQuotePrint: TToolButton
-            Left = 295
-            Top = 0
-            Caption = '&Print'
-            Enabled = False
-            ImageIndex = 4
-            OnClick = btnQuotePrintClick
-          end
-          object ToolButton5: TToolButton
-            Left = 354
-            Top = 0
-            Width = 8
-            Caption = 'ToolButton1'
-            ImageIndex = 5
-            Style = tbsSeparator
-          end
-          object btnQuoteConvert: TToolButton
-            Left = 362
-            Top = 0
-            Caption = 'Con&vert'
-            Enabled = False
-            ImageIndex = 7
-            OnClick = btnQuoteConvertClick
-          end
-        end
-      end
-      object dbgQuoteDetails: TDBGrid
-        Left = 0
-        Top = 45
-        Width = 1168
-        Height = 509
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 2
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDblClick = dbgQuoteDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Quote'
-            Width = 68
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Point'
-            Title.Caption = 'Date'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description'
-            Width = 181
-            Visible = True
-          end
-          item
-            Alignment = taRightJustify
-            Expanded = False
-            FieldName = 'Quantity'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quote_Status_Description'
-            Title.Caption = 'Status'
-            Width = 133
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Start'
-            Title.Caption = 'Start Date'
-            Width = 81
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Required'
-            Title.Caption = 'Date Required'
-            Width = 87
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Rep_Name'
-            Title.Caption = 'Rep'
-            Width = 105
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Width = 154
-            Visible = True
-          end
-          item
-            Alignment = taRightJustify
-            Expanded = False
-            FieldName = 'Total_Cost_Value'
-            Title.Caption = 'Total Cost Price'
-            Visible = True
-          end
-          item
-            Alignment = taRightJustify
-            Expanded = False
-            FieldName = 'Total_Sales_Value'
-            Title.Caption = 'Total Sales Price'
-            Width = 81
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Job_Bag'
-            Title.Caption = 'Job Bag'
-            Width = 78
-            Visible = True
-          end>
-      end
-      object Panel12: TPanel
-        Left = 0
-        Top = 554
-        Width = 1168
-        Height = 41
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 3
-        DesignSize = (
-          1168
-          41)
-        object Label55: TLabel
-          Left = 8
-          Top = 16
-          Width = 96
-          Height = 13
-          Caption = 'Description Search'
-        end
-        object Label56: TLabel
-          Left = 964
-          Top = 16
-          Width = 76
-          Height = 13
-          Anchors = [akRight, akBottom]
-          Caption = 'Quote Number'
-        end
-        object edtQuoteSearch: TEdit
-          Left = 107
-          Top = 12
-          Width = 180
-          Height = 21
-          TabOrder = 0
-          OnChange = edtQuoteSearchChange
-        end
-        object edtQuoteNumber: TEdit
-          Left = 1044
-          Top = 12
-          Width = 90
-          Height = 21
-          Anchors = [akRight, akBottom]
-          TabOrder = 1
-          OnKeyPress = edtQuoteNumberKeyPress
-        end
-        object BitBtn11: TBitBtn
-          Left = 296
-          Top = 10
-          Width = 75
-          Height = 25
-          Caption = '&Search'
-          TabOrder = 2
-          OnClick = BitBtn11Click
-        end
-      end
-    end
-    object tbEnquiries: TTabSheet
-      Caption = 'Enquiries'
-      ImageIndex = 5
-      OnExit = tbEnquiriesExit
-      OnShow = tbEnquiriesShow
-      object stsBrEnqDetails: TStatusBar
-        Left = 0
-        Top = 595
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 150
-          end
-          item
-            Width = 150
-          end
-          item
-            Width = 50
-          end>
-      end
-      object CoolBar1: TCoolBar
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 45
-        Bands = <
-          item
-            Control = tbrEnquiries
-            ImageIndex = -1
-            MinHeight = 41
-            Width = 1162
-          end>
-        object tbrEnquiries: TToolBar
-          Left = 11
-          Top = 0
-          Width = 1153
-          Height = 41
-          ButtonHeight = 36
-          ButtonWidth = 59
-          Caption = 'Toolbar1'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          Images = imgEnquiries
-          ParentFont = False
-          ParentShowHint = False
-          ShowCaptions = True
-          ShowHint = True
-          TabOrder = 0
-          object btnEnqQuick: TToolButton
-            Left = 0
-            Top = 0
-            Caption = '&Quick'
-            ImageIndex = 5
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnEnqQuickClick
-          end
-          object btnEnqAdd: TToolButton
-            Left = 59
-            Top = 0
-            Hint = 'Add Enquiry'
-            Caption = '&Add'
-            ImageIndex = 0
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnEnqAddClick
-          end
-          object btnEnqChange: TToolButton
-            Left = 118
-            Top = 0
-            Hint = 'Change enquiry'
-            Caption = '  &Change  '
-            Enabled = False
-            ImageIndex = 1
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnEnqChangeClick
-          end
-          object btnEnqCopy: TToolButton
-            Left = 177
-            Top = 0
-            Caption = 'Cop&y'
-            Enabled = False
-            ImageIndex = 3
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnEnqCopyClick
-          end
-          object btnEnqDecline: TToolButton
-            Left = 236
-            Top = 0
-            Caption = '&Decline'
-            Enabled = False
-            ImageIndex = 2
-            OnClick = btnEnqDeclineClick
-          end
-          object ToolButton4: TToolButton
-            Left = 295
-            Top = 0
-            Width = 8
-            Caption = 'ToolButton4'
-            ImageIndex = 3
-            Style = tbsSeparator
-          end
-          object btnEnqPrint: TToolButton
-            Left = 303
-            Top = 0
-            Caption = '&Print'
-            Enabled = False
-            ImageIndex = 4
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnEnqPrintClick
-          end
-          object btnRepliesSpacer: TToolButton
-            Left = 362
-            Top = 0
-            Width = 8
-            Caption = 'btnRepliesSpacer'
-            ImageIndex = 5
-            Style = tbsSeparator
-          end
-          object btnEnqReplies: TToolButton
-            Left = 370
-            Top = 0
-            Caption = '&Replies'
-            Enabled = False
-            ImageIndex = 6
-            OnClick = btnEnqRepliesClick
-          end
-          object btnEnqPricing: TToolButton
-            Left = 429
-            Top = 0
-            Caption = 'Pri&cing'
-            Enabled = False
-            ImageIndex = 7
-            OnClick = btnEnqPricingClick
-          end
-          object btnEnqQuote: TToolButton
-            Left = 488
-            Top = 0
-            Caption = 'Quo&te'
-            Enabled = False
-            ImageIndex = 8
-            OnClick = btnEnqQuoteClick
-          end
-          object btnEnqConvert: TToolButton
-            Left = 547
-            Top = 0
-            Caption = 'Con&vert'
-            Enabled = False
-            ImageIndex = 9
-            OnClick = btnEnqConvertClick
-          end
-        end
-      end
-      object dbgEnquiryDetails: TDBGrid
-        Left = 0
-        Top = 45
-        Width = 1168
-        Height = 509
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
-        ParentFont = False
-        TabOrder = 2
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgEnquiryDetailsDrawColumnCell
-        OnDblClick = dbgEnquiryDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Enquiry'
-            Width = 55
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Line'
-            Width = 26
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Point'
-            Title.Caption = 'Date'
-            Width = 61
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description'
-            Width = 124
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Form_Reference_ID'
-            Title.Caption = 'Form Reference'
-            Width = 95
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'rep_Name'
-            Title.Caption = 'Rep'
-            Width = 89
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Office_Contact_Name'
-            Title.Caption = 'Office Contact'
-            Width = 89
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Width = 110
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Branch_Name'
-            Title.Caption = 'Branch'
-            Width = 98
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Product_Type_Description'
-            Title.Caption = 'Product Type'
-            Width = 76
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Status_Text'
-            Title.Caption = 'Status'
-            Width = 245
-            Visible = True
-          end>
-      end
-      object Panel2: TPanel
-        Left = 0
-        Top = 554
-        Width = 1168
-        Height = 41
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 3
-        DesignSize = (
-          1168
-          41)
-        object Label46: TLabel
-          Left = 8
-          Top = 16
-          Width = 96
-          Height = 13
-          Caption = 'Description Search'
-        end
-        object Label47: TLabel
-          Left = 964
-          Top = 16
-          Width = 83
-          Height = 13
-          Anchors = [akRight, akBottom]
-          Caption = 'Enquiry Number'
-        end
-        object edtEnqSearch: TEdit
-          Left = 107
-          Top = 12
-          Width = 180
-          Height = 21
-          TabOrder = 0
-          OnChange = edtEnqSearchChange
-        end
-        object edtEnqNumber: TEdit
-          Left = 1044
-          Top = 12
-          Width = 90
-          Height = 21
-          Anchors = [akRight, akBottom]
-          TabOrder = 1
-          OnKeyPress = edtEnqNumberKeyPress
-        end
-        object btnSearch: TBitBtn
-          Left = 296
-          Top = 10
-          Width = 75
-          Height = 25
-          Caption = '&Search'
-          TabOrder = 2
-          OnClick = btnSearchClick
-        end
-      end
-    end
-    object tbOrders: TTabSheet
-      Caption = 'Orders'
-      ImageIndex = 6
-      OnExit = tbOrdersExit
-      OnShow = tbOrdersShow
-      object stsBrOrderDetails: TStatusBar
-        Left = 0
-        Top = 595
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 250
-          end
-          item
-            Width = 50
-          end>
-      end
-      object Panel3: TPanel
-        Left = 0
-        Top = 554
-        Width = 1168
-        Height = 41
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 1
-        DesignSize = (
-          1168
-          41)
-        object Label48: TLabel
-          Left = 8
-          Top = 16
-          Width = 96
-          Height = 13
-          Caption = 'Description Search'
-        end
-        object Label49: TLabel
-          Left = 934
-          Top = 16
-          Width = 73
-          Height = 13
-          Anchors = [akRight, akBottom]
-          Caption = 'Order number'
-          ExplicitLeft = 952
-        end
-        object edtOrderSearch: TEdit
-          Left = 104
-          Top = 12
-          Width = 180
-          Height = 21
-          TabOrder = 0
-          OnChange = edtOrderSearchChange
-        end
-        object edtOrderNumber: TEdit
-          Left = 1012
-          Top = 12
-          Width = 90
-          Height = 21
-          Anchors = [akRight, akBottom]
-          TabOrder = 1
-          OnKeyPress = edtOrderNumberKeyPress
-        end
-        object chkbxShowUnauthorised: TCheckBox
-          Left = 376
-          Top = 14
-          Width = 169
-          Height = 17
-          Caption = 'Only show unauthorised orders'
-          TabOrder = 2
-          OnClick = chkbxShowUnauthorisedClick
-        end
-        object BitBtn9: TBitBtn
-          Left = 288
-          Top = 10
-          Width = 75
-          Height = 25
-          Caption = '&Search'
-          TabOrder = 3
-          OnClick = BitBtn9Click
-        end
-      end
-      object CoolBar2: TCoolBar
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 44
-        Bands = <
-          item
-            Control = PageScroller1
-            ImageIndex = -1
-            MinHeight = 41
-            Width = 1162
-          end>
-        object PageScroller1: TPageScroller
-          Left = 11
-          Top = 0
-          Width = 1153
-          Height = 41
-          Control = tbrOrders
-          TabOrder = 0
-          object tbrOrders: TToolBar
-            Left = 0
-            Top = 0
-            Width = 1141
-            Height = 41
-            ButtonHeight = 44
-            ButtonWidth = 65
-            Caption = 'ToolBar1'
-            Images = imglstOrders
-            ParentShowHint = False
-            ShowCaptions = True
-            ShowHint = True
-            TabOrder = 0
-            object btnOrderAdd: TToolButton
-              Left = 0
-              Top = 0
-              Hint = 'Add new production order'
-              Caption = '&Add'
-              ImageIndex = 0
-              OnClick = btnOrderAddClick
-              OnMouseDown = btnOrderAddMouseDown
-            end
-            object btnOrderChange: TToolButton
-              Left = 65
-              Top = 0
-              Hint = 'Change order details'
-              Caption = '  &Change  '
-              Enabled = False
-              ImageIndex = 1
-              OnClick = btnOrderChangeClick
-            end
-            object btnOrderRepeat: TToolButton
-              Left = 130
-              Top = 0
-              Hint = 'Repeat Order'
-              Caption = '&Repeat'
-              Enabled = False
-              ImageIndex = 3
-              OnClick = btnOrderRepeatClick
-            end
-            object btnOrderDelete: TToolButton
-              Left = 195
-              Top = 0
-              Caption = 'Delete'
-              Enabled = False
-              ImageIndex = 12
-              OnClick = btnOrderDeleteClick
-            end
-            object btnOrderPrint: TToolButton
-              Left = 260
-              Top = 0
-              Hint = 'Print'
-              Caption = '&Print'
-              Enabled = False
-              ImageIndex = 4
-              OnClick = btnOrderPrintClick
-            end
-            object btnOrderRequote: TToolButton
-              Left = 325
-              Top = 0
-              Caption = 'Re-quote'
-              Enabled = False
-              ImageIndex = 10
-              OnClick = btnOrderRequoteClick
-            end
-            object btnOrderHistory: TToolButton
-              Left = 390
-              Top = 0
-              Hint = 'Show Order History'
-              Caption = '&History'
-              Enabled = False
-              ImageIndex = 13
-              OnClick = btnOrderHistoryClick
-            end
-            object btnOrderSeparator1: TToolButton
-              Left = 455
-              Top = 0
-              Width = 8
-              Caption = 'btnOrderSeparator1'
-              ImageIndex = 7
-              Style = tbsSeparator
-              Visible = False
-            end
-            object btnOrderAllocatefnc: TToolButton
-              Left = 463
-              Top = 0
-              Caption = 'Al&locate'
-              DropdownMenu = pmnOrderAllocate
-              Enabled = False
-              ImageIndex = 7
-              Style = tbsDropDown
-            end
-            object btnOrderPicking: TToolButton
-              Left = 543
-              Top = 0
-              Caption = 'Pic&king'
-              DropdownMenu = pmnOrderPicking
-              Enabled = False
-              ImageIndex = 7
-            end
-            object ToolButton3: TToolButton
-              Left = 608
-              Top = 0
-              Width = 8
-              Caption = 'ToolButton3'
-              ImageIndex = 7
-              Style = tbsSeparator
-            end
-            object btnOrderProofs: TToolButton
-              Left = 616
-              Top = 0
-              Caption = 'Proo&fs'
-              DropdownMenu = pmnOrderProofs
-              Enabled = False
-              ImageIndex = 7
-            end
-            object btnOrderDeliveriesSpacer: TToolButton
-              Left = 681
-              Top = 0
-              Width = 8
-              Caption = 'btnOrderDeliveriesSpacer'
-              ImageIndex = 7
-              Style = tbsSeparator
-            end
-            object btnOrderDeliveries: TToolButton
-              Left = 689
-              Top = 0
-              Hint = 'Deliveries'
-              Caption = 'Deliver&y'
-              Enabled = False
-              ImageIndex = 5
-              OnClick = btnOrderDeliveriesClick
-            end
-            object btnOrderHold: TToolButton
-              Left = 754
-              Top = 0
-              Hint = 'On Hold'
-              Caption = '&Hold'
-              Enabled = False
-              ImageIndex = 6
-              OnClick = btnOrderHoldClick
-            end
-          end
-        end
-      end
-      object dbgOrderDetails: TDBGrid
-        Left = 0
-        Top = 44
-        Width = 1168
-        Height = 510
-        Align = alClient
-        DataSource = dtmdlOrders.dtsOrders
-        DrawingStyle = gdsGradient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 3
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgOrderDetailsDrawColumnCell
-        OnDblClick = dbgOrderDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Sales_order'
-            Title.Caption = 'Order'
-            Width = 56
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Order_date'
-            Title.Caption = 'Order Date'
-            Width = 77
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description'
-            Width = 149
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Order_Price'
-            Title.Caption = 'Cost Price'
-            Width = 57
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Order_unit'
-            Title.Caption = 'Cost Unit'
-            Width = 56
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Selling_Price'
-            Title.Caption = 'Sell Price'
-            Width = 56
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Selling_unit'
-            Title.Caption = 'Sell Unit'
-            Width = 51
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quantity'
-            Width = 52
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Cust_Order_No'
-            Title.Caption = 'Customer Order No.'
-            Width = 130
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Goods_Required'
-            Title.Caption = 'Date Required'
-            Width = 73
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Stock_Reference'
-            Title.Caption = 'Product Code'
-            Width = 97
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Supplier_Name'
-            Title.Caption = 'Supplier'
-            Width = 131
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Form_Reference_ID'
-            Title.Caption = 'Form Reference'
-            Width = 128
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Branch_Name'
-            Title.Caption = 'Branch'
-            Width = 105
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Status_Text'
-            Title.Caption = 'Status'
-            Width = 109
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'job_bag'
-            Title.Caption = 'Job Bag'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description_Reference'
-            Title.Caption = 'Descriptive Reference'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Rep_Name'
-            Title.Caption = 'Rep'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Visible = True
-          end>
-      end
-    end
-    object tbJobs: TTabSheet
-      Caption = 'Jobs'
-      ImageIndex = 7
-      OnExit = tbJobsExit
-      OnShow = tbJobsShow
-      object stsbrJobDetails: TStatusBar
-        Left = 0
-        Top = 554
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 200
-          end
-          item
-            Width = 50
-          end
-          item
-            Width = 50
-          end>
-      end
-      object CoolBar3: TCoolBar
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 45
-        Bands = <
-          item
-            Control = tbrJobs
-            ImageIndex = -1
-            MinHeight = 41
-            Width = 1162
-          end>
-        object tbrJobs: TToolBar
-          Left = 11
-          Top = 0
-          Width = 1153
-          Height = 41
-          ButtonHeight = 36
-          ButtonWidth = 59
-          Caption = 'ToolBar1'
-          Images = imglstjobs
-          ShowCaptions = True
-          TabOrder = 0
-          object btnJobAdd: TToolButton
-            Left = 0
-            Top = 0
-            Caption = '&Add'
-            ImageIndex = 0
-            OnClick = btnJobAddClick
-          end
-          object btnJobChange: TToolButton
-            Left = 59
-            Top = 0
-            Caption = '  &Change  '
-            Enabled = False
-            ImageIndex = 1
-            OnClick = btnJobChangeClick
-          end
-          object btnJobRepeat: TToolButton
-            Left = 118
-            Top = 0
-            Caption = '&Repeat'
-            Enabled = False
-            ImageIndex = 4
-            OnClick = btnJobRepeatClick
-          end
-          object btnJobDelete: TToolButton
-            Left = 177
-            Top = 0
-            Caption = '&Delete'
-            Enabled = False
-            ImageIndex = 3
-            OnClick = btnJobDeleteClick
-          end
-          object btnJobPrint: TToolButton
-            Left = 236
-            Top = 0
-            Caption = '&Print'
-            Enabled = False
-            ImageIndex = 5
-            OnClick = btnJobPrintClick
-          end
-          object ToolButton2: TToolButton
-            Left = 295
-            Top = 0
-            Width = 8
-            Caption = 'ToolButton2'
-            ImageIndex = 5
-            Style = tbsSeparator
-          end
-          object btnJobDraft: TToolButton
-            Left = 303
-            Top = 0
-            Caption = 'Dra&ft'
-            Enabled = False
-            ImageIndex = 4
-            OnClick = btnJobDraftClick
-          end
-        end
-      end
-      object dbgJobDetails: TDBGrid
-        Left = 0
-        Top = 45
-        Width = 1168
-        Height = 509
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 2
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgJobDetailsDrawColumnCell
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Job_Bag'
-            Title.Caption = 'Job bag No.'
-            Width = 68
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Point'
-            Title.Caption = 'Date'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Job_Bag_Descr'
-            Title.Caption = 'Description'
-            Width = 181
-            Visible = True
-          end
-          item
-            Alignment = taRightJustify
-            Expanded = False
-            FieldName = 'Quantity'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Job_Bag_Status_descr'
-            Title.Caption = 'Status'
-            Width = 133
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Cust_Order_no'
-            Title.Caption = 'Customer Order number'
-            Width = 108
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Goods_Required'
-            Title.Caption = 'Date Required'
-            Width = 87
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Operator_Name'
-            Title.Caption = 'Operator'
-            Width = 101
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Account_Manager'
-            Title.Caption = 'Account Manager'
-            Width = 120
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Description_Reference'
-            Title.Caption = 'Description Reference'
-            Width = 144
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Start'
-            Title.Caption = 'Start Date'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quote'
-            Width = 82
-            Visible = True
-          end>
-      end
-      object Panel4: TPanel
-        Left = 0
-        Top = 573
-        Width = 1168
-        Height = 41
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 3
-        object Label50: TLabel
-          Left = 8
-          Top = 16
-          Width = 96
-          Height = 13
-          Caption = 'Description Search'
-        end
-        object edtJobSearch: TEdit
-          Left = 104
-          Top = 8
-          Width = 233
-          Height = 21
-          TabOrder = 0
-          OnChange = edtJobSearchChange
-        end
-        object Panel5: TPanel
-          Left = 894
-          Top = 1
-          Width = 273
-          Height = 39
-          Align = alRight
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 1
-          DesignSize = (
-            273
-            39)
-          object Label51: TLabel
-            Left = 86
             Top = 16
-            Width = 62
+            Width = 96
+            Height = 13
+            Caption = 'Description Search'
+          end
+          object Label47: TLabel
+            Left = 964
+            Top = 16
+            Width = 83
             Height = 13
             Anchors = [akRight, akBottom]
-            Caption = 'Job Number'
+            Caption = 'Enquiry Number'
           end
-          object edtJobNumber: TEdit
-            Left = 167
+          object edtEnqSearch: TEdit
+            Left = 107
+            Top = 12
+            Width = 180
+            Height = 21
+            TabOrder = 0
+            OnChange = edtEnqSearchChange
+          end
+          object edtEnqNumber: TEdit
+            Left = 1044
             Top = 12
             Width = 90
             Height = 21
             Anchors = [akRight, akBottom]
+            TabOrder = 1
+            OnKeyPress = edtEnqNumberKeyPress
+          end
+          object btnSearch: TBitBtn
+            Left = 296
+            Top = 10
+            Width = 75
+            Height = 25
+            Caption = '&Search'
+            TabOrder = 2
+            OnClick = btnSearchClick
+          end
+        end
+      end
+      object tbOrders: TTabSheet
+        Caption = 'Orders'
+        ImageIndex = 6
+        OnExit = tbOrdersExit
+        OnShow = tbOrdersShow
+        object stsBrOrderDetails: TStatusBar
+          Left = 0
+          Top = 595
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 250
+            end
+            item
+              Width = 50
+            end>
+        end
+        object Panel3: TPanel
+          Left = 0
+          Top = 554
+          Width = 1168
+          Height = 41
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 1
+          DesignSize = (
+            1168
+            41)
+          object Label48: TLabel
+            Left = 8
+            Top = 16
+            Width = 96
+            Height = 13
+            Caption = 'Description Search'
+          end
+          object Label49: TLabel
+            Left = 934
+            Top = 16
+            Width = 73
+            Height = 13
+            Anchors = [akRight, akBottom]
+            Caption = 'Order number'
+            ExplicitLeft = 952
+          end
+          object edtOrderSearch: TEdit
+            Left = 104
+            Top = 12
+            Width = 180
+            Height = 21
             TabOrder = 0
-            OnKeyPress = edtJobNumberKeyPress
+            OnChange = edtOrderSearchChange
+          end
+          object edtOrderNumber: TEdit
+            Left = 1012
+            Top = 12
+            Width = 90
+            Height = 21
+            Anchors = [akRight, akBottom]
+            TabOrder = 1
+            OnKeyPress = edtOrderNumberKeyPress
+          end
+          object chkbxShowUnauthorised: TCheckBox
+            Left = 376
+            Top = 14
+            Width = 169
+            Height = 17
+            Caption = 'Only show unauthorised orders'
+            TabOrder = 2
+            OnClick = chkbxShowUnauthorisedClick
+          end
+          object BitBtn9: TBitBtn
+            Left = 288
+            Top = 10
+            Width = 75
+            Height = 25
+            Caption = '&Search'
+            TabOrder = 3
+            OnClick = BitBtn9Click
           end
         end
-        object BitBtn10: TBitBtn
-          Left = 344
-          Top = 6
-          Width = 75
-          Height = 25
-          Caption = '&Search'
-          TabOrder = 2
-          OnClick = BitBtn10Click
-        end
-      end
-    end
-    object tbStock: TTabSheet
-      Caption = 'Stock'
-      ImageIndex = 3
-      OnExit = tbStockExit
-      OnShow = tbStockShow
-      object stsbrStockDetails: TStatusBar
-        Left = 0
-        Top = 595
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 300
-          end
-          item
-            Width = 300
-          end
-          item
-            Width = 300
-          end>
-      end
-      object Panel7: TPanel
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 595
-        Align = alClient
-        Caption = 'Panel7'
-        ParentBackground = False
-        TabOrder = 1
-        object CoolBar4: TCoolBar
-          Left = 1
-          Top = 1
-          Width = 1166
+        object CoolBar2: TCoolBar
+          Left = 0
+          Top = 0
+          Width = 1168
           Height = 44
           Bands = <
             item
-              Control = PageScroller2
+              Control = PageScroller1
               ImageIndex = -1
               MinHeight = 41
-              Width = 1160
+              Width = 1166
             end>
-          object PageScroller2: TPageScroller
+          object PageScroller1: TPageScroller
             Left = 11
             Top = 0
-            Width = 1151
+            Width = 1153
             Height = 41
-            Control = tbrStock
+            Control = tbrOrders
             TabOrder = 0
-            object tbrStock: TToolBar
+            object tbrOrders: TToolBar
               Left = 0
               Top = 0
-              Width = 1139
+              Width = 1153
               Height = 41
-              ButtonHeight = 44
-              ButtonWidth = 68
+              ButtonHeight = 29
+              ButtonWidth = 65
               Caption = 'ToolBar1'
-              HotImages = imglstMaint
-              Images = imglstMaint
+              Images = imglstOrders
+              ParentShowHint = False
               ShowCaptions = True
+              ShowHint = True
               TabOrder = 0
-              Wrapable = False
-              object btnStockChange: TToolButton
+              object btnOrderAdd: TToolButton
                 Left = 0
                 Top = 0
-                Hint = 'Change product'
-                Caption = '     &View     '
+                Hint = 'Add new production order'
+                Caption = '&Add'
+                ImageIndex = 0
+                OnClick = btnOrderAddClick
+                OnMouseDown = btnOrderAddMouseDown
+              end
+              object btnOrderChange: TToolButton
+                Left = 65
+                Top = 0
+                Hint = 'Change order details'
+                Caption = '  &Change  '
                 Enabled = False
                 ImageIndex = 1
-                ParentShowHint = False
-                ShowHint = True
-                OnClick = btnStockChangeClick
+                OnClick = btnOrderChangeClick
               end
-              object btnStockLabels: TToolButton
-                Left = 68
+              object btnOrderRepeat: TToolButton
+                Left = 130
                 Top = 0
-                Hint = 'Print labels'
-                Caption = 'Labels'
-                Enabled = False
-                ImageIndex = 11
-                ParentShowHint = False
-                ShowHint = True
-                OnClick = btnStockLabelsClick
-              end
-              object ToolButton1: TToolButton
-                Left = 136
-                Top = 0
-                Width = 8
-                Caption = 'ToolButton1'
-                ImageIndex = 5
-                Style = tbsSeparator
-              end
-              object btnStockLevels: TToolButton
-                Left = 144
-                Top = 0
-                Hint = 'Maintain stock levels'
-                Caption = '&Levels'
+                Hint = 'Repeat Order'
+                Caption = '&Repeat'
                 Enabled = False
                 ImageIndex = 3
-                ParentShowHint = False
-                ShowHint = True
-                OnClick = btnStockLevelsClick
+                OnClick = btnOrderRepeatClick
               end
-              object btnStockEnquiry: TToolButton
-                Left = 212
+              object btnOrderDelete: TToolButton
+                Left = 195
                 Top = 0
-                Caption = 'Enquiry'
-                DropdownMenu = pmnStockEnquiry
+                Caption = 'Delete'
+                Enabled = False
+                ImageIndex = 12
+                OnClick = btnOrderDeleteClick
+              end
+              object btnOrderPrint: TToolButton
+                Left = 260
+                Top = 0
+                Hint = 'Print'
+                Caption = '&Print'
+                Enabled = False
+                ImageIndex = 4
+                OnClick = btnOrderPrintClick
+              end
+              object btnOrderRequote: TToolButton
+                Left = 325
+                Top = 0
+                Caption = 'Re-quote'
+                Enabled = False
+                ImageIndex = 10
+                OnClick = btnOrderRequoteClick
+              end
+              object btnOrderHistory: TToolButton
+                Left = 390
+                Top = 0
+                Hint = 'Show Order History'
+                Caption = '&History'
+                Enabled = False
+                ImageIndex = 13
+                OnClick = btnOrderHistoryClick
+              end
+              object btnOrderSeparator1: TToolButton
+                Left = 455
+                Top = 0
+                Width = 8
+                Caption = 'btnOrderSeparator1'
+                ImageIndex = 7
+                Style = tbsSeparator
+                Visible = False
+              end
+              object btnOrderAllocatefnc: TToolButton
+                Left = 463
+                Top = 0
+                Caption = 'Al&locate'
+                DropdownMenu = pmnOrderAllocate
+                Enabled = False
+                ImageIndex = 7
+                Style = tbsDropDown
+              end
+              object btnOrderPicking: TToolButton
+                Left = 543
+                Top = 0
+                Caption = 'Pic&king'
+                DropdownMenu = pmnOrderPicking
+                Enabled = False
+                ImageIndex = 7
+              end
+              object ToolButton3: TToolButton
+                Left = 608
+                Top = 0
+                Width = 8
+                Caption = 'ToolButton3'
+                ImageIndex = 7
+                Style = tbsSeparator
+              end
+              object btnOrderProofs: TToolButton
+                Left = 616
+                Top = 0
+                Caption = 'Proo&fs'
+                DropdownMenu = pmnOrderProofs
+                Enabled = False
+                ImageIndex = 7
+              end
+              object btnOrderDeliveriesSpacer: TToolButton
+                Left = 681
+                Top = 0
+                Width = 8
+                Caption = 'btnOrderDeliveriesSpacer'
+                ImageIndex = 7
+                Style = tbsSeparator
+              end
+              object btnOrderDeliveries: TToolButton
+                Left = 689
+                Top = 0
+                Hint = 'Deliveries'
+                Caption = 'Deliver&y'
+                Enabled = False
+                ImageIndex = 5
+                OnClick = btnOrderDeliveriesClick
+              end
+              object btnOrderHold: TToolButton
+                Left = 754
+                Top = 0
+                Hint = 'On Hold'
+                Caption = '&Hold'
                 Enabled = False
                 ImageIndex = 6
-                Style = tbsDropDown
+                OnClick = btnOrderHoldClick
               end
             end
           end
         end
-        object dbgStockDetails: TDBGrid
-          Left = 1
-          Top = 45
-          Width = 1166
-          Height = 508
+        object dbgOrderDetails: TDBGrid
+          Left = 0
+          Top = 44
+          Width = 1168
+          Height = 510
           Align = alClient
+          DataSource = dtmdlOrders.dtsOrders
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -4349,707 +3836,101 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           ParentFont = False
-          TabOrder = 1
+          TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
-          OnDrawColumnCell = dbgStockDetailsDrawColumnCell
-          OnDblClick = dbgStockDetailsDblClick
+          OnDrawColumnCell = dbgOrderDetailsDrawColumnCell
+          OnDblClick = dbgOrderDetailsDblClick
           Columns = <
             item
               Expanded = False
-              FieldName = 'Part'
-              Title.Caption = 'Product'
-              Width = 97
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'description'
-              Title.Caption = 'Description'
-              Width = 177
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'form_reference_id'
-              Title.Caption = 'Form reference'
-              Width = 157
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'store_qty'
-              Title.Caption = 'In Stock'
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'qty_alloc'
-              Title.Caption = 'Allocated'
-              Width = 54
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'qty_free'
-              Title.Caption = 'Free Stock'
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'paid_for'
-              Title.Caption = 'Paid for'
-              Width = 50
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'not_paid_for'
-              Title.Caption = 'Unpaid'
-              Width = 49
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'prod_ord_qty'
-              Title.Caption = 'On Buy Print'
-              Width = 68
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'purch_ord_qty'
-              Title.Caption = 'On Purchase'
-              Width = 67
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Maximum_Stock'
-              Title.Caption = 'Maximum'
-              Width = 54
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Minimum_Stock'
-              Title.Caption = 'Minimum'
-              Width = 51
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Reorder_Level'
-              Title.Caption = 'Reorder'
-              Width = 54
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Forward_Qty'
-              Title.Caption = 'Forward'
+              FieldName = 'Sales_order'
+              Title.Caption = 'Order'
               Width = 56
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'SO_unallocated'
-              Title.Caption = 'Unallocated SO'
-              Width = 83
+              FieldName = 'Order_date'
+              Title.Caption = 'Order Date'
+              Width = 77
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Future_Stock'
-              Title.Caption = 'Future Stock'
-              Width = 68
-              Visible = True
-            end>
-        end
-        object Panel8: TPanel
-          Left = 1
-          Top = 553
-          Width = 1166
-          Height = 41
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 2
-          DesignSize = (
-            1166
-            41)
-          object Label52: TLabel
-            Left = 8
-            Top = 16
-            Width = 77
-            Height = 13
-            Anchors = [akLeft, akBottom]
-            Caption = 'Product Search'
-          end
-          object edtStockSearch: TEdit
-            Left = 104
-            Top = 8
-            Width = 233
-            Height = 21
-            Anchors = [akLeft, akBottom]
-            CharCase = ecUpperCase
-            TabOrder = 0
-            OnChange = edtStockSearchChange
-          end
-          object Panel9: TPanel
-            Left = 980
-            Top = 1
-            Width = 185
-            Height = 39
-            Align = alRight
-            BevelOuter = bvNone
-            ParentBackground = False
-            TabOrder = 1
-          end
-          object chkbxShowNotinUse: TCheckBox
-            Left = 360
-            Top = 8
-            Width = 217
-            Height = 17
-            Caption = 'Show products not in use'
-            TabOrder = 2
-            OnClick = chkbxShowNotinUseClick
-          end
-        end
-      end
-    end
-    object tbInvoices: TTabSheet
-      Caption = 'Invoices'
-      ImageIndex = 8
-      OnExit = tbInvoicesExit
-      OnShow = tbInvoicesShow
-      object stsbrInvoiceDetails: TStatusBar
-        Left = 0
-        Top = 557
-        Width = 1168
-        Height = 19
-        Panels = <
-          item
-            Width = 250
-          end
-          item
-            Width = 50
-          end>
-      end
-      object CoolBar5: TCoolBar
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 44
-        Bands = <
-          item
-            Control = PageScroller3
-            ImageIndex = -1
-            MinHeight = 40
-            Width = 1162
-          end>
-        object PageScroller3: TPageScroller
-          Left = 11
-          Top = 0
-          Width = 1153
-          Height = 40
-          Align = alClient
-          Control = tbrInvoices
-          TabOrder = 0
-          object tbrInvoices: TToolBar
-            Left = 0
-            Top = 0
-            Width = 1141
-            Height = 40
-            ButtonHeight = 36
-            ButtonWidth = 53
-            Caption = 'ToolBar1'
-            HotImages = imglstFunctions
-            Images = imglstFunctions
-            ParentShowHint = False
-            ShowCaptions = True
-            ShowHint = True
-            TabOrder = 0
-            Wrapable = False
-            object btnInvoiceChange: TToolButton
-              Left = 0
-              Top = 0
-              Hint = 'Change order details'
-              Caption = '    &View   '
-              Enabled = False
-              ImageIndex = 1
-              OnClick = btnInvoiceChangeClick
-            end
-            object btnInvoiceReprint: TToolButton
-              Left = 53
-              Top = 0
-              Caption = '&Reprint'
-              Enabled = False
-              ImageIndex = 6
-              OnClick = btnInvoiceReprintClick
-            end
-          end
-        end
-      end
-      object dbgInvoiceDetails: TDBGrid
-        Left = 0
-        Top = 44
-        Width = 1168
-        Height = 513
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 2
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgInvoiceDetailsDrawColumnCell
-        OnDblClick = dbgInvoiceDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Sales_Invoice_no'
-            Title.Caption = 'Invoice No.'
-            Width = 63
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Invoice_Date'
-            Title.Caption = 'Date'
-            Width = 65
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Invoice_Description'
-            Title.Caption = 'Description'
-            Width = 161
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Reference'
-            Title.Caption = 'Order No.'
-            Width = 61
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Goods_Value'
-            Title.Caption = 'Goods'
-            Width = 51
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Vat_Value'
-            Title.Caption = 'VAT'
-            Width = 50
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Total_Value'
-            Title.Caption = 'Total'
-            Width = 70
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Status_Description'
-            Title.Caption = 'Status'
-            Width = 83
-            Visible = True
-          end>
-      end
-      object Panel10: TPanel
-        Left = 0
-        Top = 576
-        Width = 1168
-        Height = 38
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 3
-        object Label53: TLabel
-          Left = 8
-          Top = 13
-          Width = 59
-          Height = 13
-          Caption = 'Description'
-        end
-        object edtInvoiceSearch: TEdit
-          Left = 100
-          Top = 9
-          Width = 153
-          Height = 21
-          TabOrder = 0
-          OnChange = edtInvoiceSearchChange
-        end
-        object Panel11: TPanel
-          Left = 884
-          Top = 1
-          Width = 283
-          Height = 36
-          Align = alRight
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 1
-          object Label54: TLabel
-            Left = 88
-            Top = 13
-            Width = 80
-            Height = 13
-            Caption = 'Invoice Number'
-          end
-          object edtInvoiceNumber: TEdit
-            Left = 176
-            Top = 9
-            Width = 81
-            Height = 21
-            TabOrder = 0
-            OnKeyPress = edtInvoiceNumberKeyPress
-          end
-        end
-        object chkbxShowInactive: TCheckBox
-          Left = 264
-          Top = 11
-          Width = 113
-          Height = 17
-          Caption = 'Show deleted'
-          TabOrder = 2
-        end
-      end
-    end
-    object tbDocuments: TTabSheet
-      Caption = 'Documents'
-      ImageIndex = 4
-      object Panel1: TPanel
-        Left = 0
-        Top = 573
-        Width = 1168
-        Height = 41
-        Align = alBottom
-        ParentBackground = False
-        TabOrder = 0
-        object Label33: TLabel
-          Left = 8
-          Top = 16
-          Width = 45
-          Height = 13
-          Caption = 'Logo file'
-        end
-        object edtLogoLocation: TEdit
-          Left = 56
-          Top = 12
-          Width = 281
-          Height = 21
-          TabOrder = 0
-        end
-        object Button4: TButton
-          Left = 342
-          Top = 10
-          Width = 75
-          Height = 25
-          Caption = 'Browse'
-          TabOrder = 1
-          OnClick = Button4Click
-        end
-      end
-      object ToolBar1: TToolBar
-        Left = 1129
-        Top = 0
-        Width = 39
-        Height = 573
-        Align = alRight
-        ButtonHeight = 36
-        ButtonWidth = 40
-        Caption = 'ToolBar1'
-        HotImages = imgIcons
-        Images = imgIcons
-        ParentShowHint = False
-        ShowCaptions = True
-        ShowHint = True
-        TabOrder = 1
-        object btnWord: TToolButton
-          Left = 0
-          Top = 0
-          Hint = 'Word'
-          Caption = 'Word'
-          ImageIndex = 1
-          ParentShowHint = False
-          Wrap = True
-          ShowHint = True
-          OnClick = btnWordClick
-        end
-        object btnExcel: TToolButton
-          Left = 0
-          Top = 36
-          Hint = 'Excel'
-          Caption = 'Excel'
-          ImageIndex = 0
-          ParentShowHint = False
-          Wrap = True
-          ShowHint = True
-          OnClick = btnWordClick
-        end
-        object btnAttach: TToolButton
-          Left = 0
-          Top = 72
-          Hint = 'Attach Documents'
-          Caption = 'Attach'
-          ImageIndex = 3
-          ParentShowHint = False
-          Wrap = True
-          ShowHint = True
-          OnClick = btnAttachClick
-        end
-        object btnEmail: TToolButton
-          Left = 0
-          Top = 108
-          Hint = 'Email'
-          Caption = 'Email'
-          ImageIndex = 2
-          ParentShowHint = False
-          ShowHint = True
-          OnClick = btnEmailClick
-        end
-      end
-      object lstvwDocuments: TListView
-        Left = 0
-        Top = 0
-        Width = 1129
-        Height = 573
-        Align = alClient
-        Columns = <
-          item
-            Caption = 'Name'
-            Width = 200
-          end
-          item
-            Caption = 'Type'
-            Width = 200
-          end
-          item
-            Caption = 'Date modified'
-            Width = 200
-          end>
-        LargeImages = imgDocuments
-        MultiSelect = True
-        RowSelect = True
-        PopupMenu = pmnuDocuments
-        SmallImages = imgDocuments
-        TabOrder = 2
-        OnColumnClick = lstvwDocumentsColumnClick
-        OnCompare = lstvwDocumentsCompare
-        OnDblClick = lstvwDocumentsDblClick
-      end
-    end
-    object tbActivity: TTabSheet
-      Caption = 'Activity'
-      ImageIndex = 10
-      OnExit = tbActivityExit
-      OnShow = tbActivityShow
-      object pnlActivityDetails: TPanel
-        Left = 0
-        Top = 321
-        Width = 1168
-        Height = 293
-        Align = alClient
-        ParentBackground = False
-        TabOrder = 0
-        object Panel17: TPanel
-          Left = 1
-          Top = 1
-          Width = 1166
-          Height = 24
-          Align = alTop
-          ParentBackground = False
-          TabOrder = 0
-          object Label61: TLabel
-            Left = 9
-            Top = 4
-            Width = 35
-            Height = 13
-            Caption = 'Details'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-        end
-        object Panel18: TPanel
-          Left = 1
-          Top = 25
-          Width = 821
-          Height = 267
-          Align = alLeft
-          Caption = 'Panel18'
-          ParentBackground = False
-          TabOrder = 1
-          object memNarrative: TMemo
-            Left = 1
-            Top = 1
-            Width = 819
-            Height = 265
-            Align = alClient
-            Color = clBtnFace
-            Enabled = False
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            Lines.Strings = (
-              'Memo1')
-            ParentFont = False
-            TabOrder = 0
-          end
-        end
-        object Panel19: TPanel
-          Left = 822
-          Top = 25
-          Width = 345
-          Height = 267
-          Align = alClient
-          ParentBackground = False
-          TabOrder = 2
-        end
-      end
-      object pnlActivityList: TPanel
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 321
-        Align = alTop
-        Caption = 'pnlActivityList'
-        ParentBackground = False
-        TabOrder = 1
-        object CoolBar7: TCoolBar
-          Left = 1
-          Top = 1
-          Width = 1166
-          Height = 45
-          Bands = <
-            item
-              Control = ToolBar8
-              ImageIndex = -1
-              MinHeight = 41
-              Width = 1160
-            end>
-          object ToolBar8: TToolBar
-            Left = 11
-            Top = 0
-            Width = 1151
-            Height = 41
-            ButtonHeight = 36
-            ButtonWidth = 59
-            Caption = 'ToolBar1'
-            Images = imglstjobs
-            ShowCaptions = True
-            TabOrder = 0
-            object btnActivityAdd: TToolButton
-              Left = 0
-              Top = 0
-              Caption = '&Add'
-              ImageIndex = 0
-              OnClick = btnActivityAddClick
-            end
-            object btnActivityChange: TToolButton
-              Left = 59
-              Top = 0
-              Caption = '  &Change  '
-              Enabled = False
-              ImageIndex = 1
-              OnClick = btnActivityChangeClick
-            end
-            object btnActivityDelete: TToolButton
-              Left = 118
-              Top = 0
-              Caption = '&Delete'
-              Enabled = False
-              ImageIndex = 3
-              OnClick = btnActivityDeleteClick
-            end
-          end
-        end
-        object Panel16: TPanel
-          Left = 1
-          Top = 280
-          Width = 1166
-          Height = 40
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 1
-          object Label60: TLabel
-            Left = 8
-            Top = 13
-            Width = 34
-            Height = 13
-            Caption = 'Search'
-          end
-          object Edit1: TEdit
-            Left = 56
-            Top = 9
-            Width = 177
-            Height = 21
-            TabOrder = 0
-          end
-        end
-        object dbgActivityDetails: TDBGrid
-          Left = 1
-          Top = 46
-          Width = 1166
-          Height = 234
-          Align = alClient
-          DrawingStyle = gdsGradient
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
-          ParentFont = False
-          TabOrder = 2
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clBlack
-          TitleFont.Height = -12
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
-          OnDrawColumnCell = dbgActivityDetailsDrawColumnCell
-          OnDblClick = dbgActivityDetailsDblClick
-          OnTitleClick = dbgActivityDetailsTitleClick
-          Columns = <
-            item
-              Expanded = False
-              FieldName = 'Due_Date_Time'
-              Title.Caption = 'Due Date'
-              Width = 125
+              FieldName = 'Description'
+              Width = 149
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Activity_Priority_description'
-              Title.Caption = 'Priority'
-              Width = 123
+              FieldName = 'Order_Price'
+              Title.Caption = 'Cost Price'
+              Width = 57
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Activity_Subject'
-              Title.Caption = 'Subject'
+              FieldName = 'Order_unit'
+              Title.Caption = 'Cost Unit'
+              Width = 56
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Selling_Price'
+              Title.Caption = 'Sell Price'
+              Width = 56
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Selling_unit'
+              Title.Caption = 'Sell Unit'
+              Width = 51
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Quantity'
+              Width = 52
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Cust_Order_No'
+              Title.Caption = 'Customer Order No.'
+              Width = 130
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Goods_Required'
+              Title.Caption = 'Date Required'
+              Width = 73
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Stock_Reference'
+              Title.Caption = 'Product Code'
+              Width = 97
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Supplier_Name'
+              Title.Caption = 'Supplier'
+              Width = 131
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Form_Reference_ID'
+              Title.Caption = 'Form Reference'
               Width = 128
               Visible = True
             end
@@ -5057,122 +3938,148 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Expanded = False
               FieldName = 'Branch_Name'
               Title.Caption = 'Branch'
-              Width = 178
+              Width = 105
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Contact_Name'
-              Title.Caption = 'Contact'
-              Width = 172
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Type_Description'
-              Title.Caption = 'Type'
-              Width = 115
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Activity_Status_Description'
+              FieldName = 'Status_Text'
               Title.Caption = 'Status'
-              Width = 134
+              Width = 109
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'job_bag'
+              Title.Caption = 'Job Bag'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Description_Reference'
+              Title.Caption = 'Descriptive Reference'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Rep_Name'
+              Title.Caption = 'Rep'
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Operator_Name'
-              Title.Caption = 'Created by'
-              Width = 108
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Assigned_To_Name'
-              Title.Caption = 'Assigned To'
-              Width = 101
+              Title.Caption = 'Operator'
               Visible = True
             end>
         end
       end
-    end
-    object tbCrossSelling: TTabSheet
-      Caption = 'Cross Selling Check List'
-      ImageIndex = 11
-      OnShow = tbCrossSellingShow
-      object Panel6: TPanel
-        Left = 0
-        Top = 0
-        Width = 1168
-        Height = 25
-        Align = alTop
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object Panel20: TPanel
-        Left = 0
-        Top = 25
-        Width = 585
-        Height = 589
-        Align = alLeft
-        ParentBackground = False
-        TabOrder = 1
-        object Panel21: TPanel
-          Left = 1
-          Top = 396
-          Width = 583
-          Height = 192
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 0
-          object memCategoryNarrative: TMemo
-            Left = 1
-            Top = 1
-            Width = 581
-            Height = 190
-            Align = alClient
-            Color = clBtnFace
-            Enabled = False
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            Lines.Strings = (
-              'Memo1')
-            ParentFont = False
+      object tbJobs: TTabSheet
+        Caption = 'Jobs'
+        ImageIndex = 7
+        OnExit = tbJobsExit
+        OnShow = tbJobsShow
+        object stsbrJobDetails: TStatusBar
+          Left = 0
+          Top = 554
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 200
+            end
+            item
+              Width = 50
+            end
+            item
+              Width = 50
+            end>
+        end
+        object CoolBar3: TCoolBar
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 45
+          Bands = <
+            item
+              Control = tbrJobs
+              ImageIndex = -1
+              MinHeight = 41
+              Width = 1166
+            end>
+          object tbrJobs: TToolBar
+            Left = 11
+            Top = 0
+            Width = 1153
+            Height = 41
+            ButtonHeight = 36
+            ButtonWidth = 59
+            Caption = 'ToolBar1'
+            Images = imglstjobs
+            ShowCaptions = True
             TabOrder = 0
+            object btnJobAdd: TToolButton
+              Left = 0
+              Top = 0
+              Caption = '&Add'
+              ImageIndex = 0
+              OnClick = btnJobAddClick
+            end
+            object btnJobChange: TToolButton
+              Left = 59
+              Top = 0
+              Caption = '  &Change  '
+              Enabled = False
+              ImageIndex = 1
+              OnClick = btnJobChangeClick
+            end
+            object btnJobRepeat: TToolButton
+              Left = 118
+              Top = 0
+              Caption = '&Repeat'
+              Enabled = False
+              ImageIndex = 4
+              OnClick = btnJobRepeatClick
+            end
+            object btnJobDelete: TToolButton
+              Left = 177
+              Top = 0
+              Caption = '&Delete'
+              Enabled = False
+              ImageIndex = 3
+              OnClick = btnJobDeleteClick
+            end
+            object btnJobPrint: TToolButton
+              Left = 236
+              Top = 0
+              Caption = '&Print'
+              Enabled = False
+              ImageIndex = 5
+              OnClick = btnJobPrintClick
+            end
+            object ToolButton2: TToolButton
+              Left = 295
+              Top = 0
+              Width = 8
+              Caption = 'ToolButton2'
+              ImageIndex = 5
+              Style = tbsSeparator
+            end
+            object btnJobDraft: TToolButton
+              Left = 303
+              Top = 0
+              Caption = 'Dra&ft'
+              Enabled = False
+              ImageIndex = 4
+              OnClick = btnJobDraftClick
+            end
           end
         end
-        object Panel25: TPanel
-          Left = 1
-          Top = 372
-          Width = 583
-          Height = 24
-          Align = alBottom
-          ParentBackground = False
-          TabOrder = 1
-          object Label64: TLabel
-            Left = 8
-            Top = 8
-            Width = 34
-            Height = 13
-            Caption = 'Notes:'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clBlack
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-        end
-        object dbgCategoryDetails: TDBGrid
-          Left = 1
-          Top = 1
-          Width = 479
-          Height = 371
+        object dbgJobDetails: TDBGrid
+          Left = 0
+          Top = 45
+          Width = 1168
+          Height = 509
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
@@ -5180,7 +4087,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Font.Height = -11
           Font.Name = 'Segoe UI'
           Font.Style = []
-          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           ParentFont = False
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
@@ -5188,484 +4095,1587 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
-          OnDrawColumnCell = dbgCategoryDetailsDrawColumnCell
-          OnDblClick = dbgCategoryDetailsDblClick
+          OnDrawColumnCell = dbgJobDetailsDrawColumnCell
           Columns = <
             item
               Expanded = False
-              FieldName = 'Category_Description'
-              Title.Caption = 'Category'
-              Width = 308
+              FieldName = 'Job_Bag'
+              Title.Caption = 'Job bag No.'
+              Width = 68
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Point'
+              Title.Caption = 'Date'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Job_Bag_Descr'
+              Title.Caption = 'Description'
+              Width = 181
+              Visible = True
+            end
+            item
+              Alignment = taRightJustify
+              Expanded = False
+              FieldName = 'Quantity'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Job_Bag_Status_descr'
+              Title.Caption = 'Status'
+              Width = 133
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Cust_Order_no'
+              Title.Caption = 'Customer Order number'
+              Width = 108
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Goods_Required'
+              Title.Caption = 'Date Required'
+              Width = 87
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Operator_Name'
+              Title.Caption = 'Operator'
+              Width = 101
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Account_Manager'
+              Title.Caption = 'Account Manager'
+              Width = 120
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Description_Reference'
+              Title.Caption = 'Description Reference'
+              Width = 144
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Start'
+              Title.Caption = 'Start Date'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Quote'
+              Width = 82
               Visible = True
             end>
         end
-        object Panel22: TPanel
-          Left = 480
-          Top = 1
-          Width = 104
-          Height = 371
-          Align = alRight
+        object Panel4: TPanel
+          Left = 0
+          Top = 573
+          Width = 1168
+          Height = 41
+          Align = alBottom
           ParentBackground = False
           TabOrder = 3
-          object Button1: TButton
-            Left = 16
+          object Label50: TLabel
+            Left = 8
             Top = 16
+            Width = 96
+            Height = 13
+            Caption = 'Description Search'
+          end
+          object edtJobSearch: TEdit
+            Left = 104
+            Top = 8
+            Width = 233
+            Height = 21
+            TabOrder = 0
+            OnChange = edtJobSearchChange
+          end
+          object Panel5: TPanel
+            Left = 894
+            Top = 1
+            Width = 273
+            Height = 39
+            Align = alRight
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 1
+            DesignSize = (
+              273
+              39)
+            object Label51: TLabel
+              Left = 86
+              Top = 16
+              Width = 62
+              Height = 13
+              Anchors = [akRight, akBottom]
+              Caption = 'Job Number'
+            end
+            object edtJobNumber: TEdit
+              Left = 167
+              Top = 12
+              Width = 90
+              Height = 21
+              Anchors = [akRight, akBottom]
+              TabOrder = 0
+              OnKeyPress = edtJobNumberKeyPress
+            end
+          end
+          object BitBtn10: TBitBtn
+            Left = 344
+            Top = 6
             Width = 75
             Height = 25
-            Caption = 'Use'
+            Caption = '&Search'
+            TabOrder = 2
+            OnClick = BitBtn10Click
+          end
+        end
+      end
+      object tbStock: TTabSheet
+        Caption = 'Stock'
+        ImageIndex = 3
+        OnExit = tbStockExit
+        OnShow = tbStockShow
+        object stsbrStockDetails: TStatusBar
+          Left = 0
+          Top = 595
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 300
+            end
+            item
+              Width = 300
+            end
+            item
+              Width = 300
+            end>
+        end
+        object Panel7: TPanel
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 595
+          Align = alClient
+          Caption = 'Panel7'
+          ParentBackground = False
+          TabOrder = 1
+          object CoolBar4: TCoolBar
+            Left = 1
+            Top = 1
+            Width = 1166
+            Height = 44
+            Bands = <
+              item
+                Control = PageScroller2
+                ImageIndex = -1
+                MinHeight = 41
+                Width = 1164
+              end>
+            object PageScroller2: TPageScroller
+              Left = 11
+              Top = 0
+              Width = 1151
+              Height = 41
+              Control = tbrStock
+              TabOrder = 0
+              object tbrStock: TToolBar
+                Left = 0
+                Top = 0
+                Width = 1151
+                Height = 41
+                ButtonHeight = 44
+                ButtonWidth = 68
+                Caption = 'ToolBar1'
+                HotImages = imglstMaint
+                Images = imglstMaint
+                ShowCaptions = True
+                TabOrder = 0
+                Wrapable = False
+                object btnStockChange: TToolButton
+                  Left = 0
+                  Top = 0
+                  Hint = 'Change product'
+                  Caption = '     &View     '
+                  Enabled = False
+                  ImageIndex = 1
+                  ParentShowHint = False
+                  ShowHint = True
+                  OnClick = btnStockChangeClick
+                end
+                object btnStockLabels: TToolButton
+                  Left = 68
+                  Top = 0
+                  Hint = 'Print labels'
+                  Caption = 'Labels'
+                  Enabled = False
+                  ImageIndex = 11
+                  ParentShowHint = False
+                  ShowHint = True
+                  OnClick = btnStockLabelsClick
+                end
+                object ToolButton1: TToolButton
+                  Left = 136
+                  Top = 0
+                  Width = 8
+                  Caption = 'ToolButton1'
+                  ImageIndex = 5
+                  Style = tbsSeparator
+                end
+                object btnStockLevels: TToolButton
+                  Left = 144
+                  Top = 0
+                  Hint = 'Maintain stock levels'
+                  Caption = '&Levels'
+                  Enabled = False
+                  ImageIndex = 3
+                  ParentShowHint = False
+                  ShowHint = True
+                  OnClick = btnStockLevelsClick
+                end
+                object btnStockEnquiry: TToolButton
+                  Left = 212
+                  Top = 0
+                  Caption = 'Enquiry'
+                  DropdownMenu = pmnStockEnquiry
+                  Enabled = False
+                  ImageIndex = 6
+                  Style = tbsDropDown
+                end
+              end
+            end
+          end
+          object dbgStockDetails: TDBGrid
+            Left = 1
+            Top = 45
+            Width = 1166
+            Height = 508
+            Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ParentFont = False
+            TabOrder = 1
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            OnDrawColumnCell = dbgStockDetailsDrawColumnCell
+            OnDblClick = dbgStockDetailsDblClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Part'
+                Title.Caption = 'Product'
+                Width = 97
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'description'
+                Title.Caption = 'Description'
+                Width = 177
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'form_reference_id'
+                Title.Caption = 'Form reference'
+                Width = 157
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'store_qty'
+                Title.Caption = 'In Stock'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'qty_alloc'
+                Title.Caption = 'Allocated'
+                Width = 54
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'qty_free'
+                Title.Caption = 'Free Stock'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'paid_for'
+                Title.Caption = 'Paid for'
+                Width = 50
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'not_paid_for'
+                Title.Caption = 'Unpaid'
+                Width = 49
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'prod_ord_qty'
+                Title.Caption = 'On Buy Print'
+                Width = 68
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'purch_ord_qty'
+                Title.Caption = 'On Purchase'
+                Width = 67
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Maximum_Stock'
+                Title.Caption = 'Maximum'
+                Width = 54
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Minimum_Stock'
+                Title.Caption = 'Minimum'
+                Width = 51
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Reorder_Level'
+                Title.Caption = 'Reorder'
+                Width = 54
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Forward_Qty'
+                Title.Caption = 'Forward'
+                Width = 56
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'SO_unallocated'
+                Title.Caption = 'Unallocated SO'
+                Width = 83
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Future_Stock'
+                Title.Caption = 'Future Stock'
+                Width = 68
+                Visible = True
+              end>
+          end
+          object Panel8: TPanel
+            Left = 1
+            Top = 553
+            Width = 1166
+            Height = 41
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 2
+            DesignSize = (
+              1166
+              41)
+            object Label52: TLabel
+              Left = 8
+              Top = 16
+              Width = 77
+              Height = 13
+              Anchors = [akLeft, akBottom]
+              Caption = 'Product Search'
+            end
+            object edtStockSearch: TEdit
+              Left = 104
+              Top = 8
+              Width = 233
+              Height = 21
+              Anchors = [akLeft, akBottom]
+              CharCase = ecUpperCase
+              TabOrder = 0
+              OnChange = edtStockSearchChange
+            end
+            object Panel9: TPanel
+              Left = 980
+              Top = 1
+              Width = 185
+              Height = 39
+              Align = alRight
+              BevelOuter = bvNone
+              ParentBackground = False
+              TabOrder = 1
+            end
+            object chkbxShowNotinUse: TCheckBox
+              Left = 360
+              Top = 8
+              Width = 217
+              Height = 17
+              Caption = 'Show products not in use'
+              TabOrder = 2
+              OnClick = chkbxShowNotinUseClick
+            end
+          end
+        end
+      end
+      object tbInvoices: TTabSheet
+        Caption = 'Invoices'
+        ImageIndex = 8
+        OnExit = tbInvoicesExit
+        OnShow = tbInvoicesShow
+        object stsbrInvoiceDetails: TStatusBar
+          Left = 0
+          Top = 557
+          Width = 1168
+          Height = 19
+          Panels = <
+            item
+              Width = 250
+            end
+            item
+              Width = 50
+            end>
+        end
+        object CoolBar5: TCoolBar
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 44
+          Bands = <
+            item
+              Control = PageScroller3
+              ImageIndex = -1
+              MinHeight = 40
+              Width = 1166
+            end>
+          object PageScroller3: TPageScroller
+            Left = 11
+            Top = 0
+            Width = 1153
+            Height = 40
+            Align = alClient
+            Control = tbrInvoices
+            TabOrder = 0
+            object tbrInvoices: TToolBar
+              Left = 0
+              Top = 0
+              Width = 1153
+              Height = 40
+              ButtonHeight = 36
+              ButtonWidth = 53
+              Caption = 'ToolBar1'
+              HotImages = imglstFunctions
+              Images = imglstFunctions
+              ParentShowHint = False
+              ShowCaptions = True
+              ShowHint = True
+              TabOrder = 0
+              Wrapable = False
+              object btnInvoiceChange: TToolButton
+                Left = 0
+                Top = 0
+                Hint = 'Change order details'
+                Caption = '    &View   '
+                Enabled = False
+                ImageIndex = 1
+                OnClick = btnInvoiceChangeClick
+              end
+              object btnInvoiceReprint: TToolButton
+                Left = 53
+                Top = 0
+                Caption = '&Reprint'
+                Enabled = False
+                ImageIndex = 6
+                OnClick = btnInvoiceReprintClick
+              end
+            end
+          end
+        end
+        object dbgInvoiceDetails: TDBGrid
+          Left = 0
+          Top = 44
+          Width = 1168
+          Height = 513
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
+          TabOrder = 2
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDrawColumnCell = dbgInvoiceDetailsDrawColumnCell
+          OnDblClick = dbgInvoiceDetailsDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Sales_Invoice_no'
+              Title.Caption = 'Invoice No.'
+              Width = 63
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Invoice_Date'
+              Title.Caption = 'Date'
+              Width = 65
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Invoice_Description'
+              Title.Caption = 'Description'
+              Width = 161
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Reference'
+              Title.Caption = 'Order No.'
+              Width = 61
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Goods_Value'
+              Title.Caption = 'Goods'
+              Width = 51
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Vat_Value'
+              Title.Caption = 'VAT'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Total_Value'
+              Title.Caption = 'Total'
+              Width = 70
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Status_Description'
+              Title.Caption = 'Status'
+              Width = 83
+              Visible = True
+            end>
+        end
+        object Panel10: TPanel
+          Left = 0
+          Top = 576
+          Width = 1168
+          Height = 38
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 3
+          object Label53: TLabel
+            Left = 8
+            Top = 13
+            Width = 59
+            Height = 13
+            Caption = 'Description'
+          end
+          object edtInvoiceSearch: TEdit
+            Left = 100
+            Top = 9
+            Width = 153
+            Height = 21
+            TabOrder = 0
+            OnChange = edtInvoiceSearchChange
+          end
+          object Panel11: TPanel
+            Left = 884
+            Top = 1
+            Width = 283
+            Height = 36
+            Align = alRight
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 1
+            object Label54: TLabel
+              Left = 88
+              Top = 13
+              Width = 80
+              Height = 13
+              Caption = 'Invoice Number'
+            end
+            object edtInvoiceNumber: TEdit
+              Left = 176
+              Top = 9
+              Width = 81
+              Height = 21
+              TabOrder = 0
+              OnKeyPress = edtInvoiceNumberKeyPress
+            end
+          end
+          object chkbxShowInactive: TCheckBox
+            Left = 264
+            Top = 11
+            Width = 113
+            Height = 17
+            Caption = 'Show deleted'
+            TabOrder = 2
+          end
+        end
+      end
+      object tbDocuments: TTabSheet
+        Caption = 'Documents'
+        ImageIndex = 4
+        object Panel1: TPanel
+          Left = 0
+          Top = 573
+          Width = 1168
+          Height = 41
+          Align = alBottom
+          ParentBackground = False
+          TabOrder = 0
+          object Label33: TLabel
+            Left = 8
+            Top = 16
+            Width = 45
+            Height = 13
+            Caption = 'Logo file'
+          end
+          object edtLogoLocation: TEdit
+            Left = 56
+            Top = 12
+            Width = 281
+            Height = 21
+            TabOrder = 0
+          end
+          object Button4: TButton
+            Left = 342
+            Top = 10
+            Width = 75
+            Height = 25
+            Caption = 'Browse'
+            TabOrder = 1
+            OnClick = Button4Click
+          end
+        end
+        object ToolBar1: TToolBar
+          Left = 1129
+          Top = 0
+          Width = 39
+          Height = 573
+          Align = alRight
+          ButtonHeight = 36
+          ButtonWidth = 40
+          Caption = 'ToolBar1'
+          HotImages = imgIcons
+          Images = imgIcons
+          ParentShowHint = False
+          ShowCaptions = True
+          ShowHint = True
+          TabOrder = 1
+          object btnWord: TToolButton
+            Left = 0
+            Top = 0
+            Hint = 'Word'
+            Caption = 'Word'
+            ImageIndex = 1
+            ParentShowHint = False
+            Wrap = True
+            ShowHint = True
+            OnClick = btnWordClick
+          end
+          object btnExcel: TToolButton
+            Left = 0
+            Top = 36
+            Hint = 'Excel'
+            Caption = 'Excel'
+            ImageIndex = 0
+            ParentShowHint = False
+            Wrap = True
+            ShowHint = True
+            OnClick = btnWordClick
+          end
+          object btnAttach: TToolButton
+            Left = 0
+            Top = 72
+            Hint = 'Attach Documents'
+            Caption = 'Attach'
+            ImageIndex = 3
+            ParentShowHint = False
+            Wrap = True
+            ShowHint = True
+            OnClick = btnAttachClick
+          end
+          object btnEmail: TToolButton
+            Left = 0
+            Top = 108
+            Hint = 'Email'
+            Caption = 'Email'
+            ImageIndex = 2
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btnEmailClick
+          end
+        end
+        object lstvwDocuments: TListView
+          Left = 0
+          Top = 0
+          Width = 1129
+          Height = 573
+          Align = alClient
+          Columns = <
+            item
+              Caption = 'Name'
+              Width = 200
+            end
+            item
+              Caption = 'Type'
+              Width = 200
+            end
+            item
+              Caption = 'Date modified'
+              Width = 200
+            end>
+          LargeImages = imgDocuments
+          MultiSelect = True
+          RowSelect = True
+          PopupMenu = pmnuDocuments
+          SmallImages = imgDocuments
+          TabOrder = 2
+          OnColumnClick = lstvwDocumentsColumnClick
+          OnCompare = lstvwDocumentsCompare
+          OnDblClick = lstvwDocumentsDblClick
+        end
+      end
+      object tbActivity: TTabSheet
+        Caption = 'Activity'
+        ImageIndex = 10
+        OnExit = tbActivityExit
+        OnShow = tbActivityShow
+        object pnlActivityDetails: TPanel
+          Left = 0
+          Top = 321
+          Width = 1168
+          Height = 293
+          Align = alClient
+          ParentBackground = False
+          TabOrder = 0
+          object Panel17: TPanel
+            Left = 1
+            Top = 1
+            Width = 1166
+            Height = 24
+            Align = alTop
+            ParentBackground = False
+            TabOrder = 0
+            object Label61: TLabel
+              Left = 9
+              Top = 4
+              Width = 35
+              Height = 13
+              Caption = 'Details'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+          end
+          object Panel18: TPanel
+            Left = 1
+            Top = 25
+            Width = 821
+            Height = 267
+            Align = alLeft
+            Caption = 'Panel18'
+            ParentBackground = False
+            TabOrder = 1
+            object memNarrative: TMemo
+              Left = 1
+              Top = 1
+              Width = 819
+              Height = 265
+              Align = alClient
+              Color = clBtnFace
+              Enabled = False
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Lines.Strings = (
+                'Memo1')
+              ParentFont = False
+              TabOrder = 0
+            end
+          end
+          object Panel19: TPanel
+            Left = 822
+            Top = 25
+            Width = 345
+            Height = 267
+            Align = alClient
+            ParentBackground = False
+            TabOrder = 2
+          end
+        end
+        object pnlActivityList: TPanel
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 321
+          Align = alTop
+          Caption = 'pnlActivityList'
+          ParentBackground = False
+          TabOrder = 1
+          object CoolBar7: TCoolBar
+            Left = 1
+            Top = 1
+            Width = 1166
+            Height = 45
+            Bands = <
+              item
+                Control = ToolBar8
+                ImageIndex = -1
+                MinHeight = 41
+                Width = 1164
+              end>
+            object ToolBar8: TToolBar
+              Left = 11
+              Top = 0
+              Width = 1151
+              Height = 41
+              ButtonHeight = 36
+              ButtonWidth = 59
+              Caption = 'ToolBar1'
+              Images = imglstjobs
+              ShowCaptions = True
+              TabOrder = 0
+              object btnActivityAdd: TToolButton
+                Left = 0
+                Top = 0
+                Caption = '&Add'
+                ImageIndex = 0
+                OnClick = btnActivityAddClick
+              end
+              object btnActivityChange: TToolButton
+                Left = 59
+                Top = 0
+                Caption = '  &Change  '
+                Enabled = False
+                ImageIndex = 1
+                OnClick = btnActivityChangeClick
+              end
+              object btnActivityDelete: TToolButton
+                Left = 118
+                Top = 0
+                Caption = '&Delete'
+                Enabled = False
+                ImageIndex = 3
+                OnClick = btnActivityDeleteClick
+              end
+            end
+          end
+          object Panel16: TPanel
+            Left = 1
+            Top = 280
+            Width = 1166
+            Height = 40
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 1
+            object Label60: TLabel
+              Left = 8
+              Top = 13
+              Width = 34
+              Height = 13
+              Caption = 'Search'
+            end
+            object Edit1: TEdit
+              Left = 56
+              Top = 9
+              Width = 177
+              Height = 21
+              TabOrder = 0
+            end
+          end
+          object dbgActivityDetails: TDBGrid
+            Left = 1
+            Top = 46
+            Width = 1166
+            Height = 234
+            Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
+            ParentFont = False
+            TabOrder = 2
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clBlack
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            OnDrawColumnCell = dbgActivityDetailsDrawColumnCell
+            OnDblClick = dbgActivityDetailsDblClick
+            OnTitleClick = dbgActivityDetailsTitleClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Due_Date_Time'
+                Title.Caption = 'Due Date'
+                Width = 125
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Priority_description'
+                Title.Caption = 'Priority'
+                Width = 123
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Subject'
+                Title.Caption = 'Subject'
+                Width = 128
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Branch_Name'
+                Title.Caption = 'Branch'
+                Width = 178
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Contact_Name'
+                Title.Caption = 'Contact'
+                Width = 172
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Type_Description'
+                Title.Caption = 'Type'
+                Width = 115
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Activity_Status_Description'
+                Title.Caption = 'Status'
+                Width = 134
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Operator_Name'
+                Title.Caption = 'Created by'
+                Width = 108
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Assigned_To_Name'
+                Title.Caption = 'Assigned To'
+                Width = 101
+                Visible = True
+              end>
+          end
+        end
+      end
+      object tbCrossSelling: TTabSheet
+        Caption = 'Cross Selling Check List'
+        ImageIndex = 11
+        OnShow = tbCrossSellingShow
+        object Panel6: TPanel
+          Left = 0
+          Top = 0
+          Width = 1168
+          Height = 25
+          Align = alTop
+          ParentBackground = False
+          TabOrder = 0
+        end
+        object Panel20: TPanel
+          Left = 0
+          Top = 25
+          Width = 585
+          Height = 589
+          Align = alLeft
+          ParentBackground = False
+          TabOrder = 1
+          object Panel21: TPanel
+            Left = 1
+            Top = 396
+            Width = 583
+            Height = 192
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 0
+            object memCategoryNarrative: TMemo
+              Left = 1
+              Top = 1
+              Width = 581
+              Height = 190
+              Align = alClient
+              Color = clBtnFace
+              Enabled = False
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Lines.Strings = (
+                'Memo1')
+              ParentFont = False
+              TabOrder = 0
+            end
+          end
+          object Panel25: TPanel
+            Left = 1
+            Top = 372
+            Width = 583
+            Height = 24
+            Align = alBottom
+            ParentBackground = False
+            TabOrder = 1
+            object Label64: TLabel
+              Left = 8
+              Top = 8
+              Width = 34
+              Height = 13
+              Caption = 'Notes:'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+          end
+          object dbgCategoryDetails: TDBGrid
+            Left = 1
+            Top = 1
+            Width = 479
+            Height = 371
+            Align = alClient
+            DrawingStyle = gdsGradient
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            ParentFont = False
+            TabOrder = 2
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            OnDrawColumnCell = dbgCategoryDetailsDrawColumnCell
+            OnDblClick = dbgCategoryDetailsDblClick
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Category_Description'
+                Title.Caption = 'Category'
+                Width = 308
+                Visible = True
+              end>
+          end
+          object Panel22: TPanel
+            Left = 480
+            Top = 1
+            Width = 104
+            Height = 371
+            Align = alRight
+            ParentBackground = False
+            TabOrder = 3
+            object Button1: TButton
+              Left = 16
+              Top = 16
+              Width = 75
+              Height = 25
+              Caption = 'Use'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              OnClick = Button1Click
+            end
+            object Button3: TButton
+              Left = 16
+              Top = 56
+              Width = 75
+              Height = 25
+              Caption = 'Not Used'
+              TabOrder = 1
+              OnClick = Button3Click
+            end
+            object Button5: TButton
+              Left = 16
+              Top = 96
+              Width = 75
+              Height = 25
+              Caption = 'We Supply'
+              TabOrder = 2
+              OnClick = Button5Click
+            end
+            object Button6: TButton
+              Left = 16
+              Top = 136
+              Width = 75
+              Height = 25
+              Caption = 'Don'#39't Supply'
+              TabOrder = 3
+              OnClick = Button6Click
+            end
+            object btnCategoryNotes: TButton
+              Left = 16
+              Top = 184
+              Width = 75
+              Height = 25
+              Caption = 'Notes'
+              TabOrder = 4
+              OnClick = btnCategoryNotesClick
+            end
+            object Button8: TButton
+              Left = 16
+              Top = 224
+              Width = 75
+              Height = 25
+              Caption = 'Sweep'
+              TabOrder = 5
+              OnClick = Button8Click
+            end
+          end
+        end
+        object Panel23: TPanel
+          Left = 585
+          Top = 25
+          Width = 192
+          Height = 589
+          Align = alLeft
+          ParentBackground = False
+          TabOrder = 2
+          object Label62: TLabel
+            Left = 8
+            Top = 22
+            Width = 57
+            Height = 13
+            Caption = 'Colour Key'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
             Font.Height = -11
             Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label63: TLabel
+            Left = 8
+            Top = 63
+            Width = 93
+            Height = 13
+            Caption = 'Used by Customer'
+          end
+          object Label65: TLabel
+            Left = 8
+            Top = 95
+            Width = 114
+            Height = 13
+            Caption = 'Not used by Customer'
+          end
+          object Label66: TLabel
+            Left = 8
+            Top = 127
+            Width = 55
+            Height = 13
+            Caption = 'We Supply'
+          end
+          object Edit2: TEdit
+            Left = 120
+            Top = 59
+            Width = 65
+            Height = 21
+            Color = clYellow
+            TabOrder = 0
+            Text = 'Direct Mail'
+          end
+          object Edit3: TEdit
+            Left = 120
+            Top = 91
+            Width = 65
+            Height = 21
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsStrikeOut]
+            ParentFont = False
+            TabOrder = 1
+            Text = 'Direct Mail'
+          end
+          object Edit4: TEdit
+            Left = 120
+            Top = 123
+            Width = 65
+            Height = 21
+            Color = clGreen
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            TabOrder = 0
-            OnClick = Button1Click
-          end
-          object Button3: TButton
-            Left = 16
-            Top = 56
-            Width = 75
-            Height = 25
-            Caption = 'Not Used'
-            TabOrder = 1
-            OnClick = Button3Click
-          end
-          object Button5: TButton
-            Left = 16
-            Top = 96
-            Width = 75
-            Height = 25
-            Caption = 'We Supply'
             TabOrder = 2
-            OnClick = Button5Click
-          end
-          object Button6: TButton
-            Left = 16
-            Top = 136
-            Width = 75
-            Height = 25
-            Caption = 'Don'#39't Supply'
-            TabOrder = 3
-            OnClick = Button6Click
-          end
-          object btnCategoryNotes: TButton
-            Left = 16
-            Top = 184
-            Width = 75
-            Height = 25
-            Caption = 'Notes'
-            TabOrder = 4
-            OnClick = btnCategoryNotesClick
-          end
-          object Button8: TButton
-            Left = 16
-            Top = 224
-            Width = 75
-            Height = 25
-            Caption = 'Sweep'
-            TabOrder = 5
-            OnClick = Button8Click
+            Text = 'Direct Mail'
           end
         end
       end
-      object Panel23: TPanel
-        Left = 585
-        Top = 25
-        Width = 192
-        Height = 589
-        Align = alLeft
-        ParentBackground = False
-        TabOrder = 2
-        object Label62: TLabel
-          Left = 8
-          Top = 22
-          Width = 57
-          Height = 13
-          Caption = 'Colour Key'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label63: TLabel
-          Left = 8
-          Top = 63
-          Width = 93
-          Height = 13
-          Caption = 'Used by Customer'
-        end
-        object Label65: TLabel
-          Left = 8
-          Top = 95
-          Width = 114
-          Height = 13
-          Caption = 'Not used by Customer'
-        end
-        object Label66: TLabel
-          Left = 8
-          Top = 127
-          Width = 55
-          Height = 13
-          Caption = 'We Supply'
-        end
-        object Edit2: TEdit
-          Left = 120
-          Top = 59
-          Width = 65
-          Height = 21
-          Color = clYellow
-          TabOrder = 0
-          Text = 'Direct Mail'
-        end
-        object Edit3: TEdit
-          Left = 120
-          Top = 91
-          Width = 65
-          Height = 21
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsStrikeOut]
-          ParentFont = False
-          TabOrder = 1
-          Text = 'Direct Mail'
-        end
-        object Edit4: TEdit
-          Left = 120
-          Top = 123
-          Width = 65
-          Height = 21
-          Color = clGreen
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-          Text = 'Direct Mail'
-        end
-      end
     end
-  end
-  object stsbrDetails: TStatusBar
-    Left = 0
-    Top = 724
-    Width = 1176
-    Height = 19
-    Panels = <
-      item
-        Width = 350
-      end
-      item
-        Width = 250
-      end>
-  end
-  object pnlFooter: TPanel
-    Left = 0
-    Top = 683
-    Width = 1176
-    Height = 41
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 3
-    DesignSize = (
-      1176
-      41)
-    object DelLabel: TLabel
-      Left = 801
-      Top = 16
-      Width = 109
-      Height = 13
-      Anchors = [akRight, akBottom]
-      Caption = 'Delete these details ?'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 819
-    end
-    object OKBitBtn: TBitBtn
-      Left = 947
-      Top = 10
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = 'OK'
-      Default = True
-      Glyph.Data = {
-        CE070000424DCE07000000000000360000002800000024000000120000000100
-        1800000000009807000000000000000000000000000000000000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F7F00007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F7F0000007F00007F007F0000007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F0000007F00007F00007F0000
-        7F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F000000
-        7F00007F00007F00007F00007F00007F007F0000007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F7F0000007F00007F00007F0000FF00007F00007F00007F00007F00
-        7F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFF
-        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F00007F00007F0000FF00007F7F
-        00FF00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F7F7F7FFFFFFF007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00
-        007F0000FF00007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F00
-        7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F00FF
-        00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F
-        7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF0000
-        7F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F
-        7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00
-        007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFF
-        FFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F00FF00007F00007F007F0000007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F
-        7F7FFFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00007F
-        00007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F}
-      NumGlyphs = 2
-      TabOrder = 4
-      OnClick = OKBitBtnClick
-    end
-    object CancelBitBtn: TBitBtn
-      Left = 1027
-      Top = 10
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Cancel = True
-      Caption = 'Cancel'
-      Glyph.Data = {
-        CE070000424DCE07000000000000360000002800000024000000120000000100
-        1800000000009807000000000000000000000000000000000000007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
-        7F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F0000FF7F7F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF007F7F
-        007F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F00
-        00FF00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        FFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7FFFFFFF7F7F7F7F7F7FFFFF
-        FF007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00
-        007F7F7F7F007F7F0000FF00007F00007F00007F00007F7F7F7F007F7F007F7F
-        007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7FFFFF
-        FF7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F00
-        7F7F0000FF00007F00007F00007F00007F7F7F7F00007F00007F00007F00007F
-        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F
-        7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF00
-        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00007F
-        00007F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F00
-        7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        0000FF00007F00007F00007F00007F00007F00007F7F7F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F00
-        7F7F007F7F007F7F007F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F00007F00007F00007F00007F00007F7F7F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
-        7F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
-        7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F0000FF00007F00007F00007F00007F00007F7F7F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
-        007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F7F7F7F00007F00
-        007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00
-        007F7F7F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F7F7F7FFFFF
-        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F0000FF00007F00007F7F7F7F007F7F007F7F007F7F0000FF00007F00007F
-        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
-        7F007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F007F7F007F7F007F7F
-        007F7F007F7F0000FF00007F00007F00007F007F7F007F7F007F7F007F7F007F
-        7F007F7F7F7F7FFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F7F7F7FFFFFFF00
-        7F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F0000FF007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F00
-        7F7F007F7F007F7F7F7F7FFFFFFFFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F7F7F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
-        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
-        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
-        007F7F007F7F007F7F007F7F007F7F007F7F}
-      ModalResult = 2
-      NumGlyphs = 2
-      TabOrder = 5
-      OnClick = CancelBitBtnClick
-    end
-    object PrintBitBtn: TBitBtn
-      Left = 9
-      Top = 10
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = 'Print'
-      TabOrder = 0
-      OnClick = PrintBitBtnClick
-    end
-    object ActiveChkBox: TCheckBox
-      Left = 112
-      Top = 16
-      Width = 127
-      Height = 17
-      Hint = 'Customers Account  Open  ?'
-      Caption = 'Customer Is Active'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
+    object pnlFooter: TPanel
+      Left = 0
+      Top = 683
+      Width = 1176
+      Height = 41
+      Align = alBottom
+      ParentBackground = False
       TabOrder = 1
+      DesignSize = (
+        1176
+        41)
+      object DelLabel: TLabel
+        Left = 801
+        Top = 16
+        Width = 109
+        Height = 13
+        Anchors = [akRight, akBottom]
+        Caption = 'Delete these details ?'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 819
+      end
+      object OKBitBtn: TBitBtn
+        Left = 947
+        Top = 10
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = 'OK'
+        Default = True
+        Glyph.Data = {
+          CE070000424DCE07000000000000360000002800000024000000120000000100
+          1800000000009807000000000000000000000000000000000000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F7F00007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F7F0000007F00007F007F0000007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F0000007F00007F00007F0000
+          7F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F000000
+          7F00007F00007F00007F00007F00007F007F0000007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F7F0000007F00007F00007F0000FF00007F00007F00007F00007F00
+          7F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFF
+          FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F00007F00007F0000FF00007F7F
+          00FF00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F7F7F7FFFFFFF007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00
+          007F0000FF00007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F00
+          7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F00FF
+          00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F
+          7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF0000
+          7F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F
+          7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00
+          007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFF
+          FFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F00FF00007F00007F007F0000007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F
+          7F7FFFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00007F
+          00007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F}
+        NumGlyphs = 2
+        TabOrder = 4
+        OnClick = OKBitBtnClick
+      end
+      object CancelBitBtn: TBitBtn
+        Left = 1027
+        Top = 10
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Cancel = True
+        Caption = 'Cancel'
+        Glyph.Data = {
+          CE070000424DCE07000000000000360000002800000024000000120000000100
+          1800000000009807000000000000000000000000000000000000007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+          7F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F0000FF7F7F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF007F7F
+          007F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F00
+          00FF00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          FFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7FFFFFFF7F7F7F7F7F7FFFFF
+          FF007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00
+          007F7F7F7F007F7F0000FF00007F00007F00007F00007F7F7F7F007F7F007F7F
+          007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7FFFFF
+          FF7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F00
+          7F7F0000FF00007F00007F00007F00007F7F7F7F00007F00007F00007F00007F
+          00007F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F
+          7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+          7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00007F
+          00007F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F00
+          7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          0000FF00007F00007F00007F00007F00007F00007F7F7F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F00
+          7F7F007F7F007F7F007F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F00007F00007F00007F00007F00007F7F7F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+          7F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+          7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F0000FF00007F00007F00007F00007F00007F7F7F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+          007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F7F7F7F00007F00
+          007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00
+          007F7F7F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F7F7F7FFFFF
+          FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F0000FF00007F00007F7F7F7F007F7F007F7F007F7F0000FF00007F00007F
+          00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+          7F007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F007F7F007F7F007F7F
+          007F7F007F7F0000FF00007F00007F00007F007F7F007F7F007F7F007F7F007F
+          7F007F7F7F7F7FFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+          7F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F0000FF007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F00
+          7F7F007F7F007F7F7F7F7FFFFFFFFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F7F7F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+          7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+          7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+          007F7F007F7F007F7F007F7F007F7F007F7F}
+        ModalResult = 2
+        NumGlyphs = 2
+        TabOrder = 5
+        OnClick = CancelBitBtnClick
+      end
+      object PrintBitBtn: TBitBtn
+        Left = 9
+        Top = 10
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = 'Print'
+        TabOrder = 0
+        OnClick = PrintBitBtnClick
+      end
+      object ActiveChkBox: TCheckBox
+        Left = 112
+        Top = 16
+        Width = 127
+        Height = 17
+        Hint = 'Customers Account  Open  ?'
+        Caption = 'Customer Is Active'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+      object DelivNotesBitBtn: TBitBtn
+        Left = 343
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'Delivery'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
+          333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
+          C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
+          F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
+          F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
+          00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
+          3333333373FF7333333333333000333333333333377733333333333333333333
+          3333333333333333333333333333333333333333333333333333}
+        NumGlyphs = 2
+        ParentFont = False
+        TabOrder = 3
+        OnClick = DelivNotesBitBtnClick
+      end
+      object NotesBitBtn: TBitBtn
+        Left = 238
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'Notes'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
+          333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
+          C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
+          F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
+          F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
+          00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
+          3333333373FF7333333333333000333333333333377733333333333333333333
+          3333333333333333333333333333333333333333333333333333}
+        NumGlyphs = 2
+        ParentFont = False
+        TabOrder = 2
+        OnClick = NotesBitBtnClick
+      end
     end
-    object DelivNotesBitBtn: TBitBtn
-      Left = 343
-      Top = 8
-      Width = 75
-      Height = 25
-      Caption = 'Delivery'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-        333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
-        333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
-        C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
-        F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
-        F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
-        00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
-        3333333373FF7333333333333000333333333333377733333333333333333333
-        3333333333333333333333333333333333333333333333333333}
-      NumGlyphs = 2
-      ParentFont = False
-      TabOrder = 3
-      OnClick = DelivNotesBitBtnClick
-    end
-    object NotesBitBtn: TBitBtn
-      Left = 238
-      Top = 8
-      Width = 75
-      Height = 25
-      Caption = 'Notes'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-        333333333333FF3333333333333C0C333333333333F777F3333333333CC0F0C3
-        333333333777377F33333333C30F0F0C333333337F737377F333333C00FFF0F0
-        C33333F7773337377F333CC0FFFFFF0F0C3337773F33337377F3C30F0FFFFFF0
-        F0C37F7373F33337377F00FFF0FFFFFF0F0C7733373F333373770FFFFF0FFFFF
-        F0F073F33373F333373730FFFFF0FFFFFF03373F33373F333F73330FFFFF0FFF
-        00333373F33373FF77333330FFFFF000333333373F333777333333330FFF0333
-        3333333373FF7333333333333000333333333333377733333333333333333333
-        3333333333333333333333333333333333333333333333333333}
-      NumGlyphs = 2
-      ParentFont = False
+    object pnlHeader: TPanel
+      Left = 0
+      Top = 0
+      Width = 1176
+      Height = 41
+      Align = alTop
+      ParentBackground = False
       TabOrder = 2
-      OnClick = NotesBitBtnClick
-    end
-  end
-  object pnlHeader: TPanel
-    Left = 0
-    Top = 0
-    Width = 1176
-    Height = 41
-    Align = alTop
-    ParentBackground = False
-    TabOrder = 0
-    DesignSize = (
-      1176
-      41)
-    object Label19: TLabel
-      Left = 7
-      Top = 12
-      Width = 84
-      Height = 13
-      Caption = 'Company Name'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object NameEdit: TEdit
-      Left = 108
-      Top = 8
-      Width = 531
-      Height = 21
-      Anchors = [akLeft, akTop, akRight]
-      Color = clWhite
-      MaxLength = 100
-      TabOrder = 0
-      Text = 'NameEdit'
-      OnChange = NameEditChange
-      OnExit = NameEditExit
+      DesignSize = (
+        1176
+        41)
+      object Label19: TLabel
+        Left = 7
+        Top = 12
+        Width = 84
+        Height = 13
+        Caption = 'Company Name'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object NameEdit: TEdit
+        Left = 108
+        Top = 8
+        Width = 531
+        Height = 21
+        Anchors = [akLeft, akTop, akRight]
+        Color = clWhite
+        MaxLength = 100
+        TabOrder = 0
+        Text = 'NameEdit'
+        OnChange = NameEditChange
+        OnExit = NameEditExit
+      end
     end
   end
   object FlashTimer: TTimer

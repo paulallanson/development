@@ -33,559 +33,366 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Width = 50
       end>
   end
-  object pnlTop: TPanel
+  object pnlBody: TPanel
     Left = 0
     Top = 0
     Width = 954
-    Height = 41
-    Align = alTop
+    Height = 602
+    Align = alClient
+    BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 0
-    DesignSize = (
-      954
-      41)
-    object lblQuoteNo: TLabel
-      Left = 9
-      Top = 15
-      Width = 63
-      Height = 13
-      Caption = 'Contract No'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label4: TLabel
-      Left = 186
-      Top = 15
-      Width = 24
-      Height = 13
-      Caption = 'Date'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object lblAccountManager: TLabel
-      Left = 666
-      Top = 15
-      Width = 93
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Account Manager'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 676
-    end
-    object Label5: TLabel
-      Left = 440
-      Top = 15
-      Width = 112
-      Height = 13
-      Alignment = taRightJustify
-      Caption = 'Commencement Date'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object edtContract: TEdit
-      Left = 85
-      Top = 11
-      Width = 81
-      Height = 21
-      ReadOnly = True
-      TabOrder = 0
-    end
-    object edtDate: TEdit
-      Left = 221
-      Top = 11
-      Width = 81
-      Height = 21
-      TabOrder = 1
-      OnExit = edtDateExit
-    end
-    object btnDate: TBitBtn
-      Left = 309
-      Top = 9
-      Width = 25
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000130B0000130B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-        333337FFFFFFFF77333330000000000333333777777777733333}
-      NumGlyphs = 2
-      TabOrder = 2
-      OnClick = btnDateClick
-    end
-    object edtOfficeContact: TEdit
-      Left = 780
-      Top = 11
-      Width = 95
-      Height = 21
-      TabStop = False
-      Anchors = [akTop, akRight]
-      Color = clBtnFace
-      ReadOnly = True
-      TabOrder = 3
-    end
-    object btnAccountManager: TButton
-      Left = 893
-      Top = 8
-      Width = 23
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = '...'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 4
-      OnClick = btnAccountManagerClick
-    end
-    object edtEffectiveDate: TEdit
-      Left = 562
-      Top = 11
-      Width = 81
-      Height = 21
-      TabOrder = 5
-      OnExit = edtEffectiveDateExit
-    end
-    object BitBtn9: TBitBtn
-      Left = 653
-      Top = 9
-      Width = 25
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000130B0000130B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-        333337FFFFFFFF77333330000000000333333777777777733333}
-      NumGlyphs = 2
-      TabOrder = 6
-      OnClick = BitBtn9Click
-    end
-  end
-  object Panel2: TPanel
-    Left = 0
-    Top = 563
-    Width = 954
-    Height = 39
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 3
-    object lblGDPRSignedStatement: TLabel
-      Left = 11
-      Top = 13
-      Width = 181
-      Height = 13
-      Caption = 'GDPR Policy has not been signed!!'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      Visible = False
-    end
-    object pnlBottom: TPanel
-      Left = 577
-      Top = 1
-      Width = 376
-      Height = 37
-      Align = alRight
-      BevelOuter = bvNone
+    TabOrder = 1
+    object pnlTop: TPanel
+      Left = 0
+      Top = 0
+      Width = 954
+      Height = 41
+      Align = alTop
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        376
-        37)
-      object lblDeletePrompt: TLabel
-        Left = 83
-        Top = 13
-        Width = 107
+        954
+        41)
+      object lblQuoteNo: TLabel
+        Left = 9
+        Top = 14
+        Width = 63
         Height = 13
-        Alignment = taRightJustify
-        Anchors = [akRight, akBottom]
-        Caption = 'Delete this Contract?'
+        Caption = 'Contract No'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        Visible = False
       end
-      object btnOK: TBitBtn
-        Left = 202
-        Top = 6
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Caption = 'OK'
-        Default = True
-        Enabled = False
-        Glyph.Data = {
-          DE010000424DDE01000000000000760000002800000024000000120000000100
-          0400000000006801000000000000000000001000000000000000000000000000
-          80000080000000808000800000008000800080800000C0C0C000808080000000
-          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-          3333333333333333333333330000333333333333333333333333F33333333333
-          00003333344333333333333333388F3333333333000033334224333333333333
-          338338F3333333330000333422224333333333333833338F3333333300003342
-          222224333333333383333338F3333333000034222A22224333333338F338F333
-          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
-          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
-          0000333333333A222433333333333338F338F33300003333333333A222433333
-          333333338F338F33000033333333333A222433333333333338F338F300003333
-          33333333A222433333333333338F338F00003333333333333A22433333333333
-          3338F38F000033333333333333A223333333333333338F830000333333333333
-          333A333333333333333338330000333333333333333333333333333333333333
-          0000}
-        NumGlyphs = 2
-        TabOrder = 0
-        OnClick = btnOKClick
-      end
-      object btnCancel: TBitBtn
-        Left = 290
-        Top = 6
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Kind = bkCancel
-        NumGlyphs = 2
-        TabOrder = 1
-      end
-      object btnSave: TBitBtn
-        Left = 109
-        Top = 6
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Caption = 'Save'
-        Default = True
-        Enabled = False
-        Glyph.Data = {
-          76010000424D7601000000000000760000002800000020000000100000000100
-          04000000000000010000120B0000120B00001000000000000000000000000000
-          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-          333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
-          00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
-          00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
-          00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
-          00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
-          00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
-          00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
-          0003737FFFFFFFFF7F7330099999999900333777777777777733}
-        NumGlyphs = 2
-        TabOrder = 2
-        OnClick = btnSaveClick
-      end
-    end
-  end
-  object pnlHeader: TPanel
-    Left = 0
-    Top = 41
-    Width = 954
-    Height = 224
-    Align = alTop
-    ParentBackground = False
-    TabOrder = 1
-    DesignSize = (
-      954
-      224)
-    object Label2: TLabel
-      Left = 8
-      Top = 10
-      Width = 50
-      Height = 13
-      Caption = 'Customer'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label6: TLabel
-      Left = 8
-      Top = 37
-      Width = 40
-      Height = 13
-      Caption = 'Contact'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label1: TLabel
-      Left = 8
-      Top = 118
-      Width = 59
-      Height = 13
-      Caption = 'Description'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label8: TLabel
-      Left = 694
-      Top = 13
-      Width = 67
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Total Volume'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 704
-    end
-    object Label9: TLabel
-      Left = 8
-      Top = 64
-      Width = 20
-      Height = 13
-      Caption = 'Rep'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label3: TLabel
-      Left = 671
-      Top = 40
-      Width = 97
-      Height = 13
-      Anchors = [akTop, akRight]
-      Caption = 'Minumum Volume'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 681
-    end
-    object Label10: TLabel
-      Left = 723
-      Top = 67
-      Width = 46
-      Height = 13
-      Alignment = taRightJustify
-      Anchors = [akTop, akRight]
-      Caption = 'Duration'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 733
-    end
-    object Label11: TLabel
-      Left = 636
-      Top = 149
-      Width = 133
-      Height = 13
-      Alignment = taRightJustify
-      Anchors = [akTop, akRight]
-      Caption = 'Termination Notice Period'
-      ExplicitLeft = 646
-    end
-    object Label12: TLabel
-      Left = 649
-      Top = 176
-      Width = 120
-      Height = 13
-      Alignment = taRightJustify
-      Anchors = [akTop, akRight]
-      Caption = 'Term After Initial Period'
-      ExplicitLeft = 659
-    end
-    object Label13: TLabel
-      Left = 8
-      Top = 176
-      Width = 75
-      Height = 13
-      Caption = 'Payment Terms'
-    end
-    object Label14: TLabel
-      Left = 697
-      Top = 202
-      Width = 72
-      Height = 13
-      Alignment = taRightJustify
-      Anchors = [akTop, akRight]
-      Caption = 'Review Period'
-      ExplicitLeft = 707
-    end
-    object Label7: TLabel
-      Left = 715
-      Top = 96
-      Width = 54
-      Height = 13
-      Alignment = taRightJustify
-      Anchors = [akTop, akRight]
-      Caption = 'Frequency'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitLeft = 725
-    end
-    object edtCustomer: TEdit
-      Left = 84
-      Top = 6
-      Width = 300
-      Height = 21
-      Anchors = [akLeft, akTop, akRight]
-      ReadOnly = True
-      TabOrder = 0
-    end
-    object btnCustomer: TBitBtn
-      Left = 397
-      Top = 4
-      Width = 25
-      Height = 25
-      Anchors = [akTop, akRight]
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 1
-      OnClick = btnCustomerClick
-    end
-    object BitBtn4: TBitBtn
-      Left = 324
-      Top = 31
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 3
-      OnClick = BitBtn4Click
-    end
-    object dblkpContact: TDBLookupComboBox
-      Left = 84
-      Top = 33
-      Width = 225
-      Height = 21
-      KeyField = 'Contact_no'
-      ListField = 'Name'
-      TabOrder = 2
-      OnClick = dblkpContactClick
-    end
-    object memQuantity: TMemo
-      Left = 780
-      Top = 8
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 11
-      OnChange = memQuantityChange
-      OnEnter = memQuantityEnter
-      OnExit = memQuantityExit
-      OnKeyPress = memQuantityKeyPress
-    end
-    object btnRep: TBitBtn
-      Left = 324
-      Top = 58
-      Width = 25
-      Height = 25
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 5
-      OnClick = btnRepClick
-    end
-    object edtRep: TEdit
-      Left = 84
-      Top = 60
-      Width = 225
-      Height = 21
-      ReadOnly = True
-      TabOrder = 4
-    end
-    object pnlSubReps: TPanel
-      Left = 1
-      Top = 83
-      Width = 666
-      Height = 27
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 6
-      object Label52: TLabel
-        Left = 6
-        Top = 8
-        Width = 43
+      object Label4: TLabel
+        Left = 191
+        Top = 14
+        Width = 24
         Height = 13
-        Caption = 'Sub Rep'
+        Caption = 'Date'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
-      object edtSubRep: TEdit
-        Left = 83
-        Top = 4
-        Width = 224
+      object lblAccountManager: TLabel
+        Left = 681
+        Top = 14
+        Width = 93
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Account Manager'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 441
+        Top = 14
+        Width = 112
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Commencement Date'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object edtContract: TEdit
+        Left = 85
+        Top = 11
+        Width = 81
         Height = 21
         ReadOnly = True
         TabOrder = 0
       end
-      object btnSubRep: TBitBtn
-        Left = 323
-        Top = 2
+      object edtDate: TEdit
+        Left = 221
+        Top = 11
+        Width = 81
+        Height = 21
+        TabOrder = 1
+        OnExit = edtDateExit
+      end
+      object btnDate: TBitBtn
+        Left = 309
+        Top = 9
+        Width = 25
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+          F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+          F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+          F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+          F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+          F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+          F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+          333337FFFFFFFF77333330000000000333333777777777733333}
+        NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnDateClick
+      end
+      object edtOfficeContact: TEdit
+        Left = 780
+        Top = 11
+        Width = 95
+        Height = 21
+        TabStop = False
+        Anchors = [akTop, akRight]
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object btnAccountManager: TButton
+        Left = 883
+        Top = 8
+        Width = 23
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = '...'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+        OnClick = btnAccountManagerClick
+      end
+      object edtEffectiveDate: TEdit
+        Left = 559
+        Top = 11
+        Width = 81
+        Height = 21
+        TabOrder = 5
+        OnExit = edtEffectiveDateExit
+      end
+      object BitBtn9: TBitBtn
+        Left = 650
+        Top = 9
+        Width = 25
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+          003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+          F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+          F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+          F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+          F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+          F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+          F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+          333337FFFFFFFF77333330000000000333333777777777733333}
+        NumGlyphs = 2
+        TabOrder = 6
+        OnClick = BitBtn9Click
+      end
+    end
+    object pnlHeader: TPanel
+      Left = 0
+      Top = 41
+      Width = 954
+      Height = 224
+      Align = alTop
+      ParentBackground = False
+      TabOrder = 1
+      DesignSize = (
+        954
+        224)
+      object Label2: TLabel
+        Left = 8
+        Top = 10
+        Width = 50
+        Height = 13
+        Caption = 'Customer'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 8
+        Top = 37
+        Width = 40
+        Height = 13
+        Caption = 'Contact'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label1: TLabel
+        Left = 8
+        Top = 118
+        Width = 59
+        Height = 13
+        Caption = 'Description'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 694
+        Top = 13
+        Width = 67
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Total Volume'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 704
+      end
+      object Label9: TLabel
+        Left = 8
+        Top = 64
+        Width = 20
+        Height = 13
+        Caption = 'Rep'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 671
+        Top = 40
+        Width = 97
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'Minumum Volume'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 681
+      end
+      object Label10: TLabel
+        Left = 723
+        Top = 67
+        Width = 46
+        Height = 13
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Duration'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 733
+      end
+      object Label11: TLabel
+        Left = 636
+        Top = 149
+        Width = 133
+        Height = 13
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Termination Notice Period'
+        ExplicitLeft = 646
+      end
+      object Label12: TLabel
+        Left = 649
+        Top = 176
+        Width = 120
+        Height = 13
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Term After Initial Period'
+        ExplicitLeft = 659
+      end
+      object Label13: TLabel
+        Left = 8
+        Top = 176
+        Width = 75
+        Height = 13
+        Caption = 'Payment Terms'
+      end
+      object Label14: TLabel
+        Left = 697
+        Top = 202
+        Width = 72
+        Height = 13
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Review Period'
+        ExplicitLeft = 707
+      end
+      object Label7: TLabel
+        Left = 715
+        Top = 96
+        Width = 54
+        Height = 13
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Frequency'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 725
+      end
+      object edtCustomer: TEdit
+        Left = 84
+        Top = 6
+        Width = 300
+        Height = 21
+        Anchors = [akLeft, akTop, akRight]
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object btnCustomer: TBitBtn
+        Left = 397
+        Top = 4
+        Width = 25
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        OnClick = btnCustomerClick
+      end
+      object BitBtn4: TBitBtn
+        Left = 324
+        Top = 31
         Width = 25
         Height = 25
         Caption = '...'
@@ -595,829 +402,1031 @@ object PBMaintContractFrm: TPBMaintContractFrm
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 1
-        OnClick = btnSubRepClick
+        TabOrder = 3
+        OnClick = BitBtn4Click
       end
-    end
-    object memMinVolume: TMemo
-      Left = 780
-      Top = 35
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 12
-      OnChange = memMinVolumeChange
-      OnEnter = memQuantityEnter
-      OnExit = memQuantityExit
-      OnKeyPress = memQuantityKeyPress
-    end
-    object dblkpDurationType: TDBLookupComboBox
-      Left = 850
-      Top = 63
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'ID'
-      ListField = 'Period_Description'
-      TabOrder = 14
-      OnClick = dblkpDurationTypeClick
-    end
-    object memNoticePeriod: TMemo
-      Left = 780
-      Top = 145
-      Width = 53
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 17
-      OnChange = memNoticePeriodChange
-      OnExit = memQuantityExit
-      OnKeyPress = memQuantityKeyPress
-    end
-    object dblkpNoticeType: TDBLookupComboBox
-      Left = 850
-      Top = 145
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'ID'
-      ListField = 'Period_Description'
-      TabOrder = 18
-      OnClick = dblkpNoticeTypeClick
-    end
-    object memTermPeriod: TMemo
-      Left = 780
-      Top = 172
-      Width = 53
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 19
-      OnChange = memTermPeriodChange
-      OnExit = memQuantityExit
-      OnKeyPress = memQuantityKeyPress
-    end
-    object dblkpTermType: TDBLookupComboBox
-      Left = 850
-      Top = 172
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'ID'
-      ListField = 'Period_Description'
-      TabOrder = 20
-      OnClick = dblkpTermTypeClick
-    end
-    object dblkpPaymentTerms: TDBLookupComboBox
-      Left = 84
-      Top = 172
-      Width = 225
-      Height = 21
-      KeyField = 'Payment_Terms'
-      ListField = 'Payment_Terms_Description'
-      TabOrder = 8
-      OnClick = dblkpPaymentTermsClick
-    end
-    object memReviewPeriod: TMemo
-      Left = 780
-      Top = 198
-      Width = 53
-      Height = 21
-      Anchors = [akTop, akRight]
-      TabOrder = 21
-      OnChange = memReviewPeriodChange
-      OnExit = memQuantityExit
-      OnKeyPress = memQuantityKeyPress
-    end
-    object dblkpReviewType: TDBLookupComboBox
-      Left = 850
-      Top = 198
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'ID'
-      ListField = 'Period_Description'
-      TabOrder = 22
-      OnClick = dblkpReviewTypeClick
-    end
-    object btnTerms: TBitBtn
-      Tag = 100
-      Left = 324
-      Top = 170
-      Width = 25
-      Height = 25
-      Hint = 'Customer Type maintenance'
-      Caption = '...'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 9
-      OnClick = btnTermsClick
-    end
-    object BitBtn1: TBitBtn
-      Tag = 100
-      Left = 355
-      Top = 170
-      Width = 25
-      Height = 25
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
-        55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
-        305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
-        005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
-        B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
-        B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
-        B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
-        B0557777FF577777F7F500000E055550805577777F7555575755500000555555
-        05555777775555557F5555000555555505555577755555557555}
-      NumGlyphs = 2
-      TabOrder = 10
-      OnClick = BitBtn1Click
-    end
-    object edtDescription: TMemo
-      Left = 84
-      Top = 116
-      Width = 572
-      Height = 49
-      Lines.Strings = (
-        'edtDescription')
-      TabOrder = 7
-      OnChange = edtDescriptionChange
-    end
-    object dblkpFrequencyType: TDBLookupComboBox
-      Left = 850
-      Top = 92
-      Width = 81
-      Height = 21
-      Anchors = [akTop, akRight]
-      KeyField = 'ID'
-      ListField = 'Period_Description'
-      TabOrder = 16
-      OnClick = dblkpFrequencyTypeClick
-    end
-    object spnDuration: TSpinEdit
-      Left = 780
-      Top = 62
-      Width = 53
-      Height = 22
-      Anchors = [akTop, akRight]
-      MaxValue = 999999
-      MinValue = 1
-      TabOrder = 13
-      Value = 1
-      OnChange = spnDurationChange
-    end
-    object spnFrequency: TSpinEdit
-      Left = 780
-      Top = 91
-      Width = 53
-      Height = 22
-      Anchors = [akTop, akRight]
-      MaxValue = 999999
-      MinValue = 1
-      TabOrder = 15
-      Value = 1
-      OnChange = spnFrequencyChange
-    end
-  end
-  object pgDetails: TPageControl
-    Left = 0
-    Top = 265
-    Width = 954
-    Height = 221
-    ActivePage = TabSheet3
-    Align = alClient
-    TabOrder = 2
-    object TabSheet3: TTabSheet
-      Caption = 'Job Bags'
-      ImageIndex = 2
-      object dbgJobDetails: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 861
-        Height = 174
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 0
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDblClick = dbgJobDetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Job_Bag'
-            Title.Caption = 'Job Bag'
-            Width = 68
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Point'
-            Title.Caption = 'Date'
-            Width = 76
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Start'
-            Title.Caption = 'Start Date'
-            Width = 71
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Goods_Required'
-            Title.Caption = 'Required Date'
-            Width = 75
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Contact_Name'
-            Title.Caption = 'Contact'
-            Width = 141
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Job_Bag_Descr'
-            Title.Caption = 'Description'
-            Width = 237
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quantity'
-            Width = 63
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Rep_Name'
-            Title.Caption = 'Rep'
-            Width = 96
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Job_Bag_Status_Descr'
-            Title.Caption = 'Status'
-            Width = 140
-            Visible = True
-          end>
-      end
-      object Panel3: TPanel
-        Left = 861
-        Top = 0
-        Width = 85
-        Height = 174
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 1
-        OnClick = Panel3Click
-        object btnJobAdd: TBitBtn
-          Left = 8
-          Top = 40
-          Width = 75
-          Height = 25
-          Hint = 'Add a new Works Instruction to this Job Bag'
-          Caption = '&Add'
-          TabOrder = 0
-          OnClick = btnJobAddClick
-        end
-        object btnJobChange: TBitBtn
-          Left = 8
-          Top = 72
-          Width = 75
-          Height = 25
-          Hint = 'Change the selected Works Instruction'
-          Caption = '&Change'
-          Enabled = False
-          TabOrder = 1
-          OnClick = btnJobChangeClick
-        end
-        object btnJobDelete: TBitBtn
-          Left = 8
-          Top = 136
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Delete'
-          Enabled = False
-          TabOrder = 2
-          OnClick = btnJobDeleteClick
-        end
-        object btnJobExcel: TBitBtn
-          Left = 8
-          Top = 168
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Excel'
-          Enabled = False
-          TabOrder = 3
-          OnClick = btnJobExcelClick
-        end
-        object btnJobRepeat: TBitBtn
-          Left = 8
-          Top = 104
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Repeat'
-          Enabled = False
-          TabOrder = 4
-          OnClick = btnJobRepeatClick
-        end
-        object btnJobInsert: TBitBtn
-          Left = 8
-          Top = 8
-          Width = 75
-          Height = 25
-          Hint = 'Add a new Works Instruction to this Job Bag'
-          Caption = '&Insert'
-          TabOrder = 5
-          OnClick = btnJobInsertClick
-        end
-      end
-      object stsBrJobDetails: TStatusBar
-        Left = 0
-        Top = 174
-        Width = 946
-        Height = 19
-        Panels = <
-          item
-            Width = 200
-          end
-          item
-            Width = 50
-          end>
-      end
-    end
-    object TabSheet4: TTabSheet
-      Caption = 'Buy Print Orders'
-      ImageIndex = 3
-      object Panel1: TPanel
-        Left = 861
-        Top = 0
-        Width = 85
-        Height = 174
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 0
-        OnClick = Panel1Click
-        object btnPOAdd: TBitBtn
-          Left = 8
-          Top = 8
-          Width = 75
-          Height = 25
-          Hint = 'Add a new Works Instruction to this Job Bag'
-          Caption = '&Add'
-          TabOrder = 0
-          OnClick = btnPOAddClick
-        end
-        object btnPOChange: TBitBtn
-          Left = 8
-          Top = 40
-          Width = 75
-          Height = 25
-          Hint = 'Change the selected Works Instruction'
-          Caption = '&Change'
-          Enabled = False
-          TabOrder = 1
-          OnClick = btnPOChangeClick
-        end
-        object btnPODelete: TBitBtn
-          Left = 8
-          Top = 104
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Delete'
-          Enabled = False
-          TabOrder = 2
-          OnClick = btnPODeleteClick
-        end
-        object btnPOExcel: TBitBtn
-          Left = 8
-          Top = 136
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Excel'
-          Enabled = False
-          TabOrder = 3
-          OnClick = btnPOExcelClick
-        end
-        object btnPORepeat: TBitBtn
-          Left = 8
-          Top = 72
-          Width = 75
-          Height = 25
-          Hint = 'Delete the selected Works Instruction from this Job Bag'
-          Caption = '&Repeat'
-          Enabled = False
-          TabOrder = 4
-          OnClick = btnPORepeatClick
-        end
-      end
-      object dbgPODetails: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 861
-        Height = 174
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDblClick = dbgPODetailsDblClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Purchase_Order'
-            Title.Caption = 'Order'
-            Width = 68
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Date_Point'
-            Title.Caption = 'Date'
-            Width = 76
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Supplier_Name'
-            Title.Caption = 'Supplier'
-            Width = 263
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Contact_Name'
-            Title.Caption = 'Contact'
-            Width = 125
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Goods_Required'
-            Title.Caption = 'Required Date'
-            Width = 85
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Customers_Desc'
-            Title.Caption = 'Description'
-            Width = 237
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quantity'
-            Width = 68
-            Visible = True
-          end>
-      end
-      object stsBrPODetails: TStatusBar
-        Left = 0
-        Top = 174
-        Width = 946
-        Height = 19
-        Panels = <
-          item
-            Width = 200
-          end
-          item
-            Width = 50
-          end>
-      end
-    end
-    object TabSheet1: TTabSheet
-      Caption = 'Invoices'
-      ImageIndex = 3
-      object dbgSalesInvoices: TDBGrid
-        Left = 0
-        Top = 0
-        Width = 861
-        Height = 165
-        Align = alClient
-        DrawingStyle = gdsGradient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-        ParentFont = False
-        TabOrder = 0
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'Sales_Invoice_no'
-            Title.Caption = 'Invoice No'
-            Width = 96
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Invoice_Date'
-            Title.Caption = 'Invoice Date'
-            Width = 98
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Invoice_description'
-            Title.Caption = 'Description'
-            Width = 269
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Total_Goods'
-            Title.Caption = 'Goods'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Total_Vat'
-            Title.Caption = 'Vat'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Total_Invoice'
-            Title.Caption = 'Total'
-            Width = 66
-            Visible = True
-          end>
-      end
-      object Panel8: TPanel
-        Left = 861
-        Top = 0
-        Width = 85
-        Height = 165
-        Align = alRight
-        ParentBackground = False
-        TabOrder = 1
-        object btnViewSI: TBitBtn
-          Left = 8
-          Top = 8
-          Width = 75
-          Height = 25
-          Caption = '&View'
-          TabOrder = 0
-          OnClick = btnViewSIClick
-        end
-        object btnRePrintSI: TBitBtn
-          Left = 8
-          Top = 40
-          Width = 75
-          Height = 25
-          Caption = '&Re-Print'
-          Enabled = False
-          TabOrder = 1
-          OnClick = btnRePrintSIClick
-        end
-      end
-      object Panel19: TPanel
-        Left = 0
-        Top = 165
-        Width = 946
-        Height = 28
-        Align = alBottom
-        ParentBackground = False
+      object dblkpContact: TDBLookupComboBox
+        Left = 84
+        Top = 33
+        Width = 225
+        Height = 21
+        KeyField = 'Contact_no'
+        ListField = 'Name'
         TabOrder = 2
-        DesignSize = (
-          946
-          28)
-        object Label42: TLabel
-          Left = 342
+        OnClick = dblkpContactClick
+      end
+      object memQuantity: TMemo
+        Left = 780
+        Top = 8
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 11
+        OnChange = memQuantityChange
+        OnEnter = memQuantityEnter
+        OnExit = memQuantityExit
+        OnKeyPress = memQuantityKeyPress
+      end
+      object btnRep: TBitBtn
+        Left = 324
+        Top = 58
+        Width = 25
+        Height = 25
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 5
+        OnClick = btnRepClick
+      end
+      object edtRep: TEdit
+        Left = 84
+        Top = 60
+        Width = 225
+        Height = 21
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object pnlSubReps: TPanel
+        Left = 1
+        Top = 83
+        Width = 666
+        Height = 27
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 6
+        object Label52: TLabel
+          Left = 6
           Top = 8
-          Width = 100
+          Width = 43
           Height = 13
-          Anchors = [akLeft, akBottom]
-          Caption = 'Total Invoiced Sales'
+          Caption = 'Sub Rep'
         end
-        object memTotalSI: TMemo
-          Left = 475
+        object edtSubRep: TEdit
+          Left = 83
           Top = 4
-          Width = 70
+          Width = 224
           Height = 21
-          Alignment = taRightJustify
           ReadOnly = True
           TabOrder = 0
-          WantReturns = False
-          WordWrap = False
+        end
+        object btnSubRep: TBitBtn
+          Left = 323
+          Top = 2
+          Width = 25
+          Height = 25
+          Caption = '...'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+          OnClick = btnSubRepClick
         end
       end
+      object memMinVolume: TMemo
+        Left = 780
+        Top = 35
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 12
+        OnChange = memMinVolumeChange
+        OnEnter = memQuantityEnter
+        OnExit = memQuantityExit
+        OnKeyPress = memQuantityKeyPress
+      end
+      object dblkpDurationType: TDBLookupComboBox
+        Left = 850
+        Top = 63
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'ID'
+        ListField = 'Period_Description'
+        TabOrder = 14
+        OnClick = dblkpDurationTypeClick
+      end
+      object memNoticePeriod: TMemo
+        Left = 780
+        Top = 145
+        Width = 53
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 17
+        OnChange = memNoticePeriodChange
+        OnExit = memQuantityExit
+        OnKeyPress = memQuantityKeyPress
+      end
+      object dblkpNoticeType: TDBLookupComboBox
+        Left = 850
+        Top = 145
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'ID'
+        ListField = 'Period_Description'
+        TabOrder = 18
+        OnClick = dblkpNoticeTypeClick
+      end
+      object memTermPeriod: TMemo
+        Left = 780
+        Top = 172
+        Width = 53
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 19
+        OnChange = memTermPeriodChange
+        OnExit = memQuantityExit
+        OnKeyPress = memQuantityKeyPress
+      end
+      object dblkpTermType: TDBLookupComboBox
+        Left = 850
+        Top = 172
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'ID'
+        ListField = 'Period_Description'
+        TabOrder = 20
+        OnClick = dblkpTermTypeClick
+      end
+      object dblkpPaymentTerms: TDBLookupComboBox
+        Left = 84
+        Top = 172
+        Width = 225
+        Height = 21
+        KeyField = 'Payment_Terms'
+        ListField = 'Payment_Terms_Description'
+        TabOrder = 8
+        OnClick = dblkpPaymentTermsClick
+      end
+      object memReviewPeriod: TMemo
+        Left = 780
+        Top = 198
+        Width = 53
+        Height = 21
+        Anchors = [akTop, akRight]
+        TabOrder = 21
+        OnChange = memReviewPeriodChange
+        OnExit = memQuantityExit
+        OnKeyPress = memQuantityKeyPress
+      end
+      object dblkpReviewType: TDBLookupComboBox
+        Left = 850
+        Top = 198
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'ID'
+        ListField = 'Period_Description'
+        TabOrder = 22
+        OnClick = dblkpReviewTypeClick
+      end
+      object btnTerms: TBitBtn
+        Tag = 100
+        Left = 324
+        Top = 170
+        Width = 25
+        Height = 25
+        Hint = 'Customer Type maintenance'
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 9
+        OnClick = btnTermsClick
+      end
+      object BitBtn1: TBitBtn
+        Tag = 100
+        Left = 355
+        Top = 170
+        Width = 25
+        Height = 25
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+          55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+          305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+          005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+          B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+          B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+          B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+          B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+          05555777775555557F5555000555555505555577755555557555}
+        NumGlyphs = 2
+        TabOrder = 10
+        OnClick = BitBtn1Click
+      end
+      object edtDescription: TMemo
+        Left = 84
+        Top = 116
+        Width = 572
+        Height = 49
+        Lines.Strings = (
+          'edtDescription')
+        TabOrder = 7
+        OnChange = edtDescriptionChange
+      end
+      object dblkpFrequencyType: TDBLookupComboBox
+        Left = 850
+        Top = 92
+        Width = 81
+        Height = 21
+        Anchors = [akTop, akRight]
+        KeyField = 'ID'
+        ListField = 'Period_Description'
+        TabOrder = 16
+        OnClick = dblkpFrequencyTypeClick
+      end
+      object spnDuration: TSpinEdit
+        Left = 780
+        Top = 62
+        Width = 53
+        Height = 22
+        Anchors = [akTop, akRight]
+        MaxValue = 999999
+        MinValue = 1
+        TabOrder = 13
+        Value = 1
+        OnChange = spnDurationChange
+      end
+      object spnFrequency: TSpinEdit
+        Left = 780
+        Top = 91
+        Width = 53
+        Height = 22
+        Anchors = [akTop, akRight]
+        MaxValue = 999999
+        MinValue = 1
+        TabOrder = 15
+        Value = 1
+        OnChange = spnFrequencyChange
+      end
     end
-    object TabSheet2: TTabSheet
-      Caption = 'Documents'
-      ImageIndex = 1
-      object Panel6: TPanel
-        Left = 0
-        Top = 0
-        Width = 946
-        Height = 193
-        Align = alClient
-        Caption = 'Panel6'
-        ParentBackground = False
-        TabOrder = 0
-        object Panel7: TPanel
-          Left = 1
-          Top = 168
-          Width = 944
-          Height = 24
-          Align = alBottom
-          BevelOuter = bvNone
-          ParentBackground = False
-          TabOrder = 0
-          object lblDocumentDir: TLabel
-            Left = 8
-            Top = 6
-            Width = 150
-            Height = 13
-            Caption = 'Primary Document Directory:'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-        end
-        object lstvwDocuments: TListView
-          Left = 1
-          Top = 1
-          Width = 908
-          Height = 167
+    object pgDetails: TPageControl
+      Left = 0
+      Top = 265
+      Width = 954
+      Height = 221
+      ActivePage = TabSheet3
+      Align = alClient
+      TabOrder = 2
+      object TabSheet3: TTabSheet
+        Caption = 'Job Bags'
+        ImageIndex = 2
+        object dbgJobDetails: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 861
+          Height = 174
           Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDblClick = dbgJobDetailsDblClick
           Columns = <
             item
-              Caption = 'Name'
-              Width = 200
+              Expanded = False
+              FieldName = 'Job_Bag'
+              Title.Caption = 'Job Bag'
+              Width = 68
+              Visible = True
             end
             item
-              Caption = 'Type'
-              Width = 200
+              Expanded = False
+              FieldName = 'Date_Point'
+              Title.Caption = 'Date'
+              Width = 76
+              Visible = True
             end
             item
-              Caption = 'Date modified'
-              Width = 200
+              Expanded = False
+              FieldName = 'Date_Start'
+              Title.Caption = 'Start Date'
+              Width = 71
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Goods_Required'
+              Title.Caption = 'Required Date'
+              Width = 75
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Contact_Name'
+              Title.Caption = 'Contact'
+              Width = 141
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Job_Bag_Descr'
+              Title.Caption = 'Description'
+              Width = 237
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Quantity'
+              Width = 63
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Rep_Name'
+              Title.Caption = 'Rep'
+              Width = 96
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Job_Bag_Status_Descr'
+              Title.Caption = 'Status'
+              Width = 140
+              Visible = True
             end>
-          LargeImages = imgDocuments
-          MultiSelect = True
-          RowSelect = True
-          PopupMenu = pmnuDocuments
-          SmallImages = imgDocuments
-          TabOrder = 1
-          OnColumnClick = lstvwDocumentsColumnClick
-          OnCompare = lstvwDocumentsCompare
-          OnDblClick = lstvwDocumentsDblClick
         end
-        object ToolBar1: TToolBar
-          Left = 909
-          Top = 1
-          Width = 36
-          Height = 167
+        object Panel3: TPanel
+          Left = 861
+          Top = 0
+          Width = 85
+          Height = 174
           Align = alRight
-          ButtonHeight = 30
-          ButtonWidth = 30
-          Caption = 'ToolBar1'
-          EdgeBorders = [ebLeft, ebTop, ebRight]
-          Images = imgIcons
-          ParentShowHint = False
-          ShowHint = True
+          ParentBackground = False
+          TabOrder = 1
+          OnClick = Panel3Click
+          object btnJobAdd: TBitBtn
+            Left = 8
+            Top = 40
+            Width = 75
+            Height = 25
+            Hint = 'Add a new Works Instruction to this Job Bag'
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = btnJobAddClick
+          end
+          object btnJobChange: TBitBtn
+            Left = 8
+            Top = 72
+            Width = 75
+            Height = 25
+            Hint = 'Change the selected Works Instruction'
+            Caption = '&Change'
+            Enabled = False
+            TabOrder = 1
+            OnClick = btnJobChangeClick
+          end
+          object btnJobDelete: TBitBtn
+            Left = 8
+            Top = 136
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Delete'
+            Enabled = False
+            TabOrder = 2
+            OnClick = btnJobDeleteClick
+          end
+          object btnJobExcel: TBitBtn
+            Left = 8
+            Top = 168
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Excel'
+            Enabled = False
+            TabOrder = 3
+            OnClick = btnJobExcelClick
+          end
+          object btnJobRepeat: TBitBtn
+            Left = 8
+            Top = 104
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Repeat'
+            Enabled = False
+            TabOrder = 4
+            OnClick = btnJobRepeatClick
+          end
+          object btnJobInsert: TBitBtn
+            Left = 8
+            Top = 8
+            Width = 75
+            Height = 25
+            Hint = 'Add a new Works Instruction to this Job Bag'
+            Caption = '&Insert'
+            TabOrder = 5
+            OnClick = btnJobInsertClick
+          end
+        end
+        object stsBrJobDetails: TStatusBar
+          Left = 0
+          Top = 174
+          Width = 946
+          Height = 19
+          Panels = <
+            item
+              Width = 200
+            end
+            item
+              Width = 50
+            end>
+        end
+      end
+      object TabSheet4: TTabSheet
+        Caption = 'Buy Print Orders'
+        ImageIndex = 3
+        object Panel1: TPanel
+          Left = 861
+          Top = 0
+          Width = 85
+          Height = 174
+          Align = alRight
+          ParentBackground = False
+          TabOrder = 0
+          OnClick = Panel1Click
+          object btnPOAdd: TBitBtn
+            Left = 8
+            Top = 8
+            Width = 75
+            Height = 25
+            Hint = 'Add a new Works Instruction to this Job Bag'
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = btnPOAddClick
+          end
+          object btnPOChange: TBitBtn
+            Left = 8
+            Top = 40
+            Width = 75
+            Height = 25
+            Hint = 'Change the selected Works Instruction'
+            Caption = '&Change'
+            Enabled = False
+            TabOrder = 1
+            OnClick = btnPOChangeClick
+          end
+          object btnPODelete: TBitBtn
+            Left = 8
+            Top = 104
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Delete'
+            Enabled = False
+            TabOrder = 2
+            OnClick = btnPODeleteClick
+          end
+          object btnPOExcel: TBitBtn
+            Left = 8
+            Top = 136
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Excel'
+            Enabled = False
+            TabOrder = 3
+            OnClick = btnPOExcelClick
+          end
+          object btnPORepeat: TBitBtn
+            Left = 8
+            Top = 72
+            Width = 75
+            Height = 25
+            Hint = 'Delete the selected Works Instruction from this Job Bag'
+            Caption = '&Repeat'
+            Enabled = False
+            TabOrder = 4
+            OnClick = btnPORepeatClick
+          end
+        end
+        object dbgPODetails: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 861
+          Height = 174
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDblClick = dbgPODetailsDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Purchase_Order'
+              Title.Caption = 'Order'
+              Width = 68
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Date_Point'
+              Title.Caption = 'Date'
+              Width = 76
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Supplier_Name'
+              Title.Caption = 'Supplier'
+              Width = 263
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Contact_Name'
+              Title.Caption = 'Contact'
+              Width = 125
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Goods_Required'
+              Title.Caption = 'Required Date'
+              Width = 85
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Customers_Desc'
+              Title.Caption = 'Description'
+              Width = 237
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Quantity'
+              Width = 68
+              Visible = True
+            end>
+        end
+        object stsBrPODetails: TStatusBar
+          Left = 0
+          Top = 174
+          Width = 946
+          Height = 19
+          Panels = <
+            item
+              Width = 200
+            end
+            item
+              Width = 50
+            end>
+        end
+      end
+      object TabSheet1: TTabSheet
+        Caption = 'Invoices'
+        ImageIndex = 3
+        object dbgSalesInvoices: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 861
+          Height = 165
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Sales_Invoice_no'
+              Title.Caption = 'Invoice No'
+              Width = 96
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Invoice_Date'
+              Title.Caption = 'Invoice Date'
+              Width = 98
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Invoice_description'
+              Title.Caption = 'Description'
+              Width = 269
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Total_Goods'
+              Title.Caption = 'Goods'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Total_Vat'
+              Title.Caption = 'Vat'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Total_Invoice'
+              Title.Caption = 'Total'
+              Width = 66
+              Visible = True
+            end>
+        end
+        object Panel8: TPanel
+          Left = 861
+          Top = 0
+          Width = 85
+          Height = 165
+          Align = alRight
+          ParentBackground = False
+          TabOrder = 1
+          object btnViewSI: TBitBtn
+            Left = 8
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&View'
+            TabOrder = 0
+            OnClick = btnViewSIClick
+          end
+          object btnRePrintSI: TBitBtn
+            Left = 8
+            Top = 40
+            Width = 75
+            Height = 25
+            Caption = '&Re-Print'
+            Enabled = False
+            TabOrder = 1
+            OnClick = btnRePrintSIClick
+          end
+        end
+        object Panel19: TPanel
+          Left = 0
+          Top = 165
+          Width = 946
+          Height = 28
+          Align = alBottom
+          ParentBackground = False
           TabOrder = 2
-          object btnExcel: TToolButton
-            Left = 0
-            Top = 0
-            Hint = 'Excel'
-            Caption = 'btnExcel'
-            ImageIndex = 0
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnExcelClick
+          DesignSize = (
+            946
+            28)
+          object Label42: TLabel
+            Left = 342
+            Top = 8
+            Width = 100
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Total Invoiced Sales'
           end
-          object btnWord: TToolButton
-            Left = 0
-            Top = 30
-            Hint = 'Word'
-            Caption = 'btnWord'
-            ImageIndex = 1
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnExcelClick
+          object memTotalSI: TMemo
+            Left = 475
+            Top = 4
+            Width = 70
+            Height = 21
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabOrder = 0
+            WantReturns = False
+            WordWrap = False
           end
-          object btnEmail: TToolButton
-            Left = 0
-            Top = 60
-            Hint = 'Email'
-            Caption = 'btnEmail'
-            ImageIndex = 2
-            ParentShowHint = False
-            Wrap = True
-            ShowHint = True
-            OnClick = btnEmailClick
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Documents'
+        ImageIndex = 1
+        object Panel6: TPanel
+          Left = 0
+          Top = 0
+          Width = 946
+          Height = 193
+          Align = alClient
+          Caption = 'Panel6'
+          ParentBackground = False
+          TabOrder = 0
+          object Panel7: TPanel
+            Left = 1
+            Top = 168
+            Width = 944
+            Height = 24
+            Align = alBottom
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 0
+            object lblDocumentDir: TLabel
+              Left = 8
+              Top = 6
+              Width = 150
+              Height = 13
+              Caption = 'Primary Document Directory:'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
           end
-          object btnAttach: TToolButton
-            Left = 0
-            Top = 90
-            Hint = 'Attach Documents'
-            Caption = 'btnAttach'
-            ImageIndex = 3
+          object lstvwDocuments: TListView
+            Left = 1
+            Top = 1
+            Width = 908
+            Height = 167
+            Align = alClient
+            Columns = <
+              item
+                Caption = 'Name'
+                Width = 200
+              end
+              item
+                Caption = 'Type'
+                Width = 200
+              end
+              item
+                Caption = 'Date modified'
+                Width = 200
+              end>
+            LargeImages = imgDocuments
+            MultiSelect = True
+            RowSelect = True
+            PopupMenu = pmnuDocuments
+            SmallImages = imgDocuments
+            TabOrder = 1
+            OnColumnClick = lstvwDocumentsColumnClick
+            OnCompare = lstvwDocumentsCompare
+            OnDblClick = lstvwDocumentsDblClick
+          end
+          object ToolBar1: TToolBar
+            Left = 909
+            Top = 1
+            Width = 36
+            Height = 167
+            Align = alRight
+            ButtonHeight = 30
+            ButtonWidth = 30
+            Caption = 'ToolBar1'
+            EdgeBorders = [ebLeft, ebTop, ebRight]
+            Images = imgIcons
             ParentShowHint = False
             ShowHint = True
-            OnClick = btnAttachClick
+            TabOrder = 2
+            object btnExcel: TToolButton
+              Left = 0
+              Top = 0
+              Hint = 'Excel'
+              Caption = 'btnExcel'
+              ImageIndex = 0
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnExcelClick
+            end
+            object btnWord: TToolButton
+              Left = 0
+              Top = 30
+              Hint = 'Word'
+              Caption = 'btnWord'
+              ImageIndex = 1
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnExcelClick
+            end
+            object btnEmail: TToolButton
+              Left = 0
+              Top = 60
+              Hint = 'Email'
+              Caption = 'btnEmail'
+              ImageIndex = 2
+              ParentShowHint = False
+              Wrap = True
+              ShowHint = True
+              OnClick = btnEmailClick
+            end
+            object btnAttach: TToolButton
+              Left = 0
+              Top = 90
+              Hint = 'Attach Documents'
+              Caption = 'btnAttach'
+              ImageIndex = 3
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnAttachClick
+            end
           end
         end
       end
     end
-  end
-  object pnlFooter: TPanel
-    Left = 0
-    Top = 486
-    Width = 954
-    Height = 77
-    Align = alBottom
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 5
-    object btnNotes: TBitBtn
-      Left = 8
-      Top = 13
-      Width = 75
-      Height = 25
-      Caption = 'Notes'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000120B0000120B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-        3333333333FFFFF3333333333000003333333333F777773FF333333008877700
-        33333337733FFF773F33330887000777033333733F777FFF73F3308800000007
-        703337F37777777FF7F33080000000007033373777777777F73F087000222000
-        77037F3777333777FF7F08000222220007037F777F3333777F7F0F0002222200
-        07037F777F3333777F7F0F000822220008037F777FF33377737F0F7000882000
-        780373F777FFF777F373308000000000803337F77777777737F330F800000008
-        8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
-        3333333773FFFF77333333333000003333333333377777333333}
-      NumGlyphs = 2
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnNotesClick
+    object pnlFooter: TPanel
+      Left = 0
+      Top = 486
+      Width = 954
+      Height = 77
+      Align = alBottom
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 3
+      object btnNotes: TBitBtn
+        Left = 8
+        Top = 13
+        Width = 75
+        Height = 25
+        Caption = 'Notes'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333FFFFF3333333333000003333333333F777773FF333333008877700
+          33333337733FFF773F33330887000777033333733F777FFF73F3308800000007
+          703337F37777777FF7F33080000000007033373777777777F73F087000222000
+          77037F3777333777FF7F08000222220007037F777F3333777F7F0F0002222200
+          07037F777F3333777F7F0F000822220008037F777FF33377737F0F7000882000
+          780373F777FFF777F373308000000000803337F77777777737F330F800000008
+          8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
+          3333333773FFFF77333333333000003333333333377777333333}
+        NumGlyphs = 2
+        ParentFont = False
+        TabOrder = 0
+        OnClick = btnNotesClick
+      end
+      object chkbxInactive: TCheckBox
+        Left = 8
+        Top = 52
+        Width = 193
+        Height = 17
+        Caption = 'Contract is inactive'
+        TabOrder = 1
+      end
     end
-    object chkbxInactive: TCheckBox
-      Left = 8
-      Top = 52
-      Width = 193
-      Height = 17
-      Caption = 'Contract is inactive'
-      TabOrder = 1
+    object Panel2: TPanel
+      Left = 0
+      Top = 563
+      Width = 954
+      Height = 39
+      Align = alBottom
+      ParentBackground = False
+      TabOrder = 4
+      object lblGDPRSignedStatement: TLabel
+        Left = 11
+        Top = 13
+        Width = 181
+        Height = 13
+        Caption = 'GDPR Policy has not been signed!!'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Visible = False
+      end
+      object pnlBottom: TPanel
+        Left = 577
+        Top = 1
+        Width = 376
+        Height = 37
+        Align = alRight
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 0
+        DesignSize = (
+          376
+          37)
+        object lblDeletePrompt: TLabel
+          Left = 83
+          Top = 13
+          Width = 107
+          Height = 13
+          Alignment = taRightJustify
+          Anchors = [akRight, akBottom]
+          Caption = 'Delete this Contract?'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Visible = False
+        end
+        object btnOK: TBitBtn
+          Left = 202
+          Top = 6
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = 'OK'
+          Default = True
+          Enabled = False
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000000000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            3333333333333333333333330000333333333333333333333333F33333333333
+            00003333344333333333333333388F3333333333000033334224333333333333
+            338338F3333333330000333422224333333333333833338F3333333300003342
+            222224333333333383333338F3333333000034222A22224333333338F338F333
+            8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+            33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+            0000333333333A222433333333333338F338F33300003333333333A222433333
+            333333338F338F33000033333333333A222433333333333338F338F300003333
+            33333333A222433333333333338F338F00003333333333333A22433333333333
+            3338F38F000033333333333333A223333333333333338F830000333333333333
+            333A333333333333333338330000333333333333333333333333333333333333
+            0000}
+          NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnOKClick
+        end
+        object btnCancel: TBitBtn
+          Left = 290
+          Top = 6
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Kind = bkCancel
+          NumGlyphs = 2
+          TabOrder = 1
+        end
+        object btnSave: TBitBtn
+          Left = 109
+          Top = 6
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = 'Save'
+          Default = True
+          Enabled = False
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000120B0000120B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+            333333FFFFFFFFFFFFF33000077777770033377777777777773F000007888888
+            00037F3337F3FF37F37F00000780088800037F3337F77F37F37F000007800888
+            00037F3337F77FF7F37F00000788888800037F3337777777337F000000000000
+            00037F3FFFFFFFFFFF7F00000000000000037F77777777777F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF00037F7F333333337F7F000FFFFFFFFF
+            00037F7F333333337F7F000FFFFFFFFF07037F7F33333333777F000FFFFFFFFF
+            0003737FFFFFFFFF7F7330099999999900333777777777777733}
+          NumGlyphs = 2
+          TabOrder = 2
+          OnClick = btnSaveClick
+        end
+      end
     end
   end
   object imgDocuments: TImageList

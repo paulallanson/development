@@ -48,6 +48,7 @@ type
     btnDatefrom: TBitBtn;
     qryOrdered: TFDQuery;
     btnClearDate: TBitBtn;
+    pnlBody: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxContStatusChange(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);

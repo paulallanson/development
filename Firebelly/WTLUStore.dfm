@@ -15,43 +15,6 @@ object frmWTLUStore: TfrmWTLUStore
   OnActivate = FormActivate
   OnClose = FormClose
   TextHeight = 13
-  object dbgDetails: TDBGrid
-    Left = 0
-    Top = 0
-    Width = 303
-    Height = 279
-    Align = alClient
-    DataSource = srcStore
-    DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-    ParentFont = False
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
-    OnDblClick = dbgDetailsDblClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Address_Name'
-        Title.Caption = 'Store Name'
-        Width = 272
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'inactive'
-        Visible = False
-      end>
-  end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 350
@@ -65,129 +28,173 @@ object frmWTLUStore: TfrmWTLUStore
         Width = 50
       end>
   end
-  object Panel1: TPanel
+  object pnlBody: TPanel
     Left = 0
-    Top = 279
-    Width = 392
-    Height = 71
-    Align = alBottom
-    TabOrder = 2
-    DesignSize = (
-      392
-      71)
-    object Label4: TLabel
-      Left = 8
-      Top = 13
-      Width = 34
-      Height = 13
-      Caption = 'Search'
-    end
-    object chkbxShowInactive: TCheckBox
-      Left = 8
-      Top = 42
-      Width = 169
-      Height = 17
-      Caption = 'Show inactive stores'
-      TabOrder = 0
-      OnClick = chkbxShowInactiveClick
-    end
-    object BitBtn4: TBitBtn
-      Left = 414
-      Top = 38
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Close'
-      ModalResult = 2
-      NumGlyphs = 2
-      TabOrder = 1
-      ExplicitTop = 41
-    end
-    object edtName: TEdit
-      Left = 52
-      Top = 9
-      Width = 177
-      Height = 21
-      TabOrder = 2
-      OnChange = edtNameChange
-    end
-    object BitBtn2: TBitBtn
-      Left = 309
-      Top = 35
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Close'
-      ModalResult = 2
-      NumGlyphs = 2
-      TabOrder = 3
-    end
-  end
-  object Panel2: TPanel
-    Left = 303
     Top = 0
-    Width = 89
-    Height = 279
-    Align = alRight
-    TabOrder = 3
-    ExplicitHeight = 276
-    DesignSize = (
-      89
-      279)
-    object BitBtn1: TBitBtn
-      Left = 6
-      Top = 87
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Add'
+    Width = 392
+    Height = 350
+    Align = alClient
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 112
+    ExplicitTop = 184
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Panel2: TPanel
+      Left = 303
+      Top = 0
+      Width = 89
+      Height = 279
+      Align = alRight
       TabOrder = 0
-      OnClick = BitBtn1Click
-      ExplicitTop = 84
+      DesignSize = (
+        89
+        279)
+      object BitBtn1: TBitBtn
+        Left = 6
+        Top = 87
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Add'
+        TabOrder = 0
+        OnClick = BitBtn1Click
+      end
+      object btnEdit: TBitBtn
+        Left = 6
+        Top = 127
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Edit'
+        TabOrder = 1
+        OnClick = btnEditClick
+      end
+      object btnDelete: TBitBtn
+        Left = 6
+        Top = 167
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Delete'
+        TabOrder = 2
+        OnClick = btnDeleteClick
+      end
+      object btnExcel: TBitBtn
+        Left = 6
+        Top = 207
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Excel'
+        TabOrder = 3
+        OnClick = btnExcelClick
+      end
+      object btnSelect: TBitBtn
+        Left = 6
+        Top = 245
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Select'
+        TabOrder = 4
+        OnClick = btnSelectClick
+      end
     end
-    object btnEdit: TBitBtn
-      Left = 6
-      Top = 127
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Edit'
+    object Panel1: TPanel
+      Left = 0
+      Top = 279
+      Width = 392
+      Height = 71
+      Align = alBottom
       TabOrder = 1
-      OnClick = btnEditClick
-      ExplicitTop = 124
+      DesignSize = (
+        392
+        71)
+      object Label4: TLabel
+        Left = 8
+        Top = 13
+        Width = 34
+        Height = 13
+        Caption = 'Search'
+      end
+      object chkbxShowInactive: TCheckBox
+        Left = 8
+        Top = 42
+        Width = 169
+        Height = 17
+        Caption = 'Show inactive stores'
+        TabOrder = 0
+        OnClick = chkbxShowInactiveClick
+      end
+      object BitBtn4: TBitBtn
+        Left = 414
+        Top = 38
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Close'
+        ModalResult = 2
+        NumGlyphs = 2
+        TabOrder = 1
+      end
+      object edtName: TEdit
+        Left = 52
+        Top = 9
+        Width = 177
+        Height = 21
+        TabOrder = 2
+        OnChange = edtNameChange
+      end
+      object BitBtn2: TBitBtn
+        Left = 309
+        Top = 35
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = '&Close'
+        ModalResult = 2
+        NumGlyphs = 2
+        TabOrder = 3
+      end
     end
-    object btnDelete: TBitBtn
-      Left = 6
-      Top = 167
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Delete'
+    object dbgDetails: TDBGrid
+      Left = 0
+      Top = 0
+      Width = 303
+      Height = 279
+      Align = alClient
+      DataSource = srcStore
+      DrawingStyle = gdsGradient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      ParentFont = False
       TabOrder = 2
-      OnClick = btnDeleteClick
-      ExplicitTop = 164
-    end
-    object btnExcel: TBitBtn
-      Left = 6
-      Top = 207
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Excel'
-      TabOrder = 3
-      OnClick = btnExcelClick
-      ExplicitTop = 204
-    end
-    object btnSelect: TBitBtn
-      Left = 6
-      Top = 245
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = '&Select'
-      TabOrder = 4
-      OnClick = btnSelectClick
-      ExplicitTop = 242
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      OnDrawColumnCell = dbgDetailsDrawColumnCell
+      OnDblClick = dbgDetailsDblClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Address_Name'
+          Title.Caption = 'Store Name'
+          Width = 272
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'inactive'
+          Visible = False
+        end>
     end
   end
   object srcStore: TDataSource

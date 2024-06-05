@@ -101,6 +101,7 @@ type
     ChangePrices1: TMenuItem;
     Change1: TMenuItem;
     mnuAddItem: TMenuItem;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

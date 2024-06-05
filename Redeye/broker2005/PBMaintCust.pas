@@ -470,6 +470,7 @@ type
     chkbxAcquiredCompany: TCheckBox;
     chkbxCTRLPCustomer: TCheckBox;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

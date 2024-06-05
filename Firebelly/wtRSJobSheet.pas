@@ -11,7 +11,7 @@ uses
 
 type
   TfrmWTRSJobSheet = class(TForm)
-    Panel1: TPanel;
+    pnlBottom: TPanel;
     btnPrint: TButton;
     btnPreview: TButton;
     btnEmail: TButton;
@@ -33,6 +33,7 @@ type
     chkbxMerge: TCheckBox;
     chkbxPrint: TCheckBox;
     qryReport: TFDQuery;
+    pnlBody: TPanel;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure EnableRun(Sender: TObject);

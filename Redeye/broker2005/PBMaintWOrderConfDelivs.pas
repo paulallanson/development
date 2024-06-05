@@ -15,7 +15,7 @@ type
     btnCourier: TBitBtn;
     dblkpService: TDBLookupComboBox;
     Label2: TLabel;
-    Panel2: TPanel;
+    pnlControls: TPanel;
     lblDelete: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
@@ -59,6 +59,7 @@ type
     Label15: TLabel;
     dblkpSort: TDBLookupComboBox;
     dblkpSpeed: TDBLookupComboBox;
+    pnlBody: TPanel;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure memQuantityChange(Sender: TObject);

@@ -3,7 +3,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Add Delivery Bin location'
-  ClientHeight = 159
+  ClientHeight = 157
   ClientWidth = 366
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -21,21 +21,21 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     TabOrder = 0
     object Label1: TLabel
       Left = 16
-      Top = 24
+      Top = 19
       Width = 63
       Height = 13
       Caption = 'Bin Location'
     end
     object Label2: TLabel
       Left = 16
-      Top = 56
+      Top = 51
       Width = 48
       Height = 13
       Caption = 'Delivered'
     end
     object Label3: TLabel
       Left = 192
-      Top = 56
+      Top = 51
       Width = 48
       Height = 13
       Caption = 'Allocated'
@@ -81,16 +81,17 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 130
+    Top = 128
     Width = 366
     Height = 29
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 130
     object btnOK: TBitBtn
       Left = 102
-      Top = 3
+      Top = 1
       Width = 75
       Height = 25
       Caption = 'OK'
@@ -119,7 +120,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     end
     object btnCancel: TBitBtn
       Left = 190
-      Top = 3
+      Top = 1
       Width = 75
       Height = 25
       Kind = bkCancel
@@ -131,8 +132,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     Left = 0
     Top = 80
     Width = 366
-    Height = 50
-    Align = alBottom
+    Height = 45
     BevelOuter = bvNone
     Caption = 'pnlAdjustment'
     ParentBackground = False
@@ -146,7 +146,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
       TabOrder = 0
       object Label4: TLabel
         Left = 16
-        Top = 18
+        Top = 15
         Width = 59
         Height = 13
         Caption = 'Adjustment'

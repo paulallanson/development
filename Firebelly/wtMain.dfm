@@ -16,7 +16,6 @@ object frmWTMain: TfrmWTMain
   ShowHint = True
   WindowState = wsMaximized
   WindowMenu = Window1
-  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -31,7 +30,7 @@ object frmWTMain: TfrmWTMain
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1479
+        Width = 1475
       end>
     object ToolBar1: TToolBar
       Left = 11

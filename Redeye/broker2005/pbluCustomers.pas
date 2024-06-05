@@ -1787,7 +1787,7 @@ var
 begin
   if dbgDetails.Dragging then exit;
 
-  if Column.Title.Font.style <> [fsbold] then
+  if Column.Title.Font.Style <> [fsbold] then
     SortType := ' ASC'
   else if dtmdlCustomers.SortType = ' DESC' then
       SortType := ' ASC'

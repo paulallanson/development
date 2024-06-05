@@ -198,6 +198,7 @@ type
     EnquiryLineGrid: TStringGrid;
     oldCapabilitySQL: TFDQuery;
     DropComboTarget1: TDropComboTarget;
+    pnlBody: TPanel;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);

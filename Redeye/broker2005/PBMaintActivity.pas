@@ -74,6 +74,7 @@ type
     imgIcons: TImageList;
     svDlgOfficeDoc: TSaveDialog;
     imgDocuments: TImageList;
+    pnlBody: TPanel;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button1Click(Sender: TObject);

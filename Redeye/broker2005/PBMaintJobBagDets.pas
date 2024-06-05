@@ -109,6 +109,7 @@ type
     mnuEditDescription: TMenuItem;
     mnuPrintStockOrder: TMenuItem;
     mnuProduction: TMenuItem;
+    pnlBody: TPanel;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

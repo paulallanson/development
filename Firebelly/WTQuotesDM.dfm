@@ -50,116 +50,107 @@ object dtmdlQuote: TdtmdlQuote
         '= '#39'N'#39')) AND Quote_Status.Quote_status > 1 AND ((Quote.inactive i' +
         's NULL) or (Quote.inactive = '#39'N'#39') or (Quote.inactive = '#39#39')) ORDE' +
         'R BY Quote.Quote desc')
-    Left = 24
+    Left = 25
     Top = 8
     object qryAllQuotesQuote: TIntegerField
       FieldName = 'Quote'
-      Origin = 'Quote'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
     end
     object qryAllQuotesDate_Required: TDateTimeField
       FieldName = 'Date_Required'
-      Origin = 'Date_Required'
-      Required = True
     end
     object qryAllQuotesDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-      Origin = 'Date_Raised'
-      Required = True
     end
     object qryAllQuotesCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'Customer'
-      Required = True
     end
     object qryAllQuotesDescription: TWideStringField
       FieldName = 'Description'
-      Origin = 'Description'
-      Required = True
-      Size = 255
+      Size = 50
     end
     object qryAllQuotesOperator: TIntegerField
       FieldName = 'Operator'
-      Origin = 'Operator'
-      Required = True
     end
-    object qryAllQuotesInstallation_price: TCurrencyField
+    object qryAllQuotesInstallation_price: TFloatField
       FieldName = 'Installation_price'
-      Origin = 'Installation_price'
-      Required = True
+      currency = True
     end
-    object qryAllQuotesDelivery_Price: TCurrencyField
+    object qryAllQuotesDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-      Origin = 'Delivery_Price'
-      Required = True
+      currency = True
     end
-    object qryAllQuotesSurvey_price: TCurrencyField
+    object qryAllQuotesSurvey_price: TFloatField
       FieldName = 'Survey_price'
-      Origin = 'Survey_price'
-      Required = True
-    end
-    object qryAllQuotesProject_Reference: TWideStringField
-      FieldName = 'Project_Reference'
-      Origin = 'Project_Reference'
-      Size = 100
+      currency = True
     end
     object qryAllQuotesReference: TWideStringField
+      DisplayWidth = 50
       FieldName = 'Reference'
-      Origin = 'Reference'
-      Size = 50
+      Size = 30
     end
     object qryAllQuotesQuote_Status: TIntegerField
       FieldName = 'Quote_Status'
-      Origin = 'Quote_Status'
-      Required = True
     end
-    object qryAllQuotesNett_Price: TCurrencyField
+    object qryAllQuotesNett_Price: TFloatField
       FieldName = 'Nett_Price'
-      Origin = 'Nett_Price'
-      Required = True
+      currency = True
     end
     object qryAllQuotesInactive: TWideStringField
       FieldName = 'Inactive'
-      Origin = 'Inactive'
       Size = 1
+    end
+    object qryAllQuotesOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Size = 30
+    end
+    object qryAllQuotesStatus_Description: TWideStringField
+      FieldName = 'Status_Description'
+      Size = 50
     end
     object qryAllQuotesCustomer_name: TWideStringField
       FieldName = 'Customer_name'
-      Origin = 'Customer_name'
       Size = 50
     end
     object qryAllQuotesContact_Name: TWideStringField
       FieldName = 'Contact_Name'
-      Origin = 'Contact_Name'
       Size = 50
     end
     object qryAllQuotesMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
-      Origin = 'Material_Type'
-      Required = True
+    end
+    object qryAllQuotesMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+    end
+    object qryAllQuotesGross_Price: TFloatField
+      FieldName = 'Gross_Price'
+      currency = True
+    end
+    object qryAllQuotesStatus_Text: TWideStringField
+      FieldKind = fkCalculated
+      FieldName = 'Status_Text'
+      OnGetText = qryAllQuotesStatus_TextGetText
+      Calculated = True
+    end
+    object qryAllQuotesIs_Retail_Customer: TWideStringField
+      FieldName = 'Is_Retail_Customer'
+      Size = 1
     end
     object qryAllQuotesImportance: TWideStringField
       FieldName = 'Importance'
-      Origin = 'Importance'
-      Size = 1
-    end
-    object qryAllQuotesGross_Price: TCurrencyField
-      FieldName = 'Gross_Price'
-      Origin = 'Gross_Price'
-      ReadOnly = True
     end
     object qryAllQuotesQuote_Number: TFloatField
       FieldName = 'Quote_Number'
-      Origin = 'Quote_Number'
     end
     object qryAllQuotesOriginal_Quote: TIntegerField
       FieldName = 'Original_Quote'
-      Origin = 'Original_Quote'
     end
-    object qryAllQuotesExpiry_Date: TDateTimeField
-      FieldName = 'Expiry_Date'
-      Origin = 'Expiry_Date'
+    object qryAllQuotesProject_Reference: TWideStringField
+      FieldName = 'Project_Reference'
+      Size = 100
+    end
+    object qryAllQuotesCustomer_is_Speculative: TWideStringField
+      FieldName = 'Customer_is_Speculative'
+      Size = 1
     end
     object qryAllQuotesExpiry_Date_New: TDateTimeField
       FieldKind = fkCalculated
@@ -167,37 +158,11 @@ object dtmdlQuote: TdtmdlQuote
       OnGetText = qryAllQuotesExpiry_Date_NewGetText
       Calculated = True
     end
-    object qryAllQuotesOperator_Name: TWideStringField
-      FieldName = 'Operator_Name'
-      Origin = 'Operator_Name'
-      Required = True
-      Size = 30
-    end
-    object qryAllQuotesStatus_Text: TWideStringField
-      FieldName = 'Status_Text'
-      Origin = 'Status_Text'
-      Required = True
-      OnGetText = qryAllQuotesStatus_TextGetText
-      Size = 50
-    end
-    object qryAllQuotesMaterial_Description: TWideStringField
-      FieldName = 'Material_Description'
-      Origin = 'Material_Description'
-      Size = 100
-    end
-    object qryAllQuotesIs_Retail_Customer: TWideStringField
-      FieldName = 'Is_Retail_Customer'
-      Origin = 'Is_Retail_Customer'
-      Size = 1
-    end
-    object qryAllQuotesCustomer_is_Speculative: TWideStringField
-      FieldName = 'Customer_is_Speculative'
-      Origin = 'Customer_is_Speculative'
-      Size = 1
+    object qryAllQuotesExpiry_Date: TDateTimeField
+      FieldName = 'Expiry_Date'
     end
     object qryAllQuotesAddress: TIntegerField
       FieldName = 'Address'
-      Origin = 'Address'
     end
   end
   object qryZero: TFDQuery
@@ -973,7 +938,9 @@ object dtmdlQuote: TdtmdlQuote
       '        Quote.Nett_Price,'
       '        Quote.Inactive,'
       '        Operator.Operator_Name,'
-      '        Quote_Status.Quote_status_description AS Status_Text,'
+      
+        '        Quote_Status.Quote_status_description AS Status_Descript' +
+        'ion,'
       '        Quote.Customer_name,'
       '        Quote.Contact_Name,'
       '        Quote.Material_Type,'
