@@ -325,7 +325,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 911
+      Left = 899
       Top = 8
       Width = 75
       Height = 25

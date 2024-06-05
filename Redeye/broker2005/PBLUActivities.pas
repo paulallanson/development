@@ -205,6 +205,7 @@ end;
 procedure TfrmPBLUActivities.FormShow(Sender: TObject);
 begin
   edtSearch.setfocus;
+//  FormActivate(Sender);
 end;
 
 procedure TfrmPBLUActivities.edtSearchChange(Sender: TObject);

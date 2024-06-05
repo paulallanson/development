@@ -82,6 +82,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       item
         Width = 300
       end>
+    ExplicitTop = 548
+    ExplicitWidth = 807
   end
   object pnlFooter: TPanel
     Left = 0
@@ -91,6 +93,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 511
+    ExplicitWidth = 807
     DesignSize = (
       813
       37)
@@ -160,6 +164,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 601
     end
     object CancelBitBtn: TBitBtn
       Left = 703
@@ -227,6 +232,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 697
     end
   end
   object pnlLineDetails: TPanel
@@ -238,15 +244,18 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Caption = 'pnlLineDetails'
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 254
+    ExplicitWidth = 807
     object EnquiryLinePage: TPageControl
       Tag = 180
       Left = 1
       Top = 1
       Width = 811
       Height = 255
-      ActivePage = TabSheet6
+      ActivePage = PartTabSheet
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 805
       object PartTabSheet: TTabSheet
         Caption = 'Part Details'
         DesignSize = (
@@ -789,6 +798,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           TabOrder = 0
           OnDblClick = SupplierGridDblClick
           OnDrawCell = SupplierGridDrawCell
+          ExplicitWidth = 657
           ColWidths = (
             204
             182
@@ -830,6 +840,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             FFFFFFFFFFFFFFFFFFFFFF3F00007F0000FFFFFFFFFFFFFFFFFF}
           TabOrder = 1
           OnClick = BitBtn4Click
+          ExplicitLeft = 684
         end
         object ContactSelBitBtn: TBitBtn
           Left = 690
@@ -854,6 +865,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           NumGlyphs = 2
           TabOrder = 2
           OnClick = ContactSelBitBtnClick
+          ExplicitLeft = 684
         end
       end
       object OptionsTabSheet: TTabSheet
@@ -983,7 +995,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C000000000000046000000000000000000000000309C30A0A89CDA01
+              00000000C000000000000046000000000000000000000000B00491F548B3DA01
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1159,7 +1171,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              00000000000000000000000000000000207530A0A89CDA01207530A0A89CDA01
+              00000000000000000000000000000000B00491F548B3DA01B00491F548B3DA01
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1636,7 +1648,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C000000000000046000000000000000000000000309C30A0A89CDA01
+              00000000C000000000000046000000000000000000000000B00491F548B3DA01
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1975,6 +1987,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Caption = 'pnlLines'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 807
+    ExplicitHeight = 84
     object Panel1: TPanel
       Left = 718
       Top = 1
@@ -1983,6 +1997,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Align = alRight
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 712
+      ExplicitHeight = 82
       DesignSize = (
         94
         91)
@@ -2083,6 +2099,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
       OnClick = EnquiryLineGridClick
       OnDblClick = EnquiryLineGridDblClick
+      ExplicitWidth = 711
+      ExplicitHeight = 82
       ColWidths = (
         40
         213
@@ -2099,6 +2117,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 807
     DesignSize = (
       813
       41)
@@ -2195,6 +2214,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Style = csDropDownList
       Anchors = [akTop, akRight]
       TabOrder = 1
+      ExplicitLeft = 610
     end
     object ReqByDateEdit: TEdit
       Left = 414
@@ -2204,6 +2224,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Anchors = [akTop, akRight]
       TabOrder = 2
       OnExit = ReqByDateEditExit
+      ExplicitLeft = 408
     end
     object edtEnquiryNo: TEdit
       Left = 72
@@ -2223,6 +2244,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 807
     DesignSize = (
       813
       129)
@@ -2273,6 +2295,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ReadOnly = True
       TabOrder = 0
       OnChange = CustomerEditChange
+      ExplicitWidth = 243
     end
     object CustRepCombo: TComboBox
       Left = 568
@@ -2284,6 +2307,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
       OnChange = CustRepComboChange
       OnDropDown = CustRepComboDropDown
+      ExplicitLeft = 562
     end
     object ContactCombo: TComboBox
       Left = 166
@@ -2295,6 +2319,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 2
       OnChange = ContactComboChange
       OnDropDown = ContactComboDropDown
+      ExplicitWidth = 243
     end
     object BranchEdit: TEdit
       Left = 166
@@ -2306,6 +2331,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ReadOnly = True
       TabOrder = 3
       OnChange = BranchEditChange
+      ExplicitWidth = 243
     end
     object DescriptionEdit: TEdit
       Left = 166
@@ -2316,6 +2342,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       MaxLength = 80
       TabOrder = 4
       OnChange = DescriptionEditChange
+      ExplicitWidth = 573
     end
     object CustomerSpeedButton: TButton
       Left = 424
@@ -2332,6 +2359,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 5
       OnClick = CustomerSpeedButtonClick
+      ExplicitLeft = 418
     end
     object BranchSpeedButton: TButton
       Left = 424
@@ -2348,6 +2376,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 6
       OnClick = BranchSpeedButtonClick
+      ExplicitLeft = 418
     end
     object ContactSpeedButton: TButton
       Left = 424
@@ -2364,6 +2393,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 7
       OnClick = ContactSpeedButtonClick
+      ExplicitLeft = 418
     end
     object RepSpeedButton: TButton
       Left = 756
@@ -2381,6 +2411,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 8
       OnClick = RepSpeedButtonClick
+      ExplicitLeft = 750
     end
     object rdgType: TRadioGroup
       Left = 9

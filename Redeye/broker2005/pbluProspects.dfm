@@ -2,8 +2,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   Left = 65
   Top = 104
   Caption = 'Prospects'
-  ClientHeight = 336
-  ClientWidth = 1071
+  ClientHeight = 327
+  ClientWidth = 1065
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,11 +20,11 @@ object frmPBLUProspects: TfrmPBLUProspects
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    1071
-    336)
+    1065
+    327)
   TextHeight = 13
   object Label4: TLabel
-    Left = -147
+    Left = -159
     Top = 7
     Width = 83
     Height = 13
@@ -41,19 +41,19 @@ object frmPBLUProspects: TfrmPBLUProspects
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1071
+    Width = 1065
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1065
+        Width = 1059
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1056
+      Width = 1050
       Height = 40
       Align = alLeft
       ButtonHeight = 36
@@ -178,8 +178,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1071
-    Height = 202
+    Width = 1065
+    Height = 193
     Align = alClient
     DataSource = dtmdlCustomers.dtsProspects
     DrawingStyle = gdsGradient
@@ -353,8 +353,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object Panel1: TPanel
     Left = 0
-    Top = 276
-    Width = 1071
+    Top = 267
+    Width = 1065
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -384,7 +384,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 885
+      Left = 879
       Top = 1
       Width = 185
       Height = 39
@@ -414,8 +414,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 317
-    Width = 1071
+    Top = 308
+    Width = 1065
     Height = 19
     Panels = <
       item
@@ -428,7 +428,7 @@ object frmPBLUProspects: TfrmPBLUProspects
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1071
+    Width = 1065
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -457,31 +457,32 @@ object frmPBLUProspects: TfrmPBLUProspects
       Align = alLeft
       BevelInner = bvLowered
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 67
-        Height = 21
+        Width = 73
+        Height = 23
         Caption = 'Prospects'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
+        Font.Color = clNavy
+        Font.Height = -17
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
     end
     object Panel5: TPanel
-      Left = 820
+      Left = 814
       Top = 1
       Width = 250
       Height = 28
       Align = alRight
       BevelInner = bvLowered
       BevelOuter = bvNone
+      Color = 16642529
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
@@ -490,13 +491,13 @@ object frmPBLUProspects: TfrmPBLUProspects
       object Label2: TLabel
         Left = 13
         Top = 7
-        Width = 83
-        Height = 13
+        Width = 86
+        Height = 15
         Anchors = [akTop, akRight]
         Caption = 'Colour Code by:'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
+        Font.Color = clNavy
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -522,27 +523,36 @@ object frmPBLUProspects: TfrmPBLUProspects
     object PageScroller1: TPageScroller
       Left = 401
       Top = 1
-      Width = 419
+      Width = 413
       Height = 28
       Align = alClient
+      Color = 16642529
       Control = CoolBar2
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 2
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 407
+        Width = 413
         Height = 28
+        Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 401
+            Width = 407
           end>
+        Color = 16642529
+        ParentColor = False
         Visible = False
+        ExplicitLeft = 32
+        ExplicitTop = -3
+        ExplicitWidth = 401
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 392
+          Width = 398
           Height = 25
           Align = alClient
           ButtonWidth = 66

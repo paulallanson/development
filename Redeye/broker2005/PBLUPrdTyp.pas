@@ -48,6 +48,8 @@ type
     procedure ShowNotes(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure chkbxActiveOnlyClick(Sender: TObject);
+    procedure DetsDBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
     bDisableNameChangeEvent: ByteBool;
@@ -159,6 +161,16 @@ begin
   end
   else
     chgbitbtnclick(Self);
+end;
+
+procedure TPBLUPrdTypFrm.DetsDBGridDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  if(detsDBGrid.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
+    begin
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end;
 end;
 
 procedure TPBLUPrdTypFrm.AddBitBtnClick(Sender: TObject);

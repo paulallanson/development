@@ -3,8 +3,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
-  ClientHeight = 451
-  ClientWidth = 513
+  ClientHeight = 449
+  ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,15 +28,17 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 371
-    Width = 513
+    Top = 369
+    Width = 526
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 362
+    ExplicitWidth = 507
     DesignSize = (
-      513
+      526
       80)
     object btnPrint: TButton
       Left = 8
@@ -93,12 +95,13 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 513
+    Width = 526
     Height = 62
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 507
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -123,11 +126,12 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 513
+    Width = 526
     Height = 138
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 507
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -176,20 +180,24 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 200
-    Width = 513
-    Height = 171
+    Width = 526
+    Height = 169
     Align = alClient
     Caption = 'pnlDocumentDetails'
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 507
+    ExplicitHeight = 162
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
-      Width = 511
-      Height = 169
-      ActivePage = TabSheet2
+      Width = 524
+      Height = 167
+      ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 505
+      ExplicitHeight = 160
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox
@@ -509,8 +517,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
         '<> 0)'
       'ORDER BY sales_order_line.quote')
-    Left = 376
-    Top = 80
+    Left = 326
+    Top = 132
     ParamData = <
       item
         Name = 'Int_sel'
@@ -531,8 +539,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         '            ON (Customer_Branch.Branch_No = Sales_Order.Branch_n' +
         'o) AND (Customer_Branch.Customer = Sales_Order.Customer)'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 432
-    Top = 16
+    Left = 380
+    Top = 76
     ParamData = <
       item
         Name = 'Sales_Order'

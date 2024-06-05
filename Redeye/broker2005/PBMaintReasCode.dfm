@@ -3,14 +3,15 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Reason Codes'
-  ClientHeight = 108
-  ClientWidth = 418
+  ClientHeight = 114
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy

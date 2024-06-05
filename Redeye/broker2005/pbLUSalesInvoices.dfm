@@ -2,8 +2,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   Left = 29
   Top = 178
   Caption = 'Sales Invoices'
-  ClientHeight = 387
-  ClientWidth = 1166
+  ClientHeight = 379
+  ClientWidth = 1164
   Color = clBtnFace
   Constraints.MinHeight = 426
   Constraints.MinWidth = 1182
@@ -25,19 +25,19 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1166
+    Width = 1164
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1160
+        Width = 1158
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1151
+      Width = 1149
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -45,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1139
+        Width = 1137
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 68
@@ -197,8 +197,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1166
-    Height = 238
+    Width = 1164
+    Height = 230
     Align = alClient
     DataSource = dmSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
@@ -366,8 +366,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 312
-    Width = 1166
+    Top = 304
+    Width = 1164
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -388,7 +388,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 882
+      Left = 880
       Top = 1
       Width = 283
       Height = 54
@@ -517,8 +517,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 368
-    Width = 1166
+    Top = 360
+    Width = 1164
     Height = 19
     Panels = <
       item
@@ -531,23 +531,23 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1166
+    Width = 1164
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
       Top = 3
-      Width = 96
-      Height = 21
+      Width = 104
+      Height = 23
       Caption = 'Sales Invoices'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False

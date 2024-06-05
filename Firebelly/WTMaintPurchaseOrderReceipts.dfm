@@ -11,6 +11,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
+  Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
@@ -41,7 +42,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       832
       41)
     object btbtnClose: TBitBtn
-      Left = 732
+      Left = 726
       Top = 8
       Width = 75
       Height = 25
@@ -51,7 +52,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       TabOrder = 0
     end
     object btnOK: TBitBtn
-      Left = 644
+      Left = 638
       Top = 8
       Width = 75
       Height = 25

@@ -40,6 +40,8 @@ type
     procedure FindInGrid(iTempSel: Integer);
     procedure FormCreate(Sender: TObject);
     procedure chkbxActiveOnlyClick(Sender: TObject);
+    procedure DetsDBGridDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
     bDisableNameChangeEvent: ByteBool;
@@ -87,11 +89,10 @@ begin
   begin
     Close;
     ParamByName('Code_From').AsString := '%' + NameEdit.Text + '%';
-(*    if chkbxActiveOnly.Checked then
+    if chkbxActiveOnly.Checked then
       ParamByName('inactive').AsString := 'N'
     else
       ParamByName('inactive').AsString := 'Y';
-*)
     Open;
     SelectBitBtn.Enabled := RecordCount > 0;
     ChgBitBtn.Enabled := RecordCount > 0;
@@ -139,6 +140,16 @@ begin
     SelectCode(Self)
   else
     chgbitbtnclick(Self);
+end;
+
+procedure TPBLUCategoryFrm.DetsDBGridDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  if(detsDBGrid.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
+    begin
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end;
 end;
 
 procedure TPBLUCategoryFrm.AddBitBtnClick(Sender: TObject);

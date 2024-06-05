@@ -1,12 +1,13 @@
 object PBAutoPODetsFrm: TPBAutoPODetsFrm
   Left = 84
   Top = 1
-  AutoSize = True
   BorderStyle = bsDialog
   Caption = 'Create Purchase Order From Enquiry'
-  ClientHeight = 543
-  ClientWidth = 624
+  ClientHeight = 565
+  ClientWidth = 657
   Color = clBtnFace
+  Constraints.MinHeight = 581
+  Constraints.MinWidth = 634
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
@@ -19,11 +20,13 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
-    Width = 624
+    Width = 657
     Height = 40
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 1
+    ExplicitWidth = 738
     object EnqLabel: TLabel
       Left = 8
       Top = 4
@@ -73,11 +76,14 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlOrderQty: TPanel
     Left = 0
     Top = 40
-    Width = 624
+    Width = 657
     Height = 40
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 63
+    ExplicitWidth = 738
     object Label4: TLabel
       Left = 8
       Top = 13
@@ -105,14 +111,16 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlFunctions: TPanel
     Left = 0
-    Top = 505
-    Width = 624
+    Top = 527
+    Width = 657
     Height = 38
-    Align = alTop
+    Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 504
+    ExplicitWidth = 738
     object OKBitBtn: TBitBtn
-      Left = 443
+      Left = 472
       Top = 6
       Width = 75
       Height = 25
@@ -122,7 +130,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 531
+      Left = 560
       Top = 6
       Width = 75
       Height = 25
@@ -134,11 +142,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlRunOnQty: TPanel
     Left = 0
     Top = 80
-    Width = 624
+    Width = 657
     Height = 40
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 622
     object Label3: TLabel
       Left = 8
       Top = 12
@@ -193,14 +202,16 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlOrder: TPanel
     Left = 0
     Top = 233
-    Width = 624
-    Height = 136
-    Align = alTop
+    Width = 657
+    Height = 158
+    Align = alClient
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 738
+    ExplicitHeight = 160
     object Label1: TLabel
       Left = 8
-      Top = 52
+      Top = 61
       Width = 74
       Height = 13
       Caption = 'Cust Order No'
@@ -219,23 +230,23 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Caption = 'Order Date'
     end
     object Label10: TLabel
-      Left = 441
+      Left = 433
       Top = 12
-      Width = 47
+      Width = 85
       Height = 52
       Caption = 'Date required from Supplier'
       WordWrap = True
     end
     object Label2: TLabel
       Left = 9
-      Top = 80
+      Top = 92
       Width = 70
       Height = 13
       Caption = 'Supplier Desc'
     end
     object Label5: TLabel
       Left = 9
-      Top = 110
+      Top = 124
       Width = 76
       Height = 13
       Caption = 'Customer Desc'
@@ -250,7 +261,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     end
     object CustOrdEdit: TEdit
       Left = 104
-      Top = 48
+      Top = 57
       Width = 193
       Height = 21
       MaxLength = 40
@@ -267,11 +278,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnExit = DateEditExit
     end
     object ProofsGrpBox: TGroupBox
-      Left = 390
-      Top = 51
+      Left = 392
+      Top = 62
       Width = 243
       Height = 78
-      Caption = 'Proofs'
       ParentBackground = False
       TabOrder = 8
       object ProofByLabel: TLabel
@@ -288,15 +298,6 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         Height = 13
         Caption = 'Status'
       end
-      object ProofsReqChkBox: TCheckBox
-        Left = 8
-        Top = 0
-        Width = 113
-        Height = 17
-        Caption = 'Proofs required'
-        TabOrder = 0
-        OnClick = ProofsReqChkBoxClick
-      end
       object ProofsDateEdit: TEdit
         Left = 60
         Top = 21
@@ -304,7 +305,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         Height = 21
         TabStop = False
         MaxLength = 10
-        TabOrder = 1
+        TabOrder = 0
         OnExit = ProofsDateEditExit
       end
       object ProofStatDBLUCB: TDBLookupComboBox
@@ -315,7 +316,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         KeyField = 'Proof_Status'
         ListField = 'Description'
         ListSource = PBAutoPODM.ProofStatSRC
-        TabOrder = 3
+        TabOrder = 2
         OnClick = ProofStatDBLUCBClick
       end
       object ProofDateBtn: TBitBtn
@@ -337,12 +338,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
-        TabOrder = 2
+        TabOrder = 1
         OnClick = SelDateBtnClick
       end
     end
     object ReqByDateEdit: TEdit
-      Left = 520
+      Left = 524
       Top = 16
       Width = 81
       Height = 21
@@ -353,7 +354,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     end
     object SuppDescEdit: TEdit
       Left = 104
-      Top = 76
+      Top = 88
       Width = 273
       Height = 21
       MaxLength = 20
@@ -362,7 +363,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     end
     object CustDescEdit: TEdit
       Left = 104
-      Top = 106
+      Top = 120
       Width = 273
       Height = 21
       MaxLength = 40
@@ -404,7 +405,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = SelDateBtnClick
     end
     object ReqByDateLUBtn: TBitBtn
-      Left = 608
+      Left = 612
       Top = 16
       Width = 25
       Height = 25
@@ -447,15 +448,26 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       TabOrder = 2
       OnClick = CustReqDateBtnClick
     end
+    object ProofsReqChkBox: TCheckBox
+      Left = 400
+      Top = 55
+      Width = 102
+      Height = 17
+      Caption = 'Proofs required'
+      TabOrder = 10
+      OnClick = ProofsReqChkBoxClick
+    end
   end
   object pnlDelivery: TPanel
     Left = 0
-    Top = 369
-    Width = 624
+    Top = 391
+    Width = 657
     Height = 136
-    Align = alTop
+    Align = alBottom
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 369
+    ExplicitWidth = 622
     object AddrTypeRadGrp: TRadioGroup
       Left = 7
       Top = 6
@@ -539,11 +551,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlSupplier: TPanel
     Left = 0
     Top = 120
-    Width = 624
+    Width = 657
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 6
+    ExplicitWidth = 622
     object SuppLabel: TLabel
       Left = 8
       Top = 6
@@ -601,11 +614,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlPrices: TPanel
     Left = 0
     Top = 177
-    Width = 624
+    Width = 657
     Height = 56
     Align = alTop
     ParentBackground = False
     TabOrder = 7
+    ExplicitWidth = 622
     object Label6: TLabel
       Left = 8
       Top = 13

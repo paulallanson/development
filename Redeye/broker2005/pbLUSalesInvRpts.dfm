@@ -3,30 +3,33 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
   Top = 107
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Sales Invoice Reports'
-  ClientHeight = 298
-  ClientWidth = 451
+  ClientHeight = 324
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 451
-    Height = 257
+    Width = 453
+    Height = 283
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 445
+    ExplicitHeight = 248
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 451
-      Height = 257
+      Width = 453
+      Height = 283
       Align = alClient
       Columns = <
         item
@@ -103,19 +106,23 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 451
+      ExplicitHeight = 257
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 257
-    Width = 451
+    Top = 283
+    Width = 453
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 248
+    ExplicitWidth = 445
     DesignSize = (
-      451
+      453
       41)
     object btnRun: TButton
       Left = 16
@@ -127,7 +134,7 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 366
+      Left = 362
       Top = 8
       Width = 75
       Height = 25
@@ -135,6 +142,7 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 354
     end
   end
 end

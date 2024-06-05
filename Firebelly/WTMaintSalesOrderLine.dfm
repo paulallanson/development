@@ -3,7 +3,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
   Top = 123
   BorderStyle = bsDialog
   Caption = 'Sales Order line details'
-  ClientHeight = 231
+  ClientHeight = 290
   ClientWidth = 622
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,18 +18,20 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
   TextHeight = 13
   object pnlFunctions: TPanel
     Left = 0
-    Top = 191
+    Top = 250
     Width = 622
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     TabStop = True
+    ExplicitTop = 182
+    ExplicitWidth = 616
     DesignSize = (
       622
       40)
     object lblDelete: TLabel
-      Left = 294
+      Left = 288
       Top = 12
       Width = 145
       Height = 15
@@ -44,7 +46,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ExplicitLeft = 302
     end
     object btnOK: TBitBtn
-      Left = 454
+      Left = 448
       Top = 7
       Width = 75
       Height = 25
@@ -78,9 +80,10 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 442
     end
     object btnCancel: TBitBtn
-      Left = 534
+      Left = 528
       Top = 7
       Width = 75
       Height = 25
@@ -94,16 +97,18 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
+      ExplicitLeft = 522
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 0
     Width = 622
-    Height = 191
+    Height = 250
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 1
     object Label1: TLabel
       Left = 10
       Top = 24
@@ -119,8 +124,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Caption = 'Price/unit'
     end
     object Label2: TLabel
-      Left = 208
-      Top = 78
+      Left = 210
+      Top = 77
       Width = 45
       Height = 13
       Caption = 'Unit Size'
@@ -146,8 +151,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Caption = 'Sell Price/unit'
     end
     object Label5: TLabel
-      Left = 208
-      Top = 105
+      Left = 210
+      Top = 104
       Width = 42
       Height = 13
       Caption = 'Vat Rate'
@@ -189,14 +194,14 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
     object Label6: TLabel
       Left = 10
-      Top = 172
+      Top = 202
       Width = 62
       Height = 13
       Caption = 'Job Number'
     end
     object Label8: TLabel
       Left = 10
-      Top = 171
+      Top = 170
       Width = 75
       Height = 13
       Caption = 'Allocated (units)'
@@ -208,8 +213,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ParentFont = False
     end
     object edtProduct: TEdit
-      Left = 96
-      Top = 20
+      Left = 112
+      Top = 21
       Width = 137
       Height = 21
       CharCase = ecUpperCase
@@ -218,8 +223,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnKeyPress = edtProductKeyPress
     end
     object btnLUProducts: TButton
-      Left = 240
-      Top = 18
+      Left = 256
+      Top = 19
       Width = 25
       Height = 25
       Caption = '...'
@@ -233,8 +238,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnClick = btnLUProductsClick
     end
     object memPrice: TMemo
-      Left = 96
-      Top = 74
+      Left = 112
+      Top = 75
       Width = 81
       Height = 21
       TabStop = False
@@ -245,9 +250,9 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       WordWrap = False
     end
     object edtDescription: TEdit
-      Left = 96
-      Top = 48
-      Width = 521
+      Left = 112
+      Top = 49
+      Width = 471
       Height = 21
       TabStop = False
       Color = clBtnFace
@@ -265,8 +270,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       TabOrder = 4
     end
     object memSellPrice: TMemo
-      Left = 96
-      Top = 101
+      Left = 112
+      Top = 102
       Width = 81
       Height = 21
       Alignment = taRightJustify
@@ -288,8 +293,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       TabOrder = 7
     end
     object edtQtyPacks: TMemo
-      Left = 96
-      Top = 135
+      Left = 112
+      Top = 136
       Width = 81
       Height = 21
       TabOrder = 6
@@ -341,8 +346,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateQty
     end
     object edtJobNumber: TMemo
-      Left = 96
-      Top = 199
+      Left = 112
+      Top = 200
       Width = 81
       Height = 21
       TabOrder = 12
@@ -353,8 +358,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateQty
     end
     object edtAllocated: TMemo
-      Left = 96
-      Top = 167
+      Left = 112
+      Top = 168
       Width = 81
       Height = 21
       TabOrder = 11

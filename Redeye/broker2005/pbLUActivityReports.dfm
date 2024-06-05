@@ -1,32 +1,31 @@
 object frmPBLUActivityReports: TfrmPBLUActivityReports
   Left = 201
   Top = 107
-  Width = 421
-  Height = 310
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Activity Reports'
+  ClientHeight = 263
+  ClientWidth = 403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
+  Position = poScreenCenter
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 413
-    Height = 242
+    Width = 403
+    Height = 222
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 413
-      Height = 242
+      Width = 403
+      Height = 222
       Align = alClient
       Columns = <
         item
@@ -41,27 +40,30 @@ object frmPBLUActivityReports: TfrmPBLUActivityReports
           Caption = 'Item No'
           Width = 0
         end>
-      Items.Data = {
-        420000000100000000000000FFFFFFFFFFFFFFFF01000000000000000F416374
-        6976697479205265706F7274135042525341435449564954594355535446524D
-        FFFF}
+      Items.ItemData = {
+        05650000000100000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
+        000F4100630074006900760069007400790020005200650070006F0072007400
+        1350004200520053004100430054004900560049005400590043005500530054
+        00460052004D0000000000FFFF}
       ReadOnly = True
       RowSelect = True
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 413
+      ExplicitHeight = 242
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 242
-    Width = 413
+    Top = 222
+    Width = 403
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      413
+      403
       41)
     object btnRun: TButton
       Left = 16
