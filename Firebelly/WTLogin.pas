@@ -16,7 +16,6 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     GetOperatorSQL: TFDQuery;
-    Edit1: TEdit;
     Label3: TLabel;
     Label4: TLabel;
     lblLogInto: TLabel;
@@ -29,6 +28,7 @@ type
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
   private
+    FTempArray: string;
     iLoginTries: Integer;
     sDBase: string[1];
     FOK: Boolean;
@@ -93,15 +93,14 @@ begin
     sgList.Free;
   end;
 
-  Edit1.Text := TempArray;
-  sDBase := ShortString(Copy(Trim(Edit1.Text), 1, 1));
+  FTempArray := TempArray;
+  sDBase := ShortString(Copy(Trim(FTempArray), 1, 1));
   ShowDataBAse(Self);
   GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray, SizeOf(TempArray), TfrmWTMain.AppIniFile);
-  Edit1.Text := TempArray;
-  FsFaxSystem := Edit1.Text;
+  FTempArray := TempArray;
+  FsFaxSystem := FTempArray;
   OK := False;
   iLoginTries := 0;
-  PassWordEdit.SetFocus;
 end;
 
 procedure TfrmWTLogin.OKBitBtnClick(Sender: TObject);
@@ -223,16 +222,16 @@ begin
       0: TempAlias := 'L';
       1: TempAlias := 'T';
     end;
-    Edit1.Text := TempAlias;
-    sDBase := ShortString(Copy(Trim(Edit1.Text), 1, 1));
+    FTempArray := TempAlias;
+    sDBase := ShortString(Copy(Trim(FTempArray), 1, 1));
     ShowDataBase(Self);
     WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias, TfrmWTMain.AppIniFile);
     case frmWTEnvSel.FaxSystemRadioGroup.ItemIndex of
       0: TempAlias := 'S';
       1: TempAlias := 'W';
     end;
-    Edit1.Text := TempAlias;
-    FsFaxSystem := Edit1.Text;
+    FTempArray := TempAlias;
+    FsFaxSystem := FTempArray;
     WritePrivateProfileString('Quaystone', 'Fax System', TempAlias, TfrmWTMain.AppIniFile);
   end;
   finally

@@ -18,7 +18,6 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     GetOperatorSQL: TFDQuery;
-    Edit1: TEdit;
     lblLogInto: TLabel;
     cmbAliasList: TComboBox;
     Label3: TLabel;
@@ -99,10 +98,8 @@ begin
     sgList.Free;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Fax System', 'S', TempArray,
-    sizeof(TempArray), AppIniFile);
-  Edit1.Text := TempArray;
-  FsFaxSystem := Edit1.Text;
+  GetPrivateProfileString('Centrereed Broker', 'Fax System', 'S', TempArray, sizeof(TempArray), AppIniFile);
+  FsFaxSystem := TempArray;
 
   OK := False;
   iLoginTries := 0;

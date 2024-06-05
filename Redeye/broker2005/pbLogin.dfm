@@ -93,16 +93,6 @@ object frmpbLogin: TfrmpbLogin
     TabOrder = 4
     OnClick = CancelBitBtnClick
   end
-  object Edit1: TEdit
-    Left = 384
-    Top = 96
-    Width = 33
-    Height = 21
-    TabStop = False
-    TabOrder = 5
-    Text = 'Edit1'
-    Visible = False
-  end
   object cmbAliasList: TComboBox
     Left = 104
     Top = 144

@@ -91,15 +91,6 @@ object frmWTLogin: TfrmWTLogin
     NumGlyphs = 2
     TabOrder = 4
   end
-  object Edit1: TEdit
-    Left = 320
-    Top = 88
-    Width = 33
-    Height = 21
-    TabOrder = 5
-    Text = 'Edit1'
-    Visible = False
-  end
   object cmbAliasList: TComboBox
     Left = 104
     Top = 130
