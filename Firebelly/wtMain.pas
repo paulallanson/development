@@ -195,7 +195,6 @@ type
     procedure mnuLevelofImportanceClick(Sender: TObject);
     procedure mnuVatClick(Sender: TObject);
     procedure mnuReasonsClick(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
     procedure btnSalesClick(Sender: TObject);
     procedure btnJobsClick(Sender: TObject);
     procedure mnuScriptsClick(Sender: TObject);
@@ -317,6 +316,7 @@ type
     procedure PseudoFormActivate;
     procedure LicenceCheck;
     procedure InitialiseToolButtons;
+    procedure ApplicationLogin;
 {$IFDEF DEMO}
     procedure DemoCheck(TempWarn: ByteBool);
     { Private declarations }
@@ -475,6 +475,7 @@ end;
 procedure TfrmWTMain.FormShow(Sender: TObject);
 begin
   InitialiseToolButtons;
+  ApplicationLogin;
 end;
 
 procedure TfrmWTMain.actnCloseAllExecute(Sender: TObject);
@@ -637,6 +638,201 @@ begin
     frmWtLUEdgeDetails.free;
   end;
 
+end;
+
+procedure TfrmWTMain.ApplicationLogin;
+var
+  LoginFormOK             : ByteBool;
+  UserName                : string;
+begin
+  bEndUSer := false;
+  MaxUsers := 100;
+{$IFDEF FREE}
+  MaxUsers := 2 ;
+{$ENDIF}
+{$IFDEF GMS}
+  MaxUsers := 6 ;
+{$ENDIF}
+{$IFDEF GRANTECH}
+  MaxUsers := 6 ;
+{$ENDIF}
+{$IFDEF MEGAMARBLE}
+  MaxUsers := 3 ;
+{$ENDIF}
+{$IFDEF AKTIV}
+  MaxUsers := 4 ;
+{$ENDIF}
+{$IFDEF BELLAGIO}
+  MaxUsers := 22 ;
+{$ENDIF}
+{$IFDEF ROANN}
+  MaxUsers := 20 ;
+{$ENDIF}
+{$IFDEF RUBY}
+  MaxUsers := 1 ;
+{$ENDIF}
+{$IFDEF ELITE}
+  MaxUsers := 6 ;
+{$ENDIF}
+{$IFDEF ROMANY}
+  MaxUsers := 7 ;
+{$ENDIF}
+{$IFDEF ENDUSER}
+  MaxUsers := 10 ;
+//  bEndUSer := true;
+{$ENDIF}
+{$IFDEF BATTAGLIA}
+  MaxUsers := 2 ;
+{$ENDIF}
+  if not FActivated then
+  begin
+{$IFDEF DEMO}
+      mnuDemoActivate.OnClick := mnuDemoActivateClick;
+      DataBaseDescr := 'Login To Demo DataBase';
+      frmWTMain.Caption := frmWTMain.Caption + ' - Demonstration system';
+      DemoCheck(False);
+      Operator := 1 {Demo operator};
+      OperatorName := 'Demo Operator';
+      begin  { needed for ENDIF below }
+{$ELSE}
+{$IFDEF ENDUSER}
+      mnuDemoActivate.OnClick := mnuEndUserActivateClick;
+      EndUSerCheck(False);
+{$ENDIF}
+      frmWTLogin := TfrmWTLogin.Create(Self);
+      try
+        frmWTLogin.UserEdit.Text := stsbrStatus.Panels[0].Text;
+        frmWTLogin.ShowModal;
+        LoginFormOK := frmWTLogin.OK;
+        if LoginFormOK then
+        begin
+          UserName := frmWTLogin.UserEdit.Text;
+          Operator := frmWTLogin.Operator;
+          OperatorName := frmWTLogin.Operator_name;
+          OperatorEmail := frmWTLogin.Operator_Email;
+          OperatorRevenueCentre := frmWTLogin.Operator_Revenue_Centre;
+//          DataBaseDescr := frmWTLogin.Caption;
+          DataBaseDescr := frmWTLogin.cmbAliasList.text;
+          FaxSystem := frmWTLogin.sFaxSystem ;
+
+          bEndUSer := frmWTLogin.EndUser;
+
+(*          TempComputerSize := SizeOf(TempComputer);
+          GetComputerName(Addr(TempComputer), TempComputerSize);
+          ComputerName := TempComputer;
+*)
+          ComputerName := GetComputerNetName;
+
+(*          if Pos('Live', DataBaseDescr) <> 0 then
+            frmWTMain.Caption := frmWTMain.Caption + ' - Live Database'
+          else
+            frmWTMain.Caption := frmWTMain.Caption + ' - Test Database';
+*)
+          frmWTMain.WindowState := wsMaximized;
+          if RunDBUpdate then
+            UpdateDatabase;
+        end;
+      finally
+        frmWTLogin.Free;
+      end;
+      if not LoginFormOK then
+        Application.Terminate
+      else
+      begin
+        Factivated := true;
+{$ENDIF}
+
+        frmAllImages.LoadReportLogo(Self);
+
+        with dtmdlWorktops.qryDeleteWorkStations do
+        begin
+          Close;
+          ParamByName('WorkStation_Name').AsString := ComputerName;
+          ParamByName('Status_Descr').AsString := UserName;
+          ExecSQL;
+        end;
+
+        {Try to get a valid workstation slot for this workstation};
+        WorkStation := 0;
+        {Try to find an empty workstation slot};
+        with dtmdlWorktops.qryGetWorkStation do
+        begin
+          repeat
+            begin
+              WorkStation := WorkStation + 1;
+              if WorkStation > MaxUsers then
+                begin
+                  { No empty slots};
+                  MessageDlg('User limit exceeded', mtError, [mbAbort], 0);
+                  WorkStation := 0;
+                  Application.Terminate;
+                  Exit;
+                end;
+              Close;
+              ParamByName('WorkStation').AsString := IntToStr(WorkStation);
+              Open;
+              First;
+            end;
+          until EOF = True;
+        end;
+
+        with dtmdlWorktops.qryAddWorkStation do
+        begin
+        {Vacant slot found, add details for this workstation };
+          Close;
+          ParamByName('WorkStation').AsString := IntToStr(WorkStation);
+          ParamByName('WorkStation_Name').AsString := ComputerName;
+          ParamByName('Status_Descr').AsString := UserName;
+          ParamByName('Software_Version').AsString := SWVersion + '/' + SWSubVersion;
+          ParamByName('Logged_in').Asdatetime := now;
+          ExecSQL;
+        end;
+
+(*          {Get user and password from login screen}
+        TempLoginSize := SizeOf(TempLogin);
+        GetUserName(Addr(TempLogin), TempLoginSize);
+        stsbrStatus.Panels[0].Text := TempLogin;
+
+
+        if (Username = 'firebelly') or (Username = 'bsadmin') then
+          mnuManageLogins.Visible := true
+        else
+          begin
+            mnuManageLogins.Visible := false;
+          end;
+*)
+        UserName := GetUserFromWindows;
+        stsbrStatus.Panels[0].Text := UserName;
+
+        {Check if using Contracts}
+        CheckContractQuoting;
+
+        {Check if using Purchase Ordering}
+        CheckPurchaseOrdering;
+
+        {Check if using Purchase Ordering}
+        CheckRevenueCentres;
+
+        {Check if using Purchase Ordering}
+        CheckScheduling;
+
+        {Check if using Stock}
+        CheckStockSystem;
+
+        GetCompanyDetails;
+        GetEmailDetails;
+        if bEndUser then
+          begin
+            LicenceCheck;
+            DisableModules ;
+          end;
+
+        DisplayModuleButtons;
+
+        if not FDemoExpired then
+          btnCustomersClick(self);
+      end;
+  end;
 end;
 
 procedure TfrmWTMain.Cutouts1Click(Sender: TObject);
@@ -949,203 +1145,6 @@ procedure TfrmWTMain.Loaded;
 begin
   inherited;
   FInitialiseButtons := True;
-end;
-
-procedure TfrmWTMain.FormActivate(Sender: TObject);
-var
-  LoginFormOK             : ByteBool;
-  UserName                : string;
-begin
-  bEndUSer := false;
-  MaxUsers := 100;
-{$IFDEF FREE}
-  MaxUsers := 2 ;
-{$ENDIF}
-{$IFDEF GMS}
-  MaxUsers := 6 ;
-{$ENDIF}
-{$IFDEF GRANTECH}
-  MaxUsers := 6 ;
-{$ENDIF}
-{$IFDEF MEGAMARBLE}
-  MaxUsers := 3 ;
-{$ENDIF}
-{$IFDEF AKTIV}
-  MaxUsers := 4 ;
-{$ENDIF}
-{$IFDEF BELLAGIO}
-  MaxUsers := 22 ;
-{$ENDIF}
-{$IFDEF ROANN}
-  MaxUsers := 20 ;
-{$ENDIF}
-{$IFDEF RUBY}
-  MaxUsers := 1 ;
-{$ENDIF}
-{$IFDEF ELITE}
-  MaxUsers := 6 ;
-{$ENDIF}
-{$IFDEF ROMANY}
-  MaxUsers := 7 ;
-{$ENDIF}
-{$IFDEF ENDUSER}
-  MaxUsers := 10 ;
-//  bEndUSer := true;
-{$ENDIF}
-{$IFDEF BATTAGLIA}
-  MaxUsers := 2 ;
-{$ENDIF}
-  if not FActivated then
-    begin
-{$IFDEF DEMO}
-      mnuDemoActivate.OnClick := mnuDemoActivateClick;
-      DataBaseDescr := 'Login To Demo DataBase';
-      frmWTMain.Caption := frmWTMain.Caption + ' - Demonstration system';
-      DemoCheck(False);
-      Operator := 1 {Demo operator};
-      OperatorName := 'Demo Operator';
-      begin  { needed for ENDIF below }
-{$ELSE}
-{$IFDEF ENDUSER}
-      mnuDemoActivate.OnClick := mnuEndUserActivateClick;
-      EndUSerCheck(False);
-{$ENDIF}
-      frmWTLogin := TfrmWTLogin.Create(Self);
-      try
-        frmWTLogin.UserEdit.Text := stsbrStatus.Panels[0].Text;
-        frmWTLogin.ShowModal;
-        LoginFormOK := frmWTLogin.OK;
-        if LoginFormOK then
-        begin
-          UserName := frmWTLogin.UserEdit.Text;
-          Operator := frmWTLogin.Operator;
-          OperatorName := frmWTLogin.Operator_name;
-          OperatorEmail := frmWTLogin.Operator_Email;
-          OperatorRevenueCentre := frmWTLogin.Operator_Revenue_Centre;
-//          DataBaseDescr := frmWTLogin.Caption;
-          DataBaseDescr := frmWTLogin.cmbAliasList.text;
-          FaxSystem := frmWTLogin.sFaxSystem ;
-
-          bEndUSer := frmWTLogin.EndUser;
-
-(*          TempComputerSize := SizeOf(TempComputer);
-          GetComputerName(Addr(TempComputer), TempComputerSize);
-          ComputerName := TempComputer;
-*)
-          ComputerName := GetComputerNetName;
-
-(*          if Pos('Live', DataBaseDescr) <> 0 then
-            frmWTMain.Caption := frmWTMain.Caption + ' - Live Database'
-          else
-            frmWTMain.Caption := frmWTMain.Caption + ' - Test Database';
-*)
-          frmWTMain.WindowState := wsMaximized;
-          if RunDBUpdate then
-            UpdateDatabase;
-        end;
-      finally
-        if RunDBUpdate then
-          UpdateDatabase;
-        frmWTLogin.Free;
-      end;
-      if not LoginFormOK then
-        Application.Terminate
-      else
-        begin
-          Factivated := true;
-{$ENDIF}
-
-          frmAllImages.LoadReportLogo(Self);
-
-          with dtmdlWorktops.qryDeleteWorkStations do
-            begin
-              Close;
-              ParamByName('WorkStation_Name').AsString := ComputerName;
-              ParamByName('Status_Descr').AsString := UserName;
-              ExecSQL;
-            end;
-
-          {Try to get a valid workstation slot for this workstation};
-          WorkStation := 0;
-          {Try to find an empty workstation slot};
-          with dtmdlWorktops.qryGetWorkStation do
-            begin
-              repeat
-                begin
-                  WorkStation := WorkStation + 1;
-                  if WorkStation > MaxUsers then
-                    begin
-                      { No empty slots};
-                      MessageDlg('User limit exceeded', mtError, [mbAbort], 0);
-                      WorkStation := 0;
-                      Application.Terminate;
-                      Exit;
-                    end;
-                  Close;
-                  ParamByName('WorkStation').AsString := IntToStr(WorkStation);
-                  Open;
-                  First;
-                end;
-              until EOF = True;
-            end;
-
-          with dtmdlWorktops.qryAddWorkStation do
-            begin
-            {Vacant slot found, add details for this workstation };
-              Close;
-              ParamByName('WorkStation').AsString := IntToStr(WorkStation);
-              ParamByName('WorkStation_Name').AsString := ComputerName;
-              ParamByName('Status_Descr').AsString := UserName;
-              ParamByName('Software_Version').AsString := SWVersion + '/' + SWSubVersion;
-              ParamByName('Logged_in').Asdatetime := now;
-              ExecSQL;
-            end;
-
-(*          {Get user and password from login screen}
-          TempLoginSize := SizeOf(TempLogin);
-          GetUserName(Addr(TempLogin), TempLoginSize);
-          stsbrStatus.Panels[0].Text := TempLogin;
-
-
-          if (Username = 'firebelly') or (Username = 'bsadmin') then
-            mnuManageLogins.Visible := true
-          else
-            begin
-              mnuManageLogins.Visible := false;
-            end;
-*)
-          UserName := GetUserFromWindows;
-          stsbrStatus.Panels[0].Text := UserName;
-
-          {Check if using Contracts}
-          CheckContractQuoting;
-
-          {Check if using Purchase Ordering}
-          CheckPurchaseOrdering;
-
-          {Check if using Purchase Ordering}
-          CheckRevenueCentres;
-
-          {Check if using Purchase Ordering}
-          CheckScheduling;
-
-          {Check if using Stock}
-          CheckStockSystem;
-
-          GetCompanyDetails;
-          GetEmailDetails;
-          if bEndUser then
-            begin
-              LicenceCheck;
-              DisableModules ;
-            end;
-
-          DisplayModuleButtons;
-
-          if not FDemoExpired then
-            btnCustomersClick(self);
-        end;
-    end;
 end;
 
 procedure TfrmWTMain.PseudoFormActivate;

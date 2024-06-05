@@ -16,7 +16,6 @@ object frmWTMain: TfrmWTMain
   ShowHint = True
   WindowState = wsMaximized
   WindowMenu = Window1
-  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow

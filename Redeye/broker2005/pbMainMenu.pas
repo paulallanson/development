@@ -204,7 +204,6 @@ type
     procedure btnCustomersClick(Sender: TObject);
     procedure btnEndUsersClick(Sender: TObject);
     procedure btnSuppliersClick(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
     procedure miExitClick(Sender: TObject);
     procedure mnuCompanyPrefsClick(Sender: TObject);
     procedure mnuAdhocClick(Sender: TObject);
@@ -373,6 +372,7 @@ type
     procedure SetQuoteReminder(const Value: boolean);
     procedure SetReorderReminder(const Value: boolean);
     procedure InitialiseToolButtons;
+    procedure ApplicationLogin;
   protected
     procedure Loaded; override;
   public
@@ -597,6 +597,7 @@ end;
 procedure TfrmpbMainMenu.FormShow(Sender: TObject);
 begin
   InitialiseToolButtons;
+  ApplicationLogin;
 end;
 
 procedure TfrmpbMainMenu.CopyIfNewer(FName, FDesc: String);
@@ -730,227 +731,6 @@ begin
     btnStock.Visible := False;
     FInitialiseButtons := False;
   end;
-end;
-
-procedure TfrmpbMainMenu.FormActivate(Sender: TObject);
-var
-  LoginFormOK                 : ByteBool;
-  TempLogin, TempComputer                     : array[0..255] of Char;
-  TempLoginSize, TempComputerSize             : DWORD;
-begin
-  MaxUsers := 100;
-{$IFDEF NEXUS}
-  MaxUsers := 1 ;
-{$ENDIF}
-
-{$IFDEF AVANTI}
-  MaxUsers := 2 ;
-{$ENDIF}
-
-{$IFDEF NINE8NINE}
-  MaxUsers := 2 ;
-{$ENDIF}
-
-{$IFDEF LATCHAM}
-  MaxUsers := 3 ;
-{$ENDIF}
-
-{$IFDEF BROADSWORD}
-  MaxUsers := 5 ;
-{$ENDIF}
-
-{$IFDEF SOLUTIONS23}
-  MaxUsers := 3 ;
-{$ENDIF}
-
-{$IFDEF M&M}
-  MaxUsers := 2 ;
-{$ENDIF}
-
-{$IFDEF PREMIER}
-  MaxUsers := 2 ;
-{$ENDIF}
-
-{$IFDEF PRINTGUY}
-  MaxUsers := 4 ;
-{$ENDIF}
-
-{$IFDEF MAILADOC}
-  MaxUsers := 9 ;
-{$ENDIF}
-
-{$IFDEF SOUTHERNMAIL}
-  MaxUsers := 9 ;
-{$ENDIF}
-
-{$IFDEF BESLEYCOPP}
-  MaxUsers := 8 ;
-{$ENDIF}
-
-{$IFDEF PMS}
-  MaxUsers := 3 ;
-{$ENDIF}
-
-  if not FActivated then
-    begin
-      ShowCustomers := true;
-      frmPBLogin := TfrmPBLogin.Create(Self);
-      try
-        frmPBLogin.UserEdit.Text := stsbrMainMenu.Panels[0].Text;
-        frmPBLogin.ShowModal;
-        LoginFormOK := frmPBLogin.OK;
-        if LoginFormOK then
-        begin
-          iRep := frmPBLogin.Rep;
-          UserName := frmPBLogin.UserEdit.Text;
-          stsbrMainMenu.Panels[0].Text := UserName;
-          ioperator := frmPBLogin.Operator;
-          dmBroker.iOperator := frmPBLogin.Operator;
-          sOperator_name := frmPBLogin.Operator_name;
-          SOperator_Email := frmPBLogin.Operator_Email;
-//          sDataBaseDescr := frmPBLogin.Caption;
-          sDataBaseDescr := frmPBLogin.cmbAliasList.text;
-          sFaxSystem := frmPBLogin.sFaxSystem ;
-
-          TempComputerSize := SizeOf(TempComputer);
-          GetComputerName(Addr(TempComputer), TempComputerSize);
-          sCompName := TempComputer;
-
-(*          if Pos('Live', sDataBaseDescr) <> 0 then
-            frmpbMainMenu.Caption := frmpbMainMenu.Caption + ' - Live Database'
-          else
-            frmpbMainMenu.Caption := frmpbMainMenu.Caption + ' - Test Database';
-*)          frmpbMainMenu.WindowState := wsMaximized;
-
-        end;
-      finally
-        frmPBLogin.Free;
-      end;
-
-      if not LoginFormOK then
-        Application.Terminate
-      else
-        begin
-          if (Username = 'sa') or (Username = 'paulal') then
-            mnuLicenceActivation.Visible := true
-          else
-            begin
-              mnuLicenceActivation.Visible := false;
-              LicenceCheck;
-            end;
-
-          SetOperator(iOperator);
-          PBImagesFrm.LoadReportLogo(Self);
-
-          with dmBroker.qryDeleteWorkStationsLocks do
-            begin
-              Close;
-              ParamByName('WorkStation_Name').AsString := sCompName;
-              ExecSQL;
-            end;
-
-          with dmBroker.qryDeleteWorkStations do
-            begin
-              Close;
-              ParamByName('WorkStation_Name').AsString := sCompName;
-              ParamByName('Status_Descr').AsString := UserName;
-              ExecSQL;
-            end;
-
-          {Try to get a valid workstation slot for this workstation};
-          WorkStation := 0;
-          {Try to find an empty workstation slot};
-          with dmBroker.qryGetWorkStation do
-            begin
-              repeat
-                begin
-                  WorkStation := WorkStation + 1;
-                  if WorkStation > MaxUsers then
-                    begin
-                      { No empty slots};
-                      MessageDlg('User limit exceeded', mtError, [mbAbort], 0);
-                      WorkStation := 0;
-                      Application.Terminate;
-                      Exit;
-                    end;
-                  Close;
-                  ParamByName('WorkStation').AsString := IntToStr(WorkStation);
-                  Open;
-                  First;
-                end;
-              until EOF = True;
-            end;
-
-          with dmBroker.qryAddWorkStation do
-            begin
-            {Vacant slot found, add details for this workstation };
-              Close;
-              ParamByName('WorkStation').AsString := IntToStr(WorkStation);
-              ParamByName('WorkStation_Name').AsString := sCompName;
-              ParamByName('Status_Descr').AsString := UserName;
-              ParamByName('Software_Version').AsString := sSoft_Version + sSoft_subVersion;
-              ParamByName('Logged_in').Asdatetime := now;
-              ExecSQL;
-            end;
-
-          {Get user and password from login screen}
-          TempLoginSize := SizeOf(TempLogin);
-          GetUserName(Addr(TempLogin), TempLoginSize);
-          stsbrMainMenu.Panels[0].Text := TempLogin;
-          {Check Database Version}
-          CheckDBVersion;
-          CheckJBinUse;
-          CheckStockInUse;
-          CheckRevenueCentres;
-          CheckAccountManagers;
-          CheckProduction;
-          CheckNonConformance;
-          CheckContracts;
-          CheckProspects;
-          CheckEndUsers;
-          CheckCRM;
-
-          GetCurrencyFormat;
-          GetCompanyDetails;
-          GetEmailDetails;
-          if UseCRMSystem then
-            btnActivitiesClick(self)
-          else
-          if ShowCustomers then
-            btnCustomersClick(self);
-
-          {Write a LOGIN record to the audit trail} ;
-          try
-            if not dmBroker.IsSQL then
-              begin
-                PBAuditDataMod.Add1stAuditSQL.SQL.text :=
-                    PBAuditDataMod.Access_Add1stAuditSQL.SQL.text;
-                PBAuditDataMod.AddAuditSQL.SQL.text :=
-                    PBAuditDataMod.Access_AddAuditSQL.SQL.text;
-              end;
-            PBAuditDataMod.WriteAudit(1, 0, 0, 0, 0, '') ;
-          except
-          end;
-          Factivated := true;
-        end;
-    end;
-
-  mnuEnquiries.Visible := btnEnquiries.Visible;
-  mnuProduction.Visible := btnProduction.Visible;
-  mnuJobs.Visible := btnJobs.Visible;
-  mnuStock.Visible := btnStock.Visible;
-
-  mnuFormReferences.Visible := btnFormReferences.Visible;
-  mnuSalesInvoicing.Visible := btnSalesInvoicing.Visible;
-  mnuCallOffs.Visible := btnCallOffs.Visible;
-  mnuPurchaseInvoicing.Visible := btnPurchaseInvoicing.Visible;
-  mnuPurchases.Visible := btnPurchases.Visible;
-  mnuFSCClaim.Visible := dmBroker.UseFSCClaim;
-
-  if frmPBMainMenu.UseCRMSystem then
-    CheckActivityReminder;
-//    tmrCheckActivity.Enabled := true;
-
 end;
 
 procedure TfrmpbMainMenu.miExitClick(Sender: TObject);
@@ -2454,6 +2234,226 @@ begin
   finally
     PBLUProcessGroupFrm.Free;
   end;
+end;
+
+procedure TfrmpbMainMenu.ApplicationLogin;
+var
+  LoginFormOK                 : ByteBool;
+  TempLogin, TempComputer                     : array[0..255] of Char;
+  TempLoginSize, TempComputerSize             : DWORD;
+begin
+  MaxUsers := 100;
+{$IFDEF NEXUS}
+  MaxUsers := 1 ;
+{$ENDIF}
+
+{$IFDEF AVANTI}
+  MaxUsers := 2 ;
+{$ENDIF}
+
+{$IFDEF NINE8NINE}
+  MaxUsers := 2 ;
+{$ENDIF}
+
+{$IFDEF LATCHAM}
+  MaxUsers := 3 ;
+{$ENDIF}
+
+{$IFDEF BROADSWORD}
+  MaxUsers := 5 ;
+{$ENDIF}
+
+{$IFDEF SOLUTIONS23}
+  MaxUsers := 3 ;
+{$ENDIF}
+
+{$IFDEF M&M}
+  MaxUsers := 2 ;
+{$ENDIF}
+
+{$IFDEF PREMIER}
+  MaxUsers := 2 ;
+{$ENDIF}
+
+{$IFDEF PRINTGUY}
+  MaxUsers := 4 ;
+{$ENDIF}
+
+{$IFDEF MAILADOC}
+  MaxUsers := 9 ;
+{$ENDIF}
+
+{$IFDEF SOUTHERNMAIL}
+  MaxUsers := 9 ;
+{$ENDIF}
+
+{$IFDEF BESLEYCOPP}
+  MaxUsers := 8 ;
+{$ENDIF}
+
+{$IFDEF PMS}
+  MaxUsers := 3 ;
+{$ENDIF}
+
+  if not FActivated then
+    begin
+      ShowCustomers := true;
+      frmPBLogin := TfrmPBLogin.Create(Self);
+      try
+        frmPBLogin.UserEdit.Text := stsbrMainMenu.Panels[0].Text;
+        frmPBLogin.ShowModal;
+        LoginFormOK := frmPBLogin.OK;
+        if LoginFormOK then
+        begin
+          iRep := frmPBLogin.Rep;
+          UserName := frmPBLogin.UserEdit.Text;
+          stsbrMainMenu.Panels[0].Text := UserName;
+          ioperator := frmPBLogin.Operator;
+          dmBroker.iOperator := frmPBLogin.Operator;
+          sOperator_name := frmPBLogin.Operator_name;
+          SOperator_Email := frmPBLogin.Operator_Email;
+//          sDataBaseDescr := frmPBLogin.Caption;
+          sDataBaseDescr := frmPBLogin.cmbAliasList.text;
+          sFaxSystem := frmPBLogin.sFaxSystem ;
+
+          TempComputerSize := SizeOf(TempComputer);
+          GetComputerName(Addr(TempComputer), TempComputerSize);
+          sCompName := TempComputer;
+
+(*          if Pos('Live', sDataBaseDescr) <> 0 then
+            frmpbMainMenu.Caption := frmpbMainMenu.Caption + ' - Live Database'
+          else
+            frmpbMainMenu.Caption := frmpbMainMenu.Caption + ' - Test Database';
+*)          frmpbMainMenu.WindowState := wsMaximized;
+
+        end;
+      finally
+        frmPBLogin.Free;
+      end;
+
+      if not LoginFormOK then
+        Application.Terminate
+      else
+        begin
+          if (Username = 'sa') or (Username = 'paulal') then
+            mnuLicenceActivation.Visible := true
+          else
+            begin
+              mnuLicenceActivation.Visible := false;
+              LicenceCheck;
+            end;
+
+          SetOperator(iOperator);
+          PBImagesFrm.LoadReportLogo(Self);
+
+          with dmBroker.qryDeleteWorkStationsLocks do
+            begin
+              Close;
+              ParamByName('WorkStation_Name').AsString := sCompName;
+              ExecSQL;
+            end;
+
+          with dmBroker.qryDeleteWorkStations do
+            begin
+              Close;
+              ParamByName('WorkStation_Name').AsString := sCompName;
+              ParamByName('Status_Descr').AsString := UserName;
+              ExecSQL;
+            end;
+
+          {Try to get a valid workstation slot for this workstation};
+          WorkStation := 0;
+          {Try to find an empty workstation slot};
+          with dmBroker.qryGetWorkStation do
+            begin
+              repeat
+                begin
+                  WorkStation := WorkStation + 1;
+                  if WorkStation > MaxUsers then
+                    begin
+                      { No empty slots};
+                      MessageDlg('User limit exceeded', mtError, [mbAbort], 0);
+                      WorkStation := 0;
+                      Application.Terminate;
+                      Exit;
+                    end;
+                  Close;
+                  ParamByName('WorkStation').AsString := IntToStr(WorkStation);
+                  Open;
+                  First;
+                end;
+              until EOF = True;
+            end;
+
+          with dmBroker.qryAddWorkStation do
+            begin
+            {Vacant slot found, add details for this workstation };
+              Close;
+              ParamByName('WorkStation').AsString := IntToStr(WorkStation);
+              ParamByName('WorkStation_Name').AsString := sCompName;
+              ParamByName('Status_Descr').AsString := UserName;
+              ParamByName('Software_Version').AsString := sSoft_Version + sSoft_subVersion;
+              ParamByName('Logged_in').Asdatetime := now;
+              ExecSQL;
+            end;
+
+          {Get user and password from login screen}
+          TempLoginSize := SizeOf(TempLogin);
+          GetUserName(Addr(TempLogin), TempLoginSize);
+          stsbrMainMenu.Panels[0].Text := TempLogin;
+          {Check Database Version}
+          CheckDBVersion;
+          CheckJBinUse;
+          CheckStockInUse;
+          CheckRevenueCentres;
+          CheckAccountManagers;
+          CheckProduction;
+          CheckNonConformance;
+          CheckContracts;
+          CheckProspects;
+          CheckEndUsers;
+          CheckCRM;
+
+          GetCurrencyFormat;
+          GetCompanyDetails;
+          GetEmailDetails;
+          if UseCRMSystem then
+            btnActivitiesClick(self)
+          else
+          if ShowCustomers then
+            btnCustomersClick(self);
+
+          {Write a LOGIN record to the audit trail} ;
+          try
+            if not dmBroker.IsSQL then
+              begin
+                PBAuditDataMod.Add1stAuditSQL.SQL.text :=
+                    PBAuditDataMod.Access_Add1stAuditSQL.SQL.text;
+                PBAuditDataMod.AddAuditSQL.SQL.text :=
+                    PBAuditDataMod.Access_AddAuditSQL.SQL.text;
+              end;
+            PBAuditDataMod.WriteAudit(1, 0, 0, 0, 0, '') ;
+          except
+          end;
+          Factivated := true;
+        end;
+    end;
+
+  mnuEnquiries.Visible := btnEnquiries.Visible;
+  mnuProduction.Visible := btnProduction.Visible;
+  mnuJobs.Visible := btnJobs.Visible;
+  mnuStock.Visible := btnStock.Visible;
+
+  mnuFormReferences.Visible := btnFormReferences.Visible;
+  mnuSalesInvoicing.Visible := btnSalesInvoicing.Visible;
+  mnuCallOffs.Visible := btnCallOffs.Visible;
+  mnuPurchaseInvoicing.Visible := btnPurchaseInvoicing.Visible;
+  mnuPurchases.Visible := btnPurchases.Visible;
+  mnuFSCClaim.Visible := dmBroker.UseFSCClaim;
+
+  if frmPBMainMenu.UseCRMSystem then
+    CheckActivityReminder;
+//    tmrCheckActivity.Enabled := true;
 end;
 
 procedure TfrmpbMainMenu.Barcodes1Click(Sender: TObject);
