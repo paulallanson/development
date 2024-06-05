@@ -493,7 +493,7 @@ end;
 
 procedure TfrmWTMain.Exit1Click(Sender: TObject);
 begin
-  close;
+  Close;
 end;
 
 procedure TfrmWTMain.btnPurchasingClick(Sender: TObject);

@@ -374,14 +374,14 @@ begin
 
       inc(iSupplierInv);
       irow := irow + 1;
-      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6);
-      sRef := Copy(FieldByName('Supplier_Invoice').AsString + '/' +
-        FieldByName('Invoice_Line_no').AsString + sfiller, 1, 10);
-      sLongRef := Copy(FieldByName('Supplier_Invoice_no').AsString + sfiller, 1,
-        20);
+      sAcc_code := ShortString(Copy(FieldByName('Account_Code').AsString + sfiller, 1, 6));
+      sRef := ShortString(Copy(FieldByName('Supplier_Invoice').AsString + '/' +
+        FieldByName('Invoice_Line_no').AsString + sfiller, 1, 10));
+      sLongRef := ShortString(Copy(FieldByName('Supplier_Invoice_no').AsString + sfiller, 1,
+        20));
       {if generated for Enterprise then Version is I2}
       sVersion := 'I2';
-      sDesc := Copy(FieldByName('Description').AsString + sfiller, 1, 50);
+      sDesc := ShortString(Copy(FieldByName('Description').AsString + sfiller, 1, 50));
       sStockCode := Copy(sfiller, 1, 14);
       if FieldByName('Price_Unit_Factor').AsFloat = 0 then
         rValue := FieldByName('Goods_Value').AsFloat /
@@ -3157,9 +3157,9 @@ begin
   sFilename := sPathEdit + 'Accounts.txt';
   sNewFilename := sPathEdit + 'New_Accounts.txt';
 
-  RenameFile(sFilename, sNewFilename);
+  RenameFile(sFilename, string(sNewFilename));
 
-  assignfile(AccFile, sNewFilename);
+  assignfile(AccFile, string(sNewFilename));
   reset(Accfile);
   if IOresult <> 0 then
   begin
@@ -3361,7 +3361,7 @@ begin
   if Pos('INV', FileNameEdit.Text) = 1 then
     sFilename := sPathEdit + FileNameEdit.Text
   else
-    sFilename := sPathEdit + 'INV' + FileNameEdit.Text;
+    sFilename := sPathEdit + 'INV' + ShortString(FileNameEdit.Text);
     
   if sAccountsPackage = 'SAGE50' then
     sFilename := sFilename + '.csv'
@@ -3381,7 +3381,7 @@ begin
 
   if Result = true then
   begin
-    if MessageDlg('File ' + sFilename + ' already exists. Do you want to overwrite it?', mtWarning, [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg('File ' + string(sFilename) + ' already exists. Do you want to overwrite it?', mtWarning, [mbYes, mbNo], 0) = mrYes then
     begin
       DeleteFile(sFilename);
       sFileName := Copy(sFileName, (Pos('INV', sFileName)+3), 256);
@@ -3403,7 +3403,7 @@ begin
   if Pos('INV', FileNameEdit.Text) = 1 then
     sFilename := sPathEdit + 'ACC' + Copy(FileNameEdit.Text, 4, 256)
   else
-    sFilename := sPathEdit + 'ACC' + FileNameEdit.Text;
+    sFilename := Copy(sPathEdit + 'ACC' + ShortString(FileNameEdit.Text), 1, 255);
 
   if sAccountsPackage = 'SAGE50' then
     sFilename := sFilename + '.csv'
@@ -4357,7 +4357,7 @@ begin
         sField := 'BILL'
       else
       if (fieldbyname('Transaction_type').asstring = 'PC') then
-        sAcc_Type := 'BILL REFUND';
+        sField := 'BILL REFUND';
       sQBooksText := sQBooksText + QBooksIIFFormat(sField);
 
       {Transaction Date}
