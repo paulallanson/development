@@ -748,8 +748,8 @@ begin
     end;
 
   OldCursor := Screen.Cursor;
-  Screen.Cursor := crHourglass;
   try
+    Screen.Cursor := crHourglass;
     frmWTRSTemplateSheet := TfrmWTRSTemplateSheet.Create( Application );
     Key := dtmdlAllSales.CurrentSOrder;
     frmWTRSTemplateSheet.OrderNumber := inttostr(Key);

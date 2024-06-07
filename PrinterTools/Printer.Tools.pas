@@ -12,8 +12,10 @@ type
     { Private declarations }
     function GetLocation: string;
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
-    procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList);
-    procedure FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
+    procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList;
+      const ClearFilesList: Boolean);
+    procedure FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList;
+      const ClearFilesList: Boolean);
     procedure PrintToHTML(const Report: TQuickRep; const fileName: string);
     procedure PrintToPDF(const Report: TQuickRep; const fileName: string);
     procedure PrintToRTF(const Report: TQuickRep; const fileName: string);
@@ -23,7 +25,7 @@ type
     constructor Create;
     destructor Destroy; override;
     class function New: IPrinterToAttachment;
-    procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
+    procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string; const ClearFilesList: Boolean = True);
     procedure PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
     procedure PrintToFileDelivery(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
     procedure PrintToFileLabel(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
@@ -71,17 +73,19 @@ begin
   {$ENDIF}
 end;
 
-procedure TPrinterTools.PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
+procedure TPrinterTools.PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName,
+  attachmentType: string; const ClearFilesList: Boolean = True);
 var
   Location,
   targetFileName: string;
 begin
   Location := GetLocation;
   targetFileName := Location + fileName;
-  PrintToFile(Report, targetFileName, attachmentType, FEmailAttachment);
+  PrintToFile(Report, targetFileName, attachmentType, FEmailAttachment, ClearFilesList);
 end;
 
-procedure TPrinterTools.PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList);
+procedure TPrinterTools.PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList;
+  const ClearFilesList: Boolean);
 var
   fileType: TPrinterFileType;
 begin
@@ -96,15 +100,18 @@ begin
   end;
 
   if Assigned(FEmailAttachment) then
-    FindAndAttachAllFiles(fileName, attachmentType.ToUpper, FEmailAttachment);
+    FindAndAttachAllFiles(fileName, attachmentType.ToUpper, FEmailAttachment, ClearFilesList);
 end;
 
-procedure TPrinterTools.FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
+procedure TPrinterTools.FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList;
+  const ClearFilesList: Boolean);
 var
   SearchRec: TSearchRec;
   Path: string;
 begin
-  FEmailAttachment.Clear;
+  if ClearFilesList then
+    FEmailAttachment.Clear;
+
   Path := ExtractFilePath(fileName);
 
   if FindFirst(fileName + '*' + '.' + Extension, faAnyFile, SearchRec) = 0 then
@@ -125,7 +132,7 @@ begin
   Location := GetLocation;
   targetFileName := 'DEL' + FloatToStr(PONo)+ '_' + DelLine.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType, nil);
+  PrintToFile(Report, targetFileName, attachmentType, nil, True);
   ListFiles.Add(targetFileName);
 end;
 
@@ -138,7 +145,7 @@ begin
   Location := GetLocation;
   targetFileName := 'LABEL' + FloatToStr(PONo)+ '_' + DelLine.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType, nil);
+  PrintToFile(Report, targetFileName, attachmentType, nil, True);
   ListFiles.Add(targetFileName);
 end;
 
@@ -151,7 +158,7 @@ begin
   Location := GetLocation;
   targetFileName := Location + 'Q' + ReferenceNo.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType, nil);
+  PrintToFile(Report, targetFileName, attachmentType, nil, True);
   ListFiles.Add(targetFileName);
 end;
 
