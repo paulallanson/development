@@ -25,11 +25,13 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 567
+    ExplicitWidth = 588
     DesignSize = (
       594
       45)
     object btnOK: TBitBtn
-      Left = 375
+      Left = 369
       Top = 4
       Width = 75
       Height = 25
@@ -57,9 +59,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 363
     end
     object BitBtn2: TBitBtn
-      Left = 463
+      Left = 457
       Top = 4
       Width = 75
       Height = 25
@@ -68,6 +71,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
+      ExplicitLeft = 451
     end
   end
   object pnlReference: TPanel
@@ -79,6 +83,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 505
+    ExplicitWidth = 588
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -133,6 +139,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 2
     object Label2: TLabel
       Left = 16
       Top = 16
@@ -328,6 +335,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 131
     object Label4: TLabel
       Left = 16
       Top = 8

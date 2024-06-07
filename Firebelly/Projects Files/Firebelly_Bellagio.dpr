@@ -1,6 +1,6 @@
 program Firebelly_Bellagio;
 
-{%File 'FirebellyScheduler.dll'}
+
 
 uses
   Forms,
@@ -255,19 +255,23 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
-  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
+  WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate};
 
 {$R *.RES}
 
 begin
   Application.Initialize;
-  frmWTSplash := TfrmWTSplash.Create( Application );
+
+(*  frmWTSplash := TfrmWTSplash.Create( Application );
   frmWTSplash.Show;
   frmWTSplash.Refresh;
+*)
   Application.Title := 'Firebelly - Worktop Manufacturing';
   Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);
+  Application.CreateForm(TfrmWTRSSOrderTemplate, frmWTRSSOrderTemplate);
   Application.Run;
 end.

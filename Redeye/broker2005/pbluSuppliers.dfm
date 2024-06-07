@@ -2,8 +2,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   Left = 51
   Top = 117
   Caption = 'Supplier details'
-  ClientHeight = 379
-  ClientWidth = 1018
+  ClientHeight = 370
+  ClientWidth = 1012
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   TextHeight = 13
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 360
-    Width = 1018
+    Top = 351
+    Width = 1012
     Height = 19
     Panels = <
       item
@@ -34,14 +34,14 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 319
-    Width = 1018
+    Top = 310
+    Width = 1012
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1018
+      1012
       41)
     object lblSearch: TLabel
       Left = 16
@@ -59,7 +59,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 927
+      Left = 915
       Top = 8
       Width = 75
       Height = 25
@@ -81,19 +81,19 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1018
+    Width = 1012
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1012
+        Width = 1006
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1003
+      Width = 997
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 59
@@ -193,8 +193,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1018
-    Height = 245
+    Width = 1012
+    Height = 236
     Align = alClient
     DataSource = dtmdlSuppliers.dtsSuppliers
     DrawingStyle = gdsGradient
@@ -279,23 +279,23 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1018
+    Width = 1012
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 65
-      Height = 21
+      Width = 69
+      Height = 23
       Caption = 'Suppliers'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False

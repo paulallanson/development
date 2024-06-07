@@ -2,8 +2,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   Left = 307
   Top = 7
   Caption = 'Company Details'
-  ClientHeight = 596
-  ClientWidth = 630
+  ClientHeight = 602
+  ClientWidth = 644
   Color = clBtnFace
   Constraints.MinHeight = 626
   Constraints.MinWidth = 642
@@ -22,11 +22,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object tbSettings: TPageControl
     Left = 0
     Top = 39
-    Width = 630
-    Height = 497
-    ActivePage = tbsProduction
+    Width = 644
+    Height = 503
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 638
+    ExplicitHeight = 494
     object tbsAddress: TTabSheet
       Caption = 'Address'
       object Label5: TLabel
@@ -524,11 +526,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object grpbxAuthorisePO: TGroupBox
         Left = 3
-        Top = 354
+        Top = 359
         Width = 265
         Height = 47
-        Caption = 'grpbxAuthorisePO'
+        Color = clBtnFace
         ParentBackground = False
+        ParentColor = False
         TabOrder = 15
         object Label20: TLabel
           Left = 8
@@ -537,22 +540,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Height = 13
           Caption = 'Maximum Unauthorised Value'
         end
-        object chkbxAuthorisePO: TCheckBox
-          Left = 8
-          Top = -3
-          Width = 147
-          Height = 17
-          Caption = 'Authorise Purchase Orders'
-          TabOrder = 0
-          OnClick = chkbxAuthorisePOClick
-        end
         object memCreditLimit: TMemo
           Left = 159
           Top = 19
           Width = 90
           Height = 23
           Alignment = taRightJustify
-          TabOrder = 1
+          TabOrder = 0
           WantReturns = False
           WordWrap = False
           OnExit = memCreditLimitExit
@@ -779,6 +773,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Height = 21
         TabOrder = 27
       end
+      object chkbxAuthorisePO: TCheckBox
+        Left = 3
+        Top = 351
+        Width = 147
+        Height = 17
+        Caption = 'Authorise Purchase Orders'
+        TabOrder = 28
+        OnClick = chkbxAuthorisePOClick
+      end
     end
     object TabSheet4: TTabSheet
       Caption = 'System'
@@ -868,11 +871,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Width = 201
         Height = 89
         Caption = 'When Buying Print'
+        Color = clBtnFace
         Items.Strings = (
           'Never create a Job Bag'
           'Prompt to create a Job Bag'
           'Always create a Job Bag')
         ParentBackground = False
+        ParentColor = False
         TabOrder = 3
       end
       object JobBagsCheckBox: TCheckBox
@@ -1034,7 +1039,9 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Top = 80
         Width = 281
         Height = 73
+        Color = clBtnFace
         ParentBackground = False
+        ParentColor = False
         TabOrder = 22
         object Label49: TLabel
           Left = 198
@@ -1845,8 +1852,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 622
-        Height = 469
+        Width = 636
+        Height = 475
         ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
@@ -2348,8 +2355,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'CRM'
       ImageIndex = 10
       DesignSize = (
-        622
-        469)
+        636
+        475)
       object Label52: TLabel
         Left = 16
         Top = 56
@@ -2404,7 +2411,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 416
+        Left = 418
         Top = 19
         Width = 22
         Height = 22
@@ -2478,15 +2485,17 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 536
-    Width = 630
+    Top = 542
+    Width = 644
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 533
+    ExplicitWidth = 638
     DesignSize = (
-      630
+      644
       41)
     object BitBtn1: TBitBtn
       Left = 231
@@ -2514,14 +2523,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 630
+    Width = 644
     Height = 39
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 638
     DesignSize = (
-      630
+      644
       39)
     object Label1: TLabel
       Left = 11
@@ -2539,7 +2549,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     object NameEdit: TEdit
       Left = 121
       Top = 8
-      Width = 390
+      Width = 392
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -2551,12 +2561,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ParentFont = False
       TabOrder = 0
       Text = 'NameEdit'
+      ExplicitWidth = 386
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 577
-    Width = 630
+    Top = 583
+    Width = 644
     Height = 19
     Panels = <
       item
@@ -2565,13 +2576,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       item
         Width = 50
       end>
+    ExplicitTop = 574
+    ExplicitWidth = 638
   end
   object GetCompanySQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
-    Left = 440
-    Top = 452
+    Left = 472
+    Top = 500
   end
   object UpCompanySQL: TFDQuery
     ConnectionName = 'PB'
@@ -2746,8 +2759,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ' '
       ' '
       ' ')
-    Left = 440
-    Top = 404
+    Left = 368
+    Top = 484
     ParamData = <
       item
         Name = 'Name'
@@ -3172,13 +3185,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     SQL.Strings = (
       'select *'
       'from Nominal_Level')
-    Left = 356
-    Top = 386
+    Left = 340
+    Top = 290
   end
   object GetNominalSRC: TDataSource
     DataSet = GetNominalSQL
-    Left = 444
-    Top = 338
+    Left = 420
+    Top = 218
   end
   object GetSupplierSQL: TFDQuery
     ConnectionName = 'PB'
@@ -3190,8 +3203,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       '           Supplier_Branch.Branch_no = :Branch_no and'
       '           Supplier.Supplier = Supplier_Branch.Supplier'
       '          ')
-    Left = 380
-    Top = 274
+    Left = 332
+    Top = 114
     ParamData = <
       item
         Name = 'Supplier'
@@ -3247,8 +3260,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object DsVat: TDataSource
     DataSet = QryVat
-    Left = 232
-    Top = 432
+    Left = 224
+    Top = 464
   end
   object QryPrdTyp: TFDQuery
     ConnectionName = 'PB'
@@ -3257,19 +3270,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'description'
       'From Product_Type'
       'Order By Description')
-    Left = 444
-    Top = 276
+    Left = 332
+    Top = 196
   end
   object DSPrdTyp: TDataSource
     DataSet = QryPrdTyp
-    Left = 380
-    Top = 332
+    Left = 388
+    Top = 124
   end
   object FlashPayTimer: TTimer
     Enabled = False
     OnTimer = FlashPayTimerTimer
-    Left = 200
-    Top = 376
+    Left = 136
+    Top = 392
   end
   object qryOnlineVAT: TFDQuery
     ConnectionName = 'PB'
@@ -3282,8 +3295,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtsOnlineVAT: TDataSource
     DataSet = qryOnlineVAT
-    Left = 244
-    Top = 352
+    Left = 164
+    Top = 344
   end
   object opndlgTerms: TOpenDialog
     Left = 460
@@ -3313,7 +3326,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     Enabled = False
     OnTimer = FlashCreditTimerTimer
     Left = 416
-    Top = 376
+    Top = 248
   end
   object qryActivityType: TFDQuery
     ConnectionName = 'PB'

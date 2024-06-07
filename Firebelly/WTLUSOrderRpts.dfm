@@ -4,8 +4,8 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Sales Order Reports'
-  ClientHeight = 242
-  ClientWidth = 442
+  ClientHeight = 314
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,17 +17,19 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 442
-    Height = 201
+    Width = 430
+    Height = 273
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 436
+    ExplicitHeight = 192
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 442
-      Height = 201
+      Width = 430
+      Height = 273
       Align = alClient
       Columns = <
         item
@@ -97,19 +99,22 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       ViewStyle = vsReport
       OnClick = enableSelect
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 442
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 201
-    Width = 442
+    Top = 273
+    Width = 430
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 192
+    ExplicitWidth = 436
     DesignSize = (
-      442
+      430
       41)
     object btnselect: TButton
       Left = 16
@@ -122,7 +127,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       OnClick = btnselectClick
     end
     object Button2: TButton
-      Left = 357
+      Left = 339
       Top = 8
       Width = 75
       Height = 25
@@ -130,6 +135,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 345
     end
   end
 end

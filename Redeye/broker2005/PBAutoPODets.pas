@@ -147,7 +147,6 @@ type
     ProofsGrpBox: TGroupBox;
     ProofByLabel: TLabel;
     ProofStatLabel: TLabel;
-    ProofsReqChkBox: TCheckBox;
     ProofsDateEdit: TEdit;
     ProofStatDBLUCB: TDBLookupComboBox;
     Label10: TLabel;
@@ -186,6 +185,7 @@ type
     CustReqDateBtn: TBitBtn;
     ProofDateBtn: TBitBtn;
     spdbtnLUCust: TButton;
+    ProofsReqChkBox: TCheckBox;
     procedure OKBitBtnClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure SelDateBtnClick(Sender: TObject);

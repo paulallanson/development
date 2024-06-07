@@ -3,8 +3,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   Top = 99
   ActiveControl = Panel1
   Caption = 'Customer details'
-  ClientHeight = 353
-  ClientWidth = 1116
+  ClientHeight = 344
+  ClientWidth = 1110
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 334
-    Width = 1116
+    Top = 325
+    Width = 1110
     Height = 19
     Panels = <
       item
@@ -37,14 +37,14 @@ object frmpbluCustomers: TfrmpbluCustomers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1116
+    Width = 1110
     Height = 46
     Bands = <
       item
         Control = Toolbar1
         ImageIndex = -1
         MinHeight = 43
-        Width = 1110
+        Width = 1104
       end>
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -55,7 +55,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     object Toolbar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1101
+      Width = 1095
       Height = 43
       Align = alClient
       ButtonHeight = 36
@@ -200,8 +200,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 76
-    Width = 1116
-    Height = 217
+    Width = 1110
+    Height = 208
     Align = alClient
     DataSource = dtmdlCustomers.dtsCustomers
     DrawingStyle = gdsGradient
@@ -389,8 +389,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 293
-    Width = 1116
+    Top = 284
+    Width = 1110
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -411,7 +411,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 930
+      Left = 924
       Top = 1
       Width = 185
       Height = 39
@@ -461,7 +461,7 @@ object frmpbluCustomers: TfrmpbluCustomers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1116
+    Width = 1110
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -490,25 +490,25 @@ object frmpbluCustomers: TfrmpbluCustomers
       Align = alLeft
       BevelInner = bvLowered
       BevelOuter = bvNone
-      Color = clSilver
+      Color = 16642529
       ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
         Top = 3
-        Width = 75
-        Height = 21
+        Width = 81
+        Height = 23
         Caption = 'Customers'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
+        Font.Color = clNavy
+        Font.Height = -17
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
     end
     object Panel5: TPanel
-      Left = 865
+      Left = 859
       Top = 1
       Width = 250
       Height = 28
@@ -516,21 +516,22 @@ object frmpbluCustomers: TfrmpbluCustomers
       BevelInner = bvLowered
       BevelOuter = bvNone
       Caption = 'Panel5'
+      Color = 16642529
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
         250
         28)
       object Label4: TLabel
-        Left = 13
+        Left = 10
         Top = 7
-        Width = 83
-        Height = 13
+        Width = 86
+        Height = 15
         Anchors = [akTop, akRight]
         Caption = 'Colour Code by:'
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
+        Font.Color = clNavy
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -556,28 +557,36 @@ object frmpbluCustomers: TfrmpbluCustomers
     object PageScroller2: TPageScroller
       Left = 401
       Top = 1
-      Width = 464
+      Width = 458
       Height = 28
       Align = alClient
+      Color = 16642529
       Control = clbrDashboard
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 2
       object clbrDashboard: TCoolBar
         Left = 0
         Top = 0
-        Width = 452
+        Width = 458
         Height = 28
         Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 446
+            Width = 452
           end>
+        Color = 16642529
+        ParentColor = False
         Visible = False
+        ExplicitLeft = 40
+        ExplicitTop = 3
+        ExplicitWidth = 446
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 437
+          Width = 443
           Height = 25
           Align = alClient
           ButtonWidth = 66

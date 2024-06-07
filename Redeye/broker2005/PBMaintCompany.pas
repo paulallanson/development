@@ -82,7 +82,6 @@ type
     rdgrpJobBag: TRadioGroup;
     JobBagsCheckBox: TCheckBox;
     grpbxAuthorisePO: TGroupBox;
-    chkbxAuthorisePO: TCheckBox;
     Label20: TLabel;
     memCreditLimit: TMemo;
     chkbxCustMandatory: TCheckBox;
@@ -310,6 +309,7 @@ type
     qryActivityTypeOrdAct: TFDQuery;
     qryActivityTypeDelivAct: TFDQuery;
     dtsActivityTypeDelivAct: TDataSource;
+    chkbxAuthorisePO: TCheckBox;
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure UpdateCompany;

@@ -23,11 +23,13 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 208
+    ExplicitWidth = 632
     DesignSize = (
       638
       41)
     object btnSelect: TButton
-      Left = 453
+      Left = 447
       Top = 8
       Width = 75
       Height = 25
@@ -36,9 +38,10 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Enabled = False
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 441
     end
     object btnCancel: TButton
-      Left = 549
+      Left = 543
       Top = 8
       Width = 75
       Height = 25
@@ -46,6 +49,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Caption = 'Cancel'
       TabOrder = 1
       OnClick = btnCancelClick
+      ExplicitLeft = 537
     end
   end
   object dbgDetails: TDBGrid
@@ -117,6 +121,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 632
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -161,7 +166,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
         'e) as Supply_Price'
       'from sales_order_line'
       'where sales_order = :sales_order and'
-      'quote <> NULL and Job is NULL'
+      'quote IS NOT NULL and Job is NULL'
       'order by sales_order_line_no')
     Left = 288
     Top = 80
@@ -289,7 +294,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
   end
   object dtsSOLines: TDataSource
     DataSet = qrySOLines
-    Left = 304
-    Top = 64
+    Left = 460
+    Top = 104
   end
 end

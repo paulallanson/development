@@ -21,6 +21,7 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 528
     object Label2: TLabel
       Left = 16
       Top = 13
@@ -44,6 +45,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 166
+    ExplicitWidth = 528
     object DelLabel: TLabel
       Left = 93
       Top = 14
@@ -218,6 +221,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 528
+    ExplicitHeight = 125
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -293,7 +298,7 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
       TabOrder = 0
       WantReturns = False
       WordWrap = False
-      OnClick = CheckOK
+      OnChange = CheckOK
     end
   end
   object qryPriceUnit: TFDQuery

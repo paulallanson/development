@@ -2,8 +2,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   Left = 52
   Top = 102
   Caption = 'Purchase Orders'
-  ClientHeight = 337
-  ClientWidth = 755
+  ClientHeight = 269
+  ClientWidth = 743
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 755
+    Width = 743
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 749
+        Width = 737
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 740
+      Width = 728
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,7 +43,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 728
+        Width = 716
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 62
@@ -157,8 +157,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 755
-    Height = 203
+    Width = 743
+    Height = 135
     Align = alClient
     DataSource = dtmdlPOrders.dtsPOHeaderGrid
     DrawingStyle = gdsGradient
@@ -239,8 +239,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 318
-    Width = 755
+    Top = 250
+    Width = 743
     Height = 19
     Panels = <
       item
@@ -252,8 +252,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 277
-    Width = 755
+    Top = 209
+    Width = 743
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -274,7 +274,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 467
+      Left = 455
       Top = 1
       Width = 287
       Height = 39
@@ -327,23 +327,29 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 755
+    Width = 743
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 115
-      Height = 21
+      Width = 125
+      Height = 23
       Caption = 'Purchase Orders'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False

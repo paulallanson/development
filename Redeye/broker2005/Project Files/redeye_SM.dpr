@@ -57,7 +57,6 @@ uses
   PBLUStandSize in '..\PBLUStandSize.pas' {PBLUStandSizeFrm},
   PBMaintPaper in '..\PBMaintPaper.pas' {PBMaintPaperFrm},
   PBMaintStandSize in '..\PBMaintStandSize.pas' {PBMaintStandSizeFrm},
-  PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm},
   PBMaintArtwrkTyp in '..\PBMaintArtwrkTyp.pas' {PBMaintArtwrkTypFrm},
   PBMaintOpsDet in '..\PBMaintOpsDet.pas' {PBMaintOpsDetFrm},
   PBLUOps in '..\PBLUOps.pas' {PBLUOpsFrm},
@@ -711,7 +710,8 @@ uses
   PBRSStkRec in '..\PBRSStkRec.pas',
   PBLUNCARpts in '..\PBLUNCARpts.pas',
   PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
-  PBRSNCASource in '..\PBRSNCASource.pas';
+  PBRSNCASource in '..\PBRSNCASource.pas',
+  PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm};
 
 {$R *.RES}
 
@@ -725,6 +725,7 @@ begin
   Application.CreateForm(TPBImagesFrm, PBImagesFrm);
   Application.CreateForm(TdmLetter, dmLetter);
   Application.CreateForm(TPBAuditDataMod, PBAuditDataMod);
+  Application.CreateForm(TPBLUArtwrkTypFrm, PBLUArtwrkTypFrm);
   Application.Run;
 end.
 

@@ -43,6 +43,7 @@ object PBLUCategoryFrm: TPBLUCategoryFrm
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
+    OnDrawColumnCell = DetsDBGridDrawColumnCell
     OnDblClick = DetsDBGridDblClick
     Columns = <
       item
@@ -253,7 +254,10 @@ object PBLUCategoryFrm: TPBLUCategoryFrm
     SQL.Strings = (
       'Select Category.*'
       'From Category'
-      'Where (Category.Description Like :Code_From)'
+      'Where (Category.Description Like :Code_From) AND'
+      
+        '      ((Inactive = '#39'N'#39') or (Inactive is NULL) or (Inactive = :In' +
+        'active))'
       'Order By Category.Description'
       ' '
       ''
@@ -263,6 +267,11 @@ object PBLUCategoryFrm: TPBLUCategoryFrm
     ParamData = <
       item
         Name = 'Code_From'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INACTIVE'
+        ParamType = ptInput
       end>
   end
   object SearchTimer: TTimer

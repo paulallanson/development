@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 352
-  ClientWidth = 667
+  ClientHeight = 343
+  ClientWidth = 661
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 667
+    Width = 661
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 661
+        Width = 655
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 652
+      Width = 646
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -94,8 +94,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 667
-    Height = 217
+    Width = 661
+    Height = 208
     Align = alClient
     DataSource = dtmdlJobs.dtsJobsNCA
     DrawingStyle = gdsGradient
@@ -222,8 +222,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 292
-    Width = 667
+    Top = 283
+    Width = 661
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -244,7 +244,7 @@ object frmPBluNCA: TfrmPBluNCA
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 393
+      Left = 387
       Top = 1
       Width = 273
       Height = 39
@@ -294,8 +294,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 333
-    Width = 667
+    Top = 324
+    Width = 661
     Height = 19
     Panels = <
       item
@@ -311,23 +311,24 @@ object frmPBluNCA: TfrmPBluNCA
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 667
+    Width = 661
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clSilver
+    Color = 16642529
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = -4
     object Label3: TLabel
       Left = 8
       Top = 3
-      Width = 178
-      Height = 21
+      Width = 196
+      Height = 23
       Caption = 'Non Conformance Advice'
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
+      Font.Color = clNavy
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
