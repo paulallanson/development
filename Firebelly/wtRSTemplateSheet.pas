@@ -607,7 +607,8 @@ begin
 
     for icount := 1 to 100 do
     begin
-      if EmailArray[icount, 3] = '' then Break;
+      if EmailArray[icount, 3] = '' then
+        Break;
       frmWTEmailList.EmailListGrid.Cells[0, icount] := EmailArray[icount, 1];
       frmWTEmailList.EmailListGrid.Cells[1, icount] := EmailArray[icount, 5];
       frmWTEmailList.EmailListGrid.Cells[2, icount] := EmailArray[icount, 9];
@@ -615,12 +616,12 @@ begin
       frmWTEmailList.EmailListGrid.Cells[4, icount] := EmailArray[icount, 7];
       frmWTEmailList.EmailListGrid.Cells[5, icount] := EmailArray[icount, 8];
 
-
       {Set up the Email Array with the Customer/Branch/Contact}
       frmWTEmailList.EmailContactArray[icount,1] := EmailArray[icount, 3];
       frmWTEmailList.EmailContactArray[icount,2] := EmailArray[icount, 4];
       frmWTEmailList.EmailContactArray[icount,3] := EmailArray[icount, 2];
     end;
+
     if icount = 1 then
       frmWTEmailList.EmailListGrid.RowCount := 2
     else
@@ -661,63 +662,59 @@ begin
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
           printFileName := 'TS' + EmailArray[irow,1];
 
-          TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
+          TPrinterTools.New.PrintToAttachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           if self.chkbxPrint.checked then
+          begin
+            qryGetSOQuotesEmails.close;
+            qryGetSOQuotesEmails.parambyname('Sales_Order').asinteger := strtoint(EmailArray[irow,1]);
+            qryGetSOQuotesEmails.open;
+
+            qryGetSOQuotesEmails.first;
+            while qryGetSOQuotesEmails.eof <> true do
             begin
-              with qryGetSOQuotesEmails do
+              frmwtRPQuote := TfrmwtRPQuote.create(self);
+              try
+                Printers.Printer.PrinterIndex := -1;
+
+                frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
+                frmwtRPQuote.bPrintLogo := false;
+                frmwtRPQuote.bPrintDetail := false;
+                frmwtRPQuote.bPrintAcceptance := false;
+                frmwtRPQuote.bOnlyGrandTotal := false;
+                frmwtRPQuote.bPrintTotals := false;
+
+                if (frmwtRPQuote.GetDetails = 0) then
+                  continue
+                else
                 begin
-                  close;
-                  parambyname('Sales_Order').asinteger := strtoint(EmailArray[irow,1]);
-                  open;
-
-                  first;
-                  while eof <> true do
-                    begin
-                      frmwtRPQuote := TfrmwtRPQuote.create(self);
-                      try
-                        Printers.Printer.PrinterIndex := -1;
-
-                        frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
-                        frmwtRPQuote.bPrintLogo := false;
-                        frmwtRPQuote.bPrintDetail := false;
-                        frmwtRPQuote.bPrintAcceptance := false;
-                        frmwtRPQuote.bOnlyGrandTotal := false;
-                        frmwtRPQuote.bPrintTotals := false;
-
-                        if (frmwtRPQuote.GetDetails = 0) then
-                          continue
-                        else
-                          begin
-                            // decide which address to show on quote
-                            frmwtRPQuote.bEndUser := false;
-                            frmWTRPQuote.bPreview := false;
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
-                              FEmailAttachment,
-                              printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString,
-                              frmWTEmailList.EmailListGrid.Cells[5, irow]);
-                          end;
-                      finally
-                        frmWTRPQuote.Free;
-                      end;
-                      next;
-                    end;
+                  // decide which address to show on quote
+                  sFileName := printFileName + '-Q' + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString;
+                  frmwtRPQuote.bEndUser := false;
+                  frmWTRPQuote.bPreview := false;
+                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
+                    FEmailAttachment, sFileName, frmWTEmailList.EmailListGrid.Cells[5, irow], False);
                 end;
+              finally
+                frmWTRPQuote.Free;
+              end;
+              qryGetSOQuotesEmails.next;
             end;
+          end;
 
           {Create the kitchen Plan as an attachment}
           if self.chkbxPrintPlan.checked then
-            begin
-              sKitchenPlan := GetKitchenPlan(strtoint(EmailArray[irow,1]));
-              if sKitchenPlan <> '' then
-                FEmailAttachment.add(sKitchenPlan);
-            end;
+          begin
+            sKitchenPlan := GetKitchenPlan(strtoint(EmailArray[irow,1]));
+            if sKitchenPlan <> '' then
+              FEmailAttachment.add(sKitchenPlan);
+          end;
 
           {Add any other selected documents as an attachment}
           if cmbDocuments.text <> '<None>' then
-            begin
-              GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
-            end;
+          begin
+            GetOrderDocuments(strtoint(EmailArray[irow,1]), cmbDocuments.text);
+          end;
 
           if chkbxAllSiteDocuments.Checked then
             GetSiteDocuments(strtoint(EmailArray[irow,1]));
@@ -840,105 +837,106 @@ begin
     begin
       for irow := 1 to frmWTEmailList.EmailListGrid.Rowcount -1 do
       begin
-        if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then continue;
+        if Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) = '' then
+          Continue;
 
         sOrderNumber := EmailArray[irow,1];
         sPath := dtmdlWorktops.GetCompanySalesDirectory + '\' + sOrderNumber + '\';
 
         if (Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) <> sEmail) and (Trim(frmWTEmailList.EmailListGrid.cells[3, irow]) <> '') then
+        begin
+          if sEmail <> '' then
           begin
-            if sEmail <> '' then
-              begin
-                FEmailAttachment.clear;
-                if (sMergedPDFList.Count > 0) then
-                  begin
-                    for icount := 0 to pred(sMergedPDFList.Count) do
-                      FEmailAttachment.Add(sMergedPDFList[icount]);
-                  end;
-
-                EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
-
-                {Clear attachments}
-                for i := pred(FEmailAttachment.count) downto 0 do
-                  begin
-                    if pos(sPath,FEmailAttachment.strings[i]) > 0 then
-                      continue;
-                    StrPCopy(sAttachment, FEmailAttachment.strings[i]);
-                    deletefile(sAttachment);
-                  end;
-                sMergedPDFList.clear;
-              end;
-
             FEmailAttachment.clear;
-            iOrderCount := 1;
-
-            sEmail := Trim(frmWTEmailList.EmailListGrid.cells[3, irow]);
-
-            frmwtRPTemplate := TfrmwtRPTemplate.create(self);
-            try
-              frmwtRPTemplate.qrpDetails.ShowProgress := false;
-              frmwtRPTemplate.bPreview := false;
-              frmwtRPTemplate.SalesOrder := strtoint(EmailArray[irow,1]);
-
-              frmwtRPTemplate.GetDetails;
-
-              sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              printFileName := 'TS' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType);
-
-              if iOrderCount = 1 then
-                begin
-                  sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
-                  sSubject := Trim(frmWTEmailList.EmailListGrid.Cells[2, irow]) + ' ' + 'Template Documents: ' + EmailArray[irow,1] ;
-                  sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
-                end
-              else
-                sSubject := sSubject + ', ' + EmailArray[irow,1];
-
-            finally
-              frmwtRPTemplate.free;
-            end;
-
-            {Create the Quote as an attachment}
-            if self.chkbxPrint.checked then
+            if (sMergedPDFList.Count > 0) then
             begin
-              with qryGetSOQuotesEmails do
-                begin
-                  close;
-                  parambyname('Sales_Order').asinteger := strtoint(EmailArray[irow,1]);
-                  open;
-
-                  first;
-                  while eof <> true do
-                    begin
-                      frmwtRPQuote := TfrmwtRPQuote.create(self);
-                      try
-                        Printers.Printer.PrinterIndex := -1;
-
-                        frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
-                        frmwtRPQuote.bPrintLogo := false;
-                        frmwtRPQuote.bPrintDetail := false;
-                        frmwtRPQuote.bPrintAcceptance := false;
-                        frmwtRPQuote.bOnlyGrandTotal := false;
-                        frmwtRPQuote.bPrintTotals := false;
-
-                        if (frmwtRPQuote.GetDetails = 0) then
-                          continue
-                        else
-                          begin
-                            // decide which address to show on quote
-                            frmwtRPQuote.bEndUser := false ;
-                            frmWTRPQuote.bPreview := false;
-                            sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString, sAttachmentType);
-                          end;
-                      finally
-                        frmWTRPQuote.Free;
-                      end;
-                      next;
-                    end;
-                end;
+              for icount := 0 to pred(sMergedPDFList.Count) do
+                FEmailAttachment.Add(sMergedPDFList[icount]);
             end;
+
+            EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
+
+            {Clear attachments}
+            for i := pred(FEmailAttachment.count) downto 0 do
+            begin
+              if pos(sPath,FEmailAttachment.strings[i]) > 0 then
+                continue;
+              StrPCopy(sAttachment, FEmailAttachment.strings[i]);
+              deletefile(sAttachment);
+            end;
+            sMergedPDFList.clear;
+          end;
+
+          FEmailAttachment.clear;
+          iOrderCount := 1;
+
+          sEmail := Trim(frmWTEmailList.EmailListGrid.cells[3, irow]);
+
+          frmwtRPTemplate := TfrmwtRPTemplate.create(self);
+          try
+            frmwtRPTemplate.qrpDetails.ShowProgress := false;
+            frmwtRPTemplate.bPreview := false;
+            frmwtRPTemplate.SalesOrder := strtoint(EmailArray[irow,1]);
+
+            frmwtRPTemplate.GetDetails;
+
+            sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
+            printFileName := 'TS' + EmailArray[irow,1];
+            TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType);
+
+            if iOrderCount = 1 then
+            begin
+              sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
+              sSubject := Trim(frmWTEmailList.EmailListGrid.Cells[2, irow]) + ' ' + 'Template Documents: ' + EmailArray[irow,1] ;
+              sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
+            end
+            else
+              sSubject := sSubject + ', ' + EmailArray[irow,1];
+
+          finally
+            frmwtRPTemplate.free;
+          end;
+
+          {Create the Quote as an attachment}
+          if self.chkbxPrint.checked then
+          begin
+            qryGetSOQuotesEmails.close;
+            qryGetSOQuotesEmails.parambyname('Sales_Order').asinteger := strtoint(EmailArray[irow,1]);
+            qryGetSOQuotesEmails.open;
+
+            qryGetSOQuotesEmails.first;
+            while qryGetSOQuotesEmails.Eof <> true do
+            begin
+              frmwtRPQuote := TfrmwtRPQuote.create(self);
+              try
+                Printers.Printer.PrinterIndex := -1;
+
+                frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
+                frmwtRPQuote.bPrintLogo := false;
+                frmwtRPQuote.bPrintDetail := false;
+                frmwtRPQuote.bPrintAcceptance := false;
+                frmwtRPQuote.bOnlyGrandTotal := false;
+                frmwtRPQuote.bPrintTotals := false;
+
+                if (frmwtRPQuote.GetDetails = 0) then
+                  continue
+                else
+                begin
+                  // decide which address to show on quote
+                  frmwtRPQuote.bEndUser := false;
+                  frmWTRPQuote.bPreview := false;
+                  sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
+                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
+                    FEmailAttachment,
+                    printFileName + '-Q' + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString,
+                    sAttachmentType, False);
+                end;
+              finally
+                frmWTRPQuote.Free;
+              end;
+              qryGetSOQuotesEmails.next;
+            end;
+          end;
 
             {Create the kitchen plan as an attachment}
             if self.chkbxPrintPlan.checked then
@@ -1019,9 +1017,9 @@ begin
                 end;
             end;
 *)
-          end
+        end
         else
-          begin
+        begin
             iOrderCount := iOrderCount + 1;
 
             sEmail := Trim(frmWTEmailList.EmailListGrid.cells[3, irow]);
@@ -1129,9 +1127,9 @@ begin
                   end;
                 FEmailAttachment.clear;
               end;
-          end;
         end;
       end;
+    end;
 
 //      if (FEmailAttachment.Count > 0) then
       if (sMergedPDFList.Count > 0) then
