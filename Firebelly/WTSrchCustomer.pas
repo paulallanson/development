@@ -29,6 +29,7 @@ type
     btnSweep: TBitBtn;
     qryDelete: TFDQuery;
     stbrDetails: TStatusBar;
+    pnlBody: TPanel;
     procedure tmrSearchTimer(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);

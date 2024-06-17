@@ -14,152 +14,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 13
-  object dbgDetails: TDBGrid
-    Left = 0
-    Top = 0
-    Width = 308
-    Height = 334
-    Align = alClient
-    DataSource = dtsDetails
-    DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
-    ParentFont = False
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
-    OnDblClick = dbgDetailsDblClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Customer_Name'
-        Title.Caption = 'Customer'
-        Width = 242
-        Visible = True
-      end>
-  end
-  object pnlFunctions: TPanel
-    Left = 308
-    Top = 0
-    Width = 98
-    Height = 334
-    Align = alRight
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 1
-    DesignSize = (
-      98
-      334)
-    object btnAdd: TBitBtn
-      Left = 15
-      Top = 8
-      Width = 75
-      Height = 25
-      Caption = '&Add'
-      TabOrder = 0
-      OnClick = btnAddClick
-    end
-    object btnChange: TBitBtn
-      Left = 15
-      Top = 40
-      Width = 75
-      Height = 25
-      Caption = '&Change'
-      Enabled = False
-      TabOrder = 1
-      OnClick = btnChangeClick
-    end
-    object btnDelete: TBitBtn
-      Left = 15
-      Top = 72
-      Width = 75
-      Height = 25
-      Caption = '&Delete'
-      Enabled = False
-      TabOrder = 2
-      OnClick = btnDeleteClick
-    end
-    object btnSweep: TBitBtn
-      Left = 15
-      Top = 296
-      Width = 75
-      Height = 25
-      Anchors = [akLeft, akBottom]
-      Caption = 'S&weep'
-      Enabled = False
-      TabOrder = 3
-      OnClick = btnSweepClick
-    end
-  end
-  object pnlBottom: TPanel
-    Left = 0
-    Top = 334
-    Width = 406
-    Height = 89
-    Align = alBottom
-    BevelOuter = bvNone
-    ParentBackground = False
-    TabOrder = 2
-    DesignSize = (
-      406
-      89)
-    object Label1: TLabel
-      Left = 8
-      Top = 36
-      Width = 86
-      Height = 13
-      Anchors = [akLeft, akBottom]
-      Caption = 'Customer Search'
-    end
-    object chkbxShowInactive: TCheckBox
-      Left = 8
-      Top = 8
-      Width = 193
-      Height = 17
-      Anchors = [akLeft, akBottom]
-      Caption = 'Show inactive customers'
-      TabOrder = 0
-      OnClick = chkbxShowInactiveClick
-    end
-    object edtSearch: TEdit
-      Left = 8
-      Top = 56
-      Width = 257
-      Height = 21
-      Anchors = [akLeft, akBottom]
-      TabOrder = 1
-      OnChange = edtSearchChange
-    end
-    object btnSelect: TBitBtn
-      Left = 321
-      Top = 16
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = '&Select'
-      ModalResult = 1
-      TabOrder = 2
-      OnClick = btnSelectClick
-    end
-    object BitBtn2: TBitBtn
-      Left = 321
-      Top = 54
-      Width = 75
-      Height = 25
-      Anchors = [akRight, akBottom]
-      Caption = 'Canc&el'
-      TabOrder = 3
-      OnClick = BitBtn2Click
-    end
-  end
   object stbrDetails: TStatusBar
     Left = 0
     Top = 423
@@ -172,6 +26,165 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Top = 0
+    Width = 406
+    Height = 423
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+    ExplicitLeft = 152
+    ExplicitTop = 160
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object dbgDetails: TDBGrid
+      Left = 0
+      Top = 0
+      Width = 308
+      Height = 334
+      Align = alClient
+      DataSource = dtsDetails
+      DrawingStyle = gdsGradient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      OnDrawColumnCell = dbgDetailsDrawColumnCell
+      OnDblClick = dbgDetailsDblClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Customer_Name'
+          Title.Caption = 'Customer'
+          Width = 242
+          Visible = True
+        end>
+    end
+    object pnlFunctions: TPanel
+      Left = 308
+      Top = 0
+      Width = 98
+      Height = 334
+      Align = alRight
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 1
+      DesignSize = (
+        98
+        334)
+      object btnAdd: TBitBtn
+        Left = 15
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Add'
+        TabOrder = 0
+        OnClick = btnAddClick
+      end
+      object btnChange: TBitBtn
+        Left = 15
+        Top = 40
+        Width = 75
+        Height = 25
+        Caption = '&Change'
+        Enabled = False
+        TabOrder = 1
+        OnClick = btnChangeClick
+      end
+      object btnDelete: TBitBtn
+        Left = 15
+        Top = 72
+        Width = 75
+        Height = 25
+        Caption = '&Delete'
+        Enabled = False
+        TabOrder = 2
+        OnClick = btnDeleteClick
+      end
+      object btnSweep: TBitBtn
+        Left = 15
+        Top = 296
+        Width = 75
+        Height = 25
+        Anchors = [akLeft, akBottom]
+        Caption = 'S&weep'
+        Enabled = False
+        TabOrder = 3
+        OnClick = btnSweepClick
+      end
+    end
+    object pnlBottom: TPanel
+      Left = 0
+      Top = 334
+      Width = 406
+      Height = 89
+      Align = alBottom
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 2
+      DesignSize = (
+        406
+        89)
+      object Label1: TLabel
+        Left = 8
+        Top = 36
+        Width = 86
+        Height = 13
+        Anchors = [akLeft, akBottom]
+        Caption = 'Customer Search'
+      end
+      object chkbxShowInactive: TCheckBox
+        Left = 8
+        Top = 8
+        Width = 193
+        Height = 17
+        Anchors = [akLeft, akBottom]
+        Caption = 'Show inactive customers'
+        TabOrder = 0
+        OnClick = chkbxShowInactiveClick
+      end
+      object edtSearch: TEdit
+        Left = 8
+        Top = 56
+        Width = 257
+        Height = 21
+        Anchors = [akLeft, akBottom]
+        TabOrder = 1
+        OnChange = edtSearchChange
+      end
+      object btnSelect: TBitBtn
+        Left = 321
+        Top = 16
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = '&Select'
+        ModalResult = 1
+        TabOrder = 2
+        OnClick = btnSelectClick
+      end
+      object BitBtn2: TBitBtn
+        Left = 321
+        Top = 54
+        Width = 75
+        Height = 25
+        Anchors = [akRight, akBottom]
+        Caption = 'Canc&el'
+        TabOrder = 3
+        OnClick = BitBtn2Click
+      end
+    end
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'
