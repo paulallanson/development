@@ -188,7 +188,7 @@ type
     qryAllSalesRemedial_Production: TWideStringField;
     qryAllSalesRemedial_No_Production: TWideStringField;
     qryRemedialCount: TFDQuery;
-    qryAllSalesSales_Order_Number: TCurrencyField;
+    qryAllSalesSales_Order_Number: TWideStringField;
     qryRemedialReport: TFDQuery;
     qrySOUpRemedial: TFDQuery;
     qryJobsDummyOlder: TFDQuery;

@@ -1,23 +1,66 @@
 object dtmdlSalesOrder: TdtmdlSalesOrder
-  Height = 786
-  Width = 1599
-  PixelsPerInch = 120
+  Height = 629
+  Width = 1279
   object qryAllSales: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
-      'select sales_order.*,'
-      '  Customer.Customer_name as original_customer_name,'
-      '    Operator.Operator_name,'
-      '    (Goods_Value + VAt_Value) as Total_Value,'
-      '    sales_order_status.sales_order_status_desc'
-      'from sales_order, customer, operator, sales_order_status'
-      'where sales_order.customer = customer.customer and'
-      'sales_order.operator = operator.operator and'
       
-        'sales_order.sales_order_status = sales_order_status.sales_order_' +
-        'status')
-    Left = 40
-    Top = 30
+        'select sales_order.Sales_Order, sales_order.Date_Raised, sales_o' +
+        'rder.Date_Required, sales_order.Customer, sales_order.Reference,' +
+        ' sales_order.Extra_Notes,'
+      
+        ' sales_order.Operator, sales_order.Contact_name, sales_order.Ord' +
+        'er_ref_no, sales_order.Sales_Order_Status, sales_order.Deposit_a' +
+        'mount, sales_order.Deposit_Terms,'
+      
+        ' sales_order.Goods_Value, sales_order.VAT_Value, sales_order.Rep' +
+        ', sales_order.Install_Address, sales_order.Inactive, sales_order' +
+        '.Customer_Name, sales_order.Inactive_Reason,'
+      
+        ' sales_order.Address, sales_order.Template_Date, sales_order.Dat' +
+        'e_Type, sales_order.Materials_Required, sales_order.Materials_Re' +
+        'qd_Date, sales_order.Materials_Recd_Date,'
+      
+        ' sales_order.Install_Name, sales_order.Install_Phone, sales_orde' +
+        'r.On_Hold, sales_order.Email_Address, sales_order.Account_Manage' +
+        'r, sales_order.Descriptive_Reference,'
+      
+        ' sales_order.Template_Duration, sales_order.Fitting_Duration, sa' +
+        'les_order.Fitter, sales_order.Is_In_Outlook, sales_order.IsFitti' +
+        'ngInOutlook, sales_order.IsTemplateInOutlook,'
+      
+        ' sales_order.Templater, sales_order.Supply_Only, sales_order.Pro' +
+        'ject_Reference, sales_order.Paid_Status, sales_order.Contact_no,' +
+        ' sales_order.Appliance_Details, sales_order.Branch_no,'
+      
+        ' sales_order.Location_Plan_Document, sales_order.Collection_Only' +
+        ', sales_order.Installation_Address, sales_order.SSMA_TimeStamp, ' +
+        'sales_order.Template_Docs_Returned,'
+      
+        ' sales_order.Fitting_Docs_Returned, sales_order.Revenue_Centre, ' +
+        'sales_order.Remedial_Production, sales_order.Remedial_No_Product' +
+        'ion, sales_order.Remedial_ID,'
+      
+        ' cast(sales_order.Sales_Order_Number as varchar(10)) as Sales_Or' +
+        'der_Number, sales_order.Original_Sales_Order, sales_order.Inv_Cu' +
+        'stomer,'
+      
+        ' sales_order.Do_not_invoice, sales_order.Stock_Allocation_Start_' +
+        'Date, sales_order.Stock_Allocation_End_Date,'
+      
+        ' customer.Customer_name as original_customer_name, operator.Oper' +
+        'ator_name,'
+      
+        ' (Goods_Value + VAt_Value) as Total_Value, sales_order_status.sa' +
+        'les_order_status_desc'
+      '  from sales_order, customer, operator, sales_order_status'
+      ' where sales_order.customer = customer.customer'
+      '  and sales_order.operator = operator.operator'
+      
+        '  and sales_order.sales_order_status = sales_order_status.sales_' +
+        'order_status')
+    Left = 32
+    Top = 24
     object qryAllSalesSales_Order: TIntegerField
       Alignment = taLeftJustify
       FieldName = 'Sales_Order'
@@ -240,8 +283,9 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       FieldName = 'Remedial_No_Production'
       Size = 1
     end
-    object qryAllSalesSales_Order_Number: TCurrencyField
+    object qryAllSalesSales_Order_Number: TWideStringField
       FieldName = 'Sales_Order_Number'
+      Size = 10
     end
     object qryAllSalesBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
@@ -250,12 +294,54 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsAllSales: TDataSource
     DataSet = qryAllSales
-    Left = 110
-    Top = 30
+    Left = 88
+    Top = 24
   end
   object qrydummy: TFDQuery
     SQL.Strings = (
-      '  sales_order.*,'
+      
+        '  sales_order.Sales_Order, sales_order.Date_Raised, sales_order.' +
+        'Date_Required, sales_order.Customer, sales_order.Reference, sale' +
+        's_order.Extra_Notes,'
+      
+        '  sales_order.Operator, sales_order.Contact_name, sales_order.Or' +
+        'der_ref_no, sales_order.Sales_Order_Status, sales_order.Deposit_' +
+        'amount, sales_order.Deposit_Terms,'
+      
+        '  sales_order.Goods_Value, sales_order.VAT_Value, sales_order.Re' +
+        'p, sales_order.Install_Address, sales_order.Inactive, sales_orde' +
+        'r.Customer_Name, sales_order.Inactive_Reason,'
+      
+        '  sales_order.Address, sales_order.Template_Date, sales_order.Da' +
+        'te_Type, sales_order.Materials_Required, sales_order.Materials_R' +
+        'eqd_Date, sales_order.Materials_Recd_Date,'
+      
+        '  sales_order.Install_Name, sales_order.Install_Phone, sales_ord' +
+        'er.On_Hold, sales_order.Email_Address, sales_order.Account_Manag' +
+        'er, sales_order.Descriptive_Reference,'
+      
+        '  sales_order.Template_Duration, sales_order.Fitting_Duration, s' +
+        'ales_order.Fitter, sales_order.Is_In_Outlook, sales_order.IsFitt' +
+        'ingInOutlook, sales_order.IsTemplateInOutlook,'
+      
+        '  sales_order.Templater, sales_order.Supply_Only, sales_order.Pr' +
+        'oject_Reference, sales_order.Paid_Status, sales_order.Contact_no' +
+        ', sales_order.Appliance_Details, sales_order.Branch_no,'
+      
+        '  sales_order.Location_Plan_Document, sales_order.Collection_Onl' +
+        'y, sales_order.Installation_Address, sales_order.SSMA_TimeStamp,' +
+        ' sales_order.Template_Docs_Returned,'
+      
+        '  sales_order.Fitting_Docs_Returned, sales_order.Revenue_Centre,' +
+        ' sales_order.Remedial_Production, sales_order.Remedial_No_Produc' +
+        'tion, sales_order.Remedial_ID,'
+      
+        '  cast(sales_order.Sales_Order_Number as varchar(10)) as Sales_O' +
+        'rder_Number, sales_order.Original_Sales_Order, sales_order.Inv_C' +
+        'ustomer,'
+      
+        '  sales_order.Do_not_invoice, sales_order.Stock_Allocation_Start' +
+        '_Date, sales_order.Stock_Allocation_End_Date,'
       '  Customer.Customer_name as Original_Customer_name,'
       '  Customer.Account_Code,'
       '    Operator.Operator_name,'
@@ -319,21 +405,21 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         #9#9#9#9'ON (Customer_Branch.Branch_No = sales_order.Branch_no) AND (' +
         'Customer_Branch.Customer = sales_order.Customer)'
       'WHERE (1=1)')
-    Left = 180
-    Top = 30
+    Left = 144
+    Top = 24
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 360
-    Top = 40
+    Left = 288
+    Top = 32
   end
   object qrySOGetLast: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select Last_Sales_Order_number'
       'from Company')
-    Left = 280
-    Top = 40
+    Left = 224
+    Top = 32
   end
   object qrySOHeader: TFDQuery
     ConnectionName = 'wt'
@@ -427,8 +513,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'Order_Status) ON'
       '      Rep.Rep = Sales_Order.Rep'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 30
-    Top = 160
+    Left = 40
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -470,8 +556,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'Product'
       'WHERE Sales_Order = :Sales_Order'
       'ORDER BY Sales_Order_Line_no')
-    Left = 130
-    Top = 270
+    Left = 104
+    Top = 216
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -482,13 +568,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select *'
       'from Operator')
-    Left = 200
-    Top = 490
+    Left = 160
+    Top = 392
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 270
-    Top = 490
+    Left = 216
+    Top = 392
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'wt'
@@ -496,8 +582,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'update company'
       'set last_sales_order_number = :last_sales_order_number'
       'where company = 1')
-    Left = 350
-    Top = 490
+    Left = 280
+    Top = 392
     ParamData = <
       item
         Name = 'last_sales_order_number'
@@ -620,8 +706,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        :Inv_Customer,'
       '        :Branch_no'
       ')')
-    Left = 30
-    Top = 220
+    Left = 40
+    Top = 176
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -855,8 +941,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        Inv_Customer = :Inv_Customer,'
       '        Branch_no = :Branch_no'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 30
-    Top = 330
+    Left = 40
+    Top = 264
     ParamData = <
       item
         Name = 'Date_Required'
@@ -1060,8 +1146,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'WHERE Quote = :Quote and'
       '               Element_Number = :Element_Number and'
       'Element_Type ='#39'P'#39)
-    Left = 130
-    Top = 160
+    Left = 104
+    Top = 128
     ParamData = <
       item
         Name = 'Quote'
@@ -1119,8 +1205,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ':Quote,'
       ':Markup_Value,'
       ':Waste_Value)')
-    Left = 130
-    Top = 220
+    Left = 104
+    Top = 176
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1198,13 +1284,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select * '
       'from Rep')
-    Left = 590
-    Top = 50
+    Left = 472
+    Top = 40
   end
   object dtsRep: TDataSource
     DataSet = qryRep
-    Left = 650
-    Top = 50
+    Left = 520
+    Top = 40
   end
   object qryGetCustomer: TFDQuery
     ConnectionName = 'wt'
@@ -1213,8 +1299,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'select Street, Locale,Town_City, Postcode, County_State,Telephon' +
         'e_number, Fax_number, email_address, web_address'
       'from Customer where Customer = :Customer')
-    Left = 120
-    Top = 430
+    Left = 96
+    Top = 344
     ParamData = <
       item
         Name = 'Customer'
@@ -1225,8 +1311,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select * from Rep'
       'where Rep = :rep')
-    Left = 590
-    Top = 120
+    Left = 472
+    Top = 96
     ParamData = <
       item
         Name = 'rep'
@@ -1239,8 +1325,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
         'State,Telephone_number, Fax_number, email_address, web_address'
       'from Address where Address = :Address')
-    Left = 30
-    Top = 430
+    Left = 40
+    Top = 344
     ParamData = <
       item
         Name = 'Address'
@@ -1251,8 +1337,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 520
-    Top = 20
+    Left = 416
+    Top = 16
   end
   object qryAddAddress: TFDQuery
     ConnectionName = 'wT'
@@ -1279,8 +1365,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ':Telephone_number,'
       ':email_address,'
       ':Installation_Address)')
-    Left = 520
-    Top = 90
+    Left = 416
+    Top = 72
     ParamData = <
       item
         Name = 'Address'
@@ -1328,8 +1414,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 520
-    Top = 150
+    Left = 416
+    Top = 120
     ParamData = <
       item
         Name = 'Address_Name'
@@ -1364,8 +1450,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
-    Left = 520
-    Top = 220
+    Left = 416
+    Top = 176
     ParamData = <
       item
         Name = 'address'
@@ -1377,8 +1463,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'select *'
       'from VAt'
       'order by Vat_Rate')
-    Left = 520
-    Top = 290
+    Left = 416
+    Top = 232
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
       Origin = 'Vat'
@@ -1404,8 +1490,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsVAT: TDataSource
     DataSet = qryVAT
-    Left = 580
-    Top = 290
+    Left = 464
+    Top = 232
   end
   object qryjobHeader: TFDQuery
     ConnectionName = 'wt'
@@ -1425,8 +1511,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '      Job_Status.Job_Status = Job.Job_Status) ON'
       '      Operator.Operator = Job.Operator'
       'WHERE Job.Job = :Job')
-    Left = 280
-    Top = 160
+    Left = 224
+    Top = 128
     ParamData = <
       item
         Name = 'Job'
@@ -1438,8 +1524,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'select *'
       'from vat'
       'where vat = :vat')
-    Left = 520
-    Top = 360
+    Left = 416
+    Top = 288
     ParamData = <
       item
         Name = 'vat'
@@ -1509,8 +1595,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '    Quote_Status.Quote_Status = Quote.Quote_Status) ON'
       '    Vat.Vat = Quote.Vat'
       'WHERE Quote.Quote = :Quote')
-    Left = 280
-    Top = 240
+    Left = 224
+    Top = 192
     ParamData = <
       item
         Name = 'Quote'
@@ -1548,8 +1634,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ' '#39'N'#39')) AND'
       '      (Sales_Order_Line.Sales_Order IS NULL)'
       'ORDER BY Quote.Quote desc')
-    Left = 520
-    Top = 430
+    Left = 416
+    Top = 344
     ParamData = <
       item
         Name = 'customer'
@@ -1560,12 +1646,12 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dsCustQuotes: TDataSource
     DataSet = qryCustQuotes
-    Left = 620
-    Top = 430
+    Left = 496
+    Top = 344
   end
   object dsDummy: TDataSource
-    Left = 730
-    Top = 430
+    Left = 584
+    Top = 344
   end
   object qryGetQuoteJob: TFDQuery
     ConnectionName = 'wt'
@@ -1573,8 +1659,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'select Job.Job'
       'from Job'
       'where Quote = :quote')
-    Left = 520
-    Top = 500
+    Left = 416
+    Top = 400
     ParamData = <
       item
         Name = 'quote'
@@ -1647,8 +1733,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ' where Payment.Sales_Order = :sales_order) as total_Paid'
       'from Sales_order_line'
       'where Sales_order_line.sales_order = :sales_order')
-    Left = 700
-    Top = 340
+    Left = 560
+    Top = 272
     ParamData = <
       item
         Name = 'sales_order'
@@ -1661,8 +1747,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'update sales_order'
       'set sales_order_status = :sales_order_Status'
       'where sales_order = :sales_order')
-    Left = 700
-    Top = 280
+    Left = 560
+    Top = 224
     ParamData = <
       item
         Name = 'sales_order_Status'
@@ -1698,8 +1784,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       
         'WHERE Sales_Order = :Sales_Order and Sales_Order_line_no = :Sale' +
         's_order_Line_no')
-    Left = 210
-    Top = 220
+    Left = 168
+    Top = 176
     ParamData = <
       item
         Name = 'Job'
@@ -1777,8 +1863,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select * from Sales_Invoice_Line'
       'where sales_order = :sales_order')
-    Left = 280
-    Top = 370
+    Left = 224
+    Top = 296
     ParamData = <
       item
         Name = 'sales_order'
@@ -1790,8 +1876,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'update sales_order'
       'set inactive = '#39'Y'#39
       'where sales_order = :Sales_Order')
-    Left = 280
-    Top = 430
+    Left = 224
+    Top = 344
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1803,8 +1889,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'update customer'
       'set prospect = '#39'N'#39
       'where customer = :customer')
-    Left = 670
-    Top = 180
+    Left = 536
+    Top = 144
     ParamData = <
       item
         Name = 'customer'
@@ -1816,8 +1902,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'Update Quote'
       'set Quote_Status = :Quote_Status'
       'where Quote = :Quote')
-    Left = 280
-    Top = 290
+    Left = 224
+    Top = 232
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -1832,8 +1918,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'Update Sales_Invoice'
       'Set Customer_Name = :Customer_Name'
       'Where Reference = :Reference')
-    Left = 730
-    Top = 500
+    Left = 584
+    Top = 400
     ParamData = <
       item
         Name = 'Customer_Name'
@@ -1880,8 +1966,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'WHERE (Sales_Order_Line.Sales_Order = :Sales_Order)'
       'ORDER BY OrigQuote.Date_Raised DESC'
       '')
-    Left = 800
-    Top = 20
+    Left = 640
+    Top = 16
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1971,8 +2057,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsGetLinkedQuotes: TDataSource
     DataSet = qryGetLinkedQuotes
-    Left = 880
-    Top = 20
+    Left = 704
+    Top = 16
   end
   object qryGetSOHead: TFDQuery
     ConnectionName = 'wt'
@@ -1980,8 +2066,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'Select *'
       'From Sales_Order'
       'where sales_order = :Sales_Order')
-    Left = 670
-    Top = 120
+    Left = 536
+    Top = 96
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1994,8 +2080,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'from Fitter'
       'where (inactive = '#39'N'#39') OR (Fitter = :Fitter)'
       'Order By Fitter_Name')
-    Left = 810
-    Top = 280
+    Left = 648
+    Top = 224
     ParamData = <
       item
         Name = 'Fitter'
@@ -2008,8 +2094,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'FROM Fitter'
       'where (inactive = '#39'N'#39') OR (Fitter = :Templater)'
       'ORDER BY Fitter_Name')
-    Left = 810
-    Top = 350
+    Left = 648
+    Top = 280
     ParamData = <
       item
         Name = 'Templater'
@@ -2017,13 +2103,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsFitter: TDataSource
     DataSet = qryFitter
-    Left = 910
-    Top = 280
+    Left = 728
+    Top = 224
   end
   object dtsTemplater: TDataSource
     DataSet = qryTemplater
-    Left = 910
-    Top = 350
+    Left = 728
+    Top = 280
   end
   object qrySOEvent: TFDQuery
     ConnectionName = 'wt'
@@ -2034,8 +2120,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'where Sales_Order = :Sales_Order and Internal_Note = :Internal_N' +
         'ote and'
       'Sales_Order_internal_Note.Operator = Operator.Operator')
-    Left = 360
-    Top = 110
+    Left = 288
+    Top = 88
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2059,8 +2145,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 360
-    Top = 190
+    Left = 288
+    Top = 152
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2101,8 +2187,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '  from Sales_Order_internal_Note as s'
       '    join Operator as o on o.Operator = s.Operator'
       ' where Sales_Order = :Sales_Order')
-    Left = 360
-    Top = 250
+    Left = 288
+    Top = 200
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2116,8 +2202,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'from Quote_internal_Note, Operator'
       'where Quote = :Quote and'
       'Quote_internal_Note.Operator = Operator.Operator')
-    Left = 360
-    Top = 320
+    Left = 288
+    Top = 256
     ParamData = <
       item
         Name = 'Quote'
@@ -2130,8 +2216,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'set Quote_Status = :Quote_Status'
       'where (Original_Quote = :Original_Quote) AND'
       '      (Quote <> :Quote)')
-    Left = 270
-    Top = 560
+    Left = 216
+    Top = 448
     ParamData = <
       item
         Name = 'Quote_Status'
@@ -2151,8 +2237,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        Original_Quote'
       'FROM Quote'
       'WHERE Quote = :Quote')
-    Left = 400
-    Top = 590
+    Left = 320
+    Top = 472
     ParamData = <
       item
         Name = 'Quote'
@@ -2165,8 +2251,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'FROM Quote_Slab'
       'WHERE Quote = :Quote'
       'GROUP BY Supplier')
-    Left = 520
-    Top = 580
+    Left = 416
+    Top = 464
     ParamData = <
       item
         Name = 'Quote'
@@ -2235,8 +2321,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       
         'ORDER BY Purchase_orderline.Purchase_Order desc, Purchase_orderl' +
         'ine.Line_no')
-    Left = 30
-    Top = 500
+    Left = 40
+    Top = 400
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2389,8 +2475,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsSOPurchases: TDataSource
     DataSet = qrySOPurchases
-    Left = 120
-    Top = 500
+    Left = 96
+    Top = 400
   end
   object qryRemovePO: TFDQuery
     ConnectionName = 'WT'
@@ -2400,8 +2486,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '    Sales_Order_Line_No = NULL'
       'WHERE Purchase_OrderLine.Purchase_Order = :Purchase_Order AND'
       'Purchase_OrderLine.Line_No = :Line_no')
-    Left = 800
-    Top = 200
+    Left = 640
+    Top = 160
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2416,8 +2502,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'UPDATE Purchase_Order'
       'set Inactive = '#39'Y'#39
       'WHERE Purchase_Order.Purchase_Order = :Purchase_Order')
-    Left = 910
-    Top = 200
+    Left = 728
+    Top = 160
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -2429,8 +2515,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'select Contact_no'
       'from Customer_Contact '
       'where Customer = :Customer AND Contact_Name = :Contact_Name')
-    Left = 120
-    Top = 360
+    Left = 96
+    Top = 288
     ParamData = <
       item
         Name = 'Customer'
@@ -2446,8 +2532,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'FROM Sales_Order_line, Quote_Slab'
       'WHERE Sales_Order_Line.Quote = Quote_Slab.Quote AND'
       'Sales_Order_Line.Sales_Order = :Sales_Order')
-    Left = 730
-    Top = 570
+    Left = 584
+    Top = 456
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2460,8 +2546,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'FROM Purchase_Orderline'
       'WHERE Sales_Order = :Sales_Order and'
       '(Quantity > Quantity_delivered)')
-    Left = 840
-    Top = 500
+    Left = 672
+    Top = 400
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2486,8 +2572,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         '           ON (Sales_Order.Customer = Customer_contact.Customer)' +
         ' AND (Sales_Order.Contact_Name = Customer_contact.Contact_name)'
       'WHERE Sales_Order.Sales_Order = :Sales_Order')
-    Left = 840
-    Top = 430
+    Left = 672
+    Top = 344
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2522,8 +2608,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '            ON Thickness.Thickness = Quote_Slab.Thickness'
       'WHERE Quote = :Quote'
       'ORDER BY Quote_Slab.Slab_Number')
-    Left = 520
-    Top = 650
+    Left = 416
+    Top = 520
     ParamData = <
       item
         Name = 'Quote'
@@ -2531,8 +2617,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsGetQuoteSlabs: TDataSource
     DataSet = qryGetQuoteSlabs
-    Left = 630
-    Top = 650
+    Left = 504
+    Top = 520
   end
   object qrySalesInvoices: TFDQuery
     ConnectionName = 'WT'
@@ -2584,8 +2670,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '    Sales_invoice.Invoice_or_Credit,'
       '    Sales_invoice.description,'
       '    Sales_invoice.Paid_Amount')
-    Left = 880
-    Top = 660
+    Left = 704
+    Top = 528
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2593,8 +2679,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsSalesInvoices: TDataSource
     DataSet = qrySalesInvoices
-    Left = 960
-    Top = 660
+    Left = 768
+    Top = 528
   end
   object qryUpQuoteCustomer: TFDQuery
     ConnectionName = 'wt'
@@ -2603,8 +2689,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'set Customer = :Customer,'
       '      Customer_Name = :Customer_Name'
       'where Quote = :Quote')
-    Left = 210
-    Top = 320
+    Left = 168
+    Top = 256
     ParamData = <
       item
         Name = 'Customer'
@@ -2623,8 +2709,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'set Customer = :Customer,'
       '      Customer_Name = :Customer_Name'
       'where Job = :Job')
-    Left = 30
-    Top = 600
+    Left = 48
+    Top = 480
     ParamData = <
       item
         Name = 'Customer'
@@ -2645,8 +2731,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '      quote <> NULL and'
       '      Job is NULL'
       'ORDER BY sales_order_line_no')
-    Left = 270
-    Top = 630
+    Left = 216
+    Top = 504
     ParamData = <
       item
         Name = 'sales_order'
@@ -2678,8 +2764,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '          ON Customer.Customer = Job.Customer'
       'WHERE Sales_Order_Line.Sales_Order = :Sales_Order'
       '')
-    Left = 800
-    Top = 80
+    Left = 640
+    Top = 64
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2688,8 +2774,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsJobs: TDataSource
     DataSet = qryJobs
-    Left = 880
-    Top = 80
+    Left = 704
+    Top = 64
   end
   object qryRemedials: TFDQuery
     ConnectionName = 'WT'
@@ -2724,8 +2810,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '            ON Job_Remedial.Remedial = Sales_Order.Remedial_ID'
       'WHERE Sales_Order_Line.Sales_Order = :Sales_Order'
       '')
-    Left = 800
-    Top = 140
+    Left = 640
+    Top = 112
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2733,13 +2819,55 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   end
   object dtsRemedials: TDataSource
     DataSet = qryRemedials
-    Left = 880
-    Top = 140
+    Left = 704
+    Top = 112
   end
   object qryJobsDummy: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      '  Sales_Order.*,'
+      
+        '  sales_order.Sales_Order, sales_order.Date_Raised, sales_order.' +
+        'Date_Required, sales_order.Customer, sales_order.Reference, sale' +
+        's_order.Extra_Notes,'
+      
+        '  sales_order.Operator, sales_order.Contact_name, sales_order.Or' +
+        'der_ref_no, sales_order.Sales_Order_Status, sales_order.Deposit_' +
+        'amount, sales_order.Deposit_Terms,'
+      
+        '  sales_order.Goods_Value, sales_order.VAT_Value, sales_order.Re' +
+        'p, sales_order.Install_Address, sales_order.Inactive, sales_orde' +
+        'r.Customer_Name, sales_order.Inactive_Reason,'
+      
+        '  sales_order.Address, sales_order.Template_Date, sales_order.Da' +
+        'te_Type, sales_order.Materials_Required, sales_order.Materials_R' +
+        'eqd_Date, sales_order.Materials_Recd_Date,'
+      
+        '  sales_order.Install_Name, sales_order.Install_Phone, sales_ord' +
+        'er.On_Hold, sales_order.Email_Address, sales_order.Account_Manag' +
+        'er, sales_order.Descriptive_Reference,'
+      
+        '  sales_order.Template_Duration, sales_order.Fitting_Duration, s' +
+        'ales_order.Fitter, sales_order.Is_In_Outlook, sales_order.IsFitt' +
+        'ingInOutlook, sales_order.IsTemplateInOutlook,'
+      
+        '  sales_order.Templater, sales_order.Supply_Only, sales_order.Pr' +
+        'oject_Reference, sales_order.Paid_Status, sales_order.Contact_no' +
+        ', sales_order.Appliance_Details, sales_order.Branch_no,'
+      
+        '  sales_order.Location_Plan_Document, sales_order.Collection_Onl' +
+        'y, sales_order.Installation_Address, sales_order.SSMA_TimeStamp,' +
+        ' sales_order.Template_Docs_Returned,'
+      
+        '  sales_order.Fitting_Docs_Returned, sales_order.Revenue_Centre,' +
+        ' sales_order.Remedial_Production, sales_order.Remedial_No_Produc' +
+        'tion, sales_order.Remedial_ID,'
+      
+        '  cast(sales_order.Sales_Order_Number as varchar(10)) as Sales_O' +
+        'rder_Number, sales_order.Original_Sales_Order, sales_order.Inv_C' +
+        'ustomer,'
+      
+        '  sales_order.Do_not_invoice, sales_order.Stock_Allocation_Start' +
+        '_Date, sales_order.Stock_Allocation_End_Date,'
       '  Customer.Customer_name AS Original_Customer_name,'
       '  Customer.Account_Code,'
       '  Operator.Operator_name,'
@@ -2815,8 +2943,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'Customer_Branch.Customer = sales_order.Customer)'
       'WHERE (1=1)'
       '')
-    Left = 110
-    Top = 90
+    Left = 88
+    Top = 72
   end
   object qrySOUpTemplate: TFDQuery
     ConnectionName = 'WT'
@@ -2824,8 +2952,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'UPDATE Sales_Order'
       'SET Template_Docs_Returned = :Template_Docs_Returned'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 840
-    Top = 570
+    Left = 672
+    Top = 456
     ParamData = <
       item
         Name = 'Template_Docs_Returned'
@@ -2840,8 +2968,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'UPDATE Sales_Order'
       'SET Fitting_Docs_Returned = :Fitting_Docs_Returned'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 940
-    Top = 570
+    Left = 752
+    Top = 456
     ParamData = <
       item
         Name = 'Fitting_Docs_Returned'
@@ -2856,13 +2984,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 1050
-    Top = 20
+    Left = 840
+    Top = 16
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 1160
-    Top = 20
+    Left = 928
+    Top = 16
   end
   object qryRemedialCount: TFDQuery
     ConnectionName = 'wt'
@@ -2870,8 +2998,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'SELECT max(Sales_Order_Number) as Last_Remedial'
       'FROM Sales_Order'
       'WHERE Original_Sales_Order = :Original_Sales_Order')
-    Left = 1050
-    Top = 90
+    Left = 840
+    Top = 72
     ParamData = <
       item
         Name = 'Original_Sales_Order'
@@ -2932,8 +3060,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         '      ((Job_Remedial.Remedial_Number = :Remedial_Number) or (:Re' +
         'medial_Number = 0))'
       'ORDER BY Job_Remedial.Remedial_Number')
-    Left = 1160
-    Top = 90
+    Left = 928
+    Top = 72
     ParamData = <
       item
         Name = 'Job'
@@ -2954,8 +3082,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       #9#9'INNER JOIN Job_Remedial '
       #9#9#9'ON Sales_Order.Remedial_ID = Job_Remedial.Remedial'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 1050
-    Top = 160
+    Left = 840
+    Top = 128
     ParamData = <
       item
         Name = 'Completed'
@@ -3030,8 +3158,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        ON Fitter.Fitter = sales_order.Fitter)'
       '        ON Office_Contact.Operator = sales_order.Account_Manager'
       'WHERE 1 = 1')
-    Left = 370
-    Top = 100
+    Left = 296
+    Top = 80
   end
   object qrySOUpRemedial_Access: TFDQuery
     ConnectionName = 'WT'
@@ -3041,8 +3169,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       #9#9#9'ON Sales_Order.Remedial_ID = Job_Remedial.Remedial'
       'SET'#9'Job_Remedial.Completed = :Completed'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 1050
-    Top = 160
+    Left = 840
+    Top = 128
     ParamData = <
       item
         Name = 'Completed'
@@ -3054,7 +3182,49 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
   object qryDummyOld: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      '  sales_order.*,'
+      
+        '  sales_order.Sales_Order, sales_order.Date_Raised, sales_order.' +
+        'Date_Required, sales_order.Customer, sales_order.Reference, sale' +
+        's_order.Extra_Notes,'
+      
+        '  sales_order.Operator, sales_order.Contact_name, sales_order.Or' +
+        'der_ref_no, sales_order.Sales_Order_Status, sales_order.Deposit_' +
+        'amount, sales_order.Deposit_Terms,'
+      
+        '  sales_order.Goods_Value, sales_order.VAT_Value, sales_order.Re' +
+        'p, sales_order.Install_Address, sales_order.Inactive, sales_orde' +
+        'r.Customer_Name, sales_order.Inactive_Reason,'
+      
+        '  sales_order.Address, sales_order.Template_Date, sales_order.Da' +
+        'te_Type, sales_order.Materials_Required, sales_order.Materials_R' +
+        'eqd_Date, sales_order.Materials_Recd_Date,'
+      
+        '  sales_order.Install_Name, sales_order.Install_Phone, sales_ord' +
+        'er.On_Hold, sales_order.Email_Address, sales_order.Account_Manag' +
+        'er, sales_order.Descriptive_Reference,'
+      
+        '  sales_order.Template_Duration, sales_order.Fitting_Duration, s' +
+        'ales_order.Fitter, sales_order.Is_In_Outlook, sales_order.IsFitt' +
+        'ingInOutlook, sales_order.IsTemplateInOutlook,'
+      
+        '  sales_order.Templater, sales_order.Supply_Only, sales_order.Pr' +
+        'oject_Reference, sales_order.Paid_Status, sales_order.Contact_no' +
+        ', sales_order.Appliance_Details, sales_order.Branch_no,'
+      
+        '  sales_order.Location_Plan_Document, sales_order.Collection_Onl' +
+        'y, sales_order.Installation_Address, sales_order.SSMA_TimeStamp,' +
+        ' sales_order.Template_Docs_Returned,'
+      
+        '  sales_order.Fitting_Docs_Returned, sales_order.Revenue_Centre,' +
+        ' sales_order.Remedial_Production, sales_order.Remedial_No_Produc' +
+        'tion, sales_order.Remedial_ID,'
+      
+        '  cast(sales_order.Sales_Order_Number as varchar(10)) as Sales_O' +
+        'rder_Number, sales_order.Original_Sales_Order, sales_order.Inv_C' +
+        'ustomer,'
+      
+        '  sales_order.Do_not_invoice, sales_order.Stock_Allocation_Start' +
+        '_Date, sales_order.Stock_Allocation_End_Date,'
       '  Customer.Customer_name as Original_Customer_name,'
       '  Customer.Account_Code,'
       '    Operator.Operator_name,'
@@ -3115,13 +3285,55 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        ON Templater.Fitter = sales_order.Templater)'
       '        ON Fitter.Fitter = sales_order.Fitter'
       'WHERE (1=1)')
-    Left = 260
-    Top = 30
+    Left = 208
+    Top = 24
   end
   object qryJobsDummyOld: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
-      '  Sales_Order.*,'
+      
+        '  sales_order.Sales_Order, sales_order.Date_Raised, sales_order.' +
+        'Date_Required, sales_order.Customer, sales_order.Reference, sale' +
+        's_order.Extra_Notes,'
+      
+        '  sales_order.Operator, sales_order.Contact_name, sales_order.Or' +
+        'der_ref_no, sales_order.Sales_Order_Status, sales_order.Deposit_' +
+        'amount, sales_order.Deposit_Terms,'
+      
+        '  sales_order.Goods_Value, sales_order.VAT_Value, sales_order.Re' +
+        'p, sales_order.Install_Address, sales_order.Inactive, sales_orde' +
+        'r.Customer_Name, sales_order.Inactive_Reason,'
+      
+        '  sales_order.Address, sales_order.Template_Date, sales_order.Da' +
+        'te_Type, sales_order.Materials_Required, sales_order.Materials_R' +
+        'eqd_Date, sales_order.Materials_Recd_Date,'
+      
+        '  sales_order.Install_Name, sales_order.Install_Phone, sales_ord' +
+        'er.On_Hold, sales_order.Email_Address, sales_order.Account_Manag' +
+        'er, sales_order.Descriptive_Reference,'
+      
+        '  sales_order.Template_Duration, sales_order.Fitting_Duration, s' +
+        'ales_order.Fitter, sales_order.Is_In_Outlook, sales_order.IsFitt' +
+        'ingInOutlook, sales_order.IsTemplateInOutlook,'
+      
+        '  sales_order.Templater, sales_order.Supply_Only, sales_order.Pr' +
+        'oject_Reference, sales_order.Paid_Status, sales_order.Contact_no' +
+        ', sales_order.Appliance_Details, sales_order.Branch_no,'
+      
+        '  sales_order.Location_Plan_Document, sales_order.Collection_Onl' +
+        'y, sales_order.Installation_Address, sales_order.SSMA_TimeStamp,' +
+        ' sales_order.Template_Docs_Returned,'
+      
+        '  sales_order.Fitting_Docs_Returned, sales_order.Revenue_Centre,' +
+        ' sales_order.Remedial_Production, sales_order.Remedial_No_Produc' +
+        'tion, sales_order.Remedial_ID,'
+      
+        '  cast(sales_order.Sales_Order_Number as varchar(10)) as Sales_O' +
+        'rder_Number, sales_order.Original_Sales_Order, sales_order.Inv_C' +
+        'ustomer,'
+      
+        '  sales_order.Do_not_invoice, sales_order.Stock_Allocation_Start' +
+        '_Date, sales_order.Stock_Allocation_End_Date,'
       '  Customer.Customer_name AS Original_Customer_name,'
       '  Customer.Account_Code,'
       '  Operator.Operator_name,'
@@ -3194,7 +3406,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'ager'
       'WHERE 1 = 1'
       '')
-    Left = 260
-    Top = 90
+    Left = 208
+    Top = 72
   end
 end
