@@ -513,7 +513,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'Order_Status) ON'
       '      Rep.Rep = Sales_Order.Rep'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 24
+    Left = 40
     Top = 128
     ParamData = <
       item
@@ -706,7 +706,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        :Inv_Customer,'
       '        :Branch_no'
       ')')
-    Left = 24
+    Left = 40
     Top = 176
     ParamData = <
       item
@@ -941,7 +941,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '        Inv_Customer = :Inv_Customer,'
       '        Branch_no = :Branch_no'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 24
+    Left = 40
     Top = 264
     ParamData = <
       item
@@ -1325,7 +1325,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
         'State,Telephone_number, Fax_number, email_address, web_address'
       'from Address where Address = :Address')
-    Left = 24
+    Left = 40
     Top = 344
     ParamData = <
       item
@@ -2321,7 +2321,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       
         'ORDER BY Purchase_orderline.Purchase_Order desc, Purchase_orderl' +
         'ine.Line_no')
-    Left = 24
+    Left = 40
     Top = 400
     ParamData = <
       item
@@ -2709,7 +2709,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       'set Customer = :Customer,'
       '      Customer_Name = :Customer_Name'
       'where Job = :Job')
-    Left = 24
+    Left = 48
     Top = 480
     ParamData = <
       item
