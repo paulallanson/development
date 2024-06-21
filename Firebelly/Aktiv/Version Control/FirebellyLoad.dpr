@@ -10,6 +10,7 @@ uses
 begin
   Application.Initialize;
   Application.Title := 'Firebelly Worktop System';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TfrmFirebellyVers, frmFirebellyVers);
   Application.Run;
 end.

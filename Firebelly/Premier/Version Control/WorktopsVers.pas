@@ -28,6 +28,9 @@ var
 
 implementation
 
+uses
+  System.IOUtils, System.UITypes;
+
 {$R *.DFM}
 
 procedure TfrmWorktopsVers.FormActivate(Sender: TObject);

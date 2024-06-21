@@ -18,7 +18,7 @@ type
     procedure CreateBrokerDir(DirName: String);
   private
     { Private declarations }
-    ServDir, LocalDir, LocalDrive: String;
+    ServDir, LocalDir: String;
   public
     { Public declarations }
   end;
@@ -31,6 +31,7 @@ implementation
 {$R *.DFM}
 
 uses
+  System.IOUtils,
   System.UITypes;
 
 procedure TfrmWorktopsVers.FormActivate(Sender: TObject);
@@ -40,8 +41,8 @@ begin
 	{Setup the directories}
 	ServDir := '\\ADSERVER1\myWorktops' ;
 
-  LocalDrive := copy(GetWinSysDir,1,2);
-	LocalDir := LocalDrive + '\Program Files\Quaystone\myWorktops' ;
+  LocalDir := GetEnvironmentVariable('ProgramFiles(x86)');
+	LocalDir := IncludeTrailingPathDelimiter(LocalDir) + 'Quaystone\myWorktops' ;
 
   {Test that the Directory exists, if not then contruct}
   if not DirectoryExists(LocalDir) then
