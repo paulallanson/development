@@ -2,12 +2,12 @@ object frmwtLUSales: TfrmwtLUSales
   Left = 13
   Top = 98
   Caption = 'Sales Order details'
-  ClientHeight = 394
-  ClientWidth = 1376
+  ClientHeight = 385
+  ClientWidth = 1370
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmwtLUSales: TfrmwtLUSales
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 375
-    Width = 1376
+    Top = 366
+    Width = 1370
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUSales: TfrmwtLUSales
   end
   object Panel1: TPanel
     Left = 0
-    Top = 334
-    Width = 1376
+    Top = 325
+    Width = 1370
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1376
+      1370
       41)
     object Label1: TLabel
       Left = 8
@@ -61,17 +61,16 @@ object frmwtLUSales: TfrmwtLUSales
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 1079
+      Left = 1057
       Top = 15
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
-      ExplicitLeft = 1179
     end
     object Button1: TButton
-      Left = 1243
+      Left = 1231
       Top = 10
       Width = 75
       Height = 25
@@ -84,15 +83,15 @@ object frmwtLUSales: TfrmwtLUSales
       Left = 104
       Top = 11
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1144
+      Left = 1132
       Top = 11
       Width = 73
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
@@ -110,22 +109,22 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1376
+    Width = 1370
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1370
+        Width = 1364
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1361
+      Width = 1355
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 66
+      ButtonHeight = 40
+      ButtonWidth = 74
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -141,7 +140,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 66
+        Left = 74
         Top = 0
         Hint = 'change an existing sales order'
         Caption = '  &Change  '
@@ -152,7 +151,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 132
+        Left = 148
         Top = 0
         Caption = 'Copy'
         Enabled = False
@@ -160,7 +159,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnCopyClick
       end
       object btnDelete: TToolButton
-        Left = 198
+        Left = 222
         Top = 0
         Hint = 'delete a sales order'
         Caption = '&Delete'
@@ -171,7 +170,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnDeleteClick
       end
       object btnPayments: TToolButton
-        Left = 264
+        Left = 296
         Top = 0
         Caption = 'Payments'
         Enabled = False
@@ -179,7 +178,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnPaymentsClick
       end
       object ToolButton6: TToolButton
-        Left = 330
+        Left = 370
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -187,7 +186,7 @@ object frmwtLUSales: TfrmwtLUSales
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 338
+        Left = 378
         Top = 0
         Hint = 'print a sales order confirmation'
         Caption = '&Print'
@@ -198,7 +197,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnPrintClick
       end
       object btnTemplate: TToolButton
-        Left = 404
+        Left = 452
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Template'
@@ -207,7 +206,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnTemplateClick
       end
       object btnAllocate: TToolButton
-        Left = 470
+        Left = 526
         Top = 0
         Caption = 'Allocate'
         Enabled = False
@@ -215,7 +214,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnAllocateClick
       end
       object btnDeAllocate: TToolButton
-        Left = 536
+        Left = 600
         Top = 0
         Caption = 'De-Allocate'
         Enabled = False
@@ -223,7 +222,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnDeAllocateClick
       end
       object btnConvert: TToolButton
-        Left = 602
+        Left = 674
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Convert'
@@ -234,7 +233,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnConvertClick
       end
       object btnFittingEmail: TToolButton
-        Left = 668
+        Left = 748
         Top = 0
         Caption = 'Fit Email'
         Enabled = False
@@ -242,7 +241,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnFittingEmailClick
       end
       object btnProforma: TToolButton
-        Left = 734
+        Left = 822
         Top = 0
         Caption = 'Proforma'
         Enabled = False
@@ -250,7 +249,7 @@ object frmwtLUSales: TfrmwtLUSales
         OnClick = btnProformaClick
       end
       object ToolButton1: TToolButton
-        Left = 800
+        Left = 896
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -258,7 +257,7 @@ object frmwtLUSales: TfrmwtLUSales
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 808
+        Left = 904
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -272,14 +271,14 @@ object frmwtLUSales: TfrmwtLUSales
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1376
-    Height = 257
+    Width = 1370
+    Height = 248
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -420,7 +419,6 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Quote'
-        Width = 74
         Visible = True
       end
       item
@@ -448,19 +446,19 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1376
+    Width = 1370
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 1370
+        Width = 1364
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1361
+      Width = 1355
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -468,7 +466,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1361
+        1355
         30)
       object Label2: TLabel
         Left = 0
@@ -499,7 +497,7 @@ object frmwtLUSales: TfrmwtLUSales
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1090
+        Left = 1084
         Top = 6
         Width = 81
         Height = 15
@@ -514,10 +512,10 @@ object frmwtLUSales: TfrmwtLUSales
         ExplicitLeft = 1096
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1177
+        Left = 1171
         Top = 3
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 0

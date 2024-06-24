@@ -444,8 +444,8 @@ begin
   GetUserName(Addr(TempUser), TempUserSize);
   stsbrStatus.Panels[0].Text := TempUser;
 
-  SWVersion := '23.1.';
-  SWSubVersion := '24.01.01a';
+  SWVersion := '24.1';
+  SWSubVersion := '24.06.21a';
 
   IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
   try
@@ -663,7 +663,7 @@ begin
   MaxUsers := 4 ;
 {$ENDIF}
 {$IFDEF BELLAGIO}
-  MaxUsers := 22 ;
+  MaxUsers := 25 ;
 {$ENDIF}
 {$IFDEF ROANN}
   MaxUsers := 20 ;
@@ -1169,7 +1169,7 @@ begin
   MaxUsers := 4 ;
 {$ENDIF}
 {$IFDEF BELLAGIO}
-  MaxUsers := 22 ;
+  MaxUsers := 25 ;
 {$ENDIF}
 {$IFDEF ROANN}
   MaxUsers := 20 ;

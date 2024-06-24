@@ -2,8 +2,8 @@ object frmWTMain: TfrmWTMain
   Left = 72
   Top = 61
   Caption = 'Firebelly Worktop Management System'
-  ClientHeight = 654
-  ClientWidth = 1481
+  ClientHeight = 645
+  ClientWidth = 1475
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmWTMain: TfrmWTMain
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1481
+    Width = 1475
     Height = 40
     Bands = <
       item
@@ -153,8 +153,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = 635
-    Width = 1481
+    Top = 626
+    Width = 1475
     Height = 19
     Panels = <
       item

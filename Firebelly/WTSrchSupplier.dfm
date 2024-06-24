@@ -2,8 +2,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   Left = 474
   Top = 152
   Caption = 'Search for supplier'
-  ClientHeight = 356
-  ClientWidth = 402
+  ClientHeight = 379
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 304
-    Height = 248
+    Width = 309
+    Height = 266
     Align = alClient
     DataSource = dtsDetails
     DrawingStyle = gdsGradient
@@ -47,17 +47,19 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       end>
   end
   object pnlFunctions: TPanel
-    Left = 304
+    Left = 309
     Top = 0
     Width = 98
-    Height = 248
+    Height = 266
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 298
+    ExplicitHeight = 239
     DesignSize = (
       98
-      248)
+      266)
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -88,7 +90,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     end
     object btnSweep: TBitBtn
       Left = 15
-      Top = 242
+      Top = 234
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -100,15 +102,17 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 248
-    Width = 402
+    Top = 266
+    Width = 407
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 239
+    ExplicitWidth = 396
     DesignSize = (
-      402
+      407
       89)
     object Label1: TLabel
       Left = 8
@@ -138,8 +142,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 335
-      Top = 16
+      Left = 319
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -149,8 +153,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       OnClick = btnSelectClick
     end
     object BitBtn2: TBitBtn
-      Left = 335
-      Top = 54
+      Left = 319
+      Top = 46
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -161,9 +165,9 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 337
-    Width = 402
-    Height = 19
+    Top = 355
+    Width = 407
+    Height = 24
     Panels = <
       item
         Width = 100
@@ -171,6 +175,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       item
         Width = 50
       end>
+    ExplicitTop = 337
+    ExplicitWidth = 402
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

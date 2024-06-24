@@ -3,8 +3,8 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   Top = 166
   BorderStyle = bsDialog
   Caption = 'Anticipated Invoicing Report'
-  ClientHeight = 327
-  ClientWidth = 467
+  ClientHeight = 380
+  ClientWidth = 520
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,22 +15,23 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    467
-    327)
+    520
+    380)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 288
+    Top = 341
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 279
   end
   object Button4: TButton
-    Left = 376
-    Top = 290
+    Left = 421
+    Top = 339
     Width = 75
     Height = 25
     Caption = 'Close'
@@ -229,7 +230,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 288
+    Top = 341
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -279,16 +280,18 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 279
   end
   object btnPreview: TButton
     Left = 96
-    Top = 288
+    Top = 341
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
+    ExplicitTop = 279
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
@@ -352,8 +355,8 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     TabOrder = 12
   end
   object chkbxPageBreak: TCheckBox
-    Left = 352
-    Top = 144
+    Left = 344
+    Top = 288
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -376,8 +379,8 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     TabOrder = 15
   end
   object rdgrpChargeType: TRadioGroup
-    Left = 368
-    Top = 152
+    Left = 343
+    Top = 135
     Width = 153
     Height = 90
     Caption = 'Charge Type: '
@@ -389,6 +392,14 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
       'Retail')
     ParentBackground = False
     TabOrder = 16
+  end
+  object chkbxIncludeNOT2bInvoiced: TCheckBox
+    Left = 8
+    Top = 288
+    Width = 217
+    Height = 17
+    Caption = 'Include Orders NOT to be Invoiced'
+    TabOrder = 17
   end
   object qryReps: TFDQuery
     ConnectionName = 'WT'

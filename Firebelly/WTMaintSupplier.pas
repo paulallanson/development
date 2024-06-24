@@ -540,7 +540,9 @@ begin
     frmWTMaintSupplierWorktops.showmodal;
     if frmWTMaintSupplierWorktops.bOK then
       begin
-        dtmdlOneSupplier.RefreshWorktopPrices(Supplier);
+//        dtmdlOneSupplier.RefreshWorktopPrices(Supplier);
+        tmrWorktopSearch.Enabled := False;
+        tmrWorktopSearch.Enabled := True;
       end;
   finally
     frmWTMaintSupplierWorktops.free;

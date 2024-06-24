@@ -2,8 +2,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 285
-  ClientWidth = 836
+  ClientHeight = 276
+  ClientWidth = 830
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 266
-    Width = 836
+    Top = 257
+    Width = 830
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 225
-    Width = 836
+    Top = 216
+    Width = 830
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      836
+      830
       41)
     object Label1: TLabel
       Left = 8
@@ -55,7 +55,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 555
+      Left = 543
       Top = 12
       Width = 62
       Height = 13
@@ -65,7 +65,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ExplicitLeft = 627
     end
     object Button1: TButton
-      Left = 711
+      Left = 699
       Top = 6
       Width = 75
       Height = 25
@@ -83,7 +83,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 623
+      Left = 611
       Top = 8
       Width = 73
       Height = 21
@@ -104,19 +104,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 836
+    Width = 830
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 830
+        Width = 824
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 821
+      Width = 815
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 58
@@ -223,8 +223,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 836
-    Height = 148
+    Width = 830
+    Height = 139
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
     DrawingStyle = gdsGradient
@@ -376,19 +376,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 836
+    Width = 830
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 830
+        Width = 824
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 821
+      Width = 815
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -396,7 +396,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        821
+        815
         30)
       object Label2: TLabel
         Left = 0
@@ -427,7 +427,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 567
+        Left = 561
         Top = 6
         Width = 81
         Height = 15
@@ -442,7 +442,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ExplicitLeft = 573
       end
       object cmbCustomerFilter: TComboBox
-        Left = 659
+        Left = 653
         Top = 2
         Width = 145
         Height = 21

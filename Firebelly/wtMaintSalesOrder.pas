@@ -774,6 +774,7 @@ begin
       SOrder.TemplateDate := padatestr(edtTempDate.text);
       SOrder.DateRequired := padatestr(edtReqDate.text);
 
+      dblkpRevenueCentre.KeyValue := 0;
       if dtmdlWorktops.UseRevenueCentres then
         begin
           dblkpRevenueCentre.KeyValue := dtmdlWorktops.GetOperatorRevenueCentre(frmWTMain.Operator);

@@ -712,6 +712,24 @@ begin
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
 
+{$IFDEF ROMANY}
+  frmWtRSJobSheetPreRem := TfrmWtRSJobSheetPreRem.Create( Application );
+  try
+    Key := dbgDetails.datasource.DataSet.FieldByName('Job').asinteger;
+    frmWtRSJobSheetPreRem.PrintType := 'R';
+    frmWtRSJobSheetPreRem.memSelection.text := inttostr(Key);
+    frmWtRSJobSheetPreRem.sJobNumber := inttostr(Key);
+    frmWtRSJobSheetPreRem.showmodal;
+    dtmdlAllJobs.SetSOrderStatus(Key);
+  finally
+    frmWtRSJobSheetPreRem.free;
+    Screen.Cursor := OldCursor;
+  end;
+  dbgdetails.DataSource.DataSet.Close;
+  dbgdetails.DataSource.DataSet.Open;
+  dbgdetails.DataSource.DataSet.Locate('Job', Variant(inttostr(Key)),[lopartialKey]) ;
+  exit;
+{$ENDIF}
   frmWTRSJobRemedialSheet := TfrmWTRSJobRemedialSheet.Create( Application );
   try
     Key := dbgDetails.datasource.DataSet.FieldByName('Job').asinteger;
@@ -721,23 +739,6 @@ begin
     frmWTRSJobRemedialSheet.free;
     Screen.Cursor := OldCursor;
   end;
-
-(*  frmWtRSJobSheet := TfrmWtRSJobSheet.Create( Application );
-  try
-    Key := dbgDetails.datasource.DataSet.FieldByName('Job').asinteger;
-    frmWtRSJobSheet.PrintType := 'R';
-    frmWtRSJobSheet.memSelection.text := inttostr(Key);
-    frmWtRSJobSheet.sJobNumber := inttostr(Key);
-    frmWtRSJobSheet.showmodal;
-    dtmdlAllJobs.SetSOrderStatus(Key);
-  finally
-    frmWtRSJobSheet.free;
-    Screen.Cursor := OldCursor;
-  end;
-  dbgdetails.DataSource.DataSet.Close;
-  dbgdetails.DataSource.DataSet.Open;
-  dbgdetails.DataSource.DataSet.Locate('Job', Variant(inttostr(Key)),[lopartialKey]) ;
-*)
 end;
 
 procedure TfrmwtLUJobs.cmbCustomerFilterChange(Sender: TObject);

@@ -30,10 +30,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 368
-    ExplicitTop = 344
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object SpeedButton1: TSpeedButton
       Left = 482
       Top = 280
@@ -154,8 +150,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 1
-      ExplicitTop = 348
       DesignSize = (
         907
         96)
@@ -174,7 +168,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Remedial Fitter'
       end
       object Label5: TLabel
-        Left = 731
+        Left = 725
         Top = 13
         Width = 23
         Height = 13
@@ -186,6 +180,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 731
       end
       object Label18: TLabel
         Left = 8
@@ -248,7 +243,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object edtPrice: TCREditMoney
-        Left = 766
+        Left = 760
         Top = 9
         Width = 89
         Height = 21
@@ -393,7 +388,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 737
+        Left = 731
         Top = 16
         Width = 24
         Height = 13
@@ -416,7 +411,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Reported by'
       end
       object Label17: TLabel
-        Left = 652
+        Left = 646
         Top = 48
         Width = 53
         Height = 13
@@ -435,7 +430,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 0
       end
       object edtDateRaised: TEdit
-        Left = 774
+        Left = 768
         Top = 12
         Width = 89
         Height = 21
@@ -444,7 +439,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnExit = edtDateRaisedExit
       end
       object btnDateRequired: TBitBtn
-        Left = 874
+        Left = 868
         Top = 10
         Width = 25
         Height = 25
@@ -487,7 +482,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 4
       end
       object dblkpRemedialDept: TDBLookupComboBox
-        Left = 710
+        Left = 704
         Top = 44
         Width = 153
         Height = 21
@@ -532,7 +527,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn3Click
       end
       object BitBtn4: TBitBtn
-        Left = 875
+        Left = 869
         Top = 43
         Width = 22
         Height = 22
@@ -559,8 +554,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Caption = 'Panel2'
       ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 0
-      ExplicitHeight = 662
       object pnlLeft: TPanel
         Left = 1
         Top = 1
@@ -569,7 +562,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 660
         object Label8: TLabel
           Left = 8
           Top = 112
@@ -651,7 +643,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Align = alClient
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 660
         object Label9: TLabel
           Left = 10
           Top = 112

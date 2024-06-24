@@ -43,6 +43,7 @@ type
     chkbxShowOnlyScheduled: TCheckBox;
     chkbxIncludeInvoiced: TCheckBox;
     rdgrpChargeType: TRadioGroup;
+    chkbxIncludeNOT2bInvoiced: TCheckBox;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
@@ -110,10 +111,11 @@ begin
 
     frmwtRPSOAntInvoice.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmwtRPSOAntInvoice.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;
+    frmwtRPSOAntInvoice.bIncludeNOT2bInvoiced := chkbxIncludeNOT2bInvoiced.Checked;
 
     frmwtRPSOAntInvoice.CustomerCategory := rdgrpCategory.itemindex;
 
-    if frmwtRPSOAntInvoice.GetDetails = 0 then
+ if frmwtRPSOAntInvoice.GetDetails = 0 then
       begin
         MessageDlg('No records to print', mtInformation, [mbOk], 0);
         exit;
@@ -290,6 +292,7 @@ begin
 
     frmwtRPSOAntInvoice.bShowOnlyScheduled := chkbxShowOnlyScheduled.checked;
     frmwtRPSOAntInvoice.bIncludeInvoiced := chkbxIncludeInvoiced.Checked;
+    frmwtRPSOAntInvoice.bIncludeNOT2bInvoiced := chkbxIncludeNOT2bInvoiced.Checked;
 
     frmwtRPSOAntInvoice.CustomerCategory := rdgrpCategory.itemindex;
 

@@ -2,8 +2,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   Left = 266
   Top = 44
   Caption = 'Stock Allocation'
-  ClientHeight = 600
-  ClientWidth = 927
+  ClientHeight = 588
+  ClientWidth = 1036
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,17 +17,19 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 540
-    Width = 927
+    Top = 528
+    Width = 1036
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 540
+    ExplicitWidth = 927
     DesignSize = (
-      927
+      1036
       41)
     object btnClose: TButton
-      Left = 832
+      Left = 935
       Top = 8
       Width = 75
       Height = 25
@@ -36,6 +38,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 826
     end
     object btnAllocate: TButton
       Left = 16
@@ -63,8 +66,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 581
-    Width = 927
+    Top = 569
+    Width = 1036
     Height = 19
     Panels = <
       item
@@ -73,12 +76,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 581
+    ExplicitWidth = 927
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 233
-    Width = 927
-    Height = 307
+    Width = 1036
+    Height = 295
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
@@ -155,10 +160,11 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 927
+    Width = 1036
     Height = 233
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 927
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8
@@ -703,8 +709,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       #9'Stock.Stockcode,'
       #9'Stock.Description'
       '')
-    Left = 784
-    Top = 176
+    Left = 652
+    Top = 196
     ParamData = <
       item
         Name = 'StockCode'
@@ -723,8 +729,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '      Worktop_Thickness_Slab_Size.Thickness = :Thickness AND'
       '      Worktop_Thickness_Slab_Size.Length = :Length AND'
       '      Worktop_Thickness_Slab_Size.Depth = :Depth')
-    Left = 696
-    Top = 176
+    Left = 542
+    Top = 196
     ParamData = <
       item
         Name = 'Worktop'
@@ -745,7 +751,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'User Name=readonly'
       'Password=R34donly4')
     LoginPrompt = False
-    Left = 808
+    Left = 682
     Top = 96
   end
   object qryUpdSOLine: TFDQuery
@@ -756,8 +762,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '    Stock_Allocation_End_Date = :Stock_Allocation_End_Date'
       'WHERE Sales_order = :Sales_Order AND'
       '      Sales_order_line_no = :Sales_order_line_No')
-    Left = 872
-    Top = 176
+    Left = 762
+    Top = 196
     ParamData = <
       item
         Name = 'Stock_Allocation_Start_Date'
@@ -781,8 +787,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'SET Stock_Allocation_Start_Date = :Stock_Allocation_Start_Date,'
       '    Stock_Allocation_End_Date = :Stock_Allocation_End_Date'
       'WHERE Sales_order = :Sales_Order')
-    Left = 872
-    Top = 104
+    Left = 762
+    Top = 106
     ParamData = <
       item
         Name = 'Stock_Allocation_Start_Date'
@@ -856,8 +862,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '        Quote_Slab.Length,'
       '        Quote_Slab.Depth,'
       '        Sales_order_line.Sales_Order_Line_no')
-    Left = 720
-    Top = 24
+    Left = 572
+    Top = 6
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -869,8 +875,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'SELECT *'
       'FROM Stock_System'
       'WHERE Stock_System = :Stock_System')
-    Left = 816
-    Top = 24
+    Left = 692
+    Top = 6
     ParamData = <
       item
         Name = 'Stock_System'
@@ -910,8 +916,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'ORDER BY'
       '             Stock.Stockcode'
       '')
-    Left = 696
-    Top = 264
+    Left = 542
+    Top = 306
   end
   object qryCheckStockCode: TFDQuery
     ConnectionName = 'Wt'
@@ -919,8 +925,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'SELECT TOP 1 Stock_Item.Stock_Item'
       'FROM Stock_Item'
       'WHERE Stock_Code = :Stock_Code')
-    Left = 696
-    Top = 328
+    Left = 542
+    Top = 386
     ParamData = <
       item
         Name = 'Stock_Code'
@@ -1164,8 +1170,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'WHERE (store_stock.stock_item = stock_item.stock_item) AND'
       '      (Stock_Item.Stock_code = :StockCode)'
       '')
-    Left = 784
-    Top = 232
+    Left = 652
+    Top = 266
     ParamData = <
       item
         Name = 'StockCode'
@@ -1179,8 +1185,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         'SET Quantity_Allocated = Quantity_Allocated + :Quantity_Allocate' +
         'd'
       'WHERE Store_Stock = :Store_Stock')
-    Left = 776
-    Top = 392
+    Left = 642
+    Top = 466
     ParamData = <
       item
         Name = 'Quantity_Allocated'
@@ -1236,7 +1242,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       
         'WHERE (Sales_Order.Sales_Order = :Sales_Order) AND (Sales_Order_' +
         'Line.Sales_Order_Line_No = :Sales_Order_Line_No) AND'
-      '      (SELECT Stock_item.Stock_code'
+      '      (SELECT TOP 1 Stock_item.Stock_code'
       '          FROM Stock_item'
       '              RIGHT JOIN Worktop_thickness_Slab_Size'
       
@@ -1269,17 +1275,20 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '        Quote_Slab.Length,'
       '        Quote_Slab.Depth,'
       '        Sales_order_line.Sales_Order_Line_no')
-    Left = 720
-    Top = 72
+    Left = 572
+    Top = 66
     ParamData = <
       item
         Name = 'Sales_Order'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Order_Line_No'
+        ParamType = ptInput
       end
       item
         Name = 'Stock_Code'
+        ParamType = ptInput
       end>
   end
   object qryDummyOld: TFDQuery
@@ -1434,8 +1443,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '  (Quote_Slab.Thickness = :Thickness) AND'
       '  (Quote_Slab.Length = :Length) AND'
       '  (Quote_Slab.Depth = :Depth)')
-    Left = 776
-    Top = 440
+    Left = 642
+    Top = 526
     ParamData = <
       item
         Name = 'Quote'
@@ -1464,8 +1473,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '  (Quote_Slab.Thickness = :Thickness) AND'
       '  (Quote_Slab.Length = :Length) AND'
       '  (Quote_Slab.Depth = :Depth)')
-    Left = 776
-    Top = 488
+    Left = 642
+    Top = 586
     ParamData = <
       item
         Name = 'Quote'
