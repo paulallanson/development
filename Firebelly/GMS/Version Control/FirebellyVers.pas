@@ -28,6 +28,9 @@ var
 
 implementation
 
+uses
+  System.UITypes;
+
 {$R *.DFM}
 
 procedure TfrmFirebellyVers.FormActivate(Sender: TObject);

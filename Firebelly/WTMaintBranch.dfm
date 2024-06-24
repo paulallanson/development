@@ -120,7 +120,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
               Caption = 'Date modified'
               Width = 200
             end>
-          Items.ItemData = {}
           LargeImages = imgDocuments
           RowSelect = True
           PopupMenu = pmnuDocuments
