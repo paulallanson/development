@@ -784,7 +784,6 @@ begin
 
       dblkpOperator.KeyValue := frmWtMain.Operator;
       dblkpRep.KeyValue := 0;
-      dblkpRevenueCentre.KeyValue := 0;
       edtDescription.Text := '';
       edtCustomerName.text := '';
       edtProject.text := '';
