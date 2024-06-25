@@ -23,13 +23,11 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 540
-    ExplicitWidth = 927
     DesignSize = (
       1036
       41)
     object btnClose: TButton
-      Left = 935
+      Left = 929
       Top = 8
       Width = 75
       Height = 25
@@ -38,7 +36,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 826
     end
     object btnAllocate: TButton
       Left = 16
@@ -76,8 +73,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 581
-    ExplicitWidth = 927
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -164,7 +159,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Height = 233
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 927
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8

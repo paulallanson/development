@@ -168,7 +168,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Remedial Fitter'
       end
       object Label5: TLabel
-        Left = 725
+        Left = 719
         Top = 13
         Width = 23
         Height = 13
@@ -243,7 +243,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object edtPrice: TCREditMoney
-        Left = 760
+        Left = 754
         Top = 9
         Width = 89
         Height = 21
@@ -388,7 +388,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 731
+        Left = 725
         Top = 16
         Width = 24
         Height = 13
@@ -411,7 +411,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Reported by'
       end
       object Label17: TLabel
-        Left = 646
+        Left = 640
         Top = 48
         Width = 53
         Height = 13
@@ -430,7 +430,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 0
       end
       object edtDateRaised: TEdit
-        Left = 768
+        Left = 762
         Top = 12
         Width = 89
         Height = 21
@@ -439,7 +439,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnExit = edtDateRaisedExit
       end
       object btnDateRequired: TBitBtn
-        Left = 868
+        Left = 862
         Top = 10
         Width = 25
         Height = 25
@@ -482,7 +482,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 4
       end
       object dblkpRemedialDept: TDBLookupComboBox
-        Left = 704
+        Left = 698
         Top = 44
         Width = 153
         Height = 21
@@ -527,7 +527,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn3Click
       end
       object BitBtn4: TBitBtn
-        Left = 869
+        Left = 863
         Top = 43
         Width = 22
         Height = 22
