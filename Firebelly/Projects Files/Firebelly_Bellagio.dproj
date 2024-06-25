@@ -1,0 +1,1752 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BCB52D29-CF9D-4BE5-8250-FFC36A062F22}</ProjectGuid>
+        <MainSource>Firebelly_Bellagio.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>19.5</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <SanitizedProjectName>Firebelly_Bellagio</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
+        <DCC_ExeOutput>..\</DCC_ExeOutput>
+        <DCC_DcuOutput>..\Bellagio\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_UnitSearchPath>..\;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_Define>FIREBELLY;BELLAGIO;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>Firebelly_Bellagio_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>Firebelly_Bellagio_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="..\wtWin7.pas"/>
+        <DCCReference Include="..\wtSplash.pas">
+            <Form>frmWTSplash</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtDatabase.pas">
+            <Form>frmWTDatabase</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtCustomerDM.pas">
+            <Form>dtmdlCustomers</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtDataModule.pas">
+            <Form>dtmdlWorktops</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUThickness.pas">
+            <Form>frmWtLUThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUworktops.pas">
+            <Form>frmWtLUWorktops</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintParams.pas">
+            <Form>frmWTMaintParams</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUMatType.pas">
+            <Form>frmWTLUMatType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintProductGroup.pas">
+            <Form>frmWtMaintProductGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintThickness.pas">
+            <Form>frmWtMaintThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUWTThickness.pas">
+            <Form>frmWTLUWTThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTThickness.pas">
+            <Form>frmWTMaintWTThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustomer.pas">
+            <Form>frmWTLUCustomer</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAutoPriceChange.pas">
+            <Form>frmWTAutoPriceChange</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQuote.pas">
+            <Form>frmWTMaintQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintCustomer.pas">
+            <Form>frmWtMaintCustomer</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUAddChgs.pas">
+            <Form>frmWTLUAddChgs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustQuotes.pas">
+            <Form>frmwtLUCustQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustInvoices.pas">
+            <Form>frmwtLUCustInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTCustInvoicesDM.pas">
+            <Form>dtmdlCustInvoices</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtAboutBox.pas">
+            <Form>frmwtAboutBox</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMain.pas">
+            <Form>frmWTMain</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTQuotesDM.pas">
+            <Form>dtmdlQuote</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtCommon.pas"/>
+        <DCCReference Include="..\wtLUQuotes.pas">
+            <Form>frmwtLUQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtNotesDM.pas">
+            <Form>dtmdlNotes</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUEdges.pas">
+            <Form>frmwtLUEdges</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintEdges.pas">
+            <Form>frmWTMaintEdges</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCutOuts.pas">
+            <Form>frmWTLUCutOuts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCutOuts.pas">
+            <Form>frmWTMaintCutOuts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintEdgeDetails.pas">
+            <Form>frmWTMaintEdgeDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUCustType.pas">
+            <Form>frmWTLUCustType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUVat.pas">
+            <Form>frmwtLUVat</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintVat.pas">
+            <Form>frmwtMaintVat</Form>
+        </DCCReference>
+        <DCCReference Include="..\AllCommon.pas"/>
+        <DCCReference Include="..\WTSrchSupplier.pas">
+            <Form>frmWTSrchSupplier</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQUpstand.pas">
+            <Form>frmWTMaintQUpstand</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQCutOut.pas">
+            <Form>frmWTMaintQCutOut</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQEdge.pas">
+            <Form>frmWTMaintQEdge</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQExtra.pas">
+            <Form>frmWTMaintQExtra</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCustomerConts.pas">
+            <Form>frmwtMaintCustomerConts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSrchCustContacts.pas">
+            <Form>frmWTSrchCustContacts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQElement.pas">
+            <Form>frmWTMaintQElement</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUPurchases.pas">
+            <Form>frmwtLUPurchases</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSales.pas">
+            <Form>frmwtLUSales</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTJobsDM.pas">
+            <Form>dtmdlJob</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUJobs.pas">
+            <Form>frmwtLUJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSalesOrderDM.pas">
+            <Form>dtmdlSalesOrder</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesOrder.pas">
+            <Form>frmWTMaintSalesOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtPurchasesDM.pas">
+            <Form>dtmdlPurchase</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtSalesInvoiceDM.pas">
+            <Form>dtmdlSalesInvoice</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesInvoice.pas">
+            <Form>frmWTMaintSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSContract.pas">
+            <Form>frmWTRSContract</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPQuoteTrade.pas">
+            <Form>frmwtRPQuoteTrade</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUWTGroup.pas">
+            <Form>frmWTLUWTGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTGroup.pas">
+            <Form>frmWTMaintWTGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintAddChgs.pas">
+            <Form>frmwtMaintAddChgs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJob.pas">
+            <Form>frmWTMaintJob</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJUpstand.pas">
+            <Form>frmWTMaintJUpstand</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJEdge.pas">
+            <Form>frmWTMaintJEdge</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJElement.pas">
+            <Form>frmWTMaintJElement</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJExtra.pas">
+            <Form>frmWTMaintJExtra</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJCutOut.pas">
+            <Form>frmWtMaintJCutOut</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSJobCutSched.pas">
+            <Form>frmWTRSJobCutSched</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSJobMasonRpt.pas">
+            <Form>frmWTRSJobMasonRpt</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPJobMasonRpt.pas">
+            <Form>frmWTRPJobMasonRpt</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTCustomerSearch.pas">
+            <Form>frmWTCustomerSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTJobSearch.pas">
+            <Form>frmWTJobSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintContractEvents.pas">
+            <Form>frmWTMaintContractEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJEvents.pas">
+            <Form>frmWTMaintJEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtUtilities.pas">
+            <Form>frmWTUtilities</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUOperators.pas">
+            <Form>frmWTLUOperators</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintOperators.pas">
+            <Form>frmWTMaintOperators</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTUpdateDB.pas">
+            <Form>dtmdlUpdateDB</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTLogin.pas">
+            <Form>frmWTLogin</Form>
+        </DCCReference>
+        <DCCReference Include="..\WtLUWTGroupPrices.pas">
+            <Form>frmWtLUWTGroupPrices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTGPrices.pas">
+            <Form>frmWTMaintWTGPrices</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSJobSheet.pas">
+            <Form>frmWTRSJobSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPJobAccSheet.pas">
+            <Form>frmwtRPJobAccSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUEdgeTypes.pas">
+            <Form>frmWTLUEdgeTypes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintEdgeType.pas">
+            <Form>frmWTMaintEdgeType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQElementM.pas">
+            <Form>frmWTMaintQElementM</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJElementM.pas">
+            <Form>frmWTMaintJElementM</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuotePerf.pas">
+            <Form>frmWTRSQuotePerf</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtFaxList.pas">
+            <Form>frmWTFaxList</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtEmailList.pas">
+            <Form>frmWTEmailList</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintClient.pas">
+            <Form>frmWTMaintClient</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUQuoteRpts.pas">
+            <Form>frmWTLUQuoteRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPQuotePerf.pas">
+            <Form>frmwtRPQuotePerf</Form>
+        </DCCReference>
+        <DCCReference Include="..\DateSelV5.pas">
+            <Form>DateSelV5Form</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSOutQuote.pas">
+            <Form>frmWTRSOutQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPOutQuote.pas">
+            <Form>frmwtRPOutQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\AllImages.pas">
+            <Form>frmAllImages</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSalesOrderJobLine.pas">
+            <Form>frmWTMaintSalesOrderJobLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUStock.pas">
+            <Form>frmWTLUStock</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtStockDM.pas">
+            <Form>dtmdlStock</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUReps.pas">
+            <Form>frmWTLUReps</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintReps.pas">
+            <Form>frmWTMaintReps</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUProductGroups.pas">
+            <Form>frmWTLUProductGroups</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintMatType.pas">
+            <Form>frmWtMaintMatType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintProduct.pas">
+            <Form>frmWtMaintProduct</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUProducts.pas">
+            <Form>frmWTLUProducts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesInvoiceLine.pas">
+            <Form>frmWTMaintSalesInvoiceLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSalesInvoice.pas">
+            <Form>frmwtRSSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesInvoices.pas">
+            <Form>frmWTLUSalesInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSalesInvoiceSO.pas">
+            <Form>frmWTLUSalesInvoiceSO</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSalesOrderLine.pas">
+            <Form>frmWTMaintSalesOrderLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOrder.pas">
+            <Form>frmWTRSSOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSOLines.pas">
+            <Form>frmWTLUSOLines</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSOrderRpts.pas">
+            <Form>frmWTLUSOrderRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOrderSchedule.pas">
+            <Form>frmwtRPSOrderSchedule</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSSOrderSchedule.pas">
+            <Form>frmWTRSSOrderSchedule</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSOrderSearch.pas">
+            <Form>frmWTSOrderSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WtRPJobFittingTrade.pas">
+            <Form>frmwtRPJobFittingTrade</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJobComplete.pas">
+            <Form>frmWTMaintJobComplete</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesOrderQuotes.pas">
+            <Form>frmWTLUSalesOrderQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesCredits.pas">
+            <Form>frmWTLUSalesCredits</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSalesInvoiceCN.pas">
+            <Form>frmWTLUSalesInvoiceCN</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSalesInvoiceReprint.pas">
+            <Form>frmWTRSSalesInvoiceReprint</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtAccExport1.pas">
+            <Form>frmWTAccExport1</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport2.pas">
+            <Form>frmWTAccExport2</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport3.pas">
+            <Form>frmWTAccExport3</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExportDM.pas">
+            <Form>dmAccExport</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport4.pas">
+            <Form>frmWTAccExport4</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExportFactInvs.pas">
+            <Form>frmWTAccExportFactInvs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLoginError.pas">
+            <Form>frmWTLoginError</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLicence.pas">
+            <Form>frmWTLicence</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUJobRpts.pas">
+            <Form>frmWTLUJobRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSOutJobs.pas">
+            <Form>frmWTRSOutJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPOutJobs.pas">
+            <Form>frmwtRPOutJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOAntInvoice.pas">
+            <Form>frmwtRPSOAntInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOAntInvoice.pas">
+            <Form>frmWTRSSOAntInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTDeleteHistory.pas">
+            <Form>frmWTDeleteHistory</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTUtilitiesDM.pas">
+            <Form>dtmdlUtilities</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesLead.pas">
+            <Form>frmWTLUSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUFitters.pas">
+            <Form>frmWTLUFitters</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintFitters.pas">
+            <Form>frmWTMaintFitters</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUDesigner.pas">
+            <Form>frmWTLUDesigner</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintBranch.pas">
+            <Form>frmWTMaintBranch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintDesigner.pas">
+            <Form>frmWTMaintDesigner</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSJobValue.pas">
+            <Form>frmWTRSJobValue</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPJobValue.pas">
+            <Form>frmWTRPJobValue</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuoteSalesLead.pas">
+            <Form>frmWTRSQuoteSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPQuoteSalesLead.pas">
+            <Form>frmwtRPQuoteSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCutOutDetails.pas">
+            <Form>frmWTLUCutOutDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUEdgeDetails.pas">
+            <Form>frmWTLUEdgeDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintWT.pas">
+            <Form>frmWTMaintWT</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPJob.pas">
+            <Form>frmwtRPJob</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUManageMentRpts.pas">
+            <Form>frmWTLUManagementRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCutOutDetails.pas">
+            <Form>frmWTMaintCutOutDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WtRPJobFitting.pas">
+            <Form>frmwtRPJobFitting</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTQuoteSearch.pas">
+            <Form>frmWTQuoteSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContactEvents.pas">
+            <Form>frmWTMaintContactEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTEventsDM.pas">
+            <Form>dtmdlEvents</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtDBMemo.pas">
+            <Form>frmwtDBMemo</Form>
+        </DCCReference>
+        <DCCReference Include="..\WtAccImportDM.pas">
+            <Form>dmAccImport</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTFileImport.pas">
+            <Form>frmWTFileImport</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUDataSource.pas">
+            <Form>frmWTLUDataSource</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintDataSource.pas">
+            <Form>frmWTMaintDataSource</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUContactType.pas">
+            <Form>frmWTLUContactType</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContactType.pas">
+            <Form>frmWTMaintContactType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintProspectAction.pas">
+            <Form>frmWTMaintProspectAction</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUProspectAction.pas">
+            <Form>frmWTLUProspectAction</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUCustomerRpts.pas">
+            <Form>frmWTLUCustomerRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSCustomerAction.pas">
+            <Form>frmWTRSCustomerAction</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPCustomerAction.pas">
+            <Form>frmwtRPCustomerAction</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WTRPJobCutSched.pas">
+            <Form>frmWTRPJobCutSched</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSalesOrder.pas">
+            <Form>frmwtRPSalesOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSSalesOrder.pas">
+            <Form>frmWTRSSalesOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSCustomerActivity.pas">
+            <Form>frmWTRSCustomerActivity</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPCustomerActivity.pas">
+            <Form>frmwtRPCustomerActivity</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSCustContDet.pas">
+            <Form>frmWTRSCustContDet</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPCustContDet.pas">
+            <Form>frmWTRPCustContDet</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSTemplateSheet.pas">
+            <Form>frmWTRSTemplateSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPQuote.pas">
+            <Form>frmwtRPQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WtRPJobSheet.pas">
+            <Form>frmwtRPJobSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPSalesInvoice.pas">
+            <Form>frmWTRPSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUMaterialUse.pas">
+            <Form>frmWTLUMaterialUse</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintMaterialUse.pas">
+            <Form>frmWtMaintMaterialUse</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintEmail.pas">
+            <Form>WTMaintEmailFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTWordOLE.pas">
+            <Form>WTWordOLEFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTExcelOLE.pas">
+            <Form>WTExcelOLEFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPSOrder.pas">
+            <Form>frmwtRPSOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUPaymentTerms.pas">
+            <Form>frmWTLUPaymentTerms</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintPaymentTerms.pas">
+            <Form>frmWTMaintPaymentTerms</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPTemplate.pas">
+            <Form>frmwtRPTemplate</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintCustTypes.pas">
+            <Form>frmWTMaintCustTypes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQUpstandM.pas">
+            <Form>frmWTMaintQUpstandM</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTContractsDM.pas">
+            <Form>dtmdlContract</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTLUContracts.pas">
+            <Form>frmWTLUContracts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTContractSearch.pas">
+            <Form>frmWTContractSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContract.pas">
+            <Form>frmWTMaintContract</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUPrices.pas">
+            <Form>frmWTLUPrices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTPricesDM.pas">
+            <Form>dtmdlPrices</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractOption.pas">
+            <Form>frmWTMaintContractOption</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractConvertOrder.pas">
+            <Form>frmWTMaintContractConvertOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WtRPJobSheetClient.pas">
+            <Form>frmWTRPJobSheetClient</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WTRPSOrderAllocation.pas">
+            <Form>frmWTRPSOrderAllocation</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractCopyQuote.pas">
+            <Form>frmWTMaintContractCopyQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPContract.pas">
+            <Form>frmWTRPContract</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuote.pas">
+            <Form>frmWTRSQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintAddress.pas">
+            <Form>frmWTMaintAddress</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractAddress.pas">
+            <Form>frmWTMaintContractAddress</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUInstallArea.pas">
+            <Form>frmWTLUInstallArea</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintPurchaseOrder.pas">
+            <Form>frmWTMaintPurchaseOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSupplier.pas">
+            <Form>frmWTMaintSupplier</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSupplierDM.pas">
+            <Form>dtmdlSuppliers</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTSrchSuppContacts.pas">
+            <Form>frmWTSrchSuppContacts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSupplierContact.pas">
+            <Form>frmWTMaintSupplierContact</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSupplierContacts.pas">
+            <Form>frmWTLUSupplierContacts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUAppointmentType.pas">
+            <Form>frmwtLUAppointmentType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintAppointmentType.pas">
+            <Form>frmWTMaintAppointmentType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUAppointmentDateType.pas">
+            <Form>frmwtLUAppointmentDateType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintAppointmentDateType.pas">
+            <Form>frmWTMaintAppointmentDateType</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractLines.pas">
+            <Form>frmWTMaintContractLines</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPContractOrders.pas">
+            <Form>frmwtRPContractOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSContractOrders.pas">
+            <Form>frmWTRSContractOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUContractsRpts.pas">
+            <Form>frmWTLUContractRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPMaterialAnalysis.pas">
+            <Form>frmWTRPMaterialAnalysis</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSMaterialAnalysis.pas">
+            <Form>frmWTRSMaterialAnalysis</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPContractDetails.pas">
+            <Form>frmwtRPContractDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\WtRPJobRemedialSheet.pas">
+            <Form>frmwtRPJobRemedialSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\taoMAPI.pas"/>
+        <DCCReference Include="..\WTRPSOCostAnalysis.pas">
+            <Form>frmWTRPSOCostAnalysis</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSSOCostAnalysis.pas">
+            <Form>frmWTRSSOCostAnalysis</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintContractMarkup.pas">
+            <Form>frmWTMaintContractMarkup</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintPurchaseOrderLine.pas">
+            <Form>frmWTMaintPurchaseOrderLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOProduction.pas">
+            <Form>frmWTRPSOProduction</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOProduction.pas">
+            <Form>frmWTRSSOProduction</Form>
+        </DCCReference>
+        <DCCReference Include="..\Bellagio\Reports\wtRPQuoteSummary.pas">
+            <Form>frmwtRPQuoteSummary</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUTemplating.pas">
+            <Form>frmWTLUTemplating</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSInvoiceSearch.pas">
+            <Form>frmWTSInvoiceSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintPayments.pas">
+            <Form>frmWTMaintPayments</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUPayments.pas">
+            <Form>frmwtLUPayments</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTDeleteContractQuotes.pas">
+            <Form>frmWTDeleteContractQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintCompanyDocStructure.pas">
+            <Form>frmWTMaintCompanyDocStructure</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintRevenueCentre.pas">
+            <Form>frmWTMaintRevenueCentre</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLURevenueCentre.pas">
+            <Form>frmWTLURevenueCentre</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUFitting.pas">
+            <Form>frmWTLUFitting</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtCustomerPriceChange.pas">
+            <Form>frmwtCustomerPriceChange</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtProductPriceChange.pas">
+            <Form>frmWTProductPriceChange</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintCustMaterialType.pas">
+            <Form>frmWTMaintCustMaterialType</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSFittingSheet.pas">
+            <Form>frmWTRSFittingSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOAntOrdering.pas">
+            <Form>frmWTRPSOAntOrdering</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOAntOrdering.pas">
+            <Form>frmWTRSSOAntOrdering</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOStockDeAllocation.pas">
+            <Form>frmWTRSSOStockDeAllocation</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
+        <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
+        <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
+        <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
+        <DCCReference Include="..\..\Shared\Shared.DragDrop.Helper.pas"/>
+        <DCCReference Include="..\WTRSSOrderTemplate.pas">
+            <Form>frmWTRSSOrderTemplate</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <None Include="FirebellyScheduler.dll">
+            <ContainerId>File</ContainerId>
+        </None>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">Firebelly_Bellagio.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclFMXtee9280.bpl">TeeChart Lite FMX Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <Deployment Version="4">
+                <DeployFile LocalName="..\Firebelly_Bellagio.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Firebelly_Bellagio.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Firebelly_Bellagio.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Firebelly_Bellagio.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="FirebellyScheduler.dll" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="FirebellyScheduler.dll" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidFileProvider">
+                    <Platform Name="Android">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiv7aFile">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStylesV21">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Colors">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon192">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon24">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Strings">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iOS_AppStore1024">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon152">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon167">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_SpotLight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon180">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification60">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting87">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSLaunchScreen">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXDebug">
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXEntitlements">
+                    <Platform Name="OSX32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSSimARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+            </Deployment>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
