@@ -62,6 +62,8 @@ type
     qrlblCustGoods: TQRLabel;
     qrlblCustDeposit: TQRLabel;
     gtqrStatus: TQRLabel;
+    gtqrDONOTInvoice: TQRLabel;
+    qrySalesOrderOld: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
@@ -92,6 +94,7 @@ type
     bOnlyShowAFP: boolean;
     bShowOnlyScheduled: boolean;
     bIncludeInvoiced: boolean;
+    bIncludeNOT2bInvoiced: boolean;
     SortBy: integer;
     customer, rep: integer;
     DateFrom, DateTo: TDateTime;
@@ -372,6 +375,11 @@ begin
   else
     gtqrStatus.Caption := qrySalesOrders.fieldbyname('Sales_Order_Status_Desc').asstring;
 
+  if qrySalesOrders.fieldbyname('Do_Not_Invoice').asstring = 'Y' then
+    gtqrDoNOTInvoice.caption := '***'
+  else
+    gtqrDoNOTInvoice.caption := '';
+
   qrlblDateRequired.caption := paDatestr(qrySalesOrders.fieldbyname('Date_Required').asdatetime);
 
   CustomerGoods := CustomerGoods + qrySalesOrders.fieldbyname('Goods_Value').asfloat;
@@ -407,8 +415,9 @@ begin
     + ',"Total to Invoice"'
     + ',"In Schedule"'
     + ',"Charge Type"'
-    + ',"Status"';
-
+    + ',"Payment Terms"'
+    + ',"Status"'
+    + ',"Do NOT Invoice"';
 
   writeLn(self.exportFile, tempStr);
   qrpdetails.Prepare;
@@ -479,8 +488,14 @@ begin
     else
       tempStr := tempStr + ',"' + 'Invoice' + '"';
 
+    //Payment Terms
+    tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Payment_Terms_Description').asstring + '"';
+
     //Status
     tempStr := tempStr + ',"' + gtqrStatus.caption + '"';
+
+    //Do NOT Invoice
+    tempStr := tempStr + ',"' + gtqrDoNOTInvoice.caption + '"';
 
     writeln(self.exportFile, tempStr);
     frmWTRSSOAntInvoice.prgbrExport.StepIt;

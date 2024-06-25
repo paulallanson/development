@@ -87,26 +87,3 @@ Client_Files_NDA/
 Data/
 DUnits/
 FontSizeFromMigration/
-
-# DCU folders
-Firebelly/Aire/Win32
-Firebelly/Aktiv/Win32
-Firebelly/Battaglia/Win32
-Firebelly/Bellagio/Win32
-Firebelly/Demo/Win32
-Firebelly/Elite/Win32
-Firebelly/GMS/Win32
-Firebelly/GranTech/Win32
-Firebelly/MegaMarble/Win32
-Firebelly/Meridian/Win32
-Firebelly/Premier/Win32
-Firebelly/Quaystone/Win32
-Firebelly/Roann/Win32
-Firebelly/Romany/Win32
-Firebelly/Ruby/Win32
-Firebelly/WorktopsLoad/Win32
-Firebelly/York/Win32
-Firebelly/EndUser/Win32
-Firebelly/Lanzet/Win32
-Firebelly/QBS/Win32
-Redeye/broker2005/Project Files/Win32

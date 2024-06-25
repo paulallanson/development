@@ -287,29 +287,39 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select * '
-      'from worktop'
+      'SELECT Worktop,'
+      '      Description,'
+      '      Not_used_for_quoting,'
+      '      Material_Type,'
+      '      Worktop_Group,'
+      '      inactive,'
+      '      Long_Description,'
+      '      Short_Description,'
+      '      Show_Online,'
+      '      Worktop_Finish,'
+      '      Image_Path,'
+      '      Discount'
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group)) and'
       
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 432
-    Top = 56
+    Left = 292
+    Top = 6
     ParamData = <
       item
         Name = 'material_type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'worktop_group'
-      end
-      item
-        Name = 'worktop_group'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryWTThickness: TFDQuery
@@ -384,8 +394,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workto' +
         'p_Group'
       'order by Worktop_group_description')
-    Left = 432
-    Top = 112
+    Left = 84
+    Top = 180
     ParamData = <
       item
         Name = 'Material_type'
@@ -447,8 +457,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
         'rktop.worktop = :worktop'
       'ORDER BY Worktop.Description')
-    Left = 336
-    Top = 152
+    Left = 292
+    Top = 190
     ParamData = <
       item
         Name = 'Customer'
@@ -492,8 +502,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 432
-    Top = 152
+    Left = 444
+    Top = 190
     ParamData = <
       item
         Name = 'Customer'
@@ -537,8 +547,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      ((Worktop.inactive = '#39'N'#39') or (Worktop.inactive is null) OR' +
         ' (Worktop.worktop = :worktop))'
       'ORDER BY Worktop.Description')
-    Left = 336
-    Top = 96
+    Left = 428
+    Top = 88
     ParamData = <
       item
         Name = 'Customer'
@@ -589,8 +599,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 384
-    Top = 96
+    Left = 296
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'

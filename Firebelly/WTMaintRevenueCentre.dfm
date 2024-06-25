@@ -3,8 +3,8 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
   Top = 36
   BorderStyle = bsDialog
   Caption = 'Maintain Revenue Centre'
-  ClientHeight = 633
-  ClientWidth = 611
+  ClientHeight = 659
+  ClientWidth = 635
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -15,12 +15,12 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    611
-    633)
+    635
+    659)
   TextHeight = 13
   object OKBitBtn: TBitBtn
     Left = 235
-    Top = 592
+    Top = 618
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -29,10 +29,11 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     ModalResult = 1
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 583
   end
   object CancelBitBtn: TBitBtn
     Left = 323
-    Top = 592
+    Top = 618
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -42,10 +43,11 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     NumGlyphs = 2
     TabOrder = 0
     OnClick = CancelBitBtnClick
+    ExplicitTop = 583
   end
   object chkbxInActive: TCheckBox
-    Left = 16
-    Top = 596
+    Left = 8
+    Top = 622
     Width = 185
     Height = 17
     Caption = 'Revenue Centre is inactive'
@@ -56,7 +58,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Top = 8
     Width = 617
     Height = 593
-    ActivePage = tbsNumbers
+    ActivePage = tbsGeneral
     TabOrder = 3
     object tbsGeneral: TTabSheet
       Caption = 'Details'

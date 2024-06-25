@@ -10,13 +10,14 @@ object frmWTRPContract: TfrmWTRPContract
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 72
     Top = -96
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -70,31 +71,31 @@ object frmWTRPContract: TfrmWTRPContract
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoomToWidth
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
     object qrbPageHeader: TQRBand
-      Left = 19
-      Top = 38
-      Width = 1085
-      Height = 347
+      Left = 24
+      Top = 47
+      Width = 1356
+      Height = 434
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        918.104166666666700000
-        2870.729166666667000000)
+        918.633333333333300000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object gtQRShape3: TQRShape
-        Left = 12
-        Top = 128
-        Width = 701
-        Height = 209
+        Left = 15
+        Top = 160
+        Width = 876
+        Height = 261
         Size.Values = (
           552.979166666666700000
           31.750000000000000000
@@ -107,15 +108,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblQuoteCaption: TQRLabel
-        Left = 544
-        Top = 8
-        Width = 161
-        Height = 43
+        Left = 680
+        Top = 10
+        Width = 204
+        Height = 54
         Size.Values = (
-          113.770833333333300000
+          114.300000000000000000
           1439.333333333333000000
           21.166666666666670000
-          425.979166666666700000)
+          431.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -125,7 +126,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -37
+        Font.Height = -47
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -136,15 +137,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 28
       end
       object QRDBText4: TQRDBText
-        Left = 104
-        Top = 240
-        Width = 57
-        Height = 17
+        Left = 130
+        Top = 300
+        Width = 67
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           275.166666666666700000
           635.000000000000000000
-          150.812500000000000000)
+          141.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -155,7 +156,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Developer'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -168,15 +169,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRLabel5: TQRLabel
-        Left = 17
-        Top = 240
-        Width = 57
-        Height = 17
+        Left = 21
+        Top = 300
+        Width = 67
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
+          44.450000000000000000
+          44.450000000000000000
           635.000000000000000000
-          150.812500000000000000)
+          141.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -186,7 +187,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -197,10 +198,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRDBText5: TQRDBText
-        Left = 104
-        Top = 295
-        Width = 600
-        Height = 17
+        Left = 130
+        Top = 369
+        Width = 750
+        Height = 21
         Size.Values = (
           44.979166666666670000
           275.166666666666700000
@@ -218,7 +219,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Contract_Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -231,10 +232,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object qriHeadLogo: TQRImage
-        Left = 12
+        Left = 15
         Top = 0
-        Width = 180
-        Height = 120
+        Width = 225
+        Height = 150
         Size.Values = (
           317.500000000000000000
           31.750000000000000000
@@ -246,10 +247,10 @@ object frmWTRPContract: TfrmWTRPContract
         Stretch = True
       end
       object qrmAddress: TQRMemo
-        Left = 104
-        Top = 136
-        Width = 169
-        Height = 91
+        Left = 130
+        Top = 170
+        Width = 211
+        Height = 114
         Size.Values = (
           240.770833333333300000
           275.166666666666700000
@@ -264,7 +265,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -274,15 +275,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object gtQRLabel6: TQRLabel
-        Left = 17
-        Top = 136
-        Width = 56
-        Height = 17
+        Left = 21
+        Top = 170
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
+          44.450000000000000000
+          44.450000000000000000
           359.833333333333300000
-          148.166666666666700000)
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -292,7 +293,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -303,15 +304,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object gtQRLabel7: TQRLabel
-        Left = 17
-        Top = 295
-        Width = 64
-        Height = 17
+        Left = 21
+        Top = 369
+        Width = 75
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
-          780.520833333333300000
-          169.333333333333300000)
+          44.450000000000000000
+          44.450000000000000000
+          781.050000000000000000
+          158.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -321,7 +322,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -332,10 +333,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object gtQRShape5: TQRShape
-        Left = 12
-        Top = 258
-        Width = 701
-        Height = 8
+        Left = 15
+        Top = 323
+        Width = 876
+        Height = 10
         Size.Values = (
           21.166666666666670000
           31.750000000000000000
@@ -348,10 +349,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShape6: TQRShape
-        Left = 496
-        Top = 128
-        Width = 217
-        Height = 135
+        Left = 620
+        Top = 160
+        Width = 271
+        Height = 169
         Size.Values = (
           357.187500000000000000
           1312.333333333333000000
@@ -364,15 +365,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object QRLabel2: TQRLabel
-        Left = 503
-        Top = 175
-        Width = 30
-        Height = 16
+        Left = 629
+        Top = 219
+        Width = 36
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1330.854166666667000000
-          463.020833333333300000
-          79.375000000000000000)
+          1331.383333333333000000
+          463.550000000000000000
+          76.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -382,7 +383,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -393,15 +394,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRDBText1: TQRDBText
-        Left = 627
-        Top = 175
-        Width = 80
-        Height = 16
+        Left = 788
+        Top = 219
+        Width = 96
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1658.937500000000000000
-          463.020833333333300000
-          211.666666666666700000)
+          1667.933333333333000000
+          463.550000000000000000
+          203.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -412,7 +413,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Contract_Date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -425,15 +426,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRDBText2: TQRDBText
-        Left = 621
-        Top = 141
-        Width = 86
-        Height = 16
+        Left = 783
+        Top = 176
+        Width = 101
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1643.062500000000000000
-          373.062500000000000000
-          227.541666666666700000)
+          1657.350000000000000000
+          372.533333333333300000
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -444,7 +445,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Quote_Number'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -457,15 +458,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRDBText3: TQRDBText
-        Left = 567
-        Top = 208
-        Width = 140
-        Height = 16
+        Left = 719
+        Top = 260
+        Width = 165
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1500.187500000000000000
+          1521.883333333333000000
           550.333333333333300000
-          370.416666666666700000)
+          349.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -476,7 +477,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Account_Manager_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -489,15 +490,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRDBText6: TQRDBText
-        Left = 574
-        Top = 238
-        Width = 133
-        Height = 17
+        Left = 728
+        Top = 297
+        Width = 155
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1518.708333333333000000
-          629.708333333333300000
-          351.895833333333300000)
+          44.450000000000000000
+          1540.933333333333000000
+          628.650000000000000000
+          328.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -508,7 +509,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'AM_Telephone_number'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -521,15 +522,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRLabel16: TQRLabel
-        Left = 503
-        Top = 238
-        Width = 40
-        Height = 17
+        Left = 629
+        Top = 297
+        Width = 47
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1330.854166666667000000
-          629.708333333333300000
-          105.833333333333300000)
+          44.450000000000000000
+          1331.383333333333000000
+          628.650000000000000000
+          99.483333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -539,7 +540,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -550,15 +551,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRLabel4: TQRLabel
-        Left = 503
-        Top = 208
-        Width = 46
-        Height = 16
+        Left = 629
+        Top = 260
+        Width = 56
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1330.854166666667000000
+          1331.383333333333000000
           550.333333333333300000
-          121.708333333333300000)
+          118.533333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -568,7 +569,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -579,15 +580,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object QRLabel3: TQRLabel
-        Left = 503
-        Top = 141
-        Width = 105
-        Height = 16
+        Left = 629
+        Top = 176
+        Width = 127
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1330.854166666667000000
-          373.062500000000000000
-          277.812500000000000000)
+          1331.383333333333000000
+          372.533333333333300000
+          268.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -597,7 +598,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -608,10 +609,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object gtQRShape4: TQRShape
-        Left = 12
-        Top = 231
-        Width = 701
-        Height = 4
+        Left = 15
+        Top = 289
+        Width = 876
+        Height = 5
         Size.Values = (
           10.583333333333330000
           31.750000000000000000
@@ -624,10 +625,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShape7: TQRShape
-        Left = 87
-        Top = 129
-        Width = 9
-        Height = 208
+        Left = 109
+        Top = 161
+        Width = 11
+        Height = 260
         Size.Values = (
           550.333333333333300000
           230.187500000000000000
@@ -640,10 +641,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShape8: TQRShape
-        Left = 496
-        Top = 196
-        Width = 217
-        Height = 7
+        Left = 620
+        Top = 245
+        Width = 271
+        Height = 9
         Size.Values = (
           18.520833333333340000
           1312.333333333333000000
@@ -656,10 +657,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShape9: TQRShape
-        Left = 496
-        Top = 164
-        Width = 217
-        Height = 7
+        Left = 620
+        Top = 205
+        Width = 271
+        Height = 9
         Size.Values = (
           18.520833333333340000
           1312.333333333333000000
@@ -672,15 +673,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblCompanyAdd: TQRLabel
-        Left = 199
-        Top = 99
-        Width = 342
-        Height = 15
+        Left = 249
+        Top = 124
+        Width = 421
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          526.520833333333300000
-          261.937500000000000000
-          904.875000000000000000)
+          40.216666666666670000
+          527.050000000000000000
+          262.466666666666700000
+          891.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -692,7 +693,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -703,10 +704,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object gtQRShape1: TQRShape
-        Left = 12
-        Top = 285
-        Width = 701
-        Height = 8
+        Left = 15
+        Top = 356
+        Width = 876
+        Height = 10
         Size.Values = (
           21.166666666666670000
           31.750000000000000000
@@ -719,15 +720,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRLabel1: TQRLabel
-        Left = 17
-        Top = 268
-        Width = 48
-        Height = 17
+        Left = 21
+        Top = 335
+        Width = 56
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          44.979166666666670000
+          44.450000000000000000
+          44.450000000000000000
           709.083333333333300000
-          127.000000000000000000)
+          118.533333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -737,7 +738,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -748,15 +749,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 9
       end
       object gtQRDBText1: TQRDBText
-        Left = 104
-        Top = 268
-        Width = 76
-        Height = 17
+        Left = 130
+        Top = 335
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           275.166666666666700000
           709.083333333333300000
-          201.083333333333300000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -767,7 +768,7 @@ object frmWTRPContract: TfrmWTRPContract
         DataField = 'Site_Location'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -781,10 +782,10 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrgQuote: TQRGroup
-      Left = 19
-      Top = 385
-      Width = 1085
-      Height = 2
+      Left = 24
+      Top = 481
+      Width = 1356
+      Height = 3
       AfterPrint = qrgQuoteAfterPrint
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
@@ -792,8 +793,8 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        2870.729166666667000000)
+        6.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Contract_quote'
@@ -801,10 +802,10 @@ object frmWTRPContract: TfrmWTRPContract
       ReprintOnNewPage = False
     end
     object qrsdContractLine: TQRSubDetail
-      Left = 19
-      Top = 462
-      Width = 1085
-      Height = 26
+      Left = 24
+      Top = 578
+      Width = 1356
+      Height = 33
       AfterPrint = qrsdContractLineAfterPrint
       AlignToBottom = False
       BeforePrint = qrsdContractLineBeforePrint
@@ -812,8 +813,8 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        68.791666666666670000
-        2870.729166666667000000)
+        69.850000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -823,10 +824,10 @@ object frmWTRPContract: TfrmWTRPContract
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRShapeDrawing: TQRShape
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 150
-        Height = 26
+        Width = 188
+        Height = 33
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
@@ -839,10 +840,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeOption5: TQRShape
-        Left = 683
+        Left = 854
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1807.104166666667000000
@@ -855,10 +856,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeOption1: TQRShape
-        Left = 151
+        Left = 189
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
@@ -871,10 +872,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeOption2: TQRShape
-        Left = 284
+        Left = 355
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           751.416666666666700000
@@ -887,10 +888,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeOption3: TQRShape
-        Left = 417
+        Left = 521
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1103.312500000000000000
@@ -903,10 +904,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeOption4: TQRShape
-        Left = 550
+        Left = 687
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1455.208333333333000000
@@ -919,15 +920,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblOption1: TQRLabel
-        Left = 214
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 269
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          566.208333333333300000
-          15.875000000000000000
-          74.083333333333330000)
+          569.383333333333300000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -937,7 +938,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -948,15 +949,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOption2: TQRLabel
-        Left = 350
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 440
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          926.041666666666700000
-          15.875000000000000000
-          74.083333333333330000)
+          931.333333333333300000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -966,7 +967,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -977,15 +978,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOption3: TQRLabel
-        Left = 483
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 606
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1277.937500000000000000
-          15.875000000000000000
-          74.083333333333330000)
+          1282.700000000000000000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -995,7 +996,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1006,15 +1007,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOption4: TQRLabel
-        Left = 614
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 770
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1624.541666666667000000
-          15.875000000000000000
-          74.083333333333330000)
+          1629.833333333333000000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1024,7 +1025,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1035,10 +1036,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object gtQRShapeOption6: TQRShape
-        Left = 816
+        Left = 1020
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2159.000000000000000000
@@ -1051,15 +1052,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblOption5: TQRLabel
-        Left = 750
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 940
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1984.375000000000000000
-          15.875000000000000000
-          74.083333333333330000)
+          1989.666666666667000000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1069,7 +1070,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1080,15 +1081,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOption6: TQRLabel
-        Left = 880
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 1102
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2328.333333333333000000
-          15.875000000000000000
-          74.083333333333330000)
+          2332.566666666667000000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1098,7 +1099,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1109,10 +1110,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblDrawingNumberMemo: TQRRichText
-        Left = 6
-        Top = 6
-        Width = 142
-        Height = 16
+        Left = 8
+        Top = 8
+        Width = 177
+        Height = 20
         Enabled = False
         Size.Values = (
           42.333333333333330000
@@ -1137,10 +1138,10 @@ object frmWTRPContract: TfrmWTRPContract
           'qrlblDrawingNo')
       end
       object qrlblDrawingNumber: TQRLabel
-        Left = 6
-        Top = 6
-        Width = 143
-        Height = 16
+        Left = 8
+        Top = 8
+        Width = 179
+        Height = 20
         Size.Values = (
           42.333333333333330000
           15.875000000000000000
@@ -1157,7 +1158,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1168,10 +1169,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object gtQRShapeOption7: TQRShape
-        Left = 949
+        Left = 1186
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2510.895833333333000000
@@ -1184,15 +1185,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblOption7: TQRLabel
-        Left = 1008
-        Top = 6
-        Width = 28
-        Height = 16
+        Left = 1262
+        Top = 8
+        Width = 33
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2667.000000000000000000
-          15.875000000000000000
-          74.083333333333330000)
+          2671.233333333333000000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1202,7 +1203,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1214,10 +1215,10 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrbContractLineHeader: TQRBand
-      Left = 19
-      Top = 437
-      Width = 1085
-      Height = 25
+      Left = 24
+      Top = 547
+      Width = 1356
+      Height = 31
       AfterPrint = qrbContractLineHeaderAfterPrint
       AlignToBottom = False
       BeforePrint = qrbContractLineHeaderBeforePrint
@@ -1225,16 +1226,16 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
-        2870.729166666667000000)
+        65.616666666666670000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
       object gtQRShapeHead7: TQRShape
-        Left = 949
+        Left = 1186
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2510.895833333333000000
@@ -1247,10 +1248,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead6: TQRShape
-        Left = 816
+        Left = 1020
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2159.000000000000000000
@@ -1263,10 +1264,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead5: TQRShape
-        Left = 683
+        Left = 854
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1807.104166666667000000
@@ -1279,10 +1280,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead4: TQRShape
-        Left = 550
+        Left = 687
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1455.208333333333000000
@@ -1295,10 +1296,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead3: TQRShape
-        Left = 417
+        Left = 521
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1103.312500000000000000
@@ -1311,10 +1312,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead2: TQRShape
-        Left = 284
+        Left = 355
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           751.416666666666700000
@@ -1327,10 +1328,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead1: TQRShape
-        Left = 151
+        Left = 189
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
@@ -1343,10 +1344,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeHead0: TQRShape
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 150
-        Height = 26
+        Width = 188
+        Height = 33
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
@@ -1359,10 +1360,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblOptionHead0: TQRRichText
-        Left = 156
-        Top = 6
-        Width = 137
-        Height = 16
+        Left = 195
+        Top = 8
+        Width = 171
+        Height = 20
         Enabled = False
         Size.Values = (
           42.333333333333330000
@@ -1387,15 +1388,15 @@ object frmWTRPContract: TfrmWTRPContract
           'Option Description')
       end
       object qrlblDrawing: TQRLabel
-        Left = 6
-        Top = 6
-        Width = 67
-        Height = 16
+        Left = 8
+        Top = 8
+        Width = 79
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          15.875000000000000000
-          15.875000000000000000
-          177.270833333333300000)
+          16.933333333333330000
+          16.933333333333330000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1405,7 +1406,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1416,10 +1417,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead1: TQRLabel
-        Left = 154
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 192
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           407.458333333333300000
@@ -1436,7 +1437,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1447,10 +1448,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead2: TQRLabel
-        Left = 287
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 359
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           759.354166666666700000
@@ -1467,7 +1468,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1478,10 +1479,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead3: TQRLabel
-        Left = 421
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 526
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1113.895833333333000000
@@ -1498,7 +1499,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1509,10 +1510,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead4: TQRLabel
-        Left = 554
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 693
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1465.791666666667000000
@@ -1529,7 +1530,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1540,10 +1541,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead5: TQRLabel
-        Left = 687
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 859
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1817.687500000000000000
@@ -1560,7 +1561,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1571,10 +1572,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead6: TQRLabel
-        Left = 820
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 1025
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2169.583333333333000000
@@ -1591,7 +1592,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1602,10 +1603,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblOptionHead7: TQRLabel
-        Left = 952
-        Top = 6
-        Width = 128
-        Height = 16
+        Left = 1190
+        Top = 8
+        Width = 160
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2518.833333333333000000
@@ -1622,7 +1623,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1634,32 +1635,32 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrcbNotes: TQRChildBand
-      Left = 19
-      Top = 387
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 484
+      Width = 1356
+      Height = 63
       AlignToBottom = False
       BeforePrint = qrcbNotesBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrgQuote
       PrintOrder = cboAfterParent
       object qrlNotes: TQRLabel
-        Left = 12
-        Top = 8
-        Width = 45
-        Height = 17
+        Left = 15
+        Top = 10
+        Width = 55
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           31.750000000000000000
           21.166666666666670000
-          119.062500000000000000)
+          116.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1669,7 +1670,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
@@ -1680,10 +1681,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrrchTextNotes: TQRRichText
-        Left = 12
-        Top = 26
-        Width = 701
-        Height = 22
+        Left = 15
+        Top = 33
+        Width = 876
+        Height = 27
         Size.Values = (
           58.208333333333330000
           31.750000000000000000
@@ -1706,10 +1707,10 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrbTotals: TQRBand
-      Left = 19
-      Top = 488
-      Width = 1085
-      Height = 34
+      Left = 24
+      Top = 611
+      Width = 1356
+      Height = 42
       AfterPrint = qrbTotalsAfterPrint
       AlignToBottom = False
       BeforePrint = qrbTotalsBeforePrint
@@ -1717,21 +1718,21 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        89.958333333333330000
-        2870.729166666667000000)
+        88.900000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRLabel4: TQRLabel
-        Left = 7
-        Top = 6
-        Width = 39
-        Height = 17
+        Left = 9
+        Top = 8
+        Width = 49
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          18.520833333333330000
-          15.875000000000000000
-          103.187500000000000000)
+          44.450000000000000000
+          19.050000000000000000
+          16.933333333333330000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1741,7 +1742,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1752,10 +1753,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object gtQRShapeTotal1: TQRShape
-        Left = 151
+        Left = 189
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
@@ -1768,10 +1769,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal2: TQRShape
-        Left = 284
+        Left = 355
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           751.416666666666700000
@@ -1784,10 +1785,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal3: TQRShape
-        Left = 417
+        Left = 521
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1103.312500000000000000
@@ -1800,10 +1801,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal4: TQRShape
-        Left = 550
+        Left = 687
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1455.208333333333000000
@@ -1816,10 +1817,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal5: TQRShape
-        Left = 683
+        Left = 854
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           1807.104166666667000000
@@ -1832,10 +1833,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal6: TQRShape
-        Left = 816
+        Left = 1020
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2159.000000000000000000
@@ -1848,10 +1849,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTotal7: TQRShape
-        Left = 949
+        Left = 1186
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           2510.895833333333000000
@@ -1864,15 +1865,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object qrlblOptionTotal1: TQRLabel
-        Left = 209
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 260
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          552.979166666666700000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          550.333333333333300000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1882,7 +1883,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1893,15 +1894,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal2: TQRLabel
-        Left = 345
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 430
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          912.812500000000000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          910.166666666666700000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1911,7 +1912,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1922,15 +1923,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal3: TQRLabel
-        Left = 478
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 596
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1264.708333333333000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          1261.533333333333000000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1940,7 +1941,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1951,15 +1952,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal4: TQRLabel
-        Left = 609
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 760
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1611.312500000000000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          1608.666666666667000000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1969,7 +1970,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1980,15 +1981,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal5: TQRLabel
-        Left = 745
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 930
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1971.145833333333000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          1968.500000000000000000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1998,7 +1999,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2009,15 +2010,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal6: TQRLabel
-        Left = 875
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 1093
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2315.104166666667000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          2313.516666666667000000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2027,7 +2028,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2038,15 +2039,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrlblOptionTotal7: TQRLabel
-        Left = 1003
-        Top = 6
-        Width = 33
-        Height = 17
+        Left = 1253
+        Top = 8
+        Width = 42
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2653.770833333333000000
-          15.875000000000000000
-          87.312500000000000000)
+          44.450000000000000000
+          2652.183333333333000000
+          16.933333333333330000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2056,7 +2057,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2068,32 +2069,32 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrbContractLineFooter: TQRChildBand
-      Left = 19
-      Top = 585
-      Width = 1085
-      Height = 58
+      Left = 24
+      Top = 731
+      Width = 1356
+      Height = 72
       AfterPrint = qrbContractLineFooterAfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        153.458333333333300000
-        2870.729166666667000000)
+        152.400000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbOptionSummary
       PrintOrder = cboAfterParent
       object gtQRLabel2: TQRLabel
-        Left = 9
-        Top = 24
-        Width = 160
-        Height = 17
+        Left = 14
+        Top = 30
+        Width = 193
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          29.633333333333330000
           63.500000000000000000
-          423.333333333333300000)
+          408.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2103,7 +2104,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2115,10 +2116,10 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrcbAvailability: TQRChildBand
-      Left = 19
-      Top = 643
-      Width = 1085
-      Height = 52
+      Left = 24
+      Top = 803
+      Width = 1356
+      Height = 65
       AlignToBottom = False
       BeforePrint = qrcbAvailabilityBeforePrint
       TransparentBand = False
@@ -2126,21 +2127,21 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewPage = False
       Size.Values = (
         137.583333333333300000
-        2870.729166666667000000)
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbContractLineFooter
       PrintOrder = cboAfterParent
       object QRLabel9: TQRLabel
-        Left = 12
-        Top = 7
-        Width = 83
-        Height = 17
+        Left = 15
+        Top = 9
+        Width = 106
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           31.750000000000000000
-          18.520833333333330000
-          219.604166666666700000)
+          19.050000000000000000
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2150,7 +2151,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
@@ -2161,10 +2162,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 10
       end
       object qrrchTextAvailability: TQRRichText
-        Left = 12
-        Top = 26
-        Width = 689
-        Height = 22
+        Left = 15
+        Top = 33
+        Width = 861
+        Height = 27
         Size.Values = (
           58.208333333333330000
           31.750000000000000000
@@ -2187,32 +2188,32 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrbOptionSummary: TQRChildBand
-      Left = 19
-      Top = 556
-      Width = 1085
-      Height = 29
+      Left = 24
+      Top = 695
+      Width = 1356
+      Height = 36
       AfterPrint = qrbOptionSummaryAfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        76.729166666666670000
-        2870.729166666667000000)
+        76.200000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbTemplateFitting
       PrintOrder = cboAfterParent
       object qrlblColourOptions: TQRLabel
-        Left = 7
-        Top = 6
-        Width = 72
-        Height = 17
+        Left = 9
+        Top = 8
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          18.520833333333330000
-          15.875000000000000000
-          190.500000000000000000)
+          44.450000000000000000
+          19.050000000000000000
+          16.933333333333330000
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2222,7 +2223,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2233,10 +2234,10 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrtxtOptionColours1: TQRRichText
-        Left = 158
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 198
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           418.041666666666700000
@@ -2261,10 +2262,10 @@ object frmWTRPContract: TfrmWTRPContract
           '1')
       end
       object qrtxtOptionColours2: TQRRichText
-        Left = 294
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 368
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           777.875000000000000000
@@ -2289,10 +2290,10 @@ object frmWTRPContract: TfrmWTRPContract
           '2')
       end
       object qrtxtOptionColours3: TQRRichText
-        Left = 430
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 537
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1137.708333333333000000
@@ -2317,10 +2318,10 @@ object frmWTRPContract: TfrmWTRPContract
           '3')
       end
       object qrtxtOptionColours4: TQRRichText
-        Left = 558
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 698
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1476.375000000000000000
@@ -2345,10 +2346,10 @@ object frmWTRPContract: TfrmWTRPContract
           '4')
       end
       object qrtxtOptionColours5: TQRRichText
-        Left = 694
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 867
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1836.208333333333000000
@@ -2373,10 +2374,10 @@ object frmWTRPContract: TfrmWTRPContract
           '5')
       end
       object qrtxtOptionColours6: TQRRichText
-        Left = 830
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 1038
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2196.041666666667000000
@@ -2401,10 +2402,10 @@ object frmWTRPContract: TfrmWTRPContract
           '6')
       end
       object qrtxtOptionColours7: TQRRichText
-        Left = 960
-        Top = 6
-        Width = 115
-        Height = 17
+        Left = 1200
+        Top = 8
+        Width = 144
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2540.000000000000000000
@@ -2430,10 +2431,10 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
     object qrbTemplateFitting: TQRChildBand
-      Left = 19
-      Top = 522
-      Width = 1085
-      Height = 34
+      Left = 24
+      Top = 653
+      Width = 1356
+      Height = 42
       AfterPrint = qrbTemplateFittingAfterPrint
       AlignToBottom = False
       BeforePrint = qrbTemplateFittingBeforePrint
@@ -2441,17 +2442,17 @@ object frmWTRPContract: TfrmWTRPContract
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        89.958333333333330000
-        2870.729166666667000000)
+        88.900000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbTotals
       PrintOrder = cboAfterParent
       object gtQRShape10: TQRShape
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 150
-        Height = 26
+        Width = 188
+        Height = 33
         Size.Values = (
           68.791666666666670000
           5.291666666666667000
@@ -2464,10 +2465,10 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRShapeTemplate: TQRShape
-        Left = 151
+        Left = 189
         Top = 0
-        Width = 134
-        Height = 26
+        Width = 168
+        Height = 33
         Size.Values = (
           68.791666666666670000
           399.520833333333300000
@@ -2480,15 +2481,15 @@ object frmWTRPContract: TfrmWTRPContract
         VertAdjust = 0
       end
       object gtQRLabel3: TQRLabel
-        Left = 7
-        Top = 6
-        Width = 130
-        Height = 17
+        Left = 9
+        Top = 8
+        Width = 160
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          18.520833333333330000
-          15.875000000000000000
-          343.958333333333300000)
+          44.450000000000000000
+          19.050000000000000000
+          16.933333333333330000
+          338.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2498,7 +2499,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2509,15 +2510,15 @@ object frmWTRPContract: TfrmWTRPContract
         FontSize = 8
       end
       object qrlblTemplatePrice: TQRLabel
-        Left = 214
-        Top = 6
-        Width = 28
-        Height = 17
+        Left = 269
+        Top = 8
+        Width = 33
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          566.208333333333300000
-          15.875000000000000000
-          74.083333333333330000)
+          44.450000000000000000
+          569.383333333333300000
+          16.933333333333330000
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2527,7 +2528,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

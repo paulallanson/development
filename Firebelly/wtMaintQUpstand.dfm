@@ -3,8 +3,8 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   Top = 167
   BorderStyle = bsDialog
   Caption = 'Maintain upstand'
-  ClientHeight = 287
-  ClientWidth = 603
+  ClientHeight = 297
+  ClientWidth = 609
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    603
-    287)
+    609
+    297)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 88
-    Top = 258
+    Top = 268
     Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -31,10 +31,11 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 258
   end
   object btnOK: TBitBtn
     Left = 216
-    Top = 250
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,7 +49,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   end
   object BitBtn2: TBitBtn
     Left = 312
-    Top = 250
+    Top = 260
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -323,20 +324,33 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select * '
+      'SELECT Worktop,'
+      '      Description,'
+      '      Not_used_for_quoting,'
+      '      Material_Type,'
+      '      Worktop_Group,'
+      '      inactive,'
+      '      Long_Description,'
+      '      Short_Description,'
+      '      Show_Online,'
+      '      Worktop_Finish,'
+      '      Image_Path,'
+      '      Discount'
       'from worktop'
       'where material_type = :material_type and'
       '(inactive = '#39'N'#39' or inactive is null) or worktop = :worktop'
       'Order by Description')
-    Left = 512
-    Top = 176
+    Left = 192
+    Top = 4
     ParamData = <
       item
         Name = 'material_type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryWTThickness: TFDQuery
@@ -359,8 +373,8 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 552
-    Top = 176
+    Left = 242
+    Top = 4
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness

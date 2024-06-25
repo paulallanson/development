@@ -31,6 +31,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       item
         Width = 50
       end>
+    ExplicitTop = 489
+    ExplicitWidth = 1002
   end
   object pnlBody: TPanel
     Left = 0
@@ -41,10 +43,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 472
-    ExplicitTop = 111
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 1002
+    ExplicitHeight = 489
     object pnlDetails: TPanel
       Left = 0
       Top = 0
@@ -54,6 +54,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 1002
       object Label1: TLabel
         Left = 24
         Top = 20
@@ -85,11 +86,13 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 447
+      ExplicitWidth = 1002
       DesignSize = (
         1008
         42)
       object lblDelete: TLabel
-        Left = 639
+        Left = 633
         Top = 15
         Width = 142
         Height = 13
@@ -104,7 +107,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ExplicitLeft = 641
       end
       object btnOK: TBitBtn
-        Left = 818
+        Left = 812
         Top = 9
         Width = 75
         Height = 25
@@ -115,9 +118,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         NumGlyphs = 2
         TabOrder = 1
         OnClick = btnOKClick
+        ExplicitLeft = 806
       end
       object BitBtn2: TBitBtn
-        Left = 904
+        Left = 898
         Top = 9
         Width = 75
         Height = 25
@@ -127,6 +131,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         NumGlyphs = 2
         TabOrder = 2
         OnClick = BitBtn2Click
+        ExplicitLeft = 892
       end
       object chkbxInactive: TCheckBox
         Left = 13
@@ -142,11 +147,11 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Top = 49
       Width = 1008
       Height = 407
-      ActivePage = tsDetails
+      ActivePage = tsWorktops
       Align = alClient
       TabOrder = 2
-      ExplicitTop = 0
-      ExplicitHeight = 498
+      ExplicitWidth = 1002
+      ExplicitHeight = 398
       object tsDetails: TTabSheet
         Caption = 'Details'
         object Label2: TLabel

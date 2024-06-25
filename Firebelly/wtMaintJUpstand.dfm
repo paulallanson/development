@@ -45,6 +45,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 227
   end
   object BitBtn2: TBitBtn
     Left = 318
@@ -57,6 +58,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 227
   end
   object pnlDetails: TPanel
     Left = 0
@@ -303,7 +305,18 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select * '
+      'SELECT Worktop,'
+      '      Description,'
+      '      Not_used_for_quoting,'
+      '      Material_Type,'
+      '      Worktop_Group,'
+      '      inactive,'
+      '      Long_Description,'
+      '      Short_Description,'
+      '      Show_Online,'
+      '      Worktop_Finish,'
+      '      Image_Path,'
+      '      Discount'
       'from worktop'
       'where material_type = :material_type'
       'Order by Description')
@@ -312,6 +325,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       item
         Name = 'material_type'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object qryWTThickness: TFDQuery

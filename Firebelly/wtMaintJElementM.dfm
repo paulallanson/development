@@ -24,7 +24,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 530
+    ExplicitWidth = 514
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -237,7 +237,18 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select * '
+      'SELECT Worktop,'
+      '      Description,'
+      '      Not_used_for_quoting,'
+      '      Material_Type,'
+      '      Worktop_Group,'
+      '      inactive,'
+      '      Long_Description,'
+      '      Short_Description,'
+      '      Show_Online,'
+      '      Worktop_Finish,'
+      '      Image_Path,'
+      '      Discount'
       'from worktop'
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
@@ -248,12 +259,11 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       item
         Name = 'material_type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'worktop_group'
-      end
-      item
-        Name = 'worktop_group'
+        ParamType = ptInput
       end>
   end
   object qryWTThickness: TFDQuery
