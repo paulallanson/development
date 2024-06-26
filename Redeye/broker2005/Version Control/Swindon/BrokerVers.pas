@@ -34,7 +34,7 @@ implementation
 {$R *.DFM}
 
 uses
-  pbMainMenu;
+  pbMainMenu, System.UITypes;
 
 procedure TBrokerVersFrm.FormActivate(Sender: TObject);
 Var

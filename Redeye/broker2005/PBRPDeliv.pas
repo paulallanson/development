@@ -101,7 +101,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBPODataMod, CCSCommon, PBImages;
+uses pbMainMenu, PBPODataMod, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -384,6 +384,13 @@ end;
 
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
+begin
+  TPrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+
+{function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
+  attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
   AFilters: TQRFilters;
@@ -501,6 +508,6 @@ begin
   end;
 
   AFilters.free;
-end;
+end;}
 
 end.

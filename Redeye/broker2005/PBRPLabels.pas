@@ -7,7 +7,7 @@ uses
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
   CCSPrint, PBPOObjects, qrprntr, printers, QrExport,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -51,18 +51,19 @@ type
     FbAddressOnly: boolean;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
-    function PrintToFile(PONo: real; POLine, DelLine: integer;
-      attachmentType: string): TStringList;
   public
     Preview: ByteBool;
     rPONumber: real;
     iLine, iBoxQuantity, iSets: Integer;
     iIntSel: Integer;
+    LogoPath: string;
     sNumberFrom, sNumberTo, sPrefix: string[10];
-    UseCustAddress: boolean; 
+    UseCustAddress: boolean;
     bLineup: boolean;
     bStocked: string;
     PrinterSettings : TPrinterSettings;
+    function PrintToFile(PONo: real; POLine, DelLine: integer;
+      attachmentType: string): TStringList;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
   end;
 
@@ -71,7 +72,7 @@ var
 
 implementation
 
-uses PBImages, CCSCommon, pbDatabase;
+uses PBImages, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -249,18 +250,31 @@ end;
 
 procedure TPBRPLabelsFrm.PBLabelsQuickReportBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
+var
+  irow: integer;
+   TopMar, BottomMar, LeftMar, RightMar: Double;
+   Copies: Integer;
+   Bin: TQRBin;
+   Size: TQRPaperSize;
+   Duplex: Boolean;
 begin
   with PBLabelsQuickReport.PrinterSettings do
   begin
-    PrinterIndex := PrinterSettings.PrinterIndex;
+    {PrinterIndex := PrinterSettings.PrinterIndex;
     Copies := PrinterSettings.Copies;
     if PrinterSettings.FromPage <> 0 then
     begin
       FirstPage := PrinterSettings.FromPage;
       LastPage := PrinterSettings.ToPage;
     end;
-    OutputBin := PrinterSettings.OutputBin;
+    OutputBin := PrinterSettings.OutputBin;}
   end;
+
+  PBLabelsQuickReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  PBLabelsQuickReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  PBLabelsQuickReport.PrinterSettings.Copies := Copies;   {set the copies }
 end;
 
 procedure TPBRPLabelsFrm.SetCaptions;
@@ -278,133 +292,8 @@ end;
 
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
-var
-  fileName, fileLocation: string;
-  AFilters: TQRFilters;
-  RTFFilter: TQRRTFFilter;
-  HTMLFilter: TQRHTMLFilter;
-  PDFFilter: TQRPDFFilter;
-  BMPFilter: TQRBMPFilter;
-  GIFFilter: TQRGIFFilter;
-  JPEGFilter: TQRJPEGFilter;
-  icount: integer;
 begin
-  iIntSel := dmBroker.GetNextIntSelCode(self);
-  try
-    for icount := 1 to 8 do
-      dmBroker.AddWithKey(iIntSel, iCount, PONo, POLine, DelLine, '', '');
-
-    Result := TStringList.Create;
-    self.rPONumber := PONo;
-    self.iLine := POLine;
-
-    self.bLineup := false;
-    self.Preview := false;
-    if self.GetDetails(self) = 0 then
-      exit;
-
-    self.useCustAddress := false;
-    PBLabelsQuickReport.Prepare;
-
-    fileLocation := GetWinTempDir;
-    fileName := fileLocation + 'LABEL' + FloatToStr(PONo)+ '_' + IntToStr(DelLine) + '.' + attachmentType;
-
-    AFilters := TQRFilters.Create(self);
-    try
-      if AnsiLowerCase(attachmentType) = 'pdf' then
-      begin
-        PDFFilter := TQRPDFFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.ExportToFilter(PDFFilter);
-          Result.add(fileName);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          PDFFilter.Free;
-        end;
-      end
-      else if AnsiLowerCase(attachmentType) = 'rtf' then
-      begin
-        RTFFilter := TQRRTFFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.ExportToFilter(RTFFilter);
-          Result.add(fileName);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          RTFFilter.Free;
-        end;
-      end
-      else if AnsiLowerCase(attachmentType) = 'gif' then
-      begin
-        GIFFilter := TQRGIFFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.Prepare;
-          PBLabelsQuickReport.ExportToFilter(GIFFilter);
-
-          //Assign all the Filenames to the Attachment list
-          for icount := 0 to pred(AFilters.RepFileCount) do
-            Result.add(fileLocation + AFilters.RepFileNames[icount]);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          GIFFilter.Free;
-        end;
-      end
-      else if AnsiLowerCase(attachmentType) = 'bmp' then
-      begin
-        BMPFilter := TQRBMPFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.Prepare;
-          PBLabelsQuickReport.ExportToFilter(BMPFilter);
-
-          //Assign all the Filenames to the Attachment list
-          for icount := 0 to pred(AFilters.RepFileCount) do
-            Result.add(fileLocation + AFilters.RepFileNames[icount]);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          BMPFilter.Free;
-        end;
-      end
-      else if AnsiLowerCase(attachmentType) = 'html' then
-      begin
-        HTMLFilter := TQRHTMLFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.Prepare;
-          PBLabelsQuickReport.ExportToFilter(HTMLFilter);
-
-          //Assign all the Filenames to the Attachment list
-          for icount := 0 to pred(AFilters.RepFileCount) do
-            Result.add(fileLocation + AFilters.RepFileNames[icount]);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          HTMLFilter.Free;
-        end;
-      end
-      else if AnsiLowerCase(attachmentType) = 'jpeg' then
-      begin
-        JPEGFilter := TQRJPEGFilter.Create(fileName);
-        try
-          PBLabelsQuickReport.Prepare;
-          PBLabelsQuickReport.ExportToFilter(JPEGFilter);
-
-          //Assign all the Filenames to the Attachment list
-          for icount := 0 to pred(AFilters.RepFileCount) do
-            Result.add(fileLocation + AFilters.RepFileNames[icount]);
-        finally
-          PBLabelsQuickReport.QRPrinter.Free;
-          PBLabelsQuickReport.QRPrinter := nil;
-          JPEGFilter.Free;
-        end;
-      end;
-    finally
-      AFilters.free;
-    end;
-  finally
-    dmBroker.DeleteRecord(iIntSel);
-  end;
+  TPrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
 end;
 
 end.
