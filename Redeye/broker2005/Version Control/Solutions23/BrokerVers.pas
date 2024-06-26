@@ -32,6 +32,9 @@ var
 
 implementation
 
+uses
+  System.UITypes;
+
 {$R *.DFM}
 
 procedure TBrokerVersFrm.FormActivate(Sender: TObject);

@@ -31,10 +31,10 @@ var
 
 implementation
 
-{$R *.DFM}
-
 uses
-  pbMainMenu;
+  System.UITypes;
+
+{$R *.DFM}
 
 procedure TBrokerVersFrm.FormActivate(Sender: TObject);
 Var

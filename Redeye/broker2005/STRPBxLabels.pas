@@ -49,6 +49,7 @@ type
     lblFormRefDesc: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
+    function GetDetails(Sender: TObject): Integer;
     procedure STLabelsQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
   private
@@ -69,6 +70,17 @@ var
 implementation
 
 {$R *.DFM}
+
+function TSTRPBxLabelsFrm.GetDetails(Sender: TObject): Integer;
+begin
+  {Activate the main report SQL}
+  with RepSQL do
+  begin
+    Close;
+    ParamByName('Int_Sel_Code').AsInteger := iIntSel;
+    Open;
+  end;
+end;
 
 procedure TSTRPBxLabelsFrm.QRBand1BeforePrint(Sender: TQRCustomBand; var
   PrintBand: Boolean);

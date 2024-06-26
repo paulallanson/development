@@ -8,6 +8,7 @@ uses
 
 begin
   Application.Initialize;
+  Application.MainFormOnTaskBar := True;
   Application.Title := 'Broker Loader';
   Application.CreateForm(TBrokerVersFrm, BrokerVersFrm);
   Application.Run;

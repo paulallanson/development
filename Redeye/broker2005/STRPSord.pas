@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls,
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, CCSPrint,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -105,7 +105,8 @@ type
     PackSize, QtyOrd : Integer;
     iIntSelCode: Integer ;
     TotOrdVal : Real;
-    end;
+    PrinterSettings: TPrinterSettings;
+  end;
 
 var
   STRPSordFrm: TSTRPSordFrm;

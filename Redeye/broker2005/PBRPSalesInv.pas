@@ -320,9 +320,6 @@ type
     function GetPOCustOrderNo(tempCode: string): string;
     function GetSOCustOrderNo(tempCode: string): string;
     function GetJBCustOrderNo(tempCode: string): string;
-    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
-    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
-    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
     function GetFormRefDesc(tempCode: real; tempLine: integer): string;
     function GetSOLinePUnit(tempCode: integer; tempLine: integer): string;
     procedure GetCompanyInfo(const iNoOfInvoices : integer);
@@ -337,13 +334,20 @@ type
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
   public
+    bCustomerisReseller: boolean;
     bInvoice: boolean;
     bUpdate: boolean;
     bReprint: boolean;
+    bPreview: boolean;
+    bPrintLogo: boolean;
     bAll: boolean;
     bLineUp : Boolean;
     SelCode: Integer;
+    ShowZeroValues: string;
     PrinterSettings: TPrinterSettings;
+    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
+    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
+    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
     procedure GetInvoiceData;
   end;
 
@@ -508,7 +512,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('£0.00', iGoods);
   VatValueLbl.Caption := formatfloat('£0.00', ivat);
 
-  itotal := StrToFloatDef(sGoods) + StrToFloatDef(sVat, 0, FormatSettings);
+  itotal := StrToFloatDef(sGoods, 0) + StrToFloatDef(sVat, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('£0.00', iTotal);
 
 end;

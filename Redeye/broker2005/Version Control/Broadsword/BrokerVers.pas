@@ -34,9 +34,6 @@ implementation
 
 {$R *.DFM}
 
-uses
-  pbMainMenu;
-
 procedure TBrokerVersFrm.FormActivate(Sender: TObject);
 Var
 FiName, DiName: Array [0..255] of char ;

@@ -1,18 +1,16 @@
 object BrokerVersFrm: TBrokerVersFrm
   Left = 173
   Top = 162
-  Width = 456
-  Height = 97
   Caption = 'Redeye Version Control'
+  ClientHeight = 58
+  ClientWidth = 440
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusLabel: TLabel
     Left = 16
