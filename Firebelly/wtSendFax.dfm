@@ -100,6 +100,7 @@ object frmWTSendFax: TfrmWTSendFax
     ConnectionName = 'faxesSQL'
     Params.Strings = (
       'ConnectionDef=faxes')
+    OnError = FaxDatabaseError
     BeforeConnect = FaxDatabaseBeforeConnect
     Left = 176
     Top = 16

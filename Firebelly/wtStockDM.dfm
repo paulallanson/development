@@ -55,6 +55,7 @@ object dtmdlStock: TdtmdlStock
       'Password=R34donly4'
       'DriverID=MSSQL')
     LoginPrompt = False
+    OnError = wtStkDatabaseError
     BeforeConnect = wtStkDatabaseBeforeConnect
     Left = 496
     Top = 16

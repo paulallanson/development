@@ -5,7 +5,7 @@ object dmBroker: TdmBroker
     ConnectionName = 'PB'
     Params.Strings = (
       'ConnectionDef=Redeye')
-    OnError = PBLDatabaseError
+    OnError = DatabaseError
     AfterConnect = PBLDatabaseAfterConnect
     BeforeConnect = PBLDatabaseBeforeConnect
     Left = 48
@@ -820,7 +820,7 @@ object dmBroker: TdmBroker
     Params.Strings = (
       '='
       'ConnectionDef=Redeye')
-    OnError = EmailDatabaseError
+    OnError = DatabaseError
     BeforeConnect = EmailDatabaseBeforeConnect
     Left = 1032
     Top = 32

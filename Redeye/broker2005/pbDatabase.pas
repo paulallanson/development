@@ -64,8 +64,7 @@ type
     procedure PBLDatabaseAfterConnect(Sender: TObject);
     procedure PBLDatabaseBeforeConnect(Sender: TObject);
     procedure EmailDatabaseBeforeConnect(Sender: TObject);
-    procedure PBLDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
-    procedure EmailDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+    procedure DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     FUserName: string;
     FPassword: string;
@@ -320,7 +319,7 @@ begin
 {$ENDIF}
 end;
 
-procedure TdmBroker.PBLDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+procedure TdmBroker.DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
 var
   Exc: EFDDBEngineException;
 begin
@@ -2824,17 +2823,6 @@ begin
 
   EmailDatabase.Params.UserName := self.UserName;
   EmailDatabase.Params.Password := self.Password;
-end;
-
-procedure TdmBroker.EmailDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
-var
-  Exc: EFDDBEngineException;
-begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    ParseException(Exc);
-  end;
 end;
 
 function TdmBroker.GetCompanyContractDirectory: string;
