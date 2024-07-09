@@ -21,6 +21,7 @@ type
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
     procedure FaxDatabaseBeforeConnect(Sender: TObject);
+    procedure FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     FaxFileName: string;
     TimedFax: ByteBool;
@@ -85,6 +86,17 @@ begin
   {Get user and password from login screen};
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password := 'rabbit';
+end;
+
+procedure TFaxHandler.FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 function TFaxHandler.OutToFax(FaxNo, FaxDescr,

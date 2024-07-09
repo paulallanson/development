@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
   DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, DragDropFile,
-  FireDAC.Comp.Client, DBCtrls;
+  FireDAC.Comp.Client, FireDAC.Stan.Error, DBCtrls;
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
@@ -117,6 +117,7 @@ procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
 { FireDAC }
 procedure ConfigureFDConnection(const Connection: TFDConnection);
+procedure ParseException(Exc: EFDDBEngineException);
 
 { TOpenDialog }
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
@@ -1326,6 +1327,18 @@ begin
 end;
 
 { FireDAC }
+procedure ParseException(Exc: EFDDBEngineException);
+begin
+  case Exc.Kind of
+    ekUKViolated:
+      MessageDlg('Unique Key violation. This record cannot be delete.', mtError, [mbOk], 0);
+    ekFKViolated:
+      MessageDlg('Foreign Key violation. This record cannot be delete.', mtError, [mbOk], 0);
+    ekOther:
+      MessageDlg('Unknown exception. Contact administrator.', mtError, [mbOk], 0);
+  end;
+end;
+
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
   Connection.FetchOptions.Mode := fmAll;

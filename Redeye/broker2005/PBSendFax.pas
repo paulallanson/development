@@ -103,6 +103,7 @@ type
     procedure ApdFaxDriverInterface1DocEnd(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FaxDatabaseBeforeConnect(Sender: TObject);
+    procedure FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     { Private declarations }
    FaxFinishedEvent: TEvent;
@@ -403,6 +404,17 @@ begin
   {Get user and password from login screen};
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password := 'rabbit';
+end;
+
+procedure TPBSendFaxFrm.FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 procedure TPBSendFaxFrm.WaitForFaxFinish(Sender: TObject);

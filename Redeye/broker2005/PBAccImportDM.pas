@@ -122,6 +122,9 @@ type
     procedure Sage50DatabaseBeforeConnect(Sender: TObject);
     procedure MaximiserDBBeforeConnect(Sender: TObject);
     procedure QuickbooksDBBeforeConnect(Sender: TObject);
+    procedure Sage50DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+    procedure QuickbooksDBError(ASender, AInitiator: TObject; var AException: Exception);
+    procedure MaximiserDBError(ASender, AInitiator: TObject; var AException: Exception);
   private
     icustomer: integer;
     LastPaymentUpdate: TDateTime;
@@ -1803,6 +1806,17 @@ end;
 procedure TdmAccImport.Sage50DatabaseBeforeConnect(Sender: TObject);
 begin
   ConfigureFDConnection(Sage50Database);
+end;
+
+procedure TdmAccImport.Sage50DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 procedure TdmAccImport.SetAccountRef(const Value: string);
@@ -3519,6 +3533,17 @@ begin
   ConfigureFDConnection(QuickbooksDB);
 end;
 
+procedure TdmAccImport.QuickbooksDBError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
+end;
+
 function TdmAccImport.JBLineExists(tmpJB, tmpLine: integer): boolean;
 begin
   Result := false;
@@ -3536,6 +3561,17 @@ end;
 procedure TdmAccImport.MaximiserDBBeforeConnect(Sender: TObject);
 begin
   ConfigureFDConnection(MaximiserDB);
+end;
+
+procedure TdmAccImport.MaximiserDBError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 function TdmAccImport.UpdateOrder: boolean;
