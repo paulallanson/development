@@ -1336,6 +1336,8 @@ begin
       MessageDlg('Foreign Key violation. This record cannot be delete.', mtError, [mbOk], 0);
     ekOther:
       MessageDlg('Unknown exception. Contact administrator.', mtError, [mbOk], 0);
+  else
+    MessageDlg(Exc.Message, mtError, [mbOk], 0);
   end;
 end;
 

@@ -15,7 +15,6 @@ object frmpbLUOrders: TfrmpbLUOrders
   FormStyle = fsMDIChild
   Position = poScreenCenter
   Visible = True
-  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -44,7 +43,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 896
+        Width = 884
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59
@@ -52,7 +51,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Images = imglstOrders
         ShowCaptions = True
         TabOrder = 0
-        ExplicitWidth = 884
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -342,7 +340,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
-        Width = 64
         Visible = True
       end
       item
