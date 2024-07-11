@@ -48,13 +48,13 @@ type
     btnRepeat: TToolButton;
     btnPrint: TToolButton;
     btnRequote: TToolButton;
-    btnseparator1: TToolButton;
-    ToolButton3: TToolButton;
+    btnAddSeparator: TToolButton;
+    btnProofsSeparator: TToolButton;
     btnProofs: TToolButton;
-    btnDeliveriesSpacer: TToolButton;
+    btnDeliveriesSeparator: TToolButton;
     btnDeliveries: TToolButton;
     btnHold: TToolButton;
-    ToolButton4: TToolButton;
+    btnReportsSeparator: TToolButton;
     btnreports: TToolButton;
     N2: TMenuItem;
     pmnuCancel: TMenuItem;
@@ -101,19 +101,19 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure chkbxShowUnauthorisedClick(Sender: TObject);
     procedure btnRefreshClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     ActiveCode: real;
     DontSaveLayout: Boolean;
     FDisableNameChangeEvent: boolean;
-    procedure SetDisableNameChangeEvent(const Value: boolean);
-    procedure SetButtonProperties(Sender: TObject);
-    function OrderAuthorised: boolean;
-  private
     FActivated: boolean;
     dtmdlAllOrders: TdtmdlOrders;
     iOperatorRep: Integer;
     iMnuMaintPOrds, iMnuMaintEnqs: integer;
     iMnuBtnPOMaint, iMnuBtnPOSend, iMnuBtnDeliv, iMnuBtnProof, iMnuBtnProofHist: Integer ;
+    procedure SetDisableNameChangeEvent(const Value: boolean);
+    procedure SetButtonProperties(Sender: TObject);
+    function OrderAuthorised: boolean;
     procedure CallMaintScreen(sTempFuncMode: Char);
     function CheckInput: boolean;
     procedure PrintPO;
@@ -338,7 +338,7 @@ begin
   btnHold.Visible := bTempCanUpd ;
   btnRequote.Visible := bTempCanReQuote;
   btnDeliveries.Visible := bTempCanUpd;
-  btnDeliveriesSpacer.Visible := btnDeliveries.Visible;
+  btnDeliveriesSeparator.Visible := btnDeliveries.Visible;
   btnDelete.Visible := bTempCanUpd and dmBroker.OperatorCanDeletePurchaseOrders(frmPBMainMenu.iOperator);
 
   btnStatus1.Visible := bTempCanUpd;
@@ -359,6 +359,36 @@ end;
 procedure TfrmpbLUOrders.btnCloseClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmpbLUOrders.FormActivate(Sender: TObject);
+begin
+  dmBroker.iAccCtrlMenu := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuProduction') ;
+  if not FActivated then
+    begin
+      {Check if the operator REP is needed} ;
+      If dmBroker.iAccCtrlMenu = 4 then
+        iOperatorRep := dmBroker.GetOperatorRep(frmpbMainMenu.iOperator)
+      else
+        iOperatorRep := 0 ;
+      {Get the button statuses} ;
+      iMnuMaintPOrds := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuProduction') ;
+      iMnuMaintEnqs := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuEnquiries') ;
+
+      If dmBroker.iAccCtrlMenu = 5 then
+        dtmdlAllOrders.Operator := frmpbMainMenu.iOperator;
+      dtmdlAllOrders.Rep := iOperatorRep;
+      dtmdlAllOrders.RepIsSubRep := dmBroker.RepIsSubRep(iOperatorRep);
+
+      SetButtonProperties(Self);
+
+      FActivated := True;
+    end;
+  {Determine if we should display the Export to Excel menu option}
+  frmPBMainMenu.miSendTo.Visible := (dmBroker.iAccCtrlMenu = 1);
+
+  dtmdlAllOrders.refreshPOdata;
+  dbgDetails.datasource.DataSet.locate('Sales_order', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
 end;
 
 procedure TfrmpbLUOrders.FormClose(Sender: TObject;
@@ -397,7 +427,7 @@ begin
 
   dtmdlAllOrders := TdtmdlOrders.create(self);
 
-  btnSeparator1.visible := dtmdlAllOrders.stockinuse;
+  btnAddSeparator.Visible := dtmdlAllOrders.stockinuse;
 
   if stempdate = 'None' then
     dtmdlAllOrders.OrderDate := Date - 365
@@ -453,34 +483,6 @@ end;
 procedure TfrmpbLUOrders.FormShow(Sender: TObject);
 begin
   edtSearch.setfocus;
-
-  dmBroker.iAccCtrlMenu := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuProduction') ;
-  if not FActivated then
-    begin
-      {Check if the operator REP is needed} ;
-      If dmBroker.iAccCtrlMenu = 4 then
-        iOperatorRep := dmBroker.GetOperatorRep(frmpbMainMenu.iOperator)
-      else
-        iOperatorRep := 0 ;
-      {Get the button statuses} ;
-      iMnuMaintPOrds := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuProduction') ;
-      iMnuMaintEnqs := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuEnquiries') ;
-
-      If dmBroker.iAccCtrlMenu = 5 then
-        dtmdlAllOrders.Operator := frmpbMainMenu.iOperator;
-      dtmdlAllOrders.Rep := iOperatorRep;
-      dtmdlAllOrders.RepIsSubRep := dmBroker.RepIsSubRep(iOperatorRep);
-
-      SetButtonProperties(Self);
-
-      FActivated := True;
-    end;
-  {Determine if we should display the Export to Excel menu option}
-  frmPBMainMenu.miSendTo.Visible := (dmBroker.iAccCtrlMenu = 1);
-
-  dtmdlAllOrders.refreshPOdata;
-  dbgDetails.datasource.DataSet.locate('Sales_order', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
-
 end;
 
 procedure TfrmpbLUOrders.edtNumberKeyPress(Sender: TObject; var Key: Char);
