@@ -192,7 +192,6 @@ object frmpbLUOrders: TfrmpbLUOrders
           ImageIndex = 7
           Wrap = True
           Style = tbsSeparator
-          Visible = False
         end
       end
     end
