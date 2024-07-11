@@ -2,8 +2,8 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
   Left = 427
   Top = 123
   Caption = 'Sales History Report - Inclusive'
-  ClientHeight = 312
-  ClientWidth = 691
+  ClientHeight = 331
+  ClientWidth = 695
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -15,17 +15,19 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
   TextHeight = 13
   object pnlCustProd: TPanel
     Left = 0
-    Top = 272
-    Width = 691
+    Top = 291
+    Width = 695
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 272
+    ExplicitWidth = 691
     DesignSize = (
-      691
+      695
       40)
     object CancelBitBtn: TBitBtn
-      Left = 9
+      Left = 13
       Top = 8
       Width = 72
       Height = 25
@@ -40,9 +42,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitLeft = 9
     end
     object PreviewBitBtn: TBitBtn
-      Left = 523
+      Left = 527
       Top = 8
       Width = 76
       Height = 25
@@ -70,9 +73,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 523
     end
     object PrintBitBtn: TBitBtn
-      Left = 614
+      Left = 618
       Top = 8
       Width = 72
       Height = 25
@@ -100,9 +104,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 614
     end
     object btnExcel: TBitBtn
-      Left = 431
+      Left = 435
       Top = 8
       Width = 75
       Height = 25
@@ -153,16 +158,19 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 431
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 691
-    Height = 272
+    Width = 695
+    Height = 291
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 691
+    ExplicitHeight = 272
     object pnlExportPrgrss: TPanel
       Left = 208
       Top = 115
@@ -313,7 +321,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     object rdgrpSortBy: TRadioGroup
       Left = 512
       Top = 96
-      Width = 145
+      Width = 175
       Height = 65
       Caption = 'Sort by: '
       ItemIndex = 0
@@ -401,13 +409,13 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     object GroupBox1: TGroupBox
       Left = 512
       Top = 171
-      Width = 185
+      Width = 175
       Height = 94
       Caption = 'Show records'
       ParentBackground = False
       TabOrder = 8
       object cmbShowRecords: TComboBox
-        Left = 24
+        Left = 13
         Top = 24
         Width = 121
         Height = 21
@@ -422,7 +430,7 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
           'Bottom')
       end
       object spnRecordCount: TSpinEdit
-        Left = 24
+        Left = 13
         Top = 56
         Width = 65
         Height = 22
@@ -436,13 +444,13 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
     object GroupBox2: TGroupBox
       Left = 512
       Top = 8
-      Width = 185
+      Width = 175
       Height = 83
       Caption = 'Date Required: '
       ParentBackground = False
       TabOrder = 9
       DesignSize = (
-        185
+        175
         83)
       object Label2: TLabel
         Left = 13

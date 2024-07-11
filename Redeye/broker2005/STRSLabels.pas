@@ -488,15 +488,13 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create('Brokerstk.ini');
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Product Label Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Product Label Printer Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Product Label Printer Paper',inttostr(DefaultPaper));
-      Free;
-    end;
-
+  try
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer', DefaultPrinter);
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Bin', inttostr(DefaultBin));
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Paper', inttostr(DefaultPaper));
+  finally
+    IniFile.Free;
+  end;
   Printers.Printer.PrinterIndex := -1;
 end;
 
