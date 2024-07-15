@@ -45,7 +45,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 241
+    ExplicitTop = 251
   end
   object BitBtn2: TBitBtn
     Left = 312
@@ -58,7 +58,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 241
+    ExplicitTop = 251
   end
   object pnlDetails: TPanel
     Left = 0
@@ -464,7 +464,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
       '        Customer_Worktop.Worktop,'
-      '        Worktop.Description as Worktop_Description,'
+      '        Worktop.Description,'
       '        Customer_Worktop_Group.Material_Type,'
       '        Material_Type.Description as Material_Type_Description'
       'FROM Material_Type'
@@ -554,7 +554,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
       '        Customer_Worktop.Worktop,'
       '        Worktop.Description,'
       '        Customer_Worktop_Group.Material_Type,'
-      '        Material_Type.Description'
+      '        Material_Type.Description as Material_type_Description'
       'FROM Material_Type'
       '        INNER JOIN (Worktop'
       '        INNER JOIN (Customer_Worktop_Group'
@@ -579,12 +579,15 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryCustomerPrice: TFDQuery

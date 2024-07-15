@@ -3,8 +3,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   Top = 206
   BorderStyle = bsDialog
   Caption = 'Global change upstands, splashbacks etc.'
-  ClientHeight = 187
-  ClientWidth = 536
+  ClientHeight = 192
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 418
     Height = 137
     Align = alTop
     BevelOuter = bvNone
@@ -155,7 +155,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     end
   end
   object btnOK: TBitBtn
-    Left = 208
+    Left = 110
     Top = 152
     Width = 75
     Height = 25
@@ -167,7 +167,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 296
+    Left = 198
     Top = 152
     Width = 75
     Height = 25
@@ -189,8 +189,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         '((inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workt' +
         'op_Group'
       'order by Worktop_group_description')
-    Left = 368
-    Top = 80
+    Left = 460
+    Top = 84
     ParamData = <
       item
         Name = 'material_type'
@@ -201,8 +201,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 296
-    Top = 56
+    Left = 538
+    Top = 86
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -226,8 +226,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 432
-    Top = 32
+    Left = 108
+    Top = 184
     ParamData = <
       item
         Name = 'Worktop'
@@ -238,8 +238,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 424
-    Top = 72
+    Left = 546
+    Top = 306
   end
   object qryWTThickness: TFDQuery
     MasterSource = dtsWorktops
@@ -252,8 +252,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 112
-    Top = 104
+    Left = 108
+    Top = 250
     ParamData = <
       item
         Name = 'worktop'
@@ -261,8 +261,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 144
-    Top = 104
+    Left = 228
+    Top = 250
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
@@ -286,8 +286,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 384
-    Top = 72
+    Left = 464
+    Top = 306
     ParamData = <
       item
         Name = 'material_type'
@@ -312,8 +312,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
         'aterial_Type'
       'order by Description')
-    Left = 384
-    Top = 16
+    Left = 464
+    Top = 12
     ParamData = <
       item
         Name = 'Material_Type'
@@ -321,8 +321,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 320
-    Top = 8
+    Left = 536
+    Top = 10
   end
   object qryContractWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -332,7 +332,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       '        Customer_Worktop.Worktop,'
       '        Worktop.Description,'
       '        Customer_Worktop_Group.Material_Type,'
-      '        Material_Type.Description'
+      '        Material_Type.Description as Material_type_Description'
       'FROM Material_Type'
       '        INNER JOIN (Worktop'
       '        INNER JOIN (Customer_Worktop_Group'
@@ -351,17 +351,20 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
         'rktop.worktop = :worktop'
       'ORDER BY Worktop.Description')
-    Left = 384
-    Top = 120
+    Left = 464
+    Top = 230
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Group_Number'
+        ParamType = ptInput
       end
       item
         Name = 'worktop'
+        ParamType = ptInput
       end>
   end
   object qryContractPrice: TFDQuery
@@ -396,8 +399,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 472
-    Top = 120
+    Left = 462
+    Top = 158
     ParamData = <
       item
         Name = 'Customer'
