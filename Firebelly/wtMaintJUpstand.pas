@@ -84,6 +84,7 @@ type
     procedure SetDepth(const Value: real);
     procedure RefreshMaterialUse;
     procedure SetPolishCost(const Value: currency);
+    procedure RefreshThickness;
     { Private declarations }
   public
     property Depth: real read FDepth write SetDepth;
@@ -267,13 +268,27 @@ end;
 
 procedure TfrmWTMaintJUpstand.dblkpWorktopClick(Sender: TObject);
 begin
+  RefreshThickness;
+  GetUnitPrice;
+  enableOK(self);
+end;
+
+procedure TfrmWTMaintJUpstand.RefreshThickness;
+var iThickness: integer;
+begin
+  try
+    iThickness := dblkpWTThickness.keyvalue;
+  except
+    iThickness := self.Thickness;
+  end;
+
   with qryWTThickness do
     begin
       close;
       open;
     end;
-  GetUnitPrice;
-  enableOK(self);
+  dblkpWTThickness.KeyValue := iThickness;
+  enableok(self);
 end;
 
 procedure TfrmWTMaintJUpstand.dblkpWTThicknessClick(Sender: TObject);
