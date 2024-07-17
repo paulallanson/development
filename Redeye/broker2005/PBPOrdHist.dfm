@@ -13,7 +13,6 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  OnShow = FormShow
   TextHeight = 13
   object strgrdOrdHist: TStringGrid
     Left = 0

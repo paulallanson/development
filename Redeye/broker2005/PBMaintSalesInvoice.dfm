@@ -38,10 +38,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 368
-    ExplicitTop = 280
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object btnDelete: TBitBtn
       Left = 24
       Top = 262
@@ -79,7 +75,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ParentBackground = False
       TabOrder = 0
       Visible = False
-      ExplicitTop = 260
       DesignSize = (
         896
         31)
@@ -393,7 +388,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 36
       DesignSize = (
         896
         197)
@@ -744,7 +738,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 36
       DesignSize = (
         896
         27)
@@ -941,8 +934,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       OnDblClick = sgLinesDblClick
       OnDrawCell = sgLinesDrawCell
       OnTopLeftChanged = sgLinesTopLeftChanged
-      ExplicitTop = 0
-      ExplicitHeight = 503
       ColWidths = (
         40
         89
@@ -966,8 +957,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 7
-      ExplicitLeft = -1
-      ExplicitTop = 515
       DesignSize = (
         896
         41)

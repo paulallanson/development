@@ -2,8 +2,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   Left = 29
   Top = 178
   Caption = 'Sales Invoices'
-  ClientHeight = 379
-  ClientWidth = 1164
+  ClientHeight = 387
+  ClientWidth = 1166
   Color = clBtnFace
   Constraints.MinHeight = 426
   Constraints.MinWidth = 1182
@@ -25,19 +25,19 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1164
+    Width = 1166
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1158
+        Width = 1160
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1149
+      Width = 1151
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -45,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1137
+        Width = 1139
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 68
@@ -120,7 +120,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           Caption = 'Order'
           Enabled = False
           ImageIndex = 8
-          Visible = False
           OnClick = btnOrderClick
         end
         object btnEInvoice: TToolButton
@@ -128,7 +127,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           Top = 0
           Caption = 'e-Invoice'
           ImageIndex = 8
-          Visible = False
           OnClick = btnEInvoiceClick
         end
         object ToolButton6: TToolButton
@@ -197,8 +195,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1164
-    Height = 230
+    Width = 1166
+    Height = 238
     Align = alClient
     DataSource = dmSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
@@ -366,8 +364,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 304
-    Width = 1164
+    Top = 312
+    Width = 1166
     Height = 56
     Align = alBottom
     ParentBackground = False
@@ -388,7 +386,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 880
+      Left = 882
       Top = 1
       Width = 283
       Height = 54
@@ -517,8 +515,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 360
-    Width = 1164
+    Top = 368
+    Width = 1166
     Height = 19
     Panels = <
       item
@@ -531,7 +529,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1164
+    Width = 1166
     Height = 30
     Align = alTop
     BevelInner = bvLowered

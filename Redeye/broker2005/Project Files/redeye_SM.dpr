@@ -711,7 +711,8 @@ uses
   PBLUNCARpts in '..\PBLUNCARpts.pas',
   PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
   PBRSNCASource in '..\PBRSNCASource.pas',
-  PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm};
+  PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm},
+  STRSSalesHistory in '..\STRSSalesHistory.pas';
 
 {$R *.RES}
 

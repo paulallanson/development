@@ -23,6 +23,7 @@ type
     qryGSmart: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure wtStkDatabaseBeforeConnect(Sender: TObject);
+    procedure wtStkDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     function GetHeaderCountAll: integer;
     { Private declarations }
@@ -80,6 +81,17 @@ end;
 procedure TdtmdlStock.wtStkDatabaseBeforeConnect(Sender: TObject);
 begin
   ConfigureFDConnection(wtStkDatabase);
+end;
+
+procedure TdtmdlStock.wtStkDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 function TdtmdlStock.CheckProductExists(tempCode: string): boolean;

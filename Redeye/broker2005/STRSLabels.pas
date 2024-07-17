@@ -119,6 +119,7 @@ type
     procedure PrintReport;
     procedure GetDefaultPrinter;
     procedure SaveDefaultPrinter;
+    function GetBrokerstkIniFile: string;
     property DefaultBin: integer read FDefaultBin write SetDefaultBin;
     property DefaultPaper: integer read FDefaultPaper write SetDefaultPaper;
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
@@ -343,38 +344,23 @@ end;
 
 procedure TSTRSLabelsfrm.GetDefaultPrinter;
 var
-//  IniFile : TIniFile;
-  icount: integer;
-  TempArray: array[0..255] of Char;
-  sBin, sPaper: string;
+  IniFile : TIniFile;
+  TempIniVar: string;
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Product Label Printer', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
-
-  DefaultPrinter := TempArray;
-
-  GetPrivateProfileString('Centrereed Broker', 'Product Label Printer Bin', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
-
-  sBin := TempArray;
+  IniFile := TIniFile.Create(GetBrokerstkIniFile);
   try
-    DefaultBin := strtoint(sBin);
-  except
-    DefaultBin := 15;
+    IniFile.ReadString('Centrereed Broker', 'Product Label Printer', DefaultPrinter);
+    IniFile.ReadString('Centrereed Broker', 'Product Label Printer Bin', TempIniVar);
+    DefaultBin := StrToIntDef(TempIniVar, 0);
+    IniFile.ReadString('Centrereed Broker', 'Product Label Printer Paper', TempIniVar);
+    DefaultPaper := StrToIntDef(TempIniVar, 0);
+  finally
+    IniFile.Free;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Product Label Printer Paper', '', TempArray,
-    sizeof(TempArray), frmPBMainMenu.AppIniFile);
-  sPaper := TempArray;
-  try
-    DefaultPaper := strtoint(sPaper);
-  except
-    DefaultPaper := 9;
-  end;
-
-(*  {Find the default printer in the list of printers }
+  (*  {Find the default printer in the list of printers }
   Printers.Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
@@ -406,6 +392,14 @@ begin
         GlobalUnlock (hDevMode);
   end;
   result := bin;
+end;
+
+function TSTRSLabelsfrm.GetBrokerstkIniFile: string;
+var
+  IniBasePath: string;
+begin
+  IniBasePath := ExtractFilePath(frmpbMainMenu.AppIniFile);
+  Result := IncludeTrailingPathDelimiter(IniBasePath) + 'Brokerstk.ini';
 end;
 
 function TSTRSLabelsfrm.GetPaperSelection: integer;
@@ -487,16 +481,14 @@ procedure TSTRSLabelsfrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Brokerstk.ini');
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Product Label Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Product Label Printer Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Product Label Printer Paper',inttostr(DefaultPaper));
-      Free;
-    end;
-
+  IniFile := TIniFile.Create(GetBrokerstkIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer', DefaultPrinter);
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Bin', inttostr(DefaultBin));
+    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Paper', inttostr(DefaultPaper));
+  finally
+    IniFile.Free;
+  end;
   Printers.Printer.PrinterIndex := -1;
 end;
 

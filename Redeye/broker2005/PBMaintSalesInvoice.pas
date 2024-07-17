@@ -117,10 +117,8 @@ type
     procedure mnChangeChgClick(Sender: TObject);
     procedure mnAddChgClick(Sender: TObject);
     procedure sgChargesDblClick(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgChargesDrawCell(Sender: TObject; ACol, ARow: Integer;
-      Rect: TRect; State: TGridDrawState);
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure sgChargesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure btnNotesClick(Sender: TObject);
     procedure CheckNotes(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
@@ -1220,8 +1218,8 @@ begin
     mnChangeChgClick(self);
 end;
 
-procedure TPBMaintSalesInvoicefrm.sgLinesDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintSalesInvoicefrm.sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
 var
   SavedAlign: integer;
 begin
@@ -1251,8 +1249,8 @@ begin
   end;
 end;
 
-procedure TPBMaintSalesInvoicefrm.sgChargesDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintSalesInvoicefrm.sgChargesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
 begin
   with Sender as TStringGrid do
   begin
@@ -1816,28 +1814,26 @@ end;
 
 procedure TPBMaintSalesInvoicefrm.sgLinesTopLeftChanged(Sender: TObject);
 var
-  icount: integer;
-  iRow: integer;
+  icount: Integer;
+  iRow: Integer;
   myImage: TImage;
 begin
   for icount := 0 to pred(componentcount) do
+  begin
     if (Components[icount] is TImage) then
+    begin
+      myImage := (Components[icount] as TImage);
+      (Components[icount] as TImage).Left := cellleft(sgLines,0);
+      iRow := strtoint(copy((Components[icount] as TImage).name,4,3));
+      if iRow >= sgLines.TopRow then
       begin
-        try
-          myImage := (Components[icount] as TImage);
-          (Components[icount] as TImage).Left := cellleft(sgLines,0);
-          iRow := strtoint(copy((Components[icount] as TImage).name,4,3));
-          if iRow >= sgLines.TopRow then
-            begin
-              (Components[icount] as TImage).Top := celltop(sgLines,iRow);
-              (Components[icount] as TImage).visible := true;
-            end
-          else
-            (Components[icount] as TImage).visible := false;
-
-        except
-        end;
-      end;
+        (Components[icount] as TImage).Top := celltop(sgLines,iRow);
+        (Components[icount] as TImage).Visible := true;
+      end
+      else
+        (Components[icount] as TImage).Visible := False;
+    end;
+  end;
 end;
 
 function TPBMaintSalesInvoicefrm.cellleft(grid: TStringGrid; Col: Integer): Integer;

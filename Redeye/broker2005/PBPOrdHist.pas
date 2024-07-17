@@ -28,12 +28,12 @@ type
     strgrdOrdHist: TStringGrid;
     qrySelPOLine: TFDQuery;
     StatusBar1: TStatusBar;
-    procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+    procedure InitialiseForm;
     procedure FillGrid;
   public
     { Public declarations }
@@ -123,13 +123,37 @@ begin
   qrySelPOLine.close;
 end;
 
-procedure TPBPOrdHistFrm.FormShow(Sender: TObject);
+procedure TPBPOrdHistFrm.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
+end;
+
+procedure TPBPOrdHistFrm.FormCreate(Sender: TObject);
+begin
+  StatusBar1.Top := Screen.Height - StatusBar1.Height;
+
+  for var i := 0 to strgrdOrdHist.ColCount-1 do
+  begin
+    if not (i in [0,4,5,6,11]) then
+      strgrdOrdHist.ColAlignments[i] := taRightJustify;
+  end;
+
+  InitialiseForm;
+end;
+
+procedure TPBPOrdHistFrm.FormResize(Sender: TObject);
+begin
+  self.strgrdOrdHist.Repaint;
+end;
+
+procedure TPBPOrdHistFrm.InitialiseForm;
 begin
   if Int(self.PONum) = self.PONum then
     self.Caption := self.Caption + ' for Purchase Order: ' + FloatToStr(self.PONum)
   else
     self.Caption := self.Caption + ' for Purchase Order: ' + FloatToStrF(self.PONum, ffFixed, 15, 2);
-    
+
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
   //look up and display order history
   self.strgrdOrdHist.Cells[1,0] := 'Order';
@@ -162,28 +186,6 @@ begin
   self.strgrdOrdHist.ColWidths[13] := 60;
 
   self.FillGrid;
-end;
-
-procedure TPBPOrdHistFrm.FormClose(Sender: TObject;
-  var Action: TCloseAction);
-begin
-  CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
-end;
-
-procedure TPBPOrdHistFrm.FormCreate(Sender: TObject);
-begin
-  StatusBar1.Top := Screen.Height - StatusBar1.Height;
-
-  for var i := 0 to strgrdOrdHist.ColCount-1 do
-  begin
-    if not (i in [0,4,5,6,11]) then
-      strgrdOrdHist.ColAlignments[i] := taRightJustify;
-  end;
-end;
-
-procedure TPBPOrdHistFrm.FormResize(Sender: TObject);
-begin
-  self.strgrdOrdHist.Repaint;
 end;
 
 end.

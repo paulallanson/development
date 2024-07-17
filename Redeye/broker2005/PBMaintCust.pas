@@ -853,22 +853,24 @@ uses
 
 function TPBMaintCustFrm.GetActivePageIndex: integer;
 var
-  TempArray: array[0..255] of Char;
+  IniFile : TIniFile;
+  TabIndex: string;
 begin
-  FillChar(TempArray, SizeOf(TempArray), #0);
-  {Search the INI file for Default Branch tab}
-  if Prospect then
-    GetPrivateProfileString('Prospects', 'Default Customer Tab', '', TempArray,
-        sizeof(TempArray), frmPBMainMenu.AppIniFile)
-  else
-  if EndUser then
-    GetPrivateProfileString('End Users', 'Default Customer Tab', '', TempArray,
-        sizeof(TempArray), frmPBMainMenu.AppIniFile)
-  else
-    GetPrivateProfileString('Customers', 'Default Customer Tab', '', TempArray,
-        sizeof(TempArray), frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    {Search the INI file for Default Branch tab}
+    if Prospect then
+      TabIndex := IniFile.ReadString('Prospects', 'Default Customer Tab', '0')
+    else
+    if EndUser then
+      TabIndex := IniFile.ReadString('End Users', 'Default Customer Tab', '0')
+    else
+      TabIndex := IniFile.ReadString('Customers', 'Default Customer Tab', '0');
 
-  TryStrToInt(TempArray, Result);
+    Result := StrToIntDef(TabIndex, 0);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 function TPBMaintCustFrm.GetFilesPath: string;
@@ -2367,17 +2369,17 @@ begin
   CheckOK(Self);
 end;
 
-procedure TPBMaintCustFrm.FormClose(Sender: TObject;
-  var Action: TCloseAction);
+procedure TPBMaintCustFrm.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   TempWord: Word;
 begin
-  if modalResult = mrok then exit;
+  if modalResult = mrok then
+    Exit;
 
-  if not(OKBitBtn.enabled) then exit;
+  if not(OKBitBtn.enabled) then
+    Exit;
 
-  TempWord := MessageDlg('Do you want to save these details?', mtConfirmation,
-    [mbYes, mbNo, mbCancel], 0) ;
+  TempWord := MessageDlg('Do you want to save these details?', mtConfirmation, [mbYes, mbNo, mbCancel], 0) ;
 
   if TempWord = mrNo then
       Exit

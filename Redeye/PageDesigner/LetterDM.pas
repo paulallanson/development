@@ -134,6 +134,7 @@ type
     FDConn: TFDConnection;
     procedure ADOConnBeforeConnect(Sender: TObject);
     procedure FDConnBeforeConnect(Sender: TObject);
+    procedure FDConnError(ASender, AInitiator: TObject; var AException: Exception);
   private
     FOldDatabase : Boolean;
     FDatabaseOpened : Boolean;
@@ -687,6 +688,17 @@ end;
 procedure TdmLetter.FDConnBeforeConnect(Sender: TObject);
 begin
   ConfigureFDConnection(FDConn);
+end;
+
+procedure TdmLetter.FDConnError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 function TdmLetter.GetFaxDefaultLayout: string;

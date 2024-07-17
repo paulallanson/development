@@ -43,7 +43,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1103
+        Width = 1115
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59
@@ -54,6 +54,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         ShowHint = True
         TabOrder = 0
         Wrapable = False
+        ExplicitWidth = 1103
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -332,7 +333,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       end
       item
         Expanded = False
-        FieldName = 'Account_Code'
+        FieldName = 'Account_code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
@@ -344,7 +345,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       end
       item
         Expanded = False
-        FieldName = 'Factoring_Date'
+        FieldName = 'factoring_date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
@@ -356,7 +357,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       end
       item
         Expanded = False
-        FieldName = 'Factoring_Filename'
+        FieldName = 'factoring_filename'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
