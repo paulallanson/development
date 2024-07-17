@@ -1331,9 +1331,9 @@ procedure ParseException(Exc: EFDDBEngineException);
 begin
   case Exc.Kind of
     ekUKViolated:
-      MessageDlg('Unique Key violation. This record cannot be delete.', mtError, [mbOk], 0);
+      MessageDlg('Unique Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
     ekFKViolated:
-      MessageDlg('Foreign Key violation. This record cannot be delete.', mtError, [mbOk], 0);
+      MessageDlg('Foreign Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
   else
     MessageDlg(Exc.Message, mtError, [mbOk], 0);
   end;
