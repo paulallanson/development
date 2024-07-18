@@ -299,6 +299,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '      Worktop_Finish,'
       '      Image_Path,'
       '      Discount'
+      'from worktop'
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group)) and'
       
@@ -412,7 +413,20 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   object qryMaterial: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'select Material_Type.*'
+      'select Material_Type,'
+      '      Description,'
+      '      inactive,'
+      '      Commission_Rate,'
+      '      Sales_Nominal,'
+      '      Purchase_Nominal,'
+      '      Show_Online,'
+      '      Long_Description,'
+      '      Short_Description,'
+      '      Worktop_Type,'
+      '      Image_Path,'
+      '      Preferred_Supplier,'
+      '      Warranty_Description,'
+      '      Maintenance_Description'
       'from Material_Type'
       
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
@@ -423,6 +437,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     ParamData = <
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end>
   end
   object dtsMaterial: TDataSource

@@ -141,12 +141,20 @@ begin
 end;
 
 procedure TfrmWTMaintJElementM.RefreshThickness;
+var iThickness: integer;
 begin
+  try
+    iThickness := dblkpWTThickness.keyvalue;
+  except
+    iThickness := self.Thickness;
+  end;
+
   with qryWTThickness do
     begin
       close;
       open;
     end;
+  dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
 
