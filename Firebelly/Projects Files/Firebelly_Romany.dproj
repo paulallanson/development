@@ -592,6 +592,9 @@
             <Form>frmwtRPSOrder</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\wtRSJobSheetPreRem.pas">
+            <Form>frmWTRSJobSheetPreRem</Form>
+        </DCCReference>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
         <DCCReference Include="..\..\Shared\Shared.DragDrop.Helper.pas"/>
         <BuildConfiguration Include="Base">
@@ -625,7 +628,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="..\Romany\Win32\Debug\Firebelly_Romany.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\Firebelly_Romany.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_Romany.exe</RemoteName>
                         <Overwrite>true</Overwrite>

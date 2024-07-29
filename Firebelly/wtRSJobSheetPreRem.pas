@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, ExtCtrls, gtQrCtrls, printers, Inifiles;
+  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles;
 
 type
   TfrmWTRSJobSheetPreRem = class(TForm)
