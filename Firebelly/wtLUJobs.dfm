@@ -435,7 +435,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 555
+        Left = 549
         Top = 6
         Width = 81
         Height = 15
@@ -450,7 +450,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ExplicitLeft = 573
       end
       object cmbCustomerFilter: TComboBox
-        Left = 647
+        Left = 641
         Top = 2
         Width = 145
         Height = 21

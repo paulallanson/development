@@ -98,7 +98,7 @@ uses
   System.UITypes, System.Types,
   WtMaintJob, WTRSJobCutSched, WTRSJobMasonRpt, WTJobSearch,
   wtRSJobSheet, WtMaintJobComplete, WTLUJobRpts, wtMain, wtDataModule,
-  WTRSJobRemedialSheet;
+  WTRSJobRemedialSheet, wtRSJobSheetPreRem;
 
 {$R *.DFM}
 
