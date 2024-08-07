@@ -186,7 +186,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     object dblkpWorktop: TDBLookupComboBox
       Left = 88
       Top = 40
-      Width = 249
+      Width = 390
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -320,7 +320,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'from worktop'
       'where material_type = :material_type'
       'Order by Description')
-    Left = 296
+    Left = 266
+    Top = 72
     ParamData = <
       item
         Name = 'material_type'
@@ -339,8 +340,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 456
-    Top = 16
+    Left = 418
+    Top = 124
     ParamData = <
       item
         Name = 'worktop'
@@ -348,12 +349,13 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 248
+    Left = 206
+    Top = 72
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 496
-    Top = 16
+    Left = 380
+    Top = 84
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -377,8 +379,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 392
-    Top = 8
+    Left = 338
+    Top = 114
     ParamData = <
       item
         Name = 'Worktop'

@@ -4,7 +4,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   BorderStyle = bsDialog
   Caption = 'Global change upstands, splashbacks etc.'
   ClientHeight = 192
-  ClientWidth = 418
+  ClientWidth = 496
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,13 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 418
+    Width = 496
     Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 530
+    ExplicitWidth = 412
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -54,7 +54,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       Caption = 'Unit price'
     end
     object btnWorktops: TSpeedButton
-      Left = 354
+      Left = 458
       Top = 71
       Width = 23
       Height = 22
@@ -115,7 +115,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 249
+      Width = 345
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -155,8 +155,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     end
   end
   object btnOK: TBitBtn
-    Left = 110
-    Top = 152
+    Left = 183
+    Top = 143
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -167,8 +167,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 198
-    Top = 152
+    Left = 271
+    Top = 143
     Width = 75
     Height = 25
     Cancel = True

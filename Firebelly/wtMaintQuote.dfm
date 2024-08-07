@@ -548,7 +548,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label15: TLabel
-          Left = 837
+          Left = 831
           Top = 12
           Width = 73
           Height = 13
@@ -589,7 +589,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object Label5: TLabel
-          Left = 623
+          Left = 617
           Top = 90
           Width = 51
           Height = 13
@@ -604,7 +604,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 653
         end
         object Label3: TLabel
-          Left = 516
+          Left = 510
           Top = 12
           Width = 80
           Height = 13
@@ -619,7 +619,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 546
         end
         object btnHigh: TSpeedButton
-          Left = 737
+          Left = 731
           Top = 6
           Width = 25
           Height = 25
@@ -646,7 +646,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 814
         end
         object btnLow: TSpeedButton
-          Left = 761
+          Left = 755
           Top = 6
           Width = 25
           Height = 25
@@ -686,7 +686,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 838
         end
         object btnCalendarTask: TSpeedButton
-          Left = 793
+          Left = 787
           Top = 6
           Width = 25
           Height = 25
@@ -762,7 +762,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 870
         end
         object Label63: TLabel
-          Left = 623
+          Left = 617
           Top = 66
           Width = 35
           Height = 13
@@ -807,7 +807,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 1
         end
         object dblkpOperator: TDBLookupComboBox
-          Left = 925
+          Left = 919
           Top = 8
           Width = 114
           Height = 21
@@ -815,7 +815,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           KeyField = 'Operator'
           ListField = 'Operator_Name'
           TabOrder = 2
-          ExplicitLeft = 919
+          ExplicitLeft = 913
         end
         object dblkpMaterial: TDBLookupComboBox
           Left = 96
@@ -828,14 +828,14 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           OnClick = dblkpMaterialClick
         end
         object edtReference: TEdit
-          Left = 696
+          Left = 690
           Top = 86
           Width = 345
           Height = 21
           Anchors = [akTop, akRight]
           TabOrder = 4
           OnChange = edtReferenceChange
-          ExplicitLeft = 690
+          ExplicitLeft = 684
         end
         object btnLUMatType: TBitBtn
           Left = 352
@@ -855,7 +855,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         object edtDescription: TMemo
           Left = 96
           Top = 62
-          Width = 500
+          Width = 494
           Height = 59
           Anchors = [akLeft, akTop, akRight]
           Lines.Strings = (
@@ -863,20 +863,20 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           MaxLength = 255
           TabOrder = 6
           OnChange = edtDescriptionChange
-          ExplicitWidth = 494
+          ExplicitWidth = 488
         end
         object edtFollowUpDate: TEdit
-          Left = 608
+          Left = 602
           Top = 8
           Width = 89
           Height = 21
           Anchors = [akTop, akRight]
           TabOrder = 7
           OnExit = edtFollowUpDateExit
-          ExplicitLeft = 602
+          ExplicitLeft = 596
         end
         object btnFollowUpDate: TBitBtn
-          Left = 704
+          Left = 698
           Top = 6
           Width = 25
           Height = 25
@@ -897,17 +897,17 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           NumGlyphs = 2
           TabOrder = 8
           OnClick = btnFollowUpDateClick
-          ExplicitLeft = 698
+          ExplicitLeft = 692
         end
         object edtProject: TEdit
-          Left = 696
+          Left = 690
           Top = 62
           Width = 345
           Height = 21
           Anchors = [akTop, akRight]
           TabOrder = 9
           OnChange = edtProjectChange
-          ExplicitLeft = 690
+          ExplicitLeft = 684
         end
         object edtExpiryDate: TEdit
           Left = 443
@@ -1017,7 +1017,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object lblAccepted: TLabel
-          Left = 649
+          Left = 643
           Top = 205
           Width = 74
           Height = 13
@@ -1027,7 +1027,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ExplicitLeft = 679
         end
         object Label30: TLabel
-          Left = 649
+          Left = 643
           Top = 237
           Width = 84
           Height = 13
@@ -1044,7 +1044,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Caption = 'Showroom'
         end
         object btnContactClear: TSpeedButton
-          Left = 537
+          Left = 531
           Top = 121
           Width = 23
           Height = 22
@@ -1093,7 +1093,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
         end
         object btnCustomerSearch: TBitBtn
-          Left = 510
+          Left = 504
           Top = 12
           Width = 22
           Height = 22
@@ -1109,21 +1109,19 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
           TabOrder = 0
           OnClick = btnCustomerSearchClick
-          ExplicitLeft = 504
         end
         object pnlAddress: TPanel
           Left = 74
           Top = 0
-          Width = 435
+          Width = 429
           Height = 153
           Anchors = [akLeft, akTop, akRight]
           BevelOuter = bvNone
           Enabled = False
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 429
           DesignSize = (
-            435
+            429
             153)
           object Label24: TLabel
             Left = 104
@@ -1135,39 +1133,35 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           object edtCustomerName: TEdit
             Left = 8
             Top = 12
-            Width = 417
+            Width = 411
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
             OnChange = edtCustomerNameChange
-            ExplicitWidth = 411
           end
           object edtStreet: TEdit
             Left = 8
             Top = 36
-            Width = 417
+            Width = 411
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 1
-            ExplicitWidth = 411
           end
           object edtlocale: TEdit
             Left = 8
             Top = 56
-            Width = 417
+            Width = 411
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 2
-            ExplicitWidth = 411
           end
           object edtTown: TEdit
             Left = 8
             Top = 77
-            Width = 417
+            Width = 411
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 3
-            ExplicitWidth = 411
           end
           object edtPostcode: TEdit
             Left = 8
@@ -1180,25 +1174,23 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           object edtCounty: TEdit
             Left = 152
             Top = 97
-            Width = 273
+            Width = 267
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 5
-            ExplicitWidth = 267
           end
           object edtContact: TEdit
             Left = 8
             Top = 120
-            Width = 418
+            Width = 412
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 6
             OnChange = edtContactChange
-            ExplicitWidth = 412
           end
         end
         object btnContactSearch: TBitBtn
-          Left = 510
+          Left = 504
           Top = 121
           Width = 22
           Height = 22
@@ -1214,10 +1206,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
           TabOrder = 2
           OnClick = btnContactSearchClick
-          ExplicitLeft = 504
         end
         object pnlTelephone: TPanel
-          Left = 648
+          Left = 642
           Top = 0
           Width = 391
           Height = 153
@@ -1225,7 +1216,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 3
-          ExplicitLeft = 642
           object Telephone: TLabel
             Left = 0
             Top = 16
@@ -1315,7 +1305,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           end
         end
         object edtAccepted: TEdit
-          Left = 737
+          Left = 731
           Top = 201
           Width = 90
           Height = 21
@@ -1323,11 +1313,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 4
           Visible = False
           OnExit = edtTemplateExit
-          ExplicitLeft = 731
-          ExplicitTop = 192
         end
         object btnAccepted: TBitBtn
-          Left = 833
+          Left = 827
           Top = 199
           Width = 25
           Height = 25
@@ -1349,11 +1337,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 5
           Visible = False
           OnClick = btnAcceptedClick
-          ExplicitLeft = 827
-          ExplicitTop = 190
         end
         object edtTemplate: TEdit
-          Left = 737
+          Left = 731
           Top = 233
           Width = 90
           Height = 21
@@ -1361,11 +1347,9 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 6
           Visible = False
           OnExit = edtTemplateExit
-          ExplicitLeft = 731
-          ExplicitTop = 224
         end
         object btntemplate: TBitBtn
-          Left = 833
+          Left = 827
           Top = 231
           Width = 25
           Height = 25
@@ -1387,33 +1371,29 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 7
           Visible = False
           OnClick = btntemplateClick
-          ExplicitLeft = 827
-          ExplicitTop = 222
         end
         object dblkpShowroom: TDBLookupComboBox
           Left = 82
           Top = 155
-          Width = 353
+          Width = 347
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Branch_no'
           ListField = 'Branch_Name'
           TabOrder = 8
-          ExplicitWidth = 347
         end
         object dblkpDesigner: TDBLookupComboBox
           Left = 82
           Top = 184
-          Width = 353
+          Width = 347
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Designer'
           ListField = 'Designer_Name'
           TabOrder = 9
-          ExplicitWidth = 347
         end
         object btnDesigner: TBitBtn
-          Left = 445
+          Left = 439
           Top = 183
           Width = 22
           Height = 22
@@ -1429,7 +1409,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentFont = False
           TabOrder = 12
           OnClick = btnDesignerClick
-          ExplicitLeft = 439
         end
         object dblkpLeadSource: TDBLookupComboBox
           Left = 81
@@ -1749,6 +1728,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 1012
+          ExplicitHeight = 230
           object btnAddUpstds: TBitBtn
             Left = 8
             Top = 8
@@ -1802,6 +1783,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 1
           OnDblClick = sgUpstandsDblClick
+          ExplicitWidth = 1012
+          ExplicitHeight = 230
           ColWidths = (
             40
             190
@@ -1824,6 +1807,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 230
+          ExplicitWidth = 1097
           object lblUpTotalArea: TLabel
             Left = 8
             Top = 7

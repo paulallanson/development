@@ -3,7 +3,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   Top = 181
   BorderStyle = bsDialog
   Caption = 'Maintain Cutouts'
-  ClientHeight = 244
+  ClientHeight = 285
   ClientWidth = 499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,11 +15,11 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   OnActivate = FormActivate
   DesignSize = (
     499
-    244)
+    285)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 32
-    Top = 213
+    Top = 246
     Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -33,7 +33,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   end
   object btnOK: TBitBtn
     Left = 167
-    Top = 205
+    Top = 238
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -44,11 +44,10 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 196
   end
   object BitBtn2: TBitBtn
     Left = 255
-    Top = 205
+    Top = 238
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -57,18 +56,16 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 196
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 0
     Width = 499
-    Height = 193
+    Height = 232
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 491
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -91,36 +88,36 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       Caption = 'Cutout'
     end
     object Label8: TLabel
-      Left = 352
-      Top = 76
+      Left = 16
+      Top = 106
       Width = 44
       Height = 13
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 16
-      Top = 140
+      Top = 172
       Width = 49
       Height = 13
       Caption = 'Unit Price'
     end
     object Label7: TLabel
       Left = 331
-      Top = 140
+      Top = 172
       Width = 52
       Height = 13
       Caption = 'Total Price'
     end
     object Label5: TLabel
       Left = 16
-      Top = 172
+      Top = 204
       Width = 48
       Height = 13
       Caption = 'Unit Cost'
     end
     object Label6: TLabel
       Left = 331
-      Top = 172
+      Top = 204
       Width = 51
       Height = 13
       Caption = 'Total Cost'
@@ -134,7 +131,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object Label9: TLabel
       Left = 16
-      Top = 108
+      Top = 140
       Width = 65
       Height = 13
       Caption = 'Std Sell Price'
@@ -163,7 +160,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     object dblkpCutOut: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 193
+      Width = 350
       Height = 21
       KeyField = 'cutout'
       ListField = 'description'
@@ -172,8 +169,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       OnClick = dblkpCutOutClick
     end
     object spnQuantity: TSpinEdit
-      Left = 408
-      Top = 71
+      Left = 88
+      Top = 103
       Width = 65
       Height = 22
       MaxValue = 1000
@@ -184,7 +181,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object edtUnitPrice: TCREditMoney
       Left = 88
-      Top = 136
+      Top = 168
       Width = 81
       Height = 21
       TabOrder = 6
@@ -192,7 +189,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object edtTotalPrice: TCREditMoney
       Left = 392
-      Top = 136
+      Top = 168
       Width = 81
       Height = 21
       TabStop = False
@@ -201,8 +198,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       TabOrder = 7
     end
     object btnCutOuts: TBitBtn
-      Left = 288
-      Top = 70
+      Left = 448
+      Top = 71
       Width = 25
       Height = 25
       Hint = 'maintain cut out details'
@@ -220,7 +217,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object edtUnitCost: TCREditMoney
       Left = 88
-      Top = 168
+      Top = 200
       Width = 81
       Height = 21
       Color = clBtnFace
@@ -229,7 +226,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object edtTotalCost: TCREditMoney
       Left = 392
-      Top = 168
+      Top = 200
       Width = 81
       Height = 21
       TabStop = False
@@ -247,7 +244,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     end
     object edtSellPrice: TCREditMoney
       Left = 88
-      Top = 104
+      Top = 136
       Width = 81
       Height = 21
       Color = clBtnFace
@@ -266,8 +263,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
         'where (inactive = '#39'N'#39' or inactive is null) OR Edge_Type = :Edge_' +
         'Type'
       '')
-    Left = 24
-    Top = 8
+    Left = 86
+    Top = 10
     ParamData = <
       item
         Name = 'Edge_Type'
@@ -385,8 +382,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
         '      ((CutOut.inactive = '#39'N'#39') or (CutOut.inactive is NULL) or (' +
         'CutOut.CutOut = :CutOut))'
       'ORDER BY Cutout.Description')
-    Left = 320
-    Top = 80
+    Left = 192
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -440,8 +437,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
         'and'
       '      Customer_Cutout.Edge_Type = :Edge_Type and'
       '      Customer_Cutout.CutOut = :cutout')
-    Left = 320
-    Top = 136
+    Left = 272
+    Top = 2
     ParamData = <
       item
         Name = 'Customer'

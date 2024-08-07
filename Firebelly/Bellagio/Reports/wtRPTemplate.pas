@@ -56,7 +56,6 @@ type
     QRDBText5: TQRDBText;
     gtQRLabel3: TQRLabel;
     gtQRLabel8: TQRLabel;
-    gtQRLabel15: TQRLabel;
     gtQRShape13: TQRShape;
     qrlblEdgeDetail: TQRLabel;
     qrlblColour: TQRLabel;
