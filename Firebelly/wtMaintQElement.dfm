@@ -118,7 +118,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 386
+      Left = 498
       Top = 71
       Width = 23
       Height = 22
@@ -216,7 +216,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 281
+      Width = 390
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -306,8 +306,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 292
-    Top = 6
+    Left = 261
+    Top = 8
     ParamData = <
       item
         Name = 'material_type'
@@ -432,8 +432,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
         'aterial_Type'
       'order by Description')
-    Left = 352
-    Top = 8
+    Left = 336
+    Top = 10
     ParamData = <
       item
         Name = 'Material_Type'
@@ -442,8 +442,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 320
-    Top = 8
+    Left = 296
+    Top = 10
   end
   object qryContractWorktops: TFDQuery
     ConnectionName = 'WT'

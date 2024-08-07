@@ -24,6 +24,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 736
+    ExplicitHeight = 378
     object Label1: TLabel
       Left = 16
       Top = 14
@@ -293,6 +295,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 14
+      ExplicitTop = 290
+      ExplicitWidth = 736
       object Label19: TLabel
         Left = 16
         Top = 13
@@ -445,6 +449,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 15
+      ExplicitTop = 266
+      ExplicitWidth = 736
       object Label15: TLabel
         Left = 16
         Top = 5
@@ -523,6 +529,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 16
+      ExplicitTop = 354
+      ExplicitWidth = 736
       object Label23: TLabel
         Left = 574
         Top = 5
@@ -578,6 +586,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 378
+    ExplicitWidth = 736
     DesignSize = (
       742
       46)
@@ -946,6 +956,21 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       end
       item
         Name = 'Worktop'
+      end>
+  end
+  object qryGetOneMaterialType: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Material_Type,'
+      '        Allow_Bespoke_Slab_Sizes'
+      'FROM Material_Type'
+      'WHERE Material_Type = :Material_Type')
+    Left = 512
+    Top = 347
+    ParamData = <
+      item
+        Name = 'MATERIAL_TYPE'
+        ParamType = ptInput
       end>
   end
 end
