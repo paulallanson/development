@@ -2,8 +2,8 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
   Left = 427
   Top = 123
   Caption = 'Sales History Report - Inclusive'
-  ClientHeight = 312
-  ClientWidth = 691
+  ClientHeight = 340
+  ClientWidth = 699
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -15,17 +15,19 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
   TextHeight = 13
   object pnlCustProd: TPanel
     Left = 0
-    Top = 272
-    Width = 691
+    Top = 300
+    Width = 699
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 272
+    ExplicitWidth = 691
     DesignSize = (
-      691
+      699
       40)
     object CancelBitBtn: TBitBtn
-      Left = 9
+      Left = 11
       Top = 8
       Width = 72
       Height = 25
@@ -40,9 +42,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitLeft = 3
     end
     object PreviewBitBtn: TBitBtn
-      Left = 523
+      Left = 525
       Top = 8
       Width = 76
       Height = 25
@@ -70,9 +73,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 517
     end
     object PrintBitBtn: TBitBtn
-      Left = 614
+      Left = 616
       Top = 8
       Width = 72
       Height = 25
@@ -100,9 +104,10 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 608
     end
     object btnExcel: TBitBtn
-      Left = 431
+      Left = 433
       Top = 8
       Width = 75
       Height = 25
@@ -153,16 +158,19 @@ object STRSSalesHistoryFrm: TSTRSSalesHistoryFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 425
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 691
-    Height = 272
+    Width = 699
+    Height = 300
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 691
+    ExplicitHeight = 272
     object pnlExportPrgrss: TPanel
       Left = 208
       Top = 115

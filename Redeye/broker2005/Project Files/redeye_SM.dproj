@@ -3,7 +3,7 @@
         <ProjectGuid>{25B8D3D2-5005-4A17-9908-37FA11A03299}</ProjectGuid>
         <MainSource>redeye_SM.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

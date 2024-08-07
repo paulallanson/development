@@ -114,7 +114,7 @@ begin
   QRDBText4.enabled := not bIsSummary;
   QRDBText8.enabled := not bIsSummary;
   if bIsSummary then
-    QRBand2.Height := 35
+    QRBand2.Height := 45
   else
     QRBand2.Height := 70;
 end;
