@@ -103,7 +103,8 @@ type
   private
     FDisableNameChangeEvent: boolean;
     FDefaultBin: integer;
-    FDefaultPrinter: string;
+    FInitialiseButtons: Boolean;
+    procedure InitialiseButtons;
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure CallMaintScreen(aMode: TsiMode);
     procedure CallReport(const bPreview: Boolean);
@@ -122,6 +123,7 @@ type
     dtmdlAllSInvoices: TdmSalesInvoice;
     iMnuMaint: integer;
     iOperatorRep: Integer;
+    FDefaultPrinter: string;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetSalesInvoiceEdit(Dataset: TDataset);
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;
@@ -205,6 +207,17 @@ begin
     begin
       SetPrinterBin(DefaultBin);
     end;
+end;
+
+procedure TfrmPBLUSalesInvoices.InitialiseButtons;
+begin
+  if not FInitialiseButtons then
+  begin
+    btnOrder.Visible := False;
+    btnEInvoice.Visible := False;
+
+    FInitialiseButtons := True;
+  end;
 end;
 
 procedure TfrmPBLUSalesInvoices.SetPrinterBin(BinCode : integer );
@@ -291,6 +304,7 @@ procedure TfrmPBLUSalesInvoices.FormShow(Sender: TObject);
 begin
 //  dtmdlAllSInvoices.RefreshData;
   edtSearch.setfocus;
+  InitialiseButtons;
 end;
 
 procedure TfrmPBLUSalesInvoices.edtSearchChange(Sender: TObject);

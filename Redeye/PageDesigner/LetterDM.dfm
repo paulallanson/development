@@ -660,6 +660,7 @@ object dmLetter: TdmLetter
       end>
   end
   object FDConn: TFDConnection
+    OnError = FDConnError
     BeforeConnect = FDConnBeforeConnect
     Left = 184
     Top = 16

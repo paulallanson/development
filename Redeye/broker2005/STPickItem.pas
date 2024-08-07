@@ -53,6 +53,7 @@ type
     procedure PLotEditKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure btnLUPartBinLotClick(Sender: TObject);
+    procedure CancelBtnClick(Sender: TObject);
   private
     FPartCode: string;
     FAllocatedBin: string;
@@ -462,6 +463,11 @@ begin
       begin
         cells[1,icount] := SerialNoItems.strings[icount];
       end;
+end;
+
+procedure TSTPickItemFrm.CancelBtnClick(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TSTPickItemFrm.SerialGridDrawCell(Sender: TObject; vCol,

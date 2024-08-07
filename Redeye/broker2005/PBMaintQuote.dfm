@@ -41,10 +41,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 472
-    ExplicitTop = 336
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pgDetails: TPageControl
       Left = 0
       Top = 233
@@ -1525,8 +1521,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 4
-      ExplicitLeft = 9
-      ExplicitTop = 629
       object lblGDPRSignedStatement: TLabel
         Left = 11
         Top = 13

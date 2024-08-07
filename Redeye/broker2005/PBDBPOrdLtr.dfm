@@ -680,7 +680,13 @@ inherited dbPOrdLtr: TdbPOrdLtr
       '       Supplier_Branch.Postcode,'
       '       Supplier_Branch.Supplier,'
       '       Supplier_Branch.Branch_No,'
-      '       Purchase_Order.Purchase_Order'
+      '       Purchase_Order.Purchase_Order,'
+      '       Purchase_Order.Needs_Authorising,'
+      '       (SELECT Alt_Purchase_Order'
+      '        FROM Purchase_OrderLine'
+      
+        '        WHERE Purchase_OrderLine.Purchase_Order = Purchase_Order' +
+        '.Purchase_Order) as Alt_Purchase_Order'
       'FROM ( int_sel inner join (Purchase_order'
       '     INNER JOIN Supplier_Branch Supplier_Branch ON'
       '        Purchase_Order.Supplier = Supplier_Branch.Supplier AND'
@@ -742,10 +748,6 @@ inherited dbPOrdLtr: TdbPOrdLtr
       end
       item
         Name = 'iintselcode'
-      end
-      item
-        Name = 'Purchase_Order'
-        DataType = ftInteger
         ParamType = ptInput
       end
       item
@@ -766,11 +768,6 @@ inherited dbPOrdLtr: TdbPOrdLtr
       item
         Name = 'ByBranch'
         DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'Operator'
-        DataType = ftInteger
         ParamType = ptInput
       end
       item

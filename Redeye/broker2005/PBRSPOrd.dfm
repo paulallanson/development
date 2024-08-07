@@ -353,6 +353,7 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
       '  Supplier_BranchContacts.ExportFilter,'
       '  Supplier_BranchContacts.Name AS Contact_Name,'
       '  Supplier_BranchContacts.Contact_no,'
+      '  Purchase_OrderLine.Alt_Purchase_Order,'
       '  Exportfilter.Description AS Exportfilter_Descr'
       
         'FROM (Supplier INNER JOIN Supplier_Branch ON Supplier.Supplier =' +
@@ -406,22 +407,17 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     ParamData = <
       item
         Name = 'iintselcode'
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Purchase_Order'
         DataType = ftInteger
-      end
-      item
-        Name = 'Purchase_Order'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Operator'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object GetAcksSQL: TFDQuery

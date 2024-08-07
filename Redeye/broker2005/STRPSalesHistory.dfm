@@ -211,7 +211,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Size.Values = (
           44.979166666666670000
           1733.020833333333000000
-          74.083333333333340000
+          74.083333333333330000
           148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -241,7 +241,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
           44.979166666666670000
           1640.416666666667000000
           211.666666666666700000
-          92.604166666666680000)
+          92.604166666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -525,7 +525,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
           39.687500000000000000
           1651.000000000000000000
           2.645833333333333000
-          84.666666666666680000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -952,21 +952,26 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       #9#9'Customer_Branch.Name,'
       #9#9'Ad_hoc_Address,'
       #9#9'Delivery_Customer,'
-      #9#9'Delivery_Branch')
+      #9#9'Delivery_Branch'
+      '')
     Left = 126
     Top = 94
     ParamData = <
       item
         Name = 'Record_List'
+        ParamType = ptInput
       end
       item
         Name = 'Part'
+        ParamType = ptInput
       end
       item
         Name = 'Date_From'
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
+        ParamType = ptInput
       end>
   end
   object qryBranches: TFDQuery

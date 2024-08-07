@@ -234,6 +234,8 @@ type
     qrySIHeaderGridSales_Invoice_no: TWideStringField;
     qrySIHeaderGridSales_invoice_status: TIntegerField;
     qrySIHeaderGridSales_Invoice: TIntegerField;
+    qrySIHeaderGridInvoice_Status: TWideStringField;
+    qrySIHeaderGridTotal_Value: TCurrencyField;
     qrySIHeaderGridSales_invoice_type: TWideStringField;
     qrySIHeaderGridReference: TWideStringField;
     qrySIHeaderGridInvoice_Description: TWideStringField;
@@ -241,10 +243,12 @@ type
     qrySIHeaderGridfactoring_date: TDateTimeField;
     qrySIHeaderGridpaid_status: TWideStringField;
     qrySIHeaderGridcash_sales: TWideStringField;
+    qrySIHeaderGridPaid_status_Description: TWideStringField;
     qrySIHeaderGridrep: TIntegerField;
     qrySIHeaderGridSub_Rep: TIntegerField;
     qrySIHeaderGridAlt_Sales_Invoice_no: TWideStringField;
     qrySIHeaderGridRep_Name: TWideStringField;
+    qrySIHeaderGridInvoice_Format: TWideStringField;
     qrySIHeaderGridSub_Rep_Name: TWideStringField;
     qrySIHeaderGridElectronic_Invoice: TWideStringField;
     qrySIHeaderGridEnd_User_Name: TWideStringField;
@@ -304,9 +308,12 @@ type
     qrySCHeaderGridVat_Value: TCurrencyField;
     qrySCHeaderGridGoods_Credit: TCurrencyField;
     qrySCHeaderGridVAT_Credit: TCurrencyField;
+    qrySCHeaderGridTotal_Credit: TCurrencyField;
     qrySCHeaderGridSales_Invoice_no: TWideStringField;
     qrySCHeaderGridSales_invoice_status: TIntegerField;
     qrySCHeaderGridSales_Invoice: TIntegerField;
+    qrySCHeaderGridInvoice_Status: TWideStringField;
+    qrySCHeaderGridTotal_Value: TCurrencyField;
     qrySCHeaderGridSales_invoice_type: TWideStringField;
     qrySCHeaderGridReference: TWideStringField;
     qrySCHeaderGridInvoice_Description: TWideStringField;
@@ -314,10 +321,12 @@ type
     qrySCHeaderGridfactoring_date: TDateTimeField;
     qrySCHeaderGridpaid_status: TWideStringField;
     qrySCHeaderGridcash_sales: TWideStringField;
+    qrySCHeaderGridPaid_Status_Description: TWideStringField;
     qrySCHeaderGridrep: TIntegerField;
     qrySCHeaderGridAlt_Sales_Invoice_no: TWideStringField;
     qrySCHeaderGridRep_Name: TWideStringField;
     qrySCHeaderGridElectronic_Invoice: TWideStringField;
+    qrySCHeaderGridInvoice_Format: TWideStringField;
     procedure qrySIHeaderGridCalcFields(DataSet: TDataSet);
     procedure qrySOAllCalcFields(DataSet: TDataSet);
     procedure qrySCHeaderGridCalcFields(DataSet: TDataSet);

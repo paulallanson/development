@@ -391,7 +391,10 @@ begin
     if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat)  or (Mode = qReQuote) then
       sTemp := ' New Quote '
     else
+    begin
       sTemp := ' Quote ' + floatToStr(Quote.DbKey) + ' ';
+      pgDetails.ActivePage := tsCharges;
+    end;
 
     if (Mode = qRepeat) or (Mode = qCopy) or (Mode = qReQuote) then
       begin
@@ -1644,7 +1647,7 @@ begin
 
   bOK := true;
   if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat) or (Mode = qChange) or (Mode = qRequote) then
-    begin
+  begin
       Quote.SaveToDB(true);
 
       if Mode = qRequote then
@@ -1667,18 +1670,18 @@ begin
           Quote.SaveLastEstimateDate;
         end;
       Quote.SaveEstimateFile;
-    end
+  end
   else
   if (Mode = qDelete) then
-    begin
+  begin
       Quote.Inactive := 'Y';
       Quote.DeleteFromDB;
-    end;
+  end;
 
   if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat) or (Mode = qRequote) then
-    begin
+  begin
       MessageDlg('The quote number is : ' + floatToStr(Quote.dbKey), mtInformation, [mbOK], 0);
-    end;
+  end;
 
   if bOKClose then
     ModalResult := mrOK
@@ -1715,7 +1718,7 @@ end;
 
 procedure TPBMaintQuoteFrm.FormCreate(Sender: TObject);
 begin
-  pgDetails.ActivePage := tsCharges;
+  pgDetails.ActivePage := tsSpecification;
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
   {Show pack pricing option is using Pack Prices}

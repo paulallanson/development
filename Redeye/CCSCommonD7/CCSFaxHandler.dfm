@@ -23,6 +23,7 @@ object FaxHandler: TFaxHandler
     ConnectionName = 'faxesSQL'
     Params.Strings = (
       'ConnectionDef=faxes')
+    OnError = FaxDatabaseError
     BeforeConnect = FaxDatabaseBeforeConnect
     Left = 24
   end

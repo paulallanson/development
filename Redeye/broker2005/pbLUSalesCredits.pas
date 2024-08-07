@@ -77,6 +77,13 @@ type
     FDisableNameChangeEvent: boolean;
     FDefaultBin: integer;
     FDefaultPrinter: string;
+    ActiveCode: real;
+    FActivated: boolean;
+    dLastPEDate: TDateTime;
+    DontSaveLayout: Boolean;
+    dtmdlAllSCredits: TdmSalesInvoice;
+    iMnuMaint: integer;
+    iOperatorRep: Integer;
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure CallMaintScreen(aMode: TsiMode);
     procedure CallReport(const bPreview: Boolean);
@@ -85,14 +92,6 @@ type
     function GetBinSelection: integer;
     procedure SaveDefaultPrinter;
     procedure SetButtonProperties(Sender: TObject);
-  private
-    ActiveCode: real;
-    FActivated: boolean;
-    dLastPEDate: TDateTime;
-    DontSaveLayout: Boolean;
-    dtmdlAllSCredits: TdmSalesInvoice;
-    iMnuMaint: integer;
-    iOperatorRep: Integer;
     procedure SetButtons(Sender: TObject; Field: TField);
     procedure SetSalesInvoiceEdit(Dataset: TDataset);
     property DefaultPrinter: string read FDefaultPrinter write SetDefaultPrinter;

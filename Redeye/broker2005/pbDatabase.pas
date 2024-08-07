@@ -64,6 +64,7 @@ type
     procedure PBLDatabaseAfterConnect(Sender: TObject);
     procedure PBLDatabaseBeforeConnect(Sender: TObject);
     procedure EmailDatabaseBeforeConnect(Sender: TObject);
+    procedure DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     FUserName: string;
     FPassword: string;
@@ -316,6 +317,17 @@ begin
   PBLDatabase.Params.UserName := UserName;
   PBLDatabase.Params.Password := Password;
 {$ENDIF}
+end;
+
+procedure TdmBroker.DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 procedure TdmBroker.AddIntSelCode(iTempIntSelCode: Integer; rTemp: real; sTemp: string);

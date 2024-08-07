@@ -96,6 +96,7 @@ object STPickItemFrm: TSTPickItemFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
+    OnClick = CancelBtnClick
   end
   object PartEdit: TEdit
     Left = 96

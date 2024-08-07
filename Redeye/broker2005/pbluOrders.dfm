@@ -121,11 +121,11 @@ object frmpbLUOrders: TfrmpbLUOrders
           ImageIndex = 13
           OnClick = btnHistoryClick
         end
-        object ToolButton3: TToolButton
+        object btnProofsSeparator: TToolButton
           Left = 472
           Top = 0
           Width = 8
-          Caption = 'ToolButton3'
+          Caption = 'btnProofsSeparator'
           ImageIndex = 7
           Style = tbsSeparator
         end
@@ -137,11 +137,11 @@ object frmpbLUOrders: TfrmpbLUOrders
           Enabled = False
           ImageIndex = 7
         end
-        object btnDeliveriesSpacer: TToolButton
+        object btnDeliveriesSeparator: TToolButton
           Left = 539
           Top = 0
           Width = 8
-          Caption = 'btnDeliveriesSpacer'
+          Caption = 'btnDeliveriesSeparator'
           ImageIndex = 7
           Style = tbsSeparator
         end
@@ -163,11 +163,11 @@ object frmpbLUOrders: TfrmpbLUOrders
           ImageIndex = 6
           OnClick = btnHoldClick
         end
-        object ToolButton4: TToolButton
+        object btnReportsSeparator: TToolButton
           Left = 665
           Top = 0
           Width = 8
-          Caption = 'ToolButton4'
+          Caption = 'btnReportsSeparator'
           ImageIndex = 5
           Style = tbsSeparator
         end
@@ -185,15 +185,13 @@ object frmpbLUOrders: TfrmpbLUOrders
           ImageIndex = 14
           OnClick = btnRefreshClick
         end
-        object btnseparator1: TToolButton
+        object btnAddSeparator: TToolButton
           Left = 0
           Top = 0
           Width = 8
-          Caption = 'btnseparator1'
           ImageIndex = 7
           Wrap = True
           Style = tbsSeparator
-          Visible = False
         end
       end
     end
@@ -342,7 +340,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
-        Width = 64
         Visible = True
       end
       item
