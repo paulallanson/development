@@ -3,7 +3,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
-  ClientHeight = 269
+  ClientHeight = 254
   ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -217,7 +217,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 88
       Top = 64
-      Width = 401
+      Width = 249
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -303,8 +303,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
       'Order by Description')
-    Left = 164
-    Top = 72
+    Left = 368
+    Top = 64
     ParamData = <
       item
         Name = 'material_type'
@@ -366,8 +366,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 350
-    Top = 18
+    Left = 408
+    Top = 8
     ParamData = <
       item
         Name = 'Worktop'
@@ -385,7 +385,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
         'where ((Material_Type = :Material_type) or (Material_Type is NUL' +
         'L))'
       'order by Worktop_group_description')
-    Left = 64
+    Left = 288
     Top = 32
     ParamData = <
       item
@@ -394,7 +394,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 114
+    Left = 328
     Top = 32
   end
   object qryMaterialUse: TFDQuery

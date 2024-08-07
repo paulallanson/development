@@ -57,7 +57,6 @@ type
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
     procedure dtbsWorktopsBeforeConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
-    procedure dtbsWorktopsError(ASender, AInitiator: TObject; var AException: Exception);
   private
     FIsSQL: Boolean;
     FUserName: string;
@@ -793,17 +792,6 @@ begin
   dtbsWorktops.Params.UserName := Username;
   dtbsWorktops.Params.Password := Password;
 {$ENDIF}
-end;
-
-procedure TdtmdlWorktops.dtbsWorktopsError(ASender, AInitiator: TObject; var AException: Exception);
-var
-  Exc: EFDDBEngineException;
-begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    ParseException(Exc);
-  end;
 end;
 
 function TdtmdlWorktops.UseRemedialsAsOrders: boolean;

@@ -33,6 +33,7 @@ type
     QRDBText4: TQRDBText;
     QRLabel5: TQRLabel;
     qryEndUser: TFDQuery;
+    QRLabel1: TQRLabel;
     qrySOLine: TFDQuery;
     QRDBText7: TQRDBText;
     qrySOLineSales_Order: TIntegerField;
@@ -249,7 +250,7 @@ begin
 
   GetCompanyAddress;
 
-(*  if trim(memPayment.lines.text) = '' then
+  if trim(memPayment.lines.text) = '' then
     begin
       memPayment.enabled := false;
       qrshpPayment.enabled := false;
@@ -259,7 +260,6 @@ begin
       memPayment.enabled := true;
       qrshpPayment.enabled := true;
     end;
-*)
 end;
 
 procedure TfrmwtRPSOrder.qrgSalesOrderBeforePrint(Sender: TQRCustomBand;

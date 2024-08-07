@@ -2,7 +2,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   Left = 121
   Top = 85
   Caption = 'Print Management Information System'
-  ClientHeight = 706
+  ClientHeight = 701
   ClientWidth = 1472
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -32,6 +32,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         MinHeight = 41
         Width = 1466
       end>
+    ExplicitWidth = 1466
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -225,7 +226,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   end
   object stsbrMainMenu: TStatusBar
     Left = 0
-    Top = 687
+    Top = 682
     Width = 1472
     Height = 19
     Panels = <
@@ -241,6 +242,8 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
+    ExplicitTop = 678
+    ExplicitWidth = 1466
   end
   object mnMain: TMainMenu
     Left = 184

@@ -155,20 +155,12 @@ begin
 end;
 
 procedure TfrmWTMaintJElement.RefreshThickness;
-var iThickness: integer;
 begin
-  try
-    iThickness := dblkpWTThickness.keyvalue;
-  except
-    iThickness := self.Thickness;
-  end;
-
   with qryWTThickness do
     begin
       close;
       open;
     end;
-  dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
 
@@ -210,7 +202,6 @@ begin
         close;
         open;
       end;
-
     dblkpWTThickness.keyvalue := Self.Thickness;
     edtDepth.text := '';
     edtLength.text := '';
@@ -293,7 +284,7 @@ begin
         end;
 
       parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
-      parambyName('thickness').asinteger := dblkpWTThickness.keyValue;
+      parambyName('thickness').asinteger := dblkpWTThickness.ListValue;
       open;
       edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
       JElement.PriceUnit := fieldbyname('Price_unit').asinteger;

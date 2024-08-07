@@ -3,7 +3,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Maintain Cutouts'
-  ClientHeight = 235
+  ClientHeight = 194
   ClientWidth = 491
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,8 +15,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   OnActivate = FormActivate
   TextHeight = 13
   object lblDelete: TLabel
-    Left = 40
-    Top = 200
+    Left = 24
+    Top = 152
     Width = 106
     Height = 13
     Caption = 'Delete these details?'
@@ -28,8 +28,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 171
-    Top = 192
+    Left = 155
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -41,8 +41,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 259
-    Top = 192
+    Left = 243
+    Top = 144
     Width = 75
     Height = 25
     Cancel = True
@@ -55,11 +55,12 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Left = 0
     Top = 0
     Width = 491
-    Height = 186
+    Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 485
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -89,15 +90,15 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Caption = 'Quantity'
     end
     object Label4: TLabel
-      Left = 16
-      Top = 139
+      Left = 331
+      Top = 76
       Width = 50
       Height = 13
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 331
-      Top = 139
+      Top = 108
       Width = 53
       Height = 13
       Caption = 'Total price'
@@ -126,7 +127,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     object dblkpCutOut: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 350
+      Width = 193
       Height = 21
       KeyField = 'cutout'
       ListField = 'description'
@@ -146,8 +147,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       OnChange = spnQuantityChange
     end
     object edtUnitPrice: TCREditMoney
-      Left = 88
-      Top = 135
+      Left = 392
+      Top = 72
       Width = 81
       Height = 21
       TabOrder = 4
@@ -155,7 +156,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     end
     object edtTotalPrice: TCREditMoney
       Left = 392
-      Top = 135
+      Top = 104
       Width = 81
       Height = 21
       TabStop = False
@@ -164,8 +165,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       TabOrder = 5
     end
     object btnCutOuts: TBitBtn
-      Left = 448
-      Top = 71
+      Left = 288
+      Top = 70
       Width = 25
       Height = 25
       Hint = 'maintain cut out details'
@@ -187,13 +188,13 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     SQL.Strings = (
       'select *'
       'from Edge_Type')
-    Left = 9
-    Top = 19
+    Left = 20
+    Top = 98
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 72
-    Top = 19
+    Left = 70
+    Top = 98
   end
   object qryCOThickness: TFDQuery
     ConnectionName = 'wt'
@@ -241,8 +242,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'cutout = :cutout')
-    Left = 436
-    Top = 11
+    Left = 368
+    Top = 98
     ParamData = <
       item
         Name = 'Material_type'

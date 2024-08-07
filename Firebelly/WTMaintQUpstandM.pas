@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses UITypes, wtLUworktops, wtMain, wtDataModule, AllCommon;
+uses UITypes, wtLUworktops, wtMain;
 
 {$R *.dfm}
 
@@ -199,20 +199,12 @@ begin
 end;
 
 procedure TfrmWTMaintQUpstandM.RefreshThickness;
-var iThickness: integer;
 begin
-  try
-    iThickness := dblkpWTThickness.keyvalue;
-  except
-    iThickness := self.Thickness;
-  end;
-
   with qryWTThickness do
     begin
       close;
       open;
     end;
-  dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
 
@@ -224,7 +216,6 @@ begin
 
   RefreshWorktops;
   dblkpWorktop.keyvalue := QUpstand.worktop;
-
 
   with qryWTThickness do
     begin
@@ -257,20 +248,12 @@ begin
 end;
 
 procedure TfrmWTMaintQUpstandM.GetUnitPrice;
-var
-  sText: string;
 begin
   if QUpstand.Parent.ContractQuote then
     begin
       with qryContractPrice do
         begin
           close;
-          if dtmdlWorktops.IsSQL then
-            begin
-              sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
-              SQL.Text := sText;
-            end;
-
           parambyname('Customer').AsInteger := QUpstand.Parent.Customer;
           parambyname('Group_Number').AsInteger := QUpstand.Parent.ContractGroup;
           parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
@@ -284,12 +267,6 @@ begin
       with qryOneWTThickness do
         begin
           close;
-          if dtmdlWorktops.IsSQL then
-            begin
-              sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
-              SQL.Text := sText;
-            end;
-
           parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
           parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
           open;

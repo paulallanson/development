@@ -90,7 +90,6 @@ type
     edtQuantity: TCREditFloat;
     Label26: TLabel;
     edtSlabArea: TCREditMoney;
-    qryGetOneMaterialType: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure dblkpWorktopClick(Sender: TObject);
@@ -337,19 +336,6 @@ begin
 
       iCount := recordcount;
     end;
-
-  {Check whether to allow bespoke sizes}
-  with qryGetOneMaterialType do
-    begin
-      close;
-      parambyname('Material_Type').asinteger := Material;
-      open;
-
-      edtLength.enabled := (fieldbyname('Allow_Bespoke_Slab_Sizes').asstring = 'Y');
-      edtDepth.enabled := (fieldbyname('Allow_Bespoke_Slab_Sizes').asstring = 'Y');
-      open;
-    end;
-
 end;
 
 procedure TfrmWTMaintQSlab.RefreshThickness;
@@ -446,7 +432,7 @@ begin
     GetAdhesiveDetails;
 
     if QSlab.Parent.Slabs.count > 0 then
-      dblkpSlabSize.setfocus
+      edtLength.setfocus
     else
       dblkpSupplier.SetFocus;
   end;

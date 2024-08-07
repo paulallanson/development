@@ -80,12 +80,6 @@ begin
 	StatusNarr('Checking Firebelly Program') ;
 	CopyIfNewer('firebelly.exe', 'Firebelly Program') ;
 
-	{Do the new Firebelly24 program and associated FireDAC Definition files} ;
-	StatusNarr('Checking Firebelly24 Program') ;
-	CopyIfNewer('Firebelly24.exe', 'Firebelly24 Program') ;
-	CopyIfNewer('FDConnectionDefs.ini', 'FireDAC Connection Definitions') ;
-	CopyIfNewer('FDDrivers.ini', 'FireDAC Drivers');
-
 	{Do the PDF Merge Files} ;
 	StatusNarr('Checking Firebelly PDF Merge files') ;
 	CopyIfNewer('PDFSplitMergeX.dll', 'PDF Split Merge Program') ;

@@ -1603,7 +1603,7 @@ begin
     DateType :=       fieldbyname('Date_Type').asstring;
     ExtraNotes :=     fieldbyname('Extra_Notes').asinteger;
     NarrativeText :=    datamodule.GetNarrative(ExtraNotes);
-    DepositTerms :=  fieldbyname('Deposit_Terms_SO').asfloat;
+    DepositTerms :=  fieldbyname('Deposit_Terms').asfloat;
     DoNotInvoice := (fieldbyname('Do_Not_Invoice').asstring = 'Y');
 
     if soMode = sopCopy then
@@ -1622,7 +1622,7 @@ begin
     CustomerBranch := fieldbyname('Branch_No').asinteger;
     CustomerBranchName :=   dtmdlWorktops.GetCustomerBranchName(Customer, CustomerBranch);
 
-    CustomerName:=   fieldbyname('Customer_Name_SO').asstring;
+    CustomerName:=   fieldbyname('Customer_Name').asstring;
 
     BranchExist := dtmdlWorktops.DoesCustomerBranchExist(Customer);
 

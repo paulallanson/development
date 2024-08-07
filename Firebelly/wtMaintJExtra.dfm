@@ -2,8 +2,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   Left = 192
   Top = 107
   Caption = 'Maintain Extras'
-  ClientHeight = 207
-  ClientWidth = 532
+  ClientHeight = 181
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   OnActivate = FormActivate
   TextHeight = 13
   object lblDelete: TLabel
-    Left = 64
-    Top = 159
+    Left = 8
+    Top = 160
     Width = 106
     Height = 13
     Caption = 'Delete these details?'
@@ -27,8 +27,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 195
-    Top = 151
+    Left = 139
+    Top = 152
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -40,8 +40,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 283
-    Top = 151
+    Left = 227
+    Top = 152
     Width = 75
     Height = 25
     Cancel = True
@@ -53,13 +53,12 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 532
+    Width = 452
     Height = 145
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 446
     object Label3: TLabel
       Left = 16
       Top = 20
@@ -89,8 +88,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 474
-      Top = 11
+      Left = 402
+      Top = 15
       Width = 23
       Height = 22
       Caption = '...'
@@ -105,7 +104,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     object dblkpExtras: TDBLookupComboBox
       Left = 88
       Top = 16
-      Width = 380
+      Width = 297
       Height = 21
       KeyField = 'Extra_Charge'
       ListField = 'Description'

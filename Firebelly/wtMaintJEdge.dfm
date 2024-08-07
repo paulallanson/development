@@ -2,7 +2,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   Left = 159
   Top = 142
   Caption = 'Maintain Edges'
-  ClientHeight = 234
+  ClientHeight = 179
   ClientWidth = 489
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,8 +14,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   OnActivate = FormActivate
   TextHeight = 13
   object lblDelete: TLabel
-    Left = 40
-    Top = 200
+    Left = 32
+    Top = 152
     Width = 106
     Height = 13
     Caption = 'Delete these details?'
@@ -27,8 +27,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 167
-    Top = 190
+    Left = 159
+    Top = 142
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -40,8 +40,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 255
-    Top = 190
+    Left = 247
+    Top = 142
     Width = 75
     Height = 25
     Cancel = True
@@ -54,7 +54,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Left = 0
     Top = 0
     Width = 489
-    Height = 184
+    Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
@@ -89,14 +89,14 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     end
     object Label7: TLabel
       Left = 331
-      Top = 145
+      Top = 108
       Width = 53
       Height = 13
       Caption = 'Total price'
     end
     object Label4: TLabel
-      Left = 16
-      Top = 145
+      Left = 331
+      Top = 76
       Width = 50
       Height = 13
       Caption = 'Unit price'
@@ -114,7 +114,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     object dblkpEdgeType: TDBLookupComboBox
       Left = 88
       Top = 40
-      Width = 193
+      Width = 161
       Height = 21
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
@@ -125,7 +125,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     object dblkpEdge: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 345
+      Width = 193
       Height = 21
       KeyField = 'edge_profile'
       ListField = 'description'
@@ -143,8 +143,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       OnChange = edtLengthChange
     end
     object edtUnitPrice: TCREditMoney
-      Left = 88
-      Top = 141
+      Left = 392
+      Top = 72
       Width = 81
       Height = 21
       TabOrder = 4
@@ -152,7 +152,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     end
     object edtTotalPrice: TCREditMoney
       Left = 392
-      Top = 141
+      Top = 104
       Width = 81
       Height = 21
       TabStop = False
@@ -161,8 +161,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       TabOrder = 5
     end
     object btnEdge: TBitBtn
-      Left = 448
-      Top = 71
+      Left = 288
+      Top = 70
       Width = 25
       Height = 25
       Hint = 'maintain edge details'
@@ -184,13 +184,13 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     SQL.Strings = (
       'select *'
       'from Edge_Type')
-    Left = 244
-    Top = 10
+    Left = 16
+    Top = 136
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 294
-    Top = 10
+    Left = 56
+    Top = 136
   end
   object qryEdgeThickness: TFDQuery
     ConnectionName = 'wt'
@@ -203,8 +203,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       'Material_Type = :Material_Type and'
       'Edge_thickness.Edge_profile = Edge_profile.Edge_profile'
       'order by Edge_profile.description')
-    Left = 90
-    Top = 34
+    Left = 264
+    Top = 8
     ParamData = <
       item
         Name = 'Edge_Type'
@@ -216,8 +216,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   end
   object dtsEdgeThickness: TDataSource
     DataSet = qryEdgeThickness
-    Left = 130
-    Top = 34
+    Left = 296
+    Top = 8
   end
   object qryOneEdgeThickness: TFDQuery
     ConnectionName = 'wt'
@@ -239,8 +239,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'Edge_profile = :Edge_profile')
-    Left = 408
-    Top = 146
+    Left = 320
+    Top = 136
     ParamData = <
       item
         Name = 'Material_type'

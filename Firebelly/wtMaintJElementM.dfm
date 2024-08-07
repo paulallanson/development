@@ -3,8 +3,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Global change elements'
-  ClientHeight = 205
-  ClientWidth = 536
+  ClientHeight = 187
+  ClientWidth = 520
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 520
     Height = 137
     Align = alTop
     BevelOuter = bvNone
@@ -54,7 +54,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       Caption = 'Unit price'
     end
     object SpeedButton1: TSpeedButton
-      Left = 490
+      Left = 354
       Top = 71
       Width = 23
       Height = 22
@@ -115,7 +115,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 390
+      Width = 249
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -154,8 +154,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     end
   end
   object btnOK: TBitBtn
-    Left = 216
-    Top = 154
+    Left = 208
+    Top = 152
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -166,8 +166,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 304
-    Top = 154
+    Left = 296
+    Top = 152
     Width = 75
     Height = 25
     Cancel = True

@@ -2,7 +2,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   Left = 192
   Top = 107
   Caption = 'Maintain Extras'
-  ClientHeight = 231
+  ClientHeight = 207
   ClientWidth = 553
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,13 +14,13 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   OnActivate = FormActivate
   DesignSize = (
     553
-    231)
+    207)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 72
     Top = 184
     Width = 106
-    Height = 37
+    Height = 13
     Anchors = [akLeft, akTop, akBottom]
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
@@ -29,14 +29,13 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitHeight = 13
   end
   object btnOK: TBitBtn
     Left = 203
-    Top = 181
+    Top = 176
     Width = 75
     Height = 25
-    Anchors = [akLeft, akBottom]
+    Anchors = [akLeft, akTop, akBottom]
     Caption = 'OK'
     Default = True
     Enabled = False
@@ -44,20 +43,18 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 179
   end
   object BitBtn2: TBitBtn
     Left = 291
-    Top = 181
+    Top = 176
     Width = 75
     Height = 25
-    Anchors = [akLeft, akBottom]
+    Anchors = [akLeft, akTop, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 179
   end
   object pnlDetails: TPanel
     Left = 0
@@ -68,7 +65,6 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 547
     object Label3: TLabel
       Left = 16
       Top = 20
@@ -128,7 +124,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     object dblkpExtras: TDBLookupComboBox
       Left = 88
       Top = 16
-      Width = 350
+      Width = 281
       Height = 21
       KeyField = 'Extra_Charge'
       ListField = 'Description'

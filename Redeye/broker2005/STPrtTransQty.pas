@@ -16,34 +16,35 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     qryCheckBinCount: TFDQuery;
-    GroupBox1: TGroupBox;
-    memoQty: TMemo;
-    Label5: TLabel;
-    Label1: TLabel;
-    PackSizeMemo: TMemo;
-    MemoNoofPacks: TMemo;
-    QtyLabel: TLabel;
-    BinLabel: TLabel;
-    BinEdit: TEdit;
-    BinBitBtn: TBitBtn;
-    Label2: TLabel;
-    CostMemo: TMemo;
-    GroupBox2: TGroupBox;
-    Label3: TLabel;
-    EdtStckDsc: TEdit;
-    ChkBxInvUpfrnt: TCheckBox;
-    Label4: TLabel;
-    spnSets: TSpinEdit;
-    Label6: TLabel;
-    memPO: TMemo;
-    Label7: TLabel;
-    edtPalletID: TEdit;
-    chkbxOvers: TCheckBox;
     pnlJobNumber: TPanel;
     grpbxJobNumber: TGroupBox;
     Label8: TLabel;
     edtJobNumber: TEdit;
     qryJobBag: TFDQuery;
+    pnlMain: TPanel;
+    GroupBox1: TGroupBox;
+    Label5: TLabel;
+    Label1: TLabel;
+    QtyLabel: TLabel;
+    BinLabel: TLabel;
+    Label2: TLabel;
+    memoQty: TMemo;
+    PackSizeMemo: TMemo;
+    MemoNoofPacks: TMemo;
+    BinEdit: TEdit;
+    BinBitBtn: TBitBtn;
+    CostMemo: TMemo;
+    GroupBox2: TGroupBox;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    EdtStckDsc: TEdit;
+    ChkBxInvUpfrnt: TCheckBox;
+    spnSets: TSpinEdit;
+    memPO: TMemo;
+    edtPalletID: TEdit;
+    chkbxOvers: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure CostMemoExit(Sender: TObject);
@@ -61,6 +62,7 @@ type
     procedure CostMemoKeyPress(Sender: TObject; var Key: Char);
     procedure MemoNoofPacksKeyPress(Sender: TObject; var Key: Char);
     procedure MemoNoofPacksChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     sOldValue: String;
@@ -90,9 +92,6 @@ uses
 
 procedure TSTPrtTransQtyFrm.FormActivate(Sender: TObject);
 begin
-  {Don't show Job Number prompt unless production bin}
-  pnlJobNumber.height := 0;
-  self.height := 391;
 
   chkbxinvUpfrnt.enabled := dmBroker.IsSecurityUser(frmpbMainMenu.iOperator);
   EdtStckDsc.enabled := dmBroker.IsSecurityUser(frmpbMainMenu.iOperator);
@@ -123,6 +122,13 @@ begin
   {PackSizeMemo.Enabled := Trim(sPackSize) = '' };
   CheckOK(Self) ;
   bOK := False ;
+end;
+
+procedure TSTPrtTransQtyFrm.FormCreate(Sender: TObject);
+begin
+  {Don't show Job Number prompt unless production bin}
+//  pnlJobNumber.height := 0;
+//  self.height := 391;
 end;
 
 procedure TSTPrtTransQtyFrm.OKBitBtnClick(Sender: TObject);

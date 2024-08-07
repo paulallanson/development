@@ -38,6 +38,7 @@ type
     qrlblGross: TQRLabel;
     qrlblNett: TQRLabel;
     qryEndUser: TFDQuery;
+    QRLabel1: TQRLabel;
     qrySOLine: TFDQuery;
     QRDBText7: TQRDBText;
     qrySOLineSales_Order: TIntegerField;
