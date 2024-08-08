@@ -69,6 +69,7 @@ type
     Label11: TLabel;
     memMaintenance: TMemo;
     memWarranty: TRichEdit;
+    chkbxAllowBespokeSlabSizes: TCheckBox;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -163,6 +164,7 @@ begin
       memWarranty.Text := '';
       memMaintenance.Text := '';
 
+      chkbxAllowBespokeSlabSizes.Checked := false;
       chkbxShowOnline.Checked := false;
       chkbxInactive.Checked := false;
 
@@ -197,6 +199,7 @@ begin
 
         dblkpSupplier.keyvalue := fieldbyname('Preferred_Supplier').asinteger;
 
+        chkbxAllowBespokeSlabSizes.Checked := (fieldbyname('Allow_Bespoke_Slab_Sizes').asstring = 'Y');
         chkbxShowOnline.Checked := (fieldbyname('Show_Online').asstring = 'Y');
         chkbxInactive.Checked := (fieldbyname('inActive').asstring = 'Y');
 
@@ -442,6 +445,11 @@ begin
         ParamByName('inActive').asstring := 'Y'
       else
         ParamByName('inActive').asstring := 'N';
+
+      if chkbxAllowBespokeSlabSizes.Checked then
+        ParamByName('Allow_Bespoke_Slab_Sizes').asstring := 'Y'
+      else
+        ParamByName('Allow_Bespoke_Slab_Sizes').asstring := 'N';
 
       iPathLength := length(sImageLocation);
       iFileLength := length(trim(edtImagePath.text));

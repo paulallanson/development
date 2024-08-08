@@ -98,7 +98,7 @@ uses
   System.UITypes, System.Types,
   WtMaintJob, WTRSJobCutSched, WTRSJobMasonRpt, WTJobSearch,
   wtRSJobSheet, WtMaintJobComplete, WTLUJobRpts, wtMain, wtDataModule,
-  WTRSJobRemedialSheet;
+  WTRSJobRemedialSheet, wtRSJobSheetPreRem;
 
 {$R *.DFM}
 
@@ -713,7 +713,7 @@ begin
   Screen.Cursor := crHourglass;
 
 {$IFDEF ROMANY}
-  frmWtRSJobSheetPreRem := TfrmWtRSJobSheetPreRem.Create( Application );
+   frmWtRSJobSheetPreRem := TfrmWtRSJobSheetPreRem.Create( Application );
   try
     Key := dbgDetails.datasource.DataSet.FieldByName('Job').asinteger;
     frmWtRSJobSheetPreRem.PrintType := 'R';

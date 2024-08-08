@@ -2,7 +2,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Left = 381
   Top = 145
   Caption = 'Maintain Edges'
-  ClientHeight = 277
+  ClientHeight = 291
   ClientWidth = 508
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,11 +14,11 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   OnActivate = FormActivate
   DesignSize = (
     508
-    277)
+    291)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 40
-    Top = 245
+    Top = 251
     Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -31,8 +31,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 182
-    Top = 239
+    Left = 189
+    Top = 245
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -46,7 +46,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object BitBtn2: TBitBtn
     Left = 270
-    Top = 239
+    Top = 245
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -65,7 +65,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 506
+    ExplicitWidth = 502
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -160,7 +160,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     object dblkpEdge: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 201
+      Width = 350
       Height = 21
       KeyField = 'edge_profile'
       ListField = 'description'
@@ -196,8 +196,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       TabOrder = 6
     end
     object btnEdge: TBitBtn
-      Left = 296
-      Top = 70
+      Left = 456
+      Top = 71
       Width = 25
       Height = 25
       Hint = 'maintain edge details'

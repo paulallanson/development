@@ -115,12 +115,12 @@ type
     gtQRLabel2: TQRLabel;
     lblCustOrderNo: TQRLabel;
     qrsdQLabour: TQRSubDetail;
-    qrlblLabourUTR: TQRLabel;
     qrlblLabourCharge: TQRLabel;
     qrlblLabourVAT: TQRLabel;
     qryQLabour: TFDQuery;
     qrlblReverseCharge: TQRLabel;
     qryGetReverseCharge: TFDQuery;
+    qrlblLabourUTR: TQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -299,7 +299,8 @@ begin
 //  qrlblCompanyName.caption := qryCompanyAddress.fieldbyname('Company_Name').asstring;
   qrlblCompanyName.caption := '';
 
-  qrlblVATReg.caption := 'VAT Registration No. ' + qryCompanyAddress.fieldbyname('VAT_Number').asstring;
+//  qrlblVATReg.caption := 'VAT Registration No. ' + qryCompanyAddress.fieldbyname('VAT_Number').asstring;
+  qrlblVATReg.caption := 'Registered in England No. ' + qryCompanyAddress.fieldbyname('Company_Reg_Number').asstring + ' ' + 'VAT Registration No. ' + qryCompanyAddress.fieldbyname('VAT_Number').asstring;
   qrlblLabourUTR.caption := 'LABOUR CONTENT - UTR: ' + qryCompanyAddress.fieldbyname('Unique_Tax_Reference').asstring;
 
   for icount := 0 to 4 do

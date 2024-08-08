@@ -1,20 +1,21 @@
 object dtmdlStock: TdtmdlStock
   OnCreate = DataModuleCreate
-  Height = 467
-  Width = 572
+  Height = 584
+  Width = 715
+  PixelsPerInch = 120
   object qryAllStock: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select *, product_group.product_group_description'
       'from Product, product_group'
       'where Product.product_group = product_group.product_group')
-    Left = 24
-    Top = 16
+    Left = 30
+    Top = 20
   end
   object dtsAllStock: TDataSource
     DataSet = qryAllStock
-    Left = 240
-    Top = 88
+    Left = 28
+    Top = 94
   end
   object qryDummy: TFDQuery
     SQL.Strings = (
@@ -38,8 +39,8 @@ object dtmdlStock: TdtmdlStock
       'ORDER BY'
       '    Stock_item.Stock_code'
       '')
-    Left = 96
-    Top = 16
+    Left = 120
+    Top = 20
     ParamData = <
       item
         Name = 'Code'
@@ -51,13 +52,15 @@ object dtmdlStock: TdtmdlStock
   object wtStkDatabase: TFDConnection
     ConnectionName = 'STK'
     Params.Strings = (
+      'ConnectionDef=GSmart'
       'User_Name=readonly'
       'Password=R34donly4'
       'DriverID=MSSQL')
     LoginPrompt = False
+    OnError = wtStkDatabaseError
     BeforeConnect = wtStkDatabaseBeforeConnect
-    Left = 496
-    Top = 16
+    Left = 620
+    Top = 20
   end
   object qryStockSystem: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -65,8 +68,8 @@ object dtmdlStock: TdtmdlStock
       'SELECT *'
       'FROM Stock_System'
       'WHERE Stock_System = :Stock_System')
-    Left = 240
-    Top = 16
+    Left = 300
+    Top = 20
     ParamData = <
       item
         Name = 'Stock_System'
@@ -96,15 +99,15 @@ object dtmdlStock: TdtmdlStock
         'on'
       'from Product'
       'where Product_Code = :Product_Code')
-    Left = 472
-    Top = 160
+    Left = 590
+    Top = 200
     ParamData = <
       item
         Name = 'Product_Code'
       end>
   end
   object qryGSmart: TFDQuery
-    ConnectionName = 'STK'
+    Connection = wtStkDatabase
     SQL.Strings = (
       'SELECT  Stock.ID,'
       '        Stock.Stockcode AS Stock_Code,'
@@ -133,8 +136,8 @@ object dtmdlStock: TdtmdlStock
       'ORDER BY'
       '             Stock.Stockcode'
       '')
-    Left = 496
-    Top = 80
+    Left = 620
+    Top = 100
     ParamData = <
       item
         Name = 'Code'

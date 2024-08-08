@@ -92,6 +92,7 @@ type
     procedure Sage50DatabaseBeforeConnect(Sender: TObject);
     procedure MaximiserDBBeforeConnect(Sender: TObject);
     procedure QuickbooksDBBeforeConnect(Sender: TObject);
+    procedure DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     icustomer: integer;
     LastPaymentUpdate: TDateTime;
@@ -1591,6 +1592,17 @@ end;
 procedure TdmAccImport.Sage50DatabaseBeforeConnect(Sender: TObject);
 begin
   ConfigureFDConnection(Sage50Database);
+end;
+
+procedure TdmAccImport.DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 procedure TdmAccImport.SetAccountRef(const Value: string);

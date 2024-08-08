@@ -69,6 +69,7 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FaxDatabaseBeforeConnect(Sender: TObject);
+    procedure FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
   private
     { Private declarations }
   public
@@ -91,6 +92,17 @@ begin
   ConfigureFDConnection(FaxDatabase);
   FaxDatabase.Params.UserName := 'faxes';
   FaxDatabase.Params.Password:= 'rabbit';
+end;
+
+procedure TfrmAllFaxStatus.FaxDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
 end;
 
 procedure TfrmAllFaxStatus.FormActivate(Sender: TObject);

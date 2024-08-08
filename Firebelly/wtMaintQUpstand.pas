@@ -156,7 +156,7 @@ begin
       end;
 
     RefreshMaterialUse;
-    RefreshWorktops;
+//    RefreshWorktops;
 
     if frmWTMain.bEndUSer then
       EnableButtons;
@@ -229,12 +229,20 @@ begin
 end;
 
 procedure TfrmWTMaintQUpstand.RefreshThickness;
+var iThickness: integer;
 begin
+  try
+    iThickness := dblkpWTThickness.keyvalue;
+  except
+    iThickness := self.Thickness;
+  end;
+
   with qryWTThickness do
     begin
       close;
       open;
     end;
+  dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
 
@@ -252,7 +260,10 @@ begin
 
   if Mode <> qelAdd then
   begin
+
     dblkpMaterial.keyvalue := QUpstand.Material;
+
+    RefreshWorktops;
     dblkpWorktop.keyvalue := QUpstand.worktop;
     dblkpMaterialUse.keyvalue := QUpstand.MaterialUse;
 
@@ -278,6 +289,8 @@ begin
   else
   begin
     dblkpMaterial.keyvalue := Material;
+
+    RefreshWorktops;
     dblkpWorktop.keyvalue := Self.Worktop;
     dblkpMaterialUse.KeyValue := MaterialUse;
     with qryWTThickness do
@@ -381,8 +394,15 @@ begin
 
           parambyname('Customer').AsInteger := QUpstand.Parent.Customer;
           parambyname('Group_Number').AsInteger := QUpstand.Parent.ContractGroup;
-          parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
+
+          try
+            parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
+          except
+            parambyName('thickness').asinteger := 0;
+          end;
+
           open;
+
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QUpstand.PriceUnit := fieldbyname('Price_unit').asinteger;
         end;
