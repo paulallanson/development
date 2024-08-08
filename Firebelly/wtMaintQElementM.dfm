@@ -54,7 +54,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       Caption = 'Unit price'
     end
     object btnWorktops: TSpeedButton
-      Left = 354
+      Left = 506
       Top = 71
       Width = 23
       Height = 22
@@ -115,7 +115,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 249
+      Width = 390
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -231,8 +231,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
         '((inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workt' +
         'op_Group'
       'order by Worktop_group_description')
-    Left = 368
-    Top = 80
+    Left = 116
+    Top = 100
     ParamData = <
       item
         Name = 'material_type'
@@ -243,8 +243,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 296
-    Top = 56
+    Left = 26
+    Top = 70
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -268,8 +268,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 432
-    Top = 32
+    Left = 196
+    Top = 40
     ParamData = <
       item
         Name = 'Worktop'
@@ -280,8 +280,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 424
-    Top = 72
+    Left = 186
+    Top = 90
   end
   object qryWTThickness: TFDQuery
     MasterSource = dtsWorktops
@@ -328,8 +328,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 384
-    Top = 72
+    Left = 136
+    Top = 90
     ParamData = <
       item
         Name = 'material_type'
@@ -354,8 +354,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
         'aterial_Type'
       'order by Description')
-    Left = 384
-    Top = 16
+    Left = 136
+    Top = 20
     ParamData = <
       item
         Name = 'Material_Type'
@@ -363,8 +363,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 320
-    Top = 8
+    Left = 56
+    Top = 10
   end
   object qryUpThickness: TFDQuery
     MasterSource = dtsWorktops

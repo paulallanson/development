@@ -1543,7 +1543,8 @@ begin
         end;
     end;
 
-  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) and (not Quote.ContractQuote) then
+//  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) and (not Quote.ContractQuote) then
+  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) then
     begin
       if Quote.Slabs.count = 0 then
         begin

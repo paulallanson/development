@@ -58,7 +58,7 @@
         <DCC_UnitSearchPath>..\;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>..\</DCC_ExeOutput>
         <DCC_DcuOutput>..\Meridian\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_Define>FIREBELLY;$(DCC_Define)</DCC_Define>
+        <DCC_Define>FIREBELLY;ROMANY;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
@@ -582,10 +582,13 @@
         <DCCReference Include="..\Meridian\Reports\WtRPJobFittingTrade.pas">
             <Form>frmwtRPJobFittingTrade</Form>
         </DCCReference>
-        <DCCReference Include="..\wtWin7.pas"/>
         <DCCReference Include="..\Meridian\Reports\wtRPQuoteSummary.pas">
             <Form>frmwtRPQuoteSummary</Form>
         </DCCReference>
+        <DCCReference Include="..\wtRSJobSheetPreRem.pas">
+            <Form>frmWTRSJobSheetPreRem</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtWin7.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
@@ -622,7 +625,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="..\Meridian\Win32\Debug\Firebelly_Meridian.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\Firebelly_Meridian.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_Meridian.exe</RemoteName>
                         <Overwrite>true</Overwrite>

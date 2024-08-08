@@ -38,6 +38,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
+    ExplicitTop = 334
   end
   object BitBtn2: TBitBtn
     Left = 354
@@ -51,6 +52,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
+    ExplicitTop = 334
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -60,6 +62,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
+    ExplicitTop = 331
   end
   object PageControl1: TPageControl
     Left = 8
@@ -1253,6 +1256,9 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     object TabSheet3: TTabSheet
       Caption = 'Purchasing/Slabs'
       ImageIndex = 2
+      DesignSize = (
+        833
+        229)
       object Label4: TLabel
         Left = 8
         Top = 28
@@ -1313,7 +1319,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
             TabOrder = 0
             object btnAdd: TToolButton
               Left = 0
-              Top = 2
+              Top = 0
               Hint = 'New'
               Caption = 'Add'
               ImageIndex = 0
@@ -1322,7 +1328,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
             end
             object btnChange: TToolButton
               Left = 0
-              Top = 24
+              Top = 22
               Hint = 'Change'
               Caption = 'Chnage'
               ImageIndex = 1
@@ -1331,7 +1337,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
             end
             object btnDelete: TToolButton
               Left = 0
-              Top = 46
+              Top = 44
               Hint = 'Delete'
               ImageIndex = 3
               OnClick = btnDeleteClick
@@ -1390,6 +1396,15 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ListSource = dtsSuppliers
         TabOrder = 2
       end
+      object chkbxAllowBespokeSlabSizes: TCheckBox
+        Left = 393
+        Top = 203
+        Width = 216
+        Height = 17
+        Anchors = [akLeft, akBottom]
+        Caption = 'Allow Bespoke Slab Sizes'
+        TabOrder = 3
+      end
     end
     object TabSheet4: TTabSheet
       Caption = 'Warranty && Maintenance'
@@ -1442,6 +1457,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Anchors = [akLeft, akBottom]
     Caption = 'Show Material Type Online'
     TabOrder = 2
+    ExplicitTop = 302
   end
   object edtDescription: TEdit
     Left = 85
@@ -1957,6 +1973,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       '      Preferred_Supplier = :Preferred_Supplier,'
       '      Show_Online = :Show_Online,'
       '      inActive = :inactive,'
+      '      Allow_Bespoke_Slab_Sizes = :Allow_Bespoke_Slab_Sizes,'
       '      Image_Path = :Image_Path'
       'WHERE'
       '  Material_Type = :Material_Type')
@@ -1965,46 +1982,63 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     ParamData = <
       item
         Name = 'Description'
+        ParamType = ptInput
       end
       item
         Name = 'Sales_Nominal'
+        ParamType = ptInput
       end
       item
         Name = 'Purchase_Nominal'
+        ParamType = ptInput
       end
       item
         Name = 'Short_Description'
+        ParamType = ptInput
       end
       item
         Name = 'Long_Description'
+        ParamType = ptInput
       end
       item
         Name = 'Warranty_Description'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Maintenance_Description'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Worktop_Type'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Preferred_Supplier'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Show_Online'
+        ParamType = ptInput
       end
       item
         Name = 'inactive'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ALLOW_BESPOKE_SLAB_SIZES'
+        ParamType = ptInput
       end
       item
         Name = 'Image_Path'
+        ParamType = ptInput
       end
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end>
   end
   object qryAdd: TFDQuery
