@@ -351,6 +351,7 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
+        Width = 64
         Visible = True
       end
       item
@@ -419,6 +420,7 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Quote'
+        Width = 64
         Visible = True
       end
       item

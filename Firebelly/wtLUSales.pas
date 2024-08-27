@@ -700,6 +700,7 @@ begin
   finally
     frmWTSOrderSearch.free;
   end;
+
 end;
 
 procedure TfrmwtLUSales.btnTemplateClick(Sender: TObject);

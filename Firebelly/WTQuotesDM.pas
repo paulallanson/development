@@ -5296,7 +5296,7 @@ begin
     end
   else
 *)
- text := dtsAllQuotes.Dataset.fieldbyname('Status_Description').asstring;
+  text := dtsAllQuotes.Dataset.fieldbyname('Status_Description').asstring;
 end;
 
 function TdtmdlQuote.GetWorktopUnitPrice(tempCode,
