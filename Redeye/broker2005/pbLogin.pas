@@ -158,7 +158,6 @@ begin
         Close;
         Exit;
       end;
-      MessageDlg('Invalid login', mtError, [mbOK], 0);
       PassWordEdit.SetFocus;
       iLoginTries := iLoginTries + 1;
       if iLoginTries > 3 then

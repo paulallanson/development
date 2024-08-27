@@ -48,7 +48,7 @@ object frmWTLogin: TfrmWTLogin
     Left = 32
     Top = 140
     Width = 55
-    Height = 29
+    Height = 17
     Caption = 'Database'
   end
   object UserEdit: TEdit
