@@ -1437,8 +1437,12 @@ begin
       MessageDlg('Unique Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
     ekFKViolated:
       MessageDlg('Foreign Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
+    ekUserPwdInvalid:
+      MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
+    ekInvalidParams:
+      MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
   else
-    MessageDlg(Exc.Message, mtError, [mbOk], 0);
+    MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
   end;
 end;
 

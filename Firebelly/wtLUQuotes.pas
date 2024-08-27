@@ -263,54 +263,54 @@ begin
     Key := 0
   else
   if aMode = qDelete then
+  begin
+    if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 24) then {Don't delete if converted to order}
     begin
-      if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 24) then {Don't delete if converted to order}
-        begin
-          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you cannot delete the quote.',
-              mtConfirmation, [mbOK], 0);
-          exit;
-        end;
-      Key := dtmdlAllQuote.CurrentQuote;
-    end
+      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you cannot delete the quote.',
+        mtConfirmation, [mbOK], 0);
+      Exit;
+    end;
+    Key := dtmdlAllQuote.CurrentQuote;
+  end
   else
   if aMode = qRequote then
+  begin
+    if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 23) then
     begin
-      if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 23) then
-        begin
-          MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you can only requote through the sales order.',
-              mtConfirmation, [mbOK], 0);
-          exit;
-        end;
-      Key := dtmdlAllQuote.CurrentQuote;
-    end
+      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you can only requote through the sales order.',
+        mtConfirmation, [mbOK], 0);
+      Exit;
+    end;
+    Key := dtmdlAllQuote.CurrentQuote;
+  end
   else
   if aMode = qChange then
+  begin
+    if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 10) and
+       (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger < 23)  then
     begin
-      if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 10) and
-         (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger < 23)  then
-        begin
-          if  (dbgDetails.DataSource.DataSet.FieldByName('Expiry_Date').asdatetime <> 0) and
-              (dbgDetails.DataSource.DataSet.FieldByName('Expiry_Date').asdatetime < date) then
-              if MessageDlg('This quote has expired. Do you want to continue?', mtConfirmation, [mbYes, mbNo], 0) = mrNo then
-                exit
-(*          else
-          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', continue?',
-              mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
-          exit;
+      if  (dbgDetails.DataSource.DataSet.FieldByName('Expiry_Date').asdatetime <> 0) and
+          (dbgDetails.DataSource.DataSet.FieldByName('Expiry_Date').asdatetime < date) then
+        if MessageDlg('This quote has expired. Do you want to continue?', mtConfirmation, [mbYes, mbNo], 0) = mrNo then
+          Exit;
+(*        else
+      if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', continue?',
+          mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+      exit;
 *)
-        end
-      else
-      if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger > 22) then
-        begin
-          if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', only the costs can be changed or deleted, continue?',
-              mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
-            exit
-          else
-            aMode := qView;
-        end;
-
-      Key := dtmdlAllQuote.CurrentQuote;
     end
+    else
+    if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger > 22) then
+    begin
+      if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', only the costs can be changed or deleted, continue?',
+          mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+        exit
+      else
+        aMode := qView;
+    end;
+
+    Key := dtmdlAllQuote.CurrentQuote;
+  end
   else
     Key := dtmdlAllQuote.CurrentQuote;
 

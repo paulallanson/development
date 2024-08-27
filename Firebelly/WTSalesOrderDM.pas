@@ -13,6 +13,7 @@ type
   TsolMode   = (solAdd, solChange, solDelete, solCopy, solRequote, solView);
   TsoevMode   = (soevAdd, soevChange, soevDelete, soevView);
 
+
   TdtmdlSalesOrder = class(TDataModule)
     qryAllSales: TFDQuery;
     dtsAllSales: TDataSource;
@@ -188,7 +189,7 @@ type
     qryAllSalesRemedial_Production: TWideStringField;
     qryAllSalesRemedial_No_Production: TWideStringField;
     qryRemedialCount: TFDQuery;
-    qryAllSalesSales_Order_Number: TWideStringField;
+    qryAllSalesSales_Order_Number: TFloatField;
     qryRemedialReport: TFDQuery;
     qrySOUpRemedial: TFDQuery;
     qryJobsDummyOlder: TFDQuery;
