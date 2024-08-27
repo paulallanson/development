@@ -1440,9 +1440,9 @@ begin
     ekUserPwdInvalid:
       MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
     ekInvalidParams:
-      MessageDlg('Invalid params. Please, contact technical support.', mtError, [mbOk], 0);
+      MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
   else
-    MessageDlg('Unknown error. Please, contact technical support.', mtError, [mbOk], 0);
+    MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
   end;
 end;
 
