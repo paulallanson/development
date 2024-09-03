@@ -6,7 +6,7 @@ uses
   SysUtils, Classes, DB, wtNotesDM, wtQuotesDM, AllCommon, ShellAPI,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, WTMain;
 
 type
   TsopMode   = (sopAdd, sopChange, sopDelete, sopCopy, sopView, sopConvert, sopRemedial);
@@ -2098,6 +2098,8 @@ begin
   if DbKey = 0 then
     begin
       DbKey := FDataModule.GetNextSONumber;
+      dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4000, self.dbkey, 0, 0, 0, 'Number of Lines: ' + inttostr(self.Lines.count));
+
       with FDataModule.qrySOAddHeader do
         begin
           ParamByName('Sales_Order').AsInteger := DbKey;
@@ -2238,6 +2240,8 @@ begin
   else
   if TempAll then
     begin
+      dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4100, self.dbkey, 0, 0, 0,  'Number of Lines: ' + inttostr(self.Lines.count));
+
       with FDataModule.qrySOUpHeader do
         begin
           ParamByName('Sales_Order').AsInteger := DbKey;
@@ -3169,6 +3173,8 @@ end;
 
 procedure TSOLine.SaveToDB;
 begin
+  dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4200, parent.dbkey, self.SOLNumber, 0, 0, 'Quote Number: ' + inttostr(self.Quote)) ;
+
   with FParent.FDataModule.qrySOAddLine do
   begin
     ParamByName('Sales_Order').AsInteger := FParent.DbKey;
@@ -3207,6 +3213,7 @@ begin
     else
       ParambyName('Vat').asinteger := Vat;
     ExecSQL;
+
   end;
   if Quote <> 0 then
     begin
@@ -3218,6 +3225,8 @@ end;
 
 procedure TSOLine.UpdateDB;
 begin
+  dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4300, parent.dbkey, self.SOLNumber, 0, 0, 'Quote Number: ' + inttostr(self.Quote)) ;
+
   with FParent.FDataModule.qrySOUpdLine do
   begin
     ParamByName('Sales_Order').AsInteger := FParent.DbKey;
@@ -4245,3 +4254,12 @@ begin
 end;
 
 end.
+
+
+uses wtMain;
+
+
+uses wtMain;
+
+
+uses wtMain;

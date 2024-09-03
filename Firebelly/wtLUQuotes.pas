@@ -266,7 +266,7 @@ begin
   begin
     if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 24) then {Don't delete if converted to order}
     begin
-      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you cannot delete the quote.',
+      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', you cannot delete the quote.',
         mtConfirmation, [mbOK], 0);
       Exit;
     end;
@@ -277,7 +277,7 @@ begin
   begin
     if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger >= 23) then
     begin
-      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', you can only requote through the sales order.',
+      MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', you can only requote through the sales order.',
         mtConfirmation, [mbOK], 0);
       Exit;
     end;
@@ -302,7 +302,7 @@ begin
     else
     if (dbgdetails.DataSource.DataSet.FieldByName('Quote_status').asinteger > 22) then
     begin
-      if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Text').asstring + ', only the costs can be changed or deleted, continue?',
+      if MessageDlg('This quote is '+ dbgdetails.DataSource.DataSet.FieldByName('Status_Description').asstring + ', only the costs can be changed or deleted, continue?',
           mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
         exit
       else

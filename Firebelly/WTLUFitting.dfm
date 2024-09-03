@@ -3,8 +3,8 @@ object frmWTLUFitting: TfrmWTLUFitting
   Top = 121
   ActiveControl = cmbCustomerFilter
   Caption = 'Fitting Details'
-  ClientHeight = 351
-  ClientWidth = 1248
+  ClientHeight = 423
+  ClientWidth = 1271
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,19 +24,20 @@ object frmWTLUFitting: TfrmWTLUFitting
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1248
+    Width = 1271
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 1242
+        Width = 1265
       end>
+    ExplicitWidth = 1242
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1233
+      Width = 1256
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -44,7 +45,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1233
+        1256
         30)
       object Label2: TLabel
         Left = 0
@@ -60,7 +61,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 970
+        Left = 993
         Top = 6
         Width = 81
         Height = 15
@@ -90,7 +91,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1057
+        Left = 1080
         Top = 3
         Width = 145
         Height = 21
@@ -103,13 +104,14 @@ object frmWTLUFitting: TfrmWTLUFitting
           'Trade'
           'Retail'
           'Commercial')
+        ExplicitLeft = 1051
       end
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 332
-    Width = 1248
+    Top = 404
+    Width = 1271
     Height = 19
     Panels = <
       item
@@ -121,17 +123,21 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Width = 50
       end>
+    ExplicitTop = 323
+    ExplicitWidth = 1242
   end
   object Panel1: TPanel
     Left = 0
-    Top = 291
-    Width = 1248
+    Top = 363
+    Width = 1271
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 282
+    ExplicitWidth = 1242
     DesignSize = (
-      1248
+      1271
       41)
     object Label1: TLabel
       Left = 8
@@ -141,7 +147,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 933
+      Left = 950
       Top = 15
       Width = 59
       Height = 13
@@ -158,7 +164,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1097
+      Left = 1114
       Top = 9
       Width = 75
       Height = 25
@@ -166,6 +172,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 1085
     end
     object edtSearch: TEdit
       Left = 56
@@ -176,13 +183,14 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 998
+      Left = 1015
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 986
     end
     object BitBtn2: TBitBtn
       Left = 240
@@ -276,19 +284,20 @@ object frmWTLUFitting: TfrmWTLUFitting
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1248
+    Width = 1271
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1242
+        Width = 1265
       end>
+    ExplicitWidth = 1242
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1233
+      Width = 1256
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -369,8 +378,8 @@ object frmWTLUFitting: TfrmWTLUFitting
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1248
-    Height = 214
+    Width = 1271
+    Height = 286
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
@@ -421,6 +430,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -537,19 +547,20 @@ object frmWTLUFitting: TfrmWTLUFitting
         Expanded = False
         FieldName = 'Job'
         Title.Caption = 'Job Number'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
-        Width = 94
         Visible = True
       end>
   end
