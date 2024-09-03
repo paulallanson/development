@@ -27,7 +27,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       1036
       41)
     object btnClose: TButton
-      Left = 929
+      Left = 923
       Top = 8
       Width = 75
       Height = 25
@@ -743,8 +743,12 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     ConnectionName = 'STK'
     Params.Strings = (
       'User Name=readonly'
-      'Password=R34donly4')
+      'Password=R34donly4'
+      'ConnectionDef=GSmart'
+      'DriverID=MSSQL')
     LoginPrompt = False
+    OnError = wtStkDatabaseError
+    BeforeConnect = wtStkDatabaseBeforeConnect
     Left = 682
     Top = 96
   end

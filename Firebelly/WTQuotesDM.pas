@@ -141,10 +141,6 @@ type
     qryAllQuotesCustomer_is_Speculative: TWideStringField;
     qryAllQuotesAddress: TIntegerField;
     qryAllQuotesStatus_Description: TWideStringField;
-    procedure qryAllQuotesStatus_TextGetText(Sender: TField;
-      var Text: String; DisplayText: Boolean);
-    procedure qryAllQuotesExpiry_Date_NewGetText(Sender: TField;
-      var Text: String; DisplayText: Boolean);
   private
     function GetHeaderCount: integer;
     function GetHeaderCountAll: integer;
@@ -5277,28 +5273,6 @@ begin
     end;
 end;
 
-procedure TdtmdlQuote.qryAllQuotesStatus_TextGetText(Sender: TField;
-  var Text: String; DisplayText: Boolean);
-begin
-(*  if (dtsAllQuotes.Dataset.fieldbyname('Quote_status').asinteger = 30) then
-    begin
-      qryGetJob.close;
-      qryGetJob.parambyname('Quote').asinteger := dtsAllQuotes.Dataset.fieldbyname('Quote').asinteger;
-      qryGetJob.open;
-
-      if qryGetJob.recordcount > 0 then
-        begin
-          text := qryGetJob.fieldbyname('Job').asstring;
-          exit;
-        end
-      else
-        text := dtsAllQuotes.Dataset.fieldbyname('Status_Description').asstring;
-    end
-  else
-*)
-  text := dtsAllQuotes.Dataset.fieldbyname('Status_Description').asstring;
-end;
-
 function TdtmdlQuote.GetWorktopUnitPrice(tempCode,
   tempSize: integer): real;
 begin
@@ -5815,16 +5789,6 @@ begin
           next;
         end;
     end;
-end;
-
-procedure TdtmdlQuote.qryAllQuotesExpiry_Date_NewGetText(Sender: TField;
-  var Text: String; DisplayText: Boolean);
-begin
-(*  if (qryAllQuotesExpiry_Date.asdatetime = 0) then
-    text := ''
-  else
-    text := padatestr(qryAllQuotesExpiry_Date.asdatetime);
-*)
 end;
 
 end.

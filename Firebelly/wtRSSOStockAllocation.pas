@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef;
 
 type
   TfrmWTRSSOStockAllocation = class(TForm)
@@ -92,6 +93,9 @@ type
     procedure dtsSalesOrdersDataChange(Sender: TObject; Field: TField);
     procedure btnExcludeClick(Sender: TObject);
     procedure rdgrpAllocateClick(Sender: TObject);
+    procedure wtStkDatabaseBeforeConnect(Sender: TObject);
+    procedure wtStkDatabaseError(ASender, AInitiator: TObject;
+      var AException: Exception);
   private
     DateTo, DateFrom: Tdatetime;
     ExportPath: string;
@@ -487,6 +491,24 @@ end;
 procedure TfrmWTRSSOStockAllocation.rdgrpSortByClick(Sender: TObject);
 begin
   GetDetails;
+end;
+
+procedure TfrmWTRSSOStockAllocation.wtStkDatabaseBeforeConnect(Sender: TObject);
+begin
+  ConfigureFDConnection(wtStkDatabase);
+end;
+
+procedure TfrmWTRSSOStockAllocation.wtStkDatabaseError(ASender,
+  AInitiator: TObject; var AException: Exception);
+var
+  Exc: EFDDBEngineException;
+begin
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    ParseException(Exc);
+  end;
+
 end;
 
 procedure TfrmWTRSSOStockAllocation.rdgrpCategoryClick(Sender: TObject);

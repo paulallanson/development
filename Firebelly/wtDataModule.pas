@@ -54,6 +54,7 @@ type
     lkpPriceBasisPrice_Basis: TWideStringField;
     lkpPriceBasisDescription: TWideStringField;
     lkpPriceBasisQty_Basis_Required: TWideStringField;
+    qryAddAuditTrail: TFDQuery;
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
     procedure dtbsWorktopsBeforeConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
@@ -72,6 +73,7 @@ type
     function IsOutlookRunning: boolean;
     function CheckBalancePaid: boolean;
     function CheckMandatorySODates: boolean;
+    procedure AddAuditTrail(iOperator: integer; AuditType: integer; Audit1, Audit2, Audit3, Audit4: real; AuditText: string);
     procedure CreateContractDocDirectory(tempCode: string);
     procedure CreateCustomerDocDirectory(tempCode: string);
     procedure CreateCustomerSiteDocDirectory(tempCode, tempSite: string);
@@ -1188,6 +1190,23 @@ begin
       execsql;
 
       Result := qryDeleteWSLock.RowsAffected;
+    end;
+end;
+
+procedure TdtmdlWorktops.AddAuditTrail(iOperator: integer; AuditType: integer; Audit1, Audit2, Audit3, Audit4: real; AuditText: string);
+begin
+  with qryAddAuditTrail do
+    begin
+      close;
+      parambyname('Operator').asinteger := iOperator;
+      parambyname('Date_Time_Entered').asdatetime := now;
+      parambyname('Audit_Type').asinteger := AuditType;
+      parambyname('Audit_Code_1').asfloat := Audit1;
+      parambyname('Audit_Code_2').asfloat := Audit2;
+      parambyname('Audit_Code_3').asfloat := Audit3;
+      parambyname('Audit_Code_4').asfloat := Audit4;
+      parambyname('Audit_Text').asstring := AuditText;
+      execsql;
     end;
 end;
 
