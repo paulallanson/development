@@ -681,19 +681,19 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       end
       object QRDBText2: TQRDBText
         Tag = 1
-        Left = -73
+        Left = 0
         Top = 1
         Width = 68
         Height = 19
         Size.Values = (
           40.216666666666670000
-          -154.516666666666700000
+          0.000000000000000000
           2.116666666666667000
           143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
-        Alignment = taRightJustify
+        Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
         DataSet = qrySalesOrders
@@ -1218,6 +1218,35 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
         VerticalAlignment = tlTop
         FontSize = 8
       end
+      object QRLabel13: TQRLabel
+        Left = 9
+        Top = 11
+        Width = 141
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          19.050000000000000000
+          23.283333333333330000
+          298.450000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = '*** NOT to be Invoiced'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
     end
     object qrbGroupHeader: TQRGroup
       Left = 47
@@ -1509,8 +1538,134 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
       end
     end
   end
-  object qrySalesOrders: TFDQuery
+  object qrySalesOrdersOld: TFDQuery
     ConnectionName = 'Wt'
+    SQL.Strings = (
+      'SELECT  Sales_Order.Sales_Order,'
+      '        Sales_Order.Date_Raised,'
+      '        Sales_Order.Date_Required,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Sales_Order_Status,'
+      '        Sales_Order.On_Hold,'
+      '        Sales_Order_Status.Sales_Order_Status_Desc,'
+      '        Sales_Order.Deposit_amount,'
+      '        Sales_Order.Goods_Value,'
+      '        Sales_Order.VAT_Value,'
+      '        Sales_Order.IsFittingInOutlook,'
+      
+        '        (Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sales' +
+        '_order.Deposit_amount) as Total_Value,'
+      '        Sales_Order.Rep,'
+      '        Rep.Rep_Name,'
+      '        Sales_Order.Inactive,'
+      '        Sales_Order.Do_Not_Invoice,'
+      '        Sales_Order.Customer_Name,'
+      '        Customer.Is_Retail_Customer,'
+      '        Customer.Is_Commercial_Customer,'
+      '        Customer.Requires_App_For_Payment,'
+      '        (select top 1 Job'
+      '        from sales_order_line, sales_Order SO'
+      '        where sales_order_line.sales_order = SO.sales_order and'
+      
+        '              sales_order_line.sales_order = sales_order.sales_o' +
+        'rder and'
+      '              ((job is not null) or (Job <> 0))) as Job_Number,'
+      '        Payment_Terms.Payment_Terms_Description'
+      'FROM Payment_Terms'
+      '      RIGHT JOIN (Sales_Order_Status'
+      '      INNER JOIN (Rep'
+      '      INNER JOIN (Customer'
+      '      INNER JOIN Sales_Order'
+      '        ON Customer.Customer = Sales_Order.Customer)'
+      '        ON Rep.Rep = Sales_Order.Rep)'
+      
+        '        ON Sales_Order_Status.Sales_Order_Status = Sales_Order.S' +
+        'ales_Order_Status)'
+      '        ON Payment_Terms.Payment_Terms = Customer.Payment_Terms'
+      
+        'WHERE ((Sales_Order.Customer = :Customer) or (0 = :Customer)) an' +
+        'd'
+      '      ((Sales_Order.Rep = :Rep) or (:Rep = 0)) and'
+      
+        '      ((Sales_Order.Date_Required >= :Date_From) and (Sales_orde' +
+        'r.Date_Required <= :Date_To)) and'
+      
+        '      ((Sales_Order.Sales_Order_Status >= 10) AND (Sales_Order.S' +
+        'ales_Order_Status < :Sales_Order_Status)) and'
+      
+        '      ((Sales_Order.inactive = '#39'N'#39') or (Sales_Order.inactive is ' +
+        'NULL) or (Sales_Order.inactive = '#39#39')) AND'
+      
+        '      ((Sales_Order.Do_not_Invoice = :Do_not_Invoice) OR (Sales_' +
+        'Order.Do_not_Invoice = '#39'N'#39') OR (Sales_Order.Do_not_Invoice IS NU' +
+        'LL)) AND'
+      
+        '      ((Sales_Order.IsFittingInOutlook = :IsFittingInOutlook) OR' +
+        ' (Sales_Order.IsFittingInOutlook = '#39'Y'#39') OR (Sales_Order.IsFittin' +
+        'gInOutlook IS NULL)) AND'
+      
+        '      (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND ' +
+        '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
+        '(:Is_Retail_Customer = '#39'A'#39'))'
+      '--      AND ('#39'A'#39' = :Requires_App_For_Payment)'
+      
+        '--      ((Customer.Requires_App_For_Payment = :Requires_App_For_' +
+        'Payment) OR (:Requires_App_For_Payment = '#39'A'#39'))')
+    Left = 452
+    Top = 350
+    ParamData = <
+      item
+        Name = 'Customer'
+        ParamType = ptInput
+      end
+      item
+        Name = 'Rep'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'Date_From'
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'Date_To'
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'Sales_Order_Status'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'DO_NOT_INVOICE'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'ISFITTINGINOUTLOOK'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'IS_RETAIL_CUSTOMER'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'IS_COMMERCIAL_CUSTOMER'
+        DataType = ftString
+        ParamType = ptInput
+      end>
+  end
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Date_Raised,'
@@ -1581,193 +1736,58 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
         '(:Is_Retail_Customer = '#39'A'#39')) AND'
       
         '      ((Customer.Requires_App_For_Payment = :Requires_App_For_Pa' +
-        'yment) OR (:Requires_App_For_Payment = '#39'A'#39'))'
-      '')
-    Left = 116
-    Top = 342
+        'yment) OR (:Requires_App_For_Payment = '#39'A'#39'))')
+    Left = 192
+    Top = 344
     ParamData = <
       item
-        Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
-        Name = 'Rep'
+        Name = 'CUSTOMER'
         DataType = ftInteger
         ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'Date_From'
-        DataType = ftDateTime
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Date_To'
-        DataType = ftDateTime
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Sales_Order_Status'
+        Name = 'REP'
         DataType = ftInteger
         ParamType = ptInput
-        Value = Null
+      end
+      item
+        Name = 'DATE_FROM'
+        DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
+        Name = 'DATE_TO'
+        DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_ORDER_STATUS'
+        DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'DO_NOT_INVOICE'
-        ParamType = ptInput
-      end
-      item
-        Name = 'IsFittingInOutlook'
         DataType = ftString
         ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'Is_Retail_Customer'
+        Name = 'ISFITTINGINOUTLOOK'
         DataType = ftString
         ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'Is_Commercial_Customer'
-        ParamType = ptInput
-      end
-      item
-        Name = 'Requires_App_For_Payment'
-        ParamType = ptInput
-      end>
-  end
-  object qrySalesOrderOld: TFDQuery
-    ConnectionName = 'Wt'
-    SQL.Strings = (
-      'SELECT  Sales_Order.Sales_Order,'
-      '        Sales_Order.Date_Raised,'
-      '        Sales_Order.Date_Required,'
-      '        Sales_Order.Reference,'
-      '        Sales_Order.Order_ref_no,'
-      '        Sales_Order.Sales_Order_Status,'
-      '        Sales_Order.On_Hold,'
-      '        Sales_Order_Status.Sales_Order_Status_Desc,'
-      '        Sales_Order.Deposit_amount,'
-      '        Sales_Order.Goods_Value,'
-      '        Sales_Order.VAT_Value,'
-      '        Sales_Order.IsFittingInOutlook,'
-      
-        '        (Sales_Order.Goods_Value + Sales_Order.Vat_Value - Sales' +
-        '_order.Deposit_amount) as Total_Value,'
-      '        Sales_Order.Rep,'
-      '        Rep.Rep_Name,'
-      '        Sales_Order.Inactive,'
-      '        Sales_Order.Customer_Name,'
-      '        Customer.Is_Retail_Customer,'
-      '        Customer.Is_Commercial_Customer,'
-      '        Customer.Requires_App_For_Payment,'
-      '        (select top 1 Job'
-      '        from sales_order_line, sales_Order SO'
-      '        where sales_order_line.sales_order = SO.sales_order and'
-      
-        '              sales_order_line.sales_order = sales_order.sales_o' +
-        'rder and'
-      '              ((job is not null) or (Job <> 0))) as Job_Number'
-      'FROM Customer'
-      '      INNER JOIN (Sales_Order_Status'
-      '      INNER JOIN (Rep'
-      '      INNER JOIN Sales_Order'
-      '        ON Rep.Rep = Sales_Order.Rep)'
-      
-        '        ON Sales_Order_Status.Sales_Order_Status = Sales_Order.S' +
-        'ales_Order_Status)'
-      '        ON Customer.Customer = Sales_Order.Customer'
-      
-        'WHERE ((Sales_Order.Customer = :Customer) or (0 = :Customer)) an' +
-        'd'
-      '      ((Sales_Order.Rep = :Rep) or (:Rep = 0)) and'
-      
-        '      ((Sales_Order.Date_Required >= :Date_From) and (Sales_orde' +
-        'r.Date_Required <= :Date_To)) and'
-      
-        '      ((Sales_Order.Sales_Order_Status >= 10) AND (Sales_Order.S' +
-        'ales_Order_Status < :Sales_Order_Status)) and'
-      
-        '      ((Sales_Order.inactive = '#39'N'#39') or (Sales_Order.inactive is ' +
-        'NULL) or (Sales_Order.inactive = '#39#39')) AND'
-      
-        '      ((Sales_order.Do_not_Invoice is NULL) OR (Sales_Order.Do_n' +
-        'ot_Invoice = '#39'N'#39')) AND'
-      
-        '      ((Sales_Order.IsFittingInOutlook = :IsFittingInOutlook) OR' +
-        ' (Sales_Order.IsFittingInOutlook = '#39'Y'#39') OR (Sales_Order.IsFittin' +
-        'gInOutlook IS NULL)) AND'
-      
-        '      (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND ' +
-        '(Customer.Is_Commercial_Customer = :Is_Commercial_Customer)) or ' +
-        '(:Is_Retail_Customer = '#39'A'#39')) AND'
-      
-        '      ((Customer.Requires_App_For_Payment = :Requires_App_For_Pa' +
-        'yment) OR (:Requires_App_For_Payment = '#39'A'#39'))'
-      ''
-      '')
-    Left = 460
-    Top = 350
-    ParamData = <
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Rep'
-      end
-      item
-        Name = 'Rep'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Date_From'
-        DataType = ftDateTime
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Date_To'
-        DataType = ftDateTime
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'Sales_Order_Status'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'IsFittingInOutlook'
+        Name = 'IS_RETAIL_CUSTOMER'
         DataType = ftString
         ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'Is_Retail_Customer'
+        Name = 'IS_COMMERCIAL_CUSTOMER'
         DataType = ftString
         ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'Is_Commercial_Customer'
-      end
-      item
-        Name = 'Is_Retail_Customer'
-      end
-      item
-        Name = 'Requires_App_For_Payment'
-      end
-      item
-        Name = 'Requires_App_For_Payment'
+        Name = 'REQUIRES_APP_FOR_PAYMENT'
+        ParamType = ptInput
       end>
   end
 end

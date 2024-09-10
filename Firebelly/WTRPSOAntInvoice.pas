@@ -14,7 +14,6 @@ type
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
-    qrySalesOrders: TFDQuery;
     qrsbDetails: TQRSubDetail;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
@@ -63,7 +62,9 @@ type
     qrlblCustDeposit: TQRLabel;
     gtqrStatus: TQRLabel;
     gtqrDONOTInvoice: TQRLabel;
-    qrySalesOrderOld: TFDQuery;
+    qrySalesOrdersOld: TFDQuery;
+    qrySalesOrders: TFDQuery;
+    QRLabel13: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
@@ -215,6 +216,22 @@ begin
   end;
 
   qrySalesOrders.Close;
+
+   if self.bIncludeInvoiced then
+    qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 110
+  else
+    qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 100;
+
+  if self.bIncludeNOT2bInvoiced then
+    qrySalesOrders.parambyname('Do_Not_Invoice').asstring := 'Y'
+  else
+    qrySalesOrders.parambyname('Do_Not_Invoice').asstring := 'N';
+
+  if bShowOnlyScheduled then
+    qrySalesOrders.parambyname('IsFittingInOutlook').asstring := 'Y'
+  else
+    qrySalesOrders.parambyname('IsFittingInOutlook').asstring := 'N';
+
   case CustomerCategory of
         0:  begin
               qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'A';
@@ -234,35 +251,27 @@ begin
             end;
   end;
 
-  if bShowOnlyScheduled then
-    qrySalesOrders.parambyname('IsFittingInOutlook').asstring := 'Y'
-  else
-    qrySalesOrders.parambyname('IsFittingInOutlook').asstring := 'N';
-    
-  if self.bIncludeInvoiced then
-    qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 110
-  else
-    qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 100;
+//  qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'A';
 
   case ChargeType of
         0:  begin
-              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'A';
-              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'A';
+  //            qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'A';
+  //            qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'A';
               qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'A';
             end;
         1:  begin
-              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'N';
-              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+  //            qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'N';
+  //            qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
               qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'N';
             end;
         2:  begin
-              qrySalesOrders.ParambyName('Is_Retail_Customer').asstring := 'N';
-              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+  //            qrySalesOrders.ParambyName('Is_Retail_Customer').asstring := 'N';
+  //            qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
               qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'Y';
             end;
         3:  begin
-              qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'Y';
-              qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
+  //            qrySalesOrders.Parambyname('Is_Retail_Customer').asstring := 'Y';
+  //            qrySalesOrders.Parambyname('Is_Commercial_Customer').asstring := 'N';
               qrySalesOrders.Parambyname('Requires_App_For_Payment').asstring := 'N';
             end;
   end;
@@ -272,7 +281,6 @@ begin
   qrySalesOrders.parambyname('Date_From').Asdatetime := Datefrom + StrToTime('00:00:00');
   qrySalesOrders.parambyname('Date_To').Asdatetime := DateTo + StrToTime('23:59:59');
   qrySalesOrders.Open;
-  Result := qrySalesOrders.RecordCount;
 end;
 
 procedure TfrmwtRPSOAntInvoice.QRBand2BeforePrint(Sender: TQRCustomBand;
