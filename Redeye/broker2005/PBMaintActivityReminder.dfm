@@ -264,7 +264,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       OnClick = btnCompleteAllClick
     end
     object Button1: TButton
-      Left = 664
+      Left = 658
       Top = 16
       Width = 75
       Height = 25
@@ -274,7 +274,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 576
+      Left = 570
       Top = 16
       Width = 75
       Height = 25
