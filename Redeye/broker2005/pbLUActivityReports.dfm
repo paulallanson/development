@@ -2,9 +2,10 @@ object frmPBLUActivityReports: TfrmPBLUActivityReports
   Left = 201
   Top = 107
   BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsDialog
   Caption = 'Activity Reports'
   ClientHeight = 263
-  ClientWidth = 403
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,15 +17,16 @@ object frmPBLUActivityReports: TfrmPBLUActivityReports
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 403
+    Width = 418
     Height = 222
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 403
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 403
+      Width = 418
       Height = 222
       Align = alClient
       Columns = <
@@ -57,13 +59,14 @@ object frmPBLUActivityReports: TfrmPBLUActivityReports
   object Panel2: TPanel
     Left = 0
     Top = 222
-    Width = 403
+    Width = 418
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 403
     DesignSize = (
-      403
+      418
       41)
     object btnRun: TButton
       Left = 16
@@ -75,8 +78,8 @@ object frmPBLUActivityReports: TfrmPBLUActivityReports
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 328
-      Top = 8
+      Left = 335
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]

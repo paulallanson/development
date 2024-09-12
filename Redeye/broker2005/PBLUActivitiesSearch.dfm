@@ -3,8 +3,8 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   Top = 99
   BorderStyle = bsDialog
   Caption = 'Activity Search'
-  ClientHeight = 397
-  ClientWidth = 285
+  ClientHeight = 409
+  ClientWidth = 289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,8 +13,8 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    285
-    397)
+    289
+    409)
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -58,11 +58,12 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object Label1: TLabel
     Left = 11
-    Top = 300
+    Top = 312
     Width = 69
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
+    ExplicitTop = 300
   end
   object Label4: TLabel
     Left = 11
@@ -108,11 +109,12 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object lblDueDate: TLabel
     Left = 11
-    Top = 270
+    Top = 282
     Width = 48
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Due Date'
+    ExplicitTop = 270
   end
   object Label3: TLabel
     Left = 11
@@ -145,16 +147,17 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object chkbxShowOnlyLive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 324
+    Top = 336
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show only live activities'
     TabOrder = 14
+    ExplicitTop = 315
   end
   object SearchButton: TButton
     Left = 12
-    Top = 356
+    Top = 368
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -162,19 +165,21 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Default = True
     TabOrder = 15
     OnClick = SearchButtonClick
+    ExplicitTop = 347
   end
   object edtDate: TEdit
     Left = 120
-    Top = 296
+    Top = 308
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 12
     OnExit = edtDateExit
+    ExplicitTop = 287
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 294
+    Top = 306
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -194,6 +199,7 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 13
     OnClick = btnDateClick
+    ExplicitTop = 285
   end
   object edtType: TEdit
     Left = 120
@@ -211,13 +217,14 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object ClearButton: TButton
     Left = 196
-    Top = 357
+    Top = 369
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 16
     OnClick = ClearButtonClick
+    ExplicitTop = 348
   end
   object edtContact: TEdit
     Left = 120
@@ -249,16 +256,17 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object edtDueDate: TEdit
     Left = 120
-    Top = 266
+    Top = 278
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 10
     OnExit = edtDueDateExit
+    ExplicitTop = 257
   end
   object BitBtn1: TBitBtn
     Left = 216
-    Top = 264
+    Top = 276
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -278,6 +286,7 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 11
     OnClick = BitBtn1Click
+    ExplicitTop = 255
   end
   object edtDescription: TEdit
     Left = 120

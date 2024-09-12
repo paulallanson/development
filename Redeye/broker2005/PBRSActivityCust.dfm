@@ -3,8 +3,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Activity Report'
-  ClientHeight = 341
-  ClientWidth = 621
+  ClientHeight = 361
+  ClientWidth = 649
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    621
-    341)
+    649
+    361)
   TextHeight = 13
   object PrintBitBtn: TBitBtn
-    Left = 541
-    Top = 302
+    Left = 549
+    Top = 322
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -43,8 +43,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 452
-    Top = 302
+    Left = 460
+    Top = 322
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -107,23 +107,25 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 302
+    Top = 322
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 10
+    ExplicitTop = 302
   end
   object GroupBox1: TGroupBox
     Left = 5
-    Top = 203
+    Top = 223
     Width = 180
     Height = 89
     Anchors = [akLeft, akBottom]
     Caption = 'Date Range'
     ParentBackground = False
     TabOrder = 6
+    ExplicitTop = 203
     object Label1: TLabel
       Left = 8
       Top = 28
@@ -270,7 +272,7 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Left = 480
     Top = 8
     Width = 145
-    Height = 137
+    Height = 148
     Caption = 'Sort by: '
     ItemIndex = 4
     Items.Strings = (
@@ -285,8 +287,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   end
   object chkbxPageBreak: TCheckBox
     Left = 488
-    Top = 155
-    Width = 137
+    Top = 174
+    Width = 153
     Height = 17
     Caption = 'Page break by sort type'
     Enabled = False
@@ -327,8 +329,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 362
-    Top = 302
+    Left = 370
+    Top = 322
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -381,8 +383,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   end
   object chkbxShowOnlyLive: TCheckBox
     Left = 488
-    Top = 184
-    Width = 137
+    Top = 203
+    Width = 153
     Height = 17
     Caption = 'Show only live Activities'
     TabOrder = 9
