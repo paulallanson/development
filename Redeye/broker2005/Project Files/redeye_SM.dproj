@@ -2222,32 +2222,18 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\PBAuditView.pas">
+            <Form>PBAuditViewFrm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\PBMaintLogins.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBRSSalesInvCost.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBRSSuppDet.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBRSStkRec.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBLUNCARpts.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBRSNCACostGraph.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="..\PBRSNCASource.pas">
-            <FormType>dfm</FormType>
-        </DCCReference>
+        <DCCReference Include="..\PBMaintLogins.pas"/>
+        <DCCReference Include="..\PBRSSalesInvCost.pas"/>
+        <DCCReference Include="..\PBRSSuppDet.pas"/>
+        <DCCReference Include="..\PBRSStkRec.pas"/>
+        <DCCReference Include="..\PBLUNCARpts.pas"/>
+        <DCCReference Include="..\PBRSNCACostGraph.pas"/>
+        <DCCReference Include="..\PBRSNCASource.pas"/>
         <DCCReference Include="..\PBLUArtwrkTyp.pas">
             <Form>PBLUArtwrkTypFrm</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\STRSSalesHistory.pas">
             <FormType>dfm</FormType>
