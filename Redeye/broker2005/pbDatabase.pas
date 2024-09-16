@@ -10,7 +10,8 @@ uses
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
   FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait;
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.ODBCBase;
 
 type
   TdmBroker = class(TDataModule)
@@ -320,14 +321,8 @@ begin
 end;
 
 procedure TdmBroker.DatabaseError(ASender, AInitiator: TObject; var AException: Exception);
-var
-  Exc: EFDDBEngineException;
 begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    ParseException(Exc);
-  end;
+  ParseException(AException);
 end;
 
 procedure TdmBroker.AddIntSelCode(iTempIntSelCode: Integer; rTemp: real; sTemp: string);

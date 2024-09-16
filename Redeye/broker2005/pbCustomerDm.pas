@@ -308,6 +308,7 @@ begin
 //  sTemp := sTemp + ' ORDER BY Customer.Name ';
 
   qryCustomers.SQL.text := qryCustomers.SQL.text + sTemp;
+//  qryCustomers.SQL.SaveToFile('C:\Temp\qryCustomers.sql');
 
   with qryCustomers do
   begin

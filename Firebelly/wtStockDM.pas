@@ -84,14 +84,8 @@ begin
 end;
 
 procedure TdtmdlStock.wtStkDatabaseError(ASender, AInitiator: TObject; var AException: Exception);
-var
-  Exc: EFDDBEngineException;
 begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    ParseException(Exc);
-  end;
+  ParseException(AException);
 end;
 
 function TdtmdlStock.CheckProductExists(tempCode: string): boolean;

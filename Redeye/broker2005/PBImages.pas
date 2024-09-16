@@ -44,6 +44,7 @@ var
 implementation
 
 uses
+  System.Generics.Collections,
   FireDAC.Comp.Client, PBDataBase;
 
 {$R *.DFM}
@@ -52,6 +53,7 @@ procedure TPBImagesFrm.LoadReportLogo(Sender: TObject);
 var
   TempArray: array[0..255] of Char;
   sgList: TStringList;
+  List: TList<string>;
   sDatabase, LocalDrive, LocalDir: string;
   AppIniFile: Array [0..255] of char;
 begin
@@ -64,12 +66,23 @@ begin
 
   GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray, SizeOf(TempArray), AppIniFile);
 
-  sgList := TStringList.Create;
+  sgList := nil;
+  List := nil;
   try
-    FDManager.GetConnectionDefParams(TempArray,sgList);
-    sDatabase := sgList.Values['DATABASE'];
+    sgList := TStringList.Create;
+    List := TList<string>.Create;
+    FDManager.GetConnectionDefNames(sgList);
+    List.AddRange(sgList.ToStringArray);
+    if List.Contains(TempArray) then
+    begin
+      FDManager.GetConnectionDefParams(TempArray, sgList);
+      sDatabase := sgList.Values['DATABASE'];
+    end
+    else
+      sDatabase := dmBroker.PBLDatabase.Params.Database;
   finally
-    sgList.free;
+    sgList.Free;
+    List.Free;
   end;
 
   try

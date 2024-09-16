@@ -7,13 +7,13 @@ object PBAuditDataMod: TPBAuditDataMod
     SQL.Strings = (
       'Insert Into Audit_Trail'
       
-        '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type, Audit_Cod' +
-        'e_1,'
+        '(Audit_Trail, [Operator], Date_Time_Entered, Audit_Type, Audit_C' +
+        'ode_1,'
       '        Audit_Code_2, Audit_Code_3, Audit_Code_4,'
       '        Audit_Text)'
       
-        'Select Max(Audit_trail)+1, :Operator, GetDate(), :Audit_Type, :A' +
-        'udit_Code_1,'
+        'Select Max(Audit_trail)+1, :TheOperator, GetDate(), :Audit_Type,' +
+        ' :Audit_Code_1,'
       '        :Audit_Code_2, :Audit_Code_3, :Audit_Code_4,'
       '        :Audit_Text'
       'From Audit_Trail'
@@ -22,25 +22,32 @@ object PBAuditDataMod: TPBAuditDataMod
     Top = 296
     ParamData = <
       item
-        Name = 'Operator'
+        Name = 'THEOPERATOR'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_1'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_2'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_3'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_4'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Text'
+        ParamType = ptInput
       end>
   end
   object Add1stAuditSQL: TFDQuery
@@ -123,7 +130,7 @@ object PBAuditDataMod: TPBAuditDataMod
       'Insert Into Audit_Trail'
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
       'Values'
-      '(1, :Operator, now(), 0)')
+      '(1, :Operator, getdate(), 0)')
     Left = 312
     Top = 16
     ParamData = <
@@ -136,13 +143,13 @@ object PBAuditDataMod: TPBAuditDataMod
     SQL.Strings = (
       'Insert Into Audit_Trail'
       
-        '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type, Audit_Cod' +
-        'e_1,'
+        '(Audit_Trail, [Operator], Date_Time_Entered, Audit_Type, Audit_C' +
+        'ode_1,'
       '        Audit_Code_2, Audit_Code_3, Audit_Code_4,'
       '        Audit_Text)'
       
-        'Select Max(Audit_trail)+1, :Operator, now(), :Audit_Type, :Audit' +
-        '_Code_1,'
+        'Select Max(Audit_trail)+1, :TheOperator, getdate(), :Audit_Type,' +
+        ' :Audit_Code_1,'
       '        :Audit_Code_2, :Audit_Code_3, :Audit_Code_4,'
       '        :Audit_Text'
       'From Audit_Trail'
@@ -151,25 +158,32 @@ object PBAuditDataMod: TPBAuditDataMod
     Top = 288
     ParamData = <
       item
-        Name = 'Operator'
+        Name = 'THEOPERATOR'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_1'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_2'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_3'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Code_4'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_Text'
+        ParamType = ptInput
       end>
   end
 end

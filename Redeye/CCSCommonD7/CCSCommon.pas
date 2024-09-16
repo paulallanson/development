@@ -117,7 +117,7 @@ procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 
 { FireDAC }
 procedure ConfigureFDConnection(const Connection: TFDConnection);
-procedure ParseException(Exc: EFDDBEngineException);
+procedure ParseException(AException: System.SysUtils.Exception);
 
 { TOpenDialog }
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
@@ -1327,20 +1327,30 @@ begin
 end;
 
 { FireDAC }
-procedure ParseException(Exc: EFDDBEngineException);
+procedure ParseException(AException: System.SysUtils.Exception);
+var
+  Exc: EFDDBEngineException;
 begin
-  case Exc.Kind of
-    ekUKViolated:
-      MessageDlg('Unique Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
-    ekFKViolated:
-      MessageDlg('Foreign Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
-    ekUserPwdInvalid:
-      MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
-    ekInvalidParams:
-      MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
+  if AException is EFDDBEngineException then
+  begin
+    Exc := (AException as EFDDBEngineException);
+    case Exc.Kind of
+      ekUKViolated:
+        MessageDlg('Unique Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
+      ekFKViolated:
+        MessageDlg('Foreign Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
+      ekUserPwdInvalid:
+        MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
+      ekInvalidParams:
+        MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
+      ekOther:
+        MessageDlg('Database error. Please contact technical support.', mtError, [mbOk], 0);
+    else
+      MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
+    end;
+  end
   else
     MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
-  end;
 end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);

@@ -73,46 +73,46 @@ If ((iTempType < 1000) and (not bAuditLogProg)) or
 bWriteOK := False ;
 While not bWriteOK do
    begin
-   Try
-        With AddAuditSQL do
-                begin
-                Close ;
-                ParamByName('Operator').AsInteger := frmpbMainMenu.iOperator ;
-                ParamByName('Audit_Type').AsInteger := iTempType ;
-                ParamByName('Audit_Code_1').AsInteger := iTempCode1 ;
-                ParamByName('Audit_Code_2').AsInteger := iTempCode2 ;
-                ParamByName('Audit_Code_3').AsInteger := iTempCode3 ;
-                ParamByName('Audit_Code_4').AsInteger := iTempCode4 ;
-                ParamByName('Audit_Text').AsString := sTempText + ' ' ;
-                ExecSQL ;
-                end;
-        bWriteOK := True ;
-        Except
-        On E: Exception do
-                begin
-                If (Pos('NULL', E.Message) > 0) and (Pos('Audit_Trail', E.Message) > 0) then
-                        begin
-                        {There are no records on the audit Trail, so create an INITIALISE record} ;
-                        With Add1stAuditSQL do
-                                begin
-                                Close ;
-                                ParamByName('Operator').AsInteger := frmpbMainMenu.iOperator ;
-                                ExecSQL ;
-                                end;
-                        end
-                else
-                        begin
-                        {If it's a foreign key problem, the audit_type record is missing so don't log it} ;
-                        If (Pos('FOREIGN KEY', E.Message) > 0) then
-                                exit ;
-                        {If it's not a PRIMARY KEY violation, raise an error} ;
-                        If (Pos('PRIMARY KEY', E.Message) = 0) or (Pos('duplicate key', E.Message) = 0) then
-                                Raise  ;
-                        end;
-                {Above line says if the error is caused by a duplicate audit trialn record, loop back and try the} ;
-                {audit ADD again, anything else, raise the exception} ;
-                end;
-        end;
+       Try
+            With AddAuditSQL do
+                    begin
+                    Close ;
+                    ParamByName('TheOperator').AsInteger := frmpbMainMenu.iOperator ;
+                    ParamByName('Audit_Type').AsInteger := iTempType ;
+                    ParamByName('Audit_Code_1').AsInteger := iTempCode1 ;
+                    ParamByName('Audit_Code_2').AsInteger := iTempCode2 ;
+                    ParamByName('Audit_Code_3').AsInteger := iTempCode3 ;
+                    ParamByName('Audit_Code_4').AsInteger := iTempCode4 ;
+                    ParamByName('Audit_Text').AsString := sTempText + ' ' ;
+                    ExecSQL ;
+                    end;
+            bWriteOK := True ;
+       Except
+            On E: Exception do
+                    begin
+                    If (Pos('NULL', E.Message) > 0) and (Pos('Audit_Trail', E.Message) > 0) then
+                            begin
+                            {There are no records on the audit Trail, so create an INITIALISE record} ;
+                            With Add1stAuditSQL do
+                                    begin
+                                    Close ;
+                                    ParamByName('Operator').AsInteger := frmpbMainMenu.iOperator ;
+                                    ExecSQL ;
+                                    end;
+                            end
+                    else
+                            begin
+                            {If it's a foreign key problem, the audit_type record is missing so don't log it} ;
+                            If (Pos('FOREIGN KEY', E.Message) > 0) then
+                                    exit ;
+                            {If it's not a PRIMARY KEY violation, raise an error} ;
+                            If (Pos('PRIMARY KEY', E.Message) = 0) or (Pos('duplicate key', E.Message) = 0) then
+                                    Raise  ;
+                            end;
+                    {Above line says if the error is caused by a duplicate audit trialn record, loop back and try the} ;
+                    {audit ADD again, anything else, raise the exception} ;
+                    end;
+       end;
    end;
 end;
 
