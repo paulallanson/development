@@ -4,8 +4,8 @@ object PBRSProofNFrm: TPBRSProofNFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Proof Approval Print'
-  ClientHeight = 183
-  ClientWidth = 355
+  ClientHeight = 184
+  ClientWidth = 359
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

@@ -3,7 +3,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Top = 30
   Caption = 'Expected Reorder Report'
   ClientHeight = 423
-  ClientWidth = 720
+  ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 462
   Constraints.MinWidth = 735
@@ -21,11 +21,12 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 720
+    Width = 733
     Height = 113
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 720
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
@@ -208,13 +209,14 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   object pnlButton: TPanel
     Left = 0
     Top = 363
-    Width = 720
+    Width = 733
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 720
     DesignSize = (
-      720
+      733
       41)
     object CancelBitBtn: TBitBtn
       Left = 14
@@ -276,7 +278,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = btbtnChangeClick
     end
     object PreviewBitBtn: TBitBtn
-      Left = 530
+      Left = 543
       Top = 8
       Width = 75
       Height = 25
@@ -298,9 +300,10 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 530
     end
     object PrintBitBtn: TBitBtn
-      Left = 618
+      Left = 631
       Top = 8
       Width = 75
       Height = 25
@@ -322,12 +325,13 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 618
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 720
+    Width = 733
     Height = 250
     Align = alClient
     DataSource = dtsrcLive
@@ -457,7 +461,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   object StatusBar1: TStatusBar
     Left = 0
     Top = 404
-    Width = 720
+    Width = 733
     Height = 19
     Panels = <
       item
@@ -466,6 +470,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       item
         Width = 50
       end>
+    ExplicitWidth = 720
   end
   object qryLive: TFDQuery
     ConnectionName = 'PB'
