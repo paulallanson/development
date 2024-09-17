@@ -36,7 +36,8 @@ implementation
 uses
   System.UITypes,
   PBDatabase, pbMainMenu,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client,
+  CCSCommon;
 
 {$R *.DFM}
 
@@ -104,7 +105,7 @@ begin
       try
         sgList.Add('DATABASE='+edtDatabaseName.text);
         sgList.Add('SERVER='+edtServerName.text);
-        FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
+        FDManager.AddConnectionDef(edtAliasName.text, GetMSSQLID, sgList);
       finally
         sgList.Free;
       end;

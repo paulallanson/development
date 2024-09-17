@@ -2,7 +2,7 @@ object dtmdlCustomers: TdtmdlCustomers
   Height = 794
   Width = 1095
   object qryCustomers: TFDQuery
-    Connection = dmBroker.EmailDatabase
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'

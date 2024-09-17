@@ -123,7 +123,8 @@ const
   'SELECT Supplier_Invoice.Vat_Value as vat, '+
   'Supplier_Invoice.Goods_Value as goods, (Supplier_Invoice.Goods_value + Supplier_Invoice.Vat_Value) as total_goods, '+
   'Supplier_Invoice.Invoice_Date, Supplier_Invoice.Supplier_Invoice_no, '+
-  'Supplier_Invoice.Invoice_or_Credit, Supplier_Branch.Name, Supplier.Name, Supplier_Branch.Account_Code, '+
+  'Supplier_Invoice.Invoice_or_Credit, Supplier_Branch.Name as Branch_Name, Supplier.Name as Supplier_Name, '+
+  'Supplier_Branch.Account_Code, '+
   'Supplier_Invoice.Supp_Inv_Alt_Ref '+
   'FROM Supplier INNER JOIN (Supplier_Branch INNER JOIN Supplier_Invoice ON '+
   '(Supplier_Branch.Branch_no = Supplier_Invoice.Branch_no) AND '+
@@ -263,7 +264,7 @@ begin
         PBRPPurchByInvfrm.PrinterSettings := PrinterSettings;
           {this part copies the query and values from the report selection form to the report print form}
         PBRPPurchByInvfrm.qryPurchByInv.SQL.Clear;
-        PBRPPurchByInvfrm.qryPurchByInv.SQL.Text := qryPurchByInv.Text;
+        PBRPPurchByInvfrm.qryPurchByInv.SQL.Text := qryPurchByInv.SQL.Text;
         PBRPPurchByInvFrm.totalBySupp := cbsort1.itemindex = 0;
         PBRPPurchByInvFrm.repqrgroup.ForceNewPage := chkbxPageBreak.checked;
         PBRPPurchByInvfrm.qrlblTitle.caption := PBRPPurchByInvfrm.qrlblTitle.caption + DateToStr(Date);

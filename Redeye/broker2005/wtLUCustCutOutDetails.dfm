@@ -359,14 +359,14 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       
         '    where Prices.Price_pointer = Cutout_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = Cutout_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -374,7 +374,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
         '    where Prices.Price_pointer = Cutout_thickness.price_pointer ' +
         'and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -508,21 +508,21 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       
         '    where Prices.Price_pointer = CutOut_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = CutOut_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit'
       '    from Prices'
       
         '    where Prices.Price_pointer = CutOut_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= getdate()'
       '    order by Prices.effective_date desc) AS Price_Unit'
       'FROM CutOut_thickness'
       'WHERE   CutOut_thickness.Material_Type = :Material_Type AND'

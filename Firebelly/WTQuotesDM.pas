@@ -347,7 +347,7 @@ type
     property DateEntered: TDateTime read FDateEntered write SetDateEntered;
     property EventNumber: integer read FEventNumber write SetEventNumber;
     property Narrative: TNotes read FNarrative write SetNarrative;
-    property Operator: integer read FOperator write SetOperator;
+    property &Operator: integer read FOperator write SetOperator;
     property OperatorName:string read FOperatorName write SetOperatorName;
     property Parent: TQuote read FParent write SetParent;
   end;
@@ -1174,7 +1174,7 @@ type
     property NettPrice: currency read FNettPrice write SetNettPrice;
     property OnMailingList: string read FOnMailingList write SetOnMailingList;
     property OrderRefNo: string read FOrderRefNo write SetOrderRefNo;
-    property Operator: integer read FOperator write SetOperator;
+    property &Operator: integer read FOperator write SetOperator;
     property OperatorName: string read FOperatorName write SetOperatorName;
     property OriginalQuote: integer read FOriginalQuote write SetOriginalQuote;
     property ProjectReference: string read FProjectReference write SetProjectReference;
@@ -1423,7 +1423,7 @@ begin
   Result.NettPrice:=      self.NettPrice;
   Result.OnMailingList := self.OnMailingList;
   Result.OrderRefNo :=    self.OrderRefNo;
-  Result.Operator :=      self.Operator;
+  Result.&Operator :=      self.&Operator;
   Result.OperatorName :=  self.OperatorName;
   Result.OriginalQuote := self.OriginalQuote;
   Result.EstimatorName:=  self.EstimatorName;
@@ -1584,7 +1584,7 @@ begin
     InstallPrice:=   fieldbyname('Installation_Price').asfloat;
     NettPrice:=      fieldbyname('Nett_Price').asfloat;
     OrderRefNo :=     fieldbyname('Order_Ref_No').asstring;
-    Operator :=       fieldbyname('operator').asinteger;
+    &Operator :=       fieldbyname('Operator').asinteger;
     OperatorName :=   fieldbyname('Operator_Name').asstring;
 
     if qMode = qRequote then
@@ -2091,7 +2091,7 @@ begin
           Parambyname('Contact_Name').asstring := ContactName;
           Parambyname('Customer_Name').asstring := CustomerName;
           ParamByName('Description').Asstring := Description;
-          ParamByName('Operator').AsInteger := Operator;
+          ParamByName('Operator').AsInteger := &Operator;
           if LeadSource = 0 then
             ParamByName('Sales_Lead_Source').clear
           else
@@ -2248,7 +2248,7 @@ begin
             ParamByName('Contract_Quote').AsString := 'N';
 
           ParamByName('Description').Asstring := Description;
-//          ParamByName('Operator').AsInteger := Operator;
+//          ParamByName('Operator').AsInteger := &Operator;
           if LeadSource = 0 then
             ParamByName('Sales_Lead_Source').clear
           else
@@ -2740,7 +2740,7 @@ begin
       aEvent := TQEvent.Create(Self);
       aEvent.EventNumber := FieldByName('Internal_Note').AsInteger;
       aEvent.DateEntered := FieldByName('Date_Time_Entered').Asdatetime;
-      aEvent.Operator := FieldByName('Operator').Asinteger;
+      aEvent.&Operator := FieldByName('Operator').Asinteger;
       aEvent.OperatorName := FieldByName('Operator_Name').asstring;
       aEvent.Narrative.dbKey := FieldByName('Narrative').asinteger;
       aEvent.Narrative.LoadFromDB;
@@ -5126,7 +5126,7 @@ begin
   Result := TQEvent.Create(FParent);
   Result.EventNumber    :=           self.EventNumber;
   Result.DateEntered    :=           self.DateEntered;
-  Result.operator       :=           Self.Operator;
+  Result.&Operator       :=           Self.&Operator;
   Result.OperatorName   :=           self.OperatorName; 
   Result.Narrative      :=           Self.Narrative;
 end;
@@ -5153,7 +5153,7 @@ begin
     Open;
     DateEntered := FieldbyName('Date_Time_Entered').asdatetime;
     Narrative.dbkey := FieldbyName('Narrative').AsInteger;
-    Operator := FieldbyName('Operator').asinteger;
+    &Operator := FieldbyName('Operator').asinteger;
     OperatorName := FieldbyName('Operator_Name').asstring;
     Close;
   end;
@@ -5167,7 +5167,7 @@ begin
   begin
     ParamByName('Quote').AsInteger := FParent.DbKey;
     ParamByName('Internal_Note').AsInteger := EventNumber;
-    ParamByName('Operator').asinteger := Operator;
+    ParamByName('Operator').asinteger := &Operator;
     Parambyname('Date_Time_Entered').Asdatetime := DateEntered;
     Parambyname('Narrative').asinteger := Narrative.dbKey;
     ExecSQL;
@@ -5582,7 +5582,7 @@ begin
         dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'M';
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
-        dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
+        dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.&Operator;
         dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := 0.00;
         dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := UnitCost;
 	      dtmdlWorktops.qryAddPrice.execSQL;

@@ -166,17 +166,19 @@ begin
       first;
       edtProofRevision.text := fieldbyname('Proof_Revision').asstring;
     end;
-  DefStatSQL.close;
-  DefStatSQl.open;
-
-  dblkpProofStatus.KeyValue := DefStatSQL.fieldbyname('Proof_status').asstring;
   CanPrint(self);
 end;
 
 procedure TPBRSProofNFrm.FormActivate(Sender: TObject);
 begin
+  DefStatSQL.close;
+  DefStatSQl.open;
+
   ProofStatusSQL.close;
+  ProofStatusSQL.parambyname('Proof_Status').asstring := DefStatSQL.fieldbyname('Proof_status').asstring;
   ProofStatusSQL.open;
+
+  dblkpProofStatus.KeyValue := DefStatSQL.fieldbyname('Proof_status').asstring;
 end;
 
 procedure TPBRSProofNFrm.CanPrint(Sender: TObject);
@@ -192,9 +194,13 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+
   try
-    chkbxPrintLogo.Checked := IniFile.ReadString('Redeye', 'Proof Approval - Print Logo', 'N') = 'Y';
+  with IniFile do
+    begin
+      chkbxPrintLogo.Checked := (ReadString('Redeye', 'Proof Approval - Print Logo', 'N') = 'Y');
+    end;
   finally
     IniFile.Free;
   end;
@@ -205,16 +211,17 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+
   with IniFile do
-  try
-    if chkbxPrintLogo.checked then
-      WriteString('Redeye', 'Proof Approval - Print Logo', 'Y')
-    else
-      WriteString('Redeye', 'Proof Approval - Print Logo', 'N');
-  finally
-    IniFile.Free;
-  end;
+    begin
+      if chkbxPrintLogo.checked then
+        WriteString('Redeye', 'Proof Approval - Print Logo', 'Y')
+      else
+        WriteString('Redeye', 'Proof Approval - Print Logo', 'N');
+
+      Free;
+    end;
 end;
 
 procedure TPBRSProofNFrm.EmailBitBtnClick(Sender: TObject);

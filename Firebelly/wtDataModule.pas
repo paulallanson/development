@@ -776,9 +776,7 @@ var
 begin
   { Find out what kind of database this is, Access or SQL Server }
   DriverName := dtbsWorktops.DriverName;
-
-  if DriverName = 'MSSQL' then
-    FIsSQL := true;
+  FIsSQL := DriverName.Contains('MSSQL');
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
@@ -798,14 +796,8 @@ begin
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsError(ASender, AInitiator: TObject; var AException: Exception);
-var
-  Exc: EFDDBEngineException;
 begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    ParseException(Exc);
-  end;
+  ParseException(AException);
 end;
 
 function TdtmdlWorktops.UseRemedialsAsOrders: boolean;

@@ -34,7 +34,9 @@ var
 
 implementation
 
-uses UITypes;
+uses
+  System.UITypes,
+  AllCommon;
 
 {$R *.DFM}
 
@@ -111,7 +113,7 @@ begin
       try
         sgList.Add('DATABASE='+edtDatabaseName.text);
         sgList.Add('SERVER='+edtServerName.text);
-        FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
+        FDManager.AddConnectionDef(edtAliasName.text, GetMSSQLID, sgList);
       finally
         sgList.Free;
       end;
@@ -124,7 +126,7 @@ begin
         sgList.Clear;
         sgList.Add('DATABASE='+edtDatabaseName.text);
         sgList.Add('SERVER='+edtServerName.text);
-        FDManager.ModifyConnectionDef(edtAliasName.text,sgList);
+        FDManager.ModifyConnectionDef(edtAliasName.text, sgList);
       finally
         sgList.Free;
       end;

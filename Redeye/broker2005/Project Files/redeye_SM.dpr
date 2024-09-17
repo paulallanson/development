@@ -703,7 +703,7 @@ uses
   Utils in '..\Utils.pas',
   Shared.DragDrop.Helper in '..\..\..\Shared\Shared.DragDrop.Helper.pas',
   PBMaintCustBudgets in '..\PBMaintCustBudgets.pas',
-  PBAuditView in '..\PBAuditView.pas',
+  PBAuditView in '..\PBAuditView.pas' {PBAuditViewFrm},
   PBMaintLogins in '..\PBMaintLogins.pas',
   PBRSSalesInvCost in '..\PBRSSalesInvCost.pas',
   PBRSSuppDet in '..\PBRSSuppDet.pas',

@@ -195,6 +195,8 @@ object STMaintPickFrm: TSTMaintPickFrm
       OnClick = sgDetailsClick
       OnDblClick = sgDetailsDblClick
       OnSelectCell = sgDetailsSelectCell
+      ExplicitLeft = -4
+      ExplicitTop = 6
       ColWidths = (
         123
         183

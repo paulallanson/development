@@ -148,7 +148,7 @@ begin
         CustomerName := SelCustName;
         QRLblCust.Caption := QRLblCust.Caption+'Customer - '+SelCustName;
       end;
-{    if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
+{    if dmStock.STDatabase.FDManager.GetAliasDriverName('PB').Contains('MSSQL') then
     begin
       STRPSlwMvngStkRepfrm.bSQLDatabase := true;
 
@@ -518,7 +518,7 @@ begin
       end;
       STRPSlwMvngStkRepFrm.bExcProd := ChkBxExcProd.Checked;
       STRPSlwMvngStkRepfrm.qrlblDateSince.Caption := 'Report showing stock with no movements since:- '+DateEdit.Text;
-{      if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
+{      if dmStock.STDatabase.FDManager.GetAliasDriverName('PB').Contains('MSSQL') then
       begin
         STRPSlwMvngStkRepfrm.bSQLDatabase := true;
         STRPSlwMvngStkRepfrm.qrSlwMvngStk.DataSet := STRPSlwMvngStkRepfrm.qrySlwMvngStk;
@@ -744,7 +744,7 @@ begin
         end;
         STRPSlwMvngStkRepFrm.bExcProd := ChkBxExcProd.Checked;
         STRPSlwMvngStkRepfrm.qrlblDateSince.Caption := 'Report showing stock with no movements since:- '+DateEdit.Text;
-{        if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
+{        if dmStock.STDatabase.FDManager.GetAliasDriverName('PB').Contains('MSSQL') then
         begin
           STRPSlwMvngStkRepfrm.bSQLDatabase := true;
           STRPSlwMvngStkRepfrm.qrSlwMvngStk.DataSet := STRPSlwMvngStkRepfrm.qrySlwMvngStk;

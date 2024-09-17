@@ -388,6 +388,9 @@ begin
 
     lblDocumentDir.Caption := lblDocumentDir.Caption + ' ' + dmBroker.GetCompanyQuoteDirectory;
 
+    if not ((Mode = qCopy) or (Mode = qReQuote)) then
+      pgDetails.ActivePage := tsSpecification;
+
     if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat)  or (Mode = qReQuote) then
       sTemp := ' New Quote '
     else
@@ -1718,7 +1721,6 @@ end;
 
 procedure TPBMaintQuoteFrm.FormCreate(Sender: TObject);
 begin
-  pgDetails.ActivePage := tsSpecification;
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
   {Show pack pricing option is using Pack Prices}
