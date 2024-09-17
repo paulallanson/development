@@ -124,7 +124,7 @@ type
     procedure SetIncludeLapsed(const Value: boolean);
     procedure SetIncludeProspects(const Value: boolean);
     function GetHOContactCount: integer;
-    { Private declarations }
+    function GetCustomerName: string;
   public
     Customer: integer;
     AccountManager: string;
@@ -198,13 +198,14 @@ var
   { Local function }
   { Remember, SQL likes American date formats with hyphens in quotes }
   { But Access doesn't so we have to know what we're connected to }
-function qDate(const aDate : TDateTime) : string;
+  function qDate(const aDate : TDateTime) : string;
   begin
     if dmBroker.IsSQL then
       Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
     else
       Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
   end;
+
 { Local function }
 begin
   qryCustomers.sql.clear;
@@ -307,13 +308,12 @@ begin
 
 //  sTemp := sTemp + ' ORDER BY Customer.Name ';
 
-  qryCustomers.SQL.text := qryCustomers.SQL.text + sTemp;
-//  qryCustomers.SQL.SaveToFile('C:\Temp\qryCustomers.sql');
+  qryCustomers.SQL.Text := qryCustomers.SQL.Text + sTemp;
 
   with qryCustomers do
   begin
     Close;
-    parambyname('Code_From').asstring := '%' + CustomerName + '%';
+    parambyname('Code_From').asstring := GetCustomerName;
     Open;
   end;
 
@@ -506,6 +506,17 @@ function TdtmdlCustomers.GetContactCount: integer;
 begin
   Result := qryContacts.RecordCount;
 
+end;
+
+function TdtmdlCustomers.GetCustomerName: string;
+var
+  CriteriaValue: string;
+begin
+  if CustomerName.IsEmpty then
+    CriteriaValue := '%'
+  else
+    CriteriaValue := '%' + CustomerName + '%';
+  Result := CriteriaValue;
 end;
 
 procedure TdtmdlCustomers.RefreshCategoryData;

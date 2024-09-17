@@ -44,7 +44,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 896
+        Width = 884
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59
@@ -52,7 +52,8 @@ object frmpbLUOrders: TfrmpbLUOrders
         Images = imglstOrders
         ShowCaptions = True
         TabOrder = 0
-        ExplicitWidth = 884
+        ExplicitLeft = 3
+        ExplicitTop = -3
         object btnAdd: TToolButton
           Left = 0
           Top = 0
