@@ -117,6 +117,7 @@ procedure SetRegKey(const TempPath, TempKey, TempValue: string);
 { FireDAC }
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 procedure ParseException(AException: System.SysUtils.Exception);
+function GetMSSQLID: string;
 
 { TOpenDialog }
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
@@ -1452,6 +1453,11 @@ begin
   end
   else
     MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
+end;
+
+function GetMSSQLID: string;
+begin
+  Result := 'MSSQL17';
 end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);

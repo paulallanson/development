@@ -776,9 +776,7 @@ var
 begin
   { Find out what kind of database this is, Access or SQL Server }
   DriverName := dtbsWorktops.DriverName;
-
-  if DriverName = 'MSSQL' then
-    FIsSQL := true;
+  FIsSQL := DriverName.Contains('MSSQL');
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
