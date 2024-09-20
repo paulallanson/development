@@ -1859,6 +1859,8 @@ begin
         Quote.Customer := frmwtSrchCustomer.CodeSelected;
         Quote.CustomerName := frmwtSrchCustomer.NameSelected;
 
+        Quote.DataModule.AreaDecimalPlaces := frmwtSrchCustomer.AreaDecimalPlaces;
+
         UseMarkup := false;
 
         {Over ride the company default trade discount}

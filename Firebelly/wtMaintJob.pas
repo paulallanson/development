@@ -1310,6 +1310,9 @@ begin
       begin
         Job.Customer := frmwtSrchCustomer.CodeSelected;
         Job.CustomerName := frmwtSrchCustomer.NameSelected;
+
+        Job.DataModule.AreaDecimalPlaces := frmwtSrchCustomer.AreaDecimalPlaces;
+
         Job.DiscountRate := frmWTSrchCustomer.DiscountRate;
         Job.DepositTerms := frmWTSrchCustomer.DepositTerms;
         spnDepositTerms.Value := round(Job.DepositTerms);
@@ -1463,6 +1466,7 @@ begin
           Frm.WorktopGroup := Job.Elements[Job.Elements.Count - 1].worktopgroup;
           frm.Thickness := Job.Elements[Job.Elements.Count - 1].thickness;
           frm.Material := Job.Elements[Job.Elements.Count - 1].Material;
+          Frm.MaterialType := Job.Elements[Job.Elements.Count - 1].MaterialDescr;
           frm.jElement.UnitPrice := Job.Elements[Job.Elements.Count - 1].UnitPrice;
           frm.jElement.PriceUnit := Job.Elements[Job.Elements.Count - 1].PriceUnit;
         end;
@@ -1521,6 +1525,8 @@ begin
         begin
           Frm.Worktop := Job.Elements[0].worktop;
           frm.Thickness := dtmdlWorktops.qryCompany.fieldbyname('Underslip_thickness').asinteger;
+          frm.Material := Job.Upstands[Job.Upstands.Count - 1].Material;
+          Frm.MaterialType := Job.Upstands[Job.Upstands.Count - 1].MaterialDescr;
           frm.PolishPrice := dtmdlWorktops.qryCompany.fieldbyname('Upstand_Polish_Price').asfloat;
           frm.PolishCost := dtmdlWorktops.qryCompany.fieldbyname('Upstand_Polish_Cost').asfloat;
         end
@@ -1528,6 +1534,8 @@ begin
       if (aMode = jelAdd) and (Job.Upstands.Count = 0) then
         begin
           frm.Thickness := dtmdlWorktops.qryCompany.fieldbyname('Underslip_thickness').asinteger;
+          frm.Material := Job.Upstands[Job.Upstands.Count - 1].Material;
+          Frm.MaterialType := Job.Upstands[Job.Upstands.Count - 1].MaterialDescr;
           frm.PolishPrice := dtmdlWorktops.qryCompany.fieldbyname('Upstand_Polish_Price').asfloat;
           frm.PolishCost := dtmdlWorktops.qryCompany.fieldbyname('Upstand_Polish_Cost').asfloat;
         end
@@ -1541,6 +1549,8 @@ begin
           frm.PolishPrice := Job.Upstands[Job.Upstands.Count - 1].PolishPrice;
           Frm.MaterialUse := Job.Upstands[Job.Upstands.Count - 1].MaterialUse;
           Frm.Depth := Job.Upstands[Job.Upstands.Count - 1].Depth;
+          frm.Material := Job.Upstands[Job.Upstands.Count - 1].Material;
+          Frm.MaterialType := Job.Upstands[Job.Upstands.Count - 1].MaterialDescr;
           frm.JUpstand.UnitPrice := Job.Upstands[Job.Upstands.Count - 1].UnitPrice;
           frm.JUpstand.PriceUnit := Job.Upstands[Job.Upstands.Count - 1].PriceUnit;
         end;

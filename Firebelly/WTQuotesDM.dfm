@@ -1701,13 +1701,15 @@ object dtmdlQuote: TdtmdlQuote
       '      Edge_Discount,'
       '      Edge_Discount_Type,'
       '      Discount_Rate,'
-      '      Customer_Name'
+      '      Customer_Name,'
+      '      Area_Calculation_Dec_Places'
       'from Customer where Customer = :Customer')
     Left = 120
     Top = 500
     ParamData = <
       item
         Name = 'Customer'
+        ParamType = ptInput
       end>
   end
   object qryMaterial: TFDQuery

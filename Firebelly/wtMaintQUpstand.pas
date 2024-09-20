@@ -7,7 +7,7 @@ uses
   Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Math;
 
 type
   TfrmWTMaintQUpstand = class(TForm)
@@ -336,20 +336,49 @@ end;
 
 procedure TfrmWTMaintQUpstand.GetTotalPrice;
 var
+  rArea: real;
+  iAreaDp: integer;
   rUnitPrice, rPolishPrice, rTotal: real;
   idepth,iLength,iQuantity, iNoLengths, iNoDepths: integer;
 begin
-  iDepth := strtointdef(edtDepth.text, 0);
-  iLength := strtointdef(edtLength.text, 0);
-  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
-  rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
-  iQuantity := spnQuantity.value;
-  iNoDepths := spnNoOfDepths.value;
-  iNoLengths := spnNoOflengths.value;
-  rTotal := (((idepth * iLength)/1000000)*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
-                                                               +(((iDepth/1000)*iNoDepths)*rPolishPrice*iQuantity);
-  edtTotalPrice.text := formatfloat('0.00',rTotal);
+  try
+    iDepth := strtoint(edtDepth.text);
+  except
+    iDepth := 0
+  end;
 
+  try
+    iLength := strtoint(edtLength.text);
+  except
+    iLength := 0;
+  end;
+
+  try
+    rUnitPrice := strtofloat(edtUnitPrice.text);
+  except
+    rUnitPrice := 0.00;
+  end;
+
+  try
+    rPolishPrice := strtofloat(edtPolishPrice.text);
+  except
+    rPolishPrice := 0.00;
+  end;
+
+  iQuantity := spnQuantity.value;
+
+  iNoDepths := spnNoOfDepths.value;
+
+  iNoLengths := spnNoOflengths.value;
+
+  iAreaDp := QUpstand.Parent.DataModule.AreaDecimalPlaces;
+  rArea := roundReal(((iDepth * iLength)/1000000),iAreaDp);
+
+  rTotal := (rArea*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
+                                                               +(((iDepth/1000)*iNoDepths)*rPolishPrice*iQuantity);
+//  rTotal := (((idepth * iLength)/1000000)*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
+//                                                               +(((iDepth/1000)*iNoDepths)*rPolishPrice*iQuantity);
+  edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)
 end;
 

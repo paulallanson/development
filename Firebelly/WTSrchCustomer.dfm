@@ -35,10 +35,6 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 152
-    ExplicitTop = 160
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object dbgDetails: TDBGrid
       Left = 0
       Top = 0
@@ -199,7 +195,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       '           Use_For_General_Quoting,'
       '           Installation_Price,'
       '           Delivery_Price,'
-      '           Survey_Price'
+      '           Survey_Price,'
+      '           Area_Calculation_Dec_Places'
       'from Customer'
       'where Customer_name like :Name and'
       
@@ -215,12 +212,15 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Name = 'Name'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Not_Active'
+        ParamType = ptInput
       end
       item
         Name = 'Requires_App_For_Payment'
+        ParamType = ptInput
       end>
   end
   object dtsDetails: TDataSource

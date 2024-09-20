@@ -7,7 +7,7 @@ uses
   Db, wtNotesDM, AllCommon, wtSupplierDM,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Math;
                  
 type
   TqMode   = (qAdd, qChange, qDelete, qCopy, qView, qRestrict, qRequote);
@@ -149,6 +149,7 @@ type
     function GetCurrentCQuote: integer;
     { Private declarations }
   public
+    AreaDecimalPlaces: integer;
     Customer: integer;
     CustomerName: string;
     Description: string;
@@ -185,6 +186,7 @@ type
     function GetContractDeliveryPrice(tmpCode: integer): real;
     function GetContractInstallPrice(tmpCode: integer): real;
     function GetContractSurveyPrice(tmpCode: integer): real;
+    function GetCustomerAreaDecimalPlaces(tempCust: integer): integer;
     function GetCustomerName(tempCust: integer): string;
     function GetCustomerAddress(tempcust: integer): string;
     function GetCustomerDiscount(tempCust: integer): double;
@@ -1516,6 +1518,10 @@ begin
     Close;
     ParamByName('Quote').AsInteger := DbKey;
     Open;
+
+    {Load Customer Area Decimal Places}
+    FDataModule.AreaDecimalPlaces := FDataModule.GetCustomerAreaDecimalPlaces(fieldbyname('Customer').asinteger);
+
     AcceptedDate  :=  fieldbyname('Date_Accepted').asdatetime;
     Address :=      fieldbyname('Address').asinteger;
     Material :=       fieldbyname('Material_type').asinteger;
@@ -3374,11 +3380,19 @@ end;
 function TQElement.GetTotalArea: currency;
 begin
   Result := ((fDepth * FLength)/1000000) * FQuantity;
+  Result := roundReal(Result,2);
 end;
 
 function TQElement.GetTotalPrice: currency;
+var
+  rArea: real;
+  iAreaDp: integer;
 begin
-  Result := ((fDepth * FLength)/1000000) * FQuantity * FUnitPrice;
+  iAreaDp := (FParent.FDataModule.AreaDecimalPlaces);
+  rArea := roundReal(((fDepth * FLength)/1000000), iAreaDp);
+//  rArea := roundTo(((fDepth * FLength)/1000000), iAreaDp);
+//  Result := (((fDepth * FLength)/1000000)) * FQuantity * FUnitPrice;
+  Result := rArea * FQuantity * FUnitPrice;
 end;
 
 procedure TQElement.LoadFromDB;
@@ -4295,6 +4309,18 @@ begin
   FItems[Index] := Value;
 end;
 
+function TdtmdlQuote.GetCustomerAreaDecimalPlaces(tempCust: integer): integer;
+begin
+  result := 6;
+  with qryGetCustomer do
+    begin
+      close;
+      parambyname('Customer').asinteger := tempCust;
+      open;
+      result := fieldbyname('Area_Calculation_Dec_Places').asinteger;
+    end;
+end;
+
 function TdtmdlQuote.GetCustomerAddress(tempCust: integer): string;
 var
   i: integer;
@@ -4733,6 +4759,7 @@ end;
 function TQUpstand.GetTotalArea: currency;
 begin
   Result := ((fDepth * FLength)/1000000) * FQuantity;
+  Result := roundReal(Result,2);
 end;
 
 function TQUpstand.GetTotalPolishCost: currency;
@@ -4746,8 +4773,14 @@ begin
 end;
 
 function TQUpstand.GetTotalPrice: currency;
+var
+  rArea: real;
+  iAreaDp: integer;
 begin
-  Result := (((fDepth * FLength)/1000000) * FQuantity * FUnitPrice)+ self.TotalPolishPrice;
+  iAreaDp := (FParent.FDataModule.AreaDecimalPlaces);
+  rArea := roundReal(((fDepth * FLength)/1000000), iAreaDp);
+//  rArea := roundTo(((fDepth * FLength)/1000000), iAreaDp);
+  Result := (rArea * FQuantity * FUnitPrice)+ self.TotalPolishPrice;
 end;
 
 procedure TQUpstand.LoadFromDB;

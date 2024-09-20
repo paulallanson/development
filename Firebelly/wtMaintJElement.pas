@@ -7,7 +7,7 @@ uses
   Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Math;
 
 type
   TfrmWTMaintJElement = class(TForm)
@@ -127,10 +127,20 @@ begin
     else
       sTemp := ' element ' + IntToStr(jElement.Parent.DbKey) + ' ';
 
+    if Mode <> jelAdd then
+      begin
+        edtMaterial.text := jElement.MaterialDescr;
+      end
+    else
+      begin
+        edtMaterial.text := MaterialType;
+        jElement.Material := Material;
+      end;
+
     with qryWTGroup do
       begin
         close;
-        parambyname('Material_Type').asinteger := Material;
+        parambyname('Material_Type').asinteger := jElement.Material;
         open;
       end;
 
@@ -147,7 +157,7 @@ begin
   with qryWorktops do
     begin
       close;
-      parambyname('Material_Type').asinteger := Material;
+      parambyname('Material_Type').asinteger := jElement.Material;
       parambyname('Worktop_Group').asinteger := dblkpWTGroup.keyvalue;
       open;
     end;
@@ -176,8 +186,6 @@ procedure TfrmWTMaintJElement.ShowDetails;
 begin
   if Mode <> jelAdd then
   begin
-    edtMaterial.text := MaterialType;
-
     dblkpWTGroup.keyvalue := JElement.worktopGroup;
 
     RefreshWorktops;
@@ -199,7 +207,6 @@ begin
   end
   else
   begin
-    edtMaterial.text := MaterialType;
 
     dblkpWTGroup.keyvalue := Self.WorktopGroup;
 
@@ -242,15 +249,36 @@ end;
 
 procedure TfrmWTMaintJElement.GetTotalPrice;
 var
+  rArea: real;
+  iAreaDp: integer;
   rUnitPrice, rTotal: real;
   idepth,iLength,iQuantity: integer;
 begin
-  iDepth := StrToIntDef(edtDepth.text, 0);
-  iLength := StrToIntDef(edtLength.text, 0);
-  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+  try
+    iDepth := strtoint(edtDepth.text);
+  except
+    iDepth := 0
+  end;
+
+  try
+    iLength := strtoint(edtLength.text);
+  except
+    iLength := 0;
+  end;
+
+  try
+    rUnitPrice := strtofloat(edtUnitPrice.text);
+  except
+    rUnitPrice := 0.00;
+  end;
+
   iQuantity := spnQuantity.value;
 
-  rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;
+  iAreaDp := JElement.Parent.DataModule.AreaDecimalPlaces;
+  rArea := roundReal(((iDepth * iLength)/1000000),iAreaDp);
+
+  rTotal := rArea*iQuantity*rUnitPrice;
+//  rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;
   edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)
 end;
@@ -263,7 +291,7 @@ end;
 procedure TfrmWTMaintJElement.SetMaterial(const Value: integer);
 begin
   FMaterial := Value;
-  jElement.Material := FMaterial;
+//  jElement.Material := FMaterial;
 end;
 
 procedure TfrmWTMaintJElement.dblkpWorktopClick(Sender: TObject);

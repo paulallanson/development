@@ -7,7 +7,7 @@ uses
   Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Math;
 
 type
   TfrmWTMaintQElement = class(TForm)
@@ -211,7 +211,7 @@ begin
           close;
           parambyname('Customer').AsInteger := QElement.Parent.Customer;
           parambyname('Material_Type').asinteger := Material;
-          parambyname('Worktop_Group').asinteger := dblkpWTGroup.ListValue;
+          parambyname('Worktop_Group').asinteger := dblkpWTGroup.keyvalue;
           parambyname('Worktop').asinteger := QElement.worktop;
           open;
         end;
@@ -327,14 +327,36 @@ end;
 
 procedure TfrmWTMaintQElement.GetTotalPrice;
 var
+  rArea: real;
+  iAreaDp: integer;
   rUnitPrice, rTotal: real;
   idepth,iLength,iQuantity: integer;
 begin
-  iDepth := strtointdef(edtDepth.text, 0);
-  iLength := strtointdef(edtLength.text, 0);
-  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0.00);
+  try
+    iDepth := strtoint(edtDepth.text);
+  except
+    iDepth := 0
+  end;
+
+  try
+    iLength := strtoint(edtLength.text);
+  except
+    iLength := 0;
+  end;
+
+  try
+    rUnitPrice := strtofloat(edtUnitPrice.text);
+  except
+    rUnitPrice := 0.00;
+  end;
+
   iQuantity := spnQuantity.value;
-  rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;
+
+  iAreaDp := QElement.Parent.DataModule.AreaDecimalPlaces;
+  rArea := roundReal(((iDepth * iLength)/1000000),iAreaDp);
+
+  rTotal := rArea*iQuantity*rUnitPrice;
+//  rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;
   edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)
 end;

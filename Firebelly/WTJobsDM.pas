@@ -149,6 +149,7 @@ type
     function GetNextJNumber: integer;
     function GetInstallAddress(tempQuote: integer): integer;
   public
+    AreaDecimalPlaces: integer;
     Customer: integer;
     CustomerName: string;
     Description: string;
@@ -176,6 +177,7 @@ type
     function GetAddressTelephone(tempCode: integer): string;
     function GetAddressTown(tempCode: integer): string;
     function GetAddressWebsite(tempCode: integer): string;
+    function GetCustomerAreaDecimalPlaces(tempcust: integer): integer;
     function GetCustomerAddress(tempcust: integer): string;
     function GetCustomerStreet(tempCust: integer): string;
     function GetCustomerCounty(tempCust: integer): string;
@@ -1128,6 +1130,18 @@ begin
 
 end;
 
+function TdtmdlJob.GetCustomerAreaDecimalPlaces(tempCust: integer): integer;
+begin
+  result := 6;
+  with qryGetCustomer do
+    begin
+      close;
+      parambyname('Customer').asinteger := tempCust;
+      open;
+      result := fieldbyname('Area_Calculation_Dec_Places').asinteger;
+    end;
+end;
+
 function TdtmdlJob.GetCustomerAddress(tempCust: integer): string;
 var
   i: integer;
@@ -1903,6 +1917,10 @@ begin
     Close;
     ParamByName('Job').Asfloat := DbKey;
     Open;
+
+    {Load Customer Area Decimal Places}
+    FDataModule.AreaDecimalPlaces := FDataModule.GetCustomerAreaDecimalPlaces(fieldbyname('Customer').asinteger);
+
     ActProdDate :=    fieldbyname('Production_Date_Actual').asdatetime;
     ActTempDate :=    fieldbyname('Template_Date_Actual').asdatetime;
     ActInstallDate := fieldbyname('Installation_Date_Actual').asdatetime;
@@ -2698,6 +2716,10 @@ begin
     Close;
     ParamByName('Quote').AsInteger := FDataModule.QuoteNo;
     Open;
+
+    {Load Customer Area Decimal Places}
+    FDataModule.AreaDecimalPlaces := FDataModule.GetCustomerAreaDecimalPlaces(fieldbyname('Customer').asinteger);
+
     ActProdDate :=    date;
     ActTempDate :=    date;
     ActInstallDate := date;
@@ -2777,6 +2799,10 @@ begin
     Close;
     ParamByName('Quote').AsInteger := FDataModule.QuoteNo;
     Open;
+
+    {Load Customer Area Decimal Places}
+    FDataModule.AreaDecimalPlaces := FDataModule.GetCustomerAreaDecimalPlaces(fieldbyname('Customer').asinteger);
+
     ActProdDate :=    date;
     ActTempDate :=    date;
     ActInstallDate := date;
@@ -3312,8 +3338,15 @@ begin
 end;
 
 function TJElement.GetTotalPrice: currency;
+var
+  rArea: real;
+  iAreaDp: integer;
 begin
-  Result := ((fDepth * FLength)/1000000) * FQuantity * FUnitPrice;
+  iAreaDp := (FParent.FDataModule.AreaDecimalPlaces);
+  rArea := roundReal(((fDepth * FLength)/1000000), iAreaDp);
+//  rArea := roundTo(((fDepth * FLength)/1000000),iAreaDp);
+//  Result := ((fDepth * FLength)/1000000) * FQuantity * FUnitPrice;
+  Result := rArea * FQuantity * FUnitPrice;
 end;
 
 procedure TJElement.LoadFromDB;
@@ -3588,8 +3621,15 @@ begin
 end;
 
 function TJUpstand.GetTotalPrice: currency;
+var
+  rArea: real;
+  iAreaDp: integer;
 begin
-  Result := (((fDepth * FLength)/1000000) * FQuantity * FUnitPrice) + self.TotalPolishPrice;
+  iAreaDp := (FParent.FDataModule.AreaDecimalPlaces);
+  rArea := roundReal(((fDepth * FLength)/1000000), iAreaDp);
+//  rArea := roundTo(((fDepth * FLength)/1000000),iAreaDp);
+  Result := (rArea * FQuantity * FUnitPrice) + self.TotalPolishPrice;
+//  Result := (((fDepth * FLength)/1000000) * FQuantity * FUnitPrice) + self.TotalPolishPrice;
 end;
 
 procedure TJUpstand.LoadFromDB;
