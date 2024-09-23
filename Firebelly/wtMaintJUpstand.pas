@@ -7,7 +7,7 @@ uses
   Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Math, AllCommon;
 
 type
   TfrmWTMaintJUpstand = class(TForm)
@@ -133,10 +133,20 @@ begin
     else
       sTemp := ' upstand ' + IntToStr(JUpstand.Parent.DbKey) + ' ';
 
+    if Mode <> jelAdd then
+      begin
+        edtMaterial.text := jUpstand.MaterialDescr;
+      end
+    else
+      begin
+        edtMaterial.text := MaterialType;
+        jUpstand.Material := Material;
+      end;
+
     with qryWorktops do
       begin
         close;
-        parambyname('Material_Type').asinteger := Material;
+        parambyname('Material_Type').asinteger := JUpstand.Material;
         open;
       end;
 
@@ -152,7 +162,6 @@ procedure TfrmWTMaintJUpstand.ShowDetails;
 begin
   if Mode <> jelAdd then
   begin
-    edtMaterial.text := MaterialType;
     dblkpWorktop.keyvalue := JUpstand.worktop;
     dblkpMaterialUse.keyvalue := JUpstand.MaterialUse;
 
@@ -173,7 +182,6 @@ begin
   end
   else
   begin
-    edtMaterial.text := MaterialType;
     dblkpWorktop.keyvalue := Self.Worktop;
     dblkpMaterialUse.KeyValue := MaterialUse;
     with qryWTThickness do
@@ -216,6 +224,8 @@ end;
 
 procedure TfrmWTMaintJUpstand.GetTotalPrice;
 var
+  rArea: real;
+  iAreaDp: integer;
   rUnitPrice, rPolishPrice, rTotal: real;
   idepth,iLength,iQuantity, iNoLengths, iNoDepths: integer;
 begin
@@ -232,13 +242,13 @@ begin
   end;
 
   try
-    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+    rUnitPrice := strtofloat(edtUnitPrice.text);
   except
     rUnitPrice := 0.00;
   end;
 
   try
-    rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
+    rPolishPrice := strtofloat(edtPolishPrice.text);
   except
     rPolishPrice := 0.00;
   end;
@@ -249,7 +259,10 @@ begin
 
   iNoLengths := spnNoOflengths.value;
 
-  rTotal := (((idepth * iLength)/1000000)*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
+  iAreaDp := JUpstand.Parent.DataModule.AreaDecimalPlaces;
+  rArea := roundReal(((iDepth * iLength)/1000000),iAreaDp);
+
+  rTotal := (rArea*iQuantity*rUnitPrice)+(((iLength/1000)*iNoLengths)*rPolishPrice*iQuantity)
                                                                +(((iDepth/1000)*iNoDepths)*rPolishPrice*iQuantity);
   edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)
@@ -263,7 +276,7 @@ end;
 procedure TfrmWTMaintJUpstand.SetMaterial(const Value: integer);
 begin
   FMaterial := Value;
-  JUpstand.Material := FMaterial;
+//  JUpstand.Material := FMaterial;
 end;
 
 procedure TfrmWTMaintJUpstand.dblkpWorktopClick(Sender: TObject);

@@ -60,6 +60,7 @@ type
     FSurveyPrice: double;
     FDeliveryPrice: double;
     FInstallationPrice: double;
+    FAreaDecimalPlaces: integer;
     procedure SetCodeSelected(const Value: integer);
     procedure SetNameSelected(const Value: string);
     procedure SetRetailCustomer(const Value: byteBool);
@@ -76,11 +77,13 @@ type
     procedure SetDeliveryPrice(const Value: double);
     procedure SetInstallationPrice(const Value: double);
     procedure SetSurveyPrice(const Value: double);
+    procedure SetAreaDecimalPlaces(const Value: integer);
     { Private declarations }
   public
     bOnlyShowAFP: boolean;
     bNewCustomer: boolean;
     procedure Refreshdata;
+    property AreaDecimalPlaces: integer read FAreaDecimalPlaces write SetAreaDecimalPlaces;
     property Address: integer read FAddress write SetAddress;
     property CodeSelected: integer read FCodeSelected write SetCodeSelected;
     property DeliveryPrice: double read FDeliveryPrice write SetDeliveryPrice;
@@ -185,6 +188,7 @@ begin
   if dbgDetails.datasource.DataSet.FieldByName('Narrative').AsInteger <> 0 then
     ShowNotes(Self);
 
+  AreaDecimalPlaces := qryDetails.fieldbyname('Area_Calculation_Dec_Places').asinteger;
   CodeSelected := qryDetails.fieldbyname('Customer').asinteger;
   DepositTerms := qryDetails.fieldbyname('Deposit_Terms').asfloat;
   DiscountRate := qryDetails.fieldbyname('Discount_Rate').asfloat;
@@ -380,6 +384,11 @@ end;
 procedure TfrmWTSrchCustomer.SetAddress(const Value: integer);
 begin
   FAddress := Value;
+end;
+
+procedure TfrmWTSrchCustomer.SetAreaDecimalPlaces(const Value: integer);
+begin
+  FAreaDecimalPlaces := Value;
 end;
 
 procedure TfrmWTSrchCustomer.btnSweepClick(Sender: TObject);

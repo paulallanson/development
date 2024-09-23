@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, Printers, QrExport,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, Printers, QrExport, Math,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -320,6 +320,7 @@ end;
 procedure TfrmwtRPQuote.qrsdQElementsBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
+  iAreaDp: integer;
   rArea, rUnitPrice, rTotalPrice, rPolishedPrice: real;
   sUpstand, sDescription: string;
 begin
@@ -363,6 +364,9 @@ begin
   rArea :=  ((qryQElements.fieldbyname('Length').asinteger *
             qryQElements.fieldbyname('Depth').asinteger *
             qryQElements.fieldbyname('Quantity').asinteger)/1000000);
+
+  iAreaDp := (qryCustomer.fieldbyname('Area_Calculation_Dec_Places').asinteger);
+  rArea := RoundReal(rArea, iAreaDp);
 
   lblWorktopArea.caption := formatfloat('0.00',rArea) + ' ' + 'm2';
 

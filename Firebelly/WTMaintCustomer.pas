@@ -213,6 +213,8 @@ type
     chkbxRequiresAppForPay: TCheckBox;
     DropComboTarget1: TDropComboTarget;
     pnlBody: TPanel;
+    Label39: TLabel;
+    edtAreaDecimalPlaces: TCREditInt;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -533,6 +535,7 @@ begin
       edtInvoiceLabel.Text := '';
 
       edtNoOfEmployees.Text := '0';
+      edtAreaDecimalPlaces.Text := '6';
 
       cmbbxEndUserPriceFactor.ItemIndex := -1;
       edtEndUserMarkup.Text := '';
@@ -607,6 +610,7 @@ begin
       edtInvoiceLabel.Text := qryOneCustomer.fieldbyname('Invoice_Label').asstring;
 
       edtNoOfEmployees.Text := qryOneCustomer.fieldbyname('No_of_Employees').asstring;
+      edtAreaDecimalPlaces.Text := qryOneCustomer.fieldbyname('Area_Calculation_Dec_Places').asstring;
 
       if qryOneCustomer.fieldbyname('End_User_Price_Factor').asstring = 'M' then
         cmbbxEndUserPriceFactor.itemindex := 1
@@ -2382,6 +2386,11 @@ begin
         parambyname('No_of_Employees').asinteger := 0
       else
         parambyname('No_of_Employees').asinteger := strtoint(edtNoOfEmployees.Text);
+
+      If edtAreaDecimalPlaces.Text = '' then
+        parambyname('Area_Calculation_Dec_Places').asinteger := 6
+      else
+        parambyname('Area_Calculation_Dec_Places').asinteger := strtoint(edtAreaDecimalPlaces.Text);
 
       case cmbbxEndUserPriceFactor.itemindex of
         1: parambyname('End_User_Price_Factor').asstring := 'M';

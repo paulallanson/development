@@ -68,6 +68,7 @@ function CrystalDate(const aDate : TDateTime) : string;
 function paDateStr(const vIn: variant): variant;
 function IncrementNo(StartStr: string): string;
 function RoundFloat(TempVal: real; DecPlaces: integer): real;
+function RoundReal(TempVal: real; DecPlaces: integer): real;
 { If passed a string or a float, PostoNegQty will return a string.  An
   error message will be displayed if the value is invalid. }
 function PostoNegQty(const Qty: variant): integer;
@@ -1103,6 +1104,16 @@ begin
       end;
     end;
   end;
+end;
+
+function RoundReal(TempVal: real; DecPlaces: integer): real;
+var
+  sDecPlaces: string;
+  sFloatFormat: string;
+begin
+  sDecPlaces := '0.000000';
+  sFloatFormat := copy(sDecPlaces,1,DecPlaces+2);
+  Result := strtofloat(formatfloat(sFloatFormat,TempVal));
 end;
 
 function RoundFloat(TempVal: real; DecPlaces: integer): real;

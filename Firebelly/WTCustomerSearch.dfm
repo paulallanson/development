@@ -79,8 +79,8 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Caption = 'Type'
   end
   object Label8: TLabel
-    Left = 11
-    Top = 227
+    Left = 10
+    Top = 229
     Width = 69
     Height = 13
     Caption = 'Created since'
@@ -100,14 +100,14 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     TabOrder = 1
   end
   object btnSearch: TButton
-    Left = 16
+    Left = 10
     Top = 303
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Search'
     Default = True
-    TabOrder = 3
+    TabOrder = 10
     OnClick = btnSearchClick
   end
   object edtTown: TEdit
@@ -122,7 +122,7 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Top = 114
     Width = 153
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object ClearButton: TButton
     Left = 162
@@ -131,41 +131,42 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
-    TabOrder = 5
+    TabOrder = 11
     OnClick = ClearButtonClick
+    ExplicitTop = 294
   end
   object edtCounty: TEdit
     Left = 85
     Top = 141
     Width = 153
     Height = 21
-    TabOrder = 6
+    TabOrder = 4
   end
   object edtPhone: TEdit
     Left = 85
     Top = 168
     Width = 153
     Height = 21
-    TabOrder = 7
+    TabOrder = 5
   end
   object edtType: TEdit
     Left = 85
     Top = 196
     Width = 153
     Height = 21
-    TabOrder = 8
+    TabOrder = 6
   end
   object edtDate: TEdit
     Left = 85
-    Top = 224
+    Top = 225
     Width = 89
     Height = 21
-    TabOrder = 9
+    TabOrder = 7
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
     Left = 181
-    Top = 221
+    Top = 223
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -182,15 +183,15 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
-    TabOrder = 10
+    TabOrder = 8
     OnClick = btnDateClick
   end
   object chkbxIncludeProspects: TCheckBox
-    Left = 16
-    Top = 256
+    Left = 8
+    Top = 265
     Width = 185
     Height = 17
     Caption = 'Include Prospects'
-    TabOrder = 11
+    TabOrder = 9
   end
 end
