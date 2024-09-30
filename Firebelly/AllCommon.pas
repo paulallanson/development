@@ -1468,7 +1468,7 @@ end;
 
 function GetMSSQLID: string;
 begin
-  Result := 'MSSQL17';
+  Result := 'MSSQL';
 end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);

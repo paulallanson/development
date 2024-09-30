@@ -32,7 +32,6 @@ object frmWTMain: TfrmWTMain
         MinHeight = 36
         Width = 1469
       end>
-    ExplicitWidth = 1469
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
