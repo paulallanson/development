@@ -29,7 +29,6 @@ type
     QRDBText2: TQRDBText;
     QRLabel3: TQRLabel;
     qrlblNett: TQRLabel;
-    QRLabel1: TQRLabel;
     qryPOLine: TFDQuery;
     QRDBText7: TQRDBText;
     qrlblTotalLineCost: TQRLabel;

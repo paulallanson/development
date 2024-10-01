@@ -2,6 +2,7 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
   Left = 197
   Top = 120
   BorderStyle = bsDialog
+  Caption = 'Quote Decline Reason Report'
   ClientHeight = 315
   ClientWidth = 364
   Color = clBtnFace

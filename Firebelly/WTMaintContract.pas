@@ -733,13 +733,14 @@ end;
 procedure TfrmWTMaintContract.sgDetailsDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
+  Txt: array [0..255] of Char;
   irow, iCol: integer;
   bShowDocuments: boolean;
   ContractOption: TContractOption;
   S: string;
   SavedAlign: Cardinal;
 begin
-  bShowDocuments := (iLine <> ARow) and (Mode <> cqCopy);
+   bShowDocuments := (iLine <> ARow) and (Mode <> cqCopy);
 
   iLine := ARow;
 
@@ -750,7 +751,29 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
+      Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Cells[ACol, ARow]) ;
+
+      if (ACol <= 1) then
+        begin
+          StrPCopy(Txt, Cells[ACol, ARow]);
+          SetTextAlign(Canvas.Handle,
+              GetTextAlign(Canvas.Handle)
+              and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
+          ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+            ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        end
+      else
+        begin
+          {Display the Columns Right justified in the cells}
+          StrPCopy(Txt, Cells[ACol, ARow]);
+          SetTextAlign(Canvas.Handle,
+              GetTextAlign(Canvas.Handle)
+              and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
+          ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+            ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        end;
     end;
+
   end;
 
   with Sender as TStringGrid, Canvas do
@@ -797,16 +820,6 @@ begin
     ShowLineDocuments;
     edtSupplierreference.Text := ContractLine.SupplierReference;
     memUnits.Text := formatfloat('0',ContractLine.NumberofUnits);
-  end;
-
-  if (ARow > 0) and (ACol > 1) then
-  begin
-    var Text := sgDetails.Cells[ACol,ARow];
-    var WidthOfText := sgDetails.Canvas.TextWidth(Text);
-    var WidthOfCell := sgDetails.ColWidths[ACol];
-    var LeftOffset := WidthOfCell - WidthOfText;
-
-    sgDetails.Canvas.TextRect(Rect, Rect.Left+LeftOffset, Rect.Top, Text);
   end;
 end;
 

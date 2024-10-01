@@ -2,7 +2,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   Left = 436
   Top = 74
   Caption = 'Supplier Details'
-  ClientHeight = 517
+  ClientHeight = 542
   ClientWidth = 1008
   Color = clBtnFace
   Constraints.MinHeight = 555
@@ -21,7 +21,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 498
+    Top = 523
     Width = 1008
     Height = 19
     Panels = <
@@ -38,7 +38,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Left = 0
     Top = 0
     Width = 1008
-    Height = 498
+    Height = 523
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
@@ -80,12 +80,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     end
     object pnlControls: TPanel
       Left = 0
-      Top = 456
+      Top = 481
       Width = 1008
       Height = 42
       Align = alBottom
       ParentBackground = False
-      TabOrder = 1
+      TabOrder = 2
       ExplicitTop = 447
       ExplicitWidth = 1002
       DesignSize = (
@@ -146,10 +146,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Left = 0
       Top = 49
       Width = 1008
-      Height = 407
-      ActivePage = tsWorktops
+      Height = 432
+      ActivePage = tsDetails
       Align = alClient
-      TabOrder = 2
+      TabOrder = 1
       ExplicitWidth = 1002
       ExplicitHeight = 398
       object tsDetails: TTabSheet
@@ -355,8 +355,9 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Top = 320
           Width = 81
           Height = 21
+          CharCase = ecUpperCase
           TabOrder = 11
-          Text = 'edtAccountCode'
+          Text = 'EDTACCOUNTCODE'
           OnChange = EnableOK
         end
       end
@@ -368,10 +369,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 907
           Top = 0
           Width = 93
-          Height = 317
+          Height = 342
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 1100
+          ExplicitHeight = 394
           object btnChange: TBitBtn
             Left = 10
             Top = 40
@@ -431,7 +434,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 0
           Top = 0
           Width = 907
-          Height = 317
+          Height = 342
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
@@ -508,12 +511,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         end
         object pnlMaterialsFooter: TPanel
           Left = 0
-          Top = 317
+          Top = 342
           Width = 1000
           Height = 62
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 394
+          ExplicitWidth = 1193
           DesignSize = (
             1000
             62)
@@ -570,6 +575,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 4
+            ExplicitLeft = 1089
           end
           object edtColour: TEdit
             Left = 200
@@ -666,6 +672,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             Caption = 'S&weep'
             TabOrder = 9
             OnClick = btnSweepClick
+            ExplicitLeft = 1089
           end
           object chkbxShowInactive: TCheckBox
             Left = 9
@@ -685,12 +692,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         OnShow = tsWorktopsShow
         object Panel2: TPanel
           Left = 0
-          Top = 317
+          Top = 342
           Width = 1000
           Height = 62
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 308
+          ExplicitWidth = 994
           DesignSize = (
             1000
             62)
@@ -733,6 +742,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 3
+            ExplicitLeft = 890
           end
           object edtColour1: TEdit
             Left = 200
@@ -774,10 +784,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 907
           Top = 0
           Width = 93
-          Height = 317
+          Height = 342
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 901
+          ExplicitHeight = 308
           object btnChangeWorktop: TBitBtn
             Left = 10
             Top = 40
@@ -828,7 +840,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 0
           Top = 0
           Width = 907
-          Height = 317
+          Height = 342
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
@@ -876,12 +888,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         OnShow = tsProductsShow
         object pnlProductsFooter: TPanel
           Left = 0
-          Top = 317
+          Top = 342
           Width = 1000
           Height = 62
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 394
+          ExplicitWidth = 1193
           DesignSize = (
             1000
             62)
@@ -918,6 +932,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             Caption = 'S&weep'
             TabOrder = 2
             OnClick = btnProdSweepClick
+            ExplicitLeft = 1113
           end
           object chkbxShowInactiveProducts: TCheckBox
             Left = 9
@@ -934,7 +949,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 0
           Top = 0
           Width = 907
-          Height = 317
+          Height = 342
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
@@ -999,10 +1014,12 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 907
           Top = 0
           Width = 93
-          Height = 317
+          Height = 342
           Align = alRight
           ParentBackground = False
           TabOrder = 2
+          ExplicitLeft = 1100
+          ExplicitHeight = 394
           object btnProdChange: TBitBtn
             Left = 10
             Top = 40
@@ -1044,6 +1061,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1193
           object Label44: TLabel
             Left = 2
             Top = 4
@@ -1056,16 +1074,18 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Left = 0
           Top = 17
           Width = 1000
-          Height = 362
+          Height = 387
           Align = alClient
           Caption = 'Panel11'
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 1193
+          ExplicitHeight = 439
           object lstvwDocuments: TListView
             Left = 1
             Top = 1
             Width = 969
-            Height = 360
+            Height = 385
             Align = alClient
             Columns = <
               item
@@ -1088,12 +1108,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             OnColumnClick = lstvwDocumentsColumnClick
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
+            ExplicitWidth = 1162
+            ExplicitHeight = 437
           end
           object ToolBar1: TToolBar
             Left = 970
             Top = 1
             Width = 29
-            Height = 360
+            Height = 385
             Align = alRight
             ButtonHeight = 30
             ButtonWidth = 30
@@ -1103,6 +1125,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
             ParentShowHint = False
             ShowHint = True
             TabOrder = 1
+            ExplicitLeft = 1163
+            ExplicitHeight = 437
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -1510,8 +1534,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       'SELECT *'
       'FROM Supplier'
       'WHERE Supplier = :Supplier')
-    Left = 380
-    Top = 392
+    Left = 595
+    Top = 354
     ParamData = <
       item
         Name = 'Supplier'
@@ -1537,8 +1561,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       '      inActive = :InActive'
       'WHERE'
       '  Supplier = :Supplier')
-    Left = 632
-    Top = 400
+    Left = 22
+    Top = 428
     ParamData = <
       item
         Name = 'Supplier_Name'
@@ -1601,8 +1625,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       'Select Max(Supplier)+1, :GUID'
       'From Supplier'
       ' ')
-    Left = 688
-    Top = 400
+    Left = 92
+    Top = 428
     ParamData = <
       item
         Name = 'GUID'
@@ -1616,8 +1640,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       'Delete From Supplier'
       'Where'
       '(Supplier = :Supplier)')
-    Left = 744
-    Top = 400
+    Left = 162
+    Top = 428
     ParamData = <
       item
         Name = 'Supplier'
@@ -1629,8 +1653,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       'Select Supplier'
       'From Supplier'
       'Where Supplier_Name = :GUID')
-    Left = 800
-    Top = 400
+    Left = 232
+    Top = 428
     ParamData = <
       item
         Name = 'GUID'
@@ -1640,8 +1664,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   end
   object qryZero: TFDQuery
     ConnectionName = 'WT'
-    Left = 864
-    Top = 400
+    Left = 312
+    Top = 428
   end
   object DropComboTarget1: TDropComboTarget
     DragTypes = [dtCopy, dtLink]

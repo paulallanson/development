@@ -2,8 +2,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   Left = 344
   Top = 48
   Caption = 'Promotions'
-  ClientHeight = 497
-  ClientWidth = 614
+  ClientHeight = 503
+  ClientWidth = 622
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,11 +16,11 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 614
+    Width = 622
     Height = 73
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 577
+    ExplicitWidth = 614
     object Label3: TLabel
       Left = 8
       Top = 16
@@ -70,12 +70,12 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   object Panel3: TPanel
     Left = 0
     Top = 73
-    Width = 614
-    Height = 383
+    Width = 622
+    Height = 389
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 577
-    ExplicitHeight = 350
+    ExplicitWidth = 614
+    ExplicitHeight = 383
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -215,13 +215,13 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   end
   object Panel2: TPanel
     Left = 0
-    Top = 456
-    Width = 614
+    Top = 462
+    Width = 622
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 423
-    ExplicitWidth = 577
+    ExplicitTop = 456
+    ExplicitWidth = 614
     object btnOK: TBitBtn
       Left = 212
       Top = 8
@@ -323,8 +323,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       'WHERE Promotion_Worktops.Promotion_Code = :Promotion_Code'
       'Order By Worktop.Description'
       '')
-    Left = 88
-    Top = 336
+    Left = 30
+    Top = 276
     ParamData = <
       item
         Name = 'Promotion_Code'
@@ -344,8 +344,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       '      INNER JOIN Worktop'
       '        ON Worktop_Group.Worktop_Group = Worktop.Worktop_Group'
       'WHERE Worktop.Material_Type = :Material_Type')
-    Left = 304
-    Top = 232
+    Left = 252
+    Top = 226
     ParamData = <
       item
         Name = 'Material_Type'
@@ -353,8 +353,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   end
   object dtsNonMembers: TDataSource
     DataSet = qryNonMembers
-    Left = 304
-    Top = 344
+    Left = 252
+    Top = 366
   end
   object qryDummy: TFDQuery
     ConnectionName = 'wt'
@@ -375,8 +375,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       '      Worktop.Material_Type = :Material_Type AND'
       '      Worktop.Description LIKE :Description'
       '')
-    Left = 304
-    Top = 288
+    Left = 252
+    Top = 296
     ParamData = <
       item
         Name = 'Material_Type'
@@ -387,8 +387,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   end
   object dtsMaterialType: TDataSource
     DataSet = qryMaterialType
-    Left = 528
-    Top = 40
+    Left = 484
+    Top = 42
   end
   object qryMaterialType: TFDQuery
     ConnectionName = 'WT'
@@ -400,14 +400,14 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         '      ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')'
       'ORDER BY Material_Type.Description')
-    Left = 456
-    Top = 40
+    Left = 394
+    Top = 42
   end
   object tmrRefresh: TTimer
     Interval = 250
     OnTimer = tmrRefreshTimer
-    Left = 160
-    Top = 336
+    Left = 120
+    Top = 276
   end
   object qryUpdActive: TFDQuery
     ConnectionName = 'WT'
@@ -415,8 +415,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       'UPDATE Promotion'
       'SET inactive = '#39'Y'#39
       'WHERE Promotion_Code <> :Promotion_Code')
-    Left = 96
-    Top = 393
+    Left = 40
+    Top = 347
     ParamData = <
       item
         Name = 'Promotion_Code'

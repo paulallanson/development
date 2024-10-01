@@ -4,7 +4,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   BorderStyle = bsDialog
   Caption = 'Maintain Revenue Centre'
   ClientHeight = 398
-  ClientWidth = 694
+  ClientWidth = 724
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 694
+    Width = 724
     Height = 292
     Align = alClient
     DataSource = srcRevenueCentre
@@ -56,7 +56,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 379
-    Width = 694
+    Width = 724
     Height = 19
     Panels = <
       item
@@ -65,18 +65,22 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       item
         Width = 50
       end>
+    ExplicitTop = 370
+    ExplicitWidth = 688
   end
   object Panel1: TPanel
     Left = 0
     Top = 292
-    Width = 694
+    Width = 724
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 283
+    ExplicitWidth = 688
     DesignSize = (
-      694
+      724
       87)
     object Label4: TLabel
       Left = 8
@@ -132,7 +136,7 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     object chkbxShowInactive: TCheckBox
       Left = 8
       Top = 54
-      Width = 169
+      Width = 209
       Height = 17
       Caption = 'Show inactive Remedial Source'
       TabOrder = 5

@@ -323,6 +323,7 @@ begin
     vk_back: ;
     vk_return: ;
     vk_tab: ;
+    Ord('.'): ;
   else
     MessageBeep(0);
     key := #0;
@@ -377,7 +378,7 @@ begin
           POrder.Lines[irow].DateReceived := dtTransaction.Date;
           POrder.Lines[irow].GRNNumber := edtGRN.text;
           POrder.Lines[irow].DELNoteNumber := edtDeliveryNote.text;
-          POrder.Lines[irow].QtyDelivered := strtoint(cells[5, iRow+1]);
+          POrder.Lines[irow].QtyDelivered := strtofloat(cells[5, iRow+1]);
         end;
     end;
 
