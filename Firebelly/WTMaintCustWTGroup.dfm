@@ -3,8 +3,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   Top = 226
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Worktop Groups'
-  ClientHeight = 280
-  ClientWidth = 391
+  ClientHeight = 308
+  ClientWidth = 397
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    391
-    280)
+    397
+    308)
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -102,7 +102,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   end
   object btnOK: TBitBtn
     Left = 192
-    Top = 235
+    Top = 263
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -112,10 +112,11 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 10
     OnClick = btnOKClick
+    ExplicitTop = 235
   end
   object BitBtn2: TBitBtn
     Left = 280
-    Top = 235
+    Top = 263
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -124,15 +125,17 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 11
+    ExplicitTop = 235
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 235
+    Top = 263
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 9
+    ExplicitTop = 235
   end
   object dblkpMaterialType: TDBLookupComboBox
     Left = 96
@@ -174,15 +177,17 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     ShowHint = True
     TabOrder = 3
     OnClick = btnSupplierClick
+    ExplicitLeft = 272
   end
   object chkbxUseForGeneralQuoting: TCheckBox
     Left = 8
-    Top = 195
+    Top = 223
     Width = 281
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Use for General Quoting'
     TabOrder = 8
+    ExplicitTop = 195
   end
   object edtDateEffective: TEdit
     Left = 96
@@ -192,6 +197,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Anchors = [akTop, akRight]
     TabOrder = 4
     OnExit = edtDateEffectiveExit
+    ExplicitLeft = 90
   end
   object btnDateEffective: TBitBtn
     Left = 214
@@ -215,6 +221,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnDateEffectiveClick
+    ExplicitLeft = 208
   end
   object edtDateInEffective: TEdit
     Left = 96
@@ -224,6 +231,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Anchors = [akTop, akRight]
     TabOrder = 6
     OnExit = edtDateEffectiveExit
+    ExplicitLeft = 90
   end
   object btnDateInEffective: TBitBtn
     Left = 214
@@ -247,6 +255,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 7
     OnClick = btnDateInEffectiveClick
+    ExplicitLeft = 208
   end
   object edtGroupDescription: TEdit
     Left = 96
@@ -273,7 +282,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'WHERE Material_Type = :Material_Type OR'
       '((Inactive = '#39'N'#39') OR (Inactive = '#39#39') OR (Inactive is NULL))'
       'ORDER BY Description')
-    Left = 280
+    Left = 158
+    Top = 8
     ParamData = <
       item
         Name = 'Material_Type'
@@ -281,7 +291,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   end
   object srcMaterialtype: TDataSource
     DataSet = qryMaterialType
-    Left = 320
+    Left = 208
+    Top = 8
   end
   object qrySupplier: TFDQuery
     ConnectionName = 'wt'
@@ -291,8 +302,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'WHERE Supplier = :Supplier OR'
       '((Inactive = '#39'N'#39') OR (Inactive = '#39#39') OR (Inactive is NULL))'
       'ORDER BY Supplier_Name')
-    Left = 296
-    Top = 48
+    Left = 178
+    Top = 68
     ParamData = <
       item
         Name = 'Supplier'
@@ -300,8 +311,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   end
   object srcSupplier: TDataSource
     DataSet = qrySupplier
-    Left = 328
-    Top = 48
+    Left = 218
+    Top = 68
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -318,8 +329,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'WHERE'
       '  Customer = :Customer AND'
       '  Group_Number = :Group_Number')
-    Left = 72
-    Top = 200
+    Left = 26
+    Top = 162
     ParamData = <
       item
         Name = 'Group_Description'
@@ -361,8 +372,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'Select :Customer, Max(Group_Number)+1, :GUID, :Material_Type'
       'From Customer_Worktop_Group'
       ' ')
-    Left = 128
-    Top = 200
+    Left = 96
+    Top = 162
     ParamData = <
       item
         Name = 'Customer'
@@ -382,8 +393,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'Select Group_Number'
       'From Customer_Worktop_Group'
       'Where Customer = :Customer AND Group_Description = :GUID')
-    Left = 240
-    Top = 200
+    Left = 236
+    Top = 162
     ParamData = <
       item
         Name = 'Customer'
@@ -399,8 +410,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     SQL.Strings = (
       ''
       '')
-    Left = 304
-    Top = 200
+    Left = 316
+    Top = 162
   end
   object qryPatch: TFDQuery
     ConnectionName = 'WT'
@@ -413,8 +424,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'Values (:Customer, :Group_Number, '#39'Patch'#39', :Material_Type)'
       ''
       ' ')
-    Left = 176
-    Top = 200
+    Left = 156
+    Top = 162
     ParamData = <
       item
         Name = 'Customer'

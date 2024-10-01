@@ -116,6 +116,7 @@ begin
     edtCompanyRegNo.Text := '';
     edtVATRegistrationNo.Text := '';
     dblkpAccountsPackage.keyvalue := '';
+    edtLogoPath.Text := '';
 
     chkbxUseSeparateInvoiceSeq.Checked := false;
     edtPrefixValue.text := '';
@@ -166,6 +167,7 @@ begin
 
   pcDetails.Enabled := (FunctionMode <> 'D');
   CheckOK(Self);
+  DescrEdit.SetFocus;
 end;
 
 procedure TfrmWTMaintRevenueCentre.CheckOK(Sender: TObject);

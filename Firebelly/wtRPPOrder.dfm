@@ -1,30 +1,24 @@
 object frmwtRPPOrder: TfrmwtRPPOrder
   Left = 170
   Top = 5
-  Width = 1206
-  Height = 746
   Caption = 'Purchase Order Print'
+  ClientHeight = 699
+  ClientWidth = 1188
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
-  Scaled = True
+  Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 24
     Top = 10
-    Width = 1123
-    Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Width = 1403
+    Height = 992
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = ANSI_CHARSET
@@ -46,6 +40,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -59,13 +54,16 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Sales Order Print'
     SnapToGrid = True
@@ -73,410 +71,359 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrgPurchaseOrder: TQRGroup
-      Left = 38
-      Top = 369
-      Width = 1047
-      Height = 2
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 461
+      Width = 1309
+      Height = 3
       AlignToBottom = False
       BeforePrint = qrgPurchaseOrderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        2770.187500000000000000)
+        6.350000000000000000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'purchase_order'
       FooterBand = qrbPOFooter
       Master = qrpDetails
       ReprintOnNewPage = False
     end
     object qrbPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 331
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 414
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        875.770833333333300000
-        2770.187500000000000000)
+        876.300000000000000000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRShape7: TQRShape
         Left = 0
-        Top = 299
-        Width = 1041
-        Height = 31
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Top = 374
+        Width = 1301
+        Height = 39
         Size.Values = (
           82.020833333333330000
           0.000000000000000000
           791.104166666666700000
           2754.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object QRShape2: TQRShape
-        Left = 675
-        Top = 65
-        Width = 366
-        Height = 90
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 81
+        Width = 458
+        Height = 113
         Size.Values = (
           238.125000000000000000
           1785.937500000000000000
           171.979166666666700000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object qrlblSOCaption: TQRLabel
-        Left = 613
-        Top = 2
-        Width = 417
-        Height = 56
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 762
+        Top = 3
+        Width = 529
+        Height = 70
         Size.Values = (
           148.166666666666700000
-          1621.895833333333000000
-          5.291666666666667000
-          1103.312500000000000000)
+          1612.900000000000000000
+          6.350000000000000000
+          1119.716666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PURCHASE ORDER'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -48
+        Font.Height = -60
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 36
       end
       object QRLabel2: TQRLabel
-        Left = 691
-        Top = 102
-        Width = 77
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 128
+        Width = 91
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          269.875000000000000000
-          203.729166666666700000)
+          38.100000000000000000
+          1828.800000000000000000
+          270.933333333333300000
+          192.616666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Date:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText1: TQRDBText
-        Left = 945
-        Top = 101
-        Width = 82
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1186
+        Top = 126
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2500.312500000000000000
-          267.229166666666700000
-          216.958333333333300000)
+          2510.366666666667000000
+          266.700000000000000000
+          205.316666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Raised'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText2: TQRDBText
-        Left = 920
-        Top = 73
-        Width = 107
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1149
+        Top = 91
+        Width = 135
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2434.166666666667000000
-          193.145833333333300000
-          283.104166666666700000)
+          2432.050000000000000000
+          192.616666666666700000
+          285.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Purchase_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 691
-        Top = 73
-        Width = 124
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 91
+        Width = 147
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          193.145833333333300000
-          328.083333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          192.616666666666700000
+          311.150000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Purchase Order No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
-        FontSize = 9
-      end
-      object QRLabel1: TQRLabel
-        Left = 19
-        Top = 180
-        Width = 57
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          44.979166666666670000
-          50.270833333333330000
-          476.250000000000000000
-          150.812500000000000000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Caption = 'Customer'
-        Color = clWhite
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Lucida Sans'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel9: TQRLabel
-        Left = 30
-        Top = 309
-        Width = 221
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 38
+        Top = 386
+        Width = 255
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          79.375000000000000000
-          817.562500000000000000
-          584.729166666666700000)
+          38.100000000000000000
+          80.433333333333330000
+          817.033333333333300000
+          539.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description/Customer/Reference'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel12: TQRLabel
-        Left = 646
-        Top = 309
-        Width = 65
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 807
+        Top = 386
+        Width = 73
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1709.208333333333000000
-          817.562500000000000000
-          171.979166666666700000)
+          38.100000000000000000
+          1708.150000000000000000
+          817.033333333333300000
+          154.516666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Unit Cost'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel14: TQRLabel
-        Left = 802
-        Top = 309
-        Width = 64
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1002
+        Top = 386
+        Width = 75
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          2121.958333333333000000
-          817.562500000000000000
-          169.333333333333300000)
+          38.100000000000000000
+          2120.900000000000000000
+          817.033333333333300000
+          158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sub Total'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel15: TQRLabel
-        Left = 965
-        Top = 309
-        Width = 71
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1214
+        Top = 386
+        Width = 81
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          2553.229166666667000000
-          817.562500000000000000
-          187.854166666666700000)
+          38.100000000000000000
+          2569.633333333333000000
+          817.033333333333300000
+          171.450000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Nett'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object memAddress: TQRRichText
-        Left = 24
-        Top = 112
-        Width = 281
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 140
+        Width = 351
+        Height = 41
         Size.Values = (
           87.312500000000000000
           63.500000000000000000
           296.333333333333300000
           743.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AutoStretch = False
         Color = clWindow
@@ -485,1067 +432,1011 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Font.Height = -11
         Font.Name = 'Gill Sans MT'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
       object QRShape6: TQRShape
-        Left = 821
-        Top = 64
-        Width = 9
-        Height = 90
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1026
+        Top = 80
+        Width = 11
+        Height = 113
         Size.Values = (
           238.125000000000000000
           2172.229166666667000000
           169.333333333333300000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
       object QRShape3: TQRShape
-        Left = 675
-        Top = 93
-        Width = 366
-        Height = 5
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 116
+        Width = 458
+        Height = 6
         Size.Values = (
           13.229166666666670000
           1785.937500000000000000
           246.062500000000000000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object gtQRShape1: TQRShape
-        Left = 675
-        Top = 123
-        Width = 366
-        Height = 3
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 154
+        Width = 458
+        Height = 4
         Size.Values = (
           7.937500000000000000
           1785.937500000000000000
           325.437500000000000000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object QRShape1: TQRShape
         Left = 0
-        Top = 152
-        Width = 336
-        Height = 140
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Top = 187
+        Width = 420
+        Height = 175
         Size.Values = (
           370.416666666666700000
           0.000000000000000000
-          402.166666666666700000
+          395.816666666666700000
           889.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object qrmAddress: TQRMemo
-        Left = 9
-        Top = 175
-        Width = 320
-        Height = 109
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 11
+        Top = 216
+        Width = 400
+        Height = 136
         Size.Values = (
-          288.395833333333300000
-          23.812500000000000000
-          463.020833333333300000
+          287.866666666666700000
+          23.283333333333330000
+          457.200000000000000000
           846.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 9
       end
       object gtQRLabel1: TQRLabel
-        Left = 691
-        Top = 134
-        Width = 99
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 168
+        Width = 115
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          354.541666666666700000
-          261.937500000000000000)
+          38.100000000000000000
+          1828.800000000000000000
+          355.600000000000000000
+          243.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Required:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText1: TQRDBText
-        Left = 888
-        Top = 133
-        Width = 139
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1110
+        Top = 166
+        Width = 174
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2349.500000000000000000
           351.895833333333300000
           367.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Required'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel2: TQRLabel
-        Left = 9
-        Top = 156
-        Width = 54
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 11
+        Top = 190
+        Width = 62
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          23.812500000000000000
-          412.750000000000000000
-          142.875000000000000000)
+          23.283333333333330000
+          402.166666666666700000
+          131.233333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Supplier'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel5: TQRLabel
-        Left = 888
-        Top = 309
-        Width = 61
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1110
+        Top = 386
+        Width = 69
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           2349.500000000000000000
-          817.562500000000000000
-          161.395833333333300000)
+          817.033333333333300000
+          146.050000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Discount'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel6: TQRLabel
-        Left = 600
-        Top = 309
-        Width = 25
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 750
+        Top = 386
+        Width = 29
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           1587.500000000000000000
-          817.562500000000000000
-          66.145833333333330000)
+          817.033333333333300000
+          61.383333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Qty'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel7: TQRLabel
-        Left = 4
-        Top = 309
-        Width = 19
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 5
+        Top = 386
+        Width = 22
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           10.583333333333330000
-          817.562500000000000000
-          50.270833333333330000)
+          817.033333333333300000
+          46.566666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'No'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel9: TQRLabel
-        Left = 411
-        Top = 309
-        Width = 95
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 514
+        Top = 386
+        Width = 113
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1087.437500000000000000
-          817.562500000000000000
-          251.354166666666700000)
+          38.100000000000000000
+          1087.966666666667000000
+          817.033333333333300000
+          239.183333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Slab Size (mm)'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel10: TQRLabel
-        Left = 520
-        Top = 309
-        Width = 64
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 650
+        Top = 386
+        Width = 76
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           1375.833333333333000000
-          817.562500000000000000
-          169.333333333333300000)
+          817.033333333333300000
+          160.866666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Our Order'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qriHeadLogo: TQRImage
-        Left = 39
-        Top = -8
-        Width = 245
-        Height = 113
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 49
+        Top = -10
+        Width = 306
+        Height = 141
         Size.Values = (
           298.979166666666700000
           103.187500000000000000
           -21.166666666666670000
           648.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object gtQRShape3: TQRShape
-        Left = 675
-        Top = 173
-        Width = 366
-        Height = 119
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 216
+        Width = 458
+        Height = 149
         Size.Values = (
           314.854166666666700000
           1785.937500000000000000
           457.729166666666700000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object gtQRLabel11: TQRLabel
-        Left = 691
-        Top = 211
-        Width = 74
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 264
+        Width = 84
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          558.270833333333300000
-          195.791666666666700000)
+          38.100000000000000000
+          1828.800000000000000000
+          558.800000000000000000
+          177.800000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Telephone:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText6: TQRDBText
-        Left = 832
-        Top = 210
-        Width = 195
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1040
+        Top = 262
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
           555.625000000000000000
           515.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Office_Contact_Telephone'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText7: TQRDBText
-        Left = 879
-        Top = 180
-        Width = 148
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1094
+        Top = 225
+        Width = 190
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2325.687500000000000000
+          2315.633333333333000000
           476.250000000000000000
-          391.583333333333300000)
+          402.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Office_Contact_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel12: TQRLabel
-        Left = 691
-        Top = 180
-        Width = 86
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 225
+        Width = 100
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
+          38.100000000000000000
+          1828.800000000000000000
           476.250000000000000000
-          227.541666666666700000)
+          211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Our Contact:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShape4: TQRShape
-        Left = 821
-        Top = 173
-        Width = 9
-        Height = 119
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1026
+        Top = 216
+        Width = 11
+        Height = 149
         Size.Values = (
           314.854166666666700000
           2172.229166666667000000
           457.729166666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
       object gtQRShape5: TQRShape
-        Left = 675
-        Top = 201
-        Width = 366
-        Height = 4
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 251
+        Width = 458
+        Height = 5
         Size.Values = (
           10.583333333333330000
           1785.937500000000000000
           531.812500000000000000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object gtQRShape6: TQRShape
-        Left = 675
-        Top = 231
-        Width = 366
-        Height = 2
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 289
+        Width = 458
+        Height = 3
         Size.Values = (
           5.291666666666667000
           1785.937500000000000000
           611.187500000000000000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object gtQRLabel13: TQRLabel
-        Left = 691
-        Top = 239
-        Width = 40
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 299
+        Width = 46
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          632.354166666666700000
-          105.833333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          632.883333333333300000
+          97.366666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Email:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShape7: TQRShape
-        Left = 675
-        Top = 261
-        Width = 366
-        Height = 2
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 844
+        Top = 326
+        Width = 458
+        Height = 3
         Size.Values = (
           5.291666666666667000
           1785.937500000000000000
           690.562500000000000000
           968.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object gtQRLabel14: TQRLabel
-        Left = 691
-        Top = 270
-        Width = 94
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 864
+        Top = 338
+        Width = 109
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          714.375000000000000000
-          248.708333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          715.433333333333300000
+          230.716666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Our Reference'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText10: TQRDBText
-        Left = 832
-        Top = 270
-        Width = 195
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1040
+        Top = 338
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
           714.375000000000000000
           515.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRDBText2: TQRDBText
-        Left = 832
-        Top = 239
-        Width = 195
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1040
+        Top = 299
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
           632.354166666666700000
           515.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Office_Contact_Email'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel8: TQRLabel
-        Left = 719
-        Top = 309
-        Width = 65
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 899
+        Top = 386
+        Width = 73
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1902.354166666667000000
-          817.562500000000000000
-          171.979166666666700000)
+          38.100000000000000000
+          1902.883333333333000000
+          817.033333333333300000
+          154.516666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost Unit'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
     object qrsdPOLines: TQRSubDetail
-      Left = 38
-      Top = 371
-      Width = 1047
-      Height = 23
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 464
+      Width = 1309
+      Height = 29
       AlignToBottom = False
       BeforePrint = qrsdPOLinesBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        60.854166666666670000
-        2770.187500000000000000)
+        61.383333333333330000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryPOLine
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRDBText8: TQRDBText
-        Left = 521
-        Top = 4
-        Width = 71
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 651
+        Top = 5
+        Width = 89
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1378.479166666667000000
           10.583333333333330000
           187.854166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryPOLine
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblCostUnit: TQRLabel
-        Left = 704
-        Top = 4
-        Width = 77
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 879
+        Top = 5
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1862.666666666667000000
+          1860.550000000000000000
           10.583333333333330000
-          203.729166666666700000)
+          205.316666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCostUnit'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblSlabDescription: TQRLabel
-        Left = 388
-        Top = 4
-        Width = 119
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 486
+        Top = 5
+        Width = 148
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1026.583333333333000000
+          1028.700000000000000000
           10.583333333333330000
-          314.854166666666700000)
+          313.266666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSlabDescription'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblTotalLineCost: TQRLabel
-        Left = 928
-        Top = 4
-        Width = 107
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1160
+        Top = 5
+        Width = 134
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2455.333333333333000000
           10.583333333333330000
-          283.104166666666700000)
+          283.633333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalLineCost'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRDBText7: TQRDBText
-        Left = 574
-        Top = 4
-        Width = 51
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 718
+        Top = 5
+        Width = 63
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1518.708333333333000000
+          1519.766666666667000000
           10.583333333333330000
-          134.937500000000000000)
+          133.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryPOLine
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtlblLineCount: TQRLabel
-        Left = 9
-        Top = 4
-        Width = 86
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 11
+        Top = 5
+        Width = 108
+        Height = 20
         Size.Values = (
           42.333333333333330000
           23.812500000000000000
           10.583333333333330000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'gtlblLineCount'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblUnitCost: TQRLabel
-        Left = 635
-        Top = 4
-        Width = 77
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 793
+        Top = 5
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1680.104166666667000000
+          1678.516666666667000000
           10.583333333333330000
-          203.729166666666700000)
+          205.316666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblUnitCost'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblLineCost: TQRLabel
-        Left = 790
-        Top = 4
-        Width = 77
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 986
+        Top = 5
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2090.208333333333000000
+          2087.033333333333000000
           10.583333333333330000
-          203.729166666666700000)
+          205.316666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblLineCost'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblDiscountValue: TQRLabel
-        Left = 836
-        Top = 4
-        Width = 112
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1045
+        Top = 5
+        Width = 140
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2211.916666666667000000
           10.583333333333330000
           296.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDiscountValue'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object qrlblDescription: TQRLabel
-        Left = 30
-        Top = 4
-        Width = 355
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 38
+        Top = 5
+        Width = 444
+        Height = 20
         Size.Values = (
           42.333333333333330000
           79.375000000000000000
           10.583333333333330000
           939.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1554,526 +1445,479 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
     object qrbPOFooter: TQRBand
-      Left = 38
-      Top = 416
-      Width = 1047
-      Height = 150
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 520
+      Width = 1309
+      Height = 188
       AfterPrint = qrbPOFooterAfterPrint
       AlignToBottom = True
       BeforePrint = qrbPOFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        396.875000000000000000
-        2770.187500000000000000)
+        397.933333333333300000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrshpPayment: TQRShape
-        Left = 392
-        Top = 22
-        Width = 370
-        Height = 123
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 490
+        Top = 27
+        Width = 462
+        Height = 154
         Size.Values = (
           325.437500000000000000
           1037.166666666667000000
           58.208333333333330000
           978.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object QRShape10: TQRShape
-        Left = 955
-        Top = 9
-        Width = 86
-        Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1194
+        Top = 11
+        Width = 108
+        Height = 40
         Size.Values = (
           84.666666666666670000
           2526.770833333333000000
           23.812500000000000000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object qrlblNett: TQRLabel
-        Left = 972
-        Top = 17
-        Width = 61
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1222
+        Top = 21
+        Width = 69
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2571.750000000000000000
-          44.979166666666670000
-          161.395833333333300000)
+          2586.566666666667000000
+          44.450000000000000000
+          146.050000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblNett'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRLabel4: TQRLabel
-        Left = 824
-        Top = 17
-        Width = 116
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1037
+        Top = 21
+        Width = 138
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2180.166666666667000000
-          44.979166666666670000
-          306.916666666666700000)
+          2194.983333333333000000
+          44.450000000000000000
+          292.100000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Order Value'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRShape9: TQRShape
         Left = 0
-        Top = 6
-        Width = 1042
-        Height = 7
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Top = 8
+        Width = 1302
+        Height = 9
         Size.Values = (
           18.520833333333330000
           0.000000000000000000
           15.875000000000000000
           2756.958333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object memDeliveryNotes: TQRMemo
-        Left = 398
-        Top = 41
-        Width = 355
-        Height = 90
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 498
+        Top = 51
+        Width = 444
+        Height = 113
         Size.Values = (
           238.125000000000000000
           1053.041666666667000000
           108.479166666666700000
           939.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         Lines.Strings = (
           'Delivery Notes')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 9
       end
       object gtQRLabel16: TQRLabel
-        Left = 398
-        Top = 25
-        Width = 98
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 498
+        Top = 31
+        Width = 113
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1053.041666666667000000
-          66.145833333333330000
-          259.291666666666700000)
+          1054.100000000000000000
+          65.616666666666670000
+          239.183333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Notes'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object gtQRShape2: TQRShape
         Left = 0
-        Top = 22
-        Width = 336
-        Height = 123
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Top = 27
+        Width = 420
+        Height = 154
         Size.Values = (
           325.437500000000000000
           0.000000000000000000
           58.208333333333330000
           889.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object qrmDeliveryAddress: TQRMemo
-        Left = 12
-        Top = 46
-        Width = 313
-        Height = 90
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 15
+        Top = 57
+        Width = 391
+        Height = 113
         Size.Values = (
           238.125000000000000000
           31.750000000000000000
           121.708333333333300000
           828.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 9
       end
       object gtQRLabel3: TQRLabel
-        Left = 12
-        Top = 27
-        Width = 75
-        Height = 14
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 15
+        Top = 34
+        Width = 88
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           31.750000000000000000
-          71.437500000000000000
-          198.437500000000000000)
+          71.966666666666670000
+          186.266666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery To'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
     object gtQRShape9: TQRShape
-      Left = 1078
-      Top = 337
+      Left = 1347
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2852.208333333333000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape10: TQRShape
-      Left = 38
-      Top = 337
+      Left = 48
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         100.541666666666700000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape11: TQRShape
-      Left = 993
-      Top = 337
+      Left = 1241
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2627.312500000000000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape8: TQRShape
-      Left = 920
-      Top = 337
+      Left = 1150
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2434.166666666667000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape12: TQRShape
-      Left = 825
-      Top = 337
+      Left = 1031
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2182.812500000000000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape14: TQRShape
-      Left = 755
-      Top = 337
+      Left = 944
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1997.604166666667000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape15: TQRShape
-      Left = 628
-      Top = 337
+      Left = 785
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1661.583333333333000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape16: TQRShape
-      Left = 551
-      Top = 337
+      Left = 689
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1457.854166666667000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape17: TQRShape
-      Left = 427
-      Top = 337
+      Left = 534
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1129.770833333333000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape18: TQRShape
-      Left = 63
-      Top = 337
+      Left = 79
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         166.687500000000000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object gtQRShape13: TQRShape
-      Left = 675
-      Top = 337
+      Left = 844
+      Top = 421
       Width = 1
-      Height = 278
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1785.937500000000000000
         891.645833333333300000
         2.645833333333333000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Shape = qrsVertLine
       VertAdjust = 0
     end
     object ChildBand1: TQRChildBand
-      Left = 38
-      Top = 394
-      Width = 1047
-      Height = 22
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 493
+      Width = 1309
+      Height = 27
       AlignToBottom = False
       BeforePrint = ChildBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        58.208333333333330000
-        2770.187500000000000000)
+        57.150000000000000000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrsdPOLines
+      PrintOrder = cboAfterParent
       object qrlblCustomerReference: TQRLabel
-        Left = 30
-        Top = 4
-        Width = 355
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 38
+        Top = 5
+        Width = 444
+        Height = 20
         Size.Values = (
           42.333333333333330000
           79.375000000000000000
           10.583333333333330000
           939.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -2082,12 +1926,14 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
@@ -2141,9 +1987,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 22
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -2170,9 +2014,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 518
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -2194,14 +2036,12 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 239
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryPOLine: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Purchase_orderline.Purchase_Order,'
       '        Purchase_orderline.Line_no,'
@@ -2265,9 +2105,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery
@@ -2298,9 +2136,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 589
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object dtsPOLine: TDataSource
@@ -2323,14 +2159,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Top = 293
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -167,6 +167,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
+    ExplicitTop = 617
+    ExplicitWidth = 1469
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

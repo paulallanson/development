@@ -72,7 +72,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         832
         41)
       object btbtnClose: TBitBtn
-        Left = 726
+        Left = 720
         Top = 8
         Width = 75
         Height = 25
@@ -82,7 +82,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         TabOrder = 0
       end
       object btnOK: TBitBtn
-        Left = 638
+        Left = 632
         Top = 8
         Width = 75
         Height = 25

@@ -31,7 +31,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 557
+    ExplicitTop = 607
     ExplicitWidth = 832
   end
   object pnlBody: TPanel
@@ -43,17 +43,17 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     BevelOuter = bvNone
     TabOrder = 1
     ExplicitWidth = 832
-    ExplicitHeight = 557
+    ExplicitHeight = 607
     object pgDetails: TPageControl
       Left = 0
       Top = 0
       Width = 838
       Height = 574
-      ActivePage = tsGeneral
+      ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 832
-      ExplicitHeight = 515
+      ExplicitHeight = 565
       object tsGeneral: TTabSheet
         Caption = 'General'
         object pnlDetails: TPanel
@@ -64,7 +64,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 11
+          ExplicitWidth = 824
+          ExplicitHeight = 537
           DesignSize = (
             830
             546)
@@ -683,7 +684,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 430
+            Width = 424
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -739,7 +740,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 496
           object Label31: TLabel
             Left = 24
             Top = 67
@@ -923,7 +923,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Panel13'
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 496
           object Panel15: TPanel
             Left = 1
             Top = 1
@@ -942,7 +941,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alRight
             ParentBackground = False
             TabOrder = 1
-            ExplicitHeight = 412
             object btnMTAdd: TBitBtn
               Left = 10
               Top = 8
@@ -983,7 +981,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Font.Height = -11
             Font.Name = 'Segoe UI'
             Font.Style = []
-            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             ParentFont = False
             TabOrder = 2
             TitleFont.Charset = DEFAULT_CHARSET
@@ -1017,7 +1015,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alBottom
             ParentBackground = False
             TabOrder = 3
-            ExplicitTop = 454
             object chkbxShowInactiveMaterialTypes: TCheckBox
               Left = 8
               Top = 8
@@ -1104,7 +1101,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 460
           object btnChangeQ: TBitBtn
             Left = 4
             Top = 40
@@ -1264,7 +1260,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 460
           object Label19: TLabel
             Left = 8
             Top = 12
@@ -1378,7 +1373,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 460
           object btnChangeSO: TBitBtn
             Left = 4
             Top = 40
@@ -1415,7 +1409,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 460
           object Label20: TLabel
             Left = 8
             Top = 12
@@ -1445,7 +1438,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 460
           object btnChangeJob: TBitBtn
             Left = 4
             Top = 40
@@ -1482,7 +1474,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 460
           object Label21: TLabel
             Left = 8
             Top = 12
@@ -1685,7 +1676,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 460
           object btnPrintInv: TBitBtn
             Left = 4
             Top = 40
@@ -1713,7 +1703,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 460
           object Label22: TLabel
             Left = 8
             Top = 12
@@ -1742,7 +1731,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 363
           object btnChangeEv: TBitBtn
             Left = 9
             Top = 40
@@ -1836,7 +1824,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Height = 133
           Align = alBottom
           TabOrder = 2
-          ExplicitTop = 363
           object Label28: TLabel
             Left = 291
             Top = 29
@@ -2034,7 +2021,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Panel11'
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 479
           object lstvwDocuments: TListView
             Left = 1
             Top = 1
@@ -2062,7 +2048,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             OnColumnClick = lstvwDocumentsColumnClick
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
-            ExplicitHeight = 477
           end
           object ToolBar1: TToolBar
             Left = 800
@@ -2078,7 +2063,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             ParentShowHint = False
             ShowHint = True
             TabOrder = 1
-            ExplicitHeight = 477
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -2151,7 +2135,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 515
+      ExplicitTop = 565
       ExplicitWidth = 832
       object lblDelete: TLabel
         Left = 397

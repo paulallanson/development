@@ -29,7 +29,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     ModalResult = 1
     TabOrder = 1
     OnClick = OKBitBtnClick
-    ExplicitTop = 583
+    ExplicitTop = 609
   end
   object CancelBitBtn: TBitBtn
     Left = 323
@@ -43,7 +43,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     NumGlyphs = 2
     TabOrder = 0
     OnClick = CancelBitBtnClick
-    ExplicitTop = 583
+    ExplicitTop = 609
   end
   object chkbxInActive: TCheckBox
     Left = 8
@@ -380,6 +380,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       end
       item
         Name = 'Accounts_Package'
+        DataType = ftInteger
       end
       item
         Name = 'Use_Separate_Invoice_Seq'
@@ -509,6 +510,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       end
       item
         Name = 'Accounts_Package'
+        DataType = ftInteger
       end
       item
         Name = 'Use_Separate_Invoice_Seq'
