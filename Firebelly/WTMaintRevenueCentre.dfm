@@ -29,6 +29,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     ModalResult = 1
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 609
   end
   object CancelBitBtn: TBitBtn
     Left = 323
@@ -42,6 +43,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     NumGlyphs = 2
     TabOrder = 0
     OnClick = CancelBitBtnClick
+    ExplicitTop = 609
   end
   object chkbxInActive: TCheckBox
     Left = 8
@@ -345,94 +347,55 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Top = 16
     ParamData = <
       item
-        Name = 'REVENUE_CENTRE_DESCR'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
+        Name = 'Revenue_Centre_Descr'
       end
       item
-        Name = 'INACTIVE'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
+        Name = 'inactive'
       end
       item
-        Name = 'COLOR'
+        Name = 'Color'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'FONT_COLOR'
+        Name = 'Font_Color'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'LOGO_PATH'
+        Name = 'Logo_Path'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'INVOICE_PAYMENT_NOTES'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'REGISTERED_ADDRESS'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'COMPANY_REG_NUMBER'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'VAT_REGISTRATION_NO'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'ACCOUNTS_PACKAGE'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'USE_SEPARATE_INVOICE_SEQ'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'LAST_INVOICE_NUMBER'
+        Name = 'Invoice_Payment_Notes'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'LAST_CREDIT_NOTE_NUMBER'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'PREFIX_VALUE'
+        Name = 'Registered_Address'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'REVENUE_CENTRE'
+        Name = 'Company_Reg_Number'
+      end
+      item
+        Name = 'VAT_Registration_No'
+      end
+      item
+        Name = 'Accounts_Package'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
+      end
+      item
+        Name = 'Use_Separate_Invoice_Seq'
+      end
+      item
+        Name = 'Last_Invoice_Number'
+      end
+      item
+        Name = 'Last_Credit_Note_Number'
+      end
+      item
+        Name = 'Prefix_Value'
+      end
+      item
+        Name = 'Revenue_Centre'
       end>
   end
   object qryDelete: TFDQuery
@@ -445,8 +408,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Top = 16
     ParamData = <
       item
-        Name = 'INVOICE_LOCATION'
-        ParamType = ptInput
+        Name = 'Invoice_Location'
       end>
   end
   object DetsSRC: TDataSource
@@ -515,88 +477,52 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Top = 16
     ParamData = <
       item
-        Name = 'REVENUE_CENTRE_DESCR'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
+        Name = 'Revenue_Centre_Descr'
       end
       item
-        Name = 'INACTIVE'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
+        Name = 'inactive'
       end
       item
-        Name = 'COLOR'
+        Name = 'Color'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'FONT_COLOR'
+        Name = 'Font_Color'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'LOGO_PATH'
+        Name = 'Logo_Path'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'INVOICE_PAYMENT_NOTES'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'REGISTERED_ADDRESS'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'COMPANY_REG_NUMBER'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'VAT_REGISTRATION_NO'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'ACCOUNTS_PACKAGE'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'USE_SEPARATE_INVOICE_SEQ'
-        DataType = ftString
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'LAST_INVOICE_NUMBER'
+        Name = 'Invoice_Payment_Notes'
         DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
       end
       item
-        Name = 'LAST_CREDIT_NOTE_NUMBER'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = Null
-      end
-      item
-        Name = 'PREFIX_VALUE'
+        Name = 'Registered_Address'
         DataType = ftString
-        ParamType = ptInput
-        Value = Null
+      end
+      item
+        Name = 'Company_Reg_Number'
+      end
+      item
+        Name = 'VAT_Registration_No'
+      end
+      item
+        Name = 'Accounts_Package'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Use_Separate_Invoice_Seq'
+      end
+      item
+        Name = 'Last_Invoice_Number'
+      end
+      item
+        Name = 'Last_Credit_Note_Number'
+      end
+      item
+        Name = 'Prefix_Value'
       end>
   end
   object qryAccounts: TFDQuery
