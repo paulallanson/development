@@ -357,7 +357,7 @@ begin
     SQL.Clear;
     SQL.Add('Insert Into Customer_Worktop_Group ' +
             '(Customer, Group_Number, Group_Description, Material_Type) ' +
-            'VALUES(' + inttostr(Customer) + ', 0, ''Dummy''' + inttostr(dblkpMaterialType.KeyValue) + ') ');
+            'VALUES(' + inttostr(Customer) + ', 0, ''Dummy'', ' + inttostr(dblkpMaterialType.KeyValue) + ') ');
     try
       ExecSQL;
     except

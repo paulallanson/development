@@ -256,7 +256,8 @@ uses
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
-  WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate};
+  WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate},
+  WTMaintCustWTGroup in '..\WTMaintCustWTGroup.pas';
 
 {$R *.RES}
 
