@@ -1332,31 +1332,26 @@ procedure ParseException(AException: System.SysUtils.Exception);
 var
   Exc: EFDDBEngineException;
 begin
-  if AException is EFDDBEngineException then
-  begin
-    Exc := (AException as EFDDBEngineException);
-    case Exc.Kind of
-      ekUKViolated:
-        MessageDlg('Unique Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
-      ekFKViolated:
-        MessageDlg('Foreign Key violation. This record cannot be deleted.', mtError, [mbOk], 0);
-      ekUserPwdInvalid:
-        MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
-      ekInvalidParams:
-        MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
-      ekOther:
-        MessageDlg('Database error. Please contact technical support.', mtError, [mbOk], 0);
-    else
-      MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
+  try
+    if AException is EFDDBEngineException then
+    begin
+      Exc := (AException as EFDDBEngineException);
+      case Exc.Kind of
+        ekUKViolated:
+          MessageDlg('This code has already been used.', mtError, [mbOk], 0);
+        ekUserPwdInvalid:
+          MessageDlg('Invalid username or password.', mtError, [mbOk], 0);
+        ekInvalidParams:
+          MessageDlg('Invalid params. Please contact technical support.', mtError, [mbOk], 0);
+      end;
     end;
-  end
-  else
-    MessageDlg('Unknown error. Please contact technical support.', mtError, [mbOk], 0);
+  except
+  end;
 end;
 
 function GetMSSQLID: string;
 begin
-  Result := 'MSSQL17';
+  Result := 'MSSQL';
 end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);

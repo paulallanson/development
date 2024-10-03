@@ -285,7 +285,7 @@ begin
     SQL.Clear;
     SQL.Add('Insert Into Product ' +
             '(Product, Product_Code, Product_Description, Price_Pointer, VAT, inactive) ' +
-            'VALUES(0, ''Code'', ''Dummy'', 1, 1, ' + inttostr(dblkpVatRate.keyvalue) + ', ''N'') ');
+            'VALUES(0, ''Code'', ''Dummy'', 1, ' + inttostr(dblkpVatRate.keyvalue) + ', ''N'') ');
     try
       ExecSQL;
     except
