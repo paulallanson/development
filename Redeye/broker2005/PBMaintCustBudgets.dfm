@@ -57,12 +57,14 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     ColCount = 13
     DefaultColWidth = 250
     DefaultRowHeight = 18
+    DoubleBuffered = False
+    DrawingStyle = gdsGradient
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing]
+    ParentDoubleBuffered = False
     TabOrder = 2
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
-    ExplicitTop = 50
     ColWidths = (
       250
       110

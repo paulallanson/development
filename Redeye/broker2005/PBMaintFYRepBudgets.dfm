@@ -21,7 +21,7 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
   object Label1: TLabel
     Left = 8
     Top = 9
-    Width = 67
+    Width = 69
     Height = 13
     Caption = 'Financial Year'
   end
@@ -41,7 +41,7 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     ListField = 'Name'
     ListSource = dtsReps
     TabOrder = 0
-    OnClick = dblkpRepsClick
+    OnCloseUp = dblkpRepsCloseUp
   end
   object edtFY: TEdit
     Left = 112
@@ -163,10 +163,14 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 152
     ParamData = <
       item
-        Name = 'Financial_Year'
+        Name = 'FINANCIAL_YEAR'
+        DataType = ftInteger
+        ParamType = ptInput
       end
       item
-        Name = 'Rep'
+        Name = 'REP'
+        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object qryFirstPeriod: TFDQuery
@@ -228,22 +232,28 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
   object qryAddBudget: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'insert into Rep_Budget'
+      
+        'insert into Rep_Budget (Rep, Period, Turnover_Value, Profit_Valu' +
+        'e)'
       'values (:Rep, :Period, :Turnover_Value, :Profit_Value)')
     Left = 304
     Top = 280
     ParamData = <
       item
         Name = 'Rep'
+        ParamType = ptInput
       end
       item
         Name = 'Period'
+        ParamType = ptInput
       end
       item
         Name = 'Turnover_Value'
+        ParamType = ptInput
       end
       item
         Name = 'Profit_Value'
+        ParamType = ptInput
       end>
   end
 end
