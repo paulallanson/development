@@ -10,7 +10,7 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qckrpPurchByInv: TQuickRep
@@ -310,10 +310,10 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
         Width = 59
         Height = 17
         Size.Values = (
-          44.979166666666700000
-          2447.395833333330000000
-          21.166666666666700000
-          156.104166666667000000)
+          44.979166666666670000
+          2447.395833333333000000
+          21.166666666666670000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -333,10 +333,10 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
         Width = 46
         Height = 17
         Size.Values = (
-          44.979166666666700000
-          2616.729166666670000000
-          21.166666666666700000
-          121.708333333333000000)
+          44.979166666666670000
+          2616.729166666667000000
+          21.166666666666670000
+          121.708333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -776,7 +776,7 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
         1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
-      Expression = 'qryPurchbyInv.Name_1'
+      Expression = 'qryPurchbyInv.Supplier_Name'
       FooterBand = QRBand1
       Master = QRSubDetail1
       ReprintOnNewPage = False
@@ -963,22 +963,17 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
   object qryPurchbyInv: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
+      'SELECT Supplier_Invoice.Vat_Value as vat,'
+      '  Supplier_Invoice.Goods_Value as goods,'
       
-        'SELECT (Supplier_Invoice.Vat_Value - Supplier_Invoice.Vat_Value_' +
-        'Diff) as vat,'
-      
-        '  (Supplier_Invoice.Goods_Value - Supplier_Invoice.Goods_Value_D' +
-        'iff) as goods,'
-      '  (Supplier_Invoice.Vat_Value + Supplier_Invoice.Goods_Value -'
-      
-        '  Supplier_Invoice.Vat_Value_Diff - Supplier_Invoice.Goods_Value' +
-        '_Diff) as Total_Goods,'
-      
-        '  Supplier_Invoice.Invoice_Date, Supplier_Invoice.Supplier_Invoi' +
-        'ce_no,'
-      
-        '  Supplier_Invoice.Invoice_or_Credit, Supplier_Branch.Name, Supp' +
-        'lier.Name, Supplier_Branch.Account_Code,'
+        '  (Supplier_Invoice.Goods_value + Supplier_Invoice.Vat_Value) as' +
+        ' total_goods,'
+      '  Supplier_Invoice.Invoice_Date,'
+      '  Supplier_Invoice.Supplier_Invoice_no,'
+      '  Supplier_Invoice.Invoice_or_Credit,'
+      '  Supplier_Branch.Name as Branch_Name,'
+      '  Supplier.Name as Supplier_Name,'
+      '  Supplier_Branch.Account_Code,'
       '  Supplier_Invoice.Supp_Inv_Alt_Ref'
       
         'FROM Supplier INNER JOIN (Supplier_Branch INNER JOIN Supplier_In' +
@@ -1011,13 +1006,13 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
       FixedChar = True
       Size = 2
     end
-    object qryPurchbyInvName: TWideStringField
-      FieldName = 'Name'
+    object qryPurchbyInvBranch_Name: TWideStringField
+      FieldName = 'Branch_Name'
       FixedChar = True
       Size = 80
     end
-    object qryPurchbyInvName_1: TWideStringField
-      FieldName = 'Name_1'
+    object qryPurchbyInvSupplier_Name: TWideStringField
+      FieldName = 'Supplier_Name'
       FixedChar = True
       Size = 80
     end

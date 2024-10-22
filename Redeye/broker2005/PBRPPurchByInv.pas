@@ -53,8 +53,8 @@ type
     qryPurchbyInvInvoice_Date: TDateTimeField;
     qryPurchbyInvSupplier_Invoice_no: TWideStringField;
     qryPurchbyInvInvoice_or_Credit: TWideStringField;
-    qryPurchbyInvName: TWideStringField;
-    qryPurchbyInvName_1: TWideStringField;
+    qryPurchbyInvBranch_Name: TWideStringField;
+    qryPurchbyInvSupplier_Name: TWideStringField;
     qryPurchbyInvInvoiceRef: TWideStringField;
     qryPurchbyInvsupplierName: TWideStringField;
     QRDBText1: TQRDBText;
@@ -227,7 +227,7 @@ begin
   if self.exporting then
   begin
     //Supplier
-    tempStr := '"'+ qryPurchbyInvname_1.Text + ' - '+qryPurchbyInvName.text + '"';
+    tempStr := '"'+ qryPurchbyInvSupplier_Name.Text + ' - '+qryPurchbyInvBranch_Name.text + '"';
     //Acc Code
     tempstr := tempStr + ',"' + qryPurchbyInvAccount_Code.asString + '"';
     //Invoice Number
@@ -262,7 +262,7 @@ end;
 procedure TPBRPPurchByInvFrm.qryPurchbyInvsupplierNameGetText(
   Sender: TField; var Text: String; DisplayText: Boolean);
 begin
-text := qryPurchbyInvname_1.Text + ' - '+qryPurchbyInvName.text;
+text := qryPurchbyInvSupplier_Name.Text + ' - '+qryPurchbyInvSupplier_Name.Text;
 end;
 
 end.

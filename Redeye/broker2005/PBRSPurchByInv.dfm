@@ -529,7 +529,9 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       '  Supplier_Invoice.Supplier_Invoice_no,'
       '  Supplier_Invoice.Invoice_or_Credit,'
       '  Supplier_Branch.Name as Branch_Name,'
-      '  Supplier.Name as Supplier_Name'
+      '  Supplier.Name as Supplier_Name,'
+      '  Supplier_Branch.Account_Code,'
+      '  Supplier_Invoice.Supp_Inv_Alt_Ref'
       
         'FROM Supplier INNER JOIN (Supplier_Branch INNER JOIN Supplier_In' +
         'voice ON'
