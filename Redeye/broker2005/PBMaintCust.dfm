@@ -2639,7 +2639,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = ToolBar9
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1164
+                Width = 1160
               end>
             object ToolBar9: TToolBar
               Left = 11
@@ -3027,7 +3027,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrQuotes
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1162
             end>
           object tbrQuotes: TToolBar
             Left = 11
@@ -3295,7 +3295,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrEnquiries
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1162
             end>
           object tbrEnquiries: TToolBar
             Left = 11
@@ -3667,7 +3667,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller1
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1162
             end>
           object PageScroller1: TPageScroller
             Left = 11
@@ -3679,9 +3679,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrOrders: TToolBar
               Left = 0
               Top = 0
-              Width = 1153
+              Width = 1141
               Height = 41
-              ButtonHeight = 29
+              ButtonHeight = 44
               ButtonWidth = 65
               Caption = 'ToolBar1'
               Images = imglstOrders
@@ -4007,7 +4007,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrJobs
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1162
             end>
           object tbrJobs: TToolBar
             Left = 11
@@ -4284,7 +4284,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = PageScroller2
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1164
+                Width = 1160
               end>
             object PageScroller2: TPageScroller
               Left = 11
@@ -4296,7 +4296,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               object tbrStock: TToolBar
                 Left = 0
                 Top = 0
-                Width = 1151
+                Width = 1139
                 Height = 41
                 ButtonHeight = 44
                 ButtonWidth = 68
@@ -4572,7 +4572,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller3
               ImageIndex = -1
               MinHeight = 40
-              Width = 1166
+              Width = 1162
             end>
           object PageScroller3: TPageScroller
             Left = 11
@@ -4585,7 +4585,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrInvoices: TToolBar
               Left = 0
               Top = 0
-              Width = 1153
+              Width = 1141
               Height = 40
               ButtonHeight = 36
               ButtonWidth = 53
@@ -4971,7 +4971,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = ToolBar8
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1164
+                Width = 1160
               end>
             object ToolBar8: TToolBar
               Left = 11

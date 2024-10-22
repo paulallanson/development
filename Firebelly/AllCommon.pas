@@ -80,7 +80,7 @@ function FormatQty(const Qty: variant): string;
 function FormatMoney(const Money: variant): string;
 function ShellFileOperation(const fromFileOrFolder, toFileOrFolder: string; Flag: Integer): boolean;
 procedure DirectoryCopy(asource, atarget: string);
-procedure FileCopy(const sourcefilename,targetfilename :string);
+procedure FileCopy(const SourceFileName, DestinationFileName: string);
 
 {Retreive Windows stuff}
 function GetComputerNetName: string;
@@ -195,7 +195,7 @@ const
 implementation
 
 uses
-  System.UITypes, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
+  System.UITypes, System.IOUtils, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -1351,31 +1351,9 @@ begin
     end;
 end;
 
-procedure FileCopy(const sourcefilename,targetfilename: string);
-var
-  s,t:tfilestream;
-  BytesToCopy: Integer ;
+procedure FileCopy(const SourceFileName, DestinationFileName: string);
 begin
-  s:=tfilestream.create(sourcefilename,fmOpenread);
-
-  try
-    t:=tfilestream.create(targetfilename,fmcreate);
-    try
-      While s.position < s.size do
-        begin
-          if (s.size - s.position) < 10000 then
-            BytesToCopy := s.size - s.position
-          else
-            BytesToCopy := 10000 ;
-
-          t.copyfrom(s,BytesToCopy);
-        end;
-    finally
-      t.free;
-    end;
-  finally
-    s.free;
-  end;
+  TFile.Copy(SourceFileName, DestinationFileName);
 end;
 
 { TCCSRegistry }

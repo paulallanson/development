@@ -30,7 +30,6 @@ type
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure dblkpRepsClick(Sender: TObject);
     procedure grdDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure grdDetailsExit(Sender: TObject);
@@ -40,6 +39,7 @@ type
       var CanSelect: Boolean);
     procedure OKBitBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure dblkpRepsCloseUp(Sender: TObject);
   private
     procedure CreateRepBudgets;
     procedure DisplayBudgets;
@@ -107,22 +107,22 @@ begin
     end;
 end;
 
-procedure TPBMaintFYRepBudgetsFrm.dblkpRepsClick(Sender: TObject);
+procedure TPBMaintFYRepBudgetsFrm.dblkpRepsCloseUp(Sender: TObject);
 begin
   iRep := dblkpReps.keyvalue;
 //  With this rep, go and find any budget details, if they don't exist then create
 //  and display.
-  with qryGetRepBudgets do
-    begin
-      close;
-      parambyname('Financial_Year').asinteger := icode;
-      parambyname('Rep').asinteger := dblkpReps.keyvalue;
-      open;
-      if recordcount <> iPeriods then
-        CreateRepBudgets;
-    end;
+  qryGetRepBudgets.close;
+  qryGetRepBudgets.parambyname('Financial_Year').asinteger := icode;
+  qryGetRepBudgets.parambyname('Rep').asinteger := iRep;
+  qryGetRepBudgets.open;
+
+  if qryGetRepBudgets.recordcount <> iPeriods then
+    CreateRepBudgets;
+
   DisplayBudgets;
-  OKBitBtn.Enabled := true;
+
+  OKBitBtn.Enabled := True;
 end;
 
 procedure TPBMaintFYRepBudgetsFrm.CreateRepBudgets;

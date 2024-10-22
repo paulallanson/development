@@ -26,7 +26,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 720
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
@@ -214,7 +213,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 720
     DesignSize = (
       733
       41)
@@ -300,7 +298,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
-      ExplicitLeft = 530
     end
     object PrintBitBtn: TBitBtn
       Left = 631
@@ -325,7 +322,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 618
     end
   end
   object dbgDetails: TDBGrid
@@ -470,7 +466,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       item
         Width = 50
       end>
-    ExplicitWidth = 720
   end
   object qryLive: TFDQuery
     ConnectionName = 'PB'
@@ -490,10 +485,11 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       ' rep.Name as repName,'
       ' customer.name as CustName,'
       
-        ' (purchase_orderline.Goods_reqd_by_customer + purchase_orderline' +
-        '.expected_life) as expDate ,'
-      ' (purchase_orderline.Goods_reqd_by_customer +'
-      '      purchase_orderline.expected_life) as expLife,'
+        ' dateadd(day, purchase_orderline.expected_life, cast(purchase_or' +
+        'derline.Goods_reqd_by_customer as datetime2)) as expDate,'
+      
+        ' dateadd(day, purchase_orderline.expected_life, cast(purchase_or' +
+        'derline.Goods_reqd_by_customer as datetime2)) as expLife,'
       '  form_reference.Form_Reference_ID,'
       '  Form_Reference.Form_Reference_Descr,'
       '  purchase_order.Date_Point,'
@@ -642,10 +638,11 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       ' rep.Name as repName,'
       ' customer.name as CustName,'
       
-        ' (purchase_orderline.Goods_reqd_by_customer + purchase_orderline' +
-        '.expected_life) as expDate ,'
-      ' (purchase_orderline.Goods_reqd_by_customer +'
-      '      purchase_orderline.expected_life) as expLife,'
+        ' dateadd(day, purchase_orderline.expected_life, cast(purchase_or' +
+        'derline.Goods_reqd_by_customer as datetime2)) as expDate,'
+      
+        ' dateadd(day, purchase_orderline.expected_life, cast(purchase_or' +
+        'derline.Goods_reqd_by_customer as datetime2)) as expLife,'
       '  form_reference.Form_Reference_ID,'
       '  Form_Reference.Form_Reference_Descr,'
       '  purchase_order.Date_Point,'
@@ -676,12 +673,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       
         '  and ((purchase_orderline.purchase_order - round(purchase_order' +
         'line.purchase_order, 0)) = 0)'
-      ''
-      ''
-      ' '
-      ' '
-      ' '
-      ' ')
+      '')
     Left = 80
     Top = 168
   end

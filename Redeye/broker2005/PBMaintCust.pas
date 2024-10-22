@@ -3217,7 +3217,6 @@ begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     iTabIndex := pgCustomer.ActivePageIndex;
-//    sTabName := pgCustomer.pages[iTabIndex].name;
 
     if iTabIndex < 0 then
       iTabIndex := 0;

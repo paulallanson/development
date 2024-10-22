@@ -262,6 +262,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     FixedCols = 0
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
     TabOrder = 3

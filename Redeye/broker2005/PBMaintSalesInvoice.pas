@@ -501,97 +501,87 @@ end;
 procedure TPBMaintSalesInvoicefrm.BuildLineGrid;
 var
   i, icount, iChecked, iLine: integer;
-  myImage: TImage;
+  myImage: TComponent;
 begin
   icount := 0;
 
   {free any existing images}
   for iLine := 1 to pred(sgLines.RowCount) do
+  begin
+    for iChecked := 0 to 2 do
     begin
-      for iChecked := 0 to 2 do
-        begin
-          try
-            myImage :=  findcomponent('img'+Copy((IntToStr(1000 + iLine)),2,3)+'I'+inttostr(iChecked)) as TImage;
-            myImage.Free;
-          except
-          end;
-        end;
+      myImage := nil;
+      try
+        myImage := findcomponent('img'+Copy((IntToStr(1000 + iLine)),2,3)+'I'+inttostr(iChecked));
+      finally
+        if Assigned(myImage) and (myImage is TImage) then
+          (myImage as TImage).Free;
+      end;
+    end;
+  end;
+
+  for i := 0 to pred(SalesInvoice.Lines.count) do
+  begin
+    sgLines.cells[0,i+1] := inttostr(SalesInvoice.Lines[i].SILine);
+    if SalesInvoice.Lines[i].PONumber <> 0 then
+    begin
+      sgLines.cells[1,i+1] := 'PO/'+floattostr(SalesInvoice.Lines[i].PONumber);
+      sgLines.cells[2,i+1] := SalesInvoice.Lines[i].Description;
+    end
+    else
+    if (SalesInvoice.Lines[i].SONumber <> 0) and (SalesInvoice.Lines[i].JBNumber <> 0)then
+    begin
+      sgLines.cells[1,i+1] := 'JB/'+inttostr(SalesInvoice.Lines[i].JBNumber);
+      sgLines.cells[2,i+1] := SalesInvoice.Lines[i].Description;
+    end
+    else
+    if SalesInvoice.Lines[i].SONumber <> 0 then
+    begin
+      sgLines.cells[1,i+1] := 'SO/'+inttostr(SalesInvoice.Lines[i].SONumber);
+      sgLines.cells[2,i+1] := SalesInvoice.Lines[i].Description;
+    end
+    else
+    if SalesInvoice.Lines[i].JBNumber <> 0 then
+    begin
+      sgLines.cells[1,i+1] := 'JB/'+inttostr(SalesInvoice.Lines[i].JBNumber);
+      sgLines.cells[2,i+1] := SalesInvoice.Lines[i].Description;
     end;
 
-  with sgLines, SalesInvoice.datamodule do
+    if SalesInvoice.Lines[i].PackQty = 0 then
     begin
-      for i := 0 to pred(SalesInvoice.Lines.count) do
-        begin
-        cells[0,i+1] := inttostr(SalesInvoice.Lines[i].SILine);
-        if SalesInvoice.Lines[i].PONumber <> 0 then
-          begin
-            cells[1,i+1] := 'PO/'+floattostr(SalesInvoice.Lines[i].PONumber);
-            cells[2,i+1] := SalesInvoice.Lines[i].Description;
-          end
-        else
-        if (SalesInvoice.Lines[i].SONumber <> 0) and (SalesInvoice.Lines[i].JBNumber <> 0)then
-          begin
-            cells[1,i+1] := 'JB/'+inttostr(SalesInvoice.Lines[i].JBNumber);
-(*            cells[2,i+1] := GetSOPart(SalesInvoice.Lines[i].SONumber,SalesInvoice.Lines[i].SOLine) +
-                            ' - ' +
-                            SalesInvoice.Lines[i].Description;
-*)
-            cells[2,i+1] := SalesInvoice.Lines[i].Description;
+      sgLines.cells[3,i+1] := floattostr(SalesInvoice.Lines[i].Quantity);
+      sgLines.cells[4,i+1] := SalesInvoice.Lines[i].PriceUnitDescr;
+      sgLines.cells[5,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].GoodsValue);
+    end
+    else
+    begin
+      sgLines.cells[3,i+1] := showinPacks(round(SalesInvoice.Lines[i].Quantity),SalesInvoice.Lines[i].PackQty);
+      sgLines.cells[4,i+1] := inttostr(SalesInvoice.Lines[i].PackQty);
+      sgLines.cells[5,i+1] := formatfloat('0.0000',(SalesInvoice.Lines[i].GoodsValue*SalesInvoice.Lines[i].PackQty));
+    end;
 
-          end
-        else
-        if SalesInvoice.Lines[i].SONumber <> 0 then
-          begin
-            cells[1,i+1] := 'SO/'+inttostr(SalesInvoice.Lines[i].SONumber);
-(*            cells[2,i+1] := GetSOPart(SalesInvoice.Lines[i].SONumber,SalesInvoice.Lines[i].SOLine) +
-                            ' - ' +
-                            SalesInvoice.Lines[i].Description;
-*)
-            cells[2,i+1] := SalesInvoice.Lines[i].Description;
+    sgLines.cells[6,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].TotalGoods);
+    sgLines.cells[7,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].TotalReseller);
+    sgLines.cells[8,i+1] := formatfloat('0.00%',SalesInvoice.Lines[i].VATRate);
+    sgLines.cells[9,i+1] := SalesInvoice.Lines[i].Nominal;
+    sgLines.cells[10,i+1] := SalesInvoice.Lines[i].CreditType;
+    sgLines.cells[11,i+1] := formatfloat('0.000',SalesInvoice.Lines[i].CostPrice);
+    sgLines.cells[12,i+1] := SalesInvoice.Lines[i].ProductTypeDesc;
 
-          end
-        else
-        if SalesInvoice.Lines[i].JBNumber <> 0 then
-          begin
-            cells[1,i+1] := 'JB/'+inttostr(SalesInvoice.Lines[i].JBNumber);
-            cells[2,i+1] := SalesInvoice.Lines[i].Description;
-          end;
-
-        if SalesInvoice.Lines[i].PackQty = 0 then
-          begin
-            cells[3,i+1] := floattostr(SalesInvoice.Lines[i].Quantity);
-            cells[4,i+1] := SalesInvoice.Lines[i].PriceUnitDescr;
-            cells[5,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].GoodsValue);
-          end
-        else
-          begin
-            cells[3,i+1] := showinPacks(round(SalesInvoice.Lines[i].Quantity),SalesInvoice.Lines[i].PackQty);
-            cells[4,i+1] := inttostr(SalesInvoice.Lines[i].PackQty);
-            cells[5,i+1] := formatfloat('0.0000',(SalesInvoice.Lines[i].GoodsValue*SalesInvoice.Lines[i].PackQty));
-          end;
-        cells[6,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].TotalGoods);
-        cells[7,i+1] := formatfloat('0.0000',SalesInvoice.Lines[i].TotalReseller);
-        cells[8,i+1] := formatfloat('0.00%',SalesInvoice.Lines[i].VATRate);
-        cells[9,i+1] := SalesInvoice.Lines[i].Nominal;
-        cells[10,i+1] := SalesInvoice.Lines[i].CreditType;
-        cells[11,i+1] := formatfloat('0.000',SalesInvoice.Lines[i].CostPrice);
-        cells[12,i+1] := SalesInvoice.Lines[i].ProductTypeDesc;
-
-        if (Mode <> siView) and (Mode <> siDelete) and (Mode <> siHeader) then
-          begin
-            if salesinvoice.lines[i].isChecked then
-              LoadImageChecked(i+1, 1)
-            else
-              LoadImageChecked(i+1, 0);
-          end;
-
-        icount := icount + 1;
-        end;
-      if icount = 0 then
-        rowcount := 2
+    if (Mode <> siView) and (Mode <> siDelete) and (Mode <> siHeader) then
+    begin
+      if salesinvoice.lines[i].isChecked then
+        LoadImageChecked(i+1, 1)
       else
-        rowcount := icount + 1;
+        LoadImageChecked(i+1, 0);
     end;
+
+    icount := icount + 1;
+  end;
+  if icount = 0 then
+    sgLines.rowcount := 2
+  else
+    sgLines.rowcount := icount + 1;
 end;
 
 procedure TPBMaintSalesInvoicefrm.BuildChargesGrid;
@@ -708,6 +698,7 @@ begin
   lblAltInvoiceNumber.visible := edtAltInvoiceNumber.visible;
   SetLineHeaders;
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
+  btnDelete.Top := sgLines.Top + 2;
 
   for var i := 0 to sgCharges.ColCount-1 do
   begin
@@ -1823,15 +1814,15 @@ begin
     if (Components[icount] is TImage) then
     begin
       myImage := (Components[icount] as TImage);
-      (Components[icount] as TImage).Left := cellleft(sgLines,0);
-      iRow := strtoint(copy((Components[icount] as TImage).name,4,3));
+      myImage.Left := cellleft(sgLines,0);
+      iRow := strtoint(copy(myImage.name,4,3));
       if iRow >= sgLines.TopRow then
       begin
-        (Components[icount] as TImage).Top := celltop(sgLines,iRow);
-        (Components[icount] as TImage).Visible := true;
+        myImage.Top := celltop(sgLines,iRow);
+        myImage.Visible := true;
       end
       else
-        (Components[icount] as TImage).Visible := False;
+        myImage.Visible := False;
     end;
   end;
 end;
