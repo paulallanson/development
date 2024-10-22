@@ -52,8 +52,6 @@ object frmpbLUOrders: TfrmpbLUOrders
         Images = imglstOrders
         ShowCaptions = True
         TabOrder = 0
-        ExplicitLeft = 3
-        ExplicitTop = -3
         object btnAdd: TToolButton
           Left = 0
           Top = 0

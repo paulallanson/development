@@ -1,7 +1,7 @@
 object dtmdlOrders: TdtmdlOrders
   OnCreate = DataModuleCreate
-  Height = 480
-  Width = 696
+  Height = 517
+  Width = 763
   object qryOrders: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
@@ -83,7 +83,7 @@ object dtmdlOrders: TdtmdlOrders
         'WHERE ((Purchase_orderline.Customer = :Customer) or (0 = :Custom' +
         'er)) and'
       '      Purchase_orderline.Customers_desc Like :Description')
-    Left = 16
+    Left = 40
     Top = 40
     ParamData = <
       item
@@ -243,11 +243,12 @@ object dtmdlOrders: TdtmdlOrders
       Required = True
     end
     object qryOrdersRep_Name: TWideStringField
+      DisplayWidth = 80
       FieldName = 'Rep_Name'
       Origin = 'Rep_Name'
       ReadOnly = True
       Required = True
-      Size = 1
+      Size = 80
     end
     object qryOrdersOperator: TIntegerField
       FieldName = 'Operator'
@@ -260,7 +261,7 @@ object dtmdlOrders: TdtmdlOrders
       Origin = 'Operator_Name'
       ReadOnly = True
       Required = True
-      Size = 1
+      Size = 80
     end
     object qryOrdersOriginal_order: TFloatField
       FieldName = 'Original_order'
@@ -308,7 +309,7 @@ object dtmdlOrders: TdtmdlOrders
   end
   object dtsOrders: TDataSource
     DataSet = qryOrders
-    Left = 72
+    Left = 96
     Top = 40
   end
   object qrySOrders: TFDQuery
@@ -403,7 +404,7 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_OrderRep.Rep = Rep.Rep'
       ''
       '')
-    Left = 152
+    Left = 176
     Top = 40
     ParamData = <
       item
@@ -538,7 +539,7 @@ object dtmdlOrders: TdtmdlOrders
       ''
       ' '
       ' ')
-    Left = 216
+    Left = 248
     Top = 40
     ParamData = <
       item
@@ -571,7 +572,7 @@ object dtmdlOrders: TdtmdlOrders
         ') and'
       '(Sales_Profit.Line = Purchase_OrderLine.Line)'
       ')')
-    Left = 288
+    Left = 328
     Top = 40
     ParamData = <
       item
@@ -588,8 +589,8 @@ object dtmdlOrders: TdtmdlOrders
       'set On_hold = :On_Hold'
       'where Purchase_order = :Purchase_order and'
       'Line = :Line')
-    Left = 16
-    Top = 168
+    Left = 40
+    Top = 160
     ParamData = <
       item
         Name = 'On_Hold'
@@ -606,8 +607,8 @@ object dtmdlOrders: TdtmdlOrders
     SQL.Strings = (
       'select * from company'
       'where company = 1')
-    Left = 80
-    Top = 168
+    Left = 104
+    Top = 160
   end
   object qrySOHead: TFDQuery
     ConnectionName = 'PB'
@@ -615,8 +616,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from Sales_Order'
       'where sales_order = :sales_order')
-    Left = 152
-    Top = 168
+    Left = 176
+    Top = 160
     ParamData = <
       item
         Name = 'sales_order'
@@ -628,7 +629,7 @@ object dtmdlOrders: TdtmdlOrders
       'select distinct Sales_Order, Picking_List_Ref'
       'from Part_Store_Allocation'
       'where Sales_Order = :Sales_Order')
-    Left = 152
+    Left = 176
     Top = 216
     ParamData = <
       item
@@ -646,8 +647,8 @@ object dtmdlOrders: TdtmdlOrders
       '(Sales_invoice_Line.Line = :Line)'
       ') and'
       '(Sales_Invoice_Line.Sales_Invoice = Sales_Invoice.Sales_Invoice)')
-    Left = 288
-    Top = 144
+    Left = 344
+    Top = 152
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -669,8 +670,8 @@ object dtmdlOrders: TdtmdlOrders
       '('
       '(Sales_invoice_Line.Sales_order = :Sales_Order)'
       ')')
-    Left = 288
-    Top = 200
+    Left = 344
+    Top = 208
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -780,8 +781,8 @@ object dtmdlOrders: TdtmdlOrders
       ' '
       ' '
       ' ')
-    Left = 216
-    Top = 96
+    Left = 264
+    Top = 152
     ParamData = <
       item
         Name = 'Customer'
@@ -823,8 +824,8 @@ object dtmdlOrders: TdtmdlOrders
       ''
       ' '
       ' ')
-    Left = 32
-    Top = 272
+    Left = 40
+    Top = 264
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -832,7 +833,7 @@ object dtmdlOrders: TdtmdlOrders
   end
   object dtsCallOffs: TDataSource
     DataSet = qryCallOffs
-    Left = 512
+    Left = 544
     Top = 40
   end
   object qryCallOffs: TFDQuery
@@ -911,7 +912,7 @@ object dtmdlOrders: TdtmdlOrders
         'ce '
       ' '
       ' ')
-    Left = 440
+    Left = 472
     Top = 40
     ParamData = <
       item
@@ -1060,7 +1061,7 @@ object dtmdlOrders: TdtmdlOrders
     SQL.Strings = (
       'select * from customer'
       'where customer = :customer')
-    Left = 376
+    Left = 408
     Top = 40
     ParamData = <
       item
@@ -1168,7 +1169,7 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_Order.Order_type = Order_Type.Order_Type'
       ''
       '')
-    Left = 584
+    Left = 624
     Top = 40
     ParamData = <
       item
@@ -1199,8 +1200,8 @@ object dtmdlOrders: TdtmdlOrders
         'sales_order.sales_order_head_status = sales_Order_head_Status.sa' +
         'les_Order_head_Status'
       '')
-    Left = 32
-    Top = 328
+    Left = 40
+    Top = 320
     ParamData = <
       item
         Name = 'sales_order'
@@ -1212,8 +1213,8 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from Operator'
       'where Operator = :operator')
-    Left = 32
-    Top = 384
+    Left = 40
+    Top = 376
     ParamData = <
       item
         Name = 'operator'
@@ -1225,7 +1226,7 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from sales_order_picking'
       'where sales_order = :sales_order')
-    Left = 152
+    Left = 176
     Top = 272
     ParamData = <
       item
@@ -1238,7 +1239,7 @@ object dtmdlOrders: TdtmdlOrders
       'select *'
       'from sales_invoice_line'
       'where sales_Order = :sales_order')
-    Left = 376
+    Left = 432
     Top = 152
     ParamData = <
       item
@@ -1256,8 +1257,8 @@ object dtmdlOrders: TdtmdlOrders
       'Line = :Line and'
       'Proof_History.Proof_Status = Proof_Status.Proof_Status'
       'Order BY Proof_History desc')
-    Left = 288
-    Top = 280
+    Left = 344
+    Top = 288
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1272,7 +1273,7 @@ object dtmdlOrders: TdtmdlOrders
       'Update Sales_order'
       'set Sales_order_head_Status = 250'
       'where Sales_order = :Sales_Order')
-    Left = 152
+    Left = 176
     Top = 328
     ParamData = <
       item
@@ -1388,7 +1389,7 @@ object dtmdlOrders: TdtmdlOrders
       '  Sales_OrderRep.Rep = Rep.Rep and'
       '  Sales_Order.Order_type = Order_Type.Order_Type'
       '')
-    Left = 584
+    Left = 624
     Top = 105
     ParamData = <
       item

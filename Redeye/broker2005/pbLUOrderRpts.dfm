@@ -23,8 +23,6 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 407
-    ExplicitHeight = 233
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -105,8 +103,6 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 233
-    ExplicitWidth = 407
     DesignSize = (
       413
       41)
@@ -128,7 +124,6 @@ object frmPBLUOrderRpts: TfrmPBLUOrderRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 312
     end
   end
 end

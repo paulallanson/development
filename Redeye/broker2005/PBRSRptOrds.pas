@@ -261,8 +261,8 @@ begin
     tempStr := self.edtDueDays.Text;
     if dmBroker.IsSQL then
     begin
-      self.qryLive.SQL.Add(' and ( (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life) - (getDate()) < '+ tempStr +'  )');
-      self.qryLive.SQL.Add(' and ( (getDate() - (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life))  < 0)');
+      self.qryLive.SQL.Add(' and ( (dateadd(day, purchase_orderline.expected_life, cast(purchase_orderline.Goods_reqd_by_customer as datetime2))) - (getDate()) < '+ tempStr +'  )');
+      self.qryLive.SQL.Add(' and ( (getDate() - (dateadd(day, purchase_orderline.expected_life, cast(purchase_orderline.Goods_reqd_by_customer as datetime2))))  < 0)');
     end
     else
     begin
@@ -277,7 +277,7 @@ begin
     2:
     begin
       if dmBroker.IsSQL then
-        self.qryLive.SQL.Add(' order by (getDate() - (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life)) ')
+        self.qryLive.SQL.Add(' order by (getDate() - (dateadd(day, purchase_orderline.expected_life, cast(purchase_orderline.Goods_reqd_by_customer as datetime2)))) ')
       else
         self.qryLive.SQL.Add(' order by (Date() - (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life)) ');
     end;
@@ -289,7 +289,7 @@ begin
     2:
     begin
       if dmBroker.IsSQL then
-        self.qryLive.SQL.Add(' , (getDate() - (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life)) ')
+        self.qryLive.SQL.Add(' , (getDate() - (dateadd(day, purchase_orderline.expected_life, cast(purchase_orderline.Goods_reqd_by_customer as datetime2)))) ')
       else
         self.qryLive.SQL.Add(' , (Date() - (purchase_orderline.Goods_reqd_by_customer + purchase_orderline.expected_life)) ');
     end;
