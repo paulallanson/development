@@ -237,8 +237,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       'SELECT *'
       'FROM Address'
       'WHERE Address = :Address')
-    Left = 248
-    Top = 136
+    Left = 310
+    Top = 130
     ParamData = <
       item
         Name = 'Address'
@@ -269,8 +269,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       ':Telephone_number,'
       ':email_address,'
       ':Installation_Address)')
-    Left = 288
-    Top = 136
+    Left = 360
+    Top = 130
     ParamData = <
       item
         Name = 'Address'
@@ -318,8 +318,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 328
-    Top = 136
+    Left = 410
+    Top = 138
     ParamData = <
       item
         Name = 'Address_Name'

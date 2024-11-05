@@ -1389,7 +1389,7 @@ begin
       else
         begin
           pnlDocumentDetails.Visible := false;
-          self.Height := 300;
+          self.Height := 405;
         end;
       FActivated := true;
     end;

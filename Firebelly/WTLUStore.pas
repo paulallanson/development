@@ -116,7 +116,7 @@ begin
 
     if FuncMode = 'A' then
       begin
-        frmWTMaintStore.iCode := iCode;
+        frmWTMaintStore.iCode := 0;
       end
     else
       begin

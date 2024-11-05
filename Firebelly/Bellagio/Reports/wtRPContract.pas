@@ -129,6 +129,7 @@ type
     qrtxtOptionColours6: TQRRichText;
     qrtxtOptionColours7: TQRRichText;
     qryRevenueCentre: TFDQuery;
+    qrbOptionHeader: TQRChildBand;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -383,7 +384,9 @@ begin
   qrlblDrawingNumberMemo.lines.clear;
   qrlblDrawingNumberMemo.lines.add(qryContractLine.fieldbyname('Drawing_Number').asstring);
 
-  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+//  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+  gtQRShapeDrawing.Height := qrsdContractLine.height;
+
   with qryContractOption do
     begin
       active := false;
@@ -407,15 +410,16 @@ begin
           end;
 
           OptionTotals[iCount] := OptionTotals[iCount] + rTotal;
-          
+
           tmpShape := self.findcomponent('gtQRShapeOption' + inttostr(icount)) as TQRShape;
 
           try
             tmpShape.enabled := true;
-            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+//            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+            tmpShape.Height := qrsdContractLine.height;
           except
           end;
-          
+
           icount := icount + 1;
           next;
         end;

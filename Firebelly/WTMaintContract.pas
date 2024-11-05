@@ -1270,7 +1270,8 @@ begin
           aQuote.CustomerName := Contract.CustomerName;
           aQuote.Address := Contract.Address;
           aQuote.Speculative := Contract.Speculative;
-          
+          aQuote.DataModule.AreaDecimalPlaces := aQuote.DataModule.GetCustomerAreaDecimalPlaces(aQuote.Customer);
+
           aQuote.Description := ContractOption.Quotedescription;
           aQuote.Material := ContractOption.MaterialType;
           aQuote.Reference := Contract.SiteLocation;

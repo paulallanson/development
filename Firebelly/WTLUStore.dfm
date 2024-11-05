@@ -37,10 +37,6 @@ object frmWTLUStore: TfrmWTLUStore
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 112
-    ExplicitTop = 184
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Panel2: TPanel
       Left = 303
       Top = 0

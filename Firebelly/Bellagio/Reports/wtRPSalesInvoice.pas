@@ -136,6 +136,8 @@ type
     qrlblLabourVAT: TQRLabel;
     qrlblLabourUTR: TQRLabel;
     qrlblLabourCharge: TQRLabel;
+    QRLabel1: TQRLabel;
+    qrlblSupplierCode: TQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -844,6 +846,8 @@ begin
   qrsdQLabour.Enabled := bShowLabour;
 
   qrlblAccountCode.Caption := InvHeadSRC.DataSet.fieldbyname('Account_Code').asstring;
+  qrlblSupplierCode.Caption := InvHeadSRC.DataSet.fieldbyname('Supplier_Code').asstring;
+
   {Create the Customer Address details memo}
   if (InvHeadSRC.DataSet.fieldbyname('Is_Retail_Customer').AsString = 'Y') OR (InvHeadSRC.DataSet.fieldbyname('Customer_is_Speculative').AsString = 'Y') then
     begin

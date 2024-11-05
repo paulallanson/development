@@ -16,8 +16,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
-    Left = 152
-    Top = -304
+    Left = 184
+    Top = -144
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -467,12 +467,12 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Left = 21
         Top = 246
         Width = 341
-        Height = 115
+        Height = 105
         Size.Values = (
-          243.416666666666700000
-          44.979166666666670000
-          521.229166666666800000
-          722.312500000000000000)
+          222.250000000000000000
+          44.450000000000000000
+          520.700000000000000000
+          721.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -710,13 +710,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
       object QRLabel7: TQRLabel
         Left = 20
-        Top = 364
+        Top = 357
         Width = 98
-        Height = 24
+        Height = 20
         Size.Values = (
-          50.800000000000000000
           42.333333333333330000
-          770.466666666666700000
+          42.333333333333330000
+          755.650000000000000000
           207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -796,14 +796,14 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 9
       end
       object qrlblAccountCode: TQRLabel
-        Left = 124
-        Top = 364
+        Left = 138
+        Top = 357
         Width = 130
         Height = 24
         Size.Values = (
           50.800000000000000000
-          262.466666666666700000
-          770.466666666666700000
+          292.100000000000000000
+          755.650000000000000000
           275.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -857,9 +857,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Left = 20
         Top = 221
         Width = 51
-        Height = 25
+        Height = 19
         Size.Values = (
-          52.916666666666670000
+          40.216666666666670000
           42.333333333333330000
           467.783333333333300000
           107.950000000000000000)
@@ -13392,6 +13392,64 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
           0000}
         Stretch = True
       end
+      object QRLabel1: TQRLabel
+        Left = 20
+        Top = 383
+        Width = 112
+        Height = 20
+        Size.Values = (
+          42.333333333333330000
+          42.333333333333330000
+          810.683333333333300000
+          237.066666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Supplier Code'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object qrlblSupplierCode: TQRLabel
+        Left = 138
+        Top = 383
+        Width = 130
+        Height = 20
+        Size.Values = (
+          42.333333333333330000
+          292.100000000000000000
+          810.683333333333300000
+          275.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'qrlblAccountCode'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
     end
     object QRBand2: TQRBand
       Left = 47
@@ -14535,6 +14593,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Account_Is_Factored,'
       '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
+      '           Customer.Supplier_Code,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
       
@@ -14559,10 +14618,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       item
         Name = 'Revenue_Centre'
         DataType = ftInteger
-      end
-      item
-        Name = 'Revenue_Centre'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object InvHeadSRC: TDataSource
@@ -14630,6 +14686,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Account_Is_Factored,'
       '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
+      '           Customer.Supplier_Code,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
       
@@ -14649,10 +14706,12 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       item
         Name = 'Sales_Invoice'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Revenue_Centre'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object UpInvHeadSQL: TFDQuery
@@ -14686,8 +14745,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       'set Sales_Invoice_Status = :Status'
       'where (Sales_invoice = :Sales_Invoice) AND'
       '           (Invoice_Line_No = :Line)')
-    Left = 336
-    Top = 291
+    Left = 40
+    Top = 339
     ParamData = <
       item
         Name = 'Status'
@@ -14714,6 +14773,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Account_Is_Factored,'
       '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
+      '           Customer.Supplier_Code,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
       
@@ -14774,8 +14834,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
         'ue_Centre))'
       '')
-    Left = 312
-    Top = 21
+    Left = 64
+    Top = 245
     ParamData = <
       item
         Name = 'Revenue_Centre'
@@ -14793,8 +14853,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       'From Notes'
       'Where (Notes_Code = :Notes_Code)'
       'Order By Notes_Line')
-    Left = 240
-    Top = 21
+    Left = 32
+    Top = 157
     ParamData = <
       item
         Name = 'Notes_Code'
@@ -14834,8 +14894,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '        Date_Required'
       'from Sales_order'
       'where Sales_order = :Sales_order')
-    Left = 168
-    Top = 24
+    Left = 40
+    Top = 8
     ParamData = <
       item
         Name = 'Sales_order'
