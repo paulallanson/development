@@ -3,8 +3,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Invoice Re-Print Selection'
-  ClientHeight = 187
-  ClientWidth = 364
+  ClientHeight = 212
+  ClientWidth = 387
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,8 +17,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    364
-    187)
+    387
+    212)
   TextHeight = 13
   object selectionGrp: TGroupBox
     Left = 8
@@ -50,7 +50,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnClose: TBitBtn
     Left = 273
-    Top = 150
+    Top = 175
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -58,6 +58,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnCloseClick
+    ExplicitTop = 141
   end
   object SelectLst: TListBox
     Left = 248
@@ -71,7 +72,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnPrint: TBitBtn
     Left = 9
-    Top = 150
+    Top = 175
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -79,10 +80,11 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnPrintClick
+    ExplicitTop = 141
   end
   object btnPreview: TBitBtn
     Left = 97
-    Top = 150
+    Top = 175
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,10 +92,11 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 141
   end
   object btnEmail: TBitBtn
     Left = 185
-    Top = 150
+    Top = 175
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -101,6 +104,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 141
   end
   object rdgrpType: TRadioGroup
     Left = 288
@@ -137,6 +141,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Account_is_Factored,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
+      '        Customer.Supplier_Code,'
       '        (Select Payment_Terms_Description'
       '         from Payment_Terms'
       
@@ -165,6 +170,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       item
         Name = 'Int_sel'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object qryCreditPrint: TFDQuery
@@ -182,6 +188,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Account_is_Factored,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
+      '        Customer.Supplier_Code,'
       '        (Select Payment_Terms_Description'
       '         from Payment_Terms'
       
@@ -209,6 +216,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       item
         Name = 'Int_sel'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object qryGetCustomers: TFDQuery
@@ -310,6 +318,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Account_is_Factored,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
+      '        Customer.Supplier_Code,'
       '        (Select Payment_Terms_Description'
       '         from Payment_Terms'
       
@@ -340,12 +349,15 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       item
         Name = 'Int_sel'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_no'
+        ParamType = ptInput
       end>
   end
   object qryCreditEmail: TFDQuery
@@ -363,6 +375,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Account_is_Factored,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
+      '        Customer.Supplier_Code,'
       '        (Select Payment_Terms_Description'
       '         from Payment_Terms'
       
@@ -392,12 +405,15 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       item
         Name = 'Int_sel'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_no'
+        ParamType = ptInput
       end>
   end
   object qryAddress: TFDQuery

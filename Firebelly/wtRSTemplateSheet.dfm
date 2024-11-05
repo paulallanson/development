@@ -3,7 +3,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
-  ClientHeight = 449
+  ClientHeight = 465
   ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -28,15 +28,15 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 369
+    Top = 385
     Width = 526
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 362
-    ExplicitWidth = 507
+    ExplicitTop = 360
+    ExplicitWidth = 520
     DesignSize = (
       526
       80)
@@ -94,14 +94,15 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlDocuments: TPanel
     Left = 0
-    Top = 138
+    Top = 158
     Width = 526
     Height = 62
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 507
+    ExplicitTop = 138
+    ExplicitWidth = 520
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -127,16 +128,15 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Left = 0
     Top = 0
     Width = 526
-    Height = 138
+    Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 507
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
       Width = 273
-      Height = 121
+      Height = 138
       Caption = 'Sales Order Selection'
       ParentBackground = False
       TabOrder = 0
@@ -144,7 +144,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         Left = 8
         Top = 80
         Width = 244
-        Height = 39
+        Height = 49
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -179,25 +179,26 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 200
+    Top = 220
     Width = 526
-    Height = 169
+    Height = 165
     Align = alClient
     Caption = 'pnlDocumentDetails'
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 507
-    ExplicitHeight = 162
+    ExplicitTop = 200
+    ExplicitWidth = 520
+    ExplicitHeight = 160
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
       Width = 524
-      Height = 167
+      Height = 163
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 505
-      ExplicitHeight = 160
+      ExplicitWidth = 518
+      ExplicitHeight = 158
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox
@@ -477,8 +478,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       'FROM Document_Structure'
       'WHERE Module_Id = 40'
       'ORDER BY Folder_Name')
-    Left = 48
-    Top = 88
+    Left = 440
+    Top = 64
   end
   object qryGetSalesOrdersOld: TFDQuery
     ConnectionName = 'Wt'

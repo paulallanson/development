@@ -215,6 +215,8 @@ type
     pnlBody: TPanel;
     Label39: TLabel;
     edtAreaDecimalPlaces: TCREditInt;
+    Label40: TLabel;
+    edtSupplierCode: TEdit;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -528,6 +530,7 @@ begin
 
       edtDepositTerms.Text := formatfloat('#,##0.00',qrycompany.fieldbyname('Deposit_Terms').asfloat);
       edtAccountCode.Text := '';
+      edtSupplierCode.Text := '';
 
       dblkpCreditStatus.keyvalue := 0;
 
@@ -603,6 +606,7 @@ begin
 
       edtDepositTerms.Text := formatfloat('#,##0.00',qryOneCustomer.fieldbyname('Deposit_Terms').asfloat);
       edtAccountCode.Text := qryOneCustomer.fieldbyname('Account_Code').asstring;
+      edtSupplierCode.Text := qryOneCustomer.fieldbyname('Supplier_Code').asstring;
 
       dblkpCreditStatus.keyvalue := qryOneCustomer.fieldbyname('Credit_Status').asstring;
 
@@ -2369,6 +2373,8 @@ begin
         parambyname('Payment_Terms').asinteger := dblkpPaymentTerms.keyvalue;
 
       parambyname('Account_Code').asstring := edtAccountCode.Text;
+
+      parambyname('Supplier_Code').asstring := edtSupplierCode.Text;
 
       if dblkpCreditStatus.text = '' then
         parambyname('Credit_Status').clear

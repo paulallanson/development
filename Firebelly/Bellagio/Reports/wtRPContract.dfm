@@ -2,8 +2,8 @@ object frmWTRPContract: TfrmWTRPContract
   Left = 178
   Top = 125
   Caption = 'Contract Quote Report'
-  ClientHeight = 580
-  ClientWidth = 1294
+  ClientHeight = 620
+  ClientWidth = 1333
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmWTRPContract: TfrmWTRPContract
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 72
-    Top = -96
+    Left = 16
+    Top = -320
     Width = 1403
     Height = 992
     ShowingPreview = False
@@ -829,10 +829,10 @@ object frmWTRPContract: TfrmWTRPContract
         Width = 188
         Height = 33
         Size.Values = (
-          68.791666666666670000
-          5.291666666666667000
+          69.850000000000000000
+          6.350000000000000000
           0.000000000000000000
-          396.875000000000000000)
+          397.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1698,7 +1698,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2070,7 +2070,7 @@ object frmWTRPContract: TfrmWTRPContract
     end
     object qrbContractLineFooter: TQRChildBand
       Left = 24
-      Top = 731
+      Top = 757
       Width = 1356
       Height = 72
       AfterPrint = qrbContractLineFooterAfterPrint
@@ -2117,7 +2117,7 @@ object frmWTRPContract: TfrmWTRPContract
     end
     object qrcbAvailability: TQRChildBand
       Left = 24
-      Top = 803
+      Top = 829
       Width = 1356
       Height = 65
       AlignToBottom = False
@@ -2179,7 +2179,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2189,7 +2189,7 @@ object frmWTRPContract: TfrmWTRPContract
     end
     object qrbOptionSummary: TQRChildBand
       Left = 24
-      Top = 695
+      Top = 721
       Width = 1356
       Height = 36
       AfterPrint = qrbOptionSummaryAfterPrint
@@ -2202,7 +2202,7 @@ object frmWTRPContract: TfrmWTRPContract
         2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
-      ParentBand = qrbTemplateFitting
+      ParentBand = qrbOptionHeader
       PrintOrder = cboAfterParent
       object qrlblColourOptions: TQRLabel
         Left = 9
@@ -2251,7 +2251,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2279,7 +2279,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2307,7 +2307,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2335,7 +2335,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2363,7 +2363,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2391,7 +2391,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2419,7 +2419,7 @@ object frmWTRPContract: TfrmWTRPContract
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2538,6 +2538,27 @@ object frmWTRPContract: TfrmWTRPContract
         VerticalAlignment = tlTop
         FontSize = 8
       end
+    end
+    object qrbOptionHeader: TQRChildBand
+      Left = 24
+      Top = 695
+      Width = 1356
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        55.033333333333330000
+        2870.200000000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      ParentBand = qrbTemplateFitting
+      PrintOrder = cboAfterParent
     end
   end
   object qryReport: TFDQuery

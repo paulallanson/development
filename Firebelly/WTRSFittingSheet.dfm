@@ -3,7 +3,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   Top = 139
   BorderStyle = bsDialog
   Caption = 'Fitting Sheet Print'
-  ClientHeight = 451
+  ClientHeight = 465
   ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -28,13 +28,15 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 371
+    Top = 385
     Width = 522
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 362
+    ExplicitWidth = 516
     DesignSize = (
       522
       80)
@@ -92,13 +94,15 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlDocuments: TPanel
     Left = 0
-    Top = 138
+    Top = 158
     Width = 522
     Height = 63
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 138
+    ExplicitWidth = 516
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -124,7 +128,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Left = 0
     Top = 0
     Width = 522
-    Height = 138
+    Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 3
@@ -132,7 +136,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
       Left = 8
       Top = 7
       Width = 273
-      Height = 121
+      Height = 145
       Caption = 'Sales Order Selection'
       ParentBackground = False
       TabOrder = 0
@@ -176,20 +180,25 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 201
+    Top = 221
     Width = 522
-    Height = 170
+    Height = 164
     Align = alClient
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 201
+    ExplicitWidth = 516
+    ExplicitHeight = 161
     object pcDocumentDetails: TPageControl
       Left = 1
       Top = 1
       Width = 520
-      Height = 168
+      Height = 162
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 514
+      ExplicitHeight = 159
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox

@@ -49,7 +49,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Top = 0
       Width = 838
       Height = 574
-      ActivePage = TabSheet1
+      ActivePage = tsGeneral
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 832
@@ -64,8 +64,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 824
-          ExplicitHeight = 537
           DesignSize = (
             830
             546)
@@ -409,6 +407,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Height = 13
             Caption = 'Area Calculation Decimal Places'
           end
+          object Label40: TLabel
+            Left = 9
+            Top = 323
+            Width = 73
+            Height = 13
+            Caption = 'Supplier Code'
+          end
           object chkbxRequiresAppForPay: TCheckBox
             Left = 384
             Top = 275
@@ -684,7 +689,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 424
+            Width = 418
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -727,6 +732,15 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             TabOrder = 31
             Text = 'edtNoOfEmployees'
           end
+          object edtSupplierCode: TEdit
+            Left = 87
+            Top = 321
+            Width = 81
+            Height = 21
+            CharCase = ecUpperCase
+            TabOrder = 32
+            Text = 'EDTSUPPLIERCODE'
+          end
         end
       end
       object TabSheet1: TTabSheet
@@ -740,6 +754,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 537
           object Label31: TLabel
             Left = 24
             Top = 67
@@ -923,6 +938,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Panel13'
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 552
+          ExplicitHeight = 537
           object Panel15: TPanel
             Left = 1
             Top = 1
@@ -932,6 +949,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Caption = 'Material Types'
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 550
           end
           object pnlMaterialTypeFunctions: TPanel
             Left = 465
@@ -941,6 +959,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alRight
             ParentBackground = False
             TabOrder = 1
+            ExplicitLeft = 459
+            ExplicitHeight = 453
             object btnMTAdd: TBitBtn
               Left = 10
               Top = 8
@@ -1015,6 +1035,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alBottom
             ParentBackground = False
             TabOrder = 3
+            ExplicitTop = 495
+            ExplicitWidth = 550
             object chkbxShowInactiveMaterialTypes: TCheckBox
               Left = 8
               Top = 8
@@ -2634,7 +2656,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       '      End_User_Price_Factor = :End_User_Price_Factor,'
       '      Unit_Cost = :Unit_Cost,'
       '      Requires_App_For_Payment = :Requires_App_For_Payment,'
-      '      Area_Calculation_Dec_Places = :Area_Calculation_Dec_Places'
+      
+        '      Area_Calculation_Dec_Places = :Area_Calculation_Dec_Places' +
+        ','
+      '      Supplier_Code = :Supplier_Code'
       'WHERE'
       '  Customer = :Customer')
     Left = 570
@@ -2855,6 +2880,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       item
         Name = 'AREA_CALCULATION_DEC_PLACES'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SUPPLIER_CODE'
         ParamType = ptInput
       end
       item
