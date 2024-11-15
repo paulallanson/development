@@ -361,27 +361,27 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       '    0.0001 as Job,'
       '    0 as Job_Status,'
       
-        #9'  (SELECT Sum((((Quote_Element.Length*Quote_Element.Depth)/1000' +
-        '000.00000)*Quote_Element.Quantity)*Worktop_Type_Thickness.Weight' +
-        '_kg)'
-      #9'   FROM Sales_Order_Line'
-      #9#9'    INNER JOIN ((Worktop_Type_Thickness'
-      #9#9'    INNER JOIN Quote_Element'
+        '  (SELECT Sum((((Quote_Element.Length*Quote_Element.Depth)/10000' +
+        '00.00000)*Quote_Element.Quantity)*Worktop_Type_Thickness.Weight_' +
+        'kg)'
+      '   FROM Sales_Order_Line'
+      '     INNER JOIN ((Worktop_Type_Thickness'
+      #9#9' INNER JOIN Quote_Element'
       
         #9#9#9'    ON Worktop_Type_Thickness.Thickness = Quote_Element.Thick' +
         'ness)'
-      #9#9'    INNER JOIN Material_Type'
+      #9#9' INNER JOIN Material_Type'
       
         #9#9#9'    ON (Material_Type.Material_Type = Quote_Element.Material_' +
         'type) AND (Worktop_Type_Thickness.Worktop_Type = Material_Type.W' +
         'orktop_Type))'
       #9#9#9'    ON Sales_Order_Line.Quote = Quote_Element.Quote'
       
-        #9'  WHERE'#9'Sales_Order_line.Sales_Order = Sales_Order.Sales_Order ' +
+        '   WHERE'#9'Sales_Order_line.Sales_Order = Sales_Order.Sales_Order ' +
         'AND'
       
-        #9#9#9'    Quote_Element.Quote = Sales_Order_Line.Quote) AS Worktop_' +
-        'Weight,'
+        #9'        Quote_Element.Quote = Sales_Order_Line.Quote) AS Workto' +
+        'p_Weight,'
       #9'Customer_Branch.Branch_Name'
       'FROM Customer_Branch '
       #9#9'RIGHT JOIN (Operator AS Office_Contact '

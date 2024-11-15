@@ -1765,7 +1765,7 @@ begin
       {Check that all drawing references have been entered}
       for icount := 1 to pred(sgDetails.rowcount) do
         begin
-          if sgDetails.cells[1,icount] = '' then
+          if trim(sgDetails.cells[1,icount]) = '' then
             begin
               messagedlg('Drawing reference details must be entered for all prices', mtInformation, [mbOk], 0);
 
