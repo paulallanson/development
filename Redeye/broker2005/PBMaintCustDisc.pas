@@ -273,39 +273,43 @@ CheckOk(Self);
 end;
 
 procedure TPBMaintCustDiscFrm.DatefromBitBtnClick(Sender: TObject);
-begin
-    DateSelV5Form := TDateSelV5Form.Create(Self);
-  try
-     If DateFromEdit.Text <> '' then
-        DateSelV5Form.MonthCalendar1.Date := StrToDate(DateFromEdit.Text)
-     else
-        DateSelV5Form.MonthCalendar1.Date := Date;
-    DateSelV5Form.ShowModal;
-    If DateSelV5Form.ModalResult = mrOK then
-      begin
-      DateFromEdit.Text := DateToStr(DateSelV5Form.MonthCalendar1.Date);
-      PBLUCustDiscFrm.ddTemp.Date_effec := DateSelV5Form.MonthCalendar1.Date;
-      end;
-      finally
-    DateSelV5Form.Free;
-  end;
-CheckOk(self);
-end;
-
-procedure TPBMaintCustDiscFrm.DateToBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
-     If DateToEdit.Text <> '' then
-        DateSelV5Form.MonthCalendar1.Date := StrToDate(DateToEdit.Text)
-     else
-        DateSelV5Form.MonthCalendar1.Date := Date;
+    If DateFromEdit.Text <> '' then
+      DateSelV5Form.MonthCalendar1.Date := StrToDate(DateFromEdit.Text)
+    else
+      DateSelV5Form.MonthCalendar1.Date := Date;
     DateSelV5Form.ShowModal;
-    If DateSelV5Form.ModalResult = mrOK then
-      begin
+    if DateSelV5Form.ModalResult = mrOK then
+    begin
+      DateFromEdit.Text := DateToStr(DateSelV5Form.MonthCalendar1.Date);
+      PBLUCustDiscFrm.ddTemp.Date_effec := DateSelV5Form.MonthCalendar1.Date;
+    end;
+  finally
+    DateSelV5Form.Free;
+  end;
+  CheckOk(self);
+end;
+
+procedure TPBMaintCustDiscFrm.DateToBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
+begin
+  DateSelV5Form := TDateSelV5Form.Create(Self);
+  try
+    if DateToEdit.Text <> '' then
+      DateSelV5Form.MonthCalendar1.Date := StrToDate(DateToEdit.Text)
+    else
+      DateSelV5Form.MonthCalendar1.Date := Date;
+    DateSelV5Form.ShowModal;
+    if DateSelV5Form.ModalResult = mrOK then
+    begin
       DateToEdit.Text := DateToStr(DateSelV5Form.MonthCalendar1.Date);
       PBLUCustDiscFrm.ddTemp.Date_ineffec := DateSelV5Form.MonthCalendar1.Date;
-      end;
+    end;
   finally
     DateSelV5Form.Free;
   end;

@@ -47,7 +47,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 65
+      Width = 66
       Height = 13
       Caption = 'Selected Rep'
     end
@@ -111,7 +111,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 89
+      Width = 95
       Height = 13
       Caption = 'Selected Customer'
     end
@@ -151,7 +151,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     object Label1: TLabel
       Left = 12
       Top = 22
-      Width = 52
+      Width = 56
       Height = 13
       Caption = 'Date From:'
     end

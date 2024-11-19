@@ -222,6 +222,8 @@ begin
 end;
 
 procedure TSTRSUnpaidStockFrm.btbtnDateFromClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
@@ -234,6 +236,8 @@ begin
 end;
 
 procedure TSTRSUnpaidStockFrm.btbtnDateToClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try

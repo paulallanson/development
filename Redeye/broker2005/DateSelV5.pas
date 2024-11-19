@@ -41,13 +41,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls;
+  StdCtrls, Buttons, ComCtrls, Vcl.ExtCtrls;
 
 type
   TDateSelV5Form = class(TForm)
     MonthCalendar1: TMonthCalendar;
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
+    Panel1: TPanel;
   private
     function GetDate: TDateTime;
     procedure SetDate(const Value: TDateTime);
@@ -55,9 +56,6 @@ type
   public
     property Date: TDateTime read GetDate write SetDate;
   end;
-
-var
-  DateSelV5Form: TDateSelV5Form;
 
 implementation
 

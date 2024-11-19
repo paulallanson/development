@@ -581,6 +581,8 @@ CheckOK(self) ;
 end;
 
 procedure TSTMntSOrdFrm.DateBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
@@ -591,7 +593,7 @@ begin
   finally
     DateSelV5Form.Free;
   end;
-CheckOK(Self) ;
+  CheckOK(Self) ;
 end;
 
 procedure TSTMntSOrdFrm.CustBitBtnClick(Sender: TObject);
@@ -802,8 +804,10 @@ CheckOK(self) ;
 end;
 
 procedure TSTMntSOrdFrm.DtReqBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
- DateSelV5Form := TDateSelV5Form.Create(Self);
+  DateSelV5Form := TDateSelV5Form.Create(Self);
   try
     DateSelV5Form.MonthCalendar1.Date := StrToDate(DtReqEdit.Text);
     DateSelV5Form.ShowModal;
@@ -811,7 +815,7 @@ begin
   finally
     DateSelV5Form.Free;
   end;
-CheckOK(Self) ;
+  CheckOK(Self) ;
 end;
 
 function TSTMntSOrdFrm.GetSelectedLine: TOrderLine;

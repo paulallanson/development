@@ -679,6 +679,8 @@ CheckOK(self) ;
 end;
 
 procedure TSTMntPOrdFrm.DateBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
@@ -688,7 +690,7 @@ begin
   finally
     DateSelV5Form.Free;
   end;
-CheckOK(Self) ;
+  CheckOK(Self) ;
 end;
 
 procedure TSTMntPOrdFrm.SuppBitBtnClick(Sender: TObject);
@@ -1867,6 +1869,8 @@ begin
 end;
 
 procedure TSTMntPOrdFrm.BitBtn1Click(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
@@ -1877,7 +1881,6 @@ begin
     DateSelV5Form.Free;
   end;
   CheckOK(Self) ;
-
 end;
 
 procedure TSTMntPOrdFrm.dbgInvoicesDblClick(Sender: TObject);
