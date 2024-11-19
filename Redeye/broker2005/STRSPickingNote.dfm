@@ -269,6 +269,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
     OnSelectCell = sgDetailsSelectCell
+    ExplicitTop = 119
     ColWidths = (
       119
       203

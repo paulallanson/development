@@ -42,7 +42,7 @@ type
     chkbxAutoConfirm: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure PrintBitBtnClick(Sender: TObject);
     procedure PreviewbitbtnClick(Sender: TObject);
@@ -266,41 +266,42 @@ begin
   end;
 end;
 
-procedure TSTRSPickingNoteFrm.sgDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  CellContent: string;
+procedure TSTRSPickingNoteFrm.sgDetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
+  var IsSenderStringGrid := (Sender is TStringGrid);
+
+  if not IsSenderStringGrid then
+    Exit;
+
+  var Grid := (Sender as TStringGrid);
+  var CellContent: string;
+
   {Prevent the blue cell being displayed}
-  with Sender as TStringGrid do
+  if (ARow <> 0) and (ACol <> 0) then
   begin
-    if vRow <> 0 then
-    begin
-      Canvas.Brush.Color := Color;
-      Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
-    end;
+    Canvas.Brush.Color := Color;
+    Canvas.Font.Color := Font.Color;
+    Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Grid.Cells[ACol, ARow]);
   end;
 
-  if (vCol < 3) then
+  {If Heading Display Left justified in the cells}
+  if ACol = 0 then
   begin
-  	CellContent := (Sender as TStringGrid).Cells[vCol, vRow];
-  	SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    	GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-        and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  	ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    	ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
+    CellContent := Grid.Cells[ACol, ARow];
+    SetTextAlign(Canvas.Handle,
+      GetTextAlign(Canvas.Handle) and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
+    ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
   end
   else
   begin
-		{Display the Columns Right justified in the cells}
-  	CellContent := (Sender as TStringGrid).Cells[vCol, vRow];
-  	SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    	GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      	and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  	ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    	ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
+    {Display the Columns Right justified in the cells}
+    CellContent := Grid.Cells[ACol, ARow];
+    SetTextAlign(Canvas.Handle,
+      GetTextAlign(Canvas.Handle) and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
+    ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+      ETO_CLIPPED or ETO_OPAQUE, @Rect, CellContent, Length(CellContent), nil);
   end;
 
 end;

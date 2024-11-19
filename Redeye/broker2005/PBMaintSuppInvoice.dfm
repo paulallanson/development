@@ -48,7 +48,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Align = alTop
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = -6
       object Label6: TLabel
         Left = 8
         Top = 8
@@ -210,6 +209,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       ColCount = 10
       DefaultColWidth = 40
       DefaultRowHeight = 20
+      DrawingStyle = gdsGradient
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
       PopupMenu = pmnLines
       TabOrder = 1
@@ -249,6 +249,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Height = 86
         DefaultColWidth = 40
         DefaultRowHeight = 20
+        DrawingStyle = gdsGradient
         RowCount = 2
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
         PopupMenu = pmnCharges
