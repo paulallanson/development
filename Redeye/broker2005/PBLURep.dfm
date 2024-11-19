@@ -349,4 +349,9 @@ object PBLURepFrm: TPBLURepFrm
     Left = 200
     Top = 152
   end
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
+    Left = 368
+    Top = 64
+  end
 end

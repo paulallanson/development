@@ -100,6 +100,7 @@ type
     chkbxActiveOnly: TCheckBox;
     btnBudgets: TBitBtn;
     chkbxIncludeSubReps: TCheckBox;
+    qryDelete: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
@@ -250,7 +251,20 @@ end;
 procedure TPBLURepFrm.DelBitBtnClick(Sender: TObject);
 begin
   {Delete a Rep}
-  CallMaintScreen('D');
+  if messagedlg('Delete the selected record?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      try
+        with qryDelete do
+          begin
+            close;
+            SQL.Text := 'DELETE FROM Rep WHERE Rep = ' + inttostr(detsDBGrid.DataSource.dataset.fieldbyname('Rep').asinteger);
+            execsql;
+          end;
+        ShowGrid(Self);
+      except messagedlg(detsDBGrid.DataSource.dataset.fieldbyname('Name').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
+      end;
+    end;
+//  CallMaintScreen('D');
 end;
 
 procedure TPBLURepFrm.CallMaintScreen(sTempFuncMode: string);

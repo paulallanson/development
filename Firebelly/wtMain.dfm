@@ -167,7 +167,7 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
-    ExplicitTop = 617
+    ExplicitTop = 612
     ExplicitWidth = 1469
   end
   object imgLstHot: TImageList
