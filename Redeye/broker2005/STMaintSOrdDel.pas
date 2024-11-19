@@ -166,8 +166,10 @@ begin
 end;
 
 procedure TSTMaintSOrdDelfrm.BitBtn1Click(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
- DateSelV5Form := TDateSelV5Form.Create(Self);
+  DateSelV5Form := TDateSelV5Form.Create(Self);
   try
     DateSelV5Form.MonthCalendar1.Date := StrToDate(edtDateDelivered.Text);
     DateSelV5Form.ShowModal;
@@ -175,7 +177,7 @@ begin
   finally
     DateSelV5Form.Free;
   end;
-  enableok(self);
+  Enableok(self);
 end;
 
 procedure TSTMaintSOrdDelfrm.btnCourierClick(Sender: TObject);

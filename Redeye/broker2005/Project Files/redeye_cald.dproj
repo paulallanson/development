@@ -3,7 +3,7 @@
         <ProjectGuid>{B6F4DBB8-6E9B-466D-B2B6-BBEF7E37A43E}</ProjectGuid>
         <MainSource>redeye_cald.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

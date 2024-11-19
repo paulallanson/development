@@ -364,6 +364,8 @@ begin
 end;
 
 procedure TSTPrtTranFrm.DateBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try

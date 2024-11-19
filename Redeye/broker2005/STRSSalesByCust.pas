@@ -215,6 +215,8 @@ begin
 end;
 
 procedure TSTRSSalesByCustFrm.DateFromBitBtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try
@@ -356,6 +358,8 @@ begin
 end;
 
 procedure TSTRSSalesByCustFrm.DateTobtbtnClick(Sender: TObject);
+var
+  DateSelV5Form: TDateSelV5Form;
 begin
   DateSelV5Form := TDateSelV5Form.Create(Self);
   try

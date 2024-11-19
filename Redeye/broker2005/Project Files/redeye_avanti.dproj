@@ -3,7 +3,7 @@
         <ProjectGuid>{A3F2E249-3DC9-4521-8F14-05C637D68FC8}</ProjectGuid>
         <MainSource>redeye_avanti.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
