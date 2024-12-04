@@ -41,6 +41,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     NumGlyphs = 2
     TabOrder = 11
     OnClick = PrintBitBtnClick
+    ExplicitTop = 298
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
@@ -65,6 +66,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     NumGlyphs = 2
     TabOrder = 10
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 298
   end
   object pnlReasonSearch: TPanel
     Left = 139
@@ -106,13 +108,14 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 12
+    ExplicitTop = 298
   end
   object GroupBox1: TGroupBox
     Left = 5
     Top = 219
     Width = 180
     Height = 89
-    Caption = 'Date Range'
+    Caption = 'Remedial Fitting Date Range'
     ParentBackground = False
     TabOrder = 6
     object Label1: TLabel
@@ -361,6 +364,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 298
   end
   object rdgrpCategory: TRadioGroup
     Left = 5

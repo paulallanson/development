@@ -257,7 +257,8 @@ uses
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
   WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate},
-  WTMaintCustWTGroup in '..\WTMaintCustWTGroup.pas';
+  WTMaintCustWTGroup in '..\WTMaintCustWTGroup.pas',
+  WTUSSetDocuments in '..\WTUSSetDocuments.pas' {frmWTUSSetDocuments};
 
 {$R *.RES}
 
@@ -274,5 +275,6 @@ begin
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);
   Application.CreateForm(TfrmWTRSSOrderTemplate, frmWTRSSOrderTemplate);
+  Application.CreateForm(TfrmWTUSSetDocuments, frmWTUSSetDocuments);
   Application.Run;
 end.

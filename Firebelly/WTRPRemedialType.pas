@@ -124,7 +124,8 @@ begin
 
   qryReport.SQL.clear;
   qryReport.SQL.text := qryDummy.SQL.text;
-  if tmpdateFrom <> 0 then
+
+(*  if tmpdateFrom <> 0 then
   begin
     self.qryReport.SQL.add('  AND Job_Remedial.date_raised >= ' + qDate(tmpDateFrom));
   end;
@@ -132,6 +133,17 @@ begin
   if tmpdateTo <> 0 then
   begin
     self.qryReport.SQL.Add('  AND Job_Remedial.date_raised <= '+ qDate(tmpDateTo));
+  end;
+*)
+
+  if tmpdateFrom <> 0 then
+  begin
+    self.qryReport.SQL.add('  AND (SELECT TOP 1 Date_required FROM sales_order WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) >= ' + qDate(tmpDateFrom));
+  end;
+
+  if tmpdateTo <> 0 then
+  begin
+    self.qryReport.SQL.Add('  AND (SELECT TOP 1 Date_required FROM sales_order WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) <= '+ qDate(tmpDateTo));
   end;
 
   if (tmpdateFrom = 0) and (tmpdateTo = 0) then
@@ -209,8 +221,16 @@ begin
       qrlblGroupHeader.caption:= 'Customer:';
     end
   else
-    begin
+(*    begin
       self.qryReport.SQL.Add(' ORDER BY Job_Remedial.Date_Raised');
+      qrbndgrphdr.expression := '';
+      QRDBText6.DataField := '';
+      QRbDataFooter.DataField := '';
+      qrlblGroupHeader.caption:= '';
+    end;
+*)
+    begin
+      self.qryReport.SQL.Add(' ORDER BY Remedial_Fitting_Date');
       qrbndgrphdr.expression := '';
       QRDBText6.DataField := '';
       QRbDataFooter.DataField := '';

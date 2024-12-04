@@ -294,6 +294,7 @@ begin
     + ',"Date Required"'
     + ',"Reference"'
     + ',"Rep"'
+    + ',"Revenue Centre"'
     + ',"Goods"'
     + ',"VAT"'
     + ',"Total"'
@@ -339,8 +340,11 @@ begin
     //Date Required
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Reference').asstring + '"';
 
-    //Job Number
+    //Rep Name
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Rep_Name').asstring + '"';
+
+    //Revenue Centre
+    tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Revenue_Centre_Descr').asstring + '"';
 
     //Goods Value
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Goods_Value').asstring + '"';

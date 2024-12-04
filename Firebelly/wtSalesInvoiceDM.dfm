@@ -2793,7 +2793,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object qrySCHeaderBase: TFDQuery
     SQL.Strings = (
-      'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
+      'select    Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
       '        Sales_Invoice.Invoice_or_Credit,'
       '        Customer.Customer_Name as Original_Name,'
@@ -2860,29 +2860,17 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         '  (Customer.Is_Retail_Customer = :Is_Retail_Customer) OR (Custom' +
         'er.Is_Commercial_Customer = :Is_Commercial_Customer) or (:Is_Ret' +
         'ail_Customer = '#39'A'#39')'
-      ') AND'
-      
-        '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
-        'ue_Centre))'
-      ''
-      '')
+      ')')
     Left = 200
     Top = 530
     ParamData = <
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
-      end
-      item
-        Name = 'Is_Retail_Customer'
-      end
-      item
-        Name = 'Revenue_Centre'
-      end
-      item
-        Name = 'Revenue_Centre'
+        ParamType = ptInput
       end>
   end
   object qryRevenueCentre: TFDQuery

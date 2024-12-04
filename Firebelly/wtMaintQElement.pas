@@ -300,7 +300,7 @@ begin
     edtDepth.text := '';
     edtLength.text := '';
     cmbMaterialUse.Text := '';
-    
+
     if QElement.UnitPrice = 0 then
       GetUnitPrice
     else
@@ -447,8 +447,8 @@ begin
               SQL.Text := sText;
             end;
 
-          parambyName('worktop').asinteger := dblkpWorktop.ListValue;
-          parambyName('thickness').asinteger := dblkpWTThickness.ListValue;
+          parambyName('worktop').asinteger := dblkpWorktop.keyvalue;
+          parambyName('thickness').asinteger := dblkpWTThickness.keyvalue;
           open;
           edtUnitPrice.Text := formatfloat('0.00',fieldbyname('Unit_Price').asfloat);
           QElement.PriceUnit := fieldbyname('Price_unit').asinteger;
@@ -457,7 +457,7 @@ begin
     end;
 
   if frmWTMain.bEndUSer then
-    edtUnitPrice.enabled := (StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings) = 0);
+    edtUnitPrice.enabled := (strtofloat(edtUnitPrice.Text) = 0);
 end;
 
 procedure TfrmWTMaintQElement.edtDepthChange(Sender: TObject);
@@ -476,7 +476,7 @@ var
 begin
   if frmWTMain.bEndUser then
     begin
-      if (StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) = 0) then
+      if (strtofloat(edtUnitPrice.text) = 0) then
         begin
           messagedlg('A zero worktop unit price is not allowed.', mterror, [mbOk], 0);
           edtUnitPrice.setfocus;
@@ -493,7 +493,7 @@ begin
   QElement.Depth := strtoint(edtDepth.text);
   QElement.Length := strtoint(edtLength.text);
   QElement.Quantity := spnQuantity.Value;
-  QElement.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+  QElement.UnitPrice := strtofloat(edtUnitPrice.text);
   if Mode = qelAdd then
   begin
     QElement.QENumber := QElement.Parent.Elements.Count + 1;
@@ -564,7 +564,7 @@ begin
       dblkpWTGroup.KeyValue := 0;
       dblkpWorktop.KeyValue := 0;
       dblkpWTThickness.KeyValue := 0;
-      QElement.worktop := 0;  
+      QElement.worktop := 0;
       QElement.worktopGroup := 0;
     end;
   Material := dblkpMaterial.KeyValue;

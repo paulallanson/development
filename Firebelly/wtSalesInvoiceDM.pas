@@ -2950,9 +2950,11 @@ begin
     end;
 
     case Revenuecentre of
-        -1: parambyname('Revenue_Centre').clear;
+       -1: sTemp := sTemp + ' AND (Sales_Invoice.Revenue_Centre IS NULL)';
     else
-        parambyname('Revenue_Centre').asinteger := RevenueCentre
+      begin
+       sTemp := sTemp + ' AND ((Sales_Invoice.Revenue_Centre = ' + inttostr(RevenueCentre) + ') OR (0 = ' + inttostr(RevenueCentre) + '))' ;
+      end;
     end;
 
     if SortOrder = '' then

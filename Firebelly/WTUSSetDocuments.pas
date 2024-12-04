@@ -222,6 +222,9 @@ var
   FileInfo: SHFILEINFO;
   sFilename: string;
 begin
+  if trim(CustomerBranchName) = '' then
+    exit;
+
   sSource := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + CustomerName + '\' + CustomerBranchName + '\';
 
   sSafetyFolder := dtmdlWorktops.GetCompanySafetyDocumentFolder;

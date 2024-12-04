@@ -1343,16 +1343,22 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         '        (Sales_Order.VAT_Value + Sales_Order.Goods_Value) as Tot' +
         'al_Value,'
       '        Sales_Order.Rep,'
-      '        Rep.Rep_Name'
-      'FROM Rep'
-      '    INNER JOIN (Sales_Order_Status'
-      '    INNER JOIN (Customer'
-      '    INNER JOIN Sales_Order'
-      '      ON Customer.Customer = Sales_Order.Customer)'
+      '        Rep.Rep_Name,'
+      '        Sales_Order.Revenue_Centre,'
+      '        Revenue_Centre.Revenue_Centre_Descr'
+      'FROM Revenue_Centre'
+      '        RIGHT JOIN (Sales_Order_Status'
+      '        INNER JOIN (Rep'
+      '        INNER JOIN (Customer'
+      '        INNER JOIN Sales_Order'
+      '            ON Customer.Customer = Sales_Order.Customer)'
+      '            ON Rep.Rep = Sales_Order.Rep)'
       
-        '      ON Sales_Order_Status.Sales_Order_Status = Sales_Order.Sal' +
-        'es_Order_Status)'
-      '      ON Rep.Rep = Sales_Order.Rep'
+        '            ON Sales_Order_Status.Sales_Order_Status = Sales_Ord' +
+        'er.Sales_Order_Status)'
+      
+        '            ON Revenue_Centre.Revenue_Centre = Sales_Order.Reven' +
+        'ue_Centre'
       'WHERE'
       '((Sales_Order.Rep = :Rep) or (0 = :Rep)) and'
       
