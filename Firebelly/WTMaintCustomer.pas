@@ -2604,9 +2604,10 @@ begin
     First;
     if (not EOF) then
       begin
-        MessageDlg('The account code: ' + (Sender as TEdit).Text + ' is already in use on customer: ' + FieldByName('Customer_Name').AsString, mtError, [mbOK], 0);
-       (Sender as TEdit).Text := sOldValue;
-       (Sender as TEdit).SetFocus;
+        MessageDlg('The account code: ' + (Sender as TEdit).Text + ' is already in use on customer: ' + FieldByName('Customer_Name').AsString, mtWarning, [mbOK], 0);
+//       (Sender as TEdit).Text := sOldValue;
+//       (Sender as TEdit).SetFocus;
+        dbgAccountCodes.Visible := false;
       end
     else
       dbgAccountCodes.Visible := false;

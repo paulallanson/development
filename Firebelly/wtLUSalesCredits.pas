@@ -5,15 +5,13 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, wtSalesInvoiceDM,
-  Data.DB, System.ImageList, Vcl.Buttons, IniFiles;
+  Data.DB, System.ImageList, Vcl.Buttons, IniFiles, Vcl.DBCtrls;
 
 type
   TfrmWTLUSalesCredits = class(TForm)
     CoolBar1: TCoolBar;
     dbgDetails: TDBGrid;
-    Panel1: TPanel;
-    Label1: TLabel;
-    edtSearch: TEdit;
+    pnlFooter: TPanel;
     stsbrDetails: TStatusBar;
     imglstFunctions: TImageList;
     pmnFunctions: TPopupMenu;
@@ -36,7 +34,6 @@ type
     btnClose: TButton;
     edtSalesInvNo: TEdit;
     Label2: TLabel;
-    chkbxShowArchived: TCheckBox;
     Label3: TLabel;
     edtInvoiceDate: TEdit;
     PageScroller1: TPageScroller;
@@ -49,13 +46,22 @@ type
     btnReprint: TToolButton;
     ToolButton6: TToolButton;
     btnReports: TToolButton;
-    BitBtn1: TBitBtn;
-    btnSearch: TBitBtn;
     CoolBar2: TCoolBar;
     Panel3: TPanel;
     Label4: TLabel;
     Label5: TLabel;
     cmbCustomerFilter: TComboBox;
+    Panel4: TPanel;
+    Label1: TLabel;
+    edtSearch: TEdit;
+    btnSearch: TBitBtn;
+    BitBtn1: TBitBtn;
+    chkbxShowArchived: TCheckBox;
+    pnlRevenueCentre: TPanel;
+    rdgrpRevenueCentre: TRadioGroup;
+    grpbxRevCentre: TGroupBox;
+    Label6: TLabel;
+    dblkpRevCentre: TDBLookupComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -80,6 +86,8 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure dbgDetailsTitleClick(Column: TColumn);
+    procedure rdgrpRevenueCentreClick(Sender: TObject);
+    procedure dblkpRevCentreClick(Sender: TObject);
   private
     Activecode: integer;
     FDisableNameChangeEvent: boolean;
@@ -113,7 +121,7 @@ uses
   System.UITypes,
   AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice,
   WTLUSalesInvoiceCN, wtRSSalesInvoiceReprint, WTSInvoiceSearch,
-  wtMain;
+  wtMain, wtDataModule;
 
 {$R *.DFM}
 
@@ -132,10 +140,20 @@ end;
 procedure TfrmWTLUSalesCredits.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
+  iRevenueCentre: integer;
 begin
-  stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
+  pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
+  if not pnlRevenueCentre.Visible then
+    pnlFooter.Height := 70;
 
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  windowstate := wsMaximized;
+
+  dtmdlAllSCredits := TdtmdlSalesInvoice.create(self);
+
+  dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;
+  dbgDetails.DataSource := dtmdlAllSCredits.dsSCHeaderGrid;
+
+  IniFile := TIniFile.Create('myWorktops.ini');
 
   try
   with IniFile do
@@ -151,20 +169,33 @@ begin
       else
       if (ReadString('Sales Credits', 'Customer Filter', '3') = '3') then
         cmbCustomerFilter.itemindex := 3;
+
+      try
+        rdgrpRevenueCentre.itemindex := strtoint(ReadString('Sales Credits', 'Revenue Centre Option', '0'));
+      except
+        rdgrpRevenueCentre.itemindex := 0;
+      end;
+
+      try
+        iRevenueCentre := strtoint(ReadString('Sales Credits', 'Revenue Centre', '-1'));
+      except
+        iRevenueCentre := -1;
+      end;
+
     end;
   finally
     IniFile.Free;
   end;
 
-  dtmdlAllSCredits := TdtmdlSalesInvoice.create(self);
+  if not dtmdlWorktops.UseRevenueCentres then
+    iRevenueCentre := 0;
 
-  dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;
-  dbgDetails.DataSource := dtmdlAllSCredits.dsSCHeaderGrid;
+  dtmdlAllSCredits.RevenueCentre := iRevenueCentre;
 
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSCredits.dsSCHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesCredits.SetButtons(Sender: TObject; Field: TField);
@@ -391,6 +422,30 @@ begin
   result := bin;
 end;
 
+procedure TfrmWTLUSalesCredits.rdgrpRevenueCentreClick(Sender: TObject);
+begin
+  grpbxRevCentre.Visible := false;
+  case (Sender as TRadioGroup).ItemIndex of
+      0:  begin
+            dtmdlAllSCredits.RevenueCentre := -1;
+            dtmdlAllSCredits.refreshCreditdata;
+          end;
+      1:  begin
+            dtmdlAllSCredits.RevenueCentre := 0;
+            dtmdlAllSCredits.refreshCreditdata;
+          end;
+  else
+    begin
+      grpbxRevCentre.Visible := true;
+      if dblkpRevCentre.text <> '' then
+        begin
+          dtmdlAllSCredits.RevenueCentre := dblkpRevCentre.keyvalue;
+          dtmdlAllSCredits.refreshCreditdata;
+        end;
+    end;
+  end;
+end;
+
 procedure TfrmWTLUSalesCredits.SetDefaultBin(const Value: integer);
 begin
   FDefaultBin := Value;
@@ -588,6 +643,17 @@ end;
 
 procedure TfrmWTLUSalesCredits.FormActivate(Sender: TObject);
 begin
+  dblkpRevCentre.ListSource := dtmdlAllSCredits.dtsRevenueCentre;
+
+  with dtmdlAllSCredits.qryRevenueCentre do
+    begin
+      close;
+      open;
+    end;
+
+  if dtmdlAllSCredits.RevenueCentre > 0 then
+    dblkpRevCentre.KeyValue := dtmdlAllSCredits.RevenueCentre;
+
   dtmdlAllSCredits.TradeRetail := cmbCustomerFilter.itemindex;
   dtmdlAllSCredits.refreshcreditdata;
   dbgDetails.datasource.DataSet.locate('sales_invoice', Variant(floattostr(ActiveCode)),[lopartialKey]) ;
@@ -599,7 +665,6 @@ begin
       except
       end;
     end;
-
 end;
 
 procedure TfrmWTLUSalesCredits.FormDeactivate(Sender: TObject);
@@ -633,10 +698,16 @@ begin
   IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
-    IniFile.WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
+    with IniFile do
+      begin
+        WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
+        WriteString('Sales Credits', 'Revenue Centre Option', inttostr(rdgrpRevenueCentre.itemindex));
+        WriteString('Sales Credits', 'Revenue Centre', inttostr(dtmdlAllSCredits.RevenueCentre));
+      end;
   finally
-    IniFile.Free;
+    IniFile.free;
   end;
+
 end;
 
 procedure TfrmWTLUSalesCredits.BitBtn1Click(Sender: TObject);
@@ -707,6 +778,12 @@ begin
     end;
   end;
 
+end;
+
+procedure TfrmWTLUSalesCredits.dblkpRevCentreClick(Sender: TObject);
+begin
+  dtmdlAllSCredits.RevenueCentre := dblkpRevCentre.KeyValue;
+  dtmdlAllSCredits.refreshCreditdata;
 end;
 
 end.

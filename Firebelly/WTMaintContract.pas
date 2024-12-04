@@ -1447,7 +1447,7 @@ begin
                   for icount := 0 to pred(aQuote.Slabs.count) do
                     begin
                       aQuote.Slabs[icount].worktop := frm.Worktop;
-                      aQuote.Slabs[icount].thickness := frm.thickness;
+ //                     aQuote.Slabs[icount].thickness := frm.thickness;
                     end;
 
                   for icount := 0 to pred(aQuote.Upstands.count) do

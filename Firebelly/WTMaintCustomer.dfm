@@ -64,6 +64,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 824
+          ExplicitHeight = 537
           DesignSize = (
             830
             546)
@@ -689,7 +691,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 418
+            Width = 412
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -754,7 +756,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 537
           object Label31: TLabel
             Left = 24
             Top = 67
@@ -938,8 +939,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Panel13'
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 552
-          ExplicitHeight = 537
           object Panel15: TPanel
             Left = 1
             Top = 1
@@ -949,7 +948,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Caption = 'Material Types'
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 550
           end
           object pnlMaterialTypeFunctions: TPanel
             Left = 465
@@ -959,8 +957,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alRight
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 459
-            ExplicitHeight = 453
             object btnMTAdd: TBitBtn
               Left = 10
               Top = 8
@@ -1035,8 +1031,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Align = alBottom
             ParentBackground = False
             TabOrder = 3
-            ExplicitTop = 495
-            ExplicitWidth = 550
             object chkbxShowInactiveMaterialTypes: TCheckBox
               Left = 8
               Top = 8

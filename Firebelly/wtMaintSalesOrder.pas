@@ -5048,6 +5048,9 @@ var
   FileInfo: SHFILEINFO;
   sFilename: string;
 begin
+  if trim(SOrder.CustomerBranchName) = '' then
+    exit;
+
   sSource := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + SOrder.CustomerName + '\' + SOrder.CustomerBranchName + '\';
 
   sSafetyFolder := dtmdlWorktops.GetCompanySafetyDocumentFolder;
