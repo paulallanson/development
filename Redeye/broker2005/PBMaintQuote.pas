@@ -388,16 +388,10 @@ begin
 
     lblDocumentDir.Caption := lblDocumentDir.Caption + ' ' + dmBroker.GetCompanyQuoteDirectory;
 
-    if not ((Mode = qCopy) or (Mode = qReQuote)) then
-      pgDetails.ActivePage := tsSpecification;
-
     if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat)  or (Mode = qReQuote) then
       sTemp := ' New Quote '
     else
-    begin
       sTemp := ' Quote ' + floatToStr(Quote.DbKey) + ' ';
-      pgDetails.ActivePage := tsCharges;
-    end;
 
     if (Mode = qRepeat) or (Mode = qCopy) or (Mode = qReQuote) then
       begin

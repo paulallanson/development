@@ -48,7 +48,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Top = 41
       Width = 1176
       Height = 642
-      ActivePage = tbDetails
+      ActivePage = tbFinancials
       Align = alClient
       TabOrder = 0
       object tbDetails: TTabSheet

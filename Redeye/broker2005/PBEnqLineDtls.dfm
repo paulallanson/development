@@ -186,6 +186,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     Width = 89
     Height = 201
     ColCount = 1
+    DrawingStyle = gdsGradient
     FixedCols = 0
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]

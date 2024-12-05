@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, PBLUOps, pbDatabase;
+uses pbMainMenu, CCSCommon, PBLUOps, pbDatabase, Types;
 
 {$R *.dfm}
 
@@ -154,6 +154,8 @@ end;
 procedure TPBRSAccManPerformanceFrm.dbgDetailsDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
+var
+  Txt: array [0..255] of Char;
 begin
   if(gdFocused in State) or (gdSelected in State) then
     begin
@@ -172,13 +174,21 @@ begin
   if  (pos('Year',Column.Title.Caption) <> 0) or
       (pos('GP',Column.Title.Caption) <> 0) then
   	begin
-  		if Assigned(Column.Field) then
-        Column.Alignment := taLeftJustify;
+  		StrPCopy(Txt, Column.field.text);
+  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
+  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
     end
   else
   	begin
-      if Assigned(Column.Field) then
-        Column.Alignment := taRightJustify;
+      StrPCopy(txt, Column.field.text);
+      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
+      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end;
 end;
 
@@ -241,19 +251,6 @@ end;
 function TPBRSAccManPerformanceFrm.BuildQueryString(rep: Boolean): string;
 var
   sTemp : string;
-  { Local function }
-  { Remember, SQL likes American date formats with hyphens in quotes }
-  { But Access doesn't so we have to know what we're connected to }
-function qDate(const aDate : TDateTime) : string;
-  begin
-    if dmBroker.IsSQL then
-      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
-    else
-      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
-  end;
-{ Local function }
-
-
 begin
 {rebuilds the query string depending on the sort selections}
   sTemp := qryDummy.SQL.text;
