@@ -10,7 +10,7 @@ uses
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
-  TStockDet     = class;
+  TStockDet = class;
 
   TStockNumber = class
   private
@@ -126,6 +126,7 @@ type
     property Overs: string read SDOvers write SetOvers;
     property JobBag: integer read SDJobBag write SetJobBag;
   end;
+
   TPBPartTransferFrm = class(TForm)
     TreeImageList: TImageList;
     GetPOLinesSQL: TFDQuery;
@@ -226,7 +227,6 @@ type
     procedure QtyMemoExit(Sender: TObject);
     function FormatMemoValue(TempQty, TempFormat, TempError: string; TempNeg: ByteBool): string;
     procedure SetTreeText(tnTempSBT: TTreeNode);
-    procedure ToStoreDBLookupComboBoxClick(Sender: TObject);
     procedure FromTreeViewStartDrag(Sender: TObject;
       var DragObject: TDragObject);
     procedure ToTreeViewDragOver(Sender, Source: TObject; X, Y: Integer;
@@ -241,7 +241,6 @@ type
     procedure LoadTreeViews(Sender: TObject);
     procedure LoadTreeViewTo(Sender: TObject);
     procedure LoadTreeViewFrom(Sender: TObject);
-    procedure FromStoreDBLookupComboBoxClick(Sender: TObject);
     procedure LoadTreeViewFromPartTransfer(sTempPart: String);
     procedure LoadTreeViewFromStore(sTempPart: String);
     procedure LoadTreeViewFromPO(Sender: TObject);
@@ -275,6 +274,8 @@ type
     procedure DateEditExit(Sender: TObject);
     procedure dblkpMoveTypeClick(Sender: TObject);
     procedure dblkpVersionsClick(Sender: TObject);
+    procedure FromStoreDBLookupComboBoxCloseUp(Sender: TObject);
+    procedure ToStoreDBLookupComboBoxCloseUp(Sender: TObject);
   private
     TotalDelivered: integer;
     sOldValue, sMoveTypeIn, sMoveTypeOut, sLotText: String;
@@ -364,7 +365,12 @@ With STStockDataMod.GetMoveTypeSQL do
      Open ;
      First ;
      end;
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresFromSQL do
+     begin
+     Close ;
+     Open ;
+     end;
+With STStockDataMod.GetStoresToSQL do
      begin
      Close ;
      Open ;
@@ -431,13 +437,13 @@ FromStoreDBLookupComboBox.Visible := (sMoveTypeIn = 'S')  ;
 if sMoveTypeIn = 'S' then
   begin
     FromStoreDBLookupComboBox.KeyValue := dmBroker.qryCompany.FieldByName('Default_Warehouse').AsInteger;
-    FromStoreDBLookupComboBoxClick(Self);
+    FromStoreDBLookupComboBoxCloseUp(Self);
   end
   else
   if sMoveTypeIn = 'B' then
   begin
     ToStoreDBLookupComboBox.KeyValue := dmBroker.qryCompany.FieldByName('Default_Warehouse').AsInteger;
-    ToStoreDBLookupComboBoxClick(Self);
+    ToStoreDBLookupComboBoxCloseUp(Self);
   end;
 
   if sMoveTypeOut = 'S' then
@@ -445,7 +451,7 @@ if sMoveTypeIn = 'S' then
     ToStoreLabel.Visible := true;
     ToStoreDBLookupComboBox.Visible := true;
     ToStoreDBLookupComboBox.KeyValue := dmBroker.qryCompany.FieldByName('Default_Warehouse').AsInteger;
-    ToStoreDBLookupComboBoxClick(Self);
+    ToStoreDBLookupComboBoxCloseUp(Self);
   end
   else
   begin
@@ -470,7 +476,7 @@ If (Pos(sMoveTypeIn,'PT') > 0)  then
    PORefEdit.Text := sPORef ;
    SuppNameEdit.Text := sFromName ;
    ToStoreDBLookupComboBox.KeyValue := iStore ;
-   ToStoreDBLookupComboBoxClick(Self) ;
+   ToStoreDBLookupComboBoxCloseUp(Self) ;
    end;
 LoadTreeViews(Self) ;
 SetUpdatedState(False) ;
@@ -643,9 +649,9 @@ else
                           ShowInPacks(TempStockDet.Alloc + TempStockDet.AllocAdj,1) + ')' + sTempLot ;
 end;
 
-procedure TPBPartTransferFrm.ToStoreDBLookupComboBoxClick(Sender: TObject);
+procedure TPBPartTransferFrm.ToStoreDBLookupComboBoxCloseUp(Sender: TObject);
 begin
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresToSQL do
      begin
      bToBins := (FieldByName('Stock_Bins_In_Use').AsString = 'Y') ;
      bToLots := (FieldByName('Stock_Lots_In_Use').AsString = 'Y')
@@ -1646,9 +1652,9 @@ begin
     CheckFromVisible(Self) ;
 end;
 
-procedure TPBPartTransferFrm.FromStoreDBLookupComboBoxClick(Sender: TObject);
+procedure TPBPartTransferFrm.FromStoreDBLookupComboBoxCloseUp(Sender: TObject);
 begin
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresFromSQL do
      begin
      bFromBins := (FieldByName('Stock_Bins_In_Use').AsString = 'Y') ;
      bFromLots := (FieldByName('Stock_Lots_In_Use').AsString = 'Y')

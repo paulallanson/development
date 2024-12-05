@@ -15,8 +15,8 @@ type
     GetNextMoveSQL: TFDQuery;
     GetMoveTypesSQL: TFDQuery;
     MoveTypesDataSource: TDataSource;
-    GetStoresSQL: TFDQuery;
-    StoresDataSource: TDataSource;
+    GetStoresFromSQL: TFDQuery;
+    StoresFromDataSource: TDataSource;
     GetStoreStocksSQL: TFDQuery;
     GetPartSQL: TFDQuery;
     UpdLastLotSQL: TFDQuery;
@@ -81,6 +81,8 @@ type
     qryAddSODelivLine: TFDQuery;
     qryGetPickNote: TFDQuery;
     qryUpdPartStoreBin: TFDQuery;
+    GetStoresToSQL: TFDQuery;
+    StoresToDataSource: TDataSource;
   procedure AddMovement(sTempPart: String; iTempStore: Integer; sTempBin, sTempLot, sTempType, sTempRef: String; dTempDate: TDateTime;
                                          iTempQty, iTempAlloc, iTempPackSize: Integer; fTempCost: Real; rPO: real; iPalletID, iProductID: integer);
   procedure AddStock(sTempPart: String; iTempStore: Integer; sTempBin, sTempLot, sTempType, sTempRef: String; dTempDate,dMoveDate: TDateTime;
@@ -263,7 +265,7 @@ begin
      ParambyName('Part_Store_Total_Quantity').AsFloat := (GetTotalStock(iTempStore, sTempPart));
      ParambyName('Part_Store_Total_Allocated').AsFloat := (GetTotalAllocatedStock(iTempStore, sTempPart));
      ParambyName('Part_Store_Total_Value').AsFloat := (GetTotalStockValue(iTempStore, sTempPart));
-     ExecSQL ;
+     ExecSQL;
   end;
   {If the movement is D, J or X, Despatch to Sales Order or Used for Job or Destroyed then check if product should become inactive}
   if (sTempType = 'D') or (sTempType = 'J') or (sTempType = 'X') then

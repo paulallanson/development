@@ -281,7 +281,12 @@ With STStockDataMod.GetMoveTypeSQL do
      Open ;
      First ;
      end;
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresFromSQL do
+     begin
+     Close ;
+     Open ;
+     end;
+With STStockDataMod.GetStoresToSQL do
      begin
      Close ;
      Open ;
@@ -468,7 +473,7 @@ end;
 
 procedure TSTPrtTranFrm.ToStoreDBLookupComboBoxClick(Sender: TObject);
 begin
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresToSQL do
      begin
      bToBins := (FieldByName('Stock_Bins_In_Use').AsString = 'Y') ;
      bToLots := (FieldByName('Stock_Lots_In_Use').AsString = 'Y')
@@ -1202,7 +1207,7 @@ end;
 
 procedure TSTPrtTranFrm.FromStoreDBLookupComboBoxClick(Sender: TObject);
 begin
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresFromSQL do
      begin
      bFromBins := (FieldByName('Stock_Bins_In_Use').AsString = 'Y') ;
      bFromLots := (FieldByName('Stock_Lots_In_Use').AsString = 'Y')

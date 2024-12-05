@@ -77,7 +77,12 @@ Var
 bTempLUG: ByteBool ;
 iTempCount: Integer ;
 begin
-With STStockDataMod.GetStoresSQL do
+With STStockDataMod.GetStoresFromSQL do
+     begin
+     Close ;
+     Open ;
+     end;
+With STStockDataMod.GetStoresToSQL do
      begin
      Close ;
      Open ;

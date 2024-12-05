@@ -162,28 +162,27 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Caption = 'Qty Moved (in singles)'
     end
     object Label3: TLabel
-      Left = 10
-      Top = 13
+      Left = 11
+      Top = 10
       Width = 81
       Height = 13
       Caption = 'Movement Date'
     end
     object lblMoveType: TLabel
-      Left = 303
-      Top = 13
+      Left = 304
+      Top = 10
       Width = 80
       Height = 13
       Caption = 'Movement Type'
     end
     object lblReference: TLabel
-      Left = 553
-      Top = 13
+      Left = 554
+      Top = 10
       Width = 51
       Height = 13
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'Reference'
-      ExplicitLeft = 559
     end
     object GRNGroupBox: TGroupBox
       Left = 7
@@ -378,7 +377,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     end
     object DateEdit: TEdit
       Left = 135
-      Top = 9
+      Top = 7
       Width = 81
       Height = 21
       TabOrder = 4
@@ -386,7 +385,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     end
     object DateBitBtn: TBitBtn
       Left = 227
-      Top = 7
+      Top = 5
       Width = 25
       Height = 25
       Font.Charset = ANSI_CHARSET
@@ -414,7 +413,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     end
     object edtReference: TEdit
       Left = 614
-      Top = 9
+      Top = 7
       Width = 153
       Height = 21
       Anchors = [akTop, akRight]
@@ -422,7 +421,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     end
     object dblkpMoveType: TDBLookupComboBox
       Left = 392
-      Top = 8
+      Top = 6
       Width = 145
       Height = 21
       KeyField = 'Part_Movement_Type'
@@ -487,9 +486,9 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Height = 21
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
-          ListSource = STStockDataMod.StoresDataSource
+          ListSource = STStockDataMod.StoresToDataSource
           TabOrder = 0
-          OnClick = ToStoreDBLookupComboBoxClick
+          OnCloseUp = ToStoreDBLookupComboBoxCloseUp
         end
         object ToTreeView: TTreeView
           Left = 8
@@ -558,9 +557,9 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Height = 21
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
-          ListSource = STStockDataMod.StoresDataSource
+          ListSource = STStockDataMod.StoresFromDataSource
           TabOrder = 0
-          OnClick = FromStoreDBLookupComboBoxClick
+          OnCloseUp = FromStoreDBLookupComboBoxCloseUp
         end
         object FromTreeView: TTreeView
           Left = 8
