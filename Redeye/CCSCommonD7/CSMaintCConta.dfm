@@ -1,4 +1,4 @@
-﻿object CSMaintCContaFrm: TCSMaintCContaFrm
+object CSMaintCContaFrm: TCSMaintCContaFrm
   Left = 251
   Top = 46
   BorderIcons = [biSystemMenu, biMinimize]
@@ -12,11 +12,9 @@
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 15
   object DelLabel: TLabel
     Left = 40
@@ -38,9 +36,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -105,7 +100,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 280
@@ -114,9 +112,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -181,7 +176,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -232,7 +230,7 @@
     object Label4: TLabel
       Left = 8
       Top = 213
-      Width = 71
+      Width = 70
       Height = 15
       Caption = 'Contact Type'
       Font.Charset = DEFAULT_CHARSET
@@ -258,7 +256,7 @@
     object Label7: TLabel
       Left = 8
       Top = 313
-      Width = 83
+      Width = 82
       Height = 15
       Caption = 'E-Mail Address'
       Font.Charset = DEFAULT_CHARSET
@@ -533,9 +531,6 @@
       Font.Height = -12
       Font.Name = 'Arial'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 17
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -550,6 +545,9 @@
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 17
+      OnClick = NotesBitBtnClick
     end
   end
   object GetLastSQL: TFDQuery
@@ -562,8 +560,8 @@
     Top = 384
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -579,19 +577,13 @@
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object GetBranchNameSQL: TFDQuery
@@ -604,14 +596,10 @@
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetContTypesSQL: TFDQuery
@@ -650,34 +638,22 @@
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetContLevelsSQL: TFDQuery
@@ -730,24 +706,17 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -773,43 +742,41 @@
     Top = 416
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
         ParamType = ptInput
       end
       item
-        DataType = ftString
+        Name = 'Branch_No'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'GUID'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Contact_Type'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
-        Name = 'ExportFilter'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Customer'
         ParamType = ptInput
       end
       item
+        Name = 'Contact_Type'
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'ExportFilter'
+        DataType = ftString
+      end
+      item
+        Name = 'Narrative'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Branch_No'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -846,89 +813,59 @@
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Salutation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Contact_Level'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'ExportFilter'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Receive_Mail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Contact_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Def_Markup_Perc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InActive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object qryStatus: TFDQuery

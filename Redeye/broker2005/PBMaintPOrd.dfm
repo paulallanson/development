@@ -1894,6 +1894,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               Align = alClient
               ColCount = 12
               DefaultRowHeight = 18
+              DrawingStyle = gdsGradient
               FixedCols = 0
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing]
@@ -2091,6 +2092,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               Height = 131
               Align = alClient
               DefaultRowHeight = 18
+              DrawingStyle = gdsGradient
               FixedCols = 0
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing, goRowSelect]
@@ -2229,6 +2231,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Anchors = [akLeft, akTop, akRight]
             ColCount = 3
             DefaultRowHeight = 18
+            DrawingStyle = gdsGradient
             FixedCols = 0
             RowCount = 2
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goDrawFocusSelected, goRowSelect]
@@ -2572,6 +2575,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Anchors = [akLeft, akTop, akRight]
             ColCount = 2
             DefaultRowHeight = 18
+            DrawingStyle = gdsGradient
             FixedCols = 0
             RowCount = 2
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goDrawFocusSelected, goColSizing, goRowSelect]
@@ -3279,6 +3283,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
             Anchors = [akLeft, akTop, akRight, akBottom]
             ColCount = 4
             DefaultRowHeight = 20
+            DrawingStyle = gdsGradient
             FixedCols = 0
             RowCount = 2
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
@@ -3752,7 +3757,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
                 FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
                 0000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-                00000000C000000000000046000000000000000000000000402F3F76A3B5DA01
+                00000000C000000000000046000000000000000000000000E069DC5A2847DB01
                 03000000400200000000000001004F006C006500000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -3928,7 +3933,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
                 0000000000000000000000004F0062006A0065006300740050006F006F006C00
                 0000000000000000000000000000000000000000000000000000000000000000
                 000000000000000000000000160001010200000006000000FFFFFFFF00000000
-                00000000000000000000000000000000402F3F76A3B5DA01402F3F76A3B5DA01
+                00000000000000000000000000000000E069DC5A2847DB01E069DC5A2847DB01
                 00000000000000000000000002004F006C006500500072006500730030003000
                 3000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4404,7 +4409,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
                 FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
                 0000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-                00000000C000000000000046000000000000000000000000402F3F76A3B5DA01
+                00000000C000000000000046000000000000000000000000E069DC5A2847DB01
                 03000000400D00000000000001004F006C006500000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -4713,6 +4718,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               ColCount = 2
               DefaultColWidth = 150
               DefaultRowHeight = 18
+              DrawingStyle = gdsGradient
               FixedCols = 0
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
@@ -4779,6 +4785,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               Anchors = [akLeft, akTop, akBottom]
               ColCount = 2
               DefaultRowHeight = 18
+              DrawingStyle = gdsGradient
               FixedCols = 0
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
@@ -4981,6 +4988,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               ColCount = 10
               DefaultColWidth = 40
               DefaultRowHeight = 18
+              DrawingStyle = gdsGradient
               RowCount = 3
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
               TabOrder = 0
@@ -5068,6 +5076,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               ColCount = 10
               DefaultRowHeight = 18
               DefaultDrawing = False
+              DrawingStyle = gdsGradient
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
               TabOrder = 0
@@ -5196,6 +5205,7 @@ object PBMaintPOrdFrm: TPBMaintPOrdFrm
               ColCount = 10
               DefaultRowHeight = 18
               DefaultDrawing = False
+              DrawingStyle = gdsGradient
               RowCount = 2
               TabOrder = 0
               OnDblClick = strgrdPurchInvsDblClick

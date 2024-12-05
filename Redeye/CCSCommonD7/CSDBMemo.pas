@@ -114,10 +114,10 @@ begin
   begin
     Narrative := TNarrative.Create;
     try
-      Narrative.DbKey := NarrNo;
+      Narrative.FDbKey := NarrNo;
       Narrative.LoadFromDB;
-      DataMemo.Text := Narrative.DataInfo;
-      DispMemo.Text := Narrative.DataInfo;
+      DataMemo.Text := Narrative.FDataInfo;
+      DispMemo.Text := Narrative.FDataInfo;
     finally
       Narrative.Free;
     end;
@@ -138,10 +138,10 @@ begin
   if (not bMemoUpd) then Exit;
   Narrative := TNarrative.Create;
   try
-    Narrative.DbKey := iNarr;
-    Narrative.DataInfo := DataMemo.Text;
+    Narrative.FDbKey := iNarr;
+    Narrative.FDataInfo := DataMemo.Text;
     Narrative.SaveToDB;
-    iNarr := Narrative.DbKey;
+    iNarr := Narrative.FDbKey;
   finally
     Narrative.Free;
   end;
@@ -170,7 +170,7 @@ var
 begin
   Narrative := TNarrative.Create;
   try
-    Narrative.DbKey := iNarr;
+    Narrative.FDbKey := iNarr;
     Narrative.Delete;
   finally
     Narrative.Free;

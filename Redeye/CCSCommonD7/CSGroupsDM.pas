@@ -120,17 +120,17 @@ type
     function GetNextWeight : integer;
     function GetNextBrand : integer;
     function GetNextMaterial : integer;
-    procedure SaveContactType(const Key : integer; const Data : string);
-    procedure SaveCountryId(const Key : integer; const Data : string);
-    procedure SaveCategory(const Key : integer; const Data : string);
-    procedure SaveCustType(const Key : integer; const Data : string);
-    procedure SaveCurrency(const Key : integer; const Data : string);
-    procedure SaveUOM(const Key : integer; const Data : string);
-    procedure SaveIntrastat(const Key : integer; const Data : string);
-    procedure SaveColour(const Key : integer; const Data : string);
-    procedure SaveWeight(const Key : integer; const Data : string);
-    procedure SaveBrand(const Key : integer; const Data : string);
-    procedure SaveMaterial(const Key : integer; const Data : string);
+    procedure SaveContactType(const Key : integer; const Value : string);
+    procedure SaveCountryId(const Key : integer; const Value : string);
+    procedure SaveCategory(const Key : integer; const Value : string);
+    procedure SaveCustType(const Key : integer; const Value : string);
+    procedure SaveCurrency(const Key : integer; const Value : string);
+    procedure SaveUOM(const Key : integer; const Value : string);
+    procedure SaveIntrastat(const Key : integer; const Value : string);
+    procedure SaveColour(const Key : integer; const Value : string);
+    procedure SaveWeight(const Key : integer; const Value : string);
+    procedure SaveBrand(const Key : integer; const Value : string);
+    procedure SaveMaterial(const Key : integer; const Value : string);
     procedure DeleteContactType(const Key : integer);
     procedure DeleteCountryId(const Key : integer);
     procedure DeleteCategory(const Key : integer);
@@ -144,7 +144,7 @@ type
     procedure DeleteMaterial(const Key : integer);
     procedure DeleteContactLevel(const Key: integer);
     function GetNextContactLevel: integer;
-    procedure SaveContactLevel(const Key: integer; const Data: string);
+    procedure SaveContactLevel(const Key: integer; const Value: string);
   end;
 
 var
@@ -351,103 +351,102 @@ begin
   Result := GenericReserve('Paper_Material', AddMaterialSQL, GetLastMaterialSQL);
 end;
 
-procedure TdmGroups.SaveCategory(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCategory(const Key: integer; const Value: string);
 begin
   with UpdPTCatSQL do
   begin
     ParamByName('Category').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveContactType(const Key: integer;
-  const Data: string);
+procedure TdmGroups.SaveContactType(const Key: integer; const Value: string);
 begin
   with UpdContTypeSQL do
   begin
     ParamByName('Contact_Type').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCountryId(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCountryId(const Key: integer; const Value: string);
 begin
   with UpdCountrySQL do
   begin
     ParamByName('Country_Id').AsInteger := Key;
-    ParamByName('Country_Id_Descr').AsString := Data;
+    ParamByName('Country_Id_Descr').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCurrency(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCurrency(const Key: integer; const Value: string);
 begin
   with UpdCurrencySQL do
   begin
     ParamByName('Currency_Code').AsInteger := Key;
-    ParamByName('Currency_Code_Descr').AsString := Data;
+    ParamByName('Currency_Code_Descr').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCustType(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCustType(const Key: integer; const Value: string);
 begin
   with UpdCustTypeSQL do
   begin
     ParamByName('Customer_Type').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveIntrastat(const Key: integer; const Data: string);
+procedure TdmGroups.SaveIntrastat(const Key: integer; const Value: string);
 begin
   with UpdIntrastatSQL do
   begin
     ParamByName('Intrastat_Id').AsInteger := Key;
-    ParamByName('Intrastat_Id_Descr').AsString := Data;
+    ParamByName('Intrastat_Id_Descr').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveColour(const Key: integer; const Data: string);
+procedure TdmGroups.SaveColour(const Key: integer; const Value: string);
 begin
   with UpdColourSQL do
   begin
     ParamByName('Paper_Colour').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveWeight(const Key: integer; const Data: string);
+procedure TdmGroups.SaveWeight(const Key: integer; const Value: string);
 begin
   with UpdWeightSQL do
   begin
     ParamByName('Paper_Weight').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveBrand(const Key: integer; const Data: string);
+procedure TdmGroups.SaveBrand(const Key: integer; const Value: string);
 begin
   with UpdBrandSQL do
   begin
     ParamByName('Paper_Brand').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveMaterial(const Key: integer; const Data: string);
+procedure TdmGroups.SaveMaterial(const Key: integer; const Value: string);
 begin
   with UpdMaterialSQL do
   begin
     ParamByName('Paper_Material').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 end;
@@ -466,13 +465,12 @@ begin
   Result := GenericReserve('Contact_Level', AddContLevelSQL, GetLastContLevelSQL);
 end;
 
-procedure TdmGroups.SaveContactLevel(const Key: integer;
-  const Data: string);
+procedure TdmGroups.SaveContactLevel(const Key: integer; const Value: string);
 begin
   with UpdContLevelSQL do
   begin
     ParamByName('Contact_Level').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := Value;
     ExecSQL;
   end;
 
@@ -492,12 +490,12 @@ begin
   Result := GenericReserve('Unit_of_Measure', AddUOMSQL, GetLastUOMSQL);
 end;
 
-procedure TdmGroups.SaveUOM(const Key: integer; const Data: string);
+procedure TdmGroups.SaveUOM(const Key: integer; const Value: string);
 begin
  with UpdUOMSQL do
   begin
     ParamByName('Unit_of_measure').AsInteger := Key;
-    ParamByName('Uom_Description').AsString := Data;
+    ParamByName('Uom_Description').AsString := Value;
     ExecSQL;
   end;
 end;

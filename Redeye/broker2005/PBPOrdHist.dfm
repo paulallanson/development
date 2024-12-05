@@ -22,9 +22,11 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Align = alClient
     ColCount = 14
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving, goRowSelect]
     TabOrder = 0
+    OnDrawCell = strgrdOrdHistDrawCell
   end
   object StatusBar1: TStatusBar
     Left = 0

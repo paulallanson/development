@@ -186,6 +186,7 @@ object STMaintPickFrm: TSTMaintPickFrm
       ColCount = 9
       DefaultColWidth = 60
       DefaultRowHeight = 20
+      DrawingStyle = gdsGradient
       FixedCols = 0
       RowCount = 2
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking]
@@ -194,9 +195,8 @@ object STMaintPickFrm: TSTMaintPickFrm
       TabOrder = 0
       OnClick = sgDetailsClick
       OnDblClick = sgDetailsDblClick
+      OnDrawCell = sgDetailsDrawCell
       OnSelectCell = sgDetailsSelectCell
-      ExplicitLeft = -4
-      ExplicitTop = 6
       ColWidths = (
         123
         183
