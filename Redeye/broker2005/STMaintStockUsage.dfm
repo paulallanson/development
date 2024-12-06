@@ -155,6 +155,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 332
     Align = alClient
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     FixedCols = 0
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goColSizing]
