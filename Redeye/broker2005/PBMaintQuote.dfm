@@ -182,6 +182,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ColCount = 9
             DefaultColWidth = 40
             DefaultRowHeight = 18
+            DrawingStyle = gdsGradient
             RowCount = 4
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowMoving, goRowSelect]
             TabOrder = 1
@@ -215,6 +216,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ColCount = 7
           DefaultColWidth = 40
           DefaultRowHeight = 18
+          DrawingStyle = gdsGradient
           RowCount = 4
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 0

@@ -1770,7 +1770,6 @@ begin
   finally
     PBLUJobTypeFrm.Free;
   end;
-
 end;
 
 procedure TfrmpbMainMenu.mnuSalesInvoicingClick(Sender: TObject);

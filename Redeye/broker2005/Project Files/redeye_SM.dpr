@@ -712,7 +712,8 @@ uses
   PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
   PBRSNCASource in '..\PBRSNCASource.pas',
   PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm},
-  STRSSalesHistory in '..\STRSSalesHistory.pas';
+  STRSSalesHistory in '..\STRSSalesHistory.pas',
+  PBRSAccManPerformance in '..\PBRSAccManPerformance.pas' {PBRSAccManPerformanceFrm};
 
 {$R *.RES}
 

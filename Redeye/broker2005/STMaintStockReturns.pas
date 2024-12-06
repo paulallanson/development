@@ -33,10 +33,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure dblkpProductionLocationClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure sgdetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgdetailsSelectCell(Sender: TObject; Col, Row: Integer;
-      var CanSelect: Boolean);
+    procedure sgdetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure sgdetailsSelectCell(Sender: TObject; Col, Row: Integer; var CanSelect: Boolean);
     procedure sgdetailsKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnOKClick(Sender: TObject);
@@ -249,51 +247,51 @@ var
 begin
   icount := 0;
   dtmdlStockUsage.RefreshStockUsage;
-  with sgDetails, dtmdlStockUsage.qryStockUsage do
+  with dtmdlStockUsage do
+  begin
+    while not qryStockUsage.Eof do
     begin
-      while eof <> true do
-        begin
-        cells[0,icount+1] := fieldbyname('Part').asstring;
-        cells[1,icount+1] := fieldbyname('Part_Description').asstring;
-        cells[2,icount+1] := fieldbyname('Customer_Name').asstring;
-        cells[3,icount+1] := formatfloat('###0',fieldbyname('Quantity_Allocated').asfloat);
-        cells[4,icount+1] := '0';
-        cells[5,icount+1] := '0';
-        icount := icount + 1;
-        next;
-        end;
-      if icount = 0 then
-        rowcount := 2
-      else
-        rowcount := icount + 1;
+      sgDetails.cells[0,icount+1] := qryStockUsage.fieldbyname('Part').asstring;
+      sgDetails.cells[1,icount+1] := qryStockUsage.fieldbyname('Part_Description').asstring;
+      sgDetails.cells[2,icount+1] := qryStockUsage.fieldbyname('Customer_Name').asstring;
+      sgDetails.cells[3,icount+1] := formatfloat('###0',qryStockUsage.fieldbyname('Quantity_Allocated').asfloat);
+      sgDetails.cells[4,icount+1] := '0';
+      sgDetails.cells[5,icount+1] := '0';
+      icount := icount + 1;
+      qryStockUsage.next;
     end;
+    if icount = 0 then
+      sgDetails.rowcount := 2
+    else
+      sgDetails.rowcount := icount + 1;
+  end;
 end;
 
-procedure TSTMaintStockReturnsFrm.sgdetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TSTMaintStockReturnsFrm.sgdetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect;
+  State: TGridDrawState);
 var
   Content: string;
+  Grid: TStringGrid;
 begin
+  if not (Sender is TStringGrid) then
+    Exit;
+
+  Grid := (Sender as TStringGrid);
+
   {Prevent the blue cell being displayed}
-  with Sender as TStringGrid do
+  if vRow <> 0 then
   begin
-    if vRow <> 0 then
-    begin
-      Canvas.Brush.Color := Color;
-      Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
-    end;
+    Grid.Canvas.Brush.Color := Self.Color;
+    Grid.Canvas.Font.Color := Font.Color;
+    Grid.Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Grid.Cells[vCol, vRow]);
   end;
 
   {If Heading Display Left justified in the cells}
-  with sgDetails do
   begin
-    if vCol < 3 then
+    if vCol < 2 then
     begin
-      Content := Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
+      Content := Grid.Cells[vCol, vRow];
+      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
       ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
         ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
@@ -301,47 +299,42 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      Content := Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
+      Content := Grid.Cells[vCol, vRow];
+      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
       ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
         ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
     end;
   end;
 
-  with Sender as TStringGrid, Canvas do
+  if (gdselected in State) then
   begin
-    if (gdselected in State) then
-    begin
-      //draw a box around the selected cell
-//      pen.Color := clHighlight;
-      pen.Color := clred;
-      pen.Width := 2;
-      polyline([point(rect.left+1,rect.top+1),
-                point(rect.right-2,rect.top+1),
-                point(rect.right-2,rect.bottom-2),
-                point(rect.left+1,rect.bottom-2),
-                point(rect.left+1,rect.top+1)]);
-    end;
-    if (vRow = 0) then
-    begin
-      //default drawing has been switched off in the grid so we have
-      //to draw the highlight and shadow on 3d boxes
-      pen.color := clBtnHighlight;
-      polyline([point(rect.left,rect.bottom-1),
-                point(rect.left,rect.top),
-                point(rect.right,rect.top)]);
-      pen.color := clBtnShadow;
-      polyline([point(rect.right-1,rect.top+1),
-                point(rect.right-1,rect.bottom-1),
-                point(rect.left,rect.bottom-1)]);
-    end;
+    //draw a box around the selected cell
+    //Grid.Canvas.pen.Color := clHighlight;
+    Grid.Canvas.pen.Color := clred;
+    Grid.Canvas.pen.Width := 2;
+    Grid.Canvas.polyline([point(rect.left+1,rect.top+1),
+                          point(rect.right-2,rect.top+1),
+                          point(rect.right-2,rect.bottom-2),
+                          point(rect.left+1,rect.bottom-2),
+                          point(rect.left+1,rect.top+1)]);
+  end;
+  if (vRow = 0) then
+  begin
+    //default drawing has been switched off in the grid so we have
+    //to draw the highlight and shadow on 3d boxes
+    Grid.Canvas.pen.color := clBtnHighlight;
+    Grid.Canvas.polyline([point(rect.left,rect.bottom-1),
+                          point(rect.left,rect.top),
+                          point(rect.right,rect.top)]);
+    Grid.Canvas.pen.color := clBtnShadow;
+    Grid.Canvas.polyline([point(rect.right-1,rect.top+1),
+                          point(rect.right-1,rect.bottom-1),
+                          point(rect.left,rect.bottom-1)]);
   end;
 end;
 
-procedure TSTMaintStockReturnsFrm.sgdetailsSelectCell(Sender: TObject; Col,
-  Row: Integer; var CanSelect: Boolean);
+procedure TSTMaintStockReturnsFrm.sgdetailsSelectCell(Sender: TObject; Col, Row: Integer; var CanSelect: Boolean);
 begin
 	if (Col = 4) or (Col = 5) then
     sgDetails.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]

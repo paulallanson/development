@@ -440,6 +440,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
     Height = 81
     ColCount = 3
     DefaultRowHeight = 18
+    DrawingStyle = gdsGradient
     FixedCols = 0
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
     PopupMenu = ppmnExChrgsGrid

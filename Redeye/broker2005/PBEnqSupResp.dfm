@@ -161,6 +161,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     ColCount = 3
     DefaultColWidth = 70
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
     TabOrder = 6
@@ -361,6 +362,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     ColCount = 2
     DefaultColWidth = 40
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
     TabOrder = 4
@@ -569,6 +571,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Height = 53
     ColCount = 4
     DefaultRowHeight = 12
+    DrawingStyle = gdsGradient
     RowCount = 2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack

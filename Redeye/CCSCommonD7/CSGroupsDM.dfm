@@ -1,7 +1,4 @@
 object dmGroups: TdmGroups
-  OldCreateOrder = False
-  Left = 46
-  Top = 128
   Height = 479
   Width = 741
   object GetLastContTypeSQL: TFDQuery
@@ -14,8 +11,8 @@ object dmGroups: TdmGroups
     Top = 392
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -29,8 +26,8 @@ object dmGroups: TdmGroups
     Top = 159
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -48,14 +45,10 @@ object dmGroups: TdmGroups
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object GetLastCustTypeSQL: TFDQuery
@@ -68,8 +61,8 @@ object dmGroups: TdmGroups
     Top = 168
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -87,14 +80,10 @@ object dmGroups: TdmGroups
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Country_Id_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Country_Id'
-        ParamType = ptUnknown
       end>
   end
   object GetLastPTCatSQL: TFDQuery
@@ -107,8 +96,8 @@ object dmGroups: TdmGroups
     Top = 160
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -123,8 +112,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -139,8 +128,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -154,8 +143,8 @@ object dmGroups: TdmGroups
     Top = 384
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -169,8 +158,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -188,14 +177,10 @@ object dmGroups: TdmGroups
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end>
   end
   object AddCountrySQL: TFDQuery
@@ -209,8 +194,8 @@ object dmGroups: TdmGroups
     Top = 240
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -223,9 +208,7 @@ object dmGroups: TdmGroups
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer_Type'
-        ParamType = ptUnknown
       end>
   end
   object DelCountrySQL: TFDQuery
@@ -237,9 +220,7 @@ object dmGroups: TdmGroups
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Country_Id'
-        ParamType = ptUnknown
       end>
   end
   object UpdCustTypeSQL: TFDQuery
@@ -256,14 +237,10 @@ object dmGroups: TdmGroups
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Type'
-        ParamType = ptUnknown
       end>
   end
   object UpdCurrencySQL: TFDQuery
@@ -280,14 +257,10 @@ object dmGroups: TdmGroups
     Top = 63
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Currency_Code_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Currency_Code'
-        ParamType = ptUnknown
       end>
   end
   object DelIntrastatSQL: TFDQuery
@@ -299,9 +272,7 @@ object dmGroups: TdmGroups
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Intrastat_Id'
-        ParamType = ptUnknown
       end>
   end
   object UpdIntrastatSQL: TFDQuery
@@ -318,14 +289,10 @@ object dmGroups: TdmGroups
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Intrastat_Id_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Intrastat_Id'
-        ParamType = ptUnknown
       end>
   end
   object DelPTCatSQL: TFDQuery
@@ -337,9 +304,7 @@ object dmGroups: TdmGroups
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object AddIntrastatSQL: TFDQuery
@@ -352,8 +317,8 @@ object dmGroups: TdmGroups
     Top = 232
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -366,9 +331,7 @@ object dmGroups: TdmGroups
     Top = 111
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Currency_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddContTypeSQL: TFDQuery
@@ -381,8 +344,8 @@ object dmGroups: TdmGroups
     Top = 240
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -396,8 +359,8 @@ object dmGroups: TdmGroups
     Top = 392
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -410,9 +373,7 @@ object dmGroups: TdmGroups
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -426,8 +387,8 @@ object dmGroups: TdmGroups
     Top = 456
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -441,8 +402,8 @@ object dmGroups: TdmGroups
     Top = 232
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -459,14 +420,10 @@ object dmGroups: TdmGroups
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Colour'
-        ParamType = ptUnknown
       end>
   end
   object DelColourSQL: TFDQuery
@@ -478,9 +435,7 @@ object dmGroups: TdmGroups
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Colour'
-        ParamType = ptUnknown
       end>
   end
   object GetLastColourSQL: TFDQuery
@@ -493,8 +448,8 @@ object dmGroups: TdmGroups
     Top = 376
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -508,8 +463,8 @@ object dmGroups: TdmGroups
     Top = 232
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -525,14 +480,10 @@ object dmGroups: TdmGroups
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Weight'
-        ParamType = ptUnknown
       end>
   end
   object DelWeightSQL: TFDQuery
@@ -544,9 +495,7 @@ object dmGroups: TdmGroups
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Weight'
-        ParamType = ptUnknown
       end>
   end
   object GetLastWeightSQL: TFDQuery
@@ -559,8 +508,8 @@ object dmGroups: TdmGroups
     Top = 376
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -574,8 +523,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -589,8 +538,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -606,14 +555,10 @@ object dmGroups: TdmGroups
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Brand'
-        ParamType = ptUnknown
       end>
   end
   object UpdMaterialSQL: TFDQuery
@@ -629,14 +574,10 @@ object dmGroups: TdmGroups
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Material'
-        ParamType = ptUnknown
       end>
   end
   object DelBrandSQL: TFDQuery
@@ -648,9 +589,7 @@ object dmGroups: TdmGroups
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Brand'
-        ParamType = ptUnknown
       end>
   end
   object DelMaterialSQL: TFDQuery
@@ -662,9 +601,7 @@ object dmGroups: TdmGroups
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Material'
-        ParamType = ptUnknown
       end>
   end
   object GetLastBrandSQL: TFDQuery
@@ -677,8 +614,8 @@ object dmGroups: TdmGroups
     Top = 160
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -692,8 +629,8 @@ object dmGroups: TdmGroups
     Top = 160
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -708,8 +645,8 @@ object dmGroups: TdmGroups
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -727,14 +664,10 @@ object dmGroups: TdmGroups
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Level'
-        ParamType = ptUnknown
       end>
   end
   object DelContLevelSQL: TFDQuery
@@ -746,9 +679,7 @@ object dmGroups: TdmGroups
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_Level'
-        ParamType = ptUnknown
       end>
   end
   object GetLastContLevelSQL: TFDQuery
@@ -761,8 +692,8 @@ object dmGroups: TdmGroups
     Top = 168
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -776,8 +707,8 @@ object dmGroups: TdmGroups
     Top = 232
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -795,14 +726,10 @@ object dmGroups: TdmGroups
     Top = 287
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'UOM_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
       end>
   end
   object DelUOMSQL: TFDQuery
@@ -814,9 +741,7 @@ object dmGroups: TdmGroups
     Top = 335
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
       end>
   end
   object GetLastUOMSQL: TFDQuery
@@ -830,8 +755,8 @@ object dmGroups: TdmGroups
     Top = 391
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

@@ -262,7 +262,12 @@ end;
 
 procedure TStMovSlfrm.FormActivate(Sender: TObject);
 begin
-  With StStockDataMod.GetStoresSQL do
+  With StStockDataMod.GetStoresFromSQL do
+  begin
+    Close ;
+    Open ;
+  end;
+  With StStockDataMod.GetStoresToSQL do
   begin
     Close ;
     Open ;

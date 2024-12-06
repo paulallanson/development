@@ -1,19 +1,17 @@
 object CSDBMemoFrm: TCSDBMemoFrm
   Left = 193
   Top = 142
-  Width = 318
-  Height = 302
   Caption = 'Notes'
+  ClientHeight = 263
+  ClientWidth = 302
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 15
   object DataMemo: TMemo
     Left = 8
@@ -37,25 +35,28 @@ object CSDBMemoFrm: TCSDBMemoFrm
     Top = 240
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object OkBitBtn: TBitBtn
     Left = 144
     Top = 240
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = OkBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 224
     Top = 240
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object ClearBitBtn: TBitBtn
     Left = 8
@@ -64,8 +65,6 @@ object CSDBMemoFrm: TCSDBMemoFrm
     Height = 25
     Caption = 'Clear'
     Default = True
-    TabOrder = 5
-    OnClick = ClearBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -80,5 +79,7 @@ object CSDBMemoFrm: TCSDBMemoFrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = ClearBitBtnClick
   end
 end

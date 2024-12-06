@@ -158,8 +158,10 @@ procedure TSTStkTkslfrm.FormActivate(Sender: TObject);
 begin
   if not FActivated then
     begin
-      STStockDataMod.GetStoresSQL.Close ;
-      STStockDataMod.GetStoresSQL.Open ;
+      STStockDataMod.GetStoresFromSQL.Close ;
+      STStockDataMod.GetStoresToSQL.Close ;
+      STStockDataMod.GetStoresFromSQL.Open ;
+      STStockDataMod.GetStoresToSQL.Open ;
       FActivated := true;
 
       storedblookupComboBox.KeyValue := dmBroker.GetDefaultWarehouse;
@@ -180,7 +182,7 @@ end;
 
 procedure TSTStkTkslfrm.StoreDBLookupComboBoxClick(Sender: TObject);
 begin
-  If STStockDataMod.GetStoresSQL.fieldByName('Stock_Bins_In_Use').asString = 'Y' then
+  If STStockDataMod.GetStoresToSQL.fieldByName('Stock_Bins_In_Use').asString = 'Y' then
   begin
     PrAllBinsCheckBox.Visible := True;
     SeqByRadioGroup.Visible := False;
@@ -219,8 +221,8 @@ begin
 {Lookup bins in the selected store} ;
 STMntPrtBinFrm := TSTMntPrtBinFrm.Create(Self) ;
 Try
-   STMntPrtBinFrm.iStore := STStockDataMod.StoresDataSource.DataSet.FieldByName('Part_Store').AsInteger ;
-   STMntPrtBinFrm.sStoreName := STStockDataMod.StoresDataSource.Dataset.FieldByName('Part_Store_Name').AsString ;
+   STMntPrtBinFrm.iStore := STStockDataMod.StoresToDataSource.DataSet.FieldByName('Part_Store').AsInteger ;
+   STMntPrtBinFrm.sStoreName := STStockDataMod.StoresToDataSource.Dataset.FieldByName('Part_Store_Name').AsString ;
    STMntPrtBinFrm.ShowModal ;
    selPart := STMntPrtBinFrm.sSelBin ;
    RngFromEdit.Text := selPart;
@@ -255,8 +257,8 @@ begin
 {Lookup bins in the selected store} ;
 STMntPrtBinFrm := TSTMntPrtBinFrm.Create(Self) ;
 Try
-   STMntPrtBinFrm.iStore := STStockDataMod.StoresDataSource.DataSet.FieldByName('Part_Store').AsInteger ;
-   STMntPrtBinFrm.sStoreName := STStockDataMod.StoresDataSource.Dataset.FieldByName('Part_Store_Name').AsString ;
+   STMntPrtBinFrm.iStore := STStockDataMod.StoresToDataSource.DataSet.FieldByName('Part_Store').AsInteger ;
+   STMntPrtBinFrm.sStoreName := STStockDataMod.StoresToDataSource.Dataset.FieldByName('Part_Store_Name').AsString ;
    STMntPrtBinFrm.ShowModal ;
    selPart := STMntPrtBinFrm.sSelBin ;
    RngToEdit.Text := selPart;

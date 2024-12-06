@@ -31,6 +31,7 @@ object PBEmailListFrm: TPBEmailListFrm
       Align = alClient
       ColCount = 6
       DefaultRowHeight = 20
+      DrawingStyle = gdsGradient
       FixedCols = 0
       RowCount = 2
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
@@ -38,6 +39,8 @@ object PBEmailListFrm: TPBEmailListFrm
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
+      ExplicitLeft = 2
+      ExplicitTop = 4
       ColWidths = (
         64
         186

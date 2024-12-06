@@ -345,6 +345,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               ColCount = 2
               DefaultColWidth = 195
               DefaultRowHeight = 20
+              DrawingStyle = gdsGradient
               Enabled = False
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goTabs]
               PopupMenu = PricesPopUp
@@ -402,6 +403,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
                 ColCount = 1
                 DefaultColWidth = 80
                 DefaultRowHeight = 20
+                DrawingStyle = gdsGradient
                 FixedCols = 0
                 RowCount = 4
                 TabOrder = 0
@@ -506,6 +508,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
           ColCount = 2
           DefaultColWidth = 40
           DefaultRowHeight = 20
+          DrawingStyle = gdsGradient
           RowCount = 2
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
           TabOrder = 2
@@ -583,6 +586,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               ColCount = 1
               DefaultColWidth = 80
               DefaultRowHeight = 20
+              DrawingStyle = gdsGradient
               FixedCols = 0
               RowCount = 2
               TabOrder = 0
@@ -626,6 +630,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               DefaultColWidth = 195
               DefaultRowHeight = 20
               DefaultDrawing = False
+              DrawingStyle = gdsGradient
               Enabled = False
               RowCount = 2
               Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goThumbTracking]

@@ -2238,6 +2238,10 @@
         <DCCReference Include="..\STRSSalesHistory.pas">
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\PBRSAccManPerformance.pas">
+            <Form>PBRSAccManPerformanceFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

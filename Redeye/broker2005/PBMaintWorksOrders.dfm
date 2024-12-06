@@ -100,6 +100,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           ColCount = 7
           DefaultColWidth = 40
           DefaultRowHeight = 20
+          DrawingStyle = gdsGradient
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 1
           OnDblClick = sgDelivsDblClick
@@ -326,6 +327,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             ColCount = 3
             DefaultColWidth = 40
             DefaultRowHeight = 20
+            DrawingStyle = gdsGradient
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
             TabOrder = 0
             OnClick = sgEventsClick

@@ -195,7 +195,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Font.Style = []
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
-      ListSource = STStockDataMod.StoresDataSource
+      ListSource = STStockDataMod.StoresToDataSource
       ParentFont = False
       TabOrder = 2
       OnClick = StoreDBLookupComboBoxClick

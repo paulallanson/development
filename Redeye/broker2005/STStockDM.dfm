@@ -126,7 +126,7 @@ object STStockDataMod: TSTStockDataMod
     Left = 208
     Top = 160
   end
-  object GetStoresSQL: TFDQuery
+  object GetStoresFromSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Store.*'
@@ -141,8 +141,8 @@ object STStockDataMod: TSTStockDataMod
     Left = 288
     Top = 176
   end
-  object StoresDataSource: TDataSource
-    DataSet = GetStoresSQL
+  object StoresFromDataSource: TDataSource
+    DataSet = GetStoresFromSQL
     Left = 256
     Top = 112
   end
@@ -2030,5 +2030,25 @@ object STStockDataMod: TSTStockDataMod
       item
         Name = 'Part_Bin'
       end>
+  end
+  object GetStoresToSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select Part_Store.*'
+      'From Part_Store, Part_Store_Type'
+      
+        'Where (Part_Store_Type.Part_Store_Type = Part_Store.Part_Store_T' +
+        'ype)'
+      
+        'Order by Part_Store_Type.Part_Store_Is_Van, Part_Store.Part_Stor' +
+        'e_Name'
+      ' ')
+    Left = 312
+    Top = 184
+  end
+  object StoresToDataSource: TDataSource
+    DataSet = GetStoresToSQL
+    Left = 272
+    Top = 128
   end
 end

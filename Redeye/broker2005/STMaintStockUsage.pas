@@ -285,28 +285,27 @@ procedure TSTMaintStockUsageFrm.sgdetailsDrawCell(Sender: TObject; vCol,
   vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Content: string;
+  Grid: TStringGrid;
 begin
+  if not (Sender is TStringGrid) then
+    Exit;
+
+  Grid := (Sender as TStringGrid);
 
   {Prevent the blue cell being displayed}
-  with Sender as TStringGrid do
+  if vRow <> 0 then
   begin
-    if vRow <> 0 then
-    begin
-      Canvas.Brush.Color := Color;
-      Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
-    end;
+    Grid.Canvas.Brush.Color := Self.Color;
+    Grid.Canvas.Font.Color := Font.Color;
+    Grid.Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Grid.Cells[vCol, vRow]);
   end;
 
   {If Heading Display Left justified in the cells}
-  with sgDetails do
   begin
     if vCol < 2 then
     begin
-      Content := Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
+      Content := Grid.Cells[vCol, vRow];
+      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
       ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
         ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
@@ -314,43 +313,38 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      Content := Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
+      Content := Grid.Cells[vCol, vRow];
+      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
       ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
         ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
     end;
   end;
 
-
-  with Sender as TStringGrid, Canvas do
+  if (gdselected in State) then
   begin
-    if (gdselected in State) then
-    begin
-      //draw a box around the selected cell
-//      pen.Color := clHighlight;
-      pen.Color := clred;
-      pen.Width := 2;
-      polyline([point(rect.left+1,rect.top+1),
-                point(rect.right-2,rect.top+1),
-                point(rect.right-2,rect.bottom-2),
-                point(rect.left+1,rect.bottom-2),
-                point(rect.left+1,rect.top+1)]);
-    end;
-    if (vRow = 0) then
-    begin
-      //default drawing has been switched off in the grid so we have
-      //to draw the highlight and shadow on 3d boxes
-      pen.color := clBtnHighlight;
-      polyline([point(rect.left,rect.bottom-1),
-                point(rect.left,rect.top),
-                point(rect.right,rect.top)]);
-      pen.color := clBtnShadow;
-      polyline([point(rect.right-1,rect.top+1),
-                point(rect.right-1,rect.bottom-1),
-                point(rect.left,rect.bottom-1)]);
-    end;
+    //draw a box around the selected cell
+//    Grid.Canvas.pen.Color := clHighlight;
+    Grid.Canvas.pen.Color := clred;
+    Grid.Canvas.pen.Width := 2;
+    Grid.Canvas.polyline([point(rect.left+1,rect.top+1),
+                          point(rect.right-2,rect.top+1),
+                          point(rect.right-2,rect.bottom-2),
+                          point(rect.left+1,rect.bottom-2),
+                          point(rect.left+1,rect.top+1)]);
+  end;
+  if (vRow = 0) then
+  begin
+    //default drawing has been switched off in the grid so we have
+    //to draw the highlight and shadow on 3d boxes
+    Grid.Canvas.pen.color := clBtnHighlight;
+    Grid.Canvas.polyline([point(rect.left,rect.bottom-1),
+                          point(rect.left,rect.top),
+                          point(rect.right,rect.top)]);
+    Grid.Canvas.pen.color := clBtnShadow;
+    Grid.Canvas.polyline([point(rect.right-1,rect.top+1),
+                          point(rect.right-1,rect.bottom-1),
+                          point(rect.left,rect.bottom-1)]);
   end;
 end;
 
@@ -554,105 +548,106 @@ var
   iNewTotal: integer;
 begin
   NewQty := tmpQty;
-  with dtmdlStockUsage.qryGetStoreStock do
+  MoveQty := 0;
+  with dtmdlStockUsage do
+  begin
+    qryGetStoreStock.close;
+    qryGetStoreStock.parambyname('Part').asstring := tmpPart;
+    qryGetStoreStock.parambyname('Part_Store').asinteger := Warehouse;
+    qryGetStoreStock.parambyname('Part_bin').asstring := BinLocation;
+    qryGetStoreStock.open;
+
+    while not qryGetStoreStock.Eof do
     begin
-      close;
-      parambyname('Part').asstring := tmpPart;
-      parambyname('Part_Store').asinteger := Warehouse;
-      parambyname('Part_bin').asstring := BinLocation;
-      open;
+      if NewQty > qryGetStoreStock.fieldbyname('Quantity_allocated').asinteger then
+      begin
+        MoveQty := qryGetStoreStock.fieldbyname('Quantity_allocated').asinteger;
+        NewQty := NewQty - MoveQty;
+      end
+      else
+      begin
+        MoveQty := NewQty;
+        NewQty := NewQty - MoveQty;
+      end;
 
-      while eof <> true do
-        begin
-          if NewQty > fieldbyname('Quantity_allocated').asinteger then
-            begin
-              MoveQty := fieldbyname('Quantity_allocated').asinteger;
-              NewQty := NewQty - MoveQty;
-            end
-          else
-            begin
-              MoveQty := NewQty;
-              NewQty := NewQty - MoveQty;
-            end;
-
-          iStoreStock := fieldbyname('Store_stock').asinteger;
-          iPackSize := fieldbyname('Stock_Pack_Quantity').asinteger;
-          iPalletID := fieldbyname('Pallet_ID').asinteger;
-          iProductID := fieldbyname('Product_ID').asinteger;
+      iStoreStock := qryGetStoreStock.fieldbyname('Store_stock').asinteger;
+      iPackSize := qryGetStoreStock.fieldbyname('Stock_Pack_Quantity').asinteger;
+      iPalletID := qryGetStoreStock.fieldbyname('Pallet_ID').asinteger;
+      iProductID := qryGetStoreStock.fieldbyname('Product_ID').asinteger;
 //          rCost := stPickDM.GetStoreStockCost(iStoreStock)*MoveQty;
-          rPurchaseOrder := fieldbyname('Purchase_Order').asfloat;
-          sOvers := fieldbyname('Stock_is_Overs').asstring;
-          sLot := fieldbyname('Part_Store_Lot').asstring;
-          sMoveType := 'B';
-          txnDate := dtTransaction.Date;
+      rPurchaseOrder := qryGetStoreStock.fieldbyname('Purchase_Order').asfloat;
+      sOvers := qryGetStoreStock.fieldbyname('Stock_is_Overs').asstring;
+      sLot := qryGetStoreStock.fieldbyname('Part_Store_Lot').asstring;
+      sMoveType := 'B';
+      txnDate := dtTransaction.Date;
 
 // using the store_stock code get the part_store_allocation
-          dtmdlStockUsage.qryGetPartAllocation.Close;
-          dtmdlStockUsage.qryGetPartAllocation.parambyname('Store_Stock').asinteger := fieldbyname('Store_Stock').asinteger;
-          dtmdlStockUsage.qryGetPartAllocation.Open;
+      dtmdlStockUsage.qryGetPartAllocation.Close;
+      dtmdlStockUsage.qryGetPartAllocation.parambyname('Store_Stock').asinteger := qryGetStoreStock.fieldbyname('Store_Stock').asinteger;
+      dtmdlStockUsage.qryGetPartAllocation.Open;
 
-          AllocQty := MoveQty;
+      AllocQty := MoveQty;
 
-          while dtmdlStockUsage.qryGetPartAllocation.eof <> true do
-            begin
-              if AllocQty > dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Quantity_allocated').asinteger then
-                begin
-                  MoveQty := dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Quantity_allocated').asinteger;
-                  AllocQty := AllocQty - MoveQty;
-                end
-              else
-                begin
-                  MoveQty := AllocQty;
-                  AllocQty := AllocQty - MoveQty;
-                end;
-
-              iSalesOrder := dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Sales_Order').asinteger;
-              iSalesOrderLine := dtmdlStockUsage.qryGetPartAllocation.Fieldbyname('Sales_order_line_no').asinteger;
-
-              dtmdlStockUsage.qryGetJobNumber.Close;
-              dtmdlStockUsage.qryGetJobNumber.parambyname('Sales_Order').asinteger := iSalesOrder;
-              dtmdlStockUsage.qryGetJobNumber.Open;
-
-              iJobBagNumber := dtmdlStockUsage.qryGetJobNumber.fieldbyname('Job_Bag').asinteger;
-
-              sReference := 'Bench Stock Adjustment';
-
-              {Update the store stock record - downdate allocated and stock quantity}
-              dtmdlStockMoves.UpdStock(istorestock,tmpPart,Warehouse,BinLocation,sLot,sMoveType,sReference,txnDate,txnDate,(MoveQty*-1),0,iPackSize,(rCost*-1),rPurchaseOrder,iPalletID,iProductID,sOvers);
-
-              {Update the sales order line delivery qty}
-              dtmdlPicking.UpdateSalesOrder(iSalesOrder,iSalesOrderLine,MoveQty);
-
-              {Update the sales order line invoice qty}
-              dtmdlPicking.UpdateSalesOrderQtyInv(iSalesOrder,iSalesOrderLine,MoveQty);
-
-              {Deallocate the stock on the sales order}
-              dtmdlStockMoves.DeAllocForwardStock(iStoreStock, iSalesOrder, MoveQty, 1, iSalesOrderLine);
-
-              {Update the Sales Order status}
-              dtmdlPicking.UpdateOrderStatus(iSalesOrder);
-
-              {Update the job bag status}
-              dtmdlPicking.UpdateJobBag(iSalesOrder);
-              if AllocQty <= 0 then
-                break;
-              dtmdlStockUsage.qryGetPartAllocation.next;
-            end;
-          if NewQty <= 0 then
-            break;
-          next;
-        end;
-
-      if line = 0 then
+      while not dtmdlStockUsage.qryGetPartAllocation.Eof do
+      begin
+        if AllocQty > dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Quantity_allocated').asinteger then
         begin
-          edtSearch.Text := tmpPart;
+          MoveQty := dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Quantity_allocated').asinteger;
+          AllocQty := AllocQty - MoveQty;
         end
-      else
+        else
         begin
-          iNewTotal := strtoint(sgDetails.cells[2,line]) - MoveQty;
-          sgDetails.cells[2,line] := inttostr(iNewTotal);
+          MoveQty := AllocQty;
+          AllocQty := AllocQty - MoveQty;
         end;
+
+        iSalesOrder := dtmdlStockUsage.qryGetPartAllocation.fieldbyname('Sales_Order').asinteger;
+        iSalesOrderLine := dtmdlStockUsage.qryGetPartAllocation.Fieldbyname('Sales_order_line_no').asinteger;
+
+        dtmdlStockUsage.qryGetJobNumber.Close;
+        dtmdlStockUsage.qryGetJobNumber.parambyname('Sales_Order').asinteger := iSalesOrder;
+        dtmdlStockUsage.qryGetJobNumber.Open;
+
+        iJobBagNumber := dtmdlStockUsage.qryGetJobNumber.fieldbyname('Job_Bag').asinteger;
+
+        sReference := 'Bench Stock Adjustment';
+
+        {Update the store stock record - downdate allocated and stock quantity}
+        dtmdlStockMoves.UpdStock(istorestock,tmpPart,Warehouse,BinLocation,sLot,sMoveType,sReference,txnDate,txnDate,(MoveQty*-1),0,iPackSize,(rCost*-1),rPurchaseOrder,iPalletID,iProductID,sOvers);
+
+        {Update the sales order line delivery qty}
+        dtmdlPicking.UpdateSalesOrder(iSalesOrder,iSalesOrderLine,MoveQty);
+
+        {Update the sales order line invoice qty}
+        dtmdlPicking.UpdateSalesOrderQtyInv(iSalesOrder,iSalesOrderLine,MoveQty);
+
+        {Deallocate the stock on the sales order}
+        dtmdlStockMoves.DeAllocForwardStock(iStoreStock, iSalesOrder, MoveQty, 1, iSalesOrderLine);
+
+        {Update the Sales Order status}
+        dtmdlPicking.UpdateOrderStatus(iSalesOrder);
+
+        {Update the job bag status}
+        dtmdlPicking.UpdateJobBag(iSalesOrder);
+        if AllocQty <= 0 then
+          break;
+        dtmdlStockUsage.qryGetPartAllocation.next;
+      end;
+      if NewQty <= 0 then
+        break;
+      qryGetStoreStock.Next;
     end;
+
+    if line = 0 then
+    begin
+      edtSearch.Text := tmpPart;
+    end
+    else
+    begin
+      iNewTotal := strtoint(sgDetails.cells[2,line]) - MoveQty;
+      sgDetails.cells[2,line] := inttostr(iNewTotal);
+    end;
+  end;
 end;
 
 procedure TSTMaintStockUsageFrm.btnChangeClick(Sender: TObject);

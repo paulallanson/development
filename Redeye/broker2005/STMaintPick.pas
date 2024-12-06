@@ -55,6 +55,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure cmbPickingNoteClick(Sender: TObject);
     procedure CancelBtnClick(Sender: TObject);
+    procedure sgDetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
   private
     UseForwardStock: boolean;
     FPickListNumber: string;
@@ -280,6 +281,33 @@ end;
 procedure TSTMaintPickFrm.sgDetailsDblClick(Sender: TObject);
 begin
   ChangeBtnClick(self);
+end;
+
+procedure TSTMaintPickFrm.sgDetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+var
+  Txt: array [0..255] of Char;
+begin
+	{The following is code extracted from the Delphi Info Base}
+	{If Heading Display Left justified in the cells}
+  if (ACol <> 2) and (ACol <> 5) and (ACol <>6) then
+  	begin
+  		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
+  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
+      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+     end
+  else
+  	begin
+			{Display the Columns Right justified in the cells}
+  		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
+  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
+      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    end;
 end;
 
 procedure TSTMaintPickFrm.ConfirmBtnClick(Sender: TObject);

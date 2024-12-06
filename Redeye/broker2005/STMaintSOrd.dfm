@@ -263,6 +263,7 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         Height = 82
         ColCount = 4
         DefaultRowHeight = 18
+        DrawingStyle = gdsGradient
         FixedCols = 0
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
         PopupMenu = ExtChgMenu
@@ -299,6 +300,7 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
           Align = alClient
           ColCount = 8
           DefaultRowHeight = 20
+          DrawingStyle = gdsGradient
           RowCount = 10
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           PopupMenu = pMnuMaint

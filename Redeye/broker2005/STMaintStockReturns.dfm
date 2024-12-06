@@ -243,6 +243,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
+    DrawingStyle = gdsGradient
     FixedCols = 0
     RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing]
