@@ -2770,7 +2770,7 @@ object dmSalesInvoice: TdmSalesInvoice
       '        Purch_Ord_Line_Add_Chg.Quotation_Price,'
       '        Purchase_OrderLine.Customer,'
       '        Customer.VAT_Code_Def AS Def_VAT_Code,'
-      '        Vat_Code'#1'V'#1#0'_Rate as Def_VAT_Rate,'
+      '        Vat_Code.VAT_Rate as Def_VAT_Rate,'
       '        Product_Type.Nominal,'
       '        VAT.Vat_Rate,'
       '        VAT.Vat_Code'
@@ -2800,10 +2800,12 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 436
     ParamData = <
       item
-        Name = 'Purchase_order'
+        Name = 'PURCHASE_ORDER'
+        ParamType = ptInput
       end
       item
-        Name = 'Line'
+        Name = 'LINE'
+        ParamType = ptInput
       end>
   end
   object qryCustInvTo: TFDQuery
@@ -3471,8 +3473,8 @@ object dmSalesInvoice: TdmSalesInvoice
       #9'(select distinct part_movement.date_received'
       #9'from part_movement'
       
-        #9'where part_movement_reference LIKE '#39'SalesOrd: '#39'& Sales_order.Sa' +
-        'les_order) as Pick_date,'
+        #9'where part_movement_reference LIKE N'#39'SalesOrd: '#39' + cast(Sales_o' +
+        'rder.Sales_order as nvarchar)) as Pick_date,'
       #9'(select distinct purch_ord_line.date_Deliv_actual'
       #9'from purch_ord, purch_ord_line'
       #9'where Purch_ord.Sales_order = Sales_Order.Sales_order and'
@@ -3491,28 +3493,14 @@ object dmSalesInvoice: TdmSalesInvoice
       '(Sales_Order.Branch_no = Customer_Branch.Branch_no)'
       ')'
       'ORDER BY Sales_Order.Sales_Order desc'
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ''
-      ' '
-      ' '
-      ' '
-      ' '
-      ' '
-      ' ')
+      '')
     Left = 215
     Top = 156
     ParamData = <
       item
         Name = 'Code_From'
         DataType = ftString
+        ParamType = ptInput
       end>
     object IntegerField7: TIntegerField
       FieldName = 'Sales_Order'

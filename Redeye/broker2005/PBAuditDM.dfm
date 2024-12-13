@@ -47,7 +47,10 @@ object PBAuditDataMod: TPBAuditDataMod
       end
       item
         Name = 'Audit_Text'
+        DataType = ftString
         ParamType = ptInput
+        Size = 100
+        Value = Null
       end>
   end
   object Add1stAuditSQL: TFDQuery
