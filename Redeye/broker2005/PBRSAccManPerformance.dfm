@@ -11,9 +11,9 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnShow = FormShow
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
