@@ -32,6 +32,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure strgrdOrdHistDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
     procedure InitialiseForm;
@@ -133,6 +134,7 @@ end;
 procedure TPBPOrdHistFrm.FormCreate(Sender: TObject);
 begin
   StatusBar1.Top := Screen.Height - StatusBar1.Height;
+  CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 
   for var i := 0 to strgrdOrdHist.ColCount-1 do
   begin
@@ -140,12 +142,17 @@ begin
       strgrdOrdHist.ColAlignments[i] := taRightJustify;
   end;
 
-  InitialiseForm;
 end;
 
 procedure TPBPOrdHistFrm.FormResize(Sender: TObject);
 begin
   self.strgrdOrdHist.Repaint;
+end;
+
+procedure TPBPOrdHistFrm.FormShow(Sender: TObject);
+begin
+  InitialiseForm;
+
 end;
 
 procedure TPBPOrdHistFrm.InitialiseForm;
@@ -155,7 +162,6 @@ begin
   else
     self.Caption := self.Caption + ' for Purchase Order: ' + FloatToStrF(self.PONum, ffFixed, 15, 2);
 
-  CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
   //look up and display order history
   self.strgrdOrdHist.Cells[1,0] := 'Order';
   self.strgrdOrdHist.Cells[2,0] := 'Line';

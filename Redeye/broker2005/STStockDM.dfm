@@ -4,6 +4,8 @@ object STStockDataMod: TSTStockDataMod
   Width = 922
   object AddMoveSQL: TFDQuery
     ConnectionName = 'PB'
+    FormatOptions.AssignedValues = [fvStrsTrim2Len]
+    FormatOptions.StrsTrim2Len = True
     SQL.Strings = (
       'Insert Into Part_Movement'
       
@@ -42,65 +44,88 @@ object STStockDataMod: TSTStockDataMod
     ParamData = <
       item
         Name = 'Part_Movement'
+        ParamType = ptInput
       end
       item
         Name = 'Part'
+        ParamType = ptInput
       end
       item
         Name = 'Date_Received'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Movement_Type'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Movement_Bin'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Part_Store_Lot'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Store_Cost'
+        ParamType = ptInput
       end
       item
         Name = 'Store_Quantity'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Movement_Reference'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Movement_Store'
+        ParamType = ptInput
       end
       item
         Name = 'Audit_User'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 30
+        Value = Null
       end
       item
         Name = 'Audit_Workstation'
+        ParamType = ptInput
       end
       item
         Name = 'Print_On_Audit'
+        ParamType = ptInput
       end
       item
         Name = 'Stock_Pack_Quantity'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Store_Total_Quantity'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Store_Total_Value'
+        ParamType = ptInput
       end
       item
         Name = 'Part_Store_Total_Allocated'
+        ParamType = ptInput
       end
       item
         Name = 'Purchase_Order'
+        ParamType = ptInput
       end
       item
         Name = 'Pallet_ID'
+        ParamType = ptInput
       end
       item
         Name = 'Product_ID'
+        ParamType = ptInput
       end>
   end
   object GetNextMoveSQL: TFDQuery

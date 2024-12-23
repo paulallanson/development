@@ -355,11 +355,6 @@ begin
       cells[8,0] := 'Pick Lot'; {Picking}
     end;
 
-  for var i := 0 to sgDetails.ColCount-1 do
-  begin
-    if not (i in [2,5,6]) then
-      sgDetails.ColAlignments[i] := taRightJustify;
-  end;
 end;
 
 function TSTMaintPickFrm.GetSelectedLine: TPickLine;
