@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj, Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
   DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB, Dialogs, DragDropFile,
-  FireDAC.Comp.Client, FireDAC.Stan.Error, DBCtrls;
+  FireDAC.Comp.Client, FireDAC.Stan.Error, DBCtrls, Generics.Collections;
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar: Double);
@@ -17,6 +17,10 @@ procedure ResetGridCols(grid: TDBGrid);
 procedure SetDBGridCols(formName, sectionName, iniFileName: string; dbGrid: TDBGrid);
 procedure SaveDBGridCols(formName, sectionName, iniFileName: string; dbGrid: TDBGrid);
 procedure DeleteColSettings(sectionName, iniFileName: string);
+
+{TStringGrid Routines}
+procedure AlignColumns(AlignLeftList: TList<Integer>; Grid: TStringGrid; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState; AlignToRight: Boolean = False);
 
 {formLayout Routines}
 procedure SaveFormLayout(iniFileName: string; theForm: TForm);
@@ -202,7 +206,8 @@ resourcestring
 implementation
 
 uses
-  System.UITypes, System.IOUtils, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls;
+  System.UITypes, System.IOUtils, FireDAC.Stan.Intf, FireDAC.Stan.Option, Vcl.Clipbrd, taoMAPI, Vcl.AxCtrls,
+  Vcl.Graphics;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -2122,6 +2127,71 @@ begin
   finally
     IniFile.Free;
   end;
+end;
+
+procedure AlignColumns(AlignLeftList: TList<Integer>; Grid: TStringGrid; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState; AlignToRight: Boolean = False);
+var
+  Text: string;
+  TextFormat: TTextFormat;
+  SavedColor: TColor;
+  SavedStyle: TBrushStyle;
+begin
+  Text := Grid.Cells[ACol, ARow];
+
+  // Save current canvas state
+  SavedColor := Grid.Canvas.Font.Color;
+  SavedStyle := Grid.Canvas.Brush.Style;
+
+  // Handle fixed cells (header row and first column)
+  if (gdFixed in State) then
+  begin
+    Grid.Canvas.Brush.Color := clBtnFace;
+    Grid.Canvas.Font.Color := clWindowText;
+  end
+  // Handle selected cells
+  else if (gdSelected in State) or (gdFocused in State) then
+  begin
+    Grid.Canvas.Brush.Color := clHighlight;
+    Grid.Canvas.Font.Color := clHighlightText;
+  end
+  // Normal cells
+  else
+  begin
+    Grid.Canvas.Brush.Color := Grid.Color;
+    Grid.Canvas.Font.Color := Grid.Font.Color;
+  end;
+
+  // Clear the cell background
+  Grid.Canvas.FillRect(Rect);
+
+  // Setup text format
+  TextFormat := [tfVerticalCenter, tfSingleLine];
+  if AlignToRight then
+  begin
+    if AlignLeftList.Contains(ACol) then
+      TextFormat := TextFormat + [tfRight]
+    else
+      TextFormat := TextFormat + [tfLeft];
+  end
+  else
+  begin
+    if AlignLeftList.Contains(ACol) then
+      TextFormat := TextFormat + [tfLeft]
+    else
+      TextFormat := TextFormat + [tfRight];
+  end;
+
+  // Add some padding
+  Rect.Left := Rect.Left + 2;
+  Rect.Right := Rect.Right - 2;
+
+  // Draw the text using VCL's built-in method
+  Grid.Canvas.TextRect(Rect, Text, TextFormat);
+
+  // Restore original canvas state
+  Grid.Canvas.Font.Color := SavedColor;
+  Grid.Canvas.Brush.Style := SavedStyle;
 end;
 
 {get window's system directory}

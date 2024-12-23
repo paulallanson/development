@@ -12,10 +12,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnShow = FormShow
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
@@ -51,16 +51,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       TabOrder = 0
       object tsCharges: TTabSheet
         Caption = 'Charges'
-        object Panel3: TPanel
+        object pnlActions: TPanel
           Left = 1022
           Top = 0
           Width = 85
-          Height = 216
+          Height = 180
           Align = alRight
           ParentBackground = False
           TabOrder = 0
           object btnAddCharge: TBitBtn
-            Left = 8
+            Left = 4
             Top = 8
             Width = 75
             Height = 25
@@ -70,7 +70,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             OnClick = btnAddChargeClick
           end
           object btnChgCharge: TBitBtn
-            Left = 8
+            Left = 4
             Top = 40
             Width = 75
             Height = 25
@@ -81,7 +81,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             OnClick = btnChgChargeClick
           end
           object btnDelCharge: TBitBtn
-            Left = 8
+            Left = 4
             Top = 72
             Width = 75
             Height = 25
@@ -92,7 +92,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             OnClick = btnDelChargeClick
           end
           object btnExcelCharge: TBitBtn
-            Left = 8
+            Left = 4
             Top = 104
             Width = 75
             Height = 25
@@ -103,105 +103,96 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             OnClick = btnExcelChargeClick
           end
         end
-        object Panel1: TPanel
+        object pnlChargesControls: TPanel
+          Left = 0
+          Top = 180
+          Width = 1107
+          Height = 36
+          Align = alBottom
+          BevelOuter = bvNone
+          ParentBackground = False
+          TabOrder = 1
+          DesignSize = (
+            1107
+            36)
+          object Label12: TLabel
+            Left = 8
+            Top = 13
+            Width = 62
+            Height = 13
+            Caption = 'Estimate file'
+          end
+          object edtEstimateFile: TEdit
+            Left = 80
+            Top = 9
+            Width = 729
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            Color = clBtnFace
+            Enabled = False
+            ReadOnly = True
+            TabOrder = 0
+            OnChange = edtEstimateFileChange
+          end
+          object btnOpen: TButton
+            Left = 896
+            Top = 7
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'Estimate'
+            TabOrder = 1
+            OnClick = btnOpenClick
+          end
+          object btnImport: TButton
+            Left = 977
+            Top = 7
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'Calculate'
+            TabOrder = 2
+            OnClick = btnImportClick
+          end
+          object btnBrowse: TButton
+            Left = 817
+            Top = 7
+            Width = 75
+            Height = 25
+            Anchors = [akTop, akRight]
+            Caption = 'Browse'
+            TabOrder = 3
+            OnClick = btnBrowseClick
+          end
+        end
+        object sgLines: TStringGrid
           Left = 0
           Top = 0
           Width = 1022
-          Height = 216
+          Height = 180
           Align = alClient
-          ParentBackground = False
-          TabOrder = 1
-          object Panel4: TPanel
-            Left = 1
-            Top = 179
-            Width = 1020
-            Height = 36
-            Align = alBottom
-            BevelOuter = bvNone
-            ParentBackground = False
-            TabOrder = 0
-            DesignSize = (
-              1020
-              36)
-            object Label12: TLabel
-              Left = 8
-              Top = 13
-              Width = 62
-              Height = 13
-              Caption = 'Estimate file'
-            end
-            object edtEstimateFile: TEdit
-              Left = 80
-              Top = 9
-              Width = 642
-              Height = 21
-              Anchors = [akLeft, akTop, akRight]
-              Color = clBtnFace
-              Enabled = False
-              ReadOnly = True
-              TabOrder = 0
-              OnChange = edtEstimateFileChange
-            end
-            object btnOpen: TButton
-              Left = 809
-              Top = 7
-              Width = 75
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = 'Estimate'
-              TabOrder = 1
-              OnClick = btnOpenClick
-            end
-            object btnImport: TButton
-              Left = 890
-              Top = 7
-              Width = 75
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = 'Calculate'
-              TabOrder = 2
-              OnClick = btnImportClick
-            end
-            object btnBrowse: TButton
-              Left = 730
-              Top = 7
-              Width = 75
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = 'Browse'
-              TabOrder = 3
-              OnClick = btnBrowseClick
-            end
-          end
-          object sgLines: TStringGrid
-            Left = 1
-            Top = 1
-            Width = 1020
-            Height = 178
-            Align = alClient
-            ColCount = 9
-            DefaultColWidth = 40
-            DefaultRowHeight = 18
-            DrawingStyle = gdsGradient
-            RowCount = 4
-            Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowMoving, goRowSelect]
-            TabOrder = 1
-            OnDblClick = sgLinesDblClick
-            OnDrawCell = sgLinesDrawCell
-            OnMouseDown = sgLinesMouseDown
-            OnMouseUp = sgLinesMouseUp
-            OnRowMoved = sgLinesRowMoved
-            ColWidths = (
-              40
-              137
-              267
-              62
-              78
-              78
-              83
-              75
-              84)
-          end
+          ColCount = 9
+          DefaultColWidth = 40
+          DefaultRowHeight = 18
+          DrawingStyle = gdsGradient
+          RowCount = 4
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowMoving, goRowSelect]
+          TabOrder = 2
+          OnDblClick = sgLinesDblClick
+          OnDrawCell = sgLinesDrawCell
+          OnMouseDown = sgLinesMouseDown
+          OnMouseUp = sgLinesMouseUp
+          OnRowMoved = sgLinesRowMoved
+          ColWidths = (
+            40
+            137
+            267
+            62
+            78
+            78
+            83
+            75
+            84)
         end
       end
       object tsSupply: TTabSheet
@@ -461,6 +452,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             TabOrder = 0
             Visible = False
           end
+        end
+        object pnlSpecs: TPanel
+          Left = 0
+          Top = 0
+          Width = 1022
+          Height = 216
+          Align = alClient
+          BevelOuter = bvNone
+          ParentBackground = False
+          TabOrder = 1
         end
       end
     end
@@ -1711,8 +1712,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Top = 393
   end
   object imgDocuments: TImageList
-    Left = 272
-    Top = 236
+    Left = 336
+    Top = 228
   end
   object imgIcons: TImageList
     Left = 696
