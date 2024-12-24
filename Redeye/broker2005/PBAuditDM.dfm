@@ -4,6 +4,8 @@ object PBAuditDataMod: TPBAuditDataMod
   Width = 696
   object AddAuditSQL: TFDQuery
     ConnectionName = 'PB'
+    FormatOptions.AssignedValues = [fvStrsTrim2Len]
+    FormatOptions.StrsTrim2Len = True
     SQL.Strings = (
       'Insert Into Audit_Trail'
       

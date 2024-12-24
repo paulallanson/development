@@ -189,7 +189,7 @@ object STMaintPickFrm: TSTMaintPickFrm
       DrawingStyle = gdsGradient
       FixedCols = 0
       RowCount = 2
-      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking]
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
       ParentShowHint = False
       ShowHint = False
       TabOrder = 0

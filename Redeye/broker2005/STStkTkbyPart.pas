@@ -87,7 +87,7 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types,
+  System.UITypes, System.Types, Generics.Collections,
   STStkTakeDM, STStkTkItem, StPacks, pbMainMenu;
 
 {$R *.DFM}
@@ -626,37 +626,16 @@ end;
 procedure TSTStkTkbyPartFrm.CountGridDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  with (Sender as TStringGrid) do
-  begin
-    const Gap = 4;
-    var Text := Cells[ACol, ARow];
-    var WidthOfText := Canvas.TextWidth(Text);
-    var WidthOfCell := ColWidths[ACol];
-    var LeftOffset := WidthOfCell - WidthOfText - Gap;
-
-    {The following is code extracted from the Delphi Info Base}
-    {Display the Columns Right justified in the cells}
-    if (ACol = 5) or (ACol = 6) or (ACol = 4) then
-    begin
-      if gdFixed in State then
-        Canvas.Brush.Color := CountGrid.FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
-    end
-    else
-    begin
-      if gdFixed in State then
-        Canvas.Brush.Color := CountGrid.FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
-    end;
+  var AlignToRight := True;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([4, 5, 6]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
   end;
+
 end;
 
 procedure TSTStkTkbyPartFrm.btnBrowseClick(Sender: TObject);

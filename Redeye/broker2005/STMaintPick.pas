@@ -104,7 +104,7 @@ var
 
 implementation
 
-uses Types, UITypes, stPickItem, ststockdm, STPickingDM, pbDatabase;
+uses Types, UITypes, stPickItem, ststockdm, STPickingDM, pbDatabase, Generics.Collections;
 
 {$R *.DFM}
 
@@ -284,30 +284,17 @@ begin
 end;
 
 procedure TSTMaintPickFrm.sgDetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
-	{The following is code extracted from the Delphi Info Base}
-	{If Heading Display Left justified in the cells}
-  if (ACol <> 2) and (ACol <> 5) and (ACol <>6) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[ACol, ARow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
+  var AlignToRight := True;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([2, 5, 6]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
+  end;
+
 end;
 
 procedure TSTMaintPickFrm.ConfirmBtnClick(Sender: TObject);
@@ -368,11 +355,6 @@ begin
       cells[8,0] := 'Pick Lot'; {Picking}
     end;
 
-  for var i := 0 to sgDetails.ColCount-1 do
-  begin
-    if not (i in [2,5,6]) then
-      sgDetails.ColAlignments[i] := taRightJustify;
-  end;
 end;
 
 function TSTMaintPickFrm.GetSelectedLine: TPickLine;

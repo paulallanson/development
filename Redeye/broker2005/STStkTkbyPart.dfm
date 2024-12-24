@@ -300,6 +300,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       ColCount = 7
       DefaultColWidth = 60
       DefaultRowHeight = 20
+      DrawingStyle = gdsGradient
       FixedCols = 0
       RowCount = 2
       Font.Charset = ANSI_CHARSET

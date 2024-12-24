@@ -27,7 +27,6 @@ type
     qryFY: TFDQuery;
     btnExcel: TBitBtn;
     stsbrDetails: TStatusBar;
-    procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
@@ -36,6 +35,7 @@ type
     procedure rgAccManClick(Sender: TObject);
     procedure btnAccManClick(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     iCurrentYear: integer;
     iCurrentStart, iCurrentEnd: integer;
@@ -63,11 +63,6 @@ implementation
 uses pbMainMenu, CCSCommon, PBLUOps, pbDatabase, Types;
 
 {$R *.dfm}
-
-procedure TPBRSAccManPerformanceFrm.FormActivate(Sender: TObject);
-begin
-  FixQuery(false);
-end;
 
 procedure TPBRSAccManPerformanceFrm.FormCreate(Sender: TObject);
 var
@@ -146,6 +141,11 @@ begin
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 
+procedure TPBRSAccManPerformanceFrm.FormShow(Sender: TObject);
+begin
+  FixQuery(false);
+end;
+
 procedure TPBRSAccManPerformanceFrm.btnCloseClick(Sender: TObject);
 begin
   close;
@@ -201,7 +201,7 @@ begin
     edtAccMan.text := '';
   end;
 
-  fixQuery(False);
+  FixQuery(False);
 end;
 
 procedure TPBRSAccManPerformanceFrm.btnAccManClick(Sender: TObject);
@@ -272,16 +272,28 @@ begin
   for icount := 0 to pred(dbgDetails.columns.count) do
     begin
       if pos('Year1', dbgDetails.columns[icount].FieldName) <> 0 then
-        dbgDetails.columns[icount].Title.Caption := sYearTitle1
+      begin
+        dbgDetails.columns[icount].Title.Caption := sYearTitle1;
+        dbgDetails.columns[icount].Visible := not sYearTitle1.IsEmpty;
+      end
       else
       if pos('Year2', dbgDetails.columns[icount].FieldName) <> 0 then
-        dbgDetails.columns[icount].Title.Caption := sYearTitle2
+      begin
+        dbgDetails.columns[icount].Title.Caption := sYearTitle2;
+        dbgDetails.columns[icount].Visible := not sYearTitle2.IsEmpty;
+      end
       else
       if pos('Year3', dbgDetails.columns[icount].FieldName) <> 0  then
-        dbgDetails.columns[icount].Title.Caption := sYearTitle3
+      begin
+        dbgDetails.columns[icount].Title.Caption := sYearTitle3;
+        dbgDetails.columns[icount].Visible := not sYearTitle3.IsEmpty;
+      end
       else
       if pos('Year4', dbgDetails.columns[icount].FieldName) <> 0 then
+      begin
         dbgDetails.columns[icount].Title.Caption := sYearTitle4;
+        dbgDetails.columns[icount].Visible := not sYearTitle4.IsEmpty;
+      end;
     end;
 end;
 

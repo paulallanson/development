@@ -274,11 +274,13 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         Height = 82
         ColCount = 4
         DefaultRowHeight = 18
+        DrawingStyle = gdsGradient
         FixedCols = 0
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
         PopupMenu = ExtChgMenu
         TabOrder = 1
         OnDblClick = ExtChgDetsStringGridDblClick
+        OnDrawCell = ExtChgDetsStringGridDrawCell
         OnSelectCell = ExtChgDetsStringGridSelectCell
         ColWidths = (
           202
@@ -574,6 +576,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           Align = alClient
           ColCount = 8
           DefaultRowHeight = 20
+          DrawingStyle = gdsGradient
           RowCount = 10
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
@@ -585,6 +588,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           PopupMenu = pMnuMaint
           TabOrder = 0
           OnDblClick = LineDetsStringGridDblClick
+          OnDrawCell = LineDetsStringGridDrawCell
           OnKeyUp = LineDetsStringGridKeyUp
           OnSelectCell = LineDetsStringGridSelectCell
           ColWidths = (

@@ -13,6 +13,7 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
+  OnShow = FormShow
   TextHeight = 13
   object strgrdOrdHist: TStringGrid
     Left = 0
@@ -56,8 +57,8 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
       ' rep.Name as repName,'
       ' customer.name as CustName,'
       
-        ' (purchase_orderline.Goods_reqd_by_customer + purchase_orderline' +
-        '.expected_life) as expDate,'
+        ' dateadd(DAY, purchase_orderline.expected_life, cast(purchase_or' +
+        'derline.Goods_reqd_by_customer as datetime2)) as expDate,'
       '  Form_Reference.Form_Reference_id,'
       '  Form_Reference.Form_Reference_Descr'
       'from (((((purchase_orderline'
@@ -91,9 +92,11 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     ParamData = <
       item
         Name = 'Purchase_order'
+        ParamType = ptInput
       end
       item
         Name = 'line'
+        ParamType = ptInput
       end>
   end
 end

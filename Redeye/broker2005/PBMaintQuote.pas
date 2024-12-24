@@ -45,12 +45,11 @@ type
     spnConversionRate: TSpinEdit;
     DocOpenDialog: TOpenDialog;
     svDlgOfficeDoc: TSaveDialog;
-    Panel3: TPanel;
+    pnlActions: TPanel;
     btnAddCharge: TBitBtn;
     btnChgCharge: TBitBtn;
     btnDelCharge: TBitBtn;
-    Panel1: TPanel;
-    Panel4: TPanel;
+    pnlChargesControls: TPanel;
     sgLines: TStringGrid;
     Label12: TLabel;
     edtEstimateFile: TEdit;
@@ -176,9 +175,9 @@ type
     rdgrpEnclosingType: TRadioGroup;
     DropComboTarget1: TDropComboTarget;
     pnlBody: TPanel;
+    pnlSpecs: TPanel;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
     procedure ValidateQty(Sender: TObject);
     procedure memQuantityKeyPress(Sender: TObject; var Key: Char);
@@ -210,8 +209,6 @@ type
     procedure sgLinesDblClick(Sender: TObject);
     procedure btnInsertSupplyClick(Sender: TObject);
     procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgSupplyDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure btnDeleteSupplyClick(Sender: TObject);
     procedure btnBrowseClick(Sender: TObject);
@@ -253,6 +250,7 @@ type
     procedure dblkpPackFormatClick(Sender: TObject);
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure sgSupplyDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -260,7 +258,6 @@ type
     bOK, bOKClose: boolean;
     bNotesFlash: ByteBool;
     bUseProspects: boolean;
-    FActivated:  boolean;
     FMode: TQMode;
     FQuote: TQuote;
     sOldValue: string;
@@ -303,6 +300,7 @@ type
     procedure MoveOriginalQuoteDocuments;
     procedure UpdateInternalCost;
     procedure CheckForCustomerNotes;
+    procedure InitialiseForm;
   public
     property Mode: TQMode read FMode write SetMode;
     property OriginalQuoteFromReQuote: real read FOriginalQuoteFromReQuote write SetOriginalQuoteFromReQuote;
@@ -318,7 +316,7 @@ uses UITypes, FireDAC.Stan.Param, pbDatabase, pbMainMenu, CCSCommon, PBImages, D
   PBLUCConta, PBLUCRep, PBLUOps, PBDBMemo, PBMaintQuoteLines, PBWordOLE,
   PBExcelOLE, PBDocObjects, PBMaintEmail, PBMaintQuoteDoc, PBLUQuoteEnqsQty,
   PBLUQuoteReason, ComObj, AxCtrls, taoMapi, PBLUAdHoc, PBLURep, PBMaintQuoteSupply,
-  PBSendtoExcel, PBLUPackFormat, Shared.DragDrop.Helper;
+  PBSendtoExcel, PBLUPackFormat, Shared.DragDrop.Helper, Generics.Collections;
 
 {$R *.dfm}
 
@@ -342,120 +340,6 @@ end;
 procedure TPBMaintQuoteFrm.btnCancelClick(Sender: TObject);
 begin
   close;
-end;
-
-procedure TPBMaintQuoteFrm.FormActivate(Sender: TObject);
-var
-  sTemp : string;
-  bHasGDPRBeenSigned: boolean;
-begin
-  if not FActivated then
-  begin
-    bOK := false;
-    bOKClose := true;
-
-    with Quote.DataModule do
-    begin
-      qryPackFormat.close;
-      qryPackFormat.parambyname('ID').asinteger := Quote.PackFormat;
-      qryPackFormat.Open;
-
-      qryPriceUnit.close;
-      qryPriceUnit.open;
-      qryPriceUnit.First;
-
-      qryQReason.close;
-      qryQReason.open;
-      qryQReason.First;
-    end;
-
-    bUseProspects := dmBroker.UseProspects;
-
-    dblkpPackFormat.listsource := Quote.DataModule.dtsPackFormat;
-    dblkpCustomerContact.listsource := Quote.DataModule.srcCustContact;
-    dblkpPriceUnit.listsource := Quote.DataModule.dtsPriceUnit;
-    dblkpReason.listsource := Quote.DataModule.dtsQReason;
-
-    case Mode of
-    qAdd     : Caption := 'Add a Quote';
-    qChange  : Caption := 'Change a Quote';
-    qCopy  : Caption := 'Copy a Quote';
-    qDelete  : Caption := 'Delete a Quote';
-    qView    : Caption := 'View Quote details';
-    qRequote   : Caption := 'Re-Quote ';
-
-    end;  { case }
-
-    lblDocumentDir.Caption := lblDocumentDir.Caption + ' ' + dmBroker.GetCompanyQuoteDirectory;
-
-    if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat)  or (Mode = qReQuote) then
-      sTemp := ' New Quote '
-    else
-      sTemp := ' Quote ' + floatToStr(Quote.DbKey) + ' ';
-
-    if (Mode = qRepeat) or (Mode = qCopy) or (Mode = qReQuote) then
-      begin
-        Quote.DbKey := 0;
-        Quote.Date := date;
-        Quote.OfficeContact := frmPBMainMenu.iOperator;
-        Quote.Operator := frmPBMainMenu.iOperator;
-        Quote.OperatorName := frmPBMainMenu.sOperator_Name;
-        Quote.Inactive := 'N';
-        Quote.Narrative := 0;
-        Quote.JobBag := 0;
-      end;
-
-    pnlTop.enabled := not(Mode = qView) and not(Mode = qDelete);
-    pnlHeader.enabled := not(Mode = qView) and not(Mode = qDelete);
-    pnlFooter.enabled := not(Mode = qView) and not(Mode = qDelete);
-
-    SetChargesProperties;
-    SetNotesProperties;
-    SetDocsProperties;
-    SetSupplyProperties;
-
-    if (Mode = qAdd) then
-      pgDetails.Visible := false;
-
-    ShowSpecification;
-    ShowDetails;
-
-    UpdateInternalCost;
-    ShowLines;
-    ShowSupplies;
-
-    if (Mode = qRequote) then
-      ShowDocuments(OriginalQuoteFromReQuote)
-    else
-      ShowDocuments(Quote.dbKey);
-
-    ShowTotals;
-
-    Checknotes(Self);
-    CheckOK(Self);
-
-    pgDetails.Visible := true;
-
-    FActivated := true;
-
-    if dmBroker.UseGDPR and (lblGDPRSignedStatement.visible = false) then
-      begin
-        lblGDPRSignedStatement.visible := false;
-        bHasGDPRBeenSigned := dmBroker.GetCustomerGDPRSigned(Quote.Customer);
-        if not bHasGDPRBeenSigned and (Quote.Customer <> 0) then
-        begin
-          MessageDlg('The GDPR Policy has not been signed by this customer!!!', mtWarning,[mbOk], 0);
-          lblGDPRSignedStatement.visible := true;
-        end;
-      end;
-
-    if (Mode = qRequote) or (Mode = qCopy) or (Mode = qAdd) then
-      begin
-        self.CheckForCustomerNotes;
-      end;
-
-    dmBroker.ScreenAccessControl(Self,'',frmPBMainMenu.iOperator,0,0) ;
-  end;
 end;
 
 procedure TPBMaintQuoteFrm.ShowDetails;
@@ -773,29 +657,29 @@ var
 begin
   icount := 0;
 
-  with sgLines, Quote.datamodule do
+  with Quote.datamodule do
+  begin
+    for i := 0 to Pred(Quote.Lines.count) do
     begin
-      for i := 0 to pred(Quote.Lines.count) do
-        begin
-          irow := Quote.Lines[i].Sequence;
-          cells[0,irow] := inttostr(Quote.Lines[i].Sequence);
-//          cells[1,irow] := Quote.Lines[i].ProductTypeDesc;
-          cells[1,irow] := Quote.Lines[i].ProcessDesc;
-          cells[2,irow] := Quote.Lines[i].Description;
-          cells[3,irow] := floattostr(Quote.Lines[i].Quantity);
-          cells[4,irow] := Quote.Lines[i].PriceUnitDesc;
-          cells[5,irow] := formatfloat('0.0000',Quote.lines[i].TotalCost);
-          cells[6,irow] := formatfloat('0.0000',Quote.lines[i].TotalSSP);
-          cells[7,irow] := formatfloat('0.0000',Quote.lines[i].TotalASP);
-          cells[8,irow] := formatfloat('0.0000',Quote.lines[i].TotalRSP);
-          icount := icount + 1;
-        end;
-
-      if icount = 0 then
-        rowcount := 2
-      else
-        rowcount := icount + 1;
+      irow := Quote.Lines[i].Sequence;
+      sgLines.cells[0,irow] := inttostr(Quote.Lines[i].Sequence);
+//      cells[1,irow] := Quote.Lines[i].ProductTypeDesc;
+      sgLines.cells[1,irow] := Quote.Lines[i].ProcessDesc;
+      sgLines.cells[2,irow] := Quote.Lines[i].Description;
+      sgLines.cells[3,irow] := floattostr(Quote.Lines[i].Quantity);
+      sgLines.cells[4,irow] := Quote.Lines[i].PriceUnitDesc;
+      sgLines.cells[5,irow] := formatfloat('0.0000',Quote.lines[i].TotalCost);
+      sgLines.cells[6,irow] := formatfloat('0.0000',Quote.lines[i].TotalSSP);
+      sgLines.cells[7,irow] := formatfloat('0.0000',Quote.lines[i].TotalASP);
+      sgLines.cells[8,irow] := formatfloat('0.0000',Quote.lines[i].TotalRSP);
+      icount := icount + 1;
     end;
+
+    if icount = 0 then
+      sgLines.rowcount := 2
+    else
+      sgLines.rowcount := icount + 1;
+  end;
 //  btnAddCharge.enabled := (Mode <> qAdd) and (Mode <> qRepeat);
   btnChgCharge.enabled := not (Quote.Lines.count = 0) and (Mode <> qRepeat);
   btnDelCharge.enabled := not (Quote.Lines.count = 0) and (Mode <> qRepeat);
@@ -813,57 +697,61 @@ var
   stempname: string;
   myPanel1, myPanel2: TPanel;
   myMemo: TMemo;
+  CurrentPage: TTabSheet;
 begin
   myScrollBox := TScrollBox.create(self);
   myScrollBox.Name := 'scrlbxSpec';
-  myScrollBox.parent := tsSpecification;
+  myScrollBox.Parent := pnlSpecs;
   myScrollBox.align := alClient;
 
   for icount := 0 to pred(Quote.Departments.count) do
+  begin
+    with Quote.Departments[icount] do
     begin
-      with Quote.Departments[icount] do
-        begin
-          myPanel1 := TPanel.Create(Self);
-          stempname := 'pnlHead' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
-          myPanel1.Name := stempname;
-          myPanel1.Caption := ' ' + DepartmentName;
-//          myPanel1.Parent := scrlbxSpec;
-          myPanel1.Parent := myScrollbox;
-          myPanel1.Tag := 999;
-          myPanel1.Align := alTop;
-          myPanel1.Alignment := taLeftJustify;
-          myPanel1.Font.Size := 8;
-          myPanel1.Font.Style := [fsBold];
-          myPanel1.Height := 17;
-          myPanel1.bevelOuter := bvNone;
+      myPanel1 := TPanel.Create(myScrollbox);
+      stempname := 'pnlHead' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
+      myPanel1.Name := stempname;
+      myPanel1.Caption := ' ' + DepartmentName;
+//      myPanel1.Parent := scrlbxSpec;
+      myPanel1.Parent := myScrollbox;
+      myPanel1.Tag := 999;
+      myPanel1.Align := alTop;
+      myPanel1.Alignment := taLeftJustify;
+      myPanel1.Font.Size := 8;
+      myPanel1.Font.Style := [fsBold];
+      myPanel1.Height := 17;
+      myPanel1.bevelOuter := bvNone;
 
-          {Add second panel to hold Memo component for specification}
-          myPanel2 := TPanel.Create(Self);
-          stempname := 'pnlDet' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
-          myPanel2.Name := stempname;
-          myPanel2.Caption := '';
-//          myPanel2.Parent := scrlbxSpec;
-          myPanel2.Parent := myScrollbox;
-          myPanel2.Tag := 999;
-          myPanel2.Align := alTop;
-          myPanel2.Font.Size := 8;
-          myPanel2.Height := 80;
-          myPanel2.bevelOuter := bvNone;
+      {Add second panel to hold Memo component for specification}
+      myPanel2 := TPanel.Create(myScrollbox);
+      stempname := 'pnlDet' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
+      myPanel2.Name := stempname;
+      myPanel2.Caption := '';
+//      myPanel2.Parent := scrlbxSpec;
+      myPanel2.Parent := myScrollbox;
+      myPanel2.Tag := 999;
+      myPanel2.Align := alTop;
+      myPanel2.Font.Size := 8;
+      myPanel2.Height := 80;
+      myPanel2.bevelOuter := bvNone;
 
-          {Add Memo component to hold specification}
-          mymemo := TMemo.Create(Self);
-          stempname := 'mem' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
-          myMemo.Name := stempname;
-          myMemo.text := Specification;
-          myMemo.Parent :=  myPanel2;
-          myMemo.Tag := icount;
-          myMemo.Align := alClient;
-          myMemo.ScrollBars := ssVertical;
-          myMemo.OnChange := SpecificationChange;
-          myMemo.Font.Size := 8;
-        end;
+      {Add Memo component to hold specification}
+      mymemo := TMemo.Create(myPanel2);
+      stempname := 'mem' + Copy((IntToStr(1000 + QDepartmentNo)),2,3);
+      myMemo.Name := stempname;
+      myMemo.text := Specification;
+      myMemo.Parent :=  myPanel2;
+      myMemo.Tag := icount;
+      myMemo.Align := alClient;
+      myMemo.ScrollBars := ssVertical;
+      myMemo.OnChange := SpecificationChange;
+      myMemo.Font.Size := 8;
     end;
+  end;
   tsSpecification.Visible := true;
+  CurrentPage := pgDetails.ActivePage;
+  pgDetails.ActivePage := tsSpecification;
+  pgDetails.ActivePage := CurrentPage;
 end;
 
 procedure TPBMaintQuoteFrm.BuildSupplyGrid;
@@ -1011,6 +899,116 @@ begin
   DocDir := IncludeTrailingPathDelimiter(DocDir) + floattostr(Quote.dbKey);
 
   Result := DocDir;
+end;
+
+procedure TPBMaintQuoteFrm.InitialiseForm;
+var
+  sTemp : string;
+  bHasGDPRBeenSigned: boolean;
+begin
+  bOK := false;
+  bOKClose := true;
+
+  with Quote.DataModule do
+  begin
+    qryPackFormat.close;
+    qryPackFormat.parambyname('ID').asinteger := Quote.PackFormat;
+    qryPackFormat.Open;
+
+    qryPriceUnit.close;
+    qryPriceUnit.open;
+    qryPriceUnit.First;
+
+    qryQReason.close;
+    qryQReason.open;
+    qryQReason.First;
+  end;
+
+  bUseProspects := dmBroker.UseProspects;
+
+  dblkpPackFormat.listsource := Quote.DataModule.dtsPackFormat;
+  dblkpCustomerContact.listsource := Quote.DataModule.srcCustContact;
+  dblkpPriceUnit.listsource := Quote.DataModule.dtsPriceUnit;
+  dblkpReason.listsource := Quote.DataModule.dtsQReason;
+
+  case Mode of
+  qAdd     : Caption := 'Add a Quote';
+  qChange  : Caption := 'Change a Quote';
+  qCopy  : Caption := 'Copy a Quote';
+  qDelete  : Caption := 'Delete a Quote';
+  qView    : Caption := 'View Quote details';
+  qRequote   : Caption := 'Re-Quote ';
+
+  end;  { case }
+
+  lblDocumentDir.Caption := lblDocumentDir.Caption + ' ' + dmBroker.GetCompanyQuoteDirectory;
+
+  if (Mode = qAdd) or (Mode = qCopy) or (Mode = qRepeat)  or (Mode = qReQuote) then
+    sTemp := ' New Quote '
+  else
+    sTemp := ' Quote ' + floatToStr(Quote.DbKey) + ' ';
+
+  if (Mode = qRepeat) or (Mode = qCopy) or (Mode = qReQuote) then
+    begin
+      Quote.DbKey := 0;
+      Quote.Date := date;
+      Quote.OfficeContact := frmPBMainMenu.iOperator;
+      Quote.Operator := frmPBMainMenu.iOperator;
+      Quote.OperatorName := frmPBMainMenu.sOperator_Name;
+      Quote.Inactive := 'N';
+      Quote.Narrative := 0;
+      Quote.JobBag := 0;
+    end;
+
+  pnlTop.enabled := not(Mode = qView) and not(Mode = qDelete);
+  pnlHeader.enabled := not(Mode = qView) and not(Mode = qDelete);
+  pnlFooter.enabled := not(Mode = qView) and not(Mode = qDelete);
+
+  SetChargesProperties;
+  SetNotesProperties;
+  SetDocsProperties;
+  SetSupplyProperties;
+
+  if (Mode = qAdd) then
+    pgDetails.Visible := false;
+
+  ShowSpecification;
+  ShowDetails;
+
+  UpdateInternalCost;
+  ShowLines;
+  ShowSupplies;
+
+  if (Mode = qRequote) then
+    ShowDocuments(OriginalQuoteFromReQuote)
+  else
+    ShowDocuments(Quote.dbKey);
+
+  ShowTotals;
+
+  Checknotes(Self);
+  CheckOK(Self);
+
+  pgDetails.Visible := true;
+
+  if dmBroker.UseGDPR and (lblGDPRSignedStatement.visible = false) then
+    begin
+      lblGDPRSignedStatement.visible := false;
+      bHasGDPRBeenSigned := dmBroker.GetCustomerGDPRSigned(Quote.Customer);
+      if not bHasGDPRBeenSigned and (Quote.Customer <> 0) then
+      begin
+        MessageDlg('The GDPR Policy has not been signed by this customer!!!', mtWarning,[mbOk], 0);
+        lblGDPRSignedStatement.visible := true;
+      end;
+    end;
+
+  if (Mode = qRequote) or (Mode = qCopy) or (Mode = qAdd) then
+    begin
+      self.CheckForCustomerNotes;
+    end;
+
+  dmBroker.ScreenAccessControl(Self,'',frmPBMainMenu.iOperator,0,0) ;
+
 end;
 
 procedure TPBMaintQuoteFrm.FlashTimerTimer(Sender: TObject);
@@ -1685,8 +1683,7 @@ begin
   else
     begin
       Mode := qChange;
-      Factivated := false;
-      FormActivate(self);
+      InitialiseForm;
       pgDetails.ActivePage := tsCharges;
       exit;
     end;
@@ -2051,77 +2048,16 @@ end;
 procedure TPBMaintQuoteFrm.sgLinesDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  with (Sender as TStringGrid) do
-  begin
-    if Quote.Lines.Count > 0 then
-    begin
-      const Gap = 4;
-      var Text := Cells[ACol, ARow];
-      var WidthOfText := Canvas.TextWidth(Text);
-      var WidthOfCell := ColWidths[ACol];
-      var LeftOffset := WidthOfCell - WidthOfText - Gap;
-
-      if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 4) then
-      begin
-        if gdFixed in State then
-          Canvas.Brush.Color := sgLines.FixedColor else
-          if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
-            Canvas.Brush.Color := clWindow;
-        Canvas.FillRect(Rect);
-        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
-      end
-      else
-      begin
-        {Display the Columns Right justified in the cells}
-        if gdFixed in State then
-          Canvas.Brush.Color := sgLines.FixedColor else
-          if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
-            Canvas.Brush.Color := clWindow;
-        Canvas.FillRect(Rect);
-        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
-      end;
-    end;
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1, 2, 4]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
   end;
-end;
 
-procedure TPBMaintQuoteFrm.sgSupplyDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
-begin
-  with (Sender as TStringGrid) do
-  begin
-    if Quote.Supplies.Count > 0 then
-    begin
-      const Gap = 4;
-      var Text := Cells[ACol, ARow];
-      var WidthOfText := Canvas.TextWidth(Text);
-      var WidthOfCell := ColWidths[ACol];
-      var LeftOffset := WidthOfCell - WidthOfText - Gap;
-
-      if (ACol = 0) or (ACol = 1) then
-      begin
-        if gdFixed in State then
-          Canvas.Brush.Color := sgSupply.FixedColor else
-          if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
-            Canvas.Brush.Color := clWindow;
-        Canvas.FillRect(Rect);
-        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
-      end
-      else
-      begin
-        {Display the Columns Right justified in the cells}
-        if gdFixed in State then
-          Canvas.Brush.Color := sgSupply.FixedColor else
-          if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
-            Canvas.Brush.Color := clWindow;
-        Canvas.FillRect(Rect);
-        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
-      end;
-    end;
-  end;
 end;
 
 procedure TPBMaintQuoteFrm.btnDeleteSupplyClick(Sender: TObject);
@@ -2691,6 +2627,20 @@ begin
 
 end;
 
+procedure TPBMaintQuoteFrm.sgSupplyDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+begin
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
+  end;
+
+end;
+
 procedure TPBMaintQuoteFrm.SpecificationChange(Sender: TObject);
 var
   inx: integer;
@@ -3218,6 +3168,7 @@ end;
 procedure TPBMaintQuoteFrm.FormShow(Sender: TObject);
 begin
   pnlPackFormat.Visible := dmBroker.UseSAPIntegration;
+  InitialiseForm;
 end;
 
 procedure TPBMaintQuoteFrm.btnPackFormatClick(Sender: TObject);

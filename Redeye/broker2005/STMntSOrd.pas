@@ -169,6 +169,8 @@ type
     procedure CustNameEditExit(Sender: TObject);
     procedure ChangePrices1Click(Sender: TObject);
     procedure pMnuViewPopup(Sender: TObject);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure ExtChgDetsStringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
   private
     FJobBagNo: integer;
     function GetSelectedCharge: TExtraCharge;
@@ -253,8 +255,8 @@ var
 
 implementation
 
-uses Types, 
-  System.UITypes,
+uses
+  Types, System.UITypes, Generics.Collections,
   STSODataMod, DateSelV5, STMaintSOrdLineServ, STMaintSOrdLine, PBDBMemo, PBLUCust,
   pbMainMenu, PBLUCustCstCntr, STMaintSinvExtChg, STMaintSOrdSerialNos, PBLUCConta,
   PBImages, PBLUAdHoc, PBLUSupp, STMntSOrdSpecIn, PBLUProductionLoc,
@@ -1995,6 +1997,21 @@ begin
 *)
 end;
 
+procedure TSTMntSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
+begin
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1, 2]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
+  end;
+
+end;
+
 procedure TSTMntSOrdFrm.OrdEditChange(Sender: TObject);
 begin
 SalesOrder.CustOrderNo := OrdEdit.Text;
@@ -2887,6 +2904,21 @@ end;
 procedure TSTMntSOrdFrm.ExtChgDetsStringGridDblClick(Sender: TObject);
 begin
   ChrgChgBitBtnClick(self);
+end;
+
+procedure TSTMntSOrdFrm.ExtChgDetsStringGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
+begin
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
+  end;
+
 end;
 
 procedure TSTMntSOrdFrm.DeleteSerialNos(const inx: integer);
