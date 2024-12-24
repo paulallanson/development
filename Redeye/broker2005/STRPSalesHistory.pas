@@ -110,7 +110,7 @@ begin
       close;
       ParamByName('Date_From').AsDateTime := DateFrom;
       ParamByName('Date_To').AsDateTime := DateTo;
-      ParamByName('Record_List').asinteger := RecordList;
+      //ParamByName('Record_List').asinteger := RecordList;
       open;
     end;
 end;

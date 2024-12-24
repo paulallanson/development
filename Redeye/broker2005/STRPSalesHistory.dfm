@@ -10,7 +10,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 104
@@ -911,7 +911,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     MasterSource = dtsReport
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT TOP :Record_List'
+      'SELECT '
       '  '#9'Sales_Order_Line.Part,'
       #9#9'Sum(Sales_Order_line.Quantity_Delivered) AS Usage, '
       #9#9'Customer.Name as Customer_Name,'
@@ -957,10 +957,6 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Left = 126
     Top = 94
     ParamData = <
-      item
-        Name = 'Record_List'
-        ParamType = ptInput
-      end
       item
         Name = 'Part'
         ParamType = ptInput
