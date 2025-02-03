@@ -301,38 +301,36 @@ procedure TSTMaintPickFrm.ConfirmBtnClick(Sender: TObject);
 var
   ProdCode: string;
 begin
-  if MessageDlg('Complete the Picking confirmation?',
-    mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  if MessageDlg('Complete the Picking confirmation?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    // Check that no over picking has been done
+    prodCode := OverPicked;
+    if (prodCode <> '') and (not dmBroker.AllowOverPicking) then
     begin
-// Check that no over picking has been done
-      prodCode := OverPicked;
-      if (prodCode <> '') and (not dmBroker.AllowOverPicking) then
-        begin
-          messagedlg('The quantity picked for product ' + prodCode + ' is greater than the quantity allocated, '
-                    + ' over-picking is not allowed', mtError, [mbOk], 0);
-          exit;
-        end;
-
-(*      if PickingList.TotalUnPaidPickQty > pickingList.TotalUnPaidAllocQty then
-        begin
-          if messagedlg('The Quantity Picked is greater than the Quantity Allocated, you should NOT over pick for this product. '
-                      + 'This stock has NOT been paid for by the client, do you want to continue confirming this order!?',
-            mtWarning, [mbYes, mbNo], 0) <> mrYes then
-
-          exit;
-        end;
-*)
-      UpdateTransfers;
-      if JobBagNumber <> 0 then
-        begin
-          TransferToProduction;
-          if not UseForwardStock then
-            UpdateProduction;
-        end;
-      bOK := true;
-      close;
+      messagedlg('The quantity picked for product ' + prodCode + ' is greater than the quantity allocated, ' +
+                 ' over-picking is not allowed', mtError, [mbOk], 0);
+      exit;
     end;
-//  GetNextDespNote;
+
+(*  if PickingList.TotalUnPaidPickQty > pickingList.TotalUnPaidAllocQty then
+    begin
+      if messagedlg('The Quantity Picked is greater than the Quantity Allocated, you should NOT over pick for this product. ' +
+                    'This stock has NOT been paid for by the client, do you want to continue confirming this order!?',
+        mtWarning, [mbYes, mbNo], 0) <> mrYes then
+      exit;
+    end;*)
+
+    UpdateTransfers;
+    if JobBagNumber <> 0 then
+    begin
+      TransferToProduction;
+      if not UseForwardStock then
+        UpdateProduction;
+    end;
+    bOK := true;
+    close;
+  end;
+  //GetNextDespNote;
 end;
 
 procedure TSTMaintPickFrm.FormCreate(Sender: TObject);

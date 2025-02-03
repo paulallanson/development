@@ -271,11 +271,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           Align = alClient
           DefaultColWidth = 40
           DefaultRowHeight = 18
+          DrawingStyle = gdsGradient
           RowCount = 2
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           PopupMenu = pmnCharges
           TabOrder = 0
           OnDblClick = sgChargesDblClick
+          OnDrawCell = sgChargesDrawCell
           ColWidths = (
             40
             179
@@ -895,6 +897,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       ColCount = 13
       DefaultColWidth = 40
       DefaultRowHeight = 18
+      DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

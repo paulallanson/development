@@ -143,7 +143,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       ParentBackground = False
       TabOrder = 1
       object edtSONumber: TEdit
-        Left = 8
+        Left = 3
         Top = 16
         Width = 137
         Height = 21
