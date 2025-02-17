@@ -256,6 +256,13 @@ type
     btnGenerateDocs: TButton;
     DropComboTarget1: TDropComboTarget;
     pnlBody: TPanel;
+    tbAssociateCharges: TTabSheet;
+    pnlAssociateCharges: TPanel;
+    btnChargesChange: TBitBtn;
+    btnChargesDelete: TBitBtn;
+    btnChargesAdd: TBitBtn;
+    dbgAssociateCharges: TStringGrid;
+    btnChargesExcel: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
@@ -372,7 +379,12 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
+    procedure btnChargesAddClick(Sender: TObject);
+    procedure btnChargesChangeClick(Sender: TObject);
+    procedure btnChargesDeleteClick(Sender: TObject);
+    procedure dbgAssociateChargesDblClick(Sender: TObject);
     procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure btnChargesExcelClick(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -392,6 +404,7 @@ type
     procedure SetSOrder(const Value: TSOrder);
     procedure SetGridHeaders;
     procedure BuildLineGrid;
+    procedure BuildChargesGrid;
     procedure BuildPurchaseOrderGrid;
     procedure ClearGrid(TempGrid: TStringGrid);
     procedure ShowDetails;
@@ -439,6 +452,7 @@ type
     procedure ParseInstallationAddress(installAddress: TMemo);
     procedure CallJobMaintScreen(aMode: TjMode);
     procedure CallMaintRemedials(aMode: TjremMode);
+    procedure CallInsertCharges;
     procedure ConvertToJobScreen(SOLine: TSOLine);
     function ConvertRemedialToOrder: integer;
     function UpdateRemedialInstallAddress(iCode: integer;
@@ -449,6 +463,8 @@ type
     procedure DeleteQuoteDocuments;
     procedure UpdateQuoteDocuments;
     function GetFilesPath: string;
+    procedure ShowAssociateCharges;
+    procedure CallMaintCharges(aMode: TsocMode);
   public
     bOK: boolean;
     bOperatorCanUpdateSchedule: boolean;
@@ -472,7 +488,8 @@ uses
   wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE, WTExcelOLE, wtLUFitters, WTMaintCustomer,
   WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder, WTMaintSalesOrderRaisePO, WTMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WtMaintJob, WtRSJobSheet, WtMaintJobComplete, WTMaintJRemedial, WTRSJobRemedialSheet,
-  WtRPJobRemedialSheet, WTLUCustomerSite, wtRPQuote, QRPDFFilt, Shared.DragDrop.Helper;
+  WtRPJobRemedialSheet, WTLUCustomerSite, wtRPQuote, QRPDFFilt, Shared.DragDrop.Helper, WTMaintSalesOrderAssociateCharge,
+  WTLUSalesOrderCharges, WTSendtoExcel;
 
 {$R *.dfm}
 
@@ -543,8 +560,9 @@ begin
     sopChange  : Caption := 'Change a Sales Order';
     sopDelete  : Caption := 'Delete a Sales Order';
     sopCopy   : Caption := 'Copy a Sales Order';
+    sopConvert   : Caption := 'Add a Sales Order';
     end;  { case }
-    if (Mode = sopAdd)  or (Mode = sopCopy) then
+    if (Mode = sopAdd)  or (Mode = sopCopy) or (Mode = sopConvert) then
       sTemp := ' New Sales Order '
     else
       sTemp := ' Sales Order ' + IntToStr(SOrder.DbKey) + ' ';
@@ -563,6 +581,7 @@ begin
 
     ShowDetails;
     ShowLineDetails;
+    ShowAssociateCharges;
     if Mode <> sopCopy then
       begin
         ShowJobs;
@@ -692,7 +711,7 @@ end;
 
 procedure TfrmWTMaintSalesOrder.SetGridHeaders;
 begin
-  {Sales Order header}
+  {Sales Order line header}
   dbgLines.cells[0,0] := 'Line';
   dbgLines.cells[1,0] := 'Quote';
   dbgLines.cells[2,0] := 'Part Code';
@@ -721,6 +740,25 @@ begin
   dbgPurchases.cells[10,0] := 'Status';
   dbgPurchases.cells[11,0] := 'GRN No.';
 *)
+
+  {Charges header}
+  dbgAssociateCharges.cells[0,0] := 'Line';
+  dbgAssociateCharges.cells[1,0] := 'Associate Customer';
+  dbgAssociateCharges.cells[2,0] := 'Part Code';
+  dbgAssociateCharges.cells[3,0] := 'Description';
+  dbgAssociateCharges.cells[4,0] := 'Quantity';
+  dbgAssociateCharges.cells[5,0] := 'Unit Price';
+  dbgAssociateCharges.cells[6,0] := 'Price Unit';
+  dbgAssociateCharges.cells[7,0] := 'Total';
+  dbgAssociateCharges.cells[8,0] := 'VAT Rate';
+  dbgAssociateCharges.cells[9,0] := 'Invoiced';
+  dbgAssociateCharges.cells[10,0] := 'Invoice Number';
+  dbgAssociateCharges.cells[11,0] := 'Original Order';
+  dbgAssociateCharges.cells[12,0] := 'Template Date';
+  dbgAssociateCharges.cells[13,0] := 'Fitting Date';
+  dbgAssociateCharges.cells[14,0] := 'Description';
+  dbgAssociateCharges.cells[15,0] := 'Reference';
+  dbgAssociateCharges.cells[16,0] := 'Line Number';
 
   {Event header}
   sgEvents.cells[0,0] := 'No';
@@ -1357,6 +1395,20 @@ begin
     end;
 end;
 
+procedure TfrmWTMaintSalesOrder.ShowAssociateCharges;
+begin
+  if (Mode = sopAdd) then
+    begin
+      ClearGrid(dbgAssociateCharges);  {Clear contents of Charges grid}
+      BuildChargesGrid;
+    end
+  else
+    begin
+      ClearGrid(dbgAssociateCharges);  {Clear contents of Charges grid}
+      BuildChargesGrid;
+    end;
+end;
+
 procedure TfrmWTMaintSalesOrder.ClearGrid(TempGrid: TStringGrid);
 var
   irow, icol: integer;
@@ -1412,6 +1464,46 @@ begin
       else
         rowcount := icount + 1;
     end;
+end;
+
+procedure TfrmWTMaintSalesOrder.BuildChargesGrid;
+var
+  i, icount: integer;
+begin
+  icount := 0;
+  with dbgAssociateCharges, SOrder.datamodule do
+    begin
+      for i := 0 to pred(SOrder.Charges.count) do
+        begin
+        cells[0,i+1] := inttostr(SOrder.Charges[i].SOCNumber);
+        cells[1,i+1] := SOrder.Charges[i].AssociateCustomerName;
+        cells[2,i+1] := SOrder.Charges[i].ProductCode;
+        cells[3,i+1] := SOrder.Charges[i].ProductDescription;
+        cells[4,i+1] := floattostr(SOrder.Charges[i].Quantity);
+        cells[5,i+1] := inttostr(SOrder.Charges[i].SellUnit);
+        cells[6,i+1] := formatfloat('0.00',SOrder.Charges[i].UnitPrice);
+        cells[7,i+1] := formatfloat('0.00',SOrder.Charges[i].TotalGoods);
+        cells[8,i+1] := SOrder.Charges[i].VATDescription;
+        cells[9,i+1] := SOrder.Charges[i].Invoiced;
+        cells[10,i+1] := SOrder.Charges[i].InvoiceNumber;
+        cells[11,i+1] := inttostr(SOrder.Charges[i].ParentSalesOrder);
+        cells[12,i+1] := paDateStr(SOrder.Charges[i].ParentTemplateDate);
+        cells[13,i+1] := paDateStr(SOrder.Charges[i].ParentFittingDate);
+        cells[14,i+1] := SOrder.Charges[i].ParentDescription;
+        cells[15,i+1] := SOrder.Charges[i].ParentReference;
+        cells[16,i+1] := inttostr(SOrder.Charges[i].SOLNumber);
+
+        icount := icount + 1;
+        end;
+
+      if icount = 0 then
+        rowcount := 2
+      else
+        rowcount := icount + 1;
+    end;
+  btnChargesChange.Enabled := (SOrder.Charges.count > 0);
+  btnChargesDelete.Enabled := (SOrder.Charges.count > 0);
+  btnChargesExcel.Enabled := (SOrder.Charges.count > 0);
 end;
 
 procedure TfrmWTMaintSalesOrder.BuildPurchaseOrderGrid;
@@ -2010,6 +2102,54 @@ begin
   end;
 end;
 
+procedure TfrmWTMaintSalesOrder.CallMaintCharges(aMode : TsocMode);
+var
+  iCol, iRow: integer;
+  inx : integer;
+  SOCharge : TSOCharge;
+  frm: TfrmWTMaintSalesOrderAssociateCharge;
+begin
+  icol := dbgAssociateCharges.col;
+  irow := dbgAssociateCharges.row;
+  try
+    inx := strtoint(dbgAssociateCharges.cells[0, iRow]);
+  except
+    inx := 1;
+  end;
+
+  try
+    frm := TfrmWTMaintSalesOrderAssociateCharge.Create(Self);
+    try
+      if aMode = socAdd then
+        SOCharge := TSOCharge.Create(SOrder)
+      else
+      begin
+        inx := SOrder.Charges.IndexOf(inx);
+        SOCharge := SOrder.Charges[inx];
+      end;
+      Frm.SOrder := SOrder;
+      Frm.SOCharge := SOCharge;
+      Frm.Mode := aMode;
+      if (SOCharge.Invoiced = 'Y') then
+        begin
+          if MessageDlg('This line has been invoiced and cannot be changed or deleted, continue?',
+              mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+            exit
+          else
+            Frm.Mode := socView;
+        end;
+      Frm.ShowModal;
+      if (aMode = socAdd) and (Frm.ModalResult <> mrOK) then
+        SOCharge.Free;
+    finally
+      Frm.Free;
+    end;
+  finally
+    ShowLineDetails;
+    ShowAssociateCharges;
+  end;
+end;
+
 procedure TfrmWTMaintSalesOrder.CallMaintScreen(aMode : TsolMode);
 var
   iCol, iRow: integer;
@@ -2055,6 +2195,7 @@ begin
     end;
   finally
     ShowLineDetails;
+    ShowAssociateCharges;
     ShowTotals;
     checkok(self);
   end;
@@ -2464,6 +2605,20 @@ begin
       mnPrintQuote.enabled := (SOrder.Lines.count > 0);
       mnRaisePO.visible := false;
     end;
+end;
+
+procedure TfrmWTMaintSalesOrder.btnChargesExcelClick(Sender: TObject);
+begin
+  {export the details to Excel}
+  frmWTSendtoExcel := TfrmWTSendtoExcel.create(self);
+  try
+    frmWTSendtoExcel.ExportType := 'S';
+    frmWTSendtoExcel.ExportStrGrid := dbgAssociateCharges;
+    frmWTSendtoExcel.ExportFormCaption := 'Sales Order ' +  inttostr(SOrder.dbKey) + ' - Associate Charges';
+    frmWTSendtoExcel.show;
+  finally
+    frmWTSendtoExcel.free;
+  end;
 end;
 
 procedure TfrmWTMaintSalesOrder.BitBtn3Click(Sender: TObject);
@@ -5146,6 +5301,86 @@ begin
     begin
       ShowDocuments(SOrder.dbKey);
     end);
+end;
+
+procedure TfrmWTMaintSalesOrder.btnChargesAddClick(Sender: TObject);
+var
+  iCount: integer;
+begin
+  for icount := 0 to pred(SOrder.Charges.count) do
+    begin
+      if SOrder.Charges[icount].ParentID <> 0 then
+        begin
+          CallInsertCharges;
+          exit;
+        end;
+    end;
+  CallMaintCharges(socAdd);
+end;
+
+procedure TfrmWTMaintSalesOrder.btnChargesChangeClick(Sender: TObject);
+var
+  iCount: integer;
+begin
+  for icount := 0 to pred(SOrder.Charges.count) do
+    begin
+      if SOrder.Charges[icount].ParentID <> 0 then
+        begin
+          messagedlg('These are the associate charges linked to the order lines. You cannot change the details', mtError, [mbAbort], 0);
+          exit;
+        end;
+    end;
+
+  if dbgAssociateCharges.cells[9,dbgAssociateCharges.row] = 'O' then
+    begin
+      messagedlg('An order has been raised for this charge. The details cannot be changed', mtError, [mbAbort], 0);
+      exit;
+    end;
+
+  CallMaintCharges(socChange);
+end;
+
+procedure TfrmWTMaintSalesOrder.btnChargesDeleteClick(Sender: TObject);
+begin
+  if dbgAssociateCharges.cells[9,dbgAssociateCharges.row] <> 'N' then
+    begin
+      messagedlg('An order has been raised for this charge. This cannot be deleted', mtError, [mbAbort], 0);
+      exit;
+    end;
+  CallMaintCharges(socDelete);
+end;
+
+procedure TfrmWTMaintSalesOrder.dbgAssociateChargesDblClick(
+  Sender: TObject);
+begin
+  if dbgAssociateCharges.Cells[0,dbgAssociateCharges.Row] <> '' then
+    btnChargesChangeclick(self);
+end;
+
+procedure TfrmWTMaintSalesOrder.CallInsertCharges;
+var
+  OldCursor : TCursor;
+  key: integer;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+
+  frmWTLUSalesOrderCharges := TfrmWTLUSalesOrderCharges.Create( Application );
+  try
+    frmWTLUSalesOrderCharges.Mode := 'SO';
+    frmWTLUSalesOrderCharges.SOrder := SOrder;
+    frmWTLUSalesOrderCharges.Customer := SOrder.Customer;
+    frmWTLUSalesOrderCharges.edtCustomer.Text := SOrder.CustomerName;
+    frmWTLUSalesOrderCharges.showmodal;
+    if frmWTLUSalesOrderCharges.ModalResult = idOK then
+      begin
+        ShowAssociateCharges;
+        ShowLineDetails;
+      end;
+  finally
+    frmWTLUSalesOrderCharges.free;
+    Screen.Cursor := OldCursor;
+  end;
 end;
 
 end.

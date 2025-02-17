@@ -208,6 +208,8 @@ type
     qryInvoicesReference: TWideStringField;
     qryInvoicesDescription: TWideStringField;
     qryInvoicesCustomer_Name: TWideStringField;
+    qryAssociateCharges: TFDQuery;
+    dtsAssociateCharges: TDataSource;
   private
     function GetHeaderCount: integer;
     function GetContactCount: integer;

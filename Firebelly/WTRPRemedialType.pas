@@ -66,6 +66,8 @@ type
     qrbChildDetails: TQRChildBand;
     qrlblOfficeNotes: TQRLabel;
     QRLabel15: TQRLabel;
+    QRDBText15: TQRDBText;
+    QRDBText16: TQRDBText;
     procedure qrReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbndGrpFtrAfterPrint(Sender: TQRCustomBand;
@@ -292,7 +294,9 @@ begin
         + ',"Original Fitting Date"'
         + ',"Cost"'
         + ',"Completed"'
-        + ',"Remedial Fitting Date"';
+        + ',"Remedial Sales Order"'
+        + ',"Remedial Fitting Date"'
+        + ',"Remedial Fitter"';
 
   writeLn(self.exportFile, tempStr);
 
@@ -333,7 +337,9 @@ begin
       tempStr := tempStr + ',"' + paDatestr(qryReport.fieldbyname('Fitting_Date').asdatetime) + '"';
       tempStr := tempStr + ',"' + formatfloat('0.00',qryReport.fieldbyname('Installation_Price').asfloat) + '"';
       tempStr := tempStr + ',"' + qryReport.fieldbyname('Completed').asstring + '"';
+      tempStr := tempStr + ',"' + qryReport.fieldbyname('Remedial_Sales_Order').asstring + '"';
       tempStr := tempStr + ',"' + paDatestr(qryReport.fieldbyname('Remedial_Fitting_Date').asdatetime) + '"';
+      tempStr := tempStr + ',"' + qryReport.fieldbyname('Remedial_Fitter_Name').asstring + '"';
       writeln(self.exportFile, tempStr);
     end;
 end;

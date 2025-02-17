@@ -3406,4 +3406,549 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 260
     Top = 90
   end
+  object qrySOAllCharges: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Associate_Charge.ID,'
+      '        Sales_Order_Associate_Charge.Associate_Customer,'
+      '        Customer.Customer_Name,'
+      '        Sales_Order_Associate_Charge.Product,'
+      '        Product.Product_code,'
+      '        Product.Product_Description,'
+      '        Sales_Order_Associate_Charge.Unit_Price,'
+      '        Sales_Order_Associate_Charge.Sell_Unit,'
+      '        Sales_Order_Associate_Charge.Unit_Cost,'
+      '        Sales_Order_Associate_Charge.Cost_Unit,'
+      '        Sales_Order_Associate_Charge.Quantity,'
+      '        Sales_Order_Associate_Charge.Vat,'
+      '        Vat.Vat_Rate,'
+      '        Vat.Description as Vat_Description,'
+      '        Sales_Order_Associate_Charge.Charge_Invoiced,'
+      '        Sales_Order_Associate_Charge.Sales_Invoice,'
+      '        Sales_Order_Associate_Charge.Sales_Order_line_no,'
+      '        Sales_Order_Associate_Charge.Parent_ID,'
+      '        Sales_invoice.Invoice_date,'
+      '        Sales_Invoice.Invoice_no,'
+      
+        '        Parent_Associate_Charge.Sales_Order as Parent_Sales_Orde' +
+        'r,'
+      
+        '        Parent_Sales_Order.Template_Date as Parent_Template_Date' +
+        ','
+      '        Parent_Sales_Order.Date_Required as Parent_Fitting_Date,'
+      
+        '        Parent_Sales_Order.Descriptive_Reference as Parent_Descr' +
+        'iption,'
+      '        Parent_Sales_Order.Reference as Parent_Reference'
+      'FROM Sales_Order AS Parent_Sales_Order'
+      
+        '        RIGHT JOIN (Sales_Order_Associate_Charge AS Parent_Assoc' +
+        'iate_Charge'
+      '        RIGHT JOIN (Vat'
+      '        INNER JOIN (Sales_invoice'
+      '        RIGHT JOIN (Product'
+      '        INNER JOIN (Customer'
+      '        INNER JOIN Sales_Order_Associate_Charge'
+      
+        '            ON Customer.Customer = Sales_Order_Associate_Charge.' +
+        'Associate_Customer)'
+      
+        '            ON Product.Product = Sales_Order_Associate_Charge.Pr' +
+        'oduct)'
+      
+        '            ON Sales_invoice.Sales_invoice = Sales_Order_Associa' +
+        'te_Charge.Sales_Invoice)'
+      '            ON Vat.Vat = Sales_Order_Associate_Charge.Vat)'
+      
+        '            ON Parent_Associate_Charge.ID = Sales_Order_Associat' +
+        'e_Charge.Parent_ID)'
+      
+        '            ON Parent_Sales_Order.Sales_Order = Parent_Associate' +
+        '_Charge.Sales_Order'
+      'WHERE'
+      '      Sales_Order_Associate_Charge.Sales_Order = :Sales_Order'
+      'ORDER BY Customer.Customer_Name, Product.Product_code')
+    Left = 1050
+    Top = 232
+    ParamData = <
+      item
+        Name = 'Sales_Order'
+        ParamType = ptInput
+      end>
+  end
+  object qryAssociateCharges: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Associate_Charge.ID,'
+      '        Customer_Associate_Charge.Customer,'
+      '        Customer_Associate_Charge.Associate_Customer,'
+      
+        '        Associate_Customer.Customer_Name as Associate_Customer_N' +
+        'ame,'
+      '        Customer_Associate_Charge.Product,'
+      '        Product.Product_code,'
+      '        Customer_Associate_Charge.Price_Pointer,'
+      '        Product.Product_code,'
+      '        (select top 1 Unit_price'
+      '        from Prices'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.effective_date <= now()'
+      '        order by Prices.effective_date desc) AS Unit_Price,'
+      '        (select top 1 Unit_cost'
+      '        from Prices'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.effective_date <= now()'
+      '        order by Prices.effective_date desc) AS Unit_Cost,'
+      '        (select top 1 Price_Unit_Description'
+      '        from Prices, Price_unit'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.Price_unit = Price_Unit.Price_Unit and'
+      '              Prices.effective_date <= now()'
+      
+        '        order by Prices.effective_date desc) AS Price_Unit_Descr' +
+        'iption,'
+      '        Customer_Associate_Charge.Vat,'
+      '        Product.Product_Description,'
+      '        Customer_Associate_Charge.Inactive,'
+      '        Vat.Vat_Rate,'
+      '        Vat.Description as Vat_Description'
+      'FROM Vat'
+      '        INNER JOIN (Product'
+      '        INNER JOIN (Customer AS Associate_Customer'
+      '        INNER JOIN Customer_Associate_Charge'
+      
+        '            ON Associate_Customer.Customer = Customer_Associate_' +
+        'Charge.Associate_Customer)'
+      
+        '            ON Product.Product = Customer_Associate_Charge.Produ' +
+        'ct)'
+      '            ON Vat.Vat = Customer_Associate_Charge.Vat'
+      'WHERE Customer_Associate_Charge.Customer = :Customer'
+      'ORDER BY Associate_Customer.Customer_Name, Product.Product_code')
+    Left = 1170
+    Top = 232
+    ParamData = <
+      item
+        Name = 'CUSTOMER'
+        ParamType = ptInput
+      end>
+  end
+  object qrySOAddCharge: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'INSERT INTO Sales_Order_Associate_Charge'
+      '( Sales_Order,'
+      '  Associate_Customer,'
+      '  Product,'
+      '  Unit_Price,'
+      '  Unit_Cost,'
+      '  Sell_Unit,'
+      '  Cost_Unit,'
+      '  Quantity,'
+      '  VAT,'
+      '  Charge_Invoiced,'
+      '  Sales_invoice,'
+      '  Sales_Order_Line_no,'
+      '  Parent_ID'
+      ')'
+      'VALUES'
+      '('
+      '  :Sales_Order,'
+      '  :Associate_Customer,'
+      '  :Product,'
+      '  :Unit_Price,'
+      '  :Unit_Cost,'
+      '  :Sell_Unit,'
+      '  :Cost_Unit,'
+      '  :Quantity,'
+      '  :VAT,'
+      '  :Charge_Invoiced,'
+      '  :Sales_invoice,'
+      '  :Sales_Order_Line_no,'
+      '  :Parent_ID'
+      ')'
+      '')
+    Left = 1050
+    Top = 296
+    ParamData = <
+      item
+        Name = 'Sales_Order'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ASSOCIATE_CUSTOMER'
+        ParamType = ptInput
+      end
+      item
+        Name = 'PRODUCT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'UNIT_PRICE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'UNIT_COST'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SELL_UNIT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'COST_UNIT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'QUANTITY'
+        ParamType = ptInput
+      end
+      item
+        Name = 'VAT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CHARGE_INVOICED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_INVOICE'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_ORDER_LINE_NO'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'PARENT_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+      end>
+  end
+  object qrySOUpdCharge: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Sales_Order_Associate_Charge'
+      'SET Sales_Order = :Sales_Order,'
+      '    Associate_Customer = :Associate_Customer,'
+      '    Product = :Product,'
+      '    Unit_Price = :Unit_Price,'
+      '    Unit_Cost = :Unit_Cost,'
+      '    Sell_Unit = :Sell_Unit,'
+      '    Cost_Unit = :Cost_Unit,'
+      '    Quantity = :Quantity,'
+      '    VAT = :VAT,'
+      '    Charge_Invoiced = :Charge_Invoiced,'
+      '    Sales_invoice = :Sales_invoice,'
+      '    Sales_Order_Line_no = :Sales_Order_Line_no,'
+      '    Parent_ID = :Parent_ID'
+      'WHERE ID = :ID'
+      '')
+    Left = 1162
+    Top = 296
+    ParamData = <
+      item
+        Name = 'Sales_Order'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ASSOCIATE_CUSTOMER'
+        ParamType = ptInput
+      end
+      item
+        Name = 'PRODUCT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'UNIT_PRICE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'UNIT_COST'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SELL_UNIT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'COST_UNIT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'QUANTITY'
+        ParamType = ptInput
+      end
+      item
+        Name = 'VAT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CHARGE_INVOICED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_INVOICE'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_ORDER_LINE_NO'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'PARENT_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        ParamType = ptInput
+      end>
+  end
+  object qrySOUpdChargeStatus: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Sales_Order_Associate_Charge'
+      'SET  Charge_Invoiced = :Charge_Invoiced'
+      'WHERE ID = :ID')
+    Left = 1050
+    Top = 384
+    ParamData = <
+      item
+        Name = 'CHARGE_INVOICED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ID'
+        ParamType = ptInput
+      end>
+  end
+  object qrySOCharges: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Associate_Charge.ID,'
+      '        Sales_Order_Associate_Charge.Sales_Order,'
+      '        Sales_Order.Date_Raised,'
+      '        Sales_Order.Template_Date,'
+      '        Sales_Order.Date_Required,'
+      '        Sales_Order.Customer,'
+      '        Sales_Order.Customer_Name,'
+      '        Sales_Order_Associate_Charge.Associate_Customer,'
+      '        Associate_Customer.Customer_Name,'
+      '        Sales_Order_Associate_Charge.Product,'
+      '        Product.Product_Description,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Descriptive_Reference,'
+      '        Sales_Order_Associate_Charge.Unit_Price,'
+      '        Sales_Order_Associate_Charge.Quantity,'
+      '        Sales_Order_Associate_Charge.Vat,'
+      '        Vat.Description,'
+      '        Vat.Vat_Rate'
+      'FROM Vat'
+      '        INNER JOIN (Customer AS Associate_Customer'
+      '        INNER JOIN (Product'
+      '        INNER JOIN (Sales_Order'
+      '        INNER JOIN Sales_Order_Associate_Charge'
+      
+        '          ON Sales_Order.Sales_Order = Sales_Order_Associate_Cha' +
+        'rge.Sales_Order)'
+      
+        '          ON Product.Product = Sales_Order_Associate_Charge.Prod' +
+        'uct)'
+      
+        '          ON Associate_Customer.Customer = Sales_Order_Associate' +
+        '_Charge.Associate_Customer)'
+      '          ON Vat.Vat = Sales_Order_Associate_Charge.Vat'
+      '')
+    Left = 1050
+    Top = 464
+  end
+  object dtsSOCharges: TDataSource
+    DataSet = qrySOCharges
+    Left = 1160
+    Top = 460
+  end
+  object qrySOCharge: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Associate_Charge.Associate_Customer,'
+      '        Customer.Customer_Name,'
+      '        Sales_Order_Associate_Charge.Product,'
+      '        Product.Product_code,'
+      '        Product.Product_Description,'
+      '        Sales_Order_Associate_Charge.Unit_Price,'
+      '        Sales_Order_Associate_Charge.Sell_Unit,'
+      '        Sales_Order_Associate_Charge.Unit_Cost,'
+      '        Sales_Order_Associate_Charge.Cost_Unit,'
+      '        Sales_Order_Associate_Charge.Quantity,'
+      '        Sales_Order_Associate_Charge.Vat,'
+      '        Vat.Vat_Rate,'
+      '        Vat.Description as Vat_Description,'
+      '        Sales_Order_Associate_Charge.Charge_Invoiced,'
+      '        Sales_Order_Associate_Charge.Sales_Invoice,'
+      '        Sales_invoice.Invoice_date,'
+      '        Sales_Invoice.Invoice_no,'
+      
+        '        Parent_Associate_Charge.Sales_Order as Parent_Sales_Orde' +
+        'r,'
+      
+        '        Parent_Sales_Order.Template_Date as Parent_Template_Date' +
+        ','
+      '        Parent_Sales_Order.Date_Required as Parent_Fitting_Date,'
+      
+        '        Parent_Sales_Order.Descriptive_Reference as Parent_Descr' +
+        'iption,'
+      '        Parent_Sales_Order.Reference as Parent_Reference'
+      'FROM Sales_Order AS Parent_Sales_Order'
+      
+        '        RIGHT JOIN (Sales_Order_Associate_Charge AS Parent_Assoc' +
+        'iate_Charge'
+      '        RIGHT JOIN (Vat'
+      '        INNER JOIN (Sales_invoice'
+      '        RIGHT JOIN (Product'
+      '        INNER JOIN (Customer'
+      '        INNER JOIN Sales_Order_Associate_Charge'
+      
+        '            ON Customer.Customer = Sales_Order_Associate_Charge.' +
+        'Associate_Customer)'
+      
+        '            ON Product.Product = Sales_Order_Associate_Charge.Pr' +
+        'oduct)'
+      
+        '            ON Sales_invoice.Sales_invoice = Sales_Order_Associa' +
+        'te_Charge.Sales_Invoice)'
+      '            ON Vat.Vat = Sales_Order_Associate_Charge.Vat)'
+      
+        '            ON Parent_Associate_Charge.ID = Sales_Order_Associat' +
+        'e_Charge.Parent_ID)'
+      
+        '            ON Parent_Sales_Order.Sales_Order = Parent_Associate' +
+        '_Charge.Sales_Order'
+      'WHERE  Sales_Order_Associate_Charge.ID = :ID')
+    Left = 1050
+    Top = 544
+    ParamData = <
+      item
+        Name = 'ID'
+        ParamType = ptInput
+      end>
+  end
+  object qryDummyCharges: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Associate_Charge.ID,'
+      '        Sales_Order_Associate_Charge.Sales_Order,'
+      '        Sales_Order.Date_Raised,'
+      '        Sales_Order.Template_Date,'
+      '        Sales_Order.Date_Required,'
+      '        Sales_Order.Customer,'
+      '        Sales_Order.Customer_Name,'
+      '        Sales_Order_Associate_Charge.Associate_Customer,'
+      
+        '        Associate_Customer.Customer_Name as Associate_Customer_N' +
+        'ame,'
+      '        Associate_Customer.Rep as Associate_Rep,'
+      '        Sales_Order_Associate_Charge.Product,'
+      '        Product.Product_Code,'
+      '        Product.Product_Description,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Descriptive_Reference,'
+      '        Sales_Order_Associate_Charge.Unit_Price,'
+      '        Sales_Order_Associate_Charge.Quantity,'
+      '        Sales_Order_Associate_Charge.Vat,'
+      '        Sales_Order_Associate_Charge.Charge_Invoiced,'
+      '        Vat.Description,'
+      '        Vat.Vat_Rate,'
+      
+        '        Parent_Associate_Charge.Sales_Order as Parent_Sales_Orde' +
+        'r,'
+      
+        '        Parent_Sales_Order.Template_Date as Parent_Template_Date' +
+        ','
+      '        Parent_Sales_Order.Date_Required as Parent_Fitting_Date,'
+      '        Parent_Sales_Order.Reference as Parent_Reference'
+      'FROM Sales_Order AS Parent_Sales_Order'
+      
+        '        RIGHT JOIN (Sales_Order_Associate_Charge AS Parent_Assoc' +
+        'iate_Charge'
+      '        RIGHT JOIN (Vat'
+      '        INNER JOIN (Sales_Order'
+      '        INNER JOIN (Product'
+      '        INNER JOIN (Customer AS Associate_Customer'
+      '        INNER JOIN Sales_Order_Associate_Charge'
+      
+        '            ON Associate_Customer.Customer = Sales_Order_Associa' +
+        'te_Charge.Associate_Customer)'
+      
+        '            ON Product.Product = Sales_Order_Associate_Charge.Pr' +
+        'oduct)'
+      
+        '            ON Sales_Order.Sales_Order = Sales_Order_Associate_C' +
+        'harge.Sales_Order)'
+      '            ON Vat.Vat = Sales_Order_Associate_Charge.Vat)'
+      
+        '            ON Parent_Associate_Charge.ID = Sales_Order_Associat' +
+        'e_Charge.Parent_ID)'
+      
+        '            ON Parent_Sales_Order.Sales_Order = Parent_Associate' +
+        '_Charge.Sales_Order'
+      
+        'WHERE Sales_Order_Associate_Charge.Associate_Customer = :Associa' +
+        'te_Customer AND'
+      '      ('
+      
+        '      (Sales_Order.Date_Required >= :Date_From) AND (Sales_Order' +
+        '.Date_Required <= :Date_To)'
+      '      ) AND'
+      
+        '      ((Sales_Order_Associate_Charge.Charge_Invoiced <> '#39'O'#39')) an' +
+        'd (Sales_Order_Associate_Charge.Parent_ID IS NULL)')
+    Left = 1258
+    Top = 456
+    ParamData = <
+      item
+        Name = 'ASSOCIATE_CUSTOMER'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DATE_FROM'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DATE_TO'
+        ParamType = ptInput
+      end>
+  end
+  object qryUpdSOChargeStatus: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Sales_Order_Associate_Charge'
+      'SET Charge_Invoiced = :Charge_Invoiced'
+      'WHERE  Sales_Order_Associate_Charge.ID = :ID'
+      '')
+    Left = 1154
+    Top = 552
+    ParamData = <
+      item
+        Name = 'CHARGE_INVOICED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ID'
+        ParamType = ptInput
+      end>
+  end
 end

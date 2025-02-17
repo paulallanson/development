@@ -83,9 +83,9 @@ type
     procedure CreateExportFile;
     procedure CreateGSmartExportHeader;
     procedure CreateGSmartOrderFile(tmpOrder: integer);
-    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
+    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpSlabStockCode, tmpStockCode: string);
     procedure CreateStockOrderFile(tempSO: integer);
-    procedure CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
+    procedure CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempSlabStockCode, tempStockCode: string);
     procedure DeAllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer);
     procedure DeAllocateStock;
     procedure DeAllocateStockOrder(tempSO, tempLine: integer; dtFrom, dtTo: TDateTime);
@@ -100,8 +100,7 @@ var
 
 implementation
 
-uses UITypes, 
-  wtMain, AllCommon, WTSrchCustomer, DateSelV5, wtDataModule;
+uses allCommon, WTSrchCustomer, DateSelV5, wtDataModule;
 
 {$R *.dfm}
 
@@ -189,7 +188,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  IniFile := TIniFile.Create('myWorktops.ini');
 
   try
   with IniFile do
@@ -209,7 +208,7 @@ begin
   edtDateTo.Text := paDateStr(dateTo);
 
   StockSystem := dtmdlWorktops.StockSystemCode;
-  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
+  AllCommon.LoadFormLayout('myWorktops.ini', self);
 end;
 
 procedure TfrmWTRSSOStockDeAllocation.rdgrpSelectByClick(Sender: TObject);
@@ -221,12 +220,12 @@ procedure TfrmWTRSSOStockDeAllocation.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
+  IniFile := TIniFile.Create('myWorktops.ini');
 
   with IniFile do
     begin
     end;
-  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
+  AllCommon.SaveFormLayout('myWorktops.ini', self);
 end;
 
 procedure TfrmWTRSSOStockDeAllocation.FormActivate(Sender: TObject);
@@ -249,7 +248,7 @@ function qDate(const aDate : TDateTime) : string;
   end;
 begin
   qrySalesOrders.SQL.text := qryDummy.SQL.Text;
-  
+
   qrySalesOrders.Close;
 
   DateMovefrom := padatestr(edtMoveDatefrom.Text);
@@ -366,6 +365,7 @@ procedure TfrmWTRSSOStockDeAllocation.DeAllocateStock;
 var
   iOrigOrder, icount, iMax, iSlabLine: integer;
   bAllocateStock: boolean;
+  sSlabStockCode: string;
 begin
   self.pnlExportPrgrss.Visible := true;
   self.pnlExportPrgrss.Repaint;
@@ -391,11 +391,14 @@ begin
 
           DeAllocateStockOrder(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, DateFrom, DateTo);
 
-          sStockCode := GetWorktopStockCode(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
+//          sStockCode := GetWorktopStockCode(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
+          sSlabStockCode := fieldbyname('Stock_Code').asstring;
+
+          sStockCode := fieldbyname('Allocated_Stock_Code').asstring;
 
           DeAllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
 
-          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sStockCode);
+          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sSlabStockCode, sStockCode);
 
           iOrigOrder := fieldbyname('Sales_Order').asinteger;
 
@@ -524,11 +527,11 @@ begin
   CloseExportFile(tempSO);
 end;
 
-procedure TfrmWTRSSOStockDeAllocation.CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
+procedure TfrmWTRSSOStockDeAllocation.CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempSlabStockCode, tempStockCode: string);
 begin
   CreateExportFile;
   CreateGSmartExportHeader;
-  CreateGSmartOrderLineFile(tempSO, tempLine, tempSlabLine, tempStockCode);
+  CreateGSmartOrderLineFile(tempSO, tempLine, tempSlabLine, tempSlabStockCode, tempStockCode);
   CloseExportOrderLineFile(tempSO, tempLine, tempStockCode);
 end;
 
@@ -645,7 +648,7 @@ begin
   end;
 end;
 
-procedure TfrmWTRSSOStockDeAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
+procedure TfrmWTRSSOStockDeAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpSlabStockCode, tmpStockCode: string);
 var
   tempstr: string;
   iCount: integer;
@@ -655,7 +658,7 @@ begin
     Close;
     parambyname('Sales_Order').asinteger := tmpOrder;
     parambyname('Sales_Order_Line_no').asinteger := tmpLine;
-    parambyname('Stock_Code').asstring := tmpStockCode;
+    parambyname('Stock_Code').asstring := tmpSlabStockCode;
     Open;
 
     First;
@@ -666,7 +669,7 @@ begin
       iCount := icount + 1;
 
       //Order
-      tempStr := '' + fieldbyname('Sales_Order').asstring + '_' + inttostr(tmpSlabLine) + '';
+      tempStr := '' + fieldbyname('Sales_Order').asstring + '_' + inttostr(tmpLine) + '_' + inttostr(tmpSlabLine) + '';
 
       //Customer Account Code
       tempStr := tempStr + ',' + fieldbyname('Account_Code').asstring + '';
@@ -695,7 +698,8 @@ begin
       tempStr := tempStr + ',' + fieldbyname('Date_Required').asstring + '';
 
       //Line
-      tempStr := tempStr + ',' + inttostr(tmpSlabLine) + '';
+//      tempStr := tempStr + ',' + inttostr(tmpSlabLine) + '';
+      tempStr := tempStr + ',' + '1' + '';
 
       writeln(OrderFile, tempStr);
       next;

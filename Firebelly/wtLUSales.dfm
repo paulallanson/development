@@ -2,8 +2,8 @@ object frmwtLUSales: TfrmwtLUSales
   Left = 13
   Top = 98
   Caption = 'Sales Order details'
-  ClientHeight = 376
-  ClientWidth = 1364
+  ClientHeight = 358
+  ClientWidth = 1352
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUSales: TfrmwtLUSales
   TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 357
-    Width = 1364
+    Top = 339
+    Width = 1352
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUSales: TfrmwtLUSales
   end
   object Panel1: TPanel
     Left = 0
-    Top = 316
-    Width = 1364
+    Top = 298
+    Width = 1352
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1364
+      1352
       41)
     object Label1: TLabel
       Left = 8
@@ -61,7 +61,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 1045
+      Left = 1027
       Top = 15
       Width = 69
       Height = 17
@@ -71,7 +71,7 @@ object frmwtLUSales: TfrmwtLUSales
       ExplicitLeft = 1057
     end
     object Button1: TButton
-      Left = 1219
+      Left = 1201
       Top = 10
       Width = 75
       Height = 25
@@ -89,7 +89,7 @@ object frmwtLUSales: TfrmwtLUSales
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1120
+      Left = 1102
       Top = 11
       Width = 73
       Height = 25
@@ -110,19 +110,19 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1364
+    Width = 1352
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1358
+        Width = 1346
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1349
+      Width = 1337
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 74
@@ -249,8 +249,16 @@ object frmwtLUSales: TfrmwtLUSales
         ImageIndex = 2
         OnClick = btnProformaClick
       end
-      object ToolButton1: TToolButton
+      object btnAssociateCharges: TToolButton
         Left = 896
+        Top = 0
+        Caption = 'Charges'
+        Enabled = False
+        ImageIndex = 5
+        OnClick = btnAssociateChargesClick
+      end
+      object ToolButton1: TToolButton
+        Left = 970
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -258,7 +266,7 @@ object frmwtLUSales: TfrmwtLUSales
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 904
+        Left = 978
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -272,8 +280,8 @@ object frmwtLUSales: TfrmwtLUSales
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1364
-    Height = 239
+    Width = 1352
+    Height = 221
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
@@ -324,6 +332,7 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -351,6 +360,7 @@ object frmwtLUSales: TfrmwtLUSales
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
+        Width = 64
         Visible = True
       end
       item
@@ -419,18 +429,21 @@ object frmwtLUSales: TfrmwtLUSales
       item
         Expanded = False
         FieldName = 'Quote'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
+        Width = 64
         Visible = True
       end
       item
@@ -444,19 +457,19 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1364
+    Width = 1352
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 1358
+        Width = 1346
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1349
+      Width = 1337
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -464,7 +477,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1349
+        1337
         30)
       object Label2: TLabel
         Left = 0
@@ -495,7 +508,7 @@ object frmwtLUSales: TfrmwtLUSales
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1078
+        Left = 1066
         Top = 6
         Width = 81
         Height = 15
@@ -510,7 +523,7 @@ object frmwtLUSales: TfrmwtLUSales
         ExplicitLeft = 1096
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1165
+        Left = 1153
         Top = 3
         Width = 145
         Height = 25

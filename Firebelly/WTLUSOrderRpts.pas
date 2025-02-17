@@ -31,7 +31,8 @@ implementation
 
 uses WTRSSOrderTemplate, wtRSSOAntInvoice, WTRSSOrderSchedule,
   WTRSSalesOrder, WTRSSOrderAllocation, WTRSMaterialAnalysis, WTRSSOCostAnalysis,
-  WTRSSalesOrderInvoice, WTRSSOProduction, WTRSSOAntOrdering, WTRSSOWarranty, WTRSSOFitDateMovement;
+  WTRSSalesOrderInvoice, WTRSSOProduction, WTRSSOAntOrdering, WTRSSOWarranty, WTRSSOFitDateMovement,
+  WTRSSOAllocated;
 
 {$R *.DFM}
 
@@ -77,6 +78,16 @@ begin
       frmWTRSSOProduction.showmodal;
     finally
       frmWTRSSOProduction.free;
+    end
+  end
+  else
+  if TempForm = 'FRMWTRSSOALLOCATED' then
+  begin
+    frmWTRSSOAllocated := TfrmWTRSSOAllocated.Create(self);
+    try
+      frmWTRSSOAllocated.showmodal;
+    finally
+      frmWTRSSOAllocated.free;
     end
   end
   else
@@ -182,5 +193,6 @@ begin
   if (lstvwReports.SelCount > 0) then
     btnSelectClick(self);
 end;
+
 
 end.

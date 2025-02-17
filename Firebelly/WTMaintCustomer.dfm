@@ -691,7 +691,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 412
+            Width = 394
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -1104,6 +1104,115 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Enabled = False
           TabOrder = 3
           OnClick = btnDeleteClick
+        end
+      end
+      object tbsAssociateCharges: TTabSheet
+        Caption = 'Associate Charges'
+        ImageIndex = 9
+        object pnlAssociateChargesHeader: TPanel
+          Left = 0
+          Top = 0
+          Width = 830
+          Height = 41
+          Align = alTop
+          TabOrder = 0
+          object chkbxPassOnCharges: TCheckBox
+            Left = 9
+            Top = 10
+            Width = 168
+            Height = 17
+            Caption = 'Pass on Associate Charges'
+            TabOrder = 0
+            OnClick = chkbxPassOnChargesClick
+          end
+        end
+        object pnlAssociateChargesRight: TPanel
+          Left = 719
+          Top = 41
+          Width = 111
+          Height = 505
+          Align = alRight
+          Enabled = False
+          TabOrder = 1
+          object BitBtn4: TBitBtn
+            Left = 19
+            Top = 6
+            Width = 75
+            Height = 25
+            Caption = '&Add'
+            TabOrder = 0
+            OnClick = BitBtn4Click
+          end
+          object btnChargesChange: TBitBtn
+            Left = 19
+            Top = 46
+            Width = 75
+            Height = 25
+            Caption = '&Change'
+            Enabled = False
+            TabOrder = 1
+            OnClick = btnChargesChangeClick
+          end
+          object btnChargesDelete: TBitBtn
+            Left = 19
+            Top = 86
+            Width = 75
+            Height = 25
+            Caption = '&Delete'
+            Enabled = False
+            TabOrder = 2
+            OnClick = btnChargesDeleteClick
+          end
+        end
+        object dbgAssociateCharges: TDBGrid
+          Left = 0
+          Top = 41
+          Width = 719
+          Height = 505
+          Align = alClient
+          DrawingStyle = gdsGradient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentFont = False
+          TabOrder = 2
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDblClick = dbgAssociateChargesDblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'Associate_Customer_Name'
+              Title.Caption = 'Associate Customer'
+              Width = 178
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Product_Code'
+              Title.Caption = 'Product Code'
+              Width = 128
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Product_Description'
+              Title.Caption = 'Description'
+              Width = 285
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Unit_Price'
+              Title.Caption = 'Price'
+              Visible = True
+            end>
         end
       end
       object tbsQuotes: TTabSheet
@@ -2192,7 +2301,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object chkbxInactive: TCheckBox
         Left = 13
         Top = 13
-        Width = 97
+        Width = 124
         Height = 17
         Caption = 'inactive account'
         TabOrder = 0
@@ -2532,8 +2641,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 160
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 217
-    Top = 86
+    Left = 177
+    Top = 174
   end
   object tmrNotes: TTimer
     Enabled = False
@@ -2653,7 +2762,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       
         '      Area_Calculation_Dec_Places = :Area_Calculation_Dec_Places' +
         ','
-      '      Supplier_Code = :Supplier_Code'
+      '      Supplier_Code = :Supplier_Code,'
+      '      Pass_on_Associate_Charges = :Pass_on_Associate_Charges'
       'WHERE'
       '  Customer = :Customer')
     Left = 570
@@ -2881,6 +2991,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptInput
       end
       item
+        Name = 'PASS_ON_ASSOCIATE_CHARGES'
+        ParamType = ptInput
+      end
+      item
         Name = 'Customer'
         ParamType = ptInput
       end>
@@ -2985,7 +3099,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    Left = 740
-    Top = 64
+    Left = 500
+    Top = 48
   end
 end

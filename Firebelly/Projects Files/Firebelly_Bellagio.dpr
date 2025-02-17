@@ -258,7 +258,12 @@ uses
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
   WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate},
   WTMaintCustWTGroup in '..\WTMaintCustWTGroup.pas',
-  WTUSSetDocuments in '..\WTUSSetDocuments.pas' {frmWTUSSetDocuments};
+  WTUSSetDocuments in '..\WTUSSetDocuments.pas' {frmWTUSSetDocuments},
+  WTMaintCustAssociateCharge in '..\WTMaintCustAssociateCharge.pas' {frmWTMaintCustAssociateCharge},
+  WTLUSalesOrderCharges in '..\WTLUSalesOrderCharges.pas' {frmWTLUSalesOrderCharges},
+  WTMaintSalesOrderAssociateCharge in '..\WTMaintSalesOrderAssociateCharge.pas' {frmWTMaintSalesOrderAssociateCharge},
+  WTRPSOAllocated in '..\WTRPSOAllocated.pas' {frmWTRPSOAllocated},
+  wtRSSOAllocated in '..\wtRSSOAllocated.pas' {frmWTRSSOAllocated};
 
 {$R *.RES}
 
@@ -274,7 +279,5 @@ begin
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);
-  Application.CreateForm(TfrmWTRSSOrderTemplate, frmWTRSSOrderTemplate);
-  Application.CreateForm(TfrmWTUSSetDocuments, frmWTUSSetDocuments);
   Application.Run;
 end.

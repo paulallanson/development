@@ -153,7 +153,7 @@ begin
   dtmdlAllSCredits.dsSCHeaderGrid.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllSCredits.dsSCHeaderGrid;
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -195,7 +195,7 @@ begin
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSCredits.dsSCHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
+  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order',TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesCredits.SetButtons(Sender: TObject; Field: TField);

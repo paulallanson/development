@@ -452,7 +452,7 @@ begin
 
           AttachmentList.clear;
 
-          if self.chkbxPrint.checked then
+(*    6/1/2025  -  Removed this code because the option to print/email the remedial sheet isn't visible on the selection screen          if self.chkbxPrint.checked then
             begin
               frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
               try
@@ -477,6 +477,7 @@ begin
               end;
             end;
 
+*)
           {Add any other selected documents as an attachment}
           if cmbDocuments.text <> '<None>' then
             begin

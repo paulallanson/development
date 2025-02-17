@@ -3,8 +3,8 @@ object frmWTLUStore: TfrmWTLUStore
   Top = 160
   BorderStyle = bsDialog
   Caption = 'Stores'
-  ClientHeight = 369
-  ClientWidth = 392
+  ClientHeight = 360
+  ClientWidth = 386
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUStore: TfrmWTLUStore
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 350
-    Width = 392
+    Top = 341
+    Width = 386
     Height = 19
     Panels = <
       item
@@ -27,16 +27,20 @@ object frmWTLUStore: TfrmWTLUStore
       item
         Width = 50
       end>
+    ExplicitTop = 350
+    ExplicitWidth = 392
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 392
-    Height = 350
+    Width = 386
+    Height = 341
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 392
+    ExplicitHeight = 350
     object Panel2: TPanel
       Left = 303
       Top = 0
@@ -46,67 +50,74 @@ object frmWTLUStore: TfrmWTLUStore
       TabOrder = 0
       DesignSize = (
         89
-        279)
+        270)
       object BitBtn1: TBitBtn
         Left = 6
-        Top = 87
+        Top = 78
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Add'
         TabOrder = 0
         OnClick = BitBtn1Click
+        ExplicitTop = 87
       end
       object btnEdit: TBitBtn
         Left = 6
-        Top = 127
+        Top = 118
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Edit'
         TabOrder = 1
         OnClick = btnEditClick
+        ExplicitTop = 127
       end
       object btnDelete: TBitBtn
         Left = 6
-        Top = 167
+        Top = 158
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Delete'
         TabOrder = 2
         OnClick = btnDeleteClick
+        ExplicitTop = 167
       end
       object btnExcel: TBitBtn
         Left = 6
-        Top = 207
+        Top = 198
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Excel'
         TabOrder = 3
         OnClick = btnExcelClick
+        ExplicitTop = 207
       end
       object btnSelect: TBitBtn
         Left = 6
-        Top = 245
+        Top = 236
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Select'
         TabOrder = 4
         OnClick = btnSelectClick
+        ExplicitTop = 245
       end
     end
     object Panel1: TPanel
       Left = 0
-      Top = 279
-      Width = 392
+      Top = 270
+      Width = 386
       Height = 71
       Align = alBottom
       TabOrder = 1
+      ExplicitTop = 279
+      ExplicitWidth = 392
       DesignSize = (
-        392
+        386
         71)
       object Label4: TLabel
         Left = 8
@@ -158,8 +169,8 @@ object frmWTLUStore: TfrmWTLUStore
     object dbgDetails: TDBGrid
       Left = 0
       Top = 0
-      Width = 303
-      Height = 279
+      Width = 297
+      Height = 270
       Align = alClient
       DataSource = srcStore
       DrawingStyle = gdsGradient

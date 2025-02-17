@@ -43,6 +43,7 @@ type
     btnFittingEmail: TToolButton;
     btnAllocate: TToolButton;
     btnDeAllocate: TToolButton;
+    btnAssociateCharges: TToolButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -72,6 +73,7 @@ type
     procedure dbgDetailsTitleClick(Column: TColumn);
     procedure btnAllocateClick(Sender: TObject);
     procedure btnDeAllocateClick(Sender: TObject);
+    procedure btnAssociateChargesClick(Sender: TObject);
   private
     ActiveCode: integer;
     FDisableNameChangeEvent: boolean;
@@ -98,7 +100,7 @@ uses
   WtMaintSalesOrder, wtRSSOrder, WTJobsDM, WtMaintJob, wtLUSOLines,
   WTLUSOrderRpts, WTSOrderSearch, wtRSTemplateSheet, wtDataModule,
   wtLUPayments, wtMain, wtRSFittingConfirm, wtRSSOStockAllocation,
-  wtRSSOStockDeAllocation;
+  wtRSSOStockDeAllocation, WTLUSalesOrderCharges;
 
 {$R *.DFM}
 
@@ -235,6 +237,7 @@ procedure TfrmwtLUSales.SetButtons(Sender: TObject; Field: TField);
 begin
   with dtmdlAllSales do
   begin
+    btnAssociateCharges.Enabled := HeaderCountAll > 0;
     btnChange.Enabled := HeaderCountAll > 0;
     btnPrint.Enabled := HeaderCountAll > 0;
     btnProforma.Enabled := HeaderCountAll > 0;
@@ -1159,6 +1162,40 @@ begin
     frmWTRSSOStockAllocation.showmodal;
   finally
     frmWTRSSOStockAllocation.free;
+    Screen.Cursor := OldCursor;
+  end;
+end;
+
+procedure TfrmwtLUSales.btnAssociateChargesClick(Sender: TObject);
+var
+  OldCursor : TCursor;
+  key: integer;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+
+  frmWTLUSalesOrderCharges := TfrmWTLUSalesOrderCharges.Create( Application );
+  try
+    frmWTLUSalesOrderCharges.showmodal;
+    if frmWTLUSalesOrderCharges.ModalResult = idOK then
+      begin
+        dbgdetails.DataSource.DataSet.Close;
+        dbgdetails.DataSource.DataSet.Open;
+        Key := dbgdetails.DataSource.DataSet.fieldbyname('Sales_Order').asinteger;
+
+        dbgdetails.DataSource.DataSet.Locate('Sales_order', Variant(inttostr(Key)),[lopartialKey]) ;
+
+        with dbgDetails do
+          begin
+            try
+              if datasource.dataset.recordcount > 0 then
+                SelectedRows.CurrentRowSelected := true ;
+            except
+            end;
+          end;
+      end;
+  finally
+    frmWTLUSalesOrderCharges.free;
     Screen.Cursor := OldCursor;
   end;
 end;

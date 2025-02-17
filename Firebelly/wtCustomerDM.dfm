@@ -1,6 +1,7 @@
 object dtmdlCustomers: TdtmdlCustomers
-  Height = 555
-  Width = 725
+  Height = 694
+  Width = 1130
+  PixelsPerInch = 120
   object qryBranches: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
@@ -8,8 +9,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Customer_Branch'
       'where Customer = :Customer'
       'order by Branch_Name')
-    Left = 36
-    Top = 16
+    Left = 45
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -20,8 +21,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsBranches: TDataSource
     DataSet = qryBranches
-    Left = 108
-    Top = 16
+    Left = 135
+    Top = 20
   end
   object qryRep: TFDQuery
     ConnectionName = 'WT'
@@ -29,50 +30,50 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from rep'
       'order by Rep_Name')
-    Left = 40
-    Top = 264
+    Left = 50
+    Top = 330
   end
   object dtsRep: TDataSource
     DataSet = qryRep
-    Left = 104
-    Top = 264
+    Left = 130
+    Top = 330
   end
   object lkpCustomerType: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from customer_type'
       'order by description')
-    Left = 40
-    Top = 72
+    Left = 50
+    Top = 90
   end
   object dtsCustomerType: TDataSource
     DataSet = lkpCustomerType
-    Left = 104
-    Top = 72
+    Left = 130
+    Top = 90
   end
   object dtsVAT: TDataSource
     DataSet = lkpVAT
-    Left = 104
-    Top = 136
+    Left = 130
+    Top = 170
   end
   object lkpVAT: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from VAT')
-    Left = 40
-    Top = 136
+    Left = 50
+    Top = 170
   end
   object lkpCreditStatus: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from credit_status')
-    Left = 40
-    Top = 200
+    Left = 50
+    Top = 250
   end
   object dtsCreditStatus: TDataSource
     DataSet = lkpCreditStatus
-    Left = 104
-    Top = 200
+    Left = 130
+    Top = 250
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'
@@ -126,8 +127,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'tor.Operator_Name like :Description) OR (Quote.Quote like :descr' +
         'iption))'
       'ORDER BY Quote.Quote desc')
-    Left = 40
-    Top = 320
+    Left = 50
+    Top = 400
     ParamData = <
       item
         Name = 'Customer'
@@ -298,8 +299,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'ospect_Action'
       'WHERE Customer_event.customer = :Customer'
       'ORDER BY Customer_Event_no desc')
-    Left = 192
-    Top = 16
+    Left = 240
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -310,13 +311,13 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsEvents: TDataSource
     DataSet = qryEvents
-    Left = 280
-    Top = 16
+    Left = 350
+    Top = 20
   end
   object dtsQuotes: TDataSource
     DataSet = qryQuotes
-    Left = 104
-    Top = 320
+    Left = 130
+    Top = 400
   end
   object qrySOrders: TFDQuery
     ConnectionName = 'WT'
@@ -341,8 +342,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'sales_order.sales_order_status = sales_order_status.sales_order_' +
         'status'
       'ORDER BY Sales_Order.Sales_Order desc')
-    Left = 40
-    Top = 384
+    Left = 50
+    Top = 480
     ParamData = <
       item
         Name = 'Customer'
@@ -653,8 +654,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsSOrders: TDataSource
     DataSet = qrySOrders
-    Left = 104
-    Top = 384
+    Left = 130
+    Top = 480
   end
   object qryJobs: TFDQuery
     ConnectionName = 'WT'
@@ -686,8 +687,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'like :Description) OR (Material_Type.Description like :Descripti' +
         'on) OR (Job.Job like :description))'
       'ORDER BY Job.Quote desc')
-    Left = 192
-    Top = 72
+    Left = 240
+    Top = 90
     ParamData = <
       item
         Name = 'Customer'
@@ -962,8 +963,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsJobs: TDataSource
     DataSet = qryJobs
-    Left = 280
-    Top = 72
+    Left = 350
+    Top = 90
   end
   object qryInvoices: TFDQuery
     ConnectionName = 'WT'
@@ -1004,8 +1005,8 @@ object dtmdlCustomers: TdtmdlCustomers
         '_invoice_Status)'
       'order by Sales_Invoice.Sales_Invoice desc'
       '')
-    Left = 192
-    Top = 136
+    Left = 240
+    Top = 170
     ParamData = <
       item
         Name = 'Customer'
@@ -1104,8 +1105,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsInvoices: TDataSource
     DataSet = qryInvoices
-    Left = 280
-    Top = 136
+    Left = 350
+    Top = 170
   end
   object qryAction: TFDQuery
     ConnectionName = 'WT'
@@ -1113,13 +1114,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from Prospect_Action'
       'order by Prospect_Action_Description')
-    Left = 40
-    Top = 448
+    Left = 50
+    Top = 560
   end
   object dtsAction: TDataSource
     DataSet = qryAction
-    Left = 104
-    Top = 448
+    Left = 130
+    Top = 560
   end
   object qryOperator: TFDQuery
     ConnectionName = 'WT'
@@ -1128,13 +1129,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Operator'
       'where Operator_can_login = '#39'Y'#39
       'order by Operator_Name')
-    Left = 192
-    Top = 200
+    Left = 240
+    Top = 250
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 280
-    Top = 200
+    Left = 350
+    Top = 250
   end
   object qryCustContact: TFDQuery
     ConnectionName = 'WT'
@@ -1144,8 +1145,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'where customer = :customer and'
       '((inactive is NULL) or (inactive = '#39#39') or (inactive = '#39'N'#39'))'
       'order by Customer_contact.contact_name')
-    Left = 192
-    Top = 264
+    Left = 240
+    Top = 330
     ParamData = <
       item
         Name = 'customer'
@@ -1156,33 +1157,33 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsCustContact: TDataSource
     DataSet = qryCustContact
-    Left = 280
-    Top = 264
+    Left = 350
+    Top = 330
   end
   object qryProspectStatus: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Prospect_Status')
-    Left = 192
-    Top = 320
+    Left = 240
+    Top = 400
   end
   object dtsProspectStatus: TDataSource
     DataSet = qryProspectStatus
-    Left = 280
-    Top = 320
+    Left = 350
+    Top = 400
   end
   object qryPaymentTerms: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Payment_Terms'
       'order by Payment_Terms_Description')
-    Left = 192
-    Top = 376
+    Left = 240
+    Top = 470
   end
   object dtsPaymentTerms: TDataSource
     DataSet = qryPaymentTerms
-    Left = 280
-    Top = 376
+    Left = 350
+    Top = 470
   end
   object qryWorkGroups: TFDQuery
     ConnectionName = 'WT'
@@ -1191,8 +1192,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Customer_Worktop_Group'
       'where customer = :Customer'
       'Order by Group_Description')
-    Left = 364
-    Top = 16
+    Left = 455
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
@@ -1206,8 +1207,8 @@ object dtmdlCustomers: TdtmdlCustomers
     SQL.Strings = (
       'SELECT * from Address'
       'WHERE Address = :Address')
-    Left = 368
-    Top = 70
+    Left = 460
+    Top = 88
     ParamData = <
       item
         Name = 'Address'
@@ -1223,13 +1224,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Level_of_Importance'
       'order by Level_of_Importance'
       '')
-    Left = 184
-    Top = 448
+    Left = 230
+    Top = 560
   end
   object dtsLeveloFImportance: TDataSource
     DataSet = qryLevelofImportance
-    Left = 280
-    Top = 448
+    Left = 350
+    Top = 560
   end
   object qryMaterialTypes: TFDQuery
     ConnectionName = 'WT'
@@ -1252,8 +1253,8 @@ object dtmdlCustomers: TdtmdlCustomers
         'ctive = '#39'N'#39'))'
       'ORDER BY Material_Type.Description'
       '')
-    Left = 378
-    Top = 138
+    Left = 473
+    Top = 173
     ParamData = <
       item
         Name = 'Customer'
@@ -1270,7 +1271,71 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object dtsMaterialTypes: TDataSource
     DataSet = qryMaterialTypes
-    Left = 481
-    Top = 138
+    Left = 601
+    Top = 173
+  end
+  object qryAssociateCharges: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Associate_Charge.ID,'
+      '        Customer_Associate_Charge.Customer,'
+      '        Customer_Associate_Charge.Associate_Customer,'
+      
+        '        Associate_Customer.Customer_Name as Associate_Customer_N' +
+        'ame,'
+      '        Customer_Associate_Charge.Product,'
+      '        Product.Product_code,'
+      '        Customer_Associate_Charge.Price_Pointer,'
+      '        Product.Product_code,'
+      '        (select top 1 Unit_price'
+      '        from Prices'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.effective_date <= now()'
+      '        order by Prices.effective_date desc) AS Unit_Price,'
+      '        (select top 1 Unit_cost'
+      '        from Prices'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.effective_date <= now()'
+      '        order by Prices.effective_date desc) AS Unit_Cost,'
+      '        (select top 1 Price_Unit_Description'
+      '        from Prices, Price_unit'
+      
+        '        where Prices.Price_pointer = Customer_Associate_Charge.p' +
+        'rice_pointer and'
+      '              Prices.Price_unit = Price_Unit.Price_Unit and'
+      '              Prices.effective_date <= now()'
+      
+        '        order by Prices.effective_date desc) AS Price_Unit_Descr' +
+        'iption,'
+      '        Customer_Associate_Charge.Vat,'
+      '        Product.Product_Description,'
+      '        Customer_Associate_Charge.Inactive'
+      'FROM Product'
+      '        INNER JOIN (Customer AS Associate_Customer'
+      '        INNER JOIN Customer_Associate_Charge'
+      
+        '          ON Associate_Customer.Customer = Customer_Associate_Ch' +
+        'arge.Associate_Customer)'
+      '          ON Product.Product = Customer_Associate_Charge.Product'
+      'WHERE Customer_Associate_Charge.Customer = :Customer'
+      'ORDER BY Associate_Customer.Customer_Name, Product.Product_code')
+    Left = 729
+    Top = 21
+    ParamData = <
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+  object dtsAssociateCharges: TDataSource
+    DataSet = qryAssociateCharges
+    Left = 825
+    Top = 21
   end
 end

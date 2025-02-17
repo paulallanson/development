@@ -2,8 +2,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   Left = 266
   Top = 44
   Caption = 'Stock De-Allocation'
-  ClientHeight = 499
-  ClientWidth = 904
+  ClientHeight = 490
+  ClientWidth = 898
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 439
-    Width = 904
+    Top = 430
+    Width = 898
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -27,10 +27,10 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     ExplicitTop = 460
     ExplicitWidth = 921
     DesignSize = (
-      904
+      898
       41)
     object btnClose: TButton
-      Left = 809
+      Left = 797
       Top = 8
       Width = 75
       Height = 25
@@ -56,8 +56,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 480
-    Width = 904
+    Top = 471
+    Width = 898
     Height = 19
     Panels = <
       item
@@ -72,8 +72,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 904
-    Height = 326
+    Width = 898
+    Height = 317
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
@@ -143,7 +143,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 904
+    Width = 898
     Height = 113
     Align = alTop
     ParentBackground = False
@@ -168,7 +168,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       object Label2: TLabel
         Left = 26
         Top = 48
-        Width = 15
+        Width = 14
         Height = 13
         Caption = 'To:'
       end
@@ -251,7 +251,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       object Label6: TLabel
         Left = 26
         Top = 48
-        Width = 15
+        Width = 14
         Height = 13
         Caption = 'To:'
       end

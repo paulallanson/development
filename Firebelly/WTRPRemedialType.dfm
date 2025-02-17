@@ -3,7 +3,7 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
   Top = 113
   Caption = 'Remedial Reason Type Report'
   ClientHeight = 519
-  ClientWidth = 1145
+  ClientWidth = 1392
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -389,7 +389,7 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
     end
     object qrbDetails: TQRSubDetail
       Left = 47
-      Top = 196
+      Top = 195
       Width = 1332
       Height = 55
       AfterPrint = qrbDetailsAfterPrint
@@ -407,6 +407,38 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       DataSet = qryReport
       PrintBefore = False
       PrintIfEmpty = True
+      object QRDBText4: TQRDBText
+        Left = 60
+        Top = 3
+        Width = 75
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          127.000000000000000000
+          6.350000000000000000
+          158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Date_Raised'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
       object QRDBText8: TQRDBText
         Left = 1222
         Top = 3
@@ -440,14 +472,14 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 149
-        Top = 3
+        Left = 128
+        Top = 4
         Width = 21
         Height = 19
         Size.Values = (
           40.216666666666670000
-          315.383333333333300000
-          6.350000000000000000
+          270.933333333333300000
+          8.466666666666667000
           44.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -570,37 +602,6 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         VerticalAlignment = tlTop
         FontSize = 8
       end
-      object qrlblNotes: TQRLabel
-        Left = 147
-        Top = 25
-        Width = 574
-        Height = 19
-        Size.Values = (
-          39.687500000000000000
-          312.208333333333300000
-          52.916666666666670000
-          1214.437500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = False
-        AutoStretch = True
-        Caption = 'qrlblNotes'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 8
-      end
       object QRDBText10: TQRDBText
         Left = 0
         Top = 3
@@ -634,15 +635,15 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 213
-        Top = 3
+        Left = 207
+        Top = 0
         Width = 189
         Height = 19
         Size.Values = (
-          39.687500000000000000
-          449.791666666666700000
-          5.291666666666667000
-          399.520833333333300000)
+          40.216666666666670000
+          438.150000000000000000
+          0.000000000000000000
+          400.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -826,47 +827,15 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         VerticalAlignment = tlTop
         FontSize = 8
       end
-      object QRDBText4: TQRDBText
-        Left = 60
-        Top = 3
-        Width = 75
-        Height = 19
-        Size.Values = (
-          40.216666666666670000
-          127.000000000000000000
-          6.350000000000000000
-          158.750000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Color = clWhite
-        DataSet = qryReport
-        DataField = 'Date_Raised'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
-        FontSize = 8
-      end
       object QRDBText14: TQRDBText
         Left = 1181
         Top = 3
         Width = 80
         Height = 19
         Size.Values = (
-          39.687500000000000000
-          2500.312500000000000000
-          5.291666666666667000
+          40.216666666666670000
+          2499.783333333333000000
+          6.350000000000000000
           169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -888,6 +857,101 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         WrapStyle = BreakOnSpaces
         FullJustify = False
         MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+      object QRDBText15: TQRDBText
+        Left = 1181
+        Top = 23
+        Width = 139
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          2499.783333333333000000
+          48.683333333333330000
+          294.216666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Remedial_Fitting_Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+      object QRDBText16: TQRDBText
+        Left = 128
+        Top = 25
+        Width = 134
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          270.933333333333300000
+          52.916666666666670000
+          283.633333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Remedial_Sales_Order'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+      object qrlblNotes: TQRLabel
+        Left = 207
+        Top = 25
+        Width = 517
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          438.150000000000000000
+          52.916666666666670000
+          1094.316666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = True
+        Caption = 'qrlblNotes'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
         FontSize = 8
       end
@@ -1032,21 +1096,22 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         FontSize = 8
       end
       object QRLabel1: TQRLabel
-        Left = 150
-        Top = 100
-        Width = 21
-        Height = 20
+        Left = 128
+        Top = 87
+        Width = 87
+        Height = 31
         Size.Values = (
-          42.333333333333330000
-          317.500000000000000000
-          211.666666666666700000
-          44.450000000000000000)
+          65.616666666666670000
+          270.933333333333300000
+          184.150000000000000000
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Job'
+        AutoSize = False
+        Caption = 'Job Remedial Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1062,13 +1127,13 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       end
       object QRLabel2: TQRLabel
         Left = 60
-        Top = 100
+        Top = 101
         Width = 28
         Height = 20
         Size.Values = (
           42.333333333333330000
           127.000000000000000000
-          211.666666666666700000
+          213.783333333333300000
           59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1090,14 +1155,14 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 213
-        Top = 100
+        Left = 207
+        Top = 98
         Width = 57
         Height = 20
         Size.Values = (
           42.333333333333330000
-          450.850000000000000000
-          211.666666666666700000
+          438.150000000000000000
+          207.433333333333300000
           120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1427,20 +1492,20 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       object QRLabel13: TQRLabel
         Left = 1181
         Top = 81
-        Width = 68
+        Width = 92
         Height = 39
         Size.Values = (
-          82.020833333333330000
-          2500.312500000000000000
-          171.979166666666700000
-          142.875000000000000000)
+          82.550000000000000000
+          2499.783333333333000000
+          171.450000000000000000
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        Caption = 'Remedial Booked'
+        Caption = 'Remedial Booked/Fitter'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1572,7 +1637,24 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       '         FROM sales_order'
       
         '         WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) ' +
-        'as Remedial_Fitting_Date'
+        'as Remedial_Fitting_Date,'
+      '        (SELECT TOP 1 Sales_Order'
+      '         FROM sales_order'
+      
+        '         WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) ' +
+        'as Remedial_Sales_Order,'
+      '        (SELECT TOP 1 Sales_Order_Number'
+      '         FROM sales_order'
+      
+        '         WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) ' +
+        'as Version_Number,'
+      '        (SELECT TOP 1 Fitter.Fitter_Name'
+      '         FROM Fitter'
+      '            RIGHT JOIN sales_order'
+      '              ON Fitter.Fitter = sales_order.Fitter'
+      
+        '         WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) ' +
+        'as Remedial_Fitter_Name'
       'FROM Fitter'
       '        RIGHT JOIN (Fitter AS Templater'
       '        RIGHT JOIN (Remedial_Type'

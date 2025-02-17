@@ -217,6 +217,14 @@ type
     edtAreaDecimalPlaces: TCREditInt;
     Label40: TLabel;
     edtSupplierCode: TEdit;
+    tbsAssociateCharges: TTabSheet;
+    pnlAssociateChargesHeader: TPanel;
+    chkbxPassOnCharges: TCheckBox;
+    pnlAssociateChargesRight: TPanel;
+    BitBtn4: TBitBtn;
+    btnChargesChange: TBitBtn;
+    btnChargesDelete: TBitBtn;
+    dbgAssociateCharges: TDBGrid;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -301,6 +309,11 @@ type
       State: TGridDrawState);
     procedure chkbxShowInactiveMaterialTypesClick(Sender: TObject);
     procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure chkbxPassOnChargesClick(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure btnChargesChangeClick(Sender: TObject);
+    procedure btnChargesDeleteClick(Sender: TObject);
+    procedure dbgAssociateChargesDblClick(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -350,6 +363,8 @@ type
     procedure SaveToDB;
     procedure CallMaintMaterialTypes(FuncMode: string);
     procedure ShowMaterialTypes;
+    procedure ShowAssociateCharges;
+    procedure CallMaintCharges(FuncMode: string);
   public
     procedure ConvertAddressToCustomer;
     procedure GetAddress(iAddress: integer);
@@ -376,7 +391,7 @@ uses
   wtMaintCustomerConts, WTSrchCustContacts, WTDBMemo, WTMaintContApp, WtMaintSalesInvoice,
   WTRSSalesInvoiceReprint, WTMaintEmail, WTWordOLE, WTExcelOLE, WTLUPaymentTerms, AllImages,
   WTMaintCustWorkGroup, wtLULevelofImportance, WTMaintCustMaterialType,
-  Shared.DragDrop.Helper;
+  Shared.DragDrop.Helper, WTMaintCustAssociateCharge;
 
 {$R *.DFM}
 
@@ -552,6 +567,7 @@ begin
       chkbxRequiresAppForPay.checked := false;
 
       chkbxInactive.Checked := false;
+      chkbxPassOnCharges.checked := false;
 
       edtCutOutDiscount.Text := '0.00';
       edtEdgeDiscount.Text := '0.00';
@@ -606,6 +622,7 @@ begin
 
       edtDepositTerms.Text := formatfloat('#,##0.00',qryOneCustomer.fieldbyname('Deposit_Terms').asfloat);
       edtAccountCode.Text := qryOneCustomer.fieldbyname('Account_Code').asstring;
+
       edtSupplierCode.Text := qryOneCustomer.fieldbyname('Supplier_Code').asstring;
 
       dblkpCreditStatus.keyvalue := qryOneCustomer.fieldbyname('Credit_Status').asstring;
@@ -640,6 +657,7 @@ begin
       chkbxFactored.enabled := (cmbCustomerCategory.itemindex = 0) or (cmbCustomerCategory.itemindex = 2);
 
       chkbxProspect.Checked := (qryOneCustomer.fieldbyname('Prospect').asstring = 'Y');
+      chkbxPassOnCharges.Checked := (qryOneCustomer.fieldbyname('Pass_On_Associate_Charges').asstring = 'Y');
 
       if qryOneCustomer.fieldbyname('Prospect_Action_Next_Date').asdatetime = 0 then
         edtActionDate.text := ''
@@ -666,6 +684,7 @@ begin
         begin
           ShowBranches;
           ShowMaterialTypes;
+          ShowAssociateCharges;
           RefreshQuotes;
           ShowEvents;
           dtmdlWorktops.CreateCustomerDocDirectory(edtCustomerName.text);
@@ -785,6 +804,7 @@ begin
   dblkpVAT.ListSource := dtmdlOneCustomer.dtsVAT;
   dblkpCreditStatus.listSource := dtmdlOneCustomer.dtsCreditStatus;
 
+  dbgAssociateCharges.DataSource := dtmdlOneCustomer.dtsAssociateCharges;
   dbgBranches.DataSource := dtmdlOneCustomer.dtsBranches;
   dbgEvents.DataSource := dtmdlOneCustomer.dtsEvents;
   dbgQuotes.DataSource := dtmdlOneCustomer.dtsQuotes;
@@ -804,6 +824,28 @@ end;
 procedure TfrmWtMaintCustomer.btnAddClick(Sender: TObject);
 begin
   CallMaintBranches('A');
+end;
+
+procedure TfrmWtMaintCustomer.ShowAssociateCharges;
+var
+  stext: string;
+begin
+  with dtmdlOneCustomer.qryAssociateCharges do
+    begin
+      close;
+
+      if dtmdlWorktops.IsSQL then
+        begin
+          sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+          SQL.Text := sText;
+        end;
+
+      parambyname('Customer').asinteger := Customer;
+      open;
+
+      btnChargesChange.enabled := (recordcount > 0);
+      btnChargesDelete.Enabled := btnChargesChange.enabled;
+    end;
 end;
 
 procedure TfrmWtMaintCustomer.ShowBranches;
@@ -2313,7 +2355,7 @@ procedure TfrmWtMaintCustomer.SaveToDB;
 var
   iPathLength, iFileLength: integer;
 begin
-  if CharInSet(FunctionMode[1], ['A', 'C', 'S']) then
+  if FunctionMode[1] in ['A', 'C', 'S'] then
   begin
     if (FunctionMode = 'A') or (FunctionMode = 'S') then
     begin
@@ -2335,7 +2377,7 @@ begin
       parambyname('Fax_Number').asstring := edtFaxNumber.Text;
 
       parambyname('Web_Address').asstring := edtWebAddress.Text;
-      parambyname('Email_Address').asstring := edtEmailAddress.Text;
+      parambyname('Email_Address').asstring := edtEmailAddress.Text + ' ';
 
       parambyname('Rep').asinteger := dblkpRep.KeyValue;
 
@@ -2363,8 +2405,8 @@ begin
       else
         parambyname('Level_of_Importance').asinteger := dblkpLevelOfImportance.keyvalue;
 
-      parambyname('Discount_Rate').asfloat := StrToFloatDef(edtDiscountRate.Text, 0, FormatSettings);
-      parambyname('Deposit_Terms').asfloat := StrToFloatDef(edtDepositTerms.Text, 0, FormatSettings);
+      parambyname('Discount_Rate').asfloat := strtofloat(edtDiscountRate.Text);
+      parambyname('Deposit_Terms').asfloat := strtofloat(edtDepositTerms.Text);
       parambyname('Vat').asinteger := dblkpVat.keyvalue;
 
       if dblkpPaymentTerms.keyvalue = 0 then
@@ -2384,7 +2426,7 @@ begin
       if trim(edtCreditLimit.Text) = '' then
         parambyname('Credit_Limit').asstring := '0'
       else
-        parambyname('Credit_Limit').asfloat := StrToFloatDef(edtCreditLimit.Text, 0, FormatSettings);
+        parambyname('Credit_Limit').asfloat := strtofloat(edtCreditLimit.Text);
 
       parambyname('Invoice_Label').asstring := edtInvoiceLabel.Text;
 
@@ -2409,7 +2451,7 @@ begin
       if trim(edtEndUserMarkup.Text) = '' then
         parambyname('End_User_Markup_Percentage').asfloat := 0.00
       else
-        parambyname('End_User_Markup_Percentage').asfloat := StrToFloatDef(edtEndUserMarkup.Text, 0, FormatSettings);
+        parambyname('End_User_Markup_Percentage').asfloat := strtofloat(edtEndUserMarkup.Text);
 
       if chkbxInactive.Checked then
         parambyname('Not_Active').asstring := 'Y'
@@ -2451,6 +2493,11 @@ begin
       else
         parambyname('Prospect').asstring := 'N';
 
+      if chkbxPassOnCharges.checked then
+        parambyname('Pass_on_Associate_Charges').asstring := 'Y'
+      else
+        parambyname('Pass_on_Associate_Charges').asstring := 'N';
+
       if trim(edtActionDate.Text) <> '' then
         parambyname('Prospect_Action_Next_Date').asdatetime := paDatestr(edtActionDate.Text)
       else
@@ -2462,14 +2509,14 @@ begin
       else
         parambyname('Narrative').AsInteger := frmWTDBMemo.iNarr;
 
-      parambyname('CutOut_Discount').asfloat := StrToFloatDef(edtCutOutDiscount.Text, 0, FormatSettings);
-      parambyname('Edge_Discount').asfloat := StrToFloatDef(edtEdgeDiscount.Text, 0, FormatSettings);
-      parambyname('Worktop_Discount').asfloat := StrToFloatDef(edtWorktopDiscount.Text, 0, FormatSettings);
-      parambyname('Survey_Price').asfloat := StrToFloatDef(edtSurveyPrice.Text, 0, FormatSettings);
-      parambyname('Installation_Price').asfloat := StrToFloatDef(edtInstallationPrice.Text, 0, FormatSettings);
-      parambyname('Delivery_Price').asfloat := StrToFloatDef(edtDeliveryPrice.Text, 0, FormatSettings);
+      parambyname('CutOut_Discount').asfloat := strtofloat(edtCutOutDiscount.Text);
+      parambyname('Edge_Discount').asfloat := strtofloat(edtEdgeDiscount.Text);
+      parambyname('Worktop_Discount').asfloat := strtofloat(edtWorktopDiscount.Text);
+      parambyname('Survey_Price').asfloat := strtofloat(edtSurveyPrice.Text);
+      parambyname('Installation_Price').asfloat := strtofloat(edtInstallationPrice.Text);
+      parambyname('Delivery_Price').asfloat := strtofloat(edtDeliveryPrice.Text);
 
-      parambyname('Unit_Cost').asfloat := StrToFloatDef(edtUnitCost.Text, 0, FormatSettings);
+      parambyname('Unit_Cost').asfloat := strtofloat(edtUnitCost.Text);
 
       if dblkpProspectStatus.keyvalue = 0 then
         parambyname('Prospect_Status').clear
@@ -2674,9 +2721,86 @@ begin
     end;
 end;
 
+procedure TfrmWtMaintCustomer.BitBtn4Click(Sender: TObject);
+begin
+  CallMaintCharges('A');
+end;
+
+procedure TfrmWtMaintCustomer.btnChargesChangeClick(Sender: TObject);
+begin
+  CallMaintCharges('C');
+end;
+
+procedure TfrmWtMaintCustomer.btnChargesDeleteClick(Sender: TObject);
+begin
+  if messagedlg('Delete the selected record?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      try
+        with qryDelete do
+          begin
+            close;
+            SQL.Text := 'DELETE FROM Customer_Associate_Charge WHERE ID = ' + inttostr(dbgAssociateCharges.DataSource.dataset.fieldbyname('ID').asinteger);
+            execsql;
+          end;
+        ShowAssociateCharges;
+      except
+        messagedlg(dbgAssociateCharges.DataSource.dataset.fieldbyname('Product_Description').asstring
+                    + ' has related data, therefore cannot be deleted', mtInformation,
+        [mbOk], 0);
+      end;
+    end;
+end;
+
+procedure TfrmWtMaintCustomer.dbgAssociateChargesDblClick(Sender: TObject);
+begin
+  if chkbxPassOnCharges.Checked then
+    btnChargesChangeClick(self);
+end;
+
+procedure TfrmWtMaintCustomer.chkbxPassOnChargesClick(Sender: TObject);
+begin
+  pnlAssociateChargesRight.Enabled := (Sender as TCheckbox).Checked;
+end;
+
 procedure TfrmWtMaintCustomer.chkbxShowInactiveMaterialTypesClick(Sender: TObject);
 begin
   ShowMaterialTypes;
+end;
+
+procedure TfrmWtMaintCustomer.CallMaintCharges(FuncMode: string);
+begin
+{Maintain Charges}
+  frmWTMaintCustAssociateCharge := TfrmWTMaintCustAssociateCharge.create(self);
+  try
+    if FuncMode = 'A' then
+      begin
+        frmWTMaintCustAssociateCharge.iCustomer := Customer;
+        frmWTMaintCustAssociateCharge.iCode := 0;
+      end
+    else
+      begin
+        frmWTMaintCustAssociateCharge.iCode := dbgAssociateCharges.datasource.DataSet.fieldbyname('ID').asinteger;
+        frmWTMaintCustAssociateCharge.iCustomer := dbgAssociateCharges.datasource.DataSet.fieldbyname('Customer').asinteger;
+        frmWTMaintCustAssociateCharge.CustomerName := dbgAssociateCharges.datasource.DataSet.fieldbyname('Associate_Customer_Name').asstring;
+        frmWTMaintCustAssociateCharge.iAssociatedCustomer := dbgAssociateCharges.datasource.DataSet.fieldbyname('Associate_Customer').asinteger;
+        frmWTMaintCustAssociateCharge.iProduct := dbgAssociateCharges.datasource.DataSet.fieldbyname('Product').asinteger;
+        frmWTMaintCustAssociateCharge.iVat := dbgAssociateCharges.datasource.DataSet.fieldbyname('Vat').asinteger;
+      end;
+
+    frmWTMaintCustAssociateCharge.FunctionMode := FuncMode;
+    frmWTMaintCustAssociateCharge.showmodal;
+    if frmWTMaintCustAssociateCharge.bOK then
+      begin
+        ShowAssociateCharges;
+        if frmWTMaintCustAssociateCharge.FunctionMode <> 'D' then
+          begin
+            dbgAssociateCharges.DataSource.DataSet.Locate('ID', Variant(inttostr(frmWTMaintCustAssociateCharge.iCode)),[lopartialKey]) ;
+          end;
+      end;
+
+  finally
+    frmWTMaintCustAssociateCharge.free;
+  end;
 end;
 
 end.
