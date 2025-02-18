@@ -109,7 +109,7 @@ var
 begin
   OldCursor := Screen.Cursor;
   Screen.Cursor := crHourglass;
-  iCode := dbgDetails.datasource.dataset.fieldbyname('Store').asinteger;
+//  iCode := dbgDetails.datasource.dataset.fieldbyname('Store').asinteger;
   frmWTMaintStore := TfrmWTMaintStore.create(Application);
   try
     frmWTMaintStore.sFuncMode := FuncMode;
@@ -131,7 +131,7 @@ begin
         refresh;
         if frmWTMaintStore.sFuncMode <> 'D' then
           begin
-            qryStore.Locate('Store', Variant(inttostr(frmWTMaintStore.iCode)),[lopartialKey]) ;
+            qryStore.Locate('Store', Variant(inttostr(iCode)),[lopartialKey]) ;
           end;
       end;
 

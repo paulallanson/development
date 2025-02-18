@@ -870,6 +870,26 @@
             <Form>frmWTUSSetDocuments</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\WTMaintCustAssociateCharge.pas">
+            <Form>frmWTMaintCustAssociateCharge</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSalesOrderCharges.pas">
+            <Form>frmWTLUSalesOrderCharges</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSalesOrderAssociateCharge.pas">
+            <Form>frmWTMaintSalesOrderAssociateCharge</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOAllocated.pas">
+            <Form>frmWTRPSOAllocated</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOAllocated.pas">
+            <Form>frmWTRSSOAllocated</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="FirebellyScheduler.dll">
             <ContainerId>File</ContainerId>
         </None>

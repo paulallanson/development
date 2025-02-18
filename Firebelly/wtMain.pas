@@ -8,7 +8,8 @@ uses
   Vcl.StdCtrls, FireDAC.Stan.Param;
 
 type
-  TfrmWTMain = class(TForm)
+  TfrmWTMain
+   = class(TForm)
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
     btnCustomers: TToolButton;

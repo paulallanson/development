@@ -12,6 +12,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
@@ -27,7 +28,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       1036
       41)
     object btnClose: TButton
-      Left = 923
+      Left = 917
       Top = 8
       Width = 75
       Height = 25
@@ -59,6 +60,31 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       Enabled = False
       TabOrder = 2
       OnClick = btnExcludeClick
+    end
+    object btnExcel: TBitBtn
+      Left = 822
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'Excel'
+      Enabled = False
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333FFFFFFFFFFFFFFF000000000000000077777777777777770FFFFFFFFFFF
+        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+        FFF07F3FF3FF3FF3FFF70F00F00F00F000F07F773773773777370FFFFFFFFFFF
+        FFF07FFFFFFFFFFFFFF70CCCCCCCCCCCCCC07777777777777777088CCCCCCCCC
+        C8807FF7777777777FF700000000000000007777777777777777333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnExcelClick
     end
   end
   object stsBrDetails: TStatusBar
@@ -142,6 +168,32 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         FieldName = 'Slab_Quantity'
         Title.Caption = 'No of Slabs'
         Width = 82
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Allocated_Stock_Code'
+        Width = 86
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Slab_Depth'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Slab_Length'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Thickness_mm'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Slab_Quantity'
         Visible = True
       end
       item
@@ -255,7 +307,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       object Label2: TLabel
         Left = 26
         Top = 48
-        Width = 15
+        Width = 14
         Height = 13
         Caption = 'To:'
       end
@@ -594,6 +646,10 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       
         '                Worktop_thickness_Slab_Size.Depth = Quote_Slab.D' +
         'epth) as Stock_Code,'
+      '        Quote_Slab.Allocated_Stock_Code,'
+      
+        '        Quote_Slab.Allocated_Stock_Alternative as Use_Alternativ' +
+        'e,'
       '        SUM(Quote_Slab.Quantity) as Slab_Quantity,'
       
         '        SUM(((((Quote_Slab.Length * Quote_Slab.Depth)/1000000.00' +
@@ -629,6 +685,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       
         '    ((Sales_Order.Sales_Order_Status >= 10) AND (Sales_Order.Sal' +
         'es_Order_Status < :Sales_Order_Status)) AND'
+      '    ((Sales_Order.inactive = '#39'N'#39')) AND'
       '    ((Sales_Order.Rep = :Rep) or (0 = :Rep)) AND'
       
         '    ((Sales_Order.Date_Required >= :Date_From) AND (Sales_Order.' +
@@ -640,41 +697,40 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       
         '    (((Customer.Is_Retail_Customer = :Is_Retail_Customer) AND (C' +
         'ustomer.Is_Commercial_Customer = :Is_Commercial_Customer)) or (:' +
-        'Is_Retail_Customer = '#39'A'#39'))'
-      '')
+        'Is_Retail_Customer = '#39'A'#39'))')
     Left = 200
     Top = 280
     ParamData = <
       item
         Name = 'Sales_Order_Status'
+        ParamType = ptInput
       end
       item
         Name = 'Rep'
         DataType = ftInteger
-      end
-      item
-        Name = 'Rep'
-        DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Date_From'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'IsFittingInOutlook'
+        ParamType = ptInput
       end
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
-      end
-      item
-        Name = 'Is_Retail_Customer'
+        ParamType = ptInput
       end>
   end
   object qryGetGSMStock: TFDQuery
@@ -1488,6 +1544,46 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       end
       item
         Name = 'Depth'
+      end>
+  end
+  object qrySalesOrdersOSize: TFDQuery
+    ConnectionName = 'Wt'
+    SQL.Strings = (
+      '')
+    Left = 32
+    Top = 360
+  end
+  object qryGetStockCodeOSize: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT TOP 1 Stock_item.Stock_code, Stock_item.Stock_item'
+      'FROM Stock_item'
+      '        RIGHT JOIN Worktop_Thickness_Slab_Size'
+      
+        '          ON Stock_item.Stock_item = Worktop_Thickness_Slab_Size' +
+        '.Stock_Item'
+      'WHERE Worktop_Thickness_Slab_Size.Worktop = :Worktop AND'
+      '      Worktop_Thickness_Slab_Size.Thickness = :Thickness AND'
+      '      Worktop_Thickness_Slab_Size.Length > :Length AND'
+      '      Worktop_Thickness_Slab_Size.Depth > :Depth')
+    Left = 790
+    Top = 268
+    ParamData = <
+      item
+        Name = 'WORKTOP'
+        ParamType = ptInput
+      end
+      item
+        Name = 'THICKNESS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'LENGTH'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DEPTH'
+        ParamType = ptInput
       end>
   end
 end

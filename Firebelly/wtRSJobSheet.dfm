@@ -25,6 +25,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 245
+    ExplicitWidth = 516
     DesignSize = (
       522
       89)
@@ -97,10 +99,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 176
-    ExplicitTop = 168
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 516
+    ExplicitHeight = 245
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -109,6 +109,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 516
       DesignSize = (
         522
         49)
@@ -120,7 +121,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
         Caption = 'Job No.'
       end
       object Label2: TLabel
-        Left = 342
+        Left = 336
         Top = 8
         Width = 80
         Height = 13
@@ -138,7 +139,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
         OnChange = EnableRun
       end
       object memSOrderNumber: TMemo
-        Left = 342
+        Left = 336
         Top = 24
         Width = 130
         Height = 21
@@ -146,6 +147,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
         ReadOnly = True
         TabOrder = 1
         OnChange = EnableRun
+        ExplicitLeft = 330
       end
     end
     object Panel3: TPanel
@@ -157,6 +159,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 95
+      ExplicitWidth = 516
       object lstbxDocuments: TListBox
         Left = 8
         Top = 14
@@ -204,8 +208,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 0
-      ExplicitHeight = 254
+      ExplicitWidth = 516
+      ExplicitHeight = 46
       object Label3: TLabel
         Left = 8
         Top = 5

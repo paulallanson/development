@@ -3,8 +3,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   Top = 66
   BorderStyle = bsDialog
   Caption = 'Global Price changes'
-  ClientHeight = 387
-  ClientWidth = 375
+  ClientHeight = 397
+  ClientWidth = 389
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -220,8 +220,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       ' ((Thickness = :Thickness) or (:Thickness = 0)) and'
       '      (Material_Type = :Material_Type)'
       'order by price_pointer')
-    Left = 320
-    Top = 72
+    Left = 336
+    Top = 82
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -247,8 +247,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'where (Price_pointer = :Price_pointer) and'
       #9#9'(effective_date <= now())'
       'order by effective_date desc')
-    Left = 320
-    Top = 312
+    Left = 248
+    Top = 254
     ParamData = <
       item
         Name = 'Price_pointer'
@@ -262,8 +262,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'from edge_Thickness'
       'WHERE (Material_Type = :Material_Type)'
       'order by Price_pointer')
-    Left = 320
-    Top = 248
+    Left = 336
+    Top = 302
     ParamData = <
       item
         Name = 'Material_Type'
@@ -276,8 +276,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'from Cutout_Thickness'
       'WHERE (Material_Type = :Material_Type)'
       'order by Price_pointer')
-    Left = 320
-    Top = 184
+    Left = 336
+    Top = 222
     ParamData = <
       item
         Name = 'Material_Type'
@@ -289,8 +289,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'select *'
       'from Extra_Charge'
       'order by Price_pointer')
-    Left = 320
-    Top = 128
+    Left = 336
+    Top = 152
   end
   object qryWTGroups: TFDQuery
     ConnectionName = 'wt'
@@ -315,7 +315,9 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
-      'from Material_Type')
+      'from Material_Type'
+      'WHERE Inactive = '#39'N'#39
+      'ORDER BY Description')
     Left = 168
     Top = 8
   end
@@ -334,8 +336,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       '((Thickness = :Thickness) or (:Thickness = 0)) and'
       '(Material_Type = :Material_Type)'
       'order by price_pointer')
-    Left = 320
-    Top = 16
+    Left = 336
+    Top = 12
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -359,12 +361,12 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'select *'
       'from thickness'
       'order by thickness_mm')
-    Left = 168
+    Left = 114
     Top = 256
   end
   object dtsThickness: TDataSource
     DataSet = qryThickness
-    Left = 208
+    Left = 164
     Top = 256
   end
 end

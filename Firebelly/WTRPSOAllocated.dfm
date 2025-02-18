@@ -1,7 +1,7 @@
-object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
+object frmWTRPSOAllocated: TfrmWTRPSOAllocated
   Left = 151
   Top = 107
-  Caption = 'Anticipated Material Ordering Report'
+  Caption = 'Allocated Stock Report'
   ClientHeight = 576
   ClientWidth = 1380
   Color = clBtnFace
@@ -161,9 +161,7 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
       Top = 237
       Width = 1309
       Height = 36
-      AfterPrint = qrbGroupFooterAfterPrint
       AlignToBottom = False
-      BeforePrint = qrbGroupFooterBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
@@ -1549,6 +1547,37 @@ object frmWTRPSOAntOrdering: TfrmWTRPSOAntOrdering
         Alignment = taLeftJustify
         AlignToBand = False
         Caption = 'qrlblStockCode'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+      object qrlblAllocatedSlabDescription: TQRLabel
+        Tag = 1
+        Left = 993
+        Top = 19
+        Width = 99
+        Height = 19
+        Size.Values = (
+          40.216666666666670000
+          2101.850000000000000000
+          40.216666666666670000
+          209.550000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        Caption = 'qrlblSlabDescription'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText

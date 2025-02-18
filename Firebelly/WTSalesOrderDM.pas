@@ -11,8 +11,8 @@ uses
 type
   TsopMode   = (sopAdd, sopChange, sopDelete, sopCopy, sopView, sopConvert, sopRemedial);
   TsolMode   = (solAdd, solChange, solDelete, solCopy, solRequote, solView);
+  TsocMode   = (socAdd, socChange, socDelete, socCopy, socRequote, socView);
   TsoevMode   = (soevAdd, soevChange, soevDelete, soevView);
-
 
   TdtmdlSalesOrder = class(TDataModule)
     qryAllSales: TFDQuery;
@@ -197,6 +197,16 @@ type
     qryDummyOld: TFDQuery;
     qryAllSalesBranch_Name: TWideStringField;
     qryJobsDummyOld: TFDQuery;
+    qrySOAllCharges: TFDQuery;
+    qryAssociateCharges: TFDQuery;
+    qrySOAddCharge: TFDQuery;
+    qrySOUpdCharge: TFDQuery;
+    qrySOUpdChargeStatus: TFDQuery;
+    qrySOCharges: TFDQuery;
+    dtsSOCharges: TDataSource;
+    qrySOCharge: TFDQuery;
+    qryDummyCharges: TFDQuery;
+    qryUpdSOChargeStatus: TFDQuery;
     procedure qryAllSalesStatus_TextGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
     procedure qryAllSalesTemplate_Date_NewGetText(Sender: TField;
@@ -209,6 +219,7 @@ type
     function GetNextSONumber: integer;
   public
     ActionEnd, ActionStart: TDateTime;
+    DateFrom, DateTo: TDateTime;
     ShowOnSchedule: boolean;
     ShowInactive : boolean;
     SortType: string;
@@ -228,6 +239,7 @@ type
     ProjectReference: string;
     QuoteReference: string;
     Reference: string;
+    SearchText: string;
     SiteName: string;
     Status: string;
     TemplateName: string;
@@ -241,6 +253,7 @@ type
     procedure Refreshdata;
     procedure RefreshFittingdata;
     procedure RefreshQuoteData;
+    procedure RefreshChargesData;
     function GetAddressCounty(tempCode: integer): string;
     function GetAddressEmail(tempCode: integer): string;
     function GetAddressFax(tempCode: integer): string;
@@ -405,6 +418,103 @@ type
 
   TSOPurchases = class;
 
+  TSOCharge = class
+  private
+    FParent: TSOrder;
+    FSOLNumber: integer;
+    FUnitPrice: currency;
+    FUnitCost: currency;
+    FQuantity: double;
+    FAssociateCustomer: integer;
+    FSellUnit: integer;
+    FVat: integer;
+    FID: integer;
+    FSalesInvoice: integer;
+    FProduct: integer;
+    FCostUnit: integer;
+    FVatRate: real;
+    FVatDescription: string;
+    FInvoiced: string;
+    FInvoiceNumber: string;
+    FInvoiceDate: TDateTime;
+    FProductCode: string;
+    FProductDescription: string;
+    FAssociateCustomerName: string;
+    FParentID: integer;
+    FSOCNumber: integer;
+    FParentSalesOrder: integer;
+    FParentReference: String;
+    FParentFittingDate: TDateTime;
+    FParentTemplateDate: TDateTime;
+    FParentDescription: string;
+    procedure SetParent(const Value: TSOrder);
+    procedure SetSOCNumber(const Value: integer);
+    procedure SetSOLNumber(const Value: integer);
+    procedure SetAssociateCustomer(const Value: integer);
+    procedure SetCostUnit(const Value: integer);
+    procedure SetID(const Value: integer);
+    procedure SetInvoiced(const Value: string);
+    procedure SetInvoiceDate(const Value: TDateTime);
+    procedure SetInvoiceNumber(const Value: string);
+    procedure SetProduct(const Value: integer);
+    procedure SetQuantity(const Value: double);
+    procedure SetSalesInvoice(const Value: integer);
+    procedure SetSellUnit(const Value: integer);
+    procedure SetUnitCost(const Value: currency);
+    procedure SetUnitPrice(const Value: currency);
+    procedure SetVat(const Value: integer);
+    procedure SetVatDescription(const Value: string);
+    procedure SetVatRate(const Value: real);
+    procedure SetAssociateCustomerName(const Value: string);
+    procedure SetProductCode(const Value: string);
+    procedure SetProductDescription(const Value: string);
+    function GetTotalGoods: currency;
+    procedure SetParentID(const Value: integer);
+    procedure SetParentFittingDate(const Value: TDateTime);
+    procedure SetParentReference(const Value: String);
+    procedure SetParentSalesOrder(const Value: integer);
+    procedure SetParentTemplateDate(const Value: TDateTime);
+    procedure SetParentDescription(const Value: string);
+  public
+    constructor Create(SOrder : TSOrder);
+    destructor Destroy; override;
+    function Clone : TSOCharge;
+    procedure LoadFromDB;
+    procedure SaveToDB;
+    procedure UpdateDB;
+    procedure DeleteFromDB;
+    property AssociateCustomer: integer read FAssociateCustomer write SetAssociateCustomer;
+    property AssociateCustomerName: string read FAssociateCustomerName write SetAssociateCustomerName;
+    property CostUnit: integer read FCostUnit write SetCostUnit;
+    property ID: integer read FID write SetID;
+    property Invoiced: string read FInvoiced write SetInvoiced;
+    property InvoiceNumber: string read FInvoiceNumber write SetInvoiceNumber;
+    property InvoiceDate: TDateTime read FInvoiceDate write SetInvoiceDate;
+    property SalesInvoice: integer read FSalesInvoice write SetSalesInvoice;
+    property SOCNumber: integer read FSOCNumber write SetSOCNumber;
+    property Product: integer read FProduct write SetProduct;
+    property ProductCode: string read FProductCode write SetProductCode;
+    property ProductDescription: string read FProductDescription write SetProductDescription;
+    property Parent: TSOrder read FParent write SetParent;
+    property ParentDescription: string read FParentDescription write SetParentDescription;
+    property ParentID: integer read FParentID write SetParentID;
+    property ParentSalesOrder: integer read FParentSalesOrder write SetParentSalesOrder;
+    property ParentFittingDate: TDateTime read FParentFittingDate write SetParentFittingDate;
+    property ParentReference: String read FParentReference write SetParentReference;
+    property ParentTemplateDate: TDateTime read FParentTemplateDate write SetParentTemplateDate;
+    property Quantity: double read FQuantity write SetQuantity;
+    property SellUnit: integer read FSellUnit write SetSellUnit;
+    property SOLNumber: integer read FSOLNumber write SetSOLNumber;
+    property TotalGoods: currency read GetTotalGoods;
+    property UnitPrice: currency read FUnitPrice write SetUnitPrice;
+    property UnitCost: currency read FUnitCost write SetUnitCost;
+    property Vat: integer read FVat write SetVat;
+    property VatDescription: string read FVatDescription write SetVatDescription;
+    property VatRate: real read FVatRate write SetVatRate;
+  end;
+
+  TSOCharges = class;
+
   TSOLine = class
   private
     FSOLNumber: integer;
@@ -568,8 +678,32 @@ type
     property Parent : TSOrder read FParent;
   end;
 
-  TSOLines  = class
+  TSOCharges  = class
   private
+    FParent: TSOrder;
+    FItems: TList;
+    function GetCount: integer;
+    function GetMaxLineNo: integer;
+    function GetItems(Index: integer): TSOCharge;
+    procedure SetItems(Index: integer; const Value: TSOCharge);
+  public
+    constructor Create(SOrder : TSOrder);
+    destructor Destroy; override;
+    procedure Add(aCharge : TSOCharge);
+    procedure Clear;
+    function  Clone : TSOCharges;
+    procedure Delete(const Index : integer);
+    function  IndexOf(const ChargeNo: integer) : integer;
+    procedure Renumber;
+    property Count : integer read GetCount;
+    property Items[Index : integer] : TSOCharge read GetItems write SetItems;
+      default;
+    property MaxLineNo: integer read GetMaxLineNo;
+    property Parent : TSOrder read FParent;
+  end;
+
+  TSOLines  = class
+  Private
     FParent: TSOrder;
     FItems: TList;
     function GetCount: integer;
@@ -613,6 +747,7 @@ type
     FInactive: string;
     FReason: integer;
     FInstallAddress: integer;
+    FSOCharges: TSOCharges;
     FSOLines: TSOLines;
     FAddress: integer;
     FRep: integer;
@@ -745,8 +880,13 @@ type
     function  Clone : TSOrder;
     procedure AddQuoteLine;
     procedure DeleteFromDB;
+    procedure DeleteCharges;
     procedure DeleteEvents;
     procedure DeleteLines;
+    procedure LoadAssociateCharges;
+    procedure LoadCharges;
+    procedure LoadChargeLine(ChargeID: integer);
+    procedure LoadChargeOrderLine(ChargeID: integer);
     procedure LoadEvents;
     procedure LoadFromDB;
     procedure LoadFromJob;
@@ -758,6 +898,7 @@ type
     procedure LoadQuoteLines;
     procedure MoveQuoteDocuments;
     procedure SaveToDB(TempAll: boolean);
+    procedure SaveCharges;
     procedure SaveEvents;
     procedure SaveLines;
     procedure SaveSONumber;
@@ -765,6 +906,7 @@ type
     property AccountManager: integer read FAccountManager write SetAccountManager;
     property ApplianceDetails: string read FApplianceDetails write SetApplianceDetails;
     property BranchExist: boolean read FBranchExist write SetBranchExist;
+    property Charges: TSOCharges read FSOCharges;
     property CollectionOnly: string read FCollectionOnly write SetCollectionOnly;
     property ContactName: string read FContactName write SetContactName;
     property ContactNo: integer read FContactNo write SetContactNo;
@@ -1346,6 +1488,42 @@ begin
 
 end;
 
+procedure TdtmdlSalesOrder.RefreshChargesdata;
+var
+  sTemp: string;
+  dtStart: TDateTime;
+function qDate(const aDate : TDateTime) : string;
+  begin
+    if dtmdlWorktops.IsSQL then
+      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
+    else
+      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
+  end;
+begin
+  sTemp := '';
+
+  dtStart := date;
+
+  with qrySOCharges do
+    begin
+      sql.Clear;
+      sTemp := sTemp + qryDummyCharges.sql.text;
+
+      if SearchText <> '' then
+        sTemp := sTemp + ' AND ((Sales_order.Reference LIKE ''%' + SearchText + '%'') OR (Sales_order.Order_Ref_No LIKE ''%' + SearchText + '%'')' +
+                         ' OR   (Sales_order.Descriptive_Reference LIKE ''%' + SearchText + '%'') OR (Product.Product_Code LIKE ''%' + SearchText + '%''))';
+
+      sTemp := sTemp + 'ORDER BY Sales_Order_Associate_Charge.Sales_Order DESC, Product.Product_Code ';
+
+      sql.text := sTemp;
+      parambyname('Associate_Customer').asinteger := Customer;
+      parambyname('Date_From').asdateTime := DateFrom;
+      parambyname('Date_To').asdateTime := DateTo;
+
+      open;
+    end;
+end;
+
 function TdtmdlSalesOrder.UsingSearch: boolean;
 begin
   if (CustomerName <> '') or
@@ -1376,6 +1554,7 @@ begin
   SODate :=           0;
   InstallAddress :=  0;
   InstallationAddress := 0;
+  FSOCharges.Clear;
   FSOEvents.Clear;
   FSOLines.Clear;
   FSOPurchases.Clear;
@@ -1446,6 +1625,8 @@ begin
   Result.TemplateDocsReturned := self.TemplateDocsReturned;
   Result.TemplateDuration := self.TemplateDuration;
   Result.TemplateInSchedule := self.TemplateInSchedule;
+  Result.FSOCharges.Free;
+  Result.FSOCharges :=  Self.FSOCharges.Clone;
   Result.FSOEvents.Free;
   Result.FSOEvents :=  Self.FSOEvents.Clone;
   Result.FSOLines.Free;
@@ -1457,6 +1638,7 @@ end;
 constructor TSOrder.Create(DataModule: TdtmdlSalesOrder);
 begin
   FDataModule := DataModule;
+  FSOCharges := TSOCharges.Create(Self);
   FSOEvents := TSOEvents.Create(Self);
   FSOLines := TSOLines.Create(Self);
   FSOPurchases := TSOPurchases.Create(Self);
@@ -1483,6 +1665,28 @@ begin
   end;
 end;
 
+procedure TSOrder.DeleteCharges;
+begin
+  with FDataModule.qryZero do
+  begin
+    SQL.Clear;
+    SQL.Add('UPDATE SOAC ' +
+            'SET SOAC.Charge_Invoiced = ''N''' +
+            'FROM Sales_Order_Associate_Charge ' +
+                                      'INNER JOIN Sales_Order_Associate_Charge AS SOAC ' +
+                                                   'ON Sales_Order_Associate_Charge.Parent_ID = SOAC.ID '+
+            'WHERE Sales_Order_Associate_Charge.Sales_Order = ' + IntToStr(DbKey));
+    ExecSQL;
+  end;
+
+  with FDataModule.qryZero do
+  begin
+    SQL.Clear;
+    SQL.Add('DELETE FROM Sales_Order_Associate_Charge WHERE Sales_Order = ' + IntToStr(DbKey));
+    ExecSQL;
+  end;
+end;
+
 procedure TSOrder.DeleteEvents;
 begin
   with FDataModule.qryZero do
@@ -1496,6 +1700,7 @@ end;
 
 destructor TSOrder.Destroy;
 begin
+  FSOCharges.Free;
   FSOEvents.Free;
   FSOLines.Free;
   FSOPurchases.Free;
@@ -1604,7 +1809,7 @@ begin
     DateType :=       fieldbyname('Date_Type').asstring;
     ExtraNotes :=     fieldbyname('Extra_Notes').asinteger;
     NarrativeText :=    datamodule.GetNarrative(ExtraNotes);
-    DepositTerms :=  fieldbyname('Deposit_Terms_SO').asfloat;
+    DepositTerms :=  fieldbyname('Deposit_Terms').asfloat;
     DoNotInvoice := (fieldbyname('Do_Not_Invoice').asstring = 'Y');
 
     if soMode = sopCopy then
@@ -1623,7 +1828,7 @@ begin
     CustomerBranch := fieldbyname('Branch_No').asinteger;
     CustomerBranchName :=   dtmdlWorktops.GetCustomerBranchName(Customer, CustomerBranch);
 
-    CustomerName:=   fieldbyname('Customer_Name_SO').asstring;
+    CustomerName:=   fieldbyname('Customer_Name').asstring;
 
     BranchExist := dtmdlWorktops.DoesCustomerBranchExist(Customer);
 
@@ -1697,6 +1902,7 @@ begin
     Close;
   end;
   LoadLines;
+  LoadCharges;
   LoadPurchaseOrders;
   if (soMode <> sopCopy) then
     LoadEvents;
@@ -1712,7 +1918,6 @@ begin
     ParamByName('Job').AsInteger := Datamodule.JobNo;
     Open;
     Address :=  fieldbyname('Address').asinteger;
-
     ApplianceDetails := '';
     InstallAddress :=  fieldbyname('Install_Address').asinteger;
     DateRequired :=    fieldbyname('Date_Required').asdatetime;
@@ -1823,6 +2028,7 @@ begin
     Close;
   end;
   LoadQuoteLines;
+  LoadAssociateCharges;
   LoadQuoteEvents;
 end;
 
@@ -1878,6 +2084,150 @@ begin
       aLine.SurveyPrice := FieldByName('Survey_Price').asfloat;
       aLine.UnitPrice := FieldByName('Unit_Price').asfloat;
       aLine.UnitCost := FieldByName('Unit_Cost').asfloat;
+      aLine.Vat := FieldByName('Vat').asinteger;
+      aLine.VatDescription := FieldByName('Vat_Description').asstring;
+      aLine.VatRate := FieldByName('Vat_Rate').asfloat;
+      FSOLines.Add(aLine);
+      Next;
+    end;
+    Close;
+  end;
+end;
+
+procedure TSOrder.LoadCharges;
+var
+  aCharge : TSOCharge;
+  iCount: integer;
+begin
+  FSOCharges.Clear;
+  iCount := 0;
+  with FDataModule.qrySOAllCharges do
+  begin
+    Close;
+    ParamByName('Sales_Order').AsInteger := DbKey;
+    Open;
+    while not(EOF) do
+    begin
+      iCount := iCount + 1;
+      aCharge := TSOCharge.Create(Self);
+      aCharge.ID := fieldbyname('ID').asinteger;
+      aCharge.AssociateCustomer := fieldbyname('Associate_Customer').asinteger;
+      aCharge.AssociateCustomerName := fieldbyname('Customer_Name').asstring;
+      aCharge.ParentID := fieldbyname('Parent_ID').asinteger;
+      aCharge.Product := fieldbyname('Product').asinteger;
+      aCharge.ProductCode := fieldbyname('Product_code').asstring;
+      aCharge.ProductDescription := fieldbyname('Product_Description').asstring;
+      aCharge.SOLNumber := fieldbyname('Sales_Order_Line_No').asinteger;
+      aCharge.SellUnit := fieldbyname('Sell_Unit').AsInteger;
+      aCharge.CostUnit := fieldbyname('Cost_Unit').AsInteger;
+      aCharge.Quantity := fieldbyname('Quantity').asfloat;
+      aCharge.SOCNumber := icount;
+      aCharge.UnitPrice := FieldByName('Unit_Price').asfloat;
+      aCharge.UnitCost := FieldByName('Unit_Cost').asfloat;
+      aCharge.Vat := FieldByName('Vat').asinteger;
+      aCharge.VatDescription := FieldByName('Vat_Description').asstring;
+      aCharge.VatRate := FieldByName('Vat_Rate').asfloat;
+      aCharge.Invoiced := FieldByName('Charge_Invoiced').asstring;
+      aCharge.InvoiceNumber := FieldByName('Invoice_No').asstring;
+      aCharge.InvoiceDate := FieldByName('Invoice_Date').asdatetime;
+      aCharge.SalesInvoice := FieldByName('Sales_Invoice').asinteger;
+      aCharge.ParentID := FieldByName('Parent_ID').asinteger;
+      aCharge.SOLNumber := FieldByName('Sales_Order_Line_No').asinteger;
+
+      aCharge.ParentSalesOrder := FieldByName('Parent_Sales_Order').asinteger;
+      aCharge.ParentFittingDate := FieldByName('Parent_Fitting_Date').asdatetime;
+      aCharge.ParentTemplateDate := FieldByName('Parent_Template_Date').asdatetime;
+      aCharge.ParentDescription := FieldByName('Parent_Description').asstring;
+      aCharge.ParentReference := FieldByName('Parent_Reference').asstring;
+
+      FSOCharges.Add(aCharge);
+      Next;
+    end;
+    Close;
+  end;
+end;
+
+procedure TSOrder.LoadChargeLine(ChargeID: integer);
+var
+  aCharge : TSOCharge;
+  iCount: integer;
+begin
+  iCount := 0;
+  with FDataModule.qrySOCharge do
+  begin
+    Close;
+    ParamByName('ID').AsInteger := ChargeID;
+    Open;
+    while not(EOF) do
+    begin
+      iCount := iCount + 1;
+      aCharge := TSOCharge.Create(Self);
+      aCharge.AssociateCustomer := fieldbyname('Associate_Customer').asinteger;
+      aCharge.AssociateCustomerName := fieldbyname('Customer_Name').asstring;
+      aCharge.Product := fieldbyname('Product').asinteger;
+      aCharge.ProductCode := fieldbyname('Product_code').asstring;
+      aCharge.ProductDescription := fieldbyname('Product_Description').asstring;
+      aCharge.SellUnit := fieldbyname('Sell_Unit').AsInteger;
+      aCharge.CostUnit := fieldbyname('Cost_Unit').AsInteger;
+      aCharge.Quantity := fieldbyname('Quantity').asfloat;
+      aCharge.ParentID := ChargeID;
+      aCharge.SOCNumber := charges.count+1;
+      aCharge.UnitPrice := FieldByName('Unit_Price').asfloat;
+      aCharge.UnitCost := FieldByName('Unit_Cost').asfloat;
+      aCharge.Vat := FieldByName('Vat').asinteger;
+      aCharge.VatDescription := FieldByName('Vat_Description').asstring;
+      aCharge.VatRate := FieldByName('Vat_Rate').asfloat;
+      aCharge.Invoiced := 'N';
+      aCharge.InvoiceNumber := '';
+      aCharge.InvoiceDate := 0;
+      aCharge.SalesInvoice := 0;
+
+      aCharge.ParentSalesOrder := FieldByName('Parent_Sales_Order').asinteger;
+      aCharge.ParentFittingDate := FieldByName('Parent_Fitting_Date').asdatetime;
+      aCharge.ParentTemplateDate := FieldByName('Parent_Template_Date').asdatetime;
+      aCharge.ParentReference := FieldByName('Parent_Reference').asstring;
+
+      FSOCharges.Add(aCharge);
+      Next;
+    end;
+    Close;
+  end;
+end;
+
+procedure TSOrder.LoadChargeOrderLine(ChargeID: integer);
+var
+  aLine : TSOLine;
+begin
+  with FDataModule.qrySOCharge do
+  begin
+    Close;
+    ParamByName('ID').AsInteger := ChargeID;
+    Open;
+    while not(EOF) do
+    begin
+      aLine := TSOLine.Create(Self);
+      aLine.SOLNumber := lines.Count + 1;
+      aLine.Quantity := 1;
+      aLine.CostUnit := 1;
+      aLine.MarkupValue := 0.00;
+      aLine.DeliveryPrice := 0.00;
+      aLine.Description := FieldByName('Product_Description').asstring;
+      aLine.DiscountValue := 0.00;
+      aLine.InstallPrice := 0.00;
+      aLine.WasteValue := 0.00;
+      aLine.Job := 0;
+      aLine.Quote := 0;
+      aLine.NettPrice := 0.00;
+      aLine.QtyAllocated := 0;
+      aLine.QtyDelivered := 0;
+      aLine.QtyInvoiced := 0;
+      aLine.SellUnit := 1;
+      aline.Product := FieldByName('Product').asinteger;
+      aLine.StockDescription := FieldByName('Product_Description').asstring;
+      aLine.StockCode := FieldByName('Product_Code').asstring;
+      aLine.SurveyPrice := 0.00;
+      aLine.UnitPrice := FieldByName('Unit_Price').asfloat;
+      aLine.UnitCost := 0;
       aLine.Vat := FieldByName('Vat').asinteger;
       aLine.VatDescription := FieldByName('Vat_Description').asstring;
       aLine.VatRate := FieldByName('Vat_Rate').asfloat;
@@ -1975,6 +2325,57 @@ begin
   end;
 end;
 
+procedure TSOrder.LoadAssociateCharges;
+var
+  aCharge : TSOCharge;
+  iCount: integer;
+  sText: string;
+begin
+  FSOCharges.Clear;
+  iCount := 0;
+  with FDataModule.qryAssociateCharges do
+  begin
+    Close;
+    if dtmdlWorktops.IsSQL then
+      begin
+        sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+        SQL.Text := sText;
+      end;
+
+    ParamByName('Customer').AsInteger := self.Customer;
+    Open;
+    while not(EOF) do
+    begin
+      iCount := iCount + 1;
+      aCharge := TSOCharge.Create(Self);
+      aCharge.AssociateCustomer := fieldbyname('Associate_Customer').asinteger;
+      aCharge.AssociateCustomerName := fieldbyname('Associate_Customer_Name').asstring;
+      aCharge.Product := fieldbyname('Product').asinteger;
+      aCharge.ProductCode := fieldbyname('Product_code').asstring;
+      aCharge.ProductDescription := fieldbyname('Product_Description').asstring;
+      aCharge.CostUnit := 1;
+      aCharge.SellUnit := 1;
+      aCharge.Quantity := 1;
+      aCharge.SOCNumber := icount;
+      aCharge.UnitPrice := FieldByName('Unit_Price').asfloat;
+      aCharge.UnitCost := FieldByName('Unit_Cost').asfloat;
+      aCharge.Vat := FieldByName('Vat').asinteger;
+      aCharge.VatDescription := FieldByName('Vat_Description').asstring;
+      aCharge.VatRate := FieldByName('Vat_Rate').asfloat;
+      aCharge.Invoiced := 'N';
+      aCharge.InvoiceNumber := '';
+      aCharge.InvoiceDate := 0;
+      aCharge.SalesInvoice := 0;
+      aCharge.ParentID := 0;
+      aCharge.SOLNumber := 0;
+      FSOCharges.Add(aCharge);
+      Next;
+    end;
+    Close;
+  end;
+end;
+
+
 procedure TSOrder.LoadQuoteLines;
 var
   aLine : TSOLine;
@@ -2069,7 +2470,8 @@ begin
   else
     begin
       DeleteLines;  { Get rid of any already in database }
-      FSOLines.Renumber;
+//      20/12/2024 Change made to stop numbering the lines when creating the order
+//      FSOLines.Renumber;
       for i := 0 to Pred(FSOLines.Count) do
         begin
           if (OrderMode = sopCopy) and (FSOLines[i].Quote <> 0) then
@@ -2078,6 +2480,44 @@ begin
           FSOLines[i].SaveToDB;
         end;
     end;
+end;
+
+procedure TSOrder.SaveCharges;
+var
+  i : integer;
+begin
+  { When saving, we have to delete all charge records (as the numbering may
+    change when records in the middle of a sequence are deleted) and then
+    re-write them using the new numbering. }
+
+  for i := 0 to Pred(FSOCharges.Count) do
+    begin
+      if FSOCharges[i].Invoiced <> 'N' then
+        FSOCharges[i].UpdateDB
+      else
+        FSOCharges[i].SaveToDB;
+    end;
+
+(*  if (Status > 10) or (FSOPurchases.count > 0) then
+    begin
+      for i := 0 to Pred(FSOLines.Count) do
+        begin
+          if FSOLines[i].Mode = 'C' then
+            FSOLines[i].UpdateDB
+          else
+            FSOLines[i].SaveToDB;
+        end;
+    end
+  else
+    begin
+*)
+(*  DeleteCharges;  { Get rid of any already in database }
+  FSOCharges.Renumber;
+  for i := 0 to Pred(FSOCharges.Count) do
+    begin
+      FSOCharges[i].SaveToDB;
+    end;
+*)
 end;
 
 procedure TSOrder.SaveSONumber;
@@ -2098,8 +2538,6 @@ begin
   if DbKey = 0 then
     begin
       DbKey := FDataModule.GetNextSONumber;
-      dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4000, self.dbkey, 0, 0, 0, 'Number of Lines: ' + inttostr(self.Lines.count));
-
       with FDataModule.qrySOAddHeader do
         begin
           ParamByName('Sales_Order').AsInteger := DbKey;
@@ -2240,8 +2678,6 @@ begin
   else
   if TempAll then
     begin
-      dtmdlWorktops.AddAuditTrail(frmWTMain.Operator, 4100, self.dbkey, 0, 0, 0,  'Number of Lines: ' + inttostr(self.Lines.count));
-
       with FDataModule.qrySOUpHeader do
         begin
           ParamByName('Sales_Order').AsInteger := DbKey;
@@ -2376,6 +2812,7 @@ begin
     end;
   SaveLines;
   SaveEvents;
+  SaveCharges;
 
   //Update any Remedials associated with this order
   if FittingDocsReturned then
@@ -4251,6 +4688,398 @@ begin
       parambyname('Completed').asstring := tempStatus;
       execsql;
     end;
+end;
+
+{ TSOCharge }
+
+function TSOCharge.Clone: TSOCharge;
+begin
+  Result := TSOCharge.Create(FParent);
+  Result.AssociateCustomer      :=          self.AssociateCustomer;
+  Result.CostUnit               :=          self.CostUnit;
+  Result.ID                     :=          self.ID;
+  Result.Invoiced               :=          self.Invoiced;
+  Result.InvoiceNumber          :=          self.InvoiceNumber;
+  Result.InvoiceDate            :=          self.InvoiceDate;
+  Result.SalesInvoice           :=          self.SalesInvoice;
+  Result.SOCNumber              :=          self.SOCNumber;
+  Result.SOLNumber              :=          self.SOLNumber;
+  Result.ParentID               :=          self.ParentID;
+  Result.ParentDescription      :=          self.ParentDescription;
+  Result.ParentSalesOrder       :=          self.ParentSalesOrder;
+  Result.ParentFittingDate      :=          self.ParentFittingDate;
+  Result.ParentReference        :=          self.ParentReference;
+  Result.ParentTemplateDate     :=          self.ParentTemplateDate;
+  Result.Product                :=          self.Product;
+  Result.Quantity               :=          self.Quantity;
+  Result.SellUnit               :=          self.SellUnit;
+  Result.UnitPrice              :=          self.UnitPrice;
+  Result.UnitCost               :=          self.UnitCost;
+  Result.Vat                    :=          self.Vat;
+  Result.VatDescription         :=          self.VatDescription;
+  Result.VatRate                :=          self.VatRate;
+end;
+
+constructor TSOCharge.Create(SOrder: TSOrder);
+begin
+  FParent := SOrder;
+end;
+
+procedure TSOCharge.DeleteFromDB;
+begin
+  if self.parentID <> 0 then
+    begin
+      with parent.FDataModule.qryZero do
+      begin
+        SQL.Clear;
+        SQL.Add('UPDATE Sales_Order_Associate_Charge SET Charge_Invoiced = ''N'' WHERE ID = ' + IntToStr(self.ParentID));
+        ExecSQL;
+      end;
+    end;
+
+  with parent.FDataModule.qryZero do
+  begin
+    SQL.Clear;
+    SQL.Add('DELETE FROM Sales_Order_Associate_Charge WHERE ID = ' + IntToStr(self.ID));
+    ExecSQL;
+  end;
+end;
+
+destructor TSOCharge.Destroy;
+begin
+
+  inherited;
+end;
+
+function TSOCharge.GetTotalGoods: currency;
+begin
+  result := (UnitPrice * (Quantity/SellUnit));
+end;
+
+procedure TSOCharge.LoadFromDB;
+begin
+end;
+
+procedure TSOCharge.SaveToDB;
+begin
+  with FParent.FDataModule.qryZero do
+  begin
+    SQL.Clear;
+    SQL.Add('DELETE FROM Sales_Order_Associate_Charge WHERE ID = ' + IntToStr(ID));
+    ExecSQL;
+  end;
+
+  with FParent.FDataModule.qrySOAddCharge do
+  begin
+    ParamByName('Sales_Order').AsInteger := FParent.DbKey;
+    Parambyname('Associate_Customer').asinteger := AssociateCustomer;
+    Parambyname('Product').asinteger := Product;
+    Parambyname('Quantity').asfloat := Quantity;
+    ParambyName('Unit_Price').asfloat := UnitPrice;
+    ParambyName('Unit_Cost').asfloat := UnitCost;
+    Parambyname('Cost_unit').asinteger := CostUnit;
+    ParambyName('Sell_Unit').asinteger := SellUnit;
+    if vat = 0 then
+      ParambyName('Vat').asinteger := 1
+    else
+      ParambyName('Vat').asinteger := Vat;
+    ParambyName('Charge_Invoiced').asstring := Invoiced;
+    if SalesInvoice = 0 then
+      ParambyName('Sales_Invoice').clear
+    else
+      ParambyName('Sales_Invoice').asinteger := SalesInvoice;
+    if SOLNumber = 0 then
+      ParambyName('Sales_Order_Line_no').clear
+    else
+      ParambyName('Sales_Order_Line_no').asinteger := SOLNumber;
+    if ParentID = 0 then
+      ParambyName('Parent_ID').clear
+    else
+      ParambyName('Parent_ID').asinteger := ParentID;
+    ExecSQL;
+  end;
+
+  if ParentID > 0 then
+    begin
+      with FParent.FDataModule.qrySOUpdChargeStatus do
+        begin
+          close;
+          parambyname('ID').asinteger := ParentID;
+          parambyname('Charge_Invoiced').asstring := 'O';
+          execsql;
+        end;
+    end;
+
+end;
+
+procedure TSOCharge.SetAssociateCustomer(const Value: integer);
+begin
+  FAssociateCustomer := Value;
+end;
+
+procedure TSOCharge.SetAssociateCustomerName(const Value: string);
+begin
+  FAssociateCustomerName := Value;
+end;
+
+procedure TSOCharge.SetCostUnit(const Value: integer);
+begin
+  FCostUnit := Value;
+end;
+
+procedure TSOCharge.SetID(const Value: integer);
+begin
+  FID := Value;
+end;
+
+procedure TSOCharge.SetInvoiced(const Value: string);
+begin
+  FInvoiced := Value;
+end;
+
+procedure TSOCharge.SetInvoiceDate(const Value: TDateTime);
+begin
+  FInvoiceDate := Value;
+end;
+
+procedure TSOCharge.SetInvoiceNumber(const Value: string);
+begin
+  FInvoiceNumber := Value;
+end;
+
+procedure TSOCharge.SetParent(const Value: TSOrder);
+begin
+  FParent := Value;
+end;
+
+procedure TSOCharge.SetParentDescription(const Value: string);
+begin
+  FParentDescription := Value;
+end;
+
+procedure TSOCharge.SetParentFittingDate(const Value: TDateTime);
+begin
+  FParentFittingDate := Value;
+end;
+
+procedure TSOCharge.SetParentID(const Value: integer);
+begin
+  FParentID := Value;
+end;
+
+procedure TSOCharge.SetParentReference(const Value: String);
+begin
+  FParentReference := Value;
+end;
+
+procedure TSOCharge.SetParentSalesOrder(const Value: integer);
+begin
+  FParentSalesOrder := Value;
+end;
+
+procedure TSOCharge.SetParentTemplateDate(const Value: TDateTime);
+begin
+  FParentTemplateDate := Value;
+end;
+
+procedure TSOCharge.SetProduct(const Value: integer);
+begin
+  FProduct := Value;
+end;
+
+procedure TSOCharge.SetProductCode(const Value: string);
+begin
+  FProductCode := Value;
+end;
+
+procedure TSOCharge.SetProductDescription(const Value: string);
+begin
+  FProductDescription := Value;
+end;
+
+procedure TSOCharge.SetQuantity(const Value: double);
+begin
+  FQuantity := Value;
+end;
+
+procedure TSOCharge.SetSalesInvoice(const Value: integer);
+begin
+  FSalesInvoice := Value;
+end;
+
+procedure TSOCharge.SetSellUnit(const Value: integer);
+begin
+  FSellUnit := Value;
+end;
+
+procedure TSOCharge.SetSOCNumber(const Value: integer);
+begin
+  FSOCNumber := Value;
+end;
+
+procedure TSOCharge.SetSOLNumber(const Value: integer);
+begin
+  FSOLNumber := Value;
+end;
+
+procedure TSOCharge.SetUnitCost(const Value: currency);
+begin
+  FUnitCost := Value;
+end;
+
+procedure TSOCharge.SetUnitPrice(const Value: currency);
+begin
+  FUnitPrice := Value;
+end;
+
+procedure TSOCharge.SetVat(const Value: integer);
+begin
+  FVat := Value;
+end;
+
+procedure TSOCharge.SetVatDescription(const Value: string);
+begin
+  FVatDescription := Value;
+end;
+
+procedure TSOCharge.SetVatRate(const Value: real);
+begin
+  FVatRate := Value;
+end;
+
+procedure TSOCharge.UpdateDB;
+begin
+  with FParent.FDataModule.qrySOUpdCharge do
+  begin
+    ParamByName('ID').AsInteger := ID;
+    ParamByName('Sales_Order').AsInteger := FParent.DbKey;
+    Parambyname('Associate_Customer').asinteger := AssociateCustomer;
+    Parambyname('Product').asinteger := Product;
+    Parambyname('Quantity').asfloat := Quantity;
+    ParambyName('Unit_Price').asfloat := UnitPrice;
+    ParambyName('Unit_Cost').asfloat := UnitCost;
+    Parambyname('Cost_unit').asinteger := CostUnit;
+    ParambyName('Sell_Unit').asinteger := SellUnit;
+    if vat = 0 then
+      ParambyName('Vat').asinteger := 1
+    else
+      ParambyName('Vat').asinteger := Vat;
+    ParambyName('Charge_Invoiced').asstring := Invoiced;
+    if SalesInvoice = 0 then
+      ParambyName('Sales_Invoice').clear
+    else
+      ParambyName('Sales_Invoice').asinteger := SalesInvoice;
+    if SOLNumber = 0 then
+      ParambyName('Sales_Order_Line_no').clear
+    else
+      ParambyName('Sales_Order_Line_no').asinteger := SOLNumber;
+    if ParentID = 0 then
+      ParambyName('Parent_ID').clear
+    else
+      ParambyName('Parent_ID').asinteger := ParentID;
+    ExecSQL;
+  end;
+
+  if ParentID > 0 then
+    begin
+      with FParent.FDataModule.qrySOUpdChargeStatus do
+        begin
+          close;
+          parambyname('ID').asinteger := ParentID;
+          parambyname('Charge_Invoiced').asstring := 'O';
+          execsql;
+        end;
+    end;
+end;
+
+{ TSOCharges }
+
+procedure TSOCharges.Add(aCharge: TSOCharge);
+begin
+  FItems.Add(aCharge);
+end;
+
+procedure TSOCharges.Clear;
+var
+  i : integer;
+begin
+  for i := 0 to Pred(FItems.Count) do
+    TSOCharge(FItems[i]).Free;
+end;
+
+function TSOCharges.Clone: TSOCharges;
+var
+  i : integer;
+begin
+  Result := TSOCharges.Create(FParent);
+  for i := 0 to Pred(FItems.Count) do
+    Result.Add(TSOCharge(FItems[i]).Clone);
+end;
+
+constructor TSOCharges.Create(SOrder: TSOrder);
+begin
+  FParent := SOrder;
+  FItems := TList.Create;
+
+end;
+
+procedure TSOCharges.Delete(const Index: integer);
+begin
+  FItems.Delete(Index);
+end;
+
+destructor TSOCharges.Destroy;
+var
+  i : integer;
+begin
+  for i := 0 to Pred(FItems.Count) do
+    TSOCharge(FItems[i]).Free;
+  FItems.Free;
+  inherited;
+end;
+
+function TSOCharges.GetCount: integer;
+begin
+  Result := FItems.Count;
+end;
+
+function TSOCharges.GetItems(Index: integer): TSOCharge;
+begin
+  Result := TSOCharge(FItems[Index]);
+
+end;
+
+function TSOCharges.GetMaxLineNo: integer;
+var
+  i : integer;
+begin
+  Result := 0;
+  for i := 0 to Pred(Count) do
+    if Items[i].SOCNumber > Result then
+      Result := Items[i].SOCNumber;
+end;
+
+function TSOCharges.IndexOf(const ChargeNo: integer): integer;
+var
+  i : integer;
+begin
+  Result := -1;
+  for i := 0 to Pred(FItems.Count) do
+    if TSOCharge(FItems[i]).SOCNumber = ChargeNo then
+      Result := i;
+end;
+
+procedure TSOCharges.Renumber;
+var
+  i : integer;
+begin
+  for i := 0 to Pred(FItems.Count) do
+    TSOCharge(FItems[i]).SOCNumber:= (i+1);
+end;
+
+procedure TSOCharges.SetItems(Index: integer; const Value: TSOCharge);
+begin
+  FItems[Index] := Value;
 end;
 
 end.

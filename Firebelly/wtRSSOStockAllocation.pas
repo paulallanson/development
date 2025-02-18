@@ -72,6 +72,9 @@ type
     qryDummyOld: TFDQuery;
     qryAllocQuoteSlab: TFDQuery;
     qryDeAllocQuoteSlab: TFDQuery;
+    btnExcel: TBitBtn;
+    qrySalesOrdersOSize: TFDQuery;
+    qryGetStockCodeOSize: TFDQuery;
     procedure btnCloseClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
     procedure rdgrpCustomerClick(Sender: TObject);
@@ -96,7 +99,10 @@ type
     procedure wtStkDatabaseBeforeConnect(Sender: TObject);
     procedure wtStkDatabaseError(ASender, AInitiator: TObject;
       var AException: Exception);
+    procedure btnExcelClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
+    bRunAllocation: boolean;
     DateTo, DateFrom: Tdatetime;
     ExportPath: string;
     OrderFile: TextFile;
@@ -107,23 +113,26 @@ type
     SOPInterval: integer;
     function InputDate(TempDate: TDateTime): TDateTime;
     procedure GetDetails;
-    procedure AllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer);
+    procedure GetOverSizeDetails;
+    procedure AllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer; sStockCode: string; OverSize: boolean);
     procedure AllocateStock;
+    procedure AllocateOverSizeStock;
     procedure AllocateStockOrder(tempSO, tempLine: integer; dtFrom, dtTo: TDateTime);
-    function CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real): boolean;
+    function CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real; OverSize: boolean): boolean;
     procedure CloseExportFile(tempSO: integer);
     procedure CloseExportOrderLineFile(tempSO, tempLine: integer; tempStockCode: string);
     procedure CreateExportFile;
     procedure CreateGSmartExportHeader;
     procedure CreateGSmartOrderFile(tmpOrder: integer);
-    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
+    procedure CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpSlabStockCode, tmpStockCode: string);
     procedure CreateStockOrderFile(tempSO: integer);
-    procedure CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
+    procedure CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempSlabStockCode, tempStockCode: string);
     procedure DeAllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer);
     procedure DeAllocateStock;
     procedure DeAllocateStockOrder(tempSO, tempLine: integer; dtFrom, dtTo: TDateTime);
     procedure GetStockSystemDetails(Code: string);
     function GetWorktopStockCode(tempWT, tempThickness, tempLength, tempDepth: integer): string;
+    function GetWorktopStockCodeOSize(tempWT, tempThickness, tempLength, tempDepth: integer): string;
     procedure CreateStoreStock(sStockCode, sStockDescription: string; rTotalQty, rAllocatedQty, rPOQty: real);
     procedure LoadGSMStock;
     procedure AddZero;
@@ -140,8 +149,7 @@ var
 
 implementation
 
-uses UITypes, 
-  wtMain, AllCommon, WTSrchCustomer, DateSelV5, wtDataModule;
+uses allCommon, WTSrchCustomer, DateSelV5, wtDataModule, wtMain;
 
 {$R *.dfm}
 
@@ -164,7 +172,7 @@ begin
 //        edtCustomer.Clear;
         for iCount := (frmwtSrchCustomer.dbgDetails.SelectedRows.Count - 1) downto 0 do
           begin
-            frmwtSrchCustomer.dbgDetails.datasource.DataSet.GotoBookmark(TBookMark(frmwtSrchCustomer.dbgDetails.SelectedRows[iCount])) ;
+            frmwtSrchCustomer.dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(frmwtSrchCustomer.dbgDetails.SelectedRows[iCount])) ;
             lstbxCustomersCode.Items.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer').asstring);
             lstbxCustomers.Items.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer_Name').asstring);
 //            edtCustomer.Lines.Add(frmwtSrchCustomer.dbgDetails.datasource.DataSet.fieldbyname('Customer_Name').asstring);
@@ -291,6 +299,7 @@ begin
   edtDateTo.Text := paDateStr(dateTo);
 
   StockSystem := dtmdlWorktops.StockSystemCode;
+  AllCommon.SetDBGridCols('', 'Stock Allocation Col Order', 'myWorktops.ini', self.dbgDetails);
   AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
@@ -360,7 +369,7 @@ function qDate(const aDate : TDateTime) : string;
   end;
 begin
   qrySalesOrders.SQL.text := qryDummy.SQL.Text;
-  
+
   case rdgrpSelectBy.itemindex of
     1: begin
         qrySalesOrders.SQL.Add(' AND ((Sales_Order.Date_Type = ''C'')) ');
@@ -409,7 +418,9 @@ begin
       ' Sales_Order.Goods_Value, '+
       ' Sales_Order.VAT_Value, '+
       ' Sales_Order_Line.Unit_Price, '+
-      ' Sales_order_line.Sales_Order_line_no');
+      ' Sales_order_line.Sales_Order_line_no,'+
+      ' Quote_Slab.Allocated_Stock_Code,'+
+      ' Quote_Slab.Allocated_Stock_Alternative');
 
   case rdgrpAllocate.ItemIndex of
         0:  begin
@@ -421,20 +432,27 @@ begin
           end;
   end;
 
-  case rdgrpsortby.itemindex of
-    0:begin
-        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Sales_Order');
+  if bRunAllocation then
+    begin
+      qrySalesOrders.SQL.Add('ORDER BY Quote_Slab.Length, Quote_Slab.Depth, Sales_Order.Date_Required');
+    end
+  else
+    begin
+      case rdgrpsortby.itemindex of
+        0:begin
+            qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Sales_Order');
+          end;
+        1:begin
+            qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Date_Required, Sales_Order.Sales_Order');
+          end;
+        2:begin
+            qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Customer_Name, Sales_Order.Sales_Order');
+          end;
+        3:begin
+            qrySalesOrders.SQL.Add('ORDER BY Rep.Rep_Name, Sales_Order.Sales_Order');
+          end;
       end;
-    1:begin
-        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Date_Required, Sales_Order.Sales_Order');
-      end;
-    2:begin
-        qrySalesOrders.SQL.Add('ORDER BY Sales_Order.Customer_Name, Sales_Order.Sales_Order');
-      end;
-    3:begin
-        qrySalesOrders.SQL.Add('ORDER BY Rep.Rep_Name, Sales_Order.Sales_Order');
-      end;
-  end;
+    end;
 
   qrySalesOrders.Close;
 
@@ -466,17 +484,6 @@ begin
   else
     qrySalesOrders.parambyname('Sales_Order_Status').asinteger := 55;
 
-(*  case rdgrpAllocate.ItemIndex of
-        0:  begin
-              qrySalesOrders.Parambyname('Quantity_Allocated').asinteger := 0;
-            end;
-        else
-          begin
-            qrySalesOrders.Parambyname('Quantity_Allocated').asinteger := 1;
-          end;
-  end;
-*)
-
   Datefrom := padatestr(edtDatefrom.Text);
   DateTo := padatestr(edtDateTo.Text);
   qrySalesOrders.parambyname('Rep').asinteger := rep;
@@ -488,20 +495,63 @@ begin
   EnableOK(self);
 end;
 
+procedure TfrmWTRSSOStockAllocation.GetOverSizeDetails;
+var
+  iCount: integer;
+  { Local function }
+  { Remember, SQL likes American date formats with hyphens in quotes }
+  { But Access doesn't so we have to know what we're connected to }
+function qDate(const aDate : TDateTime) : string;
+  begin
+    if dtmdlWorktops.IsSQL then
+      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
+    else
+      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
+  end;
+begin
+  qrySalesOrdersOSize.SQL.text := qrySalesOrders.SQL.text;
+
+  qrySalesOrdersOSize.Close;
+
+  case rdgrpCategory.ItemIndex of
+        0:  begin
+              qrySalesOrdersOSize.Parambyname('Is_Retail_Customer').asstring := 'A';
+              qrySalesOrdersOSize.Parambyname('Is_Commercial_Customer').asstring := 'A';
+            end;
+        1:  begin
+              qrySalesOrdersOSize.ParambyName('Is_Retail_Customer').asstring := 'N';
+              qrySalesOrdersOSize.Parambyname('Is_Commercial_Customer').asstring := 'N';
+            end;
+        2:  begin
+              qrySalesOrdersOSize.Parambyname('Is_Retail_Customer').asstring := 'Y';
+              qrySalesOrdersOSize.Parambyname('Is_Commercial_Customer').asstring := 'N';
+            end;
+        3:  begin
+              qrySalesOrdersOSize.Parambyname('Is_Retail_Customer').asstring := 'N';
+              qrySalesOrdersOSize.Parambyname('Is_Commercial_Customer').asstring := 'Y';
+            end;
+  end;
+  if chkbxShowOnlyScheduled.Checked then
+    qrySalesOrdersOSize.parambyname('IsFittingInOutlook').asstring := 'Y'
+  else
+    qrySalesOrdersOSize.parambyname('IsFittingInOutlook').asstring := 'N';
+
+  if chkbxIncludeInvoiced.checked then
+    qrySalesOrdersOSize.parambyname('Sales_Order_Status').asinteger := 110
+  else
+    qrySalesOrdersOSize.parambyname('Sales_Order_Status').asinteger := 55;
+
+  Datefrom := padatestr(edtDatefrom.Text);
+  DateTo := padatestr(edtDateTo.Text);
+  qrySalesOrdersOSize.parambyname('Rep').asinteger := rep;
+  qrySalesOrdersOSize.parambyname('Date_From').Asdatetime := Datefrom + StrToTime('00:00:00');
+  qrySalesOrdersOSize.parambyname('Date_To').Asdatetime := DateTo + StrToTime('23:59:59');
+  qrySalesOrdersOSize.Open;
+end;
+
 procedure TfrmWTRSSOStockAllocation.rdgrpSortByClick(Sender: TObject);
 begin
   GetDetails;
-end;
-
-procedure TfrmWTRSSOStockAllocation.wtStkDatabaseBeforeConnect(Sender: TObject);
-begin
-  ConfigureFDConnection(wtStkDatabase);
-end;
-
-procedure TfrmWTRSSOStockAllocation.wtStkDatabaseError(ASender,
-  AInitiator: TObject; var AException: Exception);
-begin
-  ParseException(AException);
 end;
 
 procedure TfrmWTRSSOStockAllocation.rdgrpCategoryClick(Sender: TObject);
@@ -523,6 +573,8 @@ end;
 
 procedure TfrmWTRSSOStockAllocation.btnAllocateClick(Sender: TObject);
 begin
+  bRunAllocation := true;
+
   GetStockSystemDetails(StockSystem);
 
   case rdgrpAllocate.ItemIndex of
@@ -532,7 +584,11 @@ begin
               exit;
 
           LoadGSMStock;
+          {Allocate ascending slab sizes - Standard to Jumbo}
           AllocateStock;
+
+          {Allocate ascending slab sizes - Oversize}
+          AllocateOverSizeStock;
 
           messagedlg('Stock allocation is complete.', mtInformation,[mbOk], 0);
         end;
@@ -613,10 +669,14 @@ procedure TfrmWTRSSOStockAllocation.AllocateStock;
 var
   iOrigOrder, iCount, iMax, iSlabLine: integer;
   bAllocateStock: boolean;
+  sSlabStockCode: string;
 begin
+  {Run GetDetails again based on ordering by slab size}
+  GetDetails;
+
   self.pnlExportPrgrss.Visible := true;
   self.pnlExportPrgrss.Repaint;
-  lblProcessing.caption := 'Exporting to GSmart Stock ' + inttostr(qrySalesOrders.recordcount) + ' orders';
+  lblProcessing.caption := 'Exporting to GSmart Stock - Phase 1: ' + inttostr(qrySalesOrders.recordcount) + ' orders';
 
   iMax := qrySalesOrders.recordcount;
 
@@ -636,19 +696,18 @@ begin
             begin
               iSlabLine := 1;
             end;
+          sSlabStockCode := fieldbyname('Stock_Code').asstring;
 
-//          bAllocateStock := CheckGSmartStock(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, fieldbyname('Slab_Quantity').asfloat);
-
-          bAllocateStock := CheckStock(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, fieldbyname('Slab_Quantity').asfloat);
+          bAllocateStock := CheckStock(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, fieldbyname('Slab_Quantity').asfloat,false);
 
           {I bAllocateStock true then update the sales order line allocate qty and create a file to send to GSmart}
           if bAllocateStock then
             begin
               AllocateStockOrder(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, DateFrom, DateTo);
 
-              AllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
+              AllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, sStockCode, false);
 
-              CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sStockCode);
+              CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sSlabStockCode, sStockCode);
             end;
 
           iOrigOrder := fieldbyname('Sales_Order').asinteger;
@@ -660,10 +719,6 @@ begin
           inc(iSlabLine);
           next;
         end;
-
-(*      if (iOrigOrder <> 0) and bAllocateStock then
-        CreateStockOrderFile(iOrigOrder);
-*)
     end;
 
   self.pnlExportPrgrss.visible := false;
@@ -674,6 +729,7 @@ procedure TfrmWTRSSOStockAllocation.DeAllocateStock;
 var
   iOrigOrder, icount, iMax, iSlabLine: integer;
   bAllocateStock: boolean;
+  sSlabStockCode: string;
 begin
   self.pnlExportPrgrss.Visible := true;
   self.pnlExportPrgrss.Repaint;
@@ -699,11 +755,14 @@ begin
 
           DeAllocateStockOrder(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, DateFrom, DateTo);
 
-          sStockCode := GetWorktopStockCode(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
+//          sStockCode := GetWorktopStockCode(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
+          sSlabStockCode := fieldbyname('Stock_Code').asstring;
+
+          sStockCode := fieldbyname('Allocated_Stock_Code').asstring;
 
           DeAllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger);
 
-          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sStockCode);
+          CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sSlabStockCode, sStockCode);
 
           iOrigOrder := fieldbyname('Sales_Order').asinteger;
 
@@ -749,14 +808,17 @@ begin
     end;
 end;
 
-function TfrmWTRSSOStockAllocation.CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real): boolean;
+function TfrmWTRSSOStockAllocation.CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real; OverSize: boolean): boolean;
 var
   iStoreStock: integer;
   rAvailableStock: real;
 begin
   result := false;
 
-  sStockCode := GetWorktopStockCode(tempWT, tempThickness, tempLength, tempDepth);
+  if OverSize then
+    sStockCode := GetWorktopStockCodeOSize(tempWT, tempThickness, tempLength, tempDepth)
+  else
+    sStockCode := GetWorktopStockCode(tempWT, tempThickness, tempLength, tempDepth);
 
   {Check for enough stock if there is a stock code}
   if sStockCode <> '' then
@@ -807,6 +869,21 @@ begin
     end;
 end;
 
+function TfrmWTRSSOStockAllocation.GetWorktopStockCodeOSize(tempWT, tempThickness, tempLength, tempDepth: integer): string;
+begin
+  Result := '';
+  with qryGetStockCodeOSize do
+    begin
+      close;
+      parambyname('Worktop').asinteger := tempWT;
+      parambyname('Thickness').asinteger := tempThickness;
+      parambyname('Length').asinteger := tempLength;
+      parambyname('Depth').asinteger := tempDepth;
+      open;
+      result := fieldbyname('Stock_Code').asstring;
+    end;
+end;
+
 procedure TfrmWTRSSOStockAllocation.AllocateStockOrder(tempSO, tempLine: integer; dtFrom, dtTo: TDateTime);
 begin
 (*  with qryUpdSO do
@@ -844,8 +921,18 @@ begin
     end;
 end;
 
-procedure TfrmWTRSSOStockAllocation.AllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer);
+procedure TfrmWTRSSOStockAllocation.AllocateQuoteSlab(tempQuote, tempWT, tempThickness, tempLength, tempDepth: integer; sStockCode: string; OverSize: boolean);
+var
+  iStockItem: integer;
 begin
+  with qryCheckStockCode do
+    begin
+      close;
+      parambyname('Stock_Code').asstring := sStockCode;
+      open;
+      iStockItem := fieldbyname('Stock_Item').asinteger;
+    end;
+
   with qryAllocQuoteSlab do
     begin
       close;
@@ -854,6 +941,15 @@ begin
       parambyname('Thickness').asinteger := tempThickness;
       parambyname('Length').asinteger := tempLength;
       parambyname('Depth').asinteger := tempDepth;
+      if iStockItem = 0 then
+        parambyname('Allocated_Stock_item').clear
+      else
+        parambyname('Allocated_Stock_item').asinteger := iStockItem;
+      parambyname('Allocated_Stock_Code').asstring := sStockCode;
+      if OverSize then
+        parambyname('Allocated_Stock_Alternative').asstring := 'Y'
+      else
+        parambyname('Allocated_Stock_Alternative').asstring := 'N';
       execsql;
     end;
 end;
@@ -903,11 +999,11 @@ begin
   CloseExportFile(tempSO);
 end;
 
-procedure TfrmWTRSSOStockAllocation.CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempStockCode: string);
+procedure TfrmWTRSSOStockAllocation.CreateStockOrderLineFile(tempSO, tempLine, tempSlabLine: integer; tempSlabStockCode, tempStockCode: string);
 begin
   CreateExportFile;
   CreateGSmartExportHeader;
-  CreateGSmartOrderLineFile(tempSO, tempLine, tempSlabLine, tempStockCode);
+  CreateGSmartOrderLineFile(tempSO, tempLine, tempSlabLine, tempSlabStockCode, tempStockCode);
   CloseExportOrderLineFile(tempSO, tempLine, tempStockCode);
 end;
 
@@ -1032,7 +1128,7 @@ begin
   end;
 end;
 
-procedure TfrmWTRSSOStockAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpStockCode: string);
+procedure TfrmWTRSSOStockAllocation.CreateGSmartOrderLineFile(tmpOrder, tmpLine, tmpSlabLine: integer; tmpSlabStockCode, tmpStockCode: string);
 var
   tempstr: string;
   iCount: integer;
@@ -1042,7 +1138,7 @@ begin
     Close;
     parambyname('Sales_Order').asinteger := tmpOrder;
     parambyname('Sales_Order_Line_no').asinteger := tmpLine;
-    parambyname('Stock_Code').asstring := tmpStockCode;
+    parambyname('Stock_Code').asstring := tmpSlabStockCode;
     Open;
 
     First;
@@ -1053,7 +1149,7 @@ begin
       iCount := icount + 1;
 
       //Order
-      tempStr := '' + fieldbyname('Sales_Order').asstring + '_' + inttostr(tmpSlabLine) + '';
+      tempStr := '' + fieldbyname('Sales_Order').asstring + '_' + inttostr(tmpLine) + '_' + inttostr(tmpSlabLine) + '';
 
       //Customer Account Code
       tempStr := tempStr + ',' + fieldbyname('Account_Code').asstring + '';
@@ -1091,7 +1187,8 @@ begin
       tempStr := tempStr + ',' + fieldbyname('Date_Required').asstring + '';
 
       //Line
-      tempStr := tempStr + ',' + inttostr(tmpSlabLine) + '';
+//      tempStr := tempStr + ',' + inttostr(tmpSlabLine) + '';
+      tempStr := tempStr + ',' + '1' + '';
 
       writeln(OrderFile, tempStr);
       next;
@@ -1155,17 +1252,18 @@ begin
     begin
       for iCount := (dbgDetails.SelectedRows.Count - 1) downto 0 do
         begin
+          sStockCode := dbgDetails.datasource.DataSet.fieldbyname('Stock_Code').asstring;
           dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
           AllocateStockOrder(dbgDetails.datasource.DataSet.fieldbyname('Sales_Order').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Sales_Order_Line_No').asinteger, 0, 0);
 
-          AllocateQuoteSlab(dbgDetails.datasource.DataSet.fieldbyname('Quote').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Worktop').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Thickness').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Length').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Depth').asinteger);
+          AllocateQuoteSlab(dbgDetails.datasource.DataSet.fieldbyname('Quote').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Worktop').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Thickness').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Length').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Depth').asinteger, sStockCode, false);
         end;
 
       messagedlg('The selected orders have been excluded.', mtInformation,[mbOk], 0);
 
       GetDetails;
     end;
-  
+
 end;
 
 procedure TfrmWTRSSOStockAllocation.rdgrpAllocateClick(Sender: TObject);
@@ -1182,7 +1280,8 @@ end;
 procedure TfrmWTRSSOStockAllocation.CreateStoreStock(sStockCode, sStockDescription: string; rTotalQty, rAllocatedQty, rPOQty: real);
 var
   bExist: boolean;
-  iStockItem, iStoreStock: integer;
+  iStoreStock: integer;
+  iStockItem: integer;
 begin
   {Check if stock code exists}
   with qryCheckStockCode do
@@ -1297,6 +1396,90 @@ begin
     except
     end;
   end;
+end;
+
+procedure TfrmWTRSSOStockAllocation.AllocateOverSizeStock;
+var
+  iOrigOrder, iCount, iMax, iSlabLine: integer;
+  bAllocateStock: boolean;
+  sSlabStockCode: string;
+begin
+  {Run query again to see what has not been allocated}
+  GetOverSizeDetails;
+
+  self.pnlExportPrgrss.Visible := true;
+  self.pnlExportPrgrss.Repaint;
+  lblProcessing.caption := 'Exporting to GSmart Stock - Phase 2: ' + inttostr(qrySalesOrdersOSize.recordcount) + ' orders';
+
+  iMax := qrySalesOrdersOSize.recordcount;
+
+  prgbrRecords.Position := 0;
+  icount := 0;
+
+  with qrySalesOrdersOSize do
+    begin
+      iOrigOrder := 0;
+      iSlabLine := 1;
+      bAllocateStock := false;
+
+      first;
+      while eof <> true do
+        begin
+          if (iOrigOrder <> fieldbyname('Sales_Order').asinteger) and (iOrigOrder <> 0) then
+            begin
+              iSlabLine := 1;
+            end;
+
+          sSlabStockCode := fieldbyname('Stock_Code').asstring;
+
+          bAllocateStock := CheckStock(fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, fieldbyname('Slab_Quantity').asfloat, true);
+
+          {If bAllocateStock true then update the sales order line allocate qty and create a file to send to GSmart}
+          if bAllocateStock then
+            begin
+              AllocateStockOrder(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, DateFrom, DateTo);
+
+              AllocateQuoteSlab(fieldbyname('Quote').asinteger, fieldbyname('Worktop').asinteger, fieldbyname('Thickness').asinteger, fieldbyname('Slab_Length').asinteger, fieldbyname('Slab_Depth').asinteger, sStockCode, true);
+
+              CreateStockOrderLineFile(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_Order_line_no').asinteger, iSlabLine, sSlabStockCode, sStockCode);
+            end;
+
+          iOrigOrder := fieldbyname('Sales_Order').asinteger;
+
+          inc(icount);
+          prgbrRecords.Position := Round( icount / iMax * 100);
+          Application.ProcessMessages;
+
+          inc(iSlabLine);
+          next;
+        end;
+
+    end;
+
+  self.pnlExportPrgrss.visible := false;
+  self.Repaint;
+end;
+
+procedure TfrmWTRSSOStockAllocation.btnExcelClick(Sender: TObject);
+begin
+  frmWTMain.ExportToExcel(frmWTRSSOStockAllocation);
+end;
+
+procedure TfrmWTRSSOStockAllocation.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  AllCommon.SaveDBGridCols('', 'Stock Allocation Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+end;
+
+procedure TfrmWTRSSOStockAllocation.wtStkDatabaseBeforeConnect(Sender: TObject);
+begin
+  ConfigureFDConnection(wtStkDatabase);
+end;
+
+procedure TfrmWTRSSOStockAllocation.wtStkDatabaseError(ASender,
+  AInitiator: TObject; var AException: Exception);
+begin
+  ParseException(AException);
 end;
 
 end.
