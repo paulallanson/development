@@ -1339,13 +1339,12 @@ end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
-  Connection.FetchOptions.Mode := fmAll;
-  Connection.FormatOptions.StrsTrim2Len := True;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
   Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
   Connection.FormatOptions.MapRules.Add(dtAnsiString, dtWideString);
+  Connection.FetchOptions.Mode := fmAll;
 end;
 
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
