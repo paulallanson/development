@@ -155,6 +155,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Height = 332
     Align = alClient
     DefaultRowHeight = 20
+    DefaultDrawing = False
     DrawingStyle = gdsGradient
     FixedCols = 0
     RowCount = 2

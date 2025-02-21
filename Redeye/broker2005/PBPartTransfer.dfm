@@ -484,6 +484,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Top = 24
           Width = 193
           Height = 21
+          DropDownRows = 8
+          DropDownWidth = 195
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
           ListSource = STStockDataMod.StoresToDataSource
@@ -555,6 +557,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
           Top = 24
           Width = 193
           Height = 21
+          DropDownRows = 8
+          DropDownWidth = 195
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
           ListSource = STStockDataMod.StoresFromDataSource

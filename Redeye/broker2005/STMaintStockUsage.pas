@@ -3,10 +3,9 @@ unit STMaintStockUsage;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, Grids, DBCtrls, StdCtrls, Buttons, ComCtrls, pbStockDM, stStockDM,
-  DB, stPickingDM, IniFiles,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, ExtCtrls, Grids,
+  DBCtrls, StdCtrls, Buttons, ComCtrls, pbStockDM, stStockDM, Vcl.Themes, DB, stPickingDM, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
@@ -41,10 +40,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure dblkpProductionLocationClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure sgdetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgdetailsSelectCell(Sender: TObject; Col, Row: Integer;
-      var CanSelect: Boolean);
+    procedure sgdetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure sgdetailsSelectCell(Sender: TObject; Col, Row: Integer; var CanSelect: Boolean);
     procedure sgdetailsKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnOKClick(Sender: TObject);
@@ -281,70 +278,96 @@ begin
     end;
 end;
 
-procedure TSTMaintStockUsageFrm.sgdetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TSTMaintStockUsageFrm.sgdetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
+const
+  CELL_PADDING = 4;
 var
-  Content: string;
   Grid: TStringGrid;
+  Content: string;
+  TextFormat: TTextFormat;
+  CellRect: TRect;
 begin
   if not (Sender is TStringGrid) then
     Exit;
 
-  Grid := (Sender as TStringGrid);
+  Grid := Sender as TStringGrid;
+  Content := Grid.Cells[ACol, ARow];
+  CellRect := Rect;
 
-  {Prevent the blue cell being displayed}
-  if vRow <> 0 then
+  // Header row handling (row 0)
+  if ARow = 0 then
   begin
-    Grid.Canvas.Brush.Color := Self.Color;
-    Grid.Canvas.Font.Color := Font.Color;
-    Grid.Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Grid.Cells[vCol, vRow]);
-  end;
+    // Header background
+    Grid.Canvas.Brush.Color := clBtnFace;
+    Grid.Canvas.FillRect(Rect);
 
-  {If Heading Display Left justified in the cells}
-  begin
-    if vCol < 2 then
-    begin
-      Content := Grid.Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
-    end
+    // Header text style
+    Grid.Canvas.Font.Color := clWindowText;
+    Grid.Canvas.Font.Style := [fsBold];
+
+    // Text alignment and drawing
+    TextFormat := [tfVerticalCenter, tfSingleLine, tfEndEllipsis];
+    if ACol < 2 then
+      TextFormat := TextFormat + [tfLeft]
     else
-    begin
-      {Display the Columns Right justified in the cells}
-      Content := Grid.Cells[vCol, vRow];
-      SetTextAlign(Canvas.Handle, GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Content, Length(Content), nil);
-    end;
+      TextFormat := TextFormat + [tfRight];
+
+    InflateRect(CellRect, -CELL_PADDING, -CELL_PADDING);
+    Grid.Canvas.TextRect(CellRect, Content, TextFormat);
+
+    // 3D border effect
+    Grid.Canvas.Pen.Width := 1;
+
+    // Top and left highlight
+    Grid.Canvas.Pen.Color := clBtnHighlight;
+    Grid.Canvas.MoveTo(Rect.Left, Rect.Bottom - 1);
+    Grid.Canvas.LineTo(Rect.Left, Rect.Top);
+    Grid.Canvas.LineTo(Rect.Right, Rect.Top);
+
+    // Bottom and right shadow
+    Grid.Canvas.Pen.Color := clBtnShadow;
+    Grid.Canvas.MoveTo(Rect.Right - 1, Rect.Top);
+    Grid.Canvas.LineTo(Rect.Right - 1, Rect.Bottom - 1);
+    Grid.Canvas.LineTo(Rect.Left - 1, Rect.Bottom - 1);
+
+    Exit;
   end;
 
-  if (gdselected in State) then
+  // Normal cell handling
   begin
-    //draw a box around the selected cell
-//    Grid.Canvas.pen.Color := clHighlight;
-    Grid.Canvas.pen.Color := clred;
-    Grid.Canvas.pen.Width := 2;
-    Grid.Canvas.polyline([point(rect.left+1,rect.top+1),
-                          point(rect.right-2,rect.top+1),
-                          point(rect.right-2,rect.bottom-2),
-                          point(rect.left+1,rect.bottom-2),
-                          point(rect.left+1,rect.top+1)]);
+    // Background
+    Grid.Canvas.Brush.Color := clWindow;
+    Grid.Canvas.FillRect(Rect);
+
+    // Text properties
+    Grid.Canvas.Font.Color := clWindowText;
+    Grid.Canvas.Font.Style := [];
+
+    // Text alignment and drawing
+    TextFormat := [tfVerticalCenter, tfSingleLine, tfEndEllipsis];
+    if ACol < 2 then
+      TextFormat := TextFormat + [tfLeft]
+    else
+      TextFormat := TextFormat + [tfRight];
+
+    InflateRect(CellRect, -CELL_PADDING, -CELL_PADDING);
+    Grid.Canvas.TextRect(CellRect, Content, TextFormat);
   end;
-  if (vRow = 0) then
+
+  // Selection handling
+  if (gdSelected in State) and (ARow > 0) then
   begin
-    //default drawing has been switched off in the grid so we have
-    //to draw the highlight and shadow on 3d boxes
-    Grid.Canvas.pen.color := clBtnHighlight;
-    Grid.Canvas.polyline([point(rect.left,rect.bottom-1),
-                          point(rect.left,rect.top),
-                          point(rect.right,rect.top)]);
-    Grid.Canvas.pen.color := clBtnShadow;
-    Grid.Canvas.polyline([point(rect.right-1,rect.top+1),
-                          point(rect.right-1,rect.bottom-1),
-                          point(rect.left,rect.bottom-1)]);
+    Grid.Canvas.Pen.Color := clHighlight;
+    Grid.Canvas.Pen.Width := 2;
+    Grid.Canvas.Pen.Style := psSolid;
+
+    Grid.Canvas.Rectangle(
+      Rect.Left + 1,
+      Rect.Top + 1,
+      Rect.Right - 1,
+      Rect.Bottom - 1
+    );
   end;
 end;
 

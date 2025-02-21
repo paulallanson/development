@@ -20,7 +20,7 @@ procedure DeleteColSettings(sectionName, iniFileName: string);
 
 {TStringGrid Routines}
 procedure AlignColumns(AlignLeftList: TList<Integer>; Grid: TStringGrid; ACol, ARow: Integer; Rect: TRect;
-  State: TGridDrawState; AlignToRight: Boolean = False);
+  State: TGridDrawState; AlignToRight: Boolean = False; CallBack: TProc = nil);
 
 {formLayout Routines}
 procedure SaveFormLayout(iniFileName: string; theForm: TForm);
@@ -1339,13 +1339,12 @@ end;
 
 procedure ConfigureFDConnection(const Connection: TFDConnection);
 begin
-  Connection.FetchOptions.Mode := fmAll;
-  Connection.FormatOptions.StrsTrim2Len := True;
   Connection.FormatOptions.OwnMapRules := True;
   Connection.FormatOptions.MapRules.Clear;
   Connection.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
   Connection.FormatOptions.MapRules.Add(dtBCD, dtDouble);
   Connection.FormatOptions.MapRules.Add(dtAnsiString, dtWideString);
+  Connection.FetchOptions.Mode := fmAll;
 end;
 
 procedure CopyDocuments(const FilesDialog: TOpenDialog; const Folder: string; const ExecuteBlock: TProc);
@@ -2131,7 +2130,7 @@ begin
 end;
 
 procedure AlignColumns(AlignLeftList: TList<Integer>; Grid: TStringGrid; ACol, ARow: Integer; Rect: TRect;
-  State: TGridDrawState; AlignToRight: Boolean = False);
+  State: TGridDrawState; AlignToRight: Boolean = False; CallBack: TProc = nil);
 var
   Text: string;
   TextFormat: TTextFormat;
@@ -2140,33 +2139,33 @@ var
 begin
   Text := Grid.Cells[ACol, ARow];
 
-  // Save current canvas state
+  if Assigned(CallBack) then
+    CallBack;
+
   SavedColor := Grid.Canvas.Font.Color;
   SavedStyle := Grid.Canvas.Brush.Style;
 
-  // Handle fixed cells (header row and first column)
   if (gdFixed in State) then
   begin
     Grid.Canvas.Brush.Color := clBtnFace;
     Grid.Canvas.Font.Color := clWindowText;
+    Grid.Canvas.Font.Style := [fsBold];
   end
-  // Handle selected cells
+
   else if (gdSelected in State) or (gdFocused in State) then
   begin
     Grid.Canvas.Brush.Color := clHighlight;
     Grid.Canvas.Font.Color := clHighlightText;
+    Grid.Canvas.Font.Style := [];
   end
-  // Normal cells
   else
   begin
     Grid.Canvas.Brush.Color := Grid.Color;
     Grid.Canvas.Font.Color := Grid.Font.Color;
   end;
 
-  // Clear the cell background
   Grid.Canvas.FillRect(Rect);
 
-  // Setup text format
   TextFormat := [tfVerticalCenter, tfSingleLine];
   if AlignToRight then
   begin
@@ -2183,14 +2182,11 @@ begin
       TextFormat := TextFormat + [tfRight];
   end;
 
-  // Add some padding
   Rect.Left := Rect.Left + 2;
   Rect.Right := Rect.Right - 2;
 
-  // Draw the text using VCL's built-in method
   Grid.Canvas.TextRect(Rect, Text, TextFormat);
 
-  // Restore original canvas state
   Grid.Canvas.Font.Color := SavedColor;
   Grid.Canvas.Brush.Style := SavedStyle;
 end;

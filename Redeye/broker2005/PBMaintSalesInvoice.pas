@@ -204,7 +204,7 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types,
+  System.UITypes, System.Types, System.Generics.Collections,
   PBLUCust, PBImages, PBAuditDM, pbMainMenu, DateSelV5, PBMaintSalesInvoiceLine, PBMaintInvChgs,
   PBDBMemo, PBLUSalesInvoiceCustJB, PBLUSalesInvoiceJBL, pbDatabase,
   PBLUCreditReason, PBMaintSalesInvoiceDetail, PBLURep;
@@ -1211,74 +1211,39 @@ end;
 
 procedure TPBMaintSalesInvoicefrm.sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
   State: TGridDrawState);
-var
-  SavedAlign: integer;
 begin
-  if SalesInvoice.Lines.Count > 0 then
-  begin
-    if (ARow > 0) and (SalesInvoice.Lines[ARow-1].Inactive = 'Y') then
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1, 2, 12]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight,
+      procedure
+      begin
+        if (ARow > 0) and (SalesInvoice.Lines[ARow-1].Inactive = 'Y') then
         begin
-          (Sender as TStringGrid).Canvas.font.color := clGray;
-          (Sender as TStringGrid).Canvas.font.style := Font.Style + [fsstrikeout];
+          Grid.Canvas.font.Color := clGray;
+          Grid.Canvas.font.Style := [TFontStyle.fsStrikeOut];
         end;
-
-    if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 12) then
-  	begin
-      if (ARow > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
-        (Sender as TStringGrid).Canvas.font.Color := clRed;
-      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_LEFT);
-      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-      if (ARow > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
-        (Sender as TStringGrid).Canvas.font.Color := clRed;
-      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_RIGHT);
-      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
-    end;
+      end);
+  finally
+    ColumnsList.Free;
   end;
+
 end;
 
-procedure TPBMaintSalesInvoicefrm.sgChargesDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
-  State: TGridDrawState);
+procedure TPBMaintSalesInvoicefrm.sgChargesDrawCell(Sender: TObject; ACol, ARow: Integer;
+  Rect: TRect; State: TGridDrawState);
 begin
-  with Sender as TStringGrid do
-  begin
-    if ARow <> 0 then
-    begin
-      Canvas.Brush.Color := Color;
-      Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
-    end;
-
-    const Gap = 4;
-    var Text := Cells[ACol, ARow];
-    var WidthOfText := Canvas.TextWidth(Text);
-    var WidthOfCell := ColWidths[ACol];
-    var LeftOffset := WidthOfCell - WidthOfText - Gap;
-
-    if (ACol = 0) or (ACol = 1) then
-    begin
-      if gdFixed in State then
-        Canvas.Brush.Color := FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
-    end else
-    begin
-      {Display the Columns Right justified in the cells}
-      if gdFixed in State then
-        Canvas.Brush.Color := FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
-    end;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State);
+  finally
+    ColumnsList.Free;
   end;
+
 end;
 
 procedure TPBMaintSalesInvoicefrm.btnNotesClick(Sender: TObject);

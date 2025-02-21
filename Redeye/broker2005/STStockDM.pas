@@ -1073,7 +1073,7 @@ With GetFreeStoreStockSQL do
            With UpdStockSQL do
                 begin
                 Close ;
-                ParamByName('Store_Stock').AsString := GetFreeStoreStockSQL.FieldByName('Store_Stock').AsString ;
+                ParamByName('Store_Stock').AsInteger := GetFreeStoreStockSQL.FieldByName('Store_Stock').AsInteger ;
                 ParamByName('Store_Cost_Adj').AsFloat := 0 ;
                 ParamByName('Store_Quantity_Adj').AsInteger := 0 ;
                 ParamByName('Quantity_Allocated_Adj').AsInteger := iTempQtyThisRec ;
@@ -1214,7 +1214,7 @@ With GetAllocStockByRefSQL do
            With GetStoreStockIntSQL do
                 begin
                 Close ;
-                ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                 Open ;
                 First ;
                 end;
@@ -1222,7 +1222,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Downdate the allocation on the store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ParamByName('Store_Cost_Adj').AsFloat := 0 ;
                      ParamByName('Store_Quantity_Adj').AsInteger := 0 ;
                      ParamByName('Quantity_Allocated_Adj').AsInteger := 0 - iTempQtyThisRec ;
@@ -1232,7 +1232,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Delete an empty store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ExecSQL ;
                      end;
            iTempQty := iTempQty - iTempQtyThisRec ;
@@ -1320,7 +1320,7 @@ begin
       with GetStoreStockIntSQL do
         begin
           close ;
-          paramByName('Store_Stock').AsString := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsString ;
+          paramByName('Store_Stock').AsInteger := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsInteger ;
           open ;
           first ;
         end;
@@ -1329,7 +1329,7 @@ begin
         begin
           {Downdate the allocation on the store_stock record} ;
           Close ;
-          ParamByName('Store_Stock').AsString := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsString ;
+          ParamByName('Store_Stock').AsInteger := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsInteger ;
           ParamByName('Store_Cost_Adj').AsFloat := 0 ;
 //        ParamByName('Store_Quantity_Adj').AsInteger := (iTempQtyOversThisRec + iTempQtyOverPickedThisRec);
           ParamByName('Store_Quantity_Adj').AsInteger := 0;
@@ -1341,7 +1341,7 @@ begin
         begin
           {Delete an empty store_stock record} ;
           close ;
-          ParamByName('Store_Stock').AsString := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsString ;
+          ParamByName('Store_Stock').AsInteger := GetAllocStockByStoreStockSQL.FieldByName('Store_Stock').AsInteger ;
           ExecSQL ;
         end;
 
@@ -1441,7 +1441,7 @@ With GetAllocStockByRefSQL do
            With GetStoreStockIntSQL do
                 begin
                 Close ;
-                ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                 Open ;
                 First ;
                 end;
@@ -1449,7 +1449,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Downdate the allocation on the store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ParamByName('Store_Cost_Adj').AsFloat := 0 ;
 //                     ParamByName('Store_Quantity_Adj').AsInteger := (iTempQtyOversThisRec + iTempQtyOverPickedThisRec);
                      ParamByName('Store_Quantity_Adj').AsInteger := 0;
@@ -1460,7 +1460,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Delete an empty store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ExecSQL ;
                      end;
            iTempQty := iTempQty - iTempQtyThisRec ;
@@ -1559,7 +1559,7 @@ With GetAllocStockByRefSQL do
            With GetStoreStockIntSQL do
                 begin
                 Close ;
-                ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                 Open ;
                 First ;
                 end;
@@ -1567,7 +1567,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Downdate the allocation on the store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ParamByName('Store_Cost_Adj').AsFloat := 0 ;
 //                     ParamByName('Store_Quantity_Adj').AsInteger := (iTempQtyOversThisRec + iTempQtyOverPickedThisRec);
                      ParamByName('Store_Quantity_Adj').AsInteger := 0;
@@ -1578,7 +1578,7 @@ With GetAllocStockByRefSQL do
                      begin
                      {Delete an empty store_stock record} ;
                      Close ;
-                     ParamByName('Store_Stock').AsString := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsString ;
+                     ParamByName('Store_Stock').AsInteger := GetAllocStockByRefSQL.FieldByName('Store_Stock').AsInteger ;
                      ExecSQL ;
                      end;
            iTempQty := iTempQty - iTempQtyThisRec ;
