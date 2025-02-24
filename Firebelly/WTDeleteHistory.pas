@@ -24,19 +24,22 @@ type
     qryQintNotes: TFDQuery;
     qryJSOL: TFDQuery;
     qryJIntNotes: TFDQuery;
-    chkbxIncludeConfirmed: TCheckBox;
+    chkbxDeleteQuotes: TCheckBox;
     chkbxDeleteOrders: TCheckBox;
     edtDateRequired: TEdit;
     btnDateRequired: TBitBtn;
     Label2: TLabel;
+    qrySalesOrders: TFDQuery;
+    qryUpdSO: TFDQuery;
     procedure CheckOK(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
-    procedure chkbxIncludeConfirmedClick(Sender: TObject);
+    procedure chkbxDeleteQuotesClick(Sender: TObject);
     procedure edtDateRequiredExit(Sender: TObject);
     procedure btnDateRequiredClick(Sender: TObject);
   private
+    function GetOrderDetails: integer;
     function GetQuoteDetails: integer;
     procedure DeleteQuote(Quote, iInstallAddress, iAvailability, iPayment, iNotes, iAddress: integer);
     procedure DeleteSalesOrder(Quote: integer);
@@ -76,9 +79,10 @@ procedure TfrmWTDeleteHistory.btnOKClick(Sender: TObject);
 begin
   if MessageDlg('Are you sure you want to delete the quotes up to this date?',
         mtConfirmation, [mbYes, mbNo], 0) = mrNo then exit;
-  GetQuoteDetails;
+  if chkbxDeleteQuotes.Checked then
+    GetQuoteDetails;
   if chkbxDeleteOrders.Checked then
-    GetJobDetails;
+    GetOrderDetails;
   close;
 end;
 
@@ -88,6 +92,7 @@ function TfrmWTDeleteHistory.GetQuoteDetails: integer;
   { But Access doesn't so we have to know what we're connected to }
 var
   iMax, icount :integer;
+  tmpDate: TDateTime;
 
 function qDate(const aDate : TDateTime) : string;
   begin
@@ -99,12 +104,7 @@ function qDate(const aDate : TDateTime) : string;
 begin
   qryQuotes.Close;
   qryQuotes.parambyname('Date_From').Asdatetime := paDateStr(edtDateRequired.text);
-
-  if chkbxIncludeConfirmed.Checked then
-    qryQuotes.parambyname('Quote_status').Asinteger := 30
-  else
-    qryQuotes.parambyname('Quote_status').Asinteger := 22;
-
+  qryQuotes.parambyname('Quote_status').Asinteger := 22;
   qryQuotes.Open;
 
   result := qryQuotes.recordcount;
@@ -116,9 +116,6 @@ begin
   qryQuotes.first;
   while qryQuotes.Eof <> true do
     begin
-      if chkbxDeleteOrders.Checked then
-        DeleteSalesOrder(qryQuotes.fieldbyname('Quote').asinteger);
-
       DeleteQuote(qryQuotes.fieldbyname('Quote').asinteger,
                   qryQuotes.fieldbyname('Install_address').asinteger,
                   qryQuotes.fieldbyname('Availability').asinteger,
@@ -131,6 +128,48 @@ begin
       Application.ProcessMessages;
 
       qryQuotes.next;
+    end;
+end;
+
+function TfrmWTDeleteHistory.GetOrderDetails: integer;
+  { Local function }
+  { Remember, SQL likes American date formats with hyphens in quotes }
+  { But Access doesn't so we have to know what we're connected to }
+var
+  iMax, icount :integer;
+  tmpDate: TDateTime;
+
+function qDate(const aDate : TDateTime) : string;
+  begin
+    if dtmdlWorktops.IsSQL then
+      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
+    else
+      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
+  end;
+begin
+  qrySalesOrders.Close;
+  qrySalesOrders.parambyname('Date_From').Asdatetime := paDateStr(edtDateRequired.text);
+  qrySalesOrders.parambyname('Sales_Order_Status').Asinteger := 60;
+  qrySalesOrders.Open;
+
+  result := qrySalesOrders.recordcount;
+  lblNoRecords.caption := 'Stage 2 - ' + inttostr(qrySalesOrders.recordcount) + ' records';
+
+  iMax := qrySalesOrders.recordcount;
+  prgbrRecords.Position := 0;
+  icount := 0;
+  qrySalesOrders.first;
+  while qrySalesOrders.Eof <> true do
+    begin
+      qryUpdSO.close;
+      qryUpdSO.parambyname('Sales_order').asinteger := qrySalesOrders.fieldbyname('Sales_Order').asinteger;
+      qryUpdSO.execsql;
+
+      inc(icount);
+      prgbrRecords.Position := Round( icount / iMax * 100);
+      Application.ProcessMessages;
+
+      qrySalesOrders.next;
     end;
 end;
 
@@ -588,7 +627,7 @@ begin
     end;
 end;
 
-procedure TfrmWTDeleteHistory.chkbxIncludeConfirmedClick(Sender: TObject);
+procedure TfrmWTDeleteHistory.chkbxDeleteQuotesClick(Sender: TObject);
 begin
   chkbxDeleteOrders.Enabled := (Sender as TcheckBox).checked;
   if not (Sender as TcheckBox).checked then

@@ -564,21 +564,21 @@ object frmWTRPSOAllocated: TfrmWTRPSOAllocated
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
-        Left = 483
+        Left = 543
         Top = 3
-        Width = 324
+        Width = 204
         Height = 24
         Size.Values = (
           50.800000000000000000
-          1022.350000000000000000
+          1149.350000000000000000
           6.350000000000000000
-          685.800000000000000000)
+          431.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        Caption = 'Anticipated Material Ordering Report'
+        Caption = 'Allocated Stock Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
