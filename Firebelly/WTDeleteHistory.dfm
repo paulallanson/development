@@ -3,7 +3,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   Top = 187
   BorderStyle = bsDialog
   Caption = 'Historical Records'
-  ClientHeight = 213
+  ClientHeight = 225
   ClientWidth = 257
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   OnDestroy = FormDestroy
   DesignSize = (
     257
-    213)
+    225)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -35,9 +35,9 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   object Label2: TLabel
     Left = 16
     Top = 20
-    Width = 93
+    Width = 128
     Height = 13
-    Caption = 'Delete old Quotes'
+    Caption = 'Delete Historical Records'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -74,27 +74,25 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Height = 17
     TabOrder = 2
   end
-  object chkbxIncludeConfirmed: TCheckBox
+  object chkbxDeleteQuotes: TCheckBox
     Left = 16
     Top = 80
     Width = 217
     Height = 17
-    Caption = 'Delete Confirmed Quotes'
-    Enabled = False
+    Caption = 'Delete Unconverted Quotes'
     TabOrder = 3
-    OnClick = chkbxIncludeConfirmedClick
+    OnClick = chkbxDeleteQuotesClick
   end
   object chkbxDeleteOrders: TCheckBox
     Left = 16
     Top = 104
     Width = 209
     Height = 17
-    Caption = 'Delete Sales Orders/Jobs'
-    Enabled = False
+    Caption = 'Delete Cancelled Sales Orders/Jobs'
     TabOrder = 4
   end
   object edtDateRequired: TEdit
-    Left = 122
+    Left = 116
     Top = 48
     Width = 89
     Height = 21
@@ -102,9 +100,10 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     TabOrder = 5
     OnChange = CheckOK
     OnExit = edtDateRequiredExit
+    ExplicitLeft = 110
   end
   object btnDateRequired: TBitBtn
-    Left = 218
+    Left = 212
     Top = 46
     Width = 25
     Height = 25
@@ -125,6 +124,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     NumGlyphs = 2
     TabOrder = 6
     OnClick = btnDateRequiredClick
+    ExplicitLeft = 206
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'
@@ -246,6 +246,47 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     ParamData = <
       item
         Name = 'Job'
+      end>
+  end
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT'#160' Sales_Order.Sales_Order,'
+      #160#160#160#160#160#160#160' Install_address,'
+      #160#160#160#160#160#160#160' Extra_Notes,'
+      #160#160#160#160#160#160#160' Address,'
+      #160#160#160#160#160#160#160' Installation_Address'
+      'FROM Sales_Order'
+      'WHERE (Sales_Order_status <= :Sales_Order_status) AND'
+      
+        #160#160#160#160#160' (((Date_Required < :Date_From) AND (Date_Required <> 0)) O' +
+        'R (Date_Raised < :Date_From))'
+      'ORDER BY Sales_Order.Sales_Order'
+      '')
+    Left = 32
+    Top = 72
+    ParamData = <
+      item
+        Name = 'SALES_ORDER_STATUS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'Date_From'
+        ParamType = ptInput
+      end>
+  end
+  object qryUpdSO: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'UPDATE Sales_Order'
+      'SET inactive = '#39'Y'#39
+      'WHERE Sales_Order.Sales_Order = :Sales_Order')
+    Left = 104
+    Top = 64
+    ParamData = <
+      item
+        Name = 'SALES_ORDER'
+        ParamType = ptInput
       end>
   end
 end
