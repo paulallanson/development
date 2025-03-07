@@ -2155,7 +2155,7 @@ begin
   else if (gdSelected in State) or (gdFocused in State) then
   begin
     Grid.Canvas.Brush.Color := clHighlight;
-    Grid.Canvas.Font.Color := clHighlightText;
+//    Grid.Canvas.Font.Color := clHighlightText;
     Grid.Canvas.Font.Style := [];
   end
   else
