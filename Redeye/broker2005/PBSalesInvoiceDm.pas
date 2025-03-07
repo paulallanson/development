@@ -277,22 +277,11 @@ type
     qrySOAllReplenish_Source: TIntegerField;
     qrySOAllSupplier: TIntegerField;
     qrySOAllBranch_no0: TIntegerField;
-    qrySOAllSupp_order_type: TWideStringField;
-    qrySOAllVat_Code: TIntegerField;
-    qrySOAllProduction_Location: TIntegerField;
-    qrySOAllAccount_Team: TIntegerField;
-    qrySOAllDelivery_Contact_Name: TWideStringField;
-    qrySOAllCash_Sales: TWideStringField;
-    qrySOAllPayment_Transaction_ID: TIntegerField;
-    qrySOAllinactive: TWideStringField;
-    qrySOAllinactive_date: TDateTimeField;
-    qrySOAllinactive_reason: TIntegerField;
-    qrySOAllOnline_Order_ID: TWideStringField;
-    qrySOAllSub_Rep: TIntegerField;
     qrySOAllCustomer_Name: TWideStringField;
     qrySOAllBranch_Name: TWideStringField;
     qrySOAllPick_date: TDateTimeField;
     qrySOAllDelivery_date: TDateTimeField;
+    qrySOAllActual_Delivery_Date: TDateField;
     qrySCHeaderGridInvoice_Date: TDateTimeField;
     qrySCHeaderGridCustomer: TIntegerField;
     qrySCHeaderGridBranch_no: TIntegerField;
@@ -5690,9 +5679,9 @@ end;
 procedure TdmSalesInvoice.qrySOAllCalcFields(DataSet: TDataSet);
 begin
   if qrySOAllPick_Date.asstring = '' then
-    qrySOALLDelivery_Date.asdatetime := qrySOAllDelivery_Date.asdatetime
+    qrySOALLActual_Delivery_Date.asdatetime := qrySOAllDelivery_Date.asdatetime
   else
-    qrySOALLDelivery_Date.asdatetime := qrySOAllPick_Date.asdatetime;
+    qrySOALLActual_Delivery_Date.asdatetime := qrySOAllPick_Date.asdatetime;
 end;
 
 function TdmSalesInvoice.GetLastPeriodEndDate: TDateTime;

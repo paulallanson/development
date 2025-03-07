@@ -32,7 +32,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1160
+        Width = 1164
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -45,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1139
+        Width = 1151
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 68
@@ -294,8 +294,9 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end
       item
         Expanded = False
-        FieldName = 'Paid_Status_Description'
+        FieldName = 'Paid_status_Description'
         Title.Caption = 'Paid Status'
+        Width = 64
         Visible = True
       end
       item

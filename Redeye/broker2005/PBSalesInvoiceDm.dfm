@@ -1974,6 +1974,12 @@ object dmSalesInvoice: TdmSalesInvoice
       FieldName = 'Customer0'
       Origin = 'Customer0'
     end
+    object qrySOAllOrder_Type: TWideStringField
+      FieldName = 'Order_Type'
+      Origin = 'Order_Type'
+      Required = True
+      Size = 1
+    end
     object qrySOAllSales_order_Head_Status: TIntegerField
       FieldName = 'Sales_order_Head_Status'
       Origin = 'Sales_order_Head_Status'
@@ -2009,12 +2015,6 @@ object dmSalesInvoice: TdmSalesInvoice
       Origin = 'Delivery_Notes'
       Size = 255
     end
-    object qrySOAllOrder_Type: TWideStringField
-      FieldName = 'Order_Type'
-      Origin = 'Order_Type'
-      Required = True
-      Size = 1
-    end
     object qrySOAllReplenish_Source: TIntegerField
       FieldName = 'Replenish_Source'
       Origin = 'Replenish_Source'
@@ -2026,58 +2026,6 @@ object dmSalesInvoice: TdmSalesInvoice
     object qrySOAllBranch_no0: TIntegerField
       FieldName = 'Branch_no0'
       Origin = 'Branch_no0'
-    end
-    object qrySOAllSupp_order_type: TWideStringField
-      FieldName = 'Supp_order_type'
-      Origin = 'Supp_order_type'
-      Size = 4
-    end
-    object qrySOAllVat_Code: TIntegerField
-      FieldName = 'Vat_Code'
-      Origin = 'Vat_Code'
-    end
-    object qrySOAllProduction_Location: TIntegerField
-      FieldName = 'Production_Location'
-      Origin = 'Production_Location'
-    end
-    object qrySOAllAccount_Team: TIntegerField
-      FieldName = 'Account_Team'
-      Origin = 'Account_Team'
-    end
-    object qrySOAllDelivery_Contact_Name: TWideStringField
-      FieldName = 'Delivery_Contact_Name'
-      Origin = 'Delivery_Contact_Name'
-      Size = 50
-    end
-    object qrySOAllCash_Sales: TWideStringField
-      FieldName = 'Cash_Sales'
-      Origin = 'Cash_Sales'
-      Size = 1
-    end
-    object qrySOAllPayment_Transaction_ID: TIntegerField
-      FieldName = 'Payment_Transaction_ID'
-      Origin = 'Payment_Transaction_ID'
-    end
-    object qrySOAllinactive: TWideStringField
-      FieldName = 'inactive'
-      Origin = 'inactive'
-      Size = 1
-    end
-    object qrySOAllinactive_date: TDateTimeField
-      FieldName = 'inactive_date'
-      Origin = 'inactive_date'
-    end
-    object qrySOAllinactive_reason: TIntegerField
-      FieldName = 'inactive_reason'
-      Origin = 'inactive_reason'
-    end
-    object qrySOAllOnline_Order_ID: TWideStringField
-      FieldName = 'Online_Order_ID'
-      Origin = 'Online_Order_ID'
-    end
-    object qrySOAllSub_Rep: TIntegerField
-      FieldName = 'Sub_Rep'
-      Origin = 'Sub_Rep'
     end
     object qrySOAllCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
@@ -2099,6 +2047,11 @@ object dmSalesInvoice: TdmSalesInvoice
       FieldName = 'Delivery_date'
       Origin = 'Delivery_date'
       ReadOnly = True
+    end
+    object qrySOAllActual_Delivery_Date: TDateField
+      FieldKind = fkCalculated
+      FieldName = 'Actual_Delivery_Date'
+      Calculated = True
     end
   end
   object dsSOAll: TDataSource
