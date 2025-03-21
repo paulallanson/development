@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, ExtCtrls, Grids,
   DBCtrls, StdCtrls, Buttons, ComCtrls, pbStockDM, stStockDM, Vcl.Themes, DB, stPickingDM, IniFiles,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -80,8 +80,9 @@ var
 
 implementation
 
-uses UITypes, Types, PBDatabase, CCSCommon, STMaintStockUsageLine, STLUStkMvmnts,
-  pbMainMenu;
+uses
+  UITypes, Types, PBDatabase, CCSCommon, STMaintStockUsageLine, STLUStkMvmnts, pbMainMenu,
+  System.Generics.Collections;
 
 {$R *.dfm}
 
@@ -280,95 +281,20 @@ end;
 
 procedure TSTMaintStockUsageFrm.sgdetailsDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect;
   State: TGridDrawState);
-const
-  CELL_PADDING = 4;
-var
-  Grid: TStringGrid;
-  Content: string;
-  TextFormat: TTextFormat;
-  CellRect: TRect;
 begin
   if not (Sender is TStringGrid) then
     Exit;
 
-  Grid := Sender as TStringGrid;
-  Content := Grid.Cells[ACol, ARow];
-  CellRect := Rect;
-
-  // Header row handling (row 0)
-  if ARow = 0 then
-  begin
-    // Header background
-    Grid.Canvas.Brush.Color := clBtnFace;
-    Grid.Canvas.FillRect(Rect);
-
-    // Header text style
-    Grid.Canvas.Font.Color := clWindowText;
-    Grid.Canvas.Font.Style := [fsBold];
-
-    // Text alignment and drawing
-    TextFormat := [tfVerticalCenter, tfSingleLine, tfEndEllipsis];
-    if ACol < 2 then
-      TextFormat := TextFormat + [tfLeft]
-    else
-      TextFormat := TextFormat + [tfRight];
-
-    InflateRect(CellRect, -CELL_PADDING, -CELL_PADDING);
-    Grid.Canvas.TextRect(CellRect, Content, TextFormat);
-
-    // 3D border effect
-    Grid.Canvas.Pen.Width := 1;
-
-    // Top and left highlight
-    Grid.Canvas.Pen.Color := clBtnHighlight;
-    Grid.Canvas.MoveTo(Rect.Left, Rect.Bottom - 1);
-    Grid.Canvas.LineTo(Rect.Left, Rect.Top);
-    Grid.Canvas.LineTo(Rect.Right, Rect.Top);
-
-    // Bottom and right shadow
-    Grid.Canvas.Pen.Color := clBtnShadow;
-    Grid.Canvas.MoveTo(Rect.Right - 1, Rect.Top);
-    Grid.Canvas.LineTo(Rect.Right - 1, Rect.Bottom - 1);
-    Grid.Canvas.LineTo(Rect.Left - 1, Rect.Bottom - 1);
-
-    Exit;
+  var AlignToRight := False;
+  var Grid := (Sender as TStringGrid);
+  var ColumnsList := TList<Integer>.Create;
+  try
+    ColumnsList.AddRange([0, 1]);
+    AlignColumns(ColumnsList, Grid, ACol, ARow, Rect, State, AlignToRight);
+  finally
+    ColumnsList.Free;
   end;
 
-  // Normal cell handling
-  begin
-    // Background
-    Grid.Canvas.Brush.Color := clWindow;
-    Grid.Canvas.FillRect(Rect);
-
-    // Text properties
-    Grid.Canvas.Font.Color := clWindowText;
-    Grid.Canvas.Font.Style := [];
-
-    // Text alignment and drawing
-    TextFormat := [tfVerticalCenter, tfSingleLine, tfEndEllipsis];
-    if ACol < 2 then
-      TextFormat := TextFormat + [tfLeft]
-    else
-      TextFormat := TextFormat + [tfRight];
-
-    InflateRect(CellRect, -CELL_PADDING, -CELL_PADDING);
-    Grid.Canvas.TextRect(CellRect, Content, TextFormat);
-  end;
-
-  // Selection handling
-  if (gdSelected in State) and (ARow > 0) then
-  begin
-    Grid.Canvas.Pen.Color := clHighlight;
-    Grid.Canvas.Pen.Width := 2;
-    Grid.Canvas.Pen.Style := psSolid;
-
-    Grid.Canvas.Rectangle(
-      Rect.Left + 1,
-      Rect.Top + 1,
-      Rect.Right - 1,
-      Rect.Bottom - 1
-    );
-  end;
 end;
 
 procedure TSTMaintStockUsageFrm.sgdetailsSelectCell(Sender: TObject; Col,
