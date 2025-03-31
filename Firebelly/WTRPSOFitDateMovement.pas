@@ -14,7 +14,6 @@ type
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
-    qrySalesOrdersOld: TFDQuery;
     qrsbDetails: TQRSubDetail;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
@@ -65,7 +64,6 @@ type
     qrlblNewDate: TQRLabel;
     qryGetMovedInDates: TFDQuery;
     qrlblMovementDate: TQRLabel;
-    qrySalesOrderOlder: TFDQuery;
     qrySalesOrders: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
@@ -362,6 +360,7 @@ begin
         end;
     end
   else
+  if qrySalesOrders.fieldbyname('Movement_Type').asstring = 'IN' then
     begin
       with qryGetMovedInDates do
         begin
@@ -379,6 +378,12 @@ begin
           qrlblNewDate.Caption := padatestr(qryGetMovedInDates.fieldbyname('New_Date').asdatetime);
           qrlblMovementDate.Caption := padatestr(qryGetMovedInDates.fieldbyname('Change_Date').asdatetime);
         end;
+    end
+  else
+    begin
+      qrlblOriginalDate.Caption := '';
+      qrlblNewDate.Caption := padatestr(qrySalesOrders.fieldbyname('Date_Required').asdatetime);
+      qrlblMovementDate.Caption := padatestr(qrySalesOrders.fieldbyname('Date_Raised').asdatetime);
     end;
 
   if qrySalesOrders.fieldbyname('On_Hold').asstring = 'Y' then

@@ -117,6 +117,8 @@ type
     function GetProductType(tempProdType: integer; tempPO: real): string;
     function GetInvoicedCost: double;
     function GetInvoicedSell: double;
+    function GetJBLineCost: double;
+    function GetJBLineSell: double;
     { Private declarations }
   public
     bSummary, bInvoicedValues: boolean;
@@ -256,7 +258,7 @@ end;
 procedure TPBRPJobBagCompleteFrm.QRSubDetail1BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-    with qrpDetails.DataSet do
+  with qrpDetails.DataSet do
     begin
 //    OrderLbl.caption := PBFormatPONum(fieldbyname('Purchase_Order').asFloat,fieldbyname('Line').asinteger);
       if bInvoicedValues then
@@ -266,8 +268,10 @@ begin
         end
       else
         begin
-          rTotalCost := FieldByName('Job_Bag_Line_Cost').asfloat;
-          rTotalSell := FieldByName('Job_Bag_Line_Sell').asfloat;
+//          rTotalCost := FieldByName('Job_Bag_Line_Cost').asfloat;
+//          rTotalSell := FieldByName('Job_Bag_Line_Sell').asfloat;
+          rTotalCost := GetJBLineCost;
+          rTotalSell := GetJBLineSell;
         end;
 
       TotalCostLbl.Caption := formatfloat('0.00',rTotalCost);
@@ -296,7 +300,7 @@ begin
         QRLblDesc.Caption := FieldByName('Job_Bag_Line_Descr').AsString;
 
     end;
- printBand := not bSummary;
+  printBand := not bSummary;
 end;
 
 function  TPBRPJobBagCompleteFrm.GetInvoicedCost: double;
@@ -383,6 +387,59 @@ begin
           next;
         end;
     end;
+end;
+
+function  TPBRPJobBagCompleteFrm.GetJBLineCost: double;
+var
+  iQuantity: integer;
+begin
+  result := 0.000000;
+  iQuantity := qrpDetails.DataSet.fieldbyname('Job_Bag_Quantity').asinteger - qrpDetails.DataSet.fieldbyname('Qty_Invoiced').asinteger;
+  if iQuantity <= 0 then
+    exit;
+
+  if qrpDetails.DataSet.fieldbyname('Line_Is_Internal_Cost').asstring = 'Y' then
+    result := qrpDetails.DataSet.fieldbyname('Job_Bag_Line_Cost').asfloat
+  else
+  if qrpDetails.DataSet.fieldbyname('Purchase_order').asfloat <> 0 then
+    begin
+      if qrpDetails.DataSet.fieldbyname('PO_Order_Unit_Factor').asinteger = 0 then
+        result := qrpDetails.DataSet.fieldbyname('PO_Order_Price').asfloat
+      else
+        result := qrpDetails.DataSet.fieldbyname('PO_Order_Price').asfloat * (iQuantity/qrpDetails.DataSet.fieldbyname('PO_Order_Unit_Factor').asinteger);
+    end
+  else
+    begin
+      if qrpDetails.DataSet.fieldbyname('JB_Price_Unit_Factor').asinteger = 0 then
+        result := qrpDetails.DataSet.fieldbyname('Unit_Cost').asfloat
+      else
+        result := qrpDetails.DataSet.fieldbyname('Unit_Cost').asfloat * (iQuantity/qrpDetails.DataSet.fieldbyname('JB_Price_Unit_Factor').asinteger);
+    end
+end;
+
+function  TPBRPJobBagCompleteFrm.GetJBLineSell: double;
+var
+  iQuantity: integer;
+begin
+  result := 0.000000;
+  iQuantity := qrpDetails.DataSet.fieldbyname('Job_Bag_Quantity').asinteger - qrpDetails.DataSet.fieldbyname('Qty_Invoiced').asinteger;
+  if iQuantity <= 0 then
+    exit;
+
+  if qrpDetails.DataSet.fieldbyname('Purchase_order').asfloat <> 0 then
+    begin
+      if qrpDetails.DataSet.fieldbyname('PO_Sell_Unit_Factor').asinteger = 0 then
+        result := qrpDetails.DataSet.fieldbyname('PO_Selling_Price').asfloat
+      else
+        result := qrpDetails.DataSet.fieldbyname('PO_Selling_Price').asfloat * (iQuantity/qrpDetails.DataSet.fieldbyname('PO_Order_Unit_Factor').asinteger);
+    end
+  else
+    begin
+      if qrpDetails.DataSet.fieldbyname('JB_Price_Unit_Factor').asinteger = 0 then
+        result := qrpDetails.DataSet.fieldbyname('Selling_Price').asfloat
+      else
+        result := qrpDetails.DataSet.fieldbyname('Selling_Price').asfloat * (iQuantity/qrpDetails.DataSet.fieldbyname('JB_Price_Unit_Factor').asinteger);
+    end
 end;
 
 procedure TPBRPJobBagCompleteFrm.RepQRFooterBeforePrint(Sender: TQRCustomBand;

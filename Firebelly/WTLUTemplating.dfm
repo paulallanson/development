@@ -2,8 +2,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   Left = 186
   Top = 121
   Caption = 'Templating Details'
-  ClientHeight = 391
-  ClientWidth = 1251
+  ClientHeight = 373
+  ClientWidth = 1239
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,20 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1251
+    Width = 1239
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 1245
+        Width = 1243
       end>
+    ExplicitWidth = 1245
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1236
+      Width = 1230
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -43,7 +44,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1236
+        1224
         30)
       object Label2: TLabel
         Left = 0
@@ -59,7 +60,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 986
+        Left = 974
         Top = 6
         Width = 81
         Height = 15
@@ -89,7 +90,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1073
+        Left = 1061
         Top = 3
         Width = 145
         Height = 21
@@ -102,13 +103,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
           'Trade'
           'Retail'
           'Commercial')
+        ExplicitLeft = 1067
       end
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 372
-    Width = 1251
+    Top = 354
+    Width = 1239
     Height = 19
     Panels = <
       item
@@ -120,17 +122,21 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Width = 50
       end>
+    ExplicitTop = 363
+    ExplicitWidth = 1245
   end
   object Panel1: TPanel
     Left = 0
-    Top = 331
-    Width = 1251
+    Top = 313
+    Width = 1239
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 322
+    ExplicitWidth = 1245
     DesignSize = (
-      1251
+      1239
       41)
     object Label1: TLabel
       Left = 8
@@ -140,7 +146,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 948
+      Left = 924
       Top = 15
       Width = 59
       Height = 13
@@ -152,12 +158,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     object Label6: TLabel
       Left = 528
       Top = 15
-      Width = 76
+      Width = 75
       Height = 13
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1112
+      Left = 1088
       Top = 9
       Width = 75
       Height = 25
@@ -165,6 +171,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 1100
     end
     object edtSearch: TEdit
       Left = 56
@@ -175,13 +182,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1013
+      Left = 989
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 1001
     end
     object cmbActionDate: TComboBox
       Left = 608
@@ -275,19 +283,20 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1251
+    Width = 1239
     Height = 45
     Bands = <
       item
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1245
+        Width = 1243
       end>
+    ExplicitWidth = 1245
     object btnDocuments: TToolBar
       Left = 11
       Top = 0
-      Width = 1236
+      Width = 1230
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -358,8 +367,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1251
-    Height = 254
+    Width = 1239
+    Height = 236
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
@@ -410,7 +419,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Reference'
-        Width = 64
         Visible = True
       end
       item

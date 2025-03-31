@@ -389,7 +389,7 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
     end
     object qrbDetails: TQRSubDetail
       Left = 47
-      Top = 195
+      Top = 196
       Width = 1332
       Height = 55
       AfterPrint = qrbDetailsAfterPrint
@@ -769,19 +769,19 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       object QRLabel12: TQRLabel
         Left = 730
         Top = 24
-        Width = 74
+        Width = 70
         Height = 20
         Size.Values = (
           42.333333333333330000
           1545.166666666667000000
           50.800000000000000000
-          156.633333333333300000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Completed:'
+        Caption = 'Reference:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -796,15 +796,15 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         FontSize = 8
       end
       object QRDBText13: TQRDBText
-        Left = 821
-        Top = 23
-        Width = 63
+        Left = 806
+        Top = 25
+        Width = 120
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1737.783333333333000000
-          48.683333333333330000
-          133.350000000000000000)
+          1706.033333333333000000
+          52.916666666666670000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -812,7 +812,7 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         AlignToBand = False
         Color = clWhite
         DataSet = qryReport
-        DataField = 'Completed'
+        DataField = 'Remedial_Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
@@ -1633,6 +1633,11 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
         'Order) as Fitting_Date,'
       '        Templater.Fitter_Name as Original_Templater_Name,'
       '        Fitter.Fitter_Name as Original_Fitter_Name,'
+      '        (SELECT TOP 1 Sales_Order.Reference'
+      '         FROM sales_order'
+      
+        '         WHERE sales_order.Remedial_ID = Job_Remedial.Remedial) ' +
+        'as Remedial_Reference,'
       '        (SELECT TOP 1 Date_required'
       '         FROM sales_order'
       
