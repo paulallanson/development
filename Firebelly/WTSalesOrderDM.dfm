@@ -290,6 +290,9 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       FieldName = 'Branch_Name'
       Size = 100
     end
+    object qryAllSalesRemedial_Count: TIntegerField
+      FieldName = 'Remedial_Count'
+    end
   end
   object dtsAllSales: TDataSource
     DataSet = qryAllSales
@@ -382,6 +385,12 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       
         #9'        Quote_Element.Quote = Sales_Order_Line.Quote) AS Workto' +
         'p_Weight,'
+      '    (SELECT COUNT(sales_order)'
+      '     FROM Sales_Order as SO'
+      
+        '     WHERE   (SO.Original_Sales_Order = Sales_Order.Sales_Order)' +
+        ' and'
+      '             (SO.Remedial_ID <> 0)) as Remedial_Count,'
       #9'Customer_Branch.Branch_Name'
       'FROM Customer_Branch '
       #9#9'RIGHT JOIN (Operator AS Office_Contact '
@@ -2919,6 +2928,12 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       
         #9'        Quote_Element.Quote = Sales_Order_Line.Quote) AS Workto' +
         'p_Weight,'
+      '    (SELECT COUNT(sales_order)'
+      '     FROM Sales_Order as SO'
+      
+        '     WHERE   (SO.Original_Sales_Order = Sales_Order.Sales_Order)' +
+        ' and'
+      '             (SO.Remedial_ID <> 0)) as Remedial_Count,'
       #9'Customer_Branch.Branch_Name'
       'FROM Customer_Branch '
       #9#9'RIGHT JOIN (Operator AS Office_Contact '

@@ -286,6 +286,13 @@ begin
   else
     sDescription := '';
 
+  sUpstand := ' ';
+  if qryQElements.fieldbyname('Element_number').asinteger < 1000 then
+    begin
+      if qryQElements.fieldbyname('Element_Description').asstring <> '' then
+        sUpstand := ' (' + qryQElements.fieldbyname('Element_Description').asstring+ ') ';
+    end
+  else
   if qryQElements.fieldbyname('Element_number').asinteger > 1000 then
     begin
       if qryQElements.fieldbyname('Use_Description').asstring <> '' then

@@ -358,6 +358,13 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end
   else
+  if (dbgDetails.datasource.dataset.fieldByName('Remedial_count').Asinteger > 0) then
+    begin
+      (Sender as TDBGrid).Canvas.font.color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end
+  else
   if (dbgDetails.datasource.dataset.fieldByName('Template_Docs_Returned').Asstring = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clBlue;

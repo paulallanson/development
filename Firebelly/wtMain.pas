@@ -8,8 +8,7 @@ uses
   Vcl.StdCtrls, FireDAC.Stan.Param;
 
 type
-  TfrmWTMain
-   = class(TForm)
+  TfrmWTMain = class(TForm)
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
     btnCustomers: TToolButton;
@@ -446,7 +445,7 @@ begin
   stsbrStatus.Panels[0].Text := TempUser;
 
   SWVersion := '24.1.';
-  SWSubVersion := '24.12.03a';
+  SWSubVersion := '25.03.18a';
 
   IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
   try

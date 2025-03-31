@@ -176,6 +176,16 @@ type
     qrrchTextSiteNotes: TQRMemo;
     gtQRLabel17: TQRLabel;
     qrrchTextOrderNotes: TQRMemo;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    QRShape5: TQRShape;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;

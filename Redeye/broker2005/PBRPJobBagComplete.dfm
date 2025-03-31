@@ -3,21 +3,21 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
   Top = 50
   Caption = 'Job Bag WIP report'
   ClientHeight = 540
-  ClientWidth = 1195
+  ClientWidth = 1336
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 32
     Top = 24
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -75,10 +75,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand2: TQRBand
-      Left = 19
-      Top = 38
-      Width = 1097
-      Height = 99
+      Left = 24
+      Top = 47
+      Width = 1370
+      Height = 124
       Frame.DrawBottom = True
       Frame.Style = psDashDot
       AlignToBottom = False
@@ -92,21 +92,21 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        261.937500000000000000
-        2902.479166666667000000)
+        262.466666666666700000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 472
-        Top = 2
-        Width = 152
-        Height = 24
+        Left = 593
+        Top = 3
+        Width = 183
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          1248.833333333333000000
-          5.291666666666667000
-          402.166666666666700000)
+          1255.183333333333000000
+          6.350000000000000000
+          387.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -116,7 +116,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial Narrow'
         Font.Style = [fsBold]
         ParentFont = False
@@ -127,15 +127,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 14
       end
       object QRLabel3: TQRLabel
-        Left = 218
-        Top = 80
-        Width = 144
-        Height = 17
+        Left = 273
+        Top = 100
+        Width = 177
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          576.791666666666700000
+          44.450000000000000000
+          577.850000000000000000
           211.666666666666700000
-          381.000000000000000000)
+          374.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -145,7 +145,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -156,15 +156,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object RunDateQRLabel: TQRLabel
-        Left = 998
-        Top = 5
-        Width = 83
-        Height = 15
+        Left = 1251
+        Top = 6
+        Width = 101
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2640.541666666667000000
-          13.229166666666670000
-          219.604166666666700000)
+          40.216666666666670000
+          2647.950000000000000000
+          12.700000000000000000
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -174,7 +174,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -185,15 +185,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 8
-        Top = 80
-        Width = 40
-        Height = 16
+        Left = 10
+        Top = 100
+        Width = 48
+        Height = 20
         Size.Values = (
           42.333333333333330000
           21.166666666666670000
           211.666666666666700000
-          105.833333333333300000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -203,7 +203,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -214,15 +214,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QuantityLbl: TQRLabel
-        Left = 732
-        Top = 80
-        Width = 41
-        Height = 17
+        Left = 916
+        Top = 100
+        Width = 50
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1936.750000000000000000
+          44.450000000000000000
+          1938.866666666667000000
           211.666666666666700000
-          108.479166666666700000)
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -232,7 +232,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -243,15 +243,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 802
-        Top = 80
-        Width = 54
-        Height = 17
+        Left = 1005
+        Top = 100
+        Width = 65
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2121.958333333333000000
+          44.450000000000000000
+          2127.250000000000000000
           211.666666666666700000
-          142.875000000000000000)
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -261,7 +261,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -272,15 +272,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 879
-        Top = 80
-        Width = 59
-        Height = 17
+        Left = 1102
+        Top = 100
+        Width = 71
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2325.687500000000000000
+          44.450000000000000000
+          2332.566666666667000000
           211.666666666666700000
-          156.104166666666700000)
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -290,7 +290,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -301,15 +301,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 1056
-        Top = 80
-        Width = 39
-        Height = 17
+        Left = 1321
+        Top = 100
+        Width = 48
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2794.000000000000000000
+          44.450000000000000000
+          2796.116666666667000000
           211.666666666666700000
-          103.187500000000000000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -319,7 +319,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -330,15 +330,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 1023
-        Top = 64
-        Width = 29
-        Height = 17
+        Left = 1279
+        Top = 80
+        Width = 34
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2706.687500000000000000
+          44.450000000000000000
+          2707.216666666667000000
           169.333333333333300000
-          76.729166666666670000)
+          71.966666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -348,7 +348,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -359,15 +359,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 1020
-        Top = 80
-        Width = 33
-        Height = 17
+        Left = 1276
+        Top = 100
+        Width = 40
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2698.750000000000000000
+          44.450000000000000000
+          2700.866666666667000000
           211.666666666666700000
-          87.312500000000000000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -377,7 +377,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -388,15 +388,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblTotBy: TQRLabel
-        Left = 519
-        Top = 32
-        Width = 58
-        Height = 15
+        Left = 649
+        Top = 40
+        Width = 71
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1373.187500000000000000
+          40.216666666666670000
+          1373.716666666667000000
           84.666666666666670000
-          153.458333333333300000)
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -406,7 +406,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -417,15 +417,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRSysData1: TQRSysData
-        Left = 997
-        Top = 25
-        Width = 66
-        Height = 15
+        Left = 1246
+        Top = 31
+        Width = 80
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2637.895833333333000000
-          66.145833333333330000
-          174.625000000000000000)
+          40.216666666666670000
+          2637.366666666667000000
+          65.616666666666670000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -435,7 +435,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -446,15 +446,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 136
-        Top = 80
-        Width = 69
-        Height = 16
+        Left = 170
+        Top = 100
+        Width = 83
+        Height = 20
         Size.Values = (
           42.333333333333330000
           359.833333333333300000
           211.666666666666700000
-          182.562500000000000000)
+          175.683333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -464,7 +464,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -475,15 +475,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 664
-        Top = 80
-        Width = 49
-        Height = 16
+        Left = 830
+        Top = 100
+        Width = 60
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1756.833333333333000000
           211.666666666666700000
-          129.645833333333300000)
+          127.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -493,7 +493,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -504,15 +504,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel16: TQRLabel
-        Left = 64
-        Top = 80
-        Width = 59
-        Height = 16
+        Left = 80
+        Top = 100
+        Width = 72
+        Height = 20
         Size.Values = (
           42.333333333333330000
           169.333333333333300000
           211.666666666666700000
-          156.104166666666700000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -522,7 +522,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -533,15 +533,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel1: TQRLabel
-        Left = 554
-        Top = 80
-        Width = 97
-        Height = 17
+        Left = 693
+        Top = 100
+        Width = 117
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1465.791666666667000000
+          44.450000000000000000
+          1466.850000000000000000
           211.666666666666700000
-          256.645833333333300000)
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -551,7 +551,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -562,15 +562,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 971
-        Top = 81
-        Width = 33
-        Height = 15
+        Left = 1215
+        Top = 101
+        Width = 40
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2569.104166666667000000
-          214.312500000000000000
-          87.312500000000000000)
+          40.216666666666670000
+          2571.750000000000000000
+          213.783333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -580,7 +580,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -591,15 +591,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel12: TQRLabel
-        Left = 448
-        Top = 80
-        Width = 90
-        Height = 17
+        Left = 560
+        Top = 100
+        Width = 107
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1185.333333333333000000
           211.666666666666700000
-          238.125000000000000000)
+          226.483333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -609,7 +609,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -621,10 +621,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 19
-      Top = 177
-      Width = 1097
-      Height = 35
+      Left = 24
+      Top = 221
+      Width = 1370
+      Height = 44
       AfterPrint = QRSubDetail1AfterPrint
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
@@ -638,8 +638,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        92.604166666666670000
-        2902.479166666667000000)
+        93.133333333333330000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -647,15 +647,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBQuantityText1: TQRDBText
-        Left = 684
-        Top = 2
-        Width = 89
-        Height = 17
+        Left = 859
+        Top = 3
+        Width = 107
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1809.750000000000000000
-          5.291666666666667000
-          235.479166666666700000)
+          44.450000000000000000
+          1818.216666666667000000
+          6.350000000000000000
+          226.483333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -664,6 +664,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag_Quantity'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -673,15 +679,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object TotalCostLbl: TQRLabel
-        Left = 795
-        Top = 2
-        Width = 60
-        Height = 17
+        Left = 996
+        Top = 3
+        Width = 73
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2103.437500000000000000
-          5.291666666666667000
-          158.750000000000000000)
+          44.450000000000000000
+          2108.200000000000000000
+          6.350000000000000000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -689,6 +695,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AlignToBand = False
         Caption = 'TotalCostLbl'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -696,15 +708,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object TotalSellLbl: TQRLabel
-        Left = 884
-        Top = 2
-        Width = 55
-        Height = 17
+        Left = 1106
+        Top = 3
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2338.916666666667000000
-          5.291666666666667000
-          145.520833333333300000)
+          44.450000000000000000
+          2341.033333333333000000
+          6.350000000000000000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -712,6 +724,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AlignToBand = False
         Caption = 'TotalSellLbl'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -719,15 +737,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object MarginQRBLabel: TQRLabel
-        Left = 973
-        Top = 2
-        Width = 33
-        Height = 17
+        Left = 1217
+        Top = 3
+        Width = 40
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2574.395833333333000000
-          5.291666666666667000
-          87.312500000000000000)
+          44.450000000000000000
+          2575.983333333333000000
+          6.350000000000000000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -735,6 +753,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AlignToBand = False
         Caption = 'Margin'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -742,15 +766,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object MargPercQRLabel: TQRLabel
-        Left = 1022
-        Top = 2
-        Width = 31
-        Height = 17
+        Left = 1281
+        Top = 3
+        Width = 36
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2704.041666666667000000
-          5.291666666666667000
-          82.020833333333330000)
+          44.450000000000000000
+          2711.450000000000000000
+          6.350000000000000000
+          76.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -758,6 +782,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AlignToBand = False
         Caption = '%Age'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -765,15 +795,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText1: TQRDBText
-        Left = 8
-        Top = 2
-        Width = 43
-        Height = 16
+        Left = 10
+        Top = 3
+        Width = 51
+        Height = 20
         Size.Values = (
           42.333333333333330000
           21.166666666666670000
-          5.291666666666667000
-          113.770833333333300000)
+          6.350000000000000000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -782,6 +812,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -791,10 +827,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblDesc: TQRLabel
-        Left = 216
-        Top = 16
-        Width = 337
-        Height = 16
+        Left = 270
+        Top = 20
+        Width = 421
+        Height = 20
         Size.Values = (
           42.333333333333330000
           571.500000000000000000
@@ -808,6 +844,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AutoSize = False
         Caption = 'qrlblDesc'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -815,15 +857,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 136
-        Top = 2
-        Width = 82
-        Height = 16
+        Left = 170
+        Top = 3
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
           359.833333333333300000
-          5.291666666666667000
-          216.958333333333300000)
+          6.350000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -832,6 +874,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Goods_Required'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -841,15 +889,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText7: TQRDBText
-        Left = 664
-        Top = 2
-        Width = 52
-        Height = 16
+        Left = 830
+        Top = 3
+        Width = 63
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1756.833333333333000000
-          5.291666666666667000
-          137.583333333333300000)
+          6.350000000000000000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -858,6 +906,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Start'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -867,14 +921,14 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText9: TQRDBText
-        Left = 64
-        Top = 2
-        Width = 52
-        Height = 16
+        Left = 80
+        Top = 3
+        Width = 65
+        Height = 20
         Size.Values = (
           42.333333333333330000
           169.333333333333300000
-          5.291666666666667000
+          6.350000000000000000
           137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -884,6 +938,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Point'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -893,15 +953,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblCust: TQRLabel
-        Left = 216
-        Top = 2
-        Width = 52
-        Height = 16
+        Left = 270
+        Top = 3
+        Width = 64
+        Height = 20
         Size.Values = (
           42.333333333333330000
           571.500000000000000000
-          5.291666666666667000
-          137.583333333333300000)
+          6.350000000000000000
+          135.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -909,6 +969,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         AlignToBand = False
         Caption = 'QRLblCust'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -917,26 +983,26 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object RepQRFooter: TQRBand
-      Left = 19
-      Top = 254
-      Width = 1097
-      Height = 31
+      Left = 24
+      Top = 318
+      Width = 1370
+      Height = 39
       AlignToBottom = False
       BeforePrint = RepQRFooterBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        82.020833333333330000
-        2902.479166666667000000)
+        82.550000000000000000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object Totals: TQRLabel
-        Left = 585
-        Top = 8
-        Width = 186
-        Height = 17
+        Left = 731
+        Top = 10
+        Width = 233
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1547.812500000000000000
@@ -952,7 +1018,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -963,15 +1029,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblGroupSales: TQRLabel
-        Left = 849
-        Top = 8
-        Width = 97
-        Height = 17
+        Left = 1068
+        Top = 10
+        Width = 114
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2246.312500000000000000
+          44.450000000000000000
+          2260.600000000000000000
           21.166666666666670000
-          256.645833333333300000)
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -981,7 +1047,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -992,10 +1058,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 686
+        Left = 858
         Top = 1
-        Width = 369
-        Height = 7
+        Width = 461
+        Height = 9
         Size.Values = (
           18.520833333333330000
           1815.041666666667000000
@@ -1009,15 +1075,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         VertAdjust = 0
       end
       object QRLblGroupCost: TQRLabel
-        Left = 796
-        Top = 8
-        Width = 61
-        Height = 17
+        Left = 999
+        Top = 10
+        Width = 72
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2106.083333333333000000
+          44.450000000000000000
+          2114.550000000000000000
           21.166666666666670000
-          161.395833333333300000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1027,7 +1093,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1038,15 +1104,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblGroupMargin: TQRLabel
-        Left = 910
-        Top = 8
-        Width = 97
-        Height = 17
+        Left = 1144
+        Top = 10
+        Width = 114
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2407.708333333333000000
+          44.450000000000000000
+          2421.466666666667000000
           21.166666666666670000
-          256.645833333333300000)
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1056,7 +1122,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1067,15 +1133,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblGroupMarginPerc: TQRLabel
-        Left = 958
-        Top = 8
-        Width = 97
-        Height = 17
+        Left = 1204
+        Top = 10
+        Width = 114
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2534.708333333333000000
+          44.450000000000000000
+          2548.466666666667000000
           21.166666666666670000
-          256.645833333333300000)
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1085,7 +1151,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1097,9 +1163,9 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object qrSummary: TQRBand
-      Left = 19
-      Top = 285
-      Width = 1097
+      Left = 24
+      Top = 357
+      Width = 1370
       Height = 32
       AlignToBottom = False
       BeforePrint = qrSummaryBeforePrint
@@ -1107,21 +1173,21 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2902.479166666667000000)
+        67.733333333333330000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel15: TQRLabel
-        Left = 695
-        Top = 7
-        Width = 75
-        Height = 17
+        Left = 878
+        Top = 9
+        Width = 85
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1838.854166666667000000
-          18.520833333333330000
-          198.437500000000000000)
+          44.450000000000000000
+          1858.433333333333000000
+          19.050000000000000000
+          179.916666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1131,7 +1197,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1142,15 +1208,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblReportSales: TQRLabel
-        Left = 841
-        Top = 7
-        Width = 100
-        Height = 17
+        Left = 1059
+        Top = 9
+        Width = 117
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2225.145833333333000000
-          18.520833333333330000
-          264.583333333333300000)
+          44.450000000000000000
+          2241.550000000000000000
+          19.050000000000000000
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1160,7 +1226,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1171,10 +1237,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRShape2: TQRShape
-        Left = 685
-        Top = -3
-        Width = 369
-        Height = 12
+        Left = 856
+        Top = -4
+        Width = 461
+        Height = 15
         Size.Values = (
           31.750000000000000000
           1812.395833333333000000
@@ -1188,15 +1254,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         VertAdjust = 0
       end
       object QRLblReportCost: TQRLabel
-        Left = 778
-        Top = 7
-        Width = 78
-        Height = 17
+        Left = 979
+        Top = 9
+        Width = 91
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2058.458333333333000000
-          18.520833333333330000
-          206.375000000000000000)
+          44.450000000000000000
+          2072.216666666667000000
+          19.050000000000000000
+          192.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1206,7 +1272,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1217,15 +1283,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblReportMargin: TQRLabel
-        Left = 903
-        Top = 7
-        Width = 104
-        Height = 17
+        Left = 1137
+        Top = 9
+        Width = 122
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2389.187500000000000000
-          18.520833333333330000
-          275.166666666666700000)
+          44.450000000000000000
+          2406.650000000000000000
+          19.050000000000000000
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1235,7 +1301,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1246,15 +1312,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblReportMarginPerc: TQRLabel
-        Left = 926
-        Top = 7
-        Width = 129
-        Height = 17
+        Left = 1168
+        Top = 9
+        Width = 151
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2450.041666666667000000
-          18.520833333333330000
-          341.312500000000000000)
+          44.450000000000000000
+          2472.266666666667000000
+          19.050000000000000000
+          319.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1264,7 +1330,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1276,10 +1342,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object RepQRGroup: TQRGroup
-      Left = 19
-      Top = 137
-      Width = 1097
-      Height = 16
+      Left = 24
+      Top = 171
+      Width = 1370
+      Height = 20
       AlignToBottom = False
       TransparentBand = False
       Font.Charset = ANSI_CHARSET
@@ -1292,22 +1358,22 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ParentFont = False
       Size.Values = (
         42.333333333333330000
-        2902.479166666667000000)
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = RepQRFooter
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object GrpByQRDBText: TQRDBText
-        Left = 11
+        Left = 14
         Top = 0
-        Width = 82
-        Height = 16
+        Width = 100
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          29.104166666666670000
+          29.633333333333330000
           0.000000000000000000
-          216.958333333333300000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1317,7 +1383,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         DataSet = qryReport
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1331,10 +1397,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object JobQRGroup: TQRGroup
-      Left = 19
-      Top = 153
-      Width = 1097
-      Height = 24
+      Left = 24
+      Top = 191
+      Width = 1370
+      Height = 30
       AlignToBottom = False
       BeforePrint = JobQRGroupBeforePrint
       TransparentBand = False
@@ -1342,7 +1408,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        2902.479166666667000000)
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Job_Bag'
@@ -1350,15 +1416,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object QRLabel13: TQRLabel
-        Left = 9
-        Top = 4
-        Width = 47
-        Height = 15
+        Left = 11
+        Top = 5
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          23.812500000000000000
+          40.216666666666670000
+          23.283333333333330000
           10.583333333333330000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1368,7 +1434,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1379,15 +1445,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 64
-        Top = 4
-        Width = 43
-        Height = 15
+        Left = 80
+        Top = 5
+        Width = 51
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           169.333333333333300000
           10.583333333333330000
-          113.770833333333300000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1396,6 +1462,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1405,15 +1477,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLabel14: TQRLabel
-        Left = 152
-        Top = 4
-        Width = 67
-        Height = 15
+        Left = 190
+        Top = 5
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           402.166666666666700000
           10.583333333333330000
-          177.270833333333300000)
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1423,7 +1495,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1434,15 +1506,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 232
-        Top = 4
-        Width = 78
-        Height = 15
+        Left = 290
+        Top = 5
+        Width = 92
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           613.833333333333300000
           10.583333333333330000
-          206.375000000000000000)
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1451,6 +1523,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag_Descr'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1461,10 +1539,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
     object JobQRFooter: TQRBand
-      Left = 19
-      Top = 212
-      Width = 1097
-      Height = 42
+      Left = 24
+      Top = 265
+      Width = 1370
+      Height = 53
       AfterPrint = JobQRFooterAfterPrint
       AlignToBottom = False
       BeforePrint = JobQRFooterBeforePrint
@@ -1472,16 +1550,16 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        111.125000000000000000
-        2902.479166666667000000)
+        112.183333333333300000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrshapeJobBag: TQRShape
-        Left = 686
-        Top = -4
-        Width = 369
-        Height = 12
+        Left = 858
+        Top = -5
+        Width = 461
+        Height = 15
         Size.Values = (
           31.750000000000000000
           1815.041666666667000000
@@ -1495,15 +1573,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         VertAdjust = 0
       end
       object QRLblJobSales: TQRLabel
-        Left = 889
-        Top = 5
-        Width = 52
-        Height = 17
+        Left = 1113
+        Top = 6
+        Width = 63
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2352.145833333333000000
-          13.229166666666670000
-          137.583333333333300000)
+          44.450000000000000000
+          2355.850000000000000000
+          12.700000000000000000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1513,7 +1591,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1524,15 +1602,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRLblJobCost: TQRLabel
-        Left = 805
-        Top = 5
-        Width = 52
-        Height = 17
+        Left = 1008
+        Top = 6
+        Width = 63
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2129.895833333333000000
-          13.229166666666670000
-          137.583333333333300000)
+          44.450000000000000000
+          2133.600000000000000000
+          12.700000000000000000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1542,7 +1620,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1553,15 +1631,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblMargin: TQRLabel
-        Left = 949
-        Top = 5
-        Width = 58
-        Height = 17
+        Left = 1186
+        Top = 6
+        Width = 72
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2510.895833333333000000
-          13.229166666666670000
-          153.458333333333300000)
+          44.450000000000000000
+          2510.366666666667000000
+          12.700000000000000000
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1571,7 +1649,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1582,15 +1660,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRlblMarginPerc: TQRLabel
-        Left = 975
-        Top = 5
-        Width = 80
-        Height = 17
+        Left = 1220
+        Top = 6
+        Width = 99
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2579.687500000000000000
-          13.229166666666670000
-          211.666666666666700000)
+          44.450000000000000000
+          2582.333333333333000000
+          12.700000000000000000
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1600,7 +1678,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1611,15 +1689,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrdbJobNumber: TQRDBText
-        Left = 8
-        Top = 5
-        Width = 43
-        Height = 17
+        Left = 10
+        Top = 6
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          13.229166666666670000
-          113.770833333333300000)
+          12.700000000000000000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1628,6 +1706,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1637,15 +1721,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrdbJobDate: TQRDBText
-        Left = 136
-        Top = 5
-        Width = 82
-        Height = 17
+        Left = 170
+        Top = 6
+        Width = 97
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           359.833333333333300000
-          13.229166666666670000
-          216.958333333333300000)
+          12.700000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1654,6 +1738,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Goods_Required'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1663,10 +1753,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrdbJobDescription: TQRDBText
-        Left = 216
-        Top = 22
-        Width = 361
-        Height = 15
+        Left = 270
+        Top = 27
+        Width = 451
+        Height = 19
         Size.Values = (
           39.687500000000000000
           571.500000000000000000
@@ -1681,6 +1771,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job_Bag_Descr'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1690,15 +1786,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrdbJobQuantity: TQRDBText
-        Left = 733
-        Top = 5
-        Width = 41
-        Height = 17
+        Left = 917
+        Top = 6
+        Width = 50
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1939.395833333333000000
-          13.229166666666670000
-          108.479166666666700000)
+          44.450000000000000000
+          1940.983333333333000000
+          12.700000000000000000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1707,6 +1803,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Quantity'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1716,15 +1818,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrlblJobBagTotal: TQRLabel
-        Left = 688
-        Top = 5
-        Width = 35
-        Height = 17
+        Left = 865
+        Top = 6
+        Width = 39
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1820.333333333333000000
-          13.229166666666670000
-          92.604166666666670000)
+          44.450000000000000000
+          1830.916666666667000000
+          12.700000000000000000
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1734,7 +1836,7 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1745,15 +1847,15 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 664
-        Top = 5
-        Width = 52
-        Height = 17
+        Left = 830
+        Top = 6
+        Width = 63
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1756.833333333333000000
-          13.229166666666670000
-          137.583333333333300000)
+          12.700000000000000000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1762,6 +1864,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Start'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1771,10 +1879,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object qrdbJobCustomer: TQRDBText
-        Left = 216
-        Top = 5
-        Width = 225
-        Height = 17
+        Left = 270
+        Top = 6
+        Width = 281
+        Height = 21
         Size.Values = (
           44.979166666666670000
           571.500000000000000000
@@ -1789,6 +1897,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1798,14 +1912,14 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText10: TQRDBText
-        Left = 64
-        Top = 5
-        Width = 52
-        Height = 17
+        Left = 80
+        Top = 6
+        Width = 65
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           169.333333333333300000
-          13.229166666666670000
+          12.700000000000000000
           137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1815,6 +1929,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Point'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1824,10 +1944,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 555
-        Top = 5
-        Width = 105
-        Height = 17
+        Left = 694
+        Top = 6
+        Width = 131
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1468.437500000000000000
@@ -1842,6 +1962,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Cust_Order_No'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1851,10 +1977,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 1060
-        Top = 5
-        Width = 33
-        Height = 17
+        Left = 1325
+        Top = 6
+        Width = 41
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2804.583333333333000000
@@ -1869,6 +1995,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'On_Hold'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1878,10 +2010,10 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         FontSize = 8
       end
       object QRDBText11: TQRDBText
-        Left = 448
-        Top = 5
-        Width = 105
-        Height = 17
+        Left = 560
+        Top = 6
+        Width = 131
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1185.333333333333000000
@@ -1896,6 +2028,12 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         Color = clWhite
         DataSet = qryReport
         DataField = 'Account_Manager'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1911,74 +2049,123 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Line_Dets.Job_Bag,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Descr,'
-      #9'    Customer.Name AS Customer_Name,'
-      #9'    Supplier.Name AS Supplier_Name,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Cost,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Sell,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Quantity,'
-      #9'    Job_Bag_Line_Dets.VAT_Code,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Type,'
-      #9'    Job_Bag_Line_Dets.Purchase_Order,'
-      #9'    Job_Bag_Line_Dets.Line, '
-      #9'    Job_Bag.Cust_Order_No, '
-      #9'    Rep.Rep, '
-      #9'    Rep.Name AS Rep_Name, '
-      #9'    Vat_Code.Vat_Rate, '
-      #9'    Job_Bag.Date_Point, '
-      #9'    Job_Bag.Date_Start, '
-      #9'    Job_Bag.Quantity, '
-      #9'    Job_Bag.Customer, '
-      #9'    Job_Bag.Branch_No, '
-      #9'    Customer_Branch.Name AS Customer_Branch_Name, '
-      '      Customer.Analysis_Code_1, '
-      '      Customer.Analysis_Code_2, '
-      '      (SELECT CB.Account_Code '
-      '       FROM Customer_Branch CB '
-      '       WHERE CB.Customer = Customer_Branch.Inv_To_Customer AND '
+      '                   Job_Bag_Line_Dets.Job_Bag_Line,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Descr,'
+      '                   Customer.Name AS Customer_Name,'
+      '                   Supplier.Name AS Supplier_Name,'
+      '                   Job_Bag_Line_Dets.Line_Is_Internal_Cost,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Cost,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Sell,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Quantity,'
+      '                   Job_Bag_Line_Dets.VAT_Code,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Type,'
+      '                   Job_Bag_Line_Dets.Purchase_Order,'
+      '                   Job_Bag_Line_Dets.Line,'
+      '                   Job_Bag_Line_Dets.Qty_Invoiced,'
+      '                   Job_Bag_Line_Dets.Unit_Cost,'
+      '                   Job_Bag_Line_Dets.Unit_SSP,'
+      '                   Job_Bag_Line_Dets.Selling_Price,'
+      '                   Job_Bag_Line_Dets.Price_Unit,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Job_Bag_Line_Dets.Price_Un' +
+        'it) as JB_Price_Unit_Factor,'
+      '                   Job_Bag.Cust_Order_No,'
+      '                   Rep.Rep,'
+      '                   Rep.Name AS Rep_Name,'
+      '                   Vat_Code.Vat_Rate,'
+      '                   Job_Bag.Date_Point,'
+      '                   Job_Bag.Date_Start,'
+      '                   Job_Bag.Quantity,'
+      '                   Job_Bag.Customer,'
+      '                   Job_Bag.Branch_No,'
+      '                   Customer_Branch.Name AS Customer_Branch_Name,'
+      '      Customer.Analysis_Code_1,'
+      '      Customer.Analysis_Code_2,'
+      '      (SELECT CB.Account_Code'
+      '       FROM Customer_Branch CB'
+      '       WHERE CB.Customer = Customer_Branch.Inv_To_Customer AND'
       
         '             CB.Branch_No = Customer_Branch.Inv_To_Branch) AS Ac' +
-        'count_Code, '
-      #9'    Job_Bag_Line_Dets.Supplier, '
-      #9'    Job_Bag_Line_Dets.Branch_No AS Supplier_Branch_no, '
-      #9'    Supplier_Branch.Name AS Supplier_Branch_Name, '
-      #9'    Purchase_OrderLine.Inactive, '
-      '      Job_Bag.Job_Bag_Descr, '
-      '      Job_Bag.Office_Contact, '
-      '      Operator.Name as Account_Manager, '
-      '      Job_Bag.Goods_Required, '
-      '      Job_Bag.Ready_for_Invoicing, '
-      '      Job_Bag_Line_Dets.Product_Type '
+        'count_Code,'
+      '                   Job_Bag_Line_Dets.Supplier,'
+      
+        '                   Job_Bag_Line_Dets.Branch_No AS Supplier_Branc' +
+        'h_no,'
+      '                   Supplier_Branch.Name AS Supplier_Branch_Name,'
+      '                   Purchase_OrderLine.Inactive,'
+      '                   Purchase_OrderLine.Quantity as PO_Quantity,'
+      
+        '                   Purchase_OrderLine.Order_Price as PO_Order_Pr' +
+        'ice,'
+      
+        '                   Purchase_OrderLine.Selling_Price as PO_Sellin' +
+        'g_Price,'
+      
+        '                   Purchase_OrderLine.Qty_Invoiced as PO_Qty_Inv' +
+        'oiced,'
+      '                   Purchase_OrderLine.Sell_Unit as PO_Sell_Unit,'
+      
+        '                   Purchase_OrderLine.Order_Unit as PO_Order_Uni' +
+        't,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Purchase_OrderLine.Sell_Un' +
+        'it) as PO_Sell_Unit_Factor,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Purchase_OrderLine.Order_U' +
+        'nit) as PO_Order_Unit_Factor,'
+      '      Job_Bag.Job_Bag_Descr,'
+      '      Job_Bag.Office_Contact,'
+      '      Operator.Name as Account_Manager,'
+      '      Job_Bag.Goods_Required,'
+      '      Job_Bag.Ready_for_Invoicing,'
+      '      Job_Bag_Line_Dets.Product_Type'
       'FROM Purchase_OrderLine'
-      #9'    RIGHT JOIN (Vat_Code '
-      #9'    INNER JOIN ((Supplier '
-      #9'    INNER JOIN Supplier_Branch ON '
-      #9#9'    Supplier.Supplier = Supplier_Branch.Supplier) '
-      #9'    INNER JOIN (Customer '
-      '      INNER JOIN ((Rep '
-      #9'    INNER JOIN (Customer_Branch '
-      #9'    INNER JOIN Job_Bag ON '
-      #9#9'    (Customer_Branch.Branch_no = Job_Bag.Branch_No) AND '
-      #9#9'    (Customer_Branch.Customer = Job_Bag.Customer)) ON '
-      #9#9'    Rep.Rep = Job_Bag.Rep) '
-      #9'    INNER JOIN Job_Bag_Line_Dets ON '
-      #9#9'    Job_Bag.Job_Bag = Job_Bag_Line_Dets.Job_Bag) ON '
-      #9#9'    Customer.Customer = Customer_Branch.Customer) ON '
+      '                   RIGHT JOIN (Vat_Code'
+      '                   INNER JOIN ((Supplier'
+      '                   INNER JOIN Supplier_Branch ON'
       
-        #9#9'    (Supplier_Branch.Branch_no = Job_Bag_Line_Dets.Branch_No) ' +
-        'AND '
+        '                                  Supplier.Supplier = Supplier_B' +
+        'ranch.Supplier)'
+      '                   INNER JOIN (Customer'
+      '      INNER JOIN ((Rep'
+      '                   INNER JOIN (Customer_Branch'
+      '                   INNER JOIN Job_Bag ON'
       
-        #9#9'    (Supplier_Branch.Supplier = Job_Bag_Line_Dets.Supplier)) O' +
-        'N '
-      '        Vat_Code.Vat_Code = Job_Bag_Line_Dets.VAT_Code) ON '
-      #9#9'    (Purchase_OrderLine.Line = Job_Bag_Line_Dets.Line) AND '
+        '                                  (Customer_Branch.Branch_no = J' +
+        'ob_Bag.Branch_No) AND'
       
-        #9#9'    (Purchase_OrderLine.Purchase_Order = Job_Bag_Line_Dets.Pur' +
-        'chase_Order) '
+        '                                  (Customer_Branch.Customer = Jo' +
+        'b_Bag.Customer)) ON'
+      '                                  Rep.Rep = Job_Bag.Rep)'
+      '                   INNER JOIN Job_Bag_Line_Dets ON'
+      
+        '                                  Job_Bag.Job_Bag = Job_Bag_Line' +
+        '_Dets.Job_Bag) ON'
+      
+        '                                  Customer.Customer = Customer_B' +
+        'ranch.Customer) ON'
+      
+        '                                  (Supplier_Branch.Branch_no = J' +
+        'ob_Bag_Line_Dets.Branch_No) AND'
+      
+        '                                  (Supplier_Branch.Supplier = Jo' +
+        'b_Bag_Line_Dets.Supplier)) ON'
+      '        Vat_Code.Vat_Code = Job_Bag_Line_Dets.VAT_Code) ON'
+      
+        '                                  (Purchase_OrderLine.Line = Job' +
+        '_Bag_Line_Dets.Line) AND'
+      
+        '                                  (Purchase_OrderLine.Purchase_O' +
+        'rder = Job_Bag_Line_Dets.Purchase_Order)'
       
         '      INNER JOIN Operator ON Job_Bag.Office_Contact = Operator.O' +
-        'perator '
+        'perator'
       'WHERE     (Job_Bag.Job_Bag_Status < 30) AND'
       '          (Job_Bag.On_Hold = '#39'N'#39') AND'
       
@@ -2003,40 +2190,33 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         '          ((Job_Bag.Office_Contact = :Office_Contact) OR (:Offic' +
         'e_Contact = 0))'
       ''
-      ''
       '')
     Left = 550
     Top = 16
     ParamData = <
       item
         Name = 'Invoice_This_Week'
-      end
-      item
-        Name = 'Invoice_This_Week'
-      end
-      item
-        Name = 'Production_Complete'
+        ParamType = ptInput
       end
       item
         Name = 'Production_Complete'
+        ParamType = ptInput
       end
       item
         Name = 'Date_From'
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
-      end
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Office_Contact'
+        ParamType = ptInput
       end
       item
         Name = 'Office_Contact'
+        ParamType = ptInput
       end>
   end
   object qryGetPOLine: TFDQuery
@@ -2180,75 +2360,124 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Line_Dets.Job_Bag,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Descr,'
-      #9'    Customer.Name AS Customer_Name,'
-      #9'    Supplier.Name AS Supplier_Name,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Cost,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Sell,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Quantity,'
-      #9'    Job_Bag_Line_Dets.VAT_Code,'
-      #9'    Job_Bag_Line_Dets.Job_Bag_Line_Type,'
-      #9'    Job_Bag_Line_Dets.Purchase_Order,'
-      #9'    Job_Bag_Line_Dets.Line, '
-      #9'    Job_Bag.Cust_Order_No, '
-      #9'    Job_Bag.On_Hold, '
-      #9'    Rep.Rep,'
-      #9'    Rep.Name AS Rep_Name, '
-      #9'    Vat_Code.Vat_Rate, '
-      #9'    Job_Bag.Date_Point, '
-      #9'    Job_Bag.Date_Start, '
-      #9'    Job_Bag.Quantity, '
-      #9'    Job_Bag.Customer, '
-      #9'    Job_Bag.Branch_No, '
-      #9'    Customer_Branch.Name AS Customer_Branch_Name, '
-      '      Customer.Analysis_Code_1, '
-      '      Customer.Analysis_Code_2, '
-      '      (SELECT CB.Account_Code '
-      '       FROM Customer_Branch CB '
-      '       WHERE CB.Customer = Customer_Branch.Inv_To_Customer AND '
+      '                   Job_Bag_Line_Dets.Job_Bag_Line,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Descr,'
+      '                   Customer.Name AS Customer_Name,'
+      '                   Supplier.Name AS Supplier_Name,'
+      '                   Job_Bag_Line_Dets.Line_Is_Internal_Cost,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Cost,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Sell,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Quantity,'
+      '                   Job_Bag_Line_Dets.VAT_Code,'
+      '                   Job_Bag_Line_Dets.Job_Bag_Line_Type,'
+      '                   Job_Bag_Line_Dets.Purchase_Order,'
+      '                   Job_Bag_Line_Dets.Line,'
+      '                   Job_Bag_Line_Dets.Qty_Invoiced,'
+      '                   Job_Bag_Line_Dets.Unit_Cost,'
+      '                   Job_Bag_Line_Dets.Unit_SSP,'
+      '                   Job_Bag_Line_Dets.Selling_Price,'
+      '                   Job_Bag_Line_Dets.Price_Unit,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Job_Bag_Line_Dets.Price_Un' +
+        'it) as JB_Price_Unit_Factor,'
+      '                   Job_Bag.Cust_Order_No,'
+      '                   Job_Bag.On_Hold,'
+      '                   Rep.Rep,'
+      '                   Rep.Name AS Rep_Name,'
+      '                   Vat_Code.Vat_Rate,'
+      '                   Job_Bag.Date_Point,'
+      '                   Job_Bag.Date_Start,'
+      '                   Job_Bag.Quantity,'
+      '                   Job_Bag.Customer,'
+      '                   Job_Bag.Branch_No,'
+      '                   Customer_Branch.Name AS Customer_Branch_Name,'
+      '      Customer.Analysis_Code_1,'
+      '      Customer.Analysis_Code_2,'
+      '      (SELECT CB.Account_Code'
+      '       FROM Customer_Branch CB'
+      '       WHERE CB.Customer = Customer_Branch.Inv_To_Customer AND'
       
         '             CB.Branch_No = Customer_Branch.Inv_To_Branch) AS Ac' +
-        'count_Code, '
-      #9'    Job_Bag_Line_Dets.Supplier, '
-      #9'    Job_Bag_Line_Dets.Branch_No AS Supplier_Branch_no, '
-      #9'    Supplier_Branch.Name AS Supplier_Branch_Name, '
-      #9'    Purchase_OrderLine.Inactive, '
-      '      Job_Bag.Job_Bag_Descr, '
-      '      Job_Bag.Office_Contact, '
-      '      Operator.Name as Account_Manager, '
-      '      Job_Bag.Goods_Required, '
-      '      Job_Bag.Ready_for_Invoicing, '
-      '      Job_Bag_Line_Dets.Product_Type '
+        'count_Code,'
+      '                   Job_Bag_Line_Dets.Supplier,'
+      
+        '                   Job_Bag_Line_Dets.Branch_No AS Supplier_Branc' +
+        'h_no,'
+      '                   Supplier_Branch.Name AS Supplier_Branch_Name,'
+      '                   Purchase_OrderLine.Inactive,'
+      '                   Purchase_OrderLine.Quantity as PO_Quantity,'
+      
+        '                   Purchase_OrderLine.Order_Price as PO_Order_Pr' +
+        'ice,'
+      
+        '                   Purchase_OrderLine.Selling_Price as PO_Sellin' +
+        'g_Price,'
+      
+        '                   Purchase_OrderLine.Qty_Invoiced as PO_Qty_Inv' +
+        'oiced,'
+      '                   Purchase_OrderLine.Sell_Unit as PO_Sell_Unit,'
+      
+        '                   Purchase_OrderLine.Order_Unit as PO_Order_Uni' +
+        't,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Purchase_OrderLine.Sell_Un' +
+        'it) as PO_Sell_Unit_Factor,'
+      '      (SELECT Price_Unit_Factor'
+      '        FROM Price_Unit'
+      
+        '        WHERE Price_Unit.Price_unit = Purchase_OrderLine.Order_U' +
+        'nit) as PO_Order_Unit_Factor,'
+      '      Job_Bag.Job_Bag_Descr,'
+      '      Job_Bag.Office_Contact,'
+      '      Operator.Name as Account_Manager,'
+      '      Job_Bag.Goods_Required,'
+      '      Job_Bag.Ready_for_Invoicing,'
+      '      Job_Bag_Line_Dets.Product_Type'
       'FROM Purchase_OrderLine'
-      #9'    RIGHT JOIN (Vat_Code '
-      #9'    INNER JOIN ((Supplier '
-      #9'    INNER JOIN Supplier_Branch ON '
-      #9#9'    Supplier.Supplier = Supplier_Branch.Supplier) '
-      #9'    INNER JOIN (Customer '
-      '      INNER JOIN ((Rep '
-      #9'    INNER JOIN (Customer_Branch '
-      #9'    INNER JOIN Job_Bag ON '
-      #9#9'    (Customer_Branch.Branch_no = Job_Bag.Branch_No) AND '
-      #9#9'    (Customer_Branch.Customer = Job_Bag.Customer)) ON '
-      #9#9'    Rep.Rep = Job_Bag.Rep) '
-      #9'    INNER JOIN Job_Bag_Line_Dets ON '
-      #9#9'    Job_Bag.Job_Bag = Job_Bag_Line_Dets.Job_Bag) ON '
-      #9#9'    Customer.Customer = Customer_Branch.Customer) ON '
+      '                   RIGHT JOIN (Vat_Code'
+      '                   INNER JOIN ((Supplier'
+      '                   INNER JOIN Supplier_Branch ON'
       
-        #9#9'    (Supplier_Branch.Branch_no = Job_Bag_Line_Dets.Branch_No) ' +
-        'AND '
+        '                                  Supplier.Supplier = Supplier_B' +
+        'ranch.Supplier)'
+      '                   INNER JOIN (Customer'
+      '      INNER JOIN ((Rep'
+      '                   INNER JOIN (Customer_Branch'
+      '                   INNER JOIN Job_Bag ON'
       
-        #9#9'    (Supplier_Branch.Supplier = Job_Bag_Line_Dets.Supplier)) O' +
-        'N '
-      '        Vat_Code.Vat_Code = Job_Bag_Line_Dets.VAT_Code) ON '
-      #9#9'    (Purchase_OrderLine.Line = Job_Bag_Line_Dets.Line) AND '
+        '                                  (Customer_Branch.Branch_no = J' +
+        'ob_Bag.Branch_No) AND'
       
-        #9#9'    (Purchase_OrderLine.Purchase_Order = Job_Bag_Line_Dets.Pur' +
-        'chase_Order) '
+        '                                  (Customer_Branch.Customer = Jo' +
+        'b_Bag.Customer)) ON'
+      '                                  Rep.Rep = Job_Bag.Rep)'
+      '                   INNER JOIN Job_Bag_Line_Dets ON'
+      
+        '                                  Job_Bag.Job_Bag = Job_Bag_Line' +
+        '_Dets.Job_Bag) ON'
+      
+        '                                  Customer.Customer = Customer_B' +
+        'ranch.Customer) ON'
+      
+        '                                  (Supplier_Branch.Branch_no = J' +
+        'ob_Bag_Line_Dets.Branch_No) AND'
+      
+        '                                  (Supplier_Branch.Supplier = Jo' +
+        'b_Bag_Line_Dets.Supplier)) ON'
+      '        Vat_Code.Vat_Code = Job_Bag_Line_Dets.VAT_Code) ON'
+      
+        '                                  (Purchase_OrderLine.Line = Job' +
+        '_Bag_Line_Dets.Line) AND'
+      
+        '                                  (Purchase_OrderLine.Purchase_O' +
+        'rder = Job_Bag_Line_Dets.Purchase_Order)'
       
         '      INNER JOIN Operator ON Job_Bag.Office_Contact = Operator.O' +
-        'perator '
+        'perator'
       'WHERE     (Job_Bag.Job_Bag_Status < 30) AND'
       '          (Job_Bag.On_Hold = '#39'N'#39') AND'
       
@@ -2273,40 +2502,33 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         '          ((Job_Bag.Office_Contact = :Office_Contact) OR (:Offic' +
         'e_Contact = 0))'
       ''
-      ''
       '')
     Left = 638
     Top = 16
     ParamData = <
       item
         Name = 'Invoice_This_Week'
-      end
-      item
-        Name = 'Invoice_This_Week'
-      end
-      item
-        Name = 'Production_Complete'
+        ParamType = ptInput
       end
       item
         Name = 'Production_Complete'
+        ParamType = ptInput
       end
       item
         Name = 'Date_From'
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
-      end
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Office_Contact'
+        ParamType = ptInput
       end
       item
         Name = 'Office_Contact'
+        ParamType = ptInput
       end>
   end
 end
