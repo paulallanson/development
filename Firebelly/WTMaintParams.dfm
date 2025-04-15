@@ -29,8 +29,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 16
     Top = 40
     Width = 705
-    Height = 609
-    ActivePage = tsGeneral
+    Height = 622
+    ActivePage = TabSheet2
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -44,7 +44,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label13: TLabel
         Left = 16
         Top = 81
-        Width = 28
+        Width = 27
         Height = 13
         Caption = 'Town'
       end
@@ -65,7 +65,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label16: TLabel
         Left = 16
         Top = 174
-        Width = 54
+        Width = 53
         Height = 13
         Caption = 'Telephone'
       end
@@ -93,14 +93,14 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label28: TLabel
         Left = 16
         Top = 341
-        Width = 85
+        Width = 84
         Height = 13
         Caption = 'VAT Reg Number'
       end
       object Label70: TLabel
         Left = 16
         Top = 368
-        Width = 77
+        Width = 76
         Height = 13
         Caption = 'Unique Tax Ref'
       end
@@ -229,14 +229,14 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label2: TLabel
         Left = 8
         Top = 52
-        Width = 128
+        Width = 127
         Height = 13
         Caption = 'Survey/Template Charges'
       end
       object Label7: TLabel
         Left = 8
         Top = 148
-        Width = 136
+        Width = 135
         Height = 13
         Caption = 'Customer Deposit Terms %'
       end
@@ -250,14 +250,14 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label33: TLabel
         Left = 8
         Top = 116
-        Width = 130
+        Width = 129
         Height = 13
         Caption = 'Default Trade Discount %'
       end
       object Label9: TLabel
         Left = 8
         Top = 197
-        Width = 97
+        Width = 96
         Height = 13
         Caption = 'Upstand Thickness'
       end
@@ -510,7 +510,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label24: TLabel
         Left = 16
         Top = 100
-        Width = 75
+        Width = 74
         Height = 13
         Caption = 'Payment Terms'
       end
@@ -531,7 +531,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label52: TLabel
         Left = 16
         Top = 196
-        Width = 107
+        Width = 106
         Height = 13
         Caption = 'Retail Payment Terms'
       end
@@ -651,7 +651,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label40: TLabel
         Left = 16
         Top = 120
-        Width = 85
+        Width = 84
         Height = 13
         Caption = 'Default VAT Rate'
       end
@@ -1270,7 +1270,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Left = 8
         Top = 440
         Width = 681
-        Height = 137
+        Height = 151
         Caption = 'Scheduling'
         ParentBackground = False
         TabOrder = 21
@@ -1289,36 +1289,43 @@ object frmWTMaintParams: TfrmWTMaintParams
           Caption = 'Shared Folder'
         end
         object grpbxDocumentTransfer: TGroupBox
-          Left = 368
-          Top = 15
+          Left = 373
+          Top = 23
           Width = 305
-          Height = 113
+          Height = 125
           ParentBackground = False
           TabOrder = 5
           object Label65: TLabel
-            Left = 24
-            Top = 24
+            Left = 16
+            Top = 19
             Width = 53
             Height = 13
             Caption = 'Quotation'
           end
           object Label78: TLabel
-            Left = 24
-            Top = 52
+            Left = 16
+            Top = 47
             Width = 80
             Height = 13
             Caption = 'Health && Safety'
           end
           object Label79: TLabel
-            Left = 24
-            Top = 80
+            Left = 16
+            Top = 75
             Width = 52
             Height = 13
             Caption = 'Remedials'
           end
+          object Label82: TLabel
+            Left = 16
+            Top = 104
+            Width = 27
+            Height = 13
+            Caption = 'Plans'
+          end
           object edtQuotationDocumentFolder: TEdit
             Left = 104
-            Top = 20
+            Top = 15
             Width = 193
             Height = 21
             TabOrder = 0
@@ -1326,7 +1333,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object edtSafetyDocumentFolder: TEdit
             Left = 104
-            Top = 48
+            Top = 43
             Width = 193
             Height = 21
             TabOrder = 1
@@ -1334,11 +1341,19 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object edtRemedialDocumentFolder: TEdit
             Left = 104
-            Top = 76
+            Top = 73
             Width = 193
             Height = 21
             TabOrder = 2
             Text = 'edtRemedialDocumentFolder'
+          end
+          object edtPlanDocumentFolder: TEdit
+            Left = 104
+            Top = 100
+            Width = 193
+            Height = 21
+            TabOrder = 3
+            Text = 'edtPlanDocumentFolder'
           end
         end
         object dblkpSchedulePackage: TDBLookupComboBox
@@ -1434,14 +1449,14 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label44: TLabel
         Left = 8
         Top = 16
-        Width = 106
+        Width = 105
         Height = 13
         Caption = 'Template Conditions'
       end
       object Label45: TLabel
         Left = 8
         Top = 56
-        Width = 62
+        Width = 61
         Height = 13
         Caption = 'Sales T && Cs'
       end
@@ -1528,7 +1543,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Left = 0
         Top = 0
         Width = 697
-        Height = 581
+        Height = 594
         ActivePage = TabSheet8
         Align = alClient
         TabOrder = 0
@@ -1763,7 +1778,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       ImageIndex = 8
       DesignSize = (
         697
-        581)
+        594)
       object Label57: TLabel
         Left = 16
         Top = 28
@@ -1795,14 +1810,14 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label19: TLabel
         Left = 16
         Top = 260
-        Width = 133
+        Width = 132
         Height = 13
         Caption = 'Template Documents  Out'
       end
       object Label21: TLabel
         Left = 16
         Top = 292
-        Width = 123
+        Width = 122
         Height = 13
         Caption = 'Template Documents  In'
       end
@@ -2055,13 +2070,13 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select * '
       'from Accounts_Package'
       'order by Accounts_Package_description')
-    Left = 532
-    Top = 536
+    Left = 468
+    Top = 384
   end
   object dtsAccounts: TDataSource
     DataSet = qryAccounts
-    Left = 596
-    Top = 592
+    Left = 532
+    Top = 320
   end
   object qryVat: TFDQuery
     ConnectionName = 'wt'
@@ -2084,8 +2099,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsVat: TDataSource
     DataSet = qryVat
-    Left = 588
-    Top = 488
+    Left = 580
+    Top = 408
   end
   object opndlgTerms: TOpenDialog
     Left = 652
@@ -2133,8 +2148,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'FROM Operator'
       'WHERE (Operator_Can_Login = '#39'Y'#39') OR (Operator = :Operator)'
       'ORDER BY Operator_Name')
-    Left = 532
-    Top = 592
+    Left = 348
+    Top = 448
     ParamData = <
       item
         Name = 'Operator'
@@ -2142,8 +2157,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsAccountManager: TDataSource
     DataSet = qryAccountManager
-    Left = 628
-    Top = 536
+    Left = 636
+    Top = 424
   end
   object qrySalesSource: TFDQuery
     ConnectionName = 'WT'
@@ -2272,6 +2287,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       '  Quotation_Document_Folder = :Quotation_Document_Folder,'
       '  Safety_Document_Folder = :Safety_Document_Folder,'
       '  Remedial_Document_Folder = :Remedial_Document_Folder,'
+      '  Plan_Document_Folder = :Plan_Document_Folder,'
       '  Use_Remedials_As_Orders = :Use_Remedials_As_Orders,'
       '  Stock_System = :Stock_System'
       'WHERE Company = 1')
@@ -2657,6 +2673,10 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParamType = ptInput
       end
       item
+        Name = 'PLAN_DOCUMENT_FOLDER'
+        ParamType = ptInput
+      end
+      item
         Name = 'Use_Remedials_As_Orders'
         ParamType = ptInput
       end
@@ -2676,8 +2696,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         'WHERE (Inactive = '#39'N'#39') OR (Sales_Lead_Source = :Sales_Lead_Sourc' +
         'e)'
       'ORDER BY Sales_Lead_Source_Descr')
-    Left = 516
-    Top = 488
+    Left = 468
+    Top = 400
     ParamData = <
       item
         Name = 'Sales_Lead_Source'

@@ -142,6 +142,8 @@ begin
       dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	    dtmdlWorktops.qryAddPrice.execSQL;
 
+      frmWtLUWTGroupPrices.SetWorktopThicknessInactive(self.MaterialType, dblkpWorktopGroup.KeyValue, dblkpThickness.KeyValue, 'N');
+
       if MessageDlg('Do you want to update the worktops in this group with the new thickness prices?',
         mtConfirmation, [mbYes, mbNo], 0) = mrYes then
           bUpdate := true

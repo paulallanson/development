@@ -260,10 +260,10 @@ begin
   begin
 //    imgReport.Picture := PBImagesFrm.ReportImage.Picture;
     imgReport.Enabled := true;
-    imgReport.height := 73;
+    imgReport.height := 85;
 
     imgTUV.Enabled := true;
-    imgTUV.height := 73
+    imgTUV.height := 90
   end
   else
     begin
@@ -508,8 +508,8 @@ begin
 
   if lblProduct.Caption = '' then
     begin
-      lblDescription.left := 135;
-      lblDescription.width := 320;
+      lblDescription.left := 149;
+      lblDescription.width := 440;
     end;
     
   InvoiceLine.height := lblDescription.height + 3;

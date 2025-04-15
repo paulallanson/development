@@ -78,7 +78,7 @@ type
     QRShape15: TQRShape;
     QRShape9: TQRShape;
     qrLoopB: TQRLoopBand;
-    qrlblAccountCode: TQRLabel;
+    qrlblCustReference: TQRLabel;
     gtQRShape1: TQRShape;
     gtQRShape2: TQRShape;
     gtQRShape3: TQRShape;
@@ -107,7 +107,7 @@ type
     qrlblPaymentTerms: TQRLabel;
     gtQRShape6: TQRShape;
     gtQRLabel1: TQRLabel;
-    qrlblAccountManager: TQRLabel;
+    qrlblAccountCode: TQRLabel;
     memAddress: TQRRichText;
     qrlblCompanyName: TQRLabel;
     qriHeadLogo: TQRImage;
@@ -933,8 +933,9 @@ begin
       parambyname('Sales_order').asinteger := strtoint(trim(tempcode));
       open;
       result := fieldbyname('Order_Ref_no').asstring;
+      qrlblCustReference.caption := fieldbyname('Reference').asstring;
+//      qrlblAccountManager.Caption := fieldbyname('Account_Manager_Name').asstring;
     end;
-  qrlblAccountManager.Caption := qrySOHead.fieldbyname('Account_Manager_Name').asstring;
 end;
 
 function TfrmWTRPSalesInvoice.GetSOLineProduct(tempCode,

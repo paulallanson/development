@@ -14,13 +14,13 @@ object PBRPDelivFrm: TPBRPDelivFrm
   Font.Height = -16
   Font.Name = 'Courier New'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 18
   object PBDelivQuickReport: TQuickRep
     Left = 26
     Top = -15
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = PBDelivQuickReportBeforePrint
     DataSet = PODelivSQL
@@ -79,10 +79,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 25
-      Top = 38
-      Width = 751
-      Height = 732
+      Left = 31
+      Top = 47
+      Width = 938
+      Height = 915
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -96,7 +96,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
       ParentFont = False
       Size.Values = (
         1936.750000000000000000
-        1987.020833333333000000)
+        1985.433333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBDelivQuickReport
@@ -104,15 +104,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
       PrintBefore = False
       PrintIfEmpty = True
       object Accountlbl: TQRLabel
-        Left = 16
-        Top = 336
-        Width = 111
-        Height = 24
+        Left = 20
+        Top = 420
+        Width = 141
+        Height = 30
         Size.Values = (
           63.500000000000000000
           42.333333333333330000
           889.000000000000000000
-          293.687500000000000000)
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -122,7 +122,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -133,15 +133,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object PONumberLbl: TQRLabel
-        Left = 632
-        Top = 337
-        Width = 111
-        Height = 24
+        Left = 790
+        Top = 421
+        Width = 141
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1672.166666666667000000
-          891.645833333333300000
-          293.687500000000000000)
+          891.116666666666700000
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -151,7 +151,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -162,15 +162,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DateLbl: TQRLabel
-        Left = 528
-        Top = 338
-        Width = 99
-        Height = 24
+        Left = 660
+        Top = 423
+        Width = 125
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1397.000000000000000000
-          894.291666666666700000
-          261.937500000000000000)
+          895.350000000000000000
+          264.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -180,7 +180,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -191,15 +191,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object BoxesLbl: TQRLabel
-        Left = 656
-        Top = 434
-        Width = 79
-        Height = 24
+        Left = 820
+        Top = 543
+        Width = 97
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1735.666666666667000000
-          1148.291666666667000000
-          209.020833333333300000)
+          1149.350000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -209,7 +209,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -220,15 +220,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QtyOrderedLbl: TQRLabel
-        Left = 8
-        Top = 434
-        Width = 92
-        Height = 24
+        Left = 10
+        Top = 543
+        Width = 113
+        Height = 30
         Size.Values = (
           63.500000000000000000
           21.166666666666670000
-          1148.291666666667000000
-          243.416666666666700000)
+          1149.350000000000000000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -236,6 +236,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         AlignToBand = False
         Caption = 'NNNNNNN'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -243,15 +249,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object OrderRefLbl: TQRLabel
-        Left = 416
-        Top = 338
-        Width = 78
-        Height = 24
+        Left = 520
+        Top = 423
+        Width = 99
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1100.666666666667000000
-          894.291666666666700000
-          206.375000000000000000)
+          895.350000000000000000
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -261,7 +267,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -272,15 +278,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object YourRefLbl: TQRLabel
-        Left = 144
-        Top = 338
-        Width = 122
-        Height = 24
+        Left = 180
+        Top = 423
+        Width = 155
+        Height = 30
         Size.Values = (
           63.500000000000000000
           381.000000000000000000
-          894.291666666666700000
-          322.791666666666700000)
+          895.350000000000000000
+          328.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -288,6 +294,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         AlignToBand = False
         Caption = 'XXXXXXXXXXX'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -295,15 +307,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QuantityLbl: TQRLabel
-        Left = 513
-        Top = 431
-        Width = 92
-        Height = 24
+        Left = 641
+        Top = 539
+        Width = 113
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          1357.312500000000000000
-          1140.354166666667000000
-          243.416666666666700000)
+          1356.783333333333000000
+          1140.883333333333000000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -311,6 +323,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         AlignToBand = False
         Caption = 'NNNNNNN'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -318,15 +336,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DescLbl: TQRLabel
-        Left = 120
-        Top = 436
-        Width = 331
-        Height = 24
+        Left = 150
+        Top = 545
+        Width = 421
+        Height = 30
         Size.Values = (
           63.500000000000000000
           317.500000000000000000
           1153.583333333333000000
-          875.770833333333300000)
+          891.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -336,7 +354,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -347,10 +365,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText2: TQRDBText
-        Left = 144
-        Top = 337
-        Width = 257
-        Height = 24
+        Left = 180
+        Top = 421
+        Width = 321
+        Height = 30
         Size.Values = (
           63.500000000000000000
           381.000000000000000000
@@ -367,7 +385,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Cust_Order_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -380,15 +398,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText3: TQRDBText
-        Left = 416
-        Top = 337
-        Width = 109
-        Height = 24
+        Left = 520
+        Top = 421
+        Width = 138
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1100.666666666667000000
-          891.645833333333300000
-          288.395833333333300000)
+          891.116666666666700000
+          292.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -397,6 +415,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         DataSet = PODelivSQL
         DataField = 'Purchase_Order'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -406,15 +430,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText4: TQRDBText
-        Left = 16
-        Top = 434
-        Width = 58
-        Height = 24
+        Left = 20
+        Top = 543
+        Width = 73
+        Height = 30
         Size.Values = (
           63.500000000000000000
           42.333333333333330000
-          1148.291666666667000000
-          153.458333333333300000)
+          1149.350000000000000000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -423,6 +447,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         DataSet = PODelivSQL
         DataField = 'Quantity'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -432,15 +462,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText5: TQRDBText
-        Left = 513
-        Top = 434
-        Width = 107
-        Height = 24
+        Left = 641
+        Top = 543
+        Width = 133
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          1357.312500000000000000
-          1148.291666666667000000
-          283.104166666666700000)
+          1356.783333333333000000
+          1149.350000000000000000
+          281.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -449,6 +479,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         DataSet = PODelivSQL
         DataField = 'Qty_to_Deliver'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -458,10 +494,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText6: TQRDBText
-        Left = 120
-        Top = 434
-        Width = 345
-        Height = 69
+        Left = 150
+        Top = 543
+        Width = 431
+        Height = 86
         Size.Values = (
           182.562500000000000000
           317.500000000000000000
@@ -477,6 +513,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         DataSet = PODelivSQL
         DataField = 'Customers_Desc'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -486,10 +528,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object AddressMemo: TQRMemo
-        Left = 16
-        Top = 167
-        Width = 331
-        Height = 146
+        Left = 20
+        Top = 209
+        Width = 414
+        Height = 183
         Size.Values = (
           386.291666666666700000
           42.333333333333330000
@@ -504,7 +546,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Lines.Strings = (
@@ -522,10 +564,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DeliveryMemo: TQRMemo
-        Left = 409
-        Top = 167
-        Width = 331
-        Height = 146
+        Left = 511
+        Top = 209
+        Width = 414
+        Height = 183
         Size.Values = (
           386.291666666666700000
           1082.145833333333000000
@@ -540,7 +582,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Lines.Strings = (
@@ -557,15 +599,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object Account: TQRDBText
-        Left = 16
-        Top = 336
-        Width = 101
-        Height = 24
+        Left = 20
+        Top = 420
+        Width = 126
+        Height = 30
         Size.Values = (
           63.500000000000000000
           42.333333333333330000
           889.000000000000000000
-          267.229166666666700000)
+          266.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -576,7 +618,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Account_Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -589,10 +631,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DelInstructMemo: TQRMemo
-        Left = 120
-        Top = 566
-        Width = 561
-        Height = 41
+        Left = 150
+        Top = 708
+        Width = 701
+        Height = 51
         Size.Values = (
           108.479166666666700000
           317.500000000000000000
@@ -607,7 +649,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Lines.Strings = (
@@ -624,15 +666,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object FormRefLbl: TQRLabel
-        Left = 120
-        Top = 510
-        Width = 72
-        Height = 24
+        Left = 150
+        Top = 638
+        Width = 89
+        Height = 30
         Size.Values = (
           63.500000000000000000
           317.500000000000000000
-          1349.375000000000000000
-          190.500000000000000000)
+          1350.433333333333000000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -642,7 +684,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -653,15 +695,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object FormRefDescLbl: TQRLabel
-        Left = 120
-        Top = 534
-        Width = 82
-        Height = 24
+        Left = 150
+        Top = 668
+        Width = 101
+        Height = 30
         Size.Values = (
           63.500000000000000000
           317.500000000000000000
-          1412.875000000000000000
-          216.958333333333300000)
+          1413.933333333333000000
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -671,7 +713,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -682,10 +724,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DeliveryDateLbl: TQRLabel
-        Left = 520
-        Top = 337
-        Width = 105
-        Height = 24
+        Left = 650
+        Top = 421
+        Width = 131
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1375.833333333333000000
@@ -701,7 +743,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -712,15 +754,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel1: TQRLabel
-        Left = 2
-        Top = 395
-        Width = 104
-        Height = 16
+        Left = 3
+        Top = 494
+        Width = 132
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          5.291666666666667000
-          1045.104166666667000000
-          275.166666666666700000)
+          6.350000000000000000
+          1045.633333333333000000
+          279.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -730,7 +772,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -741,15 +783,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 120
-        Top = 395
-        Width = 66
-        Height = 16
+        Left = 150
+        Top = 494
+        Width = 87
+        Height = 20
         Size.Values = (
           42.333333333333330000
           317.500000000000000000
-          1045.104166666667000000
-          174.625000000000000000)
+          1045.633333333333000000
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -759,7 +801,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -770,15 +812,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 488
-        Top = 395
-        Width = 111
-        Height = 16
+        Left = 610
+        Top = 494
+        Width = 141
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1291.166666666667000000
-          1045.104166666667000000
-          293.687500000000000000)
+          1045.633333333333000000
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -788,7 +830,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -799,15 +841,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 648
-        Top = 395
-        Width = 98
-        Height = 16
+        Left = 810
+        Top = 494
+        Width = 128
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1714.500000000000000000
-          1045.104166666667000000
-          259.291666666666700000)
+          1045.633333333333000000
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -817,7 +859,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -828,31 +870,31 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 8
       end
       object ReportImage: TQRImage
-        Left = 18
-        Top = 9
-        Width = 713
-        Height = 48
+        Left = 23
+        Top = 11
+        Width = 286
+        Height = 60
         Enabled = False
         Size.Values = (
           127.000000000000000000
-          47.625000000000000000
-          23.812500000000000000
-          1886.479166666667000000)
+          48.683333333333330000
+          23.283333333333330000
+          605.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Stretch = True
       end
       object gtlblFSCClaim: TQRLabel
-        Left = 16
-        Top = 645
-        Width = 50
-        Height = 19
+        Left = 20
+        Top = 806
+        Width = 66
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           42.333333333333330000
-          1706.562500000000000000
-          132.291666666666700000)
+          1706.033333333333000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -862,7 +904,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsItalic]
         ParentFont = False

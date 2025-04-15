@@ -245,6 +245,8 @@ begin
   with qryWTThickness do
     begin
       close;
+      parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+      parambyname('Thickness').AsInteger := QElement.thickness;
       open;
     end;
 
@@ -270,8 +272,11 @@ begin
     with qryWTThickness do
       begin
         close;
+        parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+        parambyname('Thickness').AsInteger := QElement.thickness;
         open;
       end;
+
     dblkpWTThickness.keyvalue := QElement.Thickness;
 
     cmbMaterialUse.text := QElement.ElementDescription;
@@ -293,6 +298,8 @@ begin
     with qryWTThickness do
       begin
         close;
+        parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+        parambyname('Thickness').AsInteger := QElement.thickness;
         open;
       end;
 

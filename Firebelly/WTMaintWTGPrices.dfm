@@ -24,7 +24,7 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   object Label3: TLabel
     Left = 24
     Top = 55
-    Width = 50
+    Width = 49
     Height = 13
     Caption = 'Thickness'
   end

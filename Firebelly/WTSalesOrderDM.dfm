@@ -3966,4 +3966,18 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptInput
       end>
   end
+  object qryGetRemedialJob: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT Job, Remedial_Number'
+      'FROM Remedial'
+      'WHERE ID = :ID')
+    Left = 1058
+    Top = 640
+    ParamData = <
+      item
+        Name = 'ID'
+        ParamType = ptInput
+      end>
+  end
 end

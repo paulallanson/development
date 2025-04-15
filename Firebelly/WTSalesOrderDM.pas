@@ -208,6 +208,7 @@ type
     qryDummyCharges: TFDQuery;
     qryUpdSOChargeStatus: TFDQuery;
     qryAllSalesRemedial_Count: TIntegerField;
+    qryGetRemedialJob: TFDQuery;
     procedure qryAllSalesStatus_TextGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
     procedure qryAllSalesTemplate_Date_NewGetText(Sender: TField;

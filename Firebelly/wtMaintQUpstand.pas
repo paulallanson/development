@@ -240,8 +240,11 @@ begin
   with qryWTThickness do
     begin
       close;
+      parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+      parambyname('Thickness').AsInteger := QUpstand.thickness;
       open;
     end;
+
   dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
@@ -270,6 +273,8 @@ begin
     with qryWTThickness do
       begin
         close;
+        parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+        parambyname('Thickness').AsInteger := QUpstand.thickness;
         open;
       end;
 
@@ -293,11 +298,15 @@ begin
     RefreshWorktops;
     dblkpWorktop.keyvalue := Self.Worktop;
     dblkpMaterialUse.KeyValue := MaterialUse;
+
     with qryWTThickness do
       begin
         close;
+        parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+        parambyname('Thickness').AsInteger := QUpstand.thickness;
         open;
       end;
+
     dblkpWTThickness.keyvalue := Self.Thickness;
     if self.Depth <> 0 then
       edtDepth.text := formatfloat('0',self.Depth)

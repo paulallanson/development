@@ -264,6 +264,8 @@ type
     dtsStockSystem: TDataSource;
     Label81: TLabel;
     edtCompanyNumber: TEdit;
+    Label82: TLabel;
+    edtPlanDocumentFolder: TEdit;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
@@ -509,6 +511,7 @@ begin
       edtQuotationDocumentFolder.Text := fieldbyname('Quotation_Document_Folder').asstring;
       edtSafetyDocumentFolder.Text := fieldbyname('Safety_Document_Folder').asstring;
       edtRemedialDocumentFolder.Text := fieldbyname('Remedial_Document_Folder').asstring;
+      edtPlanDocumentFolder.Text := fieldbyname('Plan_Document_Folder').asstring;
 
       iProduct := qryCompany.fieldbyname('Def_Remedial_Product_Code').asinteger;
       edtRemedialProduct.Text := GetProductCode(iProduct);
@@ -759,6 +762,7 @@ begin
       parambyname('Quotation_Document_Folder').asstring := edtQuotationDocumentFolder.Text;
       parambyname('Safety_Document_Folder').asstring := edtSafetyDocumentFolder.Text;
       parambyname('Remedial_Document_Folder').asstring := edtRemedialDocumentFolder.Text;
+      parambyname('Plan_Document_Folder').asstring := edtPlanDocumentFolder.text;
 
       ParamByName('Default_Quote_Valid_days').asinteger := spnQuoteValidDays.Value;
       ParamByName('Default_Quote_Follow_Up_days').asinteger := spnQuoteFollowUpDays.Value;
@@ -1264,6 +1268,7 @@ begin
   edtQuotationDocumentFolder.enabled := chkbxUseDocumentTransfer.checked;
   edtSafetyDocumentFolder.enabled := chkbxUseDocumentTransfer.checked;
   edtRemedialDocumentFolder.enabled:= chkbxUseDocumentTransfer.checked;
+  edtPlanDocumentFolder.enabled := chkbxUseDocumentTransfer.checked;
 end;
 
 procedure TfrmWTMaintParams.chkbxUseRemedialsAsOrdersClick(Sender: TObject);
