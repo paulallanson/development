@@ -446,6 +446,8 @@ type
     procedure CallPOReceiptsScreen(aMode: TpopMode);
     procedure SetCanUpdateSchedule(const Value: bytebool);
     procedure CopyOriginalSalesOrderDocuments;
+    procedure CopyOriginalToRemedialDocuments(iSource, iDest: integer);
+    procedure CopyOriginalPlanToRemedialDocuments(iSource, iDest: integer);
     procedure SetOriginalSalesOrderFromCopy(const Value: integer);
     procedure ClearAddressFields;
     procedure ClearInstallationAddressFields;
@@ -465,6 +467,7 @@ type
     function GetFilesPath: string;
     procedure ShowAssociateCharges;
     procedure CallMaintCharges(aMode: TsocMode);
+    procedure CreateRemedialDocument(iOrder, iRemedialID: integer);
   public
     bOK: boolean;
     bOperatorCanUpdateSchedule: boolean;
@@ -4156,6 +4159,85 @@ begin
     btnOKClick(self);
 end;
 
+procedure TfrmWTMaintSalesOrder.CopyOriginalToRemedialDocuments(iSource, iDest: integer);
+var
+  sSource, sDest: string;
+  ListItem: TListItem;
+  irow: integer;
+  icount: Integer;
+begin
+  sSource := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSource) + '\' ;
+  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iDest) + '\' ;
+
+  try
+    for icount := 0 to pred(slvDocuments.Items.Count) do
+      begin
+      //selected and NOT folder
+        if NOT slvDocuments.Folders[icount].IsFolder then
+          begin
+            try
+              filecopy(slvDocuments.Folders[icount].PathName, stringReplace(slvDocuments.Folders[icount].PathName,sSource,sDest,[rfReplaceAll, rfIgnoreCase]));
+            except
+            end;
+          end
+        else
+          begin
+            try
+              directorycopy(slvDocuments.Folders[icount].PathName, stringReplace(slvDocuments.Folders[icount].PathName,sSource,sDest,[rfReplaceAll, rfIgnoreCase]));
+            except
+            end;
+          end;
+      end;
+  finally
+  end;
+end;
+
+procedure TfrmWTMaintSalesOrder.CopyOriginalPlanToRemedialDocuments(iSource, iDest: integer);
+var
+  sSource, sDest: string;
+  irow: integer;
+  SearchRec: TSearchRec;
+  FileInfo: SHFILEINFO;
+  sFilename: string;
+  sFolderName: string;
+begin
+  sFolderName := dtmdlWorktops.GetPlanDocumentFolderName;
+
+  if trim(sFolderName) = ''
+    then exit;
+
+  sSource := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSource) + '\'+ sFolderName + '\';
+
+  if trim(sFolderName) <> '' then
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iDest) + '\' + sFolderName + '\'
+  else
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iDest) + '\';
+
+  try
+    CreateDir(sDest);
+  except
+  end;
+
+  // search for the first file
+  irow := FindFirst(sSource + '*.*', faArchive, SearchRec);
+
+  while irow = 0 do
+    begin
+      // On directories and volumes
+      if ((SearchRec.Attr and FaDirectory <> FaDirectory) and
+        (SearchRec.Attr and FaVolumeId <> FaVolumeID)) then
+        begin
+          //Get The DisplayName
+          SHGetFileInfo(PChar(sSource + SearchRec.Name), 0, FileInfo, SizeOf(FileInfo), SHGFI_DISPLAYNAME);
+
+          sFilename := SearchRec.Name;
+
+          filecopy(sSource+sFilename, sDest+sFilename);
+        end;
+      irow := FindNext(SearchRec);
+    end;
+end;
+
 procedure TfrmWTMaintSalesOrder.CopyOriginalSalesOrderDocuments;
 var
   sSource, sDest: string;
@@ -4954,6 +5036,8 @@ begin
           if bOK then
             begin
               Result := aSOrder.dbkey;
+//              CopyOriginalToRemedialDocuments(sOrder.dbKey, Result);
+              CopyOriginalPlanToRemedialDocuments(sOrder.dbKey, Result);
               CreateandCopyRemedialSheet(Result, Job.dbKey, JRemedial.RemedialNumber);
             end
           else
@@ -5245,10 +5329,30 @@ begin
         begin
           if SOrder.Lines[icount].Quote > 0 then
             CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
+          if SOrder.RemedialID <> 0 then
+            CreateRemedialDocument(SOrder.dbKey, SOrder.RemedialID)
         end;
       MoveSiteDocuments(SOrder.dbKey);
       Messagedlg('Order documents created within the file structure', mtConfirmation,[mbOk], 0);
     end;
+end;
+
+procedure TfrmWTMaintSalesOrder.CreateRemedialDocument(iOrder, iRemedialID: integer);
+var
+  iJob, iRemedialNo: integer;
+begin
+  with SOrder.DataModule.qryGetRemedialJob do
+    begin
+      close;
+      parambyname('ID').asinteger := iRemedialID;
+      open;
+
+      iJob := fieldbyname('Job').asinteger;
+      iRemedialNo := fieldbyname('Remedial_Number').asinteger;
+    end;
+
+  if iJob > 0 then
+    CreateandCopyRemedialSheet(iOrder, iJob, iRemedialNo);
 end;
 
 procedure TfrmWTMaintSalesOrder.UpdateQuoteDocuments;

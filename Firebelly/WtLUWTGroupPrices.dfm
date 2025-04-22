@@ -84,7 +84,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
         Width = 50
       end>
     ExplicitTop = 296
-    ExplicitWidth = 596
+    ExplicitWidth = 624
   end
   object Panel1: TPanel
     Left = 0
@@ -96,7 +96,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     ParentBackground = False
     TabOrder = 2
     ExplicitTop = 245
-    ExplicitWidth = 596
+    ExplicitWidth = 624
     object BitBtn1: TBitBtn
       Left = 8
       Top = 17
@@ -155,11 +155,11 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 596
+    ExplicitWidth = 624
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 68
+      Width = 67
       Height = 13
       Caption = 'Material Type'
     end
@@ -363,5 +363,44 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       Origin = 'Price_Unit_Description'
       ReadOnly = True
     end
+  end
+  object qryMakeInactive: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'UPDATE Worktop_Thickness'
+      'SET inactive = :Inactive'
+      'FROM Worktop '
+      #160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160' INNER JOIN Worktop_thickness '
+      
+        #160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160' ON Worktop.Worktop ' +
+        '= Worktop_thickness.Worktop'
+      'WHERE'
+      #160#160#160' Worktop.Material_Type = :Material_type AND'
+      
+        #160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160' Worktop.Worktop_Group = :Worktop_G' +
+        'roup AND'
+      
+        #160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160#160' Worktop_thickness.Thickness = :Thi' +
+        'ckness'
+      '')
+    Left = 472
+    Top = 128
+    ParamData = <
+      item
+        Name = 'INACTIVE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'MATERIAL_TYPE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'WORKTOP_GROUP'
+        ParamType = ptInput
+      end
+      item
+        Name = 'THICKNESS'
+        ParamType = ptInput
+      end>
   end
 end

@@ -10,13 +10,13 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrDetails: TQuickRep
     Left = 8
     Top = 8
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrDetailsBeforePrint
     DataSet = qryReport
@@ -74,10 +74,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     PreviewLeft = 0
     PreviewTop = 0
     object PageHeadQRBand: TQRBand
-      Left = 19
-      Top = 38
-      Width = 756
-      Height = 336
+      Left = 24
+      Top = 47
+      Width = 945
+      Height = 420
       Frame.DrawBottom = True
       Frame.Width = 2
       AlignToBottom = False
@@ -98,10 +98,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
-        Left = 14
-        Top = 294
-        Width = 50
-        Height = 33
+        Left = 18
+        Top = 368
+        Width = 63
+        Height = 41
         Size.Values = (
           87.312500000000000000
           37.041666666666670000
@@ -117,7 +117,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -128,10 +128,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object PreviewQRLabel: TQRLabel
-        Left = 664
-        Top = 16
-        Width = 80
-        Height = 24
+        Left = 830
+        Top = 20
+        Width = 100
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1756.833333333333000000
@@ -145,6 +145,12 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         AutoSize = False
         Caption = 'PREVIEW'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -152,10 +158,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 12
       end
       object NotesQRMemo: TQRMemo
-        Left = 16
-        Top = 129
-        Width = 272
-        Height = 100
+        Left = 20
+        Top = 161
+        Width = 340
+        Height = 125
         Size.Values = (
           264.583333333333300000
           42.333333333333330000
@@ -170,7 +176,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Lines.Strings = (
@@ -186,10 +192,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object DelInstructMemo: TQRMemo
-        Left = 433
-        Top = 127
-        Width = 272
-        Height = 100
+        Left = 541
+        Top = 159
+        Width = 340
+        Height = 125
         Size.Values = (
           264.583333333333300000
           1145.645833333333000000
@@ -204,7 +210,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -214,15 +220,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLblAccnt: TQRLabel
-        Left = 16
-        Top = 256
-        Width = 93
-        Height = 19
+        Left = 20
+        Top = 320
+        Width = 119
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          42.333333333333340000
-          677.333333333333400000
-          246.062500000000000000)
+          55.033333333333330000
+          42.333333333333330000
+          677.333333333333300000
+          251.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -232,7 +238,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -243,15 +249,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object CustRefQRDBText: TQRDBText
-        Left = 216
-        Top = 256
-        Width = 91
-        Height = 19
+        Left = 270
+        Top = 320
+        Width = 120
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           571.500000000000000000
-          677.333333333333400000
-          240.770833333333300000)
+          677.333333333333300000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -262,7 +268,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Cust_Order_No'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -275,15 +281,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object SoNumQRDBText: TQRDBText
-        Left = 400
-        Top = 256
-        Width = 68
-        Height = 19
+        Left = 500
+        Top = 320
+        Width = 89
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1058.333333333333000000
-          677.333333333333400000
-          179.916666666666700000)
+          677.333333333333300000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -294,7 +300,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -307,15 +313,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 638
-        Top = 311
-        Width = 32
-        Height = 18
+        Left = 799
+        Top = 389
+        Width = 37
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1688.041666666667000000
-          822.854166666666700000
-          84.666666666666670000)
+          48.683333333333330000
+          1691.216666666667000000
+          823.383333333333300000
+          78.316666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -325,7 +331,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -336,15 +342,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 562
-        Top = 310
-        Width = 49
-        Height = 19
+        Left = 702
+        Top = 388
+        Width = 57
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1486.958333333333000000
-          820.208333333333500000
-          129.645833333333300000)
+          50.800000000000000000
+          1485.900000000000000000
+          821.266666666666700000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -354,7 +360,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -365,15 +371,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 296
-        Top = 310
-        Width = 63
-        Height = 19
+        Left = 370
+        Top = 388
+        Width = 75
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           783.166666666666700000
-          820.208333333333500000
-          166.687500000000000000)
+          821.266666666666700000
+          158.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -383,7 +389,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -394,15 +400,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 78
-        Top = 310
-        Width = 47
-        Height = 19
+        Left = 98
+        Top = 388
+        Width = 55
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          206.375000000000000000
-          820.208333333333500000
-          124.354166666666700000)
+          50.800000000000000000
+          207.433333333333300000
+          821.266666666666700000
+          116.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -412,7 +418,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -423,15 +429,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 684
-        Top = 310
-        Width = 16
-        Height = 19
+        Left = 855
+        Top = 388
+        Width = 19
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1809.750000000000000000
-          820.208333333333500000
-          42.333333333333340000)
+          821.266666666666700000
+          40.216666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -441,7 +447,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = []
         ParentFont = False
@@ -452,15 +458,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 8
       end
       object qrlblAccountLabel: TQRLabel
-        Left = 17
-        Top = 237
-        Width = 110
-        Height = 19
+        Left = 21
+        Top = 296
+        Width = 141
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          44.979166666666670000
-          627.062500000000000000
-          291.041666666666700000)
+          55.033333333333330000
+          44.450000000000000000
+          626.533333333333300000
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -470,7 +476,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -481,15 +487,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 217
-        Top = 237
-        Width = 91
-        Height = 19
+        Left = 271
+        Top = 296
+        Width = 117
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          574.145833333333400000
-          627.062500000000000000
-          240.770833333333300000)
+          55.033333333333330000
+          573.616666666666700000
+          626.533333333333300000
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -499,7 +505,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -510,15 +516,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel8: TQRLabel
-        Left = 401
-        Top = 237
-        Width = 66
-        Height = 19
+        Left = 501
+        Top = 296
+        Width = 85
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1060.979166666667000000
-          627.062500000000000000
-          174.625000000000000000)
+          55.033333333333330000
+          1060.450000000000000000
+          626.533333333333300000
+          179.916666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -528,7 +534,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -539,15 +545,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 545
-        Top = 237
-        Width = 80
-        Height = 19
+        Left = 681
+        Top = 296
+        Width = 103
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1441.979166666667000000
-          627.062500000000000000
-          211.666666666666700000)
+          55.033333333333330000
+          1441.450000000000000000
+          626.533333333333300000
+          218.016666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -557,7 +563,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -568,15 +574,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel11: TQRLabel
-        Left = 665
-        Top = 237
-        Width = 90
-        Height = 19
+        Left = 831
+        Top = 296
+        Width = 114
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1759.479166666667000000
-          627.062500000000000000
-          238.125000000000000000)
+          55.033333333333330000
+          1758.950000000000000000
+          626.533333333333300000
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -586,7 +592,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -597,15 +603,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel12: TQRLabel
-        Left = 433
-        Top = 108
-        Width = 132
-        Height = 19
+        Left = 541
+        Top = 135
+        Width = 170
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1145.645833333333000000
+          55.033333333333330000
+          1145.116666666667000000
           285.750000000000000000
-          349.250000000000000000)
+          359.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -615,7 +621,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -626,15 +632,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 17
-        Top = 108
-        Width = 71
-        Height = 19
+        Left = 21
+        Top = 135
+        Width = 92
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          44.979166666666670000
+          55.033333333333330000
+          44.450000000000000000
           285.750000000000000000
-          187.854166666666700000)
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -644,7 +650,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -655,15 +661,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel14: TQRLabel
-        Left = 305
-        Top = 16
-        Width = 146
-        Height = 31
+        Left = 378
+        Top = 20
+        Width = 188
+        Height = 39
         Size.Values = (
-          82.020833333333330000
-          806.979166666666700000
+          82.550000000000000000
+          800.100000000000000000
           42.333333333333330000
-          386.291666666666700000)
+          397.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -673,7 +679,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -684,15 +690,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 16
       end
       object qrlblWarehouse: TQRLabel
-        Left = 321
-        Top = 48
-        Width = 108
-        Height = 24
+        Left = 401
+        Top = 60
+        Width = 134
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          849.312500000000000000
+          848.783333333333300000
           127.000000000000000000
-          285.750000000000000000)
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -702,7 +708,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -713,16 +719,16 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 12
       end
       object QRLabel18: TQRLabel
-        Left = 17
-        Top = 4
-        Width = 67
-        Height = 19
+        Left = 21
+        Top = 5
+        Width = 86
+        Height = 26
         Enabled = False
         Size.Values = (
-          50.270833333333330000
-          44.979166666666670000
+          55.033333333333330000
+          44.450000000000000000
           10.583333333333330000
-          177.270833333333300000)
+          182.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -732,7 +738,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -743,10 +749,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object CustomerAddMemo: TQRMemo
-        Left = 16
-        Top = 25
-        Width = 272
-        Height = 80
+        Left = 20
+        Top = 31
+        Width = 340
+        Height = 100
         Enabled = False
         Size.Values = (
           211.666666666666700000
@@ -762,7 +768,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Lines.Strings = (
@@ -778,15 +784,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object gtQRDBText1: TQRDBText
-        Left = 544
-        Top = 256
-        Width = 69
-        Height = 19
+        Left = 680
+        Top = 320
+        Width = 89
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1439.333333333333000000
-          677.333333333333400000
-          182.562500000000000000)
+          677.333333333333300000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -797,7 +803,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Date_picked'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -810,15 +816,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object gtQRDBText2: TQRDBText
-        Left = 655
-        Top = 256
-        Width = 88
-        Height = 19
+        Left = 814
+        Top = 320
+        Width = 115
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1733.020833333333000000
-          677.333333333333400000
-          232.833333333333400000)
+          55.033333333333330000
+          1722.966666666667000000
+          677.333333333333300000
+          243.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -829,7 +835,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Picking_List_Ref'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -843,17 +849,17 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       end
     end
     object GroupHeadQRGroup: TQRGroup
-      Left = 19
-      Top = 374
-      Width = 756
-      Height = 3
+      Left = 24
+      Top = 467
+      Width = 945
+      Height = 4
       AlignToBottom = False
       BeforePrint = GroupHeadQRGroupBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        7.937500000000000000
+        8.466666666666667000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -862,10 +868,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       ReprintOnNewPage = True
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 19
-      Top = 377
-      Width = 756
-      Height = 24
+      Left = 24
+      Top = 471
+      Width = 945
+      Height = 30
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
@@ -886,15 +892,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       PrintBefore = False
       PrintIfEmpty = True
       object PartQRDBText: TQRDBText
-        Left = 78
-        Top = 3
-        Width = 211
-        Height = 19
+        Left = 98
+        Top = 4
+        Width = 264
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          206.375000000000000000
-          7.937500000000000000
-          558.270833333333300000)
+          55.033333333333330000
+          207.433333333333300000
+          8.466666666666667000
+          558.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -906,7 +912,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Part'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -919,15 +925,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object DescQRDBText: TQRDBText
-        Left = 296
-        Top = 3
-        Width = 249
-        Height = 19
+        Left = 370
+        Top = 4
+        Width = 311
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           783.166666666666700000
-          7.937500000000000000
-          658.812500000000000000)
+          8.466666666666667000
+          658.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -939,7 +945,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Part_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -952,15 +958,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object BinQRDBText: TQRDBText
-        Left = 684
-        Top = 3
-        Width = 73
-        Height = 19
+        Left = 855
+        Top = 4
+        Width = 91
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1809.750000000000000000
-          7.937500000000000000
-          193.145833333333300000)
+          8.466666666666667000
+          192.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -972,7 +978,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Part_Bin'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         Mask = '######'
@@ -986,14 +992,14 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRDBText4: TQRDBText
-        Left = 550
-        Top = 3
-        Width = 64
-        Height = 19
+        Left = 687
+        Top = 4
+        Width = 80
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1455.208333333333000000
-          7.937500000000000000
+          55.033333333333330000
+          1454.150000000000000000
+          8.466666666666667000
           169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1006,7 +1012,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Sell_Pack_Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1019,15 +1025,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabelDlvrd: TQRLabel
-        Left = 623
-        Top = 3
-        Width = 50
-        Height = 19
+        Left = 779
+        Top = 4
+        Width = 63
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1648.354166666667000000
-          7.937500000000000000
-          132.291666666666700000)
+          55.033333333333330000
+          1648.883333333333000000
+          8.466666666666667000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1038,7 +1044,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1049,15 +1055,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabelQty: TQRLabel
-        Left = -4
-        Top = 3
-        Width = 66
-        Height = 19
+        Left = -5
+        Top = 4
+        Width = 83
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           -10.583333333333330000
-          7.937500000000000000
-          174.625000000000000000)
+          8.466666666666667000
+          175.683333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1068,7 +1074,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1080,10 +1086,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       end
     end
     object qrdetailSerialNos: TQRSubDetail
-      Left = 19
-      Top = 419
-      Width = 756
-      Height = 21
+      Left = 24
+      Top = 524
+      Width = 945
+      Height = 26
       AfterPrint = qrdetailSerialNosAfterPrint
       AlignToBottom = False
       BeforePrint = qrdetailSerialNosBeforePrint
@@ -1092,7 +1098,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        55.562500000000000000
+        55.033333333333330000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1101,15 +1107,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       PrintBefore = False
       PrintIfEmpty = True
       object lblSerialCaption: TQRLabel
-        Left = 296
+        Left = 370
         Top = 0
-        Width = 89
-        Height = 19
+        Width = 117
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           783.166666666666700000
           0.000000000000000000
-          235.479166666666700000)
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1119,7 +1125,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Times New Roman'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1130,15 +1136,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object lblSerialRange: TQRLabel
-        Left = 400
+        Left = 500
         Top = 0
-        Width = 84
-        Height = 19
+        Width = 108
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1058.333333333333000000
           0.000000000000000000
-          222.250000000000000000)
+          228.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1148,7 +1154,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Times New Roman'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1160,10 +1166,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       end
     end
     object QRBand1: TQRBand
-      Left = 19
-      Top = 440
-      Width = 756
-      Height = 56
+      Left = 24
+      Top = 550
+      Width = 945
+      Height = 70
       Frame.DrawTop = True
       Frame.Width = 2
       AlignToBottom = True
@@ -1178,14 +1184,14 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       BandType = rbPageFooter
       object QRLabel17: TQRLabel
         Left = 1
-        Top = 29
-        Width = 89
-        Height = 19
+        Top = 36
+        Width = 113
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          2.645833333333333000
-          76.729166666666670000
-          235.479166666666700000)
+          55.033333333333330000
+          2.116666666666667000
+          76.200000000000000000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1195,7 +1201,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1206,15 +1212,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 96
-        Top = 29
-        Width = 100
-        Height = 19
+        Left = 120
+        Top = 36
+        Width = 127
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           254.000000000000000000
-          76.729166666666670000
-          264.583333333333400000)
+          76.200000000000000000
+          268.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1225,7 +1231,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         DataField = 'Account_Manager'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1238,15 +1244,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRLabel19: TQRLabel
-        Left = 225
-        Top = 29
-        Width = 66
-        Height = 19
+        Left = 281
+        Top = 36
+        Width = 83
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          595.312500000000000000
-          76.729166666666670000
-          174.625000000000000000)
+          55.033333333333330000
+          594.783333333333300000
+          76.200000000000000000
+          175.683333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1256,7 +1262,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1267,10 +1273,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object QRShape3: TQRShape
-        Left = 304
-        Top = 16
-        Width = 177
-        Height = 29
+        Left = 380
+        Top = 20
+        Width = 221
+        Height = 36
         Size.Values = (
           76.729166666666670000
           804.333333333333300000
@@ -1284,15 +1290,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         VertAdjust = 0
       end
       object gtQRLabel1: TQRLabel
-        Left = 501
-        Top = 29
-        Width = 78
-        Height = 19
+        Left = 626
+        Top = 36
+        Width = 99
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1325.562500000000000000
-          76.729166666666670000
-          206.375000000000000000)
+          55.033333333333330000
+          1325.033333333333000000
+          76.200000000000000000
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1302,7 +1308,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1313,10 +1319,10 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object gtQRShape1: TQRShape
-        Left = 576
-        Top = 16
-        Width = 177
-        Height = 29
+        Left = 720
+        Top = 20
+        Width = 221
+        Height = 36
         Size.Values = (
           76.729166666666670000
           1524.000000000000000000
@@ -1330,15 +1336,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         VertAdjust = 0
       end
       object gtQRLabel2: TQRLabel
-        Left = 377
-        Top = 29
-        Width = 34
-        Height = 19
+        Left = 471
+        Top = 36
+        Width = 45
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          997.479166666666700000
-          76.729166666666670000
-          89.958333333333330000)
+          55.033333333333330000
+          996.950000000000000000
+          76.200000000000000000
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1348,7 +1354,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1359,15 +1365,15 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
-        Left = 649
-        Top = 29
-        Width = 34
-        Height = 19
+        Left = 811
+        Top = 36
+        Width = 45
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1717.145833333333000000
-          76.729166666666670000
-          89.958333333333330000)
+          55.033333333333330000
+          1716.616666666667000000
+          76.200000000000000000
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1377,7 +1383,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1389,31 +1395,31 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       end
     end
     object chldbndFSCClaim: TQRChildBand
-      Left = 19
-      Top = 401
-      Width = 756
-      Height = 18
+      Left = 24
+      Top = 501
+      Width = 945
+      Height = 23
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        47.625000000000000000
+        48.683333333333330000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = QRSubDetail1
       PrintOrder = cboAfterParent
       object gtlblFSCClaim: TQRLabel
-        Left = 78
+        Left = 98
         Top = 1
-        Width = 49
-        Height = 17
+        Width = 60
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          206.375000000000000000
-          2.645833333333333000
-          129.645833333333300000)
+          44.450000000000000000
+          207.433333333333300000
+          2.116666666666667000
+          127.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1423,7 +1429,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False

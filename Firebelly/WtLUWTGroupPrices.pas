@@ -40,6 +40,7 @@ type
     lkpWTGPricesUnit_Price: TCurrencyField;
     lkpWTGPricesUnit_Cost: TCurrencyField;
     lkpWTGPricesPrice_Unit_Description: TWideStringField;
+    qryMakeInactive: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
@@ -52,6 +53,8 @@ type
     procedure Button1Click(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure SetWorktopThicknessInactive(tmpMaterial, tmpGroup,
+      tmpThickness: integer; sInactive: string);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -201,15 +204,33 @@ end;
 
 procedure TfrmWtLUWTGroupPrices.btnDeleteClick(Sender: TObject);
 var
-  PPointer: integer;
+  PPointer, iMaterialType, iGroup, iThickness: integer;
 begin
   if messagedlg('Delete the selected record?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
       PPointer := dbgDetails.DataSource.DataSet.fieldbyname('Price_Pointer').asinteger;
+      iMaterialType := dbgDetails.DataSource.DataSet.fieldbyname('Material_type').asinteger;
+      iGroup := dbgDetails.DataSource.DataSet.fieldbyname('Worktop_Group').asinteger;
+      iThickness := dbgDetails.DataSource.DataSet.fieldbyname('Thickness').asinteger;
+
+      SetWorktopThicknessInactive(iMaterialtype, iGroup, iThickness, 'Y');
       DeleteWTGroupPrices(PPointer);
       dtmdlWorktops.DeletePrices(PPointer);
       dtmdlWorktops.DeletePointer(PPointer);
       Refresh;
+    end;
+end;
+
+procedure TfrmWtLUWTGroupPrices.SetWorktopThicknessInactive(tmpMaterial, tmpGroup, tmpThickness: integer; sInactive: string);
+begin
+  with qryMakeInactive do
+    begin
+      close;
+      parambyname('Material_type').asinteger := tmpMaterial;
+      parambyname('Worktop_Group').asinteger := tmpGroup;
+      parambyname('Thickness').asinteger := tmpThickness;
+      parambyname('Inactive').asstring := sInactive;
+      execsql;
     end;
 end;
 

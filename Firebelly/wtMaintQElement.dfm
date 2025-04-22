@@ -78,7 +78,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object Label3: TLabel
       Left = 16
       Top = 105
-      Width = 50
+      Width = 49
       Height = 13
       Caption = 'Thickness'
     end
@@ -113,7 +113,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object Label7: TLabel
       Left = 352
       Top = 164
-      Width = 53
+      Width = 52
       Height = 13
       Caption = 'Total price'
     end
@@ -324,7 +324,6 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       end>
   end
   object qryWTThickness: TFDQuery
-    MasterSource = dtsWorktops
     ConnectionName = 'wt'
     SQL.Strings = (
       'select'
@@ -332,13 +331,21 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Thickness.Thickness_mm'
       'from worktop_thickness, thickness'
       'where (worktop = :worktop and'
-      '  worktop_thickness.thickness = thickness.thickness)'
+      '  worktop_thickness.thickness = thickness.thickness) and'
+      
+        '  ((worktop_thickness.inactive = '#39'N'#39') OR (worktop_thickness.inac' +
+        'tive IS NULL) OR (worktop_thickness.thickness = :Thickness))'
       'order by thickness_mm')
     Left = 192
     Top = 120
     ParamData = <
       item
         Name = 'worktop'
+        ParamType = ptInput
+      end
+      item
+        Name = 'THICKNESS'
+        ParamType = ptInput
       end>
   end
   object dtsWorktops: TDataSource

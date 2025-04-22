@@ -139,6 +139,7 @@ type
     function GetNextIntSelCode(Sender: TObject): Integer;
     function GetOnlyCustomer: integer;
     function GetOperatorRevenueCentre(tmpCode: integer): integer;
+    function GetPlanDocumentFolderName: string;
     function GetProductDescription(iProduct: integer): string;
     function GetProductStockCode(iProduct: integer): string;
     function GetProductVat(iProduct: integer): integer;
@@ -432,6 +433,16 @@ begin
       close;
       open;
       result := trim(fieldbyname('Safety_Document_Folder').asstring);
+    end;
+end;
+
+function TdtmdlWorktops.GetPlanDocumentFolderName: string;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := trim(fieldbyname('Plan_Document_Folder').asstring);
     end;
 end;
 

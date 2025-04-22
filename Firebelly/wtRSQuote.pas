@@ -58,6 +58,7 @@ type
     sAttachmentType: string;
     sAvailabilityFile: string;
     sTermsAndConditionsFile: string;
+    sWhyUseUsFile: string;
     procedure SetDefaultBin(const Value: integer);
     procedure SetPrinterBin(BinCode: integer);
     procedure SetDefaultPrinter(const Value: string);
@@ -283,13 +284,20 @@ begin
                 if chkbxPrintTerms.checked and (sTermsAndConditionsFile <> '') then
                   FEmailAttachment.Add(sTermsAndConditionsFile);
 
+                try
+                  if (sWhyUseUsFile <> '') then
+                    FEmailAttachment.Add(sWhyUseUsFile);
+                except
+                end;
+
                 EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
 
                 for i := pred(FEmailAttachment.count) downto 0 do
                   begin
                     if (pos(sTemplateConditionsFile,FEmailAttachment.strings[i]) > 0) OR
                        (pos(sAvailabilityFile,FEmailAttachment.strings[i]) > 0) OR
-                       (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) then
+                       (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) OR
+                       (pos(sWhyUseUsFile,FEmailAttachment.strings[i]) > 0) then
                       continue;
                     StrPCopy(sFilename, FEmailAttachment.strings[i]);
                     deletefile(sFilename);
@@ -493,6 +501,12 @@ begin
       if chkbxPrintTerms.checked and (sTermsAndConditionsFile <> '') then
         FEmailAttachment.Add(sTermsAndConditionsFile);
 
+      try
+        if (sWhyUseUsFile <> '') then
+          FEmailAttachment.Add(sWhyUseUsFile);
+      except
+      end;
+
       if (FEmailAttachment.Count > 0) then
         begin
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
@@ -502,7 +516,8 @@ begin
         begin
           if (pos(sTemplateConditionsFile,FEmailAttachment.strings[i]) > 0) OR
              (pos(sAvailabilityFile,FEmailAttachment.strings[i]) > 0) OR
-             (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) then
+             (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) OR
+             (pos(sWhyUseUsFile,FEmailAttachment.strings[i]) > 0) then
               continue;
           StrPCopy(sFilename, FEmailAttachment.strings[i]);
           deletefile(sFilename);
@@ -585,13 +600,20 @@ begin
                 if sTermsAndConditionsFile <> '' then
                   FEmailAttachment.Add(sTermsAndConditionsFile);
 
+                try
+                  if (sWhyUseUsFile <> '') then
+                    FEmailAttachment.Add(sWhyUseUsFile);
+                except
+                end;
+
                 EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
 
                 for i := pred(FEmailAttachment.count) downto 0 do
                   begin
                     if (pos(sTemplateConditionsFile,FEmailAttachment.strings[i]) > 0) OR
                        (pos(sAvailabilityFile,FEmailAttachment.strings[i]) > 0) OR
-                       (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) then
+                       (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) OR
+                       (pos(sWhyUseUsFile,FEmailAttachment.strings[i]) > 0) then
                       continue;
                     StrPCopy(sFilename, FEmailAttachment.strings[i]);
                     deletefile(sFilename);
@@ -803,6 +825,12 @@ begin
       if sTermsAndConditionsFile <> '' then
         FEmailAttachment.Add(sTermsAndConditionsFile);
 
+      try
+        if (sWhyUseUsFile <> '') then
+          FEmailAttachment.Add(sWhyUseUsFile);
+      except
+      end;
+
       if (FEmailAttachment.Count > 0) then
         begin
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
@@ -812,7 +840,8 @@ begin
         begin
           if (pos(sTemplateConditionsFile,FEmailAttachment.strings[i]) > 0) OR
              (pos(sAvailabilityFile,FEmailAttachment.strings[i]) > 0) OR
-             (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) then
+             (pos(sTermsAndConditionsFile,FEmailAttachment.strings[i]) > 0) OR
+             (pos(sWhyUseUsFile,FEmailAttachment.strings[i]) > 0) then
               continue;
           StrPCopy(sFilename, FEmailAttachment.strings[i]);
           deletefile(sFilename);
@@ -1477,6 +1506,12 @@ begin
   sTemplateConditionsFile := dtmdlWorktops.GetTemplateConditionsFile;
   sAvailabilityFile := dtmdlWorktops.GetAvailabilityFile;
   sTermsAndConditionsFile := dtmdlWorktops.GetTermsAndConditionsFile;
+
+{$IFDEF GMS}
+  sWhyUseUsFile := '\\GM-TS\Firebelly\Documents\Company Documents\Why Use Us.pdf';
+{$ELSE}
+  sWhyUseUsFile := '';
+{$ENDIF}
 
   if PrintType = 'T' then
     RunTemplateReport(false)

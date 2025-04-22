@@ -249,6 +249,8 @@ begin
   with qryWTThickness do
     begin
       close;
+      parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+      parambyname('Thickness').AsInteger := QElement.thickness;
       open;
     end;
 

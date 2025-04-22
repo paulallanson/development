@@ -210,8 +210,11 @@ begin
   with qryWTThickness do
     begin
       close;
+      parambyname('worktop').AsInteger := dtsWorktops.dataset.fieldbyname('Worktop').asinteger;
+      parambyname('Thickness').AsInteger := QUpstand.thickness;
       open;
     end;
+
   dblkpWTThickness.KeyValue := iThickness;
   enableok(self);
 end;
