@@ -981,7 +981,7 @@ begin
   if UseBranchName then
     CustomerAddMemo.Lines.Add(CustomerSQL.fieldbyname('Branch_Name').AsString)
   else
-    CustomerAddMemo.Lines.Add(CustomerSQL.fieldbyname('Customer_Name').AsString);
+    CustomerAddMemo.Lines.Add(CustomerSQL.fieldbyname('Customer_Oame').AsString);
 
   for icount := 2 to 6 do
   begin
