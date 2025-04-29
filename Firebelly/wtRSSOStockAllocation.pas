@@ -815,6 +815,8 @@ var
 begin
   result := false;
 
+  iStoreStock := 0;
+
   if OverSize then
     sStockCode := GetWorktopStockCodeOSize(tempWT, tempThickness, tempLength, tempDepth)
   else
@@ -1254,7 +1256,7 @@ begin
         begin
           sStockCode := dbgDetails.datasource.DataSet.fieldbyname('Stock_Code').asstring;
           dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
-          AllocateStockOrder(dbgDetails.datasource.DataSet.fieldbyname('Sales_Order').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Sales_Order_Line_No').asinteger, 0, 0);
+          AllocateStockOrder(dbgDetails.datasource.DataSet.fieldbyname('Sales_Order').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Sales_Order_Line_No').asinteger, DateFrom, DateTo);
 
           AllocateQuoteSlab(dbgDetails.datasource.DataSet.fieldbyname('Quote').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Worktop').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Thickness').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Length').asinteger, dbgDetails.datasource.DataSet.fieldbyname('Slab_Depth').asinteger, sStockCode, false);
         end;

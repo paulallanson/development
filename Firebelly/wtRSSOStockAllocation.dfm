@@ -28,7 +28,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       1036
       41)
     object btnClose: TButton
-      Left = 917
+      Left = 911
       Top = 8
       Width = 75
       Height = 25
@@ -62,7 +62,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       OnClick = btnExcludeClick
     end
     object btnExcel: TBitBtn
-      Left = 822
+      Left = 816
       Top = 8
       Width = 75
       Height = 25
