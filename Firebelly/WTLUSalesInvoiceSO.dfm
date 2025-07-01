@@ -29,8 +29,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       item
         Width = 100
       end>
-    ExplicitTop = 416
-    ExplicitWidth = 974
+    ExplicitTop = 413
+    ExplicitWidth = 971
   end
   object pnlBody: TPanel
     Left = 0
@@ -41,10 +41,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 400
-    ExplicitTop = 216
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 971
+    ExplicitHeight = 413
     object dbgDetails: TDBGrid
       Left = 0
       Top = 0
@@ -131,8 +129,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 278
-      ExplicitWidth = 974
+      ExplicitTop = 275
+      ExplicitWidth = 971
       object chkbxShow: TCheckBox
         Left = 8
         Top = 41
@@ -160,12 +158,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 972
+        ExplicitWidth = 969
         DesignSize = (
           975
           53)
         object Label1: TLabel
-          Left = 645
+          Left = 639
           Top = 18
           Width = 59
           Height = 13
@@ -232,17 +230,17 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           OnClick = btnExcelClick
         end
         object edtSONumber: TEdit
-          Left = 709
+          Left = 703
           Top = 14
           Width = 89
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 2
           OnKeyPress = edtSONumberKeyPress
-          ExplicitLeft = 706
+          ExplicitLeft = 697
         end
         object btnSelect: TBitBtn
-          Left = 808
+          Left = 802
           Top = 12
           Width = 75
           Height = 25
@@ -251,10 +249,10 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           ModalResult = 1
           TabOrder = 3
           OnClick = btnSelectClick
-          ExplicitLeft = 805
+          ExplicitLeft = 796
         end
         object btnClose: TBitBtn
-          Left = 889
+          Left = 883
           Top = 12
           Width = 75
           Height = 25
@@ -263,7 +261,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           ModalResult = 2
           TabOrder = 4
           OnClick = btnCloseClick
-          ExplicitLeft = 886
+          ExplicitLeft = 877
         end
       end
       object pnlRevenueCentre: TPanel
@@ -275,7 +273,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
-        ExplicitLeft = 590
+        ExplicitLeft = 587
         object rdgrpRevenueCentre: TRadioGroup
           Left = 40
           Top = 3

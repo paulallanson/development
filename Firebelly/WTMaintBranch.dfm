@@ -2,8 +2,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   Left = 469
   Top = 71
   Caption = 'Maintain Site Details'
-  ClientHeight = 551
-  ClientWidth = 514
+  ClientHeight = 552
+  ClientWidth = 518
   Color = clBtnFace
   Constraints.MinHeight = 590
   Constraints.MinWidth = 530
@@ -18,41 +18,45 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 532
-    Width = 514
+    Top = 533
+    Width = 518
     Height = 19
     Panels = <>
+    ExplicitTop = 524
+    ExplicitWidth = 512
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 514
-    Height = 532
+    Width = 518
+    Height = 533
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 176
-    ExplicitTop = 272
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 512
+    ExplicitHeight = 524
     object pgDetails: TPageControl
       Left = 0
       Top = 257
-      Width = 514
-      Height = 234
+      Width = 518
+      Height = 235
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 512
+      ExplicitHeight = 226
       object TabSheet1: TTabSheet
         Caption = 'Installation Notes'
         object memInstallationNotes: TMemo
           Left = 0
           Top = 0
-          Width = 506
-          Height = 206
+          Width = 510
+          Height = 207
           Align = alClient
           MaxLength = 255
           TabOrder = 0
+          ExplicitWidth = 504
+          ExplicitHeight = 198
         end
       end
       object TabSheet2: TTabSheet
@@ -61,7 +65,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         object Panel12: TPanel
           Left = 0
           Top = 0
-          Width = 506
+          Width = 510
           Height = 17
           Align = alTop
           BevelOuter = bvNone
@@ -76,10 +80,10 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           end
         end
         object ToolBar1: TToolBar
-          Left = 473
+          Left = 477
           Top = 17
           Width = 33
-          Height = 189
+          Height = 190
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -89,7 +93,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
-          ExplicitHeight = 185
           object btnAttach: TToolButton
             Left = 0
             Top = 0
@@ -104,8 +107,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         object lstvwDocuments: TListView
           Left = 0
           Top = 17
-          Width = 473
-          Height = 189
+          Width = 477
+          Height = 190
           Align = alClient
           Columns = <
             item
@@ -126,20 +129,21 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           SmallImages = imgDocuments
           TabOrder = 2
           OnDblClick = lstvwDocumentsDblClick
-          ExplicitHeight = 185
         end
       end
     end
     object pnlFooter: TPanel
       Left = 0
-      Top = 491
-      Width = 514
+      Top = 492
+      Width = 518
       Height = 41
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 483
+      ExplicitWidth = 512
       DesignSize = (
-        514
+        518
         41)
       object btnOK: TBitBtn
         Left = 171
@@ -179,11 +183,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 514
+      Width = 518
       Height = 257
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 2
+      ExplicitTop = -6
       object lblName: TLabel
         Left = 8
         Top = 20
@@ -239,7 +244,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Label35: TLabel
         Left = 8
         Top = 108
-        Width = 51
+        Width = 50
         Height = 13
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
@@ -1032,5 +1037,126 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Target = pgDetails
     Left = 440
     Top = 208
+  end
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'SELECT Sales_Order,'
+      #160#160#160#160#160#160#160' Date_Required,'
+      #160#160#160#160#160#160#160' Installation_Address,'
+      #160#160#160#160#160#160#160' IsFittingInOutlook'
+      'FROM Sales_Order'
+      'WHERE Date_Required >= now() AND'
+      #160#160#160#160#160' Sales_order.Customer = :Customer AND'
+      #160#160#160#160#160' Sales_Order.Branch_no = :Branch_no AND'
+      
+        #160#160#160#160#160' ((Sales_Order.IsFittingInOutlook = :IsFittingInOutlook) OR' +
+        ' (:IsFittingInOutlook = '#39'A'#39'))'
+      'ORDER BY Sales_order.Sales_Order')
+    Left = 360
+    Top = 288
+    ParamData = <
+      item
+        Name = 'Customer'
+        ParamType = ptInput
+      end
+      item
+        Name = 'Branch_no'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ISFITTINGINOUTLOOK'
+        ParamType = ptInput
+      end>
+  end
+  object qryUpdSalesOrder: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'UPDATE Sales_Order'
+      'SET Install_Name = :Install_Name,'
+      #160#160#160' Email_Address = :Email_Address,'
+      #160#160#160' Install_Phone = :Install_Phone'
+      'WHERE Sales_Order = :Sales_Order')
+    Left = 360
+    Top = 352
+    ParamData = <
+      item
+        Name = 'INSTALL_NAME'
+        ParamType = ptInput
+      end
+      item
+        Name = 'EMAIL_ADDRESS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INSTALL_PHONE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SALES_ORDER'
+        ParamType = ptInput
+      end>
+  end
+  object qryUpdInstallationAdd: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'UPDATE Address'
+      'SET Street = :Street,'
+      #160#160#160' Locale = :Locale,'
+      #160#160#160' Town_City = :Town_City,'
+      #160#160#160' Postcode = :Postcode,'
+      #160#160#160' County_State = :County_State'
+      'WHERE Address = :Address')
+    Left = 360
+    Top = 416
+    ParamData = <
+      item
+        Name = 'STREET'
+        ParamType = ptInput
+      end
+      item
+        Name = 'LOCALE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'TOWN_CITY'
+        ParamType = ptInput
+      end
+      item
+        Name = 'POSTCODE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'COUNTY_STATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ADDRESS'
+        ParamType = ptInput
+      end>
+  end
+  object qryGetContact: TFDQuery
+    ConnectionName = 'wt'
+    SQL.Strings = (
+      'SELECT'#160' TOP 1'
+      #160#160#160#160#160#160#160' Contact_no,'
+      #160#160#160#160#160#160#160' Contact_name,'
+      #160#160#160#160#160#160#160' Mobile_Number,'
+      #160#160#160#160#160#160#160' Telephone_Number,'
+      #160#160#160#160#160#160#160' Email_Address'
+      'FROM Customer_Contact'
+      'WHERE Customer = :Customer AND'
+      #160#160#160#160#160' Contact_no = :Contact_No')
+    Left = 360
+    Top = 224
+    ParamData = <
+      item
+        Name = 'Customer'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CONTACT_NO'
+        ParamType = ptInput
+      end>
   end
 end

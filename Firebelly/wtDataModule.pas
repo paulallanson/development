@@ -104,6 +104,7 @@ type
     function GetCompanyQuoteDirectory: string;
     function GetCompanySalesDirectory: string;
     function GetCompanySupplierDirectory: string;
+    function GetCompanyPlanDocumentFolder: string;
     function GetCompanySafetyDocumentFolder: string;
     function GetCompanyQuoteDocumentFolder: string;
     function GetContractDrawingFolderName: string;
@@ -423,6 +424,16 @@ begin
       close;
       open;
       result := trim(fieldbyname('Quotation_Document_Folder').asstring);
+    end;
+end;
+
+function TdtmdlWorktops.GetCompanyPlanDocumentFolder: string;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := trim(fieldbyname('Plan_Document_Folder').asstring);
     end;
 end;
 

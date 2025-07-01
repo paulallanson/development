@@ -147,6 +147,8 @@ begin
   try
     with IniFile do
       begin
+        chkbxShowFutureOrders.Checked := (ReadString('Raise Sales Invoice', 'Show Future Orders', 'N') = 'Y');
+        chkbxShow.Checked := (ReadString('Raise Sales Invoice', 'Show Orders Not Fitted', 'N') = 'Y');
         try
           rdgrpRevenueCentre.itemindex := strtoint(ReadString('Raise Sales Invoice', 'Revenue Centre Option', ''));
         except
@@ -357,6 +359,15 @@ begin
       else
         WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(9999));
 *)
+      if chkbxShowFutureOrders.checked then
+        WriteString('Raise Sales Invoice', 'Show Future Orders', 'Y')
+      else
+        WriteString('Raise Sales Invoice', 'Show Future Orders', 'N');
+
+      if chkbxShow.checked then
+        WriteString('Raise Sales Invoice', 'Show Orders Not Fitted', 'Y')
+      else
+        WriteString('Raise Sales Invoice', 'Show Orders Not Fitted', 'N');
       WriteString('Raise Sales Invoice', 'Revenue Centre', inttostr(dtmdlSalesInvoice.RevenueCentre));
     end;
 end;

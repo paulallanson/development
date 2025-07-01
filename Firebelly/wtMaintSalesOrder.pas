@@ -5281,11 +5281,12 @@ end;
 
 procedure TfrmWTMaintSalesOrder.MoveSiteDocuments(iSOrder: integer);
 var
-  sDest, sSource, sSafetyFolder: string;
-  irow: integer;
+  sText: string;
+  sDest, sSource, sSafetyFolder, sPlanFolder, sQuoteFolder, SiteName: string;
+  irow, ifileLength, iNewLength: integer;
   SearchRec: TSearchRec;
   FileInfo: SHFILEINFO;
-  sFilename: string;
+  sFilename, sNewFilename: string;
 begin
   if trim(SOrder.CustomerBranchName) = '' then
     exit;
@@ -5293,11 +5294,15 @@ begin
   sSource := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + SOrder.CustomerName + '\' + SOrder.CustomerBranchName + '\';
 
   sSafetyFolder := dtmdlWorktops.GetCompanySafetyDocumentFolder;
+  sPlanFolder := dtmdlWorktops.GetCompanyPlanDocumentFolder;
+  sQuoteFolder := dtmdlWorktops.GetCompanyQuoteDocumentFolder;
 
+(*
   if sSafetyFolder <> '' then
     sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sSafetyFolder + '\'
   else
     sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\';
+*)
 
   // search for the first file
   irow := FindFirst(sSource + '*.*', faArchive, SearchRec);
@@ -5312,8 +5317,42 @@ begin
           SHGetFileInfo(PChar(sSource + SearchRec.Name), 0, FileInfo, SizeOf(FileInfo), SHGFI_DISPLAYNAME);
 
           sFilename := SearchRec.Name;
+          iFileLength := length(sfilename);
 
-          filecopy(sSource+sFilename, sDest+sFilename);
+          if pos(sSafetyFolder + ' - ', sFilename) = 1 then
+            begin
+              sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sSafetyFolder + '\';
+              iNewLength := iFileLength - length(sSafetyFolder) + 3;
+              sNewFilename := Copy(sFilename,(length(sSafetyFolder) + 4),iNewLength)
+            end
+          else
+          if pos(sPlanFolder + ' - ', sFilename) = 1 then
+            begin
+              sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sPlanFolder + '\';
+              iNewLength := iFileLength - length(sPlanFolder) + 3;
+              sNewFilename := Copy(sFilename,(length(sPlanFolder) + 4),iNewLength)
+            end
+          else
+          if pos(sQuoteFolder + ' - ', sFilename) = 1 then
+            begin
+              sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sQuoteFolder + '\';
+              iNewLength := iFileLength - length(sQuoteFolder) + 3;
+              sNewFilename := Copy(sFilename,(length(sQuoteFolder) + 4),iNewLength)
+            end
+          else
+          if sSafetyFolder <> '' then
+            begin
+              sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sSafetyFolder + '\';
+              sNewFilename := sFilename;
+            end
+          else
+            begin
+              sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\';
+              sNewFilename := sFilename;
+            end;
+
+//          filecopy(sSource+sFilename, sDest+sFilename);
+          filecopy(sSource+sFilename, sDest+sNewFilename);
         end;
       irow := FindNext(SearchRec);
     end;

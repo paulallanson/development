@@ -427,8 +427,8 @@ begin
                   qrlblColour.caption := qryQuoteMaterial.fieldbyname('Thickness_mm').asstring + ' ' + qryQuoteMaterial.fieldbyname('Colour').asstring
                       + ' ' + qryQuoteMaterial.fieldbyname('Material_Type_Desc').asstring;
 
-                  if qryQuoteSlabs.fieldbyname('Quantity').asinteger > 0 then
-                    qrlblSlab.caption := inttostr(qryQuoteSlabs.fieldbyname('Quantity').asinteger) + ' No. (' + inttostr(qryQuoteSlabs.fieldbyname('Length').asinteger)
+                  if qryQuoteSlabs.fieldbyname('Quantity').asfloat > 0 then
+                    qrlblSlab.caption := floattostr(qryQuoteSlabs.fieldbyname('Quantity').asfloat) + ' No. (' + inttostr(qryQuoteSlabs.fieldbyname('Length').asinteger)
                       + 'mm x ' + inttostr(qryQuoteSlabs.fieldbyname('Depth').asinteger) + 'mm)'
                   else
                     qrlblSlab.caption := '';
@@ -438,8 +438,8 @@ begin
                   qrlblColour2.caption := qryQuoteMaterial.fieldbyname('Thickness_mm').asstring + ' ' + qryQuoteMaterial.fieldbyname('Colour').asstring
                       + ' ' + qryQuoteMaterial.fieldbyname('Material_Type_Desc').asstring;
 
-                  if qryQuoteSlabs.fieldbyname('Quantity').asinteger > 0 then
-                    qrlblSlab2.caption := inttostr(qryQuoteSlabs.fieldbyname('Quantity').asinteger) + ' No. (' + inttostr(qryQuoteSlabs.fieldbyname('Length').asinteger)
+                  if qryQuoteSlabs.fieldbyname('Quantity').asfloat > 0 then
+                    qrlblSlab2.caption := floattostr(qryQuoteSlabs.fieldbyname('Quantity').asfloat) + ' No. (' + inttostr(qryQuoteSlabs.fieldbyname('Length').asinteger)
                       + 'mm x ' + inttostr(qryQuoteSlabs.fieldbyname('Depth').asinteger) + 'mm)'
                   else
                     qrlblSlab2.caption := '';

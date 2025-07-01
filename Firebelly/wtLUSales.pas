@@ -504,13 +504,13 @@ begin
             end;
         end;
 
-      if dbgdetails.DataSource.DataSet.FieldByName('sales_order_status').asinteger = 100 then
+(*      if dbgdetails.DataSource.DataSet.FieldByName('sales_order_status').asinteger = 100 then
         begin
           MessageDlg('This order is '+ dbgdetails.DataSource.DataSet.FieldByName('Sales_order_Status_Desc').asstring + ', there are no lines to convert',
             mtInformation, [mbOk], 0);
           exit;
         end;
-
+*)
       frmwtLUSOLines := TfrmWTLUSOLines.create(self);
       try
         frmwtLUSOLines.SalesOrder := dbgDetails.datasource.dataset.fieldbyname('Sales_order').asinteger;

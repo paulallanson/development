@@ -35,7 +35,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 360
+    ExplicitTop = 376
     ExplicitWidth = 520
     DesignSize = (
       526
@@ -101,7 +101,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 138
     ExplicitWidth = 520
     object Label2: TLabel
       Left = 8
@@ -132,6 +131,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 520
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -144,7 +144,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         Left = 8
         Top = 80
         Width = 244
-        Height = 49
+        Height = 39
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -186,9 +186,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Caption = 'pnlDocumentDetails'
     ParentBackground = False
     TabOrder = 4
-    ExplicitTop = 200
     ExplicitWidth = 520
-    ExplicitHeight = 160
+    ExplicitHeight = 156
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
@@ -198,7 +197,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 518
-      ExplicitHeight = 158
+      ExplicitHeight = 154
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox
@@ -265,11 +264,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object qryGetSalesOrders: TFDQuery
     ConnectionName = 'Wt'
     SQL.Strings = (
-      'SELECT DISTINCT'
-      '        (SELECT TOP 1 SOL.Quote'
-      '         FROM Sales_Order_Line SOL'
-      '         WHERE SOL.Sales_Order = Sales_Order.Sales_Order'
-      '         ORDER BY SOL.Sales_Order_Line_no) as Quote,'
+      'SELECT Sales_Order_Line.Quote,'
       '        Sales_Order.Sales_order,'
       '        Sales_Order_Line.description,'
       '        Sales_Order.customer_name,'
@@ -308,6 +303,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     ParamData = <
       item
         Name = 'Int_sel'
+        ParamType = ptInput
       end>
   end
   object qryGetSalesOrderEmails: TFDQuery
