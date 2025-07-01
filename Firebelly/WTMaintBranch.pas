@@ -68,6 +68,10 @@ type
     DropComboTarget1: TDropComboTarget;
     pnlTop: TPanel;
     pnlBody: TPanel;
+    qryGetSalesOrders: TFDQuery;
+    qryUpdSalesOrder: TFDQuery;
+    qryUpdInstallationAdd: TFDQuery;
+    qryGetContact: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -92,6 +96,8 @@ type
     procedure SetCustomerName(const Value: string);
     procedure ShowDocuments;
     procedure ShowListViewDocuments(strPath: string; ListView: TListView; ImageList: TImageList);
+    procedure UpdateContactDetails;
+    procedure UpdateDocuments;
     { Private declarations }
   public
     bOK: boolean;
@@ -306,6 +312,15 @@ begin
           else
             ParamByName('inActive').asstring := 'N';
           execsql;
+        end;
+
+      if messagedlg('Refresh live orders with the contact details and documents?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+        begin
+          try
+            UpdateContactDetails;
+            UpdateDocuments;
+          finally
+          end;
         end;
     end
   else
@@ -595,6 +610,7 @@ begin
           //copy the file
           deletefile(sPath+sfileName);
         end;
+      ShowDocuments;
     end;
 
 end;
@@ -628,6 +644,163 @@ begin
     begin
       ShowDocuments;
     end);
+end;
+
+procedure TfrmWTMaintBranch.UpdateContactDetails;
+var
+  sText: string;
+  sName, sMobile, sPhone, sEmail: string;
+begin
+  with qryGetContact do
+    begin
+      close;
+      parambyname('Customer').asinteger := iCustomer;
+      parambyname('Contact_no').asinteger := dblkpInstallationContact.keyvalue;
+      open;
+      if recordcount > 0 then
+        begin
+          sName := fieldbyname('Contact_Name').asstring;
+          sEmail := fieldbyname('Email_Address').asstring;
+          sMobile := fieldbyname('Mobile_Number').asstring;
+          sPhone := fieldbyname('Telephone_Number').asstring;
+        end;
+    end;
+
+  with qryGetSalesOrders do
+    begin
+      close;
+
+      if dtmdlWorktops.IsSQL then
+        begin
+          sText := stringreplace(SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+          SQL.Text := sText;
+        end;
+
+      parambyname('Customer').asinteger := iCustomer;
+      parambyname('Branch_no').asinteger := iBranch;
+      parambyname('IsFittingInOutlook').asstring := 'A';
+      open;
+
+      while eof <> true do
+        begin
+          {Update the contact details}
+          qryUpdSalesOrder.close;
+          qryUpdSalesOrder.parambyname('Sales_order').asinteger := fieldbyname('Sales_Order').AsInteger;
+          qryUpdSalesOrder.parambyname('Install_Name').asstring := sName;
+          qryUpdSalesOrder.parambyname('Email_Address').asstring  := sEmail;
+          if trim(sMobile) = '' then
+            qryUpdSalesOrder.parambyname('Install_Phone').asstring  := sPhone
+          else
+            qryUpdSalesOrder.parambyname('Install_Phone').asstring  := sMobile;
+          qryUpdSalesOrder.execsql;
+
+          {Update the installation address details}
+          qryUpdInstallationAdd.close;
+          qryUpdInstallationAdd.parambyname('Address').asinteger := qryGetSalesOrders.fieldbyname('Installation_Address').asinteger;
+          qryUpdInstallationAdd.parambyname('Street').asstring := edtStreet.Text;
+          qryUpdInstallationAdd.parambyname('Locale').asstring := edtLocale.Text;
+          qryUpdInstallationAdd.parambyname('Town_City').asstring := edtTown.text;
+          qryUpdInstallationAdd.parambyname('Postcode').asstring := edtPostcode.Text;
+          qryUpdInstallationAdd.parambyname('County_State').asstring := edtCounty.text;
+          qryUpdInstallationAdd.execsql;
+
+          next;
+        end;
+    end;
+end;
+
+procedure TfrmWTMaintBranch.UpdateDocuments;
+var
+  sText: string;
+  sDest, sSource, sSafetyFolder, sPlanFolder, sQuoteFolder, SiteName: string;
+  iSOrder, irow, ifileLength, iNewLength: integer;
+  SearchRec: TSearchRec;
+  FileInfo: SHFILEINFO;
+  sFilename, sNewFilename: string;
+begin
+  if trim(edtName.text) = '' then
+    exit;
+
+  sSource := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + self.CustomerName + '\' + edtName.text + '\';
+
+  sSafetyFolder := dtmdlWorktops.GetCompanySafetyDocumentFolder;
+  sPlanFolder := dtmdlWorktops.GetCompanyPlanDocumentFolder;
+  sQuoteFolder := dtmdlWorktops.GetCompanyQuoteDocumentFolder;
+
+  {Search for orders whicxh are already in the schedule}
+  qryGetSalesOrders.close;
+
+  if dtmdlWorktops.IsSQL then
+    begin
+      sText := stringreplace(qryGetSalesOrders.SQL.Text, 'now()', 'getdate()', [rfReplaceAll]);
+      qryGetSalesOrders.SQL.Text := sText;
+    end;
+
+  qryGetSalesOrders.parambyname('Customer').asinteger := iCustomer;
+  qryGetSalesOrders.parambyname('Branch_no').asinteger := iBranch;
+  qryGetSalesOrders.parambyname('IsFittingInOutlook').asstring := 'Y';
+  qryGetSalesOrders.open;
+
+  {Cylce through the orders}
+  while qryGetSalesOrders.eof <> true do
+    begin
+      iSorder := qryGetSalesOrders.fieldbyname('Sales_Order').asinteger;
+
+      // search for the first file
+      irow := FindFirst(sSource + '*.*', faArchive, SearchRec);
+
+      while irow = 0 do
+        begin
+          // On directories and volumes
+          if ((SearchRec.Attr and FaDirectory <> FaDirectory) and
+                (SearchRec.Attr and FaVolumeId <> FaVolumeID)) then
+            begin
+              //Get The DisplayName
+              SHGetFileInfo(PChar(sSource + SearchRec.Name), 0, FileInfo, SizeOf(FileInfo), SHGFI_DISPLAYNAME);
+
+              sFilename := SearchRec.Name;
+              iFileLength := length(sfilename);
+
+              if pos(sSafetyFolder + ' - ', sFilename) = 1 then
+                begin
+                  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sSafetyFolder + '\';
+                  iNewLength := iFileLength - length(sSafetyFolder) + 3;
+                  sNewFilename := Copy(sFilename,(length(sSafetyFolder) + 4),iNewLength)
+                end
+              else
+              if pos(sPlanFolder + ' - ', sFilename) = 1 then
+                begin
+                  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sPlanFolder + '\';
+                  iNewLength := iFileLength - length(sPlanFolder) + 3;
+                  sNewFilename := Copy(sFilename,(length(sPlanFolder) + 4),iNewLength)
+                end
+              else
+              if pos(sQuoteFolder + ' - ', sFilename) = 1 then
+                begin
+                  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sQuoteFolder + '\';
+                  iNewLength := iFileLength - length(sQuoteFolder) + 3;
+                  sNewFilename := Copy(sFilename,(length(sQuoteFolder) + 4),iNewLength)
+                end
+              else
+              if sSafetyFolder <> '' then
+                begin
+                  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' + sSafetyFolder + '\';
+                  sNewFilename := sFilename;
+                end
+              else
+                begin
+                  sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\';
+                  sNewFilename := sFilename;
+                end;
+
+              filecopy(sSource+sFilename, sDest+sNewFilename);
+            end;
+
+            irow := FindNext(SearchRec);
+        end;
+
+      qryGetSalesOrders.next;
+    end;
 end;
 
 end.

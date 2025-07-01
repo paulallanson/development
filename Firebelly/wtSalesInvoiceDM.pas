@@ -2575,7 +2575,7 @@ begin
   qrySOAll.ParamByName('Code_From').Asstring := CustomerName + '%';
 
   if DisplayUnfitted then
-    qrySOAll.ParamByName('Status').Asinteger := 20
+    qrySOAll.ParamByName('Status').Asinteger := 10
   else
     qrySOAll.ParamByName('Status').Asinteger := 55;
 

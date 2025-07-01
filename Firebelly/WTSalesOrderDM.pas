@@ -1446,7 +1446,7 @@ begin
                 sTemp := sTemp + ' AND ((Sales_order.Template_Date >= ' + qdate(ActionStart) + ') AND (Sales_order.Template_Date < ' + qDate(ActionEnd) + '))';
             end;
         60: begin
-              sTemp := sTemp + ' AND ((Sales_order.Sales_order_Status >= 50) AND (Sales_order.Sales_order_Status <= 100)) ';
+              sTemp := sTemp + ' AND ((Sales_order.Sales_order_Status >= 10) AND (Sales_order.Sales_order_Status <= 100)) ';
               if ActionStart <> 0 then
                 sTemp := sTemp + ' AND ((Sales_order.Date_Required >= ' + qdate(ActionStart) + ') AND (Sales_order.Date_Required < ' + qdate(ActionEnd) + '))';
             end;
