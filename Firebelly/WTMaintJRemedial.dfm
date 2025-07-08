@@ -20,6 +20,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Width = 907
     Height = 19
     Panels = <>
+    ExplicitTop = 653
+    ExplicitWidth = 901
   end
   object pnlBody: TPanel
     Left = 0
@@ -30,6 +32,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 901
+    ExplicitHeight = 653
     object SpeedButton1: TSpeedButton
       Left = 482
       Top = 280
@@ -47,7 +51,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label10: TLabel
       Left = 8
       Top = 384
-      Width = 82
+      Width = 81
       Height = 13
       Caption = 'Tools Required?'
     end
@@ -59,6 +63,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 596
+      ExplicitWidth = 901
       object lblDelete: TLabel
         Left = 245
         Top = 22
@@ -150,6 +156,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 500
+      ExplicitWidth = 901
       DesignSize = (
         907
         96)
@@ -168,7 +176,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Remedial Fitter'
       end
       object Label5: TLabel
-        Left = 719
+        Left = 713
         Top = 13
         Width = 23
         Height = 13
@@ -185,7 +193,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       object Label18: TLabel
         Left = 8
         Top = 15
-        Width = 95
+        Width = 94
         Height = 13
         Caption = 'Original Templater'
       end
@@ -243,7 +251,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object edtPrice: TCREditMoney
-        Left = 754
+        Left = 748
         Top = 9
         Width = 89
         Height = 21
@@ -251,6 +259,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 1
         Text = 'edtPrice'
         OnChange = EnableOK
+        ExplicitLeft = 742
       end
       object edtInstallDate: TEdit
         Left = 766
@@ -371,6 +380,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alTop
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 901
       DesignSize = (
         907
         81)
@@ -388,7 +398,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 725
+        Left = 719
         Top = 16
         Width = 24
         Height = 13
@@ -399,7 +409,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       object Label15: TLabel
         Left = 288
         Top = 48
-        Width = 73
+        Width = 72
         Height = 13
         Caption = 'Remedial Type'
       end
@@ -411,7 +421,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Reported by'
       end
       object Label17: TLabel
-        Left = 640
+        Left = 634
         Top = 48
         Width = 53
         Height = 13
@@ -430,16 +440,17 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 0
       end
       object edtDateRaised: TEdit
-        Left = 762
+        Left = 756
         Top = 12
         Width = 89
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 1
         OnExit = edtDateRaisedExit
+        ExplicitLeft = 750
       end
       object btnDateRequired: TBitBtn
-        Left = 862
+        Left = 856
         Top = 10
         Width = 25
         Height = 25
@@ -460,6 +471,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnDateRequiredClick
+        ExplicitLeft = 850
       end
       object dblkpRemedialType: TDBLookupComboBox
         Left = 368
@@ -482,7 +494,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 4
       end
       object dblkpRemedialDept: TDBLookupComboBox
-        Left = 698
+        Left = 692
         Top = 44
         Width = 153
         Height = 21
@@ -491,6 +503,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ListField = 'Remedial_Dept_Descr'
         ListSource = dtsRemedailDept
         TabOrder = 5
+        ExplicitLeft = 686
       end
       object BitBtn1: TBitBtn
         Left = 584
@@ -527,7 +540,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn3Click
       end
       object BitBtn4: TBitBtn
-        Left = 863
+        Left = 857
         Top = 43
         Width = 22
         Height = 22
@@ -543,6 +556,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
         TabOrder = 8
         OnClick = BitBtn4Click
+        ExplicitLeft = 851
       end
     end
     object Panel2: TPanel
@@ -554,6 +568,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Caption = 'Panel2'
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 901
+      ExplicitHeight = 419
       object pnlLeft: TPanel
         Left = 1
         Top = 1
@@ -562,26 +578,27 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 417
         object Label8: TLabel
           Left = 8
           Top = 112
-          Width = 184
+          Width = 266
           Height = 13
-          Caption = 'What items needs returning to site?'
+          Caption = 'What items needs returning to site? (255 characters)'
         end
         object Label11: TLabel
-          Left = 8
-          Top = 216
-          Width = 112
+          Left = 9
+          Top = 214
+          Width = 193
           Height = 13
-          Caption = 'Tools required on site'
+          Caption = 'Tools required on site (255 characters)'
         end
         object Label13: TLabel
           Left = 8
           Top = 320
-          Width = 298
+          Width = 295
           Height = 13
-          Caption = 'Additional Notes (Additional labour/Silicone colour used))'
+          Caption = 'Additional Notes (Additional labour/Silicone colour used)'
         end
         object Label2: TLabel
           Left = 8
@@ -643,19 +660,21 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Align = alClient
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 451
+        ExplicitHeight = 417
         object Label9: TLabel
           Left = 10
           Top = 112
-          Width = 122
+          Width = 204
           Height = 13
-          Caption = 'What items still on site?'
+          Caption = 'What items still on site? (255 characters)'
         end
         object Label12: TLabel
           Left = 10
           Top = 216
-          Width = 179
+          Width = 261
           Height = 13
-          Caption = 'Site requirements before returning'
+          Caption = 'Site requirements before returning (255 characters)'
         end
         object Label14: TLabel
           Left = 10
@@ -765,8 +784,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       'SELECT *'
       'FROM Remedial_Category'
       'ORDER BY Remedial_Category_Descr')
-    Left = 240
-    Top = 129
+    Left = 316
+    Top = 177
   end
   object qryRemedialDept: TFDQuery
     ConnectionName = 'WT'

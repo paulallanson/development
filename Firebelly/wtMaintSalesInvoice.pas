@@ -472,6 +472,12 @@ begin
     frmwtSrchCustomer.ShowModal;
     if frmwtSrchCustomer.modalresult = idOK then
     begin
+      if frmwtSrchCustomer.CodeSelected <> SalesInvoice.Customer then
+        begin
+          SalesInvoice.CustomerBranch := 0;
+          SalesInvoice.CustomerBranchName := '';
+          edtSiteName.Text := '';
+        end;
       SalesInvoice.Customer := frmwtSrchCustomer.CodeSelected;
 
       if (not frmwtSrchCustomer.RetailCustomer) AND (not SalesInvoice.Speculative) then
