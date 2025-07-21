@@ -808,14 +808,11 @@ begin
     end;
 end;
 
-function TfrmWTRSSOStockAllocation.CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real; OverSize: boolean): boolean;
-var
+function TfrmWTRSSOStockAllocation.CheckStock(tempWT, tempThickness, tempLength, tempDepth: integer; Quantity: real; OverSize: boolean): boolean;var
   iStoreStock: integer;
   rAvailableStock: real;
 begin
   result := false;
-
-  iStoreStock := 0;
 
   if OverSize then
     sStockCode := GetWorktopStockCodeOSize(tempWT, tempThickness, tempLength, tempDepth)
