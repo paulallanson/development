@@ -42,7 +42,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Height = 235
       ActivePage = TabSheet1
       Align = alClient
-      TabOrder = 0
+      TabOrder = 1
       ExplicitWidth = 512
       ExplicitHeight = 226
       object TabSheet1: TTabSheet
@@ -139,7 +139,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Height = 41
       Align = alBottom
       ParentBackground = False
-      TabOrder = 1
+      TabOrder = 2
       ExplicitTop = 483
       ExplicitWidth = 512
       DesignSize = (
@@ -156,7 +156,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Enabled = False
         ModalResult = 1
         NumGlyphs = 2
-        TabOrder = 0
+        TabOrder = 1
         OnClick = btnOKClick
       end
       object BitBtn2: TBitBtn
@@ -169,7 +169,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Caption = 'Cancel'
         ModalResult = 2
         NumGlyphs = 2
-        TabOrder = 1
+        TabOrder = 2
       end
       object chkbxInactive: TCheckBox
         Left = 8
@@ -177,7 +177,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Width = 97
         Height = 17
         Caption = 'Inactive'
-        TabOrder = 2
+        TabOrder = 0
       end
     end
     object pnlTop: TPanel
@@ -187,8 +187,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Height = 257
       Align = alTop
       BevelOuter = bvNone
-      TabOrder = 2
-      ExplicitTop = -6
+      TabOrder = 0
+      ExplicitWidth = 512
       object lblName: TLabel
         Left = 8
         Top = 20
@@ -353,21 +353,21 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Top = 167
         Width = 356
         Height = 21
-        TabOrder = 0
+        TabOrder = 5
       end
       object edtLocale: TEdit
         Left = 112
         Top = 75
         Width = 356
         Height = 21
-        TabOrder = 1
+        TabOrder = 2
       end
       object edtName: TEdit
         Left = 112
         Top = 16
         Width = 249
         Height = 21
-        TabOrder = 2
+        TabOrder = 0
         Text = 'edtName'
         OnChange = EnableOK
       end
@@ -377,7 +377,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Width = 99
         Height = 21
         CharCase = ecUpperCase
-        TabOrder = 3
+        TabOrder = 4
         OnChange = EnableOK
       end
       object edtStreet: TEdit
@@ -385,7 +385,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Top = 47
         Width = 356
         Height = 21
-        TabOrder = 4
+        TabOrder = 1
         OnChange = EnableOK
       end
       object edtTown: TEdit
@@ -393,7 +393,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         Top = 104
         Width = 355
         Height = 21
-        TabOrder = 5
+        TabOrder = 3
       end
       object dblkpInstallationContact: TDBLookupComboBox
         Left = 112

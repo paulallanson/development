@@ -3,8 +3,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   Top = 206
   BorderStyle = bsDialog
   Caption = 'Global change upstands, splashbacks etc.'
-  ClientHeight = 182
-  ClientWidth = 531
+  ClientHeight = 184
+  ClientWidth = 602
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,13 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 531
+    Width = 602
     Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 490
+    ExplicitWidth = 525
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -54,7 +54,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       Caption = 'Unit price'
     end
     object btnWorktops: TSpeedButton
-      Left = 458
+      Left = 562
       Top = 71
       Width = 23
       Height = 22
@@ -115,7 +115,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 345
+      Width = 450
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -155,7 +155,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     end
   end
   object btnOK: TBitBtn
-    Left = 183
+    Left = 219
     Top = 143
     Width = 75
     Height = 25
@@ -167,7 +167,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 271
+    Left = 307
     Top = 143
     Width = 75
     Height = 25
@@ -189,8 +189,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         '((inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workt' +
         'op_Group'
       'order by Worktop_group_description')
-    Left = 351
-    Top = 25
+    Left = 79
+    Top = 87
     ParamData = <
       item
         Name = 'material_type'
@@ -201,8 +201,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 449
-    Top = 28
+    Left = 17
+    Top = 91
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -226,8 +226,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 55
-    Top = 6
+    Left = 61
+    Top = 24
     ParamData = <
       item
         Name = 'Worktop'
@@ -406,8 +406,7 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 402
-    Top = 6
+    Left = 127
     ParamData = <
       item
         Name = 'Customer'

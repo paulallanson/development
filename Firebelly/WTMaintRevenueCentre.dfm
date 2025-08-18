@@ -27,7 +27,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Caption = 'OK'
     Default = True
     ModalResult = 1
-    TabOrder = 1
+    TabOrder = 2
     OnClick = OKBitBtnClick
     ExplicitTop = 609
   end
@@ -41,7 +41,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Caption = 'Cancel'
     ModalResult = 2
     NumGlyphs = 2
-    TabOrder = 0
+    TabOrder = 3
     OnClick = CancelBitBtnClick
     ExplicitTop = 609
   end
@@ -51,7 +51,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Width = 185
     Height = 17
     Caption = 'Revenue Centre is inactive'
-    TabOrder = 2
+    TabOrder = 1
   end
   object pcDetails: TPageControl
     Left = 8
@@ -59,7 +59,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Width = 617
     Height = 593
     ActivePage = tbsGeneral
-    TabOrder = 3
+    TabOrder = 0
     object tbsGeneral: TTabSheet
       Caption = 'Details'
       DesignSize = (
@@ -105,7 +105,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       object Label5: TLabel
         Left = 8
         Top = 508
-        Width = 87
+        Width = 86
         Height = 26
         Caption = 'VAT Registration No.'
         WordWrap = True
@@ -187,7 +187,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         Height = 135
         BorderStyle = bsSingle
         ParentBackground = False
-        TabOrder = 6
+        TabOrder = 11
         object imgLogo: TImage
           Left = 1
           Top = 1
@@ -214,7 +214,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         Height = 88
         Anchors = [akLeft, akTop, akRight]
         ScrollBars = ssVertical
-        TabOrder = 8
+        TabOrder = 6
       end
       object edtVATRegistrationNo: TEdit
         Left = 120
@@ -242,7 +242,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         Width = 315
         Height = 21
         MaxLength = 40
-        TabOrder = 11
+        TabOrder = 8
         Text = 'edtVATRegistrationNo'
         OnChange = CheckOK
       end

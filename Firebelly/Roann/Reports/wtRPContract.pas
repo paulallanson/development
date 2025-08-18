@@ -259,7 +259,13 @@ procedure TfrmWTRPContract.qrgQuoteBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
   i: integer;
+  iCount: integer;
 begin
+  OptionCount := 0;
+
+  for iCount := 1 to 7 do
+     OptionTotals[iCount] := 0;
+
   with qryContractLine do
     begin
       active := false;
@@ -359,7 +365,12 @@ begin
   qrlblDrawingNumberMemo.lines.clear;
   qrlblDrawingNumberMemo.lines.add(qryContractLine.fieldbyname('Drawing_Number').asstring);
 
-  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+//  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+
+  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10;
+  if gtQRShapeDrawing.Height < 33 then
+    gtQRShapeDrawing.Height := 33;
+
   with qryContractOption do
     begin
       active := false;
@@ -388,7 +399,10 @@ begin
 
           try
             tmpShape.enabled := true;
-            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+//            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10 ;
+            if tmpShape.Height < 33 then
+              tmpShape.Height := 33;
           except
           end;
 
@@ -481,12 +495,12 @@ begin
           tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TQRLabel;
 
           try
-            tmpLabel.Caption := qryOptionHeaders.fieldbyname('Option_Description').asstring;
+            tmpLabel.Caption := trim(qryOptionHeaders.fieldbyname('Option_Description').asstring);
 
             qrlblOptionHead0.Lines.clear;
-            qrlblOptionHead0.Lines.add(qryOptionHeaders.fieldbyname('Option_Description').asstring);
+            qrlblOptionHead0.Lines.add(trim(qryOptionHeaders.fieldbyname('Option_Description').asstring));
 
-            iHeight := (qrlblOptionHead0.Lines.count * 16) + 9;
+            iHeight := (qrlblOptionHead0.Lines.count * 19) + 10;
             if iHeight > iBoxheight then
               iBoxHeight := iHeight;
           except
@@ -528,7 +542,7 @@ begin
       tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TQRShape;
 
       try
-        tmpShape.Height := iBoxHeight;
+        tmpShape.Height := iBoxHeight + 5;
       except
       end;
     end;
@@ -622,7 +636,8 @@ begin
       tempStr := '"' + 'Customer: ' + qryReport.fieldbyname('Customer_Name').asstring + '"';
 
     //Quote Number
-      tempStr := tempStr + ',"' + 'Quote No: '+ qryReport.fieldbyname('Contract_Quote').asstring + '"';
+    //  tempStr := tempStr + ',"' + 'Quote No: '+ qryReport.fieldbyname('Contract_Quote').asstring + '"';
+      tempStr := tempStr + ',"' + 'Quote No: '+ qryReport.fieldbyname('Quote_Number').asstring + '"';
 
     //Date
       tempStr := tempStr + ',"' + 'Date: ' + qryReport.fieldbyname('Contract_Date').asstring + '"';

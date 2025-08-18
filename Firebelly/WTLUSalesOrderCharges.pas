@@ -9,7 +9,6 @@ uses
 
 type
   TfrmWTLUSalesOrderCharges = class(TForm)
-    stBrDetails: TStatusBar;
     pnlFooter: TPanel;
     btnSweep: TButton;
     pnlTop: TPanel;
@@ -31,6 +30,9 @@ type
     edtSearch: TEdit;
     btnDeselect: TButton;
     tmrSearch: TTimer;
+    Panel1: TPanel;
+    Label2: TLabel;
+    stBrDetails: TStatusBar;
     procedure btnCustomerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);

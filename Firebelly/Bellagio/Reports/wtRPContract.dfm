@@ -2,8 +2,8 @@ object frmWTRPContract: TfrmWTRPContract
   Left = 178
   Top = 125
   Caption = 'Contract Quote Report'
-  ClientHeight = 620
-  ClientWidth = 1333
+  ClientHeight = 611
+  ClientWidth = 1327
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -877,10 +877,10 @@ object frmWTRPContract: TfrmWTRPContract
         Width = 168
         Height = 33
         Size.Values = (
-          68.791666666666670000
+          69.850000000000000000
           751.416666666666700000
           0.000000000000000000
-          354.541666666666700000)
+          355.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1231,112 +1231,16 @@ object frmWTRPContract: TfrmWTRPContract
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
-      object gtQRShapeHead7: TQRShape
-        Left = 1186
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          2510.895833333333000000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShapeHead6: TQRShape
-        Left = 1020
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          2159.000000000000000000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShapeHead5: TQRShape
-        Left = 854
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          1807.104166666667000000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShapeHead4: TQRShape
-        Left = 687
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          1455.208333333333000000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShapeHead3: TQRShape
-        Left = 521
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          1103.312500000000000000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
-      object gtQRShapeHead2: TQRShape
-        Left = 355
-        Top = 0
-        Width = 168
-        Height = 33
-        Size.Values = (
-          68.791666666666670000
-          751.416666666666700000
-          0.000000000000000000
-          354.541666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Shape = qrsRectangle
-        VertAdjust = 0
-      end
       object gtQRShapeHead1: TQRShape
         Left = 189
         Top = 0
         Width = 168
         Height = 33
         Size.Values = (
-          68.791666666666670000
-          399.520833333333300000
+          69.850000000000000000
+          400.050000000000000000
           0.000000000000000000
-          354.541666666666700000)
+          355.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1346,13 +1250,13 @@ object frmWTRPContract: TfrmWTRPContract
       object gtQRShapeHead0: TQRShape
         Left = 3
         Top = 0
-        Width = 188
+        Width = 186
         Height = 33
         Size.Values = (
-          68.791666666666670000
-          5.291666666666667000
+          69.850000000000000000
+          6.350000000000000000
           0.000000000000000000
-          396.875000000000000000)
+          393.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1447,6 +1351,22 @@ object frmWTRPContract: TfrmWTRPContract
         VerticalAlignment = tlTop
         FontSize = 8
       end
+      object gtQRShapeHead2: TQRShape
+        Left = 355
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          751.416666666666700000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
       object qrlblOptionHead2: TQRLabel
         Left = 359
         Top = 8
@@ -1477,6 +1397,22 @@ object frmWTRPContract: TfrmWTRPContract
         WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
         FontSize = 8
+      end
+      object gtQRShapeHead3: TQRShape
+        Left = 521
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          1102.783333333333000000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
       end
       object qrlblOptionHead3: TQRLabel
         Left = 526
@@ -1509,6 +1445,22 @@ object frmWTRPContract: TfrmWTRPContract
         VerticalAlignment = tlTop
         FontSize = 8
       end
+      object gtQRShapeHead4: TQRShape
+        Left = 687
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          1454.150000000000000000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
       object qrlblOptionHead4: TQRLabel
         Left = 693
         Top = 8
@@ -1516,8 +1468,8 @@ object frmWTRPContract: TfrmWTRPContract
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1465.791666666667000000
-          15.875000000000000000
+          1466.850000000000000000
+          16.933333333333330000
           338.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1539,6 +1491,22 @@ object frmWTRPContract: TfrmWTRPContract
         WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
         FontSize = 8
+      end
+      object gtQRShapeHead5: TQRShape
+        Left = 854
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          1807.633333333333000000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
       end
       object qrlblOptionHead5: TQRLabel
         Left = 859
@@ -1571,6 +1539,22 @@ object frmWTRPContract: TfrmWTRPContract
         VerticalAlignment = tlTop
         FontSize = 8
       end
+      object gtQRShapeHead6: TQRShape
+        Left = 1020
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          2159.000000000000000000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
       object qrlblOptionHead6: TQRLabel
         Left = 1025
         Top = 8
@@ -1601,6 +1585,22 @@ object frmWTRPContract: TfrmWTRPContract
         WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
         FontSize = 8
+      end
+      object gtQRShapeHead7: TQRShape
+        Left = 1186
+        Top = 0
+        Width = 168
+        Height = 33
+        Size.Values = (
+          69.850000000000000000
+          2510.366666666667000000
+          0.000000000000000000
+          355.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Shape = qrsRectangle
+        VertAdjust = 0
       end
       object qrlblOptionHead7: TQRLabel
         Left = 1190
@@ -2773,8 +2773,8 @@ object frmWTRPContract: TfrmWTRPContract
         'ORDER BY Contract_Quote_Line_Option.Option_Number, Worktop.Descr' +
         'iption'
       '')
-    Left = 694
-    Top = 219
+    Left = 614
+    Top = 211
     ParamData = <
       item
         Name = 'Contract_Quote'

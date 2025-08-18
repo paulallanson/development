@@ -3,8 +3,8 @@ object frmWTLUFitters: TfrmWTLUFitters
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Maintain Fitters'
-  ClientHeight = 318
-  ClientWidth = 451
+  ClientHeight = 355
+  ClientWidth = 468
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWTLUFitters: TfrmWTLUFitters
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 451
-    Height = 232
+    Width = 468
+    Height = 258
     Align = alClient
     DataSource = srcFitters
     DrawingStyle = gdsGradient
@@ -55,8 +55,8 @@ object frmWTLUFitters: TfrmWTLUFitters
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 299
-    Width = 451
+    Top = 336
+    Width = 468
     Height = 19
     Panels = <
       item
@@ -65,41 +65,52 @@ object frmWTLUFitters: TfrmWTLUFitters
       item
         Width = 50
       end>
+    ExplicitTop = 290
+    ExplicitWidth = 445
   end
   object Panel1: TPanel
     Left = 0
-    Top = 232
-    Width = 451
-    Height = 67
+    Top = 258
+    Width = 468
+    Height = 78
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 252
     DesignSize = (
-      451
-      67)
-    object chkbxShowInactive: TCheckBox
-      Left = 16
+      468
+      78)
+    object Label4: TLabel
+      Left = 8
       Top = 10
-      Width = 169
+      Width = 34
+      Height = 13
+      Caption = 'Search'
+    end
+    object chkbxShowInactive: TCheckBox
+      Left = 306
+      Top = 8
+      Width = 129
       Height = 17
       Caption = 'Show inactive fitters'
       TabOrder = 0
       OnClick = chkbxShowInactiveClick
     end
     object btnAdd: TBitBtn
-      Left = 16
-      Top = 34
+      Left = 8
+      Top = 47
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Add'
       TabOrder = 1
       OnClick = btnAddClick
+      ExplicitTop = 36
     end
     object btnEdit: TBitBtn
-      Left = 104
-      Top = 34
+      Left = 96
+      Top = 47
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -107,10 +118,11 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
+      ExplicitTop = 36
     end
     object btnDelete: TBitBtn
-      Left = 192
-      Top = 34
+      Left = 184
+      Top = 47
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -118,10 +130,11 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 3
       OnClick = btnDeleteClick
+      ExplicitTop = 36
     end
     object btnExcel: TBitBtn
-      Left = 280
-      Top = 34
+      Left = 272
+      Top = 47
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -129,10 +142,11 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitTop = 36
     end
     object BitBtn4: TBitBtn
-      Left = 368
-      Top = 34
+      Left = 384
+      Top = 47
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -141,6 +155,14 @@ object frmWTLUFitters: TfrmWTLUFitters
       NumGlyphs = 2
       TabOrder = 5
       OnClick = BitBtn4Click
+    end
+    object edtName: TEdit
+      Left = 56
+      Top = 6
+      Width = 177
+      Height = 21
+      TabOrder = 6
+      OnChange = edtNameChange
     end
   end
   object srcFitters: TDataSource
@@ -156,7 +178,8 @@ object frmWTLUFitters: TfrmWTLUFitters
       'FROM Fitter'
       
         'WHERE ((inactive = :inactive) or (inactive is NULL) or (inactive' +
-        ' = '#39'N'#39'))'
+        ' = '#39'N'#39')) AND'
+      #9#9'(Fitter_Name LIKE :Description)'
       'ORDER BY Fitter_Name'
       '')
     Left = 72
@@ -164,11 +187,22 @@ object frmWTLUFitters: TfrmWTLUFitters
     ParamData = <
       item
         Name = 'inactive'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DESCRIPTION'
+        ParamType = ptInput
       end>
   end
   object qryDelete: TFDQuery
     ConnectionName = 'WT'
     Left = 232
     Top = 120
+  end
+  object tmrRefresh: TTimer
+    Interval = 250
+    OnTimer = tmrRefreshTimer
+    Left = 232
+    Top = 24
   end
 end

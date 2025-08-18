@@ -224,7 +224,6 @@ type
     qryInactiveReason: TFDQuery;
     dtsInactiveReason: TDataSource;
     dblkpInactiveContract: TDBLookupComboBox;
-    memEmailPurchaseOrder: TRichEdit;
     chkbxUseRevenueCentres: TCheckBox;
     qryGetProduct: TFDQuery;
     Label19: TLabel;
@@ -266,6 +265,7 @@ type
     edtCompanyNumber: TEdit;
     Label82: TLabel;
     edtPlanDocumentFolder: TEdit;
+    memEmailPurchaseOrder: TMemo;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
@@ -1003,7 +1003,6 @@ begin
   iFactoredPayments := qryCompany.Fieldbyname('Factored_Payment_Notes').Asinteger;
   iConfirmation := qryCompany.Fieldbyname('Order_Confirmation_Notes').Asinteger;
 
-  {Email details}
   memEmailRetailQuote.text := GetCompNotes(qryCompany.fieldbyname('Email_Retail_Quote_Notes').asinteger);
   memEmailQuote.text := GetCompNotes(qryCompany.fieldbyname('Email_Quotation_Notes').asinteger);
   memEmailInvoice.text := GetCompNotes(qryCompany.fieldbyname('Email_Invoice_Notes').asinteger);

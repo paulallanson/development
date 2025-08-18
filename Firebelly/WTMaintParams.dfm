@@ -30,7 +30,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 622
-    ActivePage = TabSheet2
+    ActivePage = TabSheet6
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -1544,7 +1544,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 0
         Width = 697
         Height = 594
-        ActivePage = TabSheet8
+        ActivePage = TabSheet10
         Align = alClient
         TabOrder = 0
         object TabSheet8: TTabSheet
@@ -1712,20 +1712,14 @@ object frmWTMaintParams: TfrmWTMaintParams
             NumGlyphs = 2
             OnClick = btnEmailHelpClick
           end
-          object memEmailPurchaseOrder: TRichEdit
-            Left = 16
-            Top = 30
-            Width = 601
-            Height = 225
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
+          object memEmailPurchaseOrder: TMemo
+            Left = 15
+            Top = 34
+            Width = 600
+            Height = 150
             Lines.Strings = (
-              'memEmailPurchaseOrder')
-            ParentFont = False
-            ScrollBars = ssBoth
+              'Memo3')
+            ScrollBars = ssVertical
             TabOrder = 0
           end
         end

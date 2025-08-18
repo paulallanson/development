@@ -616,7 +616,8 @@ begin
           begin
             dtmdlJob.UpdateQStatus(aJob.Quote);
             dtmdlJob.UpdateSOLine(aJob.Quote, aJob.dbKey);
-            dtmdlJob.UpdateSOStatus(tempSO, 50);
+            if dbgdetails.DataSource.DataSet.FieldByName('sales_order_status').asinteger < 50 then
+              dtmdlJob.UpdateSOStatus(tempSO, 50);
           end;
       finally
         Frm.Free;

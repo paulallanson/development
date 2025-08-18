@@ -75,15 +75,9 @@ type
     gtQRShapeHead4: TQRShape;
     qrlblDrawing: TQRLabel;
     qrlblOptionHead1: TQRLabel;
-    qrlblOptionHead2: TQRLabel;
-    qrlblOptionHead3: TQRLabel;
-    qrlblOptionHead4: TQRLabel;
     gtQRShapeHead5: TQRShape;
     gtQRShapeHead6: TQRShape;
-    qrlblOptionHead5: TQRLabel;
-    qrlblOptionHead6: TQRLabel;
     gtQRShapeHead7: TQRShape;
-    qrlblOptionHead7: TQRLabel;
     gtQRShapeDrawing: TQRShape;
     gtQRShapeOption5: TQRShape;
     gtQRShapeOption1: TQRShape;
@@ -130,6 +124,12 @@ type
     qrtxtOptionColours7: TQRRichText;
     qryRevenueCentre: TFDQuery;
     qrbOptionHeader: TQRChildBand;
+    qrlblOptionHead2: TQRLabel;
+    qrlblOptionHead3: TQRLabel;
+    qrlblOptionHead4: TQRLabel;
+    qrlblOptionHead5: TQRLabel;
+    qrlblOptionHead6: TQRLabel;
+    qrlblOptionHead7: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -246,8 +246,6 @@ begin
   qrbTotals.Enabled := bValuebyUnits;
   getCompanyAddress;
   qrbTemplateFitting.Enabled := not self.bIncludeTemplating;
-
-  GetCompanyAddress
 end;
 
 procedure TfrmWTRPContract.FormCreate(Sender: TObject);
@@ -385,7 +383,10 @@ begin
   qrlblDrawingNumberMemo.lines.add(qryContractLine.fieldbyname('Drawing_Number').asstring);
 
 //  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
-  gtQRShapeDrawing.Height := qrsdContractLine.height;
+//  gtQRShapeDrawing.Height := qrsdContractLine.height;
+  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10;
+  if gtQRShapeDrawing.Height < 33 then
+    gtQRShapeDrawing.Height := 33;
 
   with qryContractOption do
     begin
@@ -416,7 +417,10 @@ begin
           try
             tmpShape.enabled := true;
 //            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
-            tmpShape.Height := qrsdContractLine.height;
+//            tmpShape.Height := qrsdContractLine.height;
+            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10 ;
+            if tmpShape.Height < 33 then
+              tmpShape.Height := 33;
           except
           end;
 
