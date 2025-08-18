@@ -24,6 +24,9 @@ type
     BitBtn4: TBitBtn;
     qryFitters: TFDQuery;
     qryDelete: TFDQuery;
+    Label4: TLabel;
+    edtName: TEdit;
+    tmrRefresh: TTimer;
     procedure BitBtn4Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
@@ -36,6 +39,8 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure btnExcelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure edtNameChange(Sender: TObject);
+    procedure tmrRefreshTimer(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -134,6 +139,12 @@ begin
   btnExcel.enabled := (srcFitters.DataSet.RecordCount > 0);
 end;
 
+procedure TfrmWTLUFitters.tmrRefreshTimer(Sender: TObject);
+begin
+  tmrRefresh.Enabled := False;
+  Refresh;
+end;
+
 procedure TfrmWTLUFitters.chkbxShowInactiveClick(Sender: TObject);
 begin
   Refresh;
@@ -150,9 +161,16 @@ begin
     end;
 end;
 
+procedure TfrmWTLUFitters.edtNameChange(Sender: TObject);
+begin
+  tmrRefresh.Enabled := False;
+  tmrRefresh.Enabled := True;
+end;
+
 procedure TfrmWTLUFitters.Refresh;
 begin
   qryFitters.close;
+  qryfitters.parambyname('Description').asstring :=  '%' + edtName.Text + '%';
   if not chkbxShowInactive.Checked then
     begin
       qryFitters.parambyname('inactive').asstring := 'N';

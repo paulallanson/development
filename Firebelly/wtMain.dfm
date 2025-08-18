@@ -41,7 +41,7 @@ object frmWTMain: TfrmWTMain
       Align = alClient
       AutoSize = True
       ButtonHeight = 36
-      ButtonWidth = 64
+      ButtonWidth = 63
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
@@ -66,21 +66,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnCustomersClick
       end
       object btnSuppliers: TToolButton
-        Left = 64
+        Left = 63
         Top = 0
         Caption = 'Su&ppliers'
         ImageIndex = 7
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 128
+        Left = 126
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
-        Left = 192
+        Left = 189
         Top = 0
         Hint = 'Quotes|Maintain Quotes Estimates and Quotations'
         Caption = '&Quotes'
@@ -91,21 +91,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnQuotesClick
       end
       object btnSales: TToolButton
-        Left = 256
+        Left = 252
         Top = 0
         Caption = '&Sales'
         ImageIndex = 6
         OnClick = btnSalesClick
       end
       object btnTemplating: TToolButton
-        Left = 320
+        Left = 315
         Top = 0
         Caption = '&Templating'
         ImageIndex = 11
         OnClick = btnTemplatingClick
       end
       object btnJobs: TToolButton
-        Left = 384
+        Left = 378
         Top = 0
         Hint = 'Jobs|Maintain Job details'
         Caption = '&Jobs'
@@ -116,35 +116,35 @@ object frmWTMain: TfrmWTMain
         OnClick = btnJobsClick
       end
       object btnFitting: TToolButton
-        Left = 448
+        Left = 441
         Top = 0
         Caption = '&Fitting'
         ImageIndex = 11
         OnClick = btnFittingClick
       end
       object btnStock: TToolButton
-        Left = 512
+        Left = 504
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
-        Left = 576
+        Left = 567
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
-        Left = 640
+        Left = 630
         Top = 0
         Caption = '&Invoicing'
         DropdownMenu = pmnuSInvoicing
         ImageIndex = 4
       end
       object btnPrices: TToolButton
-        Left = 704
+        Left = 693
         Top = 0
         Caption = 'Colours'
         ImageIndex = 10

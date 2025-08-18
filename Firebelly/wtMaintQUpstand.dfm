@@ -183,7 +183,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     object dblkpWorktop: TDBLookupComboBox
       Left = 88
       Top = 40
-      Width = 390
+      Width = 497
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'

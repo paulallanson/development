@@ -176,11 +176,12 @@ begin
 
         parambyname('Description').asstring := edtDescription.Text;
 
-        if LeftStr(edtColourCode.Text,1) = '#' then
+(*        if LeftStr(edtColourCode.Text,1) = '#' then
           parambyname('Colour_Code').asstring := edtColourCode.Text
         else
           parambyname('Colour_Code').asstring := '#'+ edtColourCode.Text;
-
+*)
+        parambyname('Colour_Code').asstring := edtColourCode.Text;
 
         if chkbxShowOnline.Checked then
           parambyname('Show_Online').asstring := 'Y'

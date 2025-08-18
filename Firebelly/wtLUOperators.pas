@@ -24,6 +24,9 @@ type
     btnExcel: TBitBtn;
     qryOperators: TFDQuery;
     qryDelete: TFDQuery;
+    Label4: TLabel;
+    edtName: TEdit;
+    tmrRefresh: TTimer;
     procedure BitBtn4Click(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
@@ -36,6 +39,8 @@ type
     procedure FormActivate(Sender: TObject);
     procedure btnExcelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure tmrRefreshTimer(Sender: TObject);
+    procedure edtNameChange(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
     procedure Refresh;
@@ -56,6 +61,7 @@ uses UITypes, WTMaintOperators, wtMain;
 procedure TfrmWTLUOperators.Refresh;
 begin
   qryOperators.close;
+  qryOperators.parambyname('Description').asstring :=  '%' + edtName.Text + '%';
   if not chkbxShowInactive.Checked then
     begin
       qryOperators.parambyname('Operator_Can_Login').asstring := 'Y';
@@ -137,6 +143,12 @@ begin
   btnExcel.enabled := (srcOperators.DataSet.RecordCount > 0);
 end;
 
+procedure TfrmWTLUOperators.tmrRefreshTimer(Sender: TObject);
+begin
+  tmrRefresh.Enabled := False;
+  Refresh;
+end;
+
 procedure TfrmWTLUOperators.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
@@ -146,6 +158,12 @@ begin
       (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
+end;
+
+procedure TfrmWTLUOperators.edtNameChange(Sender: TObject);
+begin
+  tmrRefresh.Enabled := False;
+  tmrRefresh.Enabled := True;
 end;
 
 procedure TfrmWTLUOperators.chkbxShowInactiveClick(Sender: TObject);

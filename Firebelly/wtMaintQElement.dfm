@@ -3,8 +3,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
-  ClientHeight = 277
-  ClientWidth = 538
+  ClientHeight = 287
+  ClientWidth = 599
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -29,7 +29,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 200
+    Left = 218
     Top = 237
     Width = 75
     Height = 25
@@ -41,7 +41,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 288
+    Left = 306
     Top = 237
     Width = 75
     Height = 25
@@ -54,7 +54,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 538
+    Width = 599
     Height = 225
     Align = alTop
     BevelOuter = bvNone
@@ -118,7 +118,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 498
+      Left = 559
       Top = 71
       Width = 23
       Height = 22
@@ -216,7 +216,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 390
+      Width = 450
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -306,8 +306,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 261
-    Top = 8
+    Left = 22
+    Top = 218
     ParamData = <
       item
         Name = 'material_type'
@@ -350,8 +350,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 496
-    Top = 56
+    Left = 124
+    Top = 214
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
@@ -380,8 +380,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 432
-    Top = 8
+    Left = 276
+    Top = 10
     ParamData = <
       item
         Name = 'Worktop'
@@ -402,8 +402,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workto' +
         'p_Group'
       'order by Worktop_group_description')
-    Left = 84
-    Top = 180
+    Left = 145
+    Top = 105
     ParamData = <
       item
         Name = 'Material_type'
@@ -414,8 +414,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 496
-    Top = 112
+    Left = 212
+    Top = 108
   end
   object qryMaterial: TFDQuery
     ConnectionName = 'wt'
@@ -479,8 +479,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
         'rktop.worktop = :worktop'
       'ORDER BY Worktop.Description')
-    Left = 292
-    Top = 190
+    Left = 29
+    Top = 142
     ParamData = <
       item
         Name = 'Customer'
@@ -524,8 +524,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 444
-    Top = 190
+    Left = 467
+    Top = 182
     ParamData = <
       item
         Name = 'Customer'
@@ -569,8 +569,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      ((Worktop.inactive = '#39'N'#39') or (Worktop.inactive is null) OR' +
         ' (Worktop.worktop = :worktop))'
       'ORDER BY Worktop.Description')
-    Left = 428
-    Top = 88
+    Left = 199
+    Top = 150
     ParamData = <
       item
         Name = 'Customer'
@@ -641,12 +641,12 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       'FROM Material_Use'
       'WHERE Use_Type <= 1'
       'ORDER BY Use_Description ASC')
-    Left = 384
-    Top = 216
+    Left = 32
+    Top = 70
   end
   object dtsMaterialUse: TDataSource
     DataSet = qryMaterialUse
-    Left = 448
-    Top = 216
+    Left = 32
+    Top = 6
   end
 end

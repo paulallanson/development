@@ -14,21 +14,6 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 15
-  object stBrDetails: TStatusBar
-    Left = 0
-    Top = 589
-    Width = 1273
-    Height = 19
-    Panels = <
-      item
-        Width = 250
-      end
-      item
-        Width = 50
-      end>
-    ExplicitTop = 580
-    ExplicitWidth = 1267
-  end
   object pnlFooter: TPanel
     Left = 0
     Top = 536
@@ -36,8 +21,9 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     Height = 53
     Align = alBottom
     ParentBackground = False
-    TabOrder = 1
-    ExplicitTop = 527
+    TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = 508
     ExplicitWidth = 1267
     DesignSize = (
       1273
@@ -78,7 +64,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       OnClick = btnExcelClick
     end
     object btnClose: TButton
-      Left = 1150
+      Left = 1144
       Top = 16
       Width = 75
       Height = 25
@@ -86,10 +72,10 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 2
-      ExplicitLeft = 1144
+      ExplicitLeft = 1138
     end
     object btnSelect: TButton
-      Left = 1045
+      Left = 1039
       Top = 16
       Width = 75
       Height = 25
@@ -98,7 +84,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Enabled = False
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 1039
+      ExplicitLeft = 1033
     end
     object edtSearch: TEdit
       Left = 48
@@ -127,7 +113,8 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     Height = 97
     Align = alTop
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
+    ExplicitWidth = 1267
     DesignSize = (
       1273
       97)
@@ -162,7 +149,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       OnClick = btnCustomerClick
     end
     object grpInvDate: TGroupBox
-      Left = 974
+      Left = 968
       Top = 18
       Width = 233
       Height = 73
@@ -170,6 +157,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Caption = 'Fitting Date'
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 962
       DesignSize = (
         233
         73)
@@ -269,7 +257,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -353,6 +341,36 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
         Width = 57
         Visible = True
       end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 589
+    Width = 1273
+    Height = 19
+    Align = alBottom
+    Caption = 'pnlBottom'
+    TabOrder = 3
+    object Label2: TLabel
+      Left = 64
+      Top = 16
+      Width = 48
+      Height = 15
+      Caption = 'BOTTOM'
+    end
+    object stBrDetails: TStatusBar
+      Left = 1
+      Top = -1
+      Width = 1271
+      Height = 19
+      Panels = <
+        item
+          Width = 250
+        end
+        item
+          Width = 250
+        end>
+      ExplicitTop = 8
+    end
   end
   object tmrSearch: TTimer
     Enabled = False

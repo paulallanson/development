@@ -3,8 +3,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
-  ClientHeight = 269
-  ClientWidth = 526
+  ClientHeight = 268
+  ClientWidth = 579
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -29,7 +29,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 200
+    Left = 208
     Top = 224
     Width = 75
     Height = 25
@@ -42,7 +42,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 288
+    Left = 296
     Top = 224
     Width = 75
     Height = 25
@@ -55,7 +55,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 526
+    Width = 579
     Height = 217
     Align = alTop
     BevelOuter = bvNone
@@ -79,7 +79,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label3: TLabel
       Left = 16
       Top = 97
-      Width = 50
+      Width = 49
       Height = 13
       Caption = 'Thickness'
     end
@@ -114,7 +114,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label7: TLabel
       Left = 352
       Top = 156
-      Width = 53
+      Width = 52
       Height = 13
       Caption = 'Total price'
     end
@@ -217,7 +217,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 88
       Top = 64
-      Width = 401
+      Width = 450
       Height = 21
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -336,8 +336,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 408
-    Top = 64
+    Left = 438
+    Top = 8
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
@@ -366,8 +366,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 350
-    Top = 18
+    Left = 358
+    Top = 7
     ParamData = <
       item
         Name = 'Worktop'

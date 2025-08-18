@@ -51,6 +51,7 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
+    ExplicitTop = 188
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -63,6 +64,7 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 188
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -72,6 +74,7 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
+    ExplicitTop = 193
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
