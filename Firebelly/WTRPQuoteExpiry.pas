@@ -62,10 +62,10 @@ type
     gtQRLabel1: TQRLabel;
     qryReQuote: TFDQuery;
     gtQRDBText1: TQRDBText;
-    procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
-      var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
+    procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
     procedure qrbCustomerFooterBeforePrint(Sender: TQRCustomBand;
@@ -115,77 +115,6 @@ begin
   TotalConverted := 0;
   CustomerTotal := 0.00;
   ReportTotal := 0.00;
-end;
-
-procedure TfrmwtRPQuoteExpiry.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
-  var PrintBand: Boolean);
-var
-  CompleteTotal, QuoteTotal, VATTotal: real;
-  RequoteCompleteTotal, RequoteCount: real;
-  RequoteTotal, RequoteInstall, RequoteSurvey, RequoteDelivery: real;
-  RequoteStatus: integer;
-begin
-  if (qryQuotes.fieldbyname('Original_Quote').asinteger <> 0) and (qryQuotes.fieldbyname('Original_Quote').asinteger = OriginalQuote) then
-    begin
-      PrintBand := false;
-      exit;
-    end;
-    
-  RequoteCompleteTotal := 0.00;
-  ReQuoteInstall := 0.00;
-  ReQuoteSurvey := 0.00;
-  ReQuoteDelivery := 0.00;
-  RequoteStatus := 0;
-
-  RequoteCount := qryQuotes.fieldbyname('Requote_Count').asfloat;
-  if RequoteCount > 0 then
-    begin
-      with qryRequote do
-        begin
-          close;
-          parambyname('Original_Quote').asinteger := qryQuotes.fieldbyname('Original_Quote').asinteger;
-          parambyname('Quote').asinteger := qryQuotes.fieldbyname('Quote').asinteger;
-          open;
-
-          RequoteCompleteTotal := qryRequote.fieldbyname('Total_Complete').asfloat;
-
-          ReQuoteTotal := qryReQuote.fieldbyname('Total_Install').asfloat +
-                          qryReQuote.fieldbyname('Total_Survey').asfloat +
-                          qryReQuote.fieldbyname('Total_Delivery').asfloat;
-
-          ReQuoteInstall := qryReQuote.fieldbyname('Total_Install').asfloat;
-          ReQuoteSurvey := qryReQuote.fieldbyname('Total_Survey').asfloat;
-          ReQuoteDelivery := qryReQuote.fieldbyname('Total_Delivery').asfloat;
-          RequoteStatus := qryReQuote.fieldbyname('Requote_Status').asinteger;
-       end;
-    end;
-
-  CompleteTotal := qryQuotes.fieldbyname('Nett_Price').asfloat -
-                      qryQuotes.fieldbyname('Discount_Value').asfloat + qryQuotes.fieldbyname('Markup_Value').asfloat + qryQuotes.fieldbyname('Waste_Value').asfloat;
-
-  CompleteTotal := (CompleteTotal + RequoteCompleteTotal);
-
-  QuoteTotal := CompleteTotal + ReQuoteTotal +
-                      qryQuotes.fieldbyname('Installation_Price').asfloat +
-                      qryQuotes.fieldbyname('Survey_Price').asfloat +
-                      qryQuotes.fieldbyname('Delivery_Price').asfloat;
-
-  CompleteTotal := CompleteTotal/(RequoteCount + 1);
-  QuoteTotal := QuoteTotal/(RequoteCount + 1);
-
-  VATTotal := QuoteTotal * (qryQuotes.fieldbyname('VAT_Rate').asfloat/100);
-
-  qrlInstallationPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Installation_Price').asfloat+ReQuoteInstall)/(RequoteCount + 1));
-  qrlSurveyPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Survey_Price').asfloat+ReQuoteSurvey)/(RequoteCount + 1));
-  qrlDeliveryPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Delivery_Price').asfloat+ReQuoteDelivery)/(RequoteCount + 1));
-  qrlComplete.caption := formatfloat('0.00',CompleteTotal);
-  qrlTotal.caption := formatfloat('0.00',(QuoteTotal));
-
-  qrlblrequote.caption := formatfloat('0',qryQuotes.fieldbyname('Requote_Count').asfloat);
-
-  CustomerTotal := CustomerTotal + QuoteTotal;
-  QuoteCount := QuoteCount + 1;
-  TotalCount := TotalCount + 1;
 end;
 
 procedure TfrmwtRPQuoteExpiry.qrbCustomerFooterAfterPrint(
@@ -383,6 +312,80 @@ end;
 procedure TfrmwtRPQuoteExpiry.SetCustomerCategory(const Value: integer);
 begin
   FCustomerCategory := Value;
+end;
+
+procedure TfrmwtRPQuoteExpiry.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+var
+  CompleteTotal, QuoteTotal, VATTotal: real;
+  RequoteCompleteTotal, RequoteCount: real;
+  RequoteTotal, RequoteInstall, RequoteSurvey, RequoteDelivery: real;
+  RequoteStatus: integer;
+begin
+  if (qryQuotes.fieldbyname('Original_Quote').asinteger <> 0) and (qryQuotes.fieldbyname('Original_Quote').asinteger = OriginalQuote) then
+    begin
+      PrintBand := false;
+      exit;
+    end;
+
+  CompleteTotal := 0.00;
+  QuoteTotal := 0.00;
+  RequoteCompleteTotal := 0.00;
+  ReQuoteInstall := 0.00;
+  ReQuoteSurvey := 0.00;
+  ReQuoteDelivery := 0.00;
+  RequoteStatus := 0;
+  RequoteCount := 0;
+
+  RequoteCount := qryQuotes.fieldbyname('Requote_Count').asfloat;
+  if RequoteCount > 0 then
+    begin
+      with qryRequote do
+        begin
+          close;
+          parambyname('Original_Quote').asinteger := qryQuotes.fieldbyname('Original_Quote').asinteger;
+          parambyname('Quote').asinteger := qryQuotes.fieldbyname('Quote').asinteger;
+          open;
+
+          RequoteCompleteTotal := qryRequote.fieldbyname('Total_Complete').asfloat;
+
+          ReQuoteTotal := qryReQuote.fieldbyname('Total_Install').asfloat +
+                          qryReQuote.fieldbyname('Total_Survey').asfloat +
+                          qryReQuote.fieldbyname('Total_Delivery').asfloat;
+
+          ReQuoteInstall := qryReQuote.fieldbyname('Total_Install').asfloat;
+          ReQuoteSurvey := qryReQuote.fieldbyname('Total_Survey').asfloat;
+          ReQuoteDelivery := qryReQuote.fieldbyname('Total_Delivery').asfloat;
+          RequoteStatus := qryReQuote.fieldbyname('Requote_Status').asinteger;
+       end;
+    end;
+
+  CompleteTotal := qryQuotes.fieldbyname('Nett_Price').asfloat -
+                      qryQuotes.fieldbyname('Discount_Value').asfloat + qryQuotes.fieldbyname('Markup_Value').asfloat + qryQuotes.fieldbyname('Waste_Value').asfloat;
+
+  CompleteTotal := (CompleteTotal + RequoteCompleteTotal);
+
+  QuoteTotal := CompleteTotal + ReQuoteTotal +
+                      qryQuotes.fieldbyname('Installation_Price').asfloat +
+                      qryQuotes.fieldbyname('Survey_Price').asfloat +
+                      qryQuotes.fieldbyname('Delivery_Price').asfloat;
+
+  CompleteTotal := CompleteTotal/(RequoteCount + 1);
+  QuoteTotal := QuoteTotal/(RequoteCount + 1);
+
+  VATTotal := QuoteTotal * (qryQuotes.fieldbyname('VAT_Rate').asfloat/100);
+
+  qrlInstallationPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Installation_Price').asfloat+ReQuoteInstall)/(RequoteCount + 1));
+  qrlSurveyPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Survey_Price').asfloat+ReQuoteSurvey)/(RequoteCount + 1));
+  qrlDeliveryPrice.caption := formatfloat('0.00',(qryQuotes.fieldbyname('Delivery_Price').asfloat+ReQuoteDelivery)/(RequoteCount + 1));
+  qrlComplete.caption := formatfloat('0.00',CompleteTotal);
+  qrlTotal.caption := formatfloat('0.00',(QuoteTotal));
+
+  qrlblrequote.caption := formatfloat('0',qryQuotes.fieldbyname('Requote_Count').asfloat);
+
+  CustomerTotal := CustomerTotal + QuoteTotal;
+  QuoteCount := QuoteCount + 1;
+  TotalCount := TotalCount + 1;
 end;
 
 end.

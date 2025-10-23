@@ -1703,7 +1703,8 @@ begin
   bUpdateSchedule := false;
   sSchedulingSystem := '';
 
-  if (not SOrder.OnHold) and (SOrder.DateType <> 'T') then
+//  if (not SOrder.OnHold) and (SOrder.DateType <> 'T') then
+  if (not SOrder.OnHold) then
     begin
       {Check if order is for fitting of worktops and needs to update schedule}
       sSchedulingSystem := trim(dtmdlWorktops.SchedulingSystem);
@@ -1774,10 +1775,11 @@ begin
           MoveQuoteDocument;
         end
       else
-      if Mode = sopCopy then
+      if (Mode = sopCopy) then
         begin
           CopyOriginalSalesOrderDocuments;
         end;
+
 
       if (Mode = sopAdd) or (Mode = sopConvert) or (Mode = sopCopy) or (Mode = sopRemedial)then
         begin
@@ -1871,6 +1873,24 @@ begin
                           end;
 
                         messagedlg('Template and Fitting appointments have been added to the Firebelly Schedule.', mtInformation, [mbOk], 0);
+                      end;
+                  end
+                else
+                  {This must be To be Confirmed date type, so no dates}
+                  begin
+                    if (sSchedulingSystem = 'Moraware') then
+                      begin
+                        if dtmdlWorktops.UseDocumentTransfer then
+                          begin
+                            for icount := 0 to pred(SOrder.Lines.count) do
+                              begin
+                                if SOrder.Lines[icount].Quote > 0 then
+                                  CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
+                              end;
+                            MoveSiteDocuments(SOrder.dbKey);
+                          end;
+                        AddMorawareAppointment(SOrder.Fitter, SOrder.dbKey, false);
+                        messagedlg('Template and Fitting appointments which are TO BE CONFIRMED have been added to the Firebelly Schedule.', mtInformation, [mbOk], 0);
                       end;
                   end;
               except
@@ -2010,6 +2030,29 @@ begin
                         end;
                       if not SOrder.TemplateInSchedule or not SOrder.FittingInSchedule then
                         messagedlg('Template and Fitting appointments have been updated to the Firebelly Schedule.', mtInformation, [mbOk], 0);
+                    end;
+                end
+              else
+                {This must be TO BE CONFIRMED date type, so no dates}
+                begin
+                  if not SOrder.FittingInSchedule then
+                    begin
+                      if (sSchedulingSystem = 'Moraware') then
+                        begin
+                          if dtmdlWorktops.UseDocumentTransfer then
+                            begin
+                              for icount := 0 to pred(SOrder.Lines.count) do
+                                begin
+                                  if SOrder.Lines[icount].Quote > 0 then
+                                    CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
+                                end;
+                              MoveSiteDocuments(SOrder.dbKey);
+                            end;
+                            AddMorawareAppointment(SOrder.Fitter, SOrder.dbKey, false);
+                        end;
+                      if not SOrder.FittingInSchedule then
+                        messagedlg('Template and Fitting appointments which are TO BE CONFIRMED have been updated to the Firebelly Schedule.', mtInformation, [mbOk], 0);
+
                     end;
                 end;
             end;

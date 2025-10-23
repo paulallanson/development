@@ -30,7 +30,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 622
-    ActivePage = TabSheet6
+    ActivePage = tsGeneral
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -1544,7 +1544,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 0
         Width = 697
         Height = 594
-        ActivePage = TabSheet10
+        ActivePage = TabSheet8
         Align = alClient
         TabOrder = 0
         object TabSheet8: TTabSheet
